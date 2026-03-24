@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Incident Management Plan (Template 13)</title>
+<script src="./shared.js"></script>
+</head>
+<body>
+<script>
+(function() {
+  injectCSS();
+  var config = {};
+  var stepLabels = ["Classification","Response Workflow","Regulatory Reporting","Log Retention","Communication","Testing & Drills","Summary"];
+  var responseTimes = [{value:"",label:"-- Select --"},{value:"immediate",label:"Immediate"},{value:"4h",label:"< 4 hours"},{value:"24h",label:"< 24 hours"},{value:"72h",label:"< 72 hours"}];
+  var severityLevels = ["Critical","High","Medium","Low"];
+  var severityDefaults = {
+    Critical:{definition:"System causes or risks imminent serious harm to individuals, critical safety failure, or widespread discriminatory impact.",examples:"Autonomous system causes physical injury; AI makes mass erroneous decisions affecting fundamental rights; complete loss of human oversight in high-risk system.",responseTime:"immediate"},
+    High:{definition:"System produces significant erroneous outputs, exhibits substantial bias, or experiences major security breach affecting AI integrity.",examples:"Systematic bias discovered in hiring AI; unauthorized access to model weights; significant data poisoning detected; regulatory deadline breach.",responseTime:"4h"},
+    Medium:{definition:"System experiences degraded performance, minor bias detection, or non-critical compliance deviation.",examples:"Model drift causing accuracy degradation; minor fairness metric deviation; documentation gap identified; non-critical feature malfunction.",responseTime:"24h"},
+    Low:{definition:"Minor issues with no immediate impact on safety, rights, or compliance. Routine maintenance items.",examples:"Minor UI issues in AI interface; non-critical logging gaps; cosmetic output issues; scheduled maintenance delays.",responseTime:"72h"}
+  };
+  var workflowPhases = ["Detection","Triage","Containment","Investigation","Remediation","Notification","Recovery","Post-Incident Review"];
+  var jurisdictions = [
+    {id:"eu-ai-act",label:"EU AI Act Art. 62",what:"Serious incidents: death, serious health damage, fundamental rights violations, widespread disruption of critical infrastructure",whom:"Relevant national market surveillance authority",deadline:"Immediately, no later than 15 days after becoming aware"},
+    {id:"eu-gdpr",label:"EU GDPR",what:"Personal data breaches involving AI-processed data",whom:"Supervisory authority (DPA)",deadline:"72 hours after becoming aware"},
+    {id:"california-sb53",label:"California SB 53",what:"Covered AI model safety incidents, critical capability failures",whom:"California Attorney General",deadline:"72 hours of discovery"},
+    {id:"south-korea",label:"South Korea",what:"High-risk AI system incidents affecting users or public safety",whom:"Korea Internet and Security Agency (KISA)",deadline:"Within 24 hours"},
+    {id:"china",label:"China GenAI",what:"Illegal content generation, data security incidents, algorithmic discrimination",whom:"Cyberspace Administration of China (CAC)",deadline:"Immediately upon discovery"},
+    {id:"uk",label:"UK Cyber Security Bill",what:"AI-related cyber security incidents in critical infrastructure",whom:"Relevant sector regulator",deadline:"Within 72 hours"},
+    {id:"nigeria",label:"Nigeria NDPC",what:"Data breaches involving AI systems processing Nigerian data",whom:"Nigeria Data Protection Commission",deadline:"72 hours"},
+    {id:"algeria",label:"Algeria",what:"AI system incidents affecting citizen data or safety",whom:"National authority for personal data protection",deadline:"As soon as practicable"}
+  ];
+  var drillTypes = ["Tabletop exercise","System shutdown drill","Regulatory notification drill","Communication cascade drill"];
+  var drillFrequencies = [{value:"",label:"-- Select --"},{value:"monthly",label:"Monthly"},{value:"quarterly",label:"Quarterly"},{value:"semi-annual",label:"Semi-annual"},{value:"annual",label:"Annual"}];
+  var audiences = ["Incident team","Executive leadership","Regulators","Affected individuals","Public"];
+  var commWhens = [{value:"",label:"-- Select --"},{value:"immediate",label:"Immediately"},{value:"1h",label:"Within 1 hour"},{value:"4h",label:"Within 4 hours"},{value:"24h",label:"Within 24 hours"},{value:"48h",label:"Within 48 hours"},{value:"as-needed",label:"As needed"}];
+  var commMethods = [{value:"",label:"-- Select --"},{value:"phone",label:"Phone/call"},{value:"email",label:"Email"},{value:"secure-channel",label:"Secure channel"},{value:"portal",label:"Portal/form"},{value:"press",label:"Press release"},{value:"letter",label:"Letter"}];
+  var evidenceItems = ["Incident classification matrix documented","Response workflow with clear ownership","Regulatory reporting obligations mapped per jurisdiction","Log retention policy meets all jurisdiction minimums","Communication plan with templates for all audiences","Drill schedule maintained with findings tracked","Post-incident review process defined","Escalation procedures documented","Contact list for all regulatory authorities"];
+
+  var state = {
+    classification:{},
+    workflow:{},
+    reporting:{},
+    retention:{logStorage:"",accessControl:""},
+    communication:{},
+    drills:{},
+    evidenceChecklist:{}
+  };
+
+  function initDefaults(){
+    for(var i=0;i<severityLevels.length;i++){var lv=severityLevels[i];var key=lv.toLowerCase();if(!state.classification[key]){var def=severityDefaults[lv];state.classification[key]={definition:def.definition,examples:def.examples,responseTime:def.responseTime};}}
+    for(var i=0;i<workflowPhases.length;i++){var key=workflowPhases[i].toLowerCase().replace(/\s+/g,"_");if(!state.workflow[key])state.workflow[key]={actions:"",responsible:"",timeline:""};}
+    for(var i=0;i<jurisdictions.length;i++){var j=jurisdictions[i];if(!state.reporting[j.id])state.reporting[j.id]={applicable:null,what:j.what,whom:j.whom,deadline:j.deadline};}
+    for(var i=0;i<audiences.length;i++){var key=audiences[i].toLowerCase().replace(/\s+/g,"_");if(!state.communication[key])state.communication[key]={when:"",method:"",template:"",responsible:""};}
+    for(var i=0;i<drillTypes.length;i++){var key=drillTypes[i].toLowerCase().replace(/\s+/g,"_");if(!state.drills[key])state.drills[key]={frequency:"",lastConducted:"",nextScheduled:"",findings:""};}
+  }
+  initDefaults();
+
+  var wizard = createWizard({
+    title: 'Incident Management Plan',
+    subtitle: 'Template 13 \u2014 EU AI Act Art. 62; China GenAI; California SB 53; South Korea; UK Cyber Security Bill',
+    totalSteps: 7,
+    stepLabels: stepLabels,
+    renderStep: function(step, container) {
+      if (step === 0) renderStep1(container);
+      else if (step === 1) renderStep2(container);
+      else if (step === 2) renderStep3(container);
+      else if (step === 3) renderStep4(container);
+      else if (step === 4) renderStep5(container);
+      else if (step === 5) renderStep6(container);
+      else if (step === 6) renderStep7(container);
+    },
+    onLoad: function() {
+      loadConfigFromFile(function(c) { config = c; loadState(); wizard.refreshStep(); });
+    },
+    onSave: doSave,
+    onExport: doExport,
+    stateKey: 'incidentManagement',
+    getState: function() { return state; },
+    setState: function(s) {
+      if (s.classification) { for (var k in s.classification) { state.classification[k] = s.classification[k]; } }
+      if (s.workflow) { for (var k in s.workflow) { state.workflow[k] = s.workflow[k]; } }
+      if (s.reporting) { for (var k in s.reporting) { state.reporting[k] = s.reporting[k]; } }
+      if (s.retention) {
+        if (s.retention.logStorage !== undefined) state.retention.logStorage = s.retention.logStorage;
+        if (s.retention.accessControl !== undefined) state.retention.accessControl = s.retention.accessControl;
+      }
+      if (s.communication) { for (var k in s.communication) { state.communication[k] = s.communication[k]; } }
+      if (s.drills) { for (var k in s.drills) { state.drills[k] = s.drills[k]; } }
+      if (s.evidenceChecklist) { for (var k in s.evidenceChecklist) { state.evidenceChecklist[k] = s.evidenceChecklist[k]; } }
+      initDefaults();
+    }
+  });
+
+  function renderStep1(container){
+    var s=el("div",{className:"section"});s.appendChild(el("h2",{},["Step 1: Incident Classification"]));
+    s.appendChild(createAlert("info","Define severity levels for AI incidents. Defaults are pre-populated from Template 13 but can be customized."));
+    for(var i=0;i<severityLevels.length;i++){(function(lv){var key=lv.toLowerCase();var cl=state.classification[key];
+    var card=el("div",{className:"section",style:"border:1px solid #1E2D3D;padding:16px;border-radius:4px;margin-bottom:12px;"});
+    var cls=lv==="Critical"?"score-high":lv==="High"?"score-med":"score-low";
+    var h=el("h3");h.appendChild(el("span",{className:cls},[lv]));card.appendChild(h);
+    card.appendChild(createTextArea("Definition",cl.definition,function(v){cl.definition=v;}));
+    card.appendChild(createTextArea("Examples",cl.examples,function(v){cl.examples=v;}));
+    card.appendChild(createSelect("Response time",responseTimes,cl.responseTime,function(v){cl.responseTime=v;}));
+    s.appendChild(card);})(severityLevels[i]);}
+    container.appendChild(s);
+  }
+
+  function renderStep2(container){
+    var s=el("div",{className:"section"});s.appendChild(el("h2",{},["Step 2: Response Workflow"]));
+    s.appendChild(createAlert("info","Define actions, responsible roles, and timelines for each phase of incident response."));
+    for(var i=0;i<workflowPhases.length;i++){(function(phase){var key=phase.toLowerCase().replace(/\s+/g,"_");var wf=state.workflow[key];
+    var card=el("div",{className:"section",style:"border:1px solid #1E2D3D;padding:12px 16px;border-radius:4px;margin-bottom:8px;"});
+    card.appendChild(el("h3",{},[phase]));
+    card.appendChild(createTextArea("Actions",wf.actions,function(v){wf.actions=v;}));
+    card.appendChild(createTextInput("Responsible role",wf.responsible,function(v){wf.responsible=v;}));
+    card.appendChild(createTextInput("Timeline",wf.timeline,function(v){wf.timeline=v;}));
+    s.appendChild(card);})(workflowPhases[i]);}
+    container.appendChild(s);
+  }
+
+  function renderStep3(container){
+    var s=el("div",{className:"section"});s.appendChild(el("h2",{},["Step 3: Regulatory Reporting"]));
+    s.appendChild(createAlert("warning","Regulatory reporting deadlines are strict. Ensure your incident team knows which authorities to notify and when."));
+    var configJur=(config.project&&config.project.jurisdictions)?config.project.jurisdictions:[];
+    for(var i=0;i<jurisdictions.length;i++){(function(j){
+    var shouldShow=configJur.length===0||configJur.some(function(cj){return cj.toUpperCase().indexOf(j.id.split("-")[0].toUpperCase())>=0||cj.toLowerCase().indexOf(j.label.toLowerCase().split(" ")[0])>=0;});
+    if(!shouldShow)return;
+    var rp=state.reporting[j.id];
+    var card=el("div",{className:"section",style:"border:1px solid #1E2D3D;padding:16px;border-radius:4px;margin-bottom:12px;"});
+    card.appendChild(el("h3",{},[j.label]));
+    card.appendChild(createToggle("Applicable?",rp.applicable,function(v){rp.applicable=v;wizard.saveNow();}));
+    card.appendChild(createTextInput("What must be reported",rp.what,function(v){rp.what=v;}));
+    card.appendChild(createTextInput("To whom",rp.whom,function(v){rp.whom=v;}));
+    card.appendChild(createTextInput("Deadline",rp.deadline,function(v){rp.deadline=v;}));
+    s.appendChild(card);})(jurisdictions[i]);}
+    container.appendChild(s);
+  }
+
+  function renderStep4(container){
+    var s=el("div",{className:"section"});s.appendChild(el("h2",{},["Step 4: Log Retention"]));
+    s.appendChild(createAlert("info","Different jurisdictions have different minimum log retention requirements."));
+    var retentionTable=el("table",{className:"result-table"});var rth=el("thead");var rhr=el("tr");rhr.appendChild(el("th",{},["Jurisdiction"]));rhr.appendChild(el("th",{},["Minimum Retention"]));rhr.appendChild(el("th",{},["What Must Be Retained"]));rth.appendChild(rhr);retentionTable.appendChild(rth);
+    var rtb=el("tbody");
+    var retData=[{j:"China",min:"6 months",what:"Content moderation logs, user interaction logs, algorithm audit trails"},{j:"EU (High-Risk)",min:"Lifecycle + 10 years",what:"Technical documentation, conformity records, quality management logs, incident reports"},{j:"General Best Practice",min:"3-5 years",what:"Incident reports, investigation records, remediation evidence, communication logs"}];
+    for(var i=0;i<retData.length;i++){var rd=retData[i];var rr=el("tr");rr.appendChild(el("td",{},[rd.j]));rr.appendChild(el("td",{},[rd.min]));rr.appendChild(el("td",{},[rd.what]));rtb.appendChild(rr);}
+    retentionTable.appendChild(rtb);s.appendChild(retentionTable);
+    s.appendChild(createTextInput("Log storage location",state.retention.logStorage,function(v){state.retention.logStorage=v;},"e.g., S3 bucket, on-premise SIEM"));
+    s.appendChild(createTextInput("Access control method",state.retention.accessControl,function(v){state.retention.accessControl=v;},"e.g., RBAC, encryption at rest"));
+    container.appendChild(s);
+  }
+
+  function renderStep5(container){
+    var s=el("div",{className:"section"});s.appendChild(el("h2",{},["Step 5: Communication Plan"]));
+    for(var i=0;i<audiences.length;i++){(function(aud){var key=aud.toLowerCase().replace(/\s+/g,"_");var cm=state.communication[key];
+    var card=el("div",{className:"section",style:"border:1px solid #1E2D3D;padding:12px 16px;border-radius:4px;margin-bottom:8px;"});
+    card.appendChild(el("h3",{},[aud]));
+    card.appendChild(createSelect("When to communicate",commWhens,cm.when,function(v){cm.when=v;}));
+    card.appendChild(createSelect("Method",commMethods,cm.method,function(v){cm.method=v;}));
+    card.appendChild(createTextArea("Content template",cm.template,function(v){cm.template=v;},"Key message points for this audience"));
+    card.appendChild(createTextInput("Responsible person",cm.responsible,function(v){cm.responsible=v;}));
+    s.appendChild(card);})(audiences[i]);}
+    container.appendChild(s);
+  }
+
+  function renderStep6(container){
+    var s=el("div",{className:"section"});s.appendChild(el("h2",{},["Step 6: Testing & Drills"]));
+    s.appendChild(createAlert("info","Regular testing ensures your incident management plan works when needed."));
+    for(var i=0;i<drillTypes.length;i++){(function(dt){var key=dt.toLowerCase().replace(/\s+/g,"_");var dr=state.drills[key];
+    var card=el("div",{className:"section",style:"border:1px solid #1E2D3D;padding:16px;border-radius:4px;margin-bottom:12px;"});
+    card.appendChild(el("h3",{},[dt]));
+    card.appendChild(createSelect("Frequency",drillFrequencies,dr.frequency,function(v){dr.frequency=v;}));
+    var d1=el("div",{className:"field-row"});d1.appendChild(el("label",{className:"field-label"},["Last conducted"]));var di1=el("input",{type:"date",className:"field-input",value:dr.lastConducted||""});di1.addEventListener("change",function(){dr.lastConducted=di1.value;});d1.appendChild(di1);card.appendChild(d1);
+    var d2=el("div",{className:"field-row"});d2.appendChild(el("label",{className:"field-label"},["Next scheduled"]));var di2=el("input",{type:"date",className:"field-input",value:dr.nextScheduled||""});di2.addEventListener("change",function(){dr.nextScheduled=di2.value;});d2.appendChild(di2);card.appendChild(d2);
+    card.appendChild(createTextArea("Findings",dr.findings,function(v){dr.findings=v;}));
+    s.appendChild(card);})(drillTypes[i]);}
+    container.appendChild(s);
+  }
+
+  function renderStep7(container){
+    var s=el("div",{className:"section"});s.appendChild(el("h2",{},["Step 7: Summary"]));
+    var classComplete=0;for(var i=0;i<severityLevels.length;i++){var key=severityLevels[i].toLowerCase();var cl=state.classification[key];if(cl.definition&&cl.responseTime)classComplete++;}
+    s.appendChild(createAlert(classComplete===4?"success":"warning","Classification completeness: "+classComplete+"/4 severity levels defined"));
+    var wfComplete=0;for(var i=0;i<workflowPhases.length;i++){var key=workflowPhases[i].toLowerCase().replace(/\s+/g,"_");if(state.workflow[key].actions&&state.workflow[key].responsible)wfComplete++;}
+    s.appendChild(createAlert(wfComplete===workflowPhases.length?"success":"warning","Workflow coverage: "+wfComplete+"/"+workflowPhases.length+" phases documented"));
+    var repMapped=0;for(var i=0;i<jurisdictions.length;i++){if(state.reporting[jurisdictions[i].id].applicable!==null)repMapped++;}
+    s.appendChild(createAlert("info","Regulatory reporting: "+repMapped+"/"+jurisdictions.length+" jurisdictions mapped"));
+    s.appendChild(createAlert(state.retention.logStorage?"success":"warning","Log retention: "+(state.retention.logStorage?"Storage location defined":"Storage location not set")));
+    var commComplete=0;for(var i=0;i<audiences.length;i++){var key=audiences[i].toLowerCase().replace(/\s+/g,"_");if(state.communication[key].when&&state.communication[key].method)commComplete++;}
+    s.appendChild(createAlert(commComplete===audiences.length?"success":"warning","Communication plan: "+commComplete+"/"+audiences.length+" audiences covered"));
+    var drillsScheduled=0;for(var i=0;i<drillTypes.length;i++){var key=drillTypes[i].toLowerCase().replace(/\s+/g,"_");if(state.drills[key].frequency)drillsScheduled++;}
+    s.appendChild(createAlert(drillsScheduled===drillTypes.length?"success":"warning","Drill schedule: "+drillsScheduled+"/"+drillTypes.length+" drill types scheduled"));
+    s.appendChild(el("h3",{},["Evidence Checklist"]));
+    for(var i=0;i<evidenceItems.length;i++){(function(idx,item){var checked=state.evidenceChecklist[idx]||false;var cb=el("input",{type:"checkbox"});cb.checked=checked;cb.addEventListener("change",function(){state.evidenceChecklist[idx]=cb.checked;});var row=el("div",{className:"checklist-item"});row.appendChild(cb);row.appendChild(el("label",{},[item]));s.appendChild(row);})(i,evidenceItems[i]);}
+    var ec=Object.values(state.evidenceChecklist).filter(Boolean).length;
+    s.appendChild(createAlert(ec===evidenceItems.length?"success":ec>evidenceItems.length/2?"warning":"danger","Evidence checklist: "+ec+"/"+evidenceItems.length+" items completed"));
+    container.appendChild(s);
+  }
+
+  function loadState(){var sv=(config.interactiveToolResults&&config.interactiveToolResults.incidentManagement)?config.interactiveToolResults.incidentManagement:null;if(sv){if(sv.classification)state.classification=sv.classification;if(sv.workflow)state.workflow=sv.workflow;if(sv.reporting)state.reporting=sv.reporting;if(sv.retention)state.retention=sv.retention;if(sv.communication)state.communication=sv.communication;if(sv.drills)state.drills=sv.drills;if(sv.evidenceChecklist)state.evidenceChecklist=sv.evidenceChecklist;}initDefaults();}
+  function buildResults(){return{completedDate:new Date().toISOString().split("T")[0],classification:state.classification,workflow:state.workflow,reporting:state.reporting,retention:state.retention,communication:state.communication,drills:state.drills,evidenceChecklist:state.evidenceChecklist};}
+  function doSave(){config.interactiveToolResults=config.interactiveToolResults||{};config.interactiveToolResults.incidentManagement=buildResults();saveConfigToFile(config);}
+  function doExport(){
+    var r=buildResults();var l=[];l.push("# Incident Management Plan Report (Template 13)");l.push("");l.push("**Date:** "+r.completedDate);l.push("");
+    l.push("## Incident Classification");l.push("");l.push("| Severity | Response Time | Definition |");l.push("|----------|---------------|------------|");
+    for(var i=0;i<severityLevels.length;i++){var key=severityLevels[i].toLowerCase();var cl=r.classification[key]||{};l.push("| "+severityLevels[i]+" | "+(cl.responseTime||"-")+" | "+(cl.definition||"-")+" |");}l.push("");
+    l.push("## Response Workflow");l.push("");
+    for(var i=0;i<workflowPhases.length;i++){var key=workflowPhases[i].toLowerCase().replace(/\s+/g,"_");var wf=r.workflow[key]||{};l.push("### "+workflowPhases[i]);l.push("- **Responsible:** "+(wf.responsible||"N/A"));l.push("- **Timeline:** "+(wf.timeline||"N/A"));l.push("- **Actions:** "+(wf.actions||"N/A"));l.push("");}
+    l.push("## Regulatory Reporting");l.push("");l.push("| Jurisdiction | Applicable | Deadline | Authority |");l.push("|-------------|------------|----------|-----------|");
+    for(var i=0;i<jurisdictions.length;i++){var j=jurisdictions[i];var rp=r.reporting[j.id]||{};l.push("| "+j.label+" | "+(rp.applicable===true?"Yes":rp.applicable===false?"No":"-")+" | "+(rp.deadline||"-")+" | "+(rp.whom||"-")+" |");}l.push("");
+    l.push("## Log Retention");l.push("- **Storage:** "+(r.retention.logStorage||"N/A"));l.push("- **Access control:** "+(r.retention.accessControl||"N/A"));l.push("");
+    l.push("## Communication Plan");l.push("");l.push("| Audience | When | Method | Responsible |");l.push("|----------|------|--------|-------------|");
+    for(var i=0;i<audiences.length;i++){var key=audiences[i].toLowerCase().replace(/\s+/g,"_");var cm=r.communication[key]||{};l.push("| "+audiences[i]+" | "+(cm.when||"-")+" | "+(cm.method||"-")+" | "+(cm.responsible||"-")+" |");}l.push("");
+    l.push("## Testing & Drills");l.push("");l.push("| Drill Type | Frequency | Last | Next |");l.push("|------------|-----------|------|------|");
+    for(var i=0;i<drillTypes.length;i++){var key=drillTypes[i].toLowerCase().replace(/\s+/g,"_");var dr=r.drills[key]||{};l.push("| "+drillTypes[i]+" | "+(dr.frequency||"-")+" | "+(dr.lastConducted||"-")+" | "+(dr.nextScheduled||"-")+" |");}l.push("");
+    l.push("## Evidence Checklist");for(var i=0;i<evidenceItems.length;i++){l.push("- ["+(r.evidenceChecklist[i]?"x":" ")+"] "+evidenceItems[i]);}
+    l.push("");l.push("---");l.push("*Generated by Incident Management Plan Tool. This is research, not legal advice.*");
+    exportMarkdown("incident-management-report.md",l.join("\n"));
+  }
+  wizard.render();
+})();
+</script>
+</body>
+</html>

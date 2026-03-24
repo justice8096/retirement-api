@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Training Data Disclosure (Template 05)</title>
+<script src="./shared.js"></script>
+</head>
+<body>
+<script>
+(function() {
+  injectCSS();
+  var config = {};
+  var stepLabels = ["Data Inventory","Characteristics","Copyright Audit","Quality","GPAI Summary","Jurisdiction","Summary"];
+  var acquisitionMethods = [{value:"",label:"-- Select --"},{value:"scraped",label:"Scraped"},{value:"licensed",label:"Licensed"},{value:"open",label:"Open"},{value:"proprietary",label:"Proprietary"},{value:"user-contributed",label:"User-contributed"}];
+  var dataPhases = [{value:"",label:"-- Select --"},{value:"pre-training",label:"Pre-training"},{value:"fine-tuning",label:"Fine-tuning"},{value:"evaluation",label:"Evaluation"}];
+  var copyrightStatuses = [{value:"",label:"-- Select --"},{value:"public-domain",label:"Public domain"},{value:"creative-commons",label:"Creative Commons"},{value:"licensed",label:"Licensed"},{value:"unknown",label:"Unknown"},{value:"copyrighted",label:"Copyrighted"}];
+  var licenseTypes = [{value:"",label:"-- Select --"},{value:"cc-by",label:"CC-BY"},{value:"cc-by-sa",label:"CC-BY-SA"},{value:"mit",label:"MIT"},{value:"proprietary",label:"Proprietary"},{value:"fair-use",label:"Fair use claim"}];
+  var qualityRatings = [{value:"",label:"-- Select --"},{value:"high",label:"High"},{value:"medium",label:"Medium"},{value:"low",label:"Low"},{value:"not-assessed",label:"Not assessed"}];
+  var publicationStatuses = [{value:"",label:"-- Select --"},{value:"published",label:"Published"},{value:"draft",label:"Draft"},{value:"pending",label:"Pending Commission template"}];
+  var qualityDimensions = ["Completeness","Accuracy","Representativeness","Timeliness","Deduplication","Toxicity filtering","PII scrubbing","Bias assessment"];
+  var evidenceItems = ["Complete inventory of all training data sources","Copyright and licensing documentation for each source","TDM opt-out compliance records","Data quality assessment methodology documentation","GPAI public summary (if applicable)","Personal data impact assessment (if applicable)","China data security assessment (if applicable)","California AB 2013 disclosure publication","Australia copyright license evidence"];
+  var state = {dataSources:[],characteristics:{totalVolume:"",languages:"",geographicCoverage:"",temporalRange:"",modalities:{text:null,image:null,audio:null,video:null,code:null,structured:null},domains:{web:null,books:null,academic:null,socialMedia:null,enterprise:null,government:null},personalData:null,sensitiveCategories:{health:null,financial:null,biometric:null,childrens:null,criminalRecords:null}},copyrightAudit:[],optOut:{euReservation:null,robotsTxt:null,takedownCount:"",australiaLicenses:null},quality:{},gpaiSummary:{generalDescription:"",dataSourcesCategories:"",curationMethods:"",sizeScope:"",knownLimitations:"",linkToFullDocs:"",publicationStatus:""},jurisdiction:{china:{lawfulCollection:null,securityAssessment:null,personalInfoProtection:null,crossBorderCompliance:null,dataClassification:null},california:{trainingDataSources:"",disclosureUrl:"",updateFrequency:""}},evidenceChecklist:{}};
+
+  function emptySource(){return{name:"",description:"",size:"",dateRange:"",acquisition:"",license:"",phase:""};}
+  function emptyCopyrightEntry(){return{copyrightStatus:"",licenseType:"",tdmOptOut:null,rightsHolderContacted:null,evidenceRef:""};}
+  function mergeDeep(t,s){var r=JSON.parse(JSON.stringify(t));var k=Object.keys(s);for(var i=0;i<k.length;i++){if(s[k[i]]!==null&&typeof s[k[i]]==="object"&&!Array.isArray(s[k[i]])&&r[k[i]]&&typeof r[k[i]]==="object"){r[k[i]]=mergeDeep(r[k[i]],s[k[i]]);}else{r[k[i]]=s[k[i]];}}return r;}
+
+  var wizard = createWizard({
+    title: 'Training Data Disclosure',
+    subtitle: 'Template 05 \u2014 EU AI Act Art. 53 (GPAI); California AB 2013; China Data Security Specs; EU Art. 10; Australia Copyright',
+    totalSteps: 7,
+    stepLabels: stepLabels,
+    renderStep: function(step, container) {
+      if (step === 0) renderStep1(container);
+      else if (step === 1) renderStep2(container);
+      else if (step === 2) renderStep3(container);
+      else if (step === 3) renderStep4(container);
+      else if (step === 4) renderStep5(container);
+      else if (step === 5) renderStep6(container);
+      else if (step === 6) renderStep7(container);
+    },
+    onLoad: function() {
+      loadConfigFromFile(function(c) { config = c; loadState(); wizard.refreshStep(); });
+    },
+    onSave: doSave,
+    onExport: doExport,
+    stateKey: 'trainingDataDisclosure',
+    getState: function() { return state; },
+    setState: function(s) {
+      if (s.dataSources) state.dataSources = s.dataSources;
+      if (s.characteristics) state.characteristics = mergeDeep(state.characteristics, s.characteristics);
+      if (s.copyrightAudit) state.copyrightAudit = s.copyrightAudit;
+      if (s.optOut) state.optOut = mergeDeep(state.optOut, s.optOut);
+      if (s.quality) { for (var k in s.quality) { state.quality[k] = s.quality[k]; } }
+      if (s.gpaiSummary) state.gpaiSummary = mergeDeep(state.gpaiSummary, s.gpaiSummary);
+      if (s.jurisdiction) state.jurisdiction = mergeDeep(state.jurisdiction, s.jurisdiction);
+      if (s.evidenceChecklist) { for (var k in s.evidenceChecklist) { state.evidenceChecklist[k] = s.evidenceChecklist[k]; } }
+    }
+  });
+
+  function renderStep1(container){
+    var s=el("div",{className:"section"});s.appendChild(el("h2",{},["Step 1: Training Data Inventory"]));
+    s.appendChild(createAlert("info","Add all data sources used for training, fine-tuning, and evaluation of your AI system."));
+    for(var i=0;i<state.dataSources.length;i++){(function(idx){var src=state.dataSources[idx];var card=el("div",{className:"section",style:"border:1px solid #1E2D3D;padding:16px;border-radius:4px;margin-bottom:12px;"});var hdr=el("div",{style:"display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;"});hdr.appendChild(el("h3",{},["Data Source "+(idx+1)]));hdr.appendChild(el("button",{className:"btn",textContent:"Remove",onClick:function(){state.dataSources.splice(idx,1);state.copyrightAudit.splice(idx,1);wizard.refreshStep();}}));card.appendChild(hdr);
+    card.appendChild(createTextInput("Dataset/source name",src.name,function(v){src.name=v;}));
+    card.appendChild(createTextArea("Description",src.description,function(v){src.description=v;}));
+    card.appendChild(createTextInput("Size",src.size,function(v){src.size=v;},"e.g., 100GB, 1M records"));
+    card.appendChild(createTextInput("Date range",src.dateRange,function(v){src.dateRange=v;},"e.g., 2020-01 to 2024-12"));
+    card.appendChild(createSelect("Acquisition method",acquisitionMethods,src.acquisition,function(v){src.acquisition=v;}));
+    card.appendChild(createTextInput("License/terms",src.license,function(v){src.license=v;}));
+    card.appendChild(createSelect("Data phase",dataPhases,src.phase,function(v){src.phase=v;}));
+    s.appendChild(card);})(i);}
+    s.appendChild(el("button",{className:"btn success",textContent:"+ Add Data Source",onClick:function(){state.dataSources.push(emptySource());state.copyrightAudit.push(emptyCopyrightEntry());wizard.refreshStep();}}));
+    container.appendChild(s);
+  }
+
+  function renderStep2(container){
+    var s=el("div",{className:"section"});s.appendChild(el("h2",{},["Step 2: Data Characteristics"]));var ch=state.characteristics;
+    s.appendChild(createTextInput("Total volume",ch.totalVolume,function(v){ch.totalVolume=v;},"e.g., 500TB"));
+    s.appendChild(createTextInput("Languages",ch.languages,function(v){ch.languages=v;},"e.g., English, French, Mandarin"));
+    s.appendChild(createTextInput("Geographic coverage",ch.geographicCoverage,function(v){ch.geographicCoverage=v;}));
+    s.appendChild(createTextInput("Temporal range",ch.temporalRange,function(v){ch.temporalRange=v;}));
+    s.appendChild(el("h3",{},["Data Modalities"]));
+    var mk=["text","image","audio","video","code","structured"],ml=["Text","Image","Audio","Video","Code","Structured"];
+    for(var i=0;i<mk.length;i++){(function(k,l){s.appendChild(createToggle(l,ch.modalities[k],function(v){ch.modalities[k]=v;wizard.saveNow();}));})(mk[i],ml[i]);}
+    s.appendChild(el("h3",{},["Data Domains"]));
+    var dk=["web","books","academic","socialMedia","enterprise","government"],dl=["Web","Books","Academic","Social media","Enterprise","Government"];
+    for(var i=0;i<dk.length;i++){(function(k,l){s.appendChild(createToggle(l,ch.domains[k],function(v){ch.domains[k]=v;wizard.saveNow();}));})(dk[i],dl[i]);}
+    s.appendChild(el("h3",{},["Personal & Sensitive Data"]));
+    s.appendChild(createToggle("Personal data included?",ch.personalData,function(v){ch.personalData=v;wizard.refreshStep();}));
+    if(ch.personalData===true)s.appendChild(createAlert("warning","Personal data detected. Complete PIA assessment (Template 07) to document personal data processing and safeguards."));
+    s.appendChild(el("h3",{},["Sensitive Categories Present"]));
+    var sk=["health","financial","biometric","childrens","criminalRecords"],sl=["Health","Financial","Biometric","Children\u2019s","Criminal records"];
+    for(var i=0;i<sk.length;i++){(function(k,l){s.appendChild(createToggle(l,ch.sensitiveCategories[k],function(v){ch.sensitiveCategories[k]=v;wizard.saveNow();}));})(sk[i],sl[i]);}
+    container.appendChild(s);
+  }
+
+  function renderStep3(container){
+    var s=el("div",{className:"section"});s.appendChild(el("h2",{},["Step 3: Copyright & Licensing Audit"]));
+    if(state.dataSources.length===0)s.appendChild(createAlert("warning","No data sources defined. Go back to Step 1 to add data sources first."));
+    for(var i=0;i<state.dataSources.length;i++){(function(idx){var src=state.dataSources[idx];if(!state.copyrightAudit[idx])state.copyrightAudit[idx]=emptyCopyrightEntry();var ca=state.copyrightAudit[idx];
+    var card=el("div",{className:"section",style:"border:1px solid #1E2D3D;padding:16px;border-radius:4px;margin-bottom:12px;"});
+    card.appendChild(el("h3",{},[(src.name||("Data Source "+(idx+1)))]));
+    card.appendChild(createSelect("Copyright status",copyrightStatuses,ca.copyrightStatus,function(v){ca.copyrightStatus=v;}));
+    card.appendChild(createSelect("License type",licenseTypes,ca.licenseType,function(v){ca.licenseType=v;}));
+    card.appendChild(createToggle("TDM opt-out respected?",ca.tdmOptOut,function(v){ca.tdmOptOut=v;wizard.saveNow();}));
+    card.appendChild(createToggle("Rights holder contacted?",ca.rightsHolderContacted,function(v){ca.rightsHolderContacted=v;wizard.saveNow();}));
+    card.appendChild(createTextInput("Evidence reference",ca.evidenceRef,function(v){ca.evidenceRef=v;},"Document or ticket reference"));
+    s.appendChild(card);})(i);}
+    s.appendChild(el("h3",{},["Opt-Out Compliance"]));
+    s.appendChild(createToggle("EU Art. 53 reservation check completed?",state.optOut.euReservation,function(v){state.optOut.euReservation=v;wizard.saveNow();}));
+    s.appendChild(createToggle("robots.txt directives respected?",state.optOut.robotsTxt,function(v){state.optOut.robotsTxt=v;wizard.saveNow();}));
+    s.appendChild(createTextInput("Takedown requests received (count)",state.optOut.takedownCount,function(v){state.optOut.takedownCount=v;},"0"));
+    s.appendChild(createToggle("Australia: explicit copyright licenses obtained?",state.optOut.australiaLicenses,function(v){state.optOut.australiaLicenses=v;wizard.saveNow();}));
+    container.appendChild(s);
+  }
+
+  function renderStep4(container){
+    var s=el("div",{className:"section"});s.appendChild(el("h2",{},["Step 4: Data Quality Assessment"]));
+    s.appendChild(createAlert("info","Assess each quality dimension as required by EU AI Act Art. 10 for training data governance."));
+    for(var i=0;i<qualityDimensions.length;i++){(function(dim){var key=dim.toLowerCase().replace(/\s+/g,"_");if(!state.quality[key])state.quality[key]={rating:"",method:""};var q=state.quality[key];
+    var card=el("div",{className:"section",style:"border:1px solid #1E2D3D;padding:12px 16px;border-radius:4px;margin-bottom:8px;"});
+    card.appendChild(el("h3",{},[dim]));card.appendChild(createSelect("Rating",qualityRatings,q.rating,function(v){q.rating=v;}));card.appendChild(createTextInput("Method used",q.method,function(v){q.method=v;},"Describe assessment method"));s.appendChild(card);})(qualityDimensions[i]);}
+    container.appendChild(s);
+  }
+
+  function renderStep5(container){
+    var s=el("div",{className:"section"});s.appendChild(el("h2",{},["Step 5: EU GPAI Public Summary"]));
+    s.appendChild(createAlert("info","EU AI Act Art. 53 requires GPAI providers to publish a sufficiently detailed summary of training data content."));
+    var g=state.gpaiSummary;
+    s.appendChild(createTextArea("General description of training data",g.generalDescription,function(v){g.generalDescription=v;}));
+    s.appendChild(createTextArea("Data sources categories",g.dataSourcesCategories,function(v){g.dataSourcesCategories=v;},"e.g., web crawl, licensed datasets, public domain texts"));
+    s.appendChild(createTextArea("Curation methods",g.curationMethods,function(v){g.curationMethods=v;},"Filtering, cleaning, deduplication methods"));
+    s.appendChild(createTextArea("Size and scope",g.sizeScope,function(v){g.sizeScope=v;}));
+    s.appendChild(createTextArea("Known limitations",g.knownLimitations,function(v){g.knownLimitations=v;}));
+    s.appendChild(createTextInput("Link to full documentation",g.linkToFullDocs,function(v){g.linkToFullDocs=v;},"URL"));
+    s.appendChild(createSelect("Publication status",publicationStatuses,g.publicationStatus,function(v){g.publicationStatus=v;}));
+    container.appendChild(s);
+  }
+
+  function renderStep6(container){
+    var s=el("div",{className:"section"});s.appendChild(el("h2",{},["Step 6: Jurisdiction-Specific Requirements"]));
+    var jur=(config.project&&config.project.jurisdictions)?config.project.jurisdictions:[];
+    var showCN=jur.length===0||jur.some(function(j){return j.toUpperCase().indexOf("CN")>=0||j.toLowerCase().indexOf("china")>=0;});
+    var showCA=jur.length===0||jur.some(function(j){return j.toUpperCase().indexOf("US")>=0||j.toLowerCase().indexOf("california")>=0;});
+    if(showCN){s.appendChild(el("h3",{},["China Data Security Requirements"]));var cn=state.jurisdiction.china;
+    s.appendChild(createToggle("Lawful collection verification completed?",cn.lawfulCollection,function(v){cn.lawfulCollection=v;wizard.saveNow();}));
+    s.appendChild(createToggle("Security assessment completed?",cn.securityAssessment,function(v){cn.securityAssessment=v;wizard.saveNow();}));
+    s.appendChild(createToggle("Personal information protection measures in place?",cn.personalInfoProtection,function(v){cn.personalInfoProtection=v;wizard.saveNow();}));
+    s.appendChild(createToggle("Cross-border data transfer compliance verified?",cn.crossBorderCompliance,function(v){cn.crossBorderCompliance=v;wizard.saveNow();}));
+    s.appendChild(createToggle("Data classification and grading completed?",cn.dataClassification,function(v){cn.dataClassification=v;wizard.saveNow();}));}
+    if(showCA){s.appendChild(el("h3",{},["California AB 2013"]));var ca=state.jurisdiction.california;
+    s.appendChild(createTextArea("Training data sources description",ca.trainingDataSources,function(v){ca.trainingDataSources=v;},"High-level summary of training data"));
+    s.appendChild(createTextInput("Disclosure URL",ca.disclosureUrl,function(v){ca.disclosureUrl=v;},"Public URL where disclosure is posted"));
+    s.appendChild(createTextInput("Update frequency",ca.updateFrequency,function(v){ca.updateFrequency=v;},"e.g., Annually, Per major release"));}
+    s.appendChild(el("h3",{},["Evidence Checklist"]));
+    for(var i=0;i<evidenceItems.length;i++){(function(idx,item){var checked=state.evidenceChecklist[idx]||false;var cb=el("input",{type:"checkbox"});cb.checked=checked;cb.addEventListener("change",function(){state.evidenceChecklist[idx]=cb.checked;});var row=el("div",{className:"checklist-item"});row.appendChild(cb);row.appendChild(el("label",{},[item]));s.appendChild(row);})(i,evidenceItems[i]);}
+    container.appendChild(s);
+  }
+
+  function renderStep7(container){
+    var s=el("div",{className:"section"});s.appendChild(el("h2",{},["Step 7: Summary"]));
+    s.appendChild(createAlert("info","Data sources documented: "+state.dataSources.length));
+    var cc={};for(var i=0;i<state.copyrightAudit.length;i++){var st=state.copyrightAudit[i].copyrightStatus||"Not set";cc[st]=(cc[st]||0)+1;}
+    if(state.copyrightAudit.length>0){s.appendChild(el("h3",{},["Copyright Status Breakdown"]));var t=el("table",{className:"result-table"});var th=el("thead");var hr=el("tr");hr.appendChild(el("th",{},["Status"]));hr.appendChild(el("th",{},["Count"]));th.appendChild(hr);t.appendChild(th);var tb=el("tbody");var ks=Object.keys(cc);for(var i=0;i<ks.length;i++){var r=el("tr");r.appendChild(el("td",{},[ks[i]]));r.appendChild(el("td",{},[String(cc[ks[i]])]));tb.appendChild(r);}t.appendChild(tb);s.appendChild(t);}
+    var qt=el("table",{className:"result-table"});var qh=el("thead");var qr=el("tr");qr.appendChild(el("th",{},["Dimension"]));qr.appendChild(el("th",{},["Rating"]));qh.appendChild(qr);qt.appendChild(qh);var qb=el("tbody");var asd=0;
+    for(var i=0;i<qualityDimensions.length;i++){var key=qualityDimensions[i].toLowerCase().replace(/\s+/g,"_");var q=state.quality[key]||{};var rat=q.rating||"Not assessed";if(q.rating&&q.rating!=="not-assessed")asd++;var qw=el("tr");qw.appendChild(el("td",{},[qualityDimensions[i]]));var cls=rat==="high"?"score-low":rat==="medium"?"score-med":rat==="low"?"score-high":"";var rc=el("td");rc.appendChild(el("span",{className:cls},[rat]));qw.appendChild(rc);qb.appendChild(qw);}
+    qt.appendChild(qb);s.appendChild(el("h3",{},["Quality Assessment ("+asd+"/"+qualityDimensions.length+" assessed)"]));s.appendChild(qt);
+    var gs=state.gpaiSummary.publicationStatus||"Not set";s.appendChild(createAlert(gs==="published"?"success":gs==="draft"?"warning":"info","GPAI Public Summary status: "+gs));
+    var cnc=Object.values(state.jurisdiction.china).filter(function(v){return v===true;}).length;s.appendChild(createAlert("info","China data security requirements: "+cnc+"/5 completed"));
+    var cac=(state.jurisdiction.california.trainingDataSources?1:0)+(state.jurisdiction.california.disclosureUrl?1:0)+(state.jurisdiction.california.updateFrequency?1:0);s.appendChild(createAlert("info","California AB 2013 fields: "+cac+"/3 completed"));
+    var ec=Object.values(state.evidenceChecklist).filter(Boolean).length;s.appendChild(createAlert(ec===evidenceItems.length?"success":ec>evidenceItems.length/2?"warning":"danger","Evidence checklist: "+ec+"/"+evidenceItems.length+" items completed"));
+    container.appendChild(s);
+  }
+
+  function loadState(){var sv=(config.interactiveToolResults&&config.interactiveToolResults.trainingDataDisclosure)?config.interactiveToolResults.trainingDataDisclosure:null;if(sv){if(sv.dataSources)state.dataSources=sv.dataSources;if(sv.characteristics)state.characteristics=mergeDeep(state.characteristics,sv.characteristics);if(sv.copyrightAudit)state.copyrightAudit=sv.copyrightAudit;if(sv.optOut)state.optOut=mergeDeep(state.optOut,sv.optOut);if(sv.quality)state.quality=sv.quality;if(sv.gpaiSummary)state.gpaiSummary=mergeDeep(state.gpaiSummary,sv.gpaiSummary);if(sv.jurisdiction)state.jurisdiction=mergeDeep(state.jurisdiction,sv.jurisdiction);if(sv.evidenceChecklist)state.evidenceChecklist=sv.evidenceChecklist;}}
+  function buildResults(){return{completedDate:new Date().toISOString().split("T")[0],dataSources:state.dataSources,characteristics:state.characteristics,copyrightAudit:state.copyrightAudit,optOut:state.optOut,quality:state.quality,gpaiSummary:state.gpaiSummary,jurisdiction:state.jurisdiction,evidenceChecklist:state.evidenceChecklist};}
+  function doSave(){config.interactiveToolResults=config.interactiveToolResults||{};config.interactiveToolResults.trainingDataDisclosure=buildResults();saveConfigToFile(config);}
+  function doExport(){
+    var r=buildResults();var l=[];l.push("# Training Data Disclosure Report (Template 05)");l.push("");l.push("**Date:** "+r.completedDate);l.push("");l.push("## Training Data Inventory");l.push("");
+    for(var i=0;i<r.dataSources.length;i++){var d=r.dataSources[i];l.push("### Source "+(i+1)+": "+(d.name||"Unnamed"));l.push("- **Description:** "+(d.description||"N/A"));l.push("- **Size:** "+(d.size||"N/A"));l.push("- **Date range:** "+(d.dateRange||"N/A"));l.push("- **Acquisition:** "+(d.acquisition||"N/A"));l.push("- **License:** "+(d.license||"N/A"));l.push("- **Phase:** "+(d.phase||"N/A"));l.push("");}
+    l.push("## Data Characteristics");l.push("- **Volume:** "+(r.characteristics.totalVolume||"N/A"));l.push("- **Languages:** "+(r.characteristics.languages||"N/A"));l.push("- **Coverage:** "+(r.characteristics.geographicCoverage||"N/A"));l.push("- **Temporal:** "+(r.characteristics.temporalRange||"N/A"));l.push("");
+    l.push("**Modalities:** "+Object.keys(r.characteristics.modalities).filter(function(k){return r.characteristics.modalities[k]===true;}).join(", "));
+    l.push("**Domains:** "+Object.keys(r.characteristics.domains).filter(function(k){return r.characteristics.domains[k]===true;}).join(", "));l.push("");
+    l.push("## Copyright Audit");l.push("");l.push("| Source | Copyright | License | TDM | Rights Holder |");l.push("|--------|-----------|---------|-----|---------------|");
+    for(var i=0;i<r.copyrightAudit.length;i++){var ca=r.copyrightAudit[i];var nm=r.dataSources[i]?(r.dataSources[i].name||"Source "+(i+1)):"Source "+(i+1);l.push("| "+nm+" | "+(ca.copyrightStatus||"-")+" | "+(ca.licenseType||"-")+" | "+(ca.tdmOptOut===true?"Yes":ca.tdmOptOut===false?"No":"-")+" | "+(ca.rightsHolderContacted===true?"Yes":ca.rightsHolderContacted===false?"No":"-")+" |");}
+    l.push("");l.push("## Data Quality");l.push("");l.push("| Dimension | Rating | Method |");l.push("|-----------|--------|--------|");
+    for(var i=0;i<qualityDimensions.length;i++){var key=qualityDimensions[i].toLowerCase().replace(/\s+/g,"_");var q=r.quality[key]||{};l.push("| "+qualityDimensions[i]+" | "+(q.rating||"N/A")+" | "+(q.method||"-")+" |");}
+    l.push("");l.push("## Evidence Checklist");for(var i=0;i<evidenceItems.length;i++){l.push("- ["+(r.evidenceChecklist[i]?"x":" ")+"] "+evidenceItems[i]);}
+    l.push("");l.push("---");l.push("*Generated by Training Data Disclosure Tool. This is research, not legal advice.*");
+    exportMarkdown("training-data-disclosure-report.md",l.join("\n"));
+  }
+  wizard.render();
+})();
+</script>
+</body>
+</html>

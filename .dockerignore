@@ -1,0 +1,13 @@
+node_modules
+dist
+.git
+.github
+.env
+.env.*
+!.env.example
+*.md
+!CLAUDE.md
+data/retirement.db
+data/retirement.db-shm
+data/retirement.db-wal
+.claude

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Moderation Evidence (Template 16)</title>
+<script src="./shared.js"></script>
+</head>
+<body>
+<script>
+(function() {
+  injectCSS();
+
+  var config = {};
+
+  var stepLabels = ['System Info', 'Content Policy', 'Moderation Mechanisms', 'China GenAI Compliance', 'EU DSA Compliance', 'Review & Export'];
+
+  var prohibitedCategories = [
+    { id: 'violence', label: 'Violence & graphic content' },
+    { id: 'csam', label: 'Child sexual abuse material (CSAM)' },
+    { id: 'hate', label: 'Hate speech & discrimination' },
+    { id: 'terrorism', label: 'Terrorism & extremism' },
+    { id: 'selfHarm', label: 'Self-harm & suicide promotion' },
+    { id: 'harassment', label: 'Harassment & bullying' },
+    { id: 'sexualExplicit', label: 'Sexually explicit content' },
+    { id: 'misinformation', label: 'Misinformation & disinformation' },
+    { id: 'illegalActivity', label: 'Illegal activity promotion' },
+    { id: 'pii', label: 'Personal data / PII exposure' },
+    { id: 'copyrightViolation', label: 'Copyright-infringing content' },
+    { id: 'politicalManipulation', label: 'Political manipulation / deepfakes' }
+  ];
+
+  var moderationMechanisms = [
+    { id: 'inputFilter', label: 'Pre-generation input filter' },
+    { id: 'promptInjectionDetection', label: 'Prompt injection detection' },
+    { id: 'outputFilter', label: 'Post-generation output filter' },
+    { id: 'toxicityClassifier', label: 'Toxicity classifier' },
+    { id: 'nsfwDetector', label: 'NSFW image/video detector' },
+    { id: 'factCheckIntegration', label: 'Fact-checking integration' },
+    { id: 'watermarking', label: 'AI content watermarking' },
+    { id: 'humanReviewQueue', label: 'Human review queue' },
+    { id: 'userReporting', label: 'User reporting mechanism' },
+    { id: 'appealProcess', label: 'Appeal / re-review process' },
+    { id: 'auditLogging', label: 'Moderation audit logging' },
+    { id: 'rateLimit', label: 'Rate limiting / abuse prevention' }
+  ];
+
+  var chinaRequirements = [
+    { id: 'contentSafetyReview', label: 'Content safety review mechanism (Art. 8)' },
+    { id: 'illegalContentBlocking', label: 'Illegal content blocking per PRC law' },
+    { id: 'socialismCoreValues', label: 'Adherence to socialism core values filter' },
+    { id: 'realNameVerification', label: 'Real-name user verification' },
+    { id: 'algorithmFiling', label: 'Algorithm filing with CAC' },
+    { id: 'securityAssessment', label: 'Security assessment completed' },
+    { id: 'trainingDataCompliance', label: 'Training data legality review' },
+    { id: 'labelingGenContent', label: 'Generated content labeling' },
+    { id: 'incidentReporting', label: 'Incident reporting to authorities' }
+  ];
+
+  var state = {
+    systemInfo: { systemName: '', version: '', contentTypes: '', targetMarkets: '' },
+    contentPolicy: {
+      policyVersion: '',
+      policyLastUpdated: '',
+      policyUrl: '',
+      categories: {},
+      escalationProcess: '',
+      updateFrequency: ''
+    },
+    mechanisms: {},
+    china: {
+      applicable: null,
+      requirements: {},
+      cacFilingNumber: '',
+      securityAssessmentDate: '',
+      notes: ''
+    },
+    dsa: {
+      applicable: null,
+      vlop: null,
+      transparencyReporting: null,
+      reportingFrequency: '',
+      trustedFlaggers: null,
+      trustedFlaggerProcess: '',
+      systemic: {
+        riskIdentified: null,
+        riskDescription: '',
+        mitigations: '',
+        auditDate: '',
+        auditResult: ''
+      },
+      complaintMechanism: null,
+      complaintDescription: '',
+      outOfCourtResolution: null,
+      notes: ''
+    }
+  };
+
+  function initState() {
+    for (var i = 0; i < prohibitedCategories.length; i++) {
+      var c = prohibitedCategories[i];
+      if (!state.contentPolicy.categories[c.id]) state.contentPolicy.categories[c.id] = { prohibited: null, threshold: '', action: '' };
+    }
+    for (var i = 0; i < moderationMechanisms.length; i++) {
+      var m = moderationMechanisms[i];
+      if (!state.mechanisms[m.id]) state.mechanisms[m.id] = { implemented: null, provider: '', accuracy: '', notes: '' };
+    }
+    for (var i = 0; i < chinaRequirements.length; i++) {
+      var r = chinaRequirements[i];
+      if (!state.china.requirements[r.id]) state.china.requirements[r.id] = { compliant: null, notes: '' };
+    }
+  }
+  initState();
+
+  var wizard = createWizard({
+    title: 'Content Moderation Evidence',
+    subtitle: 'Template 16 \u2014 China GenAI Measures; EU Digital Services Act; EU AI Act Art. 50; Platform Safety Laws',
+    totalSteps: 6,
+    stepLabels: stepLabels,
+    renderStep: function(step, container) {
+      if (step === 0) renderStep1(container);
+      else if (step === 1) renderStep2(container);
+      else if (step === 2) renderStep3(container);
+      else if (step === 3) renderStep4(container);
+      else if (step === 4) renderStep5(container);
+      else if (step === 5) renderSummary(container);
+    },
+    onLoad: function() {
+      loadConfigFromFile(function(c) { config = c; loadState(); wizard.refreshStep(); });
+    },
+    onSave: doSave,
+    onExport: doExport,
+    stateKey: 'contentModeration',
+    getState: function() { return state; },
+    setState: function(s) {
+      if (s.systemInfo) { for (var k in s.systemInfo) { state.systemInfo[k] = s.systemInfo[k]; } }
+      if (s.contentPolicy) {
+        if (s.contentPolicy.policyVersion !== undefined) state.contentPolicy.policyVersion = s.contentPolicy.policyVersion;
+        if (s.contentPolicy.policyLastUpdated !== undefined) state.contentPolicy.policyLastUpdated = s.contentPolicy.policyLastUpdated;
+        if (s.contentPolicy.policyUrl !== undefined) state.contentPolicy.policyUrl = s.contentPolicy.policyUrl;
+        if (s.contentPolicy.categories) { for (var k in s.contentPolicy.categories) { state.contentPolicy.categories[k] = s.contentPolicy.categories[k]; } }
+        if (s.contentPolicy.escalationProcess !== undefined) state.contentPolicy.escalationProcess = s.contentPolicy.escalationProcess;
+        if (s.contentPolicy.updateFrequency !== undefined) state.contentPolicy.updateFrequency = s.contentPolicy.updateFrequency;
+      }
+      if (s.mechanisms) { for (var k in s.mechanisms) { state.mechanisms[k] = s.mechanisms[k]; } }
+      if (s.china) {
+        if (s.china.applicable !== undefined) state.china.applicable = s.china.applicable;
+        if (s.china.requirements) { for (var k in s.china.requirements) { state.china.requirements[k] = s.china.requirements[k]; } }
+        if (s.china.cacFilingNumber !== undefined) state.china.cacFilingNumber = s.china.cacFilingNumber;
+        if (s.china.securityAssessmentDate !== undefined) state.china.securityAssessmentDate = s.china.securityAssessmentDate;
+        if (s.china.notes !== undefined) state.china.notes = s.china.notes;
+      }
+      if (s.dsa) {
+        if (s.dsa.applicable !== undefined) state.dsa.applicable = s.dsa.applicable;
+        if (s.dsa.vlop !== undefined) state.dsa.vlop = s.dsa.vlop;
+        if (s.dsa.transparencyReporting !== undefined) state.dsa.transparencyReporting = s.dsa.transparencyReporting;
+        if (s.dsa.reportingFrequency !== undefined) state.dsa.reportingFrequency = s.dsa.reportingFrequency;
+        if (s.dsa.trustedFlaggers !== undefined) state.dsa.trustedFlaggers = s.dsa.trustedFlaggers;
+        if (s.dsa.trustedFlaggerProcess !== undefined) state.dsa.trustedFlaggerProcess = s.dsa.trustedFlaggerProcess;
+        if (s.dsa.systemic) {
+          if (s.dsa.systemic.riskIdentified !== undefined) state.dsa.systemic.riskIdentified = s.dsa.systemic.riskIdentified;
+          if (s.dsa.systemic.riskDescription !== undefined) state.dsa.systemic.riskDescription = s.dsa.systemic.riskDescription;
+          if (s.dsa.systemic.mitigations !== undefined) state.dsa.systemic.mitigations = s.dsa.systemic.mitigations;
+          if (s.dsa.systemic.auditDate !== undefined) state.dsa.systemic.auditDate = s.dsa.systemic.auditDate;
+          if (s.dsa.systemic.auditResult !== undefined) state.dsa.systemic.auditResult = s.dsa.systemic.auditResult;
+        }
+        if (s.dsa.complaintMechanism !== undefined) state.dsa.complaintMechanism = s.dsa.complaintMechanism;
+        if (s.dsa.complaintDescription !== undefined) state.dsa.complaintDescription = s.dsa.complaintDescription;
+        if (s.dsa.outOfCourtResolution !== undefined) state.dsa.outOfCourtResolution = s.dsa.outOfCourtResolution;
+        if (s.dsa.notes !== undefined) state.dsa.notes = s.dsa.notes;
+      }
+      initState();
+    }
+  });
+
+  function renderStep1(container) {
+    var items = [];
+    items.push(createAlert('info', 'Load your compliance config to pre-fill system information, or enter details manually.'));
+    if (config.systemInfo) {
+      var info = config.systemInfo;
+      var infoBox = el('div', { style: 'padding: 12px; border: 1px solid #2A7B7B55; border-radius: 4px; background: #2A7B7B11; margin-bottom: 12px;' });
+      infoBox.appendChild(el('h3', {}, ['Loaded from config:']));
+      if (info.systemName) infoBox.appendChild(el('p', { style: 'font-size: 0.85em; color: #9AACBA; margin: 4px 0;' }, ['System: ' + info.systemName]));
+      if (info.version) infoBox.appendChild(el('p', { style: 'font-size: 0.85em; color: #9AACBA; margin: 4px 0;' }, ['Version: ' + info.version]));
+      items.push(infoBox);
+    }
+    items.push(createTextInput('System name', state.systemInfo.systemName, function(v) { state.systemInfo.systemName = v; }, 'e.g. Customer Support AI v2.1'));
+    items.push(createTextInput('System version', state.systemInfo.version, function(v) { state.systemInfo.version = v; }, 'e.g. 2.1.0'));
+    items.push(createSelect('Content types generated', [
+      { value: '', label: '-- Select --' },
+      { value: 'text', label: 'Text only' },
+      { value: 'text-image', label: 'Text and images' },
+      { value: 'text-image-audio', label: 'Text, images, and audio' },
+      { value: 'text-image-video', label: 'Text, images, and video' },
+      { value: 'multimodal', label: 'Full multimodal (text, image, audio, video)' },
+      { value: 'code', label: 'Code generation' }
+    ], state.systemInfo.contentTypes, function(v) { state.systemInfo.contentTypes = v; }));
+    items.push(createTextInput('Target markets', state.systemInfo.targetMarkets, function(v) { state.systemInfo.targetMarkets = v; }, 'e.g. EU, US, China, Global'));
+    container.appendChild(createSection('Step 1: System Information', items));
+  }
+
+  function renderStep2(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 2: Content Policy Definition']));
+    section.appendChild(createAlert('info', 'Define your content moderation policy. For each category, specify whether it is prohibited and what action is taken.'));
+    var policyFields = el('div', { style: 'margin-bottom: 16px;' });
+    policyFields.appendChild(createTextInput('Policy version', state.contentPolicy.policyVersion, function(v) { state.contentPolicy.policyVersion = v; }, 'e.g. v3.2'));
+    var dateRow = el('div', { className: 'field-row' });
+    dateRow.appendChild(el('label', { className: 'field-label' }, ['Policy last updated']));
+    var dateInput = el('input', { type: 'date', className: 'field-input', value: state.contentPolicy.policyLastUpdated || '' });
+    dateInput.addEventListener('change', function() { state.contentPolicy.policyLastUpdated = dateInput.value; });
+    dateRow.appendChild(dateInput);
+    policyFields.appendChild(dateRow);
+    policyFields.appendChild(createTextInput('Policy URL', state.contentPolicy.policyUrl, function(v) { state.contentPolicy.policyUrl = v; }, 'Link to published content policy'));
+    policyFields.appendChild(createTextArea('Escalation process', state.contentPolicy.escalationProcess, function(v) { state.contentPolicy.escalationProcess = v; }, 'Describe how flagged content is escalated'));
+    policyFields.appendChild(createSelect('Policy update frequency', [
+      { value: '', label: '-- Select --' },
+      { value: 'quarterly', label: 'Quarterly' },
+      { value: 'biannual', label: 'Bi-annually' },
+      { value: 'annual', label: 'Annually' },
+      { value: 'ad-hoc', label: 'Ad hoc / as needed' }
+    ], state.contentPolicy.updateFrequency, function(v) { state.contentPolicy.updateFrequency = v; }));
+    section.appendChild(policyFields);
+
+    section.appendChild(el('h3', {}, ['Prohibited Content Categories']));
+    for (var i = 0; i < prohibitedCategories.length; i++) {
+      (function(cat) {
+        var c = state.contentPolicy.categories[cat.id];
+        var group = el('div', { style: 'margin-bottom: 8px; padding: 10px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830;' });
+        group.appendChild(el('h3', {}, [cat.label]));
+        group.appendChild(createToggle('Prohibited?', c.prohibited, function(v) { c.prohibited = v; wizard.saveNow(); }));
+        group.appendChild(createSelect('Detection threshold', [
+          { value: '', label: '-- Select --' },
+          { value: 'zero-tolerance', label: 'Zero tolerance' },
+          { value: 'high-confidence', label: 'High confidence (>95%)' },
+          { value: 'medium-confidence', label: 'Medium confidence (>80%)' },
+          { value: 'human-review', label: 'Flag for human review' }
+        ], c.threshold, function(v) { c.threshold = v; }));
+        group.appendChild(createSelect('Action on detection', [
+          { value: '', label: '-- Select --' },
+          { value: 'block', label: 'Block / prevent generation' },
+          { value: 'filter-replace', label: 'Filter and replace' },
+          { value: 'flag-review', label: 'Flag for human review' },
+          { value: 'warn-user', label: 'Warn user but allow' },
+          { value: 'log-only', label: 'Log only' }
+        ], c.action, function(v) { c.action = v; }));
+        section.appendChild(group);
+      })(prohibitedCategories[i]);
+    }
+    container.appendChild(section);
+  }
+
+  function renderStep3(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 3: Moderation Mechanisms']));
+    section.appendChild(createAlert('info', 'Document which moderation mechanisms are implemented and their effectiveness.'));
+    for (var i = 0; i < moderationMechanisms.length; i++) {
+      (function(mech) {
+        var m = state.mechanisms[mech.id];
+        var group = el('div', { style: 'margin-bottom: 10px; padding: 10px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830;' });
+        group.appendChild(el('h3', {}, [mech.label]));
+        group.appendChild(createToggle('Implemented?', m.implemented, function(v) { m.implemented = v; wizard.saveNow(); }));
+        group.appendChild(createTextInput('Provider / tool', m.provider, function(v) { m.provider = v; }, 'e.g. OpenAI Moderation API, custom model, Perspective API'));
+        group.appendChild(createTextInput('Measured accuracy / effectiveness', m.accuracy, function(v) { m.accuracy = v; }, 'e.g. 97.3% precision, <0.1% false positive rate'));
+        group.appendChild(createTextInput('Notes', m.notes, function(v) { m.notes = v; }, 'Configuration details, thresholds, etc.'));
+        section.appendChild(group);
+      })(moderationMechanisms[i]);
+    }
+    container.appendChild(section);
+  }
+
+  function renderStep4(container) {
+    var items = [];
+    items.push(createAlert('warning', 'China Interim Measures for the Management of Generative AI Services (effective August 15, 2023) require specific content safety controls. Complete this section if your system operates in or serves users in China.'));
+    items.push(createToggle('China market applicable?', state.china.applicable, function(v) { state.china.applicable = v; wizard.saveNow(); }));
+
+    var reqSection = el('div', { style: 'margin-top: 16px;' });
+    reqSection.appendChild(el('h3', {}, ['China GenAI Requirements']));
+    for (var i = 0; i < chinaRequirements.length; i++) {
+      (function(req) {
+        var r = state.china.requirements[req.id];
+        var group = el('div', { style: 'margin-bottom: 8px; padding: 10px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830;' });
+        group.appendChild(createToggle(req.label, r.compliant, function(v) { r.compliant = v; wizard.saveNow(); }));
+        group.appendChild(createTextInput('Implementation notes', r.notes, function(v) { r.notes = v; }, 'How this requirement is met'));
+        reqSection.appendChild(group);
+      })(chinaRequirements[i]);
+    }
+    items.push(reqSection);
+    items.push(createTextInput('CAC algorithm filing number', state.china.cacFilingNumber, function(v) { state.china.cacFilingNumber = v; }, 'Filing number from Cyberspace Administration of China'));
+    var dateRow = el('div', { className: 'field-row' });
+    dateRow.appendChild(el('label', { className: 'field-label' }, ['Security assessment date']));
+    var dateInput = el('input', { type: 'date', className: 'field-input', value: state.china.securityAssessmentDate || '' });
+    dateInput.addEventListener('change', function() { state.china.securityAssessmentDate = dateInput.value; });
+    dateRow.appendChild(dateInput);
+    items.push(dateRow);
+    items.push(createTextArea('Additional China compliance notes', state.china.notes, function(v) { state.china.notes = v; }, 'Any additional details about China market compliance'));
+    container.appendChild(createSection('Step 4: China GenAI Compliance', items));
+  }
+
+  function renderStep5(container) {
+    var items = [];
+    items.push(createAlert('info', 'The EU Digital Services Act (DSA) imposes content moderation obligations on platforms. Very Large Online Platforms (VLOPs) face additional systemic risk assessment requirements.'));
+    items.push(createToggle('EU DSA applicable?', state.dsa.applicable, function(v) { state.dsa.applicable = v; wizard.saveNow(); }));
+    items.push(createToggle('Designated as VLOP/VLOSE?', state.dsa.vlop, function(v) { state.dsa.vlop = v; wizard.saveNow(); }));
+    items.push(createToggle('Transparency reporting implemented?', state.dsa.transparencyReporting, function(v) { state.dsa.transparencyReporting = v; wizard.saveNow(); }));
+    items.push(createSelect('Reporting frequency', [
+      { value: '', label: '-- Select --' },
+      { value: 'biannual', label: 'Bi-annually (standard)' },
+      { value: 'annual', label: 'Annually (VLOP)' },
+      { value: 'quarterly', label: 'Quarterly' }
+    ], state.dsa.reportingFrequency, function(v) { state.dsa.reportingFrequency = v; }));
+    items.push(createToggle('Trusted flagger program?', state.dsa.trustedFlaggers, function(v) { state.dsa.trustedFlaggers = v; wizard.saveNow(); }));
+    items.push(createTextArea('Trusted flagger process', state.dsa.trustedFlaggerProcess, function(v) { state.dsa.trustedFlaggerProcess = v; }, 'Describe how trusted flagger reports are prioritized'));
+    items.push(createToggle('Complaint mechanism available?', state.dsa.complaintMechanism, function(v) { state.dsa.complaintMechanism = v; wizard.saveNow(); }));
+    items.push(createTextArea('Complaint mechanism description', state.dsa.complaintDescription, function(v) { state.dsa.complaintDescription = v; }, 'Describe the internal complaint-handling system'));
+    items.push(createToggle('Out-of-court dispute resolution?', state.dsa.outOfCourtResolution, function(v) { state.dsa.outOfCourtResolution = v; wizard.saveNow(); }));
+
+    var systemic = el('div', { style: 'margin-top: 16px; padding: 12px; border: 1px solid #D4943A55; border-radius: 4px; background: #D4943A11;' });
+    systemic.appendChild(el('h3', {}, ['Systemic Risk Assessment (VLOP/VLOSE only)']));
+    systemic.appendChild(createToggle('Systemic risk identified?', state.dsa.systemic.riskIdentified, function(v) { state.dsa.systemic.riskIdentified = v; wizard.saveNow(); }));
+    systemic.appendChild(createTextArea('Risk description', state.dsa.systemic.riskDescription, function(v) { state.dsa.systemic.riskDescription = v; }, 'Describe identified systemic risks (e.g., election manipulation, public health misinformation)'));
+    systemic.appendChild(createTextArea('Mitigation measures', state.dsa.systemic.mitigations, function(v) { state.dsa.systemic.mitigations = v; }, 'Measures taken to mitigate systemic risks'));
+    var auditDateRow = el('div', { className: 'field-row' });
+    auditDateRow.appendChild(el('label', { className: 'field-label' }, ['Last audit date']));
+    var auditDateInput = el('input', { type: 'date', className: 'field-input', value: state.dsa.systemic.auditDate || '' });
+    auditDateInput.addEventListener('change', function() { state.dsa.systemic.auditDate = auditDateInput.value; });
+    auditDateRow.appendChild(auditDateInput);
+    systemic.appendChild(auditDateRow);
+    systemic.appendChild(createSelect('Audit result', [
+      { value: '', label: '-- Select --' },
+      { value: 'compliant', label: 'Compliant' },
+      { value: 'partially-compliant', label: 'Partially compliant' },
+      { value: 'non-compliant', label: 'Non-compliant' },
+      { value: 'pending', label: 'Audit pending' }
+    ], state.dsa.systemic.auditResult, function(v) { state.dsa.systemic.auditResult = v; }));
+    items.push(systemic);
+
+    items.push(createTextArea('Additional DSA compliance notes', state.dsa.notes, function(v) { state.dsa.notes = v; }, 'Any additional details about EU DSA compliance'));
+    container.appendChild(createSection('Step 5: EU DSA Compliance', items));
+  }
+
+  function calcSectionScore(sectionId) {
+    var filled = 0; var total = 0;
+    if (sectionId === 'systemInfo') {
+      var s = state.systemInfo; total = 4;
+      if (s.systemName) filled++; if (s.version) filled++; if (s.contentTypes) filled++; if (s.targetMarkets) filled++;
+    } else if (sectionId === 'contentPolicy') {
+      total = prohibitedCategories.length + 2;
+      if (state.contentPolicy.policyVersion) filled++;
+      if (state.contentPolicy.escalationProcess) filled++;
+      for (var i = 0; i < prohibitedCategories.length; i++) { if (state.contentPolicy.categories[prohibitedCategories[i].id].prohibited !== null) filled++; }
+    } else if (sectionId === 'mechanisms') {
+      total = moderationMechanisms.length;
+      for (var i = 0; i < moderationMechanisms.length; i++) { if (state.mechanisms[moderationMechanisms[i].id].implemented !== null) filled++; }
+    } else if (sectionId === 'china') {
+      if (state.china.applicable !== true) return { filled: 1, total: 1 };
+      total = chinaRequirements.length;
+      for (var i = 0; i < chinaRequirements.length; i++) { if (state.china.requirements[chinaRequirements[i].id].compliant !== null) filled++; }
+    } else if (sectionId === 'dsa') {
+      if (state.dsa.applicable !== true) return { filled: 1, total: 1 };
+      total = 5;
+      if (state.dsa.transparencyReporting !== null) filled++;
+      if (state.dsa.trustedFlaggers !== null) filled++;
+      if (state.dsa.complaintMechanism !== null) filled++;
+      if (state.dsa.outOfCourtResolution !== null) filled++;
+      if (state.dsa.vlop !== null) filled++;
+    }
+    return { filled: filled, total: total };
+  }
+
+  function renderSummary(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 6: Review & Export']));
+    var sections = [
+      { id: 'systemInfo', label: 'System Information' },
+      { id: 'contentPolicy', label: 'Content Policy' },
+      { id: 'mechanisms', label: 'Moderation Mechanisms' },
+      { id: 'china', label: 'China GenAI Compliance' },
+      { id: 'dsa', label: 'EU DSA Compliance' }
+    ];
+    var table = el('table', { className: 'result-table' });
+    var thead = el('thead'); var headerRow = el('tr');
+    headerRow.appendChild(el('th', {}, ['Section']));
+    headerRow.appendChild(el('th', {}, ['Completeness']));
+    headerRow.appendChild(el('th', {}, ['Score']));
+    thead.appendChild(headerRow); table.appendChild(thead);
+    var tbody = el('tbody'); var totalFilled = 0; var totalAll = 0;
+    for (var i = 0; i < sections.length; i++) {
+      var s = sections[i]; var score = calcSectionScore(s.id);
+      totalFilled += score.filled; totalAll += score.total;
+      var pct = score.total > 0 ? Math.round((score.filled / score.total) * 100) : 0;
+      var cls = pct >= 80 ? 'score-low' : pct >= 50 ? 'score-med' : 'score-high';
+      var row = el('tr'); row.appendChild(el('td', {}, [s.label]));
+      row.appendChild(el('td', {}, [score.filled + ' / ' + score.total]));
+      var scoreCell = el('td'); scoreCell.appendChild(el('span', { className: cls }, [pct + '%']));
+      row.appendChild(scoreCell); tbody.appendChild(row);
+    }
+    table.appendChild(tbody); section.appendChild(table);
+    var overallPct = totalAll > 0 ? Math.round((totalFilled / totalAll) * 100) : 0;
+    var overallCls = overallPct >= 80 ? 'score-low' : overallPct >= 50 ? 'score-med' : 'score-high';
+    var overallEl = el('div', { style: 'margin-top: 16px; text-align: center; font-size: 1.2em;' });
+    overallEl.appendChild(document.createTextNode('Overall Completeness: '));
+    overallEl.appendChild(el('span', { className: overallCls }, [overallPct + '%']));
+    section.appendChild(overallEl);
+
+    var implementedCount = 0;
+    for (var i = 0; i < moderationMechanisms.length; i++) {
+      if (state.mechanisms[moderationMechanisms[i].id].implemented === true) implementedCount++;
+    }
+    var mechEl = el('div', { style: 'margin-top: 12px; text-align: center; font-size: 0.9em; color: #9AACBA;' });
+    mechEl.appendChild(document.createTextNode('Moderation mechanisms active: ' + implementedCount + ' / ' + moderationMechanisms.length));
+    section.appendChild(mechEl);
+
+    if (overallPct < 50) section.appendChild(createAlert('danger', 'Content moderation documentation is incomplete. Address gaps before deployment.'));
+    else if (overallPct < 80) section.appendChild(createAlert('warning', 'Content moderation documentation is partially complete. Review unfilled sections.'));
+    else section.appendChild(createAlert('success', 'Content moderation documentation is substantially complete. Proceed to legal review.'));
+
+    var exportBar = el('div', { className: 'toolbar', style: 'margin-top: 16px;' });
+    exportBar.appendChild(el('button', { className: 'btn primary', textContent: 'Export Markdown', onClick: doExport }));
+    exportBar.appendChild(el('button', { className: 'btn success', textContent: 'Save Config', onClick: doSave }));
+    section.appendChild(exportBar);
+    container.appendChild(section);
+  }
+
+  function loadState() {
+    if (config.systemInfo) {
+      if (config.systemInfo.systemName && !state.systemInfo.systemName) state.systemInfo.systemName = config.systemInfo.systemName;
+      if (config.systemInfo.version && !state.systemInfo.version) state.systemInfo.version = config.systemInfo.version;
+    }
+    var saved = null;
+    if (config.interactiveToolResults && config.interactiveToolResults.contentModeration) saved = config.interactiveToolResults.contentModeration;
+    if (saved) {
+      if (saved.systemInfo) state.systemInfo = JSON.parse(JSON.stringify(saved.systemInfo));
+      if (saved.contentPolicy) state.contentPolicy = JSON.parse(JSON.stringify(saved.contentPolicy));
+      if (saved.mechanisms) state.mechanisms = JSON.parse(JSON.stringify(saved.mechanisms));
+      if (saved.china) state.china = JSON.parse(JSON.stringify(saved.china));
+      if (saved.dsa) state.dsa = JSON.parse(JSON.stringify(saved.dsa));
+      initState();
+    }
+  }
+
+  function buildResults() {
+    var sectionIds = ['systemInfo','contentPolicy','mechanisms','china','dsa'];
+    var scores = {}; var totalFilled = 0; var totalAll = 0;
+    for (var i = 0; i < sectionIds.length; i++) {
+      var s = calcSectionScore(sectionIds[i]);
+      scores[sectionIds[i]] = { filled: s.filled, total: s.total, pct: s.total > 0 ? Math.round((s.filled / s.total) * 100) : 0 };
+      totalFilled += s.filled; totalAll += s.total;
+    }
+    return {
+      completedDate: new Date().toISOString().split('T')[0],
+      systemInfo: JSON.parse(JSON.stringify(state.systemInfo)),
+      contentPolicy: JSON.parse(JSON.stringify(state.contentPolicy)),
+      mechanisms: JSON.parse(JSON.stringify(state.mechanisms)),
+      china: JSON.parse(JSON.stringify(state.china)),
+      dsa: JSON.parse(JSON.stringify(state.dsa)),
+      scores: scores,
+      overallScore: totalAll > 0 ? Math.round((totalFilled / totalAll) * 100) : 0
+    };
+  }
+
+  function doSave() {
+    config.interactiveToolResults = config.interactiveToolResults || {};
+    config.interactiveToolResults.contentModeration = buildResults();
+    saveConfigToFile(config);
+  }
+
+  function doExport() {
+    var r = buildResults(); var lines = [];
+    lines.push('# Content Moderation Evidence (Template 16)'); lines.push('');
+    lines.push('**Date:** ' + r.completedDate);
+    lines.push('**Applicable Law:** China GenAI Measures; EU Digital Services Act; EU AI Act Art. 50; Platform Safety Laws');
+    lines.push('');
+
+    lines.push('## 1. System Information'); lines.push('');
+    lines.push('- **System name:** ' + (r.systemInfo.systemName || 'N/A'));
+    lines.push('- **Version:** ' + (r.systemInfo.version || 'N/A'));
+    lines.push('- **Content types:** ' + (r.systemInfo.contentTypes || 'N/A'));
+    lines.push('- **Target markets:** ' + (r.systemInfo.targetMarkets || 'N/A'));
+    lines.push('');
+
+    lines.push('## 2. Content Policy'); lines.push('');
+    lines.push('- **Policy version:** ' + (r.contentPolicy.policyVersion || 'N/A'));
+    lines.push('- **Last updated:** ' + (r.contentPolicy.policyLastUpdated || 'N/A'));
+    lines.push('- **Policy URL:** ' + (r.contentPolicy.policyUrl || 'N/A'));
+    lines.push('- **Escalation process:** ' + (r.contentPolicy.escalationProcess || 'N/A'));
+    lines.push('- **Update frequency:** ' + (r.contentPolicy.updateFrequency || 'N/A'));
+    lines.push('');
+    lines.push('### Prohibited Content Categories'); lines.push('');
+    lines.push('| Category | Prohibited | Threshold | Action |');
+    lines.push('|----------|-----------|-----------|--------|');
+    for (var i = 0; i < prohibitedCategories.length; i++) {
+      var cat = prohibitedCategories[i]; var c = r.contentPolicy.categories[cat.id] || {};
+      var prohibited = c.prohibited === true ? 'Yes' : c.prohibited === false ? 'No' : 'N/A';
+      lines.push('| ' + cat.label + ' | ' + prohibited + ' | ' + (c.threshold || 'N/A') + ' | ' + (c.action || 'N/A') + ' |');
+    }
+    lines.push('');
+
+    lines.push('## 3. Moderation Mechanisms'); lines.push('');
+    lines.push('| Mechanism | Implemented | Provider | Accuracy | Notes |');
+    lines.push('|-----------|-----------|----------|----------|-------|');
+    for (var i = 0; i < moderationMechanisms.length; i++) {
+      var mech = moderationMechanisms[i]; var m = r.mechanisms[mech.id] || {};
+      var impl = m.implemented === true ? 'Yes' : m.implemented === false ? 'No' : 'N/A';
+      lines.push('| ' + mech.label + ' | ' + impl + ' | ' + (m.provider || 'N/A') + ' | ' + (m.accuracy || 'N/A') + ' | ' + (m.notes || '') + ' |');
+    }
+    lines.push('');
+
+    lines.push('## 4. China GenAI Compliance'); lines.push('');
+    lines.push('- **Applicable:** ' + (r.china.applicable === true ? 'Yes' : r.china.applicable === false ? 'No' : 'N/A'));
+    if (r.china.applicable === true) {
+      lines.push('- **CAC filing number:** ' + (r.china.cacFilingNumber || 'N/A'));
+      lines.push('- **Security assessment date:** ' + (r.china.securityAssessmentDate || 'N/A'));
+      lines.push('');
+      lines.push('| Requirement | Compliant | Notes |');
+      lines.push('|------------|----------|-------|');
+      for (var i = 0; i < chinaRequirements.length; i++) {
+        var req = chinaRequirements[i]; var cr = r.china.requirements[req.id] || {};
+        var compl = cr.compliant === true ? 'Yes' : cr.compliant === false ? 'No' : 'N/A';
+        lines.push('| ' + req.label + ' | ' + compl + ' | ' + (cr.notes || '') + ' |');
+      }
+      if (r.china.notes) lines.push('\n**Notes:** ' + r.china.notes);
+    }
+    lines.push('');
+
+    lines.push('## 5. EU DSA Compliance'); lines.push('');
+    lines.push('- **Applicable:** ' + (r.dsa.applicable === true ? 'Yes' : r.dsa.applicable === false ? 'No' : 'N/A'));
+    if (r.dsa.applicable === true) {
+      lines.push('- **VLOP/VLOSE designation:** ' + (r.dsa.vlop === true ? 'Yes' : r.dsa.vlop === false ? 'No' : 'N/A'));
+      lines.push('- **Transparency reporting:** ' + (r.dsa.transparencyReporting === true ? 'Yes' : r.dsa.transparencyReporting === false ? 'No' : 'N/A'));
+      lines.push('- **Reporting frequency:** ' + (r.dsa.reportingFrequency || 'N/A'));
+      lines.push('- **Trusted flaggers:** ' + (r.dsa.trustedFlaggers === true ? 'Yes' : r.dsa.trustedFlaggers === false ? 'No' : 'N/A'));
+      if (r.dsa.trustedFlaggerProcess) lines.push('- **Trusted flagger process:** ' + r.dsa.trustedFlaggerProcess);
+      lines.push('- **Complaint mechanism:** ' + (r.dsa.complaintMechanism === true ? 'Yes' : r.dsa.complaintMechanism === false ? 'No' : 'N/A'));
+      if (r.dsa.complaintDescription) lines.push('- **Complaint description:** ' + r.dsa.complaintDescription);
+      lines.push('- **Out-of-court resolution:** ' + (r.dsa.outOfCourtResolution === true ? 'Yes' : r.dsa.outOfCourtResolution === false ? 'No' : 'N/A'));
+      if (r.dsa.vlop === true) {
+        lines.push('');
+        lines.push('### Systemic Risk Assessment');
+        lines.push('- **Risk identified:** ' + (r.dsa.systemic.riskIdentified === true ? 'Yes' : r.dsa.systemic.riskIdentified === false ? 'No' : 'N/A'));
+        if (r.dsa.systemic.riskDescription) lines.push('- **Risk description:** ' + r.dsa.systemic.riskDescription);
+        if (r.dsa.systemic.mitigations) lines.push('- **Mitigations:** ' + r.dsa.systemic.mitigations);
+        lines.push('- **Last audit date:** ' + (r.dsa.systemic.auditDate || 'N/A'));
+        lines.push('- **Audit result:** ' + (r.dsa.systemic.auditResult || 'N/A'));
+      }
+      if (r.dsa.notes) lines.push('\n**Notes:** ' + r.dsa.notes);
+    }
+    lines.push('');
+
+    lines.push('## 6. Completeness Summary'); lines.push('');
+    lines.push('| Section | Score |'); lines.push('|---------|-------|');
+    var sectionLabels = { systemInfo: 'System Information', contentPolicy: 'Content Policy', mechanisms: 'Moderation Mechanisms', china: 'China GenAI', dsa: 'EU DSA' };
+    for (var key in r.scores) { lines.push('| ' + (sectionLabels[key] || key) + ' | ' + r.scores[key].pct + '% (' + r.scores[key].filled + '/' + r.scores[key].total + ') |'); }
+    lines.push('| **Overall** | **' + r.overallScore + '%** |');
+    lines.push(''); lines.push('---');
+    lines.push('*Generated by Content Moderation Evidence Tool. This is research, not legal advice.*');
+    exportMarkdown('content-moderation-report.md', lines.join('\n'));
+  }
+
+  wizard.render();
+})();
+</script>
+</body>
+</html>

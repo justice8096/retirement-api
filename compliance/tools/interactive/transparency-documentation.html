@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>System Transparency Documentation (Template 01)</title>
+<script src="./shared.js"></script>
+</head>
+<body>
+<script>
+(function() {
+  injectCSS();
+
+  var config = {};
+
+  var limitationCategories = [
+    { id: 'accuracy', label: 'Accuracy boundaries' },
+    { id: 'bias', label: 'Bias risks' },
+    { id: 'hallucination', label: 'Hallucination / confabulation' },
+    { id: 'adversarial', label: 'Adversarial vulnerability' },
+    { id: 'dataCurrency', label: 'Data currency' },
+    { id: 'ood', label: 'Out-of-distribution behavior' },
+    { id: 'environmental', label: 'Environmental dependencies' }
+  ];
+
+  var metricDefs = [
+    { id: 'accuracy', label: 'Accuracy' },
+    { id: 'precision', label: 'Precision' },
+    { id: 'recall', label: 'Recall' },
+    { id: 'f1', label: 'F1' },
+    { id: 'fairness', label: 'Fairness' },
+    { id: 'latencyP50', label: 'Latency p50' },
+    { id: 'latencyP95', label: 'Latency p95' },
+    { id: 'latencyP99', label: 'Latency p99' },
+    { id: 'errorRate', label: 'Error rate' }
+  ];
+
+  var disclosureItems = [
+    { id: 'aiNotice', label: 'AI interaction notice' },
+    { id: 'contentLabel', label: 'AI content labeling' },
+    { id: 'decisionFactors', label: 'Decision factor explanation' },
+    { id: 'optOut', label: 'Opt-out / human alternative' },
+    { id: 'complaint', label: 'Complaint / appeal mechanism' }
+  ];
+
+  var sectorOptions = [
+    { id: 'healthcare', label: 'Healthcare' },
+    { id: 'finance', label: 'Finance' },
+    { id: 'employment', label: 'Employment' },
+    { id: 'education', label: 'Education' },
+    { id: 'lawEnforcement', label: 'Law enforcement' },
+    { id: 'general', label: 'General' }
+  ];
+
+  var state = {
+    purpose: { systemPurpose: '', useCases: '', deployEnv: '', intendedUsers: '', sectors: {} },
+    architecture: { modelType: '', foundationModel: '', fineTuning: '', inputTypes: '', outputTypes: '', pipeline: '', keyFactors: '', confidenceMethod: '', fallback: '' },
+    limitations: {},
+    metrics: {},
+    oversight: { model: '', overrideCapability: '', qualifications: '', monitorFrequency: '' },
+    disclosures: {}
+  };
+
+  function initState() {
+    for (var i = 0; i < limitationCategories.length; i++) {
+      var c = limitationCategories[i];
+      if (!state.limitations[c.id]) state.limitations[c.id] = { applicable: null, description: '', mitigation: '' };
+    }
+    for (var i = 0; i < metricDefs.length; i++) {
+      var m = metricDefs[i];
+      if (!state.metrics[m.id]) state.metrics[m.id] = { value: '', method: '', date: '' };
+    }
+    for (var i = 0; i < disclosureItems.length; i++) {
+      var d = disclosureItems[i];
+      if (!state.disclosures[d.id]) state.disclosures[d.id] = { implemented: null, location: '', screenshot: '' };
+    }
+  }
+  initState();
+
+  var wizard = createWizard({
+    title: 'System Transparency Documentation',
+    subtitle: 'Template 01 \u2014 EU AI Act Arts. 11-14, 50; Colorado SB 24-205; UK DUA Act; South Korea AI Basic Act',
+    totalSteps: 7,
+    stepLabels: ['Purpose & Scope', 'Architecture', 'Limitations', 'Metrics', 'Oversight', 'Disclosures', 'Summary'],
+    renderStep: function(step, container) {
+      if (step === 0) renderStep1(container);
+      else if (step === 1) renderStep2(container);
+      else if (step === 2) renderStep3(container);
+      else if (step === 3) renderStep4(container);
+      else if (step === 4) renderStep5(container);
+      else if (step === 5) renderStep6(container);
+      else if (step === 6) renderSummary(container);
+    },
+    onLoad: function() {
+      loadConfigFromFile(function(c) { config = c; loadState(); wizard.refreshStep(); });
+    },
+    onSave: doSave,
+    onExport: doExport,
+    stateKey: 'transparencyDocumentation',
+    getState: function() { return state; },
+    setState: function(s) {
+      if (s.purpose) {
+        if (s.purpose.systemPurpose !== undefined) state.purpose.systemPurpose = s.purpose.systemPurpose;
+        if (s.purpose.useCases !== undefined) state.purpose.useCases = s.purpose.useCases;
+        if (s.purpose.deployEnv !== undefined) state.purpose.deployEnv = s.purpose.deployEnv;
+        if (s.purpose.intendedUsers !== undefined) state.purpose.intendedUsers = s.purpose.intendedUsers;
+        if (s.purpose.sectors) { for (var k in s.purpose.sectors) { state.purpose.sectors[k] = s.purpose.sectors[k]; } }
+      }
+      if (s.architecture) {
+        if (s.architecture.modelType !== undefined) state.architecture.modelType = s.architecture.modelType;
+        if (s.architecture.foundationModel !== undefined) state.architecture.foundationModel = s.architecture.foundationModel;
+        if (s.architecture.fineTuning !== undefined) state.architecture.fineTuning = s.architecture.fineTuning;
+        if (s.architecture.inputTypes !== undefined) state.architecture.inputTypes = s.architecture.inputTypes;
+        if (s.architecture.outputTypes !== undefined) state.architecture.outputTypes = s.architecture.outputTypes;
+        if (s.architecture.pipeline !== undefined) state.architecture.pipeline = s.architecture.pipeline;
+        if (s.architecture.keyFactors !== undefined) state.architecture.keyFactors = s.architecture.keyFactors;
+        if (s.architecture.confidenceMethod !== undefined) state.architecture.confidenceMethod = s.architecture.confidenceMethod;
+        if (s.architecture.fallback !== undefined) state.architecture.fallback = s.architecture.fallback;
+      }
+      if (s.limitations) { for (var k in s.limitations) { state.limitations[k] = s.limitations[k]; } }
+      if (s.metrics) { for (var k in s.metrics) { state.metrics[k] = s.metrics[k]; } }
+      if (s.oversight) {
+        if (s.oversight.model !== undefined) state.oversight.model = s.oversight.model;
+        if (s.oversight.overrideCapability !== undefined) state.oversight.overrideCapability = s.oversight.overrideCapability;
+        if (s.oversight.qualifications !== undefined) state.oversight.qualifications = s.oversight.qualifications;
+        if (s.oversight.monitorFrequency !== undefined) state.oversight.monitorFrequency = s.oversight.monitorFrequency;
+      }
+      if (s.disclosures) { for (var k in s.disclosures) { state.disclosures[k] = s.disclosures[k]; } }
+      initState();
+    }
+  });
+
+  function renderStep1(container) {
+    var items = [];
+    items.push(createAlert('info', 'Describe the AI system in plain language. This information will be used for regulatory transparency filings.'));
+    items.push(createTextInput('System purpose (plain language)', state.purpose.systemPurpose, function(v) { state.purpose.systemPurpose = v; }, 'e.g. Automated customer support chatbot'));
+    items.push(createTextInput('Intended use cases', state.purpose.useCases, function(v) { state.purpose.useCases = v; }, 'e.g. Answer product questions, process returns'));
+    items.push(createTextInput('Deployment environment', state.purpose.deployEnv, function(v) { state.purpose.deployEnv = v; }, 'e.g. Web application, mobile app, API'));
+    items.push(createSelect('Intended users', [
+      { value: '', label: '-- Select --' },
+      { value: 'internal', label: 'Internal staff' },
+      { value: 'business', label: 'Business customers' },
+      { value: 'consumers', label: 'Consumers' },
+      { value: 'publicSector', label: 'Public sector' }
+    ], state.purpose.intendedUsers, function(v) { state.purpose.intendedUsers = v; }));
+    var sectorSection = el('div', { style: 'margin-top: 16px;' });
+    sectorSection.appendChild(el('h3', {}, ['Applicable sectors']));
+    for (var i = 0; i < sectorOptions.length; i++) {
+      (function(s) {
+        sectorSection.appendChild(createToggle(s.label, state.purpose.sectors[s.id] === undefined ? null : state.purpose.sectors[s.id], function(v) { state.purpose.sectors[s.id] = v; wizard.saveNow(); }));
+      })(sectorOptions[i]);
+    }
+    items.push(sectorSection);
+    container.appendChild(createSection('Step 1: System Purpose & Scope', items));
+  }
+
+  function renderStep2(container) {
+    var items = [];
+    items.push(createSelect('Model type', [
+      { value: '', label: '-- Select --' }, { value: 'llm', label: 'LLM' }, { value: 'classification', label: 'Classification' },
+      { value: 'regression', label: 'Regression' }, { value: 'generative', label: 'Generative' },
+      { value: 'multiModal', label: 'Multi-modal' }, { value: 'other', label: 'Other' }
+    ], state.architecture.modelType, function(v) { state.architecture.modelType = v; }));
+    items.push(createTextInput('Foundation model name', state.architecture.foundationModel, function(v) { state.architecture.foundationModel = v; }, 'e.g. GPT-4, Claude 3, Llama 3'));
+    items.push(createTextInput('Fine-tuning approach', state.architecture.fineTuning, function(v) { state.architecture.fineTuning = v; }, 'e.g. LoRA on domain-specific dataset'));
+    items.push(createTextInput('Input types', state.architecture.inputTypes, function(v) { state.architecture.inputTypes = v; }, 'e.g. Text, images'));
+    items.push(createTextInput('Output types', state.architecture.outputTypes, function(v) { state.architecture.outputTypes = v; }, 'e.g. Text, structured JSON'));
+    items.push(createTextArea('How outputs are generated (pipeline description)', state.architecture.pipeline, function(v) { state.architecture.pipeline = v; }, 'Describe the end-to-end pipeline from input to output'));
+    items.push(createTextArea('Key factors influencing outputs', state.architecture.keyFactors, function(v) { state.architecture.keyFactors = v; }, 'e.g. Training data composition, prompt structure, temperature'));
+    items.push(createTextInput('Confidence scoring method', state.architecture.confidenceMethod, function(v) { state.architecture.confidenceMethod = v; }, 'e.g. Softmax probability, calibrated logits'));
+    items.push(createTextInput('Fallback behavior', state.architecture.fallback, function(v) { state.architecture.fallback = v; }, 'e.g. Escalate to human agent when confidence < 0.7'));
+    container.appendChild(createSection('Step 2: Architecture & Decision Logic', items));
+  }
+
+  function renderStep3(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 3: Known Limitations']));
+    section.appendChild(createAlert('warning', 'For each limitation category, indicate if it applies and describe the limitation and mitigation measures.'));
+    for (var i = 0; i < limitationCategories.length; i++) {
+      (function(cat) {
+        var lim = state.limitations[cat.id];
+        var group = el('div', { style: 'margin-bottom: 16px; padding: 12px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830;' });
+        group.appendChild(el('h3', {}, [cat.label]));
+        group.appendChild(createToggle('Applicable?', lim.applicable, function(v) { lim.applicable = v; wizard.saveNow(); }));
+        group.appendChild(createTextArea('Description', lim.description, function(v) { lim.description = v; }, 'Describe this limitation...'));
+        group.appendChild(createTextArea('Mitigation', lim.mitigation, function(v) { lim.mitigation = v; }, 'Describe mitigation measures...'));
+        section.appendChild(group);
+      })(limitationCategories[i]);
+    }
+    container.appendChild(section);
+  }
+
+  function renderStep4(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 4: Performance Metrics']));
+    section.appendChild(createAlert('info', 'Record measured performance values. These are required for EU AI Act technical documentation (Art. 11).'));
+    for (var i = 0; i < metricDefs.length; i++) {
+      (function(m) {
+        var met = state.metrics[m.id];
+        var group = el('div', { style: 'margin-bottom: 12px; padding: 10px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830;' });
+        group.appendChild(el('h3', {}, [m.label]));
+        group.appendChild(createTextInput('Value', met.value, function(v) { met.value = v; }, 'e.g. 0.95'));
+        group.appendChild(createTextInput('Measurement method', met.method, function(v) { met.method = v; }, 'e.g. Holdout test set, cross-validation'));
+        var dateRow = el('div', { className: 'field-row' });
+        dateRow.appendChild(el('label', { className: 'field-label' }, ['Date measured']));
+        var dateInput = el('input', { type: 'date', className: 'field-input', value: met.date || '' });
+        dateInput.addEventListener('change', function() { met.date = dateInput.value; });
+        dateRow.appendChild(dateInput);
+        group.appendChild(dateRow);
+        section.appendChild(group);
+      })(metricDefs[i]);
+    }
+    container.appendChild(section);
+  }
+
+  function renderStep5(container) {
+    var items = [];
+    items.push(createAlert('info', 'Human oversight is required for high-risk AI systems under EU AI Act Arts. 14 and Colorado SB 24-205.'));
+    items.push(createSelect('Oversight model', [
+      { value: '', label: '-- Select --' }, { value: 'hitl', label: 'Human-in-the-Loop (HITL)' },
+      { value: 'hotl', label: 'Human-on-the-Loop (HOTL)' }, { value: 'hic', label: 'Human-in-Command (HIC)' }
+    ], state.oversight.model, function(v) { state.oversight.model = v; }));
+    items.push(createTextArea('Override capability description', state.oversight.overrideCapability, function(v) { state.oversight.overrideCapability = v; }, 'How can humans override or reverse AI decisions?'));
+    items.push(createTextInput('Personnel qualifications', state.oversight.qualifications, function(v) { state.oversight.qualifications = v; }, 'Required training or qualifications for oversight staff'));
+    items.push(createSelect('Monitoring frequency', [
+      { value: '', label: '-- Select --' }, { value: 'realtime', label: 'Real-time' },
+      { value: 'daily', label: 'Daily' }, { value: 'weekly', label: 'Weekly' }, { value: 'perDecision', label: 'Per-decision' }
+    ], state.oversight.monitorFrequency, function(v) { state.oversight.monitorFrequency = v; }));
+    container.appendChild(createSection('Step 5: Human Oversight Summary', items));
+  }
+
+  function renderStep6(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 6: Transparency Disclosures']));
+    section.appendChild(createAlert('info', 'Document where and how each required disclosure is provided to users.'));
+    for (var i = 0; i < disclosureItems.length; i++) {
+      (function(d) {
+        var disc = state.disclosures[d.id];
+        var group = el('div', { style: 'margin-bottom: 12px; padding: 10px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830;' });
+        group.appendChild(el('h3', {}, [d.label]));
+        group.appendChild(createToggle('Implemented?', disc.implemented, function(v) { disc.implemented = v; wizard.saveNow(); }));
+        group.appendChild(createTextInput('Location (URL / screen)', disc.location, function(v) { disc.location = v; }, 'e.g. /settings, footer banner'));
+        group.appendChild(createTextInput('Screenshot reference', disc.screenshot, function(v) { disc.screenshot = v; }, 'e.g. screenshot-ai-notice-v2.png'));
+        section.appendChild(group);
+      })(disclosureItems[i]);
+    }
+    container.appendChild(section);
+  }
+
+  function calcSectionScore(sectionId) {
+    var filled = 0; var total = 0;
+    if (sectionId === 'purpose') {
+      var p = state.purpose; total = 5;
+      if (p.systemPurpose) filled++; if (p.useCases) filled++; if (p.deployEnv) filled++;
+      if (p.intendedUsers) filled++;
+      if (Object.values(p.sectors).some(function(v) { return v === true; })) filled++;
+    } else if (sectionId === 'architecture') {
+      var a = state.architecture;
+      var fields = ['modelType','foundationModel','fineTuning','inputTypes','outputTypes','pipeline','keyFactors','confidenceMethod','fallback'];
+      total = fields.length;
+      for (var i = 0; i < fields.length; i++) { if (a[fields[i]]) filled++; }
+    } else if (sectionId === 'limitations') {
+      total = limitationCategories.length;
+      for (var i = 0; i < limitationCategories.length; i++) { if (state.limitations[limitationCategories[i].id].applicable !== null) filled++; }
+    } else if (sectionId === 'metrics') {
+      total = metricDefs.length;
+      for (var i = 0; i < metricDefs.length; i++) { if (state.metrics[metricDefs[i].id].value) filled++; }
+    } else if (sectionId === 'oversight') {
+      var o = state.oversight; total = 4;
+      if (o.model) filled++; if (o.overrideCapability) filled++; if (o.qualifications) filled++; if (o.monitorFrequency) filled++;
+    } else if (sectionId === 'disclosures') {
+      total = disclosureItems.length;
+      for (var i = 0; i < disclosureItems.length; i++) { if (state.disclosures[disclosureItems[i].id].implemented !== null) filled++; }
+    }
+    return { filled: filled, total: total };
+  }
+
+  function renderSummary(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 7: Summary']));
+    var sections = [
+      { id: 'purpose', label: 'System Purpose & Scope' }, { id: 'architecture', label: 'Architecture & Decision Logic' },
+      { id: 'limitations', label: 'Known Limitations' }, { id: 'metrics', label: 'Performance Metrics' },
+      { id: 'oversight', label: 'Human Oversight' }, { id: 'disclosures', label: 'Transparency Disclosures' }
+    ];
+    var table = el('table', { className: 'result-table' });
+    var thead = el('thead'); var headerRow = el('tr');
+    headerRow.appendChild(el('th', {}, ['Section']));
+    headerRow.appendChild(el('th', {}, ['Completeness']));
+    headerRow.appendChild(el('th', {}, ['Score']));
+    thead.appendChild(headerRow); table.appendChild(thead);
+    var tbody = el('tbody'); var totalFilled = 0; var totalAll = 0;
+    for (var i = 0; i < sections.length; i++) {
+      var s = sections[i]; var score = calcSectionScore(s.id);
+      totalFilled += score.filled; totalAll += score.total;
+      var pct = score.total > 0 ? Math.round((score.filled / score.total) * 100) : 0;
+      var cls = pct >= 80 ? 'score-low' : pct >= 50 ? 'score-med' : 'score-high';
+      var row = el('tr'); row.appendChild(el('td', {}, [s.label]));
+      row.appendChild(el('td', {}, [score.filled + ' / ' + score.total]));
+      var scoreCell = el('td'); scoreCell.appendChild(el('span', { className: cls }, [pct + '%']));
+      row.appendChild(scoreCell); tbody.appendChild(row);
+    }
+    table.appendChild(tbody); section.appendChild(table);
+    var overallPct = totalAll > 0 ? Math.round((totalFilled / totalAll) * 100) : 0;
+    var overallCls = overallPct >= 80 ? 'score-low' : overallPct >= 50 ? 'score-med' : 'score-high';
+    var overallEl = el('div', { style: 'margin-top: 16px; text-align: center; font-size: 1.2em;' });
+    overallEl.appendChild(document.createTextNode('Overall Completeness: '));
+    overallEl.appendChild(el('span', { className: overallCls }, [overallPct + '%']));
+    section.appendChild(overallEl);
+    if (overallPct < 50) section.appendChild(createAlert('danger', 'Documentation is incomplete. Several required sections need attention before regulatory submission.'));
+    else if (overallPct < 80) section.appendChild(createAlert('warning', 'Documentation is partially complete. Review unfilled sections to improve compliance readiness.'));
+    else section.appendChild(createAlert('success', 'Documentation is substantially complete. Proceed to legal review.'));
+    var exportBar = el('div', { className: 'toolbar', style: 'margin-top: 16px;' });
+    exportBar.appendChild(el('button', { className: 'btn primary', textContent: 'Export Markdown', onClick: doExport }));
+    exportBar.appendChild(el('button', { className: 'btn success', textContent: 'Save Config', onClick: doSave }));
+    section.appendChild(exportBar);
+    container.appendChild(section);
+  }
+
+  function loadState() {
+    var saved = null;
+    if (config.interactiveToolResults && config.interactiveToolResults.transparencyDocumentation) saved = config.interactiveToolResults.transparencyDocumentation;
+    if (saved) {
+      if (saved.purpose) state.purpose = JSON.parse(JSON.stringify(saved.purpose));
+      if (saved.architecture) state.architecture = JSON.parse(JSON.stringify(saved.architecture));
+      if (saved.limitations) state.limitations = JSON.parse(JSON.stringify(saved.limitations));
+      if (saved.metrics) state.metrics = JSON.parse(JSON.stringify(saved.metrics));
+      if (saved.oversight) state.oversight = JSON.parse(JSON.stringify(saved.oversight));
+      if (saved.disclosures) state.disclosures = JSON.parse(JSON.stringify(saved.disclosures));
+      initState();
+    }
+  }
+
+  function buildResults() {
+    var sectionIds = ['purpose','architecture','limitations','metrics','oversight','disclosures'];
+    var scores = {}; var totalFilled = 0; var totalAll = 0;
+    for (var i = 0; i < sectionIds.length; i++) {
+      var s = calcSectionScore(sectionIds[i]);
+      scores[sectionIds[i]] = { filled: s.filled, total: s.total, pct: s.total > 0 ? Math.round((s.filled / s.total) * 100) : 0 };
+      totalFilled += s.filled; totalAll += s.total;
+    }
+    return { completedDate: new Date().toISOString().split('T')[0], purpose: JSON.parse(JSON.stringify(state.purpose)), architecture: JSON.parse(JSON.stringify(state.architecture)), limitations: JSON.parse(JSON.stringify(state.limitations)), metrics: JSON.parse(JSON.stringify(state.metrics)), oversight: JSON.parse(JSON.stringify(state.oversight)), disclosures: JSON.parse(JSON.stringify(state.disclosures)), scores: scores, overallScore: totalAll > 0 ? Math.round((totalFilled / totalAll) * 100) : 0 };
+  }
+
+  function doSave() {
+    config.interactiveToolResults = config.interactiveToolResults || {};
+    config.interactiveToolResults.transparencyDocumentation = buildResults();
+    saveConfigToFile(config);
+  }
+
+  function doExport() {
+    var r = buildResults(); var lines = [];
+    lines.push('# System Transparency Documentation (Template 01)'); lines.push('');
+    lines.push('**Date:** ' + r.completedDate);
+    lines.push('**Applicable Law:** EU AI Act Arts. 11-14, 50; Colorado SB 24-205; UK DUA Act; South Korea AI Basic Act');
+    lines.push(''); lines.push('## 1. System Purpose & Scope'); lines.push('');
+    lines.push('- **System purpose:** ' + (r.purpose.systemPurpose || 'N/A'));
+    lines.push('- **Intended use cases:** ' + (r.purpose.useCases || 'N/A'));
+    lines.push('- **Deployment environment:** ' + (r.purpose.deployEnv || 'N/A'));
+    lines.push('- **Intended users:** ' + (r.purpose.intendedUsers || 'N/A'));
+    var activeSectors = [];
+    var sectorOpts = [{id:'healthcare',label:'Healthcare'},{id:'finance',label:'Finance'},{id:'employment',label:'Employment'},{id:'education',label:'Education'},{id:'lawEnforcement',label:'Law enforcement'},{id:'general',label:'General'}];
+    for (var i = 0; i < sectorOpts.length; i++) { if (r.purpose.sectors[sectorOpts[i].id]) activeSectors.push(sectorOpts[i].label); }
+    lines.push('- **Sectors:** ' + (activeSectors.length > 0 ? activeSectors.join(', ') : 'N/A'));
+    lines.push(''); lines.push('## 2. Architecture & Decision Logic'); lines.push('');
+    lines.push('- **Model type:** ' + (r.architecture.modelType || 'N/A'));
+    lines.push('- **Foundation model:** ' + (r.architecture.foundationModel || 'N/A'));
+    lines.push('- **Fine-tuning approach:** ' + (r.architecture.fineTuning || 'N/A'));
+    lines.push('- **Input types:** ' + (r.architecture.inputTypes || 'N/A'));
+    lines.push('- **Output types:** ' + (r.architecture.outputTypes || 'N/A'));
+    lines.push('- **Pipeline description:** ' + (r.architecture.pipeline || 'N/A'));
+    lines.push('- **Key factors:** ' + (r.architecture.keyFactors || 'N/A'));
+    lines.push('- **Confidence scoring:** ' + (r.architecture.confidenceMethod || 'N/A'));
+    lines.push('- **Fallback behavior:** ' + (r.architecture.fallback || 'N/A'));
+    lines.push(''); lines.push('## 3. Known Limitations'); lines.push('');
+    for (var i = 0; i < limitationCategories.length; i++) {
+      var cat = limitationCategories[i]; var lim = r.limitations[cat.id] || {};
+      lines.push('### ' + cat.label);
+      lines.push('- **Applicable:** ' + (lim.applicable === true ? 'Yes' : lim.applicable === false ? 'No' : 'Not assessed'));
+      if (lim.description) lines.push('- **Description:** ' + lim.description);
+      if (lim.mitigation) lines.push('- **Mitigation:** ' + lim.mitigation);
+      lines.push('');
+    }
+    lines.push('## 4. Performance Metrics'); lines.push('');
+    lines.push('| Metric | Value | Method | Date |'); lines.push('|--------|-------|--------|------|');
+    for (var i = 0; i < metricDefs.length; i++) {
+      var m = metricDefs[i]; var met = r.metrics[m.id] || {};
+      lines.push('| ' + m.label + ' | ' + (met.value || 'N/A') + ' | ' + (met.method || 'N/A') + ' | ' + (met.date || 'N/A') + ' |');
+    }
+    lines.push(''); lines.push('## 5. Human Oversight'); lines.push('');
+    lines.push('- **Oversight model:** ' + (r.oversight.model || 'N/A'));
+    lines.push('- **Override capability:** ' + (r.oversight.overrideCapability || 'N/A'));
+    lines.push('- **Personnel qualifications:** ' + (r.oversight.qualifications || 'N/A'));
+    lines.push('- **Monitoring frequency:** ' + (r.oversight.monitorFrequency || 'N/A'));
+    lines.push(''); lines.push('## 6. Transparency Disclosures'); lines.push('');
+    lines.push('| Disclosure | Implemented | Location | Screenshot |'); lines.push('|-----------|-------------|----------|------------|');
+    for (var i = 0; i < disclosureItems.length; i++) {
+      var d = disclosureItems[i]; var disc = r.disclosures[d.id] || {};
+      var impl = disc.implemented === true ? 'Yes' : disc.implemented === false ? 'No' : 'N/A';
+      lines.push('| ' + d.label + ' | ' + impl + ' | ' + (disc.location || 'N/A') + ' | ' + (disc.screenshot || 'N/A') + ' |');
+    }
+    lines.push(''); lines.push('## 7. Completeness Summary'); lines.push('');
+    lines.push('| Section | Score |'); lines.push('|---------|-------|');
+    var sectionLabels = {purpose:'Purpose & Scope',architecture:'Architecture',limitations:'Limitations',metrics:'Metrics',oversight:'Oversight',disclosures:'Disclosures'};
+    for (var key in r.scores) { lines.push('| ' + (sectionLabels[key]||key) + ' | ' + r.scores[key].pct + '% (' + r.scores[key].filled + '/' + r.scores[key].total + ') |'); }
+    lines.push('| **Overall** | **' + r.overallScore + '%** |');
+    lines.push(''); lines.push('---');
+    lines.push('*Generated by System Transparency Documentation Tool. This is research, not legal advice.*');
+    exportMarkdown('transparency-documentation-report.md', lines.join('\n'));
+  }
+
+  wizard.render();
+})();
+</script>
+</body>
+</html>

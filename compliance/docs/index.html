@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Compliance Evidence Collection Kit</title>
+<meta name="description" content="Open-source toolkit for gathering AI/LLM compliance evidence across 16+ jurisdictions. Templates, interactive tools, and autofill scripts for EU AI Act, GDPR, Colorado SB 24-205, and more.">
+<style>
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: #060E1A;
+  color: #D8D2C4;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Layout ── */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
+section { padding: 72px 0; }
+section + section { border-top: 1px solid #131F2E; }
+
+/* ── Typography ── */
+h1 { font-size: 2.8em; font-weight: 200; letter-spacing: 2px; color: #E8B96A; line-height: 1.15; }
+h2 { font-size: 1.5em; font-weight: 300; color: #E8B96A; letter-spacing: 1px; margin-bottom: 32px; }
+h3 { font-size: 1.05em; font-weight: 500; color: #9AACBA; margin-bottom: 12px; }
+p { color: #8A9BAD; font-size: 0.95em; max-width: 680px; }
+a { color: #4DBFBF; text-decoration: none; transition: color 0.15s; }
+a:hover { color: #E8B96A; }
+
+/* ── Hero ── */
+.hero {
+  padding: 100px 0 80px;
+  background: linear-gradient(180deg, #0B1426 0%, #060E1A 100%);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(212,148,58,0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border: 1px solid #D4943A44;
+  border-radius: 20px;
+  font-size: 0.72em;
+  color: #D4943A;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  background: #D4943A0A;
+}
+.hero p {
+  font-size: 1.1em;
+  margin-top: 20px;
+  max-width: 620px;
+}
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.stat { text-align: left; }
+.stat-num { font-size: 2.4em; font-weight: 200; color: #E8B96A; line-height: 1; }
+.stat-label { font-size: 0.75em; color: #6B7B8D; letter-spacing: 1px; text-transform: uppercase; margin-top: 4px; }
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 28px;
+  border-radius: 4px;
+  font-size: 0.88em;
+  font-weight: 500;
+  transition: all 0.15s;
+  border: 1px solid transparent;
+}
+.btn-primary {
+  background: #D4943A;
+  color: #060E1A;
+}
+.btn-primary:hover { background: #E8B96A; color: #060E1A; }
+.btn-outline {
+  border-color: #3A4A5A;
+  color: #9AACBA;
+  background: transparent;
+}
+.btn-outline:hover { border-color: #D4943A; color: #E8B96A; }
+
+/* ── Nav ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: #060E1Aee;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #131F2E;
+  padding: 0 28px;
+  transition: background 0.2s;
+}
+nav .inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+}
+nav .logo {
+  font-size: 0.85em;
+  font-weight: 500;
+  color: #E8B96A;
+  letter-spacing: 1px;
+}
+nav .links { display: flex; gap: 24px; }
+nav .links a { font-size: 0.8em; color: #6B7B8D; letter-spacing: 0.5px; }
+nav .links a:hover { color: #E8B96A; }
+
+/* ── World Map ── */
+.map-section { background: #0A1220; }
+.map-frame {
+  background: #0D1830;
+  border: 1px solid #1E2D3D;
+  border-radius: 8px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.map-frame iframe {
+  width: 100%;
+  height: 520px;
+  border: none;
+  border-radius: 4px;
+}
+.legend-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  margin-top: 16px;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.75em;
+  color: #6B7B8D;
+}
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ── Templates Grid ── */
+.tmpl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+.tmpl-card {
+  background: #0D1830;
+  border: 1px solid #1E2D3D;
+  border-radius: 6px;
+  padding: 18px 20px;
+  transition: border-color 0.15s;
+}
+.tmpl-card:hover { border-color: #3A4A5A; }
+.tmpl-num {
+  font-size: 0.7em;
+  color: #D4943A;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.tmpl-name {
+  font-size: 0.95em;
+  color: #D8D2C4;
+  margin: 4px 0 6px;
+  font-weight: 500;
+}
+.tmpl-desc {
+  font-size: 0.78em;
+  color: #6B7B8D;
+  line-height: 1.5;
+}
+.tmpl-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 10px;
+}
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 0.65em;
+  letter-spacing: 0.5px;
+}
+.tag-enacted { background: #D4943A22; color: #E8B96A; border: 1px solid #D4943A33; }
+.tag-active { background: #2A7B7B22; color: #4DBFBF; border: 1px solid #2A7B7B33; }
+
+/* ── Tools Grid ── */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.tool-card {
+  background: #0D1830;
+  border: 1px solid #1E2D3D;
+  border-radius: 6px;
+  padding: 22px 24px;
+  transition: border-color 0.15s;
+}
+.tool-card:hover { border-color: #D4943A55; }
+.tool-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1em;
+  margin-bottom: 14px;
+}
+.tool-icon.risk { background: #c0392b22; color: #e74c3c; }
+.tool-icon.impact { background: #D4943A22; color: #E8B96A; }
+.tool-icon.oversight { background: #2A7B7B22; color: #4DBFBF; }
+.tool-icon.bias { background: #8e44ad22; color: #a569bd; }
+.tool-icon.consent { background: #2980b922; color: #5dade2; }
+.tool-icon.security { background: #1E2D3D; color: #9AACBA; }
+.tool-name { font-size: 1em; color: #D8D2C4; font-weight: 500; margin-bottom: 6px; }
+.tool-template { font-size: 0.72em; color: #D4943A; margin-bottom: 8px; }
+.tool-desc { font-size: 0.82em; color: #6B7B8D; line-height: 1.5; }
+
+/* ── Workflow ── */
+.workflow {
+  display: flex;
+  gap: 0;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+.wf-step {
+  flex: 1;
+  min-width: 200px;
+  padding: 24px;
+  background: #0D1830;
+  border: 1px solid #1E2D3D;
+  position: relative;
+}
+.wf-step:first-child { border-radius: 6px 0 0 6px; }
+.wf-step:last-child { border-radius: 0 6px 6px 0; }
+.wf-num {
+  font-size: 2em;
+  font-weight: 200;
+  color: #D4943A33;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.wf-title { font-size: 0.9em; color: #E8B96A; font-weight: 500; margin-bottom: 6px; }
+.wf-desc { font-size: 0.78em; color: #6B7B8D; line-height: 1.5; }
+
+/* ── Deadlines ── */
+.deadline-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+.deadline-table th, .deadline-table td {
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid #131F2E;
+  font-size: 0.85em;
+}
+.deadline-table th {
+  color: #6B7B8D;
+  font-weight: 500;
+  font-size: 0.72em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.deadline-table td { color: #9AACBA; }
+.deadline-date { color: #E8B96A; font-weight: 500; font-variant-numeric: tabular-nums; }
+.deadline-urgent { color: #e74c3c; }
+.deadline-soon { color: #E8B96A; }
+.deadline-later { color: #4DBFBF; }
+.deadline-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 0.7em;
+}
+.badge-enacted { background: #1D9E7522; color: #1D9E75; }
+.badge-sector { background: #378ADD22; color: #378ADD; }
+.badge-proposed { background: #EF9F2722; color: #EF9F27; }
+
+/* ── Poster ── */
+.poster-frame {
+  background: #0D1830;
+  border: 1px solid #1E2D3D;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 24px;
+}
+.poster-frame img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #1E2D3D;
+}
+
+/* ── Jurisdictions ── */
+.juris-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+  margin-top: 20px;
+}
+.juris-chip {
+  padding: 10px 14px;
+  background: #0D1830;
+  border: 1px solid #1E2D3D;
+  border-radius: 4px;
+  font-size: 0.8em;
+  text-align: center;
+  transition: border-color 0.15s;
+}
+.juris-chip:hover { border-color: #3A4A5A; }
+.juris-status {
+  display: block;
+  font-size: 0.65em;
+  margin-top: 3px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.juris-enacted .juris-status { color: #1D9E75; }
+.juris-sector .juris-status { color: #378ADD; }
+.juris-proposed .juris-status { color: #EF9F27; }
+.juris-voluntary .juris-status { color: #7F77DD; }
+
+/* ── Footer ── */
+footer {
+  padding: 40px 0;
+  border-top: 1px solid #131F2E;
+  text-align: center;
+}
+footer p { margin: 0 auto; font-size: 0.78em; color: #3A4A5A; }
+footer a { color: #6B7B8D; }
+
+/* ── Responsive ── */
+@media (max-width: 680px) {
+  h1 { font-size: 1.8em; }
+  .hero-stats { gap: 24px; }
+  .workflow { flex-direction: column; }
+  .wf-step { border-radius: 0; }
+  .wf-step:first-child { border-radius: 6px 6px 0 0; }
+  .wf-step:last-child { border-radius: 0 0 6px 6px; }
+  nav .links { gap: 14px; }
+  nav .links a { font-size: 0.72em; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="inner">
+    <div class="logo">AI Compliance Kit</div>
+    <div class="links">
+      <a href="#map">World Map</a>
+      <a href="#templates">Templates</a>
+      <a href="#tools">Tools</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#deadlines">Deadlines</a>
+      <a href="https://github.com/justice8096/LLMComplianceSkill">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">Claude Code Skill</div>
+    <h1>AI Compliance<br>Evidence Collection Kit</h1>
+    <p>Open-source toolkit for gathering compliance evidence across global AI regulations. 22 evidence templates, 6 interactive assessment tools, and an autofill engine. Built to hand to your legal team.</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">16</div>
+        <div class="stat-label">Jurisdictions</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">45+</div>
+        <div class="stat-label">Laws Tracked</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">22</div>
+        <div class="stat-label">Evidence Templates</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Interactive Tools</div>
+      </div>
+    </div>
+    <div class="hero-actions">
+      <a href="https://github.com/justice8096/LLMComplianceSkill" class="btn btn-primary">View on GitHub</a>
+      <a href="#workflow" class="btn btn-outline">How It Works</a>
+    </div>
+  </div>
+</section>
+
+<!-- World Map -->
+<section class="map-section" id="map">
+  <div class="container">
+    <h2>Global Regulatory Landscape</h2>
+    <p>Hover over countries to see their AI regulation status, key legislation, and enforcement timelines.</p>
+    <div class="map-frame">
+      <iframe src="world-map.html" title="AI Regulations World Map" loading="lazy"></iframe>
+    </div>
+    <div class="legend-row">
+      <div class="legend-item"><div class="legend-dot" style="background:#1D9E75"></div> Enacted comprehensive AI law</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#378ADD"></div> Active binding sector rules</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#EF9F27"></div> Legislation proposed</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#7F77DD"></div> Voluntary frameworks</div>
+    </div>
+  </div>
+</section>
+
+<!-- Jurisdictions -->
+<section id="jurisdictions">
+  <div class="container">
+    <h2>Covered Jurisdictions</h2>
+    <p>Detailed regulation research files cover each jurisdiction with specific laws, requirements, deadlines, and developer guidance.</p>
+    <div class="juris-grid">
+      <div class="juris-chip juris-enacted">European Union<span class="juris-status">Enacted</span></div>
+      <div class="juris-chip juris-enacted">South Korea<span class="juris-status">Enacted</span></div>
+      <div class="juris-chip juris-enacted">Peru<span class="juris-status">Enacted</span></div>
+      <div class="juris-chip juris-enacted">Vietnam<span class="juris-status">Enacted</span></div>
+      <div class="juris-chip juris-sector">China<span class="juris-status">Active Sector</span></div>
+      <div class="juris-chip juris-sector">United Kingdom<span class="juris-status">Active Sector</span></div>
+      <div class="juris-chip juris-sector">United States<span class="juris-status">Active Sector</span></div>
+      <div class="juris-chip juris-proposed">Canada<span class="juris-status">Proposed</span></div>
+      <div class="juris-chip juris-proposed">Brazil<span class="juris-status">Proposed</span></div>
+      <div class="juris-chip juris-proposed">India<span class="juris-status">Proposed</span></div>
+      <div class="juris-chip juris-proposed">Japan<span class="juris-status">Proposed</span></div>
+      <div class="juris-chip juris-proposed">Nigeria<span class="juris-status">Proposed</span></div>
+      <div class="juris-chip juris-proposed">Mexico<span class="juris-status">Proposed</span></div>
+      <div class="juris-chip juris-voluntary">Australia<span class="juris-status">Voluntary</span></div>
+      <div class="juris-chip juris-voluntary">New Zealand<span class="juris-status">Voluntary</span></div>
+      <div class="juris-chip juris-voluntary">Singapore<span class="juris-status">Voluntary</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Templates -->
+<section id="templates">
+  <div class="container">
+    <h2>22 Evidence Templates</h2>
+    <p>Each template maps directly to specific legal requirements. Fill them in and hand the completed set to your legal or compliance team.</p>
+
+    <h3>Core Evidence</h3>
+    <div class="tmpl-grid">
+      <div class="tmpl-card">
+        <div class="tmpl-num">01</div>
+        <div class="tmpl-name">System Transparency Document</div>
+        <div class="tmpl-desc">Architecture, purpose, limitations, performance metrics, and risk classification justification.</div>
+        <div class="tmpl-tags"><span class="tag tag-enacted">EU</span><span class="tag tag-enacted">UK</span><span class="tag tag-active">US-CO</span><span class="tag tag-enacted">KR</span><span class="tag tag-enacted">PE</span></div>
+      </div>
+      <div class="tmpl-card">
+        <div class="tmpl-num">02</div>
+        <div class="tmpl-name">User-Facing Disclosure Toolkit</div>
+        <div class="tmpl-desc">Disclosure copy templates, consent flows, and implementation checklist for user-facing AI notices.</div>
+        <div class="tmpl-tags"><span class="tag tag-enacted">EU</span><span class="tag tag-active">US-CO</span><span class="tag tag-active">US-CA</span><span class="tag tag-active">CN</span><span class="tag tag-enacted">KR</span></div>
+      </div>
+      <div class="tmpl-card">
+        <div class="tmpl-num">03</div>
+        <div class="tmpl-name">Content Labeling Spec</div>
+        <div class="tmpl-desc">Explicit labels, metadata watermarks, and China two-tier labeling requirements.</div>
+        <div class="tmpl-tags"><span class="tag tag-enacted">EU</span><span class="tag tag-active">CN</span><span class="tag tag-active">US-CA</span><span class="tag tag-enacted">KR</span></div>
+      </div>
+      <div class="tmpl-card">
+        <div class="tmpl-num">04</div>
+        <div class="tmpl-name">Automated Decision Logic</div>
+        <div class="tmpl-desc">Decision factors, weights, explainability methods, and contestability mechanisms.</div>
+        <div class="tmpl-tags"><span class="tag tag-enacted">EU</span><span class="tag tag-enacted">UK</span><span class="tag tag-active">US-CO</span><span class="tag tag-active">AU</span></div>
+      </div>
+      <div class="tmpl-card">
+        <div class="tmpl-num">05</div>
+        <div class="tmpl-name">Training Data Disclosure</div>
+        <div class="tmpl-desc">Data inventory, copyright audit, GPAI technical documentation summary.</div>
+        <div class="tmpl-tags"><span class="tag tag-enacted">EU</span><span class="tag tag-enacted">UK</span><span class="tag tag-active">US-CA</span><span class="tag tag-active">AU</span></div>
+      </div>
+      <div class="tmpl-card">
+        <div class="tmpl-num">06</div>
+        <div class="tmpl-name">Impact/Risk Assessment</div>
+        <div class="tmpl-desc">Fundamental rights impact, risk matrix scoring, KRI configuration, and mitigation tracking.</div>
+        <div class="tmpl-tags"><span class="tag tag-enacted">EU</span><span class="tag tag-active">US-CO</span><span class="tag tag-enacted">KR</span><span class="tag tag-enacted">BR</span></div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:32px">High-Frequency Evidence</h3>
+    <div class="tmpl-grid">
+      <div class="tmpl-card">
+        <div class="tmpl-num">07</div>
+        <div class="tmpl-name">Privacy Impact Assessment</div>
+        <div class="tmpl-desc">DPIA across 17 jurisdictions. Required by 20+ laws globally.</div>
+        <div class="tmpl-tags"><span class="tag tag-enacted">GDPR</span><span class="tag tag-enacted">UK</span><span class="tag tag-active">AU</span><span class="tag tag-enacted">KR</span><span class="tag tag-active">IN</span></div>
+      </div>
+      <div class="tmpl-card">
+        <div class="tmpl-num">08</div>
+        <div class="tmpl-name">Bias Testing</div>
+        <div class="tmpl-desc">Protected characteristics matrix, fairness metrics, NYC LL 144 audit format.</div>
+        <div class="tmpl-tags"><span class="tag tag-enacted">EU</span><span class="tag tag-enacted">UK</span><span class="tag tag-active">US-CO</span><span class="tag tag-active">NYC</span><span class="tag tag-active">AU</span></div>
+      </div>
+      <div class="tmpl-card">
+        <div class="tmpl-num">09</div>
+        <div class="tmpl-name">Human Oversight Design</div>
+        <div class="tmpl-desc">Override mechanisms, automation bias prevention, personnel qualifications.</div>
+        <div class="tmpl-tags"><span class="tag tag-enacted">EU</span><span class="tag tag-enacted">UK</span><span class="tag tag-active">AU</span><span class="tag tag-enacted">KR</span></div>
+      </div>
+      <div class="tmpl-card">
+        <div class="tmpl-num">10</div>
+        <div class="tmpl-name">Consent Records</div>
+        <div class="tmpl-desc">Collection design, record schema, lifecycle management. Required by 16+ laws.</div>
+        <div class="tmpl-tags"><span class="tag tag-enacted">GDPR</span><span class="tag tag-enacted">UK</span><span class="tag tag-active">AU</span><span class="tag tag-active">IN</span><span class="tag tag-enacted">BR</span></div>
+      </div>
+      <div class="tmpl-card">
+        <div class="tmpl-num">11</div>
+        <div class="tmpl-name">Data Subject Rights</div>
+        <div class="tmpl-desc">Rights matrix and AI-specific challenges across 14+ data protection laws.</div>
+        <div class="tmpl-tags"><span class="tag tag-enacted">GDPR</span><span class="tag tag-enacted">UK</span><span class="tag tag-active">AU</span><span class="tag tag-active">CA</span><span class="tag tag-enacted">BR</span></div>
+      </div>
+      <div class="tmpl-card">
+        <div class="tmpl-num">12</div>
+        <div class="tmpl-name">Governance Framework</div>
+        <div class="tmpl-desc">Organizational structure, AI register, approval gates, policy framework.</div>
+        <div class="tmpl-tags"><span class="tag tag-enacted">EU</span><span class="tag tag-enacted">UK</span><span class="tag tag-active">AU</span><span class="tag tag-active">SG</span><span class="tag tag-enacted">KR</span></div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:32px">Specialized Evidence</h3>
+    <div class="tmpl-grid">
+      <div class="tmpl-card">
+        <div class="tmpl-num">13</div>
+        <div class="tmpl-name">Incident Management</div>
+        <div class="tmpl-desc">Classification matrix, regulatory reporting timelines, log retention.</div>
+        <div class="tmpl-tags"><span class="tag tag-enacted">EU</span><span class="tag tag-active">CN</span><span class="tag tag-active">US-CA</span><span class="tag tag-enacted">KR</span></div>
+      </div>
+      <div class="tmpl-card">
+        <div class="tmpl-num">14</div>
+        <div class="tmpl-name">Registration/Filing Tracker</div>
+        <div class="tmpl-desc">EU database, China CAC filings, Peru registry, and other national registries.</div>
+        <div class="tmpl-tags"><span class="tag tag-enacted">EU</span><span class="tag tag-active">CN</span><span class="tag tag-enacted">PE</span><span class="tag tag-enacted">KR</span></div>
+      </div>
+      <div class="tmpl-card">
+        <div class="tmpl-num">15</div>
+        <div class="tmpl-name">Security Assessment</div>
+        <div class="tmpl-desc">Threat model, AI-specific attack vectors, China GenAI security specs.</div>
+        <div class="tmpl-tags"><span class="tag tag-enacted">EU</span><span class="tag tag-enacted">UK</span><span class="tag tag-active">CN</span><span class="tag tag-enacted">KR</span></div>
+      </div>
+      <div class="tmpl-card">
+        <div class="tmpl-num">16</div>
+        <div class="tmpl-name">Content Moderation</div>
+        <div class="tmpl-desc">Moderation pipeline, complaints process, India intermediary rules.</div>
+        <div class="tmpl-tags"><span class="tag tag-active">CN</span><span class="tag tag-active">IN</span></div>
+      </div>
+      <div class="tmpl-card">
+        <div class="tmpl-num">17</div>
+        <div class="tmpl-name">Risk Classification</div>
+        <div class="tmpl-desc">Decision tree across 7 regulatory frameworks. Start here.</div>
+        <div class="tmpl-tags"><span class="tag tag-enacted">EU</span><span class="tag tag-active">US-CO</span><span class="tag tag-enacted">KR</span><span class="tag tag-enacted">BR</span><span class="tag tag-enacted">PE</span></div>
+      </div>
+      <div class="tmpl-card">
+        <div class="tmpl-num">18</div>
+        <div class="tmpl-name">AI Literacy Training Record</div>
+        <div class="tmpl-desc">EU Art. 4 compliance. Already enforceable since Feb 2025.</div>
+        <div class="tmpl-tags"><span class="tag tag-enacted">EU Art. 4</span></div>
+      </div>
+      <div class="tmpl-card">
+        <div class="tmpl-num">19</div>
+        <div class="tmpl-name">Conformity Assessment</div>
+        <div class="tmpl-desc">EU AI Act Arts. 9-15 checklist, CE marking pathway, notified body requirements.</div>
+        <div class="tmpl-tags"><span class="tag tag-enacted">EU</span></div>
+      </div>
+      <div class="tmpl-card">
+        <div class="tmpl-num">20</div>
+        <div class="tmpl-name">Sector-Specific Matrix</div>
+        <div class="tmpl-desc">Finance, healthcare, employment, and education sector requirements.</div>
+        <div class="tmpl-tags"><span class="tag tag-enacted">EU</span><span class="tag tag-enacted">UK</span><span class="tag tag-active">AU</span><span class="tag tag-active">SG</span></div>
+      </div>
+      <div class="tmpl-card">
+        <div class="tmpl-num">21</div>
+        <div class="tmpl-name">Jurisdiction Selector</div>
+        <div class="tmpl-desc">Check your countries, get your required template list with deadlines.</div>
+        <div class="tmpl-tags"><span class="tag tag-active">All</span></div>
+      </div>
+      <div class="tmpl-card">
+        <div class="tmpl-num">22</div>
+        <div class="tmpl-name">Compliance Deadline Tracker</div>
+        <div class="tmpl-desc">All known AI regulation deadlines with 90-day alert thresholds.</div>
+        <div class="tmpl-tags"><span class="tag tag-active">All</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive Tools -->
+<section id="tools">
+  <div class="container">
+    <h2>Interactive Assessment Tools</h2>
+    <p>Browser-based tools for compliance areas that require human judgment. No server needed. Load your config, make decisions, export results.</p>
+
+    <div class="tools-grid">
+      <div class="tool-card">
+        <div class="tool-icon risk">&#9888;</div>
+        <div class="tool-name">Risk Classification</div>
+        <div class="tool-template">Template 17 &mdash; EU AI Act Annex III, Colorado SB 24-205, South Korea AI Basic Act</div>
+        <div class="tool-desc">Step-through decision tree for prohibited practices, high-risk categories, and limited risk triggers across regulatory frameworks.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon impact">&#9878;</div>
+        <div class="tool-name">Impact &amp; Risk Scoring</div>
+        <div class="tool-template">Template 06 &mdash; EU AI Act Art. 9, Colorado SB 24-205</div>
+        <div class="tool-desc">Fundamental rights impact assessment with severity/likelihood matrix, mitigation tracking, and Key Risk Indicator configuration.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon oversight">&#9673;</div>
+        <div class="tool-name">Human Oversight Design</div>
+        <div class="tool-template">Template 09 &mdash; EU AI Act Art. 14, UK DUA Act, Australia Privacy Act</div>
+        <div class="tool-desc">Oversight model selection, override mechanism design, personnel requirements, and automation bias prevention measures.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon bias">&#9876;</div>
+        <div class="tool-name">Bias Testing Evidence</div>
+        <div class="tool-template">Template 08 &mdash; EU, UK, Colorado, California, NYC LL 144</div>
+        <div class="tool-desc">Protected characteristics matrix, fairness metric selection, findings documentation, and remediation planning.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon consent">&#9745;</div>
+        <div class="tool-name">Consent Collection Design</div>
+        <div class="tool-template">Template 10 &mdash; GDPR Arts. 6-7, UK GDPR, Australia, South Korea PIPA</div>
+        <div class="tool-desc">Legal basis selection, consent mechanism design, record schema definition, and lifecycle management.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon security">&#9881;</div>
+        <div class="tool-name">Security Assessment</div>
+        <div class="tool-template">Template 15 &mdash; EU AI Act Art. 15, UK DUA Act, China GenAI Specs</div>
+        <div class="tool-desc">AI-specific threat modeling, security control mapping, China TC260 requirements, and infrastructure security audit.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Workflow -->
+<section id="workflow">
+  <div class="container">
+    <h2>How It Works</h2>
+    <p>A file-based pipeline with no server dependencies. Everything runs locally.</p>
+
+    <div class="workflow">
+      <div class="wf-step">
+        <div class="wf-num">01</div>
+        <div class="wf-title">Configure</div>
+        <div class="wf-desc">Fill in compliance-config.json with your project details, jurisdictions, and system metadata.</div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-num">02</div>
+        <div class="wf-title">Assess</div>
+        <div class="wf-desc">Open the interactive HTML tools in your browser. Load your config, make human-judgment decisions, save results back.</div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-num">03</div>
+        <div class="wf-title">Autofill</div>
+        <div class="wf-desc">Run node autofill.js to populate all 22 templates with your config data and generate a MANIFEST.md.</div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-num">04</div>
+        <div class="wf-title">Handoff</div>
+        <div class="wf-desc">Hand the output/ folder to your legal or compliance team. Every template cites the specific laws it serves as evidence for.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Deadlines -->
+<section id="deadlines">
+  <div class="container">
+    <h2>Key Compliance Deadlines</h2>
+    <p>Major AI regulation enforcement dates through 2027. The toolkit includes 90-day alert thresholds for each.</p>
+
+    <table class="deadline-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Jurisdiction</th>
+          <th>Regulation</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="deadline-date deadline-urgent">2025-02-02</td>
+          <td>EU</td>
+          <td>AI Act &mdash; Prohibited practices + AI Literacy (Art. 4)</td>
+          <td><span class="deadline-badge badge-enacted">In Force</span></td>
+        </tr>
+        <tr>
+          <td class="deadline-date deadline-urgent">2025-08-02</td>
+          <td>EU</td>
+          <td>AI Act &mdash; GPAI obligations</td>
+          <td><span class="deadline-badge badge-enacted">In Force</span></td>
+        </tr>
+        <tr>
+          <td class="deadline-date deadline-urgent">2026-01-01</td>
+          <td>US-CA</td>
+          <td>SB 53 Frontier AI + AB 2013 Training Data Transparency</td>
+          <td><span class="deadline-badge badge-enacted">In Force</span></td>
+        </tr>
+        <tr>
+          <td class="deadline-date deadline-urgent">2026-02-05</td>
+          <td>UK</td>
+          <td>DUA Act &mdash; ADM reforms + Deepfake offence</td>
+          <td><span class="deadline-badge badge-enacted">In Force</span></td>
+        </tr>
+        <tr>
+          <td class="deadline-date deadline-soon">2026-06-30</td>
+          <td>US-CO</td>
+          <td>Colorado AI Act (SB 24-205)</td>
+          <td><span class="deadline-badge badge-proposed">Upcoming</span></td>
+        </tr>
+        <tr>
+          <td class="deadline-date deadline-soon">2026-08-02</td>
+          <td>EU</td>
+          <td>AI Act &mdash; Full applicability (high-risk, transparency, conformity)</td>
+          <td><span class="deadline-badge badge-proposed">Upcoming</span></td>
+        </tr>
+        <tr>
+          <td class="deadline-date deadline-soon">2026-08-02</td>
+          <td>US-CA</td>
+          <td>AI Transparency Act (SB 942)</td>
+          <td><span class="deadline-badge badge-proposed">Upcoming</span></td>
+        </tr>
+        <tr>
+          <td class="deadline-date deadline-later">2026-12-01</td>
+          <td>AU</td>
+          <td>Privacy Act ADM transparency obligations</td>
+          <td><span class="deadline-badge badge-proposed">Upcoming</span></td>
+        </tr>
+        <tr>
+          <td class="deadline-date deadline-later">2027-08-02</td>
+          <td>EU</td>
+          <td>AI Act &mdash; High-risk AI in regulated products</td>
+          <td><span class="deadline-badge badge-proposed">Upcoming</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Evidence Matrix Poster -->
+<section id="poster">
+  <div class="container">
+    <h2>Evidence Requirements Matrix</h2>
+    <p>Complete cross-reference of 45+ laws across 16 jurisdictions mapped to 24 evidence categories.</p>
+    <div class="poster-frame">
+      <img src="poster.png" alt="AI Compliance Evidence Matrix - 16 jurisdictions by 24 evidence categories" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- Quick Start -->
+<section id="quickstart">
+  <div class="container">
+    <h2>Quick Start</h2>
+    <div style="background:#0D1830; border:1px solid #1E2D3D; border-radius:8px; padding:28px 32px; margin-top:8px;">
+      <pre style="color:#9AACBA; font-size:0.88em; line-height:1.8; font-family:'Cascadia Code','Fira Code',monospace; overflow-x:auto;"><code><span style="color:#6B7B8D"># Clone the repository</span>
+<span style="color:#4DBFBF">git clone</span> https://github.com/justice8096/LLMComplianceSkill.git
+<span style="color:#4DBFBF">cd</span> LLMComplianceSkill
+
+<span style="color:#6B7B8D"># 1. Edit your project config</span>
+<span style="color:#4DBFBF">cp</span> tools/compliance-config.json tools/my-config.json
+<span style="color:#6B7B8D"># Edit my-config.json with your project details</span>
+
+<span style="color:#6B7B8D"># 2. Open interactive tools in your browser</span>
+<span style="color:#6B7B8D"># (load my-config.json into each tool, save results)</span>
+
+<span style="color:#6B7B8D"># 3. Run autofill</span>
+<span style="color:#4DBFBF">node</span> tools/autofill.js
+
+<span style="color:#6B7B8D"># 4. Collected evidence is in output/</span>
+<span style="color:#4DBFBF">ls</span> output/</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- Disclaimer -->
+<section>
+  <div class="container">
+    <div style="background:#c0392b11; border:1px solid #c0392b33; border-radius:6px; padding:18px 24px;">
+      <p style="color:#e74c3c; font-size:0.82em; font-weight:500; margin-bottom:6px;">Important Disclaimer</p>
+      <p style="color:#8A9BAD; font-size:0.8em;">This toolkit supports compliance evidence gathering. It is not legal advice. Always have completed templates reviewed by qualified legal counsel. Regulations may have changed since the last research update (March 2026).</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>AI Compliance Evidence Collection Kit &mdash; Built with <a href="https://claude.ai/claude-code">Claude Code</a></p>
+    <p style="margin-top:6px;">Research current as of March 2026. <a href="https://github.com/justice8096/LLMComplianceSkill">Contribute on GitHub</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

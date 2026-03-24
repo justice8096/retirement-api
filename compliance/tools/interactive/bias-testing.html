@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bias Testing Evidence Gatherer</title>
+<script src="./shared.js"></script>
+</head>
+<body>
+<script>
+(function() {
+  injectCSS();
+
+  // Additional CSS for this tool
+  var style = document.createElement('style');
+  style.textContent = [
+    '.char-card { background: #0D1830; border: 1px solid #1E2D3D; border-radius: 4px; padding: 12px; margin-bottom: 8px; }',
+    '.char-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }',
+    '.char-title { font-size: 0.95em; color: #E8B96A; }',
+    '.badges { display: flex; flex-wrap: wrap; gap: 4px; }',
+    '.metric-card { background: #0D1830; border: 1px solid #1E2D3D; border-radius: 4px; padding: 10px 14px; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between; }',
+    '.metric-name { font-size: 0.9em; }',
+    '.metric-threshold { font-size: 0.75em; color: #6B7B8D; }',
+    '.finding-card { background: #0D1830; border: 1px solid #1E2D3D; border-radius: 4px; padding: 12px; margin-bottom: 8px; }',
+    '.severity-critical { border-left: 3px solid #e74c3c; }',
+    '.severity-high { border-left: 3px solid #E8B96A; }',
+    '.severity-medium { border-left: 3px solid #D4943A; }',
+    '.severity-low { border-left: 3px solid #2A7B7B; }',
+    '.summary-stat { display: inline-block; padding: 8px 16px; margin: 4px; border-radius: 4px; background: #1E2D3D; text-align: center; }',
+    '.summary-stat-value { font-size: 1.4em; font-weight: 600; }',
+    '.summary-stat-label { font-size: 0.75em; color: #6B7B8D; }',
+    '.multi-select { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }',
+    '.multi-select .chip { padding: 4px 12px; border: 1px solid #3A4A5A; border-radius: 3px; font-size: 0.8em; cursor: pointer; background: transparent; color: #6B7B8D; }',
+    '.multi-select .chip.selected { background: #D4943A; border-color: #D4943A; color: #0B1426; font-weight: 600; }',
+    '.group-row { display: flex; gap: 8px; align-items: center; margin-bottom: 6px; }',
+    '.group-row input { width: 80px; padding: 4px 8px; background: #0D1830; border: 1px solid #3A4A5A; border-radius: 3px; color: #F0EBE0; font-size: 0.85em; }',
+    '.group-row input:focus { border-color: #D4943A; outline: none; }',
+    '.group-row label { font-size: 0.8em; color: #9AACBA; min-width: 80px; }',
+    '.pass-fail-btn { padding: 3px 10px; border: 1px solid #3A4A5A; border-radius: 3px; cursor: pointer; font-size: 0.75em; background: transparent; color: #6B7B8D; }',
+    '.pass-fail-btn.pass { background: #2A7B7B; border-color: #2A7B7B; color: white; }',
+    '.pass-fail-btn.fail { background: #c0392b; border-color: #c0392b; color: white; }'
+  ].join('\n');
+  document.head.appendChild(style);
+
+  var config = {};
+
+  var state = {
+    domain: 'general',
+    jurisdictions: [],
+    characteristics: {},
+    metrics: { disparateImpact: true, statisticalParity: false, equalOpportunity: false, predictiveParity: false },
+    findings: [],
+    remediations: []
+  };
+
+  var DOMAINS = [
+    { value: 'employment', label: 'Employment' },
+    { value: 'credit', label: 'Credit' },
+    { value: 'insurance', label: 'Insurance' },
+    { value: 'healthcare', label: 'Healthcare' },
+    { value: 'education', label: 'Education' },
+    { value: 'housing', label: 'Housing' },
+    { value: 'general', label: 'General' }
+  ];
+
+  var ALL_JURISDICTIONS = [
+    { code: 'EU', label: 'European Union' },
+    { code: 'UK', label: 'United Kingdom' },
+    { code: 'US', label: 'United States' },
+    { code: 'CA', label: 'Canada' },
+    { code: 'CN', label: 'China' },
+    { code: 'JP', label: 'Japan' },
+    { code: 'KR', label: 'South Korea' },
+    { code: 'IN', label: 'India' },
+    { code: 'SG', label: 'Singapore' },
+    { code: 'AU', label: 'Australia' },
+    { code: 'NZ', label: 'New Zealand' },
+    { code: 'MX', label: 'Mexico' },
+    { code: 'BR', label: 'Brazil' }
+  ];
+
+  var CHARACTERISTICS = [
+    { id: 'race', label: 'Race/Ethnicity', jurisdictions: ['US', 'UK', 'EU', 'CA', 'AU', 'NZ', 'BR'] },
+    { id: 'gender', label: 'Gender/Sex', jurisdictions: ['US', 'UK', 'EU', 'CA', 'AU', 'NZ', 'JP', 'KR', 'IN', 'BR', 'MX'] },
+    { id: 'age', label: 'Age', jurisdictions: ['US', 'UK', 'EU', 'CA', 'AU', 'NZ', 'KR'] },
+    { id: 'disability', label: 'Disability', jurisdictions: ['US', 'UK', 'EU', 'CA', 'AU', 'NZ', 'JP'] },
+    { id: 'religion', label: 'Religion', jurisdictions: ['US', 'UK', 'EU', 'CA', 'AU', 'NZ', 'IN'] },
+    { id: 'national_origin', label: 'National Origin', jurisdictions: ['US', 'UK', 'EU', 'CA', 'AU'] },
+    { id: 'sexual_orientation', label: 'Sexual Orientation', jurisdictions: ['UK', 'EU', 'CA', 'AU', 'NZ', 'BR'] },
+    { id: 'pregnancy', label: 'Pregnancy/Family', jurisdictions: ['US', 'UK', 'EU', 'CA', 'AU', 'NZ'] },
+    { id: 'veteran', label: 'Veteran Status', jurisdictions: ['US'] },
+    { id: 'socioeconomic', label: 'Socioeconomic Status', jurisdictions: ['EU', 'FR', 'BR'] }
+  ];
+
+  var SEVERITY_OPTIONS = [
+    { value: 'critical', label: 'Critical' },
+    { value: 'high', label: 'High' },
+    { value: 'medium', label: 'Medium' },
+    { value: 'low', label: 'Low' }
+  ];
+
+  // Init characteristics state
+  CHARACTERISTICS.forEach(function(c) {
+    state.characteristics[c.id] = { enabled: false, groups: [], metricValue: '', result: '' };
+  });
+
+  function updateConfig() {
+    config.interactiveToolResults = config.interactiveToolResults || {};
+    config.interactiveToolResults.biasTesting = {
+      domain: state.domain,
+      jurisdictions: state.jurisdictions,
+      characteristics: state.characteristics,
+      metrics: state.metrics,
+      findings: state.findings,
+      remediations: state.remediations,
+      completedDate: new Date().toISOString().split('T')[0]
+    };
+  }
+
+  function doSave() {
+    updateConfig();
+    saveConfigToFile(config);
+  }
+
+  function doExport() {
+    updateConfig();
+    exportMarkdown('bias-testing-evidence.md', generateMarkdown());
+  }
+
+  var wizard = createWizard({
+    title: 'Bias Testing Evidence Gatherer',
+    subtitle: 'Structured entry for Template 08 - AI Bias Testing and Fairness Assessment',
+    totalSteps: 7,
+    stepLabels: ['Domain', 'Jurisdictions', 'Characteristics', 'Metrics', 'Findings', 'Remediation', 'Summary'],
+    renderStep: function(step, container) {
+      if (step === 0) renderDomainStep(container);
+      else if (step === 1) renderJurisdictionStep(container);
+      else if (step === 2) renderCharacteristicsStep(container);
+      else if (step === 3) renderMetricsStep(container);
+      else if (step === 4) renderFindingsStep(container);
+      else if (step === 5) renderRemediationStep(container);
+      else if (step === 6) renderSummaryStep(container);
+    },
+    onLoad: function() {
+      loadConfigFromFile(function(c) {
+        config = c;
+        if (config.jurisdictions) {
+          state.jurisdictions = config.jurisdictions.slice();
+        }
+        if (config.interactiveToolResults && config.interactiveToolResults.biasTesting) {
+          var saved = config.interactiveToolResults.biasTesting;
+          if (saved.domain) state.domain = saved.domain;
+          if (saved.jurisdictions) state.jurisdictions = saved.jurisdictions;
+          if (saved.characteristics) state.characteristics = saved.characteristics;
+          if (saved.metrics) state.metrics = saved.metrics;
+          if (saved.findings) state.findings = saved.findings;
+          if (saved.remediations) state.remediations = saved.remediations;
+        }
+        wizard.refreshStep();
+      });
+    },
+    onSave: doSave,
+    onExport: doExport,
+    stateKey: 'biasTesting',
+    getState: function() { return state; },
+    setState: function(s) {
+      if (s.domain !== undefined) state.domain = s.domain;
+      if (s.jurisdictions) state.jurisdictions = s.jurisdictions;
+      if (s.characteristics) state.characteristics = s.characteristics;
+      if (s.metrics) state.metrics = s.metrics;
+      if (s.findings) state.findings = s.findings;
+      if (s.remediations) state.remediations = s.remediations;
+    }
+  });
+
+  function renderDomainStep(container) {
+    container.appendChild(el('h2', {}, ['Step 1: Select Decision Domain']));
+    container.appendChild(el('p', { className: 'subtitle' }, ['Choose the domain where AI-assisted decisions are being made. This determines applicable regulations.']));
+    container.appendChild(createSelect('Decision Domain', DOMAINS, state.domain, function(v) { state.domain = v; }));
+
+    var domainInfo = {
+      employment: 'Employment decisions are subject to Title VII (US), Equality Act (UK), EU AI Act high-risk classification, and provincial human rights codes (CA).',
+      credit: 'Credit decisions are regulated under ECOA/FCRA (US), Consumer Credit Act (UK), and EU AI Act high-risk classification.',
+      insurance: 'Insurance underwriting is regulated under state insurance codes (US), FCA guidelines (UK), and EU AI Act.',
+      healthcare: 'Healthcare AI is subject to HIPAA (US), NHS AI guidance (UK), and EU AI Act high-risk classification.',
+      education: 'Education AI is classified as high-risk under EU AI Act. Subject to FERPA (US) and education equity laws.',
+      housing: 'Housing decisions are subject to Fair Housing Act (US), Equality Act (UK), and EU AI Act.',
+      general: 'General-purpose AI systems may still be subject to consumer protection and anti-discrimination laws across jurisdictions.'
+    };
+    if (domainInfo[state.domain]) {
+      container.appendChild(createAlert('info', domainInfo[state.domain]));
+    }
+  }
+
+  function renderJurisdictionStep(container) {
+    container.appendChild(el('h2', {}, ['Step 2: Select Jurisdictions']));
+    container.appendChild(el('p', { className: 'subtitle' }, ['Select all jurisdictions where the AI system operates. This determines required protected characteristics.']));
+
+    var multiSelect = el('div', { className: 'multi-select' });
+    ALL_JURISDICTIONS.forEach(function(j) {
+      var selected = state.jurisdictions.indexOf(j.code) >= 0;
+      var chip = el('button', {
+        className: 'chip' + (selected ? ' selected' : ''),
+        textContent: j.label + ' (' + j.code + ')',
+        onClick: function() {
+          var idx = state.jurisdictions.indexOf(j.code);
+          if (idx >= 0) {
+            state.jurisdictions.splice(idx, 1);
+          } else {
+            state.jurisdictions.push(j.code);
+          }
+          wizard.refreshStep();
+        }
+      });
+      multiSelect.appendChild(chip);
+    });
+    container.appendChild(multiSelect);
+
+    if (state.jurisdictions.length > 0) {
+      container.appendChild(createAlert('info', 'Selected: ' + state.jurisdictions.join(', ') + '. Required protected characteristics will be shown in the next step.'));
+    } else {
+      container.appendChild(createAlert('warning', 'Select at least one jurisdiction to proceed.'));
+    }
+  }
+
+  function renderCharacteristicsStep(container) {
+    container.appendChild(el('h2', {}, ['Step 3: Protected Characteristics Matrix']));
+    container.appendChild(el('p', { className: 'subtitle' }, ['For each required characteristic, enter group sizes, metric values, and pass/fail results.']));
+
+    CHARACTERISTICS.forEach(function(ch) {
+      var relevant = ch.jurisdictions.filter(function(j) { return state.jurisdictions.indexOf(j) >= 0; });
+      if (relevant.length === 0 && state.jurisdictions.length > 0) return;
+
+      var chState = state.characteristics[ch.id];
+      var card = el('div', { className: 'char-card' });
+      var header = el('div', { className: 'char-header' });
+      header.appendChild(el('span', { className: 'char-title' }, [ch.label]));
+
+      var badges = el('div', { className: 'badges' });
+      relevant.forEach(function(j) {
+        badges.appendChild(el('span', { className: 'badge enacted' }, [j]));
+      });
+      header.appendChild(badges);
+      card.appendChild(header);
+
+      // Enable toggle
+      card.appendChild(createToggle('Include in testing', chState.enabled, function(v) {
+        chState.enabled = v;
+        wizard.refreshStep();
+      }));
+
+      if (chState.enabled) {
+        // Group A
+        var groupARow = el('div', { className: 'group-row' });
+        groupARow.appendChild(el('label', {}, ['Group A Size']));
+        var groupAInput = el('input', { type: 'number', value: chState.groupASize || '' });
+        groupAInput.addEventListener('input', function() { chState.groupASize = groupAInput.value; });
+        groupARow.appendChild(groupAInput);
+        groupARow.appendChild(el('label', {}, ['Group B Size']));
+        var groupBInput = el('input', { type: 'number', value: chState.groupBSize || '' });
+        groupBInput.addEventListener('input', function() { chState.groupBSize = groupBInput.value; });
+        groupARow.appendChild(groupBInput);
+        card.appendChild(groupARow);
+
+        // Metric value
+        var metricRow = el('div', { className: 'group-row' });
+        metricRow.appendChild(el('label', {}, ['Metric Value']));
+        var metricInput = el('input', { type: 'text', value: chState.metricValue || '' });
+        metricInput.addEventListener('input', function() { chState.metricValue = metricInput.value; });
+        metricRow.appendChild(metricInput);
+
+        // Pass/fail buttons
+        var passBtn = el('button', {
+          className: 'pass-fail-btn' + (chState.result === 'pass' ? ' pass' : ''),
+          textContent: 'Pass',
+          onClick: function() { chState.result = 'pass'; wizard.refreshStep(); }
+        });
+        var failBtn = el('button', {
+          className: 'pass-fail-btn' + (chState.result === 'fail' ? ' fail' : ''),
+          textContent: 'Fail',
+          onClick: function() { chState.result = 'fail'; wizard.refreshStep(); }
+        });
+        metricRow.appendChild(passBtn);
+        metricRow.appendChild(failBtn);
+        card.appendChild(metricRow);
+
+        // Notes
+        var notesTA = el('textarea', {
+          className: 'field-textarea',
+          placeholder: 'Additional notes for this characteristic...'
+        });
+        notesTA.value = chState.notes || '';
+        notesTA.addEventListener('input', function() { chState.notes = notesTA.value; });
+        card.appendChild(notesTA);
+      }
+
+      container.appendChild(card);
+    });
+  }
+
+  function renderMetricsStep(container) {
+    container.appendChild(el('h2', {}, ['Step 4: Fairness Metrics Selection']));
+    container.appendChild(el('p', { className: 'subtitle' }, ['Select which fairness metrics to apply.']));
+
+    var metricsData = [
+      { key: 'disparateImpact', label: 'Disparate Impact Ratio', threshold: 'Threshold: 0.8 (Four-Fifths Rule)', desc: 'Ratio of selection rates between groups. Values below 0.8 indicate potential disparate impact.' },
+      { key: 'statisticalParity', label: 'Statistical Parity', threshold: 'Threshold: varies', desc: 'Difference in positive outcome rates across groups should be minimized.' },
+      { key: 'equalOpportunity', label: 'Equal Opportunity', threshold: 'Threshold: varies', desc: 'True positive rates should be equal across groups.' },
+      { key: 'predictiveParity', label: 'Predictive Parity', threshold: 'Threshold: varies', desc: 'Positive predictive values should be equal across groups.' }
+    ];
+
+    metricsData.forEach(function(m) {
+      var card = el('div', { className: 'metric-card' });
+      var left = el('div');
+      left.appendChild(el('div', { className: 'metric-name' }, [m.label]));
+      left.appendChild(el('div', { className: 'metric-threshold' }, [m.threshold]));
+      left.appendChild(el('div', { className: 'metric-threshold' }, [m.desc]));
+      card.appendChild(left);
+
+      var toggleDiv = el('div', { className: 'toggle-group' });
+      var yesBtn = el('button', {
+        className: 'toggle-btn' + (state.metrics[m.key] ? ' active yes' : ''),
+        textContent: 'On',
+        onClick: function() { state.metrics[m.key] = true; wizard.refreshStep(); }
+      });
+      var noBtn = el('button', {
+        className: 'toggle-btn' + (!state.metrics[m.key] ? ' active no' : ''),
+        textContent: 'Off',
+        onClick: function() { state.metrics[m.key] = false; wizard.refreshStep(); }
+      });
+      toggleDiv.appendChild(yesBtn);
+      toggleDiv.appendChild(noBtn);
+      card.appendChild(toggleDiv);
+      container.appendChild(card);
+    });
+  }
+
+  function renderFindingsStep(container) {
+    container.appendChild(el('h2', {}, ['Step 5: Findings Entry']));
+    container.appendChild(el('p', { className: 'subtitle' }, ['Document any bias findings with severity ratings.']));
+
+    state.findings.forEach(function(f, idx) {
+      var card = el('div', { className: 'finding-card severity-' + (f.severity || 'low') });
+      card.appendChild(createTextInput('Finding Title', f.title, function(v) { f.title = v; }, 'Brief description'));
+      card.appendChild(createSelect('Severity', SEVERITY_OPTIONS, f.severity || 'low', function(v) {
+        f.severity = v;
+        wizard.refreshStep();
+      }));
+      card.appendChild(createSelect('Characteristic', [{ value: '', label: '-- Select --' }].concat(
+        CHARACTERISTICS.map(function(c) { return { value: c.id, label: c.label }; })
+      ), f.characteristic || '', function(v) { f.characteristic = v; }));
+      card.appendChild(createTextArea('Description', f.description, function(v) { f.description = v; }, 'Detailed finding description'));
+      card.appendChild(createTextInput('Impact', f.impact, function(v) { f.impact = v; }, 'Who is affected and how'));
+
+      var removeBtn = el('button', { className: 'btn', textContent: 'Remove Finding', onClick: function() {
+        state.findings.splice(idx, 1);
+        wizard.refreshStep();
+      }});
+      card.appendChild(removeBtn);
+      container.appendChild(card);
+    });
+
+    container.appendChild(el('button', { className: 'btn success', textContent: '+ Add Finding', onClick: function() {
+      state.findings.push({ title: '', severity: 'low', characteristic: '', description: '', impact: '' });
+      wizard.refreshStep();
+    }}));
+  }
+
+  function renderRemediationStep(container) {
+    container.appendChild(el('h2', {}, ['Step 6: Remediation Plan']));
+    container.appendChild(el('p', { className: 'subtitle' }, ['Build a remediation plan for identified bias issues.']));
+
+    state.remediations.forEach(function(r, idx) {
+      var card = el('div', { className: 'finding-card' });
+      card.appendChild(createTextInput('Action Item', r.action, function(v) { r.action = v; }, 'What needs to be done'));
+      card.appendChild(createSelect('Priority', SEVERITY_OPTIONS, r.priority || 'medium', function(v) { r.priority = v; }));
+      card.appendChild(createTextInput('Owner', r.owner, function(v) { r.owner = v; }, 'Responsible person/team'));
+      card.appendChild(createTextInput('Target Date', r.targetDate, function(v) { r.targetDate = v; }, 'YYYY-MM-DD'));
+      card.appendChild(createSelect('Status', [
+        { value: 'planned', label: 'Planned' },
+        { value: 'in-progress', label: 'In Progress' },
+        { value: 'completed', label: 'Completed' },
+        { value: 'deferred', label: 'Deferred' }
+      ], r.status || 'planned', function(v) { r.status = v; }));
+      card.appendChild(createTextArea('Notes', r.notes, function(v) { r.notes = v; }, 'Implementation details'));
+
+      var removeBtn = el('button', { className: 'btn', textContent: 'Remove', onClick: function() {
+        state.remediations.splice(idx, 1);
+        wizard.refreshStep();
+      }});
+      card.appendChild(removeBtn);
+      container.appendChild(card);
+    });
+
+    container.appendChild(el('button', { className: 'btn success', textContent: '+ Add Remediation', onClick: function() {
+      state.remediations.push({ action: '', priority: 'medium', owner: '', targetDate: '', status: 'planned', notes: '' });
+      wizard.refreshStep();
+    }}));
+  }
+
+  function renderSummaryStep(container) {
+    container.appendChild(el('h2', {}, ['Step 7: Summary']));
+
+    // Stats
+    var statsDiv = el('div', { style: 'margin: 16px 0;' });
+
+    var enabledChars = CHARACTERISTICS.filter(function(c) { return state.characteristics[c.id].enabled; });
+    var passCount = enabledChars.filter(function(c) { return state.characteristics[c.id].result === 'pass'; }).length;
+    var failCount = enabledChars.filter(function(c) { return state.characteristics[c.id].result === 'fail'; }).length;
+    var criticalFindings = state.findings.filter(function(f) { return f.severity === 'critical'; }).length;
+    var highFindings = state.findings.filter(function(f) { return f.severity === 'high'; }).length;
+
+    function addStat(val, label, cls) {
+      var stat = el('div', { className: 'summary-stat' });
+      stat.appendChild(el('div', { className: 'summary-stat-value ' + (cls || '') }, [String(val)]));
+      stat.appendChild(el('div', { className: 'summary-stat-label' }, [label]));
+      statsDiv.appendChild(stat);
+    }
+
+    addStat(enabledChars.length, 'Characteristics Tested');
+    addStat(passCount, 'Passed', 'score-low');
+    addStat(failCount, 'Failed', 'score-high');
+    addStat(state.findings.length, 'Findings');
+    addStat(criticalFindings + highFindings, 'Critical/High', criticalFindings + highFindings > 0 ? 'score-high' : 'score-low');
+    addStat(state.remediations.length, 'Remediations');
+    container.appendChild(statsDiv);
+
+    // Overall result
+    var overall = (failCount === 0 && criticalFindings === 0) ? 'PASS' : 'FAIL';
+    var alertType = overall === 'PASS' ? 'success' : 'danger';
+    container.appendChild(createAlert(alertType, 'Overall Result: ' + overall + ' | Domain: ' + state.domain + ' | Jurisdictions: ' + state.jurisdictions.join(', ')));
+
+    // Characteristics table
+    if (enabledChars.length > 0) {
+      container.appendChild(el('h3', {}, ['Characteristics Results']));
+      var table = el('table', { className: 'result-table' });
+      var thead = el('thead');
+      var headerRow = el('tr');
+      ['Characteristic', 'Group A', 'Group B', 'Metric Value', 'Result'].forEach(function(h) {
+        headerRow.appendChild(el('th', {}, [h]));
+      });
+      thead.appendChild(headerRow);
+      table.appendChild(thead);
+      var tbody = el('tbody');
+      enabledChars.forEach(function(ch) {
+        var s = state.characteristics[ch.id];
+        var row = el('tr');
+        row.appendChild(el('td', {}, [ch.label]));
+        row.appendChild(el('td', {}, [s.groupASize || '-']));
+        row.appendChild(el('td', {}, [s.groupBSize || '-']));
+        row.appendChild(el('td', {}, [s.metricValue || '-']));
+        var resultTd = el('td');
+        var resultSpan = el('span', {
+          className: s.result === 'pass' ? 'score-low' : (s.result === 'fail' ? 'score-high' : '')
+        }, [s.result ? s.result.toUpperCase() : 'NOT SET']);
+        resultTd.appendChild(resultSpan);
+        row.appendChild(resultTd);
+        tbody.appendChild(row);
+      });
+      table.appendChild(tbody);
+      container.appendChild(table);
+    }
+
+    // Findings table
+    if (state.findings.length > 0) {
+      container.appendChild(el('h3', {}, ['Findings']));
+      var fTable = el('table', { className: 'result-table' });
+      var fHead = el('thead');
+      var fHRow = el('tr');
+      ['Title', 'Severity', 'Characteristic', 'Impact'].forEach(function(h) {
+        fHRow.appendChild(el('th', {}, [h]));
+      });
+      fHead.appendChild(fHRow);
+      fTable.appendChild(fHead);
+      var fBody = el('tbody');
+      state.findings.forEach(function(f) {
+        var row = el('tr');
+        row.appendChild(el('td', {}, [f.title || '-']));
+        row.appendChild(el('td', {}, [f.severity || '-']));
+        var charLabel = CHARACTERISTICS.find(function(c) { return c.id === f.characteristic; });
+        row.appendChild(el('td', {}, [charLabel ? charLabel.label : '-']));
+        row.appendChild(el('td', {}, [f.impact || '-']));
+        fBody.appendChild(row);
+      });
+      fTable.appendChild(fBody);
+      container.appendChild(fTable);
+    }
+  }
+
+  function generateMarkdown() {
+    var lines = [];
+    lines.push('# Bias Testing Evidence Report');
+    lines.push('');
+    lines.push('**Generated:** ' + new Date().toISOString().split('T')[0]);
+    lines.push('**Decision Domain:** ' + state.domain);
+    lines.push('**Jurisdictions:** ' + state.jurisdictions.join(', '));
+    lines.push('');
+
+    var enabledChars = CHARACTERISTICS.filter(function(c) { return state.characteristics[c.id].enabled; });
+    var passCount = enabledChars.filter(function(c) { return state.characteristics[c.id].result === 'pass'; }).length;
+    var failCount = enabledChars.filter(function(c) { return state.characteristics[c.id].result === 'fail'; }).length;
+    var overall = (failCount === 0 && state.findings.filter(function(f) { return f.severity === 'critical'; }).length === 0) ? 'PASS' : 'FAIL';
+
+    lines.push('## Overall Result: ' + overall);
+    lines.push('');
+
+    lines.push('## Metrics Used');
+    if (state.metrics.disparateImpact) lines.push('- Disparate Impact Ratio (threshold: 0.8)');
+    if (state.metrics.statisticalParity) lines.push('- Statistical Parity');
+    if (state.metrics.equalOpportunity) lines.push('- Equal Opportunity');
+    if (state.metrics.predictiveParity) lines.push('- Predictive Parity');
+    lines.push('');
+
+    lines.push('## Protected Characteristics Results');
+    lines.push('');
+    lines.push('| Characteristic | Group A | Group B | Metric Value | Result |');
+    lines.push('|---|---|---|---|---|');
+    enabledChars.forEach(function(ch) {
+      var s = state.characteristics[ch.id];
+      lines.push('| ' + ch.label + ' | ' + (s.groupASize || '-') + ' | ' + (s.groupBSize || '-') + ' | ' + (s.metricValue || '-') + ' | ' + (s.result || '-').toUpperCase() + ' |');
+    });
+    lines.push('');
+
+    if (state.findings.length > 0) {
+      lines.push('## Findings');
+      lines.push('');
+      state.findings.forEach(function(f, i) {
+        lines.push('### Finding ' + (i + 1) + ': ' + (f.title || 'Untitled'));
+        lines.push('- **Severity:** ' + (f.severity || '-'));
+        var charLabel = CHARACTERISTICS.find(function(c) { return c.id === f.characteristic; });
+        lines.push('- **Characteristic:** ' + (charLabel ? charLabel.label : '-'));
+        lines.push('- **Impact:** ' + (f.impact || '-'));
+        lines.push('- **Description:** ' + (f.description || '-'));
+        lines.push('');
+      });
+    }
+
+    if (state.remediations.length > 0) {
+      lines.push('## Remediation Plan');
+      lines.push('');
+      lines.push('| Action | Priority | Owner | Target Date | Status |');
+      lines.push('|---|---|---|---|---|');
+      state.remediations.forEach(function(r) {
+        lines.push('| ' + (r.action || '-') + ' | ' + (r.priority || '-') + ' | ' + (r.owner || '-') + ' | ' + (r.targetDate || '-') + ' | ' + (r.status || '-') + ' |');
+      });
+      lines.push('');
+    }
+
+    lines.push('---');
+    lines.push('*This report is generated for compliance evidence purposes. It is not legal advice.*');
+    return lines.join('\n');
+  }
+
+  // Initial render
+  wizard.render();
+})();
+</script>
+</body>
+</html>

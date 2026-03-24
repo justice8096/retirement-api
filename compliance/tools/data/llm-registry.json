@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "description": "LLM Registry for compliance evidence auto-filling",
+    "lastUpdated": "2026-03-15",
+    "version": "1.0.0",
+    "format": "chunked"
+  },
+  "sources": {
+    "huggingface": { "name": "Hugging Face", "url": "https://huggingface.co", "type": "model-hub" },
+    "ollama": { "name": "Ollama", "url": "https://ollama.com", "type": "local-runtime" },
+    "api": { "name": "API Provider", "type": "cloud-api" }
+  },
+  "chunks": [
+    "llm-registry-meta.json",
+    "llm-registry-mistral.json",
+    "llm-registry-google-microsoft.json",
+    "llm-registry-china.json",
+    "llm-registry-other-open.json",
+    "llm-registry-api-only.json"
+  ]
+}

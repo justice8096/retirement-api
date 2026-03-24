@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Regulations World Map</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; margin: 0; padding: 20px; background: #fafafa; color: #222; }
+  @media (prefers-color-scheme: dark) { body { background: #1a1a1a; color: #ddd; } .no-specific { fill: #2a2a2a !important; } #tooltip { background: #2a2a2a; border-color: #444; color: #ddd; } .tt-status { color: #aaa !important; } .tt-detail { color: #888 !important; } .tt-via { color: #999 !important; } .legend { color: #aaa; } h1 { color: #ddd; } .note { color: #999; } }
+  h1 { font-size: 18px; font-weight: 500; margin-bottom: 12px; }
+  #map-container { width: 100%; max-width: 900px; position: relative; }
+  svg { width: 100%; height: auto; display: block; }
+  .country { stroke: #bbb; stroke-width: 0.3; cursor: pointer; transition: opacity 0.2s; }
+  .country:hover { opacity: 0.8; stroke-width: 0.8; stroke: #333; }
+  .enacted { fill: #1D9E75; }
+  .active-sector { fill: #378ADD; }
+  .proposed { fill: #EF9F27; }
+  .voluntary { fill: #7F77DD; }
+  .no-specific { fill: #e5e5e5; }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 20px; padding: 14px 0 6px; font-size: 13px; color: #666; }
+  .legend-item { display: flex; align-items: center; gap: 7px; }
+  .legend-swatch { width: 14px; height: 14px; border-radius: 3px; border: 0.5px solid rgba(0,0,0,0.12); flex-shrink: 0; }
+  #tooltip { position: absolute; background: #fff; border: 0.5px solid #ccc; border-radius: 8px; padding: 10px 14px; font-size: 12px; pointer-events: none; opacity: 0; transition: opacity 0.15s; z-index: 10; max-width: 320px; color: #222; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .tt-name { font-weight: 600; font-size: 14px; margin-bottom: 3px; }
+  .tt-status { font-size: 12px; color: #888; }
+  .tt-detail { font-size: 11px; color: #aaa; margin-top: 4px; line-height: 1.4; }
+  .tt-via { font-size: 10px; color: #bbb; margin-top: 4px; font-style: italic; }
+  .note { font-size: 11px; color: #999; margin-top: 8px; line-height: 1.5; }
+</style>
+</head>
+<body>
+<h1>LLM & AI software development regulations — world map</h1>
+<div id="map-container">
+  <div id="tooltip"></div>
+</div>
+<div class="legend">
+  <div class="legend-item"><div class="legend-swatch" style="background:#1D9E75"></div>Enacted comprehensive AI law</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#378ADD"></div>Active binding sector / state rules</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#EF9F27"></div>Legislation proposed or in progress</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#7F77DD"></div>Voluntary frameworks / strategy</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#d5d5d5"></div>No AI-specific measures tracked</div>
+</div>
+<p class="note">Hover over countries for details. Includes coverage inherited via union membership (EU/EEA, AU) and territories.<br>Data as of March 2026. See individual regulation files in this folder for detailed coverage per jurisdiction.</p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+const R = {};
+function add(cat, id, name, detail, via) {
+  R[id] = {cat, name, detail: detail||'', via: via||''};
+}
+
+// === ENACTED: EU AI Act (27 member states) ===
+const euDetail = 'EU AI Act — full applicability Aug 2026';
+const euVia = 'EU member state';
+add('enacted','276','Germany',euDetail,euVia);
+add('enacted','250','France',euDetail,euVia);
+add('enacted','380','Italy','EU AI Act + Italy AI Law (Oct 2025)',euVia);
+add('enacted','724','Spain','EU AI Act — first EU AI supervisory agency',euVia);
+add('enacted','620','Portugal',euDetail,euVia);
+add('enacted','056','Belgium',euDetail,euVia);
+add('enacted','528','Netherlands',euDetail,euVia);
+add('enacted','040','Austria',euDetail,euVia);
+add('enacted','203','Czechia',euDetail,euVia);
+add('enacted','208','Denmark',euDetail+' (Greenland and Faroe Islands excluded from EU)',euVia);
+add('enacted','233','Estonia',euDetail,euVia);
+add('enacted','246','Finland',euDetail,euVia);
+add('enacted','300','Greece',euDetail,euVia);
+add('enacted','348','Hungary',euDetail,euVia);
+add('enacted','372','Ireland','EU AI Act — 60% of GPAI enforcement (tech HQs)',euVia);
+add('enacted','428','Latvia',euDetail,euVia);
+add('enacted','440','Lithuania',euDetail,euVia);
+add('enacted','442','Luxembourg',euDetail,euVia);
+add('enacted','470','Malta',euDetail,euVia);
+add('enacted','616','Poland',euDetail,euVia);
+add('enacted','642','Romania',euDetail,euVia);
+add('enacted','703','Slovakia',euDetail,euVia);
+add('enacted','705','Slovenia',euDetail,euVia);
+add('enacted','752','Sweden',euDetail,euVia);
+add('enacted','100','Bulgaria',euDetail,euVia);
+add('enacted','191','Croatia',euDetail,euVia);
+add('enacted','196','Cyprus',euDetail,euVia);
+
+// === ENACTED: EEA — EU AI Act extends via EEA Agreement ===
+const eeaVia = 'EEA member — EU AI Act extends via EEA Agreement';
+add('enacted','578','Norway',euDetail,eeaVia);
+add('enacted','352','Iceland',euDetail,eeaVia);
+add('enacted','438','Liechtenstein',euDetail,eeaVia);
+
+// === ENACTED: French overseas regions (part of EU) ===
+add('enacted','254','French Guiana','EU AI Act applies — French overseas region, integral part of EU','French overseas region (part of EU/France)');
+
+// === ENACTED: Non-EU countries with own AI laws ===
+add('enacted','410','South Korea','AI Basic Act effective Jan 22, 2026 — risk-based, high-impact AI focus','');
+add('enacted','604','Peru','Law No. 31814 — first AI law in Latin America, 3-tier risk framework','');
+add('enacted','704','Vietnam','Digital Technology Industry Law — first ASEAN AI law, phased from Mar 2026','');
+add('enacted','076','Brazil','PL 2338/2023 — Senate-approved bill, most detailed in LatAm, risk-based','');
+
+// === ACTIVE-SECTOR: Countries with binding sector/state rules ===
+add('active-sector','840','United States','State patchwork: CO AI Act (Jun 2026), CA frontier AI (Jan 2026), TX, IL; no federal law; Dec 2025 EO aims to preempt states','');
+add('active-sector','156','China','Most actively enforced globally: GenAI measures (Aug 2023), algorithm/LLM filing, content labeling (Sep 2025), Cybersecurity Law (Jan 2026)','');
+add('active-sector','826','United Kingdom','DUA Act (Feb 2026): ADM reforms + deepfake offence; sector regulators (ICO, FCA, CMA); AI Bill expected late 2026','');
+
+// === ACTIVE-SECTOR: US territories ===
+const usVia = 'US territory — federal executive orders and some state-equivalent laws apply';
+add('active-sector','630','Puerto Rico','Federal AI executive orders apply; territory may adopt own AI measures',usVia);
+
+// === ACTIVE-SECTOR: UK territories (large enough to show) ===
+add('active-sector','238','Falkland Islands','UK DUA Act provisions may extend; UK regulatory framework applies',
+    'UK Overseas Territory');
+
+// === PROPOSED: Countries with active AI legislation ===
+add('proposed','124','Canada','AIDA died Jan 2025; privacy reform + Ontario AI hiring 2026; CAISI; CAD 925M AI infra','');
+add('proposed','484','Mexico','Federal AI Law in Senate; creates CONAIA; risk-based; expected 2026','');
+add('proposed','032','Argentina','Multiple AI bills; innovation-hub strategy with light regulation','');
+add('proposed','152','Chile','AI bill introduced 2024; National AI Policy since 2021; LatAm AI leader','');
+add('proposed','170','Colombia','Bill 059 approved by Senate; creating National AI Council (CON-IA)','');
+add('proposed','392','Japan','AI Promotion Act (May 2025): innovation-first, principles-based, non-punitive','');
+add('proposed','356','India','DPDPA enforcing mid-2025; AI Governance Guidelines; no dedicated AI law','');
+add('proposed','566','Nigeria','Digital Economy Bill targeted Mar 2026 — potentially first AI law in Africa; NDPA enforced; N-ATLAS multilingual LLM','');
+add('proposed','818','Egypt','Draft AI Law in development; PDPL enforcement Nov 2026; expanded AI Council Jan 2026','');
+add('proposed','504','Morocco','Digital X.0 Framework Law; National AI Agency anticipated 2026; Mistral AI Arabic/Amazigh','');
+add('proposed','231','Ethiopia','National AI Policy (June 2024); Ethiopian AI Institute; PDPP 2024 with AI decision rights','');
+
+// === PROPOSED: Western Sahara (Morocco-administered) ===
+add('proposed','732','Western Sahara','Morocco-administered territory; Morocco Digital X.0 framework may extend','Territory administered by Morocco');
+
+// === VOLUNTARY: Asia-Pacific ===
+add('voluntary','036','Australia','National AI Plan (Dec 2025); AI Safety Institute; Privacy Act ADM reforms Dec 2026','');
+add('voluntary','554','New Zealand','Light-touch; AI Strategy Jul 2025; OECD principles; Privacy Act 2020','');
+add('voluntary','702','Singapore','AI Verify framework; MAS Veritas for finance; PDPA applies','');
+add('voluntary','764','Thailand','ETDA drafting regulation; sector-based approach','');
+add('voluntary','360','Indonesia','Presidential regulations expected early 2026; sector-specific','');
+add('voluntary','608','Philippines','AI framework planned for ASEAN chairmanship 2026','');
+add('voluntary','458','Malaysia','13th Malaysia Plan (2026-2031) AI priorities','');
+
+// === VOLUNTARY: African countries with national AI strategies/frameworks ===
+const auVia = 'AU member — Continental AI Strategy (2024); Kigali Declaration signatory';
+add('voluntary','710','South Africa','Draft AI Policy — consultation expected Mar 2026; POPIA Sec 71; AI Safety Hub at UCT',auVia);
+add('voluntary','404','Kenya','National AI Strategy 2025-2030; DPA 2019 ADM protections; suspended Worldcoin',auVia);
+add('voluntary','646','Rwanda',"First African National AI Policy (Apr 2023); C4IR Rwanda; Gates Foundation AI Hub",auVia);
+add('voluntary','480','Mauritius','2025-2029 AI Blueprint; binding AI advisory licensing (2021); GPAI member',auVia);
+add('voluntary','288','Ghana','DPA 2012 Sec 41 — right to object to automated decisions',auVia);
+add('voluntary','788','Tunisia','New data protection bill with AI sandbox provisions',auVia);
+add('voluntary','894','Zambia','National AI Strategy 2024-2026; first in HealthAI Global Network; DPA 2021',auVia);
+add('voluntary','120','Cameroon','National AI Strategy Jul 2025; "GPT Cameroon" local LLM plan',auVia);
+add('voluntary','384',"Côte d'Ivoire",'National AI Strategy 2030; $800M innovation fund',auVia);
+add('voluntary','204','Benin','AI and Big Data Strategy 2023-2027',auVia);
+add('voluntary','686','Senegal','Only African GPAI member; "Technological New Deal" Feb 2025',auVia);
+add('voluntary','012','Algeria','Data protection law amended Jul 2025; DPIAs required',auVia);
+add('voluntary','072','Botswana','DPA 2024 (eff. Jan 2025); automated decision rights; fines BWP 50M/4%',auVia);
+
+// === VOLUNTARY: Additional AU member states (covered by Continental AI Strategy) ===
+add('voluntary','800','Uganda','AU Continental AI Strategy member; Data Protection Act 2019','AU Continental AI Strategy member');
+add('voluntary','834','Tanzania','AU member; Personal Data Protection Act 2022 (eff. May 2023)','AU Continental AI Strategy member');
+add('voluntary','508','Mozambique','AU member; developing digital governance framework','AU Continental AI Strategy member');
+add('voluntary','024','Angola','AU member; National AI and Digital Strategy under development','AU Continental AI Strategy member');
+add('voluntary','516','Namibia','AU member; developing national data protection framework','AU Continental AI Strategy member');
+add('voluntary','716','Zimbabwe','AU member; Cyber & Data Protection Act 2021','AU Continental AI Strategy member');
+add('voluntary','454','Malawi','AU member; developing digital governance policies','AU Continental AI Strategy member');
+add('voluntary','180','Dem. Rep. Congo','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','178','Congo','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','266','Gabon','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','434','Libya','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','729','Sudan','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','728','South Sudan','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','148','Chad','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','562','Niger','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','466','Mali','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','854','Burkina Faso','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','324','Guinea','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','694','Sierra Leone','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','430','Liberia','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','768','Togo','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','270','Gambia','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','478','Mauritania','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','706','Somalia','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','232','Eritrea','AU member','AU Continental AI Strategy member');
+add('voluntary','262','Djibouti','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','108','Burundi','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','748','Eswatini','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','426','Lesotho','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','450','Madagascar','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','624','Guinea-Bissau','AU member; Kigali Declaration signatory','AU Continental AI Strategy member');
+add('voluntary','140','Central African Republic','AU member','AU Continental AI Strategy member');
+
+// === VOLUNTARY: Greenland (Danish territory, NOT in EU/EEA) ===
+add('voluntary','304','Greenland','Danish autonomous territory — NOT part of EU/EEA; left EEC in 1985. Danish data protection extends partially.','Danish autonomous territory (not EU/EEA)');
+
+// === VOLUNTARY: New Caledonia (French territory, NOT in EU) ===
+add('voluntary','540','New Caledonia','French special collectivity — NOT part of EU. Some French data protection principles apply.','French overseas collectivity (not EU)');
+
+// === Swiss non-EU but own framework ===
+add('voluntary','756','Switzerland','National AI Strategy; finalizing regulatory proposal; GDPR-equivalent FADP applies; not EU/EEA but closely aligned','');
+
+const catLabels = {
+  "enacted": "Enacted comprehensive AI law",
+  "active-sector": "Active binding sector / state rules",
+  "proposed": "Legislation proposed or in progress",
+  "voluntary": "Voluntary frameworks / national AI strategy"
+};
+
+const w = 900, h = 520;
+const container = document.getElementById('map-container');
+const svg = d3.select(container).append('svg').attr('viewBox', `0 0 ${w} ${h}`).attr('preserveAspectRatio', 'xMidYMid meet');
+const projection = d3.geoNaturalEarth1().scale(160).translate([w/2, h/2 + 16]);
+const pathGen = d3.geoPath().projection(projection);
+const tooltip = document.getElementById('tooltip');
+
+d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(world => {
+  const countries = topojson.feature(world, world.objects.countries);
+  svg.selectAll('.country').data(countries.features).enter().append('path')
+    .attr('class', d => {
+      const r = R[d.id];
+      return 'country ' + (r ? r.cat : 'no-specific');
+    })
+    .attr('d', pathGen)
+    .on('mousemove', function(event, d) {
+      const r = R[d.id];
+      if (!r) { tooltip.style.opacity = 0; return; }
+      let html = '<div class="tt-name">' + r.name + '</div>';
+      html += '<div class="tt-status">' + catLabels[r.cat] + '</div>';
+      if (r.detail) html += '<div class="tt-detail">' + r.detail + '</div>';
+      if (r.via) html += '<div class="tt-via">Coverage via: ' + r.via + '</div>';
+      tooltip.innerHTML = html;
+      tooltip.style.opacity = 1;
+      const rect = container.getBoundingClientRect();
+      let x = event.clientX - rect.left + 14;
+      let y = event.clientY - rect.top - 10;
+      if (x + 320 > rect.width) x = x - 340;
+      if (y < 0) y = 10;
+      tooltip.style.left = x + 'px';
+      tooltip.style.top = y + 'px';
+    })
+    .on('mouseleave', () => { tooltip.style.opacity = 0; });
+  svg.append('path')
+    .datum(topojson.mesh(world, world.objects.countries, (a, b) => a !== b))
+    .attr('fill', 'none').attr('stroke', '#bbb').attr('stroke-width', 0.25).attr('d', pathGen);
+});
+</script>
+</body>
+</html>

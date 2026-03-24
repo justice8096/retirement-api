@@ -1,0 +1,42 @@
+{
+  "organization": {
+    "name": "Your Organization Name",
+    "documentOwner": "Name, Title",
+    "sessionRef": "GH-YYYY-NNN"
+  },
+  "system": {
+    "name": "Your AI System Name",
+    "version": "1.0.0",
+    "description": "Brief description of what the system does",
+    "modelType": "LLM",
+    "foundationModel": "Model name, Provider",
+    "inputTypes": ["text"],
+    "outputTypes": ["text"],
+    "deploymentEnvironment": "Cloud / On-premise / Hybrid",
+    "sector": ["general"],
+    "intendedUsers": ["consumers"]
+  },
+  "jurisdictions": ["EU", "UK"],
+  "riskClassification": {
+    "euAiAct": null,
+    "coloradoSB24205": null,
+    "southKoreaAiBasicAct": null,
+    "brazilPL2338": null,
+    "peruLaw31814": null
+  },
+  "dates": {
+    "projectStart": "YYYY-MM-DD",
+    "targetLaunch": "YYYY-MM-DD",
+    "configLastUpdated": "YYYY-MM-DD"
+  },
+  "completedTemplates": {},
+  "interactiveToolResults": {
+    "llmSelector": {
+      "usesLlm": "third-party",
+      "selectedModels": [],
+      "customModels": [],
+      "deployments": {},
+      "notes": ""
+    }
+  }
+}

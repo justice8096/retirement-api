@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Literacy & Training Records (Template 18)</title>
+<script src="./shared.js"></script>
+</head>
+<body>
+<script>
+(function() {
+  injectCSS();
+
+  var config = {};
+
+  var stepLabels = ['System Info', 'Training Audiences', 'Curriculum Design', 'Competency Assessment', 'EU AI Act Art. 4', 'Review & Export'];
+
+  var audienceTypes = [
+    { id: 'operators', label: 'Operators (day-to-day users of the AI system)' },
+    { id: 'deployers', label: 'Deployers (organizations deploying the AI system)' },
+    { id: 'developers', label: 'Developers (technical staff building/maintaining the system)' },
+    { id: 'affectedPersons', label: 'Affected persons (individuals subject to AI decisions)' },
+    { id: 'executives', label: 'Executives & board members' },
+    { id: 'compliance', label: 'Compliance & legal staff' },
+    { id: 'support', label: 'Customer support / front-line staff' },
+    { id: 'dataProtection', label: 'Data protection officers (DPOs)' }
+  ];
+
+  var topicCategories = [
+    { id: 'aiBasics', label: 'AI fundamentals & terminology' },
+    { id: 'systemCapabilities', label: 'System capabilities & limitations' },
+    { id: 'biasRisks', label: 'Bias, fairness, and discrimination risks' },
+    { id: 'dataPrivacy', label: 'Data privacy & protection (GDPR, etc.)' },
+    { id: 'ethicalUse', label: 'Ethical AI use principles' },
+    { id: 'regulatoryObligations', label: 'Regulatory obligations & compliance' },
+    { id: 'incidentResponse', label: 'Incident reporting & response' },
+    { id: 'humanOversight', label: 'Human oversight procedures' },
+    { id: 'outputInterpretation', label: 'Interpreting AI outputs & confidence scores' },
+    { id: 'overrideEscalation', label: 'Override & escalation procedures' },
+    { id: 'contentModeration', label: 'Content moderation & safety' },
+    { id: 'transparencyDisclosure', label: 'Transparency & disclosure requirements' }
+  ];
+
+  var assessmentMethods = [
+    { id: 'quiz', label: 'Knowledge quiz / test' },
+    { id: 'practicalExercise', label: 'Practical exercise / simulation' },
+    { id: 'caseStudy', label: 'Case study analysis' },
+    { id: 'certification', label: 'Formal certification exam' },
+    { id: 'selfAssessment', label: 'Self-assessment checklist' },
+    { id: 'peerReview', label: 'Peer review / observation' },
+    { id: 'scenarioTest', label: 'Scenario-based testing' },
+    { id: 'ongoingMonitoring', label: 'Ongoing performance monitoring' }
+  ];
+
+  var state = {
+    systemInfo: { systemName: '', version: '', trainingLead: '', programVersion: '' },
+    audiences: {},
+    curriculum: {},
+    assessment: {
+      methods: {},
+      passingCriteria: '',
+      retestPolicy: '',
+      recordRetention: '',
+      certificationValidity: ''
+    },
+    euArt4: {
+      applicable: null,
+      literacyObligation: null,
+      staffCoverage: '',
+      proportionality: '',
+      contextFactors: '',
+      documentedProgram: null,
+      regularUpdates: null,
+      updateFrequency: '',
+      vulnerableGroups: null,
+      vulnerableGroupsMeasures: '',
+      providerGuidance: null,
+      providerGuidanceDetails: '',
+      notes: ''
+    }
+  };
+
+  function initState() {
+    for (var i = 0; i < audienceTypes.length; i++) {
+      var a = audienceTypes[i];
+      if (!state.audiences[a.id]) state.audiences[a.id] = {
+        applicable: null,
+        headcount: '',
+        currentlyTrained: null,
+        trainingFrequency: '',
+        lastTrainingDate: '',
+        notes: ''
+      };
+    }
+    for (var i = 0; i < audienceTypes.length; i++) {
+      var a = audienceTypes[i];
+      if (!state.curriculum[a.id]) {
+        state.curriculum[a.id] = { topics: {}, customTopics: '', deliveryMethod: '', duration: '' };
+        for (var j = 0; j < topicCategories.length; j++) {
+          state.curriculum[a.id].topics[topicCategories[j].id] = { included: null, depth: '' };
+        }
+      }
+    }
+    for (var i = 0; i < assessmentMethods.length; i++) {
+      var m = assessmentMethods[i];
+      if (!state.assessment.methods[m.id]) state.assessment.methods[m.id] = { used: null, details: '' };
+    }
+  }
+  initState();
+
+  var wizard = createWizard({
+    title: 'AI Literacy & Training Records',
+    subtitle: 'Template 18 \u2014 EU AI Act Art. 4 (AI Literacy); EU AI Act Art. 9 (Risk Management Training); ISO/IEC 42001 Annex A',
+    totalSteps: 6,
+    stepLabels: stepLabels,
+    renderStep: function(step, container) {
+      if (step === 0) renderStep1(container);
+      else if (step === 1) renderStep2(container);
+      else if (step === 2) renderStep3(container);
+      else if (step === 3) renderStep4(container);
+      else if (step === 4) renderStep5(container);
+      else if (step === 5) renderSummary(container);
+    },
+    onLoad: function() {
+      loadConfigFromFile(function(c) { config = c; loadState(); wizard.refreshStep(); });
+    },
+    onSave: doSave,
+    onExport: doExport,
+    stateKey: 'aiLiteracyTraining',
+    getState: function() { return state; },
+    setState: function(s) {
+      if (s.systemInfo) { for (var k in s.systemInfo) { state.systemInfo[k] = s.systemInfo[k]; } }
+      if (s.audiences) { for (var k in s.audiences) { state.audiences[k] = s.audiences[k]; } }
+      if (s.curriculum) { for (var k in s.curriculum) { state.curriculum[k] = s.curriculum[k]; } }
+      if (s.assessment) {
+        if (s.assessment.methods) { for (var k in s.assessment.methods) { state.assessment.methods[k] = s.assessment.methods[k]; } }
+        if (s.assessment.passingCriteria !== undefined) state.assessment.passingCriteria = s.assessment.passingCriteria;
+        if (s.assessment.retestPolicy !== undefined) state.assessment.retestPolicy = s.assessment.retestPolicy;
+        if (s.assessment.recordRetention !== undefined) state.assessment.recordRetention = s.assessment.recordRetention;
+        if (s.assessment.certificationValidity !== undefined) state.assessment.certificationValidity = s.assessment.certificationValidity;
+      }
+      if (s.euArt4) {
+        if (s.euArt4.applicable !== undefined) state.euArt4.applicable = s.euArt4.applicable;
+        if (s.euArt4.literacyObligation !== undefined) state.euArt4.literacyObligation = s.euArt4.literacyObligation;
+        if (s.euArt4.staffCoverage !== undefined) state.euArt4.staffCoverage = s.euArt4.staffCoverage;
+        if (s.euArt4.proportionality !== undefined) state.euArt4.proportionality = s.euArt4.proportionality;
+        if (s.euArt4.contextFactors !== undefined) state.euArt4.contextFactors = s.euArt4.contextFactors;
+        if (s.euArt4.documentedProgram !== undefined) state.euArt4.documentedProgram = s.euArt4.documentedProgram;
+        if (s.euArt4.regularUpdates !== undefined) state.euArt4.regularUpdates = s.euArt4.regularUpdates;
+        if (s.euArt4.updateFrequency !== undefined) state.euArt4.updateFrequency = s.euArt4.updateFrequency;
+        if (s.euArt4.vulnerableGroups !== undefined) state.euArt4.vulnerableGroups = s.euArt4.vulnerableGroups;
+        if (s.euArt4.vulnerableGroupsMeasures !== undefined) state.euArt4.vulnerableGroupsMeasures = s.euArt4.vulnerableGroupsMeasures;
+        if (s.euArt4.providerGuidance !== undefined) state.euArt4.providerGuidance = s.euArt4.providerGuidance;
+        if (s.euArt4.providerGuidanceDetails !== undefined) state.euArt4.providerGuidanceDetails = s.euArt4.providerGuidanceDetails;
+        if (s.euArt4.notes !== undefined) state.euArt4.notes = s.euArt4.notes;
+      }
+      initState();
+    }
+  });
+
+  function renderStep1(container) {
+    var items = [];
+    items.push(createAlert('info', 'Load your compliance config to pre-fill system information, or enter details manually.'));
+    if (config.systemInfo) {
+      var info = config.systemInfo;
+      var infoBox = el('div', { style: 'padding: 12px; border: 1px solid #2A7B7B55; border-radius: 4px; background: #2A7B7B11; margin-bottom: 12px;' });
+      infoBox.appendChild(el('h3', {}, ['Loaded from config:']));
+      if (info.systemName) infoBox.appendChild(el('p', { style: 'font-size: 0.85em; color: #9AACBA; margin: 4px 0;' }, ['System: ' + info.systemName]));
+      if (info.version) infoBox.appendChild(el('p', { style: 'font-size: 0.85em; color: #9AACBA; margin: 4px 0;' }, ['Version: ' + info.version]));
+      items.push(infoBox);
+    }
+    items.push(createTextInput('System name', state.systemInfo.systemName, function(v) { state.systemInfo.systemName = v; }, 'e.g. Customer Support AI v2.1'));
+    items.push(createTextInput('System version', state.systemInfo.version, function(v) { state.systemInfo.version = v; }, 'e.g. 2.1.0'));
+    items.push(createTextInput('Training program lead', state.systemInfo.trainingLead, function(v) { state.systemInfo.trainingLead = v; }, 'Name and role of person responsible'));
+    items.push(createTextInput('Training program version', state.systemInfo.programVersion, function(v) { state.systemInfo.programVersion = v; }, 'e.g. v1.0, 2026-Q1'));
+    container.appendChild(createSection('Step 1: System Information', items));
+  }
+
+  function renderStep2(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 2: Training Audiences']));
+    section.appendChild(createAlert('info', 'Identify all groups that interact with or are affected by the AI system. EU AI Act Art. 4 requires AI literacy measures proportionate to the context of use.'));
+    for (var i = 0; i < audienceTypes.length; i++) {
+      (function(aud) {
+        var a = state.audiences[aud.id];
+        var group = el('div', { style: 'margin-bottom: 12px; padding: 12px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830;' });
+        group.appendChild(el('h3', {}, [aud.label]));
+        group.appendChild(createToggle('Applicable audience?', a.applicable, function(v) { a.applicable = v; wizard.saveNow(); }));
+        group.appendChild(createTextInput('Estimated headcount', a.headcount, function(v) { a.headcount = v; }, 'e.g. 25, 100-150'));
+        group.appendChild(createToggle('Currently trained?', a.currentlyTrained, function(v) { a.currentlyTrained = v; wizard.saveNow(); }));
+        group.appendChild(createSelect('Training frequency', [
+          { value: '', label: '-- Select --' },
+          { value: 'onboarding', label: 'Onboarding only' },
+          { value: 'annual', label: 'Annual refresher' },
+          { value: 'biannual', label: 'Bi-annual refresher' },
+          { value: 'quarterly', label: 'Quarterly' },
+          { value: 'on-change', label: 'On system change' },
+          { value: 'continuous', label: 'Continuous / ongoing' }
+        ], a.trainingFrequency, function(v) { a.trainingFrequency = v; }));
+        var dateRow = el('div', { className: 'field-row' });
+        dateRow.appendChild(el('label', { className: 'field-label' }, ['Last training date']));
+        var dateInput = el('input', { type: 'date', className: 'field-input', value: a.lastTrainingDate || '' });
+        dateInput.addEventListener('change', function() { a.lastTrainingDate = dateInput.value; });
+        dateRow.appendChild(dateInput);
+        group.appendChild(dateRow);
+        group.appendChild(createTextInput('Notes', a.notes, function(v) { a.notes = v; }, 'Special considerations for this audience'));
+        section.appendChild(group);
+      })(audienceTypes[i]);
+    }
+    container.appendChild(section);
+  }
+
+  function renderStep3(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 3: Training Curriculum Design']));
+    section.appendChild(createAlert('info', 'For each applicable audience, select the training topics and depth. Different audiences need different levels of detail.'));
+
+    var applicableAudiences = [];
+    for (var i = 0; i < audienceTypes.length; i++) {
+      if (state.audiences[audienceTypes[i].id].applicable === true) applicableAudiences.push(audienceTypes[i]);
+    }
+
+    if (applicableAudiences.length === 0) {
+      section.appendChild(createAlert('warning', 'No audiences marked as applicable yet. Go back to Step 2 to identify your training audiences.'));
+    }
+
+    for (var i = 0; i < applicableAudiences.length; i++) {
+      (function(aud) {
+        var cur = state.curriculum[aud.id];
+        var audGroup = el('div', { style: 'margin-bottom: 20px; padding: 16px; border: 1px solid #D4943A55; border-radius: 4px; background: #D4943A08;' });
+        audGroup.appendChild(el('h3', { style: 'color: #E8B96A;' }, [aud.label]));
+        audGroup.appendChild(createSelect('Delivery method', [
+          { value: '', label: '-- Select --' },
+          { value: 'in-person', label: 'In-person workshop' },
+          { value: 'virtual-live', label: 'Virtual live session' },
+          { value: 'elearning', label: 'E-learning / self-paced' },
+          { value: 'blended', label: 'Blended (live + e-learning)' },
+          { value: 'documentation', label: 'Documentation / guides only' }
+        ], cur.deliveryMethod, function(v) { cur.deliveryMethod = v; }));
+        audGroup.appendChild(createTextInput('Estimated duration', cur.duration, function(v) { cur.duration = v; }, 'e.g. 2 hours, 1 day, 4 modules x 30 min'));
+
+        audGroup.appendChild(el('h3', { style: 'margin-top: 12px;' }, ['Topics']));
+        for (var j = 0; j < topicCategories.length; j++) {
+          (function(topic) {
+            var t = cur.topics[topic.id];
+            var topicRow = el('div', { style: 'margin-bottom: 6px; padding: 8px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830;' });
+            topicRow.appendChild(createToggle(topic.label, t.included, function(v) { t.included = v; wizard.saveNow(); }));
+            topicRow.appendChild(createSelect('Depth', [
+              { value: '', label: '-- Select depth --' },
+              { value: 'awareness', label: 'Awareness (basic understanding)' },
+              { value: 'working', label: 'Working knowledge (can apply)' },
+              { value: 'expert', label: 'Expert (deep technical understanding)' }
+            ], t.depth, function(v) { t.depth = v; }));
+            audGroup.appendChild(topicRow);
+          })(topicCategories[j]);
+        }
+        audGroup.appendChild(createTextArea('Custom / additional topics', cur.customTopics, function(v) { cur.customTopics = v; }, 'Any additional topics specific to this audience'));
+        section.appendChild(audGroup);
+      })(applicableAudiences[i]);
+    }
+    container.appendChild(section);
+  }
+
+  function renderStep4(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 4: Competency Assessment Methods']));
+    section.appendChild(createAlert('info', 'Define how training effectiveness is measured. This evidence demonstrates that AI literacy obligations are being met.'));
+
+    for (var i = 0; i < assessmentMethods.length; i++) {
+      (function(method) {
+        var m = state.assessment.methods[method.id];
+        var group = el('div', { style: 'margin-bottom: 8px; padding: 10px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830;' });
+        group.appendChild(createToggle(method.label, m.used, function(v) { m.used = v; wizard.saveNow(); }));
+        group.appendChild(createTextInput('Implementation details', m.details, function(v) { m.details = v; }, 'Describe how this method is applied'));
+        section.appendChild(group);
+      })(assessmentMethods[i]);
+    }
+
+    var policySection = el('div', { style: 'margin-top: 20px;' });
+    policySection.appendChild(el('h3', {}, ['Assessment Policies']));
+    policySection.appendChild(createTextInput('Passing criteria', state.assessment.passingCriteria, function(v) { state.assessment.passingCriteria = v; }, 'e.g. 80% quiz score, successful scenario completion'));
+    policySection.appendChild(createSelect('Re-test policy', [
+      { value: '', label: '-- Select --' },
+      { value: 'immediate', label: 'Immediate re-test allowed' },
+      { value: 'cooldown', label: 'Re-test after cooldown period' },
+      { value: 'remediation', label: 'Re-test after remediation training' },
+      { value: 'none', label: 'No re-test (must retake training)' }
+    ], state.assessment.retestPolicy, function(v) { state.assessment.retestPolicy = v; }));
+    policySection.appendChild(createSelect('Record retention period', [
+      { value: '', label: '-- Select --' },
+      { value: '1-year', label: '1 year' },
+      { value: '3-years', label: '3 years' },
+      { value: '5-years', label: '5 years' },
+      { value: '10-years', label: '10 years' },
+      { value: 'indefinite', label: 'Indefinite' }
+    ], state.assessment.recordRetention, function(v) { state.assessment.recordRetention = v; }));
+    policySection.appendChild(createSelect('Certification validity period', [
+      { value: '', label: '-- Select --' },
+      { value: '6-months', label: '6 months' },
+      { value: '1-year', label: '1 year' },
+      { value: '2-years', label: '2 years' },
+      { value: '3-years', label: '3 years' },
+      { value: 'no-expiry', label: 'No expiry' }
+    ], state.assessment.certificationValidity, function(v) { state.assessment.certificationValidity = v; }));
+    section.appendChild(policySection);
+    container.appendChild(section);
+  }
+
+  function renderStep5(container) {
+    var items = [];
+    items.push(createAlert('warning', 'EU AI Act Article 4 (effective February 2, 2025) requires providers and deployers to ensure sufficient AI literacy among their staff and other persons dealing with AI systems on their behalf. This is a cross-cutting obligation that applies to ALL AI systems, not just high-risk.'));
+    items.push(createToggle('EU AI Act applicable?', state.euArt4.applicable, function(v) { state.euArt4.applicable = v; wizard.saveNow(); }));
+    items.push(createToggle('Art. 4 AI literacy obligation acknowledged?', state.euArt4.literacyObligation, function(v) { state.euArt4.literacyObligation = v; wizard.saveNow(); }));
+    items.push(createSelect('Staff coverage', [
+      { value: '', label: '-- Select --' },
+      { value: 'all-staff', label: 'All staff interacting with AI' },
+      { value: 'key-roles', label: 'Key roles only' },
+      { value: 'partial', label: 'Partial coverage (in progress)' },
+      { value: 'planned', label: 'Planned but not yet implemented' }
+    ], state.euArt4.staffCoverage, function(v) { state.euArt4.staffCoverage = v; }));
+    items.push(createTextArea('Proportionality assessment', state.euArt4.proportionality, function(v) { state.euArt4.proportionality = v; }, 'How training is proportionate to: context of use, persons involved, their technical knowledge and experience'));
+    items.push(createTextArea('Context factors considered', state.euArt4.contextFactors, function(v) { state.euArt4.contextFactors = v; }, 'e.g. Risk level, sector, audience technical background, system complexity'));
+    items.push(createToggle('Documented training program?', state.euArt4.documentedProgram, function(v) { state.euArt4.documentedProgram = v; wizard.saveNow(); }));
+    items.push(createToggle('Regular updates to training?', state.euArt4.regularUpdates, function(v) { state.euArt4.regularUpdates = v; wizard.saveNow(); }));
+    items.push(createSelect('Update frequency', [
+      { value: '', label: '-- Select --' },
+      { value: 'quarterly', label: 'Quarterly' },
+      { value: 'biannual', label: 'Bi-annually' },
+      { value: 'annual', label: 'Annually' },
+      { value: 'on-change', label: 'On regulatory / system change' }
+    ], state.euArt4.updateFrequency, function(v) { state.euArt4.updateFrequency = v; }));
+    items.push(createToggle('Vulnerable groups considered?', state.euArt4.vulnerableGroups, function(v) { state.euArt4.vulnerableGroups = v; wizard.saveNow(); }));
+    items.push(createTextArea('Measures for vulnerable groups', state.euArt4.vulnerableGroupsMeasures, function(v) { state.euArt4.vulnerableGroupsMeasures = v; }, 'How training addresses impacts on vulnerable or disadvantaged groups'));
+    items.push(createToggle('Provider guidance incorporated?', state.euArt4.providerGuidance, function(v) { state.euArt4.providerGuidance = v; wizard.saveNow(); }));
+    items.push(createTextArea('Provider guidance details', state.euArt4.providerGuidanceDetails, function(v) { state.euArt4.providerGuidanceDetails = v; }, 'How AI provider instructions of use are integrated into training'));
+    items.push(createTextArea('Additional Art. 4 compliance notes', state.euArt4.notes, function(v) { state.euArt4.notes = v; }, 'Any additional details about EU AI Act Art. 4 compliance'));
+    container.appendChild(createSection('Step 5: EU AI Act Art. 4 Compliance', items));
+  }
+
+  function calcSectionScore(sectionId) {
+    var filled = 0; var total = 0;
+    if (sectionId === 'systemInfo') {
+      var s = state.systemInfo; total = 4;
+      if (s.systemName) filled++; if (s.version) filled++; if (s.trainingLead) filled++; if (s.programVersion) filled++;
+    } else if (sectionId === 'audiences') {
+      total = audienceTypes.length;
+      for (var i = 0; i < audienceTypes.length; i++) { if (state.audiences[audienceTypes[i].id].applicable !== null) filled++; }
+    } else if (sectionId === 'curriculum') {
+      var applicableCount = 0;
+      for (var i = 0; i < audienceTypes.length; i++) {
+        if (state.audiences[audienceTypes[i].id].applicable === true) applicableCount++;
+      }
+      if (applicableCount === 0) return { filled: 0, total: 1 };
+      total = applicableCount;
+      for (var i = 0; i < audienceTypes.length; i++) {
+        if (state.audiences[audienceTypes[i].id].applicable === true) {
+          var cur = state.curriculum[audienceTypes[i].id];
+          var hasTopics = false;
+          for (var j = 0; j < topicCategories.length; j++) {
+            if (cur.topics[topicCategories[j].id].included !== null) { hasTopics = true; break; }
+          }
+          if (hasTopics && cur.deliveryMethod) filled++;
+        }
+      }
+    } else if (sectionId === 'assessment') {
+      total = assessmentMethods.length + 2;
+      for (var i = 0; i < assessmentMethods.length; i++) { if (state.assessment.methods[assessmentMethods[i].id].used !== null) filled++; }
+      if (state.assessment.passingCriteria) filled++;
+      if (state.assessment.recordRetention) filled++;
+    } else if (sectionId === 'euArt4') {
+      if (state.euArt4.applicable !== true) return { filled: 1, total: 1 };
+      total = 7;
+      if (state.euArt4.literacyObligation !== null) filled++;
+      if (state.euArt4.staffCoverage) filled++;
+      if (state.euArt4.proportionality) filled++;
+      if (state.euArt4.documentedProgram !== null) filled++;
+      if (state.euArt4.regularUpdates !== null) filled++;
+      if (state.euArt4.vulnerableGroups !== null) filled++;
+      if (state.euArt4.providerGuidance !== null) filled++;
+    }
+    return { filled: filled, total: total };
+  }
+
+  function renderSummary(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 6: Review & Export']));
+    var sections = [
+      { id: 'systemInfo', label: 'System Information' },
+      { id: 'audiences', label: 'Training Audiences' },
+      { id: 'curriculum', label: 'Curriculum Design' },
+      { id: 'assessment', label: 'Competency Assessment' },
+      { id: 'euArt4', label: 'EU AI Act Art. 4' }
+    ];
+    var table = el('table', { className: 'result-table' });
+    var thead = el('thead'); var headerRow = el('tr');
+    headerRow.appendChild(el('th', {}, ['Section']));
+    headerRow.appendChild(el('th', {}, ['Completeness']));
+    headerRow.appendChild(el('th', {}, ['Score']));
+    thead.appendChild(headerRow); table.appendChild(thead);
+    var tbody = el('tbody'); var totalFilled = 0; var totalAll = 0;
+    for (var i = 0; i < sections.length; i++) {
+      var s = sections[i]; var score = calcSectionScore(s.id);
+      totalFilled += score.filled; totalAll += score.total;
+      var pct = score.total > 0 ? Math.round((score.filled / score.total) * 100) : 0;
+      var cls = pct >= 80 ? 'score-low' : pct >= 50 ? 'score-med' : 'score-high';
+      var row = el('tr'); row.appendChild(el('td', {}, [s.label]));
+      row.appendChild(el('td', {}, [score.filled + ' / ' + score.total]));
+      var scoreCell = el('td'); scoreCell.appendChild(el('span', { className: cls }, [pct + '%']));
+      row.appendChild(scoreCell); tbody.appendChild(row);
+    }
+    table.appendChild(tbody); section.appendChild(table);
+    var overallPct = totalAll > 0 ? Math.round((totalFilled / totalAll) * 100) : 0;
+    var overallCls = overallPct >= 80 ? 'score-low' : overallPct >= 50 ? 'score-med' : 'score-high';
+    var overallEl = el('div', { style: 'margin-top: 16px; text-align: center; font-size: 1.2em;' });
+    overallEl.appendChild(document.createTextNode('Overall Completeness: '));
+    overallEl.appendChild(el('span', { className: overallCls }, [overallPct + '%']));
+    section.appendChild(overallEl);
+
+    var applicableCount = 0; var trainedCount = 0;
+    for (var i = 0; i < audienceTypes.length; i++) {
+      var a = state.audiences[audienceTypes[i].id];
+      if (a.applicable === true) { applicableCount++; if (a.currentlyTrained === true) trainedCount++; }
+    }
+    var audEl = el('div', { style: 'margin-top: 12px; text-align: center; font-size: 0.9em; color: #9AACBA;' });
+    audEl.appendChild(document.createTextNode('Audiences trained: ' + trainedCount + ' / ' + applicableCount + ' applicable'));
+    section.appendChild(audEl);
+
+    if (state.euArt4.applicable === true && state.euArt4.literacyObligation !== true) {
+      section.appendChild(createAlert('danger', 'EU AI Act Art. 4 AI literacy obligation has not been acknowledged. This is a cross-cutting requirement effective February 2, 2025.'));
+    }
+
+    if (overallPct < 50) section.appendChild(createAlert('danger', 'Training program documentation is incomplete. Several required sections need attention.'));
+    else if (overallPct < 80) section.appendChild(createAlert('warning', 'Training program documentation is partially complete. Review unfilled sections.'));
+    else section.appendChild(createAlert('success', 'Training program documentation is substantially complete. Proceed to legal review.'));
+
+    var exportBar = el('div', { className: 'toolbar', style: 'margin-top: 16px;' });
+    exportBar.appendChild(el('button', { className: 'btn primary', textContent: 'Export Markdown', onClick: doExport }));
+    exportBar.appendChild(el('button', { className: 'btn success', textContent: 'Save Config', onClick: doSave }));
+    section.appendChild(exportBar);
+    container.appendChild(section);
+  }
+
+  function loadState() {
+    if (config.systemInfo) {
+      if (config.systemInfo.systemName && !state.systemInfo.systemName) state.systemInfo.systemName = config.systemInfo.systemName;
+      if (config.systemInfo.version && !state.systemInfo.version) state.systemInfo.version = config.systemInfo.version;
+    }
+    var saved = null;
+    if (config.interactiveToolResults && config.interactiveToolResults.aiLiteracyTraining) saved = config.interactiveToolResults.aiLiteracyTraining;
+    if (saved) {
+      if (saved.systemInfo) state.systemInfo = JSON.parse(JSON.stringify(saved.systemInfo));
+      if (saved.audiences) state.audiences = JSON.parse(JSON.stringify(saved.audiences));
+      if (saved.curriculum) state.curriculum = JSON.parse(JSON.stringify(saved.curriculum));
+      if (saved.assessment) state.assessment = JSON.parse(JSON.stringify(saved.assessment));
+      if (saved.euArt4) state.euArt4 = JSON.parse(JSON.stringify(saved.euArt4));
+      initState();
+    }
+  }
+
+  function buildResults() {
+    var sectionIds = ['systemInfo','audiences','curriculum','assessment','euArt4'];
+    var scores = {}; var totalFilled = 0; var totalAll = 0;
+    for (var i = 0; i < sectionIds.length; i++) {
+      var s = calcSectionScore(sectionIds[i]);
+      scores[sectionIds[i]] = { filled: s.filled, total: s.total, pct: s.total > 0 ? Math.round((s.filled / s.total) * 100) : 0 };
+      totalFilled += s.filled; totalAll += s.total;
+    }
+    return {
+      completedDate: new Date().toISOString().split('T')[0],
+      systemInfo: JSON.parse(JSON.stringify(state.systemInfo)),
+      audiences: JSON.parse(JSON.stringify(state.audiences)),
+      curriculum: JSON.parse(JSON.stringify(state.curriculum)),
+      assessment: JSON.parse(JSON.stringify(state.assessment)),
+      euArt4: JSON.parse(JSON.stringify(state.euArt4)),
+      scores: scores,
+      overallScore: totalAll > 0 ? Math.round((totalFilled / totalAll) * 100) : 0
+    };
+  }
+
+  function doSave() {
+    config.interactiveToolResults = config.interactiveToolResults || {};
+    config.interactiveToolResults.aiLiteracyTraining = buildResults();
+    saveConfigToFile(config);
+  }
+
+  function doExport() {
+    var r = buildResults(); var lines = [];
+    lines.push('# AI Literacy & Training Records (Template 18)'); lines.push('');
+    lines.push('**Date:** ' + r.completedDate);
+    lines.push('**Applicable Law:** EU AI Act Art. 4 (AI Literacy); EU AI Act Art. 9 (Risk Management Training); ISO/IEC 42001 Annex A');
+    lines.push('');
+
+    lines.push('## 1. System Information'); lines.push('');
+    lines.push('- **System name:** ' + (r.systemInfo.systemName || 'N/A'));
+    lines.push('- **Version:** ' + (r.systemInfo.version || 'N/A'));
+    lines.push('- **Training program lead:** ' + (r.systemInfo.trainingLead || 'N/A'));
+    lines.push('- **Program version:** ' + (r.systemInfo.programVersion || 'N/A'));
+    lines.push('');
+
+    lines.push('## 2. Training Audiences'); lines.push('');
+    lines.push('| Audience | Applicable | Headcount | Trained | Frequency | Last Training |');
+    lines.push('|----------|-----------|-----------|---------|-----------|--------------|');
+    for (var i = 0; i < audienceTypes.length; i++) {
+      var aud = audienceTypes[i]; var a = r.audiences[aud.id] || {};
+      var appl = a.applicable === true ? 'Yes' : a.applicable === false ? 'No' : 'N/A';
+      var trained = a.currentlyTrained === true ? 'Yes' : a.currentlyTrained === false ? 'No' : 'N/A';
+      lines.push('| ' + aud.label + ' | ' + appl + ' | ' + (a.headcount || 'N/A') + ' | ' + trained + ' | ' + (a.trainingFrequency || 'N/A') + ' | ' + (a.lastTrainingDate || 'N/A') + ' |');
+    }
+    lines.push('');
+
+    lines.push('## 3. Training Curriculum'); lines.push('');
+    for (var i = 0; i < audienceTypes.length; i++) {
+      var aud = audienceTypes[i];
+      if (r.audiences[aud.id] && r.audiences[aud.id].applicable === true) {
+        var cur = r.curriculum[aud.id];
+        if (!cur) continue;
+        lines.push('### ' + aud.label); lines.push('');
+        lines.push('- **Delivery method:** ' + (cur.deliveryMethod || 'N/A'));
+        lines.push('- **Duration:** ' + (cur.duration || 'N/A'));
+        lines.push('');
+        lines.push('| Topic | Included | Depth |');
+        lines.push('|-------|---------|-------|');
+        for (var j = 0; j < topicCategories.length; j++) {
+          var topic = topicCategories[j];
+          var t = cur.topics && cur.topics[topic.id] ? cur.topics[topic.id] : {};
+          var incl = t.included === true ? 'Yes' : t.included === false ? 'No' : 'N/A';
+          lines.push('| ' + topic.label + ' | ' + incl + ' | ' + (t.depth || 'N/A') + ' |');
+        }
+        if (cur.customTopics) lines.push('\n**Custom topics:** ' + cur.customTopics);
+        lines.push('');
+      }
+    }
+
+    lines.push('## 4. Competency Assessment'); lines.push('');
+    lines.push('| Method | Used | Details |');
+    lines.push('|--------|-----|---------|');
+    for (var i = 0; i < assessmentMethods.length; i++) {
+      var method = assessmentMethods[i]; var m = r.assessment.methods[method.id] || {};
+      var used = m.used === true ? 'Yes' : m.used === false ? 'No' : 'N/A';
+      lines.push('| ' + method.label + ' | ' + used + ' | ' + (m.details || '') + ' |');
+    }
+    lines.push('');
+    lines.push('- **Passing criteria:** ' + (r.assessment.passingCriteria || 'N/A'));
+    lines.push('- **Re-test policy:** ' + (r.assessment.retestPolicy || 'N/A'));
+    lines.push('- **Record retention:** ' + (r.assessment.recordRetention || 'N/A'));
+    lines.push('- **Certification validity:** ' + (r.assessment.certificationValidity || 'N/A'));
+    lines.push('');
+
+    lines.push('## 5. EU AI Act Article 4 Compliance'); lines.push('');
+    lines.push('- **EU AI Act applicable:** ' + (r.euArt4.applicable === true ? 'Yes' : r.euArt4.applicable === false ? 'No' : 'N/A'));
+    if (r.euArt4.applicable === true) {
+      lines.push('- **AI literacy obligation acknowledged:** ' + (r.euArt4.literacyObligation === true ? 'Yes' : r.euArt4.literacyObligation === false ? 'No' : 'N/A'));
+      lines.push('- **Staff coverage:** ' + (r.euArt4.staffCoverage || 'N/A'));
+      if (r.euArt4.proportionality) lines.push('- **Proportionality assessment:** ' + r.euArt4.proportionality);
+      if (r.euArt4.contextFactors) lines.push('- **Context factors:** ' + r.euArt4.contextFactors);
+      lines.push('- **Documented program:** ' + (r.euArt4.documentedProgram === true ? 'Yes' : r.euArt4.documentedProgram === false ? 'No' : 'N/A'));
+      lines.push('- **Regular updates:** ' + (r.euArt4.regularUpdates === true ? 'Yes' : r.euArt4.regularUpdates === false ? 'No' : 'N/A'));
+      if (r.euArt4.updateFrequency) lines.push('- **Update frequency:** ' + r.euArt4.updateFrequency);
+      lines.push('- **Vulnerable groups considered:** ' + (r.euArt4.vulnerableGroups === true ? 'Yes' : r.euArt4.vulnerableGroups === false ? 'No' : 'N/A'));
+      if (r.euArt4.vulnerableGroupsMeasures) lines.push('- **Vulnerable groups measures:** ' + r.euArt4.vulnerableGroupsMeasures);
+      lines.push('- **Provider guidance incorporated:** ' + (r.euArt4.providerGuidance === true ? 'Yes' : r.euArt4.providerGuidance === false ? 'No' : 'N/A'));
+      if (r.euArt4.providerGuidanceDetails) lines.push('- **Provider guidance details:** ' + r.euArt4.providerGuidanceDetails);
+      if (r.euArt4.notes) lines.push('\n**Notes:** ' + r.euArt4.notes);
+    }
+    lines.push('');
+
+    lines.push('## 6. Completeness Summary'); lines.push('');
+    lines.push('| Section | Score |'); lines.push('|---------|-------|');
+    var sectionLabels = { systemInfo: 'System Information', audiences: 'Training Audiences', curriculum: 'Curriculum Design', assessment: 'Competency Assessment', euArt4: 'EU AI Act Art. 4' };
+    for (var key in r.scores) { lines.push('| ' + (sectionLabels[key] || key) + ' | ' + r.scores[key].pct + '% (' + r.scores[key].filled + '/' + r.scores[key].total + ') |'); }
+    lines.push('| **Overall** | **' + r.overallScore + '%** |');
+    lines.push(''); lines.push('---');
+    lines.push('*Generated by AI Literacy & Training Records Tool. This is research, not legal advice.*');
+    exportMarkdown('ai-literacy-training-report.md', lines.join('\n'));
+  }
+
+  wizard.render();
+})();
+</script>
+</body>
+</html>

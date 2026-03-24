@@ -1,0 +1,113 @@
+════════════════════════════════════════════════════════════
+  AI Compliance Evidence Checker — Comprehensive Report
+  2026-03-21 | Retirement Planning SaaS | Retirement Planning SaaS Platform
+════════════════════════════════════════════════════════════
+
+TEMPLATE COMPLETENESS
+────────────────────────────────────────────────────────────
+  01 System Transparency Document               ████████░░░░  65% ✓
+  02 User-Facing Disclosure Toolkit             █████████░░░  71% ✓
+  03 Content Labeling Spec                      █████████░░░  79% ✓
+  04 Automated Decision Logic                   ██████████░░  80% 1C/1M
+  05 Training Data Disclosure                   ████████░░░░  67% 1M
+  06 Impact/Risk Assessment                     ██████░░░░░░  47% 1C
+  07 Privacy Impact Assessment (PIA/DPIA)       ███████░░░░░  55% 7C/4H
+  08 Bias Testing                               ████████░░░░  67% ✓
+  09 Human Oversight Design                     ███████░░░░░  62% 1C
+  10 Consent Records                            █████████░░░  75% 4C
+  11 Data Subject Rights                        ██████████░░  83% ✓
+  12 Governance Framework                       █████████░░░  76% 1M
+  13 Incident Management                        ██████████░░  86% ✓
+  14 Registration/Filing Tracker                ████████░░░░  67% 1M
+  15 Security Assessment                        ███████░░░░░  59% ✓
+  17 Risk Classification                        █████████░░░  71% 1H
+  18 AI Literacy Training Record                ████████░░░░  66% 1H/1M
+  19 Conformity Assessment                      ████████░░░░  63% ✓
+  20 Sector-Specific Matrix                     █████████░░░  75% ✓
+
+TEMPLATE 04: AUTOMATED DECISION LOGIC
+────────────────────────────────────────
+  MEDIUM   △ Metadata: Metadata: "AI System Name" not filled
+  CRITICAL ✗ Sec 1: Decision inventory incomplete
+
+TEMPLATE 05: TRAINING DATA DISCLOSURE
+────────────────────────────────────────
+  MEDIUM   △ Metadata: Metadata: "AI System Name" not filled
+
+TEMPLATE 06: IMPACT/RISK ASSESSMENT
+────────────────────────────────────────
+  CRITICAL ✗ Sign-off: Overall risk level not assigned
+
+TEMPLATE 07: PRIVACY IMPACT ASSESSMENT (PIA/DPIA)
+────────────────────────────────────────
+  HIGH     ✗ Sec 2: 5 necessity question(s) unanswered
+  HIGH     ✗ Sec 3.1: 1 high risk(s) without mitigation
+  HIGH     ✗ Sec 4: 10 right(s) not implemented
+  HIGH     ✗ Sec 5: Critical measures missing: Encryption at rest, Encryption in transit, Breach notification process
+  CRITICAL ✗ Sec 1: Personal data types not specified
+  CRITICAL ✗ Sec 1: Legal basis empty
+  CRITICAL ✗ Sec 1: Data subjects not specified
+  CRITICAL ✗ Sec 3.1: 16 risk(s) missing scores
+  CRITICAL ✗ Sec 3.2: 6 AI risk(s) missing scores
+  CRITICAL ✗ Sec 7: DPO consultation not documented
+  CRITICAL ✗ Sec 8: Outcome/sign-off incomplete
+
+TEMPLATE 09: HUMAN OVERSIGHT DESIGN
+────────────────────────────────────────
+  CRITICAL ✗ Sec 1: Oversight model not specified
+
+TEMPLATE 10: CONSENT RECORDS
+────────────────────────────────────────
+  CRITICAL ✗ Sec 1: 8 activities with empty legal basis
+  CRITICAL ✗ Sec 5: Withdrawal method empty
+  CRITICAL ✗ Sec 7: No sample consent records
+  CRITICAL ✗ Sec 8: 9/9 checklist unchecked
+
+TEMPLATE 12: GOVERNANCE FRAMEWORK
+────────────────────────────────────────
+  MEDIUM   △ Metadata: Metadata: "AI System Name" not filled
+
+TEMPLATE 14: REGISTRATION/FILING TRACKER
+────────────────────────────────────────
+  MEDIUM   △ Metadata: Metadata: "AI System Name" not filled
+
+TEMPLATE 17: RISK CLASSIFICATION
+────────────────────────────────────────
+  HIGH     ✗ EU AI Act: EU AI Act classification not completed
+
+TEMPLATE 18: AI LITERACY TRAINING RECORD
+────────────────────────────────────────
+  HIGH     ✗ Sec 1: Training program not documented
+  MEDIUM   △ Metadata: Metadata: "AI System Name" not filled
+
+CROSS-REFERENCE CHECKS
+────────────────────────────────────────────────────────────
+  ✗ Tool NOT done: Impact Scoring (T06)
+  ✗ Tool NOT done: DSR Rights (T11)
+  ✗ Tool NOT done: Content Moderation (T16)
+  ✗ PIA basis is consent but T10 has no records
+  ✗ Risk classified but impact scoring not done
+  ... and 16 passing check(s)
+
+OVERALL SUMMARY
+────────────────────────────────────────────────────────────
+  Findings: 25 (14 critical, 6 high, 5 medium)
+  Templates: 19
+
+  CRITICAL items:
+    1. T04: Decision inventory incomplete
+    2. T06: Overall risk level not assigned
+    3. T07: Personal data types not specified
+    4. T07: Legal basis empty
+    5. T07: Data subjects not specified
+    6. T07: 16 risk(s) missing scores
+    7. T07: 6 AI risk(s) missing scores
+    8. T07: DPO consultation not documented
+    9. T07: Outcome/sign-off incomplete
+    10. T09: Oversight model not specified
+    ... and 4 more
+
+  Run these interactive tools:
+    - tools/interactive/impact-risk-scoring.html
+    - tools/interactive/dsr-rights-implementation.html
+    - tools/interactive/content-moderation.html

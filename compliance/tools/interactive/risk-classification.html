@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Risk Classification - Decision Tree (Template 17)</title>
+<script src="./shared.js"></script>
+</head>
+<body>
+<script>
+(function() {
+  injectCSS();
+
+  var config = {};
+
+  var state = {
+    prohibited: {},
+    highRisk: { euAnnexIII: {}, colorado: {}, southKorea: {}, brazil: {} },
+    limitedRisk: {},
+    notes: ''
+  };
+
+  var prohibitedQuestions = [
+    { id: 'subliminal', text: 'Does the system deploy subliminal, manipulative, or deceptive techniques to distort behavior?', badges: ['EU AI Act Art.5(1)(a)'] },
+    { id: 'vulnerability', text: 'Does the system exploit vulnerabilities due to age, disability, or socio-economic situation?', badges: ['EU AI Act Art.5(1)(b)'] },
+    { id: 'socialScoring', text: 'Does the system perform social scoring by public authorities?', badges: ['EU AI Act Art.5(1)(c)', 'China PIPL'] },
+    { id: 'crimePrediction', text: 'Does the system predict criminal offenses based solely on profiling or personality traits?', badges: ['EU AI Act Art.5(1)(d)'] },
+    { id: 'facialScraping', text: 'Does the system create facial recognition databases via untargeted scraping?', badges: ['EU AI Act Art.5(1)(e)'] },
+    { id: 'emotionInference', text: 'Does the system infer emotions in workplace or educational contexts (without medical/safety reasons)?', badges: ['EU AI Act Art.5(1)(f)'] },
+    { id: 'biometricCategorization', text: 'Does the system perform biometric categorization to infer sensitive attributes (race, political opinion, etc.)?', badges: ['EU AI Act Art.5(1)(g)'] },
+    { id: 'realTimeBiometric', text: 'Does the system use real-time remote biometric identification in publicly accessible spaces for law enforcement?', badges: ['EU AI Act Art.5(1)(h)', 'Brazil AI Bill'] },
+    { id: 'autonomousWeapons', text: 'Does the system operate as a fully autonomous lethal weapons system?', badges: ['Brazil AI Bill', 'South Korea Ethics'] },
+    { id: 'denialEssentialServices', text: 'Does the system make fully automated decisions denying essential services without human review?', badges: ['Colorado SB21-169', 'Brazil AI Bill'] }
+  ];
+
+  var euAnnexIIICategories = [
+    { id: 'biometrics', text: 'Biometric identification and categorization of natural persons' },
+    { id: 'criticalInfra', text: 'Management and operation of critical infrastructure' },
+    { id: 'education', text: 'Education and vocational training (admissions, assessment)' },
+    { id: 'employment', text: 'Employment, worker management, and access to self-employment' },
+    { id: 'essentialServices', text: 'Access to essential private/public services and benefits' },
+    { id: 'lawEnforcement', text: 'Law enforcement (risk assessment, polygraphs, evidence evaluation)' },
+    { id: 'migration', text: 'Migration, asylum, and border control management' },
+    { id: 'justice', text: 'Administration of justice and democratic processes' }
+  ];
+
+  var coloradoCategories = [
+    { id: 'coInsurance', text: 'Insurance underwriting or pricing decisions' },
+    { id: 'coEmployment', text: 'Employment decisions (hiring, termination, compensation)' },
+    { id: 'coFinancial', text: 'Financial services (lending, credit)' },
+    { id: 'coHousing', text: 'Housing decisions (rental, sale, mortgage)' },
+    { id: 'coEducation', text: 'Educational enrollment or opportunity decisions' },
+    { id: 'coGovernment', text: 'Government services access decisions' }
+  ];
+
+  var southKoreaCategories = [
+    { id: 'skHealthcare', text: 'Healthcare diagnosis or treatment recommendations' },
+    { id: 'skPublicSafety', text: 'Public safety and security systems' },
+    { id: 'skFinancial', text: 'Financial creditworthiness assessment' },
+    { id: 'skEmployment', text: 'Employment screening and evaluation' }
+  ];
+
+  var brazilCategories = [
+    { id: 'brBiometric', text: 'Biometric identification in public spaces' },
+    { id: 'brAutonomousVehicles', text: 'Autonomous vehicle operation' },
+    { id: 'brHealthcare', text: 'Healthcare and diagnostic systems' },
+    { id: 'brJudicial', text: 'Judicial and law enforcement decisions' },
+    { id: 'brEducation', text: 'Educational assessment and access' }
+  ];
+
+  var limitedRiskTriggers = [
+    { id: 'chatbot', text: 'System interacts with humans as a chatbot or conversational agent', badges: ['EU AI Act Art.50(1)'] },
+    { id: 'syntheticContent', text: 'System generates synthetic audio, image, video, or text content', badges: ['EU AI Act Art.50(2)', 'China Deep Synthesis'] },
+    { id: 'emotionRecognition', text: 'System performs emotion recognition on individuals', badges: ['EU AI Act Art.50(3)'] },
+    { id: 'biometricCat', text: 'System performs biometric categorization (non-prohibited use)', badges: ['EU AI Act Art.50(3)'] }
+  ];
+
+  var wizard = createWizard({
+    title: 'AI Risk Classification Decision Tree',
+    subtitle: 'Template 17 - Interactive risk classification across multiple regulatory frameworks',
+    totalSteps: 4,
+    stepLabels: ['Prohibited', 'High-Risk', 'Limited Risk', 'Summary'],
+    renderStep: function(step, container) {
+      if (step === 0) renderStep1(container);
+      else if (step === 1) renderStep2(container);
+      else if (step === 2) renderStep3(container);
+      else if (step === 3) renderSummary(container);
+    },
+    onLoad: function() {
+      loadConfigFromFile(function(c) { config = c; loadState(); wizard.refreshStep(); });
+    },
+    onSave: doSave,
+    onExport: doExport,
+    stateKey: 'riskClassification',
+    getState: function() { return state; },
+    setState: function(s) {
+      if (s.prohibited) state.prohibited = s.prohibited;
+      if (s.highRisk) {
+        if (s.highRisk.euAnnexIII) state.highRisk.euAnnexIII = s.highRisk.euAnnexIII;
+        if (s.highRisk.colorado) state.highRisk.colorado = s.highRisk.colorado;
+        if (s.highRisk.southKorea) state.highRisk.southKorea = s.highRisk.southKorea;
+        if (s.highRisk.brazil) state.highRisk.brazil = s.highRisk.brazil;
+      }
+      if (s.limitedRisk) state.limitedRisk = s.limitedRisk;
+      if (s.notes !== undefined) state.notes = s.notes;
+    }
+  });
+
+  function renderStep1(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 1: Prohibited Practices Check']));
+    section.appendChild(createAlert('warning', 'If any of these apply, the AI system may be PROHIBITED under applicable law. Answering "Yes" does not automatically mean prohibition - exceptions may apply.'));
+
+    for (var i = 0; i < prohibitedQuestions.length; i++) {
+      (function(q) {
+        var row = createToggle(q.text, state.prohibited[q.id] === undefined ? null : state.prohibited[q.id], function(v) {
+          state.prohibited[q.id] = v;
+          wizard.saveNow();
+        });
+        var badgeRow = el('div', { className: 'toggle-row', style: 'border: none; padding: 0 16px 4px; margin-top: -6px; background: transparent;' });
+        for (var b = 0; b < q.badges.length; b++) {
+          badgeRow.appendChild(el('span', { className: 'badge enacted' }, [q.badges[b]]));
+        }
+        section.appendChild(row);
+        section.appendChild(badgeRow);
+      })(prohibitedQuestions[i]);
+    }
+
+    var anyProhibited = Object.values(state.prohibited).some(function(v) { return v === true; });
+    if (anyProhibited) {
+      section.appendChild(createAlert('danger', 'WARNING: One or more prohibited practice triggers have been identified. Legal review is strongly recommended before proceeding.'));
+    }
+
+    container.appendChild(section);
+  }
+
+  function renderStep2(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 2: High-Risk Categories']));
+    section.appendChild(createAlert('info', 'Check all categories that apply to your AI system. Different jurisdictions define high-risk differently.'));
+
+    section.appendChild(el('h3', {}, ['EU AI Act - Annex III High-Risk Categories']));
+    renderChecklist(section, euAnnexIIICategories, state.highRisk.euAnnexIII, 'enacted');
+
+    section.appendChild(el('h3', {}, ['Colorado SB21-169 - Consequential Decisions']));
+    renderChecklist(section, coloradoCategories, state.highRisk.colorado, 'active-sector');
+
+    section.appendChild(el('h3', {}, ['South Korea - High-Risk AI Areas']));
+    renderChecklist(section, southKoreaCategories, state.highRisk.southKorea, 'enacted');
+
+    section.appendChild(el('h3', {}, ['Brazil AI Bill - High-Risk Categories']));
+    renderChecklist(section, brazilCategories, state.highRisk.brazil, 'active-sector');
+
+    container.appendChild(section);
+  }
+
+  function renderChecklist(parent, items, stateObj, badgeClass) {
+    for (var i = 0; i < items.length; i++) {
+      (function(item) {
+        var checked = stateObj[item.id] || false;
+        var cb = el('input', { type: 'checkbox' });
+        cb.checked = checked;
+        cb.addEventListener('change', function() { stateObj[item.id] = cb.checked; wizard.saveNow(); });
+        var label = el('label', {}, [item.text]);
+        var row = el('div', { className: 'checklist-item' });
+        row.appendChild(cb);
+        row.appendChild(label);
+        parent.appendChild(row);
+      })(items[i]);
+    }
+  }
+
+  function renderStep3(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 3: Limited Risk Transparency Triggers']));
+    section.appendChild(createAlert('info', 'Limited risk systems require transparency obligations - users must be informed they are interacting with AI.'));
+
+    for (var i = 0; i < limitedRiskTriggers.length; i++) {
+      (function(t) {
+        var row = createToggle(t.text, state.limitedRisk[t.id] === undefined ? null : state.limitedRisk[t.id], function(v) {
+          state.limitedRisk[t.id] = v;
+          wizard.saveNow();
+        });
+        var badgeRow = el('div', { className: 'toggle-row', style: 'border: none; padding: 0 16px 4px; margin-top: -6px; background: transparent;' });
+        for (var b = 0; b < t.badges.length; b++) {
+          badgeRow.appendChild(el('span', { className: 'badge enacted' }, [t.badges[b]]));
+        }
+        section.appendChild(row);
+        section.appendChild(badgeRow);
+      })(limitedRiskTriggers[i]);
+    }
+
+    section.appendChild(createTextArea('Additional Notes', state.notes, function(v) { state.notes = v; }, 'Any additional classification notes...'));
+
+    container.appendChild(section);
+  }
+
+  function renderSummary(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Classification Summary']));
+
+    var anyProhibited = Object.values(state.prohibited).some(function(v) { return v === true; });
+    var prohibitedCount = Object.values(state.prohibited).filter(function(v) { return v === true; }).length;
+
+    if (anyProhibited) {
+      section.appendChild(createAlert('danger', 'PROHIBITED: ' + prohibitedCount + ' prohibited practice trigger(s) identified. System may be banned under applicable frameworks.'));
+    }
+
+    var table = el('table', { className: 'result-table' });
+    var thead = el('thead');
+    var headerRow = el('tr');
+    headerRow.appendChild(el('th', {}, ['Framework']));
+    headerRow.appendChild(el('th', {}, ['Classification']));
+    headerRow.appendChild(el('th', {}, ['Obligations']));
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+
+    var tbody = el('tbody');
+
+    var euHighCount = Object.values(state.highRisk.euAnnexIII).filter(Boolean).length;
+    var euClass = anyProhibited ? 'Prohibited' : euHighCount > 0 ? 'High-Risk' : Object.values(state.limitedRisk).some(Boolean) ? 'Limited Risk' : 'Minimal Risk';
+    var euObl = euClass === 'Prohibited' ? 'System banned (Art. 5)' : euClass === 'High-Risk' ? 'Conformity assessment, CE marking, risk management, technical documentation' : euClass === 'Limited Risk' ? 'Transparency obligations (Art. 50)' : 'No mandatory obligations';
+    addSummaryRow(tbody, 'EU AI Act', euClass, euObl);
+
+    var coHighCount = Object.values(state.highRisk.colorado).filter(Boolean).length;
+    var coClass = coHighCount > 0 ? 'High-Risk (Consequential)' : 'Standard';
+    var coObl = coHighCount > 0 ? 'Impact assessment, disclosure, consumer notification, annual review' : 'General consumer protection applies';
+    addSummaryRow(tbody, 'Colorado SB21-169', coClass, coObl);
+
+    var skHighCount = Object.values(state.highRisk.southKorea).filter(Boolean).length;
+    var skClass = skHighCount > 0 ? 'High-Risk' : 'General Purpose';
+    var skObl = skHighCount > 0 ? 'Risk assessment, transparency, human oversight requirements' : 'Basic transparency obligations';
+    addSummaryRow(tbody, 'South Korea', skClass, skObl);
+
+    var brHighCount = Object.values(state.highRisk.brazil).filter(Boolean).length;
+    var brClass = anyProhibited ? 'Prohibited' : brHighCount > 0 ? 'High-Risk' : 'Standard';
+    var brObl = brClass === 'Prohibited' ? 'System prohibited under AI Bill' : brHighCount > 0 ? 'Algorithmic impact assessment, human oversight, rights protection' : 'General LGPD obligations apply';
+    addSummaryRow(tbody, 'Brazil AI Bill', brClass, brObl);
+
+    table.appendChild(tbody);
+    section.appendChild(table);
+
+    section.appendChild(el('h3', {}, ['Triggered Obligations']));
+    var obligationsList = el('div');
+
+    if (anyProhibited) {
+      obligationsList.appendChild(createAlert('danger', 'Immediate: Cease deployment in jurisdictions where practice is prohibited'));
+    }
+    if (euHighCount > 0) {
+      obligationsList.appendChild(createAlert('warning', 'EU High-Risk: Complete conformity assessment before market placement (Art. 43)'));
+      obligationsList.appendChild(createAlert('warning', 'EU High-Risk: Establish quality management system (Art. 17)'));
+      obligationsList.appendChild(createAlert('warning', 'EU High-Risk: Maintain technical documentation (Art. 11)'));
+    }
+    if (Object.values(state.limitedRisk).some(Boolean)) {
+      obligationsList.appendChild(createAlert('info', 'Transparency: Notify users of AI interaction and synthetic content generation'));
+    }
+    if (coHighCount > 0) {
+      obligationsList.appendChild(createAlert('warning', 'Colorado: Complete algorithmic impact assessment'));
+      obligationsList.appendChild(createAlert('warning', 'Colorado: Provide consumer notification and opt-out mechanisms'));
+    }
+
+    if (!anyProhibited && euHighCount === 0 && coHighCount === 0 && skHighCount === 0 && brHighCount === 0 && !Object.values(state.limitedRisk).some(Boolean)) {
+      obligationsList.appendChild(createAlert('success', 'No specific high-risk or limited-risk obligations triggered. Standard governance practices recommended.'));
+    }
+
+    section.appendChild(obligationsList);
+
+    if (state.notes) {
+      section.appendChild(el('h3', {}, ['Notes']));
+      section.appendChild(el('p', { style: 'font-size: 0.9em; color: #9AACBA;' }, [state.notes]));
+    }
+
+    container.appendChild(section);
+  }
+
+  function addSummaryRow(tbody, framework, classification, obligations) {
+    var row = el('tr');
+    row.appendChild(el('td', {}, [framework]));
+    var classCell = el('td');
+    var cls = classification.toLowerCase().indexOf('prohibited') >= 0 ? 'score-high' :
+              classification.toLowerCase().indexOf('high') >= 0 ? 'score-med' : 'score-low';
+    classCell.appendChild(el('span', { className: cls }, [classification]));
+    row.appendChild(classCell);
+    row.appendChild(el('td', {}, [obligations]));
+    tbody.appendChild(row);
+  }
+
+  function loadState() {
+    if (config.riskClassification) {
+      state = JSON.parse(JSON.stringify(config.riskClassification));
+      if (!state.prohibited) state.prohibited = {};
+      if (!state.highRisk) state.highRisk = { euAnnexIII: {}, colorado: {}, southKorea: {}, brazil: {} };
+      if (!state.limitedRisk) state.limitedRisk = {};
+      if (!state.notes) state.notes = '';
+    }
+    if (config.interactiveToolResults && config.interactiveToolResults.riskClassification) {
+      var saved = config.interactiveToolResults.riskClassification;
+      if (saved.prohibited) state.prohibited = saved.prohibited;
+      if (saved.highRisk) state.highRisk = saved.highRisk;
+      if (saved.limitedRisk) state.limitedRisk = saved.limitedRisk;
+      if (saved.notes) state.notes = saved.notes;
+    }
+  }
+
+  function doSave() {
+    config.riskClassification = JSON.parse(JSON.stringify(state));
+    config.interactiveToolResults = config.interactiveToolResults || {};
+    config.interactiveToolResults.riskClassification = buildResults();
+    saveConfigToFile(config);
+  }
+
+  function buildResults() {
+    var anyProhibited = Object.values(state.prohibited).some(function(v) { return v === true; });
+    var euHighCount = Object.values(state.highRisk.euAnnexIII).filter(Boolean).length;
+    var coHighCount = Object.values(state.highRisk.colorado).filter(Boolean).length;
+    var skHighCount = Object.values(state.highRisk.southKorea).filter(Boolean).length;
+    var brHighCount = Object.values(state.highRisk.brazil).filter(Boolean).length;
+
+    return {
+      completedDate: new Date().toISOString().split('T')[0],
+      prohibited: state.prohibited,
+      highRisk: state.highRisk,
+      limitedRisk: state.limitedRisk,
+      notes: state.notes,
+      classifications: {
+        euAIAct: anyProhibited ? 'Prohibited' : euHighCount > 0 ? 'High-Risk' : Object.values(state.limitedRisk).some(Boolean) ? 'Limited Risk' : 'Minimal Risk',
+        colorado: coHighCount > 0 ? 'High-Risk' : 'Standard',
+        southKorea: skHighCount > 0 ? 'High-Risk' : 'General Purpose',
+        brazil: anyProhibited ? 'Prohibited' : brHighCount > 0 ? 'High-Risk' : 'Standard'
+      }
+    };
+  }
+
+  function doExport() {
+    var results = buildResults();
+    var lines = [];
+    lines.push('# AI Risk Classification Report (Template 17)');
+    lines.push('');
+    lines.push('**Date:** ' + results.completedDate);
+    lines.push('');
+    lines.push('## Prohibited Practices Check');
+    lines.push('');
+    for (var i = 0; i < prohibitedQuestions.length; i++) {
+      var q = prohibitedQuestions[i];
+      var v = state.prohibited[q.id];
+      lines.push('- [' + (v === true ? 'x' : ' ') + '] ' + q.text + ' (' + q.badges.join(', ') + ')');
+    }
+    lines.push('');
+    lines.push('## High-Risk Classifications');
+    lines.push('');
+    lines.push('### EU AI Act Annex III');
+    for (var i = 0; i < euAnnexIIICategories.length; i++) {
+      var c = euAnnexIIICategories[i];
+      lines.push('- [' + (state.highRisk.euAnnexIII[c.id] ? 'x' : ' ') + '] ' + c.text);
+    }
+    lines.push('');
+    lines.push('### Colorado SB21-169');
+    for (var i = 0; i < coloradoCategories.length; i++) {
+      var c = coloradoCategories[i];
+      lines.push('- [' + (state.highRisk.colorado[c.id] ? 'x' : ' ') + '] ' + c.text);
+    }
+    lines.push('');
+    lines.push('### South Korea');
+    for (var i = 0; i < southKoreaCategories.length; i++) {
+      var c = southKoreaCategories[i];
+      lines.push('- [' + (state.highRisk.southKorea[c.id] ? 'x' : ' ') + '] ' + c.text);
+    }
+    lines.push('');
+    lines.push('### Brazil AI Bill');
+    for (var i = 0; i < brazilCategories.length; i++) {
+      var c = brazilCategories[i];
+      lines.push('- [' + (state.highRisk.brazil[c.id] ? 'x' : ' ') + '] ' + c.text);
+    }
+    lines.push('');
+    lines.push('## Limited Risk Triggers');
+    lines.push('');
+    for (var i = 0; i < limitedRiskTriggers.length; i++) {
+      var t = limitedRiskTriggers[i];
+      var v = state.limitedRisk[t.id];
+      lines.push('- [' + (v === true ? 'x' : ' ') + '] ' + t.text);
+    }
+    lines.push('');
+    lines.push('## Classification Summary');
+    lines.push('');
+    lines.push('| Framework | Classification |');
+    lines.push('|-----------|---------------|');
+    lines.push('| EU AI Act | ' + results.classifications.euAIAct + ' |');
+    lines.push('| Colorado SB21-169 | ' + results.classifications.colorado + ' |');
+    lines.push('| South Korea | ' + results.classifications.southKorea + ' |');
+    lines.push('| Brazil AI Bill | ' + results.classifications.brazil + ' |');
+    if (state.notes) {
+      lines.push('');
+      lines.push('## Notes');
+      lines.push('');
+      lines.push(state.notes);
+    }
+    lines.push('');
+    lines.push('---');
+    lines.push('*Generated by AI Risk Classification Tool. This is research, not legal advice.*');
+
+    exportMarkdown('risk-classification-report.md', lines.join('\n'));
+  }
+
+  wizard.render();
+})();
+</script>
+</body>
+</html>

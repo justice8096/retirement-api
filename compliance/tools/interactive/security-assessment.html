@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Security Assessment Tool (Template 15)</title>
+<script src="./shared.js"></script>
+</head>
+<body>
+<script>
+(function() {
+  injectCSS();
+
+  var style = document.createElement('style');
+  style.textContent = [
+    '.threat-card { background: #0D1830; border: 1px solid #1E2D3D; border-radius: 4px; padding: 14px; margin-bottom: 10px; }',
+    '.threat-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }',
+    '.threat-title { font-size: 0.95em; color: #E8B96A; }',
+    '.control-card { background: #0D1830; border: 1px solid #1E2D3D; border-radius: 4px; padding: 14px; margin-bottom: 10px; border-left: 3px solid #3A4A5A; }',
+    '.control-card.has-control { border-left-color: #2A7B7B; }',
+    '.stat-row { display: flex; gap: 16px; flex-wrap: wrap; margin: 12px 0; }',
+    '.summary-stat { display: inline-block; padding: 8px 16px; margin: 4px; border-radius: 4px; background: #1E2D3D; text-align: center; }',
+    '.summary-stat-value { font-size: 1.4em; font-weight: 600; }',
+    '.summary-stat-label { font-size: 0.75em; color: #6B7B8D; }',
+    '.summary-card { background: #0D1830; border: 1px solid #1E2D3D; border-radius: 4px; padding: 12px; margin-bottom: 8px; }',
+    '.severity-badge { display: inline-block; padding: 2px 10px; border-radius: 3px; font-size: 0.75em; font-weight: 600; }',
+    '.severity-critical { background: #c0392b33; color: #e74c3c; border: 1px solid #c0392b55; }',
+    '.severity-high { background: #e67e2233; color: #e67e22; border: 1px solid #e67e2255; }',
+    '.severity-medium { background: #D4943A33; color: #E8B96A; border: 1px solid #D4943A55; }',
+    '.severity-low { background: #2A7B7B33; color: #4DBFBF; border: 1px solid #2A7B7B55; }',
+    '.posture-gauge { text-align: center; padding: 16px; margin: 12px 0; }',
+    '.posture-label { font-size: 1.8em; font-weight: 300; letter-spacing: 1px; }',
+    '.score-bar { height: 6px; border-radius: 3px; background: #3A4A5A; margin: 8px 0; }',
+    '.score-fill { height: 100%; border-radius: 3px; transition: width 0.3s; }',
+    '.china-section { border: 1px solid #D4943A55; border-radius: 4px; padding: 14px; margin: 12px 0; background: #D4943A08; }',
+    '.infra-detail { margin-left: 212px; margin-top: -4px; margin-bottom: 8px; }'
+  ].join('\n');
+  document.head.appendChild(style);
+
+  var config = {};
+
+  var THREATS = [
+    { id: 'promptInjectionDirect', label: 'Prompt injection (direct)' },
+    { id: 'promptInjectionIndirect', label: 'Prompt injection (indirect)' },
+    { id: 'dataPoisoningTraining', label: 'Data poisoning (training)' },
+    { id: 'dataPoisoningFineTuning', label: 'Data poisoning (fine-tuning)' },
+    { id: 'modelExtraction', label: 'Model extraction/stealing' },
+    { id: 'membershipInference', label: 'Membership inference' },
+    { id: 'adversarialExamples', label: 'Adversarial examples' },
+    { id: 'outputManipulation', label: 'Output manipulation' },
+    { id: 'piiLeakage', label: 'PII leakage from training data' },
+    { id: 'denialOfService', label: 'Denial of service' },
+    { id: 'supplyChainCompromise', label: 'Supply chain compromise (model/data)' },
+    { id: 'unauthorizedAccess', label: 'Unauthorized access to model weights' }
+  ];
+
+  var SEVERITY_OPTIONS = [
+    { value: 'low', label: 'Low' },
+    { value: 'medium', label: 'Medium' },
+    { value: 'high', label: 'High' },
+    { value: 'critical', label: 'Critical' }
+  ];
+
+  var CONTROL_TYPE_OPTIONS = [
+    { value: '', label: '-- Select --' },
+    { value: 'preventive', label: 'Preventive' },
+    { value: 'detective', label: 'Detective' },
+    { value: 'corrective', label: 'Corrective' }
+  ];
+
+  var IMPL_STATUS_OPTIONS = [
+    { value: '', label: '-- Select --' },
+    { value: 'planned', label: 'Planned' },
+    { value: 'in_progress', label: 'In progress' },
+    { value: 'implemented', label: 'Implemented' },
+    { value: 'tested', label: 'Tested' }
+  ];
+
+  var INFRA_ITEMS = [
+    { id: 'modelAccessAuth', label: 'Model access authentication' },
+    { id: 'apiRateLimiting', label: 'API rate limiting' },
+    { id: 'inputValidation', label: 'Input validation/sanitization' },
+    { id: 'outputFiltering', label: 'Output filtering' },
+    { id: 'encryptionAtRest', label: 'Encryption at rest' },
+    { id: 'encryptionInTransit', label: 'Encryption in transit' },
+    { id: 'auditLogging', label: 'Audit logging' }
+  ];
+
+  var state = {
+    threats: {},
+    controls: {},
+    china: {
+      applicable: false,
+      preTrainingAssessment: false,
+      safetyEvaluation: false,
+      contentSecurity: false,
+      algorithmFiling: false,
+      dataAnnotation: false
+    },
+    infrastructure: {},
+    penTestSchedule: '',
+    incidentResponseRef: ''
+  };
+
+  // Initialize threat and control states
+  THREATS.forEach(function(t) {
+    state.threats[t.id] = { applicable: false, severity: 'medium' };
+    state.controls[t.id] = { controlType: '', description: '', status: '', evidence: '' };
+  });
+
+  INFRA_ITEMS.forEach(function(item) {
+    state.infrastructure[item.id] = { enabled: false, details: '' };
+  });
+
+  function getIdentifiedThreats() {
+    return THREATS.filter(function(t) { return state.threats[t.id].applicable; });
+  }
+
+  var wizard = createWizard({
+    title: 'AI Security Assessment Tool',
+    subtitle: 'Template 15 -- Serves EU AI Act Art. 15, UK DUA Act, China GenAI Security Specs',
+    totalSteps: 5,
+    stepLabels: ['Threat Model', 'Security Controls', 'China Requirements', 'Infrastructure', 'Summary'],
+    renderStep: function(step, container) {
+      if (step === 0) renderStep1(container);
+      else if (step === 1) renderStep2(container);
+      else if (step === 2) renderStep3(container);
+      else if (step === 3) renderStep4(container);
+      else if (step === 4) renderSummary(container);
+    },
+    onLoad: function() {
+      loadConfigFromFile(function(c) { config = c; loadState(); wizard.refreshStep(); });
+    },
+    onSave: doSave,
+    onExport: doExport,
+    stateKey: 'securityAssessment',
+    getState: function() { return state; },
+    setState: function(s) {
+      if (s.threats) state.threats = s.threats;
+      if (s.controls) state.controls = s.controls;
+      if (s.china) state.china = s.china;
+      if (s.infrastructure) state.infrastructure = s.infrastructure;
+      if (s.penTestSchedule !== undefined) state.penTestSchedule = s.penTestSchedule;
+      if (s.incidentResponseRef !== undefined) state.incidentResponseRef = s.incidentResponseRef;
+    }
+  });
+
+  // Step 1: Threat Model
+  function renderStep1(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 1: Threat Model']));
+    section.appendChild(createAlert('info', 'Identify applicable threats to your AI system. For each applicable threat, set the severity level. EU AI Act Art. 15 requires AI systems to be resilient against attempts by unauthorized third parties.'));
+
+    THREATS.forEach(function(t) {
+      var tState = state.threats[t.id];
+      var card = el('div', { className: 'threat-card' });
+      var header = el('div', { className: 'threat-header' });
+      header.appendChild(el('span', { className: 'threat-title' }, [t.label]));
+
+      if (tState.applicable) {
+        var badgeCls = 'severity-badge severity-' + tState.severity;
+        header.appendChild(el('span', { className: badgeCls }, [tState.severity.toUpperCase()]));
+      }
+      card.appendChild(header);
+
+      card.appendChild(createToggle('Applicable', tState.applicable, function(v) {
+        tState.applicable = v;
+        wizard.refreshStep();
+      }));
+
+      if (tState.applicable) {
+        card.appendChild(createSelect('Severity', SEVERITY_OPTIONS, tState.severity, function(v) {
+          tState.severity = v;
+          wizard.refreshStep();
+        }));
+      }
+
+      section.appendChild(card);
+    });
+
+    var identified = getIdentifiedThreats();
+    if (identified.length > 0) {
+      var bySeverity = { critical: 0, high: 0, medium: 0, low: 0 };
+      identified.forEach(function(t) { bySeverity[state.threats[t.id].severity]++; });
+      var parts = [];
+      if (bySeverity.critical) parts.push(bySeverity.critical + ' critical');
+      if (bySeverity.high) parts.push(bySeverity.high + ' high');
+      if (bySeverity.medium) parts.push(bySeverity.medium + ' medium');
+      if (bySeverity.low) parts.push(bySeverity.low + ' low');
+      var summaryText = identified.length + ' threat(s) identified: ' + parts.join(', ');
+      var alertType = bySeverity.critical > 0 ? 'danger' : bySeverity.high > 0 ? 'warning' : 'info';
+      section.appendChild(createAlert(alertType, summaryText));
+    }
+
+    container.appendChild(section);
+  }
+
+  // Step 2: Security Controls
+  function renderStep2(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 2: Security Controls']));
+
+    var identified = getIdentifiedThreats();
+
+    if (identified.length === 0) {
+      section.appendChild(createAlert('info', 'No threats identified in Step 1. Go back to identify applicable threats, or proceed if no threats apply.'));
+      container.appendChild(section);
+      return;
+    }
+
+    section.appendChild(createAlert('info', 'For each identified threat, define the security control(s) in place or planned.'));
+
+    identified.forEach(function(t) {
+      var ctrl = state.controls[t.id];
+      var hasContent = ctrl.controlType || ctrl.description || ctrl.status;
+      var card = el('div', { className: 'control-card' + (hasContent ? ' has-control' : '') });
+
+      var header = el('div', { className: 'threat-header' });
+      header.appendChild(el('span', { className: 'threat-title' }, [t.label]));
+      var badgeCls = 'severity-badge severity-' + state.threats[t.id].severity;
+      header.appendChild(el('span', { className: badgeCls }, [state.threats[t.id].severity.toUpperCase()]));
+      card.appendChild(header);
+
+      card.appendChild(createSelect('Control Type', CONTROL_TYPE_OPTIONS, ctrl.controlType, function(v) {
+        ctrl.controlType = v;
+      }));
+
+      card.appendChild(createTextArea('Control Description', ctrl.description, function(v) {
+        ctrl.description = v;
+      }, 'Describe the security control, mitigation strategy, or safeguard...'));
+
+      card.appendChild(createSelect('Implementation Status', IMPL_STATUS_OPTIONS, ctrl.status, function(v) {
+        ctrl.status = v;
+      }));
+
+      card.appendChild(createTextInput('Testing Evidence', ctrl.evidence, function(v) {
+        ctrl.evidence = v;
+      }, 'Reference to test report, link, or document...'));
+
+      section.appendChild(card);
+    });
+
+    container.appendChild(section);
+  }
+
+  // Step 3: China-Specific Requirements
+  function renderStep3(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 3: China-Specific Requirements']));
+    section.appendChild(createAlert('info', 'Skip this step if China is not in your target jurisdictions. These requirements apply under China GenAI Measures and related security specifications.'));
+
+    section.appendChild(createToggle('China is a target jurisdiction', state.china.applicable, function(v) {
+      state.china.applicable = v;
+      wizard.refreshStep();
+    }));
+
+    if (!state.china.applicable) {
+      section.appendChild(createAlert('success', 'China requirements skipped. Proceed to next step.'));
+      container.appendChild(section);
+      return;
+    }
+
+    var chinaDiv = el('div', { className: 'china-section' });
+    chinaDiv.appendChild(el('h3', {}, ['GenAI Security Compliance']));
+
+    chinaDiv.appendChild(createToggle('Pre-training data security assessment completed', state.china.preTrainingAssessment, function(v) {
+      state.china.preTrainingAssessment = v;
+      wizard.saveNow();
+    }));
+
+    chinaDiv.appendChild(createToggle('GenAI safety evaluation passed', state.china.safetyEvaluation, function(v) {
+      state.china.safetyEvaluation = v;
+      wizard.saveNow();
+    }));
+
+    chinaDiv.appendChild(createToggle('Content security mechanisms in place', state.china.contentSecurity, function(v) {
+      state.china.contentSecurity = v;
+      wizard.saveNow();
+    }));
+
+    chinaDiv.appendChild(createToggle('Algorithm filing completed', state.china.algorithmFiling, function(v) {
+      state.china.algorithmFiling = v;
+      wizard.saveNow();
+    }));
+
+    chinaDiv.appendChild(createToggle('Data annotation management documented', state.china.dataAnnotation, function(v) {
+      state.china.dataAnnotation = v;
+      wizard.saveNow();
+    }));
+
+    var chinaFields = ['preTrainingAssessment', 'safetyEvaluation', 'contentSecurity', 'algorithmFiling', 'dataAnnotation'];
+    var chinaComplete = chinaFields.filter(function(f) { return state.china[f]; }).length;
+    var chinaPct = Math.round((chinaComplete / chinaFields.length) * 100);
+
+    if (chinaPct === 100) {
+      chinaDiv.appendChild(createAlert('success', 'All China GenAI requirements addressed.'));
+    } else {
+      chinaDiv.appendChild(createAlert('warning', chinaComplete + '/' + chinaFields.length + ' China requirements completed (' + chinaPct + '%).'));
+    }
+
+    section.appendChild(chinaDiv);
+    container.appendChild(section);
+  }
+
+  // Step 4: Infrastructure Security
+  function renderStep4(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 4: Infrastructure Security']));
+    section.appendChild(createAlert('info', 'Assess the security posture of your AI infrastructure. EU AI Act Art. 15 requires appropriate levels of accuracy, robustness, and cybersecurity.'));
+
+    INFRA_ITEMS.forEach(function(item) {
+      var iState = state.infrastructure[item.id];
+
+      section.appendChild(createToggle(item.label, iState.enabled, function(v) {
+        iState.enabled = v;
+        wizard.refreshStep();
+      }));
+
+      if (iState.enabled) {
+        var detailWrap = el('div', { className: 'infra-detail' });
+        detailWrap.appendChild(createTextInput('Details', iState.details, function(v) {
+          iState.details = v;
+        }, 'Implementation details, tool/vendor, configuration notes...'));
+        section.appendChild(detailWrap);
+      }
+    });
+
+    section.appendChild(createTextInput('Penetration Testing Schedule', state.penTestSchedule, function(v) {
+      state.penTestSchedule = v;
+    }, 'e.g., Quarterly, Semi-annual, Annual, Ad-hoc'));
+
+    section.appendChild(createTextInput('Incident Response Plan Reference', state.incidentResponseRef, function(v) {
+      state.incidentResponseRef = v;
+    }, 'e.g., Document ID, link, or file path'));
+
+    var infraComplete = INFRA_ITEMS.filter(function(item) { return state.infrastructure[item.id].enabled; }).length;
+    var infraPct = Math.round((infraComplete / INFRA_ITEMS.length) * 100);
+    var alertType = infraPct >= 80 ? 'success' : infraPct >= 50 ? 'warning' : 'danger';
+    section.appendChild(createAlert(alertType, 'Infrastructure checklist: ' + infraComplete + '/' + INFRA_ITEMS.length + ' controls enabled (' + infraPct + '%).'));
+
+    container.appendChild(section);
+  }
+
+  // Step 5: Summary
+  function renderSummary(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 5: Security Assessment Summary']));
+
+    // Threat count by severity
+    var identified = getIdentifiedThreats();
+    var bySeverity = { critical: 0, high: 0, medium: 0, low: 0 };
+    identified.forEach(function(t) { bySeverity[state.threats[t.id].severity]++; });
+
+    section.appendChild(el('h3', {}, ['Threat Overview']));
+    var statsDiv = el('div', { className: 'stat-row' });
+    addStat(statsDiv, identified.length, 'Total Threats');
+    addStat(statsDiv, bySeverity.critical, 'Critical', 'score-high');
+    addStat(statsDiv, bySeverity.high, 'High', 'score-med');
+    addStat(statsDiv, bySeverity.medium, 'Medium', 'score-med');
+    addStat(statsDiv, bySeverity.low, 'Low', 'score-low');
+    section.appendChild(statsDiv);
+
+    // Threat table
+    if (identified.length > 0) {
+      var table = el('table', { className: 'result-table' });
+      var thead = el('thead');
+      var headerRow = el('tr');
+      headerRow.appendChild(el('th', {}, ['Threat']));
+      headerRow.appendChild(el('th', {}, ['Severity']));
+      headerRow.appendChild(el('th', {}, ['Control Type']));
+      headerRow.appendChild(el('th', {}, ['Status']));
+      thead.appendChild(headerRow);
+      table.appendChild(thead);
+
+      var tbody = el('tbody');
+      identified.forEach(function(t) {
+        var ctrl = state.controls[t.id];
+        var row = el('tr');
+        row.appendChild(el('td', {}, [t.label]));
+        var sevCell = el('td');
+        var sevCls = 'severity-badge severity-' + state.threats[t.id].severity;
+        sevCell.appendChild(el('span', { className: sevCls }, [state.threats[t.id].severity.toUpperCase()]));
+        row.appendChild(sevCell);
+        row.appendChild(el('td', {}, [findLabel(CONTROL_TYPE_OPTIONS, ctrl.controlType)]));
+        row.appendChild(el('td', {}, [findLabel(IMPL_STATUS_OPTIONS, ctrl.status)]));
+        tbody.appendChild(row);
+      });
+      table.appendChild(tbody);
+      section.appendChild(table);
+    }
+
+    // Controls coverage
+    section.appendChild(el('h3', {}, ['Controls Coverage']));
+    var controlledCount = 0;
+    identified.forEach(function(t) {
+      var ctrl = state.controls[t.id];
+      if (ctrl.controlType && ctrl.description && ctrl.status) controlledCount++;
+    });
+    var coveragePct = identified.length > 0 ? Math.round((controlledCount / identified.length) * 100) : 100;
+    var coverageCls = coveragePct >= 80 ? 'score-low' : coveragePct >= 50 ? 'score-med' : 'score-high';
+
+    var coverageStats = el('div', { className: 'stat-row' });
+    addStat(coverageStats, controlledCount + '/' + identified.length, 'Threats with Controls', coverageCls);
+    addStat(coverageStats, coveragePct + '%', 'Coverage', coverageCls);
+    section.appendChild(coverageStats);
+
+    var bar = el('div', { className: 'score-bar' });
+    var fill = el('div', { className: 'score-fill', style: 'width: ' + coveragePct + '%; background: ' + (coveragePct >= 80 ? '#4DBFBF' : coveragePct >= 50 ? '#E8B96A' : '#e74c3c') + ';' });
+    bar.appendChild(fill);
+    section.appendChild(bar);
+
+    // China compliance
+    if (state.china.applicable) {
+      section.appendChild(el('h3', {}, ['China GenAI Compliance']));
+      var chinaFields = ['preTrainingAssessment', 'safetyEvaluation', 'contentSecurity', 'algorithmFiling', 'dataAnnotation'];
+      var chinaLabels = {
+        preTrainingAssessment: 'Pre-training data security assessment',
+        safetyEvaluation: 'GenAI safety evaluation',
+        contentSecurity: 'Content security mechanisms',
+        algorithmFiling: 'Algorithm filing',
+        dataAnnotation: 'Data annotation management'
+      };
+      var chinaComplete = 0;
+      chinaFields.forEach(function(f) {
+        if (state.china[f]) chinaComplete++;
+        var status = state.china[f] ? 'Complete' : 'Incomplete';
+        var statusCls = state.china[f] ? 'score-low' : 'score-high';
+        var row = el('div', { style: 'display: flex; justify-content: space-between; padding: 4px 0; font-size: 0.85em;' });
+        row.appendChild(el('span', { style: 'color: #9AACBA;' }, [chinaLabels[f]]));
+        row.appendChild(el('span', { className: statusCls }, [status]));
+        section.appendChild(row);
+      });
+      var chinaPct = Math.round((chinaComplete / chinaFields.length) * 100);
+      var chinaAlertType = chinaPct === 100 ? 'success' : chinaPct >= 60 ? 'warning' : 'danger';
+      section.appendChild(createAlert(chinaAlertType, 'China compliance: ' + chinaComplete + '/' + chinaFields.length + ' (' + chinaPct + '%)'));
+    }
+
+    // Infrastructure checklist
+    section.appendChild(el('h3', {}, ['Infrastructure Security']));
+    var infraComplete = 0;
+    INFRA_ITEMS.forEach(function(item) {
+      var iState = state.infrastructure[item.id];
+      if (iState.enabled) infraComplete++;
+      var row = el('div', { style: 'display: flex; justify-content: space-between; padding: 4px 0; font-size: 0.85em;' });
+      row.appendChild(el('span', { style: 'color: #9AACBA;' }, [item.label]));
+      row.appendChild(el('span', { className: iState.enabled ? 'score-low' : 'score-high' }, [iState.enabled ? 'Enabled' : 'Not enabled']));
+      section.appendChild(row);
+    });
+    var infraPct = Math.round((infraComplete / INFRA_ITEMS.length) * 100);
+
+    if (state.penTestSchedule) {
+      section.appendChild(el('div', { style: 'font-size: 0.85em; color: #9AACBA; margin-top: 8px;' }, ['Penetration testing: ' + state.penTestSchedule]));
+    }
+    if (state.incidentResponseRef) {
+      section.appendChild(el('div', { style: 'font-size: 0.85em; color: #9AACBA; margin-top: 4px;' }, ['Incident response plan: ' + state.incidentResponseRef]));
+    }
+
+    // Overall security posture
+    section.appendChild(el('h3', {}, ['Overall Security Posture']));
+    var postureScore = computePostureScore(coveragePct, infraPct, bySeverity);
+    var postureLabel = postureScore >= 80 ? 'STRONG' : postureScore >= 60 ? 'MODERATE' : postureScore >= 40 ? 'DEVELOPING' : 'INSUFFICIENT';
+    var postureCls = postureScore >= 80 ? 'score-low' : postureScore >= 60 ? 'score-med' : 'score-high';
+
+    var gauge = el('div', { className: 'posture-gauge' });
+    gauge.appendChild(el('div', { className: 'posture-label ' + postureCls }, [postureLabel]));
+    gauge.appendChild(el('div', { style: 'font-size: 0.85em; color: #6B7B8D; margin-top: 4px;' }, ['Score: ' + postureScore + '/100']));
+    section.appendChild(gauge);
+
+    var postureBar = el('div', { className: 'score-bar' });
+    var postureFill = el('div', { className: 'score-fill', style: 'width: ' + postureScore + '%; background: ' + (postureScore >= 80 ? '#4DBFBF' : postureScore >= 60 ? '#E8B96A' : '#e74c3c') + ';' });
+    postureBar.appendChild(postureFill);
+    section.appendChild(postureBar);
+
+    section.appendChild(createAlert('info', 'This is compliance research evidence, not legal advice. Review with qualified security and legal professionals before deployment.'));
+
+    container.appendChild(section);
+  }
+
+  function computePostureScore(coveragePct, infraPct, bySeverity) {
+    var controlsScore = coveragePct * 0.4;
+    var infraScore = infraPct * 0.4;
+    var severityPenalty = 0;
+    if (bySeverity.critical > 0) severityPenalty += bySeverity.critical * 5;
+    if (bySeverity.high > 0) severityPenalty += bySeverity.high * 3;
+    var severityScore = Math.max(0, 20 - severityPenalty);
+    return Math.round(Math.min(100, controlsScore + infraScore + severityScore));
+  }
+
+  function findLabel(options, value) {
+    var opt = options.find(function(o) { return o.value === value; });
+    return opt ? opt.label : (value || 'Not set');
+  }
+
+  function addStat(container, val, label, cls) {
+    var stat = el('div', { className: 'summary-stat' });
+    stat.appendChild(el('div', { className: 'summary-stat-value ' + (cls || '') }, [String(val)]));
+    stat.appendChild(el('div', { className: 'summary-stat-label' }, [label]));
+    container.appendChild(stat);
+  }
+
+  function loadState() {
+    if (config.interactiveToolResults && config.interactiveToolResults.securityAssessment) {
+      var saved = config.interactiveToolResults.securityAssessment;
+      if (saved.threats) state.threats = saved.threats;
+      if (saved.controls) state.controls = saved.controls;
+      if (saved.china) state.china = saved.china;
+      if (saved.infrastructure) state.infrastructure = saved.infrastructure;
+      if (saved.penTestSchedule !== undefined) state.penTestSchedule = saved.penTestSchedule;
+      if (saved.incidentResponseRef !== undefined) state.incidentResponseRef = saved.incidentResponseRef;
+    }
+  }
+
+  function doSave() {
+    config.interactiveToolResults = config.interactiveToolResults || {};
+    config.interactiveToolResults.securityAssessment = {
+      completedDate: new Date().toISOString().split('T')[0],
+      threats: JSON.parse(JSON.stringify(state.threats)),
+      controls: JSON.parse(JSON.stringify(state.controls)),
+      china: JSON.parse(JSON.stringify(state.china)),
+      infrastructure: JSON.parse(JSON.stringify(state.infrastructure)),
+      penTestSchedule: state.penTestSchedule,
+      incidentResponseRef: state.incidentResponseRef
+    };
+    saveConfigToFile(config);
+  }
+
+  function doExport() {
+    var lines = [];
+    lines.push('# AI Security Assessment Report (Template 15)');
+    lines.push('');
+    lines.push('**Generated:** ' + new Date().toISOString().split('T')[0]);
+    lines.push('**Serves:** EU AI Act Art. 15, UK DUA Act, China GenAI Security Specs');
+    lines.push('');
+
+    // Threat Model
+    lines.push('## 1. Threat Model');
+    lines.push('');
+    var identified = getIdentifiedThreats();
+    if (identified.length === 0) {
+      lines.push('No threats identified.');
+    } else {
+      lines.push('| Threat | Severity |');
+      lines.push('|--------|----------|');
+      identified.forEach(function(t) {
+        lines.push('| ' + t.label + ' | ' + state.threats[t.id].severity.toUpperCase() + ' |');
+      });
+    }
+    lines.push('');
+
+    // Security Controls
+    lines.push('## 2. Security Controls');
+    lines.push('');
+    if (identified.length === 0) {
+      lines.push('No controls configured (no threats identified).');
+    } else {
+      identified.forEach(function(t) {
+        var ctrl = state.controls[t.id];
+        lines.push('### ' + t.label + ' (' + state.threats[t.id].severity.toUpperCase() + ')');
+        lines.push('');
+        lines.push('- **Control Type:** ' + findLabel(CONTROL_TYPE_OPTIONS, ctrl.controlType));
+        lines.push('- **Description:** ' + (ctrl.description || 'Not provided'));
+        lines.push('- **Status:** ' + findLabel(IMPL_STATUS_OPTIONS, ctrl.status));
+        lines.push('- **Evidence:** ' + (ctrl.evidence || 'Not provided'));
+        lines.push('');
+      });
+    }
+
+    // China
+    if (state.china.applicable) {
+      lines.push('## 3. China GenAI Requirements');
+      lines.push('');
+      var chinaLabels = {
+        preTrainingAssessment: 'Pre-training data security assessment',
+        safetyEvaluation: 'GenAI safety evaluation',
+        contentSecurity: 'Content security mechanisms',
+        algorithmFiling: 'Algorithm filing',
+        dataAnnotation: 'Data annotation management'
+      };
+      Object.keys(chinaLabels).forEach(function(k) {
+        lines.push('- [' + (state.china[k] ? 'x' : ' ') + '] ' + chinaLabels[k]);
+      });
+      lines.push('');
+    }
+
+    // Infrastructure
+    lines.push('## 4. Infrastructure Security');
+    lines.push('');
+    INFRA_ITEMS.forEach(function(item) {
+      var iState = state.infrastructure[item.id];
+      lines.push('- [' + (iState.enabled ? 'x' : ' ') + '] ' + item.label + (iState.enabled && iState.details ? ' -- ' + iState.details : ''));
+    });
+    lines.push('');
+    if (state.penTestSchedule) lines.push('- **Penetration Testing Schedule:** ' + state.penTestSchedule);
+    if (state.incidentResponseRef) lines.push('- **Incident Response Plan:** ' + state.incidentResponseRef);
+    lines.push('');
+
+    // Summary metrics
+    lines.push('## 5. Summary');
+    lines.push('');
+    var bySeverity = { critical: 0, high: 0, medium: 0, low: 0 };
+    identified.forEach(function(t) { bySeverity[state.threats[t.id].severity]++; });
+    lines.push('- **Total threats:** ' + identified.length);
+    lines.push('- **Critical:** ' + bySeverity.critical + ', **High:** ' + bySeverity.high + ', **Medium:** ' + bySeverity.medium + ', **Low:** ' + bySeverity.low);
+
+    var controlledCount = 0;
+    identified.forEach(function(t) {
+      var ctrl = state.controls[t.id];
+      if (ctrl.controlType && ctrl.description && ctrl.status) controlledCount++;
+    });
+    var coveragePct = identified.length > 0 ? Math.round((controlledCount / identified.length) * 100) : 100;
+    lines.push('- **Controls coverage:** ' + coveragePct + '%');
+
+    var infraComplete = INFRA_ITEMS.filter(function(item) { return state.infrastructure[item.id].enabled; }).length;
+    var infraPct = Math.round((infraComplete / INFRA_ITEMS.length) * 100);
+    lines.push('- **Infrastructure completion:** ' + infraPct + '%');
+
+    var postureScore = computePostureScore(coveragePct, infraPct, bySeverity);
+    var postureLabel = postureScore >= 80 ? 'STRONG' : postureScore >= 60 ? 'MODERATE' : postureScore >= 40 ? 'DEVELOPING' : 'INSUFFICIENT';
+    lines.push('- **Overall security posture:** ' + postureLabel + ' (' + postureScore + '/100)');
+    lines.push('');
+
+    lines.push('---');
+    lines.push('*Generated by AI Security Assessment Tool. This is compliance research evidence, not legal advice.*');
+
+    exportMarkdown('security-assessment-report.md', lines.join('\n'));
+  }
+
+  wizard.render();
+})();
+</script>
+</body>
+</html>

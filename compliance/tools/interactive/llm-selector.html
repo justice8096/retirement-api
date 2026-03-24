@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLM Selector &amp; Compliance Tool</title>
+<script src="./shared.js"></script>
+</head>
+<body>
+<script>
+(function() {
+  injectCSS();
+
+  var extraStyle = document.createElement('style');
+  extraStyle.textContent = [
+    '.model-card { padding: 12px; margin-bottom: 8px; border: 2px solid #1E2D3D; border-radius: 6px; background: #0D1830; cursor: pointer; transition: all 0.15s; }',
+    '.model-card:hover { border-color: #3A4A5A; }',
+    '.model-card.selected { border-color: #D4943A; background: #1E2D3D; }',
+    '.model-meta { font-size: 0.85em; color: #9AACBA; margin-top: 4px; }',
+    '.model-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }',
+    '.model-tag { font-size: 0.75em; padding: 2px 8px; border-radius: 3px; background: #1E2D3D; color: #9AACBA; }',
+    '.model-tag.open { background: #1a3a2a; color: #4DBFBF; }',
+    '.model-tag.api { background: #3a2a1a; color: #E8B96A; }',
+    '.model-tag.china { background: #3a1a1a; color: #e74c3c; }',
+    '.filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }',
+    '.filter-btn { padding: 6px 12px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830; color: #9AACBA; cursor: pointer; font-size: 0.85em; }',
+    '.filter-btn.active { border-color: #D4943A; color: #E8B96A; background: #1E2D3D; }',
+    '.autofill-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #1E2D3D; font-size: 0.85em; }',
+    '.autofill-field { color: #9AACBA; }',
+    '.autofill-value { color: #4DBFBF; max-width: 60%; text-align: right; }',
+    '.compliance-flag { padding: 8px 12px; margin-bottom: 6px; border-left: 3px solid #D4943A; background: #0D183088; font-size: 0.9em; }',
+    '.compliance-flag.warning { border-color: #e74c3c; }',
+    '.compliance-flag.info { border-color: #2A7B7B; }',
+    '.search-input { width: 100%; padding: 10px 12px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830; color: #F0EBE0; font-size: 0.95em; margin-bottom: 12px; }',
+    '.search-input::placeholder { color: #6B7B8D; }',
+    '.model-cards-container { max-height: 500px; overflow-y: auto; padding-right: 4px; }',
+    '.custom-model-form { padding: 16px; border: 1px dashed #3A4A5A; border-radius: 6px; background: #0D1830; margin-top: 12px; }',
+    '.deploy-block { padding: 12px; border: 1px solid #1E2D3D; border-radius: 6px; background: #0D1830; margin-bottom: 10px; }',
+    '.deploy-block-title { font-size: 0.95em; font-weight: 600; color: #E8B96A; margin-bottom: 8px; }',
+    '.risk-row { display: flex; justify-content: space-between; padding: 4px 0; font-size: 0.85em; }',
+    '.risk-label { color: #9AACBA; }',
+    '.risk-yes { color: #4DBFBF; }',
+    '.risk-no { color: #e74c3c; }',
+    '.risk-partial { color: #E8B96A; }',
+    '.obligation-section { margin-bottom: 16px; }',
+    '.obligation-title { font-size: 0.95em; font-weight: 600; margin-bottom: 6px; }',
+    '.obligation-title.provider { color: #4DBFBF; }',
+    '.obligation-title.deployer { color: #E8B96A; }'
+  ].join('\n');
+  document.head.appendChild(extraStyle);
+
+  var config = {};
+
+  // Templates that apply even without LLM
+  var nonLlmTemplates = [
+    'T01 - System Overview & Purpose',
+    'T02 - Risk Classification',
+    'T05 - Data Governance',
+    'T06 - Testing & Validation',
+    'T09 - Human Oversight Design',
+    'T10 - Incident Response Plan',
+    'T12 - Regulatory Filing Tracker',
+    'T14 - Impact Assessment',
+    'T15 - Transparency Disclosure',
+    'T22 - Security Assessment'
+  ];
+
+  // Templates specific to LLM usage
+  var llmTemplates = [
+    'T03 - Training Data Documentation',
+    'T04 - Model Card',
+    'T07 - Bias & Fairness Testing',
+    'T08 - Content Filtering Policy',
+    'T11 - GPAI Compliance (EU)',
+    'T13 - Consent & Disclosure Design',
+    'T16 - Watermarking Policy',
+    'T17 - Copyright Compliance',
+    'T18 - Data Processing Agreements',
+    'T19 - Model Provider Audit',
+    'T20 - Safety Testing Results',
+    'T21 - Deployer Obligations Checklist'
+  ];
+
+  var usesLlmOptions = [
+    { id: 'third-party', label: 'Yes \u2014 we use a pre-trained LLM we did not develop', desc: 'Most common for deployer-side compliance. This tool will guide you through model selection, deployment, and deployer obligations.' },
+    { id: 'own', label: 'Yes \u2014 we developed our own LLM', desc: 'Provider obligations are much heavier than deployer obligations. This tool focuses on deployer obligations but will flag provider-specific requirements.' },
+    { id: 'no', label: 'No \u2014 this project does not use an LLM', desc: 'Many evidence templates may not apply. A subset of templates still apply for general AI systems.' }
+  ];
+
+  var state = {
+    usesLlm: null,
+    selectedModels: [],
+    customModels: [],
+    deployments: {},
+    configJurisdictions: [],
+    notes: ''
+  };
+
+  var _registry = null;
+  var _searchText = '';
+  var _filterType = 'all';
+  var _filterSource = '';
+  var _filterCountry = '';
+  var _showCustomForm = false;
+
+  var _countryCodeMap = { 'US': 'US', 'FR': 'France', 'CN': 'China', 'CA': 'Canada', 'GB': 'UK', 'UK': 'UK', 'AE': 'UAE', 'DE': 'Germany', 'IL': 'Israel', 'JP': 'Japan', 'KR': 'South Korea', 'IN': 'India', 'RU': 'Russia' };
+
+  function normalizeModel(m) {
+    if (!m.name) m.name = m.family || m.id;
+    if (!m.country) m.country = _countryCodeMap[m.countryOfOrigin] || m.countryOfOrigin || 'Unknown';
+    if (m.deployment && m.localCapable === undefined) m.localCapable = m.deployment.localCapable;
+    if (m.deployment && m.apiAvailable === undefined) m.apiAvailable = m.deployment.apiAvailable;
+  }
+
+  function loadRegistry(callback) {
+    if (_registry) { callback(_registry); return; }
+    fetch('../data/llm-registry.json')
+      .then(function(r) { return r.json(); })
+      .then(function(index) {
+        if (!index.chunks || !index.chunks.length) {
+          index.models = index.models || [];
+          _registry = index;
+          callback(index);
+          return;
+        }
+        var promises = index.chunks.map(function(f) {
+          return fetch('../data/' + f).then(function(r) { return r.json(); });
+        });
+        Promise.all(promises).then(function(chunks) {
+          var allModels = [];
+          for (var i = 0; i < chunks.length; i++) {
+            if (chunks[i].models) allModels = allModels.concat(chunks[i].models);
+          }
+          for (var i = 0; i < allModels.length; i++) {
+            normalizeModel(allModels[i]);
+          }
+          _registry = { _meta: index._meta, sources: index.sources, models: allModels };
+          callback(_registry);
+        });
+      })
+      .catch(function() {
+        callback(null);
+      });
+  }
+
+  function getModelById(id) {
+    if (!_registry || !_registry.models) return null;
+    for (var i = 0; i < _registry.models.length; i++) {
+      if (_registry.models[i].id === id) return _registry.models[i];
+    }
+    return null;
+  }
+
+  function getCustomModelById(id) {
+    for (var i = 0; i < state.customModels.length; i++) {
+      if (state.customModels[i].id === id) return state.customModels[i];
+    }
+    return null;
+  }
+
+  function getAllSelectedModels() {
+    var models = [];
+    for (var i = 0; i < state.selectedModels.length; i++) {
+      var m = getModelById(state.selectedModels[i]);
+      if (m) models.push(m);
+    }
+    for (var i = 0; i < state.customModels.length; i++) {
+      models.push(state.customModels[i]);
+    }
+    return models;
+  }
+
+  function isSelected(modelId) {
+    if (state.selectedModels.indexOf(modelId) !== -1) return true;
+    for (var i = 0; i < state.customModels.length; i++) {
+      if (state.customModels[i].id === modelId) return true;
+    }
+    return false;
+  }
+
+  function toggleModel(modelId) {
+    var idx = state.selectedModels.indexOf(modelId);
+    if (idx !== -1) {
+      state.selectedModels.splice(idx, 1);
+      delete state.deployments[modelId];
+    } else {
+      state.selectedModels.push(modelId);
+      state.deployments[modelId] = { type: '', provider: '', region: '' };
+    }
+    wizard.saveNow();
+  }
+
+  function getCountryFlag(country) {
+    var flags = {
+      'US': '\uD83C\uDDFA\uD83C\uDDF8', 'France': '\uD83C\uDDEB\uD83C\uDDF7', 'China': '\uD83C\uDDE8\uD83C\uDDF3',
+      'Canada': '\uD83C\uDDE8\uD83C\uDDE6', 'UK': '\uD83C\uDDEC\uD83C\uDDE7', 'UAE': '\uD83C\uDDE6\uD83C\uDDEA',
+      'Germany': '\uD83C\uDDE9\uD83C\uDDEA', 'Israel': '\uD83C\uDDEE\uD83C\uDDF1', 'Japan': '\uD83C\uDDEF\uD83C\uDDF5',
+      'South Korea': '\uD83C\uDDF0\uD83C\uDDF7', 'India': '\uD83C\uDDEE\uD83C\uDDF3', 'Russia': '\uD83C\uDDF7\uD83C\uDDFA'
+    };
+    return flags[country] || '\uD83C\uDF10';
+  }
+
+  function matchesFilters(model) {
+    if (_searchText) {
+      var q = _searchText.toLowerCase();
+      var haystack = ((model.name || '') + ' ' + (model.family || '') + ' ' + (model.provider || '')).toLowerCase();
+      if (haystack.indexOf(q) === -1) return false;
+    }
+    if (_filterType === 'open-source' && !model.openSource) return false;
+    if (_filterType === 'api-only' && model.localCapable) return false;
+    if (_filterType === 'local-capable' && !model.localCapable) return false;
+    if (_filterSource && model.availableOn) {
+      var sources = model.availableOn;
+      var found = false;
+      for (var i = 0; i < sources.length; i++) {
+        if (sources[i].toLowerCase() === _filterSource.toLowerCase()) { found = true; break; }
+      }
+      if (!found) return false;
+    }
+    if (_filterCountry) {
+      if (_filterCountry === 'Other') {
+        var mainCountries = ['US', 'France', 'China', 'Canada', 'UK'];
+        if (mainCountries.indexOf(model.country) !== -1) return false;
+      } else {
+        if (model.country !== _filterCountry) return false;
+      }
+    }
+    return true;
+  }
+
+  function getSelectedCount() {
+    return state.selectedModels.length + state.customModels.length;
+  }
+
+  // --- Wizard ---
+
+  var wizard = createWizard({
+    title: 'LLM Selector & Compliance Tool',
+    subtitle: 'Identify which LLM(s) your project uses, configure deployment, and review compliance implications.',
+    totalSteps: 5,
+    stepLabels: ['LLM Usage', 'Select Models', 'Deployment', 'Compliance', 'Summary'],
+    renderStep: function(step, container) {
+      if (step === 0) renderStep1(container);
+      else if (step === 1) renderStep2(container);
+      else if (step === 2) renderStep3(container);
+      else if (step === 3) renderStep4(container);
+      else if (step === 4) renderStep5(container);
+    },
+    onLoad: function() {
+      loadConfigFromFile(function(c) {
+        config = c;
+        loadStateFromConfig();
+        wizard.refreshStep();
+      });
+    },
+    onSave: doSave,
+    onExport: doExport,
+    stateKey: 'llmSelector',
+    getState: function() { return state; },
+    setState: function(s) {
+      if (s.usesLlm !== undefined) state.usesLlm = s.usesLlm;
+      if (s.selectedModels) state.selectedModels = s.selectedModels;
+      if (s.customModels) state.customModels = s.customModels;
+      if (s.deployments) state.deployments = s.deployments;
+      if (s.configJurisdictions) state.configJurisdictions = s.configJurisdictions;
+      if (s.notes !== undefined) state.notes = s.notes;
+    }
+  });
+
+  // --- Step 1: Does Your Project Use an LLM? ---
+
+  function renderStep1(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 1: Does Your Project Use an LLM?']));
+    section.appendChild(createAlert('info', 'This determines which compliance templates and obligations apply to your project.'));
+
+    var buttons = [];
+
+    for (var i = 0; i < usesLlmOptions.length; i++) {
+      (function(opt, idx) {
+        var isSel = state.usesLlm === opt.id;
+        var btn = el('div', {
+          className: 'model-card' + (isSel ? ' selected' : '')
+        });
+
+        var header = el('div', { style: 'display: flex; justify-content: space-between; align-items: center;' });
+        var labelSpan = el('span', { style: 'font-size: 0.95em; font-weight: 600; color: ' + (isSel ? '#E8B96A' : '#F0EBE0') + ';' }, [opt.label]);
+        header.appendChild(labelSpan);
+        var badge = el('span', { className: 'badge enacted', style: isSel ? '' : 'display:none' }, ['Selected']);
+        header.appendChild(badge);
+        btn.appendChild(header);
+
+        var desc = el('p', { style: 'font-size: 0.85em; color: #9AACBA; margin-top: 6px; display: ' + (isSel ? 'block' : 'none') + ';' }, [opt.desc]);
+        btn.appendChild(desc);
+
+        btn._labelSpan = labelSpan;
+        btn._badge = badge;
+        btn._desc = desc;
+        buttons.push(btn);
+
+        btn.addEventListener('click', function() {
+          state.usesLlm = opt.id;
+          for (var j = 0; j < buttons.length; j++) {
+            var sel = (j === idx);
+            buttons[j].className = 'model-card' + (sel ? ' selected' : '');
+            buttons[j]._labelSpan.style.color = sel ? '#E8B96A' : '#F0EBE0';
+            buttons[j]._badge.style.display = sel ? '' : 'none';
+            buttons[j]._desc.style.display = sel ? 'block' : 'none';
+          }
+          extraInfo.textContent = '';
+          if (opt.id === 'no') {
+            renderNonLlmSummary(extraInfo);
+          } else if (opt.id === 'own') {
+            extraInfo.appendChild(createAlert('warning', 'Provider obligations under the EU AI Act (GPAI provisions) are significantly heavier than deployer obligations. This tool focuses on deployer obligations but will flag where provider-specific requirements apply. Consult legal counsel for full provider compliance.'));
+          }
+          wizard.saveNow();
+        });
+
+        section.appendChild(btn);
+      })(usesLlmOptions[i], i);
+    }
+
+    var extraInfo = el('div');
+    if (state.usesLlm === 'no') {
+      renderNonLlmSummary(extraInfo);
+    } else if (state.usesLlm === 'own') {
+      extraInfo.appendChild(createAlert('warning', 'Provider obligations under the EU AI Act (GPAI provisions) are significantly heavier than deployer obligations. This tool focuses on deployer obligations but will flag where provider-specific requirements apply. Consult legal counsel for full provider compliance.'));
+    }
+    section.appendChild(extraInfo);
+
+    container.appendChild(section);
+  }
+
+  function renderNonLlmSummary(container) {
+    container.appendChild(createAlert('info', 'Your project does not use an LLM. The following templates still apply for general AI systems:'));
+    for (var i = 0; i < nonLlmTemplates.length; i++) {
+      var row = el('div', { style: 'padding: 4px 0 4px 12px; font-size: 0.85em; color: #4DBFBF;' }, ['\u2713 ' + nonLlmTemplates[i]]);
+      container.appendChild(row);
+    }
+    container.appendChild(el('div', { style: 'margin-top: 8px;' }));
+    container.appendChild(createAlert('warning', 'The following LLM-specific templates will NOT apply:'));
+    for (var i = 0; i < llmTemplates.length; i++) {
+      var row = el('div', { style: 'padding: 4px 0 4px 12px; font-size: 0.85em; color: #6B7B8D;' }, ['\u2717 ' + llmTemplates[i]]);
+      container.appendChild(row);
+    }
+  }
+
+  // --- Step 2: Select Your LLM(s) ---
+
+  function renderStep2(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 2: Select Your LLM(s)']));
+
+    if (state.usesLlm === 'no') {
+      section.appendChild(createAlert('info', 'You indicated this project does not use an LLM. You can skip this step or go back to change your selection.'));
+      container.appendChild(section);
+      return;
+    }
+
+    var countEl = el('div', { style: 'font-size: 0.9em; color: #E8B96A; margin-bottom: 12px;' }, [getSelectedCount() + ' model(s) selected']);
+
+    var cardsContainer = el('div', { className: 'model-cards-container' });
+    var loadingEl = el('div', { style: 'color: #6B7B8D; padding: 20px; text-align: center;' }, ['Loading model registry...']);
+    cardsContainer.appendChild(loadingEl);
+
+    // Search input
+    var searchInput = el('input', {
+      type: 'text', className: 'search-input', placeholder: 'Search by model name, family, or provider...', value: _searchText
+    });
+    searchInput.addEventListener('input', function() {
+      _searchText = searchInput.value;
+      applyFilters(cardsContainer);
+    });
+
+    // Type filter bar
+    var typeBar = el('div', { className: 'filter-bar' });
+    var typeFilters = [
+      { id: 'all', label: 'All' },
+      { id: 'open-source', label: 'Open Source' },
+      { id: 'api-only', label: 'API Only' },
+      { id: 'local-capable', label: 'Local Capable' }
+    ];
+    var typeButtons = [];
+    for (var i = 0; i < typeFilters.length; i++) {
+      (function(f) {
+        var btn = el('button', {
+          className: 'filter-btn' + (_filterType === f.id ? ' active' : ''),
+          textContent: f.label
+        });
+        btn.addEventListener('click', function() {
+          _filterType = f.id;
+          for (var j = 0; j < typeButtons.length; j++) {
+            typeButtons[j].className = 'filter-btn' + (_filterType === typeFilters[j].id ? ' active' : '');
+          }
+          applyFilters(cardsContainer);
+        });
+        typeButtons.push(btn);
+        typeBar.appendChild(btn);
+      })(typeFilters[i]);
+    }
+
+    // Source filter bar
+    var sourceBar = el('div', { className: 'filter-bar' });
+    sourceBar.appendChild(el('span', { style: 'font-size: 0.8em; color: #6B7B8D; padding: 6px 0;' }, ['Source:']));
+    var sourceFilters = ['', 'HuggingFace', 'Ollama', 'API'];
+    var sourceButtons = [];
+    for (var i = 0; i < sourceFilters.length; i++) {
+      (function(s) {
+        var label = s || 'All';
+        var btn = el('button', {
+          className: 'filter-btn' + (_filterSource === s ? ' active' : ''),
+          textContent: label
+        });
+        btn.addEventListener('click', function() {
+          _filterSource = s;
+          for (var j = 0; j < sourceButtons.length; j++) {
+            sourceButtons[j].className = 'filter-btn' + (_filterSource === sourceFilters[j] ? ' active' : '');
+          }
+          applyFilters(cardsContainer);
+        });
+        sourceButtons.push(btn);
+        sourceBar.appendChild(btn);
+      })(sourceFilters[i]);
+    }
+
+    // Country filter bar
+    var countryBar = el('div', { className: 'filter-bar' });
+    countryBar.appendChild(el('span', { style: 'font-size: 0.8em; color: #6B7B8D; padding: 6px 0;' }, ['Country:']));
+    var countryFilters = ['', 'US', 'France', 'China', 'Canada', 'UK', 'Other'];
+    var countryButtons = [];
+    for (var i = 0; i < countryFilters.length; i++) {
+      (function(c) {
+        var label = c || 'All';
+        var btn = el('button', {
+          className: 'filter-btn' + (_filterCountry === c ? ' active' : ''),
+          textContent: label
+        });
+        btn.addEventListener('click', function() {
+          _filterCountry = c;
+          for (var j = 0; j < countryButtons.length; j++) {
+            countryButtons[j].className = 'filter-btn' + (_filterCountry === countryFilters[j] ? ' active' : '');
+          }
+          applyFilters(cardsContainer);
+        });
+        countryButtons.push(btn);
+        countryBar.appendChild(btn);
+      })(countryFilters[i]);
+    }
+
+    section.appendChild(searchInput);
+    section.appendChild(typeBar);
+    section.appendChild(sourceBar);
+    section.appendChild(countryBar);
+    section.appendChild(countEl);
+    section.appendChild(cardsContainer);
+
+    // Load registry and build cards
+    loadRegistry(function(data) {
+      cardsContainer.textContent = '';
+      if (!data || !data.models || data.models.length === 0) {
+        renderRegistryFallback(cardsContainer);
+        return;
+      }
+      for (var i = 0; i < data.models.length; i++) {
+        var card = buildModelCard(data.models[i], countEl);
+        cardsContainer.appendChild(card);
+      }
+      applyFilters(cardsContainer);
+    });
+
+    // Custom model button
+    var customBtn = el('button', { className: 'btn', textContent: 'My model isn\'t listed', style: 'margin-top: 12px;' });
+    var customFormWrap = el('div', { style: _showCustomForm ? '' : 'display:none' });
+
+    customBtn.addEventListener('click', function() {
+      _showCustomForm = !_showCustomForm;
+      customFormWrap.style.display = _showCustomForm ? '' : 'none';
+    });
+
+    renderCustomModelForm(customFormWrap, countEl);
+
+    section.appendChild(customBtn);
+    section.appendChild(customFormWrap);
+
+    // Show existing custom models
+    if (state.customModels.length > 0) {
+      section.appendChild(el('h3', { style: 'margin-top: 16px;' }, ['Custom Models Added']));
+      for (var i = 0; i < state.customModels.length; i++) {
+        (function(cm, idx) {
+          var row = el('div', { style: 'display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; border: 1px solid #D4943A; border-radius: 4px; margin-bottom: 4px; background: #1E2D3D;' });
+          row.appendChild(el('span', { style: 'color: #E8B96A;' }, [cm.name + ' (' + cm.provider + ')']));
+          var removeBtn = el('button', { className: 'btn', textContent: 'Remove', style: 'padding: 2px 10px; font-size: 0.75em;' });
+          removeBtn.addEventListener('click', function() {
+            state.customModels.splice(idx, 1);
+            delete state.deployments['custom-' + cm.id];
+            wizard.saveNow();
+            wizard.refreshStep();
+          });
+          row.appendChild(removeBtn);
+          section.appendChild(row);
+        })(state.customModels[i], i);
+      }
+    }
+
+    container.appendChild(section);
+  }
+
+  function buildModelCard(model, countEl) {
+    var sel = isSelected(model.id);
+    var card = el('div', { className: 'model-card' + (sel ? ' selected' : '') });
+    card.setAttribute('data-model-id', model.id);
+
+    var header = el('div', { style: 'display: flex; justify-content: space-between; align-items: center;' });
+    var nameSpan = el('span', { style: 'font-weight: 600; color: ' + (sel ? '#E8B96A' : '#F0EBE0') + ';' }, [getCountryFlag(model.country) + ' ' + model.name]);
+    header.appendChild(nameSpan);
+    var badge = el('span', { className: 'badge enacted', style: sel ? '' : 'display:none' }, ['Selected']);
+    header.appendChild(badge);
+    card.appendChild(header);
+
+    var meta = el('div', { className: 'model-meta' });
+    var metaParts = [model.provider];
+    if (model.parameters) metaParts.push(model.parameters);
+    if (model.license) metaParts.push(model.license);
+    meta.appendChild(document.createTextNode(metaParts.join(' \u2022 ')));
+    card.appendChild(meta);
+
+    if (model.availableOn && model.availableOn.length > 0) {
+      var availMeta = el('div', { className: 'model-meta' }, ['Available on: ' + model.availableOn.join(', ')]);
+      card.appendChild(availMeta);
+    }
+
+    var tags = el('div', { className: 'model-tags' });
+    if (model.openSource) {
+      tags.appendChild(el('span', { className: 'model-tag open' }, ['Open Source']));
+    } else {
+      tags.appendChild(el('span', { className: 'model-tag api' }, ['Proprietary']));
+    }
+    if (model.localCapable) {
+      tags.appendChild(el('span', { className: 'model-tag' }, ['Local Capable']));
+    } else {
+      tags.appendChild(el('span', { className: 'model-tag api' }, ['API Only']));
+    }
+    if (model.country === 'China') {
+      tags.appendChild(el('span', { className: 'model-tag china' }, ['China-origin']));
+    }
+    if (model.family) {
+      tags.appendChild(el('span', { className: 'model-tag' }, [model.family]));
+    }
+    card.appendChild(tags);
+
+    card._nameSpan = nameSpan;
+    card._badge = badge;
+
+    card.addEventListener('click', function() {
+      toggleModel(model.id);
+      var nowSel = isSelected(model.id);
+      card.className = 'model-card' + (nowSel ? ' selected' : '');
+      card._nameSpan.style.color = nowSel ? '#E8B96A' : '#F0EBE0';
+      card._badge.style.display = nowSel ? '' : 'none';
+      countEl.textContent = getSelectedCount() + ' model(s) selected';
+    });
+
+    return card;
+  }
+
+  function applyFilters(cardsContainer) {
+    var cards = cardsContainer.querySelectorAll('.model-card');
+    for (var i = 0; i < cards.length; i++) {
+      var id = cards[i].getAttribute('data-model-id');
+      var model = getModelById(id);
+      if (model) {
+        cards[i].style.display = matchesFilters(model) ? '' : 'none';
+      }
+    }
+  }
+
+  function renderRegistryFallback(container) {
+    container.appendChild(createAlert('warning', 'Could not load llm-registry.json. You can load it manually or add custom models below.'));
+    var fileInput = el('input', { type: 'file', accept: '.json', style: 'margin-top: 8px;' });
+    fileInput.addEventListener('change', function(e) {
+      var file = e.target.files[0];
+      if (!file) return;
+      var reader = new FileReader();
+      reader.onload = function(ev) {
+        try {
+          _registry = JSON.parse(ev.target.result);
+          wizard.refreshStep();
+        } catch (err) {
+          container.appendChild(createAlert('danger', 'Invalid JSON file: ' + err.message));
+        }
+      };
+      reader.readAsText(file);
+    });
+    container.appendChild(fileInput);
+  }
+
+  function renderCustomModelForm(container, countEl) {
+    var form = el('div', { className: 'custom-model-form' });
+    form.appendChild(el('h3', { style: 'margin-bottom: 12px;' }, ['Add Custom / Unlisted Model']));
+
+    var custom = { name: '', provider: '', country: '', license: '', openSource: false, localCapable: false };
+
+    form.appendChild(createTextInput('Model Name', '', function(v) { custom.name = v; }, 'e.g., My Fine-tuned GPT'));
+    form.appendChild(createTextInput('Provider', '', function(v) { custom.provider = v; }, 'e.g., Internal, Custom vendor'));
+    form.appendChild(createTextInput('Country of Origin', '', function(v) { custom.country = v; }, 'e.g., US, France, China'));
+    form.appendChild(createTextInput('License', '', function(v) { custom.license = v; }, 'e.g., MIT, Apache 2.0, Proprietary'));
+    form.appendChild(createToggle('Open Source', null, function(v) { custom.openSource = v; }));
+    form.appendChild(createToggle('Local Capable', null, function(v) { custom.localCapable = v; }));
+
+    var addBtn = el('button', { className: 'btn primary', textContent: 'Add Model', style: 'margin-top: 12px;' });
+    addBtn.addEventListener('click', function() {
+      if (!custom.name) {
+        form.appendChild(createAlert('danger', 'Model name is required.'));
+        return;
+      }
+      var id = 'custom-' + Date.now();
+      var cm = {
+        id: id,
+        name: custom.name,
+        provider: custom.provider || 'Unknown',
+        country: custom.country || 'Unknown',
+        license: custom.license || 'Unknown',
+        openSource: custom.openSource === true,
+        localCapable: custom.localCapable === true
+      };
+      state.customModels.push(cm);
+      state.deployments[id] = { type: '', provider: '', region: '' };
+      wizard.saveNow();
+      wizard.refreshStep();
+    });
+    form.appendChild(addBtn);
+
+    container.appendChild(form);
+  }
+
+  // --- Step 3: Deployment Configuration ---
+
+  function renderStep3(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 3: Deployment Configuration']));
+
+    if (state.usesLlm === 'no') {
+      section.appendChild(createAlert('info', 'No LLM selected. You can skip this step.'));
+      container.appendChild(section);
+      return;
+    }
+
+    var allModels = getAllSelectedModels();
+    if (allModels.length === 0) {
+      section.appendChild(createAlert('warning', 'No models selected. Go back to Step 2 to select at least one model.'));
+      container.appendChild(section);
+      return;
+    }
+
+    section.appendChild(createAlert('info', 'Configure how each selected model will be deployed. This affects data residency and compliance obligations.'));
+
+    var deployTypeOptions = [
+      { value: '', label: '-- Select Deployment Type --' },
+      { value: 'local', label: 'Local (on-device / on-premise)' },
+      { value: 'api', label: 'Cloud API (provider-hosted)' },
+      { value: 'cloud', label: 'Self-hosted Cloud' }
+    ];
+
+    for (var i = 0; i < allModels.length; i++) {
+      (function(model) {
+        var mid = model.id;
+        if (!state.deployments[mid]) {
+          state.deployments[mid] = { type: '', provider: '', region: '' };
+        }
+        var dep = state.deployments[mid];
+
+        var block = el('div', { className: 'deploy-block' });
+        block.appendChild(el('div', { className: 'deploy-block-title' }, [getCountryFlag(model.country) + ' ' + model.name]));
+
+        var alertsContainer = el('div');
+
+        block.appendChild(createSelect('Deployment type', deployTypeOptions, dep.type, function(v) {
+          state.deployments[mid].type = v;
+          alertsContainer.textContent = '';
+          extraFields.textContent = '';
+          renderDeployAlerts(model, v, alertsContainer);
+          renderDeployExtraFields(model, mid, v, extraFields);
+          wizard.saveNow();
+        }));
+
+        var extraFields = el('div');
+        var currentType = dep.type;
+
+        if (currentType) {
+          renderDeployAlerts(model, currentType, alertsContainer);
+          renderDeployExtraFields(model, mid, currentType, extraFields);
+        }
+
+        block.appendChild(alertsContainer);
+        block.appendChild(extraFields);
+        section.appendChild(block);
+      })(allModels[i]);
+    }
+
+    container.appendChild(section);
+  }
+
+  function renderDeployAlerts(model, deployType, container) {
+    if (deployType === 'local') {
+      if (!model.localCapable && model.localCapable !== undefined) {
+        container.appendChild(createAlert('danger', 'This model (' + model.name + ') is API-only and cannot be deployed locally. Please select a different deployment type.'));
+      } else {
+        container.appendChild(createAlert('success', 'Data stays on-device. No data sent to external providers.'));
+      }
+    } else if (deployType === 'api') {
+      container.appendChild(createAlert('warning', 'Data will be sent to the model provider (' + (model.provider || 'unknown') + '). Ensure appropriate data processing agreements are in place.'));
+    } else if (deployType === 'cloud') {
+      container.appendChild(createAlert('info', 'Self-hosted cloud deployment. You control the infrastructure but data leaves your premises.'));
+    }
+
+    // Cross-jurisdiction warnings
+    var jurisdictions = state.configJurisdictions;
+    if (model.country === 'China' && jurisdictions.length > 0) {
+      var hasEU = false;
+      for (var i = 0; i < jurisdictions.length; i++) {
+        var j = jurisdictions[i].toLowerCase();
+        if (j === 'eu' || j === 'european union' || j === 'germany' || j === 'france' || j === 'italy' || j === 'spain' || j === 'netherlands') {
+          hasEU = true; break;
+        }
+      }
+      if (hasEU) {
+        container.appendChild(createAlert('danger', 'Data sovereignty consideration: This model originates from China and your project operates in the EU. Review data transfer mechanisms and consider GPAI provisions under the EU AI Act.'));
+      }
+    }
+  }
+
+  function renderDeployExtraFields(model, mid, deployType, container) {
+    var dep = state.deployments[mid];
+    if (deployType === 'api') {
+      container.appendChild(createTextInput('API Provider (if different from model provider)', dep.provider, function(v) {
+        state.deployments[mid].provider = v;
+        wizard.saveNow();
+      }, 'e.g., Azure OpenAI, AWS Bedrock'));
+    } else if (deployType === 'cloud') {
+      container.appendChild(createTextInput('Cloud Provider', dep.provider, function(v) {
+        state.deployments[mid].provider = v;
+        wizard.saveNow();
+      }, 'e.g., AWS, GCP, Azure'));
+      container.appendChild(createTextInput('Deployment Region', dep.region, function(v) {
+        state.deployments[mid].region = v;
+        wizard.saveNow();
+      }, 'e.g., eu-west-1, us-east-1'));
+    }
+  }
+
+  // --- Step 4: Compliance Implications ---
+
+  function renderStep4(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 4: Compliance Implications']));
+
+    if (state.usesLlm === 'no') {
+      section.appendChild(createAlert('info', 'No LLM selected. General AI compliance templates apply (see Step 1).'));
+      container.appendChild(section);
+      return;
+    }
+
+    var allModels = getAllSelectedModels();
+    if (allModels.length === 0) {
+      section.appendChild(createAlert('warning', 'No models selected. Go back to Step 2.'));
+      container.appendChild(section);
+      return;
+    }
+
+    var jurisdictions = state.configJurisdictions;
+
+    // Auto-fill preview
+    section.appendChild(el('h3', {}, ['Auto-fill Preview']));
+    section.appendChild(el('p', { style: 'font-size: 0.85em; color: #6B7B8D; margin-bottom: 8px;' }, ['These fields will be pre-populated in the evidence toolkit from your selections:']));
+
+    var autofillData = buildAutofillData(allModels);
+    for (var i = 0; i < autofillData.length; i++) {
+      var row = el('div', { className: 'autofill-row' });
+      row.appendChild(el('span', { className: 'autofill-field' }, [autofillData[i].field]));
+      row.appendChild(el('span', { className: 'autofill-value' }, [autofillData[i].value]));
+      section.appendChild(row);
+    }
+
+    // Provider vs Deployer obligations
+    section.appendChild(el('h3', { style: 'margin-top: 20px;' }, ['Provider vs Deployer Obligations']));
+
+    var hasApiModel = false;
+    var hasOpenSource = false;
+    for (var i = 0; i < allModels.length; i++) {
+      if (!allModels[i].localCapable || (state.deployments[allModels[i].id] && state.deployments[allModels[i].id].type === 'api')) hasApiModel = true;
+      if (allModels[i].openSource) hasOpenSource = true;
+    }
+
+    var providerObl = el('div', { className: 'obligation-section' });
+    providerObl.appendChild(el('div', { className: 'obligation-title provider' }, ['Provider Obligations (on model vendor)']));
+    if (hasApiModel) {
+      providerObl.appendChild(el('div', { style: 'font-size: 0.85em; color: #9AACBA; padding: 2px 0 2px 12px;' }, ['\u2022 Training data documentation and disclosure']));
+      providerObl.appendChild(el('div', { style: 'font-size: 0.85em; color: #9AACBA; padding: 2px 0 2px 12px;' }, ['\u2022 Model safety testing and red-teaming']));
+      providerObl.appendChild(el('div', { style: 'font-size: 0.85em; color: #9AACBA; padding: 2px 0 2px 12px;' }, ['\u2022 Model card / technical documentation']));
+      providerObl.appendChild(el('div', { style: 'font-size: 0.85em; color: #9AACBA; padding: 2px 0 2px 12px;' }, ['\u2022 Copyright policy for training data']));
+      providerObl.appendChild(el('div', { style: 'font-size: 0.85em; color: #9AACBA; padding: 2px 0 2px 12px;' }, ['\u2022 Content filtering and watermarking (if applicable)']));
+    }
+    if (hasOpenSource) {
+      providerObl.appendChild(el('div', { style: 'font-size: 0.85em; color: #E8B96A; padding: 2px 0 2px 12px;' }, ['\u26A0 Open-source models may shift some provider obligations to you as the deployer if the provider does not fulfill them.']));
+    }
+    section.appendChild(providerObl);
+
+    var deployerObl = el('div', { className: 'obligation-section' });
+    deployerObl.appendChild(el('div', { className: 'obligation-title deployer' }, ['Deployer Obligations (on you)']));
+    deployerObl.appendChild(el('div', { style: 'font-size: 0.85em; color: #9AACBA; padding: 2px 0 2px 12px;' }, ['\u2022 Risk assessment for your specific use case']));
+    deployerObl.appendChild(el('div', { style: 'font-size: 0.85em; color: #9AACBA; padding: 2px 0 2px 12px;' }, ['\u2022 Human oversight implementation']));
+    deployerObl.appendChild(el('div', { style: 'font-size: 0.85em; color: #9AACBA; padding: 2px 0 2px 12px;' }, ['\u2022 Transparency and user disclosure']));
+    deployerObl.appendChild(el('div', { style: 'font-size: 0.85em; color: #9AACBA; padding: 2px 0 2px 12px;' }, ['\u2022 Data processing agreements (for API models)']));
+    deployerObl.appendChild(el('div', { style: 'font-size: 0.85em; color: #9AACBA; padding: 2px 0 2px 12px;' }, ['\u2022 Incident monitoring and reporting']));
+    deployerObl.appendChild(el('div', { style: 'font-size: 0.85em; color: #9AACBA; padding: 2px 0 2px 12px;' }, ['\u2022 Bias and fairness testing for your application']));
+    if (state.usesLlm === 'own') {
+      deployerObl.appendChild(el('div', { style: 'font-size: 0.85em; color: #e74c3c; padding: 2px 0 2px 12px;' }, ['\u26A0 As the model developer, you also bear ALL provider obligations listed above.']));
+    }
+    section.appendChild(deployerObl);
+
+    // Jurisdiction-specific flags
+    section.appendChild(el('h3', { style: 'margin-top: 20px;' }, ['Jurisdiction-Specific Flags']));
+
+    var flagCount = 0;
+
+    for (var i = 0; i < allModels.length; i++) {
+      var model = allModels[i];
+      var dep = state.deployments[model.id] || {};
+
+      // Chinese model + EU
+      if (model.country === 'China') {
+        var hasEU = jurisdictionIncludes(['eu', 'european union', 'germany', 'france', 'italy', 'spain', 'netherlands']);
+        if (hasEU) {
+          var flag = el('div', { className: 'compliance-flag warning' });
+          flag.appendChild(el('strong', {}, [model.name + ': ']));
+          flag.appendChild(document.createTextNode('Chinese-origin model used in EU jurisdiction. The EU AI Act GPAI provisions may require additional scrutiny of training data provenance, data transfer mechanisms, and potential national security considerations.'));
+          section.appendChild(flag);
+          flagCount++;
+        }
+      }
+
+      // Any model + China jurisdiction
+      if (jurisdictionIncludes(['china', 'prc'])) {
+        var flag = el('div', { className: 'compliance-flag warning' });
+        flag.appendChild(el('strong', {}, [model.name + ': ']));
+        flag.appendChild(document.createTextNode('Operating in China requires CAC (Cyberspace Administration of China) filing for generative AI services. Algorithm registration is mandatory before public deployment.'));
+        section.appendChild(flag);
+        flagCount++;
+      }
+
+      // API model + GDPR jurisdiction
+      if (dep.type === 'api') {
+        var hasGDPR = jurisdictionIncludes(['eu', 'european union', 'germany', 'france', 'italy', 'spain', 'netherlands', 'uk', 'united kingdom']);
+        if (hasGDPR) {
+          var flag = el('div', { className: 'compliance-flag' });
+          flag.appendChild(el('strong', {}, [model.name + ': ']));
+          flag.appendChild(document.createTextNode('API deployment in GDPR jurisdiction. A Data Processing Agreement (DPA) with the API provider is required. Verify data transfer mechanisms if provider is outside the EU/UK.'));
+          section.appendChild(flag);
+          flagCount++;
+        }
+      }
+
+      // Training data disclosure gap
+      if (model.trainingDataDisclosure === 'none' || model.trainingDataDisclosure === 'partial') {
+        var hasEU2 = jurisdictionIncludes(['eu', 'european union', 'germany', 'france', 'italy', 'spain', 'netherlands']);
+        if (hasEU2) {
+          var flag = el('div', { className: 'compliance-flag info' });
+          flag.appendChild(el('strong', {}, [model.name + ': ']));
+          flag.appendChild(document.createTextNode('GPAI transparency gap: This model has ' + (model.trainingDataDisclosure || 'no known') + ' training data disclosure. EU AI Act Art. 53 requires GPAI providers to make available a sufficiently detailed summary of training data content.'));
+          section.appendChild(flag);
+          flagCount++;
+        }
+      }
+    }
+
+    if (flagCount === 0) {
+      section.appendChild(createAlert('success', 'No jurisdiction-specific compliance flags identified for your current model and jurisdiction combination.'));
+    }
+
+    // Risk indicators
+    section.appendChild(el('h3', { style: 'margin-top: 20px;' }, ['Risk Indicators by Model']));
+
+    for (var i = 0; i < allModels.length; i++) {
+      var model = allModels[i];
+      var riskBlock = el('div', { className: 'deploy-block' });
+      riskBlock.appendChild(el('div', { className: 'deploy-block-title' }, [model.name]));
+
+      var indicators = [
+        { label: 'Training data disclosure', value: model.trainingDataDisclosure || 'unknown', good: 'full' },
+        { label: 'Content filtering built-in', value: model.contentFiltering, isBool: true },
+        { label: 'Watermarking built-in', value: model.watermarking, isBool: true },
+        { label: 'Safety testing published', value: model.safetyTesting, isBool: true },
+        { label: 'Model card available', value: model.modelCard, isBool: true }
+      ];
+
+      for (var j = 0; j < indicators.length; j++) {
+        var ind = indicators[j];
+        var row = el('div', { className: 'risk-row' });
+        row.appendChild(el('span', { className: 'risk-label' }, [ind.label]));
+        if (ind.isBool) {
+          var cls = ind.value === true ? 'risk-yes' : (ind.value === false ? 'risk-no' : 'risk-partial');
+          var txt = ind.value === true ? 'Yes' : (ind.value === false ? 'No' : 'Unknown');
+          row.appendChild(el('span', { className: cls }, [txt]));
+        } else {
+          var cls = ind.value === ind.good ? 'risk-yes' : (ind.value === 'partial' ? 'risk-partial' : 'risk-no');
+          row.appendChild(el('span', { className: cls }, [ind.value]));
+        }
+        riskBlock.appendChild(row);
+      }
+
+      section.appendChild(riskBlock);
+    }
+
+    container.appendChild(section);
+  }
+
+  function jurisdictionIncludes(targets) {
+    var jurisdictions = state.configJurisdictions;
+    for (var i = 0; i < jurisdictions.length; i++) {
+      var j = jurisdictions[i].toLowerCase();
+      for (var t = 0; t < targets.length; t++) {
+        if (j === targets[t] || j.indexOf(targets[t]) !== -1) return true;
+      }
+    }
+    return false;
+  }
+
+  function buildAutofillData(allModels) {
+    var data = [];
+    var names = [];
+    var providers = [];
+    var countries = [];
+    var licenses = [];
+    var deployTypes = [];
+
+    for (var i = 0; i < allModels.length; i++) {
+      var m = allModels[i];
+      names.push(m.name);
+      if (providers.indexOf(m.provider) === -1) providers.push(m.provider);
+      if (countries.indexOf(m.country) === -1) countries.push(m.country);
+      if (m.license && licenses.indexOf(m.license) === -1) licenses.push(m.license);
+      var dep = state.deployments[m.id];
+      if (dep && dep.type && deployTypes.indexOf(dep.type) === -1) deployTypes.push(dep.type);
+    }
+
+    data.push({ field: 'LLM Model(s)', value: names.join(', ') || 'None' });
+    data.push({ field: 'Model Provider(s)', value: providers.join(', ') || 'Unknown' });
+    data.push({ field: 'Provider Country(ies)', value: countries.join(', ') || 'Unknown' });
+    data.push({ field: 'License Type(s)', value: licenses.join(', ') || 'Unknown' });
+    data.push({ field: 'Deployment Type(s)', value: deployTypes.join(', ') || 'Not configured' });
+    data.push({ field: 'Open Source', value: allModels.some(function(m) { return m.openSource; }) ? 'Yes (at least one)' : 'No' });
+    data.push({ field: 'Number of Models', value: String(allModels.length) });
+    data.push({ field: 'Uses LLM', value: state.usesLlm === 'own' ? 'Yes (self-developed)' : 'Yes (third-party)' });
+
+    return data;
+  }
+
+  // --- Step 5: Summary & Export ---
+
+  function renderStep5(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 5: Summary & Export']));
+
+    if (state.usesLlm === 'no') {
+      section.appendChild(createAlert('info', 'This project does not use an LLM. General AI templates apply.'));
+      section.appendChild(el('h3', {}, ['Applicable Templates']));
+      for (var i = 0; i < nonLlmTemplates.length; i++) {
+        section.appendChild(el('div', { style: 'padding: 2px 0 2px 12px; font-size: 0.85em; color: #4DBFBF;' }, ['\u2713 ' + nonLlmTemplates[i]]));
+      }
+      section.appendChild(el('div', { style: 'margin-top: 16px;' }));
+      section.appendChild(createTextArea('Notes', state.notes, function(v) { state.notes = v; }, 'Any additional notes about AI usage in this project...'));
+      renderActionButtons(section);
+      container.appendChild(section);
+      return;
+    }
+
+    var allModels = getAllSelectedModels();
+
+    // Overall summary card
+    var summaryCard = el('div', { className: 'deploy-block' });
+    summaryCard.appendChild(el('div', { className: 'deploy-block-title' }, ['LLM Selection Summary']));
+
+    var summaryRows = [
+      ['Project uses LLM', state.usesLlm === 'own' ? 'Yes (self-developed)' : 'Yes (third-party)'],
+      ['Models selected', String(allModels.length)],
+      ['Registry models', String(state.selectedModels.length)],
+      ['Custom models', String(state.customModels.length)]
+    ];
+    for (var i = 0; i < summaryRows.length; i++) {
+      var row = el('div', { className: 'autofill-row' });
+      row.appendChild(el('span', { className: 'autofill-field' }, [summaryRows[i][0]]));
+      row.appendChild(el('span', { className: 'autofill-value' }, [summaryRows[i][1]]));
+      summaryCard.appendChild(row);
+    }
+    section.appendChild(summaryCard);
+
+    // Selected models with compliance notes
+    section.appendChild(el('h3', {}, ['Selected Models']));
+    for (var i = 0; i < allModels.length; i++) {
+      var model = allModels[i];
+      var dep = state.deployments[model.id] || {};
+      var mCard = el('div', { className: 'deploy-block' });
+      mCard.appendChild(el('div', { className: 'deploy-block-title' }, [getCountryFlag(model.country) + ' ' + model.name]));
+
+      var details = [];
+      details.push(['Provider', model.provider || 'Unknown']);
+      details.push(['Country', model.country || 'Unknown']);
+      details.push(['License', model.license || 'Unknown']);
+      details.push(['Open Source', model.openSource ? 'Yes' : 'No']);
+      details.push(['Deployment', dep.type || 'Not configured']);
+      if (dep.provider) details.push(['API/Cloud Provider', dep.provider]);
+      if (dep.region) details.push(['Region', dep.region]);
+
+      for (var j = 0; j < details.length; j++) {
+        var row = el('div', { className: 'autofill-row' });
+        row.appendChild(el('span', { className: 'autofill-field' }, [details[j][0]]));
+        row.appendChild(el('span', { className: 'autofill-value' }, [details[j][1]]));
+        mCard.appendChild(row);
+      }
+
+      // Compliance notes for this model
+      var notes = getModelComplianceNotes(model, dep);
+      if (notes.length > 0) {
+        mCard.appendChild(el('div', { style: 'margin-top: 8px; font-size: 0.8em; color: #6B7B8D;' }, ['Compliance notes:']));
+        for (var j = 0; j < notes.length; j++) {
+          mCard.appendChild(el('div', { style: 'padding: 2px 0 2px 12px; font-size: 0.8em; color: #E8B96A;' }, ['\u26A0 ' + notes[j]]));
+        }
+      }
+
+      section.appendChild(mCard);
+    }
+
+    // Auto-fill fields
+    section.appendChild(el('h3', {}, ['Auto-fill Fields']));
+    section.appendChild(el('p', { style: 'font-size: 0.85em; color: #6B7B8D; margin-bottom: 8px;' }, ['These values will be written to your compliance config when you click "Apply to Config":']));
+    var autofillData = buildAutofillData(allModels);
+    for (var i = 0; i < autofillData.length; i++) {
+      var row = el('div', { className: 'autofill-row' });
+      row.appendChild(el('span', { className: 'autofill-field' }, [autofillData[i].field]));
+      row.appendChild(el('span', { className: 'autofill-value' }, [autofillData[i].value]));
+      section.appendChild(row);
+    }
+
+    section.appendChild(el('div', { style: 'margin-top: 16px;' }));
+    section.appendChild(createTextArea('Notes', state.notes, function(v) { state.notes = v; }, 'Any additional notes about LLM selection and deployment...'));
+
+    renderActionButtons(section);
+    container.appendChild(section);
+  }
+
+  function getModelComplianceNotes(model, dep) {
+    var notes = [];
+    if (model.country === 'China') {
+      notes.push('China-origin model: review data sovereignty and GPAI provisions');
+    }
+    if (dep.type === 'api') {
+      notes.push('API deployment: DPA required with provider');
+    }
+    if (model.openSource) {
+      notes.push('Open-source: some provider obligations may fall on deployer');
+    }
+    if (model.trainingDataDisclosure === 'none') {
+      notes.push('No training data disclosure: transparency gap for EU GPAI compliance');
+    }
+    if (model.safetyTesting === false) {
+      notes.push('No published safety testing: consider independent evaluation');
+    }
+    if (model.modelCard === false) {
+      notes.push('No model card available: documentation gap');
+    }
+    return notes;
+  }
+
+  function renderActionButtons(section) {
+    var actions = el('div', { className: 'toolbar', style: 'margin-top: 24px;' });
+    actions.appendChild(el('button', { className: 'btn success', textContent: 'Apply to Config', onClick: doSave }));
+    actions.appendChild(el('button', { className: 'btn primary', textContent: 'Export Markdown', onClick: doExport }));
+    actions.appendChild(el('button', { className: 'btn', textContent: 'Save Config File', onClick: function() {
+      config.interactiveToolResults = config.interactiveToolResults || {};
+      config.interactiveToolResults.llmSelector = buildResults();
+      saveConfigToFile(config);
+    }}));
+    section.appendChild(actions);
+  }
+
+  // --- State and config management ---
+
+  function loadStateFromConfig() {
+    if (config.jurisdictions) {
+      state.configJurisdictions = Array.isArray(config.jurisdictions) ? config.jurisdictions : [];
+    }
+    if (config.interactiveToolResults && config.interactiveToolResults.llmSelector) {
+      var saved = config.interactiveToolResults.llmSelector;
+      if (saved.usesLlm !== undefined) state.usesLlm = saved.usesLlm;
+      if (saved.selectedModels) state.selectedModels = saved.selectedModels;
+      if (saved.customModels) state.customModels = saved.customModels;
+      if (saved.deployments) state.deployments = saved.deployments;
+      if (saved.notes !== undefined) state.notes = saved.notes;
+    }
+  }
+
+  function buildResults() {
+    var allModels = getAllSelectedModels();
+    var modelSummaries = [];
+    for (var i = 0; i < allModels.length; i++) {
+      var m = allModels[i];
+      var dep = state.deployments[m.id] || {};
+      modelSummaries.push({
+        id: m.id,
+        name: m.name,
+        provider: m.provider,
+        country: m.country,
+        license: m.license,
+        openSource: m.openSource,
+        localCapable: m.localCapable,
+        deployment: dep,
+        complianceNotes: getModelComplianceNotes(m, dep)
+      });
+    }
+
+    return {
+      completedDate: new Date().toISOString().split('T')[0],
+      usesLlm: state.usesLlm,
+      selectedModels: state.selectedModels.slice(),
+      customModels: JSON.parse(JSON.stringify(state.customModels)),
+      deployments: JSON.parse(JSON.stringify(state.deployments)),
+      configJurisdictions: state.configJurisdictions.slice(),
+      notes: state.notes,
+      modelSummaries: modelSummaries,
+      autofillData: buildAutofillData(allModels)
+    };
+  }
+
+  function doSave() {
+    config.interactiveToolResults = config.interactiveToolResults || {};
+    config.interactiveToolResults.llmSelector = buildResults();
+    saveConfigToFile(config);
+  }
+
+  function doExport() {
+    var results = buildResults();
+    var lines = [];
+    lines.push('# LLM Selection & Compliance Report');
+    lines.push('');
+    lines.push('**Date:** ' + results.completedDate);
+    lines.push('');
+
+    lines.push('## 1. LLM Usage');
+    lines.push('');
+    if (state.usesLlm === 'no') {
+      lines.push('This project does **not** use an LLM.');
+      lines.push('');
+      lines.push('### Applicable Templates (General AI)');
+      for (var i = 0; i < nonLlmTemplates.length; i++) {
+        lines.push('- ' + nonLlmTemplates[i]);
+      }
+      lines.push('');
+      lines.push('### Non-Applicable Templates (LLM-Specific)');
+      for (var i = 0; i < llmTemplates.length; i++) {
+        lines.push('- ~~' + llmTemplates[i] + '~~');
+      }
+    } else {
+      lines.push('**Uses LLM:** ' + (state.usesLlm === 'own' ? 'Yes (self-developed)' : 'Yes (third-party)'));
+      lines.push('**Models Selected:** ' + results.modelSummaries.length);
+      lines.push('');
+
+      lines.push('## 2. Selected Models');
+      lines.push('');
+      for (var i = 0; i < results.modelSummaries.length; i++) {
+        var m = results.modelSummaries[i];
+        lines.push('### ' + m.name);
+        lines.push('');
+        lines.push('| Field | Value |');
+        lines.push('|-------|-------|');
+        lines.push('| Provider | ' + (m.provider || 'Unknown') + ' |');
+        lines.push('| Country | ' + (m.country || 'Unknown') + ' |');
+        lines.push('| License | ' + (m.license || 'Unknown') + ' |');
+        lines.push('| Open Source | ' + (m.openSource ? 'Yes' : 'No') + ' |');
+        lines.push('| Deployment | ' + (m.deployment.type || 'Not configured') + ' |');
+        if (m.deployment.provider) lines.push('| API/Cloud Provider | ' + m.deployment.provider + ' |');
+        if (m.deployment.region) lines.push('| Region | ' + m.deployment.region + ' |');
+        lines.push('');
+        if (m.complianceNotes.length > 0) {
+          lines.push('**Compliance Notes:**');
+          for (var j = 0; j < m.complianceNotes.length; j++) {
+            lines.push('- ' + m.complianceNotes[j]);
+          }
+          lines.push('');
+        }
+      }
+
+      lines.push('## 3. Auto-fill Fields');
+      lines.push('');
+      lines.push('| Field | Value |');
+      lines.push('|-------|-------|');
+      for (var i = 0; i < results.autofillData.length; i++) {
+        lines.push('| ' + results.autofillData[i].field + ' | ' + results.autofillData[i].value + ' |');
+      }
+      lines.push('');
+
+      lines.push('## 4. Compliance Flags');
+      lines.push('');
+      var hasFlags = false;
+      for (var i = 0; i < results.modelSummaries.length; i++) {
+        var m = results.modelSummaries[i];
+        if (m.complianceNotes.length > 0) {
+          hasFlags = true;
+          for (var j = 0; j < m.complianceNotes.length; j++) {
+            lines.push('- **' + m.name + ':** ' + m.complianceNotes[j]);
+          }
+        }
+      }
+      if (!hasFlags) {
+        lines.push('No compliance flags identified.');
+      }
+    }
+
+    lines.push('');
+    if (state.notes) {
+      lines.push('## Notes');
+      lines.push('');
+      lines.push(state.notes);
+      lines.push('');
+    }
+    lines.push('---');
+    lines.push('*Generated by LLM Selector & Compliance Tool. This is research, not legal advice.*');
+
+    exportMarkdown('llm-selector-report.md', lines.join('\n'));
+  }
+
+  wizard.render();
+})();
+</script>
+</body>
+</html>

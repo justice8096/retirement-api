@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Subject Rights Implementation (Template 11)</title>
+<script src="./shared.js"></script>
+</head>
+<body>
+<script>
+(function() {
+  injectCSS();
+
+  var style = document.createElement('style');
+  style.textContent = [
+    '.right-card { background: #0D1830; border: 1px solid #1E2D3D; border-radius: 4px; padding: 14px 16px; margin-bottom: 10px; }',
+    '.right-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }',
+    '.right-name { font-size: 0.95em; color: #E8B96A; font-weight: 600; }',
+    '.badge-row { display: flex; flex-wrap: wrap; gap: 4px; margin: 6px 0; }',
+    '.channel-card { background: #0D1830; border: 1px solid #1E2D3D; border-radius: 4px; padding: 12px 16px; margin-bottom: 8px; }',
+    '.channel-name { font-size: 0.9em; color: #E8B96A; margin-bottom: 6px; }',
+    '.challenge-card { background: #0D1830; border: 1px solid #1E2D3D; border-radius: 4px; padding: 14px 16px; margin-bottom: 10px; }',
+    '.challenge-title { font-size: 0.9em; color: #E8B96A; margin-bottom: 8px; font-weight: 500; }',
+    '.exemption-card { background: #0D1830; border: 1px solid #1E2D3D; border-radius: 4px; padding: 14px 16px; margin-bottom: 10px; }',
+    '.exemption-title { font-size: 0.9em; color: #E8B96A; margin-bottom: 4px; font-weight: 500; }',
+    '.exemption-scope { font-size: 0.8em; color: #6B7B8D; margin-bottom: 8px; }',
+    '.cond-section { margin-top: 8px; padding: 10px 12px; border-left: 2px solid #3A4A5A; background: #0B142688; }',
+    '.score-bar { height: 8px; border-radius: 4px; background: #3A4A5A; margin: 8px 0; overflow: hidden; }',
+    '.score-fill { height: 100%; border-radius: 4px; transition: width 0.3s; }',
+    '.score-container { margin: 16px 0; }',
+    '.score-label { display: flex; justify-content: space-between; font-size: 0.85em; margin-bottom: 4px; }',
+    '.stat-row { display: flex; gap: 16px; flex-wrap: wrap; margin: 12px 0; }',
+    '.summary-stat { display: inline-block; padding: 10px 18px; margin: 4px; border-radius: 4px; background: #1E2D3D; text-align: center; min-width: 120px; }',
+    '.summary-stat-value { font-size: 1.4em; font-weight: 600; display: block; }',
+    '.summary-stat-label { font-size: 0.75em; color: #6B7B8D; }',
+    '.summary-card { background: #0D1830; border: 1px solid #1E2D3D; border-radius: 4px; padding: 14px; margin-bottom: 10px; }',
+    '.summary-card-title { font-size: 0.95em; color: #E8B96A; margin-bottom: 8px; }',
+    '.compliance-rating { padding: 16px; border-radius: 6px; text-align: center; margin: 16px 0; }',
+    '.compliance-rating.compliant { background: #2A7B7B22; border: 2px solid #2A7B7B; }',
+    '.compliance-rating.partial { background: #D4943A22; border: 2px solid #D4943A; }',
+    '.compliance-rating.non-compliant { background: #c0392b22; border: 2px solid #c0392b; }',
+    '.rating-label { font-size: 1.3em; font-weight: 700; }',
+    '.rating-label.compliant { color: #4DBFBF; }',
+    '.rating-label.partial { color: #E8B96A; }',
+    '.rating-label.non-compliant { color: #e74c3c; }',
+    '.jurisdiction-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; border: 1px solid #1E2D3D; border-radius: 4px; margin-bottom: 4px; background: #0D1830; font-size: 0.85em; }',
+    '.jurisdiction-status { font-weight: 600; }',
+    '.jurisdiction-status.pass { color: #4DBFBF; }',
+    '.jurisdiction-status.warn { color: #E8B96A; }',
+    '.jurisdiction-status.fail { color: #e74c3c; }',
+    '.remediation-item { padding: 8px 12px; border-left: 3px solid #c0392b; background: #c0392b11; margin-bottom: 6px; border-radius: 0 4px 4px 0; font-size: 0.85em; }',
+    '.inline-warning { font-size: 0.8em; color: #E8B96A; padding: 4px 8px; background: #D4943A15; border-radius: 3px; margin-top: 4px; display: block; }',
+    '.inline-critical { font-size: 0.8em; color: #e74c3c; padding: 4px 8px; background: #c0392b15; border-radius: 3px; margin-top: 4px; display: block; }',
+    '.subsection { margin: 16px 0 12px; padding-bottom: 4px; border-bottom: 1px solid #1E2D3D22; }',
+    '.subsection-title { font-size: 0.95em; color: #9AACBA; font-weight: 500; }'
+  ].join('\n');
+  document.head.appendChild(style);
+
+  var config = {};
+
+  // --- Rights Definition ---
+  var RIGHTS = [
+    { id: 'informed', name: 'Right to be informed', jurisdictions: ['EU','UK','India','Brazil','S.Africa','Canada','Australia','S.Korea'] },
+    { id: 'access', name: 'Right of access', jurisdictions: ['EU','UK','India','Brazil','S.Africa','Canada','Australia','S.Korea'] },
+    { id: 'rectification', name: 'Right to rectification', jurisdictions: ['EU','UK','India','Brazil','S.Africa','Canada','Australia','S.Korea'] },
+    { id: 'erasure', name: 'Right to erasure/deletion', jurisdictions: ['EU','UK','India','Brazil','Australia','S.Korea'] },
+    { id: 'restrict', name: 'Right to restrict processing', jurisdictions: ['EU','UK'] },
+    { id: 'portability', name: 'Right to data portability', jurisdictions: ['EU','UK','Brazil','S.Korea'] },
+    { id: 'object', name: 'Right to object', jurisdictions: ['EU','UK','Brazil','S.Africa','Canada','Australia','S.Korea'] },
+    { id: 'automated', name: 'Right re: automated decisions', jurisdictions: ['EU','UK','Brazil','S.Africa','Australia','S.Korea'] },
+    { id: 'withdrawConsent', name: 'Right to withdraw consent', jurisdictions: ['EU','UK','India','Brazil','S.Africa','Canada','Australia','S.Korea'] },
+    { id: 'complain', name: 'Right to complain to authority', jurisdictions: ['EU','UK','India','Brazil','S.Africa','Canada','Australia','S.Korea'] }
+  ];
+
+  var RESPONSE_TIME_OPTIONS = [
+    { value: '', label: '-- Select --' },
+    { value: 'at_collection', label: 'At collection' },
+    { value: 'immediate', label: 'Immediate' },
+    { value: '30_days', label: '30 days' },
+    { value: '45_days', label: '45 days' },
+    { value: 'other', label: 'Other' }
+  ];
+
+  var EXEMPTIONS = [
+    { id: 'unfounded', name: 'Manifestly unfounded/excessive', scope: 'EU, UK', jurisdictions: ['EU','UK'] },
+    { id: 'legalRetention', name: 'Legal obligation to retain', scope: 'All jurisdictions', jurisdictions: ['EU','UK','India','Brazil','S.Africa','Canada','Australia','S.Korea'] },
+    { id: 'legalClaims', name: 'Legal claims', scope: 'EU, UK', jurisdictions: ['EU','UK'] },
+    { id: 'publicInterest', name: 'Public interest', scope: 'EU, UK', jurisdictions: ['EU','UK'] },
+    { id: 'freeExpression', name: 'Freedom of expression', scope: 'EU', jurisdictions: ['EU'] }
+  ];
+
+  var LOG_FIELDS = [
+    { id: 'requestId', name: 'Request ID' },
+    { id: 'date', name: 'Date' },
+    { id: 'subjectId', name: 'Subject ID' },
+    { id: 'rightExercised', name: 'Right exercised' },
+    { id: 'verificationStatus', name: 'Verification status' },
+    { id: 'outcome', name: 'Outcome' },
+    { id: 'responseDate', name: 'Response date' },
+    { id: 'daysTaken', name: 'Days taken' }
+  ];
+
+  // --- Data init ---
+  function initData() {
+    if (!config.interactiveToolResults) config.interactiveToolResults = {};
+    if (!config.interactiveToolResults.dsrImplementation) {
+      config.interactiveToolResults.dsrImplementation = {
+        rights: {},
+        channels: {
+          onlineForm: { enabled: null, url: '' },
+          email: { enabled: null, address: '' },
+          inApp: { enabled: null, description: '' },
+          physicalMail: { enabled: null },
+          phone: { enabled: null }
+        },
+        identity: {
+          method: '',
+          overCollectionAddressed: null,
+          failedVerificationFallback: null
+        },
+        sla: {
+          acknowledgeReceipt: '',
+          verifyIdentity: '',
+          executeRequest: '',
+          notifyOutcome: ''
+        },
+        aiErasure: {
+          trainingSet: { method: '', details: '' },
+          memorized: { evaluated: null, mitigation: '' },
+          logsCaches: { purgeExists: null, details: '' },
+          backups: { purgeSchedule: null, details: '' },
+          thirdParty: { notificationProcedure: null, details: '' }
+        },
+        aiAutomated: {
+          humanReviewHow: '',
+          reviewerRole: '',
+          reviewTurnaround: '',
+          canOverturn: '',
+          explanationProvided: null
+        },
+        aiPortability: {
+          format: '',
+          dataIncluded: { input: false, profile: false, interaction: false, aiOutputs: false },
+          transmissionMethod: ''
+        },
+        exemptions: {},
+        logging: {
+          systemOperational: null,
+          fields: {},
+          automatedSlaTracking: null,
+          slaBreachAlerts: null,
+          staffTrained: null,
+          trainingDate: '',
+          numberTrained: '',
+          periodicAudit: null,
+          auditFrequency: '',
+          lastAuditDate: '',
+          auditFindings: null
+        }
+      };
+      // Init per-right data
+      RIGHTS.forEach(function(r) {
+        config.interactiveToolResults.dsrImplementation.rights[r.id] = {
+          implemented: null,
+          responseTime: '',
+          method: ''
+        };
+      });
+      // Init per-exemption data
+      EXEMPTIONS.forEach(function(ex) {
+        config.interactiveToolResults.dsrImplementation.exemptions[ex.id] = {
+          policyExists: null,
+          howInvoked: '',
+          whoDecides: '',
+          writtenJustification: null
+        };
+      });
+      // Init log fields
+      LOG_FIELDS.forEach(function(f) {
+        config.interactiveToolResults.dsrImplementation.logging.fields[f.id] = false;
+      });
+    }
+    return config.interactiveToolResults.dsrImplementation;
+  }
+
+  function getData() {
+    return config.interactiveToolResults.dsrImplementation;
+  }
+
+  // --- Scoring helpers ---
+  function getRightsImplementedCount() {
+    var data = getData();
+    var count = 0;
+    RIGHTS.forEach(function(r) { if (data.rights[r.id].implemented === true) count++; });
+    return count;
+  }
+
+  function getChannelCount() {
+    var data = getData();
+    var ch = data.channels;
+    var count = 0;
+    if (ch.onlineForm.enabled === true) count++;
+    if (ch.email.enabled === true) count++;
+    if (ch.inApp.enabled === true) count++;
+    if (ch.physicalMail.enabled === true) count++;
+    if (ch.phone.enabled === true) count++;
+    return count;
+  }
+
+  function getErasureMethodsAddressed() {
+    var data = getData();
+    var ai = data.aiErasure;
+    var count = 0;
+    if (ai.trainingSet.method && ai.trainingSet.method !== '') count++;
+    if (ai.memorized.evaluated === true) count++;
+    if (ai.logsCaches.purgeExists === true) count++;
+    if (ai.backups.purgeSchedule === true) count++;
+    if (ai.thirdParty.notificationProcedure === true) count++;
+    return count;
+  }
+
+  function getExemptionsDocumented() {
+    var data = getData();
+    var count = 0;
+    EXEMPTIONS.forEach(function(ex) {
+      if (data.exemptions[ex.id].policyExists === true) count++;
+    });
+    return count;
+  }
+
+  function getLogFieldsCount() {
+    var data = getData();
+    var count = 0;
+    LOG_FIELDS.forEach(function(f) {
+      if (data.logging.fields[f.id] === true) count++;
+    });
+    return count;
+  }
+
+  function getOverallRating() {
+    var data = getData();
+    var rightsCount = getRightsImplementedCount();
+    var channelCount = getChannelCount();
+    var logFields = getLogFieldsCount();
+    var loggingActive = data.logging.systemOperational === true;
+
+    // Critical checks
+    var criticalRights = ['informed','access','rectification','erasure','withdrawConsent'];
+    var criticalMissing = false;
+    criticalRights.forEach(function(rId) {
+      if (data.rights[rId].implemented !== true) criticalMissing = true;
+    });
+
+    if (!criticalMissing && loggingActive && channelCount >= 2 && rightsCount >= 8 && logFields >= 6) {
+      return 'COMPLIANT';
+    }
+    if (rightsCount >= 5 && channelCount >= 1 && (loggingActive || logFields >= 4)) {
+      return 'PARTIALLY COMPLIANT';
+    }
+    return 'NON-COMPLIANT';
+  }
+
+  // --- Score bar helper ---
+  function buildScoreBar(pct, label) {
+    var color = pct >= 100 ? '#4DBFBF' : pct >= 80 ? '#E8B96A' : '#e74c3c';
+    var container = el('div', { className: 'score-container' });
+    var labelRow = el('div', { className: 'score-label' });
+    labelRow.appendChild(el('span', {}, [label]));
+    var pctSpan = el('span', { style: 'color:' + color });
+    pctSpan.textContent = pct + '%';
+    labelRow.appendChild(pctSpan);
+    container.appendChild(labelRow);
+    var bar = el('div', { className: 'score-bar' });
+    var fill = el('div', { className: 'score-fill', style: 'width:' + pct + '%;background:' + color });
+    bar.appendChild(fill);
+    container.appendChild(bar);
+    return container;
+  }
+
+  // --- Wizard ---
+  var wizard = createWizard({
+    title: 'Data Subject Rights Implementation',
+    subtitle: 'Template 11 \u2014 Evidence gathering for GDPR, UK GDPR, DPDPA, LGPD, POPIA, PIPEDA, Privacy Act, PIPA, PDPA (14+ laws)',
+    totalSteps: 6,
+    stepLabels: ['Rights Matrix', 'Request Handling', 'AI Challenges', 'Exemptions', 'Logging & Audit', 'Summary'],
+    renderStep: function(step, container) {
+      initData();
+      if (step === 0) renderStep1(container);
+      else if (step === 1) renderStep2(container);
+      else if (step === 2) renderStep3(container);
+      else if (step === 3) renderStep4(container);
+      else if (step === 4) renderStep5(container);
+      else if (step === 5) renderStep6(container);
+    },
+    onLoad: function() {
+      loadConfigFromFile(function(c) { config = c; initData(); wizard.refreshStep(); });
+    },
+    onSave: function() { saveConfigToFile(config); },
+    onExport: function() { doExportMarkdown(); },
+    stateKey: 'dsrRightsImplementation',
+    getState: function() { return getData(); },
+    setState: function(s) {
+      initData();
+      var data = getData();
+      if (s.rights) { for (var k in s.rights) { data.rights[k] = s.rights[k]; } }
+      if (s.channels) {
+        if (s.channels.onlineForm) { for (var k in s.channels.onlineForm) { data.channels.onlineForm[k] = s.channels.onlineForm[k]; } }
+        if (s.channels.email) { for (var k in s.channels.email) { data.channels.email[k] = s.channels.email[k]; } }
+        if (s.channels.inApp) { for (var k in s.channels.inApp) { data.channels.inApp[k] = s.channels.inApp[k]; } }
+        if (s.channels.physicalMail) { for (var k in s.channels.physicalMail) { data.channels.physicalMail[k] = s.channels.physicalMail[k]; } }
+        if (s.channels.phone) { for (var k in s.channels.phone) { data.channels.phone[k] = s.channels.phone[k]; } }
+      }
+      if (s.identity) {
+        if (s.identity.method !== undefined) data.identity.method = s.identity.method;
+        if (s.identity.overCollectionAddressed !== undefined) data.identity.overCollectionAddressed = s.identity.overCollectionAddressed;
+        if (s.identity.failedVerificationFallback !== undefined) data.identity.failedVerificationFallback = s.identity.failedVerificationFallback;
+      }
+      if (s.sla) {
+        if (s.sla.acknowledgeReceipt !== undefined) data.sla.acknowledgeReceipt = s.sla.acknowledgeReceipt;
+        if (s.sla.verifyIdentity !== undefined) data.sla.verifyIdentity = s.sla.verifyIdentity;
+        if (s.sla.executeRequest !== undefined) data.sla.executeRequest = s.sla.executeRequest;
+        if (s.sla.notifyOutcome !== undefined) data.sla.notifyOutcome = s.sla.notifyOutcome;
+      }
+      if (s.aiErasure) {
+        if (s.aiErasure.trainingSet) { for (var k in s.aiErasure.trainingSet) { data.aiErasure.trainingSet[k] = s.aiErasure.trainingSet[k]; } }
+        if (s.aiErasure.memorized) { for (var k in s.aiErasure.memorized) { data.aiErasure.memorized[k] = s.aiErasure.memorized[k]; } }
+        if (s.aiErasure.logsCaches) { for (var k in s.aiErasure.logsCaches) { data.aiErasure.logsCaches[k] = s.aiErasure.logsCaches[k]; } }
+        if (s.aiErasure.backups) { for (var k in s.aiErasure.backups) { data.aiErasure.backups[k] = s.aiErasure.backups[k]; } }
+        if (s.aiErasure.thirdParty) { for (var k in s.aiErasure.thirdParty) { data.aiErasure.thirdParty[k] = s.aiErasure.thirdParty[k]; } }
+      }
+      if (s.aiAutomated) {
+        if (s.aiAutomated.humanReviewHow !== undefined) data.aiAutomated.humanReviewHow = s.aiAutomated.humanReviewHow;
+        if (s.aiAutomated.reviewerRole !== undefined) data.aiAutomated.reviewerRole = s.aiAutomated.reviewerRole;
+        if (s.aiAutomated.reviewTurnaround !== undefined) data.aiAutomated.reviewTurnaround = s.aiAutomated.reviewTurnaround;
+        if (s.aiAutomated.canOverturn !== undefined) data.aiAutomated.canOverturn = s.aiAutomated.canOverturn;
+        if (s.aiAutomated.explanationProvided !== undefined) data.aiAutomated.explanationProvided = s.aiAutomated.explanationProvided;
+      }
+      if (s.aiPortability) {
+        if (s.aiPortability.format !== undefined) data.aiPortability.format = s.aiPortability.format;
+        if (s.aiPortability.dataIncluded) { for (var k in s.aiPortability.dataIncluded) { data.aiPortability.dataIncluded[k] = s.aiPortability.dataIncluded[k]; } }
+        if (s.aiPortability.transmissionMethod !== undefined) data.aiPortability.transmissionMethod = s.aiPortability.transmissionMethod;
+      }
+      if (s.exemptions) { for (var k in s.exemptions) { data.exemptions[k] = s.exemptions[k]; } }
+      if (s.logging) {
+        if (s.logging.systemOperational !== undefined) data.logging.systemOperational = s.logging.systemOperational;
+        if (s.logging.fields) { for (var k in s.logging.fields) { data.logging.fields[k] = s.logging.fields[k]; } }
+        if (s.logging.automatedSlaTracking !== undefined) data.logging.automatedSlaTracking = s.logging.automatedSlaTracking;
+        if (s.logging.slaBreachAlerts !== undefined) data.logging.slaBreachAlerts = s.logging.slaBreachAlerts;
+        if (s.logging.staffTrained !== undefined) data.logging.staffTrained = s.logging.staffTrained;
+        if (s.logging.trainingDate !== undefined) data.logging.trainingDate = s.logging.trainingDate;
+        if (s.logging.numberTrained !== undefined) data.logging.numberTrained = s.logging.numberTrained;
+        if (s.logging.periodicAudit !== undefined) data.logging.periodicAudit = s.logging.periodicAudit;
+        if (s.logging.auditFrequency !== undefined) data.logging.auditFrequency = s.logging.auditFrequency;
+        if (s.logging.lastAuditDate !== undefined) data.logging.lastAuditDate = s.logging.lastAuditDate;
+        if (s.logging.auditFindings !== undefined) data.logging.auditFindings = s.logging.auditFindings;
+      }
+    }
+  });
+
+  // ========== Step 1: Rights Implementation Matrix ==========
+  function renderStep1(container) {
+    var data = getData();
+    container.appendChild(el('h2', {}, ['Step 1: Rights Implementation Matrix']));
+    container.appendChild(el('div', { style: 'margin-bottom:16px;color:#9AACBA;font-size:0.9em;' }, ['For each data subject right, indicate whether it is implemented, the response time, and the implementation method. Jurisdiction badges show which laws require each right.']));
+
+    RIGHTS.forEach(function(right, idx) {
+      var rData = data.rights[right.id];
+      var card = el('div', { className: 'right-card' });
+
+      // Header
+      var header = el('div', { className: 'right-header' });
+      header.appendChild(el('span', { className: 'right-name' }, [(idx + 1) + '. ' + right.name]));
+      card.appendChild(header);
+
+      // Jurisdiction badges
+      var badgeRow = el('div', { className: 'badge-row' });
+      badgeRow.appendChild(el('span', { style: 'font-size:0.8em;color:#6B7B8D;margin-right:4px;' }, ['Required by:']));
+      right.jurisdictions.forEach(function(j) {
+        badgeRow.appendChild(el('span', { className: 'badge enacted' }, [j]));
+      });
+      card.appendChild(badgeRow);
+
+      // Implemented toggle
+      card.appendChild(createToggle('Implemented?', rData.implemented, function(val) {
+        getData().rights[right.id].implemented = val; wizard.saveNow();
+        wizard.refreshStep();
+      }));
+
+      // Response time
+      card.appendChild(createSelect('Response time', RESPONSE_TIME_OPTIONS, rData.responseTime, function(val) {
+        getData().rights[right.id].responseTime = val;
+      }));
+
+      // Implementation method
+      card.appendChild(createTextInput('Implementation method', rData.method, function(val) {
+        getData().rights[right.id].method = val;
+      }, 'Describe how this right is fulfilled...'));
+
+      // Warning if not implemented
+      if (rData.implemented === false) {
+        var jCount = right.jurisdictions.length;
+        var severity = jCount >= 6 ? 'inline-critical' : 'inline-warning';
+        var sevText = jCount >= 6 ? 'CRITICAL' : 'WARNING';
+        card.appendChild(el('span', { className: severity }, [sevText + ': Not implemented \u2014 required by ' + jCount + ' jurisdiction(s): ' + right.jurisdictions.join(', ')]));
+      }
+
+      container.appendChild(card);
+    });
+
+    // Implementation score
+    var implemented = getRightsImplementedCount();
+    var pct = Math.round((implemented / RIGHTS.length) * 100);
+    container.appendChild(buildScoreBar(pct, 'Implementation Score: ' + implemented + '/' + RIGHTS.length + ' rights implemented'));
+  }
+
+  // ========== Step 2: Request Handling Infrastructure ==========
+  function renderStep2(container) {
+    var data = getData();
+    container.appendChild(el('h2', {}, ['Step 2: Request Handling Infrastructure']));
+
+    // --- Request Intake Channels ---
+    var sub1 = el('div', { className: 'subsection' });
+    sub1.appendChild(el('div', { className: 'subsection-title' }, ['Request Intake Channels']));
+    container.appendChild(sub1);
+
+    // Online form
+    var chOnline = el('div', { className: 'channel-card' });
+    chOnline.appendChild(el('div', { className: 'channel-name' }, ['Online form / portal']));
+    chOnline.appendChild(createToggle('Available?', data.channels.onlineForm.enabled, function(val) {
+      getData().channels.onlineForm.enabled = val; wizard.refreshStep();
+    }));
+    if (data.channels.onlineForm.enabled === true) {
+      chOnline.appendChild(createTextInput('Portal URL', data.channels.onlineForm.url, function(val) {
+        getData().channels.onlineForm.url = val;
+      }, 'https://...'));
+    }
+    container.appendChild(chOnline);
+
+    // Email
+    var chEmail = el('div', { className: 'channel-card' });
+    chEmail.appendChild(el('div', { className: 'channel-name' }, ['Email address']));
+    chEmail.appendChild(createToggle('Available?', data.channels.email.enabled, function(val) {
+      getData().channels.email.enabled = val; wizard.refreshStep();
+    }));
+    if (data.channels.email.enabled === true) {
+      chEmail.appendChild(createTextInput('Email address', data.channels.email.address, function(val) {
+        getData().channels.email.address = val;
+      }, 'privacy@example.com'));
+    }
+    container.appendChild(chEmail);
+
+    // In-app
+    var chApp = el('div', { className: 'channel-card' });
+    chApp.appendChild(el('div', { className: 'channel-name' }, ['In-app mechanism']));
+    chApp.appendChild(createToggle('Available?', data.channels.inApp.enabled, function(val) {
+      getData().channels.inApp.enabled = val; wizard.refreshStep();
+    }));
+    if (data.channels.inApp.enabled === true) {
+      chApp.appendChild(createTextInput('Description', data.channels.inApp.description, function(val) {
+        getData().channels.inApp.description = val;
+      }, 'Describe the in-app mechanism...'));
+    }
+    container.appendChild(chApp);
+
+    // Physical mail
+    var chMail = el('div', { className: 'channel-card' });
+    chMail.appendChild(el('div', { className: 'channel-name' }, ['Physical mail']));
+    chMail.appendChild(createToggle('Available?', data.channels.physicalMail.enabled, function(val) {
+      getData().channels.physicalMail.enabled = val; wizard.refreshStep();
+    }));
+    container.appendChild(chMail);
+
+    // Phone
+    var chPhone = el('div', { className: 'channel-card' });
+    chPhone.appendChild(el('div', { className: 'channel-name' }, ['Phone']));
+    chPhone.appendChild(createToggle('Available?', data.channels.phone.enabled, function(val) {
+      getData().channels.phone.enabled = val; wizard.refreshStep();
+    }));
+    container.appendChild(chPhone);
+
+    // Channel count warning
+    var channelCount = getChannelCount();
+    if (channelCount < 2) {
+      container.appendChild(createAlert('danger', 'WARNING: Fewer than 2 request channels available (' + channelCount + '). Best practice requires at least 2 intake channels for accessibility.'));
+    } else {
+      container.appendChild(createAlert('success', channelCount + ' request channel(s) available.'));
+    }
+
+    // --- Identity Verification ---
+    var sub2 = el('div', { className: 'subsection' });
+    sub2.appendChild(el('div', { className: 'subsection-title' }, ['Identity Verification']));
+    container.appendChild(sub2);
+
+    container.appendChild(createSelect('Verification method', [
+      { value: '', label: '-- Select --' },
+      { value: 'id_verification', label: 'ID verification' },
+      { value: 'account_auth', label: 'Account authentication' },
+      { value: 'email_verification', label: 'Email verification' },
+      { value: 'knowledge_based', label: 'Knowledge-based' },
+      { value: 'other', label: 'Other' }
+    ], data.identity.method, function(val) {
+      getData().identity.method = val;
+    }));
+
+    container.appendChild(createToggle('Over-collection risk addressed? (GDPR data minimisation principle)', data.identity.overCollectionAddressed, function(val) {
+      getData().identity.overCollectionAddressed = val; wizard.refreshStep();
+    }));
+    if (data.identity.overCollectionAddressed === false) {
+      container.appendChild(createAlert('warning', 'GDPR Recital 64: Controllers should not retain personal data for the sole purpose of being able to react to potential requests. Ensure identity verification does not collect excessive data.'));
+    }
+
+    container.appendChild(createToggle('Failed verification fallback documented?', data.identity.failedVerificationFallback, function(val) {
+      getData().identity.failedVerificationFallback = val; wizard.saveNow();
+    }));
+
+    // --- Processing Workflow SLAs ---
+    var sub3 = el('div', { className: 'subsection' });
+    sub3.appendChild(el('div', { className: 'subsection-title' }, ['Processing Workflow SLAs']));
+    container.appendChild(sub3);
+
+    container.appendChild(createSelect('Acknowledge receipt within', [
+      { value: '', label: '-- Select --' },
+      { value: 'same_day', label: 'Same day' },
+      { value: '1_day', label: '1 day' },
+      { value: '3_days', label: '3 days' },
+      { value: '5_days', label: '5 days' }
+    ], data.sla.acknowledgeReceipt, function(val) {
+      getData().sla.acknowledgeReceipt = val;
+    }));
+
+    container.appendChild(createSelect('Verify identity within', [
+      { value: '', label: '-- Select --' },
+      { value: '1_day', label: '1 day' },
+      { value: '3_days', label: '3 days' },
+      { value: '5_days', label: '5 days' },
+      { value: '7_days', label: '7 days' }
+    ], data.sla.verifyIdentity, function(val) {
+      getData().sla.verifyIdentity = val;
+    }));
+
+    container.appendChild(createSelect('Execute request within', [
+      { value: '', label: '-- Select --' },
+      { value: '7_days', label: '7 days' },
+      { value: '14_days', label: '14 days' },
+      { value: '30_days', label: '30 days' },
+      { value: '45_days', label: '45 days' }
+    ], data.sla.executeRequest, function(val) {
+      getData().sla.executeRequest = val;
+    }));
+
+    container.appendChild(createSelect('Notify outcome within', [
+      { value: '', label: '-- Select --' },
+      { value: '30_days', label: '30 days' },
+      { value: '45_days', label: '45 days' },
+      { value: '60_days', label: '60 days' }
+    ], data.sla.notifyOutcome, function(val) {
+      getData().sla.notifyOutcome = val;
+      wizard.refreshStep();
+    }));
+
+    if (data.sla.notifyOutcome === '45_days' || data.sla.notifyOutcome === '60_days') {
+      container.appendChild(createAlert('warning', 'EU/UK GDPR requires response within 1 month (approx. 30 days). A notify-outcome SLA exceeding 30 days may breach EU/UK requirements unless an extension is formally communicated.'));
+    }
+  }
+
+  // ========== Step 3: AI-Specific Challenges ==========
+  function renderStep3(container) {
+    var data = getData();
+    container.appendChild(el('h2', {}, ['Step 3: AI-Specific Challenges']));
+
+    // --- Right to erasure in AI systems ---
+    var sub1 = el('div', { className: 'subsection' });
+    sub1.appendChild(el('div', { className: 'subsection-title' }, ['Right to Erasure in AI Systems']));
+    container.appendChild(sub1);
+
+    // 1. Training set
+    var c1 = el('div', { className: 'challenge-card' });
+    c1.appendChild(el('div', { className: 'challenge-title' }, ['1. Data in training set']));
+    c1.appendChild(createSelect('Approach', [
+      { value: '', label: '-- Select --' },
+      { value: 'retrain', label: 'Retrain without data' },
+      { value: 'unlearning', label: 'Machine unlearning' },
+      { value: 'document_inability', label: 'Document inability' },
+      { value: 'not_applicable', label: 'Not applicable' }
+    ], data.aiErasure.trainingSet.method, function(val) {
+      getData().aiErasure.trainingSet.method = val;
+    }));
+    c1.appendChild(createTextArea('Details', data.aiErasure.trainingSet.details, function(val) {
+      getData().aiErasure.trainingSet.details = val;
+    }, 'Describe the approach and any limitations...'));
+    container.appendChild(c1);
+
+    // 2. Memorized by model
+    var c2 = el('div', { className: 'challenge-card' });
+    c2.appendChild(el('div', { className: 'challenge-title' }, ['2. Data memorized by model']));
+    c2.appendChild(createToggle('Evaluated for memorization?', data.aiErasure.memorized.evaluated, function(val) {
+      getData().aiErasure.memorized.evaluated = val; wizard.saveNow();
+    }));
+    c2.appendChild(createTextArea('Mitigation description', data.aiErasure.memorized.mitigation, function(val) {
+      getData().aiErasure.memorized.mitigation = val;
+    }, 'Describe memorization testing and mitigation measures...'));
+    container.appendChild(c2);
+
+    // 3. Logs and caches
+    var c3 = el('div', { className: 'challenge-card' });
+    c3.appendChild(el('div', { className: 'challenge-title' }, ['3. Data in logs and caches']));
+    c3.appendChild(createToggle('Purge procedure exists?', data.aiErasure.logsCaches.purgeExists, function(val) {
+      getData().aiErasure.logsCaches.purgeExists = val; wizard.saveNow();
+    }));
+    c3.appendChild(createTextArea('Details', data.aiErasure.logsCaches.details, function(val) {
+      getData().aiErasure.logsCaches.details = val;
+    }, 'Describe log and cache purge procedures...'));
+    container.appendChild(c3);
+
+    // 4. Backups
+    var c4 = el('div', { className: 'challenge-card' });
+    c4.appendChild(el('div', { className: 'challenge-title' }, ['4. Data in backups']));
+    c4.appendChild(createToggle('Backup purge schedule exists?', data.aiErasure.backups.purgeSchedule, function(val) {
+      getData().aiErasure.backups.purgeSchedule = val; wizard.saveNow();
+    }));
+    c4.appendChild(createTextArea('Schedule details', data.aiErasure.backups.details, function(val) {
+      getData().aiErasure.backups.details = val;
+    }, 'Describe backup rotation and purge schedule...'));
+    container.appendChild(c4);
+
+    // 5. Third parties
+    var c5 = el('div', { className: 'challenge-card' });
+    c5.appendChild(el('div', { className: 'challenge-title' }, ['5. Data shared with third parties']));
+    c5.appendChild(createToggle('Third-party notification procedure?', data.aiErasure.thirdParty.notificationProcedure, function(val) {
+      getData().aiErasure.thirdParty.notificationProcedure = val; wizard.saveNow();
+    }));
+    c5.appendChild(createTextArea('Details', data.aiErasure.thirdParty.details, function(val) {
+      getData().aiErasure.thirdParty.details = val;
+    }, 'Describe third-party erasure notification process...'));
+    container.appendChild(c5);
+
+    // Erasure score
+    var erasureCount = getErasureMethodsAddressed();
+    container.appendChild(buildScoreBar(Math.round((erasureCount / 5) * 100), 'AI Erasure Challenges Addressed: ' + erasureCount + '/5'));
+
+    // --- Right regarding automated decisions ---
+    var sub2 = el('div', { className: 'subsection' });
+    sub2.appendChild(el('div', { className: 'subsection-title' }, ['Right Regarding Automated Decisions']));
+    container.appendChild(sub2);
+
+    container.appendChild(createTextInput('How user requests human review', data.aiAutomated.humanReviewHow, function(val) {
+      getData().aiAutomated.humanReviewHow = val;
+    }, 'e.g., Button in dashboard, email to DPO...'));
+
+    container.appendChild(createTextInput('Who performs review (role + qualifications)', data.aiAutomated.reviewerRole, function(val) {
+      getData().aiAutomated.reviewerRole = val;
+    }, 'e.g., Senior Data Analyst with domain expertise'));
+
+    container.appendChild(createSelect('Review turnaround time', [
+      { value: '', label: '-- Select --' },
+      { value: '24_hours', label: '24 hours' },
+      { value: '3_days', label: '3 days' },
+      { value: '7_days', label: '7 days' },
+      { value: '14_days', label: '14 days' },
+      { value: '30_days', label: '30 days' }
+    ], data.aiAutomated.reviewTurnaround, function(val) {
+      getData().aiAutomated.reviewTurnaround = val;
+    }));
+
+    container.appendChild(createSelect('Can automated decision be overturned?', [
+      { value: '', label: '-- Select --' },
+      { value: 'fully', label: 'Fully' },
+      { value: 'within_limits', label: 'Within limits' },
+      { value: 'no', label: 'No' }
+    ], data.aiAutomated.canOverturn, function(val) {
+      getData().aiAutomated.canOverturn = val;
+      wizard.refreshStep();
+    }));
+    if (data.aiAutomated.canOverturn === 'no') {
+      container.appendChild(createAlert('warning', 'GDPR Art. 22 requires the right to obtain human intervention and to contest the decision. Inability to overturn may breach this requirement.'));
+    }
+
+    container.appendChild(createToggle('Explanation of decision logic provided? (see also Template 04)', data.aiAutomated.explanationProvided, function(val) {
+      getData().aiAutomated.explanationProvided = val; wizard.saveNow();
+    }));
+
+    // --- Data portability ---
+    var sub3 = el('div', { className: 'subsection' });
+    sub3.appendChild(el('div', { className: 'subsection-title' }, ['Data Portability']));
+    container.appendChild(sub3);
+
+    container.appendChild(createSelect('Data format', [
+      { value: '', label: '-- Select --' },
+      { value: 'json', label: 'JSON' },
+      { value: 'csv', label: 'CSV' },
+      { value: 'xml', label: 'XML' },
+      { value: 'other', label: 'Machine-readable other' }
+    ], data.aiPortability.format, function(val) {
+      getData().aiPortability.format = val;
+    }));
+
+    container.appendChild(el('div', { style: 'margin:8px 0 4px;font-size:0.85em;color:#9AACBA;' }, ['Data included in portability export:']));
+    container.appendChild(createToggle('Input data', data.aiPortability.dataIncluded.input, function(val) {
+      getData().aiPortability.dataIncluded.input = val; wizard.saveNow();
+    }));
+    container.appendChild(createToggle('Profile data', data.aiPortability.dataIncluded.profile, function(val) {
+      getData().aiPortability.dataIncluded.profile = val; wizard.saveNow();
+    }));
+    container.appendChild(createToggle('Interaction history', data.aiPortability.dataIncluded.interaction, function(val) {
+      getData().aiPortability.dataIncluded.interaction = val; wizard.saveNow();
+    }));
+    container.appendChild(createToggle('AI outputs', data.aiPortability.dataIncluded.aiOutputs, function(val) {
+      getData().aiPortability.dataIncluded.aiOutputs = val; wizard.saveNow();
+    }));
+
+    container.appendChild(createSelect('Transmission method', [
+      { value: '', label: '-- Select --' },
+      { value: 'download', label: 'Download' },
+      { value: 'api', label: 'API' },
+      { value: 'direct_transfer', label: 'Direct transfer' }
+    ], data.aiPortability.transmissionMethod, function(val) {
+      getData().aiPortability.transmissionMethod = val;
+    }));
+  }
+
+  // ========== Step 4: Exemptions Framework ==========
+  function renderStep4(container) {
+    var data = getData();
+    container.appendChild(el('h2', {}, ['Step 4: Exemptions Framework']));
+    container.appendChild(el('div', { style: 'margin-bottom:16px;color:#9AACBA;font-size:0.9em;' }, ['Document when and how your organization may decline or limit data subject requests under lawful exemptions.']));
+
+    EXEMPTIONS.forEach(function(ex, idx) {
+      var exData = data.exemptions[ex.id];
+      var card = el('div', { className: 'exemption-card' });
+      card.appendChild(el('div', { className: 'exemption-title' }, [(idx + 1) + '. ' + ex.name]));
+      card.appendChild(el('div', { className: 'exemption-scope' }, ['Applicable: ' + ex.scope]));
+
+      // Jurisdiction badges
+      var badgeRow = el('div', { className: 'badge-row' });
+      ex.jurisdictions.forEach(function(j) {
+        badgeRow.appendChild(el('span', { className: 'badge enacted' }, [j]));
+      });
+      card.appendChild(badgeRow);
+
+      card.appendChild(createToggle('Policy exists?', exData.policyExists, function(val) {
+        getData().exemptions[ex.id].policyExists = val; wizard.saveNow();
+        wizard.refreshStep();
+      }));
+
+      if (exData.policyExists === true) {
+        var detail = el('div', { className: 'cond-section' });
+        detail.appendChild(createTextInput('How is the exemption invoked?', exData.howInvoked, function(val) {
+          getData().exemptions[ex.id].howInvoked = val;
+        }, 'Describe the invocation procedure...'));
+        detail.appendChild(createTextInput('Who decides?', exData.whoDecides, function(val) {
+          getData().exemptions[ex.id].whoDecides = val;
+        }, 'e.g., DPO, Legal counsel, Privacy team'));
+        detail.appendChild(createToggle('Written justification required?', exData.writtenJustification, function(val) {
+          getData().exemptions[ex.id].writtenJustification = val; wizard.saveNow();
+        }));
+        card.appendChild(detail);
+      }
+
+      container.appendChild(card);
+    });
+
+    var documented = getExemptionsDocumented();
+    container.appendChild(buildScoreBar(Math.round((documented / EXEMPTIONS.length) * 100), 'Exemptions Documented: ' + documented + '/' + EXEMPTIONS.length));
+  }
+
+  // ========== Step 5: Logging & Audit ==========
+  function renderStep5(container) {
+    var data = getData();
+    container.appendChild(el('h2', {}, ['Step 5: Logging & Audit']));
+
+    // Request log system
+    container.appendChild(createToggle('Request log system operational?', data.logging.systemOperational, function(val) {
+      getData().logging.systemOperational = val; wizard.saveNow();
+      wizard.refreshStep();
+    }));
+    if (data.logging.systemOperational === false) {
+      container.appendChild(createAlert('danger', 'CRITICAL: No request logging system operational. This is essential for demonstrating compliance with any data protection regulation. Without logs, you cannot prove timely response to DSR requests.'));
+    }
+
+    // Log fields
+    var sub1 = el('div', { className: 'subsection' });
+    sub1.appendChild(el('div', { className: 'subsection-title' }, ['Log captures']));
+    container.appendChild(sub1);
+
+    LOG_FIELDS.forEach(function(f) {
+      container.appendChild(createToggle(f.name, data.logging.fields[f.id], function(val) {
+        getData().logging.fields[f.id] = val; wizard.saveNow();
+        wizard.refreshStep();
+      }));
+    });
+
+    var logCount = getLogFieldsCount();
+    container.appendChild(buildScoreBar(Math.round((logCount / LOG_FIELDS.length) * 100), 'Log Fields Captured: ' + logCount + '/' + LOG_FIELDS.length));
+
+    // SLA tracking
+    var sub2 = el('div', { className: 'subsection' });
+    sub2.appendChild(el('div', { className: 'subsection-title' }, ['SLA & Alerts']));
+    container.appendChild(sub2);
+
+    container.appendChild(createToggle('Automated SLA tracking?', data.logging.automatedSlaTracking, function(val) {
+      getData().logging.automatedSlaTracking = val; wizard.saveNow();
+    }));
+    container.appendChild(createToggle('SLA breach alerts?', data.logging.slaBreachAlerts, function(val) {
+      getData().logging.slaBreachAlerts = val; wizard.saveNow();
+    }));
+
+    // Staff training
+    var sub3 = el('div', { className: 'subsection' });
+    sub3.appendChild(el('div', { className: 'subsection-title' }, ['Staff Training']));
+    container.appendChild(sub3);
+
+    container.appendChild(createToggle('Staff trained on request handling?', data.logging.staffTrained, function(val) {
+      getData().logging.staffTrained = val; wizard.saveNow();
+      wizard.refreshStep();
+    }));
+    if (data.logging.staffTrained === true) {
+      container.appendChild(createTextInput('Training date', data.logging.trainingDate, function(val) {
+        getData().logging.trainingDate = val;
+      }, 'YYYY-MM-DD'));
+      container.appendChild(createTextInput('Number of staff trained', data.logging.numberTrained, function(val) {
+        getData().logging.numberTrained = val;
+      }, 'e.g., 12'));
+    }
+
+    // Periodic audit
+    var sub4 = el('div', { className: 'subsection' });
+    sub4.appendChild(el('div', { className: 'subsection-title' }, ['Periodic Audit']));
+    container.appendChild(sub4);
+
+    container.appendChild(createToggle('Periodic audit scheduled?', data.logging.periodicAudit, function(val) {
+      getData().logging.periodicAudit = val; wizard.saveNow();
+      wizard.refreshStep();
+    }));
+    if (data.logging.periodicAudit === true) {
+      container.appendChild(createSelect('Audit frequency', [
+        { value: '', label: '-- Select --' },
+        { value: 'monthly', label: 'Monthly' },
+        { value: 'quarterly', label: 'Quarterly' },
+        { value: 'annually', label: 'Annually' }
+      ], data.logging.auditFrequency, function(val) {
+        getData().logging.auditFrequency = val;
+      }));
+    }
+
+    container.appendChild(createTextInput('Last audit date', data.logging.lastAuditDate, function(val) {
+      getData().logging.lastAuditDate = val;
+    }, 'YYYY-MM-DD'));
+
+    container.appendChild(createToggle('Audit findings documented?', data.logging.auditFindings, function(val) {
+      getData().logging.auditFindings = val; wizard.saveNow();
+    }));
+  }
+
+  // ========== Step 6: Summary & Compliance Report ==========
+  function renderStep6(container) {
+    var data = getData();
+    container.appendChild(el('h2', {}, ['Step 6: Summary & Compliance Report']));
+
+    // --- Stats Row ---
+    var statsRow = el('div', { className: 'stat-row' });
+
+    var rightsCount = getRightsImplementedCount();
+    var s1 = el('div', { className: 'summary-stat' });
+    var s1val = el('span', { className: 'summary-stat-value' });
+    s1val.textContent = rightsCount + '/10';
+    s1val.style.color = rightsCount >= 8 ? '#4DBFBF' : rightsCount >= 5 ? '#E8B96A' : '#e74c3c';
+    s1.appendChild(s1val);
+    s1.appendChild(el('span', { className: 'summary-stat-label' }, ['Rights Implemented']));
+    statsRow.appendChild(s1);
+
+    var channelCount = getChannelCount();
+    var s2 = el('div', { className: 'summary-stat' });
+    var s2val = el('span', { className: 'summary-stat-value' });
+    s2val.textContent = String(channelCount);
+    s2val.style.color = channelCount >= 2 ? '#4DBFBF' : '#e74c3c';
+    s2.appendChild(s2val);
+    s2.appendChild(el('span', { className: 'summary-stat-label' }, ['Request Channels']));
+    statsRow.appendChild(s2);
+
+    var erasureCount = getErasureMethodsAddressed();
+    var s3 = el('div', { className: 'summary-stat' });
+    var s3val = el('span', { className: 'summary-stat-value' });
+    s3val.textContent = erasureCount + '/5';
+    s3val.style.color = erasureCount >= 4 ? '#4DBFBF' : erasureCount >= 2 ? '#E8B96A' : '#e74c3c';
+    s3.appendChild(s3val);
+    s3.appendChild(el('span', { className: 'summary-stat-label' }, ['AI Erasure Addressed']));
+    statsRow.appendChild(s3);
+
+    var exCount = getExemptionsDocumented();
+    var s4 = el('div', { className: 'summary-stat' });
+    var s4val = el('span', { className: 'summary-stat-value' });
+    s4val.textContent = exCount + '/5';
+    s4val.style.color = exCount >= 4 ? '#4DBFBF' : exCount >= 2 ? '#E8B96A' : '#e74c3c';
+    s4.appendChild(s4val);
+    s4.appendChild(el('span', { className: 'summary-stat-label' }, ['Exemptions Documented']));
+    statsRow.appendChild(s4);
+
+    var logCount = getLogFieldsCount();
+    var s5 = el('div', { className: 'summary-stat' });
+    var s5val = el('span', { className: 'summary-stat-value' });
+    s5val.textContent = logCount + '/8';
+    s5val.style.color = logCount >= 6 ? '#4DBFBF' : logCount >= 4 ? '#E8B96A' : '#e74c3c';
+    s5.appendChild(s5val);
+    s5.appendChild(el('span', { className: 'summary-stat-label' }, ['Log Fields Captured']));
+    statsRow.appendChild(s5);
+
+    container.appendChild(statsRow);
+
+    // --- Detail Cards ---
+    // Rights
+    var rCard = el('div', { className: 'summary-card' });
+    rCard.appendChild(el('div', { className: 'summary-card-title' }, ['Rights Implementation']));
+    rCard.appendChild(buildScoreBar(Math.round((rightsCount / 10) * 100), rightsCount + '/10 rights implemented'));
+    RIGHTS.forEach(function(r) {
+      var rd = data.rights[r.id];
+      var row = el('div', { style: 'display:flex;justify-content:space-between;padding:3px 0;font-size:0.85em;border-bottom:1px solid #1E2D3D11;' });
+      row.appendChild(el('span', {}, [r.name]));
+      var statusColor = rd.implemented === true ? '#4DBFBF' : rd.implemented === false ? '#e74c3c' : '#6B7B8D';
+      var statusText = rd.implemented === true ? 'Implemented' : rd.implemented === false ? 'Not implemented' : 'Not assessed';
+      row.appendChild(el('span', { style: 'color:' + statusColor + ';font-weight:600;' }, [statusText]));
+      rCard.appendChild(row);
+    });
+    container.appendChild(rCard);
+
+    // AI challenges
+    var aiCard = el('div', { className: 'summary-card' });
+    aiCard.appendChild(el('div', { className: 'summary-card-title' }, ['AI-Specific Challenges']));
+    aiCard.appendChild(buildScoreBar(Math.round((erasureCount / 5) * 100), erasureCount + '/5 erasure methods addressed'));
+    var autoReviewStatus = data.aiAutomated.humanReviewHow ? 'Configured' : 'Not configured';
+    var autoColor = data.aiAutomated.humanReviewHow ? '#4DBFBF' : '#e74c3c';
+    var autoRow = el('div', { style: 'display:flex;justify-content:space-between;padding:3px 0;font-size:0.85em;' });
+    autoRow.appendChild(el('span', {}, ['Automated decision review']));
+    autoRow.appendChild(el('span', { style: 'color:' + autoColor + ';font-weight:600;' }, [autoReviewStatus]));
+    aiCard.appendChild(autoRow);
+    container.appendChild(aiCard);
+
+    // Logging
+    var logCard = el('div', { className: 'summary-card' });
+    logCard.appendChild(el('div', { className: 'summary-card-title' }, ['Logging & Audit']));
+    logCard.appendChild(buildScoreBar(Math.round((logCount / 8) * 100), logCount + '/8 log fields captured'));
+
+    var logStatusRow = el('div', { style: 'display:flex;justify-content:space-between;padding:3px 0;font-size:0.85em;' });
+    logStatusRow.appendChild(el('span', {}, ['Logging system']));
+    var logSysColor = data.logging.systemOperational === true ? '#4DBFBF' : '#e74c3c';
+    var logSysText = data.logging.systemOperational === true ? 'Operational' : data.logging.systemOperational === false ? 'NOT OPERATIONAL' : 'Not assessed';
+    logStatusRow.appendChild(el('span', { style: 'color:' + logSysColor + ';font-weight:600;' }, [logSysText]));
+    logCard.appendChild(logStatusRow);
+
+    var trainRow = el('div', { style: 'display:flex;justify-content:space-between;padding:3px 0;font-size:0.85em;' });
+    trainRow.appendChild(el('span', {}, ['Staff training']));
+    var trainColor = data.logging.staffTrained === true ? '#4DBFBF' : '#e74c3c';
+    var trainText = data.logging.staffTrained === true ? 'Trained (' + (data.logging.numberTrained || '?') + ' staff)' : data.logging.staffTrained === false ? 'Not trained' : 'Not assessed';
+    trainRow.appendChild(el('span', { style: 'color:' + trainColor + ';font-weight:600;' }, [trainText]));
+    logCard.appendChild(trainRow);
+
+    var auditRow = el('div', { style: 'display:flex;justify-content:space-between;padding:3px 0;font-size:0.85em;' });
+    auditRow.appendChild(el('span', {}, ['Periodic audit']));
+    var auditColor = data.logging.periodicAudit === true ? '#4DBFBF' : '#E8B96A';
+    var auditText = data.logging.periodicAudit === true ? 'Scheduled (' + (data.logging.auditFrequency || 'frequency not set') + ')' : data.logging.periodicAudit === false ? 'Not scheduled' : 'Not assessed';
+    auditRow.appendChild(el('span', { style: 'color:' + auditColor + ';font-weight:600;' }, [auditText]));
+    logCard.appendChild(auditRow);
+
+    container.appendChild(logCard);
+
+    // --- Overall Rating ---
+    var rating = getOverallRating();
+    var ratingClass, ratingLabelClass;
+    if (rating === 'COMPLIANT') { ratingClass = 'compliant'; ratingLabelClass = 'rating-label compliant'; }
+    else if (rating === 'PARTIALLY COMPLIANT') { ratingClass = 'partial'; ratingLabelClass = 'rating-label partial'; }
+    else { ratingClass = 'non-compliant'; ratingLabelClass = 'rating-label non-compliant'; }
+
+    var ratingDiv = el('div', { className: 'compliance-rating ' + ratingClass });
+    ratingDiv.appendChild(el('div', { className: ratingLabelClass }, [rating]));
+    var ratingDesc;
+    if (rating === 'COMPLIANT') ratingDesc = 'All critical rights implemented, channels operational, logging active.';
+    else if (rating === 'PARTIALLY COMPLIANT') ratingDesc = 'Most rights implemented, some gaps remain.';
+    else ratingDesc = 'Critical rights missing or no logging system operational.';
+    ratingDiv.appendChild(el('div', { style: 'font-size:0.85em;color:#9AACBA;margin-top:6px;' }, [ratingDesc]));
+    container.appendChild(ratingDiv);
+
+    // --- Per-Jurisdiction Compliance ---
+    var sub1 = el('div', { className: 'subsection' });
+    sub1.appendChild(el('div', { className: 'subsection-title' }, ['Per-Jurisdiction Compliance Status']));
+    container.appendChild(sub1);
+
+    var allJurisdictions = ['EU','UK','India','Brazil','S.Africa','Canada','Australia','S.Korea'];
+    allJurisdictions.forEach(function(jur) {
+      var missing = [];
+      RIGHTS.forEach(function(r) {
+        if (r.jurisdictions.indexOf(jur) >= 0 && data.rights[r.id].implemented !== true) {
+          missing.push(r.name);
+        }
+      });
+      var status, statusClass;
+      if (missing.length === 0) { status = 'PASS'; statusClass = 'jurisdiction-status pass'; }
+      else if (missing.length <= 2) { status = 'PARTIAL'; statusClass = 'jurisdiction-status warn'; }
+      else { status = 'FAIL'; statusClass = 'jurisdiction-status fail'; }
+
+      var row = el('div', { className: 'jurisdiction-row' });
+      row.appendChild(el('span', {}, [jur]));
+      var statusEl = el('span', { className: statusClass });
+      if (missing.length > 0) {
+        statusEl.textContent = status + ' \u2014 missing: ' + missing.join(', ');
+      } else {
+        statusEl.textContent = status;
+      }
+      row.appendChild(statusEl);
+      container.appendChild(row);
+    });
+
+    // --- Remediation List ---
+    var remediations = buildRemediations();
+    if (remediations.length > 0) {
+      var sub2 = el('div', { className: 'subsection' });
+      sub2.appendChild(el('div', { className: 'subsection-title' }, ['Auto-Generated Remediation List']));
+      container.appendChild(sub2);
+
+      remediations.forEach(function(r) {
+        container.appendChild(el('div', { className: 'remediation-item' }, [r]));
+      });
+    } else {
+      container.appendChild(createAlert('success', 'No remediation items identified. All checks passed.'));
+    }
+
+    // Bottom action buttons
+    var bottomToolbar = el('div', { className: 'toolbar', style: 'margin-top:24px;' });
+    bottomToolbar.appendChild(el('button', { className: 'btn primary', onClick: function() { doExportMarkdown(); }}, ['Export Markdown']));
+    bottomToolbar.appendChild(el('button', { className: 'btn', onClick: function() { saveConfigToFile(config); }}, ['Save Config']));
+    container.appendChild(bottomToolbar);
+  }
+
+  // --- Remediation Builder ---
+  function buildRemediations() {
+    var data = getData();
+    var items = [];
+
+    // Critical rights
+    var criticalRights = ['informed','access','rectification','erasure','withdrawConsent'];
+    RIGHTS.forEach(function(r) {
+      if (data.rights[r.id].implemented === false) {
+        var isCritical = criticalRights.indexOf(r.id) >= 0;
+        var prefix = isCritical ? '[CRITICAL]' : '[HIGH]';
+        items.push(prefix + ' Implement ' + r.name + ' (required by ' + r.jurisdictions.join(', ') + ')');
+      }
+    });
+
+    // Channels
+    if (getChannelCount() < 2) {
+      items.push('[HIGH] Add additional request intake channels (currently ' + getChannelCount() + ', need at least 2)');
+    }
+
+    // Identity verification
+    if (!data.identity.method) {
+      items.push('[HIGH] Define identity verification method for DSR requests');
+    }
+    if (data.identity.overCollectionAddressed === false) {
+      items.push('[MEDIUM] Address over-collection risk in identity verification (GDPR data minimisation)');
+    }
+    if (data.identity.failedVerificationFallback === false) {
+      items.push('[MEDIUM] Document failed verification fallback procedure');
+    }
+
+    // SLAs
+    if (!data.sla.acknowledgeReceipt) items.push('[MEDIUM] Set SLA for acknowledging receipt of DSR requests');
+    if (!data.sla.executeRequest) items.push('[HIGH] Set SLA for executing DSR requests');
+    if (data.sla.notifyOutcome === '45_days' || data.sla.notifyOutcome === '60_days') {
+      items.push('[HIGH] Reduce outcome notification SLA to 30 days or less for EU/UK compliance');
+    }
+
+    // AI erasure
+    if (!data.aiErasure.trainingSet.method) items.push('[HIGH] Define approach for erasure of data in AI training sets');
+    if (data.aiErasure.memorized.evaluated !== true) items.push('[HIGH] Evaluate AI model for data memorization risks');
+    if (data.aiErasure.logsCaches.purgeExists !== true) items.push('[MEDIUM] Implement log and cache purge procedures');
+    if (data.aiErasure.backups.purgeSchedule !== true) items.push('[MEDIUM] Define backup purge schedule for erased data');
+    if (data.aiErasure.thirdParty.notificationProcedure !== true) items.push('[HIGH] Implement third-party erasure notification procedure');
+
+    // Automated decisions
+    if (!data.aiAutomated.humanReviewHow) items.push('[HIGH] Define process for users to request human review of automated decisions');
+    if (data.aiAutomated.canOverturn === 'no') items.push('[CRITICAL] Enable ability to overturn automated decisions (GDPR Art. 22)');
+    if (data.aiAutomated.explanationProvided !== true) items.push('[HIGH] Provide explanation of automated decision logic');
+
+    // Logging
+    if (data.logging.systemOperational === false) items.push('[CRITICAL] Implement DSR request logging system');
+    if (getLogFieldsCount() < 6) items.push('[HIGH] Capture at least 6/8 recommended log fields (currently ' + getLogFieldsCount() + ')');
+    if (data.logging.automatedSlaTracking !== true) items.push('[MEDIUM] Implement automated SLA tracking');
+    if (data.logging.slaBreachAlerts !== true) items.push('[MEDIUM] Configure SLA breach alerts');
+    if (data.logging.staffTrained !== true) items.push('[HIGH] Train staff on DSR request handling');
+    if (data.logging.periodicAudit !== true) items.push('[MEDIUM] Schedule periodic DSR compliance audits');
+    if (data.logging.auditFindings !== true) items.push('[MEDIUM] Document audit findings');
+
+    // Exemptions
+    EXEMPTIONS.forEach(function(ex) {
+      if (data.exemptions[ex.id].policyExists === false) {
+        items.push('[MEDIUM] Document exemption policy for: ' + ex.name + ' (' + ex.scope + ')');
+      }
+    });
+
+    return items;
+  }
+
+  // --- Markdown Export ---
+  function doExportMarkdown() {
+    var data = getData();
+    var rating = getOverallRating();
+    var rightsCount = getRightsImplementedCount();
+    var channelCount = getChannelCount();
+    var erasureCount = getErasureMethodsAddressed();
+    var exCount = getExemptionsDocumented();
+    var logCount = getLogFieldsCount();
+
+    var lines = [];
+    lines.push('# Data Subject Rights Implementation Report');
+    lines.push('');
+    lines.push('**Template:** 11 - Data Subject Rights Implementation');
+    lines.push('**Generated:** ' + new Date().toISOString().split('T')[0]);
+    lines.push('**Overall Rating:** ' + rating);
+    lines.push('');
+
+    // Step 1
+    lines.push('## 1. Rights Implementation Matrix');
+    lines.push('');
+    lines.push('**Implemented:** ' + rightsCount + '/10 rights');
+    lines.push('');
+    lines.push('| # | Right | Implemented | Response Time | Method | Jurisdictions |');
+    lines.push('|---|-------|-------------|---------------|--------|---------------|');
+    RIGHTS.forEach(function(r, idx) {
+      var rd = data.rights[r.id];
+      var impl = rd.implemented === true ? 'Yes' : rd.implemented === false ? 'No' : 'N/A';
+      var time = rd.responseTime || 'Not set';
+      var method = rd.method || 'Not set';
+      lines.push('| ' + (idx + 1) + ' | ' + r.name + ' | ' + impl + ' | ' + time + ' | ' + method + ' | ' + r.jurisdictions.join(', ') + ' |');
+    });
+    lines.push('');
+
+    // Step 2
+    lines.push('## 2. Request Handling Infrastructure');
+    lines.push('');
+    lines.push('### Request Channels (' + channelCount + ' available)');
+    var ch = data.channels;
+    lines.push('- Online form/portal: ' + fmtBool(ch.onlineForm.enabled) + (ch.onlineForm.url ? ' (' + ch.onlineForm.url + ')' : ''));
+    lines.push('- Email: ' + fmtBool(ch.email.enabled) + (ch.email.address ? ' (' + ch.email.address + ')' : ''));
+    lines.push('- In-app: ' + fmtBool(ch.inApp.enabled) + (ch.inApp.description ? ' (' + ch.inApp.description + ')' : ''));
+    lines.push('- Physical mail: ' + fmtBool(ch.physicalMail.enabled));
+    lines.push('- Phone: ' + fmtBool(ch.phone.enabled));
+    lines.push('');
+    lines.push('### Identity Verification');
+    lines.push('- Method: ' + (data.identity.method || 'Not set'));
+    lines.push('- Over-collection risk addressed: ' + fmtBool(data.identity.overCollectionAddressed));
+    lines.push('- Failed verification fallback: ' + fmtBool(data.identity.failedVerificationFallback));
+    lines.push('');
+    lines.push('### SLAs');
+    lines.push('- Acknowledge receipt: ' + (data.sla.acknowledgeReceipt || 'Not set'));
+    lines.push('- Verify identity: ' + (data.sla.verifyIdentity || 'Not set'));
+    lines.push('- Execute request: ' + (data.sla.executeRequest || 'Not set'));
+    lines.push('- Notify outcome: ' + (data.sla.notifyOutcome || 'Not set'));
+    lines.push('');
+
+    // Step 3
+    lines.push('## 3. AI-Specific Challenges');
+    lines.push('');
+    lines.push('### Erasure in AI Systems (' + erasureCount + '/5 addressed)');
+    lines.push('- Training set: ' + (data.aiErasure.trainingSet.method || 'Not set') + (data.aiErasure.trainingSet.details ? ' \u2014 ' + data.aiErasure.trainingSet.details : ''));
+    lines.push('- Model memorization evaluated: ' + fmtBool(data.aiErasure.memorized.evaluated) + (data.aiErasure.memorized.mitigation ? ' \u2014 ' + data.aiErasure.memorized.mitigation : ''));
+    lines.push('- Log/cache purge: ' + fmtBool(data.aiErasure.logsCaches.purgeExists) + (data.aiErasure.logsCaches.details ? ' \u2014 ' + data.aiErasure.logsCaches.details : ''));
+    lines.push('- Backup purge: ' + fmtBool(data.aiErasure.backups.purgeSchedule) + (data.aiErasure.backups.details ? ' \u2014 ' + data.aiErasure.backups.details : ''));
+    lines.push('- Third-party notification: ' + fmtBool(data.aiErasure.thirdParty.notificationProcedure) + (data.aiErasure.thirdParty.details ? ' \u2014 ' + data.aiErasure.thirdParty.details : ''));
+    lines.push('');
+    lines.push('### Automated Decision Review');
+    lines.push('- Human review process: ' + (data.aiAutomated.humanReviewHow || 'Not set'));
+    lines.push('- Reviewer: ' + (data.aiAutomated.reviewerRole || 'Not set'));
+    lines.push('- Review turnaround: ' + (data.aiAutomated.reviewTurnaround || 'Not set'));
+    lines.push('- Can overturn: ' + (data.aiAutomated.canOverturn || 'Not set'));
+    lines.push('- Explanation provided: ' + fmtBool(data.aiAutomated.explanationProvided));
+    lines.push('');
+    lines.push('### Data Portability');
+    lines.push('- Format: ' + (data.aiPortability.format || 'Not set'));
+    var included = [];
+    if (data.aiPortability.dataIncluded.input) included.push('Input data');
+    if (data.aiPortability.dataIncluded.profile) included.push('Profile data');
+    if (data.aiPortability.dataIncluded.interaction) included.push('Interaction history');
+    if (data.aiPortability.dataIncluded.aiOutputs) included.push('AI outputs');
+    lines.push('- Data included: ' + (included.length > 0 ? included.join(', ') : 'None selected'));
+    lines.push('- Transmission: ' + (data.aiPortability.transmissionMethod || 'Not set'));
+    lines.push('');
+
+    // Step 4
+    lines.push('## 4. Exemptions Framework');
+    lines.push('');
+    lines.push('**Documented:** ' + exCount + '/' + EXEMPTIONS.length);
+    lines.push('');
+    EXEMPTIONS.forEach(function(ex) {
+      var exData = data.exemptions[ex.id];
+      lines.push('### ' + ex.name + ' (' + ex.scope + ')');
+      lines.push('- Policy exists: ' + fmtBool(exData.policyExists));
+      if (exData.policyExists === true) {
+        lines.push('- How invoked: ' + (exData.howInvoked || 'Not set'));
+        lines.push('- Who decides: ' + (exData.whoDecides || 'Not set'));
+        lines.push('- Written justification required: ' + fmtBool(exData.writtenJustification));
+      }
+      lines.push('');
+    });
+
+    // Step 5
+    lines.push('## 5. Logging & Audit');
+    lines.push('');
+    lines.push('- Log system operational: ' + fmtBool(data.logging.systemOperational));
+    lines.push('- Log fields captured: ' + logCount + '/8');
+    LOG_FIELDS.forEach(function(f) {
+      lines.push('  - ' + f.name + ': ' + fmtBool(data.logging.fields[f.id]));
+    });
+    lines.push('- Automated SLA tracking: ' + fmtBool(data.logging.automatedSlaTracking));
+    lines.push('- SLA breach alerts: ' + fmtBool(data.logging.slaBreachAlerts));
+    lines.push('- Staff trained: ' + fmtBool(data.logging.staffTrained) + (data.logging.staffTrained === true ? ' (' + (data.logging.numberTrained || '?') + ' staff, ' + (data.logging.trainingDate || 'date not set') + ')' : ''));
+    lines.push('- Periodic audit: ' + fmtBool(data.logging.periodicAudit) + (data.logging.periodicAudit === true ? ' (' + (data.logging.auditFrequency || 'frequency not set') + ')' : ''));
+    lines.push('- Last audit date: ' + (data.logging.lastAuditDate || 'Not set'));
+    lines.push('- Audit findings documented: ' + fmtBool(data.logging.auditFindings));
+    lines.push('');
+
+    // Step 6
+    lines.push('## 6. Compliance Summary');
+    lines.push('');
+    lines.push('| Metric | Status |');
+    lines.push('|--------|--------|');
+    lines.push('| Rights implemented | ' + rightsCount + '/10 |');
+    lines.push('| Request channels | ' + channelCount + ' |');
+    lines.push('| AI erasure methods | ' + erasureCount + '/5 |');
+    lines.push('| Exemptions documented | ' + exCount + '/5 |');
+    lines.push('| Log fields captured | ' + logCount + '/8 |');
+    lines.push('| Staff training | ' + fmtBool(data.logging.staffTrained) + ' |');
+    lines.push('| Audit scheduled | ' + fmtBool(data.logging.periodicAudit) + ' |');
+    lines.push('| **Overall Rating** | **' + rating + '** |');
+    lines.push('');
+
+    // Per-jurisdiction
+    lines.push('### Per-Jurisdiction Status');
+    lines.push('');
+    var allJurisdictions = ['EU','UK','India','Brazil','S.Africa','Canada','Australia','S.Korea'];
+    allJurisdictions.forEach(function(jur) {
+      var missing = [];
+      RIGHTS.forEach(function(r) {
+        if (r.jurisdictions.indexOf(jur) >= 0 && data.rights[r.id].implemented !== true) {
+          missing.push(r.name);
+        }
+      });
+      var status = missing.length === 0 ? 'PASS' : missing.length <= 2 ? 'PARTIAL' : 'FAIL';
+      lines.push('- **' + jur + ':** ' + status + (missing.length > 0 ? ' \u2014 missing: ' + missing.join(', ') : ''));
+    });
+    lines.push('');
+
+    // Remediations
+    var remediations = buildRemediations();
+    if (remediations.length > 0) {
+      lines.push('## Remediation Actions');
+      lines.push('');
+      remediations.forEach(function(r) { lines.push('- ' + r); });
+      lines.push('');
+    }
+
+    lines.push('---');
+    lines.push('*This is a compliance research tool, not legal advice. Consult qualified legal counsel for binding compliance determinations.*');
+
+    exportMarkdown('dsr-rights-implementation.md', lines.join('\n'));
+  }
+
+  function fmtBool(v) {
+    if (v === true) return 'Yes';
+    if (v === false) return 'No';
+    return 'Not assessed';
+  }
+
+  // Init
+  wizard.render();
+})();
+</script>
+</body>
+</html>

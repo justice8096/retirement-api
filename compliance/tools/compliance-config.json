@@ -1,0 +1,5987 @@
+{
+  "organization": {
+    "name": "Retirement Planning SaaS",
+    "documentOwner": "Justin, Project Owner",
+    "sessionRef": "RP-2026-001"
+  },
+  "system": {
+    "name": "Retirement Planning SaaS Platform",
+    "version": "0.1.0",
+    "description": "Multi-user commercial SaaS for retirement cost comparison, financial projections, and Monte Carlo portfolio simulation. Uses Claude AI agents for automated cost data research, location data updates, and data refinement. Dashboard provides personalized retirement planning with tax calculations, Social Security modeling, and RMD projections.",
+    "modelType": "LLM",
+    "foundationModel": "Claude (Opus/Sonnet), Anthropic",
+    "inputTypes": [
+      "text",
+      "structured-data",
+      "financial-data"
+    ],
+    "outputTypes": [
+      "financial-projections",
+      "cost-estimates",
+      "recommendations",
+      "text",
+      "structured-data"
+    ],
+    "deploymentEnvironment": "Docker Compose production stack — self-hosted with Tailscale TLS (nginx reverse proxy + Fastify API + PostgreSQL + Redis). Public access via Tailscale Funnel with auto TLS termination.",
+    "sector": [
+      "finance",
+      "consumer-services"
+    ],
+    "intendedUsers": [
+      "consumers"
+    ],
+    "aiUsage": {
+      "agentOrchestration": "Claude Code agents automate cost data research, location data updates, and data refinement via packages/tools/",
+      "clientSideAI": "None — all financial calculations (tax, SS, RMD, Monte Carlo) are deterministic pure functions, no AI in the calculation path",
+      "dataCollection": "AI agents research and update location cost data from public sources; users do not interact with AI directly through the dashboard",
+      "decisionMaking": "No automated decisions about users — the platform presents financial projections for users to make their own retirement planning decisions"
+    }
+  },
+  "jurisdictions": [
+    "EU",
+    "US-CA",
+    "US-CO",
+    "US-TX",
+    "US-NYC",
+    "US-IL",
+    "US-UT",
+    "BR",
+    "MX",
+    "PE"
+  ],
+  "riskClassification": {
+    "euAiAct": "limited",
+    "coloradoSB24205": "high-risk",
+    "southKoreaAiBasicAct": null,
+    "brazilPL2338": "high-risk",
+    "peruLaw31814": "applicable"
+  },
+  "dates": {
+    "projectStart": "2026-03-01",
+    "targetLaunch": "2026-09-01",
+    "configLastUpdated": "2026-03-21"
+  },
+  "completedTemplates": {},
+  "interactiveToolResults": {
+    "riskClassification": {
+      "completedDate": "2026-03-20",
+      "prohibited": {
+        "socialScoring": false,
+        "biometricId": false,
+        "behaviorManipulation": false,
+        "predictivePolicing": false,
+        "emotionRecognition": false,
+        "facialScraping": false
+      },
+      "highRisk": {
+        "euAnnexIII": {
+          "biometricIdCat": false,
+          "criticalInfra": false,
+          "education": false,
+          "employment": false,
+          "essentialServices": true,
+          "lawEnforcement": false,
+          "justice": false
+        },
+        "colorado": {
+          "consequentialDecisions": true,
+          "financialServices": true
+        },
+        "brazil": {
+          "prohibitedCategory": false,
+          "highRiskCategory": true,
+          "financialServices": true
+        }
+      },
+      "limitedRisk": {
+        "chatbotDisclosure": false,
+        "aiContentLabeling": true,
+        "emotionRecognitionNotice": false
+      },
+      "notes": "The platform uses AI agents for backend data research only — users do not interact with AI directly. Financial projections are deterministic pure functions. However, the platform operates in the financial services sector and presents projections that consumers may rely on for retirement decisions, triggering high-risk classification in Colorado (consequential decisions) and Brazil (financial sector). EU classification is limited-risk because no automated decisions are made about users — the system presents information for users to make their own decisions. Content labeling applies because AI-researched cost data should be disclosed.",
+      "classifications": {
+        "euAIAct": "Limited Risk",
+        "colorado": "High-Risk",
+        "brazil": "High-Risk"
+      }
+    },
+    "piaAssessment": {
+      "completedDate": "2026-03-20",
+      "dataInventory": {
+        "personalDataTypes": [
+          {
+            "type": "Identity",
+            "fields": "email, displayName, authProviderId",
+            "sensitivity": "medium",
+            "source": "User registration via Clerk/Auth0"
+          },
+          {
+            "type": "Financial",
+            "fields": "portfolioBalance, targetAnnualIncome, stripeCustomerId",
+            "sensitivity": "high",
+            "source": "User input during onboarding and settings"
+          },
+          {
+            "type": "Social Security",
+            "fields": "ssPia, ssFra, ssClaimAge per household member",
+            "sensitivity": "high",
+            "source": "User input in SS benefits tab"
+          },
+          {
+            "type": "Household composition",
+            "fields": "adultsCount, member names, birth years, roles",
+            "sensitivity": "medium",
+            "source": "User input in household setup"
+          },
+          {
+            "type": "Pet data",
+            "fields": "pet type, breed, size, birth year, expected lifespan",
+            "sensitivity": "low",
+            "source": "User input in household setup"
+          },
+          {
+            "type": "Preferences",
+            "fields": "UI state, selected locations, projection parameters (~48 keys)",
+            "sensitivity": "low",
+            "source": "User interactions stored as JSONB blob"
+          },
+          {
+            "type": "Custom locations",
+            "fields": "User-created location cost estimates, overrides",
+            "sensitivity": "low",
+            "source": "User input in Manage Locations tab"
+          },
+          {
+            "type": "Scenarios",
+            "fields": "What-if retirement simulation parameters and results",
+            "sensitivity": "medium",
+            "source": "User input in Scenarios tab"
+          },
+          {
+            "type": "Subscription",
+            "fields": "tier (free/basic/premium/admin)",
+            "sensitivity": "low",
+            "source": "Stripe integration"
+          },
+          {
+            "type": "Technical",
+            "fields": "createdAt, updatedAt timestamps, request IP/user-agent",
+            "sensitivity": "low",
+            "source": "System-generated"
+          }
+        ],
+        "dataSubjects": [
+          "Consumers (retirement planners, age 55-70+)",
+          "Household dependents (spouses, referenced but not registered)",
+          "Admin users (SaaS staff managing location data)"
+        ],
+        "legalBasis": {
+          "identity": "Contract — required to provide the retirement planning service",
+          "financial": "Contract — necessary to perform portfolio projections and retirement calculations",
+          "socialSecurity": "Consent — optional data provided to enable SS benefit modeling",
+          "household": "Consent — optional data to enable household-level projections",
+          "preferences": "Legitimate interest — service improvement and UX continuity",
+          "subscription": "Contract — payment processing and feature gating",
+          "technical": "Legitimate interest — security monitoring and fraud detection"
+        }
+      },
+      "necessity": {
+        "q1_purpose_limitation": {
+          "answer": true,
+          "notes": "Data collected only for retirement planning projections and account management"
+        },
+        "q2_data_minimization": {
+          "answer": true,
+          "notes": "Only financial data needed for projections is collected; no SSNs, no bank account numbers, no investment account details"
+        },
+        "q3_storage_limitation": {
+          "answer": false,
+          "notes": "No retention policy implemented yet — data persists indefinitely until user deletion"
+        },
+        "q4_accuracy": {
+          "answer": true,
+          "notes": "Users can update all personal and financial data at any time via dashboard"
+        },
+        "q5_security": {
+          "answer": true,
+          "notes": "AES-256-GCM field-level encryption implemented for financial data. Clerk JWT auth on all protected routes. Per-tier rate limiting (free=60, basic=120, premium=300, admin=600 req/min) with Redis backing. TLS via Tailscale certs (auto-detected by nginx entrypoint). HSTS header enforced. nginx reverse proxy keeps API internal (not publicly exposed)."
+        }
+      },
+      "risks": [
+        {
+          "id": "R1",
+          "category": "Unauthorized access",
+          "description": "Financial data (portfolio balance, SS benefits) accessed by unauthorized parties",
+          "likelihood": "possible",
+          "severity": "high",
+          "score": 12,
+          "mitigation": "Clerk JWT auth middleware on all protected routes (implemented), AES-256-GCM field-level encryption (implemented), per-tier rate limiting with Redis (implemented), nginx reverse proxy — API not publicly exposed (implemented)"
+        },
+        {
+          "id": "R2",
+          "category": "Data breach",
+          "description": "Database compromise exposing financial and identity data",
+          "likelihood": "unlikely",
+          "severity": "critical",
+          "score": 10,
+          "mitigation": "AES-256-GCM encryption at rest for financial fields (implemented), Prisma parameterized queries (implemented), nginx security headers — CSP, X-Frame-Options, X-Content-Type-Options, Permissions-Policy, HSTS (implemented), TLS in transit via Tailscale certs (implemented)"
+        },
+        {
+          "id": "R3",
+          "category": "Cross-border transfer",
+          "description": "EU user data stored on US servers without adequate safeguards",
+          "likelihood": "likely",
+          "severity": "medium",
+          "score": 9,
+          "mitigation": "Standard Contractual Clauses (TODO), EU-US DPF certification (TODO), DPA with cloud provider (TODO)"
+        },
+        {
+          "id": "R4",
+          "category": "Horizontal privilege escalation",
+          "description": "User A accessing User B's financial data via API",
+          "likelihood": "possible",
+          "severity": "high",
+          "score": 12,
+          "mitigation": "Prisma where: { userId } on all queries (TODO — routes currently return 501)"
+        },
+        {
+          "id": "R5",
+          "category": "Third-party data exposure",
+          "description": "Auth provider or payment processor mishandling user data",
+          "likelihood": "unlikely",
+          "severity": "medium",
+          "score": 6,
+          "mitigation": "DPA with Clerk/Auth0 (TODO), Stripe DPA (TODO)"
+        },
+        {
+          "id": "R6",
+          "category": "Inadequate deletion",
+          "description": "User data not fully cascaded on account deletion",
+          "likelihood": "possible",
+          "severity": "medium",
+          "score": 9,
+          "mitigation": "Cascade delete defined in Prisma schema (implemented), but endpoint not tested"
+        },
+        {
+          "id": "R7",
+          "category": "Lack of consent records",
+          "description": "No audit trail of when users consented to data processing",
+          "likelihood": "likely",
+          "severity": "medium",
+          "score": 9,
+          "mitigation": "Consent logging (TODO)"
+        },
+        {
+          "id": "R8",
+          "category": "Financial data in logs",
+          "description": "Portfolio balance or SS PIA values appearing in server logs or error messages",
+          "likelihood": "possible",
+          "severity": "medium",
+          "score": 9,
+          "mitigation": "Log sanitization (TODO), Fastify logger serializer customization (TODO)"
+        },
+        {
+          "id": "R9",
+          "category": "Client-side data exposure",
+          "description": "Sensitive financial data persisted in browser localStorage",
+          "likelihood": "unlikely",
+          "severity": "low",
+          "score": 3,
+          "mitigation": "Zustand stores hold portfolio in memory only; localStorage stores only UI preferences (implemented)"
+        },
+        {
+          "id": "R10",
+          "category": "AI-generated data accuracy",
+          "description": "Claude agents produce inaccurate location cost data that misleads users",
+          "likelihood": "possible",
+          "severity": "medium",
+          "score": 9,
+          "mitigation": "Human review of AI-generated data before publishing (implemented), financial disclaimer (TODO)"
+        }
+      ],
+      "aiRisks": [
+        {
+          "id": "AI1",
+          "category": "Training data bias",
+          "description": "AI agents may source cost data disproportionately from English-language sources, underrepresenting local pricing in Latin America",
+          "likelihood": "possible",
+          "severity": "medium",
+          "score": 9,
+          "mitigation": "Cross-reference with local government sources and expat community data"
+        },
+        {
+          "id": "AI2",
+          "category": "Hallucinated costs",
+          "description": "AI agent fabricates or misattributes cost data for locations",
+          "likelihood": "possible",
+          "severity": "medium",
+          "score": 9,
+          "mitigation": "All AI output reviewed by human before database insertion; validate-location-data skill checks for anomalies"
+        },
+        {
+          "id": "AI3",
+          "category": "Opacity of data provenance",
+          "description": "Users cannot verify whether location cost data was AI-researched or human-verified",
+          "likelihood": "likely",
+          "severity": "low",
+          "score": 6,
+          "mitigation": "Content labeling for AI-researched data (TODO)"
+        },
+        {
+          "id": "AI4",
+          "category": "Over-reliance on projections",
+          "description": "Users treat AI-enhanced retirement projections as financial advice",
+          "likelihood": "likely",
+          "severity": "medium",
+          "score": 9,
+          "mitigation": "Financial disclaimer prominently displayed (TODO): 'Not financial advice — consult a professional'"
+        },
+        {
+          "id": "AI5",
+          "category": "Model dependency",
+          "description": "System depends on Anthropic Claude API availability for data updates",
+          "likelihood": "unlikely",
+          "severity": "low",
+          "score": 3,
+          "mitigation": "AI agents are only used for data maintenance, not runtime; dashboard functions without AI"
+        },
+        {
+          "id": "AI6",
+          "category": "Indirect discrimination",
+          "description": "Cost projections may systematically disadvantage certain demographics or locations",
+          "likelihood": "unlikely",
+          "severity": "medium",
+          "score": 6,
+          "mitigation": "Bias testing across location categories, income levels, and household compositions (TODO)"
+        }
+      ],
+      "rights": {
+        "access": {
+          "implemented": false,
+          "notes": "GET /api/me/export endpoint exists as stub (501)"
+        },
+        "rectification": {
+          "implemented": true,
+          "notes": "Users can update all personal data via dashboard PUT endpoints"
+        },
+        "erasure": {
+          "implemented": false,
+          "notes": "DELETE /api/me endpoint exists as stub (501); Prisma cascade deletes defined in schema"
+        },
+        "restriction": {
+          "implemented": false,
+          "notes": "No mechanism to restrict processing without deletion"
+        },
+        "portability": {
+          "implemented": false,
+          "notes": "GET /api/me/export returns 501 — planned JSON/CSV export"
+        },
+        "objection": {
+          "implemented": false,
+          "notes": "No mechanism for users to object to specific processing activities"
+        },
+        "automatedDecisions": {
+          "implemented": true,
+          "notes": "No automated decisions made about users — all calculations are presented as information, user makes own decisions"
+        },
+        "withdrawConsent": {
+          "implemented": false,
+          "notes": "No consent withdrawal mechanism beyond account deletion"
+        },
+        "lodgeComplaint": {
+          "implemented": false,
+          "notes": "No link to relevant data protection authority"
+        },
+        "information": {
+          "implemented": false,
+          "notes": "No privacy notice or data processing disclosure published"
+        }
+      },
+      "securityMeasures": {
+        "implemented": [
+          "TLS/HTTPS via Tailscale certs with auto-detect nginx entrypoint",
+          "HSTS header (max-age=31536000, includeSubDomains)",
+          "nginx reverse proxy — API container not publicly exposed, internal Docker network only",
+          "AES-256-GCM field-level encryption for financial data (portfolio, income, SS PIAs)",
+          "Clerk JWT auth middleware on all protected API routes",
+          "Admin role enforcement on /api/admin/* routes",
+          "Server-side tier enforcement via requireTier() middleware — free users blocked from premium API endpoints",
+          "Zod input validation on all request bodies (including billing/checkout and health/cleanup)",
+          "Prototype pollution defense — safeJsonRecord sanitizer strips __proto__/constructor/prototype from JSONB inputs",
+          "Per-tier rate limiting (free=60, basic=120, premium=300, admin=600 req/min) with Redis backing",
+          "Prisma parameterized queries (no SQL injection)",
+          "React textContent rendering (no XSS)",
+          "Delegated auth to Clerk (no password storage)",
+          "nginx security headers: CSP, X-Frame-Options SAMEORIGIN, X-Content-Type-Options nosniff, Referrer-Policy strict-origin-when-cross-origin, X-XSS-Protection, Permissions-Policy (camera/mic/geo denied)",
+          "Content Security Policy with Clerk and Stripe domains whitelisted",
+          "server_tokens off (nginx version hidden)",
+          "Sentry error monitoring (opt-in via DSN env var)",
+          "GDPR: right to erasure (DELETE /api/me), right to portability (GET /api/me/export with decrypted data)",
+          "Idempotent webhook processing (processed_events table + cleanup scheduler)",
+          "HTTP→HTTPS redirect on port 8080 when TLS certs present",
+          "Tailscale Funnel for public access with automatic TLS termination",
+          "Same-origin API routing eliminates CORS attack surface",
+          "Gzip compression for text/css/json/js/xml/wasm",
+          "Health endpoint hides config details (encryption/auth/stripe status, memory) from unauthenticated requests",
+          "Generic error messages in production — no stack traces or DB schema leakage",
+          "Encryption key validation on startup — warns loudly in production if ENCRYPTION_MASTER_KEY missing"
+        ],
+        "planned": [
+          "Audit logging for data mutations",
+          "Log sanitization for PII",
+          "Secrets manager integration (AWS Secrets Manager/Vault)",
+          "WAF (Cloudflare or similar) for public deployment",
+          "Encryption key rotation mechanism"
+        ],
+        "missing": [
+          "Breach notification process",
+          "DPA with auth provider (Clerk)",
+          "DPA with payment processor (Stripe)",
+          "SECURITY.md file",
+          "Dependabot configuration"
+        ]
+      },
+      "dpoConsultation": {
+        "consulted": false,
+        "notes": "No DPO designated — required if processing large-scale financial data of EU residents. Recommend designating a DPO or outsourcing to a DPO-as-a-service provider before launch."
+      },
+      "outcome": {
+        "overallRiskLevel": "Medium",
+        "summary": "The platform collects sensitive financial data (portfolio balances, SS benefits) from consumers for retirement planning. Auth middleware (Clerk JWT) and field-level encryption (AES-256-GCM) are now fully implemented. Per-tier rate limiting with Redis backing is in production. TLS is enforced via Tailscale certs with HSTS. API is not publicly exposed — nginx reverse proxy on the dashboard container handles all external traffic. Remaining risks: (1) no privacy notice or consent mechanism published, (2) cross-border transfer safeguards not in place, (3) DPAs with Clerk/Stripe not signed. All financial calculations are deterministic and no automated decisions are made about users, which reduces AI-specific risk.",
+        "signedOff": false,
+        "signOffNotes": "Auth and encryption implemented. Requires privacy notice, consent mechanism, and DPAs before sign-off."
+      }
+    },
+    "impactRisk": {
+      "completedDate": "2026-03-20",
+      "rights": {
+        "privacy": {
+          "impacted": true,
+          "description": "Collection of financial data (portfolio, SS benefits, income) and household composition"
+        },
+        "nonDiscrimination": {
+          "impacted": true,
+          "description": "Cost projections could vary by location in ways that correlate with demographics"
+        },
+        "dataProtection": {
+          "impacted": true,
+          "description": "Personal and financial data stored in cloud database"
+        },
+        "freedom": {
+          "impacted": false,
+          "description": "No impact on freedom of expression or movement"
+        },
+        "dignity": {
+          "impacted": false,
+          "description": "No profiling or scoring of individuals"
+        },
+        "consumerProtection": {
+          "impacted": true,
+          "description": "Users may rely on projections for major financial decisions"
+        },
+        "fairTreatment": {
+          "impacted": false,
+          "description": "No automated decisions — users make their own choices"
+        },
+        "accessToServices": {
+          "impacted": false,
+          "description": "No gatekeeping of essential services"
+        }
+      },
+      "dimensions": {
+        "financialHarm": {
+          "severity": "medium",
+          "likelihood": "possible"
+        },
+        "privacyHarm": {
+          "severity": "high",
+          "likelihood": "unlikely"
+        },
+        "discriminationHarm": {
+          "severity": "low",
+          "likelihood": "rare"
+        },
+        "autonomyHarm": {
+          "severity": "low",
+          "likelihood": "unlikely"
+        },
+        "safetyHarm": {
+          "severity": "negligible",
+          "likelihood": "rare"
+        },
+        "reputationalHarm": {
+          "severity": "medium",
+          "likelihood": "possible"
+        }
+      },
+      "mitigations": {
+        "financialHarm": {
+          "measures": "Prominent financial disclaimer ('not financial advice'), multiple scenario comparison to discourage over-reliance on single projection",
+          "residualRisk": "low",
+          "monitoring": "User feedback, support tickets mentioning financial decisions"
+        },
+        "privacyHarm": {
+          "measures": "Field-level encryption (planned), auth middleware (planned), DPAs with third parties (planned), GDPR privacy notice (planned)",
+          "residualRisk": "medium",
+          "monitoring": "Security audit skill, dependency audit, breach detection"
+        },
+        "discriminationHarm": {
+          "measures": "Bias testing across location categories and income levels, diverse location dataset (19 locations across 5 countries)",
+          "residualRisk": "low",
+          "monitoring": "Periodic bias testing via bias-testing skill"
+        },
+        "autonomyHarm": {
+          "measures": "No automated decisions — all projections presented as information, user controls all inputs",
+          "residualRisk": "negligible",
+          "monitoring": "N/A"
+        },
+        "safetyHarm": {
+          "measures": "N/A — platform does not affect physical safety",
+          "residualRisk": "negligible",
+          "monitoring": "N/A"
+        },
+        "reputationalHarm": {
+          "measures": "Data accuracy validation (validate-location-data skill), human review of AI-researched data, source citations",
+          "residualRisk": "low",
+          "monitoring": "User reports, data validation runs"
+        }
+      },
+      "summary": {
+        "impactedRightsCount": 4,
+        "impactedRights": [
+          "privacy",
+          "nonDiscrimination",
+          "dataProtection",
+          "consumerProtection"
+        ],
+        "overallRiskLevel": "Medium",
+        "notes": "Primary risks are privacy/data protection (financial data handling) and consumer protection (reliance on projections). Discrimination risk is low because no decisions are made about users. Overall risk is medium — reducible to low once encryption, auth, and privacy notice are implemented."
+      }
+    },
+    "humanOversight": {
+      "completedDate": "2026-03-20",
+      "oversightModel": "hotl",
+      "oversightModelLabel": "Human-on-the-Loop",
+      "modelJustification": "The system does not make automated decisions about users. AI agents operate in a backend data research capacity with human review before data is published. Users interact only with deterministic calculations. Human-on-the-loop is appropriate because: (1) AI output (location cost data) is reviewed by admin before publication, (2) users make their own retirement decisions based on projections, (3) no real-time AI interaction requires human-in-the-loop intervention.",
+      "mechanisms": {
+        "adminReview": {
+          "enabled": true,
+          "description": "All AI-researched location data reviewed by admin before database insertion via packages/tools/ pipeline",
+          "responseTime": "Within 24 hours of data generation"
+        },
+        "userControl": {
+          "enabled": true,
+          "description": "Users can override any cost estimate, create custom locations, and adjust all projection parameters",
+          "responseTime": "Immediate — all controls available in dashboard"
+        },
+        "dataValidation": {
+          "enabled": true,
+          "description": "validate-location-data skill checks for anomalies, missing fields, and unreasonable values before data is seeded",
+          "responseTime": "Before each data update cycle"
+        },
+        "escalation": {
+          "enabled": false,
+          "description": "No escalation path needed — no automated decisions affect users",
+          "responseTime": "N/A"
+        },
+        "killSwitch": {
+          "enabled": true,
+          "description": "AI agents can be disabled entirely; dashboard continues to function with existing static data",
+          "responseTime": "Immediate — remove agent orchestration from tools pipeline"
+        },
+        "auditTrail": {
+          "enabled": true,
+          "description": "AdminLocationHistory tracks all data changes with version, changedBy, and timestamp",
+          "responseTime": "Permanent record"
+        }
+      },
+      "personnel": {
+        "qualifications": "Project owner with domain expertise in retirement planning, financial calculations, and cost research methodology",
+        "training": "Familiarity with AI agent outputs, data validation procedures, and compliance requirements",
+        "authorityLevel": "executive",
+        "monitoringFrequency": "daily",
+        "escalation": "N/A — single owner/operator during pre-launch phase"
+      },
+      "automationBias": {
+        "measures": {
+          "multiSourceVerification": true,
+          "confidenceDisplay": false,
+          "disagreementHighlighting": false,
+          "periodicManualAudit": true,
+          "userFeedbackLoop": false
+        },
+        "additionalMeasures": "AI-researched data is cross-referenced with government statistics, expat forums, and cost-of-living databases. Validate-location-data skill flags outliers.",
+        "testingApproach": "Compare AI-generated cost estimates against Numbeo, Expatistan, and local government data for each location"
+      },
+      "summary": {
+        "enabledMechanismCount": 5,
+        "enabledMechanisms": [
+          "adminReview",
+          "userControl",
+          "dataValidation",
+          "killSwitch",
+          "auditTrail"
+        ],
+        "biasPreventionScore": 40,
+        "complianceGaps": [
+          "No user-facing confidence scores for AI-researched data",
+          "No automated disagreement highlighting between AI and manual data"
+        ]
+      }
+    },
+    "biasTesting": {
+      "completedDate": "2026-03-20",
+      "domain": "finance",
+      "jurisdictions": [
+        "EU",
+        "US-CA",
+        "US-CO",
+        "US-NYC",
+        "US-IL",
+        "BR"
+      ],
+      "characteristics": {
+        "income": {
+          "enabled": true,
+          "groupASize": "Low income ($30K-$50K)",
+          "groupBSize": "High income ($100K+)",
+          "metricValue": "",
+          "result": "",
+          "notes": "Test whether cost projections and Monte Carlo success rates are proportionally accurate across income levels"
+        },
+        "age": {
+          "enabled": true,
+          "groupASize": "Early retirees (55-62)",
+          "groupBSize": "Late retirees (67-75)",
+          "metricValue": "",
+          "result": "",
+          "notes": "Test whether SS benefit calculations and RMD projections are accurate across age ranges"
+        },
+        "householdSize": {
+          "enabled": true,
+          "groupASize": "Single adult",
+          "groupBSize": "Two adults + pets",
+          "metricValue": "",
+          "result": "",
+          "notes": "Test whether cost scaling is proportional and fair across household configurations"
+        },
+        "locationRegion": {
+          "enabled": true,
+          "groupASize": "US locations (9)",
+          "groupBSize": "International locations (10)",
+          "metricValue": "",
+          "result": "",
+          "notes": "Test whether FX drift and inflation projections are calibrated fairly across regions; check for systematic over/under-estimation"
+        },
+        "race": {
+          "enabled": false,
+          "groupASize": "",
+          "groupBSize": "",
+          "metricValue": "",
+          "result": "",
+          "notes": "Not directly applicable — platform does not collect race data or make decisions based on demographics. Location inclusion assessments cover racial prejudice but are informational only."
+        },
+        "gender": {
+          "enabled": false,
+          "groupASize": "",
+          "groupBSize": "",
+          "metricValue": "",
+          "result": "",
+          "notes": "Not directly applicable — platform uses gender-neutral household member model. SS calculations use individual PIA/FRA regardless of gender."
+        }
+      },
+      "metrics": {
+        "disparateImpact": true,
+        "statisticalParity": false,
+        "equalOpportunity": false,
+        "predictiveParity": true
+      },
+      "findings": [],
+      "remediations": [
+        {
+          "action": "Implement bias test suite in test-shared-functions skill covering income, age, household, and region dimensions",
+          "priority": "high",
+          "owner": "Justin",
+          "targetDate": "2026-06-01",
+          "status": "planned",
+          "notes": "Must complete before Colorado AI Act deadline (June 30)"
+        },
+        {
+          "action": "Validate cost data accuracy across all 19 locations against independent sources",
+          "priority": "medium",
+          "owner": "Justin",
+          "targetDate": "2026-07-01",
+          "status": "planned",
+          "notes": "Use validate-location-data skill"
+        },
+        {
+          "action": "Add financial disclaimer to dashboard header/footer",
+          "priority": "high",
+          "owner": "Justin",
+          "targetDate": "2026-05-01",
+          "status": "planned",
+          "notes": "Required for consumer protection in all jurisdictions"
+        }
+      ]
+    },
+    "consentDesign": {
+      "completedDate": "2026-03-20",
+      "legalBasis": {
+        "accountCreation": "contract",
+        "retirementPlanning": "contract",
+        "financialDataProcessing": "contract",
+        "socialSecurityModeling": "consent",
+        "householdDataCollection": "consent",
+        "preferencesStorage": "legitimate_interest",
+        "paymentProcessing": "contract",
+        "analyticsAndImprovement": "legitimate_interest",
+        "aiDataResearch": "legitimate_interest"
+      },
+      "consentMechanisms": {
+        "socialSecurityModeling": {
+          "collectionMethod": "checkbox",
+          "granularity": "purpose_specific",
+          "preChecked": false,
+          "withdrawalMethod": "Delete SS data from household member settings or delete account",
+          "withdrawalEase": "one_click",
+          "childConsent": false,
+          "childAgeThreshold": "N/A"
+        },
+        "householdDataCollection": {
+          "collectionMethod": "checkbox",
+          "granularity": "purpose_specific",
+          "preChecked": false,
+          "withdrawalMethod": "Delete household members from settings or delete account",
+          "withdrawalEase": "one_click",
+          "childConsent": false,
+          "childAgeThreshold": "N/A"
+        }
+      },
+      "recordSchema": {
+        "timestamp": true,
+        "userIdentifier": true,
+        "specificPurposes": true,
+        "privacyNoticeVersion": true,
+        "collectionMethod": true,
+        "ipDeviceInfo": false,
+        "withdrawalTimestamp": true,
+        "consentDurationExpiry": true,
+        "additionalFields": "jurisdictionAtTimeOfConsent"
+      },
+      "lifecycle": {
+        "refreshFrequency": "on_material_change",
+        "reConsentTriggers": "Changes to data processing purposes, new third-party integrations, changes to privacy notice",
+        "dataHandlingOnWithdrawal": "delete",
+        "crossBorderApproach": "Standard Contractual Clauses (SCCs) for EU-US transfers; DPAs with all processors",
+        "auditRetentionPeriod": "7 years after consent withdrawal"
+      }
+    },
+    "consentRecordsAudit": {
+      "completedDate": "2026-03-20",
+      "auditScope": {
+        "startDate": "2026-03-20",
+        "endDate": "2026-03-20",
+        "sampleSize": 0,
+        "totalRecords": 0,
+        "methodDescription": "Pre-launch audit — no consent records exist yet. This audit establishes the baseline schema and requirements for consent record-keeping."
+      },
+      "consentRecords": {},
+      "auditFindings": [
+        {
+          "finding": "No consent collection mechanism implemented",
+          "severity": "critical",
+          "affectedRecords": 0,
+          "recommendation": "Implement consent collection at registration and for optional data (SS, household) before launch"
+        },
+        {
+          "finding": "No consent record storage table in database schema",
+          "severity": "critical",
+          "affectedRecords": 0,
+          "recommendation": "Add ConsentRecord model to Prisma schema: userId, purpose, consentGiven, timestamp, privacyNoticeVersion, withdrawalDate"
+        },
+        {
+          "finding": "No privacy notice published",
+          "severity": "critical",
+          "affectedRecords": 0,
+          "recommendation": "Draft and publish privacy notice before any user data collection begins"
+        }
+      ],
+      "complianceScore": 0,
+      "gaps": [
+        "No consent collection UI",
+        "No consent record table",
+        "No privacy notice",
+        "No withdrawal mechanism beyond account deletion"
+      ],
+      "nextAuditScheduled": "2026-06-20"
+    },
+    "securityAssessment": {
+      "completedDate": "2026-03-20",
+      "threats": {
+        "unauthorizedAccess": {
+          "applicable": true,
+          "severity": "critical"
+        },
+        "dataBreachExfiltration": {
+          "applicable": true,
+          "severity": "critical"
+        },
+        "sqlInjection": {
+          "applicable": true,
+          "severity": "high"
+        },
+        "xss": {
+          "applicable": true,
+          "severity": "medium"
+        },
+        "csrf": {
+          "applicable": true,
+          "severity": "medium"
+        },
+        "bruteForce": {
+          "applicable": true,
+          "severity": "medium"
+        },
+        "insiderThreat": {
+          "applicable": false,
+          "severity": "low"
+        },
+        "supplyChain": {
+          "applicable": true,
+          "severity": "medium"
+        },
+        "ddos": {
+          "applicable": true,
+          "severity": "medium"
+        },
+        "misconfiguration": {
+          "applicable": true,
+          "severity": "high"
+        }
+      },
+      "controls": {
+        "unauthorizedAccess": {
+          "controlType": "preventive",
+          "description": "Clerk JWT auth middleware on all protected routes, per-tier rate limiting (free=60, basic=120, premium=300, admin=600 req/min) with Redis backing, nginx reverse proxy keeps API internal",
+          "status": "implemented",
+          "evidence": "packages/api/src/middleware/auth.ts, packages/api/src/middleware/rate-limit.ts, packages/dashboard/nginx.conf location /api/ block, docker-compose.prod.yml expose:3000 (not ports)"
+        },
+        "dataBreachExfiltration": {
+          "controlType": "preventive",
+          "description": "AES-256-GCM field encryption for financial data at rest, TLS in transit via Tailscale certs with HSTS enforcement, nginx security headers (CSP, X-Frame-Options, etc.)",
+          "status": "implemented",
+          "evidence": "packages/api/src/middleware/encryption.ts, packages/dashboard/nginx-ssl.conf TLS config, .env.example ENCRYPTION_MASTER_KEY"
+        },
+        "sqlInjection": {
+          "controlType": "preventive",
+          "description": "Prisma ORM with parameterized queries — no raw SQL anywhere in codebase",
+          "status": "implemented",
+          "evidence": "All database access through prisma client methods"
+        },
+        "xss": {
+          "controlType": "preventive",
+          "description": "React textContent rendering, no innerHTML with user data, Helmet CSP headers",
+          "status": "implemented",
+          "evidence": "packages/dashboard/src/ — React JSX rendering"
+        },
+        "csrf": {
+          "controlType": "preventive",
+          "description": "JWT Bearer tokens via Clerk (no cookies for auth), same-origin API routing via nginx reverse proxy eliminates cross-origin attack surface",
+          "status": "implemented",
+          "evidence": "packages/api/src/middleware/auth.ts — Bearer token extraction, packages/dashboard/nginx.conf — same-origin /api/ proxy"
+        },
+        "bruteForce": {
+          "controlType": "detective",
+          "description": "Per-tier rate limiting (free=60, basic=120, premium=300, admin=600 req/min) with Redis backing and in-memory fallback",
+          "status": "implemented",
+          "evidence": "packages/api/src/middleware/rate-limit.ts"
+        },
+        "supplyChain": {
+          "controlType": "detective",
+          "description": "npm audit for vulnerability detection, package-lock.json committed",
+          "status": "in_progress",
+          "evidence": "package-lock.json in repository"
+        },
+        "ddos": {
+          "controlType": "preventive",
+          "description": "Per-tier rate limiting with Redis backing, nginx as front door with connection limits, Tailscale Funnel provides infrastructure-level protection",
+          "status": "implemented",
+          "evidence": "packages/api/src/middleware/rate-limit.ts, packages/dashboard/nginx.conf"
+        },
+        "misconfiguration": {
+          "controlType": "detective",
+          "description": "nginx security headers (CSP, HSTS, X-Frame-Options, Permissions-Policy, server_tokens off), .env for secrets, .gitignore excludes certs/keys/credentials, Docker entrypoint auto-detects TLS config",
+          "status": "implemented",
+          "evidence": "packages/dashboard/nginx.conf, packages/dashboard/nginx-ssl.conf, packages/dashboard/docker-entrypoint.sh, .gitignore"
+        }
+      },
+      "china": {
+        "applicable": false,
+        "preTrainingAssessment": false,
+        "safetyEvaluation": false,
+        "contentSecurity": false,
+        "algorithmFiling": false,
+        "dataAnnotation": false
+      },
+      "infrastructure": {
+        "waf": {
+          "enabled": false,
+          "details": "Planned for cloud deployment (Cloudflare or AWS WAF). nginx provides basic request filtering and security headers."
+        },
+        "encryption_at_rest": {
+          "enabled": true,
+          "details": "AES-256-GCM application-layer encryption for financial fields (portfolio, income, SS PIAs). Key managed via ENCRYPTION_MASTER_KEY env var."
+        },
+        "encryption_in_transit": {
+          "enabled": true,
+          "details": "Tailscale TLS certs (Let's Encrypt) with nginx termination on port 8443. HSTS enforced (max-age=31536000, includeSubDomains). HTTP→HTTPS redirect on port 8080. Tailscale Funnel provides auto TLS for public access. API container not publicly exposed — nginx reverse proxy on internal Docker network."
+        },
+        "logging": {
+          "enabled": true,
+          "details": "Fastify built-in logger with Sentry error monitoring (opt-in via SENTRY_DSN env var). Dashboard has Sentry integration (opt-in via VITE_SENTRY_DSN)."
+        },
+        "monitoring": {
+          "enabled": true,
+          "details": "Sentry error tracking for API and dashboard. Health endpoint (/api/health) reports DB, Redis, encryption, and auth status. Offline/reconnect detection in dashboard."
+        },
+        "backup": {
+          "enabled": false,
+          "details": "Planned: Daily automated PostgreSQL backups. Currently relies on Docker volume persistence."
+        },
+        "accessControl": {
+          "enabled": true,
+          "details": "Separate database user (retirement), no root access, env-based secrets. Clerk JWT auth on all protected routes. Admin role enforcement on /api/admin/*. Per-tier rate limiting. nginx reverse proxy — API only accessible via internal Docker network."
+        },
+        "networkSegmentation": {
+          "enabled": true,
+          "details": "Docker Compose internal network: API container exposed only via Docker 'expose' (port 3000, not bound to host). Dashboard nginx proxies /api/* to API internally. PostgreSQL and Redis are internal-only services with no host port binding. Only dashboard ports 8080/8443 are publicly accessible."
+        }
+      },
+      "penTestSchedule": "Before production launch (target: 2026-08-01)",
+      "incidentResponseRef": "See Template 13 (Incident Management)"
+    },
+    "automatedDecisionLogic": {
+      "completedDate": "2026-03-20",
+      "decisions": [
+        {
+          "name": "Retirement Cost Projection",
+          "description": "Calculates projected annual costs for each retirement location over 35 years using per-category inflation rates and FX drift. All inputs are user-provided or from admin-managed location data. Output is informational — no action is taken automatically.",
+          "affectedGroup": "consumers",
+          "affectedGroupOther": "",
+          "estimatedVolume": "All active users, per-session",
+          "dataUsed": {
+            "financialData": true,
+            "locationCosts": true,
+            "inflationRates": true,
+            "exchangeRates": true
+          },
+          "consequenceDescription": "Users may rely on these projections to choose a retirement location or make financial plans. Inaccurate projections could lead to poor financial decisions. Mitigated by: financial disclaimer, multiple scenario comparison, user-adjustable parameters."
+        },
+        {
+          "name": "Monte Carlo Portfolio Simulation",
+          "description": "Runs 5000 stochastic simulations of portfolio survival using user's portfolio balance, withdrawal rate, and market return assumptions. Returns success probability and percentile outcomes. No automated action — results are displayed for user interpretation.",
+          "affectedGroup": "consumers",
+          "affectedGroupOther": "",
+          "estimatedVolume": "Per user request (on-demand in Monte Carlo tab)",
+          "dataUsed": {
+            "financialData": true,
+            "marketAssumptions": true
+          },
+          "consequenceDescription": "Users may use success probability to decide portfolio allocation or retirement timing. Simulations use simplified market models and may not capture tail risks. Mitigated by: range of scenarios, user-adjustable parameters, financial disclaimer."
+        },
+        {
+          "name": "Social Security Benefit Calculation",
+          "description": "Calculates estimated SS benefits based on PIA, FRA, and claim age using SSA formulas. Includes spousal benefit, COLA, and trust fund depletion modeling. Deterministic calculation — no AI involved.",
+          "affectedGroup": "consumers",
+          "affectedGroupOther": "",
+          "estimatedVolume": "All users with SS data entered",
+          "dataUsed": {
+            "socialSecurityData": true
+          },
+          "consequenceDescription": "Users may rely on these estimates to plan SS claiming strategy. Incorrect calculations could lead to suboptimal claiming decisions. Mitigated by: cross-check against SSA.gov calculator, audit-financial-calcs skill, disclaimer."
+        },
+        {
+          "name": "Subscription Tier Feature Gating",
+          "description": "Restricts access to certain features based on subscription tier (free/basic/premium). This is a business decision, not an AI-driven decision.",
+          "affectedGroup": "consumers",
+          "affectedGroupOther": "",
+          "estimatedVolume": "All users",
+          "dataUsed": {
+            "subscriptionTier": true
+          },
+          "consequenceDescription": "Free tier users have limited features. This is standard SaaS gating and does not involve algorithmic decision-making."
+        }
+      ],
+      "significance": {
+        "legalEffects": {
+          "applies": false,
+          "justification": "No legal effects — platform provides informational projections only"
+        },
+        "financialConsequences": {
+          "applies": true,
+          "justification": "Users may make financial decisions based on projections, but no direct financial action is taken by the system"
+        },
+        "healthSafety": {
+          "applies": false,
+          "justification": "No health or safety implications"
+        },
+        "accessToServices": {
+          "applies": false,
+          "justification": "Subscription gating is standard SaaS model, not algorithmic discrimination"
+        },
+        "reputation": {
+          "applies": false,
+          "justification": "No reputational scoring or profiling"
+        }
+      },
+      "humanReview": {
+        "oversightModel": "hotl",
+        "appealProcess": "Users can contact support to dispute any data or projection. All inputs are user-modifiable.",
+        "appealContact": "Support email (TBD)",
+        "appealResponseTime": "72h",
+        "humanOverrideDescription": "Users can override any cost estimate, adjust all calculation parameters, and create custom scenarios. Admin can update location data.",
+        "overrideAuthority": "User (own data), Admin (location data)",
+        "escalationCriteria": "User reports inaccurate calculation or data error",
+        "reviewLogRetention": "AdminLocationHistory retains all data changes indefinitely"
+      },
+      "explainability": {
+        "methods": {
+          "formulaDisplay": {
+            "used": true,
+            "implementation": "Tax brackets, SS reduction formulas, and RMD divisors are documented in shared library source code"
+          },
+          "inputOutputTrace": {
+            "used": true,
+            "implementation": "Dashboard shows all inputs and derived outputs; users can adjust any parameter and see results change"
+          },
+          "sourceCitation": {
+            "used": true,
+            "implementation": "Location data includes source links; inclusion assessments cite official sources"
+          }
+        },
+        "layeredApproach": true,
+        "shortExplanationTemplate": "Your projected monthly cost in {location} is {amount}, based on {categories} with {inflation}% annual inflation over {years} years.",
+        "detailedExplanationTemplate": "Detailed cost breakdown by category with per-category inflation rates, FX drift assumptions, and data sources available in Projections tab.",
+        "technicalExplanationTemplate": "Calculation source code available in packages/shared/src/ — pure JavaScript functions with no external dependencies.",
+        "explanationLanguages": "English",
+        "explanationAccessibility": "Dashboard accessible via web browser; responsive design for mobile"
+      }
+    },
+    "transparencyDocumentation": {
+      "completedDate": "2026-03-20",
+      "purpose": {
+        "systemPurpose": "Help consumers compare retirement locations, project costs, simulate portfolio survival, and plan Social Security claiming strategies",
+        "useCases": "1. Compare monthly costs across 19 retirement locations. 2. Project costs over 35 years with inflation and FX drift. 3. Run Monte Carlo simulations for portfolio survival. 4. Model Social Security benefits with spousal and delay strategies. 5. Explore neighborhoods, services, and inclusion assessments per location.",
+        "deployEnv": "Cloud SaaS — Vercel/Cloudflare (dashboard) + Railway/Render (API) + managed PostgreSQL",
+        "intendedUsers": "consumers",
+        "sectors": {
+          "finance": true,
+          "consumerServices": true,
+          "healthcare": false,
+          "education": false,
+          "employment": false,
+          "government": false
+        }
+      },
+      "architecture": {
+        "modelType": "llm",
+        "foundationModel": "Claude (Opus/Sonnet) by Anthropic — used only for backend data research, not in user-facing calculations",
+        "fineTuning": "None — Claude is used via API with prompt engineering only",
+        "inputTypes": "User: financial data, household composition, location preferences. AI agent: public cost data sources, government statistics",
+        "outputTypes": "Dashboard: financial projections, charts, comparison tables, Monte Carlo results. AI agent: structured location cost data (JSON)",
+        "pipeline": "1. AI agents research cost data from public sources. 2. Admin reviews and approves data. 3. Data seeded to PostgreSQL. 4. Dashboard reads data via API. 5. Client-side pure functions compute projections. 6. Results displayed to user.",
+        "keyFactors": "Per-category inflation rates, FX drift assumptions, SS benefit formulas, IRS tax brackets, Monte Carlo market return parameters",
+        "confidenceMethod": "Monte Carlo provides probability distributions (p5/p25/median/p75/p95); no single-point predictions",
+        "fallback": "Dashboard functions with static JSON data if API or AI agents are unavailable"
+      },
+      "limitations": {
+        "dataAccuracy": {
+          "applicable": true,
+          "description": "Cost data is AI-researched and may not reflect current prices in all locations",
+          "mitigation": "Human review of all data, validate-location-data skill, source citations"
+        },
+        "modelBias": {
+          "applicable": true,
+          "description": "English-language source bias may underrepresent local pricing in Latin American locations",
+          "mitigation": "Cross-reference with local government data, expat community sources"
+        },
+        "temporalValidity": {
+          "applicable": true,
+          "description": "Cost data requires periodic updates; exchange rates and inflation assumptions may become stale",
+          "mitigation": "Periodic data refresh via AI agents, user-adjustable parameters"
+        },
+        "geographicLimitation": {
+          "applicable": true,
+          "description": "Limited to 19 locations in 5 countries — does not cover all possible retirement destinations",
+          "mitigation": "Users can add custom locations with their own cost estimates"
+        },
+        "financialAdvice": {
+          "applicable": true,
+          "description": "Platform provides informational projections, not financial advice",
+          "mitigation": "Prominent disclaimer, encourage consulting financial professionals"
+        },
+        "monteCarloSimplification": {
+          "applicable": true,
+          "description": "Monte Carlo uses simplified market models (normal distribution returns, constant inflation assumptions)",
+          "mitigation": "Display as probability ranges, not guarantees; user can adjust parameters"
+        }
+      },
+      "oversight": {
+        "model": "Human-on-the-Loop — admin reviews AI data before publication, users control all inputs",
+        "overrideCapability": "Users override any cost, parameter, or assumption. Admin overrides location data.",
+        "qualifications": "Domain expertise in retirement planning and financial calculations",
+        "monitorFrequency": "Daily during active development; weekly post-launch"
+      }
+    },
+    "disclosureToolkit": {
+      "completedDate": "2026-03-20",
+      "requirements": {
+        "aiSystemDisclosure": {
+          "applies": true,
+          "jurisdictions": [
+            "EU",
+            "US-CA",
+            "US-CO"
+          ],
+          "implemented": false,
+          "copyApproach": "Disclose that location cost data is researched with AI assistance and reviewed by humans",
+          "userTestingDone": false,
+          "complianceNotes": "EU AI Act Art. 50 transparency; Colorado deployer disclosure; California AI Transparency Act"
+        },
+        "financialDisclaimer": {
+          "applies": true,
+          "jurisdictions": [
+            "EU",
+            "US-CA",
+            "US-CO",
+            "US-NYC",
+            "US-IL",
+            "US-UT",
+            "BR",
+            "MX",
+            "PE"
+          ],
+          "implemented": false,
+          "copyApproach": "Prominent disclaimer: 'This tool provides informational projections for retirement planning purposes only. It is not financial, tax, or legal advice. Consult a qualified professional before making financial decisions.'",
+          "userTestingDone": false,
+          "complianceNotes": "Required in all jurisdictions for financial sector consumer-facing applications"
+        },
+        "dataCollectionNotice": {
+          "applies": true,
+          "jurisdictions": [
+            "EU",
+            "US-CA",
+            "BR",
+            "MX"
+          ],
+          "implemented": false,
+          "copyApproach": "At-registration notice listing data categories collected, purposes, retention, and rights",
+          "userTestingDone": false,
+          "complianceNotes": "GDPR Art. 13/14, CCPA notice at collection, LGPD, LFPDPPP"
+        },
+        "cookieConsent": {
+          "applies": true,
+          "jurisdictions": [
+            "EU",
+            "BR"
+          ],
+          "implemented": false,
+          "copyApproach": "Cookie banner for localStorage usage disclosure; strictly necessary cookies exempt",
+          "userTestingDone": false,
+          "complianceNotes": "ePrivacy Directive; localStorage may be treated as cookies under EU law"
+        },
+        "aiContentLabeling": {
+          "applies": true,
+          "jurisdictions": [
+            "EU",
+            "US-CA"
+          ],
+          "implemented": false,
+          "copyApproach": "Label AI-researched cost data with indicator (e.g., 'Data sourced with AI assistance, human-reviewed')",
+          "userTestingDone": false,
+          "complianceNotes": "EU AI Act Art. 50 content labeling; California SB 942"
+        },
+        "algorithmicDecisionDisclosure": {
+          "applies": true,
+          "jurisdictions": [
+            "US-CO",
+            "US-NYC"
+          ],
+          "implemented": false,
+          "copyApproach": "Disclose that Monte Carlo simulations and cost projections use algorithmic calculations; provide methodology documentation",
+          "userTestingDone": false,
+          "complianceNotes": "Colorado AI Act deployer disclosure; NYC Local Law 144 (if employment-adjacent)"
+        }
+      },
+      "copyDesign": {
+        "plainLanguageScore": 0,
+        "readabilityLevel": "Target: 8th grade reading level (Flesch-Kincaid)",
+        "avgWordLength": 0,
+        "testingApproach": "User testing with 5-10 retirement-age adults before launch"
+      },
+      "checklist": {},
+      "evidenceLog": [],
+      "stats": {
+        "applicable": 6,
+        "implemented": 0,
+        "evidenceEntries": 0
+      }
+    },
+    "trainingDataDisclosure": {
+      "completedDate": "2026-03-20",
+      "dataSources": [
+        {
+          "name": "Anthropic Claude API",
+          "description": "Foundation model used via API for location cost data research. No fine-tuning or custom training data.",
+          "size": "N/A — API access only",
+          "dateRange": "2024-present",
+          "acquisition": "Commercial API license",
+          "license": "Anthropic commercial terms",
+          "phase": "other"
+        },
+        {
+          "name": "Public cost-of-living databases",
+          "description": "AI agents reference Numbeo, Expatistan, government statistics, and expat community sources to research location costs",
+          "size": "Varies per location",
+          "dateRange": "2024-2026",
+          "acquisition": "Public web sources, cited per data point",
+          "license": "Public data / fair use",
+          "phase": "other"
+        },
+        {
+          "name": "IRS/SSA official data",
+          "description": "Tax brackets, SS benefit formulas, RMD tables hardcoded from official government publications",
+          "size": "Small — structured data",
+          "dateRange": "2025-2026 tax year",
+          "acquisition": "Official government publications",
+          "license": "Public domain (US government)",
+          "phase": "other"
+        }
+      ],
+      "characteristics": {
+        "totalVolume": "19 locations with ~50 data fields each; IRS/SSA formula parameters",
+        "languages": "English (primary), with cost data from French, Spanish, Portuguese sources",
+        "geographicCoverage": "US (9 locations), France (4), Spain (1), Portugal (1), Panama (2), Ireland (1)",
+        "temporalRange": "2024-2026 cost data; IRS 2026 tax brackets; SSA current formulas",
+        "modalities": {
+          "text": true,
+          "structured_data": true,
+          "images": false,
+          "audio": false,
+          "video": false
+        },
+        "domains": {
+          "finance": true,
+          "real_estate": true,
+          "healthcare": true,
+          "government": true,
+          "consumer": true
+        }
+      },
+      "copyrightAudit": [
+        {
+          "copyrightStatus": "No copyright concerns — AI used via commercial API, not trained on user data",
+          "licenseType": "Anthropic commercial API terms",
+          "tdmOptOut": null,
+          "rightsHolderContacted": null,
+          "optOutImplemented": null
+        }
+      ],
+      "optOut": {
+        "htmlRobotsTxt": false,
+        "jsonRobotsProtocol": false,
+        "machineLicense": "N/A — no custom training data",
+        "complianceApproach": "Platform does not train AI models. Claude is accessed via commercial API. Location data is compiled from public sources with citations."
+      },
+      "gpaiSummary": {
+        "gpaiApplicable": true,
+        "policyMeasures": "Anthropic (Claude provider) is responsible for GPAI compliance under EU AI Act. Platform is a deployer, not a provider, of the foundation model."
+      },
+      "jurisdiction": {
+        "EU": {
+          "applicable": true,
+          "disclosureApproach": "Disclose use of Claude API for data research; note Anthropic's GPAI compliance; provide data source citations"
+        },
+        "US-CA": {
+          "applicable": true,
+          "disclosureApproach": "AB 2013 training data transparency — disclose that AI assists in data research; platform does not train models"
+        },
+        "BR": {
+          "applicable": true,
+          "disclosureApproach": "LGPD data processing disclosure includes AI-assisted data collection methodology"
+        }
+      }
+    },
+    "governanceFramework": {
+      "completedDate": "2026-03-20",
+      "roles": [
+        {
+          "type": "AI System Owner",
+          "names": "Justin (Project Owner)",
+          "authority": "Full authority over system design, data, deployment, and compliance decisions"
+        },
+        {
+          "type": "Data Protection Lead",
+          "names": "TBD — designate before launch",
+          "authority": "Privacy notice, consent mechanisms, DSAR responses, DPA negotiations"
+        },
+        {
+          "type": "Technical Lead",
+          "names": "Justin (Project Owner)",
+          "authority": "Architecture decisions, security implementation, code review"
+        }
+      ],
+      "meetings": [
+        {
+          "name": "Compliance Review",
+          "frequency": "Monthly",
+          "attendees": "Project Owner + DPO (when designated)"
+        },
+        {
+          "name": "Data Quality Review",
+          "frequency": "Quarterly",
+          "attendees": "Project Owner — validate location data accuracy"
+        }
+      ],
+      "policies": {
+        "aiEthicsPolicy": "Planned",
+        "dataProtectionPolicy": "Planned",
+        "incidentResponsePolicy": "Planned",
+        "dataRetentionPolicy": "Planned",
+        "acceptableUsePolicy": "Planned",
+        "biasTestingPolicy": "Planned",
+        "vendorManagementPolicy": "Planned"
+      },
+      "systems": [
+        {
+          "id": "retirement-saas",
+          "name": "Retirement Planning SaaS Platform",
+          "riskLevel": "Medium (EU Limited / CO High-Risk)",
+          "status": "Pre-launch development",
+          "owner": "Justin"
+        }
+      ],
+      "gates": {
+        "riskAssessment": true,
+        "biasEvaluation": false,
+        "securityReview": false,
+        "privacyReview": false,
+        "legalSignOff": false
+      },
+      "thirdParty": {
+        "vendorRiskAssessment": false,
+        "contractualTerms": false,
+        "auditRights": false,
+        "dataProcessingAgreements": false
+      }
+    },
+    "incidentManagement": {
+      "completedDate": "2026-03-20",
+      "classification": {
+        "critical": {
+          "responseTime": "1 hour",
+          "definition": "Data breach affecting financial data (portfolio, SS benefits), unauthorized access to user accounts, complete service outage"
+        },
+        "high": {
+          "responseTime": "4 hours",
+          "definition": "Partial data exposure, authentication bypass, significant calculation errors affecting financial projections"
+        },
+        "medium": {
+          "responseTime": "24 hours",
+          "definition": "Minor data quality issues, non-critical feature outage, rate limiting failures"
+        },
+        "low": {
+          "responseTime": "72 hours",
+          "definition": "UI bugs, cosmetic issues, minor data inaccuracies in non-financial fields"
+        }
+      },
+      "workflow": {
+        "detection": {
+          "responsible": "Automated monitoring (planned: Sentry) + user reports",
+          "timeline": "Immediate upon detection",
+          "actions": "Triage severity, assign incident lead, begin investigation"
+        },
+        "containment": {
+          "responsible": "Project Owner / Technical Lead",
+          "timeline": "Within response time SLA",
+          "actions": "Isolate affected systems, revoke compromised credentials, disable affected features if needed"
+        },
+        "investigation": {
+          "responsible": "Project Owner",
+          "timeline": "24-72 hours",
+          "actions": "Root cause analysis, scope of impact assessment, affected user identification"
+        },
+        "notification": {
+          "responsible": "Project Owner / DPO",
+          "timeline": "72 hours for GDPR (EU), without unreasonable delay for CCPA (CA)",
+          "actions": "Notify affected users, notify relevant DPA (GDPR), notify AG (CCPA if >500 CA residents)"
+        },
+        "remediation": {
+          "responsible": "Project Owner",
+          "timeline": "Based on severity",
+          "actions": "Fix root cause, deploy patch, verify fix, update security controls"
+        },
+        "postMortem": {
+          "responsible": "Project Owner",
+          "timeline": "Within 1 week of resolution",
+          "actions": "Document lessons learned, update incident playbook, implement preventive measures"
+        }
+      },
+      "reporting": {
+        "EU": {
+          "applicable": true,
+          "deadline": "72 hours to DPA (GDPR Art. 33)",
+          "whom": "Lead supervisory authority (based on main establishment)"
+        },
+        "US-CA": {
+          "applicable": true,
+          "deadline": "Without unreasonable delay (CCPA)",
+          "whom": "California AG if >500 residents affected"
+        },
+        "US-CO": {
+          "applicable": true,
+          "deadline": "30 days (Colorado consumer notification)",
+          "whom": "Colorado AG"
+        },
+        "BR": {
+          "applicable": true,
+          "deadline": "Reasonable timeframe (LGPD Art. 48)",
+          "whom": "ANPD (National Data Protection Authority)"
+        },
+        "MX": {
+          "applicable": true,
+          "deadline": "Immediately upon awareness (LFPDPPP)",
+          "whom": "INAI and affected data subjects"
+        }
+      },
+      "retention": {
+        "logStorage": "Incident logs retained for 7 years (compliance requirement)",
+        "accessControl": "Incident logs accessible only to Project Owner and designated compliance personnel"
+      },
+      "communication": {
+        "affectedUsers": {
+          "when": "Within 72 hours of confirmed breach",
+          "method": "Email notification + in-app banner",
+          "responsible": "Project Owner"
+        },
+        "regulators": {
+          "when": "Per jurisdiction deadlines above",
+          "method": "Official notification form per DPA requirements",
+          "responsible": "Project Owner / DPO"
+        },
+        "public": {
+          "when": "Only if required by law or >1000 users affected",
+          "method": "Blog post / status page",
+          "responsible": "Project Owner"
+        }
+      },
+      "drills": {
+        "tabletop": {
+          "frequency": "Annually",
+          "lastConducted": "",
+          "nextScheduled": "2026-08-01"
+        },
+        "technicalDrill": {
+          "frequency": "Bi-annually",
+          "lastConducted": "",
+          "nextScheduled": "2026-08-01"
+        }
+      }
+    },
+    "dsrImplementation": {
+      "completedDate": "2026-03-20",
+      "rights": {
+        "access": {
+          "implemented": false,
+          "responseTime": "30 days (GDPR), 45 days (CCPA)",
+          "method": "GET /api/me/export — returns full data export as JSON (stub, returns 501)"
+        },
+        "rectification": {
+          "implemented": true,
+          "responseTime": "Immediate (self-service)",
+          "method": "Users can update all personal and financial data via dashboard settings"
+        },
+        "erasure": {
+          "implemented": false,
+          "responseTime": "30 days (GDPR)",
+          "method": "DELETE /api/me — cascade delete across all user tables (stub, returns 501)"
+        },
+        "restriction": {
+          "implemented": false,
+          "responseTime": "30 days",
+          "method": "Not yet implemented — need mechanism to freeze processing without deletion"
+        },
+        "portability": {
+          "implemented": false,
+          "responseTime": "30 days",
+          "method": "GET /api/me/export — JSON/CSV format (stub, returns 501)"
+        },
+        "objection": {
+          "implemented": false,
+          "responseTime": "30 days",
+          "method": "Not yet implemented — need purpose-specific processing controls"
+        },
+        "withdrawConsent": {
+          "implemented": false,
+          "responseTime": "Immediate",
+          "method": "Not yet implemented — need consent management UI with per-purpose toggles"
+        },
+        "automatedDecisions": {
+          "implemented": true,
+          "responseTime": "N/A",
+          "method": "No automated decisions — users make all decisions. Financial calculations are tools, not decisions."
+        },
+        "lodgeComplaint": {
+          "implemented": false,
+          "responseTime": "N/A",
+          "method": "Need to display relevant DPA contact information per user's jurisdiction"
+        }
+      },
+      "channels": {
+        "onlineForm": {
+          "enabled": false,
+          "url": ""
+        },
+        "email": {
+          "enabled": false,
+          "address": "TBD — privacy@[domain].com"
+        },
+        "inApp": {
+          "enabled": false,
+          "description": "Planned: Settings page with data export, deletion, and consent management"
+        },
+        "phone": {
+          "enabled": false,
+          "number": ""
+        }
+      },
+      "exemptions": {
+        "legalRetention": {
+          "policyExists": false,
+          "howInvoked": "Financial records may need 7-year retention for tax compliance",
+          "whoDecides": "Project Owner / Legal counsel",
+          "appealProcess": "User notified of retention reason and remaining duration"
+        },
+        "fraudPrevention": {
+          "policyExists": false,
+          "howInvoked": "Account flagged for suspicious activity",
+          "whoDecides": "Project Owner",
+          "appealProcess": "Email support for review"
+        }
+      }
+    },
+    "contentLabeling": {
+      "completedDate": "2026-03-20",
+      "contentTypes": {
+        "locationCostData": {
+          "generated": true,
+          "modalities": "Structured data (JSON)",
+          "estimatedVolume": "19 locations, updated periodically"
+        },
+        "neighborhoodDescriptions": {
+          "generated": true,
+          "modalities": "Text",
+          "estimatedVolume": "4-6 neighborhoods per location"
+        },
+        "inclusionAssessments": {
+          "generated": true,
+          "modalities": "Text + scores",
+          "estimatedVolume": "1 per location"
+        }
+      },
+      "explicitLabels": {
+        "locationCostData": {
+          "labelText": "Cost data researched with AI assistance, human-reviewed",
+          "placement": "Footer of each location detail view and data source tooltip",
+          "persistence": "permanent",
+          "visibility": "Visible on hover/click of data source indicator",
+          "accessibility": "aria-label on AI indicator icon"
+        },
+        "neighborhoodDescriptions": {
+          "labelText": "AI-assisted research, verified against public sources",
+          "placement": "Below each neighborhood section",
+          "persistence": "permanent",
+          "visibility": "Always visible as small text",
+          "accessibility": "Standard text element"
+        },
+        "inclusionAssessments": {
+          "labelText": "Assessment compiled from official sources with AI research assistance",
+          "placement": "Header of inclusion tab per location",
+          "persistence": "permanent",
+          "visibility": "Always visible",
+          "accessibility": "Standard text element"
+        }
+      },
+      "chinaMetadata": {
+        "applicable": false
+      },
+      "californiaSB942": {
+        "applicable": true,
+        "disclosureFormat": "Text label on AI-researched content indicating AI involvement in data collection",
+        "updateFrequency": "Updated with each data refresh cycle"
+      },
+      "euMetadata": {
+        "applicable": true,
+        "docsAttached": false,
+        "easyAccessMechanism": "Planned: 'About this data' link on each location page explaining AI research methodology and data sources"
+      },
+      "checklist": {},
+      "evidenceLog": [],
+      "stats": {
+        "contentTypesGenerated": 3,
+        "explicitLabelsComplete": 3,
+        "evidenceEntries": 0
+      }
+    },
+    "conformityAssessment": {
+      "completedDate": "2026-03-20",
+      "systemInfo": {
+        "systemName": "Retirement Planning SaaS Platform",
+        "description": "Multi-user commercial SaaS for retirement cost comparison, financial projections, and Monte Carlo portfolio simulation with AI-assisted data research",
+        "provider": "Justin (independent developer)"
+      },
+      "standards": {
+        "euAiAct": {
+          "applicable": true,
+          "riskLevel": "Limited Risk",
+          "requiresExternal": false
+        },
+        "iso42001": {
+          "applicable": false,
+          "riskLevel": "",
+          "requiresExternal": false
+        },
+        "nistRmf": {
+          "applicable": true,
+          "riskLevel": "Reference framework",
+          "requiresExternal": false
+        },
+        "coloradoAiAct": {
+          "applicable": true,
+          "riskLevel": "High-Risk",
+          "requiresExternal": false
+        },
+        "brazilPL2338": {
+          "applicable": true,
+          "riskLevel": "High-Risk",
+          "requiresExternal": false
+        }
+      },
+      "assessmentType": {
+        "internalAssessment": true,
+        "externalAudit": false,
+        "thirdPartyReview": false,
+        "notifiedBody": false,
+        "notifiedBodyId": ""
+      },
+      "evidence": [],
+      "outcome": {
+        "overallConformity": "Under Assessment",
+        "gaps": [
+          "Privacy notice not published",
+          "Consent collection mechanism not built",
+          "Bias testing not executed",
+          "DPAs with third-party processors not signed (Clerk, Stripe)",
+          "Financial disclaimer not displayed in dashboard",
+          "SECURITY.md file not created",
+          "Dependabot not configured",
+          "Breach notification process not documented"
+        ],
+        "remediationPlan": "Auth, encryption, tier enforcement, input sanitization, and OWASP hardening implemented. Remaining: privacy notice + consent + disclaimers (Phase 1), then bias testing + DPAs (Phase 2), then security documentation (Phase 3). All before target launch (2026-09-01).",
+        "targetDate": "2026-08-01"
+      }
+    },
+    "aiLiteracyTraining": {
+      "completedDate": "2026-03-20",
+      "systemInfo": {
+        "systemName": "Retirement Planning SaaS Platform",
+        "systemDescription": "Multi-user SaaS using AI agents for data research; deterministic calculations for user-facing projections",
+        "deploymentDate": "2026-09-01",
+        "jurisdiction": "EU, US (CA, CO, TX, NYC, IL, UT), Brazil, Mexico, Peru"
+      },
+      "audiences": {
+        "admin": {
+          "description": "SaaS administrators managing location data and reviewing AI agent outputs",
+          "estimatedSize": 1,
+          "trainingRequired": true,
+          "currentCoverage": 100,
+          "targetCompletion": "2026-06-01"
+        },
+        "consumers": {
+          "description": "End users of the retirement planning dashboard",
+          "estimatedSize": 1000,
+          "trainingRequired": false,
+          "currentCoverage": 0,
+          "targetCompletion": ""
+        },
+        "support": {
+          "description": "Customer support staff (when hired)",
+          "estimatedSize": 0,
+          "trainingRequired": true,
+          "currentCoverage": 0,
+          "targetCompletion": "2026-08-01"
+        }
+      },
+      "curriculum": {
+        "aiBasics": {
+          "topic": "Understanding AI in the retirement planning platform",
+          "duration": "30 minutes",
+          "format": "Self-paced documentation",
+          "contentSummary": "How AI agents research location data, what AI does vs. does not do in the platform, limitations of AI-researched data"
+        },
+        "dataReview": {
+          "topic": "Reviewing and approving AI-generated location data",
+          "duration": "1 hour",
+          "format": "Hands-on walkthrough",
+          "contentSummary": "Using validate-location-data skill, comparing AI output to reference sources, flagging anomalies"
+        },
+        "complianceAwareness": {
+          "topic": "AI compliance requirements for the platform",
+          "duration": "1 hour",
+          "format": "Self-paced documentation",
+          "contentSummary": "Overview of EU AI Act, Colorado AI Act, and Brazil PL 2338 requirements relevant to this platform"
+        }
+      },
+      "assessment": {
+        "method": "Self-certification after completing documentation review",
+        "passingScore": 0,
+        "retestPolicy": "Annual refresh"
+      },
+      "euArt4": {
+        "applicability": true,
+        "personDefinition": "Any person involved in the operation, deployment, or oversight of the AI system — includes admin users who review AI agent output and make publication decisions",
+        "implementationApproach": "Self-paced documentation covering AI capabilities, limitations, and compliance obligations. Admin must complete before reviewing AI-generated data."
+      }
+    },
+    "llmSelector": {
+      "usesLlm": "third-party",
+      "selectedModels": [
+        {
+          "provider": "Anthropic",
+          "model": "Claude Opus",
+          "usage": "Agent orchestration for complex data research and refinement tasks"
+        },
+        {
+          "provider": "Anthropic",
+          "model": "Claude Sonnet",
+          "usage": "Standard data research, cost updates, and location data validation"
+        }
+      ],
+      "customModels": [],
+      "deployments": {
+        "claudeOpus": {
+          "environment": "Development/tools only — not in production runtime",
+          "dataProcessed": "Public cost data, location research queries",
+          "region": "Anthropic API (US)"
+        },
+        "claudeSonnet": {
+          "environment": "Development/tools only — not in production runtime",
+          "dataProcessed": "Public cost data, location research queries",
+          "region": "Anthropic API (US)"
+        }
+      },
+      "notes": "LLMs are used exclusively in the development/tools pipeline for researching and updating location cost data. No LLM is called at runtime when users interact with the dashboard. All user-facing calculations are deterministic pure JavaScript functions."
+    }
+  },
+  "extractedEvidence": {
+    "_meta": {
+      "extractedAt": "2026-03-21T12:50:44.030Z",
+      "repoPath": "D:\\commercialRetirementProject",
+      "daysCovered": 365
+    },
+    "git-evidence": {
+      "_meta": {
+        "extractor": "git-evidence",
+        "version": "1.0.0",
+        "extractedAt": "2026-03-21T12:50:42.359Z",
+        "repoPath": "D:\\commercialRetirementProject",
+        "daysCovered": 365
+      },
+      "codeReview": {
+        "totalCommits": 36,
+        "mergeCommits": 0,
+        "mergePercentage": 0,
+        "reviewedCommits": 0,
+        "uniqueReviewers": [],
+        "prBasedWorkflow": false
+      },
+      "changeManagement": {
+        "commitFrequency": {
+          "daily": 0.1,
+          "weekly": 0.68,
+          "monthly": 2.77
+        },
+        "releaseTags": [],
+        "releaseFrequencyDays": 0,
+        "conventionalCommits": {
+          "feat": 0,
+          "fix": 0,
+          "chore": 0,
+          "docs": 0,
+          "refactor": 0,
+          "test": 0,
+          "other": 36
+        },
+        "conventionalCommitPercentage": 0,
+        "hasChangelog": false,
+        "changelogLastUpdate": ""
+      },
+      "aiCodeGeneration": {
+        "aiAttributedCommits": 36,
+        "aiAttributionPercentage": 100,
+        "aiToolsDetected": [
+          {
+            "tool": "Claude",
+            "commits": 108
+          }
+        ],
+        "topAiModifiedFiles": [
+          {
+            "file": "CLAUDE.md",
+            "commits": 7
+          },
+          {
+            "file": "packages/dashboard/src/App.jsx",
+            "commits": 7
+          },
+          {
+            "file": "packages/dashboard/src/hooks/useApiSync.js",
+            "commits": 7
+          },
+          {
+            "file": ".env.example",
+            "commits": 6
+          },
+          {
+            "file": "package-lock.json",
+            "commits": 6
+          },
+          {
+            "file": "packages/api/src/server.js",
+            "commits": 6
+          },
+          {
+            "file": "docker-compose.prod.yml",
+            "commits": 5
+          },
+          {
+            "file": "packages/dashboard/nginx.conf",
+            "commits": 4
+          },
+          {
+            "file": "packages/dashboard/src/data/api.js",
+            "commits": 4
+          },
+          {
+            "file": "packages/dashboard/Dockerfile",
+            "commits": 4
+          },
+          {
+            "file": "packages/api/src/middleware/rate-limit.js",
+            "commits": 4
+          },
+          {
+            "file": "packages/api/src/routes/health.js",
+            "commits": 4
+          },
+          {
+            "file": "package.json",
+            "commits": 4
+          },
+          {
+            "file": "packages/dashboard/src/tabs/SettingsTab.jsx",
+            "commits": 4
+          },
+          {
+            "file": ".gitignore",
+            "commits": 3
+          },
+          {
+            "file": "packages/api/package.json",
+            "commits": 3
+          },
+          {
+            "file": "packages/api/src/__tests__/routes-health.test.js",
+            "commits": 3
+          },
+          {
+            "file": "packages/api/src/__tests__/routes-webhooks.test.js",
+            "commits": 3
+          },
+          {
+            "file": "packages/api/src/db/prisma.js",
+            "commits": 3
+          },
+          {
+            "file": "packages/api/src/middleware/encryption.js",
+            "commits": 3
+          }
+        ]
+      },
+      "securityPractices": {
+        "gitignoreExcludesSecrets": true,
+        "gitignoreSecretPatterns": [
+          ".env",
+          ".env.local",
+          "credentials",
+          "*.key",
+          "*.pem",
+          "secrets"
+        ],
+        "securityFiles": {
+          "SECURITY.md": false,
+          "CODEOWNERS": false,
+          "dependabot.yml": false,
+          ".github/security.yml": false,
+          ".github/CODEOWNERS": false
+        },
+        "securityWorkflows": [],
+        "hasPreCommitHooks": false,
+        "hookTools": [],
+        "signedCommits": 0,
+        "signedPercentage": 0
+      },
+      "incidentResponse": {
+        "hotfixBranches": [],
+        "revertCommits": 0,
+        "revertDetails": [],
+        "avgReleaseIntervalDays": 0
+      },
+      "governance": {
+        "codeowners": [],
+        "hasContributing": false,
+        "hasLicense": false,
+        "licenseType": "",
+        "uniqueContributors": 0,
+        "contributorList": []
+      },
+      "accessControl": {
+        "uniqueCommitterEmails": [
+          "justice8096@gmail.com"
+        ],
+        "authorCommitterMismatches": 0
+      },
+      "autoFillFields": {
+        "supplyChain.aiCodeGenerationDetected": true,
+        "supplyChain.aiToolsUsed": "Claude (108 commits)",
+        "supplyChain.aiAttributionPercentage": 100,
+        "supplyChain.note": "AI-assisted code generation detected in 100% of commits. Tools: Claude (108 commits). Review supply chain documentation requirements.",
+        "security.secretsExcluded": true,
+        "security.excludedPatterns": ".env, .env.local, credentials, *.key, *.pem, secrets",
+        "accessControl.uniqueContributors": 0,
+        "accessControl.uniqueCommitters": 1
+      }
+    },
+    "package-evidence": {
+      "_meta": {
+        "extractor": "package-evidence",
+        "version": "1.0.0",
+        "extractedAt": "2026-03-21T12:50:43.983Z",
+        "repoPath": "D:\\commercialRetirementProject",
+        "packageManagers": [
+          "npm"
+        ]
+      },
+      "inventory": {
+        "directDependencies": 0,
+        "transitiveDependencies": 540,
+        "packages": [
+          {
+            "name": "@adobe/css-tools",
+            "version": "4.4.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@ampproject/remapping",
+            "version": "2.3.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@asamuzakjp/css-color",
+            "version": "5.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "lru-cache",
+            "version": "11.2.7",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@asamuzakjp/dom-selector",
+            "version": "7.0.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "lru-cache",
+            "version": "11.2.7",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@asamuzakjp/nwsapi",
+            "version": "2.3.9",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@babel/code-frame",
+            "version": "7.29.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "js-tokens",
+            "version": "4.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@babel/helper-string-parser",
+            "version": "7.27.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@babel/helper-validator-identifier",
+            "version": "7.28.5",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@babel/parser",
+            "version": "7.29.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@babel/runtime",
+            "version": "7.29.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@babel/types",
+            "version": "7.29.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@bcoe/v8-coverage",
+            "version": "1.0.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@bramus/specificity",
+            "version": "2.4.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@clerk/backend",
+            "version": "3.2.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@clerk/clerk-react",
+            "version": "5.61.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@clerk/shared",
+            "version": "3.47.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@clerk/fastify",
+            "version": "3.1.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@clerk/shared",
+            "version": "4.3.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@csstools/color-helpers",
+            "version": "6.0.2",
+            "license": "MIT-0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@csstools/css-calc",
+            "version": "3.1.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@csstools/css-color-parser",
+            "version": "4.0.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@csstools/css-parser-algorithms",
+            "version": "4.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@csstools/css-syntax-patches-for-csstree",
+            "version": "1.1.1",
+            "license": "MIT-0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@csstools/css-tokenizer",
+            "version": "4.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/aix-ppc64",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/android-arm",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/android-arm64",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/android-x64",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/darwin-arm64",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/darwin-x64",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/freebsd-arm64",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/freebsd-x64",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/linux-arm",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/linux-arm64",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/linux-ia32",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/linux-loong64",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/linux-mips64el",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/linux-ppc64",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/linux-riscv64",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/linux-s390x",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/linux-x64",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/netbsd-arm64",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/netbsd-x64",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/openbsd-arm64",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/openbsd-x64",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/openharmony-arm64",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/sunos-x64",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/win32-arm64",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/win32-ia32",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/win32-x64",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@exodus/bytes",
+            "version": "1.15.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@fastify/ajv-compiler",
+            "version": "4.0.5",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@fastify/cookie",
+            "version": "10.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@fastify/cors",
+            "version": "10.1.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@fastify/error",
+            "version": "4.2.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@fastify/fast-json-stringify-compiler",
+            "version": "5.0.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@fastify/forwarded",
+            "version": "3.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@fastify/helmet",
+            "version": "12.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@fastify/merge-json-schemas",
+            "version": "0.2.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@fastify/otel",
+            "version": "0.17.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/api-logs",
+            "version": "0.212.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation",
+            "version": "0.212.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "import-in-the-middle",
+            "version": "2.0.6",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@fastify/proxy-addr",
+            "version": "5.1.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@fastify/rate-limit",
+            "version": "10.3.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@isaacs/cliui",
+            "version": "8.0.2",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@istanbuljs/schema",
+            "version": "0.1.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@jridgewell/gen-mapping",
+            "version": "0.3.13",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@jridgewell/resolve-uri",
+            "version": "3.1.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@jridgewell/sourcemap-codec",
+            "version": "1.5.5",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@jridgewell/trace-mapping",
+            "version": "0.3.31",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@lukeed/ms",
+            "version": "2.0.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/api",
+            "version": "1.9.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/api-logs",
+            "version": "0.213.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/context-async-hooks",
+            "version": "2.6.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/core",
+            "version": "2.6.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation",
+            "version": "0.213.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-amqplib",
+            "version": "0.60.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-connect",
+            "version": "0.56.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-dataloader",
+            "version": "0.30.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-express",
+            "version": "0.61.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-fs",
+            "version": "0.32.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-generic-pool",
+            "version": "0.56.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-graphql",
+            "version": "0.61.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-hapi",
+            "version": "0.59.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-http",
+            "version": "0.213.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-ioredis",
+            "version": "0.61.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-kafkajs",
+            "version": "0.22.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-knex",
+            "version": "0.57.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-koa",
+            "version": "0.61.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-lru-memoizer",
+            "version": "0.57.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-mongodb",
+            "version": "0.66.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-mongoose",
+            "version": "0.59.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-mysql",
+            "version": "0.59.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-mysql2",
+            "version": "0.59.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-pg",
+            "version": "0.65.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-redis",
+            "version": "0.61.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-tedious",
+            "version": "0.32.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation-undici",
+            "version": "0.23.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/redis-common",
+            "version": "0.38.2",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/resources",
+            "version": "2.6.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/sdk-trace-base",
+            "version": "2.6.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/semantic-conventions",
+            "version": "1.40.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/sql-common",
+            "version": "0.41.2",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@pinojs/redact",
+            "version": "0.4.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@pkgjs/parseargs",
+            "version": "0.11.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@playwright/test",
+            "version": "1.58.2",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@prisma/client",
+            "version": "6.19.2",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@prisma/config",
+            "version": "6.19.2",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@prisma/debug",
+            "version": "6.19.2",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@prisma/engines",
+            "version": "6.19.2",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@prisma/engines-version",
+            "version": "7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@prisma/fetch-engine",
+            "version": "6.19.2",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@prisma/get-platform",
+            "version": "6.19.2",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@prisma/instrumentation",
+            "version": "7.4.2",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/api-logs",
+            "version": "0.207.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@opentelemetry/instrumentation",
+            "version": "0.207.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "import-in-the-middle",
+            "version": "2.0.6",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@retirement/api",
+            "version": "",
+            "license": "UNKNOWN",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@retirement/dashboard",
+            "version": "",
+            "license": "UNKNOWN",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@retirement/shared",
+            "version": "",
+            "license": "UNKNOWN",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@retirement/tools",
+            "version": "",
+            "license": "UNKNOWN",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-android-arm-eabi",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-android-arm64",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-darwin-arm64",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-darwin-x64",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-freebsd-arm64",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-freebsd-x64",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-linux-arm-gnueabihf",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-linux-arm-musleabihf",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-linux-arm64-gnu",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-linux-arm64-musl",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-linux-loong64-gnu",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-linux-loong64-musl",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-linux-ppc64-gnu",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-linux-ppc64-musl",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-linux-riscv64-gnu",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-linux-riscv64-musl",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-linux-s390x-gnu",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-linux-x64-gnu",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-linux-x64-musl",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-openbsd-x64",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-openharmony-arm64",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-win32-arm64-msvc",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-win32-ia32-msvc",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-win32-x64-gnu",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rollup/rollup-win32-x64-msvc",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@sentry-internal/browser-utils",
+            "version": "10.45.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@sentry-internal/feedback",
+            "version": "10.45.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@sentry-internal/replay",
+            "version": "10.45.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@sentry-internal/replay-canvas",
+            "version": "10.45.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@sentry/browser",
+            "version": "10.45.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@sentry/core",
+            "version": "10.45.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@sentry/node",
+            "version": "10.45.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@sentry/node-core",
+            "version": "10.45.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@sentry/opentelemetry",
+            "version": "10.45.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@sentry/react",
+            "version": "10.45.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@stablelib/base64",
+            "version": "1.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@standard-schema/spec",
+            "version": "1.1.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@tanstack/query-core",
+            "version": "5.90.16",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@testing-library/dom",
+            "version": "10.4.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@testing-library/jest-dom",
+            "version": "6.9.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "dom-accessibility-api",
+            "version": "0.6.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@testing-library/react",
+            "version": "16.3.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@types/aria-query",
+            "version": "5.0.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@types/chai",
+            "version": "5.2.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@types/connect",
+            "version": "3.4.38",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@types/deep-eql",
+            "version": "4.0.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@types/estree",
+            "version": "1.0.8",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@types/mysql",
+            "version": "2.15.27",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@types/node",
+            "version": "25.5.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@types/pg",
+            "version": "8.15.6",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@types/pg-pool",
+            "version": "2.0.7",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@types/tedious",
+            "version": "4.0.14",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@vitest/coverage-v8",
+            "version": "3.2.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@vitest/expect",
+            "version": "3.2.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@vitest/mocker",
+            "version": "3.2.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@vitest/pretty-format",
+            "version": "3.2.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@vitest/runner",
+            "version": "3.2.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@vitest/snapshot",
+            "version": "3.2.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@vitest/spy",
+            "version": "3.2.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@vitest/utils",
+            "version": "3.2.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "abstract-logging",
+            "version": "2.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "acorn",
+            "version": "8.16.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "acorn-import-attributes",
+            "version": "1.9.5",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "ajv",
+            "version": "8.18.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "ajv-formats",
+            "version": "3.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "ansi-regex",
+            "version": "6.2.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "ansi-styles",
+            "version": "6.2.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "aria-query",
+            "version": "5.3.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "assertion-error",
+            "version": "2.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "ast-v8-to-istanbul",
+            "version": "0.3.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "js-tokens",
+            "version": "10.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "atomic-sleep",
+            "version": "1.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "avvio",
+            "version": "9.2.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "balanced-match",
+            "version": "4.0.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "base64-js",
+            "version": "1.5.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "better-sqlite3",
+            "version": "12.8.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "bidi-js",
+            "version": "1.0.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "bindings",
+            "version": "1.5.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "bl",
+            "version": "4.1.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "brace-expansion",
+            "version": "5.0.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "buffer",
+            "version": "5.7.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "c12",
+            "version": "3.1.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "cac",
+            "version": "6.7.14",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "chai",
+            "version": "5.3.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "check-error",
+            "version": "2.1.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "chokidar",
+            "version": "4.0.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "chownr",
+            "version": "1.1.4",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "citty",
+            "version": "0.1.6",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "cjs-module-lexer",
+            "version": "2.2.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "color-convert",
+            "version": "2.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "color-name",
+            "version": "1.1.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "confbox",
+            "version": "0.2.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "consola",
+            "version": "3.4.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "cookie",
+            "version": "1.1.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "cookie-signature",
+            "version": "1.2.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "cookies",
+            "version": "0.9.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "cross-spawn",
+            "version": "7.0.6",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "css-tree",
+            "version": "3.2.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "css.escape",
+            "version": "1.5.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "csstype",
+            "version": "3.1.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "data-urls",
+            "version": "7.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "debug",
+            "version": "4.4.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "decimal.js",
+            "version": "10.6.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "decompress-response",
+            "version": "6.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "deep-eql",
+            "version": "5.0.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "deep-extend",
+            "version": "0.6.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "deepmerge-ts",
+            "version": "7.1.5",
+            "license": "BSD-3-Clause",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "defu",
+            "version": "6.1.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "depd",
+            "version": "2.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "dequal",
+            "version": "2.0.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "destr",
+            "version": "2.0.5",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "detect-libc",
+            "version": "2.1.2",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "dom-accessibility-api",
+            "version": "0.5.16",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "dotenv",
+            "version": "16.6.1",
+            "license": "BSD-2-Clause",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "eastasianwidth",
+            "version": "0.2.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "effect",
+            "version": "3.18.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "emoji-regex",
+            "version": "9.2.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "empathic",
+            "version": "2.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "end-of-stream",
+            "version": "1.4.5",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "entities",
+            "version": "6.0.1",
+            "license": "BSD-2-Clause",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "es-module-lexer",
+            "version": "1.7.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "esbuild",
+            "version": "0.27.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "estree-walker",
+            "version": "3.0.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "expand-template",
+            "version": "2.0.3",
+            "license": "(MIT OR WTFPL)",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "expect-type",
+            "version": "1.3.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "exsolve",
+            "version": "1.0.8",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "fast-check",
+            "version": "3.23.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "fast-decode-uri-component",
+            "version": "1.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "fast-deep-equal",
+            "version": "3.1.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "fast-json-stringify",
+            "version": "6.3.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "fast-querystring",
+            "version": "1.1.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "fast-sha256",
+            "version": "1.3.0",
+            "license": "Unlicense",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "fast-uri",
+            "version": "3.1.0",
+            "license": "BSD-3-Clause",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "fastify",
+            "version": "5.8.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "fastify-plugin",
+            "version": "5.1.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "fastq",
+            "version": "1.20.1",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "fdir",
+            "version": "6.5.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "file-uri-to-path",
+            "version": "1.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "find-my-way",
+            "version": "9.5.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "foreground-child",
+            "version": "3.3.1",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "forwarded-parse",
+            "version": "2.1.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "fs-constants",
+            "version": "1.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "fsevents",
+            "version": "2.3.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "get-tsconfig",
+            "version": "4.13.6",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "giget",
+            "version": "2.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "github-from-package",
+            "version": "0.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "glob",
+            "version": "10.5.0",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "glob-to-regexp",
+            "version": "0.4.1",
+            "license": "BSD-2-Clause",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "balanced-match",
+            "version": "1.0.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "brace-expansion",
+            "version": "2.0.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "minimatch",
+            "version": "9.0.9",
+            "license": "BlueOak-1.0.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "has-flag",
+            "version": "4.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "helmet",
+            "version": "7.2.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "html-encoding-sniffer",
+            "version": "6.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "html-escaper",
+            "version": "2.0.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "ieee754",
+            "version": "1.2.1",
+            "license": "BSD-3-Clause",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "import-in-the-middle",
+            "version": "3.0.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "indent-string",
+            "version": "4.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "inherits",
+            "version": "2.0.4",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "ini",
+            "version": "1.3.8",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "ipaddr.js",
+            "version": "2.3.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "is-fullwidth-code-point",
+            "version": "3.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "is-potential-custom-element-name",
+            "version": "1.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "isexe",
+            "version": "2.0.0",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "istanbul-lib-coverage",
+            "version": "3.2.2",
+            "license": "BSD-3-Clause",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "istanbul-lib-report",
+            "version": "3.0.1",
+            "license": "BSD-3-Clause",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "istanbul-lib-source-maps",
+            "version": "5.0.6",
+            "license": "BSD-3-Clause",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "istanbul-reports",
+            "version": "3.2.0",
+            "license": "BSD-3-Clause",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "jackspeak",
+            "version": "3.4.3",
+            "license": "BlueOak-1.0.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "jiti",
+            "version": "2.6.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "js-cookie",
+            "version": "3.0.5",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "js-tokens",
+            "version": "9.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "jsdom",
+            "version": "29.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "lru-cache",
+            "version": "11.2.7",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "json-schema-ref-resolver",
+            "version": "3.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "json-schema-traverse",
+            "version": "1.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "keygrip",
+            "version": "1.1.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "light-my-request",
+            "version": "6.6.0",
+            "license": "BSD-3-Clause",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "process-warning",
+            "version": "4.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "loose-envify",
+            "version": "1.4.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "js-tokens",
+            "version": "4.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "loupe",
+            "version": "3.2.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "lru-cache",
+            "version": "10.4.3",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "lz-string",
+            "version": "1.5.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "magic-string",
+            "version": "0.30.21",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "magicast",
+            "version": "0.3.5",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "make-dir",
+            "version": "4.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "mdn-data",
+            "version": "2.27.1",
+            "license": "CC0-1.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "mimic-response",
+            "version": "3.1.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "min-indent",
+            "version": "1.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "minimatch",
+            "version": "10.2.4",
+            "license": "BlueOak-1.0.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "minimist",
+            "version": "1.2.8",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "minipass",
+            "version": "7.1.3",
+            "license": "BlueOak-1.0.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "mkdirp-classic",
+            "version": "0.5.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "mnemonist",
+            "version": "0.40.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "module-details-from-path",
+            "version": "1.0.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "ms",
+            "version": "2.1.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "nanoid",
+            "version": "3.3.11",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "napi-build-utils",
+            "version": "2.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "node-abi",
+            "version": "3.89.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "node-fetch-native",
+            "version": "1.6.7",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "nypm",
+            "version": "0.6.5",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "citty",
+            "version": "0.2.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "obliterator",
+            "version": "2.0.5",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "ohash",
+            "version": "2.0.11",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "on-exit-leak-free",
+            "version": "2.1.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "once",
+            "version": "1.4.0",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "package-json-from-dist",
+            "version": "1.0.1",
+            "license": "BlueOak-1.0.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "parse5",
+            "version": "8.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "path-key",
+            "version": "3.1.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "path-scurry",
+            "version": "1.11.1",
+            "license": "BlueOak-1.0.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "pathe",
+            "version": "2.0.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "pathval",
+            "version": "2.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "perfect-debounce",
+            "version": "1.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "pg-int8",
+            "version": "1.0.1",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "pg-protocol",
+            "version": "1.13.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "pg-types",
+            "version": "2.2.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "picocolors",
+            "version": "1.1.1",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "picomatch",
+            "version": "4.0.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "pino",
+            "version": "10.3.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "pino-abstract-transport",
+            "version": "3.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "pino-std-serializers",
+            "version": "7.1.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "pkg-types",
+            "version": "2.3.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "playwright",
+            "version": "1.58.2",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "playwright-core",
+            "version": "1.58.2",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "fsevents",
+            "version": "2.3.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "postcss",
+            "version": "8.5.8",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "postgres-array",
+            "version": "2.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "postgres-bytea",
+            "version": "1.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "postgres-date",
+            "version": "1.0.7",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "postgres-interval",
+            "version": "1.2.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "prebuild-install",
+            "version": "7.1.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "pretty-format",
+            "version": "27.5.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "ansi-regex",
+            "version": "5.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "ansi-styles",
+            "version": "5.2.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "prisma",
+            "version": "6.19.2",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "process-warning",
+            "version": "5.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "pump",
+            "version": "3.0.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "punycode",
+            "version": "2.3.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "pure-rand",
+            "version": "6.1.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "quick-format-unescaped",
+            "version": "4.0.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "rc",
+            "version": "1.2.8",
+            "license": "(BSD-2-Clause OR MIT OR Apache-2.0)",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "rc9",
+            "version": "2.1.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "react",
+            "version": "18.3.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "react-dom",
+            "version": "18.3.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "react-is",
+            "version": "17.0.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "readable-stream",
+            "version": "3.6.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "readdirp",
+            "version": "4.1.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "real-require",
+            "version": "0.2.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "redent",
+            "version": "3.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "require-from-string",
+            "version": "2.0.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "require-in-the-middle",
+            "version": "8.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "resolve-pkg-maps",
+            "version": "1.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "ret",
+            "version": "0.5.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "reusify",
+            "version": "1.1.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "rfdc",
+            "version": "1.4.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "rollup",
+            "version": "4.59.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "safe-buffer",
+            "version": "5.2.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "safe-regex2",
+            "version": "5.1.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "safe-stable-stringify",
+            "version": "2.5.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "saxes",
+            "version": "6.0.0",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "scheduler",
+            "version": "0.23.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "secure-json-parse",
+            "version": "4.1.0",
+            "license": "BSD-3-Clause",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "semver",
+            "version": "7.7.4",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "set-cookie-parser",
+            "version": "2.7.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "shebang-command",
+            "version": "2.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "shebang-regex",
+            "version": "3.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "siginfo",
+            "version": "2.0.0",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "signal-exit",
+            "version": "4.1.0",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "simple-concat",
+            "version": "1.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "simple-get",
+            "version": "4.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "sonic-boom",
+            "version": "4.2.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "source-map-js",
+            "version": "1.2.1",
+            "license": "BSD-3-Clause",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "split2",
+            "version": "4.2.0",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "sql.js",
+            "version": "1.14.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "stackback",
+            "version": "0.0.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "standardwebhooks",
+            "version": "1.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "std-env",
+            "version": "3.10.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "string_decoder",
+            "version": "1.3.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "string-width",
+            "version": "5.1.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "string-width-cjs",
+            "version": "4.2.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "ansi-regex",
+            "version": "5.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "emoji-regex",
+            "version": "8.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "strip-ansi",
+            "version": "6.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "strip-ansi",
+            "version": "7.2.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "strip-ansi-cjs",
+            "version": "6.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "ansi-regex",
+            "version": "5.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "strip-indent",
+            "version": "3.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "strip-json-comments",
+            "version": "2.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "strip-literal",
+            "version": "3.1.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "stripe",
+            "version": "20.4.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "supports-color",
+            "version": "7.2.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "swr",
+            "version": "2.3.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "symbol-tree",
+            "version": "3.2.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "tar-fs",
+            "version": "2.1.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "tar-stream",
+            "version": "2.2.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "test-exclude",
+            "version": "7.0.2",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "thread-stream",
+            "version": "4.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "tinybench",
+            "version": "2.9.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "tinyexec",
+            "version": "1.0.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "tinyglobby",
+            "version": "0.2.15",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "tinypool",
+            "version": "1.1.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "tinyrainbow",
+            "version": "2.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "tinyspy",
+            "version": "4.0.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "tldts",
+            "version": "7.0.27",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "tldts-core",
+            "version": "7.0.27",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "toad-cache",
+            "version": "3.7.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "tough-cookie",
+            "version": "6.0.1",
+            "license": "BSD-3-Clause",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "tr46",
+            "version": "6.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "tslib",
+            "version": "2.8.1",
+            "license": "0BSD",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "tsscmp",
+            "version": "1.0.6",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "tsx",
+            "version": "4.21.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "tunnel-agent",
+            "version": "0.6.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "typescript",
+            "version": "5.9.3",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "undici",
+            "version": "7.24.5",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "undici-types",
+            "version": "7.18.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "use-sync-external-store",
+            "version": "1.6.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "util-deprecate",
+            "version": "1.0.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "vite",
+            "version": "7.3.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "vite-node",
+            "version": "3.2.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "vitest",
+            "version": "3.2.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "tinyexec",
+            "version": "0.3.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "w3c-xmlserializer",
+            "version": "5.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "webidl-conversions",
+            "version": "8.0.1",
+            "license": "BSD-2-Clause",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "whatwg-mimetype",
+            "version": "5.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "whatwg-url",
+            "version": "16.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "which",
+            "version": "2.0.2",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "why-is-node-running",
+            "version": "2.3.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "wrap-ansi",
+            "version": "8.1.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "wrap-ansi-cjs",
+            "version": "7.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "ansi-regex",
+            "version": "5.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "ansi-styles",
+            "version": "4.3.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "emoji-regex",
+            "version": "8.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "string-width",
+            "version": "4.2.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "strip-ansi",
+            "version": "6.0.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "wrappy",
+            "version": "1.0.2",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "xml-name-validator",
+            "version": "5.0.0",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "xmlchars",
+            "version": "2.2.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "xtend",
+            "version": "4.0.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "zod",
+            "version": "3.25.76",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "packages/api",
+            "version": "0.1.0",
+            "license": "UNKNOWN",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "packages/dashboard",
+            "version": "0.1.0",
+            "license": "UNKNOWN",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@babel/compat-data",
+            "version": "7.29.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@babel/core",
+            "version": "7.29.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@babel/generator",
+            "version": "7.29.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@babel/helper-compilation-targets",
+            "version": "7.28.6",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@babel/helper-globals",
+            "version": "7.28.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@babel/helper-module-imports",
+            "version": "7.28.6",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@babel/helper-module-transforms",
+            "version": "7.28.6",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@babel/helper-plugin-utils",
+            "version": "7.28.6",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@babel/helper-validator-option",
+            "version": "7.27.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@babel/helpers",
+            "version": "7.29.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@babel/plugin-transform-react-jsx-self",
+            "version": "7.27.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@babel/plugin-transform-react-jsx-source",
+            "version": "7.27.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@babel/template",
+            "version": "7.28.6",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@babel/traverse",
+            "version": "7.29.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/aix-ppc64",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/android-arm",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/android-arm64",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/android-x64",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/darwin-arm64",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/darwin-x64",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/freebsd-arm64",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/freebsd-x64",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/linux-arm",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/linux-arm64",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/linux-ia32",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/linux-loong64",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/linux-mips64el",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/linux-ppc64",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/linux-riscv64",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/linux-s390x",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/linux-x64",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/netbsd-arm64",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/netbsd-x64",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/openbsd-arm64",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/openbsd-x64",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/openharmony-arm64",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/sunos-x64",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/win32-arm64",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/win32-ia32",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@esbuild/win32-x64",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@jridgewell/remapping",
+            "version": "2.3.5",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@kurkle/color",
+            "version": "0.3.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@remix-run/router",
+            "version": "1.23.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@rolldown/pluginutils",
+            "version": "1.0.0-beta.27",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@types/babel__core",
+            "version": "7.20.5",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@types/babel__generator",
+            "version": "7.27.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@types/babel__template",
+            "version": "7.4.4",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@types/babel__traverse",
+            "version": "7.28.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@vitejs/plugin-react",
+            "version": "4.7.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "baseline-browser-mapping",
+            "version": "2.10.8",
+            "license": "Apache-2.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "browserslist",
+            "version": "4.28.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "caniuse-lite",
+            "version": "1.0.30001780",
+            "license": "CC-BY-4.0",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "chart.js",
+            "version": "4.4.7",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "convert-source-map",
+            "version": "2.0.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "electron-to-chromium",
+            "version": "1.5.313",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "esbuild",
+            "version": "0.25.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "escalade",
+            "version": "3.2.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "gensync",
+            "version": "1.0.0-beta.2",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "jsesc",
+            "version": "3.1.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "json5",
+            "version": "2.2.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "lru-cache",
+            "version": "5.1.1",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "node-releases",
+            "version": "2.0.36",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "react-chartjs-2",
+            "version": "5.3.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "react-refresh",
+            "version": "0.17.0",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "react-router",
+            "version": "6.30.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "react-router-dom",
+            "version": "6.30.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "semver",
+            "version": "6.3.1",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "update-browserslist-db",
+            "version": "1.2.3",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "vite",
+            "version": "6.4.1",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "yallist",
+            "version": "3.1.1",
+            "license": "ISC",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "zustand",
+            "version": "5.0.12",
+            "license": "MIT",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "packages/shared",
+            "version": "0.1.0",
+            "license": "UNKNOWN",
+            "direct": false,
+            "ecosystem": "npm"
+          },
+          {
+            "name": "packages/tools",
+            "version": "0.1.0",
+            "license": "UNKNOWN",
+            "direct": false,
+            "ecosystem": "npm"
+          }
+        ]
+      },
+      "sbom": {
+        "existingSbomFiles": [],
+        "lockFilePresent": true,
+        "lockFileCommitted": true,
+        "format": "package-lock.json"
+      },
+      "vulnerabilities": {
+        "auditResults": {
+          "critical": 0,
+          "high": 3,
+          "moderate": 0,
+          "low": 0,
+          "info": 0
+        },
+        "hasDependabot": false,
+        "hasRenovate": false,
+        "hasSecurityWorkflows": true,
+        "securityWorkflowFiles": [
+          ".github/workflows/ci.yml"
+        ],
+        "scanToolsDetected": []
+      },
+      "licenses": {
+        "summary": {
+          "MIT": 417,
+          "Apache-2.0": 59,
+          "ISC": 27,
+          "MIT-0": 2,
+          "UNKNOWN": 8,
+          "BSD-3-Clause": 11,
+          "BSD-2-Clause": 4,
+          "(MIT OR WTFPL)": 1,
+          "Unlicense": 1,
+          "BlueOak-1.0.0": 6,
+          "CC0-1.0": 1,
+          "(BSD-2-Clause OR MIT OR Apache-2.0)": 1,
+          "0BSD": 1,
+          "CC-BY-4.0": 1
+        },
+        "copyleftPackages": [],
+        "unknownLicensePackages": [
+          {
+            "name": "@retirement/api",
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@retirement/dashboard",
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@retirement/shared",
+            "ecosystem": "npm"
+          },
+          {
+            "name": "@retirement/tools",
+            "ecosystem": "npm"
+          },
+          {
+            "name": "packages/api",
+            "ecosystem": "npm"
+          },
+          {
+            "name": "packages/dashboard",
+            "ecosystem": "npm"
+          },
+          {
+            "name": "packages/shared",
+            "ecosystem": "npm"
+          },
+          {
+            "name": "packages/tools",
+            "ecosystem": "npm"
+          }
+        ],
+        "hasLicenseScanner": false,
+        "licenseScannerTool": ""
+      },
+      "freshness": {
+        "lockFileAge": "today",
+        "pinnedVersions": 0,
+        "floatingVersions": 0,
+        "pinnedPercentage": 0
+      },
+      "aiDependencies": {
+        "detected": [],
+        "hasApiClients": false,
+        "hasLocalInference": false
+      },
+      "autoFillFields": {
+        "security.dependencyVulnerabilityRisk": true,
+        "security.dependencyVulnerabilityDetail": "Dependency audit found 0 critical and 3 high severity vulnerabilities. Remediate before deployment.",
+        "supplyChain.unknownLicenseCount": 8,
+        "supplyChain.unknownLicenseNote": "8 package(s) have unknown licenses. Manual license review required for compliance."
+      }
+    },
+    "ci-evidence": {
+      "_meta": {
+        "extractor": "ci-evidence",
+        "version": "1.0.0",
+        "extractedAt": "2026-03-21T12:50:44.024Z",
+        "repoPath": "D:\\commercialRetirementProject",
+        "ciSystems": [
+          "github-actions"
+        ]
+      },
+      "securityScanning": {
+        "sast": {
+          "detected": false,
+          "tools": [],
+          "files": []
+        },
+        "dast": {
+          "detected": false,
+          "tools": [],
+          "files": []
+        },
+        "dependencyScanning": {
+          "detected": true,
+          "tools": [
+            "npm audit"
+          ],
+          "files": [
+            ".github\\workflows\\ci.yml"
+          ]
+        },
+        "containerScanning": {
+          "detected": false,
+          "tools": [],
+          "files": []
+        },
+        "secretScanning": {
+          "detected": false,
+          "tools": [],
+          "files": []
+        },
+        "licenseScanning": {
+          "detected": false,
+          "tools": [],
+          "files": []
+        },
+        "sbomGeneration": {
+          "detected": false,
+          "tools": [],
+          "files": []
+        }
+      },
+      "testing": {
+        "testRunners": [
+          "vitest"
+        ],
+        "coverageTools": [
+          "coverage"
+        ],
+        "testJobCount": 6,
+        "testsRequiredForMerge": false
+      },
+      "buildProvenance": {
+        "hasAttestation": false,
+        "signingTools": [],
+        "hostedRunners": true,
+        "selfHostedRunners": false,
+        "estimatedSlsaLevel": 2,
+        "slsaEvidence": "Hosted CI with artifact outputs; no attestation detected"
+      },
+      "codeReviewEnforcement": {
+        "branchProtectionConfig": false,
+        "requiredReviewers": 0,
+        "prOnlyMerge": false
+      },
+      "deploymentControls": {
+        "environments": [],
+        "hasManualApproval": false,
+        "hasStagingEnvironment": false,
+        "hasProductionEnvironment": false
+      },
+      "aiCodeControls": {
+        "hasAiInstructionFiles": true,
+        "aiInstructionFiles": [
+          "CLAUDE.md"
+        ],
+        "hasPreCommitHooks": false,
+        "preCommitTools": [],
+        "sastOnPRs": false
+      },
+      "autoFillFields": {
+        "securityScanningCoverage": "1/7 categories",
+        "securityCoverageLevel": "basic",
+        "testingMaturity": "basic",
+        "slsaComplianceLevel": "L2",
+        "aiCodeGenControlsInPlace": true,
+        "codeReviewEnforced": false,
+        "deploymentGatesExist": false
+      }
+    }
+  },
+  "extractedAutoFill": {
+    "supplyChain.aiCodeGenerationDetected": true,
+    "supplyChain.aiToolsUsed": "Claude (108 commits)",
+    "supplyChain.aiAttributionPercentage": 100,
+    "supplyChain.note": "AI-assisted code generation detected in 100% of commits. Tools: Claude (108 commits). Review supply chain documentation requirements.",
+    "security.secretsExcluded": true,
+    "security.excludedPatterns": ".env, .env.local, credentials, *.key, *.pem, secrets",
+    "accessControl.uniqueContributors": 0,
+    "accessControl.uniqueCommitters": 1,
+    "security.dependencyVulnerabilityRisk": true,
+    "security.dependencyVulnerabilityDetail": "Dependency audit found 0 critical and 3 high severity vulnerabilities. Remediate before deployment.",
+    "supplyChain.unknownLicenseCount": 8,
+    "supplyChain.unknownLicenseNote": "8 package(s) have unknown licenses. Manual license review required for compliance.",
+    "securityScanningCoverage": "1/7 categories",
+    "securityCoverageLevel": "basic",
+    "testingMaturity": "basic",
+    "slsaComplianceLevel": "L2",
+    "aiCodeGenControlsInPlace": true,
+    "codeReviewEnforced": false,
+    "deploymentGatesExist": false
+  }
+}

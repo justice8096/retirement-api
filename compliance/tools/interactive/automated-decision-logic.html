@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automated Decision Logic (Template 04)</title>
+<script src="./shared.js"></script>
+</head>
+<body>
+<script>
+(function() {
+  injectCSS();
+
+  var config = {};
+
+  var affectedGroupOptions = [
+    { value: '', label: '-- Select --' },
+    { value: 'employees', label: 'Employees / job applicants' },
+    { value: 'consumers', label: 'Consumers / customers' },
+    { value: 'patients', label: 'Patients' },
+    { value: 'students', label: 'Students' },
+    { value: 'citizens', label: 'Citizens / public' },
+    { value: 'businesses', label: 'Businesses / vendors' },
+    { value: 'other', label: 'Other' }
+  ];
+
+  var dataCategories = [
+    { id: 'personalId', label: 'Personal identifiers (name, ID, email)' },
+    { id: 'demographic', label: 'Demographic data (age, gender, ethnicity)' },
+    { id: 'financial', label: 'Financial data (income, credit, transactions)' },
+    { id: 'behavioral', label: 'Behavioral data (browsing, purchase history)' },
+    { id: 'biometric', label: 'Biometric data (face, voice, fingerprint)' },
+    { id: 'health', label: 'Health / medical data' },
+    { id: 'location', label: 'Location / geolocation data' },
+    { id: 'employment', label: 'Employment / professional data' },
+    { id: 'education', label: 'Education records' },
+    { id: 'publicRecords', label: 'Public records / social media' },
+    { id: 'thirdParty', label: 'Third-party derived / inferred data' }
+  ];
+
+  var significanceCriteria = [
+    { id: 'solelyAutomated', label: 'Decision is solely automated (no human in loop)', description: 'GDPR Art. 22: Applies to decisions based solely on automated processing.' },
+    { id: 'legalEffects', label: 'Produces legal effects', description: 'Decision affects legal rights (contract, eligibility, legal status).' },
+    { id: 'significantEffects', label: 'Similarly significant effects', description: 'Decision significantly affects access to services, financial outcomes, or opportunities.' },
+    { id: 'specialCategory', label: 'Uses special category data', description: 'GDPR Art. 9: Processing of racial, ethnic, political, religious, health, sexual orientation, or biometric data.' },
+    { id: 'profiling', label: 'Involves profiling', description: 'Automated processing to evaluate personal aspects (performance, reliability, behavior, interests).' },
+    { id: 'vulnerable', label: 'Affects vulnerable groups', description: 'Decision impacts children, elderly, disabled persons, or other vulnerable populations.' },
+    { id: 'largescale', label: 'Large-scale processing', description: 'Decision affects a large number of data subjects.' },
+    { id: 'noAlternative', label: 'No alternative available', description: 'Data subjects cannot easily avoid the automated decision.' }
+  ];
+
+  var oversightModelOptions = [
+    { value: '', label: '-- Select --' },
+    { value: 'hitl', label: 'Human-in-the-Loop (every decision reviewed)' },
+    { value: 'hotl', label: 'Human-on-the-Loop (monitoring with override)' },
+    { value: 'hic', label: 'Human-in-Command (strategic oversight)' },
+    { value: 'appeal', label: 'Post-decision appeal only' },
+    { value: 'hybrid', label: 'Hybrid (varies by decision risk)' }
+  ];
+
+  var responseTimeOptions = [
+    { value: '', label: '-- Select --' },
+    { value: 'immediate', label: 'Immediate (real-time)' },
+    { value: '24h', label: 'Within 24 hours' },
+    { value: '72h', label: 'Within 72 hours' },
+    { value: '7d', label: 'Within 7 days' },
+    { value: '30d', label: 'Within 30 days (GDPR maximum)' },
+    { value: 'custom', label: 'Custom timeline' }
+  ];
+
+  var explainabilityMethods = [
+    { id: 'featureImportance', label: 'Feature importance / key factors', description: 'Show which input features most influenced the decision.' },
+    { id: 'counterfactual', label: 'Counterfactual explanations', description: 'Explain what would need to change for a different outcome.' },
+    { id: 'rulesBased', label: 'Rules-based explanation', description: 'Translate decision into plain-language if/then rules.' },
+    { id: 'confidence', label: 'Confidence / probability score', description: 'Provide the system confidence level in the decision.' },
+    { id: 'comparison', label: 'Comparison with similar cases', description: 'Show how similar inputs were decided.' },
+    { id: 'processFlow', label: 'Process flow description', description: 'Step-by-step walkthrough of the decision pipeline.' },
+    { id: 'dataProvenance', label: 'Data provenance', description: 'Show which data sources contributed to the decision.' },
+    { id: 'modelCard', label: 'Model card / system documentation', description: 'Provide link to detailed system documentation.' }
+  ];
+
+  var MAX_DECISIONS = 10;
+
+  var state = {
+    decisions: [createEmptyDecision()],
+    significance: {},
+    humanReview: {
+      oversightModel: '', appealProcess: '', appealContact: '',
+      appealResponseTime: '', humanOverrideDescription: '',
+      overrideAuthority: '', escalationCriteria: '', reviewLogRetention: ''
+    },
+    explainability: {
+      methods: {}, layeredApproach: null,
+      shortExplanationTemplate: '', detailedExplanationTemplate: '',
+      technicalExplanationTemplate: '', explanationLanguages: '',
+      explanationAccessibility: ''
+    }
+  };
+
+  function createEmptyDecision() {
+    return { name: '', description: '', affectedGroup: '', affectedGroupOther: '', estimatedVolume: '', dataUsed: {}, consequenceDescription: '' };
+  }
+
+  function initState() {
+    for (var i = 0; i < significanceCriteria.length; i++) {
+      var c = significanceCriteria[i];
+      if (!state.significance[c.id]) state.significance[c.id] = { applies: null, justification: '' };
+    }
+    for (var i = 0; i < explainabilityMethods.length; i++) {
+      var m = explainabilityMethods[i];
+      if (!state.explainability.methods[m.id]) state.explainability.methods[m.id] = { used: null, implementation: '' };
+    }
+  }
+  initState();
+
+  var wizard = createWizard({
+    title: 'Automated Decision Logic',
+    subtitle: 'Template 04 \u2014 GDPR Art. 22; EU AI Act Arts. 14, 86; Colorado SB 24-205; Canada Directive on ADM',
+    totalSteps: 6,
+    stepLabels: ['Load Config', 'Map Decisions', 'Classify Significance', 'Human Review', 'Explainability', 'Review & Export'],
+    renderStep: function(step, container) {
+      if (step === 0) renderStep1(container);
+      else if (step === 1) renderStep2(container);
+      else if (step === 2) renderStep3(container);
+      else if (step === 3) renderStep4(container);
+      else if (step === 4) renderStep5(container);
+      else if (step === 5) renderSummary(container);
+    },
+    onLoad: function() {
+      loadConfigFromFile(function(c) { config = c; loadState(); wizard.refreshStep(); });
+    },
+    onSave: doSave,
+    onExport: doExport,
+    stateKey: 'automatedDecisionLogic',
+    getState: function() { return state; },
+    setState: function(s) {
+      if (s.decisions && s.decisions.length > 0) state.decisions = s.decisions;
+      if (s.significance) { for (var k in s.significance) { state.significance[k] = s.significance[k]; } }
+      if (s.humanReview) {
+        if (s.humanReview.oversightModel !== undefined) state.humanReview.oversightModel = s.humanReview.oversightModel;
+        if (s.humanReview.appealProcess !== undefined) state.humanReview.appealProcess = s.humanReview.appealProcess;
+        if (s.humanReview.appealContact !== undefined) state.humanReview.appealContact = s.humanReview.appealContact;
+        if (s.humanReview.appealResponseTime !== undefined) state.humanReview.appealResponseTime = s.humanReview.appealResponseTime;
+        if (s.humanReview.humanOverrideDescription !== undefined) state.humanReview.humanOverrideDescription = s.humanReview.humanOverrideDescription;
+        if (s.humanReview.overrideAuthority !== undefined) state.humanReview.overrideAuthority = s.humanReview.overrideAuthority;
+        if (s.humanReview.escalationCriteria !== undefined) state.humanReview.escalationCriteria = s.humanReview.escalationCriteria;
+        if (s.humanReview.reviewLogRetention !== undefined) state.humanReview.reviewLogRetention = s.humanReview.reviewLogRetention;
+      }
+      if (s.explainability) {
+        if (s.explainability.methods) { for (var k in s.explainability.methods) { state.explainability.methods[k] = s.explainability.methods[k]; } }
+        if (s.explainability.layeredApproach !== undefined) state.explainability.layeredApproach = s.explainability.layeredApproach;
+        if (s.explainability.shortExplanationTemplate !== undefined) state.explainability.shortExplanationTemplate = s.explainability.shortExplanationTemplate;
+        if (s.explainability.detailedExplanationTemplate !== undefined) state.explainability.detailedExplanationTemplate = s.explainability.detailedExplanationTemplate;
+        if (s.explainability.technicalExplanationTemplate !== undefined) state.explainability.technicalExplanationTemplate = s.explainability.technicalExplanationTemplate;
+        if (s.explainability.explanationLanguages !== undefined) state.explainability.explanationLanguages = s.explainability.explanationLanguages;
+        if (s.explainability.explanationAccessibility !== undefined) state.explainability.explanationAccessibility = s.explainability.explanationAccessibility;
+      }
+      initState();
+    }
+  });
+
+  function renderStep1(container) {
+    var items = [];
+    items.push(createAlert('info', 'Load your compliance-config.json to pre-populate system information. This tool documents automated decisions, their significance under GDPR Art. 22, human review mechanisms, and explainability approaches.'));
+    if (config.project) {
+      var infoBox = el('div', { style: 'padding: 12px; border: 1px solid #2A7B7B55; border-radius: 4px; background: #2A7B7B11; margin-top: 12px;' });
+      infoBox.appendChild(el('h3', {}, ['Loaded System Info']));
+      infoBox.appendChild(el('p', { style: 'font-size: 0.85em; color: #9AACBA; margin-top: 8px;' }, ['Project: ' + (config.project.name || 'N/A')]));
+      infoBox.appendChild(el('p', { style: 'font-size: 0.85em; color: #9AACBA;' }, ['Description: ' + (config.project.description || 'N/A')]));
+      if (config.project.jurisdictions && config.project.jurisdictions.length > 0) {
+        infoBox.appendChild(el('p', { style: 'font-size: 0.85em; color: #9AACBA;' }, ['Jurisdictions: ' + config.project.jurisdictions.join(', ')]));
+      }
+      items.push(infoBox);
+      items.push(createAlert('success', 'Config loaded successfully. Proceed to Step 2 to map your automated decisions.'));
+    } else {
+      items.push(createAlert('warning', 'No config loaded. Click "Load Config" above to load your compliance-config.json, or proceed to fill in fields manually.'));
+    }
+    container.appendChild(createSection('Step 1: Load Config & System Info', items));
+  }
+
+  function renderStep2(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 2: Map Automated Decisions']));
+    section.appendChild(createAlert('info', 'Document each automated decision your system makes. Include what the decision is, who is affected, and what data is used.'));
+    for (var i = 0; i < state.decisions.length; i++) {
+      (function(idx) {
+        var d = state.decisions[idx];
+        var group = el('div', { style: 'margin-bottom: 20px; padding: 16px; border: 1px solid #3A4A5A; border-radius: 4px; background: #0D1830;' });
+        var header = el('div', { style: 'display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;' });
+        header.appendChild(el('h3', { style: 'color: #E8B96A;' }, ['Decision ' + (idx + 1)]));
+        if (state.decisions.length > 1) {
+          header.appendChild(el('button', { className: 'btn', textContent: 'Remove', style: 'padding: 4px 12px; font-size: 0.8em;', onClick: function() { state.decisions.splice(idx, 1); wizard.refreshStep(); } }));
+        }
+        group.appendChild(header);
+        group.appendChild(createTextInput('Decision name', d.name, function(v) { d.name = v; }, 'e.g. Loan approval, content recommendation'));
+        group.appendChild(createTextArea('Decision description', d.description, function(v) { d.description = v; }, 'What does this automated decision do?'));
+        group.appendChild(createSelect('Primary affected group', affectedGroupOptions, d.affectedGroup, function(v) { d.affectedGroup = v; }));
+        if (d.affectedGroup === 'other') {
+          group.appendChild(createTextInput('Specify affected group', d.affectedGroupOther, function(v) { d.affectedGroupOther = v; }, 'Describe the affected group'));
+        }
+        group.appendChild(createTextInput('Estimated volume', d.estimatedVolume, function(v) { d.estimatedVolume = v; }, 'e.g. ~5,000 decisions/month'));
+        var dataSection = el('div', { style: 'margin-top: 12px;' });
+        dataSection.appendChild(el('h3', { style: 'margin-bottom: 8px;' }, ['Data categories used']));
+        for (var j = 0; j < dataCategories.length; j++) {
+          (function(cat) {
+            dataSection.appendChild(createToggle(cat.label, d.dataUsed[cat.id] === undefined ? null : d.dataUsed[cat.id], function(v) { d.dataUsed[cat.id] = v; wizard.saveNow(); }));
+          })(dataCategories[j]);
+        }
+        group.appendChild(dataSection);
+        group.appendChild(createTextArea('Consequence description', d.consequenceDescription, function(v) { d.consequenceDescription = v; }, 'What are the consequences for affected individuals?'));
+        section.appendChild(group);
+      })(i);
+    }
+    if (state.decisions.length < MAX_DECISIONS) {
+      section.appendChild(el('button', { className: 'btn', textContent: '+ Add Another Decision', onClick: function() { state.decisions.push(createEmptyDecision()); wizard.refreshStep(); } }));
+    }
+    container.appendChild(section);
+  }
+
+  function renderStep3(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 3: Classify Decision Significance']));
+    section.appendChild(createAlert('warning', 'GDPR Art. 22 restricts decisions based solely on automated processing that produce legal effects or similarly significantly affect individuals. Assess each criterion below.'));
+    for (var i = 0; i < significanceCriteria.length; i++) {
+      (function(cDef) {
+        var c = state.significance[cDef.id];
+        var group = el('div', { style: 'margin-bottom: 16px; padding: 12px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830;' });
+        group.appendChild(el('h3', {}, [cDef.label]));
+        group.appendChild(el('p', { style: 'font-size: 0.8em; color: #6B7B8D; margin-bottom: 8px;' }, [cDef.description]));
+        group.appendChild(createToggle('Applies to your system?', c.applies, function(v) { c.applies = v; wizard.saveNow(); }));
+        group.appendChild(createTextArea('Justification', c.justification, function(v) { c.justification = v; }, 'Explain why this does or does not apply'));
+        section.appendChild(group);
+      })(significanceCriteria[i]);
+    }
+    var art22Triggers = ['solelyAutomated', 'legalEffects', 'significantEffects'];
+    var triggered = 0;
+    for (var i = 0; i < art22Triggers.length; i++) { if (state.significance[art22Triggers[i]].applies === true) triggered++; }
+    if (triggered >= 2) section.appendChild(createAlert('danger', 'GDPR Art. 22 likely applies: your system makes solely automated decisions with legal or significant effects. You must provide meaningful human involvement, the right to contest, and explicit consent or valid legal basis (Art. 22(2)).'));
+    else if (triggered === 1) section.appendChild(createAlert('warning', 'One Art. 22 trigger criterion is met. Carefully assess whether GDPR Art. 22 restrictions apply. Consult legal counsel.'));
+    else section.appendChild(createAlert('info', 'Based on current inputs, GDPR Art. 22 may not be triggered. Verify with legal counsel.'));
+    container.appendChild(section);
+  }
+
+  function renderStep4(container) {
+    var items = [];
+    items.push(createAlert('info', 'Design the human review and appeal mechanism. Required under GDPR Art. 22(3), EU AI Act Art. 14, and Colorado SB 24-205.'));
+    items.push(createSelect('Oversight model', oversightModelOptions, state.humanReview.oversightModel, function(v) { state.humanReview.oversightModel = v; }));
+    items.push(createTextArea('Appeal process description', state.humanReview.appealProcess, function(v) { state.humanReview.appealProcess = v; }, 'How can an affected individual contest an automated decision?'));
+    items.push(createTextInput('Appeal contact / channel', state.humanReview.appealContact, function(v) { state.humanReview.appealContact = v; }, 'e.g. appeals@company.com, in-app form'));
+    items.push(createSelect('Appeal response time', responseTimeOptions, state.humanReview.appealResponseTime, function(v) { state.humanReview.appealResponseTime = v; }));
+    items.push(createTextArea('Human override description', state.humanReview.humanOverrideDescription, function(v) { state.humanReview.humanOverrideDescription = v; }, 'How can a human reviewer override the automated decision?'));
+    items.push(createTextInput('Override authority', state.humanReview.overrideAuthority, function(v) { state.humanReview.overrideAuthority = v; }, 'Who has authority to override? (role/title)'));
+    items.push(createTextArea('Escalation criteria', state.humanReview.escalationCriteria, function(v) { state.humanReview.escalationCriteria = v; }, 'When is a decision automatically escalated for human review?'));
+    items.push(createTextInput('Review log retention period', state.humanReview.reviewLogRetention, function(v) { state.humanReview.reviewLogRetention = v; }, 'e.g. 3 years, 7 years'));
+    container.appendChild(createSection('Step 4: Human Review Mechanism', items));
+  }
+
+  function renderStep5(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 5: Decision Logic Explainability']));
+    section.appendChild(createAlert('info', 'Document how automated decisions are explained to affected individuals. GDPR Art. 22(3) requires "meaningful information about the logic involved." EU AI Act Art. 86 establishes a right to explanation.'));
+    section.appendChild(el('h3', { style: 'margin-top: 16px;' }, ['Explainability methods']));
+    for (var i = 0; i < explainabilityMethods.length; i++) {
+      (function(mDef) {
+        var m = state.explainability.methods[mDef.id];
+        var group = el('div', { style: 'margin-bottom: 12px; padding: 10px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830;' });
+        group.appendChild(el('h3', {}, [mDef.label]));
+        group.appendChild(el('p', { style: 'font-size: 0.8em; color: #6B7B8D; margin-bottom: 8px;' }, [mDef.description]));
+        group.appendChild(createToggle('Used?', m.used, function(v) { m.used = v; wizard.saveNow(); }));
+        group.appendChild(createTextInput('Implementation details', m.implementation, function(v) { m.implementation = v; }, 'How is this method implemented?'));
+        section.appendChild(group);
+      })(explainabilityMethods[i]);
+    }
+    section.appendChild(el('h3', { style: 'margin-top: 24px;' }, ['Layered explanation approach']));
+    section.appendChild(createToggle('Use layered explanations (short, detailed, technical)?', state.explainability.layeredApproach, function(v) { state.explainability.layeredApproach = v; wizard.saveNow(); }));
+    section.appendChild(createTextArea('Short explanation template', state.explainability.shortExplanationTemplate, function(v) { state.explainability.shortExplanationTemplate = v; }, 'e.g. "Your application was [approved/denied] based on [top 3 factors]."'));
+    section.appendChild(createTextArea('Detailed explanation template', state.explainability.detailedExplanationTemplate, function(v) { state.explainability.detailedExplanationTemplate = v; }, 'Full explanation with all relevant factors and data sources'));
+    section.appendChild(createTextArea('Technical explanation template', state.explainability.technicalExplanationTemplate, function(v) { state.explainability.technicalExplanationTemplate = v; }, 'For regulators/auditors: model details, feature weights, confidence scores'));
+    section.appendChild(createTextInput('Explanation languages', state.explainability.explanationLanguages, function(v) { state.explainability.explanationLanguages = v; }, 'e.g. English, Spanish, French'));
+    section.appendChild(createTextArea('Accessibility notes', state.explainability.explanationAccessibility, function(v) { state.explainability.explanationAccessibility = v; }, 'e.g. Screen reader friendly, plain language'));
+    container.appendChild(section);
+  }
+
+  function calcSectionScore(sectionId) {
+    var filled = 0; var total = 0;
+    if (sectionId === 'decisions') {
+      for (var i = 0; i < state.decisions.length; i++) {
+        var d = state.decisions[i]; total += 4;
+        if (d.name) filled++; if (d.description) filled++;
+        if (d.affectedGroup) filled++; if (d.consequenceDescription) filled++;
+      }
+    } else if (sectionId === 'significance') {
+      total = significanceCriteria.length;
+      for (var i = 0; i < significanceCriteria.length; i++) { if (state.significance[significanceCriteria[i].id].applies !== null) filled++; }
+    } else if (sectionId === 'humanReview') {
+      total = 6;
+      if (state.humanReview.oversightModel) filled++;
+      if (state.humanReview.appealProcess) filled++;
+      if (state.humanReview.appealContact) filled++;
+      if (state.humanReview.appealResponseTime) filled++;
+      if (state.humanReview.humanOverrideDescription) filled++;
+      if (state.humanReview.escalationCriteria) filled++;
+    } else if (sectionId === 'explainability') {
+      total = explainabilityMethods.length + 2;
+      for (var i = 0; i < explainabilityMethods.length; i++) { if (state.explainability.methods[explainabilityMethods[i].id].used !== null) filled++; }
+      if (state.explainability.layeredApproach !== null) filled++;
+      if (state.explainability.shortExplanationTemplate) filled++;
+    }
+    return { filled: filled, total: total };
+  }
+
+  function renderSummary(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 6: Review & Export']));
+    var sections = [
+      { id: 'decisions', label: 'Automated Decisions' },
+      { id: 'significance', label: 'Decision Significance' },
+      { id: 'humanReview', label: 'Human Review Mechanism' },
+      { id: 'explainability', label: 'Explainability' }
+    ];
+    var table = el('table', { className: 'result-table' });
+    var thead = el('thead'); var headerRow = el('tr');
+    headerRow.appendChild(el('th', {}, ['Section']));
+    headerRow.appendChild(el('th', {}, ['Completeness']));
+    headerRow.appendChild(el('th', {}, ['Score']));
+    thead.appendChild(headerRow); table.appendChild(thead);
+    var tbody = el('tbody'); var totalFilled = 0; var totalAll = 0;
+    for (var i = 0; i < sections.length; i++) {
+      var s = sections[i]; var score = calcSectionScore(s.id);
+      totalFilled += score.filled; totalAll += score.total;
+      var pct = score.total > 0 ? Math.round((score.filled / score.total) * 100) : 0;
+      var cls = pct >= 80 ? 'score-low' : pct >= 50 ? 'score-med' : 'score-high';
+      var row = el('tr'); row.appendChild(el('td', {}, [s.label]));
+      row.appendChild(el('td', {}, [score.filled + ' / ' + score.total]));
+      var scoreCell = el('td'); scoreCell.appendChild(el('span', { className: cls }, [pct + '%']));
+      row.appendChild(scoreCell); tbody.appendChild(row);
+    }
+    table.appendChild(tbody); section.appendChild(table);
+    var overallPct = totalAll > 0 ? Math.round((totalFilled / totalAll) * 100) : 0;
+    var overallCls = overallPct >= 80 ? 'score-low' : overallPct >= 50 ? 'score-med' : 'score-high';
+    var overallEl = el('div', { style: 'margin-top: 16px; text-align: center; font-size: 1.2em;' });
+    overallEl.appendChild(document.createTextNode('Overall Completeness: '));
+    overallEl.appendChild(el('span', { className: overallCls }, [overallPct + '%']));
+    section.appendChild(overallEl);
+    if (overallPct < 50) section.appendChild(createAlert('danger', 'Automated decision documentation is incomplete. Several required sections need attention.'));
+    else if (overallPct < 80) section.appendChild(createAlert('warning', 'Automated decision documentation is partially complete. Review unfilled sections.'));
+    else section.appendChild(createAlert('success', 'Automated decision documentation is substantially complete. Proceed to legal review.'));
+
+    var art22Triggers = ['solelyAutomated', 'legalEffects', 'significantEffects'];
+    var triggered = 0;
+    for (var i = 0; i < art22Triggers.length; i++) { if (state.significance[art22Triggers[i]].applies === true) triggered++; }
+    var riskBox = el('div', { style: 'margin-top: 16px; padding: 12px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830;' });
+    riskBox.appendChild(el('h3', {}, ['GDPR Art. 22 Risk Assessment']));
+    if (triggered >= 2) {
+      riskBox.appendChild(el('span', { className: 'score-high' }, ['HIGH RISK']));
+      riskBox.appendChild(el('p', { style: 'font-size: 0.85em; color: #9AACBA; margin-top: 4px;' }, ['Art. 22 likely applies. Ensure meaningful human involvement, right to contest, and valid legal basis.']));
+    } else if (triggered === 1) {
+      riskBox.appendChild(el('span', { className: 'score-med' }, ['MEDIUM RISK']));
+      riskBox.appendChild(el('p', { style: 'font-size: 0.85em; color: #9AACBA; margin-top: 4px;' }, ['One trigger criterion met. Review with legal counsel.']));
+    } else {
+      riskBox.appendChild(el('span', { className: 'score-low' }, ['LOWER RISK']));
+      riskBox.appendChild(el('p', { style: 'font-size: 0.85em; color: #9AACBA; margin-top: 4px;' }, ['Art. 22 may not apply based on current assessment. Verify with legal counsel.']));
+    }
+    section.appendChild(riskBox);
+
+    var decisionNames = [];
+    for (var i = 0; i < state.decisions.length; i++) { if (state.decisions[i].name) decisionNames.push(state.decisions[i].name); }
+    if (decisionNames.length > 0) {
+      var dSummary = el('div', { style: 'margin-top: 16px;' });
+      dSummary.appendChild(el('h3', {}, ['Documented Decisions']));
+      for (var i = 0; i < decisionNames.length; i++) { dSummary.appendChild(el('span', { className: 'badge enacted', style: 'margin: 2px;' }, [decisionNames[i]])); }
+      section.appendChild(dSummary);
+    }
+    var activeMethods = [];
+    for (var i = 0; i < explainabilityMethods.length; i++) { if (state.explainability.methods[explainabilityMethods[i].id].used === true) activeMethods.push(explainabilityMethods[i].label); }
+    if (activeMethods.length > 0) {
+      var eSummary = el('div', { style: 'margin-top: 16px;' });
+      eSummary.appendChild(el('h3', {}, ['Active Explainability Methods']));
+      for (var i = 0; i < activeMethods.length; i++) { eSummary.appendChild(el('span', { className: 'badge active-sector', style: 'margin: 2px;' }, [activeMethods[i]])); }
+      section.appendChild(eSummary);
+    }
+    var exportBar = el('div', { className: 'toolbar', style: 'margin-top: 16px;' });
+    exportBar.appendChild(el('button', { className: 'btn primary', textContent: 'Export Markdown', onClick: doExport }));
+    exportBar.appendChild(el('button', { className: 'btn success', textContent: 'Save Config', onClick: doSave }));
+    section.appendChild(exportBar);
+    container.appendChild(section);
+  }
+
+  function loadState() {
+    if (config.interactiveToolResults && config.interactiveToolResults.automatedDecisionLogic) {
+      var saved = config.interactiveToolResults.automatedDecisionLogic;
+      if (saved.decisions && saved.decisions.length > 0) state.decisions = JSON.parse(JSON.stringify(saved.decisions));
+      if (saved.significance) state.significance = JSON.parse(JSON.stringify(saved.significance));
+      if (saved.humanReview) state.humanReview = JSON.parse(JSON.stringify(saved.humanReview));
+      if (saved.explainability) state.explainability = JSON.parse(JSON.stringify(saved.explainability));
+      if (!state.explainability.methods) state.explainability.methods = {};
+      initState();
+    }
+  }
+
+  function buildResults() {
+    var sectionIds = ['decisions', 'significance', 'humanReview', 'explainability'];
+    var scores = {}; var totalFilled = 0; var totalAll = 0;
+    for (var i = 0; i < sectionIds.length; i++) {
+      var s = calcSectionScore(sectionIds[i]);
+      scores[sectionIds[i]] = { filled: s.filled, total: s.total, pct: s.total > 0 ? Math.round((s.filled / s.total) * 100) : 0 };
+      totalFilled += s.filled; totalAll += s.total;
+    }
+    return {
+      completedDate: new Date().toISOString().split('T')[0],
+      decisions: JSON.parse(JSON.stringify(state.decisions)),
+      significance: JSON.parse(JSON.stringify(state.significance)),
+      humanReview: JSON.parse(JSON.stringify(state.humanReview)),
+      explainability: JSON.parse(JSON.stringify(state.explainability)),
+      scores: scores,
+      overallScore: totalAll > 0 ? Math.round((totalFilled / totalAll) * 100) : 0
+    };
+  }
+
+  function doSave() {
+    config.interactiveToolResults = config.interactiveToolResults || {};
+    config.interactiveToolResults.automatedDecisionLogic = buildResults();
+    saveConfigToFile(config);
+  }
+
+  function doExport() {
+    var r = buildResults(); var lines = [];
+    lines.push('# Automated Decision Logic Report (Template 04)');
+    lines.push('');
+    lines.push('**Date:** ' + r.completedDate);
+    lines.push('**Applicable Law:** GDPR Art. 22; EU AI Act Arts. 14, 86; Colorado SB 24-205; Canada Directive on ADM');
+    lines.push('');
+    lines.push('## 1. Automated Decisions');
+    lines.push('');
+    for (var i = 0; i < r.decisions.length; i++) {
+      var d = r.decisions[i];
+      lines.push('### Decision ' + (i + 1) + ': ' + (d.name || 'Unnamed'));
+      lines.push('');
+      lines.push('- **Description:** ' + (d.description || 'N/A'));
+      var groupLabel = d.affectedGroup || 'N/A';
+      if (d.affectedGroup === 'other' && d.affectedGroupOther) groupLabel = d.affectedGroupOther;
+      lines.push('- **Affected group:** ' + groupLabel);
+      lines.push('- **Estimated volume:** ' + (d.estimatedVolume || 'N/A'));
+      var usedData = [];
+      for (var j = 0; j < dataCategories.length; j++) { if (d.dataUsed[dataCategories[j].id] === true) usedData.push(dataCategories[j].label); }
+      lines.push('- **Data categories used:** ' + (usedData.length > 0 ? usedData.join('; ') : 'N/A'));
+      lines.push('- **Consequences:** ' + (d.consequenceDescription || 'N/A'));
+      lines.push('');
+    }
+    lines.push('## 2. Decision Significance Classification (GDPR Art. 22)');
+    lines.push('');
+    lines.push('| Criterion | Applies | Justification |');
+    lines.push('|----------|---------|--------------|');
+    for (var i = 0; i < significanceCriteria.length; i++) {
+      var cd = significanceCriteria[i]; var c = r.significance[cd.id] || {};
+      var applies = c.applies === true ? 'Yes' : c.applies === false ? 'No' : 'Not assessed';
+      lines.push('| ' + cd.label + ' | ' + applies + ' | ' + (c.justification || 'N/A') + ' |');
+    }
+    lines.push('');
+    var art22Triggers = ['solelyAutomated', 'legalEffects', 'significantEffects'];
+    var triggered = 0;
+    for (var i = 0; i < art22Triggers.length; i++) { if (r.significance[art22Triggers[i]] && r.significance[art22Triggers[i]].applies === true) triggered++; }
+    if (triggered >= 2) lines.push('**GDPR Art. 22 Risk: HIGH** - Solely automated decisions with legal/significant effects detected.');
+    else if (triggered === 1) lines.push('**GDPR Art. 22 Risk: MEDIUM** - One trigger criterion met.');
+    else lines.push('**GDPR Art. 22 Risk: LOWER** - Art. 22 may not be triggered based on current assessment.');
+    lines.push('');
+    lines.push('## 3. Human Review Mechanism');
+    lines.push('');
+    lines.push('- **Oversight model:** ' + (r.humanReview.oversightModel || 'N/A'));
+    lines.push('- **Appeal process:** ' + (r.humanReview.appealProcess || 'N/A'));
+    lines.push('- **Appeal contact:** ' + (r.humanReview.appealContact || 'N/A'));
+    lines.push('- **Appeal response time:** ' + (r.humanReview.appealResponseTime || 'N/A'));
+    lines.push('- **Human override:** ' + (r.humanReview.humanOverrideDescription || 'N/A'));
+    lines.push('- **Override authority:** ' + (r.humanReview.overrideAuthority || 'N/A'));
+    lines.push('- **Escalation criteria:** ' + (r.humanReview.escalationCriteria || 'N/A'));
+    lines.push('- **Review log retention:** ' + (r.humanReview.reviewLogRetention || 'N/A'));
+    lines.push('');
+    lines.push('## 4. Decision Logic Explainability');
+    lines.push('');
+    lines.push('### Methods');
+    lines.push('');
+    lines.push('| Method | Used | Implementation |');
+    lines.push('|--------|------|---------------|');
+    for (var i = 0; i < explainabilityMethods.length; i++) {
+      var md = explainabilityMethods[i];
+      var m = (r.explainability.methods && r.explainability.methods[md.id]) || {};
+      var used = m.used === true ? 'Yes' : m.used === false ? 'No' : 'Not assessed';
+      lines.push('| ' + md.label + ' | ' + used + ' | ' + (m.implementation || 'N/A') + ' |');
+    }
+    lines.push('');
+    lines.push('### Explanation Templates');
+    lines.push('');
+    lines.push('- **Layered approach:** ' + (r.explainability.layeredApproach === true ? 'Yes' : r.explainability.layeredApproach === false ? 'No' : 'N/A'));
+    lines.push('- **Short explanation:** ' + (r.explainability.shortExplanationTemplate || 'N/A'));
+    lines.push('- **Detailed explanation:** ' + (r.explainability.detailedExplanationTemplate || 'N/A'));
+    lines.push('- **Technical explanation:** ' + (r.explainability.technicalExplanationTemplate || 'N/A'));
+    lines.push('- **Languages:** ' + (r.explainability.explanationLanguages || 'N/A'));
+    lines.push('- **Accessibility:** ' + (r.explainability.explanationAccessibility || 'N/A'));
+    lines.push('');
+    lines.push('## 5. Completeness Summary');
+    lines.push('');
+    lines.push('| Section | Score |');
+    lines.push('|---------|-------|');
+    var sectionLabels = { decisions: 'Automated Decisions', significance: 'Decision Significance', humanReview: 'Human Review', explainability: 'Explainability' };
+    for (var key in r.scores) { lines.push('| ' + (sectionLabels[key] || key) + ' | ' + r.scores[key].pct + '% (' + r.scores[key].filled + '/' + r.scores[key].total + ') |'); }
+    lines.push('| **Overall** | **' + r.overallScore + '%** |');
+    lines.push('');
+    lines.push('---');
+    lines.push('*Generated by Automated Decision Logic Tool. This is research, not legal advice.*');
+    exportMarkdown('automated-decision-logic-report.md', lines.join('\n'));
+  }
+
+  wizard.render();
+})();
+</script>
+</body>
+</html>

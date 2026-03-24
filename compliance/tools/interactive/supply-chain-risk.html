@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI/LLM Supply Chain Risk Assessment (Template 23)</title>
+<script src="./shared.js"></script>
+</head>
+<body>
+<script>
+(function() {
+  injectCSS();
+
+  var extraStyle = document.createElement('style');
+  extraStyle.textContent = [
+    '.comp-row { padding: 12px; border: 1px solid #1E2D3D; border-radius: 4px; margin-bottom: 8px; background: #0D1830; }',
+    '.comp-row .field-row { margin-bottom: 4px; }',
+    '.comp-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }',
+    '.comp-title { font-weight: 600; color: #E8B96A; font-size: 0.95em; }',
+    '.threat-row { padding: 10px 12px; border: 1px solid #1E2D3D; border-radius: 4px; margin-bottom: 6px; background: #0D1830; }',
+    '.threat-label { font-size: 0.9em; margin-bottom: 6px; color: #F0EBE0; }',
+    '.threat-fields { display: flex; gap: 8px; flex-wrap: wrap; align-items: flex-start; margin-top: 6px; }',
+    '.threat-fields .field-row { flex: 1; min-width: 140px; margin-bottom: 4px; }',
+    '.threat-fields .field-row:last-child { flex: 2; min-width: 200px; }',
+    '.threat-detail { margin-top: 6px; }',
+    '.risk-badge { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 0.75em; font-weight: 600; margin-left: 6px; }',
+    '.risk-critical { background: #c0392b33; color: #e74c3c; border: 1px solid #c0392b55; }',
+    '.risk-high { background: #e67e2233; color: #f39c12; border: 1px solid #e67e2255; }',
+    '.risk-medium { background: #D4943A33; color: #E8B96A; border: 1px solid #D4943A55; }',
+    '.risk-low { background: #2A7B7B33; color: #4DBFBF; border: 1px solid #2A7B7B55; }',
+    '.heatmap { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; margin: 12px 0; }',
+    '.heatmap-cell { padding: 4px; text-align: center; font-size: 0.7em; border-radius: 2px; }',
+    '.heatmap-header { background: #1E2D3D; color: #9AACBA; font-weight: 600; }',
+    '.heatmap-label { background: #1E2D3D; color: #9AACBA; font-weight: 600; text-align: right; padding-right: 8px; }',
+    '.heat-critical { background: #c0392b; color: white; }',
+    '.heat-high { background: #e67e22; color: white; }',
+    '.heat-medium { background: #D4943A; color: #0B1426; }',
+    '.heat-low { background: #2A7B7B; color: white; }',
+    '.heat-negligible { background: #1a3a3a; color: #4DBFBF; }',
+    '.dash-card { padding: 12px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830; margin-bottom: 8px; }',
+    '.dash-row { display: flex; justify-content: space-between; align-items: center; padding: 4px 0; font-size: 0.9em; }',
+    '.dash-count { font-weight: 600; font-size: 1.1em; }',
+    '.gap-item { padding: 8px 12px; margin-bottom: 4px; border-left: 3px solid #c0392b; background: #0D183088; font-size: 0.9em; color: #e74c3c; }',
+    '.pass-item { padding: 8px 12px; margin-bottom: 4px; border-left: 3px solid #2A7B7B; background: #0D183088; font-size: 0.9em; color: #4DBFBF; }',
+    '.section-divider { border: none; border-top: 1px solid #1E2D3D; margin: 16px 0; }',
+    '.subsection { margin-left: 8px; padding-left: 12px; border-left: 2px solid #2A7B7B44; margin-bottom: 16px; }',
+    '.due-diligence-row { padding: 10px 12px; border: 1px solid #1E2D3D; border-radius: 4px; margin-bottom: 6px; background: #0D1830; }',
+    '.flag-detail { margin-left: 16px; margin-bottom: 8px; padding: 8px 12px; border-left: 2px solid #D4943A; background: #0D1830; }',
+    '.na-notice { padding: 16px; text-align: center; color: #6B7B8D; font-style: italic; border: 1px dashed #3A4A5A; border-radius: 4px; margin: 12px 0; }'
+  ].join('\n');
+  document.head.appendChild(extraStyle);
+
+  var config = {};
+
+  // --- Data definitions ---
+
+  var componentTypes = [
+    { value: '', label: '-- Select Type --' },
+    { value: 'Model', label: 'Model' },
+    { value: 'Software', label: 'Software' },
+    { value: 'Data', label: 'Data' },
+    { value: 'Framework', label: 'Framework' },
+    { value: 'Library', label: 'Library' }
+  ];
+
+  var riskTiers = [
+    { value: '', label: '-- Risk Tier --' },
+    { value: 'Critical', label: 'Critical' },
+    { value: 'High', label: 'High' },
+    { value: 'Medium', label: 'Medium' },
+    { value: 'Low', label: 'Low' }
+  ];
+
+  var likelihoodOptions = [
+    { value: '', label: '-- Likelihood --' },
+    { value: 'Rare', label: 'Rare' },
+    { value: 'Unlikely', label: 'Unlikely' },
+    { value: 'Possible', label: 'Possible' },
+    { value: 'Likely', label: 'Likely' },
+    { value: 'Almost Certain', label: 'Almost Certain' }
+  ];
+
+  var impactOptions = [
+    { value: '', label: '-- Impact --' },
+    { value: 'Negligible', label: 'Negligible' },
+    { value: 'Minor', label: 'Minor' },
+    { value: 'Moderate', label: 'Moderate' },
+    { value: 'Major', label: 'Major' },
+    { value: 'Severe', label: 'Severe' }
+  ];
+
+  var frequencyOptions = [
+    { value: '', label: '-- Frequency --' },
+    { value: 'Real-time', label: 'Real-time' },
+    { value: 'Daily', label: 'Daily' },
+    { value: 'Weekly', label: 'Weekly' },
+    { value: 'Monthly', label: 'Monthly' },
+    { value: 'Quarterly', label: 'Quarterly' },
+    { value: 'Annually', label: 'Annually' }
+  ];
+
+  var scoreOptions = [
+    { value: '', label: '--' },
+    { value: '1', label: '1' },
+    { value: '2', label: '2' },
+    { value: '3', label: '3' },
+    { value: '4', label: '4' },
+    { value: '5', label: '5' }
+  ];
+
+  var bomFormatOptions = [
+    { value: '', label: '-- Format --' },
+    { value: 'SPDX', label: 'SPDX' },
+    { value: 'CycloneDX', label: 'CycloneDX' },
+    { value: 'SWID', label: 'SWID' }
+  ];
+
+  // Provenance checklists
+  var modelProvenanceItems = [
+    { id: 'sourceVerified', text: 'Model source verified (official repo/registry)' },
+    { id: 'hashValidated', text: 'Model hash/checksum validated' },
+    { id: 'modelCardReviewed', text: 'Model card reviewed' },
+    { id: 'licenseCompatible', text: 'License compatibility confirmed' },
+    { id: 'identityVerified', text: 'Provider identity verified (not typosquatted repo)' },
+    { id: 'modelSigned', text: 'Model signed by provider (if available)' },
+    { id: 'sbomAvailable', text: 'SBOM/AIBOM available' }
+  ];
+
+  var modelThreatItems = [
+    { id: 'modelCompromise', text: 'AML.T0010.003 Model Compromise - Backdoors in pretrained model weights' },
+    { id: 'orgConfusion', text: 'Hugging Face org confusion - Downloading from impersonator repo (ATLAS CS0028)' },
+    { id: 'maliciousFiles', text: 'Malicious model files - Pickle/safetensors with embedded code (ATLAS CS0030)' },
+    { id: 'loraPoisoning', text: 'LoRA/adapter poisoning - Fine-tune adapters introducing backdoors' },
+    { id: 'modelSubstitution', text: 'Model substitution - Swapped model weights in deployment pipeline' },
+    { id: 'quantizationArtifacts', text: 'Quantization artifacts - Behavioral changes from GGUF/GPTQ conversion' }
+  ];
+
+  var vulnerableCodeRisks = [
+    { id: 'insecureCode', text: 'Insecure code suggestions - AI reproducing known CVE patterns from training data' },
+    { id: 'missingValidation', text: 'Missing input validation - Generated code lacking sanitization (SQLi, XSS, command injection)' },
+    { id: 'weakCrypto', text: 'Weak cryptography - AI suggesting deprecated algorithms (MD5, SHA1, DES)' },
+    { id: 'hardcodedSecrets', text: 'Hardcoded secrets - AI including placeholder credentials that reach production' },
+    { id: 'insecureDefaults', text: 'Insecure defaults - HTTP instead of HTTPS, permissive CORS, debug modes' },
+    { id: 'incompleteErrors', text: 'Incomplete error handling - Swallowed exceptions, information leakage in errors' }
+  ];
+
+  var dependencyRisks = [
+    { id: 'packageHallucination', text: 'Package hallucination - AI suggesting nonexistent packages (~20% rate)' },
+    { id: 'slopsquatting', text: 'Slopsquatting - Attacker registers hallucinated package names with malware' },
+    { id: 'versionHallucination', text: 'Version hallucination - AI suggesting nonexistent versions of real packages' },
+    { id: 'dependencyConfusion', text: 'Dependency confusion - AI mixing public/private package names' }
+  ];
+
+  var licenseRisks = [
+    { id: 'copyleftInjection', text: 'Copyleft injection - AI reproducing GPL/AGPL code into permissive-licensed project' },
+    { id: 'copyrightRepro', text: 'Copyright reproduction - AI outputting verbatim copyrighted code' },
+    { id: 'attributionGaps', text: 'Attribution gaps - AI-generated code lacking required license notices' },
+    { id: 'patentExposure', text: 'Patent exposure - AI suggesting patented algorithms without disclosure' }
+  ];
+
+  var cicdRisks = [
+    { id: 'rulesFileBackdoor', text: 'Rules File Backdoor - Poisoned config files injecting malicious instructions into coding assistant' },
+    { id: 'agentToolMisuse', text: 'AI agent tool misuse - Coding agent executing unauthorized commands (CVE-2025-53773)' },
+    { id: 'promptInjection', text: 'Prompt injection via issues/PRs - Malicious content in GitHub Issues hijacking AI code review' },
+    { id: 'wormableInfections', text: 'Wormable infections - AI-generated code that propagates across forked repositories' },
+    { id: 'secretExfiltration', text: 'Secret exfiltration - AI tool leaking GITHUB_TOKEN or other credentials' }
+  ];
+
+  var dataProvenanceItems = [
+    { id: 'sourcesDocumented', text: 'Training data sources documented' },
+    { id: 'provenanceVerified', text: 'Data provenance chain verified' },
+    { id: 'licensesReviewed', text: 'Data licenses reviewed and compatible' },
+    { id: 'piiScanned', text: 'PII scan completed on training data' },
+    { id: 'copyrightScanned', text: 'Copyright/IP scan completed' },
+    { id: 'qualityAssessed', text: 'Data quality assessment performed' }
+  ];
+
+  var dataPoisoningThreats = [
+    { id: 'dataCompromise', text: 'AML.T0010.001 Data Compromise - Poisoned open-source datasets' },
+    { id: 'splitView', text: 'Split-view poisoning (CISA) - Via expired domain purchases in curated datasets' },
+    { id: 'frontrunning', text: 'Frontrunning poisoning (CISA) - Injection before crowd-sourced collection' },
+    { id: 'ragPoisoning', text: 'RAG data poisoning - Malicious content in retrieval-augmented generation sources' },
+    { id: 'finetuningPoisoning', text: 'Fine-tuning data poisoning - Compromised instruction-tuning datasets' },
+    { id: 'embeddingPoisoning', text: 'Embedding poisoning - Manipulated vector embeddings for retrieval manipulation' }
+  ];
+
+  var infraThreats = [
+    { id: 'hardwareCompromise', text: 'AML.T0010.000 Hardware Compromise - GPU/TPU firmware vulnerabilities' },
+    { id: 'softwareCompromise', text: 'AML.T0010.002 Software Compromise - ML framework/library supply chain attacks' },
+    { id: 'containerCompromise', text: 'AML.T0010.004 Container Registry Compromise - Malicious inference containers' },
+    { id: 'cloudborne', text: 'CloudBorne - Firmware vulnerabilities in shared cloud GPU instances' },
+    { id: 'cloudjacking', text: 'CloudJacking - Unauthorized cloud infrastructure access' },
+    { id: 'maliciousPackages', text: 'PyPI/npm malicious packages - Backdoored ML libraries (ENISA 2025)' }
+  ];
+
+  var dueDiligenceCriteria = [
+    { id: 'transparency', text: 'Provider transparency (model cards, documentation)' },
+    { id: 'dataDisclosure', text: 'Training data disclosure level' },
+    { id: 'safetyTesting', text: 'Safety testing evidence' },
+    { id: 'biasEvaluation', text: 'Bias evaluation and disclosure' },
+    { id: 'incidentResponse', text: 'Incident response capability' },
+    { id: 'dataHandling', text: 'Data handling and privacy practices' },
+    { id: 'regulatoryCompliance', text: 'Regulatory compliance posture' },
+    { id: 'financialStability', text: 'Financial stability / continuity risk' },
+    { id: 'exitStrategy', text: 'Exit strategy / data portability' }
+  ];
+
+  var contractualItems = [
+    { id: 'writtenAgreement', text: 'Written agreement with AI component supplier' },
+    { id: 'technicalAccess', text: 'Technical access and documentation provisions' },
+    { id: 'ipProtection', text: 'IP and trade secret protections (Art. 25(6))' },
+    { id: 'auditRights', text: 'Audit rights' },
+    { id: 'incidentNotification', text: 'Incident notification obligations' },
+    { id: 'dataDeletion', text: 'Data handling and deletion terms' },
+    { id: 'liability', text: 'Liability allocation' },
+    { id: 'modelUpdateNotification', text: 'Model update notification and approval' },
+    { id: 'subcontractorRestrictions', text: 'Subcontractor (4th party) AI use restrictions' }
+  ];
+
+  var monitoringAreas = [
+    { id: 'performanceDrift', text: 'Model performance drift' },
+    { id: 'complianceStatus', text: 'Provider compliance status' },
+    { id: 'securityAdvisory', text: 'Security advisory tracking' },
+    { id: 'licenseChanges', text: 'License/terms changes' }
+  ];
+
+  var jurisdictionFlags = [
+    { id: 'chineseModelEU', text: 'Chinese-origin model deployed in EU - Extra GPAI documentation required; assess content filtering alignment with EU values' },
+    { id: 'chineseModelUS', text: 'Chinese-origin model deployed in US - Monitor for any export control or sanctions developments' },
+    { id: 'anyModelChina', text: 'Any model deployed in China - CAC filing required; GenAI security standards (TC260-003) apply' },
+    { id: 'apiProviderDiffJurisdiction', text: 'API provider in different jurisdiction - GDPR DPA required if EU personal data processed; data transfer impact assessment' },
+    { id: 'trainedOnEUData', text: 'Model trained on EU personal data - GDPR lawful basis required regardless of provider location' },
+    { id: 'southKoreaDeployment', text: 'South Korea deployment - Local representative required for foreign AI operators (AI Basic Act)' },
+    { id: 'openSourceModified', text: 'Open-source model modified - You become "provider" under EU AI Act Art. 25(1) if substantially modified' }
+  ];
+
+  var preGenControls = [
+    { id: 'toolVetted', text: 'AI coding tool vetted and approved' },
+    { id: 'configHardened', text: 'Tool configuration hardened (no YOLO mode, etc.)' },
+    { id: 'rulesFilesReviewed', text: 'Rules files / system prompts reviewed for injection' },
+    { id: 'packageAllowlist', text: 'Approved package allowlist maintained' },
+    { id: 'safeDefaults', text: 'AI instructed to prefer safe defaults (OpenSSF)' }
+  ];
+
+  var postGenControls = [
+    { id: 'sastScan', text: 'SAST scan on all AI-generated code (CodeQL, Semgrep, Bandit)' },
+    { id: 'depVerification', text: 'Dependency verification - all packages exist and are legitimate' },
+    { id: 'licenseScan', text: 'License scan (FOSSA, Snyk, etc.) on AI-generated code' },
+    { id: 'humanReview', text: 'Human review of all AI-generated code before merge' },
+    { id: 'securityTests', text: 'Security-focused unit tests including negative tests (OpenSSF)' },
+    { id: 'secretScanning', text: 'Secret scanning (GitGuardian, etc.)' }
+  ];
+
+  var slsaItems = [
+    { id: 'l1Build', text: 'L1 - Build process documented' },
+    { id: 'l2Hosted', text: 'L2 - Hosted build service with signed provenance' },
+    { id: 'l3Tamperproof', text: 'L3 - Tamper-proof build with non-falsifiable provenance' },
+    { id: 'aiTracked', text: 'AI-generated code tracked in VCS with attribution' }
+  ];
+
+  var evidenceItems = [
+    'AI component inventory completed',
+    'Model provenance verified (hashes, source repos, signatures)',
+    'Code generation risks assessed and controls implemented',
+    'Dependency hallucination controls in place',
+    'License contamination scan performed',
+    'CI/CD pipeline hardened against AI-specific attacks',
+    'Training data provenance documented (NIST SP 800-218A PW.3)',
+    'Data poisoning risks assessed',
+    'Infrastructure supply chain reviewed',
+    'Third-party provider due diligence completed (ISO 42001 A.10)',
+    'Contractual requirements in place (EU AI Act Art. 25(4))',
+    'Cross-jurisdiction flags reviewed',
+    'AIBOM/SBOM generated (CISA guidance)',
+    'SLSA compliance assessed',
+    'Risk mitigation plan documented',
+    'Next review date scheduled'
+  ];
+
+  // --- State ---
+
+  function emptyComponent() {
+    return { name: '', type: '', provider: '', version: '', countryOfOrigin: '', license: '', riskTier: '' };
+  }
+
+  function emptyThreat() {
+    return { applicable: null, likelihood: '', impact: '', controls: '' };
+  }
+
+  var state = {
+    components: [emptyComponent()],
+    modelProvenance: {},
+    modelThreats: {},
+    usesCodeGen: null,
+    codeGenRisks: { vulnerable: {}, dependencies: {}, license: {}, cicd: {} },
+    dataProvenance: {},
+    dataPoisoning: {},
+    infraThreats: {},
+    providerDueDiligence: {},
+    contractual: {},
+    monitoring: {},
+    jurisdictionFlags: {},
+    codeGenControls: { pre: {}, post: {}, slsa: {} },
+    bom: { generated: null, format: '', location: '' },
+    notes: ''
+  };
+
+  function initState() {
+    for (var i = 0; i < modelProvenanceItems.length; i++) {
+      var id = modelProvenanceItems[i].id;
+      if (state.modelProvenance[id] === undefined) state.modelProvenance[id] = null;
+    }
+    for (var i = 0; i < modelThreatItems.length; i++) {
+      var id = modelThreatItems[i].id;
+      if (!state.modelThreats[id]) state.modelThreats[id] = emptyThreat();
+    }
+    var codeGenGroups = [
+      { key: 'vulnerable', items: vulnerableCodeRisks },
+      { key: 'dependencies', items: dependencyRisks },
+      { key: 'license', items: licenseRisks },
+      { key: 'cicd', items: cicdRisks }
+    ];
+    for (var g = 0; g < codeGenGroups.length; g++) {
+      var grp = codeGenGroups[g];
+      for (var i = 0; i < grp.items.length; i++) {
+        if (!state.codeGenRisks[grp.key][grp.items[i].id]) state.codeGenRisks[grp.key][grp.items[i].id] = emptyThreat();
+      }
+    }
+    for (var i = 0; i < dataProvenanceItems.length; i++) {
+      if (state.dataProvenance[dataProvenanceItems[i].id] === undefined) state.dataProvenance[dataProvenanceItems[i].id] = null;
+    }
+    for (var i = 0; i < dataPoisoningThreats.length; i++) {
+      if (!state.dataPoisoning[dataPoisoningThreats[i].id]) state.dataPoisoning[dataPoisoningThreats[i].id] = emptyThreat();
+    }
+    for (var i = 0; i < infraThreats.length; i++) {
+      if (!state.infraThreats[infraThreats[i].id]) state.infraThreats[infraThreats[i].id] = emptyThreat();
+    }
+    for (var i = 0; i < dueDiligenceCriteria.length; i++) {
+      if (!state.providerDueDiligence[dueDiligenceCriteria[i].id]) state.providerDueDiligence[dueDiligenceCriteria[i].id] = { assessment: '', score: '' };
+    }
+    for (var i = 0; i < contractualItems.length; i++) {
+      if (state.contractual[contractualItems[i].id] === undefined) state.contractual[contractualItems[i].id] = null;
+    }
+    for (var i = 0; i < monitoringAreas.length; i++) {
+      if (!state.monitoring[monitoringAreas[i].id]) state.monitoring[monitoringAreas[i].id] = { frequency: '', method: '' };
+    }
+    for (var i = 0; i < jurisdictionFlags.length; i++) {
+      if (!state.jurisdictionFlags[jurisdictionFlags[i].id]) state.jurisdictionFlags[jurisdictionFlags[i].id] = { applicable: null, action: '' };
+    }
+    for (var i = 0; i < preGenControls.length; i++) {
+      if (!state.codeGenControls.pre[preGenControls[i].id]) state.codeGenControls.pre[preGenControls[i].id] = { enabled: null, detail: '' };
+    }
+    for (var i = 0; i < postGenControls.length; i++) {
+      if (!state.codeGenControls.post[postGenControls[i].id]) state.codeGenControls.post[postGenControls[i].id] = { enabled: null, detail: '' };
+    }
+    for (var i = 0; i < slsaItems.length; i++) {
+      if (state.codeGenControls.slsa[slsaItems[i].id] === undefined) state.codeGenControls.slsa[slsaItems[i].id] = null;
+    }
+  }
+  initState();
+
+  // --- Risk scoring ---
+
+  var likelihoodScores = { 'Rare': 1, 'Unlikely': 2, 'Possible': 3, 'Likely': 4, 'Almost Certain': 5 };
+  var impactScores = { 'Negligible': 1, 'Minor': 2, 'Moderate': 3, 'Major': 4, 'Severe': 5 };
+
+  function calcRiskScore(likelihood, impact) {
+    var l = likelihoodScores[likelihood] || 0;
+    var i = impactScores[impact] || 0;
+    if (l === 0 || i === 0) return null;
+    return l * i;
+  }
+
+  function riskLevel(score) {
+    if (score === null) return '';
+    if (score >= 20) return 'Critical';
+    if (score >= 12) return 'High';
+    if (score >= 6) return 'Medium';
+    return 'Low';
+  }
+
+  function riskClass(level) {
+    if (level === 'Critical') return 'risk-critical';
+    if (level === 'High') return 'risk-high';
+    if (level === 'Medium') return 'risk-medium';
+    if (level === 'Low') return 'risk-low';
+    return '';
+  }
+
+  // --- Wizard ---
+
+  var wizard = createWizard({
+    title: 'AI/LLM Supply Chain Risk Assessment',
+    subtitle: 'Template 23 \u2014 EU AI Act Art. 25, NIST AI RMF, OWASP LLM Top 10, MITRE ATLAS, ISO/IEC 42001',
+    totalSteps: 8,
+    stepLabels: [
+      'AI Component Inventory',
+      'Model Supply Chain Risk',
+      'Code Generation Risk',
+      'Data & Infrastructure Risk',
+      'Third-Party Assessment',
+      'Cross-Jurisdiction Flags',
+      'Code Gen Security Controls',
+      'Summary'
+    ],
+    renderStep: function(step, container) {
+      if (step === 0) renderStep1(container);
+      else if (step === 1) renderStep2(container);
+      else if (step === 2) renderStep3(container);
+      else if (step === 3) renderStep4(container);
+      else if (step === 4) renderStep5(container);
+      else if (step === 5) renderStep6(container);
+      else if (step === 6) renderStep7(container);
+      else if (step === 7) renderSummary(container);
+    },
+    onLoad: function() {
+      loadConfigFromFile(function(c) { config = c; loadState(); wizard.refreshStep(); });
+    },
+    onSave: doSave,
+    onExport: doExport,
+    stateKey: 'supplyChainRisk',
+    getState: function() { return state; },
+    setState: function(s) {
+      if (s.components) state.components = s.components;
+      if (s.modelProvenance) { for (var k in s.modelProvenance) state.modelProvenance[k] = s.modelProvenance[k]; }
+      if (s.modelThreats) { for (var k in s.modelThreats) state.modelThreats[k] = s.modelThreats[k]; }
+      if (s.usesCodeGen !== undefined) state.usesCodeGen = s.usesCodeGen;
+      if (s.codeGenRisks) {
+        var keys = ['vulnerable', 'dependencies', 'license', 'cicd'];
+        for (var ki = 0; ki < keys.length; ki++) {
+          if (s.codeGenRisks[keys[ki]]) {
+            for (var k in s.codeGenRisks[keys[ki]]) state.codeGenRisks[keys[ki]][k] = s.codeGenRisks[keys[ki]][k];
+          }
+        }
+      }
+      if (s.dataProvenance) { for (var k in s.dataProvenance) state.dataProvenance[k] = s.dataProvenance[k]; }
+      if (s.dataPoisoning) { for (var k in s.dataPoisoning) state.dataPoisoning[k] = s.dataPoisoning[k]; }
+      if (s.infraThreats) { for (var k in s.infraThreats) state.infraThreats[k] = s.infraThreats[k]; }
+      if (s.providerDueDiligence) { for (var k in s.providerDueDiligence) state.providerDueDiligence[k] = s.providerDueDiligence[k]; }
+      if (s.contractual) { for (var k in s.contractual) state.contractual[k] = s.contractual[k]; }
+      if (s.monitoring) { for (var k in s.monitoring) state.monitoring[k] = s.monitoring[k]; }
+      if (s.jurisdictionFlags) { for (var k in s.jurisdictionFlags) state.jurisdictionFlags[k] = s.jurisdictionFlags[k]; }
+      if (s.codeGenControls) {
+        if (s.codeGenControls.pre) { for (var k in s.codeGenControls.pre) state.codeGenControls.pre[k] = s.codeGenControls.pre[k]; }
+        if (s.codeGenControls.post) { for (var k in s.codeGenControls.post) state.codeGenControls.post[k] = s.codeGenControls.post[k]; }
+        if (s.codeGenControls.slsa) { for (var k in s.codeGenControls.slsa) state.codeGenControls.slsa[k] = s.codeGenControls.slsa[k]; }
+      }
+      if (s.bom) state.bom = s.bom;
+      if (s.notes !== undefined) state.notes = s.notes;
+      initState();
+    }
+  });
+
+  // --- Helper: render threat row with targeted DOM updates ---
+
+  function renderThreatRow(threatDef, threatState, container) {
+    var row = el('div', { className: 'threat-row' });
+    row.appendChild(el('div', { className: 'threat-label' }, [threatDef.text]));
+
+    var score = calcRiskScore(threatState.likelihood, threatState.impact);
+    var level = riskLevel(score);
+    var scoreBadge = el('span', { className: 'risk-badge ' + riskClass(level) }, [level ? level + ' (' + score + ')' : '']);
+    row.appendChild(scoreBadge);
+
+    var detailWrap = el('div', { className: 'threat-detail', style: threatState.applicable === true ? '' : 'display:none' });
+
+    function updateScore() {
+      var s = calcRiskScore(threatState.likelihood, threatState.impact);
+      var lv = riskLevel(s);
+      scoreBadge.className = 'risk-badge ' + riskClass(lv);
+      scoreBadge.textContent = lv ? lv + ' (' + s + ')' : '';
+    }
+
+    var fields = el('div', { className: 'threat-fields' });
+    fields.appendChild(createSelect('Likelihood', likelihoodOptions, threatState.likelihood, function(v) {
+      threatState.likelihood = v; updateScore(); wizard.saveNow();
+    }));
+    fields.appendChild(createSelect('Impact', impactOptions, threatState.impact, function(v) {
+      threatState.impact = v; updateScore(); wizard.saveNow();
+    }));
+    detailWrap.appendChild(fields);
+    detailWrap.appendChild(createTextArea('Controls', threatState.controls, function(v) {
+      threatState.controls = v;
+    }, 'Describe mitigation controls...'));
+
+    var toggle = createToggle('Applicable?', threatState.applicable, function(v) {
+      threatState.applicable = v;
+      detailWrap.style.display = v ? '' : 'none';
+      if (!v) { scoreBadge.textContent = ''; scoreBadge.className = 'risk-badge'; }
+      else { updateScore(); }
+      wizard.saveNow();
+    });
+    row.appendChild(toggle);
+    row.appendChild(detailWrap);
+    container.appendChild(row);
+  }
+
+  // --- Helper: render provenance toggles ---
+
+  function renderProvenanceToggles(items, stateObj, container) {
+    for (var i = 0; i < items.length; i++) {
+      (function(item) {
+        var toggle = createToggle(item.text, stateObj[item.id], function(v) {
+          stateObj[item.id] = v;
+          wizard.saveNow();
+        });
+        container.appendChild(toggle);
+      })(items[i]);
+    }
+  }
+
+  // --- Step renderers ---
+
+  function renderStep1(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 1: AI Component Inventory']));
+    section.appendChild(createAlert('info', 'List all AI components in your system. Include models, software, data sources, frameworks, and libraries.'));
+
+    function renderComponents() {
+      var compWrap = section.querySelector('.comp-wrap');
+      if (compWrap) section.removeChild(compWrap);
+      compWrap = el('div', { className: 'comp-wrap' });
+
+      for (var ci = 0; ci < state.components.length; ci++) {
+        (function(idx) {
+          var comp = state.components[idx];
+          var row = el('div', { className: 'comp-row' });
+          var header = el('div', { className: 'comp-header' });
+          header.appendChild(el('span', { className: 'comp-title' }, ['Component ' + (idx + 1)]));
+          if (state.components.length > 1) {
+            header.appendChild(el('button', { className: 'btn', textContent: 'Remove', onClick: function() {
+              state.components.splice(idx, 1);
+              renderComponents();
+              wizard.saveNow();
+            }}));
+          }
+          row.appendChild(header);
+          row.appendChild(createTextInput('Name', comp.name, function(v) { comp.name = v; }, 'Component name'));
+          row.appendChild(createSelect('Type', componentTypes, comp.type, function(v) { comp.type = v; wizard.saveNow(); }));
+          row.appendChild(createTextInput('Provider', comp.provider, function(v) { comp.provider = v; }, 'Provider/vendor'));
+          row.appendChild(createTextInput('Version', comp.version, function(v) { comp.version = v; }, 'Version'));
+          row.appendChild(createTextInput('Country of Origin', comp.countryOfOrigin, function(v) { comp.countryOfOrigin = v; }, 'Country'));
+          row.appendChild(createTextInput('License', comp.license, function(v) { comp.license = v; }, 'License type'));
+          row.appendChild(createSelect('Risk Tier', riskTiers, comp.riskTier, function(v) { comp.riskTier = v; wizard.saveNow(); }));
+          compWrap.appendChild(row);
+        })(ci);
+      }
+
+      compWrap.appendChild(el('button', { className: 'btn success', textContent: '+ Add Component', onClick: function() {
+        state.components.push(emptyComponent());
+        renderComponents();
+        wizard.saveNow();
+      }}));
+      section.appendChild(compWrap);
+    }
+    renderComponents();
+    container.appendChild(section);
+  }
+
+  function renderStep2(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 2: Model Supply Chain Risk']));
+
+    section.appendChild(el('h3', {}, ['2.1 Model Provenance Checklist']));
+    section.appendChild(createAlert('info', 'Verify the provenance of all model components per MITRE ATLAS AML.T0010.'));
+    renderProvenanceToggles(modelProvenanceItems, state.modelProvenance, section);
+
+    section.appendChild(el('hr', { className: 'section-divider' }));
+    section.appendChild(el('h3', {}, ['2.2 Model Integrity Threats']));
+    for (var i = 0; i < modelThreatItems.length; i++) {
+      renderThreatRow(modelThreatItems[i], state.modelThreats[modelThreatItems[i].id], section);
+    }
+
+    container.appendChild(section);
+  }
+
+  function renderStep3(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 3: Code Generation Supply Chain Risk']));
+
+    var detailWrap = el('div', { style: state.usesCodeGen === true ? '' : 'display:none' });
+    var naNotice = el('div', { className: 'na-notice', style: state.usesCodeGen === false ? '' : 'display:none' }, ['Code generation risks are not applicable. This section will be skipped.']);
+
+    var toggle = createToggle('Does this project use AI for code generation?', state.usesCodeGen, function(v) {
+      state.usesCodeGen = v;
+      detailWrap.style.display = v ? '' : 'none';
+      naNotice.style.display = v === false ? '' : 'none';
+      wizard.saveNow();
+    });
+    section.appendChild(toggle);
+    section.appendChild(naNotice);
+
+    // 3.1
+    var sub31 = el('div', { className: 'subsection' });
+    sub31.appendChild(el('h3', {}, ['3.1 Vulnerable Code Patterns (OWASP LLM03, OpenSSF)']));
+    for (var i = 0; i < vulnerableCodeRisks.length; i++) {
+      renderThreatRow(vulnerableCodeRisks[i], state.codeGenRisks.vulnerable[vulnerableCodeRisks[i].id], sub31);
+    }
+    detailWrap.appendChild(sub31);
+
+    detailWrap.appendChild(createAlert('warning', 'OpenSSF 2025: 45% of AI-assisted development tasks introduce critical security flaws; 62% of AI-generated code contains known vulnerabilities; 78% contains at least one exploitable vulnerability that traditional scanning misses.'));
+
+    // 3.2
+    var sub32 = el('div', { className: 'subsection' });
+    sub32.appendChild(el('h3', {}, ['3.2 Dependency Hallucination / Slopsquatting (OWASP LLM03, ENISA 2025)']));
+    for (var i = 0; i < dependencyRisks.length; i++) {
+      renderThreatRow(dependencyRisks[i], state.codeGenRisks.dependencies[dependencyRisks[i].id], sub32);
+    }
+    detailWrap.appendChild(sub32);
+
+    // 3.3
+    var sub33 = el('div', { className: 'subsection' });
+    sub33.appendChild(el('h3', {}, ['3.3 License Contamination (NIST AI 600-1 Risk #10)']));
+    for (var i = 0; i < licenseRisks.length; i++) {
+      renderThreatRow(licenseRisks[i], state.codeGenRisks.license[licenseRisks[i].id], sub33);
+    }
+    detailWrap.appendChild(sub33);
+
+    // 3.4
+    var sub34 = el('div', { className: 'subsection' });
+    sub34.appendChild(el('h3', {}, ['3.4 CI/CD Pipeline Risks (ENISA 2025, GitHub/Pillar Security)']));
+    for (var i = 0; i < cicdRisks.length; i++) {
+      renderThreatRow(cicdRisks[i], state.codeGenRisks.cicd[cicdRisks[i].id], sub34);
+    }
+    detailWrap.appendChild(sub34);
+
+    section.appendChild(detailWrap);
+    container.appendChild(section);
+  }
+
+  function renderStep4(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 4: Training Data & Infrastructure Risk']));
+
+    section.appendChild(el('h3', {}, ['4.1 Data Provenance Checklist (NIST SP 800-218A PW.3)']));
+    renderProvenanceToggles(dataProvenanceItems, state.dataProvenance, section);
+
+    section.appendChild(el('hr', { className: 'section-divider' }));
+    section.appendChild(el('h3', {}, ['4.2 Data Poisoning Threats']));
+    for (var i = 0; i < dataPoisoningThreats.length; i++) {
+      renderThreatRow(dataPoisoningThreats[i], state.dataPoisoning[dataPoisoningThreats[i].id], section);
+    }
+
+    section.appendChild(el('hr', { className: 'section-divider' }));
+    section.appendChild(el('h3', {}, ['5. Infrastructure Supply Chain Threats (MITRE ATLAS)']));
+    for (var i = 0; i < infraThreats.length; i++) {
+      renderThreatRow(infraThreats[i], state.infraThreats[infraThreats[i].id], section);
+    }
+
+    container.appendChild(section);
+  }
+
+  function renderStep5(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 5: Third-Party Provider Assessment']));
+
+    // 6.1
+    section.appendChild(el('h3', {}, ['6.1 Provider Due Diligence (ISO/IEC 42001 A.10)']));
+    for (var i = 0; i < dueDiligenceCriteria.length; i++) {
+      (function(crit) {
+        var dd = state.providerDueDiligence[crit.id];
+        var row = el('div', { className: 'due-diligence-row' });
+        row.appendChild(el('div', { className: 'threat-label' }, [crit.text]));
+        row.appendChild(createTextArea('Assessment', dd.assessment, function(v) { dd.assessment = v; }, 'Provide assessment...'));
+        row.appendChild(createSelect('Score (1-5)', scoreOptions, dd.score, function(v) { dd.score = v; wizard.saveNow(); }));
+        section.appendChild(row);
+      })(dueDiligenceCriteria[i]);
+    }
+
+    // 6.2
+    section.appendChild(el('hr', { className: 'section-divider' }));
+    section.appendChild(el('h3', {}, ['6.2 Contractual Requirements (EU AI Act Art. 25(4))']));
+    for (var i = 0; i < contractualItems.length; i++) {
+      (function(item) {
+        var toggle = createToggle(item.text, state.contractual[item.id], function(v) {
+          state.contractual[item.id] = v;
+          wizard.saveNow();
+        });
+        section.appendChild(toggle);
+      })(contractualItems[i]);
+    }
+
+    // 6.3
+    section.appendChild(el('hr', { className: 'section-divider' }));
+    section.appendChild(el('h3', {}, ['6.3 Ongoing Monitoring (ISO/IEC 42001 A.10.3)']));
+    for (var i = 0; i < monitoringAreas.length; i++) {
+      (function(area) {
+        var mon = state.monitoring[area.id];
+        var row = el('div', { className: 'due-diligence-row' });
+        row.appendChild(el('div', { className: 'threat-label' }, [area.text]));
+        row.appendChild(createSelect('Frequency', frequencyOptions, mon.frequency, function(v) { mon.frequency = v; wizard.saveNow(); }));
+        row.appendChild(createTextArea('Method', mon.method, function(v) { mon.method = v; }, 'Describe monitoring method...'));
+        section.appendChild(row);
+      })(monitoringAreas[i]);
+    }
+
+    container.appendChild(section);
+  }
+
+  function renderStep6(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 6: Cross-Jurisdiction Supply Chain Flags']));
+    section.appendChild(createAlert('info', 'Review each jurisdiction flag. Mark as applicable if it applies to your deployment, then document the required action.'));
+
+    for (var i = 0; i < jurisdictionFlags.length; i++) {
+      (function(flag) {
+        var fs = state.jurisdictionFlags[flag.id];
+        var detailWrap = el('div', { className: 'flag-detail', style: fs.applicable === true ? '' : 'display:none' });
+        detailWrap.appendChild(createTextArea('Action Required', fs.action, function(v) { fs.action = v; }, 'Describe required action...'));
+
+        var toggle = createToggle(flag.text, fs.applicable, function(v) {
+          fs.applicable = v;
+          detailWrap.style.display = v ? '' : 'none';
+          wizard.saveNow();
+        });
+        section.appendChild(toggle);
+        section.appendChild(detailWrap);
+      })(jurisdictionFlags[i]);
+    }
+
+    container.appendChild(section);
+  }
+
+  function renderStep7(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 7: Code Generation Security Controls']));
+
+    if (state.usesCodeGen !== true) {
+      section.appendChild(el('div', { className: 'na-notice' }, ['Code generation is not used (set in Step 3). This section is not applicable.']));
+      container.appendChild(section);
+      return;
+    }
+
+    // 8.1 Pre-Generation
+    section.appendChild(el('h3', {}, ['8.1 Pre-Generation Controls']));
+    for (var i = 0; i < preGenControls.length; i++) {
+      (function(ctrl) {
+        var cs = state.codeGenControls.pre[ctrl.id];
+        var detailWrap = el('div', { className: 'flag-detail', style: cs.enabled === true ? '' : 'display:none' });
+        detailWrap.appendChild(createTextArea('Details', cs.detail, function(v) { cs.detail = v; }, 'Implementation details...'));
+
+        var toggle = createToggle(ctrl.text, cs.enabled, function(v) {
+          cs.enabled = v;
+          detailWrap.style.display = v ? '' : 'none';
+          wizard.saveNow();
+        });
+        section.appendChild(toggle);
+        section.appendChild(detailWrap);
+      })(preGenControls[i]);
+    }
+
+    // 8.2 Post-Generation
+    section.appendChild(el('hr', { className: 'section-divider' }));
+    section.appendChild(el('h3', {}, ['8.2 Post-Generation Controls']));
+    for (var i = 0; i < postGenControls.length; i++) {
+      (function(ctrl) {
+        var cs = state.codeGenControls.post[ctrl.id];
+        var detailWrap = el('div', { className: 'flag-detail', style: cs.enabled === true ? '' : 'display:none' });
+        detailWrap.appendChild(createTextArea('Details', cs.detail, function(v) { cs.detail = v; }, 'Implementation details...'));
+
+        var toggle = createToggle(ctrl.text, cs.enabled, function(v) {
+          cs.enabled = v;
+          detailWrap.style.display = v ? '' : 'none';
+          wizard.saveNow();
+        });
+        section.appendChild(toggle);
+        section.appendChild(detailWrap);
+      })(postGenControls[i]);
+    }
+
+    // 8.3 SLSA
+    section.appendChild(el('hr', { className: 'section-divider' }));
+    section.appendChild(el('h3', {}, ['8.3 SLSA Compliance for AI-Assisted Development']));
+    for (var i = 0; i < slsaItems.length; i++) {
+      (function(item) {
+        var toggle = createToggle(item.text, state.codeGenControls.slsa[item.id], function(v) {
+          state.codeGenControls.slsa[item.id] = v;
+          wizard.saveNow();
+        });
+        section.appendChild(toggle);
+      })(slsaItems[i]);
+    }
+
+    // BOM
+    section.appendChild(el('hr', { className: 'section-divider' }));
+    section.appendChild(el('h3', {}, ['AIBOM/SBOM']));
+    section.appendChild(createToggle('AIBOM/SBOM generated?', state.bom.generated, function(v) {
+      state.bom.generated = v;
+      wizard.saveNow();
+    }));
+    section.appendChild(createSelect('Format', bomFormatOptions, state.bom.format, function(v) { state.bom.format = v; wizard.saveNow(); }));
+    section.appendChild(createTextInput('Location', state.bom.location, function(v) { state.bom.location = v; }, 'Path or URL to BOM file'));
+
+    container.appendChild(section);
+  }
+
+  // --- Collect all threats for summary ---
+
+  function getAllThreats() {
+    var threats = [];
+    function addGroup(label, items, stateObj) {
+      for (var i = 0; i < items.length; i++) {
+        var t = stateObj[items[i].id];
+        if (t && t.applicable === true) {
+          var score = calcRiskScore(t.likelihood, t.impact);
+          threats.push({ category: label, name: items[i].text, likelihood: t.likelihood, impact: t.impact, score: score, level: riskLevel(score), controls: t.controls });
+        }
+      }
+    }
+    addGroup('Model Integrity', modelThreatItems, state.modelThreats);
+    if (state.usesCodeGen === true) {
+      addGroup('Vulnerable Code', vulnerableCodeRisks, state.codeGenRisks.vulnerable);
+      addGroup('Dependency Hallucination', dependencyRisks, state.codeGenRisks.dependencies);
+      addGroup('License Contamination', licenseRisks, state.codeGenRisks.license);
+      addGroup('CI/CD Pipeline', cicdRisks, state.codeGenRisks.cicd);
+    }
+    addGroup('Data Poisoning', dataPoisoningThreats, state.dataPoisoning);
+    addGroup('Infrastructure', infraThreats, state.infraThreats);
+    return threats;
+  }
+
+  function countByCategory(threats) {
+    var cats = {};
+    for (var i = 0; i < threats.length; i++) {
+      cats[threats[i].category] = (cats[threats[i].category] || 0) + 1;
+    }
+    return cats;
+  }
+
+  function countByLevel(threats) {
+    var levels = { Critical: 0, High: 0, Medium: 0, Low: 0, Unscored: 0 };
+    for (var i = 0; i < threats.length; i++) {
+      if (threats[i].level) levels[threats[i].level]++;
+      else levels.Unscored++;
+    }
+    return levels;
+  }
+
+  function getEvidenceStatus() {
+    var status = [];
+    // 1. inventory
+    var hasComps = state.components.length > 0 && state.components[0].name;
+    status.push(!!hasComps);
+    // 2. model provenance
+    var mpCount = 0;
+    for (var k in state.modelProvenance) { if (state.modelProvenance[k] === true) mpCount++; }
+    status.push(mpCount > 0);
+    // 3. code gen risks
+    if (state.usesCodeGen === true) {
+      var cgCount = 0;
+      for (var k in state.codeGenRisks.vulnerable) { if (state.codeGenRisks.vulnerable[k].applicable !== null) cgCount++; }
+      status.push(cgCount > 0);
+    } else { status.push(state.usesCodeGen === false); }
+    // 4. dep hallucination controls
+    var depCount = 0;
+    for (var k in state.codeGenRisks.dependencies) { if (state.codeGenRisks.dependencies[k].applicable !== null) depCount++; }
+    status.push(state.usesCodeGen !== true || depCount > 0);
+    // 5. license scan
+    var licCount = 0;
+    for (var k in state.codeGenRisks.license) { if (state.codeGenRisks.license[k].applicable !== null) licCount++; }
+    status.push(state.usesCodeGen !== true || licCount > 0);
+    // 6. CI/CD hardened
+    var ciCount = 0;
+    for (var k in state.codeGenRisks.cicd) { if (state.codeGenRisks.cicd[k].applicable !== null) ciCount++; }
+    status.push(state.usesCodeGen !== true || ciCount > 0);
+    // 7. data provenance
+    var dpCount = 0;
+    for (var k in state.dataProvenance) { if (state.dataProvenance[k] === true) dpCount++; }
+    status.push(dpCount > 0);
+    // 8. data poisoning
+    var poisonCount = 0;
+    for (var k in state.dataPoisoning) { if (state.dataPoisoning[k].applicable !== null) poisonCount++; }
+    status.push(poisonCount > 0);
+    // 9. infra
+    var infraCount = 0;
+    for (var k in state.infraThreats) { if (state.infraThreats[k].applicable !== null) infraCount++; }
+    status.push(infraCount > 0);
+    // 10. due diligence
+    var ddCount = 0;
+    for (var k in state.providerDueDiligence) { if (state.providerDueDiligence[k].score) ddCount++; }
+    status.push(ddCount > 0);
+    // 11. contractual
+    var conCount = 0;
+    for (var k in state.contractual) { if (state.contractual[k] !== null) conCount++; }
+    status.push(conCount > 0);
+    // 12. jurisdiction flags
+    var jfCount = 0;
+    for (var k in state.jurisdictionFlags) { if (state.jurisdictionFlags[k].applicable !== null) jfCount++; }
+    status.push(jfCount > 0);
+    // 13. BOM
+    status.push(state.bom.generated === true);
+    // 14. SLSA
+    var slsaCount = 0;
+    for (var k in state.codeGenControls.slsa) { if (state.codeGenControls.slsa[k] !== null) slsaCount++; }
+    status.push(state.usesCodeGen !== true || slsaCount > 0);
+    // 15. risk plan (threats documented with controls)
+    var threats = getAllThreats();
+    var controlledCount = 0;
+    for (var i = 0; i < threats.length; i++) { if (threats[i].controls) controlledCount++; }
+    status.push(threats.length === 0 || controlledCount > 0);
+    // 16. next review (notes field as proxy)
+    status.push(!!state.notes);
+    return status;
+  }
+
+  function getComplianceGaps() {
+    var gaps = [];
+    if (!state.components[0] || !state.components[0].name) gaps.push('No AI components listed in inventory');
+    var mpCount = 0;
+    for (var k in state.modelProvenance) { if (state.modelProvenance[k] === true) mpCount++; }
+    if (mpCount === 0) gaps.push('No model provenance checks completed');
+    if (state.usesCodeGen === null) gaps.push('Code generation applicability not determined');
+    var dpCount = 0;
+    for (var k in state.dataProvenance) { if (state.dataProvenance[k] === true) dpCount++; }
+    if (dpCount === 0) gaps.push('No data provenance checks completed');
+    var ddCount = 0;
+    for (var k in state.providerDueDiligence) { if (state.providerDueDiligence[k].score) ddCount++; }
+    if (ddCount === 0) gaps.push('No provider due diligence scores assigned');
+    var conCount = 0;
+    for (var k in state.contractual) { if (state.contractual[k] === true) conCount++; }
+    if (conCount === 0) gaps.push('No contractual requirements confirmed');
+    var jfCount = 0;
+    for (var k in state.jurisdictionFlags) { if (state.jurisdictionFlags[k].applicable !== null) jfCount++; }
+    if (jfCount === 0) gaps.push('Jurisdiction flags not reviewed');
+    if (state.bom.generated !== true) gaps.push('AIBOM/SBOM not generated');
+    return gaps;
+  }
+
+  function renderSummary(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 8: Risk Assessment Summary']));
+
+    var threats = getAllThreats();
+    var byCategory = countByCategory(threats);
+    var byLevel = countByLevel(threats);
+
+    // Risk dashboard
+    section.appendChild(el('h3', {}, ['Risk Dashboard']));
+    var dashCard = el('div', { className: 'dash-card' });
+    dashCard.appendChild(el('div', { className: 'dash-row' }, [
+      el('span', {}, ['Total applicable threats:']),
+      el('span', { className: 'dash-count', style: 'color: #E8B96A;' }, [String(threats.length)])
+    ]));
+
+    var levelColors = { Critical: '#e74c3c', High: '#f39c12', Medium: '#E8B96A', Low: '#4DBFBF', Unscored: '#6B7B8D' };
+    var levelKeys = ['Critical', 'High', 'Medium', 'Low', 'Unscored'];
+    for (var li = 0; li < levelKeys.length; li++) {
+      if (byLevel[levelKeys[li]] > 0) {
+        dashCard.appendChild(el('div', { className: 'dash-row' }, [
+          el('span', {}, [levelKeys[li] + ':']),
+          el('span', { style: 'color: ' + levelColors[levelKeys[li]] + '; font-weight: 600;' }, [String(byLevel[levelKeys[li]])])
+        ]));
+      }
+    }
+    section.appendChild(dashCard);
+
+    // Category breakdown
+    var catCard = el('div', { className: 'dash-card' });
+    catCard.appendChild(el('div', { style: 'color: #9AACBA; margin-bottom: 8px; font-weight: 600;' }, ['Threats by Category']));
+    for (var cat in byCategory) {
+      catCard.appendChild(el('div', { className: 'dash-row' }, [
+        el('span', {}, [cat]),
+        el('span', { style: 'font-weight: 600; color: #E8B96A;' }, [String(byCategory[cat])])
+      ]));
+    }
+    if (threats.length === 0) {
+      catCard.appendChild(el('div', { style: 'color: #6B7B8D; font-style: italic;' }, ['No threats marked as applicable yet.']));
+    }
+    section.appendChild(catCard);
+
+    // Overall risk level
+    var overallLevel = 'Low';
+    if (byLevel.Critical > 0) overallLevel = 'Critical';
+    else if (byLevel.High > 0) overallLevel = 'High';
+    else if (byLevel.Medium > 0) overallLevel = 'Medium';
+
+    section.appendChild(el('div', { className: 'dash-card' }, [
+      el('div', { className: 'dash-row' }, [
+        el('span', { style: 'font-weight: 600; color: #9AACBA;' }, ['Overall Risk Level:']),
+        el('span', { className: 'risk-badge ' + riskClass(overallLevel), style: 'font-size: 1em;' }, [overallLevel])
+      ])
+    ]));
+
+    // Risk heat map
+    section.appendChild(el('h3', {}, ['Risk Heat Map']));
+    var heatmap = el('div', { className: 'heatmap', style: 'grid-template-columns: auto repeat(5, 1fr);' });
+
+    // Header row
+    heatmap.appendChild(el('div', { className: 'heatmap-cell' }));
+    var impactLabels = ['Negligible', 'Minor', 'Moderate', 'Major', 'Severe'];
+    for (var hi = 0; hi < impactLabels.length; hi++) {
+      heatmap.appendChild(el('div', { className: 'heatmap-cell heatmap-header' }, [impactLabels[hi]]));
+    }
+
+    var likelihoodLabels = ['Almost Certain', 'Likely', 'Possible', 'Unlikely', 'Rare'];
+    var likelihoodVals = [5, 4, 3, 2, 1];
+    var impactVals = [1, 2, 3, 4, 5];
+
+    // Count threats in each cell
+    var heatCounts = {};
+    for (var ti = 0; ti < threats.length; ti++) {
+      var t = threats[ti];
+      var lv = likelihoodScores[t.likelihood] || 0;
+      var iv = impactScores[t.impact] || 0;
+      if (lv && iv) {
+        var hk = lv + '_' + iv;
+        heatCounts[hk] = (heatCounts[hk] || 0) + 1;
+      }
+    }
+
+    for (var li = 0; li < likelihoodLabels.length; li++) {
+      heatmap.appendChild(el('div', { className: 'heatmap-cell heatmap-label' }, [likelihoodLabels[li]]));
+      for (var ii = 0; ii < impactVals.length; ii++) {
+        var score = likelihoodVals[li] * impactVals[ii];
+        var level = riskLevel(score);
+        var heatClass = 'heat-negligible';
+        if (level === 'Critical') heatClass = 'heat-critical';
+        else if (level === 'High') heatClass = 'heat-high';
+        else if (level === 'Medium') heatClass = 'heat-medium';
+        else if (level === 'Low') heatClass = 'heat-low';
+
+        var cellKey = likelihoodVals[li] + '_' + impactVals[ii];
+        var count = heatCounts[cellKey] || 0;
+        var cellText = count > 0 ? String(count) : '';
+        heatmap.appendChild(el('div', { className: 'heatmap-cell ' + heatClass }, [cellText]));
+      }
+    }
+    section.appendChild(heatmap);
+
+    // Compliance gap analysis
+    section.appendChild(el('h3', {}, ['Compliance Gap Analysis']));
+    var gaps = getComplianceGaps();
+    if (gaps.length === 0) {
+      section.appendChild(createAlert('success', 'No major compliance gaps identified. Ready for legal review.'));
+    } else {
+      for (var i = 0; i < gaps.length; i++) {
+        section.appendChild(el('div', { className: 'gap-item' }, ['Gap: ' + gaps[i]]));
+      }
+    }
+
+    // Evidence checklist status
+    section.appendChild(el('h3', {}, ['Evidence Checklist Status']));
+    var evStatus = getEvidenceStatus();
+    var evComplete = 0;
+    for (var i = 0; i < evStatus.length; i++) { if (evStatus[i]) evComplete++; }
+
+    var evCard = el('div', { className: 'dash-card' });
+    evCard.appendChild(el('div', { className: 'dash-row' }, [
+      el('span', { style: 'font-weight: 600; color: #9AACBA;' }, ['Evidence Items Complete:']),
+      el('span', { className: evComplete >= 12 ? 'score-low' : evComplete >= 8 ? 'score-med' : 'score-high', style: 'font-size: 1.1em;' }, [evComplete + ' / ' + evidenceItems.length])
+    ]));
+    for (var i = 0; i < evidenceItems.length; i++) {
+      var cls = evStatus[i] ? 'pass-item' : 'gap-item';
+      var marker = evStatus[i] ? '\u2713 ' : '\u2717 ';
+      evCard.appendChild(el('div', { className: cls }, [marker + evidenceItems[i]]));
+    }
+    section.appendChild(evCard);
+
+    // Notes
+    section.appendChild(el('h3', {}, ['Additional Notes / Next Review Date']));
+    section.appendChild(createTextArea('Notes', state.notes, function(v) { state.notes = v; }, 'Additional notes, next review date, etc.'));
+
+    // Action buttons
+    var actions = el('div', { className: 'toolbar', style: 'margin-top: 24px;' });
+    actions.appendChild(el('button', { className: 'btn primary', textContent: 'Export Markdown', onClick: doExport }));
+    actions.appendChild(el('button', { className: 'btn success', textContent: 'Save Config', onClick: doSave }));
+    actions.appendChild(el('button', { className: 'btn', textContent: 'Apply to Config', onClick: function() {
+      loadConfigFromFile(function(c) {
+        config = c;
+        config.interactiveToolResults = config.interactiveToolResults || {};
+        config.interactiveToolResults.supplyChainRisk = buildResults();
+        saveConfigToFile(config);
+      });
+    }}));
+    section.appendChild(actions);
+
+    container.appendChild(section);
+  }
+
+  // --- Load state from config ---
+
+  function loadState() {
+    if (config.interactiveToolResults && config.interactiveToolResults.supplyChainRisk) {
+      var saved = config.interactiveToolResults.supplyChainRisk;
+      if (saved.components) state.components = saved.components;
+      if (saved.modelProvenance) { for (var k in saved.modelProvenance) state.modelProvenance[k] = saved.modelProvenance[k]; }
+      if (saved.modelThreats) { for (var k in saved.modelThreats) state.modelThreats[k] = saved.modelThreats[k]; }
+      if (saved.usesCodeGen !== undefined) state.usesCodeGen = saved.usesCodeGen;
+      if (saved.codeGenRisks) {
+        var keys = ['vulnerable', 'dependencies', 'license', 'cicd'];
+        for (var ki = 0; ki < keys.length; ki++) {
+          if (saved.codeGenRisks[keys[ki]]) {
+            for (var k in saved.codeGenRisks[keys[ki]]) state.codeGenRisks[keys[ki]][k] = saved.codeGenRisks[keys[ki]][k];
+          }
+        }
+      }
+      if (saved.dataProvenance) { for (var k in saved.dataProvenance) state.dataProvenance[k] = saved.dataProvenance[k]; }
+      if (saved.dataPoisoning) { for (var k in saved.dataPoisoning) state.dataPoisoning[k] = saved.dataPoisoning[k]; }
+      if (saved.infraThreats) { for (var k in saved.infraThreats) state.infraThreats[k] = saved.infraThreats[k]; }
+      if (saved.providerDueDiligence) { for (var k in saved.providerDueDiligence) state.providerDueDiligence[k] = saved.providerDueDiligence[k]; }
+      if (saved.contractual) { for (var k in saved.contractual) state.contractual[k] = saved.contractual[k]; }
+      if (saved.monitoring) { for (var k in saved.monitoring) state.monitoring[k] = saved.monitoring[k]; }
+      if (saved.jurisdictionFlags) { for (var k in saved.jurisdictionFlags) state.jurisdictionFlags[k] = saved.jurisdictionFlags[k]; }
+      if (saved.codeGenControls) {
+        if (saved.codeGenControls.pre) { for (var k in saved.codeGenControls.pre) state.codeGenControls.pre[k] = saved.codeGenControls.pre[k]; }
+        if (saved.codeGenControls.post) { for (var k in saved.codeGenControls.post) state.codeGenControls.post[k] = saved.codeGenControls.post[k]; }
+        if (saved.codeGenControls.slsa) { for (var k in saved.codeGenControls.slsa) state.codeGenControls.slsa[k] = saved.codeGenControls.slsa[k]; }
+      }
+      if (saved.bom) state.bom = saved.bom;
+      if (saved.notes !== undefined) state.notes = saved.notes;
+    }
+    initState();
+  }
+
+  // --- Build results ---
+
+  function buildResults() {
+    var threats = getAllThreats();
+    var byLevel = countByLevel(threats);
+    var overallLevel = 'Low';
+    if (byLevel.Critical > 0) overallLevel = 'Critical';
+    else if (byLevel.High > 0) overallLevel = 'High';
+    else if (byLevel.Medium > 0) overallLevel = 'Medium';
+
+    var evStatus = getEvidenceStatus();
+    var evComplete = 0;
+    for (var i = 0; i < evStatus.length; i++) { if (evStatus[i]) evComplete++; }
+
+    return {
+      completedDate: new Date().toISOString().split('T')[0],
+      components: JSON.parse(JSON.stringify(state.components)),
+      modelProvenance: JSON.parse(JSON.stringify(state.modelProvenance)),
+      modelThreats: JSON.parse(JSON.stringify(state.modelThreats)),
+      usesCodeGen: state.usesCodeGen,
+      codeGenRisks: JSON.parse(JSON.stringify(state.codeGenRisks)),
+      dataProvenance: JSON.parse(JSON.stringify(state.dataProvenance)),
+      dataPoisoning: JSON.parse(JSON.stringify(state.dataPoisoning)),
+      infraThreats: JSON.parse(JSON.stringify(state.infraThreats)),
+      providerDueDiligence: JSON.parse(JSON.stringify(state.providerDueDiligence)),
+      contractual: JSON.parse(JSON.stringify(state.contractual)),
+      monitoring: JSON.parse(JSON.stringify(state.monitoring)),
+      jurisdictionFlags: JSON.parse(JSON.stringify(state.jurisdictionFlags)),
+      codeGenControls: JSON.parse(JSON.stringify(state.codeGenControls)),
+      bom: JSON.parse(JSON.stringify(state.bom)),
+      notes: state.notes,
+      summary: {
+        totalThreats: threats.length,
+        overallRiskLevel: overallLevel,
+        threatsByLevel: byLevel,
+        complianceGaps: getComplianceGaps(),
+        evidenceComplete: evComplete,
+        evidenceTotal: evidenceItems.length
+      }
+    };
+  }
+
+  // --- Save ---
+
+  function doSave() {
+    config.interactiveToolResults = config.interactiveToolResults || {};
+    config.interactiveToolResults.supplyChainRisk = buildResults();
+    saveConfigToFile(config);
+  }
+
+  // --- Export Markdown ---
+
+  function doExport() {
+    var results = buildResults();
+    var lines = [];
+    lines.push('# AI/LLM Supply Chain Risk Assessment (Template 23)');
+    lines.push('');
+    lines.push('> **Laws served:** EU AI Act Art. 25, NIST AI RMF, OWASP LLM Top 10 2025, MITRE ATLAS, ISO/IEC 42001');
+    lines.push('> **Date:** ' + results.completedDate);
+    lines.push('');
+    lines.push('---');
+    lines.push('');
+
+    // 1. Component Inventory
+    lines.push('## 1. AI Component Inventory');
+    lines.push('');
+    lines.push('| Component | Type | Provider | Version | Country of Origin | License | Risk Tier |');
+    lines.push('|-----------|------|----------|---------|-------------------|---------|-----------|');
+    for (var i = 0; i < state.components.length; i++) {
+      var c = state.components[i];
+      lines.push('| ' + (c.name || '') + ' | ' + (c.type || '') + ' | ' + (c.provider || '') + ' | ' + (c.version || '') + ' | ' + (c.countryOfOrigin || '') + ' | ' + (c.license || '') + ' | ' + (c.riskTier || '') + ' |');
+    }
+    lines.push('');
+
+    // 2. Model Supply Chain Risk
+    lines.push('## 2. Model Supply Chain Risk (MITRE ATLAS AML.T0010)');
+    lines.push('');
+    lines.push('### 2.1 Model Provenance');
+    lines.push('');
+    lines.push('| Check | Status |');
+    lines.push('|-------|--------|');
+    for (var i = 0; i < modelProvenanceItems.length; i++) {
+      var item = modelProvenanceItems[i];
+      var marker = state.modelProvenance[item.id] === true ? 'x' : ' ';
+      lines.push('| ' + item.text + ' | [' + marker + '] |');
+    }
+    lines.push('');
+
+    lines.push('### 2.2 Model Integrity Threats');
+    lines.push('');
+    lines.push('| Threat | Applicable? | Likelihood | Impact | Risk Score | Controls |');
+    lines.push('|--------|:-----------:|-----------|--------|:----------:|----------|');
+    for (var i = 0; i < modelThreatItems.length; i++) {
+      var item = modelThreatItems[i];
+      var t = state.modelThreats[item.id];
+      var score = calcRiskScore(t.likelihood, t.impact);
+      var scoreStr = score !== null ? riskLevel(score) + ' (' + score + ')' : '';
+      var appStr = t.applicable === true ? 'Yes' : t.applicable === false ? 'No' : '';
+      lines.push('| ' + item.text + ' | ' + appStr + ' | ' + (t.likelihood || '') + ' | ' + (t.impact || '') + ' | ' + scoreStr + ' | ' + (t.controls || '') + ' |');
+    }
+    lines.push('');
+
+    // 3. Code Generation
+    lines.push('## 3. Code Generation Supply Chain Risk');
+    lines.push('');
+    if (state.usesCodeGen !== true) {
+      lines.push('*Not applicable - project does not use AI for code generation.*');
+      lines.push('');
+    } else {
+      function exportThreatTable(title, items, stateObj) {
+        lines.push('### ' + title);
+        lines.push('');
+        lines.push('| Risk | Applicable? | Likelihood | Impact | Risk Score | Controls |');
+        lines.push('|------|:-----------:|-----------|--------|:----------:|----------|');
+        for (var i = 0; i < items.length; i++) {
+          var t = stateObj[items[i].id];
+          var score = calcRiskScore(t.likelihood, t.impact);
+          var scoreStr = score !== null ? riskLevel(score) + ' (' + score + ')' : '';
+          var appStr = t.applicable === true ? 'Yes' : t.applicable === false ? 'No' : '';
+          lines.push('| ' + items[i].text + ' | ' + appStr + ' | ' + (t.likelihood || '') + ' | ' + (t.impact || '') + ' | ' + scoreStr + ' | ' + (t.controls || '') + ' |');
+        }
+        lines.push('');
+      }
+      exportThreatTable('3.1 Vulnerable Code Patterns', vulnerableCodeRisks, state.codeGenRisks.vulnerable);
+      lines.push('**Statistics (OpenSSF 2025):** 45% of AI-assisted development tasks introduce critical security flaws; 62% of AI-generated code contains known vulnerabilities; 78% contains at least one exploitable vulnerability that traditional scanning misses.');
+      lines.push('');
+      exportThreatTable('3.2 Dependency Hallucination / Slopsquatting', dependencyRisks, state.codeGenRisks.dependencies);
+      exportThreatTable('3.3 License Contamination', licenseRisks, state.codeGenRisks.license);
+      exportThreatTable('3.4 CI/CD Pipeline Risks', cicdRisks, state.codeGenRisks.cicd);
+    }
+
+    // 4. Training Data
+    lines.push('## 4. Training Data Supply Chain Risk');
+    lines.push('');
+    lines.push('### 4.1 Data Provenance');
+    lines.push('');
+    lines.push('| Check | Status |');
+    lines.push('|-------|--------|');
+    for (var i = 0; i < dataProvenanceItems.length; i++) {
+      var item = dataProvenanceItems[i];
+      var marker = state.dataProvenance[item.id] === true ? 'x' : ' ';
+      lines.push('| ' + item.text + ' | [' + marker + '] |');
+    }
+    lines.push('');
+
+    lines.push('### 4.2 Data Poisoning Threats');
+    lines.push('');
+    lines.push('| Threat | Applicable? | Likelihood | Impact | Risk Score | Controls |');
+    lines.push('|--------|:-----------:|-----------|--------|:----------:|----------|');
+    for (var i = 0; i < dataPoisoningThreats.length; i++) {
+      var item = dataPoisoningThreats[i];
+      var t = state.dataPoisoning[item.id];
+      var score = calcRiskScore(t.likelihood, t.impact);
+      var scoreStr = score !== null ? riskLevel(score) + ' (' + score + ')' : '';
+      var appStr = t.applicable === true ? 'Yes' : t.applicable === false ? 'No' : '';
+      lines.push('| ' + item.text + ' | ' + appStr + ' | ' + (t.likelihood || '') + ' | ' + (t.impact || '') + ' | ' + scoreStr + ' | ' + (t.controls || '') + ' |');
+    }
+    lines.push('');
+
+    // 5. Infrastructure
+    lines.push('## 5. Infrastructure Supply Chain Risk');
+    lines.push('');
+    lines.push('| Threat | Applicable? | Likelihood | Impact | Risk Score | Controls |');
+    lines.push('|--------|:-----------:|-----------|--------|:----------:|----------|');
+    for (var i = 0; i < infraThreats.length; i++) {
+      var item = infraThreats[i];
+      var t = state.infraThreats[item.id];
+      var score = calcRiskScore(t.likelihood, t.impact);
+      var scoreStr = score !== null ? riskLevel(score) + ' (' + score + ')' : '';
+      var appStr = t.applicable === true ? 'Yes' : t.applicable === false ? 'No' : '';
+      lines.push('| ' + item.text + ' | ' + appStr + ' | ' + (t.likelihood || '') + ' | ' + (t.impact || '') + ' | ' + scoreStr + ' | ' + (t.controls || '') + ' |');
+    }
+    lines.push('');
+
+    // 6. Third-Party Provider
+    lines.push('## 6. Third-Party Provider Assessment');
+    lines.push('');
+    lines.push('### 6.1 Provider Due Diligence');
+    lines.push('');
+    lines.push('| Criterion | Assessment | Score (1-5) |');
+    lines.push('|-----------|-----------|:-----------:|');
+    for (var i = 0; i < dueDiligenceCriteria.length; i++) {
+      var crit = dueDiligenceCriteria[i];
+      var dd = state.providerDueDiligence[crit.id];
+      lines.push('| ' + crit.text + ' | ' + (dd.assessment || '') + ' | ' + (dd.score || '') + ' |');
+    }
+    lines.push('');
+
+    lines.push('### 6.2 Contractual Requirements');
+    lines.push('');
+    lines.push('| Requirement | In Contract? |');
+    lines.push('|-------------|:---:|');
+    for (var i = 0; i < contractualItems.length; i++) {
+      var item = contractualItems[i];
+      var marker = state.contractual[item.id] === true ? 'x' : ' ';
+      lines.push('| ' + item.text + ' | [' + marker + '] |');
+    }
+    lines.push('');
+
+    lines.push('### 6.3 Ongoing Monitoring');
+    lines.push('');
+    lines.push('| Monitoring Area | Frequency | Method |');
+    lines.push('|----------------|-----------|--------|');
+    for (var i = 0; i < monitoringAreas.length; i++) {
+      var area = monitoringAreas[i];
+      var mon = state.monitoring[area.id];
+      lines.push('| ' + area.text + ' | ' + (mon.frequency || '') + ' | ' + (mon.method || '') + ' |');
+    }
+    lines.push('');
+
+    // 7. Jurisdiction Flags
+    lines.push('## 7. Cross-Jurisdiction Supply Chain Flags');
+    lines.push('');
+    lines.push('| Flag | Applicable? | Action Required |');
+    lines.push('|------|:-----------:|-----------------|');
+    for (var i = 0; i < jurisdictionFlags.length; i++) {
+      var flag = jurisdictionFlags[i];
+      var fs = state.jurisdictionFlags[flag.id];
+      var appStr = fs.applicable === true ? 'Yes' : fs.applicable === false ? 'No' : '';
+      lines.push('| ' + flag.text + ' | ' + appStr + ' | ' + (fs.action || '') + ' |');
+    }
+    lines.push('');
+
+    // 8. Code Gen Security Controls
+    lines.push('## 8. Code Generation Security Controls');
+    lines.push('');
+    if (state.usesCodeGen !== true) {
+      lines.push('*Not applicable.*');
+      lines.push('');
+    } else {
+      lines.push('### 8.1 Pre-Generation Controls');
+      lines.push('');
+      lines.push('| Control | Implemented? | Details |');
+      lines.push('|---------|:---:|---------|');
+      for (var i = 0; i < preGenControls.length; i++) {
+        var ctrl = preGenControls[i];
+        var cs = state.codeGenControls.pre[ctrl.id];
+        var marker = cs.enabled === true ? 'x' : ' ';
+        lines.push('| ' + ctrl.text + ' | [' + marker + '] | ' + (cs.detail || '') + ' |');
+      }
+      lines.push('');
+
+      lines.push('### 8.2 Post-Generation Controls');
+      lines.push('');
+      lines.push('| Control | Implemented? | Details |');
+      lines.push('|---------|:---:|---------|');
+      for (var i = 0; i < postGenControls.length; i++) {
+        var ctrl = postGenControls[i];
+        var cs = state.codeGenControls.post[ctrl.id];
+        var marker = cs.enabled === true ? 'x' : ' ';
+        lines.push('| ' + ctrl.text + ' | [' + marker + '] | ' + (cs.detail || '') + ' |');
+      }
+      lines.push('');
+
+      lines.push('### 8.3 SLSA Compliance');
+      lines.push('');
+      lines.push('| SLSA Level | Met? |');
+      lines.push('|-----------|:---:|');
+      for (var i = 0; i < slsaItems.length; i++) {
+        var item = slsaItems[i];
+        var marker = state.codeGenControls.slsa[item.id] === true ? 'x' : ' ';
+        lines.push('| ' + item.text + ' | [' + marker + '] |');
+      }
+      lines.push('');
+    }
+
+    // 9. BOM
+    lines.push('## 9. Bill of Materials');
+    lines.push('');
+    lines.push('| Generated? | Format | Location |');
+    lines.push('|:---:|--------|----------|');
+    var bomMarker = state.bom.generated === true ? 'Yes' : 'No';
+    lines.push('| ' + bomMarker + ' | ' + (state.bom.format || '') + ' | ' + (state.bom.location || '') + ' |');
+    lines.push('');
+
+    // 10. Risk Summary
+    lines.push('## 10. Risk Summary');
+    lines.push('');
+    var threats = getAllThreats();
+    var byLevel = countByLevel(threats);
+    var overallLevel = 'Low';
+    if (byLevel.Critical > 0) overallLevel = 'Critical';
+    else if (byLevel.High > 0) overallLevel = 'High';
+    else if (byLevel.Medium > 0) overallLevel = 'Medium';
+
+    lines.push('- **Overall Risk Level:** ' + overallLevel);
+    lines.push('- **Total Applicable Threats:** ' + threats.length);
+    lines.push('- **Critical:** ' + byLevel.Critical + ' | **High:** ' + byLevel.High + ' | **Medium:** ' + byLevel.Medium + ' | **Low:** ' + byLevel.Low);
+    lines.push('');
+
+    if (threats.length > 0) {
+      lines.push('| Risk | Category | Likelihood | Impact | Score | Controls |');
+      lines.push('|------|----------|-----------|--------|:-----:|----------|');
+      // Sort by score desc
+      threats.sort(function(a, b) { return (b.score || 0) - (a.score || 0); });
+      for (var i = 0; i < threats.length; i++) {
+        var t = threats[i];
+        var scoreStr = t.score !== null ? t.level + ' (' + t.score + ')' : 'Unscored';
+        lines.push('| ' + t.name + ' | ' + t.category + ' | ' + (t.likelihood || '') + ' | ' + (t.impact || '') + ' | ' + scoreStr + ' | ' + (t.controls || '') + ' |');
+      }
+      lines.push('');
+    }
+
+    // 11. Evidence Checklist
+    lines.push('## 11. Evidence Checklist');
+    lines.push('');
+    var evStatus = getEvidenceStatus();
+    for (var i = 0; i < evidenceItems.length; i++) {
+      var marker = evStatus[i] ? 'x' : ' ';
+      lines.push('- [' + marker + '] ' + evidenceItems[i]);
+    }
+    lines.push('');
+
+    // Compliance gaps
+    var gaps = getComplianceGaps();
+    if (gaps.length > 0) {
+      lines.push('## Compliance Gaps');
+      lines.push('');
+      for (var i = 0; i < gaps.length; i++) {
+        lines.push('- ' + gaps[i]);
+      }
+      lines.push('');
+    }
+
+    if (state.notes) {
+      lines.push('## Notes');
+      lines.push('');
+      lines.push(state.notes);
+      lines.push('');
+    }
+
+    lines.push('---');
+    lines.push('*Generated by AI/LLM Supply Chain Risk Assessment Tool. This is research, not legal advice.*');
+
+    exportMarkdown('supply-chain-risk-assessment.md', lines.join('\n'));
+  }
+
+  wizard.render();
+})();
+</script>
+</body>
+</html>

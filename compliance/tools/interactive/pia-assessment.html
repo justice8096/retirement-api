@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Impact Assessment Tool (Template 07)</title>
+<script src="./shared.js"></script>
+</head>
+<body>
+<script>
+(function() {
+  injectCSS();
+
+  var extraStyle = document.createElement('style');
+  extraStyle.textContent = [
+    '.risk-badge { display: inline-block; padding: 3px 10px; border-radius: 3px; font-size: 0.75em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }',
+    '.risk-critical { background: #8B0000; color: #ff6b6b; border: 1px solid #c0392b; }',
+    '.risk-high { background: #c0392b33; color: #e74c3c; border: 1px solid #c0392b55; }',
+    '.risk-medium { background: #D4943A33; color: #E8B96A; border: 1px solid #D4943A55; }',
+    '.risk-low { background: #2A7B7B33; color: #4DBFBF; border: 1px solid #2A7B7B55; }',
+    '.risk-row { padding: 12px 16px; border: 1px solid #1E2D3D; border-radius: 4px; margin-bottom: 8px; background: #0D1830; }',
+    '.risk-row-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }',
+    '.risk-row-title { font-size: 0.9em; font-weight: 500; flex: 1; }',
+    '.risk-selects { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }',
+    '.risk-selects select { padding: 4px 8px; background: #0D1830; border: 1px solid #3A4A5A; border-radius: 3px; color: #F0EBE0; font-size: 0.8em; }',
+    '.risk-selects label { font-size: 0.75em; color: #6B7B8D; }',
+    '.cond-section { margin-top: 8px; padding: 10px 12px; border-left: 2px solid #3A4A5A; background: #0B142688; }',
+    '.right-row { padding: 12px 16px; border: 1px solid #1E2D3D; border-radius: 4px; margin-bottom: 8px; background: #0D1830; }',
+    '.right-row-header { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }',
+    '.right-row-title { font-size: 0.9em; font-weight: 500; flex: 1; }',
+    '.right-fields { display: flex; gap: 12px; flex-wrap: wrap; }',
+    '.right-fields .field-row { flex: 1; min-width: 200px; margin-bottom: 4px; }',
+    '.measure-row { padding: 10px 16px; border: 1px solid #1E2D3D; border-radius: 4px; margin-bottom: 6px; background: #0D1830; }',
+    '.measure-header { display: flex; align-items: center; gap: 12px; }',
+    '.measure-title { font-size: 0.9em; flex: 1; }',
+    '.consult-row { padding: 12px 16px; border: 1px solid #1E2D3D; border-radius: 4px; margin-bottom: 8px; background: #0D1830; }',
+    '.consult-fields { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }',
+    '.consult-fields .field-row { flex: 1; min-width: 180px; margin-bottom: 4px; }',
+    '.heatmap { display: grid; grid-template-columns: auto repeat(3, 1fr); gap: 2px; margin: 16px 0; font-size: 0.8em; }',
+    '.heatmap-cell { padding: 6px 8px; text-align: center; border-radius: 2px; }',
+    '.heatmap-header { background: #1E2D3D; color: #9AACBA; font-weight: 600; }',
+    '.heatmap-label { background: #1E2D3D; color: #9AACBA; text-align: right; padding-right: 12px; }',
+    '.heatmap-critical { background: #8B0000; color: #ff6b6b; font-weight: 700; }',
+    '.heatmap-high { background: #c0392b44; color: #e74c3c; font-weight: 600; }',
+    '.heatmap-medium { background: #D4943A33; color: #E8B96A; }',
+    '.heatmap-low { background: #2A7B7B33; color: #4DBFBF; }',
+    '.summary-card { padding: 16px; border: 1px solid #1E2D3D; border-radius: 6px; background: #0D1830; margin-bottom: 12px; }',
+    '.summary-card h3 { margin-bottom: 10px; }',
+    '.summary-stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid #1E2D3D11; font-size: 0.9em; }',
+    '.stat-label { color: #9AACBA; }',
+    '.progress-bar-bg { height: 8px; background: #1E2D3D; border-radius: 4px; overflow: hidden; margin: 6px 0; }',
+    '.progress-bar-fill { height: 100%; border-radius: 4px; transition: width 0.3s; }',
+    '.data-type-grid { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }',
+    '.data-type-grid .toggle-row { flex: 0 0 calc(50% - 3px); margin-bottom: 0; }',
+    '.subjects-grid { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }',
+    '.subjects-grid .toggle-row { flex: 0 0 calc(50% - 3px); margin-bottom: 0; }',
+    '.jurisdiction-note { font-size: 0.8em; color: #6B7B8D; padding: 4px 0 4px 12px; border-left: 2px solid #3A4A5A; margin: 4px 0; }'
+  ].join('\n');
+  document.head.appendChild(extraStyle);
+
+  var config = {};
+
+  var personalDataTypes = ['Identity', 'Contact', 'Financial', 'Health', 'Biometric', 'Behavioral', 'Location', "Children's", 'Criminal'];
+  var legalBasisOptions = [
+    { value: '', label: '-- Select Legal Basis --' },
+    { value: 'consent', label: 'Consent' },
+    { value: 'legitimate_interest', label: 'Legitimate interest' },
+    { value: 'contractual', label: 'Contractual' },
+    { value: 'legal_obligation', label: 'Legal obligation' },
+    { value: 'vital_interest', label: 'Vital interest' },
+    { value: 'public_task', label: 'Public task' }
+  ];
+  var dataSubjects = ['Customers', 'Employees', 'Candidates', 'Patients', 'Students', 'Public'];
+  var art9Conditions = [
+    { value: '', label: '-- Select Art. 9 Condition --' },
+    { value: 'explicit_consent', label: 'Explicit consent' },
+    { value: 'employment', label: 'Employment / social security' },
+    { value: 'vital_interests', label: 'Vital interests' },
+    { value: 'legitimate_activities', label: 'Legitimate activities (foundation/association)' },
+    { value: 'manifestly_public', label: 'Manifestly made public' },
+    { value: 'legal_claims', label: 'Legal claims' },
+    { value: 'substantial_public_interest', label: 'Substantial public interest' },
+    { value: 'health', label: 'Health / social care' },
+    { value: 'public_health', label: 'Public health' },
+    { value: 'archiving', label: 'Archiving / research / statistics' }
+  ];
+  var transferMechanisms = [
+    { value: '', label: '-- Select Mechanism --' },
+    { value: 'sccs', label: 'Standard Contractual Clauses (SCCs)' },
+    { value: 'bcrs', label: 'Binding Corporate Rules (BCRs)' },
+    { value: 'adequacy', label: 'Adequacy Decision' },
+    { value: 'consent', label: 'Explicit Consent' },
+    { value: 'derogation', label: 'Derogation' }
+  ];
+
+  var necessityQuestions = [
+    'Is processing necessary for the stated purpose?',
+    'Could the purpose be achieved with less data?',
+    'Could the purpose be achieved without personal data?',
+    'Is the processing proportionate to the goal?',
+    'Have data minimization measures been applied?'
+  ];
+
+  var dataSubjectRisks = [
+    'Unauthorized access to personal data',
+    'Inaccurate decisions based on personal data',
+    'Discrimination through profiling',
+    'Loss of personal data',
+    'Re-identification of anonymized data',
+    'Function creep (data used beyond original purpose)',
+    'Excessive data collection',
+    'Inability to exercise data subject rights',
+    'Cross-border data exposure',
+    'Chilling effect on free expression'
+  ];
+
+  var aiSpecificRisks = [
+    'Personal data memorized by model',
+    'Personal data in model outputs (hallucination)',
+    'Inference of sensitive attributes from non-sensitive data',
+    'Training data extraction attacks',
+    'Prompt injection revealing personal data',
+    'Inadequate anonymization in training data'
+  ];
+
+  var dataSubjectRightsList = [
+    'Informed', 'Access', 'Rectification', 'Erasure', 'Restrict processing',
+    'Data portability', 'Object to processing', 'Automated decision opt-out',
+    'Withdraw consent', 'Lodge complaint'
+  ];
+
+  var protectionMeasures = [
+    'Encryption at rest', 'Encryption in transit', 'Access controls',
+    'Pseudonymization', 'Anonymization', 'Data minimization',
+    'Purpose limitation controls', 'Audit logging', 'Breach detection',
+    'Breach notification process', 'Regular security testing'
+  ];
+
+  var consultees = [
+    'Data Protection Officer', 'Legal counsel', 'IT Security',
+    'Affected data subjects', 'Supervisory authority'
+  ];
+
+  var overallRiskOptions = [
+    { value: '', label: '-- Select --' },
+    { value: 'high', label: 'High' },
+    { value: 'medium', label: 'Medium' },
+    { value: 'low', label: 'Low' }
+  ];
+  var decisionOptions = [
+    { value: '', label: '-- Select Decision --' },
+    { value: 'proceed', label: 'Proceed' },
+    { value: 'proceed_conditions', label: 'Proceed with conditions' },
+    { value: 'do_not_proceed', label: 'Do not proceed' },
+    { value: 'consult_authority', label: 'Consult supervisory authority' }
+  ];
+
+  // --- STATE ---
+  var state = {
+    processing: {
+      dataTypes: {},
+      purpose: '',
+      legalBasis: '',
+      subjects: {},
+      estimatedSubjects: '',
+      specialCategory: null,
+      art9Condition: '',
+      crossBorder: null,
+      crossBorderCountry: '',
+      transferMechanism: '',
+      retentionPeriod: '',
+      processors: ''
+    },
+    necessity: [],
+    dsRisks: [],
+    aiRisks: [],
+    rights: [],
+    measures: [],
+    consultation: [],
+    outcome: {
+      overallRisk: '',
+      decision: '',
+      conditions: '',
+      approvedBy: '',
+      dpoOpinion: ''
+    }
+  };
+
+  function initState() {
+    for (var i = 0; i < personalDataTypes.length; i++) {
+      if (state.processing.dataTypes[personalDataTypes[i]] === undefined)
+        state.processing.dataTypes[personalDataTypes[i]] = null;
+    }
+    for (var i = 0; i < dataSubjects.length; i++) {
+      if (state.processing.subjects[dataSubjects[i]] === undefined)
+        state.processing.subjects[dataSubjects[i]] = null;
+    }
+    if (state.necessity.length === 0) {
+      for (var i = 0; i < necessityQuestions.length; i++) {
+        state.necessity.push({ answer: null, justification: '' });
+      }
+    }
+    if (state.dsRisks.length === 0) {
+      for (var i = 0; i < dataSubjectRisks.length; i++) {
+        state.dsRisks.push({ likelihood: '', severity: '', mitigation: '' });
+      }
+    }
+    if (state.aiRisks.length === 0) {
+      for (var i = 0; i < aiSpecificRisks.length; i++) {
+        state.aiRisks.push({ likelihood: '', severity: '', mitigation: '' });
+      }
+    }
+    if (state.rights.length === 0) {
+      for (var i = 0; i < dataSubjectRightsList.length; i++) {
+        state.rights.push({ implemented: null, method: '', responseTime: '' });
+      }
+    }
+    if (state.measures.length === 0) {
+      for (var i = 0; i < protectionMeasures.length; i++) {
+        state.measures.push({ implemented: null, details: '' });
+      }
+    }
+    if (state.consultation.length === 0) {
+      for (var i = 0; i < consultees.length; i++) {
+        state.consultation.push({ consulted: null, date: '', summary: '', addressed: null });
+      }
+    }
+  }
+  initState();
+
+  function calcOverallRisk(likelihood, severity) {
+    if (!likelihood || !severity) return '';
+    var l = likelihood.charAt(0).toUpperCase();
+    var s = severity.charAt(0).toUpperCase();
+    if (l === 'H' && s === 'H') return 'Critical';
+    if ((l === 'H' && s === 'M') || (l === 'M' && s === 'H')) return 'High';
+    if (l === 'M' && s === 'M') return 'Medium';
+    return 'Low';
+  }
+
+  function riskClass(level) {
+    if (!level) return '';
+    var l = level.toLowerCase();
+    if (l === 'critical') return 'risk-critical';
+    if (l === 'high') return 'risk-high';
+    if (l === 'medium') return 'risk-medium';
+    return 'risk-low';
+  }
+
+  function countRiskLevels(risksArr, riskNames) {
+    var counts = { Critical: 0, High: 0, Medium: 0, Low: 0 };
+    for (var i = 0; i < risksArr.length; i++) {
+      var r = calcOverallRisk(risksArr[i].likelihood, risksArr[i].severity);
+      if (r && counts[r] !== undefined) counts[r]++;
+    }
+    return counts;
+  }
+
+  function getMeasureCompleteness() {
+    var total = protectionMeasures.length;
+    var done = 0;
+    for (var i = 0; i < state.measures.length; i++) {
+      if (state.measures[i].implemented === true) done++;
+    }
+    return Math.round((done / total) * 100);
+  }
+
+  function getRightsCompleteness() {
+    var total = dataSubjectRightsList.length;
+    var done = 0;
+    for (var i = 0; i < state.rights.length; i++) {
+      if (state.rights[i].implemented === true) done++;
+    }
+    return Math.round((done / total) * 100);
+  }
+
+  function getConsultationCompleteness() {
+    var total = consultees.length;
+    var done = 0;
+    for (var i = 0; i < state.consultation.length; i++) {
+      if (state.consultation[i].consulted === true) done++;
+    }
+    return Math.round((done / total) * 100);
+  }
+
+  function suggestOverallRisk() {
+    var allRisks = state.dsRisks.concat(state.aiRisks);
+    var counts = { Critical: 0, High: 0, Medium: 0, Low: 0 };
+    for (var i = 0; i < allRisks.length; i++) {
+      var r = calcOverallRisk(allRisks[i].likelihood, allRisks[i].severity);
+      if (r && counts[r] !== undefined) counts[r]++;
+    }
+    if (counts.Critical > 0) return 'high';
+    if (counts.High > 2) return 'high';
+    if (counts.High > 0 || counts.Medium > 3) return 'medium';
+    return 'low';
+  }
+
+  // --- SAVE / LOAD ---
+  function saveState() {
+    if (!config.interactiveToolResults) config.interactiveToolResults = {};
+    config.interactiveToolResults.piaAssessment = JSON.parse(JSON.stringify(state));
+  }
+
+  function loadState() {
+    if (config.interactiveToolResults && config.interactiveToolResults.piaAssessment) {
+      var saved = config.interactiveToolResults.piaAssessment;
+      // Merge carefully
+      if (saved.processing) {
+        for (var k in saved.processing) state.processing[k] = saved.processing[k];
+      }
+      if (saved.necessity) state.necessity = saved.necessity;
+      if (saved.dsRisks) state.dsRisks = saved.dsRisks;
+      if (saved.aiRisks) state.aiRisks = saved.aiRisks;
+      if (saved.rights) state.rights = saved.rights;
+      if (saved.measures) state.measures = saved.measures;
+      if (saved.consultation) state.consultation = saved.consultation;
+      if (saved.outcome) state.outcome = saved.outcome;
+    }
+    initState();
+  }
+
+  function doSave() {
+    saveState();
+    saveConfigToFile(config);
+  }
+
+  function doExport() {
+    saveState();
+    var md = generateMarkdown();
+    exportMarkdown('pia-assessment.md', md);
+  }
+
+  var wizard = createWizard({
+    title: 'Privacy Impact Assessment Tool',
+    subtitle: 'Template 07 \u2014 Serves EU GDPR Art. 35, UK GDPR/DUA Act, India DPDPA, Brazil LGPD, Australia Privacy Act, 17 jurisdictions',
+    totalSteps: 8,
+    stepLabels: [
+      'Processing Activity',
+      'Necessity & Proportionality',
+      'Data Subject Risks',
+      'AI-Specific Risks',
+      'Data Subject Rights',
+      'Protection Measures',
+      'Consultation',
+      'Outcome & Summary'
+    ],
+    renderStep: function(step, container) {
+      if (step === 0) renderStep1(container);
+      else if (step === 1) renderStep2(container);
+      else if (step === 2) renderStep3(container);
+      else if (step === 3) renderStep4(container);
+      else if (step === 4) renderStep5(container);
+      else if (step === 5) renderStep6(container);
+      else if (step === 6) renderStep7(container);
+      else if (step === 7) renderStep8(container);
+    },
+    onLoad: function() {
+      loadConfigFromFile(function(c) { config = c; loadState(); wizard.refreshStep(); });
+    },
+    onSave: doSave,
+    onExport: doExport,
+    stateKey: 'piaAssessment',
+    getState: function() { return state; },
+    setState: function(s) {
+      if (s.processing) {
+        if (s.processing.dataTypes) { for (var k in s.processing.dataTypes) { state.processing.dataTypes[k] = s.processing.dataTypes[k]; } }
+        if (s.processing.purpose !== undefined) state.processing.purpose = s.processing.purpose;
+        if (s.processing.legalBasis !== undefined) state.processing.legalBasis = s.processing.legalBasis;
+        if (s.processing.subjects) { for (var k in s.processing.subjects) { state.processing.subjects[k] = s.processing.subjects[k]; } }
+        if (s.processing.estimatedSubjects !== undefined) state.processing.estimatedSubjects = s.processing.estimatedSubjects;
+        if (s.processing.specialCategory !== undefined) state.processing.specialCategory = s.processing.specialCategory;
+        if (s.processing.art9Condition !== undefined) state.processing.art9Condition = s.processing.art9Condition;
+        if (s.processing.crossBorder !== undefined) state.processing.crossBorder = s.processing.crossBorder;
+        if (s.processing.crossBorderCountry !== undefined) state.processing.crossBorderCountry = s.processing.crossBorderCountry;
+        if (s.processing.transferMechanism !== undefined) state.processing.transferMechanism = s.processing.transferMechanism;
+        if (s.processing.retentionPeriod !== undefined) state.processing.retentionPeriod = s.processing.retentionPeriod;
+        if (s.processing.processors !== undefined) state.processing.processors = s.processing.processors;
+      }
+      if (s.necessity) state.necessity = s.necessity;
+      if (s.dsRisks) state.dsRisks = s.dsRisks;
+      if (s.aiRisks) state.aiRisks = s.aiRisks;
+      if (s.rights) state.rights = s.rights;
+      if (s.measures) state.measures = s.measures;
+      if (s.consultation) state.consultation = s.consultation;
+      if (s.outcome) {
+        if (s.outcome.overallRisk !== undefined) state.outcome.overallRisk = s.outcome.overallRisk;
+        if (s.outcome.decision !== undefined) state.outcome.decision = s.outcome.decision;
+        if (s.outcome.conditions !== undefined) state.outcome.conditions = s.outcome.conditions;
+        if (s.outcome.approvedBy !== undefined) state.outcome.approvedBy = s.outcome.approvedBy;
+        if (s.outcome.dpoOpinion !== undefined) state.outcome.dpoOpinion = s.outcome.dpoOpinion;
+      }
+      initState();
+    }
+  });
+
+  // ========== STEP 1: Processing Activity ==========
+  function renderStep1(container) {
+    var items = [];
+
+    items.push(el('h3', {}, ['Personal Data Types Processed']));
+    var grid = el('div', { className: 'data-type-grid' });
+    for (var i = 0; i < personalDataTypes.length; i++) {
+      (function(idx) {
+        var dt = personalDataTypes[idx];
+        grid.appendChild(createToggle(dt, state.processing.dataTypes[dt], function(v) {
+          state.processing.dataTypes[dt] = v;
+          wizard.saveNow();
+        }));
+      })(i);
+    }
+    items.push(grid);
+
+    items.push(createTextArea('Purpose of processing', state.processing.purpose, function(v) {
+      state.processing.purpose = v;
+    }, 'Describe the purpose for processing personal data...'));
+
+    items.push(createSelect('Legal basis', legalBasisOptions, state.processing.legalBasis, function(v) {
+      state.processing.legalBasis = v;
+    }));
+
+    items.push(el('h3', {}, ['Data Subjects Affected']));
+    var sgrid = el('div', { className: 'subjects-grid' });
+    for (var i = 0; i < dataSubjects.length; i++) {
+      (function(idx) {
+        var ds = dataSubjects[idx];
+        sgrid.appendChild(createToggle(ds, state.processing.subjects[ds], function(v) {
+          state.processing.subjects[ds] = v;
+          wizard.saveNow();
+        }));
+      })(i);
+    }
+    items.push(sgrid);
+
+    items.push(createTextInput('Estimated number of data subjects', state.processing.estimatedSubjects, function(v) {
+      state.processing.estimatedSubjects = v;
+    }, 'e.g., 10,000'));
+
+    items.push(createToggle('Special category data (Art. 9)?', state.processing.specialCategory, function(v) {
+      state.processing.specialCategory = v;
+      wizard.refreshStep();
+    }));
+    if (state.processing.specialCategory === true) {
+      items.push(createSelect('Art. 9 Condition', art9Conditions, state.processing.art9Condition, function(v) {
+        state.processing.art9Condition = v;
+      }));
+    }
+
+    items.push(createToggle('Cross-border transfers?', state.processing.crossBorder, function(v) {
+      state.processing.crossBorder = v;
+      wizard.refreshStep();
+    }));
+    if (state.processing.crossBorder === true) {
+      items.push(createTextInput('Transfer destination country/countries', state.processing.crossBorderCountry, function(v) {
+        state.processing.crossBorderCountry = v;
+      }, 'e.g., United States, India'));
+      items.push(createSelect('Transfer mechanism', transferMechanisms, state.processing.transferMechanism, function(v) {
+        state.processing.transferMechanism = v;
+      }));
+    }
+
+    items.push(createTextInput('Data retention period', state.processing.retentionPeriod, function(v) {
+      state.processing.retentionPeriod = v;
+    }, 'e.g., 2 years after account closure'));
+
+    items.push(createTextArea('Data processors involved', state.processing.processors, function(v) {
+      state.processing.processors = v;
+    }, 'List third-party processors (name, role, location)...'));
+
+    container.appendChild(createSection('Step 1: Processing Activity Description', items));
+  }
+
+  // ========== STEP 2: Necessity & Proportionality ==========
+  function renderStep2(container) {
+    var items = [];
+
+    for (var i = 0; i < necessityQuestions.length; i++) {
+      (function(idx) {
+        var q = necessityQuestions[idx];
+        var nItem = state.necessity[idx];
+        items.push(el('h3', {}, [(idx + 1) + '. ' + q]));
+        items.push(createToggle('Answer', nItem.answer, function(v) {
+          state.necessity[idx].answer = v;
+          wizard.saveNow();
+        }));
+        items.push(createTextArea('Justification', nItem.justification, function(v) {
+          state.necessity[idx].justification = v;
+        }, 'Provide justification for your answer...'));
+      })(i);
+    }
+
+    // Warnings
+    var warnings = [];
+    if (state.necessity[0] && state.necessity[0].answer === false) {
+      warnings.push('Processing is not necessary for the stated purpose. Reconsider whether this processing should proceed.');
+    }
+    if (state.necessity[1] && state.necessity[1].answer === true) {
+      warnings.push('The purpose could be achieved with less data. Apply data minimization principles.');
+    }
+    if (state.necessity[2] && state.necessity[2].answer === true) {
+      warnings.push('The purpose could be achieved without personal data. Consider whether personal data processing is justified.');
+    }
+    if (state.necessity[3] && state.necessity[3].answer === false) {
+      warnings.push('Processing is not proportionate to the goal. Review the scope and scale of data processing.');
+    }
+    if (state.necessity[4] && state.necessity[4].answer === false) {
+      warnings.push('Data minimization measures have not been applied. This is a requirement under GDPR Art. 5(1)(c).');
+    }
+
+    for (var w = 0; w < warnings.length; w++) {
+      items.push(createAlert('warning', warnings[w]));
+    }
+
+    container.appendChild(createSection('Step 2: Necessity & Proportionality', items));
+  }
+
+  // ========== STEP 3: Data Subject Risks ==========
+  function renderStep3(container) {
+    var items = [];
+    items.push(el('p', { className: 'subtitle' }, ['Assess each risk by selecting likelihood and severity. Mitigation is required for Medium risk and above.']));
+
+    for (var i = 0; i < dataSubjectRisks.length; i++) {
+      items.push(buildRiskRow(dataSubjectRisks[i], state.dsRisks[i], i, 'dsRisks'));
+    }
+
+    container.appendChild(createSection('Step 3: Risk Assessment \u2014 Data Subject Risks', items));
+  }
+
+  // ========== STEP 4: AI-Specific Risks ==========
+  function renderStep4(container) {
+    var items = [];
+    items.push(el('p', { className: 'subtitle' }, ['AI and machine learning introduce additional privacy risks. Assess each below.']));
+
+    for (var i = 0; i < aiSpecificRisks.length; i++) {
+      items.push(buildRiskRow(aiSpecificRisks[i], state.aiRisks[i], i, 'aiRisks'));
+    }
+
+    container.appendChild(createSection('Step 4: Risk Assessment \u2014 AI-Specific Privacy Risks', items));
+  }
+
+  function buildRiskRow(riskName, riskState, idx, stateKey) {
+    var row = el('div', { className: 'risk-row' });
+    var header = el('div', { className: 'risk-row-header' });
+    header.appendChild(el('span', { className: 'risk-row-title' }, [(idx + 1) + '. ' + riskName]));
+
+    var overall = calcOverallRisk(riskState.likelihood, riskState.severity);
+    if (overall) {
+      header.appendChild(el('span', { className: 'risk-badge ' + riskClass(overall) }, [overall]));
+    }
+    row.appendChild(header);
+
+    var selects = el('div', { className: 'risk-selects' });
+
+    var likelihoodOpts = [
+      { value: '', label: '-- Likelihood --' },
+      { value: 'High', label: 'High' },
+      { value: 'Medium', label: 'Medium' },
+      { value: 'Low', label: 'Low' }
+    ];
+    var severityOpts = [
+      { value: '', label: '-- Severity --' },
+      { value: 'High', label: 'High' },
+      { value: 'Medium', label: 'Medium' },
+      { value: 'Low', label: 'Low' }
+    ];
+
+    var lSel = el('select');
+    for (var j = 0; j < likelihoodOpts.length; j++) {
+      var o = el('option', { value: likelihoodOpts[j].value });
+      o.textContent = likelihoodOpts[j].label;
+      if (likelihoodOpts[j].value === riskState.likelihood) o.selected = true;
+      lSel.appendChild(o);
+    }
+    lSel.className = 'field-select';
+    lSel.style.cssText = 'flex:none;width:auto;padding:4px 8px;';
+    lSel.addEventListener('change', (function(k, i2) {
+      return function() { state[k][i2].likelihood = lSel.value; wizard.refreshStep(); };
+    })(stateKey, idx));
+
+    var sSel = el('select');
+    for (var j = 0; j < severityOpts.length; j++) {
+      var o = el('option', { value: severityOpts[j].value });
+      o.textContent = severityOpts[j].label;
+      if (severityOpts[j].value === riskState.severity) o.selected = true;
+      sSel.appendChild(o);
+    }
+    sSel.className = 'field-select';
+    sSel.style.cssText = 'flex:none;width:auto;padding:4px 8px;';
+    sSel.addEventListener('change', (function(k, i2) {
+      return function() { state[k][i2].severity = sSel.value; wizard.refreshStep(); };
+    })(stateKey, idx));
+
+    selects.appendChild(el('label', {}, ['Likelihood: ']));
+    selects.appendChild(lSel);
+    selects.appendChild(el('label', {}, ['Severity: ']));
+    selects.appendChild(sSel);
+    row.appendChild(selects);
+
+    // Mitigation if medium or above
+    if (overall === 'Critical' || overall === 'High' || overall === 'Medium') {
+      var mitDiv = el('div', { className: 'cond-section' });
+      var mitTa = el('textarea', {
+        className: 'field-textarea',
+        placeholder: 'Describe mitigation measures for this risk...'
+      });
+      mitTa.value = riskState.mitigation || '';
+      mitTa.addEventListener('input', (function(k, i2) {
+        return function() { state[k][i2].mitigation = mitTa.value; };
+      })(stateKey, idx));
+      mitDiv.appendChild(el('label', { className: 'field-label' }, ['Mitigation measures (required):']));
+      mitDiv.appendChild(mitTa);
+      row.appendChild(mitDiv);
+    }
+
+    return row;
+  }
+
+  // ========== STEP 5: Data Subject Rights ==========
+  function renderStep5(container) {
+    var items = [];
+
+    var notes = [
+      'EU/UK: 30 days for access requests (GDPR Art. 12)',
+      'India DPDPA: Response timelines defined by rules (not yet finalized)',
+      'Brazil LGPD: 15 days for simplified confirmation; reasonable time for full requests'
+    ];
+    for (var n = 0; n < notes.length; n++) {
+      items.push(el('div', { className: 'jurisdiction-note' }, [notes[n]]));
+    }
+
+    var anyNotImpl = false;
+    for (var i = 0; i < dataSubjectRightsList.length; i++) {
+      (function(idx) {
+        var right = dataSubjectRightsList[idx];
+        var rState = state.rights[idx];
+
+        var row = el('div', { className: 'right-row' });
+        var header = el('div', { className: 'right-row-header' });
+        header.appendChild(el('span', { className: 'right-row-title' }, [(idx + 1) + '. Right to be ' + right]));
+        row.appendChild(header);
+
+        row.appendChild(createToggle('Implemented?', rState.implemented, function(v) {
+          state.rights[idx].implemented = v;
+          wizard.refreshStep();
+        }));
+
+        if (rState.implemented === true) {
+          var fields = el('div', { className: 'right-fields' });
+          var methodInput = createTextInput('Method', rState.method, function(v) {
+            state.rights[idx].method = v;
+          }, 'e.g., Self-service portal');
+          var timeInput = createTextInput('Response time', rState.responseTime, function(v) {
+            state.rights[idx].responseTime = v;
+          }, 'e.g., 30 days');
+          fields.appendChild(methodInput);
+          fields.appendChild(timeInput);
+          row.appendChild(fields);
+        }
+
+        if (rState.implemented === false) anyNotImpl = true;
+        items.push(row);
+      })(i);
+    }
+
+    if (anyNotImpl) {
+      items.push(createAlert('danger', 'One or more data subject rights are not implemented. Under GDPR, all listed rights must be facilitated unless a specific exemption applies.'));
+    }
+
+    container.appendChild(createSection('Step 5: Data Subject Rights Implementation', items));
+  }
+
+  // ========== STEP 6: Data Protection Measures ==========
+  function renderStep6(container) {
+    var items = [];
+
+    var pct = getMeasureCompleteness();
+    var pctBar = el('div', { className: 'progress-bar-bg' });
+    var fillColor = pct >= 80 ? '#2A7B7B' : pct >= 50 ? '#D4943A' : '#c0392b';
+    var fill = el('div', { className: 'progress-bar-fill' });
+    fill.style.cssText = 'width:' + pct + '%;background:' + fillColor + ';';
+    pctBar.appendChild(fill);
+    items.push(el('p', { className: 'subtitle' }, ['Completeness: ' + pct + '%']));
+    items.push(pctBar);
+
+    var criticalMissing = [];
+    for (var i = 0; i < protectionMeasures.length; i++) {
+      (function(idx) {
+        var measure = protectionMeasures[idx];
+        var mState = state.measures[idx];
+
+        var row = el('div', { className: 'measure-row' });
+        var header = el('div', { className: 'measure-header' });
+        header.appendChild(el('span', { className: 'measure-title' }, [(idx + 1) + '. ' + measure]));
+        row.appendChild(header);
+
+        row.appendChild(createToggle('Implemented?', mState.implemented, function(v) {
+          state.measures[idx].implemented = v;
+          wizard.refreshStep();
+        }));
+
+        if (mState.implemented === true) {
+          row.appendChild(createTextInput('Details', mState.details, function(v) {
+            state.measures[idx].details = v;
+          }, 'Describe the implementation...'));
+        }
+
+        if (mState.implemented === false) {
+          var isCritical = (measure.indexOf('Encryption') >= 0 || measure === 'Breach notification process' || measure === 'Breach detection');
+          if (isCritical) criticalMissing.push(measure);
+        }
+
+        items.push(row);
+      })(i);
+    }
+
+    if (criticalMissing.length > 0) {
+      items.push(createAlert('danger', 'Critical measures missing: ' + criticalMissing.join(', ') + '. These are typically mandatory under GDPR Art. 32 and other data protection laws.'));
+    }
+
+    container.appendChild(createSection('Step 6: Data Protection Measures', items));
+  }
+
+  // ========== STEP 7: Consultation Records ==========
+  function renderStep7(container) {
+    var items = [];
+
+    for (var i = 0; i < consultees.length; i++) {
+      (function(idx) {
+        var name = consultees[idx];
+        var cState = state.consultation[idx];
+
+        var row = el('div', { className: 'consult-row' });
+        row.appendChild(el('h3', {}, [name]));
+
+        row.appendChild(createToggle('Consulted?', cState.consulted, function(v) {
+          state.consultation[idx].consulted = v;
+          wizard.refreshStep();
+        }));
+
+        if (cState.consulted === true) {
+          var fields = el('div', { className: 'consult-fields' });
+          fields.appendChild(createTextInput('Date', cState.date, function(v) {
+            state.consultation[idx].date = v;
+          }, 'YYYY-MM-DD'));
+          fields.appendChild(createToggle('Issues addressed?', cState.addressed, function(v) {
+            state.consultation[idx].addressed = v;
+            wizard.saveNow();
+          }));
+          row.appendChild(fields);
+          row.appendChild(createTextArea('Summary of input', cState.summary, function(v) {
+            state.consultation[idx].summary = v;
+          }, 'Summarize the consultation input and recommendations...'));
+        }
+
+        items.push(row);
+      })(i);
+    }
+
+    // DPO warning
+    if (state.consultation[0] && state.consultation[0].consulted === false) {
+      items.push(createAlert('danger', 'Data Protection Officer has not been consulted. Under GDPR Art. 35(2), the controller shall seek the advice of the DPO when carrying out a DPIA. This is mandatory.'));
+    }
+
+    container.appendChild(createSection('Step 7: Consultation Records', items));
+  }
+
+  // ========== STEP 8: Outcome & Summary ==========
+  function renderStep8(container) {
+    var items = [];
+
+    // Auto-suggest overall risk
+    var suggested = suggestOverallRisk();
+    if (!state.outcome.overallRisk) {
+      state.outcome.overallRisk = suggested;
+    }
+
+    items.push(createSelect('Overall risk level after mitigation', overallRiskOptions, state.outcome.overallRisk, function(v) {
+      state.outcome.overallRisk = v;
+    }));
+    if (suggested) {
+      items.push(el('div', { className: 'jurisdiction-note' }, ['Auto-suggested based on risk scores: ' + suggested.charAt(0).toUpperCase() + suggested.slice(1)]));
+    }
+
+    items.push(createSelect('Decision', decisionOptions, state.outcome.decision, function(v) {
+      state.outcome.decision = v;
+      wizard.refreshStep();
+    }));
+
+    if (state.outcome.decision === 'proceed_conditions') {
+      items.push(createTextArea('Conditions for proceeding', state.outcome.conditions, function(v) {
+        state.outcome.conditions = v;
+      }, 'Describe the conditions that must be met...'));
+    }
+
+    items.push(createTextInput('Approved by (name, role)', state.outcome.approvedBy, function(v) {
+      state.outcome.approvedBy = v;
+    }, 'e.g., Jane Smith, Data Protection Officer'));
+
+    items.push(createTextArea('DPO opinion', state.outcome.dpoOpinion, function(v) {
+      state.outcome.dpoOpinion = v;
+    }, 'Record the DPO opinion on this assessment...'));
+
+    // ===== SUMMARY DISPLAY =====
+    items.push(el('h2', {}, ['Assessment Summary']));
+
+    // Risk Heatmap
+    items.push(buildHeatmap());
+
+    // Risk counts
+    var allDsCounts = countRiskLevels(state.dsRisks, dataSubjectRisks);
+    var allAiCounts = countRiskLevels(state.aiRisks, aiSpecificRisks);
+    var combinedCounts = {
+      Critical: allDsCounts.Critical + allAiCounts.Critical,
+      High: allDsCounts.High + allAiCounts.High,
+      Medium: allDsCounts.Medium + allAiCounts.Medium,
+      Low: allDsCounts.Low + allAiCounts.Low
+    };
+
+    var riskCard = el('div', { className: 'summary-card' });
+    riskCard.appendChild(el('h3', {}, ['Risk Distribution']));
+    var levels = ['Critical', 'High', 'Medium', 'Low'];
+    for (var i = 0; i < levels.length; i++) {
+      var statRow = el('div', { className: 'summary-stat' });
+      statRow.appendChild(el('span', { className: 'stat-label' }, [levels[i]]));
+      var badge = el('span', { className: 'risk-badge ' + riskClass(levels[i]) }, [String(combinedCounts[levels[i]])]);
+      statRow.appendChild(badge);
+      riskCard.appendChild(statRow);
+    }
+    items.push(riskCard);
+
+    // Measures completeness
+    var measPct = getMeasureCompleteness();
+    var measCard = el('div', { className: 'summary-card' });
+    measCard.appendChild(el('h3', {}, ['Data Protection Measures']));
+    measCard.appendChild(el('p', {}, ['Completeness: ' + measPct + '%']));
+    var mBar = el('div', { className: 'progress-bar-bg' });
+    var mFill = el('div', { className: 'progress-bar-fill' });
+    mFill.style.cssText = 'width:' + measPct + '%;background:' + (measPct >= 80 ? '#2A7B7B' : measPct >= 50 ? '#D4943A' : '#c0392b') + ';';
+    mBar.appendChild(mFill);
+    measCard.appendChild(mBar);
+    items.push(measCard);
+
+    // Rights completeness
+    var rightsPct = getRightsCompleteness();
+    var rightsCard = el('div', { className: 'summary-card' });
+    rightsCard.appendChild(el('h3', {}, ['Data Subject Rights']));
+    rightsCard.appendChild(el('p', {}, ['Implementation: ' + rightsPct + '%']));
+    var rBar = el('div', { className: 'progress-bar-bg' });
+    var rFill = el('div', { className: 'progress-bar-fill' });
+    rFill.style.cssText = 'width:' + rightsPct + '%;background:' + (rightsPct >= 80 ? '#2A7B7B' : rightsPct >= 50 ? '#D4943A' : '#c0392b') + ';';
+    rBar.appendChild(rFill);
+    rightsCard.appendChild(rBar);
+    items.push(rightsCard);
+
+    // Consultation completeness
+    var consultPct = getConsultationCompleteness();
+    var consultCard = el('div', { className: 'summary-card' });
+    consultCard.appendChild(el('h3', {}, ['Consultation']));
+    consultCard.appendChild(el('p', {}, ['Completeness: ' + consultPct + '%']));
+    var cBar = el('div', { className: 'progress-bar-bg' });
+    var cFill = el('div', { className: 'progress-bar-fill' });
+    cFill.style.cssText = 'width:' + consultPct + '%;background:' + (consultPct >= 80 ? '#2A7B7B' : consultPct >= 50 ? '#D4943A' : '#c0392b') + ';';
+    cBar.appendChild(cFill);
+    consultCard.appendChild(cBar);
+    items.push(consultCard);
+
+    // Overall recommendation
+    var recCard = el('div', { className: 'summary-card' });
+    recCard.appendChild(el('h3', {}, ['Overall Recommendation']));
+    var recText = buildRecommendation(combinedCounts, measPct, rightsPct, consultPct);
+    recCard.appendChild(el('p', {}, [recText]));
+    items.push(recCard);
+
+    // Export / Save buttons at bottom
+    var bottomBar = el('div', { className: 'toolbar' });
+    bottomBar.appendChild(el('button', { className: 'btn success', textContent: 'Save Config', onClick: doSave }));
+    bottomBar.appendChild(el('button', { className: 'btn primary', textContent: 'Export Markdown', onClick: doExport }));
+    items.push(bottomBar);
+
+    container.appendChild(createSection('Step 8: Outcome & Summary', items));
+  }
+
+  function buildHeatmap() {
+    var hm = el('div', { className: 'heatmap' });
+    // Header row
+    hm.appendChild(el('div', { className: 'heatmap-cell heatmap-header' }, ['Likelihood \\ Severity']));
+    hm.appendChild(el('div', { className: 'heatmap-cell heatmap-header' }, ['High']));
+    hm.appendChild(el('div', { className: 'heatmap-cell heatmap-header' }, ['Medium']));
+    hm.appendChild(el('div', { className: 'heatmap-cell heatmap-header' }, ['Low']));
+
+    var allRisks = state.dsRisks.concat(state.aiRisks);
+    var matrix = {};
+    var liks = ['High', 'Medium', 'Low'];
+    var sevs = ['High', 'Medium', 'Low'];
+    for (var li = 0; li < liks.length; li++) {
+      for (var si = 0; si < sevs.length; si++) {
+        matrix[liks[li] + '_' + sevs[si]] = 0;
+      }
+    }
+    for (var i = 0; i < allRisks.length; i++) {
+      var key = allRisks[i].likelihood + '_' + allRisks[i].severity;
+      if (matrix[key] !== undefined) matrix[key]++;
+    }
+
+    for (var li = 0; li < liks.length; li++) {
+      hm.appendChild(el('div', { className: 'heatmap-cell heatmap-label' }, [liks[li]]));
+      for (var si = 0; si < sevs.length; si++) {
+        var count = matrix[liks[li] + '_' + sevs[si]];
+        var overall = calcOverallRisk(liks[li], sevs[si]);
+        var cls = 'heatmap-cell heatmap-' + overall.toLowerCase();
+        hm.appendChild(el('div', { className: cls }, [String(count)]));
+      }
+    }
+
+    return hm;
+  }
+
+  function buildRecommendation(counts, measPct, rightsPct, consultPct) {
+    var issues = [];
+    if (counts.Critical > 0) issues.push(counts.Critical + ' critical risk(s) identified');
+    if (counts.High > 2) issues.push(counts.High + ' high risks require attention');
+    if (measPct < 70) issues.push('data protection measures incomplete (' + measPct + '%)');
+    if (rightsPct < 80) issues.push('data subject rights implementation gaps (' + rightsPct + '%)');
+    if (consultPct < 60) issues.push('consultation incomplete (' + consultPct + '%)');
+
+    if (issues.length === 0) {
+      return 'Assessment indicates adequate controls are in place. Proceed with regular monitoring and periodic reassessment.';
+    } else if (counts.Critical > 0) {
+      return 'Critical issues found: ' + issues.join('; ') + '. Recommend consulting supervisory authority before proceeding.';
+    } else {
+      return 'Issues identified: ' + issues.join('; ') + '. Address these before proceeding or document acceptance of residual risk.';
+    }
+  }
+
+  // ========== MARKDOWN EXPORT ==========
+  function generateMarkdown() {
+    var lines = [];
+    lines.push('# Privacy Impact Assessment');
+    lines.push('');
+    lines.push('**Generated:** ' + new Date().toISOString().split('T')[0]);
+    lines.push('**Template:** 07 \u2014 EU GDPR Art. 35, UK GDPR/DUA Act, India DPDPA, Brazil LGPD, Australia Privacy Act');
+    lines.push('');
+
+    // Step 1
+    lines.push('## 1. Processing Activity Description');
+    lines.push('');
+    var activeTypes = [];
+    for (var k in state.processing.dataTypes) {
+      if (state.processing.dataTypes[k] === true) activeTypes.push(k);
+    }
+    lines.push('**Personal data types:** ' + (activeTypes.length > 0 ? activeTypes.join(', ') : 'None selected'));
+    lines.push('');
+    lines.push('**Purpose:** ' + (state.processing.purpose || 'Not specified'));
+    lines.push('');
+    var basisLabel = '';
+    for (var b = 0; b < legalBasisOptions.length; b++) {
+      if (legalBasisOptions[b].value === state.processing.legalBasis) basisLabel = legalBasisOptions[b].label;
+    }
+    lines.push('**Legal basis:** ' + (basisLabel || 'Not selected'));
+    lines.push('');
+    var activeSubjects = [];
+    for (var k in state.processing.subjects) {
+      if (state.processing.subjects[k] === true) activeSubjects.push(k);
+    }
+    lines.push('**Data subjects:** ' + (activeSubjects.length > 0 ? activeSubjects.join(', ') : 'None selected'));
+    lines.push('');
+    lines.push('**Estimated subjects:** ' + (state.processing.estimatedSubjects || 'Not specified'));
+    lines.push('');
+    lines.push('**Special category data:** ' + (state.processing.specialCategory === true ? 'Yes' : state.processing.specialCategory === false ? 'No' : 'Not assessed'));
+    if (state.processing.specialCategory === true && state.processing.art9Condition) {
+      var condLabel = '';
+      for (var a = 0; a < art9Conditions.length; a++) {
+        if (art9Conditions[a].value === state.processing.art9Condition) condLabel = art9Conditions[a].label;
+      }
+      lines.push('**Art. 9 Condition:** ' + condLabel);
+    }
+    lines.push('');
+    lines.push('**Cross-border transfers:** ' + (state.processing.crossBorder === true ? 'Yes' : state.processing.crossBorder === false ? 'No' : 'Not assessed'));
+    if (state.processing.crossBorder === true) {
+      lines.push('**Destination:** ' + (state.processing.crossBorderCountry || 'Not specified'));
+      var mechLabel = '';
+      for (var t = 0; t < transferMechanisms.length; t++) {
+        if (transferMechanisms[t].value === state.processing.transferMechanism) mechLabel = transferMechanisms[t].label;
+      }
+      lines.push('**Transfer mechanism:** ' + (mechLabel || 'Not selected'));
+    }
+    lines.push('');
+    lines.push('**Retention period:** ' + (state.processing.retentionPeriod || 'Not specified'));
+    lines.push('');
+    lines.push('**Data processors:** ' + (state.processing.processors || 'None listed'));
+    lines.push('');
+
+    // Step 2
+    lines.push('## 2. Necessity & Proportionality');
+    lines.push('');
+    for (var i = 0; i < necessityQuestions.length; i++) {
+      var a = state.necessity[i];
+      var ans = a.answer === true ? 'Yes' : a.answer === false ? 'No' : 'Not assessed';
+      lines.push('### ' + (i + 1) + '. ' + necessityQuestions[i]);
+      lines.push('**Answer:** ' + ans);
+      if (a.justification) lines.push('**Justification:** ' + a.justification);
+      lines.push('');
+    }
+
+    // Step 3
+    lines.push('## 3. Data Subject Risk Assessment');
+    lines.push('');
+    lines.push('| # | Risk | Likelihood | Severity | Overall | Mitigation |');
+    lines.push('|---|------|-----------|----------|---------|-----------|');
+    for (var i = 0; i < dataSubjectRisks.length; i++) {
+      var r = state.dsRisks[i];
+      var overall = calcOverallRisk(r.likelihood, r.severity) || 'N/A';
+      lines.push('| ' + (i + 1) + ' | ' + dataSubjectRisks[i] + ' | ' + (r.likelihood || 'N/A') + ' | ' + (r.severity || 'N/A') + ' | ' + overall + ' | ' + (r.mitigation || '-') + ' |');
+    }
+    lines.push('');
+
+    // Step 4
+    lines.push('## 4. AI-Specific Risk Assessment');
+    lines.push('');
+    lines.push('| # | Risk | Likelihood | Severity | Overall | Mitigation |');
+    lines.push('|---|------|-----------|----------|---------|-----------|');
+    for (var i = 0; i < aiSpecificRisks.length; i++) {
+      var r = state.aiRisks[i];
+      var overall = calcOverallRisk(r.likelihood, r.severity) || 'N/A';
+      lines.push('| ' + (i + 1) + ' | ' + aiSpecificRisks[i] + ' | ' + (r.likelihood || 'N/A') + ' | ' + (r.severity || 'N/A') + ' | ' + overall + ' | ' + (r.mitigation || '-') + ' |');
+    }
+    lines.push('');
+
+    // Step 5
+    lines.push('## 5. Data Subject Rights Implementation');
+    lines.push('');
+    lines.push('| Right | Implemented | Method | Response Time |');
+    lines.push('|-------|------------|--------|--------------|');
+    for (var i = 0; i < dataSubjectRightsList.length; i++) {
+      var r = state.rights[i];
+      var impl = r.implemented === true ? 'Yes' : r.implemented === false ? 'No' : 'N/A';
+      lines.push('| ' + dataSubjectRightsList[i] + ' | ' + impl + ' | ' + (r.method || '-') + ' | ' + (r.responseTime || '-') + ' |');
+    }
+    lines.push('');
+    lines.push('**Implementation completeness:** ' + getRightsCompleteness() + '%');
+    lines.push('');
+
+    // Step 6
+    lines.push('## 6. Data Protection Measures');
+    lines.push('');
+    lines.push('| Measure | Implemented | Details |');
+    lines.push('|---------|------------|---------|');
+    for (var i = 0; i < protectionMeasures.length; i++) {
+      var m = state.measures[i];
+      var impl = m.implemented === true ? 'Yes' : m.implemented === false ? 'No' : 'N/A';
+      lines.push('| ' + protectionMeasures[i] + ' | ' + impl + ' | ' + (m.details || '-') + ' |');
+    }
+    lines.push('');
+    lines.push('**Completeness:** ' + getMeasureCompleteness() + '%');
+    lines.push('');
+
+    // Step 7
+    lines.push('## 7. Consultation Records');
+    lines.push('');
+    for (var i = 0; i < consultees.length; i++) {
+      var c = state.consultation[i];
+      lines.push('### ' + consultees[i]);
+      lines.push('**Consulted:** ' + (c.consulted === true ? 'Yes' : c.consulted === false ? 'No' : 'Not recorded'));
+      if (c.consulted === true) {
+        lines.push('**Date:** ' + (c.date || 'Not recorded'));
+        lines.push('**Issues addressed:** ' + (c.addressed === true ? 'Yes' : c.addressed === false ? 'No' : 'N/A'));
+        if (c.summary) lines.push('**Summary:** ' + c.summary);
+      }
+      lines.push('');
+    }
+
+    // Step 8
+    lines.push('## 8. Outcome');
+    lines.push('');
+    lines.push('**Overall risk after mitigation:** ' + (state.outcome.overallRisk || 'Not assessed'));
+    var decLabel = '';
+    for (var d = 0; d < decisionOptions.length; d++) {
+      if (decisionOptions[d].value === state.outcome.decision) decLabel = decisionOptions[d].label;
+    }
+    lines.push('**Decision:** ' + (decLabel || 'Not selected'));
+    if (state.outcome.decision === 'proceed_conditions' && state.outcome.conditions) {
+      lines.push('**Conditions:** ' + state.outcome.conditions);
+    }
+    lines.push('**Approved by:** ' + (state.outcome.approvedBy || 'Not recorded'));
+    if (state.outcome.dpoOpinion) lines.push('**DPO opinion:** ' + state.outcome.dpoOpinion);
+    lines.push('');
+
+    // Summary stats
+    var allDsCounts = countRiskLevels(state.dsRisks, dataSubjectRisks);
+    var allAiCounts = countRiskLevels(state.aiRisks, aiSpecificRisks);
+    lines.push('## Summary Statistics');
+    lines.push('');
+    lines.push('- Critical risks: ' + (allDsCounts.Critical + allAiCounts.Critical));
+    lines.push('- High risks: ' + (allDsCounts.High + allAiCounts.High));
+    lines.push('- Medium risks: ' + (allDsCounts.Medium + allAiCounts.Medium));
+    lines.push('- Low risks: ' + (allDsCounts.Low + allAiCounts.Low));
+    lines.push('- Data protection measures: ' + getMeasureCompleteness() + '% complete');
+    lines.push('- Data subject rights: ' + getRightsCompleteness() + '% implemented');
+    lines.push('- Consultation: ' + getConsultationCompleteness() + '% complete');
+    lines.push('');
+    lines.push('---');
+    lines.push('*This assessment is research output, not legal advice. Consult qualified legal counsel for binding compliance determinations.*');
+
+    return lines.join('\n');
+  }
+
+  wizard.render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Governance Framework (Template 12)</title>
+<script src="./shared.js"></script>
+</head>
+<body>
+<script>
+(function() {
+  injectCSS();
+  var config = {};
+  var roleTypes = [{value:"",label:"-- Select --"},{value:"executive-sponsor",label:"Executive sponsor"},{value:"governance-board",label:"AI Governance Board"},{value:"ethics-advisor",label:"Ethics Advisor"},{value:"chief-ai-officer",label:"Chief AI Officer"},{value:"dpo",label:"DPO"},{value:"legal",label:"Legal"},{value:"technical-lead",label:"Technical Lead"},{value:"oversight-operators",label:"Oversight Operators"}];
+  var meetingFrequencies = [{value:"",label:"-- Select --"},{value:"weekly",label:"Weekly"},{value:"monthly",label:"Monthly"},{value:"quarterly",label:"Quarterly"},{value:"per-use-case",label:"Per use case"},{value:"per-release",label:"Per release"},{value:"per-incident",label:"Per incident"}];
+  var policyStatuses = [{value:"",label:"-- Select --"},{value:"not-started",label:"Not started"},{value:"draft",label:"Draft"},{value:"under-review",label:"Under review"},{value:"approved",label:"Approved"}];
+  var riskLevels = [{value:"",label:"-- Select --"},{value:"high",label:"High"},{value:"medium",label:"Medium"},{value:"low",label:"Low"}];
+  var systemStatuses = [{value:"",label:"-- Select --"},{value:"active",label:"Active"},{value:"development",label:"Development"},{value:"retired",label:"Retired"}];
+  var corePolicies = ["Acceptable Use","Risk Management","Ethics","Transparency","Data Governance","Incident Response","Procurement","Model Lifecycle"];
+  var principles = ["Safety","Fairness","Transparency","Accountability","Human oversight","Privacy","Robustness"];
+  var approvalGates = ["Proposal","Ethics Review","Risk Assessment","Technical Review","Compliance Review","Approval","Deployment"];
+  var changeTypes = ["Model update","Data refresh","Parameter change","Use case expansion","Vendor change","Decommission"];
+  var evidenceItems = ["Governance structure documented with roles and responsibilities","Meeting schedule and minutes archive","Policy framework with version control","AI system register maintained","Approval process with decision records","Third-party AI governance procedures","Annual governance review completed","Training records for governance participants","Compliance monitoring reports"];
+
+  var state = {
+    roles:[],meetings:[],
+    policies:{},policyDates:{},policyOwners:{},
+    principlesImpl:{},
+    systems:[],
+    gates:{},gateMakers:{},gateArtifacts:{},
+    changeApprovals:{},changeScopes:{},
+    thirdParty:{vendorAssessment:"",contractual:"",monitoring:"",exitStrategy:""},
+    evidenceChecklist:{}
+  };
+
+  function emptyRole(){return{type:"",names:"",responsibilities:"",authority:""};}
+  function emptyMeeting(){return{name:"",frequency:"",attendees:"",purpose:""};}
+  function emptySystem(){return{id:"",name:"",purpose:"",riskLevel:"",owner:"",status:"",jurisdictions:"",lastReview:""};}
+
+  var wizard = createWizard({
+    title: 'AI Governance Framework',
+    subtitle: 'Template 12 \u2014 EU AI Act; South Korea; Brazil; Chile; Singapore; UK; Texas; Japan; NZ; Australia; Canada',
+    totalSteps: 7,
+    stepLabels: ["Governance Structure","Meetings","Policy Framework","AI System Register","Approval Process","Third-Party","Summary"],
+    renderStep: function(step, container) {
+      if (step === 0) renderStep1(container);
+      else if (step === 1) renderStep2(container);
+      else if (step === 2) renderStep3(container);
+      else if (step === 3) renderStep4(container);
+      else if (step === 4) renderStep5(container);
+      else if (step === 5) renderStep6(container);
+      else if (step === 6) renderStep7(container);
+    },
+    onLoad: function() {
+      loadConfigFromFile(function(c) { config = c; loadState(); wizard.refreshStep(); });
+    },
+    onSave: doSave,
+    onExport: doExport,
+    stateKey: 'governanceFramework',
+    getState: function() { return state; },
+    setState: function(s) {
+      if (s.roles) state.roles = s.roles;
+      if (s.meetings) state.meetings = s.meetings;
+      if (s.policies) { for (var k in s.policies) { state.policies[k] = s.policies[k]; } }
+      if (s.policyDates) { for (var k in s.policyDates) { state.policyDates[k] = s.policyDates[k]; } }
+      if (s.policyOwners) { for (var k in s.policyOwners) { state.policyOwners[k] = s.policyOwners[k]; } }
+      if (s.principlesImpl) { for (var k in s.principlesImpl) { state.principlesImpl[k] = s.principlesImpl[k]; } }
+      if (s.systems) state.systems = s.systems;
+      if (s.gates) { for (var k in s.gates) { state.gates[k] = s.gates[k]; } }
+      if (s.gateMakers) { for (var k in s.gateMakers) { state.gateMakers[k] = s.gateMakers[k]; } }
+      if (s.gateArtifacts) { for (var k in s.gateArtifacts) { state.gateArtifacts[k] = s.gateArtifacts[k]; } }
+      if (s.changeApprovals) { for (var k in s.changeApprovals) { state.changeApprovals[k] = s.changeApprovals[k]; } }
+      if (s.changeScopes) { for (var k in s.changeScopes) { state.changeScopes[k] = s.changeScopes[k]; } }
+      if (s.thirdParty) {
+        if (s.thirdParty.vendorAssessment !== undefined) state.thirdParty.vendorAssessment = s.thirdParty.vendorAssessment;
+        if (s.thirdParty.contractual !== undefined) state.thirdParty.contractual = s.thirdParty.contractual;
+        if (s.thirdParty.monitoring !== undefined) state.thirdParty.monitoring = s.thirdParty.monitoring;
+        if (s.thirdParty.exitStrategy !== undefined) state.thirdParty.exitStrategy = s.thirdParty.exitStrategy;
+      }
+      if (s.evidenceChecklist) { for (var k in s.evidenceChecklist) { state.evidenceChecklist[k] = s.evidenceChecklist[k]; } }
+    }
+  });
+
+  function renderStep1(container){
+    var s=el("div",{className:"section"});s.appendChild(el("h2",{},["Step 1: Governance Structure"]));
+    s.appendChild(createAlert("info","Define the roles and responsibilities for AI governance in your organization."));
+    for(var i=0;i<state.roles.length;i++){(function(idx){var r=state.roles[idx];var card=el("div",{className:"section",style:"border:1px solid #1E2D3D;padding:16px;border-radius:4px;margin-bottom:12px;"});var hdr=el("div",{style:"display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;"});hdr.appendChild(el("h3",{},["Role "+(idx+1)]));hdr.appendChild(el("button",{className:"btn",textContent:"Remove",onClick:function(){state.roles.splice(idx,1);wizard.refreshStep();}}));card.appendChild(hdr);
+    card.appendChild(createSelect("Role type",roleTypes,r.type,function(v){r.type=v;}));
+    card.appendChild(createTextInput("Name(s)",r.names,function(v){r.names=v;}));
+    card.appendChild(createTextArea("Responsibilities",r.responsibilities,function(v){r.responsibilities=v;}));
+    card.appendChild(createTextInput("Authority level",r.authority,function(v){r.authority=v;}));
+    s.appendChild(card);})(i);}
+    s.appendChild(el("button",{className:"btn success",textContent:"+ Add Role",onClick:function(){state.roles.push(emptyRole());wizard.refreshStep();}}));
+    container.appendChild(s);
+  }
+
+  function renderStep2(container){
+    var s=el("div",{className:"section"});s.appendChild(el("h2",{},["Step 2: Governance Meetings"]));
+    for(var i=0;i<state.meetings.length;i++){(function(idx){var m=state.meetings[idx];var card=el("div",{className:"section",style:"border:1px solid #1E2D3D;padding:16px;border-radius:4px;margin-bottom:12px;"});var hdr=el("div",{style:"display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;"});hdr.appendChild(el("h3",{},["Meeting "+(idx+1)]));hdr.appendChild(el("button",{className:"btn",textContent:"Remove",onClick:function(){state.meetings.splice(idx,1);wizard.refreshStep();}}));card.appendChild(hdr);
+    card.appendChild(createTextInput("Meeting name",m.name,function(v){m.name=v;}));
+    card.appendChild(createSelect("Frequency",meetingFrequencies,m.frequency,function(v){m.frequency=v;}));
+    card.appendChild(createTextInput("Attendees",m.attendees,function(v){m.attendees=v;}));
+    card.appendChild(createTextArea("Purpose",m.purpose,function(v){m.purpose=v;}));
+    s.appendChild(card);})(i);}
+    s.appendChild(el("button",{className:"btn success",textContent:"+ Add Meeting",onClick:function(){state.meetings.push(emptyMeeting());wizard.refreshStep();}}));
+    container.appendChild(s);
+  }
+
+  function renderStep3(container){
+    var s=el("div",{className:"section"});s.appendChild(el("h2",{},["Step 3: Policy Framework"]));
+    s.appendChild(el("h3",{},["Core Policies"]));
+    for(var i=0;i<corePolicies.length;i++){(function(pol){var key=pol.toLowerCase().replace(/\s+/g,"_");if(!state.policies[key])state.policies[key]="";if(!state.policyOwners[key])state.policyOwners[key]="";if(!state.policyDates[key])state.policyDates[key]="";
+    var card=el("div",{className:"section",style:"border:1px solid #1E2D3D;padding:12px 16px;border-radius:4px;margin-bottom:8px;"});
+    card.appendChild(el("h3",{},[pol]));
+    card.appendChild(createSelect("Status",policyStatuses,state.policies[key],function(v){state.policies[key]=v;}));
+    card.appendChild(createTextInput("Owner",state.policyOwners[key],function(v){state.policyOwners[key]=v;}));
+    var dateRow=el("div",{className:"field-row"});dateRow.appendChild(el("label",{className:"field-label"},["Last reviewed"]));var dateIn=el("input",{type:"date",className:"field-input",value:state.policyDates[key]||""});dateIn.addEventListener("change",function(){state.policyDates[key]=dateIn.value;});dateRow.appendChild(dateIn);card.appendChild(dateRow);
+    s.appendChild(card);})(corePolicies[i]);}
+    s.appendChild(el("h3",{},["Governance Principles"]));
+    for(var i=0;i<principles.length;i++){(function(pr){var key=pr.toLowerCase().replace(/\s+/g,"_");if(!state.principlesImpl[key])state.principlesImpl[key]="";
+    s.appendChild(createTextArea(pr+" - How implemented",state.principlesImpl[key],function(v){state.principlesImpl[key]=v;}));
+    })(principles[i]);}
+    container.appendChild(s);
+  }
+
+  function renderStep4(container){
+    var s=el("div",{className:"section"});s.appendChild(el("h2",{},["Step 4: AI System Register"]));
+    s.appendChild(createAlert("info","Maintain a register of all AI systems deployed or under development in your organization."));
+    for(var i=0;i<state.systems.length;i++){(function(idx){var sys=state.systems[idx];var card=el("div",{className:"section",style:"border:1px solid #1E2D3D;padding:16px;border-radius:4px;margin-bottom:12px;"});var hdr=el("div",{style:"display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;"});hdr.appendChild(el("h3",{},["System "+(idx+1)]));hdr.appendChild(el("button",{className:"btn",textContent:"Remove",onClick:function(){state.systems.splice(idx,1);wizard.refreshStep();}}));card.appendChild(hdr);
+    card.appendChild(createTextInput("System ID",sys.id,function(v){sys.id=v;}));
+    card.appendChild(createTextInput("System name",sys.name,function(v){sys.name=v;}));
+    card.appendChild(createTextInput("Purpose",sys.purpose,function(v){sys.purpose=v;}));
+    card.appendChild(createSelect("Risk level",riskLevels,sys.riskLevel,function(v){sys.riskLevel=v;}));
+    card.appendChild(createTextInput("Owner",sys.owner,function(v){sys.owner=v;}));
+    card.appendChild(createSelect("Status",systemStatuses,sys.status,function(v){sys.status=v;}));
+    card.appendChild(createTextInput("Jurisdictions",sys.jurisdictions,function(v){sys.jurisdictions=v;}));
+    card.appendChild(createTextInput("Last review date",sys.lastReview,function(v){sys.lastReview=v;},"YYYY-MM-DD"));
+    s.appendChild(card);})(i);}
+    s.appendChild(el("button",{className:"btn success",textContent:"+ Add System",onClick:function(){state.systems.push(emptySystem());wizard.refreshStep();}}));
+    container.appendChild(s);
+  }
+
+  function renderStep5(container){
+    var s=el("div",{className:"section"});s.appendChild(el("h2",{},["Step 5: Approval Process"]));
+    s.appendChild(el("h3",{},["Approval Gates"]));
+    for(var i=0;i<approvalGates.length;i++){(function(gate){var key=gate.toLowerCase().replace(/\s+/g,"_");if(state.gates[key]===undefined)state.gates[key]=null;if(!state.gateMakers[key])state.gateMakers[key]="";if(!state.gateArtifacts[key])state.gateArtifacts[key]="";
+    var card=el("div",{className:"section",style:"border:1px solid #1E2D3D;padding:12px 16px;border-radius:4px;margin-bottom:8px;"});
+    card.appendChild(el("h3",{},[gate]));
+    card.appendChild(createToggle("Gate defined?",state.gates[key],function(v){state.gates[key]=v;wizard.saveNow();}));
+    card.appendChild(createTextInput("Decision maker",state.gateMakers[key],function(v){state.gateMakers[key]=v;}));
+    card.appendChild(createTextInput("Artifacts required",state.gateArtifacts[key],function(v){state.gateArtifacts[key]=v;}));
+    s.appendChild(card);})(approvalGates[i]);}
+    s.appendChild(el("h3",{},["Change Management"]));
+    for(var i=0;i<changeTypes.length;i++){(function(ct){var key=ct.toLowerCase().replace(/\s+/g,"_");if(!state.changeApprovals[key])state.changeApprovals[key]="";if(!state.changeScopes[key])state.changeScopes[key]="";
+    var card=el("div",{className:"section",style:"border:1px solid #1E2D3D;padding:12px 16px;border-radius:4px;margin-bottom:8px;"});
+    card.appendChild(el("h3",{},[ct]));
+    card.appendChild(createTextInput("Approval required",state.changeApprovals[key],function(v){state.changeApprovals[key]=v;}));
+    card.appendChild(createTextInput("Review scope",state.changeScopes[key],function(v){state.changeScopes[key]=v;}));
+    s.appendChild(card);})(changeTypes[i]);}
+    container.appendChild(s);
+  }
+
+  function renderStep6(container){
+    var s=el("div",{className:"section"});s.appendChild(el("h2",{},["Step 6: Third-Party AI Governance"]));
+    var tp=state.thirdParty;
+    s.appendChild(createTextArea("Vendor assessment process",tp.vendorAssessment,function(v){tp.vendorAssessment=v;},"How do you evaluate third-party AI vendors?"));
+    s.appendChild(createTextArea("Contractual requirements",tp.contractual,function(v){tp.contractual=v;},"AI-specific contract clauses"));
+    s.appendChild(createTextArea("Ongoing monitoring",tp.monitoring,function(v){tp.monitoring=v;},"How do you monitor third-party AI performance?"));
+    s.appendChild(createTextArea("Exit strategy",tp.exitStrategy,function(v){tp.exitStrategy=v;},"Plan for transitioning away from a vendor"));
+    container.appendChild(s);
+  }
+
+  function renderStep7(container){
+    var s=el("div",{className:"section"});s.appendChild(el("h2",{},["Step 7: Summary"]));
+    s.appendChild(createAlert("info","Governance roles defined: "+state.roles.length));
+    s.appendChild(createAlert("info","Meetings scheduled: "+state.meetings.length));
+    var approved=0;var total=corePolicies.length;for(var i=0;i<corePolicies.length;i++){var key=corePolicies[i].toLowerCase().replace(/\s+/g,"_");if(state.policies[key]==="approved")approved++;}
+    s.appendChild(createAlert(approved===total?"success":approved>0?"warning":"danger","Policies approved: "+approved+"/"+total));
+    s.appendChild(createAlert("info","AI systems registered: "+state.systems.length));
+    var gatesDefined=Object.values(state.gates).filter(function(v){return v===true;}).length;
+    s.appendChild(createAlert(gatesDefined===approvalGates.length?"success":gatesDefined>0?"warning":"danger","Approval gates defined: "+gatesDefined+"/"+approvalGates.length));
+    s.appendChild(el("h3",{},["Evidence Checklist"]));
+    for(var i=0;i<evidenceItems.length;i++){(function(idx,item){var checked=state.evidenceChecklist[idx]||false;var cb=el("input",{type:"checkbox"});cb.checked=checked;cb.addEventListener("change",function(){state.evidenceChecklist[idx]=cb.checked;});var row=el("div",{className:"checklist-item"});row.appendChild(cb);row.appendChild(el("label",{},[item]));s.appendChild(row);})(i,evidenceItems[i]);}
+    var ec=Object.values(state.evidenceChecklist).filter(Boolean).length;
+    s.appendChild(createAlert(ec===evidenceItems.length?"success":ec>evidenceItems.length/2?"warning":"danger","Evidence checklist: "+ec+"/"+evidenceItems.length+" items completed"));
+    container.appendChild(s);
+  }
+
+  function loadState(){var sv=(config.interactiveToolResults&&config.interactiveToolResults.governanceFramework)?config.interactiveToolResults.governanceFramework:null;if(sv){if(sv.roles)state.roles=sv.roles;if(sv.meetings)state.meetings=sv.meetings;if(sv.policies)state.policies=sv.policies;if(sv.policyDates)state.policyDates=sv.policyDates;if(sv.policyOwners)state.policyOwners=sv.policyOwners;if(sv.principlesImpl)state.principlesImpl=sv.principlesImpl;if(sv.systems)state.systems=sv.systems;if(sv.gates)state.gates=sv.gates;if(sv.gateMakers)state.gateMakers=sv.gateMakers;if(sv.gateArtifacts)state.gateArtifacts=sv.gateArtifacts;if(sv.changeApprovals)state.changeApprovals=sv.changeApprovals;if(sv.changeScopes)state.changeScopes=sv.changeScopes;if(sv.thirdParty)state.thirdParty=sv.thirdParty;if(sv.evidenceChecklist)state.evidenceChecklist=sv.evidenceChecklist;}}
+  function buildResults(){return{completedDate:new Date().toISOString().split("T")[0],roles:state.roles,meetings:state.meetings,policies:state.policies,policyDates:state.policyDates,policyOwners:state.policyOwners,principlesImpl:state.principlesImpl,systems:state.systems,gates:state.gates,gateMakers:state.gateMakers,gateArtifacts:state.gateArtifacts,changeApprovals:state.changeApprovals,changeScopes:state.changeScopes,thirdParty:state.thirdParty,evidenceChecklist:state.evidenceChecklist};}
+  function doSave(){config.interactiveToolResults=config.interactiveToolResults||{};config.interactiveToolResults.governanceFramework=buildResults();saveConfigToFile(config);}
+  function doExport(){
+    var r=buildResults();var l=[];l.push("# AI Governance Framework Report (Template 12)");l.push("");l.push("**Date:** "+r.completedDate);l.push("");
+    l.push("## Governance Structure");l.push("");l.push("| Role | Name(s) | Authority |");l.push("|------|---------|-----------|");
+    for(var i=0;i<r.roles.length;i++){var ro=r.roles[i];l.push("| "+(ro.type||"-")+" | "+(ro.names||"-")+" | "+(ro.authority||"-")+" |");}l.push("");
+    l.push("## Meetings");l.push("");l.push("| Meeting | Frequency | Attendees |");l.push("|---------|-----------|-----------|");
+    for(var i=0;i<r.meetings.length;i++){var m=r.meetings[i];l.push("| "+(m.name||"-")+" | "+(m.frequency||"-")+" | "+(m.attendees||"-")+" |");}l.push("");
+    l.push("## Policy Framework");l.push("");l.push("| Policy | Status | Owner | Last Reviewed |");l.push("|--------|--------|-------|---------------|");
+    for(var i=0;i<corePolicies.length;i++){var key=corePolicies[i].toLowerCase().replace(/\s+/g,"_");l.push("| "+corePolicies[i]+" | "+(r.policies[key]||"-")+" | "+(r.policyOwners[key]||"-")+" | "+(r.policyDates[key]||"-")+" |");}l.push("");
+    l.push("## Principles");l.push("");for(var i=0;i<principles.length;i++){var key=principles[i].toLowerCase().replace(/\s+/g,"_");l.push("### "+principles[i]);l.push(r.principlesImpl[key]||"Not documented");l.push("");}
+    l.push("## AI System Register");l.push("");l.push("| ID | Name | Risk | Status | Owner |");l.push("|----|------|------|--------|-------|");
+    for(var i=0;i<r.systems.length;i++){var sy=r.systems[i];l.push("| "+(sy.id||"-")+" | "+(sy.name||"-")+" | "+(sy.riskLevel||"-")+" | "+(sy.status||"-")+" | "+(sy.owner||"-")+" |");}l.push("");
+    l.push("## Approval Gates");l.push("");for(var i=0;i<approvalGates.length;i++){var key=approvalGates[i].toLowerCase().replace(/\s+/g,"_");l.push("- **"+approvalGates[i]+":** "+(r.gates[key]===true?"Defined":"Not defined")+" | Maker: "+(r.gateMakers[key]||"-")+" | Artifacts: "+(r.gateArtifacts[key]||"-"));}l.push("");
+    l.push("## Evidence Checklist");for(var i=0;i<evidenceItems.length;i++){l.push("- ["+(r.evidenceChecklist[i]?"x":" ")+"] "+evidenceItems[i]);}
+    l.push("");l.push("---");l.push("*Generated by AI Governance Framework Tool. This is research, not legal advice.*");
+    exportMarkdown("governance-framework-report.md",l.join("\n"));
+  }
+  wizard.render();
+})();
+</script>
+</body>
+</html>

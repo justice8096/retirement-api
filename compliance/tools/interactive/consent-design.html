@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consent Collection Design Tool (Template 10)</title>
+<script src="./shared.js"></script>
+</head>
+<body>
+<script>
+(function() {
+  injectCSS();
+
+  var style = document.createElement('style');
+  style.textContent = [
+    '.purpose-card { background: #0D1830; border: 1px solid #1E2D3D; border-radius: 4px; padding: 14px; margin-bottom: 10px; }',
+    '.purpose-header { font-size: 0.95em; color: #E8B96A; margin-bottom: 8px; }',
+    '.jurisdiction-note { font-size: 0.8em; color: #6B7B8D; padding: 6px 10px; background: #1E2D3D44; border-left: 2px solid #3A4A5A; margin: 6px 0; }',
+    '.consent-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }',
+    '.consent-grid .field-row { margin-bottom: 4px; }',
+    '.record-field-row { display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; border: 1px solid #1E2D3D; border-radius: 4px; margin-bottom: 4px; background: #0D1830; }',
+    '.stat-row { display: flex; gap: 16px; flex-wrap: wrap; margin: 12px 0; }',
+    '.summary-stat { display: inline-block; padding: 8px 16px; margin: 4px; border-radius: 4px; background: #1E2D3D; text-align: center; }',
+    '.summary-stat-value { font-size: 1.4em; font-weight: 600; }',
+    '.summary-stat-label { font-size: 0.75em; color: #6B7B8D; }',
+    '.summary-card { background: #0D1830; border: 1px solid #1E2D3D; border-radius: 4px; padding: 12px; margin-bottom: 8px; }',
+    '.score-bar { height: 6px; border-radius: 3px; background: #3A4A5A; margin: 8px 0; }',
+    '.score-fill { height: 100%; border-radius: 3px; transition: width 0.3s; }'
+  ].join('\n');
+  document.head.appendChild(style);
+
+  var config = {};
+
+  var PURPOSES = [
+    { id: 'aiTraining', label: 'AI model training' },
+    { id: 'personalization', label: 'Personalization' },
+    { id: 'analytics', label: 'Analytics' },
+    { id: 'profiling', label: 'Profiling' },
+    { id: 'automatedDecision', label: 'Automated decision-making' },
+    { id: 'thirdPartySharing', label: 'Data sharing with third parties' }
+  ];
+
+  var LEGAL_BASIS_OPTIONS = [
+    { value: '', label: '-- Select --' },
+    { value: 'consent', label: 'Consent' },
+    { value: 'legitimate_interest', label: 'Legitimate Interest' },
+    { value: 'contract', label: 'Contract' },
+    { value: 'legal_obligation', label: 'Legal Obligation' },
+    { value: 'public_interest', label: 'Public Interest' },
+    { value: 'vital_interest', label: 'Vital Interest' }
+  ];
+
+  var JURISDICTION_NOTES = {
+    aiTraining: [
+      'EU: GDPR Art. 6 -- requires lawful basis; consent or legitimate interest with DPIA recommended.',
+      'AU: Privacy Act APP 6 -- use/disclosure must be for primary purpose or reasonably expected secondary purpose.',
+      'South Korea: PIPA Art. 15 -- consent required for collection; separate consent for sensitive data.'
+    ],
+    personalization: [
+      'EU: GDPR Art. 6(1)(a)/(f) -- consent or legitimate interest; must balance against data subject rights.',
+      'UK: UK GDPR mirrors EU requirements; ICO guidance emphasizes transparency.'
+    ],
+    analytics: [
+      'EU: ePrivacy Directive -- cookies/tracking require consent; anonymized analytics may use legitimate interest.',
+      'AU: Privacy Act -- analytics on personal information requires APP 6 compliance.'
+    ],
+    profiling: [
+      'EU: GDPR Art. 22 -- profiling with legal/significant effects requires explicit consent or legal basis with safeguards.',
+      'South Korea: PIPA Art. 37-2 -- automated decisions with significant impact require notification and right to refuse.'
+    ],
+    automatedDecision: [
+      'EU: GDPR Art. 22 -- ADM with legal/significant effects requires explicit consent or legal basis with safeguards.',
+      'UK: UK GDPR Art. 22 -- mirrors EU; ICO requires meaningful human review option.',
+      'South Korea: PIPA -- right to explanation and right to refuse automated decisions.'
+    ],
+    thirdPartySharing: [
+      'EU: GDPR Art. 6 + Art. 13/14 -- recipients must be disclosed; separate consent often needed.',
+      'AU: Privacy Act APP 8 -- cross-border disclosure requires reasonable steps to ensure compliance.',
+      'South Korea: PIPA Art. 17 -- separate consent required for third-party provision.'
+    ]
+  };
+
+  var COLLECTION_METHODS = [
+    { value: '', label: '-- Select --' },
+    { value: 'checkbox', label: 'Checkbox' },
+    { value: 'click_through', label: 'Click-through' },
+    { value: 'verbal', label: 'Verbal' },
+    { value: 'written', label: 'Written' },
+    { value: 'double_opt_in', label: 'Double opt-in' }
+  ];
+
+  var GRANULARITY_OPTIONS = [
+    { value: '', label: '-- Select --' },
+    { value: 'bundled', label: 'Bundled' },
+    { value: 'purpose_specific', label: 'Purpose-specific' },
+    { value: 'granular', label: 'Granular per data type' }
+  ];
+
+  var WITHDRAWAL_EASE_OPTIONS = [
+    { value: '', label: '-- Select --' },
+    { value: 'same_as_giving', label: 'Same as giving' },
+    { value: 'one_click', label: 'One-click' },
+    { value: 'contact_required', label: 'Contact required' }
+  ];
+
+  var REFRESH_OPTIONS = [
+    { value: '', label: '-- Select --' },
+    { value: 'never', label: 'Never' },
+    { value: 'annual', label: 'Annual' },
+    { value: 'biennial', label: 'Biennial' },
+    { value: 'on_material_change', label: 'On material change' }
+  ];
+
+  var DATA_HANDLING_OPTIONS = [
+    { value: '', label: '-- Select --' },
+    { value: 'delete', label: 'Delete' },
+    { value: 'anonymize', label: 'Anonymize' },
+    { value: 'cease_processing', label: 'Cease processing' },
+    { value: 'archive', label: 'Archive' }
+  ];
+
+  var state = {
+    legalBasis: {},
+    consentMechanisms: {},
+    recordSchema: {
+      timestamp: true,
+      userIdentifier: true,
+      specificPurposes: true,
+      privacyNoticeVersion: true,
+      collectionMethod: true,
+      ipDeviceInfo: false,
+      withdrawalTimestamp: true,
+      consentDurationExpiry: false,
+      additionalFields: ''
+    },
+    lifecycle: {
+      refreshFrequency: '',
+      reConsentTriggers: '',
+      dataHandlingOnWithdrawal: '',
+      crossBorderApproach: '',
+      auditRetentionPeriod: ''
+    }
+  };
+
+  // Initialize purpose states
+  PURPOSES.forEach(function(p) {
+    state.legalBasis[p.id] = '';
+    state.consentMechanisms[p.id] = {
+      collectionMethod: '',
+      granularity: '',
+      preChecked: false,
+      withdrawalMethod: '',
+      withdrawalEase: '',
+      childConsent: false,
+      childAgeThreshold: ''
+    };
+  });
+
+  function getPurposesRequiringConsent() {
+    return PURPOSES.filter(function(p) {
+      return state.legalBasis[p.id] === 'consent';
+    });
+  }
+
+  var wizard = createWizard({
+    title: 'Consent Collection Design Tool',
+    subtitle: 'Template 10 -- Serves EU GDPR Arts. 6-7, UK GDPR, Australia Privacy Act, South Korea PIPA',
+    totalSteps: 5,
+    stepLabels: ['Legal Basis', 'Consent Mechanisms', 'Record Schema', 'Lifecycle', 'Summary'],
+    renderStep: function(step, container) {
+      if (step === 0) renderStep1(container);
+      else if (step === 1) renderStep2(container);
+      else if (step === 2) renderStep3(container);
+      else if (step === 3) renderStep4(container);
+      else if (step === 4) renderSummary(container);
+    },
+    onLoad: function() {
+      loadConfigFromFile(function(c) { config = c; loadState(); wizard.refreshStep(); });
+    },
+    onSave: doSave,
+    onExport: doExport,
+    stateKey: 'consentDesign',
+    getState: function() { return state; },
+    setState: function(s) {
+      if (s.legalBasis) state.legalBasis = s.legalBasis;
+      if (s.consentMechanisms) state.consentMechanisms = s.consentMechanisms;
+      if (s.recordSchema) state.recordSchema = s.recordSchema;
+      if (s.lifecycle) state.lifecycle = s.lifecycle;
+    }
+  });
+
+  // Step 1: Legal Basis Selection
+  function renderStep1(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 1: Legal Basis Selection']));
+    section.appendChild(createAlert('info', 'For each data processing purpose, select the legal basis under which processing will occur. Selecting "Consent" will activate consent mechanism design in Step 2.'));
+
+    PURPOSES.forEach(function(p) {
+      var card = el('div', { className: 'purpose-card' });
+      card.appendChild(el('div', { className: 'purpose-header' }, [p.label]));
+
+      card.appendChild(createSelect('Legal Basis', LEGAL_BASIS_OPTIONS, state.legalBasis[p.id], function(v) {
+        state.legalBasis[p.id] = v;
+        wizard.refreshStep();
+      }));
+
+      // Jurisdiction-specific notes
+      var notes = JURISDICTION_NOTES[p.id];
+      if (notes) {
+        notes.forEach(function(note) {
+          var noteDiv = el('div', { className: 'jurisdiction-note' });
+          noteDiv.appendChild(document.createTextNode(note));
+          card.appendChild(noteDiv);
+        });
+      }
+
+      section.appendChild(card);
+    });
+
+    var consentCount = getPurposesRequiringConsent().length;
+    if (consentCount > 0) {
+      section.appendChild(createAlert('warning', consentCount + ' purpose(s) require consent. Configure consent mechanisms in the next step.'));
+    }
+
+    container.appendChild(section);
+  }
+
+  // Step 2: Consent Mechanism Design
+  function renderStep2(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 2: Consent Mechanism Design']));
+
+    var consentPurposes = getPurposesRequiringConsent();
+
+    if (consentPurposes.length === 0) {
+      section.appendChild(createAlert('info', 'No purposes require consent based on Step 1 selections. You may proceed to Step 3, or go back and select "Consent" as a legal basis for applicable purposes.'));
+      container.appendChild(section);
+      return;
+    }
+
+    section.appendChild(createAlert('info', 'Configure consent collection details for each purpose that requires consent.'));
+
+    consentPurposes.forEach(function(p) {
+      var mech = state.consentMechanisms[p.id];
+      var card = el('div', { className: 'purpose-card' });
+      card.appendChild(el('div', { className: 'purpose-header' }, [p.label]));
+
+      card.appendChild(createSelect('Collection Method', COLLECTION_METHODS, mech.collectionMethod, function(v) {
+        mech.collectionMethod = v;
+      }));
+
+      card.appendChild(createSelect('Granularity', GRANULARITY_OPTIONS, mech.granularity, function(v) {
+        mech.granularity = v;
+      }));
+
+      card.appendChild(createToggle('Pre-checked?', mech.preChecked, function(v) {
+        mech.preChecked = v;
+        wizard.refreshStep();
+      }));
+
+      if (mech.preChecked) {
+        card.appendChild(createAlert('danger', 'Pre-checked consent boxes are non-compliant under EU GDPR (Planet49 ruling, C-673/17), UK GDPR, and South Korea PIPA. Consent must be given by clear affirmative action.'));
+      }
+
+      card.appendChild(createTextInput('Withdrawal Method', mech.withdrawalMethod, function(v) {
+        mech.withdrawalMethod = v;
+      }, 'e.g., Account settings toggle, email request, API call'));
+
+      card.appendChild(createSelect('Withdrawal Ease', WITHDRAWAL_EASE_OPTIONS, mech.withdrawalEase, function(v) {
+        mech.withdrawalEase = v;
+      }));
+
+      card.appendChild(createToggle('Child Consent Handling Required', mech.childConsent, function(v) {
+        mech.childConsent = v;
+        wizard.refreshStep();
+      }));
+
+      if (mech.childConsent) {
+        card.appendChild(createTextInput('Age Threshold', mech.childAgeThreshold, function(v) {
+          mech.childAgeThreshold = v;
+        }, 'e.g., 13 (COPPA), 14 (China PIPL), 16 (EU GDPR default)'));
+        card.appendChild(createAlert('info', 'EU GDPR Art. 8: Age 16 default (member states may lower to 13). US COPPA: Age 13. China PIPL: Age 14. South Korea PIPA: Age 14.'));
+      }
+
+      section.appendChild(card);
+    });
+
+    container.appendChild(section);
+  }
+
+  // Step 3: Record Schema
+  function renderStep3(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 3: Consent Record Schema']));
+    section.appendChild(createAlert('info', 'Define what data is captured for each consent event. GDPR Art. 7(1) requires controllers to demonstrate that consent was given.'));
+
+    var fields = [
+      { key: 'timestamp', label: 'Timestamp of consent' },
+      { key: 'userIdentifier', label: 'User identifier (pseudonymized)' },
+      { key: 'specificPurposes', label: 'Specific purposes consented to' },
+      { key: 'privacyNoticeVersion', label: 'Version of privacy notice shown' },
+      { key: 'collectionMethod', label: 'Method of consent collection' },
+      { key: 'ipDeviceInfo', label: 'IP/device information' },
+      { key: 'withdrawalTimestamp', label: 'Withdrawal timestamp' },
+      { key: 'consentDurationExpiry', label: 'Consent duration/expiry' }
+    ];
+
+    fields.forEach(function(f) {
+      var toggle = createToggle(f.label, state.recordSchema[f.key], function(v) {
+        state.recordSchema[f.key] = v;
+        if (f.key === 'ipDeviceInfo') wizard.refreshStep();
+        else wizard.saveNow();
+      });
+      section.appendChild(toggle);
+
+      if (f.key === 'ipDeviceInfo' && state.recordSchema.ipDeviceInfo) {
+        section.appendChild(createAlert('warning', 'Collecting IP/device info in consent records may itself constitute personal data processing. Ensure a lawful basis exists and apply data minimization principles.'));
+      }
+    });
+
+    section.appendChild(createTextArea('Additional Fields', state.recordSchema.additionalFields, function(v) {
+      state.recordSchema.additionalFields = v;
+    }, 'Describe any additional fields to record per consent event...'));
+
+    // Completeness indicator
+    var enabledCount = fields.filter(function(f) { return state.recordSchema[f.key]; }).length;
+    var pct = Math.round((enabledCount / fields.length) * 100);
+    var cls = pct >= 75 ? 'score-low' : pct >= 50 ? 'score-med' : 'score-high';
+    section.appendChild(el('div', { style: 'margin-top: 12px;' }, [
+      el('span', { style: 'font-size: 0.85em; color: #9AACBA;' }, ['Record completeness: ']),
+      el('span', { className: cls }, [pct + '% (' + enabledCount + '/' + fields.length + ' fields)'])
+    ]));
+
+    container.appendChild(section);
+  }
+
+  // Step 4: Lifecycle Management
+  function renderStep4(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 4: Lifecycle Management']));
+    section.appendChild(createAlert('info', 'Configure how consent is maintained, refreshed, and handled throughout its lifecycle.'));
+
+    section.appendChild(createSelect('Consent Refresh Frequency', REFRESH_OPTIONS, state.lifecycle.refreshFrequency, function(v) {
+      state.lifecycle.refreshFrequency = v;
+    }));
+
+    section.appendChild(createTextArea('Re-consent Trigger Conditions', state.lifecycle.reConsentTriggers, function(v) {
+      state.lifecycle.reConsentTriggers = v;
+    }, 'e.g., Change in processing purpose, new data sharing partners, material privacy notice updates...'));
+
+    section.appendChild(createSelect('Data Handling on Withdrawal', DATA_HANDLING_OPTIONS, state.lifecycle.dataHandlingOnWithdrawal, function(v) {
+      state.lifecycle.dataHandlingOnWithdrawal = v;
+    }));
+
+    section.appendChild(createTextArea('Cross-border Consent Transfer Approach', state.lifecycle.crossBorderApproach, function(v) {
+      state.lifecycle.crossBorderApproach = v;
+    }, 'e.g., SCCs, adequacy decisions, binding corporate rules, explicit consent per Art. 49...'));
+
+    section.appendChild(createTextInput('Audit Trail Retention Period', state.lifecycle.auditRetentionPeriod, function(v) {
+      state.lifecycle.auditRetentionPeriod = v;
+    }, 'e.g., 3 years after consent withdrawal, duration of processing + 1 year'));
+
+    section.appendChild(createAlert('warning', 'EU GDPR: Consent withdrawal must not affect the lawfulness of processing based on consent before withdrawal (Art. 7(3)). Retain audit trail accordingly.'));
+
+    container.appendChild(section);
+  }
+
+  // Step 5: Summary
+  function renderSummary(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 5: Summary']));
+
+    // Purpose x Legal Basis table
+    section.appendChild(el('h3', {}, ['Purposes and Legal Basis']));
+    var table = el('table', { className: 'result-table' });
+    var thead = el('thead');
+    var headerRow = el('tr');
+    headerRow.appendChild(el('th', {}, ['Purpose']));
+    headerRow.appendChild(el('th', {}, ['Legal Basis']));
+    headerRow.appendChild(el('th', {}, ['Requires Consent']));
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+
+    var tbody = el('tbody');
+    PURPOSES.forEach(function(p) {
+      var row = el('tr');
+      row.appendChild(el('td', {}, [p.label]));
+      var basis = state.legalBasis[p.id];
+      var basisLabel = LEGAL_BASIS_OPTIONS.find(function(o) { return o.value === basis; });
+      row.appendChild(el('td', {}, [basisLabel ? basisLabel.label : (basis || 'Not set')]));
+      var needsConsent = basis === 'consent';
+      var consentCell = el('td');
+      consentCell.appendChild(el('span', {
+        className: needsConsent ? 'score-med' : 'score-low'
+      }, [needsConsent ? 'Yes' : 'No']));
+      row.appendChild(consentCell);
+      tbody.appendChild(row);
+    });
+    table.appendChild(tbody);
+    section.appendChild(table);
+
+    // Consent mechanisms summary
+    var consentPurposes = getPurposesRequiringConsent();
+    if (consentPurposes.length > 0) {
+      section.appendChild(el('h3', {}, ['Consent Mechanisms']));
+      consentPurposes.forEach(function(p) {
+        var mech = state.consentMechanisms[p.id];
+        var card = el('div', { className: 'summary-card' });
+        card.appendChild(el('div', { style: 'color: #E8B96A; font-size: 0.95em; margin-bottom: 6px;' }, [p.label]));
+
+        var details = [
+          ['Collection', findLabel(COLLECTION_METHODS, mech.collectionMethod)],
+          ['Granularity', findLabel(GRANULARITY_OPTIONS, mech.granularity)],
+          ['Pre-checked', mech.preChecked ? 'Yes (NON-COMPLIANT)' : 'No'],
+          ['Withdrawal', mech.withdrawalMethod || 'Not set'],
+          ['Withdrawal Ease', findLabel(WITHDRAWAL_EASE_OPTIONS, mech.withdrawalEase)],
+          ['Child Consent', mech.childConsent ? 'Yes (age ' + (mech.childAgeThreshold || 'not set') + ')' : 'No']
+        ];
+        details.forEach(function(d) {
+          var row = el('div', { style: 'font-size: 0.85em; color: #9AACBA; margin-bottom: 2px;' });
+          row.appendChild(document.createTextNode(d[0] + ': '));
+          if (d[0] === 'Pre-checked' && mech.preChecked) {
+            row.appendChild(el('span', { className: 'score-high' }, [d[1]]));
+          } else {
+            row.appendChild(document.createTextNode(d[1]));
+          }
+          card.appendChild(row);
+        });
+        section.appendChild(card);
+      });
+    }
+
+    // Record completeness
+    section.appendChild(el('h3', {}, ['Record Schema Completeness']));
+    var recordFields = ['timestamp', 'userIdentifier', 'specificPurposes', 'privacyNoticeVersion', 'collectionMethod', 'ipDeviceInfo', 'withdrawalTimestamp', 'consentDurationExpiry'];
+    var enabledCount = recordFields.filter(function(f) { return state.recordSchema[f]; }).length;
+    var pct = Math.round((enabledCount / recordFields.length) * 100);
+    var scoreCls = pct >= 75 ? 'score-low' : pct >= 50 ? 'score-med' : 'score-high';
+
+    var statsDiv = el('div', { className: 'stat-row' });
+    addStat(statsDiv, PURPOSES.length, 'Purposes');
+    addStat(statsDiv, consentPurposes.length, 'Require Consent', 'score-med');
+    addStat(statsDiv, enabledCount + '/' + recordFields.length, 'Record Fields', scoreCls);
+    addStat(statsDiv, pct + '%', 'Completeness', scoreCls);
+    section.appendChild(statsDiv);
+
+    var bar = el('div', { className: 'score-bar' });
+    var fill = el('div', { className: 'score-fill', style: 'width: ' + pct + '%; background: ' + (pct >= 75 ? '#4DBFBF' : pct >= 50 ? '#E8B96A' : '#e74c3c') + ';' });
+    bar.appendChild(fill);
+    section.appendChild(bar);
+
+    // Lifecycle summary
+    section.appendChild(el('h3', {}, ['Lifecycle Configuration']));
+    var lcCard = el('div', { className: 'summary-card' });
+    var lcDetails = [
+      ['Refresh Frequency', findLabel(REFRESH_OPTIONS, state.lifecycle.refreshFrequency)],
+      ['Data on Withdrawal', findLabel(DATA_HANDLING_OPTIONS, state.lifecycle.dataHandlingOnWithdrawal)],
+      ['Audit Retention', state.lifecycle.auditRetentionPeriod || 'Not set']
+    ];
+    lcDetails.forEach(function(d) {
+      lcCard.appendChild(el('div', { style: 'font-size: 0.85em; color: #9AACBA; margin-bottom: 2px;' }, [d[0] + ': ' + d[1]]));
+    });
+    if (state.lifecycle.reConsentTriggers) {
+      lcCard.appendChild(el('div', { style: 'font-size: 0.85em; color: #9AACBA; margin-bottom: 2px;' }, ['Re-consent Triggers: ' + state.lifecycle.reConsentTriggers]));
+    }
+    if (state.lifecycle.crossBorderApproach) {
+      lcCard.appendChild(el('div', { style: 'font-size: 0.85em; color: #9AACBA;' }, ['Cross-border Approach: ' + state.lifecycle.crossBorderApproach]));
+    }
+    section.appendChild(lcCard);
+
+    // Warnings
+    var warnings = [];
+    consentPurposes.forEach(function(p) {
+      var mech = state.consentMechanisms[p.id];
+      if (mech.preChecked) warnings.push(p.label + ': Pre-checked consent is non-compliant under GDPR/UK GDPR.');
+      if (mech.withdrawalEase === 'contact_required') warnings.push(p.label + ': Withdrawal requiring contact may not satisfy GDPR Art. 7(3) ease requirement.');
+      if (!mech.withdrawalMethod) warnings.push(p.label + ': No withdrawal method specified.');
+    });
+    if (warnings.length > 0) {
+      section.appendChild(el('h3', {}, ['Compliance Warnings']));
+      warnings.forEach(function(w) {
+        section.appendChild(createAlert('danger', w));
+      });
+    }
+
+    section.appendChild(createAlert('info', 'This is compliance research evidence, not legal advice. Review with qualified legal counsel before implementation.'));
+
+    container.appendChild(section);
+  }
+
+  function findLabel(options, value) {
+    var opt = options.find(function(o) { return o.value === value; });
+    return opt ? opt.label : (value || 'Not set');
+  }
+
+  function addStat(container, val, label, cls) {
+    var stat = el('div', { className: 'summary-stat' });
+    stat.appendChild(el('div', { className: 'summary-stat-value ' + (cls || '') }, [String(val)]));
+    stat.appendChild(el('div', { className: 'summary-stat-label' }, [label]));
+    container.appendChild(stat);
+  }
+
+  function loadState() {
+    if (config.interactiveToolResults && config.interactiveToolResults.consentDesign) {
+      var saved = config.interactiveToolResults.consentDesign;
+      if (saved.legalBasis) state.legalBasis = saved.legalBasis;
+      if (saved.consentMechanisms) state.consentMechanisms = saved.consentMechanisms;
+      if (saved.recordSchema) state.recordSchema = saved.recordSchema;
+      if (saved.lifecycle) state.lifecycle = saved.lifecycle;
+    }
+  }
+
+  function doSave() {
+    config.interactiveToolResults = config.interactiveToolResults || {};
+    config.interactiveToolResults.consentDesign = {
+      completedDate: new Date().toISOString().split('T')[0],
+      legalBasis: JSON.parse(JSON.stringify(state.legalBasis)),
+      consentMechanisms: JSON.parse(JSON.stringify(state.consentMechanisms)),
+      recordSchema: JSON.parse(JSON.stringify(state.recordSchema)),
+      lifecycle: JSON.parse(JSON.stringify(state.lifecycle))
+    };
+    saveConfigToFile(config);
+  }
+
+  function doExport() {
+    var lines = [];
+    lines.push('# Consent Collection Design Report (Template 10)');
+    lines.push('');
+    lines.push('**Generated:** ' + new Date().toISOString().split('T')[0]);
+    lines.push('**Serves:** EU GDPR Arts. 6-7, UK GDPR, Australia Privacy Act, South Korea PIPA');
+    lines.push('');
+
+    lines.push('## 1. Legal Basis by Purpose');
+    lines.push('');
+    lines.push('| Purpose | Legal Basis | Requires Consent |');
+    lines.push('|---------|------------|-----------------|');
+    PURPOSES.forEach(function(p) {
+      var basis = state.legalBasis[p.id];
+      var basisLabel = findLabel(LEGAL_BASIS_OPTIONS, basis);
+      lines.push('| ' + p.label + ' | ' + basisLabel + ' | ' + (basis === 'consent' ? 'Yes' : 'No') + ' |');
+    });
+    lines.push('');
+
+    var consentPurposes = getPurposesRequiringConsent();
+    if (consentPurposes.length > 0) {
+      lines.push('## 2. Consent Mechanisms');
+      lines.push('');
+      consentPurposes.forEach(function(p) {
+        var mech = state.consentMechanisms[p.id];
+        lines.push('### ' + p.label);
+        lines.push('');
+        lines.push('- **Collection Method:** ' + findLabel(COLLECTION_METHODS, mech.collectionMethod));
+        lines.push('- **Granularity:** ' + findLabel(GRANULARITY_OPTIONS, mech.granularity));
+        lines.push('- **Pre-checked:** ' + (mech.preChecked ? 'Yes (NON-COMPLIANT)' : 'No'));
+        lines.push('- **Withdrawal Method:** ' + (mech.withdrawalMethod || 'Not set'));
+        lines.push('- **Withdrawal Ease:** ' + findLabel(WITHDRAWAL_EASE_OPTIONS, mech.withdrawalEase));
+        lines.push('- **Child Consent:** ' + (mech.childConsent ? 'Yes (age threshold: ' + (mech.childAgeThreshold || 'not set') + ')' : 'No'));
+        lines.push('');
+      });
+    }
+
+    lines.push('## 3. Consent Record Schema');
+    lines.push('');
+    var recordLabels = {
+      timestamp: 'Timestamp', userIdentifier: 'User identifier (pseudonymized)',
+      specificPurposes: 'Specific purposes consented to', privacyNoticeVersion: 'Privacy notice version',
+      collectionMethod: 'Collection method', ipDeviceInfo: 'IP/device information',
+      withdrawalTimestamp: 'Withdrawal timestamp', consentDurationExpiry: 'Consent duration/expiry'
+    };
+    Object.keys(recordLabels).forEach(function(k) {
+      lines.push('- [' + (state.recordSchema[k] ? 'x' : ' ') + '] ' + recordLabels[k]);
+    });
+    if (state.recordSchema.additionalFields) {
+      lines.push('- **Additional fields:** ' + state.recordSchema.additionalFields);
+    }
+    lines.push('');
+
+    lines.push('## 4. Lifecycle Management');
+    lines.push('');
+    lines.push('- **Refresh Frequency:** ' + findLabel(REFRESH_OPTIONS, state.lifecycle.refreshFrequency));
+    lines.push('- **Re-consent Triggers:** ' + (state.lifecycle.reConsentTriggers || 'Not set'));
+    lines.push('- **Data Handling on Withdrawal:** ' + findLabel(DATA_HANDLING_OPTIONS, state.lifecycle.dataHandlingOnWithdrawal));
+    lines.push('- **Cross-border Approach:** ' + (state.lifecycle.crossBorderApproach || 'Not set'));
+    lines.push('- **Audit Retention Period:** ' + (state.lifecycle.auditRetentionPeriod || 'Not set'));
+    lines.push('');
+
+    lines.push('---');
+    lines.push('*Generated by Consent Collection Design Tool. This is compliance research evidence, not legal advice.*');
+
+    exportMarkdown('consent-design-report.md', lines.join('\n'));
+  }
+
+  wizard.render();
+})();
+</script>
+</body>
+</html>

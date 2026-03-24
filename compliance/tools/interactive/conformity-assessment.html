@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conformity Assessment (Template 19)</title>
+<script src="./shared.js"></script>
+</head>
+<body>
+<script>
+(function() {
+  injectCSS();
+
+  var config = {};
+
+  var stepLabels = ['System Info', 'Standards Mapping', 'Assessment Type', 'Evidence Cross-Reference', 'Outcome & Gaps', 'Review & Export'];
+
+  var standardCategories = [
+    { id: 'iso42001', label: 'ISO/IEC 42001 — AI Management System' },
+    { id: 'iso23894', label: 'ISO/IEC 23894 — AI Risk Management' },
+    { id: 'iso25059', label: 'ISO/IEC 25059 — AI System Quality' },
+    { id: 'iso24028', label: 'ISO/IEC 24028 — Trustworthiness' },
+    { id: 'euHarmonised', label: 'EU Harmonised Standards (AI Act Annex XI)' },
+    { id: 'euCyberResilience', label: 'EU Cyber Resilience Act Standards' },
+    { id: 'nistAiRmf', label: 'NIST AI RMF (US)' },
+    { id: 'sectorHealthcare', label: 'Sector: Healthcare / Medical Device (MDR, FDA)' },
+    { id: 'sectorFinance', label: 'Sector: Financial Services (MiFID II, SR 11-7)' },
+    { id: 'sectorAutomotive', label: 'Sector: Automotive (UNECE, ISO 21448 SOTIF)' },
+    { id: 'sectorEmployment', label: 'Sector: Employment (EEOC, NYC LL 144)' }
+  ];
+
+  var templateCrossRef = [
+    { id: 't01', num: '01', label: 'System Transparency Documentation' },
+    { id: 't02', num: '02', label: 'Risk Classification Evidence' },
+    { id: 't03', num: '03', label: 'Data Governance Documentation' },
+    { id: 't04', num: '04', label: 'Bias Testing & Fairness Report' },
+    { id: 't05', num: '05', label: 'Human Oversight Protocol' },
+    { id: 't06', num: '06', label: 'Data Subject Rights (DSR) Implementation' },
+    { id: 't07', num: '07', label: 'Consent Records & Legal Basis' },
+    { id: 't08', num: '08', label: 'Privacy Impact Assessment (PIA)' },
+    { id: 't09', num: '09', label: 'Cross-Border Data Transfer' },
+    { id: 't10', num: '10', label: 'Security & Robustness Assessment' },
+    { id: 't11', num: '11', label: 'Incident Response Plan' },
+    { id: 't12', num: '12', label: 'Post-Market Monitoring Plan' },
+    { id: 't13', num: '13', label: 'Regulatory Registration Record' },
+    { id: 't14', num: '14', label: 'Third-Party Audit Trail' },
+    { id: 't15', num: '15', label: 'Intellectual Property Documentation' },
+    { id: 't16', num: '16', label: 'Content Moderation Evidence' },
+    { id: 't17', num: '17', label: 'Environmental Impact Assessment' },
+    { id: 't18', num: '18', label: 'AI Literacy & Training Records' }
+  ];
+
+  var state = {
+    systemInfo: { systemName: '', version: '', assessmentDate: '', assessor: '', assessorRole: '' },
+    standards: {},
+    assessmentType: {
+      approach: '',
+      rationale: '',
+      riskClassification: '',
+      notifiedBody: '',
+      notifiedBodyId: '',
+      selfAssessmentJustification: '',
+      thirdPartyScope: '',
+      targetCompletionDate: ''
+    },
+    evidence: {},
+    outcome: {
+      overallResult: '',
+      summaryFindings: '',
+      gaps: [
+        { id: 'gap1', description: '', severity: '', remediation: '', deadline: '' },
+        { id: 'gap2', description: '', severity: '', remediation: '', deadline: '' },
+        { id: 'gap3', description: '', severity: '', remediation: '', deadline: '' },
+        { id: 'gap4', description: '', severity: '', remediation: '', deadline: '' },
+        { id: 'gap5', description: '', severity: '', remediation: '', deadline: '' }
+      ],
+      declarationOfConformity: null,
+      ceMarkingApplicable: null,
+      nextReviewDate: ''
+    }
+  };
+
+  function initState() {
+    for (var i = 0; i < standardCategories.length; i++) {
+      var s = standardCategories[i];
+      if (!state.standards[s.id]) state.standards[s.id] = { applicable: null, status: '', notes: '' };
+    }
+    for (var i = 0; i < templateCrossRef.length; i++) {
+      var t = templateCrossRef[i];
+      if (!state.evidence[t.id]) state.evidence[t.id] = { available: null, location: '', notes: '' };
+    }
+  }
+  initState();
+
+  var wizard = createWizard({
+    title: 'Conformity Assessment',
+    subtitle: 'Template 19 \u2014 EU AI Act Arts. 40-49, Annex VI-VII; ISO/IEC 42001; Sector-Specific Standards',
+    totalSteps: 6,
+    stepLabels: stepLabels,
+    renderStep: function(step, container) {
+      if (step === 0) renderStep1(container);
+      else if (step === 1) renderStep2(container);
+      else if (step === 2) renderStep3(container);
+      else if (step === 3) renderStep4(container);
+      else if (step === 4) renderStep5(container);
+      else if (step === 5) renderSummary(container);
+    },
+    onLoad: function() {
+      loadConfigFromFile(function(c) { config = c; loadState(); wizard.refreshStep(); });
+    },
+    onSave: doSave,
+    onExport: doExport,
+    stateKey: 'conformityAssessment',
+    getState: function() { return state; },
+    setState: function(s) {
+      if (s.systemInfo) { for (var k in s.systemInfo) { state.systemInfo[k] = s.systemInfo[k]; } }
+      if (s.standards) { for (var k in s.standards) { state.standards[k] = s.standards[k]; } }
+      if (s.assessmentType) { for (var k in s.assessmentType) { state.assessmentType[k] = s.assessmentType[k]; } }
+      if (s.evidence) { for (var k in s.evidence) { state.evidence[k] = s.evidence[k]; } }
+      if (s.outcome) {
+        if (s.outcome.overallResult !== undefined) state.outcome.overallResult = s.outcome.overallResult;
+        if (s.outcome.summaryFindings !== undefined) state.outcome.summaryFindings = s.outcome.summaryFindings;
+        if (s.outcome.gaps) state.outcome.gaps = s.outcome.gaps;
+        if (s.outcome.declarationOfConformity !== undefined) state.outcome.declarationOfConformity = s.outcome.declarationOfConformity;
+        if (s.outcome.ceMarkingApplicable !== undefined) state.outcome.ceMarkingApplicable = s.outcome.ceMarkingApplicable;
+        if (s.outcome.nextReviewDate !== undefined) state.outcome.nextReviewDate = s.outcome.nextReviewDate;
+      }
+      initState();
+    }
+  });
+
+  function renderStep1(container) {
+    var items = [];
+    items.push(createAlert('info', 'Load your compliance config to pre-fill system information, or enter details manually.'));
+    if (config.systemInfo) {
+      var info = config.systemInfo;
+      var infoBox = el('div', { style: 'padding: 12px; border: 1px solid #2A7B7B55; border-radius: 4px; background: #2A7B7B11; margin-bottom: 12px;' });
+      infoBox.appendChild(el('h3', {}, ['Loaded from config:']));
+      if (info.systemName) infoBox.appendChild(el('p', { style: 'font-size: 0.85em; color: #9AACBA; margin: 4px 0;' }, ['System: ' + info.systemName]));
+      if (info.version) infoBox.appendChild(el('p', { style: 'font-size: 0.85em; color: #9AACBA; margin: 4px 0;' }, ['Version: ' + info.version]));
+      if (config.organization && config.organization.name) infoBox.appendChild(el('p', { style: 'font-size: 0.85em; color: #9AACBA; margin: 4px 0;' }, ['Organization: ' + config.organization.name]));
+      items.push(infoBox);
+    }
+    items.push(createTextInput('System name', state.systemInfo.systemName, function(v) { state.systemInfo.systemName = v; }, 'e.g. Customer Support AI v2.1'));
+    items.push(createTextInput('System version', state.systemInfo.version, function(v) { state.systemInfo.version = v; }, 'e.g. 2.1.0'));
+    var dateRow = el('div', { className: 'field-row' });
+    dateRow.appendChild(el('label', { className: 'field-label' }, ['Assessment date']));
+    var dateInput = el('input', { type: 'date', className: 'field-input', value: state.systemInfo.assessmentDate || '' });
+    dateInput.addEventListener('change', function() { state.systemInfo.assessmentDate = dateInput.value; });
+    dateRow.appendChild(dateInput);
+    items.push(dateRow);
+    items.push(createTextInput('Assessor name', state.systemInfo.assessor, function(v) { state.systemInfo.assessor = v; }, 'Name of person conducting assessment'));
+    items.push(createSelect('Assessor role', [
+      { value: '', label: '-- Select --' },
+      { value: 'internal-compliance', label: 'Internal Compliance Officer' },
+      { value: 'internal-engineering', label: 'Internal Engineering Lead' },
+      { value: 'external-auditor', label: 'External Auditor' },
+      { value: 'notified-body', label: 'Notified Body Representative' },
+      { value: 'legal-counsel', label: 'Legal Counsel' }
+    ], state.systemInfo.assessorRole, function(v) { state.systemInfo.assessorRole = v; }));
+    container.appendChild(createSection('Step 1: System Information', items));
+  }
+
+  function renderStep2(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 2: Applicable Standards Mapping']));
+    section.appendChild(createAlert('info', 'Identify which standards apply to your AI system. For EU AI Act high-risk systems, harmonised standards provide presumption of conformity (Art. 40).'));
+    for (var i = 0; i < standardCategories.length; i++) {
+      (function(cat) {
+        var std = state.standards[cat.id];
+        var group = el('div', { style: 'margin-bottom: 12px; padding: 12px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830;' });
+        group.appendChild(el('h3', {}, [cat.label]));
+        group.appendChild(createToggle('Applicable?', std.applicable, function(v) { std.applicable = v; wizard.saveNow(); }));
+        group.appendChild(createSelect('Compliance status', [
+          { value: '', label: '-- Select --' },
+          { value: 'not-started', label: 'Not started' },
+          { value: 'in-progress', label: 'In progress' },
+          { value: 'substantially-compliant', label: 'Substantially compliant' },
+          { value: 'fully-compliant', label: 'Fully compliant' },
+          { value: 'not-applicable', label: 'Not applicable' }
+        ], std.status, function(v) { std.status = v; }));
+        group.appendChild(createTextInput('Notes', std.notes, function(v) { std.notes = v; }, 'Certification number, scope notes, etc.'));
+        section.appendChild(group);
+      })(standardCategories[i]);
+    }
+    container.appendChild(section);
+  }
+
+  function renderStep3(container) {
+    var items = [];
+    items.push(createAlert('warning', 'EU AI Act requires third-party conformity assessment for high-risk biometric and critical infrastructure systems (Annex III). Self-assessment is permitted for other high-risk categories if harmonised standards are followed.'));
+    items.push(createSelect('Assessment approach', [
+      { value: '', label: '-- Select --' },
+      { value: 'self-assessment', label: 'Self-assessment (internal conformity — Annex VI)' },
+      { value: 'third-party', label: 'Third-party assessment (Notified Body — Annex VII)' },
+      { value: 'hybrid', label: 'Hybrid (self + third-party for specific areas)' }
+    ], state.assessmentType.approach, function(v) { state.assessmentType.approach = v; }));
+    items.push(createSelect('Risk classification', [
+      { value: '', label: '-- Select --' },
+      { value: 'unacceptable', label: 'Unacceptable risk (prohibited)' },
+      { value: 'high', label: 'High risk (Annex III)' },
+      { value: 'limited', label: 'Limited risk (transparency obligations)' },
+      { value: 'minimal', label: 'Minimal risk' },
+      { value: 'gpai', label: 'General-Purpose AI Model' }
+    ], state.assessmentType.riskClassification, function(v) { state.assessmentType.riskClassification = v; }));
+    items.push(createTextArea('Rationale for chosen approach', state.assessmentType.rationale, function(v) { state.assessmentType.rationale = v; }, 'Explain why this assessment approach was selected'));
+    items.push(createTextInput('Notified Body name (if applicable)', state.assessmentType.notifiedBody, function(v) { state.assessmentType.notifiedBody = v; }, 'e.g. TUV SUD, BSI, Bureau Veritas'));
+    items.push(createTextInput('Notified Body ID number', state.assessmentType.notifiedBodyId, function(v) { state.assessmentType.notifiedBodyId = v; }, 'e.g. NB 0123'));
+    items.push(createTextArea('Self-assessment justification', state.assessmentType.selfAssessmentJustification, function(v) { state.assessmentType.selfAssessmentJustification = v; }, 'If self-assessing, justify why third-party is not required'));
+    items.push(createTextArea('Third-party assessment scope', state.assessmentType.thirdPartyScope, function(v) { state.assessmentType.thirdPartyScope = v; }, 'Define what the third-party assessment will cover'));
+    var dateRow = el('div', { className: 'field-row' });
+    dateRow.appendChild(el('label', { className: 'field-label' }, ['Target completion date']));
+    var dateInput = el('input', { type: 'date', className: 'field-input', value: state.assessmentType.targetCompletionDate || '' });
+    dateInput.addEventListener('change', function() { state.assessmentType.targetCompletionDate = dateInput.value; });
+    dateRow.appendChild(dateInput);
+    items.push(dateRow);
+    container.appendChild(createSection('Step 3: Assessment Type Decision', items));
+  }
+
+  function renderStep4(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 4: Evidence Cross-Reference']));
+    section.appendChild(createAlert('info', 'Check each template whose evidence is available. This creates a traceable link between your conformity assessment and the supporting documentation (Templates 01-18).'));
+    for (var i = 0; i < templateCrossRef.length; i++) {
+      (function(tmpl) {
+        var ev = state.evidence[tmpl.id];
+        var group = el('div', { style: 'margin-bottom: 8px; padding: 10px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830;' });
+        var header = el('div', { style: 'display: flex; align-items: center; gap: 8px;' });
+        header.appendChild(el('span', { className: 'badge enacted' }, ['T' + tmpl.num]));
+        header.appendChild(el('span', { style: 'font-size: 0.9em;' }, [tmpl.label]));
+        group.appendChild(header);
+        group.appendChild(createToggle('Evidence available?', ev.available, function(v) { ev.available = v; wizard.saveNow(); }));
+        group.appendChild(createTextInput('Evidence location', ev.location, function(v) { ev.location = v; }, 'File path, URL, or document reference'));
+        group.appendChild(createTextInput('Notes', ev.notes, function(v) { ev.notes = v; }, 'Status, version, or caveats'));
+        section.appendChild(group);
+      })(templateCrossRef[i]);
+    }
+    container.appendChild(section);
+  }
+
+  function renderStep5(container) {
+    var items = [];
+    items.push(createAlert('info', 'Document the overall assessment result. Identify any gaps requiring remediation before the EU AI Act compliance deadline (August 2, 2026 for high-risk systems).'));
+    items.push(createSelect('Overall assessment result', [
+      { value: '', label: '-- Select --' },
+      { value: 'conformant', label: 'Conformant' },
+      { value: 'conditionally-conformant', label: 'Conditionally conformant (gaps identified)' },
+      { value: 'non-conformant', label: 'Non-conformant' },
+      { value: 'in-progress', label: 'Assessment in progress' }
+    ], state.outcome.overallResult, function(v) { state.outcome.overallResult = v; }));
+    items.push(createTextArea('Summary of findings', state.outcome.summaryFindings, function(v) { state.outcome.summaryFindings = v; }, 'High-level summary of the conformity assessment findings'));
+    items.push(createToggle('Declaration of Conformity drafted?', state.outcome.declarationOfConformity, function(v) { state.outcome.declarationOfConformity = v; wizard.saveNow(); }));
+    items.push(createToggle('CE Marking applicable?', state.outcome.ceMarkingApplicable, function(v) { state.outcome.ceMarkingApplicable = v; wizard.saveNow(); }));
+    var dateRow = el('div', { className: 'field-row' });
+    dateRow.appendChild(el('label', { className: 'field-label' }, ['Next review date']));
+    var dateInput = el('input', { type: 'date', className: 'field-input', value: state.outcome.nextReviewDate || '' });
+    dateInput.addEventListener('change', function() { state.outcome.nextReviewDate = dateInput.value; });
+    dateRow.appendChild(dateInput);
+    items.push(dateRow);
+
+    var gapSection = el('div', { style: 'margin-top: 16px;' });
+    gapSection.appendChild(el('h3', {}, ['Identified Gaps']));
+    for (var i = 0; i < state.outcome.gaps.length; i++) {
+      (function(gap, idx) {
+        var group = el('div', { style: 'margin-bottom: 12px; padding: 12px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830;' });
+        group.appendChild(el('h3', {}, ['Gap ' + (idx + 1)]));
+        group.appendChild(createTextArea('Description', gap.description, function(v) { gap.description = v; }, 'Describe the gap or non-conformance'));
+        group.appendChild(createSelect('Severity', [
+          { value: '', label: '-- Select --' },
+          { value: 'critical', label: 'Critical (blocks conformity)' },
+          { value: 'major', label: 'Major (significant risk)' },
+          { value: 'minor', label: 'Minor (low risk, improvement needed)' },
+          { value: 'observation', label: 'Observation (recommendation only)' }
+        ], gap.severity, function(v) { gap.severity = v; }));
+        group.appendChild(createTextArea('Remediation plan', gap.remediation, function(v) { gap.remediation = v; }, 'Steps to close this gap'));
+        var dlRow = el('div', { className: 'field-row' });
+        dlRow.appendChild(el('label', { className: 'field-label' }, ['Remediation deadline']));
+        var dlInput = el('input', { type: 'date', className: 'field-input', value: gap.deadline || '' });
+        dlInput.addEventListener('change', function() { gap.deadline = dlInput.value; });
+        dlRow.appendChild(dlInput);
+        group.appendChild(dlRow);
+        gapSection.appendChild(group);
+      })(state.outcome.gaps[i], i);
+    }
+    items.push(gapSection);
+    container.appendChild(createSection('Step 5: Assessment Outcome & Gaps', items));
+  }
+
+  function calcSectionScore(sectionId) {
+    var filled = 0; var total = 0;
+    if (sectionId === 'systemInfo') {
+      var s = state.systemInfo; total = 5;
+      if (s.systemName) filled++; if (s.version) filled++; if (s.assessmentDate) filled++;
+      if (s.assessor) filled++; if (s.assessorRole) filled++;
+    } else if (sectionId === 'standards') {
+      total = standardCategories.length;
+      for (var i = 0; i < standardCategories.length; i++) { if (state.standards[standardCategories[i].id].applicable !== null) filled++; }
+    } else if (sectionId === 'assessmentType') {
+      var a = state.assessmentType; total = 3;
+      if (a.approach) filled++; if (a.riskClassification) filled++; if (a.rationale) filled++;
+    } else if (sectionId === 'evidence') {
+      total = templateCrossRef.length;
+      for (var i = 0; i < templateCrossRef.length; i++) { if (state.evidence[templateCrossRef[i].id].available !== null) filled++; }
+    } else if (sectionId === 'outcome') {
+      var o = state.outcome; total = 4;
+      if (o.overallResult) filled++; if (o.summaryFindings) filled++;
+      if (o.declarationOfConformity !== null) filled++; if (o.ceMarkingApplicable !== null) filled++;
+    }
+    return { filled: filled, total: total };
+  }
+
+  function renderSummary(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 6: Review & Export']));
+    var sections = [
+      { id: 'systemInfo', label: 'System Information' },
+      { id: 'standards', label: 'Standards Mapping' },
+      { id: 'assessmentType', label: 'Assessment Type' },
+      { id: 'evidence', label: 'Evidence Cross-Reference' },
+      { id: 'outcome', label: 'Outcome & Gaps' }
+    ];
+    var table = el('table', { className: 'result-table' });
+    var thead = el('thead'); var headerRow = el('tr');
+    headerRow.appendChild(el('th', {}, ['Section']));
+    headerRow.appendChild(el('th', {}, ['Completeness']));
+    headerRow.appendChild(el('th', {}, ['Score']));
+    thead.appendChild(headerRow); table.appendChild(thead);
+    var tbody = el('tbody'); var totalFilled = 0; var totalAll = 0;
+    for (var i = 0; i < sections.length; i++) {
+      var s = sections[i]; var score = calcSectionScore(s.id);
+      totalFilled += score.filled; totalAll += score.total;
+      var pct = score.total > 0 ? Math.round((score.filled / score.total) * 100) : 0;
+      var cls = pct >= 80 ? 'score-low' : pct >= 50 ? 'score-med' : 'score-high';
+      var row = el('tr'); row.appendChild(el('td', {}, [s.label]));
+      row.appendChild(el('td', {}, [score.filled + ' / ' + score.total]));
+      var scoreCell = el('td'); scoreCell.appendChild(el('span', { className: cls }, [pct + '%']));
+      row.appendChild(scoreCell); tbody.appendChild(row);
+    }
+    table.appendChild(tbody); section.appendChild(table);
+    var overallPct = totalAll > 0 ? Math.round((totalFilled / totalAll) * 100) : 0;
+    var overallCls = overallPct >= 80 ? 'score-low' : overallPct >= 50 ? 'score-med' : 'score-high';
+    var overallEl = el('div', { style: 'margin-top: 16px; text-align: center; font-size: 1.2em;' });
+    overallEl.appendChild(document.createTextNode('Overall Completeness: '));
+    overallEl.appendChild(el('span', { className: overallCls }, [overallPct + '%']));
+    section.appendChild(overallEl);
+
+    var availableCount = 0; var assessedCount = 0;
+    for (var i = 0; i < templateCrossRef.length; i++) {
+      var ev = state.evidence[templateCrossRef[i].id];
+      if (ev.available !== null) assessedCount++;
+      if (ev.available === true) availableCount++;
+    }
+    var evidenceEl = el('div', { style: 'margin-top: 12px; text-align: center; font-size: 0.9em; color: #9AACBA;' });
+    evidenceEl.appendChild(document.createTextNode('Evidence templates available: ' + availableCount + ' / ' + templateCrossRef.length + ' assessed'));
+    section.appendChild(evidenceEl);
+
+    var gapCount = 0;
+    for (var i = 0; i < state.outcome.gaps.length; i++) { if (state.outcome.gaps[i].description) gapCount++; }
+    if (gapCount > 0) {
+      section.appendChild(createAlert('warning', gapCount + ' gap(s) identified. Review remediation plans before finalizing conformity declaration.'));
+    }
+
+    if (overallPct < 50) section.appendChild(createAlert('danger', 'Assessment is incomplete. Several required sections need attention.'));
+    else if (overallPct < 80) section.appendChild(createAlert('warning', 'Assessment is partially complete. Review unfilled sections.'));
+    else section.appendChild(createAlert('success', 'Assessment is substantially complete. Proceed to legal review and declaration of conformity.'));
+
+    var exportBar = el('div', { className: 'toolbar', style: 'margin-top: 16px;' });
+    exportBar.appendChild(el('button', { className: 'btn primary', textContent: 'Export Markdown', onClick: doExport }));
+    exportBar.appendChild(el('button', { className: 'btn success', textContent: 'Save Config', onClick: doSave }));
+    section.appendChild(exportBar);
+    container.appendChild(section);
+  }
+
+  function loadState() {
+    if (config.systemInfo) {
+      if (config.systemInfo.systemName && !state.systemInfo.systemName) state.systemInfo.systemName = config.systemInfo.systemName;
+      if (config.systemInfo.version && !state.systemInfo.version) state.systemInfo.version = config.systemInfo.version;
+    }
+    var saved = null;
+    if (config.interactiveToolResults && config.interactiveToolResults.conformityAssessment) saved = config.interactiveToolResults.conformityAssessment;
+    if (saved) {
+      if (saved.systemInfo) state.systemInfo = JSON.parse(JSON.stringify(saved.systemInfo));
+      if (saved.standards) state.standards = JSON.parse(JSON.stringify(saved.standards));
+      if (saved.assessmentType) state.assessmentType = JSON.parse(JSON.stringify(saved.assessmentType));
+      if (saved.evidence) state.evidence = JSON.parse(JSON.stringify(saved.evidence));
+      if (saved.outcome) state.outcome = JSON.parse(JSON.stringify(saved.outcome));
+      initState();
+    }
+  }
+
+  function buildResults() {
+    var sectionIds = ['systemInfo','standards','assessmentType','evidence','outcome'];
+    var scores = {}; var totalFilled = 0; var totalAll = 0;
+    for (var i = 0; i < sectionIds.length; i++) {
+      var s = calcSectionScore(sectionIds[i]);
+      scores[sectionIds[i]] = { filled: s.filled, total: s.total, pct: s.total > 0 ? Math.round((s.filled / s.total) * 100) : 0 };
+      totalFilled += s.filled; totalAll += s.total;
+    }
+    return {
+      completedDate: new Date().toISOString().split('T')[0],
+      systemInfo: JSON.parse(JSON.stringify(state.systemInfo)),
+      standards: JSON.parse(JSON.stringify(state.standards)),
+      assessmentType: JSON.parse(JSON.stringify(state.assessmentType)),
+      evidence: JSON.parse(JSON.stringify(state.evidence)),
+      outcome: JSON.parse(JSON.stringify(state.outcome)),
+      scores: scores,
+      overallScore: totalAll > 0 ? Math.round((totalFilled / totalAll) * 100) : 0
+    };
+  }
+
+  function doSave() {
+    config.interactiveToolResults = config.interactiveToolResults || {};
+    config.interactiveToolResults.conformityAssessment = buildResults();
+    saveConfigToFile(config);
+  }
+
+  function doExport() {
+    var r = buildResults(); var lines = [];
+    lines.push('# Conformity Assessment (Template 19)'); lines.push('');
+    lines.push('**Date:** ' + r.completedDate);
+    lines.push('**Applicable Law:** EU AI Act Arts. 40-49, Annex VI-VII; ISO/IEC 42001; Sector-Specific Standards');
+    lines.push('');
+
+    lines.push('## 1. System Information'); lines.push('');
+    lines.push('- **System name:** ' + (r.systemInfo.systemName || 'N/A'));
+    lines.push('- **Version:** ' + (r.systemInfo.version || 'N/A'));
+    lines.push('- **Assessment date:** ' + (r.systemInfo.assessmentDate || 'N/A'));
+    lines.push('- **Assessor:** ' + (r.systemInfo.assessor || 'N/A'));
+    lines.push('- **Assessor role:** ' + (r.systemInfo.assessorRole || 'N/A'));
+    lines.push('');
+
+    lines.push('## 2. Applicable Standards'); lines.push('');
+    lines.push('| Standard | Applicable | Status | Notes |');
+    lines.push('|----------|-----------|--------|-------|');
+    for (var i = 0; i < standardCategories.length; i++) {
+      var cat = standardCategories[i]; var std = r.standards[cat.id] || {};
+      var appl = std.applicable === true ? 'Yes' : std.applicable === false ? 'No' : 'N/A';
+      lines.push('| ' + cat.label + ' | ' + appl + ' | ' + (std.status || 'N/A') + ' | ' + (std.notes || '') + ' |');
+    }
+    lines.push('');
+
+    lines.push('## 3. Assessment Type'); lines.push('');
+    lines.push('- **Approach:** ' + (r.assessmentType.approach || 'N/A'));
+    lines.push('- **Risk classification:** ' + (r.assessmentType.riskClassification || 'N/A'));
+    lines.push('- **Rationale:** ' + (r.assessmentType.rationale || 'N/A'));
+    if (r.assessmentType.notifiedBody) lines.push('- **Notified Body:** ' + r.assessmentType.notifiedBody + ' (ID: ' + (r.assessmentType.notifiedBodyId || 'N/A') + ')');
+    if (r.assessmentType.selfAssessmentJustification) lines.push('- **Self-assessment justification:** ' + r.assessmentType.selfAssessmentJustification);
+    if (r.assessmentType.thirdPartyScope) lines.push('- **Third-party scope:** ' + r.assessmentType.thirdPartyScope);
+    if (r.assessmentType.targetCompletionDate) lines.push('- **Target completion:** ' + r.assessmentType.targetCompletionDate);
+    lines.push('');
+
+    lines.push('## 4. Evidence Cross-Reference'); lines.push('');
+    lines.push('| Template | Available | Location | Notes |');
+    lines.push('|----------|----------|----------|-------|');
+    for (var i = 0; i < templateCrossRef.length; i++) {
+      var tmpl = templateCrossRef[i]; var ev = r.evidence[tmpl.id] || {};
+      var avail = ev.available === true ? 'Yes' : ev.available === false ? 'No' : 'N/A';
+      lines.push('| T' + tmpl.num + ' ' + tmpl.label + ' | ' + avail + ' | ' + (ev.location || '') + ' | ' + (ev.notes || '') + ' |');
+    }
+    lines.push('');
+
+    lines.push('## 5. Assessment Outcome'); lines.push('');
+    lines.push('- **Overall result:** ' + (r.outcome.overallResult || 'N/A'));
+    lines.push('- **Summary:** ' + (r.outcome.summaryFindings || 'N/A'));
+    lines.push('- **Declaration of Conformity drafted:** ' + (r.outcome.declarationOfConformity === true ? 'Yes' : r.outcome.declarationOfConformity === false ? 'No' : 'N/A'));
+    lines.push('- **CE Marking applicable:** ' + (r.outcome.ceMarkingApplicable === true ? 'Yes' : r.outcome.ceMarkingApplicable === false ? 'No' : 'N/A'));
+    if (r.outcome.nextReviewDate) lines.push('- **Next review date:** ' + r.outcome.nextReviewDate);
+    lines.push('');
+
+    var hasGaps = false;
+    for (var i = 0; i < r.outcome.gaps.length; i++) { if (r.outcome.gaps[i].description) { hasGaps = true; break; } }
+    if (hasGaps) {
+      lines.push('### Identified Gaps'); lines.push('');
+      lines.push('| # | Description | Severity | Remediation | Deadline |');
+      lines.push('|---|------------|----------|-------------|----------|');
+      for (var i = 0; i < r.outcome.gaps.length; i++) {
+        var g = r.outcome.gaps[i];
+        if (g.description) {
+          lines.push('| ' + (i + 1) + ' | ' + g.description + ' | ' + (g.severity || 'N/A') + ' | ' + (g.remediation || 'N/A') + ' | ' + (g.deadline || 'N/A') + ' |');
+        }
+      }
+      lines.push('');
+    }
+
+    lines.push('## 6. Completeness Summary'); lines.push('');
+    lines.push('| Section | Score |'); lines.push('|---------|-------|');
+    var sectionLabels = { systemInfo: 'System Information', standards: 'Standards Mapping', assessmentType: 'Assessment Type', evidence: 'Evidence Cross-Reference', outcome: 'Outcome & Gaps' };
+    for (var key in r.scores) { lines.push('| ' + (sectionLabels[key] || key) + ' | ' + r.scores[key].pct + '% (' + r.scores[key].filled + '/' + r.scores[key].total + ') |'); }
+    lines.push('| **Overall** | **' + r.overallScore + '%** |');
+    lines.push(''); lines.push('---');
+    lines.push('*Generated by Conformity Assessment Tool. This is research, not legal advice.*');
+    exportMarkdown('conformity-assessment-report.md', lines.join('\n'));
+  }
+
+  wizard.render();
+})();
+</script>
+</body>
+</html>

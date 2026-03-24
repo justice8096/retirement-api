@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Human Oversight Design Tool (Template 09)</title>
+<script src="./shared.js"></script>
+</head>
+<body>
+<script>
+(function() {
+  injectCSS();
+
+  var extraStyle = document.createElement('style');
+  extraStyle.textContent = [
+    '.model-btn { width: 100%; text-align: left; padding: 16px; margin-bottom: 8px; border: 2px solid #1E2D3D; border-radius: 6px; background: #0D1830; cursor: pointer; transition: all 0.15s; }',
+    '.model-btn:hover { border-color: #3A4A5A; }',
+    '.model-btn.selected { border-color: #D4943A; background: #1E2D3D; }',
+    '.mech-detail { margin-left: 16px; margin-bottom: 12px; padding: 8px 12px; border-left: 2px solid #2A7B7B; background: #0D1830; }',
+    '.bias-score-box { padding: 12px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830; margin-bottom: 12px; }',
+    '.gap-item { padding: 8px 12px; margin-bottom: 4px; border-left: 3px solid #c0392b; background: #0D183088; font-size: 0.9em; color: #e74c3c; }',
+    '.model-desc { margin-top: 8px; font-size: 0.85em; color: #9AACBA; line-height: 1.5; }',
+    '.summary-model { padding: 12px; border: 1px solid #D4943A; border-radius: 4px; background: #0D1830; margin-bottom: 12px; }',
+    '.measure-check { padding: 2px 0 2px 12px; font-size: 0.85em; }'
+  ].join('\n');
+  document.head.appendChild(extraStyle);
+
+  var config = {};
+
+  var oversightModels = [
+    { id: 'hitl', label: 'Human-in-the-Loop', description: 'A human reviews and approves every AI decision before it is executed. The AI system cannot act autonomously. This provides maximum oversight but may reduce throughput.' },
+    { id: 'hotl', label: 'Human-on-the-Loop', description: 'The AI system can act autonomously but a human monitors outputs and can intervene when needed. Decisions proceed unless the human overrides. Balances efficiency with oversight.' },
+    { id: 'hic', label: 'Human-in-Command', description: 'A human retains overall authority and can override, shut down, or redirect the AI system at any time, but does not review individual decisions. Strategic-level oversight for high-autonomy systems.' }
+  ];
+
+  var overrideMechanisms = [
+    { id: 'emergencyShutdown', text: 'Emergency shutdown (kill switch)' },
+    { id: 'outputOverride', text: 'Output override/correction' },
+    { id: 'inputFiltering', text: 'Input filtering/rejection' },
+    { id: 'confidenceThreshold', text: 'Confidence threshold adjustment' },
+    { id: 'manualFallback', text: 'Full manual fallback mode' },
+    { id: 'partialAutomation', text: 'Partial automation with human approval' },
+    { id: 'batchReview', text: 'Batch review before release' }
+  ];
+
+  var authorityOptions = [
+    { value: '', label: '-- Select Authority Level --' },
+    { value: 'operator', label: 'Operator' },
+    { value: 'supervisor', label: 'Supervisor' },
+    { value: 'manager', label: 'Manager' },
+    { value: 'executive', label: 'Executive' }
+  ];
+
+  var frequencyOptions = [
+    { value: '', label: '-- Select Frequency --' },
+    { value: 'realtime', label: 'Real-time' },
+    { value: 'hourly', label: 'Hourly' },
+    { value: 'daily', label: 'Daily' },
+    { value: 'weekly', label: 'Weekly' },
+    { value: 'perDecision', label: 'Per-decision' }
+  ];
+
+  var biasMeasures = [
+    { id: 'confidenceScores', text: 'System displays confidence scores' },
+    { id: 'mandatoryReview', text: 'Mandatory review intervals regardless of confidence' },
+    { id: 'spotChecks', text: 'Periodic accuracy spot-checks by humans' },
+    { id: 'diverseRotation', text: 'Diverse reviewer rotation' },
+    { id: 'explanationRequired', text: 'Decision explanation required before override' },
+    { id: 'feedbackLoop', text: 'Feedback loop from overrides to model improvement' }
+  ];
+
+  var state = {
+    oversightModel: '',
+    modelJustification: '',
+    mechanisms: {},
+    personnel: {
+      qualifications: '',
+      training: '',
+      authorityLevel: '',
+      monitoringFrequency: '',
+      escalation: ''
+    },
+    automationBias: {
+      measures: {},
+      additionalMeasures: '',
+      testingApproach: ''
+    }
+  };
+
+  function initState() {
+    for (var i = 0; i < overrideMechanisms.length; i++) {
+      if (!state.mechanisms[overrideMechanisms[i].id]) {
+        state.mechanisms[overrideMechanisms[i].id] = { enabled: null, description: '', responseTime: '' };
+      }
+    }
+    for (var i = 0; i < biasMeasures.length; i++) {
+      if (state.automationBias.measures[biasMeasures[i].id] === undefined) {
+        state.automationBias.measures[biasMeasures[i].id] = null;
+      }
+    }
+  }
+  initState();
+
+  function getEnabledMechanismCount() {
+    var count = 0;
+    for (var i = 0; i < overrideMechanisms.length; i++) {
+      if (state.mechanisms[overrideMechanisms[i].id].enabled === true) count++;
+    }
+    return count;
+  }
+
+  function getEnabledBiasCount() {
+    var count = 0;
+    for (var k in state.automationBias.measures) {
+      if (state.automationBias.measures[k] === true) count++;
+    }
+    return count;
+  }
+
+  var wizard = createWizard({
+    title: 'Human Oversight Design Tool',
+    subtitle: 'Template 09 \u2014 Serves EU AI Act Art. 14, UK DUA Act, Australia Privacy Act ADM',
+    totalSteps: 5,
+    stepLabels: ['Oversight Model', 'Override Mechanisms', 'Personnel & Training', 'Automation Bias', 'Summary'],
+    renderStep: function(step, container) {
+      if (step === 0) renderStep1(container);
+      else if (step === 1) renderStep2(container);
+      else if (step === 2) renderStep3(container);
+      else if (step === 3) renderStep4(container);
+      else if (step === 4) renderSummary(container);
+    },
+    onLoad: function() {
+      loadConfigFromFile(function(c) { config = c; loadState(); wizard.refreshStep(); });
+    },
+    onSave: doSave,
+    onExport: doExport,
+    stateKey: 'humanOversight',
+    getState: function() { return state; },
+    setState: function(s) {
+      if (s.oversightModel !== undefined) state.oversightModel = s.oversightModel;
+      if (s.modelJustification !== undefined) state.modelJustification = s.modelJustification;
+      if (s.mechanisms) { for (var k in s.mechanisms) { state.mechanisms[k] = s.mechanisms[k]; } }
+      if (s.personnel) state.personnel = s.personnel;
+      if (s.automationBias) {
+        if (s.automationBias.measures) { for (var k in s.automationBias.measures) { state.automationBias.measures[k] = s.automationBias.measures[k]; } }
+        if (s.automationBias.additionalMeasures !== undefined) state.automationBias.additionalMeasures = s.automationBias.additionalMeasures;
+        if (s.automationBias.testingApproach !== undefined) state.automationBias.testingApproach = s.automationBias.testingApproach;
+      }
+      initState();
+    }
+  });
+
+  function renderStep1(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 1: Oversight Model Selection']));
+    section.appendChild(createAlert('info', 'Select the human oversight model that best fits your AI system. This determines the level of human involvement in AI-driven decisions.'));
+
+    var buttons = [];
+    var descContainers = [];
+
+    for (var i = 0; i < oversightModels.length; i++) {
+      (function(model, idx) {
+        var isSelected = state.oversightModel === model.id;
+        var btn = el('div', {
+          className: 'model-btn' + (isSelected ? ' selected' : '')
+        });
+
+        var header = el('div', { style: 'display: flex; justify-content: space-between; align-items: center;' });
+        var labelSpan = el('span', { style: 'font-size: 1em; font-weight: 600; color: ' + (isSelected ? '#E8B96A' : '#F0EBE0') + ';' }, [model.label]);
+        header.appendChild(labelSpan);
+        var badge = el('span', { className: 'badge enacted', style: isSelected ? '' : 'display:none' }, ['Selected']);
+        header.appendChild(badge);
+        btn.appendChild(header);
+
+        var desc = el('p', { className: 'model-desc', style: isSelected ? '' : 'display:none' }, [model.description]);
+        btn.appendChild(desc);
+
+        btn._labelSpan = labelSpan;
+        btn._badge = badge;
+        btn._desc = desc;
+        buttons.push(btn);
+
+        btn.style.cursor = 'pointer';
+        btn.addEventListener('click', function() {
+          state.oversightModel = model.id;
+          for (var j = 0; j < buttons.length; j++) {
+            var b = buttons[j];
+            var sel = (j === idx);
+            b.className = 'model-btn' + (sel ? ' selected' : '');
+            b._labelSpan.style.color = sel ? '#E8B96A' : '#F0EBE0';
+            b._badge.style.display = sel ? '' : 'none';
+            b._desc.style.display = sel ? '' : 'none';
+          }
+          justificationWrap.style.display = '';
+          wizard.saveNow();
+        });
+
+        section.appendChild(btn);
+      })(oversightModels[i], i);
+    }
+
+    var justificationWrap = el('div', { style: state.oversightModel ? '' : 'display:none' });
+    justificationWrap.appendChild(createTextArea('Justification for selected model', state.modelJustification, function(v) {
+      state.modelJustification = v;
+    }, 'Explain why this oversight model is appropriate for your AI system...'));
+    section.appendChild(justificationWrap);
+
+    container.appendChild(section);
+  }
+
+  function renderStep2(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 2: Override Mechanisms']));
+    section.appendChild(createAlert('info', 'Enable the override capabilities available in your system. For each enabled mechanism, provide a description and response time target.'));
+
+    var statusEl = el('div');
+
+    function updateStatus() {
+      statusEl.textContent = '';
+      var enabledCount = getEnabledMechanismCount();
+      if (enabledCount === 0) {
+        statusEl.appendChild(createAlert('danger', 'No override mechanisms enabled. EU AI Act Art. 14 requires appropriate human oversight measures including the ability to intervene or interrupt the system.'));
+      } else {
+        statusEl.appendChild(createAlert('success', enabledCount + ' override mechanism(s) enabled.'));
+      }
+    }
+
+    for (var i = 0; i < overrideMechanisms.length; i++) {
+      (function(mech) {
+        var ms = state.mechanisms[mech.id];
+
+        var detail = el('div', { className: 'mech-detail', style: ms.enabled === true ? '' : 'display:none' });
+        detail.appendChild(createTextArea('Description', ms.description, function(v) {
+          state.mechanisms[mech.id].description = v;
+        }, 'Describe how this override mechanism works...'));
+        detail.appendChild(createTextInput('Response time target', ms.responseTime, function(v) {
+          state.mechanisms[mech.id].responseTime = v;
+        }, 'e.g., < 30 seconds, < 5 minutes'));
+
+        var toggle = createToggle(mech.text, ms.enabled, function(v) {
+          state.mechanisms[mech.id].enabled = v;
+          detail.style.display = v ? '' : 'none';
+          updateStatus();
+          wizard.saveNow();
+        });
+        section.appendChild(toggle);
+        section.appendChild(detail);
+      })(overrideMechanisms[i]);
+    }
+
+    section.appendChild(statusEl);
+    updateStatus();
+
+    container.appendChild(section);
+  }
+
+  function renderStep3(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 3: Personnel & Training Requirements']));
+    section.appendChild(createAlert('info', 'Define the qualifications, training, and authority levels needed for personnel overseeing the AI system.'));
+
+    section.appendChild(createTextArea('Minimum qualification requirements', state.personnel.qualifications, function(v) {
+      state.personnel.qualifications = v;
+    }, 'e.g., Degree in relevant field, X years experience, domain expertise...'));
+
+    section.appendChild(createTextArea('Required training program', state.personnel.training, function(v) {
+      state.personnel.training = v;
+    }, 'e.g., AI system operation training, bias awareness, escalation procedures...'));
+
+    section.appendChild(createSelect('Authority level needed', authorityOptions, state.personnel.authorityLevel, function(v) {
+      state.personnel.authorityLevel = v;
+    }));
+
+    section.appendChild(createSelect('Monitoring frequency', frequencyOptions, state.personnel.monitoringFrequency, function(v) {
+      state.personnel.monitoringFrequency = v;
+    }));
+
+    section.appendChild(createTextArea('Escalation procedure', state.personnel.escalation, function(v) {
+      state.personnel.escalation = v;
+    }, 'Describe the escalation path when issues are identified...'));
+
+    container.appendChild(section);
+  }
+
+  function renderStep4(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 4: Automation Bias Prevention']));
+    section.appendChild(createAlert('warning', 'Automation bias occurs when humans over-rely on AI outputs. EU AI Act Art. 14(4)(b) requires measures to prevent this.'));
+
+    for (var i = 0; i < biasMeasures.length; i++) {
+      (function(measure) {
+        var toggle = createToggle(measure.text, state.automationBias.measures[measure.id], function(v) {
+          state.automationBias.measures[measure.id] = v;
+          wizard.saveNow();
+        });
+        section.appendChild(toggle);
+      })(biasMeasures[i]);
+    }
+
+    section.appendChild(createTextArea('Additional measures', state.automationBias.additionalMeasures, function(v) {
+      state.automationBias.additionalMeasures = v;
+    }, 'Describe any additional automation bias prevention measures...'));
+
+    section.appendChild(createTextArea('Testing approach', state.automationBias.testingApproach, function(v) {
+      state.automationBias.testingApproach = v;
+    }, 'How will you test that automation bias prevention measures are effective?'));
+
+    var biasCount = getEnabledBiasCount();
+    if (biasCount === 0) {
+      section.appendChild(createAlert('danger', 'No automation bias prevention measures enabled. Consider implementing at least confidence score display and mandatory review intervals.'));
+    } else if (biasCount < 3) {
+      section.appendChild(createAlert('warning', biasCount + ' measure(s) enabled. Consider adding more for robust automation bias prevention.'));
+    } else {
+      section.appendChild(createAlert('success', biasCount + ' automation bias prevention measure(s) enabled.'));
+    }
+
+    container.appendChild(section);
+  }
+
+  function renderSummary(container) {
+    var section = el('div', { className: 'section' });
+    section.appendChild(el('h2', {}, ['Step 5: Oversight Design Summary']));
+
+    // Oversight model
+    section.appendChild(el('h3', {}, ['Oversight Model']));
+    var modelLabel = 'Not selected';
+    var modelDesc = '';
+    for (var i = 0; i < oversightModels.length; i++) {
+      if (oversightModels[i].id === state.oversightModel) {
+        modelLabel = oversightModels[i].label;
+        modelDesc = oversightModels[i].description;
+      }
+    }
+    var modelBox = el('div', { className: 'summary-model' });
+    modelBox.appendChild(el('span', { style: 'font-weight: 600; color: #E8B96A; font-size: 1.05em;' }, [modelLabel]));
+    if (modelDesc) {
+      modelBox.appendChild(el('p', { style: 'color: #9AACBA; font-size: 0.85em; margin-top: 6px;' }, [modelDesc]));
+    }
+    if (state.modelJustification) {
+      modelBox.appendChild(el('p', { style: 'color: #6B7B8D; font-size: 0.8em; margin-top: 6px; font-style: italic;' }, ['Justification: ' + state.modelJustification]));
+    }
+    section.appendChild(modelBox);
+
+    // Override mechanisms
+    var enabledMechs = [];
+    for (var i = 0; i < overrideMechanisms.length; i++) {
+      if (state.mechanisms[overrideMechanisms[i].id].enabled === true) {
+        enabledMechs.push(overrideMechanisms[i]);
+      }
+    }
+
+    section.appendChild(el('h3', {}, ['Override Mechanisms (' + enabledMechs.length + '/' + overrideMechanisms.length + ' enabled)']));
+
+    if (enabledMechs.length > 0) {
+      var mechTable = el('table', { className: 'result-table' });
+      var mHead = el('thead');
+      var mHRow = el('tr');
+      mHRow.appendChild(el('th', {}, ['Mechanism']));
+      mHRow.appendChild(el('th', {}, ['Response Time']));
+      mHead.appendChild(mHRow);
+      mechTable.appendChild(mHead);
+
+      var mBody = el('tbody');
+      for (var i = 0; i < enabledMechs.length; i++) {
+        var ms = state.mechanisms[enabledMechs[i].id];
+        var row = el('tr');
+        row.appendChild(el('td', {}, [enabledMechs[i].text]));
+        row.appendChild(el('td', {}, [ms.responseTime || 'Not specified']));
+        mBody.appendChild(row);
+      }
+      mechTable.appendChild(mBody);
+      section.appendChild(mechTable);
+    } else {
+      section.appendChild(createAlert('danger', 'No override mechanisms enabled. This is a significant compliance gap.'));
+    }
+
+    // Training requirements
+    section.appendChild(el('h3', {}, ['Training Requirements']));
+    var trainTable = el('table', { className: 'result-table' });
+    var tHead = el('thead');
+    var tHRow = el('tr');
+    tHRow.appendChild(el('th', {}, ['Requirement']));
+    tHRow.appendChild(el('th', {}, ['Detail']));
+    tHead.appendChild(tHRow);
+    trainTable.appendChild(tHead);
+
+    var tBody = el('tbody');
+    function addTrainRow(req, detail) {
+      var r = el('tr');
+      r.appendChild(el('td', {}, [req]));
+      r.appendChild(el('td', {}, [detail || 'Not specified']));
+      tBody.appendChild(r);
+    }
+
+    var authLabel = '';
+    for (var i = 0; i < authorityOptions.length; i++) {
+      if (authorityOptions[i].value === state.personnel.authorityLevel) authLabel = authorityOptions[i].label;
+    }
+    var freqLabel = '';
+    for (var i = 0; i < frequencyOptions.length; i++) {
+      if (frequencyOptions[i].value === state.personnel.monitoringFrequency) freqLabel = frequencyOptions[i].label;
+    }
+
+    addTrainRow('Qualifications', state.personnel.qualifications);
+    addTrainRow('Training Program', state.personnel.training);
+    addTrainRow('Authority Level', authLabel);
+    addTrainRow('Monitoring Frequency', freqLabel);
+    addTrainRow('Escalation Procedure', state.personnel.escalation);
+    trainTable.appendChild(tBody);
+    section.appendChild(trainTable);
+
+    // Automation bias prevention score
+    section.appendChild(el('h3', {}, ['Automation Bias Prevention']));
+    var biasCount = getEnabledBiasCount();
+    var biasTotal = biasMeasures.length;
+    var biasPercent = Math.round((biasCount / biasTotal) * 100);
+    var biasClass = biasPercent >= 67 ? 'score-low' : biasPercent >= 33 ? 'score-med' : 'score-high';
+    var biasLevel = biasPercent >= 67 ? 'Strong' : biasPercent >= 33 ? 'Moderate' : 'Weak';
+
+    var biasBox = el('div', { className: 'bias-score-box' });
+    var biasHeader = el('div', { style: 'display: flex; justify-content: space-between; align-items: center;' });
+    biasHeader.appendChild(el('span', { style: 'color: #9AACBA;' }, ['Automation Bias Prevention Score']));
+    biasHeader.appendChild(el('span', { className: biasClass, style: 'font-size: 1.2em;' }, [biasPercent + '% (' + biasLevel + ')']));
+    biasBox.appendChild(biasHeader);
+    biasBox.appendChild(el('p', { style: 'color: #6B7B8D; font-size: 0.8em; margin-top: 6px;' }, [biasCount + ' of ' + biasTotal + ' standard measures enabled']));
+
+    for (var i = 0; i < biasMeasures.length; i++) {
+      if (state.automationBias.measures[biasMeasures[i].id] === true) {
+        var measureEl = el('div', { className: 'measure-check' });
+        measureEl.appendChild(el('span', { style: 'color: #4DBFBF;' }, ['\u2713 ' + biasMeasures[i].text]));
+        biasBox.appendChild(measureEl);
+      }
+    }
+    section.appendChild(biasBox);
+
+    // Compliance readiness
+    section.appendChild(el('h3', {}, ['Compliance Readiness']));
+    var gaps = getComplianceGaps();
+
+    if (gaps.length === 0) {
+      section.appendChild(createAlert('success', 'All major oversight design elements are addressed. Ready for legal review.'));
+    } else {
+      for (var i = 0; i < gaps.length; i++) {
+        var gapEl = el('div', { className: 'gap-item' });
+        gapEl.appendChild(document.createTextNode('Gap: ' + gaps[i]));
+        section.appendChild(gapEl);
+      }
+    }
+
+    // Action buttons
+    var actions = el('div', { className: 'toolbar', style: 'margin-top: 24px;' });
+    actions.appendChild(el('button', { className: 'btn primary', textContent: 'Export Markdown', onClick: doExport }));
+    actions.appendChild(el('button', { className: 'btn success', textContent: 'Save Config', onClick: doSave }));
+    section.appendChild(actions);
+
+    container.appendChild(section);
+  }
+
+  function getComplianceGaps() {
+    var gaps = [];
+    if (!state.oversightModel) gaps.push('No oversight model selected');
+    if (getEnabledMechanismCount() === 0) gaps.push('No override mechanisms enabled');
+    if (!state.personnel.qualifications && !state.personnel.training) gaps.push('Personnel requirements not defined');
+    if (!state.personnel.authorityLevel) gaps.push('Authority level not set');
+    if (!state.personnel.monitoringFrequency) gaps.push('Monitoring frequency not set');
+    if (getEnabledBiasCount() === 0) gaps.push('No automation bias prevention measures');
+    return gaps;
+  }
+
+  function loadState() {
+    if (config.interactiveToolResults && config.interactiveToolResults.humanOversight) {
+      var saved = config.interactiveToolResults.humanOversight;
+      if (saved.oversightModel) state.oversightModel = saved.oversightModel;
+      if (saved.modelJustification !== undefined) state.modelJustification = saved.modelJustification;
+      if (saved.mechanisms) {
+        for (var k in saved.mechanisms) {
+          state.mechanisms[k] = saved.mechanisms[k];
+        }
+      }
+      if (saved.personnel) state.personnel = saved.personnel;
+      if (saved.automationBias) {
+        if (saved.automationBias.measures) {
+          for (var k in saved.automationBias.measures) {
+            state.automationBias.measures[k] = saved.automationBias.measures[k];
+          }
+        }
+        if (saved.automationBias.additionalMeasures !== undefined) state.automationBias.additionalMeasures = saved.automationBias.additionalMeasures;
+        if (saved.automationBias.testingApproach !== undefined) state.automationBias.testingApproach = saved.automationBias.testingApproach;
+      }
+    }
+    initState();
+  }
+
+  function buildResults() {
+    var enabledMechs = [];
+    for (var i = 0; i < overrideMechanisms.length; i++) {
+      if (state.mechanisms[overrideMechanisms[i].id].enabled === true) {
+        enabledMechs.push(overrideMechanisms[i].id);
+      }
+    }
+
+    var modelLabel = 'Not selected';
+    for (var i = 0; i < oversightModels.length; i++) {
+      if (oversightModels[i].id === state.oversightModel) modelLabel = oversightModels[i].label;
+    }
+
+    return {
+      completedDate: new Date().toISOString().split('T')[0],
+      oversightModel: state.oversightModel,
+      oversightModelLabel: modelLabel,
+      modelJustification: state.modelJustification,
+      mechanisms: JSON.parse(JSON.stringify(state.mechanisms)),
+      personnel: JSON.parse(JSON.stringify(state.personnel)),
+      automationBias: JSON.parse(JSON.stringify(state.automationBias)),
+      summary: {
+        enabledMechanismCount: enabledMechs.length,
+        enabledMechanisms: enabledMechs,
+        biasPreventionScore: Math.round((getEnabledBiasCount() / biasMeasures.length) * 100),
+        complianceGaps: getComplianceGaps()
+      }
+    };
+  }
+
+  function doSave() {
+    config.interactiveToolResults = config.interactiveToolResults || {};
+    config.interactiveToolResults.humanOversight = buildResults();
+    saveConfigToFile(config);
+  }
+
+  function doExport() {
+    var results = buildResults();
+    var lines = [];
+    lines.push('# Human Oversight Design Report (Template 09)');
+    lines.push('');
+    lines.push('**Date:** ' + results.completedDate);
+    lines.push('**Applicable Regulations:** EU AI Act Art. 14, UK DUA Act, Australia Privacy Act ADM');
+    lines.push('');
+
+    lines.push('## 1. Oversight Model');
+    lines.push('');
+    lines.push('**Selected Model:** ' + results.oversightModelLabel);
+    lines.push('');
+    for (var i = 0; i < oversightModels.length; i++) {
+      if (oversightModels[i].id === state.oversightModel) {
+        lines.push(oversightModels[i].description);
+        lines.push('');
+      }
+    }
+    if (state.modelJustification) {
+      lines.push('**Justification:** ' + state.modelJustification);
+      lines.push('');
+    }
+
+    lines.push('## 2. Override Mechanisms');
+    lines.push('');
+    for (var i = 0; i < overrideMechanisms.length; i++) {
+      var mech = overrideMechanisms[i];
+      var ms = state.mechanisms[mech.id];
+      var marker = ms.enabled === true ? 'x' : ' ';
+      lines.push('- [' + marker + '] **' + mech.text + '**');
+      if (ms.enabled === true) {
+        if (ms.description) lines.push('  - Description: ' + ms.description);
+        if (ms.responseTime) lines.push('  - Response time target: ' + ms.responseTime);
+      }
+    }
+    lines.push('');
+
+    lines.push('## 3. Personnel & Training');
+    lines.push('');
+    var authLabel = '';
+    for (var i = 0; i < authorityOptions.length; i++) {
+      if (authorityOptions[i].value === state.personnel.authorityLevel) authLabel = authorityOptions[i].label;
+    }
+    var freqLabel = '';
+    for (var i = 0; i < frequencyOptions.length; i++) {
+      if (frequencyOptions[i].value === state.personnel.monitoringFrequency) freqLabel = frequencyOptions[i].label;
+    }
+    lines.push('- **Qualifications:** ' + (state.personnel.qualifications || 'Not specified'));
+    lines.push('- **Training Program:** ' + (state.personnel.training || 'Not specified'));
+    lines.push('- **Authority Level:** ' + (authLabel || 'Not specified'));
+    lines.push('- **Monitoring Frequency:** ' + (freqLabel || 'Not specified'));
+    lines.push('- **Escalation Procedure:** ' + (state.personnel.escalation || 'Not specified'));
+    lines.push('');
+
+    lines.push('## 4. Automation Bias Prevention');
+    lines.push('');
+    for (var i = 0; i < biasMeasures.length; i++) {
+      var bm = biasMeasures[i];
+      var marker = state.automationBias.measures[bm.id] === true ? 'x' : ' ';
+      lines.push('- [' + marker + '] ' + bm.text);
+    }
+    lines.push('');
+    lines.push('**Bias Prevention Score:** ' + results.summary.biasPreventionScore + '%');
+    lines.push('');
+    if (state.automationBias.additionalMeasures) {
+      lines.push('**Additional Measures:** ' + state.automationBias.additionalMeasures);
+      lines.push('');
+    }
+    if (state.automationBias.testingApproach) {
+      lines.push('**Testing Approach:** ' + state.automationBias.testingApproach);
+      lines.push('');
+    }
+
+    lines.push('## 5. Compliance Readiness');
+    lines.push('');
+    var gaps = results.summary.complianceGaps;
+    if (gaps.length === 0) {
+      lines.push('All major oversight design elements are addressed. Ready for legal review.');
+    } else {
+      lines.push('### Identified Gaps');
+      lines.push('');
+      for (var i = 0; i < gaps.length; i++) {
+        lines.push('- ' + gaps[i]);
+      }
+    }
+    lines.push('');
+    lines.push('---');
+    lines.push('*Generated by Human Oversight Design Tool. This is research, not legal advice.*');
+
+    exportMarkdown('human-oversight-design.md', lines.join('\n'));
+  }
+
+  wizard.render();
+})();
+</script>
+</body>
+</html>
