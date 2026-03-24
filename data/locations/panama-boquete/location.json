@@ -1,0 +1,276 @@
+{
+  "id": "panama-boquete",
+  "name": "Boquete, Panama",
+  "country": "Panama",
+  "region": "Chiriqui",
+  "cities": [
+    "Boquete",
+    "David"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Pensionado Visa",
+    "incomeRequirement": {
+      "monthly": 1000,
+      "annual": 12000,
+      "currency": "USD"
+    },
+    "notes": "Same Pensionado program as Panama City. Boquete is top expat retirement destination."
+  },
+  "climate": {
+    "winterLowF": 55,
+    "summerHighF": 78,
+    "rainyDaysPerYear": 200,
+    "meetsWarmWinterReq": true
+  },
+  "monthlyCosts": {
+    "rent": {
+      "min": 700,
+      "max": 1200,
+      "typical": 900,
+      "type": "2-bedroom house/cottage",
+      "annualInflation": 0.025,
+      "notes": "No rental tax in Panama.",
+      "gigInternetTypical": 1080,
+      "gigInternetCoverage": 15,
+      "gigInternetProviders": "+Móvil, Tigo, Planet Telecom",
+      "gigInternetNotes": "LIMITED: Fiber expanding but true 1Gbps very limited in Boquete. Alto Boquete has TIGO fiber up to 600Mbps ($64/mo). +Móvil fiber in Bajo Boquete. Most rentals get 100-300Mbps. Finding a rental with verified gigabit narrows the pool dramatically to newer developments and specific fiber-served areas."
+    },
+    "groceries": {
+      "min": 610,
+      "max": 960,
+      "typical": 785,
+      "notes": "2 adults + pet food; local markets cheaper",
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "min": 64,
+      "max": 104,
+      "typical": 80,
+      "annualInflation": 0.025,
+      "breakdown": {
+        "electricity": {
+          "typical": 50,
+          "notes": "EDECHI. Much less A/C needed — Boquete at 3,900ft elevation, 55–78°F year-round. Fans sufficient most days."
+        },
+        "gas": {
+          "typical": 10,
+          "notes": "Propane (tanque) for cooking. No natural gas."
+        },
+        "water": {
+          "typical": 15,
+          "notes": "IDAAN or community water cooperative. Very affordable mountain water."
+        },
+        "sewage": {
+          "typical": 5,
+          "notes": "Septic systems common in Boquete. Minimal municipal sewer."
+        },
+        "trash": {
+          "typical": 0,
+          "notes": "Garbage collection included in rent — $10/mo."
+        }
+      },
+      "taxes": "ITBMS 7% on electricity. Water exempt for residential.",
+      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig). Trash included in rent."
+    },
+    "healthcare": {
+      "min": 280,
+      "max": 550,
+      "typical": 400,
+      "notes": "Private insurance required (~$175-250/person/mo, higher with pre-existing conditions). Pre-existing condition exclusions common first 12-24 months. Anti-VEGF injections: available in David/Panama City at private clinics. May need to travel for specialized ophthalmology. Pensionado discount 15-25% on medical services.",
+      "annualInflation": 0.06
+    },
+    "insurance": {
+      "min": 10,
+      "max": 20,
+      "typical": 15,
+      "annualInflation": 0.02
+    },
+    "petCare": {
+      "min": 40,
+      "max": 110,
+      "typical": 70,
+      "annualInflation": 0.03,
+      "notes": "Vet visits, vaccinations; limited specialty vets"
+    },
+    "petDaycare": {
+      "min": 110,
+      "max": 200,
+      "typical": 150,
+      "annualInflation": 0.025,
+      "notes": "Hired pet sitter 2 days/week (~$17/visit). No commercial daycare in Boquete. Expat community has informal pet sitting network. Lower cost of living reflected in rates."
+    },
+    "petGrooming": {
+      "min": 30,
+      "max": 70,
+      "typical": 45,
+      "annualInflation": 0.025,
+      "notes": "Bernese coat maintenance; fewer groomers than city"
+    },
+    "transportation": {
+      "min": 60,
+      "max": 150,
+      "typical": 100,
+      "notes": "Car useful; local buses cheap; David trips for supplies",
+      "annualInflation": 0.025
+    },
+    "entertainment": {
+      "min": 270,
+      "max": 430,
+      "typical": 340,
+      "annualInflation": 0.02,
+      "notes": "Incl cable+1Gig internet, Netflix, Amazon Prime, Apple TV+, NFL RedZone (DAZN), dining out (lunch for 2 2x/week w/ tax+tip)"
+    },
+    "clothing": {
+      "min": 30,
+      "max": 80,
+      "typical": 50,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "min": 15,
+      "max": 40,
+      "typical": 25,
+      "annualInflation": 0.02
+    },
+    "subscriptions": {
+      "min": 30,
+      "max": 80,
+      "typical": 50,
+      "annualInflation": 0.03,
+      "notes": "Streaming, news, apps"
+    },
+    "phoneCell": {
+      "min": 68,
+      "max": 100,
+      "typical": 83,
+      "annualInflation": 0.02,
+      "notes": "Google Fi Flexible (US Number) + +Movil Prepaid (Local). 2 phones, 1.5GB+ high-speed data each, all taxes included."
+    },
+    "miscellaneous": {
+      "min": 40,
+      "max": 80,
+      "typical": 60,
+      "annualInflation": 0.025
+    },
+    "buffer": {
+      "min": 800,
+      "max": 800,
+      "typical": 800,
+      "annualInflation": 0.025,
+      "notes": "Monthly safety buffer for unexpected expenses"
+    },
+    "medicalOOP": {
+      "min": 100,
+      "max": 325,
+      "typical": 175,
+      "annualInflation": 0.06,
+      "notes": "Private system OOP: specialist visits $40-80, anti-VEGF injections $400-800 each (6-10x/yr) if not covered by insurance. May need travel to Panama City for retina specialist. Pensionado discounts help. Labs $15-30 per panel. Higher costs for specialized monitoring."
+    },
+    "medicine": {
+      "min": 383,
+      "typical": 479,
+      "max": 529,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "taxes": {
+      "min": 0,
+      "typical": 0,
+      "max": 0,
+      "annualInflation": 0.02
+    }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true,
+      "brackets": [
+        {
+          "min": 0,
+          "max": 23850,
+          "rate": 0.1
+        },
+        {
+          "min": 23850,
+          "max": 96950,
+          "rate": 0.12
+        },
+        {
+          "min": 96950,
+          "max": 206700,
+          "rate": 0.22
+        },
+        {
+          "min": 206700,
+          "max": 394600,
+          "rate": 0.24
+        },
+        {
+          "min": 394600,
+          "max": 501050,
+          "rate": 0.32
+        },
+        {
+          "min": 501050,
+          "max": 751600,
+          "rate": 0.35
+        },
+        {
+          "min": 751600,
+          "max": null,
+          "rate": 0.37
+        }
+      ],
+      "standardDeduction": 30000
+    },
+    "stateIncomeTax": {
+      "rate": 0,
+      "type": "territorial",
+      "label": "Panama Income Tax",
+      "brackets": [],
+      "deduction": 0,
+      "exemptions": "Territorial system: foreign-sourced income NOT taxed in Panama."
+    },
+    "salesTax": {
+      "rate": 0
+    },
+    "propertyTax": {
+      "rate": 0
+    },
+    "socialCharges": null,
+    "vatRate": 0.07,
+    "estVehicleTax": 0,
+    "ssExempt": true,
+    "notes": "Territorial tax: only Panama-sourced income taxed."
+  },
+  "healthcare": {
+    "system": "Private (Hospital Chiriqui in David; clinics in Boquete)",
+    "qualityRating": 6,
+    "waitTimes": "low for private",
+    "dentalIncluded": false,
+    "prescriptionCoverage": "varies by plan"
+  },
+  "lifestyle": {
+    "internetSpeed": "100-300Mbps; fiber expanding",
+    "dogFriendly": 8,
+    "expatCommunity": 9,
+    "englishPrevalence": 7,
+    "safetyRating": 8
+  },
+  "pros": [
+    "USD currency (no exchange risk)",
+    "No income tax on foreign income",
+    "Large expat retirement community",
+    "Cool mountain climate (no A/C needed)",
+    "Very low cost of living",
+    "Pensionado discounts (20-50% on many services)"
+  ],
+  "cons": [
+    "Heavy rainy season (Apr-Dec)",
+    "Limited specialty healthcare (David 40 min)",
+    "Fewer pet services than cities",
+    "Internet not gigabit yet",
+    "Small town with limited nightlife"
+  ]
+}

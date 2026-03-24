@@ -1,0 +1,303 @@
+{
+  "id": "us-virginia",
+  "name": "Fairfax VA, USA (Base)",
+  "country": "United States",
+  "region": "Virginia",
+  "cities": [
+    "Fairfax",
+    "Falls Church",
+    "Vienna",
+    "Burke"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Citizen",
+    "incomeRequirement": null,
+    "notes": "US citizen, no visa required."
+  },
+  "climate": {
+    "winterLowF": 24,
+    "summerHighF": 90,
+    "rainyDaysPerYear": 112,
+    "meetsWarmWinterReq": false
+  },
+  "monthlyCosts": {
+    "rent": {
+      "min": 2397,
+      "max": 3374,
+      "typical": 2885,
+      "type": "2-bedroom single-family house",
+      "annualInflation": 0.035,
+      "notes": "Virginia has no rental tax. Water, sewage, and trash are separate utility bills (not included in rent).",
+      "gigInternetTypical": 2950,
+      "gigInternetCoverage": 90,
+      "gigInternetProviders": "Verizon Fios (90%+), Cox",
+      "gigInternetNotes": "Fios covers nearly all of Fairfax County with symmetrical gig service. Most single-family rentals in NOVA are Fios-eligible. Minimal filtering required."
+    },
+    "groceries": {
+      "min": 1400,
+      "max": 1835,
+      "typical": 1610,
+      "annualInflation": 0.03,
+      "notes": "NOVA grocery prices 15-20% above national average"
+    },
+    "utilities": {
+      "min": 276,
+      "max": 449,
+      "typical": 345,
+      "annualInflation": 0.03,
+      "breakdown": {
+        "electricity": {
+          "typical": 155,
+          "notes": "Dominion Energy. Avg across seasons — $100 winter, $220 summer A/C. Includes general household."
+        },
+        "gas": {
+          "typical": 65,
+          "notes": "Washington Gas. Natural gas heating (Nov–Mar primary), cooking, water heater."
+        },
+        "water": {
+          "typical": 50,
+          "notes": "Fairfax Water Authority. 2-adult household, ~6,000 gal/mo."
+        },
+        "sewage": {
+          "typical": 45,
+          "notes": "Billed with water. Fairfax County sanitary sewer charge."
+        },
+        "trash": {
+          "typical": 30,
+          "notes": "Fairfax County solid waste. Billed quarterly (~$90/qtr)."
+        }
+      },
+      "taxes": "Virginia exempts residential utilities from state sales tax.",
+      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig). "
+    },
+    "healthcare": {
+      "min": 550,
+      "max": 850,
+      "typical": 650,
+      "notes": "Medicare Part B ($174.70/mo) + Medigap Plan G (~$200/mo x2 people) + Part D (~$45/mo x2) + dental/vision plans. Higher premiums reflect macular degeneration specialist coverage and frequent monitoring needs.",
+      "annualInflation": 0.055
+    },
+    "insurance": {
+      "min": 35,
+      "max": 55,
+      "typical": 45,
+      "type": "renter's insurance",
+      "annualInflation": 0.03
+    },
+    "petCare": {
+      "min": 140,
+      "max": 250,
+      "typical": 185,
+      "annualInflation": 0.04,
+      "notes": "Vet care in NOVA premium-priced. VCA, Pender, and Fairfax Animal Hospital nearby."
+    },
+    "petDaycare": {
+      "min": 340,
+      "max": 520,
+      "typical": 420,
+      "annualInflation": 0.035,
+      "notes": "Doggy daycare 2 days/week, large breed rate (~$48/day). Camp Bow Wow, Dogtopia, Whole Dogz in Fairfax area. NoVA premium pricing."
+    },
+    "petGrooming": {
+      "min": 90,
+      "max": 170,
+      "typical": 125,
+      "annualInflation": 0.03,
+      "notes": "Bernese coat maintenance, professional grooming monthly. NOVA grooming prices above average."
+    },
+    "transportation": {
+      "min": 250,
+      "max": 500,
+      "typical": 375,
+      "notes": "Car-dependent but Metro Orange/Silver lines accessible from Vienna/Falls Church. Gas, insurance, parking higher in NOVA.",
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "min": 440,
+      "max": 650,
+      "typical": 530,
+      "annualInflation": 0.025,
+      "notes": "Incl cable+1Gig internet, Netflix, Amazon Prime, Apple TV+, dining out (lunch for 2 2x/week w/ tax+tip)"
+    },
+    "clothing": {
+      "min": 100,
+      "max": 250,
+      "typical": 160,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "min": 45,
+      "max": 110,
+      "typical": 70,
+      "annualInflation": 0.02
+    },
+    "subscriptions": {
+      "min": 30,
+      "max": 80,
+      "typical": 55,
+      "annualInflation": 0.03,
+      "notes": "Streaming, news, apps"
+    },
+    "phoneCell": {
+      "min": 50,
+      "max": 80,
+      "typical": 62,
+      "annualInflation": 0.02,
+      "notes": "T-Mobile 55+ Essentials. 2 phones, 1.5GB+ high-speed data each, all taxes included."
+    },
+    "miscellaneous": {
+      "min": 120,
+      "max": 250,
+      "typical": 175,
+      "annualInflation": 0.025,
+      "notes": "HOA contributions, parking permits, EZ-Pass tolls common in NOVA"
+    },
+    "buffer": {
+      "min": 800,
+      "max": 800,
+      "typical": 800,
+      "annualInflation": 0.025,
+      "notes": "Monthly safety buffer for unexpected expenses"
+    },
+    "medicalOOP": {
+      "min": 325,
+      "max": 700,
+      "typical": 475,
+      "annualInflation": 0.055,
+      "notes": "Anti-VEGF injections for macular degeneration (~$300-400 OOP each, 6-10x/yr after Medicare 80%). Specialist visits: ophthalmologist q6-8wks, endocrinologist 2-4x/yr, cardiologist 1-2x/yr. Frequent labs: lipid panel, TSH, A1C, CMP 3-4x/yr each. Both adults: PCP visits quarterly."
+    },
+    "medicine": {
+      "min": 73,
+      "typical": 91,
+      "max": 925,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "taxes": {
+      "min": 0,
+      "typical": 0,
+      "max": 0,
+      "annualInflation": 0.02
+    }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true,
+      "brackets": [
+        {
+          "min": 0,
+          "max": 23850,
+          "rate": 0.1
+        },
+        {
+          "min": 23850,
+          "max": 96950,
+          "rate": 0.12
+        },
+        {
+          "min": 96950,
+          "max": 206700,
+          "rate": 0.22
+        },
+        {
+          "min": 206700,
+          "max": 394600,
+          "rate": 0.24
+        },
+        {
+          "min": 394600,
+          "max": 501050,
+          "rate": 0.32
+        },
+        {
+          "min": 501050,
+          "max": 751600,
+          "rate": 0.35
+        },
+        {
+          "min": 751600,
+          "max": null,
+          "rate": 0.37
+        }
+      ],
+      "standardDeduction": 30000
+    },
+    "stateIncomeTax": {
+      "rate": 0.0575,
+      "type": "top-marginal",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 3000,
+          "rate": 0.02
+        },
+        {
+          "min": 3000,
+          "max": 5000,
+          "rate": 0.03
+        },
+        {
+          "min": 5000,
+          "max": 17000,
+          "rate": 0.05
+        },
+        {
+          "min": 17000,
+          "max": null,
+          "rate": 0.0575
+        }
+      ],
+      "deduction": 24000,
+      "exemptions": "Age 65+ deduction $12K/person. SS fully exempt from VA tax."
+    },
+    "salesTax": {
+      "rate": 0.06,
+      "notes": "Fairfax County 6% (4.3% state + 0.7% regional + 1% NOVA transit)"
+    },
+    "propertyTax": {
+      "rate": 0,
+      "notes": "Renters: no direct property tax. Vehicle personal property ~$4.57/$100 assessed."
+    },
+    "socialCharges": null,
+    "vatRate": 0,
+    "estVehicleTax": 1200,
+    "ssExempt": true,
+    "notes": "Fairfax County sales tax 6%."
+  },
+  "healthcare": {
+    "system": "Medicare (at 65) + private supplement",
+    "qualityRating": 9,
+    "waitTimes": "low-moderate",
+    "dentalIncluded": false,
+    "prescriptionCoverage": "Part D plan",
+    "notes": "Inova Fairfax Medical Center (Level I trauma), Virginia Hospital Center, access to Johns Hopkins/Georgetown specialists. Excellent healthcare infrastructure."
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps+ widely available (Verizon Fios, Cox)",
+    "dogFriendly": 7,
+    "expatCommunity": 0,
+    "englishPrevalence": 10,
+    "safetyRating": 8,
+    "notes": "Burke Lake Park, Lake Accotink, numerous dog parks. Diverse dining scene. Close to DC cultural amenities."
+  },
+  "pros": [
+    "No visa needed",
+    "English-speaking",
+    "World-class healthcare (Inova system)",
+    "SS tax exempt in VA",
+    "Proximity to DC cultural resources (Smithsonian, etc.)",
+    "Excellent internet infrastructure",
+    "Highly diverse community",
+    "Metro access from Vienna/Falls Church"
+  ],
+  "cons": [
+    "Highest costs in Virginia",
+    "Cold winters (24°F lows)",
+    "Heavy traffic congestion",
+    "Car-dependent outside Metro corridors",
+    "High property tax on vehicles",
+    "Healthcare expensive pre-Medicare"
+  ]
+}

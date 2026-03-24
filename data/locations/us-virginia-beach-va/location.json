@@ -1,0 +1,167 @@
+{
+  "id": "us-virginia-beach-va",
+  "name": "Virginia Beach, VA",
+  "country": "United States",
+  "region": "US Mid-Atlantic",
+  "cities": [
+    "Virginia Beach"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "N/A (domestic)",
+    "notes": "US citizen â€” no visa required"
+  },
+  "climate": {
+    "winterLowF": 33,
+    "summerHighF": 87,
+    "meetsWarmWinterReq": false,
+    "rainyDaysPerYear": 115
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 1600,
+      "min": 1250,
+      "max": 2000,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 560,
+      "min": 460,
+      "max": 670,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 240,
+      "min": 190,
+      "max": 310,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 520,
+      "min": 420,
+      "max": 660,
+      "annualInflation": 0.05
+    },
+    "insurance": {
+      "typical": 300,
+      "min": 220,
+      "max": 400,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 200,
+      "min": 150,
+      "max": 300,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 60,
+      "min": 40,
+      "max": 90,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 320,
+      "min": 220,
+      "max": 420,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 300,
+      "min": 200,
+      "max": 400,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 100,
+      "min": 60,
+      "max": 150,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 120,
+      "min": 80,
+      "max": 160,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 62,
+      "min": 50,
+      "max": 77,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 65,
+      "typical": 91,
+      "max": 180,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 200,
+      "typical": 350,
+      "max": 600,
+      "annualInflation": 0.055
+    }
+  },
+  "healthcare": {
+    "system": "Private insurance (ACA/employer/Medicare)",
+    "qualityRating": 8,
+    "dentalIncluded": false,
+    "waitTimes": "Short to moderate",
+    "prescriptionCoverage": "Via insurance plan"
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps available",
+    "dogFriendly": 8,
+    "expatCommunity": 1,
+    "englishPrevalence": 10,
+    "safetyRating": 7
+  },
+  "pros": [
+    "Beautiful oceanfront with boardwalk",
+    "Low crime rate for a beach city",
+    "Good schools and family-friendly"
+  ],
+  "cons": [
+    "Tourist crowds in summer",
+    "Higher housing costs than inland VA",
+    "VA state income tax (2-5.75%)"
+  ],
+  "taxes": {
+    "notes": "Federal + VA state income tax (2-5.75%); SS partially exempt for age 65+",
+    "vatRate": 0,
+    "socialChargesRate": 0
+  }
+}

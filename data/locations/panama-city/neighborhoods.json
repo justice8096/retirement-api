@@ -1,0 +1,167 @@
+{
+  "city": "Panama City, Panama",
+  "neighborhoods": [
+    {
+      "id": "panama-casco-viejo",
+      "name": "Casco Viejo (Casco Antiguo)",
+      "description": "UNESCO World Heritage colonial quarter on a peninsula, with restored historic buildings, rooftop bars, and waterfront plazas",
+      "character": "Historic, walkable, gentrifying, vibrant nightlife and restaurant scene",
+      "housing": {
+        "avgRentOneBedroomUSD": 1000,
+        "avgRentTwoBedroomUSD": 1500,
+        "buyPricePerSqmUSD": 3200,
+        "predominantType": "Restored colonial apartments and modern loft conversions"
+      },
+      "walkabilityScore": 82,
+      "transitScore": 55,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "moderate",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Active gentrification ongoing. Mix of luxury and unrestored buildings. UNESCO status protects architecture. Can be noisy on weekends.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City"
+        },
+        {
+          "title": "International Living - Panama",
+          "url": "https://internationalliving.com/countries/panama/"
+        },
+        {
+          "title": "Encuentra24 - Casco Viejo",
+          "url": "https://www.encuentra24.com/panama-en/real-estate"
+        }
+      ]
+    },
+    {
+      "id": "panama-punta-pacifica",
+      "name": "Punta Pacifica",
+      "description": "Modern high-rise district on a point jutting into the Pacific, home to luxury towers, Johns Hopkins-affiliated hospital, and Multiplaza mall",
+      "character": "Upscale modern, high-rise living, ocean views, international feel",
+      "housing": {
+        "avgRentOneBedroomUSD": 1200,
+        "avgRentTwoBedroomUSD": 1800,
+        "buyPricePerSqmUSD": 2800,
+        "predominantType": "Luxury high-rise condos with pools, gyms, and ocean views"
+      },
+      "walkabilityScore": 55,
+      "transitScore": 65,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Hospital Punta Pacifica (Johns Hopkins affiliate) is here. Multiplaza Pacific mall. Metro station nearby. Most popular expat high-rise area.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City"
+        },
+        {
+          "title": "Encuentra24 - Punta Pacifica",
+          "url": "https://www.encuentra24.com/panama-en/real-estate"
+        }
+      ]
+    },
+    {
+      "id": "panama-el-cangrejo",
+      "name": "El Cangrejo",
+      "description": "Central residential neighborhood with a mix of mid-rise apartments, restaurants, and the Via Argentina pedestrian boulevard",
+      "character": "Middle-class residential, diverse, walkable main street, convenient",
+      "housing": {
+        "avgRentOneBedroomUSD": 700,
+        "avgRentTwoBedroomUSD": 1000,
+        "buyPricePerSqmUSD": 1800,
+        "predominantType": "Mid-rise apartments and older condos, some with doorman"
+      },
+      "walkabilityScore": 78,
+      "transitScore": 70,
+      "safetyRating": "moderate-high",
+      "expats": {
+        "communitySize": "moderate",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Via Argentina is the main walkable strip with cafes and shops. Close to metro. More affordable than Punta Pacifica. Diverse dining scene.",
+      "sources": [
+        {
+          "title": "Expatistan Cost of Living Panama City",
+          "url": "https://www.expatistan.com/cost-of-living/panama-city"
+        },
+        {
+          "title": "Encuentra24 - El Cangrejo",
+          "url": "https://www.encuentra24.com/panama-en/real-estate"
+        },
+        {
+          "title": "International Living - Panama Neighborhoods",
+          "url": "https://internationalliving.com/countries/panama/panama-city/"
+        }
+      ]
+    },
+    {
+      "id": "panama-clayton",
+      "name": "Clayton (Ciudad del Saber)",
+      "description": "Former US military base converted to a knowledge city with tree-lined streets, parks, and low-rise buildings surrounded by rainforest",
+      "character": "Green, quiet, campus-like, family-friendly, close to nature",
+      "housing": {
+        "avgRentOneBedroomUSD": 800,
+        "avgRentTwoBedroomUSD": 1200,
+        "buyPricePerSqmUSD": 2000,
+        "predominantType": "Converted military housing, townhouses, and newer apartments"
+      },
+      "walkabilityScore": 45,
+      "transitScore": 35,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "moderate",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Adjacent to Parque Natural Metropolitano (rainforest within the city). Ciudad del Saber hosts NGOs and international orgs. Very green and quiet.",
+      "sources": [
+        {
+          "title": "Ciudad del Saber",
+          "url": "https://ciudaddelsaber.org/"
+        },
+        {
+          "title": "Encuentra24 - Clayton",
+          "url": "https://www.encuentra24.com/panama-en/real-estate"
+        }
+      ]
+    },
+    {
+      "id": "panama-coronado",
+      "name": "Coronado Beach",
+      "description": "Beach community 80km west of Panama City, popular weekend retreat that has grown into a full-time expat community with amenities",
+      "character": "Beach resort community, expat-heavy, gated communities, relaxed pace",
+      "housing": {
+        "avgRentOneBedroomUSD": 600,
+        "avgRentTwoBedroomUSD": 900,
+        "buyPricePerSqmUSD": 1400,
+        "predominantType": "Houses and condos in gated beach communities with pools"
+      },
+      "walkabilityScore": 30,
+      "transitScore": 15,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Coronado Mall and Riba Smith supermarket. 90-minute drive to Panama City. Large English-speaking community. Golf courses. Car essential.",
+      "sources": [
+        {
+          "title": "International Living - Coronado Panama",
+          "url": "https://internationalliving.com/countries/panama/coronado/"
+        },
+        {
+          "title": "Encuentra24 - Coronado",
+          "url": "https://www.encuentra24.com/panama-en/real-estate"
+        },
+        {
+          "title": "Numbeo Cost of Living Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City"
+        }
+      ]
+    }
+  ]
+}

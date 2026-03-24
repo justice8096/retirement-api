@@ -1,0 +1,330 @@
+{
+  "distanceUnit": "mi",
+  "currency": "USD",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "AdventHealth Orlando",
+      "address": "601 East Rollins Street, Orlando, FL 32803",
+      "notes": "Major hospital, Level 1 trauma center, comprehensive emergency services",
+      "sources": [
+        {
+          "title": "AdventHealth Orlando",
+          "url": "https://www.adventhealth.com/hospital/adventhealth-orlando"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Walgreens - Orlando Central",
+      "address": "200 S Orange Ave, Orlando, FL 32801",
+      "notes": "24-hour pharmacy, drive-through, COVID/flu vaccinations",
+      "sources": [
+        {
+          "title": "Walgreens",
+          "url": "https://www.walgreens.com/"
+        }
+      ],
+      "distanceMi": 0.3
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Publix Super Market - Downtown Orlando",
+      "address": "434 N Bumby Ave, Orlando, FL 32803",
+      "notes": "Popular Florida supermarket chain, deli, bakery, pharmacy inside",
+      "sources": [
+        {
+          "title": "Publix",
+          "url": "https://www.publix.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "bank",
+      "name": "Chase Bank - Downtown Orlando",
+      "address": "111 N Orange Ave, Orlando, FL 32801",
+      "notes": "Full-service branch, ATM, financial advisors, mobile banking",
+      "sources": [
+        {
+          "title": "Chase",
+          "url": "https://www.chase.com/"
+        }
+      ],
+      "distanceMi": 0.2
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Orlando Health Physician Associates",
+      "address": "21 W Columbia St, Orlando, FL 32806",
+      "notes": "Primary care practice, accepting new patients, same-day appointments available",
+      "sources": [
+        {
+          "title": "Orlando Health",
+          "url": "https://www.orlandohealth.com/"
+        }
+      ],
+      "distanceMi": 0.9
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Aspen Dental Orlando",
+      "address": "2800 S Orange Ave, Orlando, FL 32806",
+      "notes": "General and cosmetic dentistry, accepts most insurance, new patient specials",
+      "sources": [
+        {
+          "title": "Aspen Dental",
+          "url": "https://www.aspendental.com/"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "vet",
+      "name": "VCA Animal Hospital of East Orlando",
+      "address": "11221 East Colonial Drive, Orlando, FL 32817",
+      "notes": "Full-service vet, emergency referrals, boarding and grooming",
+      "sources": [
+        {
+          "title": "VCA Hospitals",
+          "url": "https://vcahospitals.com/"
+        }
+      ],
+      "distanceMi": 6.2
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Dr. Phillips Dog Park (Barber Park)",
+      "address": "3701 Gatlin Ave, Orlando, FL 32812",
+      "notes": "Fenced off-leash park, separate areas for small/large dogs, water fountains",
+      "sources": [
+        {
+          "title": "Orange County Parks",
+          "url": "https://www.orangecountyfl.net/CultureParks/"
+        }
+      ],
+      "distanceMi": 3.7
+    },
+    {
+      "categoryId": "gym",
+      "name": "LA Fitness Orlando",
+      "address": "4950 S Kirkman Road, Orlando, FL 32811",
+      "notes": "Large gym with pool, basketball courts, group fitness, sauna",
+      "sources": [
+        {
+          "title": "LA Fitness",
+          "url": "https://www.lafitness.com/"
+        }
+      ],
+      "distanceMi": 3.1
+    },
+    {
+      "categoryId": "english_church",
+      "name": "First Presbyterian Church of Orlando",
+      "address": "106 E Church St, Orlando, FL 32801",
+      "notes": "Historic downtown church, active community programs, multiple services",
+      "sources": [
+        {
+          "title": "First Pres Orlando",
+          "url": "https://www.firstpresorlando.org/"
+        }
+      ],
+      "distanceMi": 0.2
+    },
+    {
+      "categoryId": "airport",
+      "name": "Orlando International Airport (MCO)",
+      "address": "1 Jeff Fuqua Blvd, Orlando, FL 32827",
+      "notes": "Major international airport, new Terminal C, SunRail connection planned",
+      "sources": [
+        {
+          "title": "Orlando Airport",
+          "url": "https://www.orlandoairports.net/"
+        }
+      ],
+      "distanceMi": 9.3
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "LYNX Central Station",
+      "address": "455 N Garland Ave, Orlando, FL 32801",
+      "notes": "Main bus terminal, SunRail connection, Lymmo free downtown circulator",
+      "sources": [
+        {
+          "title": "LYNX Bus",
+          "url": "https://www.golynx.com/"
+        }
+      ],
+      "distanceMi": 0.3
+    },
+    {
+      "categoryId": "coworking",
+      "name": "Industrious Orlando",
+      "address": "Church Street Plaza, Orlando, FL 32801",
+      "notes": "Premium coworking space, private offices, downtown location",
+      "sources": [
+        {
+          "title": "Industrious",
+          "url": "https://www.industriousoffice.com/"
+        }
+      ],
+      "distanceMi": 0.3
+    },
+    {
+      "categoryId": "pet_daycare",
+      "name": "Camp Bow Wow Orlando",
+      "address": "5117 C International Drive, Orlando, FL 32819",
+      "notes": "Dog daycare and boarding, webcam access, indoor/outdoor play areas",
+      "sources": [
+        {
+          "title": "Camp Bow Wow",
+          "url": "https://www.campbowwow.com/"
+        }
+      ],
+      "distanceMi": 5.0
+    }
+  ],
+  "attractions": [
+    {
+      "type": "entertainment",
+      "name": "Walt Disney World Resort",
+      "description": "World-famous theme park complex with four parks, dining, and entertainment",
+      "frequency": "Open daily, varies by park and season",
+      "sources": [
+        {
+          "title": "Walt Disney World",
+          "url": "https://www.disneyworld.disney.go.com/"
+        }
+      ],
+      "distanceMi": 15.5,
+      "estimatedCostUSD": 110
+    },
+    {
+      "type": "nature",
+      "name": "Harry P. Leu Gardens",
+      "description": "50-acre botanical garden with tropical and subtropical plants, butterfly garden",
+      "frequency": "Daily 9:00-17:00",
+      "sources": [
+        {
+          "title": "Leu Gardens",
+          "url": "https://www.leugardens.org/"
+        }
+      ],
+      "distanceMi": 1.9,
+      "estimatedCostUSD": 15
+    },
+    {
+      "type": "outdoor",
+      "name": "Lake Eola Park",
+      "description": "Urban park with swan boats, walking trail, fountain shows, farmers market",
+      "frequency": "Open daily, farmers market Sundays",
+      "sources": [
+        {
+          "title": "City of Orlando",
+          "url": "https://www.orlando.gov/Parks-the-Environment/Directory/Lake-Eola-Park"
+        }
+      ],
+      "distanceMi": 0.3,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "cultural",
+      "name": "Orlando Museum of Art",
+      "description": "Regional art museum with American art, African art, and traveling exhibitions",
+      "frequency": "Tue-Sun 10:00-16:00",
+      "sources": [
+        {
+          "title": "Orlando Museum of Art",
+          "url": "https://www.omart.org/"
+        }
+      ],
+      "distanceMi": 1.9,
+      "estimatedCostUSD": 15
+    },
+    {
+      "type": "nature",
+      "name": "Blue Spring State Park",
+      "description": "Natural spring with manatee viewing Nov-Mar, kayaking, swimming, hiking",
+      "frequency": "Day trip, daily 8:00-sunset",
+      "sources": [
+        {
+          "title": "Florida State Parks",
+          "url": "https://www.floridastateparks.org/parks-and-trails/blue-spring-state-park"
+        }
+      ],
+      "distanceMi": 28.0,
+      "estimatedCostUSD": 6
+    },
+    {
+      "type": "dining",
+      "name": "Winter Park Farmers' Market",
+      "description": "Popular Saturday morning market with local produce, food trucks, crafts",
+      "frequency": "Saturdays 7:00-13:00, year-round",
+      "sources": [
+        {
+          "title": "Winter Park Farmers Market",
+          "url": "https://www.cityofwinterpark.org/departments/parks-recreation/farmers-market/"
+        }
+      ],
+      "distanceMi": 3.7,
+      "estimatedCostUSD": 15
+    },
+    {
+      "type": "social",
+      "name": "Church Street District",
+      "description": "Downtown entertainment district with bars, restaurants, live music, and events",
+      "frequency": "Nightly, busiest weekends",
+      "sources": [
+        {
+          "title": "Downtown Orlando",
+          "url": "https://www.downtownorlando.com/"
+        }
+      ],
+      "distanceMi": 0.2,
+      "estimatedCostUSD": 15
+    },
+    {
+      "type": "sports",
+      "name": "Amway Center",
+      "description": "Home of Orlando Magic NBA and Orlando City SC, concerts and events",
+      "frequency": "Event schedule varies, NBA season Oct-Apr",
+      "sources": [
+        {
+          "title": "Amway Center",
+          "url": "https://www.amwaycenter.com/"
+        }
+      ],
+      "distanceMi": 0.3,
+      "estimatedCostUSD": 40
+    },
+    {
+      "type": "outdoor",
+      "name": "Wekiwa Springs State Park",
+      "description": "Natural spring swimming, canoeing, hiking through Florida scrub habitat",
+      "frequency": "Daily 8:00-sunset",
+      "sources": [
+        {
+          "title": "Florida State Parks",
+          "url": "https://www.floridastateparks.org/parks-and-trails/wekiwa-springs-state-park"
+        }
+      ],
+      "distanceMi": 15.5,
+      "estimatedCostUSD": 6
+    },
+    {
+      "type": "shopping",
+      "name": "Park Avenue, Winter Park",
+      "description": "Charming tree-lined shopping street with boutiques, galleries, and restaurants",
+      "frequency": "Mon-Sat 10:00-18:00, Sun 12:00-17:00",
+      "sources": [
+        {
+          "title": "Winter Park",
+          "url": "https://www.winterpark.org/"
+        }
+      ],
+      "distanceMi": 3.7,
+      "estimatedCostUSD": 0
+    }
+  ]
+}

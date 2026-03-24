@@ -1,0 +1,126 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 18,
+      "typical": 24,
+      "max": 225
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 190,
+        "coverageNote": "HZZO covers for diabetes with specialist prescription"
+      },
+      {
+        "name": "Levotiroksin [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "HZZO basic list — fully covered"
+      },
+      {
+        "name": "Atorvastatin 20mg [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 6,
+        "coverageNote": "HZZO basic list generic"
+      },
+      {
+        "name": "Montelukast [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 10,
+        "coverageNote": "HZZO supplementary list — small copay"
+      },
+      {
+        "name": "Hidroklorotiazid [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 3,
+        "coverageNote": "HZZO basic list — fully covered"
+      },
+      {
+        "name": "Olmesartan [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 12,
+        "coverageNote": "HZZO supplementary list"
+      },
+      {
+        "name": "Salbutamol [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 3,
+        "coverageNote": "HZZO basic list"
+      },
+      {
+        "name": "Metformin 500mg [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 3,
+        "coverageNote": "HZZO basic list — fully covered"
+      },
+      {
+        "name": "Alopurinol [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "HZZO basic list"
+      },
+      {
+        "name": "Lizinopril [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 5,
+        "coverageNote": "HZZO basic list"
+      },
+      {
+        "name": "Topiramat [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 12,
+        "coverageNote": "HZZO supplementary list"
+      },
+      {
+        "name": "Metoprolol [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 5,
+        "coverageNote": "HZZO basic list"
+      },
+      {
+        "name": "Atorvastatin 20mg [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 6,
+        "coverageNote": "HZZO basic list generic"
+      }
+    ],
+    "pharmacyAccess": "Ljekarne (pharmacies) available in all Croatian cities. Rotating 24h duty pharmacy system. EU prescriptions accepted with some limitations.",
+    "notes": "Croatia HZZO provides medication coverage through basic and supplementary lists. Basic list medications have no copay. Supplementary list has small copays. EU citizens can use EHIC. Temporary residents need private insurance or pay reference prices."
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 70,
+      "typical": 85,
+      "max": 105
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in Croatia at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "A1 Croatia Postpaid",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "10GB 4G/5G",
+        "baseCost": 20,
+        "taxesAndFees": 0,
+        "monthlyTotal": 20,
+        "notes": "2 lines ~€9/line. A1 has best coverage. EU roaming included."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      }
+    ]
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "id": "greece-crete",
+  "name": "Crete, Greece",
+  "country": "Greece",
+  "region": "Southern Europe",
+  "cities": [
+    "Chania",
+    "Heraklion",
+    "Rethymno"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93
+  },
+  "visa": {
+    "type": "Financial Independence Visa",
+    "incomeRequirement": {
+      "monthly": 2000,
+      "currency": "EUR"
+    },
+    "notes": "Financially independent person visa requires ~€2,000/mo income proof."
+  },
+  "climate": {
+    "winterLowF": 48,
+    "summerHighF": 90,
+    "meetsWarmWinterReq": false,
+    "rainyDaysPerYear": 50
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 800,
+      "min": 600,
+      "max": 1000,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 380,
+      "min": 300,
+      "max": 480,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 150,
+      "min": 110,
+      "max": 200,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 90,
+      "min": 60,
+      "max": 140,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 110,
+      "min": 70,
+      "max": 160,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 140,
+      "min": 90,
+      "max": 210,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 200,
+      "min": 140,
+      "max": 280,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 70,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 87,
+      "min": 72,
+      "max": 107,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 20,
+      "typical": 35,
+      "max": 70,
+      "annualInflation": 0.035,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 40,
+      "typical": 80,
+      "max": 160,
+      "annualInflation": 0.035
+    }
+  },
+  "healthcare": {
+    "system": "Regional hospital in Heraklion (PAGNI) is largest on the island. Limited specialist care may require travel to Athens.",
+    "qualityRating": 6,
+    "dentalIncluded": false,
+    "waitTimes": "Public: 4-12 weeks. Complex cases may need Athens referral.",
+    "prescriptionCoverage": "Standard EOPYY coverage with co-pays"
+  },
+  "lifestyle": {
+    "internetSpeed": "100Mbps+",
+    "dogFriendly": 7,
+    "expatCommunity": 6,
+    "englishPrevalence": 5,
+    "safetyRating": 9
+  },
+  "pros": [
+    "Very affordable cost of living",
+    "Warm climate with beautiful beaches and mountains",
+    "Excellent Cretan cuisine and food culture"
+  ],
+  "cons": [
+    "Island isolation - ferry or flights to mainland",
+    "Limited specialist healthcare",
+    "Car essentially required outside cities"
+  ],
+  "taxes": {
+    "notes": "Greek progressive income tax 9%-44%. 7% flat tax option for foreign retirees.",
+    "vatRate": 24,
+    "socialChargesRate": 0
+  }
+}

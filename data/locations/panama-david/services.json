@@ -1,0 +1,245 @@
+{
+  "distanceUnit": "km",
+  "currency": "USD",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Hospital Nacional",
+      "address": "City center area, David, Panama",
+      "distanceKm": 8,
+      "notes": "Private hospital, English-speaking staff, modern facilities",
+      "sources": [
+        {
+          "title": "Hospital Nacional",
+          "url": "https://www.hospitalnacional.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Farmacias Arrocha",
+      "address": "City center area, David, Panama",
+      "distanceKm": 1.5,
+      "notes": "Well-stocked pharmacy, prescription medications, some English spoken",
+      "sources": [
+        {
+          "title": "Farmacias Arrocha",
+          "url": "https://www.arrocha.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Riba Smith",
+      "address": "City center area, David, Panama",
+      "distanceKm": 2,
+      "notes": "Upscale supermarket popular with expats, imported US/European products",
+      "sources": [
+        {
+          "title": "Riba Smith",
+          "url": "https://www.ribasmith.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "Banco General",
+      "address": "City center area, David, Panama",
+      "distanceKm": 2,
+      "notes": "Largest private bank in Panama, English-speaking staff, expat accounts",
+      "sources": [
+        {
+          "title": "Banco General",
+          "url": "https://www.bgeneral.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Consultorios Médicos Paitilla",
+      "address": "City center area, David, Panama",
+      "distanceKm": 3,
+      "notes": "Private medical center, English-speaking doctors, modern facilities",
+      "sources": [
+        {
+          "title": "Consultorios Médicos Paitilla",
+          "url": "https://www.cmedicospaitilla.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Dental Clinic David Center",
+      "address": "City center area, David, Panama",
+      "distanceKm": 3,
+      "notes": "General and cosmetic dentistry, some English-speaking dentists, modern equipment",
+      "sources": [
+        {
+          "title": "Dental Services Panama",
+          "url": "https://www.cmedicospaitilla.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Veterinary Clinic David",
+      "address": "City center area, David, Panama",
+      "distanceKm": 4,
+      "notes": "Full veterinary services, vaccinations, surgery, some English spoken",
+      "sources": [
+        {
+          "title": "Veterinary Services Panama",
+          "url": "https://www.mida.gob.pa/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Parque Canino / Dog Park David",
+      "address": "Park area, David, Panama",
+      "distanceKm": 5,
+      "notes": "Off-leash area, green space popular with dog owners, water available",
+      "sources": [
+        {
+          "title": "Parks in David",
+          "url": "https://www.miambiente.gob.pa/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "PowerClub",
+      "address": "City center area, David, Panama",
+      "distanceKm": 3,
+      "notes": "Modern gym with cardio and weight equipment, group classes, monthly memberships",
+      "sources": [
+        {
+          "title": "PowerClub",
+          "url": "https://www.powerclubpanama.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "Crossroads Bible Church Panama",
+      "address": "City center area, David, Panama",
+      "distanceKm": 5,
+      "notes": "English-language services, expat community gathering point, social events",
+      "sources": [
+        {
+          "title": "Crossroads Bible Church Panama",
+          "url": "https://www.crossroadspanama.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Enrique Malek International Airport (DAV)",
+      "address": "Airport area",
+      "distanceKm": 5,
+      "notes": "International airport with domestic and international flights",
+      "sources": [
+        {
+          "title": "Enrique Malek International Airport",
+          "url": "https://www.tocumenpanama.aero/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Metro Bus / Metro David",
+      "address": "City center area, David, Panama",
+      "distanceKm": 2,
+      "notes": "Metro system, MetroBus, affordable fares with RapidPass card",
+      "sources": [
+        {
+          "title": "Metro Bus",
+          "url": "https://www.elmetrodepanama.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "coworking",
+      "name": "Selina Cowork David",
+      "address": "City center area, David, Panama",
+      "distanceKm": 3,
+      "notes": "Coworking space, high-speed internet, meeting rooms, community events",
+      "sources": [
+        {
+          "title": "Selina Cowork David",
+          "url": "https://www.selina.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "Pet Grooming David",
+      "address": "City center area, David, Panama",
+      "distanceKm": 4,
+      "notes": "Professional pet grooming services, bathing, clipping, appointment recommended",
+      "sources": [
+        {
+          "title": "Pet Services David",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "categoryId": "international_school",
+      "name": "InterNations Panama Expat Community",
+      "address": "City center area, David, Panama",
+      "distanceKm": 4,
+      "notes": "International expat community center, social events, networking, relocation assistance",
+      "sources": [
+        {
+          "title": "InterNations Panama Expat Community",
+          "url": "https://www.internations.org/"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "David Cultural Center",
+      "description": "Cultural center with local art, history, and community events",
+      "distanceKm": 4,
+      "frequency": "Tue-Sun 10:00-17:00",
+      "sources": [
+        {
+          "title": "David Culture",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "estimatedCostUSD": 8
+    },
+    {
+      "type": "nature",
+      "name": "David Central Park / Garden",
+      "description": "Main public park with walking trails, gardens, and green space",
+      "distanceKm": 3,
+      "frequency": "Daily, dawn to dusk",
+      "sources": [
+        {
+          "title": "Parks in David",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "dining",
+      "name": "David Restaurant District",
+      "description": "Walkable area with diverse restaurants, cafes, and bars",
+      "distanceKm": 2,
+      "frequency": "Daily, lunch and dinner service",
+      "sources": [
+        {
+          "title": "Dining in David",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "estimatedCostUSD": 25
+    }
+  ]
+}

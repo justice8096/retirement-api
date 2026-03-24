@@ -1,0 +1,178 @@
+{
+  "id": "spain-valencia",
+  "name": "Valencia, Spain",
+  "country": "Spain",
+  "region": "Southern Europe",
+  "cities": [
+    "Valencia",
+    "Gandia",
+    "Sagunto"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93
+  },
+  "visa": {
+    "type": "Non-Lucrative Visa",
+    "incomeRequirement": {
+      "monthly": 2400,
+      "currency": "EUR"
+    },
+    "notes": "Non-lucrative visa requires proof of sufficient funds (~€2,400/mo). Cannot work in Spain on this visa."
+  },
+  "climate": {
+    "winterLowF": 43,
+    "summerHighF": 90,
+    "meetsWarmWinterReq": false,
+    "rainyDaysPerYear": 45
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 1050,
+      "min": 800,
+      "max": 1300,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 420,
+      "min": 340,
+      "max": 530,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 155,
+      "min": 115,
+      "max": 210,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 110,
+      "min": 70,
+      "max": 160,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 125,
+      "min": 85,
+      "max": 180,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 110,
+      "min": 70,
+      "max": 170,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 250,
+      "min": 180,
+      "max": 350,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 70,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 79,
+      "min": 64,
+      "max": 99,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 15,
+      "typical": 23,
+      "max": 55,
+      "annualInflation": 0.03,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 40,
+      "typical": 80,
+      "max": 160,
+      "annualInflation": 0.035
+    }
+  },
+  "healthcare": {
+    "system": "Valencian public health system (Conselleria de Sanitat) with modern hospitals. Private options plentiful.",
+    "qualityRating": 8,
+    "dentalIncluded": false,
+    "waitTimes": "Public: 3-8 weeks for specialists. Private: under 2 weeks.",
+    "prescriptionCoverage": "Public covers most prescriptions with co-pays based on income"
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps available",
+    "dogFriendly": 7,
+    "expatCommunity": 7,
+    "englishPrevalence": 5,
+    "safetyRating": 8
+  },
+  "pros": [
+    "Excellent value for a major Mediterranean city",
+    "City of Arts and Sciences, great cultural scene",
+    "Good metro and bus system, bikeable"
+  ],
+  "cons": [
+    "Less English spoken than Costa del Sol",
+    "Flash flooding risk in autumn (DANA events)",
+    "Summer humidity can be uncomfortable"
+  ],
+  "taxes": {
+    "notes": "Spanish progressive income tax 19%-47%. Valencia region may have slightly different regional rates.",
+    "vatRate": 21,
+    "socialChargesRate": 0
+  }
+}

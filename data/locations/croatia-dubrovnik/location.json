@@ -1,0 +1,178 @@
+{
+  "id": "croatia-dubrovnik",
+  "name": "Dubrovnik, Croatia",
+  "country": "Croatia",
+  "region": "Southern Europe",
+  "cities": [
+    "Dubrovnik",
+    "Cavtat",
+    "Mlini"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93
+  },
+  "visa": {
+    "type": "Temporary Stay Permit",
+    "incomeRequirement": {
+      "monthly": 1500,
+      "currency": "EUR"
+    },
+    "notes": "Temporary stay permit for retirees/financially independent persons. Digital nomad visa also available. Croatia joined Schengen and euro in 2023."
+  },
+  "climate": {
+    "winterLowF": 44,
+    "summerHighF": 88,
+    "meetsWarmWinterReq": false,
+    "rainyDaysPerYear": 90
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 1050,
+      "min": 800,
+      "max": 1300,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 400,
+      "min": 320,
+      "max": 500,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 155,
+      "min": 115,
+      "max": 210,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 95,
+      "min": 60,
+      "max": 140,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 115,
+      "min": 75,
+      "max": 165,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 120,
+      "min": 75,
+      "max": 180,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 250,
+      "min": 180,
+      "max": 350,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 70,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 85,
+      "min": 70,
+      "max": 105,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 15,
+      "typical": 28,
+      "max": 60,
+      "annualInflation": 0.035,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 25,
+      "typical": 50,
+      "max": 100,
+      "annualInflation": 0.035
+    }
+  },
+  "healthcare": {
+    "system": "HZZO (Croatian Health Insurance Fund). Dubrovnik General Hospital for basic care. Specialist care may require Split or Zagreb.",
+    "qualityRating": 7,
+    "dentalIncluded": false,
+    "waitTimes": "Public: 4-12 weeks. Private clinics available in city.",
+    "prescriptionCoverage": "HZZO covers most prescriptions with small co-pays"
+  },
+  "lifestyle": {
+    "internetSpeed": "100Mbps+",
+    "dogFriendly": 6,
+    "expatCommunity": 5,
+    "englishPrevalence": 6,
+    "safetyRating": 9
+  },
+  "pros": [
+    "Stunning medieval walled city on the Adriatic",
+    "Excellent seafood and Mediterranean lifestyle",
+    "Croatia in EU and Schengen since 2023"
+  ],
+  "cons": [
+    "Extremely tourism-heavy (Game of Thrones effect)",
+    "Higher cost than rest of Croatia",
+    "Very crowded May-October"
+  ],
+  "taxes": {
+    "notes": "Croatian progressive income tax 20% (up to €50,400) and 30% above. Surtax may apply (0-18% depending on municipality). No US-Croatia tax treaty.",
+    "vatRate": 25,
+    "socialChargesRate": 0
+  }
+}

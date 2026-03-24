@@ -1,0 +1,202 @@
+{
+  "description": "Agent-to-tab mapping. Each agent researches data that feeds one or more dashboard tabs.",
+  "agents": [
+    {
+      "id": "exchange-rates",
+      "label": "Exchange Rates",
+      "tabIds": ["overview", "compare", "manage"],
+      "promptFile": "prompts/exchange-rates.md",
+      "updateFrequency": "monthly",
+      "targetFiles": ["data/locations/*/location.json"],
+      "targetPaths": ["$.exchangeRates.optimistic", "$.exchangeRates.pessimistic", "$.exchangeRates.mid", "$.exchangeRate"],
+      "dependsOn": [],
+      "parallel": false,
+      "locationsScope": "eur-all"
+    },
+    {
+      "id": "housing",
+      "label": "Housing & Rent",
+      "tabIds": ["housing", "overview", "compare", "projections"],
+      "promptFile": "prompts/housing.md",
+      "updateFrequency": "quarterly",
+      "targetFiles": ["data/locations/*/location.json", "data/locations/*/detailed-costs.json"],
+      "targetPaths": ["$.monthlyCosts.rent", "$.housing"],
+      "dependsOn": ["exchange-rates"],
+      "parallel": true,
+      "locationsScope": "all"
+    },
+    {
+      "id": "entertainment",
+      "label": "Entertainment",
+      "tabIds": ["entertainment", "overview", "compare", "projections"],
+      "promptFile": "prompts/entertainment.md",
+      "updateFrequency": "quarterly",
+      "targetFiles": ["data/locations/*/location.json", "data/locations/*/detailed-costs.json"],
+      "targetPaths": ["$.monthlyCosts.entertainment", "$.monthlyCosts.subscriptions", "$.entertainment"],
+      "dependsOn": ["exchange-rates"],
+      "parallel": true,
+      "locationsScope": "all"
+    },
+    {
+      "id": "transportation",
+      "label": "Transportation",
+      "tabIds": ["transportation", "overview", "compare", "projections"],
+      "promptFile": "prompts/transportation.md",
+      "updateFrequency": "quarterly",
+      "targetFiles": ["data/locations/*/location.json", "data/locations/*/detailed-costs.json"],
+      "targetPaths": ["$.monthlyCosts.transportation", "$.transportation"],
+      "dependsOn": ["exchange-rates"],
+      "parallel": true,
+      "locationsScope": "all"
+    },
+    {
+      "id": "medicine",
+      "label": "Medicine & Prescriptions",
+      "tabIds": ["medicine", "overview", "compare", "projections"],
+      "promptFile": "prompts/medicine.md",
+      "updateFrequency": "biannual",
+      "targetFiles": ["data/locations/*/location.json", "data/locations/*/detailed-costs.json"],
+      "targetPaths": ["$.monthlyCosts.healthcare", "$.medicine"],
+      "dependsOn": ["exchange-rates"],
+      "parallel": true,
+      "locationsScope": "all"
+    },
+    {
+      "id": "vision-dental",
+      "label": "Vision & Dental",
+      "tabIds": ["visiondental", "overview", "compare", "projections"],
+      "promptFile": "prompts/vision-dental.md",
+      "updateFrequency": "biannual",
+      "targetFiles": ["data/locations/*/location.json", "data/locations/*/detailed-costs.json"],
+      "targetPaths": ["$.monthlyCosts.insurance", "$.visionDental"],
+      "dependsOn": ["exchange-rates"],
+      "parallel": true,
+      "locationsScope": "all"
+    },
+    {
+      "id": "groceries",
+      "label": "Groceries",
+      "tabIds": ["groceries", "overview", "compare", "projections"],
+      "promptFile": "prompts/groceries.md",
+      "updateFrequency": "quarterly",
+      "targetFiles": ["data/locations/*/location.json"],
+      "targetPaths": ["$.monthlyCosts.groceries", "$.groceries"],
+      "dependsOn": ["exchange-rates"],
+      "parallel": true,
+      "locationsScope": "all"
+    },
+    {
+      "id": "taxes",
+      "label": "Taxes",
+      "tabIds": ["taxes", "overview", "compare", "projections"],
+      "promptFile": "prompts/taxes.md",
+      "updateFrequency": "annual",
+      "targetFiles": ["data/locations/*/location.json"],
+      "targetPaths": ["$.taxes", "$.monthlyCosts.taxes"],
+      "dependsOn": [],
+      "parallel": true,
+      "locationsScope": "all"
+    },
+    {
+      "id": "cellphones",
+      "label": "Cell Phones",
+      "tabIds": ["cellphones", "overview", "compare", "projections"],
+      "promptFile": "prompts/cellphones.md",
+      "updateFrequency": "biannual",
+      "targetFiles": ["data/locations/*/location.json", "data/locations/*/detailed-costs.json"],
+      "targetPaths": ["$.monthlyCosts.phoneCell", "$.cellPhones"],
+      "dependsOn": ["exchange-rates"],
+      "parallel": true,
+      "locationsScope": "all"
+    },
+    {
+      "id": "neighborhoods",
+      "label": "Neighborhoods",
+      "tabIds": ["neighborhoods"],
+      "promptFile": "prompts/neighborhoods.md",
+      "updateFrequency": "biannual",
+      "targetFiles": ["data/locations/*/neighborhoods.json"],
+      "targetPaths": ["$.neighborhoods"],
+      "dependsOn": [],
+      "parallel": true,
+      "locationsScope": "all"
+    },
+    {
+      "id": "services",
+      "label": "Services & Attractions",
+      "tabIds": ["services"],
+      "promptFile": "prompts/services.md",
+      "updateFrequency": "annual",
+      "targetFiles": ["data/locations/*/services.json"],
+      "targetPaths": ["$.services"],
+      "dependsOn": [],
+      "parallel": true,
+      "locationsScope": "all"
+    },
+    {
+      "id": "inclusion",
+      "label": "Inclusion & Prejudice Assessment",
+      "tabIds": ["inclusion"],
+      "promptFile": "prompts/inclusion.md",
+      "updateFrequency": "annual",
+      "targetFiles": ["data/locations/*/inclusion.json"],
+      "targetPaths": ["$.inclusion"],
+      "dependsOn": [],
+      "parallel": true,
+      "locationsScope": "all"
+    },
+    {
+      "id": "ss-benefits",
+      "label": "Social Security Benefits",
+      "tabIds": ["sssimulator", "scenarios", "projections", "montecarlo"],
+      "promptFile": "prompts/ss-benefits.md",
+      "updateFrequency": "annual",
+      "targetFiles": ["data/shared/social-security.json"],
+      "targetPaths": ["$.socialSecurity"],
+      "dependsOn": [],
+      "parallel": false,
+      "locationsScope": "none"
+    },
+    {
+      "id": "utilities",
+      "label": "Utilities",
+      "tabIds": ["overview", "compare", "projections"],
+      "promptFile": "prompts/utilities.md",
+      "updateFrequency": "biannual",
+      "targetFiles": ["data/locations/*/location.json"],
+      "targetPaths": ["$.monthlyCosts.utilities"],
+      "dependsOn": ["exchange-rates"],
+      "parallel": true,
+      "locationsScope": "all"
+    },
+    {
+      "id": "petcare",
+      "label": "Pet Care",
+      "tabIds": ["overview", "compare", "projections"],
+      "promptFile": "prompts/petcare.md",
+      "updateFrequency": "biannual",
+      "targetFiles": ["data/locations/*/location.json", "data/locations/*/detailed-costs.json"],
+      "targetPaths": ["$.monthlyCosts.petCare", "$.monthlyCosts.petDaycare", "$.monthlyCosts.petGrooming", "$.petCare"],
+      "dependsOn": ["exchange-rates"],
+      "parallel": true,
+      "locationsScope": "all"
+    },
+    {
+      "id": "index-sync",
+      "label": "Index & Totals Sync",
+      "tabIds": ["overview", "compare", "manage"],
+      "promptFile": null,
+      "updateFrequency": "always",
+      "targetFiles": ["data/index.json", "data/locations/*/location.json"],
+      "targetPaths": ["$.locations[*].monthlyCostUSD", "$.locations[*].summary"],
+      "dependsOn": [
+        "housing", "entertainment", "transportation", "medicine",
+        "vision-dental", "groceries", "taxes", "cellphones",
+        "utilities", "petcare", "neighborhoods", "services",
+        "inclusion", "ss-benefits"
+      ],
+      "parallel": false,
+      "locationsScope": "all"
+    }
+  ]
+}

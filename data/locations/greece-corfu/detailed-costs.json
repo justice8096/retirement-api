@@ -1,0 +1,126 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 20,
+      "typical": 26,
+      "max": 230
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 195,
+        "coverageNote": "EOPYY covers for diabetes with endocrinologist prescription"
+      },
+      {
+        "name": "Λεβοθυροξίνη (Levothyroxine) [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "EOPYY fully reimbursed"
+      },
+      {
+        "name": "Atorvastatin 20mg [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 6,
+        "coverageNote": "EOPYY reimbursed generic"
+      },
+      {
+        "name": "Montelukast [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 10,
+        "coverageNote": "EOPYY reimbursed"
+      },
+      {
+        "name": "Hydrochlorothiazide [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 3,
+        "coverageNote": "EOPYY reimbursed generic"
+      },
+      {
+        "name": "Olmesartan [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 12,
+        "coverageNote": "EOPYY reimbursed"
+      },
+      {
+        "name": "Salbutamol (Ventolin) [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "EOPYY reimbursed"
+      },
+      {
+        "name": "Metformin 500mg [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 3,
+        "coverageNote": "EOPYY reimbursed generic"
+      },
+      {
+        "name": "Allopurinol [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "EOPYY reimbursed"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 5,
+        "coverageNote": "EOPYY reimbursed"
+      },
+      {
+        "name": "Topiramate [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 12,
+        "coverageNote": "EOPYY reimbursed"
+      },
+      {
+        "name": "Metoprolol [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 5,
+        "coverageNote": "EOPYY reimbursed"
+      },
+      {
+        "name": "Atorvastatin 20mg [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 6,
+        "coverageNote": "EOPYY reimbursed generic"
+      }
+    ],
+    "pharmacyAccess": "Φαρμακεία (pharmacies) with green cross signage in all Greek cities and towns. Rotating 24h duty pharmacy system. EU prescriptions accepted.",
+    "notes": "Greece EOPYY provides pharmaceutical coverage with 0-25% copay depending on medication category and patient status. Pensioners and chronic condition patients often pay 0-10%. Private pharmacies may charge slightly more than reference prices. EU EHIC card accepted."
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 72,
+      "typical": 87,
+      "max": 107
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in Greece at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "Cosmote Postpaid",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "8GB 4G/5G",
+        "baseCost": 22,
+        "taxesAndFees": 0,
+        "monthlyTotal": 22,
+        "notes": "2 lines ~€10/line. Cosmote is largest carrier. EU roaming included."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      }
+    ]
+  }
+}

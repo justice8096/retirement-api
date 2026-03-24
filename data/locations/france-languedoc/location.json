@@ -1,0 +1,178 @@
+{
+  "id": "france-languedoc",
+  "name": "Languedoc, France",
+  "country": "France",
+  "region": "Western Europe",
+  "cities": [
+    "Montpellier",
+    "Béziers",
+    "Narbonne"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93
+  },
+  "visa": {
+    "type": "Long-Stay Visa (VLS-TS)",
+    "incomeRequirement": {
+      "monthly": 1500,
+      "currency": "EUR"
+    },
+    "notes": "Long-stay visa requires ~€1,500/mo income. Must apply at French consulate. Renewable annually."
+  },
+  "climate": {
+    "winterLowF": 37,
+    "summerHighF": 90,
+    "meetsWarmWinterReq": false,
+    "rainyDaysPerYear": 55
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 1000,
+      "min": 800,
+      "max": 1200,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 460,
+      "min": 370,
+      "max": 580,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 175,
+      "min": 130,
+      "max": 230,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 130,
+      "min": 90,
+      "max": 185,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 150,
+      "min": 100,
+      "max": 210,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 130,
+      "min": 80,
+      "max": 190,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 260,
+      "min": 180,
+      "max": 360,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 70,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 85,
+      "min": 70,
+      "max": 105,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 20,
+      "typical": 36,
+      "max": 75,
+      "annualInflation": 0.03,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 30,
+      "typical": 60,
+      "max": 120,
+      "annualInflation": 0.03
+    }
+  },
+  "healthcare": {
+    "system": "French Sécurité Sociale (Assurance Maladie) - world-class system. Residents get carte vitale after 3 months. CHU Montpellier is a major university hospital.",
+    "qualityRating": 9,
+    "dentalIncluded": true,
+    "waitTimes": "GPs: same week. Specialists: 2-6 weeks. Shorter in Montpellier.",
+    "prescriptionCoverage": "70% covered by Sécu, remainder by mutuelle (supplemental insurance)"
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps available",
+    "dogFriendly": 8,
+    "expatCommunity": 6,
+    "englishPrevalence": 4,
+    "safetyRating": 8
+  },
+  "pros": [
+    "Warm Mediterranean climate in southern France",
+    "Affordable by French standards",
+    "Montpellier is a vibrant university city with tram system"
+  ],
+  "cons": [
+    "French language essential for daily life",
+    "Mistral winds can be intense",
+    "Smaller international community than Côte d'Azur"
+  ],
+  "taxes": {
+    "notes": "French progressive income tax 11%-45%. Social charges ~9.1% on foreign income (CSG/CRDS). US-France tax treaty.",
+    "vatRate": 20,
+    "socialChargesRate": 9.1
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "city": "Savannah",
+  "neighborhoods": [
+    {
+      "id": "savannah-historic-district",
+      "name": "Historic District",
+      "description": "Savannah's iconic core with 22 tree-canopied squares, antebellum architecture, and cobblestone streets along the riverfront",
+      "character": "Urban historic, extremely walkable, tourist-adjacent, elegant",
+      "housing": {
+        "avgRentOneBedroomUSD": 1500,
+        "avgRentTwoBedroomUSD": 2200,
+        "buyPricePerSqmUSD": 4300,
+        "predominantType": "Restored Victorian rowhouses, carriage houses, and luxury condos"
+      },
+      "walkabilityScore": 92,
+      "transitScore": 45,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "One of the most walkable neighborhoods in the American South. Tourists concentrate on River Street and around Forsyth Park. SCAD students add creative energy.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Savannah",
+          "url": "https://www.numbeo.com/cost-of-living/in/Savannah-GA"
+        },
+        {
+          "title": "Zillow - Savannah Historic District",
+          "url": "https://www.zillow.com/savannah-ga/historic-district/"
+        },
+        {
+          "title": "Visit Savannah",
+          "url": "https://www.visitsavannah.com/"
+        }
+      ]
+    },
+    {
+      "id": "savannah-ardsley-park",
+      "name": "Ardsley Park",
+      "description": "Gracious early-20th-century neighborhood south of the Historic District with wide boulevards, mature oaks, and a strong community feel",
+      "character": "Established residential, tree-lined, family and retiree friendly",
+      "housing": {
+        "avgRentOneBedroomUSD": 1200,
+        "avgRentTwoBedroomUSD": 1700,
+        "buyPricePerSqmUSD": 3200,
+        "predominantType": "Craftsman bungalows, Colonial Revival homes, and brick Tudor-style houses"
+      },
+      "walkabilityScore": 70,
+      "transitScore": 30,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Daffin Park offers tennis, pool, and walking paths. Close to good restaurants on Bull Street. Quieter than downtown but still close.",
+      "sources": [
+        {
+          "title": "Zillow - Ardsley Park",
+          "url": "https://www.zillow.com/savannah-ga/ardsley-park/"
+        },
+        {
+          "title": "Numbeo Cost of Living Savannah",
+          "url": "https://www.numbeo.com/cost-of-living/in/Savannah-GA"
+        }
+      ]
+    },
+    {
+      "id": "savannah-tybee-island",
+      "name": "Tybee Island",
+      "description": "Small barrier island beach community 20 minutes east of Savannah with a laid-back vibe, lighthouse, and year-round residents",
+      "character": "Beach community, casual, small-town, seasonal tourist activity",
+      "housing": {
+        "avgRentOneBedroomUSD": 1300,
+        "avgRentTwoBedroomUSD": 1800,
+        "buyPricePerSqmUSD": 3800,
+        "predominantType": "Beach cottages, elevated houses, and small condos"
+      },
+      "walkabilityScore": 50,
+      "transitScore": 15,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Year-round population of about 3,000 swells in summer. Casual flip-flop lifestyle. Flood insurance required. Strong sense of community among permanent residents.",
+      "sources": [
+        {
+          "title": "Zillow - Tybee Island",
+          "url": "https://www.zillow.com/tybee-island-ga/"
+        },
+        {
+          "title": "Tybee Island Official",
+          "url": "https://www.cityoftybee.org/"
+        }
+      ]
+    },
+    {
+      "id": "savannah-pooler",
+      "name": "Pooler",
+      "description": "Fast-growing suburb west of Savannah with new construction, shopping centers, and proximity to the airport",
+      "character": "Modern suburban, affordable, convenient, rapidly developing",
+      "housing": {
+        "avgRentOneBedroomUSD": 1100,
+        "avgRentTwoBedroomUSD": 1500,
+        "buyPricePerSqmUSD": 2200,
+        "predominantType": "New-construction single-family homes in planned communities"
+      },
+      "walkabilityScore": 25,
+      "transitScore": 15,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Close to Savannah/Hilton Head International Airport. Tanger Outlets and big-box retail. Popular with military retirees from nearby bases.",
+      "sources": [
+        {
+          "title": "Zillow - Pooler GA",
+          "url": "https://www.zillow.com/pooler-ga/"
+        },
+        {
+          "title": "Numbeo Cost of Living Savannah area",
+          "url": "https://www.numbeo.com/cost-of-living/in/Savannah-GA"
+        }
+      ]
+    },
+    {
+      "id": "savannah-isle-of-hope",
+      "name": "Isle of Hope",
+      "description": "Historic waterfront community on a bluff overlooking the Skidaway River, with moss-draped oaks and a marina",
+      "character": "Scenic, quiet, historic waterfront, close-knit",
+      "housing": {
+        "avgRentOneBedroomUSD": 1300,
+        "avgRentTwoBedroomUSD": 1900,
+        "buyPricePerSqmUSD": 3500,
+        "predominantType": "Historic homes and waterfront properties, some dating to the 1800s"
+      },
+      "walkabilityScore": 35,
+      "transitScore": 10,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Bluff Drive along the river is one of the most beautiful streets in Georgia. Wormsloe Historic Site is nearby. Very quiet -- car required.",
+      "sources": [
+        {
+          "title": "Zillow - Isle of Hope",
+          "url": "https://www.zillow.com/savannah-ga/isle-of-hope/"
+        },
+        {
+          "title": "Visit Savannah",
+          "url": "https://www.visitsavannah.com/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 73,
+      "typical": 91,
+      "max": 925
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic/Wegovy) [P1]",
+        "monthlyCost": 25,
+        "withoutInsurance": 900,
+        "coverageNote": "Medicare Part D covers for diabetes (tier 3). $25 copay typical. Without coverage ~$900/mo. IRA negotiated price TBD."
+      },
+      {
+        "name": "Levothyroxine (Synthroid) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 15,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Atorvastatin 20mg [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Montelukast (Singulair) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 15,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Hydrochlorothiazide (HCTZ) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 8,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Olmesartan/Medoxomil (Benicar) [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 30,
+        "coverageNote": "Medicare Part D generic tier 1-2; $4-15 copay"
+      },
+      {
+        "name": "Albuterol inhaler [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 35,
+        "coverageNote": "Medicare Part D tier 2; $10-25 copay. IRA cap applies."
+      },
+      {
+        "name": "Metformin 500mg [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Allopurinol (gout) [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Topiramate (Topamax) [P2]",
+        "monthlyCost": 10,
+        "withoutInsurance": 25,
+        "coverageNote": "Medicare Part D generic tier 1-2; $4-15 copay"
+      },
+      {
+        "name": "Metoprolol (Lopressor) [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Atorvastatin 20mg [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      }
+    ],
+    "pharmacyAccess": "CVS, Walgreens, Walmart, Kroger pharmacies widely available. $4 generic programs at Walmart/Kroger. Mail-order via OptumRx, Express Scripts, or Mark Cuban Cost Plus Drugs.",
+    "notes": "US prices shown with Medicare Part D coverage. Without insurance, use GoodRx or Cost Plus Drugs for significant savings on generics. IRA Inflation Reduction Act caps insulin at $35/mo and out-of-pocket at $2,000/yr starting 2025."
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 50,
+      "typical": 62,
+      "max": 77
+    },
+    "plans": [
+      {
+        "name": "T-Mobile 55+ Essentials",
+        "type": "US Domestic",
+        "lines": 2,
+        "dataPerLine": "Unlimited (50GB priority)",
+        "baseCost": 55,
+        "taxesAndFees": 7,
+        "monthlyTotal": 62,
+        "notes": "2 lines unlimited talk/text/data. VA wireless tax ~12% + federal USF. 5G included."
+      }
+    ],
+    "sources": [
+      {
+        "title": "T-Mobile 55+ Plans",
+        "url": "https://www.t-mobile.com/cell-phone-plans/unlimited-55-plus"
+      }
+    ]
+  }
+}

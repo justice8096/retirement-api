@@ -1,0 +1,27 @@
+{
+  "frequencies": {
+    "monthly": { "intervalDays": 30, "description": "Exchange rates — fast-moving" },
+    "quarterly": { "intervalDays": 90, "description": "Housing, entertainment, transport, groceries — seasonal" },
+    "biannual": { "intervalDays": 180, "description": "Medicine, vision/dental, utilities, petcare, cellphones, neighborhoods" },
+    "annual": { "intervalDays": 365, "description": "Taxes, SS benefits, services, inclusion — slow-changing law/policy" },
+    "always": { "intervalDays": 0, "description": "index-sync runs at end of every pipeline execution" }
+  },
+  "lastRun": {
+    "exchange-rates": null,
+    "housing": null,
+    "entertainment": null,
+    "transportation": null,
+    "medicine": null,
+    "vision-dental": null,
+    "groceries": null,
+    "taxes": null,
+    "cellphones": null,
+    "neighborhoods": null,
+    "services": null,
+    "inclusion": null,
+    "ss-benefits": null,
+    "utilities": null,
+    "petcare": null,
+    "index-sync": null
+  }
+}

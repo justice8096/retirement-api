@@ -1,0 +1,1262 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 383,
+      "typical": 479,
+      "max": 529
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 350,
+        "withoutInsurance": 350,
+        "coverageNote": "Not covered by most private plans. Import or buy at Farmacias Arrocha. Pensionado 15% discount may apply."
+      },
+      {
+        "name": "Levothyroxine (Synthroid) [P1]",
+        "monthlyCost": 8,
+        "withoutInsurance": 12,
+        "coverageNote": "Generic available. Pensionado 15% discount. May need specific brand from Panama City."
+      },
+      {
+        "name": "Atorvastatin 20mg [P1]",
+        "monthlyCost": 12,
+        "withoutInsurance": 18,
+        "coverageNote": "Generic widely available. Pensionado 15% discount."
+      },
+      {
+        "name": "Montelukast [P1]",
+        "monthlyCost": 15,
+        "withoutInsurance": 20,
+        "coverageNote": "Available at major pharmacies. Pensionado 15% discount."
+      },
+      {
+        "name": "Hydrochlorothiazide [P1]",
+        "monthlyCost": 6,
+        "withoutInsurance": 8,
+        "coverageNote": "Generic widely available. Pensionado 15% discount."
+      },
+      {
+        "name": "Olmesartan [P1]",
+        "monthlyCost": 20,
+        "withoutInsurance": 30,
+        "coverageNote": "May need to source from larger pharmacies in David or Panama City."
+      },
+      {
+        "name": "Albuterol inhaler (Salbutamol) [P1]",
+        "monthlyCost": 8,
+        "withoutInsurance": 12,
+        "coverageNote": "Available as Salbutamol. Pensionado 15% discount."
+      },
+      {
+        "name": "Metformin 500mg [P2]",
+        "monthlyCost": 6,
+        "withoutInsurance": 8,
+        "coverageNote": "Generic widely available. Pensionado 15% discount."
+      },
+      {
+        "name": "Allopurinol [P2]",
+        "monthlyCost": 8,
+        "withoutInsurance": 12,
+        "coverageNote": "Available at most pharmacies. Pensionado 15% discount."
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 8,
+        "withoutInsurance": 12,
+        "coverageNote": "Generic available. Pensionado 15% discount."
+      },
+      {
+        "name": "Topiramate [P2]",
+        "monthlyCost": 18,
+        "withoutInsurance": 25,
+        "coverageNote": "Generic available. May need to source from David or Panama City."
+      },
+      {
+        "name": "Metoprolol [P2]",
+        "monthlyCost": 8,
+        "withoutInsurance": 12,
+        "coverageNote": "Generic available. Pensionado 15% discount."
+      },
+      {
+        "name": "Atorvastatin 20mg [P2]",
+        "monthlyCost": 12,
+        "withoutInsurance": 18,
+        "coverageNote": "Generic widely available. Pensionado 15% discount."
+      }
+    ],
+    "pharmacyAccess": "Excellent in Panama City. Major chains include Farmacias Arrocha, Super Farmacia, and Farmacias Metro. Many medications available without prescription. 24-hour pharmacies available in major areas.",
+    "prescriptionSystem": "Prescriptions from licensed Panamanian doctors. Many medications available OTC that require prescription in the US. CSS (social security) system provides medications at low cost if enrolled; private patients pay out-of-pocket or through insurance. Pensionado visa holders receive 15% discount on prescription medications.",
+    "insuranceCoverage": "Private insurance is standard for expats. Plans from $200-400/mo for seniors. Major providers: ASSA, Mapfre, BlueCross Panama. Most plans cover 70-80% of medications after deductible. Pre-existing conditions may be excluded for first 1-2 years.",
+    "sources": [
+      {
+        "title": "Panama Pensionado Visa Benefits",
+        "url": "https://www.visitpanama.com/plan-your-trip/retirement-in-panama/"
+      },
+      {
+        "title": "Farmacias Arrocha",
+        "url": "https://www.arrocha.com/"
+      }
+    ]
+  },
+  "vision": {
+    "annualExamCost": {
+      "withInsurance": 15,
+      "withoutInsurance": 50,
+      "notes": "Private ophthalmologists $40-60 per visit. Pensionado discount 15% on medical consultations."
+    },
+    "eyeglasses": {
+      "basicFrameAndLens": {
+        "min": 40,
+        "typical": 80,
+        "max": 200
+      },
+      "progressiveLens": {
+        "min": 100,
+        "typical": 200,
+        "max": 450
+      },
+      "contactLensesMonthly": {
+        "min": 15,
+        "typical": 30,
+        "max": 50
+      }
+    },
+    "insuranceCoverage": "Most private plans cover annual eye exams. Glasses and contacts typically not covered, or limited to $100-150 annual allowance. Pensionado 15% discount applies to eye exams and some optical shops.",
+    "specialistWaitTime": "1-2 weeks for private ophthalmologists. Same-day appointments sometimes available. Clinica Boyd and Hospital Nacional are top eye care facilities.",
+    "seniorConsiderations": "Excellent private ophthalmology. Cataract surgery $1,500-2,500 per eye (vs $3,500+ in US). LASIK available. Pensionado discount reduces consultation costs. Many US-trained specialists.",
+    "sources": [
+      {
+        "title": "Clinica Boyd Eye Center",
+        "url": "https://www.clinicaboyd.com/"
+      },
+      {
+        "title": "Hospital Nacional Panama",
+        "url": "https://www.hospitalnacional.com/"
+      }
+    ]
+  },
+  "dental": {
+    "annualCleaningCost": {
+      "withInsurance": 15,
+      "withoutInsurance": 45,
+      "notes": "Pensionado discount 15% on dental procedures. Many US-trained dentists."
+    },
+    "commonProcedures": [
+      {
+        "procedure": "Filling",
+        "cost": {
+          "min": 30,
+          "typical": 50,
+          "max": 80
+        },
+        "coverageNote": "Pensionado 15% discount. Private dental plans cover basic fillings."
+      },
+      {
+        "procedure": "Crown",
+        "cost": {
+          "min": 200,
+          "typical": 350,
+          "max": 500
+        },
+        "coverageNote": "Pensionado discount applies. Porcelain crowns at higher end."
+      },
+      {
+        "procedure": "Root Canal",
+        "cost": {
+          "min": 150,
+          "typical": 250,
+          "max": 400
+        },
+        "coverageNote": "Pensionado 15% discount. About 50-60% cheaper than US prices."
+      },
+      {
+        "procedure": "Extraction",
+        "cost": {
+          "min": 40,
+          "typical": 70,
+          "max": 120
+        },
+        "coverageNote": "Simple extraction at lower end; surgical at higher end. Pensionado discount applies."
+      },
+      {
+        "procedure": "Implant",
+        "cost": {
+          "min": 700,
+          "typical": 1000,
+          "max": 1800
+        },
+        "coverageNote": "Significant savings vs US ($3,000-5,000). Many expats come to Panama specifically for implants."
+      },
+      {
+        "procedure": "Dentures",
+        "cost": {
+          "min": 300,
+          "typical": 500,
+          "max": 900
+        },
+        "coverageNote": "Full set at typical price. Pensionado 15% discount reduces cost further."
+      }
+    ],
+    "insuranceCoverage": "Separate dental insurance available $30-60/mo. Some health plans include basic dental. Pensionado visa provides 15% discount on all dental services regardless of insurance. Out-of-pocket costs still much lower than US.",
+    "dentistAvailability": "Excellent in Panama City. Many US-trained dentists with modern equipment. English widely spoken at expat-oriented practices. Dental tourism is growing. Clinics in Punta Pacifica and El Cangrejo areas popular with expats.",
+    "sources": [
+      {
+        "title": "Panama Dental Tourism",
+        "url": "https://www.dentaltourism.com/panama/"
+      },
+      {
+        "title": "International Living – Panama Healthcare",
+        "url": "https://internationalliving.com/countries/panama/health-care/"
+      }
+    ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 310,
+      "typical": 380,
+      "max": 480
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 235,
+        "seniorDiscounts": "Jubilado (retiree) discounts 10-25% at many restaurants by law.",
+        "notes": "Lunch for 2 at moderate restaurant: ~$22 + 7% ITBMS + 10% tip = ~$27, 2x/week = ~$235/mo"
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 65,
+        "seniorDiscounts": "Jubilado discount 25% on utilities including internet.",
+        "notes": "Cable Onda/+Movil 100-300 Mbps $40-60/mo. True 1 Gig ~$65-80/mo."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 14,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "~$13.99/mo in Panama (USD pricing)."
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 7,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "~$6.99/mo (Prime Video standalone)."
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 10,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "~$9.99/mo."
+      },
+      {
+        "name": "NFL RedZone",
+        "monthlyCost": 10,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "DAZN NFL Game Pass ~$11/mo during season (Sep-Feb). Annualized ~$10/mo. Includes RedZone, live games, NFL Network."
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 25,
+        "seniorDiscounts": "Jubilado discounts at many gyms."
+      },
+      {
+        "name": "Books/Media",
+        "monthlyCost": 8,
+        "seniorDiscounts": "Limited English-language libraries."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 15,
+        "seniorDiscounts": "Jubilado discounts 15-25% at cafes."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Cable Onda Internet",
+        "url": "https://www.cableonda.com"
+      },
+      {
+        "title": "Panama Jubilado Discounts",
+        "url": "https://www.visitpanama.com"
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 40,
+      "typical": 150,
+      "max": 300
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 50,
+        "senior": 50,
+        "notes": "No monthly pass per se. Metro and MetroBus use rechargeable RapiPass card. $0.35/bus ride, $0.35/metro ride. Estimate based on 2 rides/day."
+      },
+      "singleRide": 0.35,
+      "coverage": "Metro Line 1 (north-south) and Line 2 (east to Nuevo Tocumen). MetroBus covers most of the city. Mi Bus feeder routes. Coverage expanding with Line 3 under construction.",
+      "seniorDiscount": "Pensionado/jubilado RapiPass card offers free metro and bus rides. Must register at Metro office with Pensionado visa documentation."
+    },
+    "rideShare": {
+      "baseFare": 2.5,
+      "perKm": 0.75,
+      "typicalCrossTownTrip": {
+        "min": 4,
+        "typical": 7,
+        "max": 15
+      },
+      "availability": "Uber widely used. DiDi also available. Regular yellow taxis use zones (not meters). InDriver app popular for negotiated fares.",
+      "notes": "Taxi from Tocumen airport to city center $30-35 fixed rate. Uber typically $20-25. Traffic congestion can double trip costs during peak hours."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 50,
+        "initialRegistration": {
+          "min": 100,
+          "typical": 200,
+          "max": 400
+        },
+        "notes": "Annual vehicle inspection (revisado) required. Registration through ATTT (Autoridad de Tránsito)."
+      },
+      "insurance": {
+        "monthlyMin": 40,
+        "monthlyTypical": 65,
+        "monthlyMax": 120,
+        "notes": "Liability insurance mandatory. ASSA, Mapfre, ASSA are major providers. Higher rates for imported vehicles."
+      },
+      "fuel": {
+        "pricePerLiter": 0.95,
+        "monthlyEstimate": {
+          "min": 60,
+          "typical": 100,
+          "max": 180
+        },
+        "notes": "Government-regulated fuel prices. Gasoline approximately $0.90-1.00/liter. Traffic congestion increases fuel consumption significantly."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 50,
+          "typical": 100,
+          "max": 200
+        },
+        "hourlyStreet": 0.75,
+        "notes": "Building parking included in many apartment rentals. Mall parking usually free. Downtown street parking metered."
+      },
+      "tolls": {
+        "monthlyEstimate": 20,
+        "notes": "Corredor Sur and Corredor Norte toll roads $0.50-1.00 per trip. Frequent use adds up. Many commuters use them to avoid traffic."
+      },
+      "seniorDiscounts": "No specific senior car ownership discounts. Pensionado 15% discount on auto insurance premiums at some providers."
+    },
+    "walkability": "Varies greatly by neighborhood. Casco Viejo very walkable. Cinta Costera waterfront path excellent. Many neighborhoods have poor sidewalks and are car-dependent. Heat and rain can make walking uncomfortable.",
+    "cycling": {
+      "bikeShareMonthly": 0,
+      "infrastructure": "Cinta Costera has a dedicated bike path. Otherwise cycling infrastructure is minimal and traffic is aggressive. Not recommended as primary transportation.",
+      "notes": "Cinta Costera bike path is pleasant for exercise. Commuter cycling is dangerous due to driver behavior and road conditions."
+    },
+    "sources": [
+      {
+        "title": "Metro de Panamá",
+        "url": "https://www.elmetrodepanama.com/"
+      },
+      {
+        "title": "MiBus Panama",
+        "url": "https://www.mibus.com.pa/"
+      },
+      {
+        "title": "Uber Panama",
+        "url": "https://www.uber.com/pa/"
+      }
+    ],
+    "electricVehicle": {
+      "purchasePrice": {
+        "min": 28000,
+        "typical": 40000,
+        "max": 58000
+      },
+      "purchaseNotes": "Better EV selection than Boquete. BYD, Hyundai, Kia, Nissan dealers. Some Tesla grey imports. Import duty exemption under Law 295.",
+      "federalIncentive": 0,
+      "stateIncentive": 0,
+      "incentiveNotes": "Law 295 (2022): EVs exempt from import duties and ITBMS (7% sales tax). Reduced annual vehicle tax. Growing government support.",
+      "chargingHome": {
+        "installCost": {
+          "min": 400,
+          "typical": 800,
+          "max": 1500
+        },
+        "monthlyElectricity": {
+          "min": 20,
+          "typical": 35,
+          "max": 55
+        },
+        "notes": "Electricity ~$0.15-0.20/kWh. Most condos allow home charging installation."
+      },
+      "chargingPublic": {
+        "perKwh": {
+          "min": 0.2,
+          "typical": 0.35,
+          "max": 0.5
+        },
+        "notes": "Growing network in Panama City. Chargers at Multiplaza, Albrook Mall, some hotels. EV adoption accelerating."
+      },
+      "insurance": {
+        "monthly": {
+          "min": 60,
+          "typical": 85,
+          "max": 130
+        },
+        "notes": "Better options than Boquete. ASSA, Mapfre, SURA. Pensionado discount may apply."
+      },
+      "maintenance": {
+        "annual": {
+          "min": 300,
+          "typical": 450,
+          "max": 700
+        },
+        "notes": "Better EV service access than Boquete. Authorized dealer service available in the city."
+      },
+      "registration": {
+        "annual": {
+          "min": 0,
+          "typical": 25,
+          "max": 50
+        },
+        "notes": "Reduced vehicle tax for EVs under Law 295."
+      },
+      "batteryWarranty": "Manufacturer standard. Better warranty service access in Panama City.",
+      "depreciationNotes": "Larger EV market in the city. Better resale prospects than Boquete.",
+      "totalMonthlyOwnership": {
+        "min": 110,
+        "typical": 185,
+        "max": 300
+      },
+      "totalMonthlyNotes": "Includes: charging ($35), insurance ($85), maintenance ($38/mo avg), registration ($2/mo). Excludes: purchase/loan payment, depreciation.",
+      "sources": [
+        {
+          "title": "Panama EV Law 295",
+          "url": "https://www.gacetaoficial.gob.pa/"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 55,
+    "discounts": [
+      {
+        "category": "Restaurants",
+        "description": "Discount on meals at participating restaurants",
+        "discount": "25% off Monday-Thursday, 15% Friday-Sunday",
+        "details": "Applies to Pensionado/jubilado visa holders. Must present Pensionado card. Most mid-range and chain restaurants participate.",
+        "source": "Law 6 of 1987 (Ley de Jubilaciones)"
+      },
+      {
+        "category": "Entertainment",
+        "description": "Movies, theaters, concerts, sporting events",
+        "discount": "50% off admission",
+        "details": "Applies to all Pensionado card holders. Cinemas, theaters, and events must honor the discount.",
+        "source": "Law 6 of 1987"
+      },
+      {
+        "category": "Medical Services",
+        "description": "Doctor visits, lab work, hospital fees",
+        "discount": "20% off medical consultations and procedures",
+        "details": "Applies at private clinics and hospitals. Must present Pensionado card. Some doctors apply automatically.",
+        "source": "Law 6 of 1987"
+      },
+      {
+        "category": "Dental Services",
+        "description": "All dental procedures",
+        "discount": "15% off dental services",
+        "details": "Applies at private dental clinics. Combined with already lower Panama prices, significant savings vs US.",
+        "source": "Law 6 of 1987"
+      },
+      {
+        "category": "Prescriptions",
+        "description": "Pharmacy medications",
+        "discount": "15% off prescription medications",
+        "details": "Applies at all licensed pharmacies. Farmacias Arrocha and Super Farmacia honor the discount.",
+        "source": "Law 6 of 1987"
+      },
+      {
+        "category": "Airline Tickets",
+        "description": "Domestic and some international flights",
+        "discount": "25% off airline tickets",
+        "details": "Applies to domestic Copa flights and some regional carriers. Must book in person or call to apply discount.",
+        "source": "Law 6 of 1987"
+      },
+      {
+        "category": "Public Transit",
+        "description": "Metro and MetroBus rides",
+        "discount": "Free rides with jubilado RapiPass",
+        "details": "Register at Metro de Panamá office with Pensionado documentation to receive the special card.",
+        "source": "Metro de Panamá"
+      },
+      {
+        "category": "Utility Bills",
+        "description": "Electricity and phone",
+        "discount": "25% off electricity (up to first 600 kWh); 25% off phone",
+        "details": "Applied to residential electricity bills automatically once registered. Phone discount on landline service.",
+        "source": "Law 6 of 1987"
+      }
+    ]
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 70,
+      "typical": 85,
+      "max": 105
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in Panama at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "+Movil Postpaid (Local)",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "3GB 4G/5G",
+        "baseCost": 18,
+        "taxesAndFees": 2,
+        "monthlyTotal": 20,
+        "notes": "+Movil postpaid $9/mo per line + 7% ITBMS. 3GB data, unlimited calls. Excellent 5G coverage in Panama City."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      },
+      {
+        "title": "+Movil Panama",
+        "url": "https://www.masmovil.com.pa/"
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom house",
+    "monthlyBudget": {
+      "min": 1000,
+      "max": 1700,
+      "typical": 1300
+    },
+    "breakdown": {
+      "baseRent": 1220,
+      "HOAFees": 50,
+      "garbageCollection": 15,
+      "municipalFee": 15,
+      "total": 1300
+    },
+    "taxNotes": "No rental tax in Panama. Property tax (impuesto de inmueble) is landlord responsibility with generous exemptions for new construction (up to 20 years tax-free). No VAT on residential rent. Panama uses USD (balboa pegged 1:1).",
+    "leaseTerms": "Typical 1-year lease. Security deposit usually 1 month + last month rent. Panama Civil Code governs rentals. Pensionado visa holders get 25% off utility bills.",
+    "marketNotes": "Panama City has both high-rise apartments and standalone houses. Houses more common in suburbs: Clayton, Ciudad del Saber, Albrook, Costa del Este. Gated communities (residenciales) popular with expats. AC essential year-round.",
+    "sources": [
+      {
+        "name": "Encuentra24 Panama Rentals",
+        "url": "https://www.encuentra24.com/panama/bienes-raices-alquiler-casas"
+      },
+      {
+        "name": "Panama Pensionado Benefits",
+        "url": "https://www.visitpanama.com/plan/retirement-in-panama/"
+      }
+    ],
+    "housingSites": {
+      "rentals": [
+        {
+          "name": "Encuentra24",
+          "url": "https://www.encuentra24.com/panama-en/real-estate-for-rent/panama-city",
+          "type": "rental"
+        },
+        {
+          "name": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/alquiler/panama-city",
+          "type": "rental"
+        },
+        {
+          "name": "Point2Homes",
+          "url": "https://www.point2homes.com/PA/Real-Estate/Panama-City.html",
+          "type": "purchase"
+        }
+      ]
+    }
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Riba Smith",
+        "type": "supermarket",
+        "website": "https://www.ribasmith.com/",
+        "notes": "Upscale Panama chain, imports available",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Riba Smith Panama City",
+            "url": "https://www.youtube.com/watch?v=x8vRH7GkPW4"
+          },
+          {
+            "platform": "instagram",
+            "title": "@ribasmith",
+            "url": "https://www.instagram.com/ribasmith/"
+          }
+        ]
+      },
+      {
+        "name": "El Rey",
+        "type": "supermarket",
+        "website": "https://www.elrey.com/",
+        "notes": "Largest Panama chain, good prices",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "El Rey Supermarket Panama",
+            "url": "https://www.youtube.com/watch?v=pQk3WF_AX6M"
+          },
+          {
+            "platform": "instagram",
+            "title": "@elreypty",
+            "url": "https://www.instagram.com/elreysupermercados/"
+          }
+        ]
+      },
+      {
+        "name": "Mercado de Mariscos",
+        "type": "specialty-grocery",
+        "website": "https://www.visitpanama.com/",
+        "notes": "Famous seafood market on Cinta Costera",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Mercado de Mariscos Panama City",
+            "url": "https://www.youtube.com/watch?v=m7Kv_qjmEas"
+          },
+          {
+            "platform": "instagram",
+            "title": "@visitpanama",
+            "url": "https://www.instagram.com/visitpanama/"
+          }
+        ]
+      }
+    ]
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 45,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Farmers market or CSA box"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 30,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Bananas, berries, apples, citrus"
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Sweet Potatoes / Potatoes",
+            "monthlyCost": 11.25,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet staple"
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 9,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet vegetables"
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 7.5,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Digestive health, home-cooked diet"
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 37.5,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Primary protein for both adults & dog"
+          },
+          {
+            "name": "Ground Turkey / Beef",
+            "monthlyCost": 33.75,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean ground for dog food base"
+          },
+          {
+            "name": "Fish (salmon/tilapia)",
+            "monthlyCost": 30,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Omega-3 rich"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 11.25,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": "Eggs also for dog diet"
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Essential for balanced home-cooked dog diet"
+          },
+          {
+            "name": "Beans / Lentils",
+            "monthlyCost": 6,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "grains",
+        "name": "Grains & Starches",
+        "items": [
+          {
+            "name": "Rice (brown/white)",
+            "monthlyCost": 7.5,
+            "quantity": 5,
+            "unit": "lbs/month",
+            "forWhom": "shared",
+            "notes": "Dog diet carb source"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 11.25,
+            "quantity": 2,
+            "unit": "loaves/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 6,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Oats / Cereal",
+            "monthlyCost": 7.5,
+            "quantity": 1,
+            "unit": "container/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk / Plant Milk",
+            "monthlyCost": 11.25,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Cheese",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Yogurt / Kefir",
+            "monthlyCost": 11.25,
+            "quantity": 1,
+            "unit": "quart/week",
+            "forWhom": "shared",
+            "notes": "Probiotics for dog digestion too"
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 7.5,
+            "quantity": 1,
+            "unit": "unit/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Olive Oil / Cooking Oils",
+            "monthlyCost": 11.25,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Spices & Seasonings",
+            "monthlyCost": 7.5,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Canned Goods (tomatoes, beans)",
+            "monthlyCost": 9,
+            "quantity": 6,
+            "unit": "cans/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Condiments & Sauces",
+            "monthlyCost": 7.5,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 18.75,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tea",
+            "monthlyCost": 6,
+            "quantity": 1,
+            "unit": "box/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Wine / Beer",
+            "monthlyCost": 30,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Optional"
+          },
+          {
+            "name": "Sparkling Water / Juice",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "case/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "snacks",
+        "name": "Snacks & Treats",
+        "items": [
+          {
+            "name": "Nuts & Trail Mix",
+            "monthlyCost": 11.25,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Crackers / Chips",
+            "monthlyCost": 7.5,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Dark Chocolate",
+            "monthlyCost": 6,
+            "quantity": 4,
+            "unit": "bars/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "frozen",
+        "name": "Frozen Foods",
+        "items": [
+          {
+            "name": "Frozen Vegetables",
+            "monthlyCost": 9,
+            "quantity": 4,
+            "unit": "bags/month",
+            "forWhom": "shared",
+            "notes": "Backup for dog food prep"
+          },
+          {
+            "name": "Frozen Fruit (smoothies)",
+            "monthlyCost": 7.5,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Frozen Meals (convenience)",
+            "monthlyCost": 11.25,
+            "quantity": 4,
+            "unit": "meals/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "supplements",
+        "name": "Pet Supplements & Health",
+        "items": [
+          {
+            "name": "Joint Supplement (glucosamine)",
+            "monthlyCost": 22.5,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Essential for Bernese — hip/joint health"
+          },
+          {
+            "name": "Fish Oil (omega-3)",
+            "monthlyCost": 11.25,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Coat & skin health"
+          },
+          {
+            "name": "Multivitamin / Mineral Mix",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "container/month",
+            "forWhom": "dog",
+            "notes": "Balance home-cooked diet"
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 11.25,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "dog",
+            "notes": "Training & dental chews"
+          }
+        ]
+      }
+    ],
+    "monthlyTotal": 534
+  },
+  "healthcare": {
+    "system": "Private insurance + out-of-pocket",
+    "coverageSummary": "No public healthcare for expats. Private insurance required. Pre-existing condition exclusions common for first 12-24 months. Pensionado visa: 15-25% discount on medical services.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD"
+      ],
+      "costs": [
+        {
+          "item": "Private insurance premium",
+          "monthlyCost": 250,
+          "notes": "$225-275/mo. Pre-existing exclusions for AMD, obesity. Age loading for 60+. BUPA, Cigna, or local Pacific plans."
+        },
+        {
+          "item": "Anti-VEGF injections (out-of-pocket)",
+          "monthlyCost": 200,
+          "notes": "$800-1200/injection, 6-8/yr. Likely excluded from insurance. Must travel to Panama City or David."
+        },
+        {
+          "item": "Ophthalmologist visits",
+          "monthlyCost": 30,
+          "notes": "$60-100/visit in Panama City. Limited specialists in Boquete."
+        },
+        {
+          "item": "Endocrinologist",
+          "monthlyCost": 20,
+          "notes": "Available in David. $50-80/visit."
+        },
+        {
+          "item": "Pensionado discount savings",
+          "monthlyCost": -30,
+          "notes": "15% off medical consultations, 10-15% off hospital services."
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Gout",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Migraines"
+      ],
+      "costs": [
+        {
+          "item": "Private insurance premium",
+          "monthlyCost": 200,
+          "notes": "$180-220/mo. Pre-existing exclusion period for diabetes (12-24 months)."
+        },
+        {
+          "item": "Endocrinologist (diabetes)",
+          "monthlyCost": 25,
+          "notes": "Available in David. $50-80/visit quarterly."
+        },
+        {
+          "item": "Diabetes supplies",
+          "monthlyCost": 30,
+          "notes": "Glucose monitor, strips, lancets. Limited insurance coverage initially."
+        },
+        {
+          "item": "Specialist visits (rheumatology, neuro)",
+          "monthlyCost": 15,
+          "notes": "May need to travel to Panama City for specialists."
+        },
+        {
+          "item": "Pensionado discount savings",
+          "monthlyCost": -25,
+          "notes": "15% off medical consultations."
+        }
+      ]
+    },
+    "shared": [
+      {
+        "item": "Dental care (2 adults)",
+        "monthlyCost": 30,
+        "notes": "Good dental care in David at $40-80/visit. Pensionado 15% discount."
+      },
+      {
+        "item": "Medical travel (David/Panama City)",
+        "monthlyCost": 40,
+        "notes": "Specialist visits may require travel from Boquete to David (45 min) or Panama City."
+      },
+      {
+        "item": "Emergency reserve (monthly set-aside)",
+        "monthlyCost": 50,
+        "notes": "Higher out-of-pocket risk with pre-existing exclusions."
+      }
+    ],
+    "monthlyTotals": {
+      "person1": 470,
+      "person2": 245,
+      "shared": 120,
+      "household": 835
+    },
+    "notes": "First 1-2 years will have higher costs due to pre-existing condition exclusions on insurance. Anti-VEGF injections are the largest single expense — limited providers outside Panama City.",
+    "phaseTransition": null
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Black Hair Care",
+      "priceRange": {
+        "cut": "12-30",
+        "color": "35-80",
+        "fullService": "50-130"
+      },
+      "notes": "Panama City has a large Afro-Panamanian community, especially in neighborhoods like Colón, Curundú, and San Miguelito. Good salon options.",
+      "providers": [
+        {
+          "name": "African Queen Beauty Salon",
+          "type": "Afro hair salon",
+          "address": "Via España, Panama City",
+          "distanceMi": 3,
+          "rating": 4.4,
+          "notes": "Popular Afro salon. Braids, weaves, locs, natural hair, color. Experienced stylists.",
+          "website": ""
+        },
+        {
+          "name": "Salon Rizos",
+          "type": "Curly/textured hair",
+          "address": "El Cangrejo, Panama City",
+          "distanceMi": 2,
+          "rating": 4.5,
+          "notes": "Specializes in curly and coily hair. DevaCurl, color services. Modern salon.",
+          "website": ""
+        }
+      ]
+    },
+    "whiteHairCare": {
+      "label": "White/Caucasian Hair Care",
+      "priceRange": {
+        "cut": "12-30",
+        "color": "30-70",
+        "highlights": "40-90"
+      },
+      "notes": "Panama City has upscale salons in Obarrio and Punta Pacifica areas, popular with expats.",
+      "providers": [
+        {
+          "name": "Salon Enrique Iglesias",
+          "type": "Upscale salon",
+          "address": "Obarrio, Panama City",
+          "distanceMi": 2,
+          "rating": 4.6,
+          "notes": "Top Panama City salon. Expert colorists. Highlights, balayage. Expat-friendly.",
+          "website": ""
+        },
+        {
+          "name": "David's Salon",
+          "type": "Full-service salon",
+          "address": "Punta Pacifica, Panama City",
+          "distanceMi": 3,
+          "rating": 4.4,
+          "notes": "Good color work, English-speaking staff. Popular with expat community.",
+          "website": ""
+        }
+      ]
+    },
+    "mensBigTall": {
+      "label": "Men's Big & Tall Clothing",
+      "priceRange": {
+        "shirts": "12-35",
+        "pants": "15-30",
+        "suits": "60-180"
+      },
+      "notes": "Albrook Mall and Multiplaza have the best selection. Extended sizes more available than in Boquete.",
+      "providers": [
+        {
+          "name": "Albrook Mall",
+          "type": "Mega mall",
+          "address": "Albrook, Panama City",
+          "distanceMi": 5,
+          "rating": 4.2,
+          "notes": "Largest mall in Latin America. Multiple stores with extended sizes. Very affordable.",
+          "website": ""
+        },
+        {
+          "name": "Multiplaza Pacific",
+          "type": "Upscale mall",
+          "address": "Punta Pacifica",
+          "distanceMi": 3,
+          "rating": 4.4,
+          "notes": "Upscale shopping. Zara, H&M with larger sizes. Better quality options.",
+          "website": ""
+        }
+      ]
+    },
+    "womensClothing": {
+      "label": "Women's Regular Clothing",
+      "priceRange": {
+        "casual": "10-30",
+        "dresses": "18-50",
+        "professional": "25-70"
+      },
+      "notes": "Panama City has excellent shopping. Albrook Mall for budget, Multiplaza for mid-range to upscale.",
+      "providers": [
+        {
+          "name": "Albrook Mall",
+          "type": "Mega mall",
+          "address": "Albrook, Panama City",
+          "distanceMi": 5,
+          "rating": 4.2,
+          "notes": "Hundreds of stores. Budget to mid-range. Full regular sizes.",
+          "website": ""
+        },
+        {
+          "name": "Multiplaza Pacific",
+          "type": "Upscale mall",
+          "address": "Punta Pacifica",
+          "distanceMi": 3,
+          "rating": 4.5,
+          "notes": "Zara, Mango, international brands. Good selection of regular women's sizes.",
+          "website": ""
+        }
+      ]
+    },
+    "shoes": {
+      "label": "Shoes",
+      "priceRange": {
+        "casual": "15-40",
+        "dress": "25-70",
+        "athletic": "25-60",
+        "wideWidth": "20-55"
+      },
+      "notes": "Good shoe shopping in Panama City. Cheaper than US prices. Wide widths still limited.",
+      "providers": [
+        {
+          "name": "Albrook Mall shoe stores",
+          "type": "Multiple retailers",
+          "address": "Albrook, Panama City",
+          "distanceMi": 5,
+          "rating": 4.1,
+          "notes": "Many shoe stores. Budget to mid-range. Sizes vary by store.",
+          "website": ""
+        },
+        {
+          "name": "Payless / Hush Puppies",
+          "type": "Shoe retailer",
+          "address": "Multiple Panama City locations",
+          "distanceMi": 3,
+          "rating": 4,
+          "notes": "Standard shoe retailers. Moderate prices. Extended sizes in some styles.",
+          "website": ""
+        }
+      ]
+    }
+  }
+}

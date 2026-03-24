@@ -1,0 +1,292 @@
+{
+  "id": "us-richmond",
+  "name": "Richmond, Virginia",
+  "country": "United States",
+  "region": "Virginia",
+  "cities": [
+    "Richmond"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Citizen",
+    "incomeRequirement": null,
+    "notes": "US citizen, no visa required."
+  },
+  "climate": {
+    "winterLowF": 28,
+    "summerHighF": 90,
+    "rainyDaysPerYear": 115,
+    "meetsWarmWinterReq": false
+  },
+  "monthlyCosts": {
+    "rent": {
+      "min": 1424,
+      "max": 2107,
+      "typical": 1715,
+      "type": "2-bedroom single-family house",
+      "annualInflation": 0.03,
+      "notes": "Virginia has no rental tax. Water, sewage, and trash are separate utility bills (not included in rent).",
+      "gigInternetTypical": 1800,
+      "gigInternetCoverage": 77,
+      "gigInternetProviders": "Verizon Fios (77%), Comcast",
+      "gigInternetNotes": "Fios covers 77.2% of Richmond per BroadbandNow. Gaps in Monroe Ward, Gambles Hill, downtown. Good coverage west of Oregon Hill and south of James River."
+    },
+    "groceries": {
+      "min": 1135,
+      "max": 1485,
+      "typical": 1310,
+      "notes": "2 adults + pet food",
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "min": 232,
+      "max": 377,
+      "typical": 290,
+      "annualInflation": 0.03,
+      "breakdown": {
+        "electricity": {
+          "typical": 135,
+          "notes": "Dominion Energy. A/C heavy in summer (Jun–Sep). Heat pump common."
+        },
+        "gas": {
+          "typical": 50,
+          "notes": "Virginia Natural Gas or propane. Moderate heating needs."
+        },
+        "water": {
+          "typical": 45,
+          "notes": "City of Richmond Dept of Public Utilities."
+        },
+        "sewage": {
+          "typical": 35,
+          "notes": "Billed with water. Richmond wastewater charge."
+        },
+        "trash": {
+          "typical": 25,
+          "notes": "City of Richmond solid waste. Weekly curbside collection."
+        }
+      },
+      "taxes": "Virginia exempts residential utilities from state sales tax.",
+      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig). "
+    },
+    "healthcare": {
+      "min": 550,
+      "max": 850,
+      "typical": 650,
+      "notes": "Medicare Part B ($174.70/mo) + Medigap Plan G (~$200/mo x2 people) + Part D (~$45/mo x2) + dental/vision plans. Higher premiums reflect macular degeneration specialist coverage and frequent monitoring needs.",
+      "annualInflation": 0.055
+    },
+    "insurance": {
+      "min": 25,
+      "max": 45,
+      "typical": 35,
+      "annualInflation": 0.03
+    },
+    "petCare": {
+      "min": 110,
+      "max": 200,
+      "typical": 150,
+      "annualInflation": 0.04,
+      "notes": "Vet visits, vaccinations, flea/tick, pet insurance"
+    },
+    "petDaycare": {
+      "min": 270,
+      "max": 400,
+      "typical": 330,
+      "annualInflation": 0.03,
+      "notes": "Doggy daycare 2 days/week, large breed rate (~$38/day). Holiday Barn, Camp Bow Wow, Dogtopia Richmond."
+    },
+    "petGrooming": {
+      "min": 75,
+      "max": 140,
+      "typical": 100,
+      "annualInflation": 0.03,
+      "notes": "Bernese coat maintenance, professional grooming monthly"
+    },
+    "transportation": {
+      "min": 180,
+      "max": 350,
+      "typical": 260,
+      "notes": "Car-dependent; GRTC bus/Pulse BRT in city",
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "min": 400,
+      "max": 620,
+      "typical": 500,
+      "annualInflation": 0.025,
+      "notes": "Incl cable+1Gig internet, Netflix, Amazon Prime, Apple TV+, dining out (lunch for 2 2x/week w/ tax+tip)"
+    },
+    "clothing": {
+      "min": 80,
+      "max": 200,
+      "typical": 130,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "min": 35,
+      "max": 80,
+      "typical": 55,
+      "annualInflation": 0.02
+    },
+    "subscriptions": {
+      "min": 30,
+      "max": 80,
+      "typical": 50,
+      "annualInflation": 0.03,
+      "notes": "Streaming, news, apps"
+    },
+    "phoneCell": {
+      "min": 50,
+      "max": 80,
+      "typical": 62,
+      "annualInflation": 0.02,
+      "notes": "T-Mobile 55+ Essentials. 2 phones, 1.5GB+ high-speed data each, all taxes included."
+    },
+    "miscellaneous": {
+      "min": 80,
+      "max": 160,
+      "typical": 120,
+      "annualInflation": 0.025
+    },
+    "buffer": {
+      "min": 800,
+      "max": 800,
+      "typical": 800,
+      "annualInflation": 0.025,
+      "notes": "Monthly safety buffer for unexpected expenses"
+    },
+    "medicalOOP": {
+      "min": 325,
+      "max": 700,
+      "typical": 475,
+      "annualInflation": 0.055,
+      "notes": "Anti-VEGF injections for macular degeneration (~$300-400 OOP each, 6-10x/yr after Medicare 80%). Specialist visits: ophthalmologist q6-8wks, endocrinologist 2-4x/yr, cardiologist 1-2x/yr. Frequent labs: lipid panel, TSH, A1C, CMP 3-4x/yr each. Both adults: PCP visits quarterly."
+    },
+    "medicine": {
+      "min": 73,
+      "typical": 91,
+      "max": 925,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "taxes": {
+      "min": 0,
+      "typical": 0,
+      "max": 0,
+      "annualInflation": 0.02
+    }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true,
+      "brackets": [
+        {
+          "min": 0,
+          "max": 23850,
+          "rate": 0.1
+        },
+        {
+          "min": 23850,
+          "max": 96950,
+          "rate": 0.12
+        },
+        {
+          "min": 96950,
+          "max": 206700,
+          "rate": 0.22
+        },
+        {
+          "min": 206700,
+          "max": 394600,
+          "rate": 0.24
+        },
+        {
+          "min": 394600,
+          "max": 501050,
+          "rate": 0.32
+        },
+        {
+          "min": 501050,
+          "max": 751600,
+          "rate": 0.35
+        },
+        {
+          "min": 751600,
+          "max": null,
+          "rate": 0.37
+        }
+      ],
+      "standardDeduction": 30000
+    },
+    "stateIncomeTax": {
+      "rate": 0.0575,
+      "type": "top-marginal",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 3000,
+          "rate": 0.02
+        },
+        {
+          "min": 3000,
+          "max": 5000,
+          "rate": 0.03
+        },
+        {
+          "min": 5000,
+          "max": 17000,
+          "rate": 0.05
+        },
+        {
+          "min": 17000,
+          "max": null,
+          "rate": 0.0575
+        }
+      ],
+      "deduction": 24000,
+      "exemptions": "Age 65+ deduction $12K/person. SS fully exempt from VA tax."
+    },
+    "salesTax": {
+      "rate": 0.053,
+      "notes": "4.3% state + 1% local"
+    },
+    "propertyTax": {
+      "rate": 0
+    },
+    "socialCharges": null,
+    "vatRate": 0,
+    "estVehicleTax": 900,
+    "ssExempt": true,
+    "notes": "VA state income tax with age deductions."
+  },
+  "healthcare": {
+    "system": "Medicare (at 65) + private supplement",
+    "qualityRating": 8,
+    "waitTimes": "varies",
+    "dentalIncluded": false,
+    "prescriptionCoverage": "Part D plan"
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps+ available (Verizon Fios/Comcast)",
+    "dogFriendly": 8,
+    "expatCommunity": 0,
+    "englishPrevalence": 10,
+    "safetyRating": 6
+  },
+  "pros": [
+    "More affordable than NoVA",
+    "Growing food/brewery scene",
+    "VA age deduction + SS tax exempt",
+    "State capital with good healthcare",
+    "James River outdoor recreation",
+    "Historic charm (Church Hill, Fan District)"
+  ],
+  "cons": [
+    "Cold winters (28F lows)",
+    "Car-dependent",
+    "Hot humid summers",
+    "Higher crime in some neighborhoods",
+    "Smaller job market than NoVA"
+  ]
+}

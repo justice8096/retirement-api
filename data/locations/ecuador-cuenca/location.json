@@ -1,0 +1,171 @@
+{
+  "id": "ecuador-cuenca",
+  "name": "Cuenca, Ecuador",
+  "country": "Ecuador",
+  "region": "South America",
+  "cities": [
+    "Cuenca"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Retirement (Jubilado)",
+    "incomeRequirement": {
+      "monthly": 1375,
+      "currency": "USD"
+    },
+    "notes": "Retirement visa requires $1,375/mo income (3x Ecuador minimum wage). Includes discounts on utilities, flights, and entertainment."
+  },
+  "climate": {
+    "winterLowF": 50,
+    "summerHighF": 70,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 140
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 700,
+      "min": 500,
+      "max": 900,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 300,
+      "min": 220,
+      "max": 400,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 130,
+      "min": 60,
+      "max": 220,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 180,
+      "min": 100,
+      "max": 280,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 40,
+      "min": 25,
+      "max": 65,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 100,
+      "min": 50,
+      "max": 170,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 150,
+      "min": 90,
+      "max": 230,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 70,
+      "min": 40,
+      "max": 110,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 77,
+      "min": 62,
+      "max": 97,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 100,
+      "min": 60,
+      "max": 180,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 25,
+      "typical": 45,
+      "max": 100,
+      "annualInflation": 0.04,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 30,
+      "typical": 55,
+      "max": 110,
+      "annualInflation": 0.04
+    }
+  },
+  "healthcare": {
+    "system": "IESS public system; good private hospitals (Hospital Monte Sinaí). Affordable private care.",
+    "qualityRating": 7,
+    "dentalIncluded": false,
+    "waitTimes": "Short at private; moderate at IESS public",
+    "prescriptionCoverage": "Affordable; many meds available without prescription"
+  },
+  "lifestyle": {
+    "internetSpeed": "50-100Mbps",
+    "dogFriendly": 6,
+    "expatCommunity": 8,
+    "englishPrevalence": 4,
+    "safetyRating": 6
+  },
+  "pros": [
+    "Large established expat community",
+    "UNESCO World Heritage colonial city",
+    "Very affordable with USD currency (no exchange risk)"
+  ],
+  "cons": [
+    "Altitude (8,400 ft) may cause adjustment issues",
+    "Cool climate may not suit warm-weather seekers",
+    "Political instability and occasional unrest in Ecuador"
+  ],
+  "taxes": {
+    "notes": "Ecuador uses USD. Income tax on worldwide income if fiscal resident, but retiree visa holders may qualify for exemptions. Progressive rates 0-37%. Jubilado discount benefits offset many costs.",
+    "vatRate": 0.15,
+    "socialChargesRate": 0
+  }
+}

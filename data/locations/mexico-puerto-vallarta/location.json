@@ -1,0 +1,171 @@
+{
+  "id": "mexico-puerto-vallarta",
+  "name": "Puerto Vallarta, Mexico",
+  "country": "Mexico",
+  "region": "Central America",
+  "cities": [
+    "Puerto Vallarta"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Temporary Resident",
+    "incomeRequirement": {
+      "monthly": 1500,
+      "currency": "USD"
+    },
+    "notes": "Temporary resident visa requires ~$1,500/mo income or ~$25,000 savings."
+  },
+  "climate": {
+    "winterLowF": 62,
+    "summerHighF": 93,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 90
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 1150,
+      "min": 900,
+      "max": 1400,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 450,
+      "min": 340,
+      "max": 580,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 140,
+      "min": 90,
+      "max": 210,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 180,
+      "min": 90,
+      "max": 300,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 250,
+      "min": 150,
+      "max": 380,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 40,
+      "min": 25,
+      "max": 65,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 160,
+      "min": 90,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 260,
+      "min": 160,
+      "max": 380,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 70,
+      "min": 40,
+      "max": 110,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 81,
+      "min": 66,
+      "max": 101,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 100,
+      "min": 60,
+      "max": 180,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 30,
+      "typical": 55,
+      "max": 120,
+      "annualInflation": 0.04,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 40,
+      "typical": 75,
+      "max": 150,
+      "annualInflation": 0.04
+    }
+  },
+  "healthcare": {
+    "system": "IMSS public system; several private hospitals (CMQ, San Javier). Medical tourism hub.",
+    "qualityRating": 7,
+    "dentalIncluded": false,
+    "waitTimes": "Short at private facilities; moderate at IMSS",
+    "prescriptionCoverage": "Affordable with wide availability"
+  },
+  "lifestyle": {
+    "internetSpeed": "50-100Mbps",
+    "dogFriendly": 7,
+    "expatCommunity": 7,
+    "englishPrevalence": 6,
+    "safetyRating": 6
+  },
+  "pros": [
+    "Beautiful Pacific beach with mountain backdrop",
+    "LGBTQ+-friendly with vibrant social scene",
+    "Excellent dining and nightlife"
+  ],
+  "cons": [
+    "Hot and humid summers with heavy rain",
+    "Tourist prices in popular zones",
+    "Seasonal (many expats leave in summer)"
+  ],
+  "taxes": {
+    "notes": "Territorial tax for temporary residents. Foreign income not taxed.",
+    "vatRate": 0.16,
+    "socialChargesRate": 0
+  }
+}

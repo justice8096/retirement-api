@@ -1,0 +1,171 @@
+{
+  "id": "ecuador-quito",
+  "name": "Quito, Ecuador",
+  "country": "Ecuador",
+  "region": "South America",
+  "cities": [
+    "Quito"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Retirement (Jubilado)",
+    "incomeRequirement": {
+      "monthly": 1375,
+      "currency": "USD"
+    },
+    "notes": "Retirement visa requires $1,375/mo income."
+  },
+  "climate": {
+    "winterLowF": 48,
+    "summerHighF": 68,
+    "meetsWarmWinterReq": false,
+    "rainyDaysPerYear": 150
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 800,
+      "min": 600,
+      "max": 1000,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 320,
+      "min": 240,
+      "max": 430,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 90,
+      "min": 55,
+      "max": 135,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 140,
+      "min": 70,
+      "max": 240,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 200,
+      "min": 120,
+      "max": 300,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 40,
+      "min": 25,
+      "max": 65,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 110,
+      "min": 50,
+      "max": 180,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 170,
+      "min": 100,
+      "max": 260,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 70,
+      "min": 40,
+      "max": 110,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 77,
+      "min": 62,
+      "max": 97,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 100,
+      "min": 60,
+      "max": 180,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 25,
+      "typical": 45,
+      "max": 100,
+      "annualInflation": 0.04,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 30,
+      "typical": 55,
+      "max": 110,
+      "annualInflation": 0.04
+    }
+  },
+  "healthcare": {
+    "system": "IESS public system; best hospitals in Ecuador (Hospital Metropolitano, Clínica Pasteur).",
+    "qualityRating": 7,
+    "dentalIncluded": false,
+    "waitTimes": "Short at private facilities",
+    "prescriptionCoverage": "Affordable; wide availability"
+  },
+  "lifestyle": {
+    "internetSpeed": "50-100Mbps",
+    "dogFriendly": 6,
+    "expatCommunity": 5,
+    "englishPrevalence": 4,
+    "safetyRating": 5
+  },
+  "pros": [
+    "Capital city with best healthcare and services",
+    "UNESCO World Heritage historic center",
+    "Uses USD with no exchange rate risk"
+  ],
+  "cons": [
+    "High altitude (9,350 ft) causes adjustment issues",
+    "Cool and rainy climate",
+    "Security concerns in some neighborhoods"
+  ],
+  "taxes": {
+    "notes": "Ecuador uses USD. Progressive income tax 0-37% on worldwide income for residents.",
+    "vatRate": 0.15,
+    "socialChargesRate": 0
+  }
+}

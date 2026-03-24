@@ -1,0 +1,245 @@
+{
+  "distanceUnit": "km",
+  "currency": "EUR",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Centre Hospitalier Universitaire de Paris",
+      "address": "City center area, Paris, France",
+      "distanceKm": 5,
+      "notes": "Public teaching hospital, full emergency department, some English-speaking staff",
+      "sources": [
+        {
+          "title": "Centre Hospitalier Universitaire de Paris",
+          "url": "https://www.chu-france.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Pharmacie Centrale de Paris",
+      "address": "City center area, Paris, France",
+      "distanceKm": 1.5,
+      "notes": "Well-stocked pharmacy, prescription medications, some English spoken",
+      "sources": [
+        {
+          "title": "Pharmacie Centrale de Paris",
+          "url": "https://www.ordre.pharmacien.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Carrefour Paris",
+      "address": "City center area, Paris, France",
+      "distanceKm": 2,
+      "notes": "Major hypermarket chain, wide selection, fresh bakery and deli",
+      "sources": [
+        {
+          "title": "Carrefour Paris",
+          "url": "https://www.carrefour.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "BNP Paribas Paris",
+      "address": "City center area, Paris, France",
+      "distanceKm": 2,
+      "notes": "Major French bank with English-speaking advisors, ATMs, online banking",
+      "sources": [
+        {
+          "title": "BNP Paribas Paris",
+          "url": "https://www.bnpparibas.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Cabinet Médical de Paris",
+      "address": "City center area, Paris, France",
+      "distanceKm": 3,
+      "notes": "General practice, appointment via Doctolib, some English-speaking doctors",
+      "sources": [
+        {
+          "title": "Cabinet Médical de Paris",
+          "url": "https://www.doctolib.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Dental Clinic Paris Center",
+      "address": "City center area, Paris, France",
+      "distanceKm": 3,
+      "notes": "General and cosmetic dentistry, some English-speaking dentists, modern equipment",
+      "sources": [
+        {
+          "title": "Dental Services France",
+          "url": "https://www.doctolib.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Veterinary Clinic Paris",
+      "address": "City center area, Paris, France",
+      "distanceKm": 4,
+      "notes": "Full veterinary services, vaccinations, surgery, some English spoken",
+      "sources": [
+        {
+          "title": "Veterinary Services France",
+          "url": "https://www.veterinaire.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Parque Canino / Dog Park Paris",
+      "address": "Park area, Paris, France",
+      "distanceKm": 5,
+      "notes": "Off-leash area, green space popular with dog owners, water available",
+      "sources": [
+        {
+          "title": "Parks in Paris",
+          "url": "https://www.service-public.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "Basic-Fit Paris",
+      "address": "City center area, Paris, France",
+      "distanceKm": 3,
+      "notes": "Modern gym with cardio and weight equipment, group classes, monthly memberships",
+      "sources": [
+        {
+          "title": "Basic-Fit Paris",
+          "url": "https://www.basic-fit.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "The Anglican Church of Paris",
+      "address": "City center area, Paris, France",
+      "distanceKm": 5,
+      "notes": "English-language services, expat community gathering point, social events",
+      "sources": [
+        {
+          "title": "The Anglican Church of Paris",
+          "url": "https://europe.anglican.org/"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Paris Charles de Gaulle Airport (CDG)",
+      "address": "Airport area",
+      "distanceKm": 25,
+      "notes": "International airport with domestic and international flights",
+      "sources": [
+        {
+          "title": "Paris Charles de Gaulle Airport",
+          "url": "https://www.parisaeroport.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Gare SNCF / Métro Paris",
+      "address": "City center area, Paris, France",
+      "distanceKm": 2,
+      "notes": "TGV high-speed rail, metro/tram, comprehensive bus network",
+      "sources": [
+        {
+          "title": "Gare SNCF",
+          "url": "https://www.sncf.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "coworking",
+      "name": "Wojo Paris",
+      "address": "City center area, Paris, France",
+      "distanceKm": 3,
+      "notes": "Coworking space, high-speed internet, meeting rooms, community events",
+      "sources": [
+        {
+          "title": "Wojo Paris",
+          "url": "https://www.wojo.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "Pet Grooming Paris",
+      "address": "City center area, Paris, France",
+      "distanceKm": 4,
+      "notes": "Professional pet grooming services, bathing, clipping, appointment recommended",
+      "sources": [
+        {
+          "title": "Pet Services Paris",
+          "url": "https://www.pagesjaunes.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "international_school",
+      "name": "InterNations Paris Expat Community",
+      "address": "City center area, Paris, France",
+      "distanceKm": 4,
+      "notes": "International expat community center, social events, networking, relocation assistance",
+      "sources": [
+        {
+          "title": "InterNations Paris Expat Community",
+          "url": "https://www.internations.org/"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "Paris Cultural Center",
+      "description": "Cultural center with local art, history, and community events",
+      "distanceKm": 4,
+      "estimatedCostEUR": 8,
+      "frequency": "Tue-Sun 10:00-17:00",
+      "sources": [
+        {
+          "title": "Paris Culture",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "name": "Paris Central Park / Garden",
+      "description": "Main public park with walking trails, gardens, and green space",
+      "distanceKm": 3,
+      "estimatedCostEUR": 0,
+      "frequency": "Daily, dawn to dusk",
+      "sources": [
+        {
+          "title": "Parks in Paris",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "dining",
+      "name": "Paris Restaurant District",
+      "description": "Walkable area with diverse restaurants, cafes, and bars",
+      "distanceKm": 2,
+      "estimatedCostEUR": 25,
+      "frequency": "Daily, lunch and dinner service",
+      "sources": [
+        {
+          "title": "Dining in Paris",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    }
+  ]
+}

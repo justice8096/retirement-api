@@ -1,0 +1,178 @@
+{
+  "id": "portugal-cascais",
+  "name": "Cascais, Portugal",
+  "country": "Portugal",
+  "region": "Southern Europe",
+  "cities": [
+    "Cascais",
+    "Estoril",
+    "Sintra"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93
+  },
+  "visa": {
+    "type": "D7 Passive Income",
+    "incomeRequirement": {
+      "monthly": 760,
+      "currency": "EUR"
+    },
+    "notes": "D7 visa requires proof of passive income. NHR ended Jan 2024; IFICI replacement excludes pensions."
+  },
+  "climate": {
+    "winterLowF": 47,
+    "summerHighF": 82,
+    "meetsWarmWinterReq": false,
+    "rainyDaysPerYear": 60
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 1800,
+      "min": 1400,
+      "max": 2200,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 500,
+      "min": 400,
+      "max": 620,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 180,
+      "min": 135,
+      "max": 240,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 120,
+      "min": 80,
+      "max": 170,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 140,
+      "min": 100,
+      "max": 200,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 140,
+      "min": 90,
+      "max": 210,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 320,
+      "min": 220,
+      "max": 440,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 70,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 85,
+      "min": 70,
+      "max": 105,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 20,
+      "typical": 37,
+      "max": 80,
+      "annualInflation": 0.035,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 40,
+      "typical": 80,
+      "max": 160,
+      "annualInflation": 0.035
+    }
+  },
+  "healthcare": {
+    "system": "SNS public healthcare plus excellent private clinics. Easy access to Lisbon hospitals (30 min).",
+    "qualityRating": 8,
+    "dentalIncluded": false,
+    "waitTimes": "Moderate (3-6 weeks for specialists); fast private options nearby",
+    "prescriptionCoverage": "Standard SNS coverage with co-pays; private insurance widely used"
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps available",
+    "dogFriendly": 8,
+    "expatCommunity": 8,
+    "englishPrevalence": 8,
+    "safetyRating": 9
+  },
+  "pros": [
+    "Upscale beach town with excellent quality of life",
+    "Train connection to Lisbon (35 min)",
+    "Strong international community and English widely spoken"
+  ],
+  "cons": [
+    "One of the most expensive areas in Portugal",
+    "Crowded in summer tourist season",
+    "Housing market very competitive"
+  ],
+  "taxes": {
+    "notes": "NHR ended Jan 2024. IFICI replacement excludes pensions. Standard progressive rates 14.5%-48%.",
+    "vatRate": 23,
+    "socialChargesRate": 0
+  }
+}

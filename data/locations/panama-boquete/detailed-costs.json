@@ -1,0 +1,1262 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 383,
+      "typical": 479,
+      "max": 529
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 350,
+        "withoutInsurance": 350,
+        "coverageNote": "Not covered by most private plans. Import or buy at Farmacias Arrocha. Pensionado 15% discount may apply."
+      },
+      {
+        "name": "Levothyroxine (Synthroid) [P1]",
+        "monthlyCost": 8,
+        "withoutInsurance": 12,
+        "coverageNote": "Generic available. Pensionado 15% discount. May need specific brand from Panama City."
+      },
+      {
+        "name": "Atorvastatin 20mg [P1]",
+        "monthlyCost": 12,
+        "withoutInsurance": 18,
+        "coverageNote": "Generic widely available. Pensionado 15% discount."
+      },
+      {
+        "name": "Montelukast [P1]",
+        "monthlyCost": 15,
+        "withoutInsurance": 20,
+        "coverageNote": "Available at major pharmacies. Pensionado 15% discount."
+      },
+      {
+        "name": "Hydrochlorothiazide [P1]",
+        "monthlyCost": 6,
+        "withoutInsurance": 8,
+        "coverageNote": "Generic widely available. Pensionado 15% discount."
+      },
+      {
+        "name": "Olmesartan [P1]",
+        "monthlyCost": 20,
+        "withoutInsurance": 30,
+        "coverageNote": "May need to source from larger pharmacies in David or Panama City."
+      },
+      {
+        "name": "Albuterol inhaler (Salbutamol) [P1]",
+        "monthlyCost": 8,
+        "withoutInsurance": 12,
+        "coverageNote": "Available as Salbutamol. Pensionado 15% discount."
+      },
+      {
+        "name": "Metformin 500mg [P2]",
+        "monthlyCost": 6,
+        "withoutInsurance": 8,
+        "coverageNote": "Generic widely available. Pensionado 15% discount."
+      },
+      {
+        "name": "Allopurinol [P2]",
+        "monthlyCost": 8,
+        "withoutInsurance": 12,
+        "coverageNote": "Available at most pharmacies. Pensionado 15% discount."
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 8,
+        "withoutInsurance": 12,
+        "coverageNote": "Generic available. Pensionado 15% discount."
+      },
+      {
+        "name": "Topiramate [P2]",
+        "monthlyCost": 18,
+        "withoutInsurance": 25,
+        "coverageNote": "Generic available. May need to source from David or Panama City."
+      },
+      {
+        "name": "Metoprolol [P2]",
+        "monthlyCost": 8,
+        "withoutInsurance": 12,
+        "coverageNote": "Generic available. Pensionado 15% discount."
+      },
+      {
+        "name": "Atorvastatin 20mg [P2]",
+        "monthlyCost": 12,
+        "withoutInsurance": 18,
+        "coverageNote": "Generic widely available. Pensionado 15% discount."
+      }
+    ],
+    "pharmacyAccess": "Limited compared to cities. Boquete has 2-3 small pharmacies (Farmacia Boquete, Farmacia Don Bosco). Stock of specialty medications can be inconsistent. David (40 km, 45 min drive) has Farmacias Arrocha and full-service pharmacies. Many expats stock up during David trips.",
+    "prescriptionSystem": "Same as Panama City: prescriptions from licensed doctors. Boquete has several expat-oriented clinics. For chronic medications, expats typically get 3-month supplies from David or Panama City pharmacies. Pensionado 15% discount applies everywhere. Some medications imported from Costa Rica are available.",
+    "insuranceCoverage": "Private insurance required. Same plans as Panama City ($150-350/mo for seniors in Chiriqui region, slightly lower premiums than capital). Hospital Chiriqui in David is the main covered facility. Emergency transport to David may be needed for serious conditions.",
+    "sources": [
+      {
+        "title": "Panama Pensionado Benefits",
+        "url": "https://www.visitpanama.com/plan-your-trip/retirement-in-panama/"
+      },
+      {
+        "title": "Hospital Chiriqui",
+        "url": "https://www.hospitalchiriqui.com/"
+      }
+    ]
+  },
+  "vision": {
+    "annualExamCost": {
+      "withInsurance": 15,
+      "withoutInsurance": 40,
+      "notes": "Limited optometrists in Boquete. Most expats go to David for eye exams. Pensionado 15% discount on medical consultations."
+    },
+    "eyeglasses": {
+      "basicFrameAndLens": {
+        "min": 35,
+        "typical": 70,
+        "max": 180
+      },
+      "progressiveLens": {
+        "min": 80,
+        "typical": 180,
+        "max": 400
+      },
+      "contactLensesMonthly": {
+        "min": 15,
+        "typical": 30,
+        "max": 50
+      }
+    },
+    "insuranceCoverage": "Private insurance covers eye exams at covered clinics in David. Glasses not typically covered. Some plans offer $100-150 annual vision allowance. Pensionado 15% discount on exams applies.",
+    "specialistWaitTime": "No ophthalmologist resident in Boquete. David ophthalmologists available within 1-2 weeks. Some visit Boquete periodically. For surgery, David or Panama City required.",
+    "seniorConsiderations": "Must plan trips to David for specialty eye care. Optical shops in David (Optica Lopez, MultiOpticas) are well-stocked. Cataract surgery available at Hospital Chiriqui in David ($1,200-2,200 per eye). Some expats travel to Panama City for complex procedures.",
+    "sources": [
+      {
+        "title": "Hospital Chiriqui – Ophthalmology",
+        "url": "https://www.hospitalchiriqui.com/"
+      },
+      {
+        "title": "Boquete Health Guide – Expat Exchange",
+        "url": "https://www.expatexchange.com/ctryguide/4750/55/Panama/Health-Insurance-Hospitals-in-Boquete"
+      }
+    ]
+  },
+  "dental": {
+    "annualCleaningCost": {
+      "withInsurance": 10,
+      "withoutInsurance": 35,
+      "notes": "Several English-speaking dentists in Boquete serving expat community. Pensionado 15% discount."
+    },
+    "commonProcedures": [
+      {
+        "procedure": "Filling",
+        "cost": {
+          "min": 25,
+          "typical": 45,
+          "max": 70
+        },
+        "coverageNote": "Available in Boquete. Pensionado 15% discount. Quality comparable to David clinics."
+      },
+      {
+        "procedure": "Crown",
+        "cost": {
+          "min": 180,
+          "typical": 300,
+          "max": 450
+        },
+        "coverageNote": "Some Boquete dentists do crowns; others refer to David. Pensionado discount applies."
+      },
+      {
+        "procedure": "Root Canal",
+        "cost": {
+          "min": 120,
+          "typical": 200,
+          "max": 350
+        },
+        "coverageNote": "Available in Boquete from experienced dentists. David for complex cases."
+      },
+      {
+        "procedure": "Extraction",
+        "cost": {
+          "min": 30,
+          "typical": 60,
+          "max": 100
+        },
+        "coverageNote": "Simple extractions in Boquete. Surgical extractions may require David."
+      },
+      {
+        "procedure": "Implant",
+        "cost": {
+          "min": 650,
+          "typical": 900,
+          "max": 1500
+        },
+        "coverageNote": "Some Boquete dentists place implants. Complex cases referred to David or Panama City."
+      },
+      {
+        "procedure": "Dentures",
+        "cost": {
+          "min": 250,
+          "typical": 450,
+          "max": 800
+        },
+        "coverageNote": "Available in Boquete. Pensionado 15% discount makes this very affordable."
+      }
+    ],
+    "insuranceCoverage": "Dental insurance $25-50/mo if separate from health plan. Pensionado 15% discount on all dental procedures. Out-of-pocket costs already very low. Many expats pay cash and skip dental insurance.",
+    "dentistAvailability": "Good for a small town. 3-4 dental practices in Boquete, most with English-speaking staff. Dr. Balmore Vega and others well-known in expat community. David has additional options (20+ dental clinics). No long waits.",
+    "sources": [
+      {
+        "title": "Boquete Ning – Dental Resources",
+        "url": "https://boquete.ning.com/"
+      },
+      {
+        "title": "International Living – Boquete Healthcare",
+        "url": "https://internationalliving.com/countries/panama/boquete/"
+      }
+    ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 270,
+      "typical": 340,
+      "max": 430
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 200,
+        "seniorDiscounts": "Jubilado discounts 10-25% at restaurants by law. Smaller town = lower prices.",
+        "notes": "Lunch for 2 at moderate restaurant: ~$18 + 7% ITBMS + 10% tip = ~$23, 2x/week = ~$200/mo"
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 55,
+        "seniorDiscounts": "Jubilado discount 25% on utilities.",
+        "notes": "Cable Onda in Boquete. 100-300 Mbps ~$35-55/mo. True gigabit limited availability."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 14,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "~$13.99/mo."
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 7,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "~$6.99/mo."
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 10,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "~$9.99/mo."
+      },
+      {
+        "name": "NFL RedZone",
+        "monthlyCost": 10,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "DAZN NFL Game Pass ~$11/mo during season (Sep-Feb). Annualized ~$10/mo. Includes RedZone, live games, NFL Network."
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 20,
+        "seniorDiscounts": "Jubilado discounts. Smaller selection than Panama City."
+      },
+      {
+        "name": "Books/Media",
+        "monthlyCost": 8,
+        "seniorDiscounts": "Boquete Library has English section."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 15,
+        "seniorDiscounts": "Jubilado discounts. World-class Geisha coffee.",
+        "notes": "Boquete is famous for its coffee."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Cable Onda Internet",
+        "url": "https://www.cableonda.com"
+      },
+      {
+        "title": "Panama Jubilado Discounts",
+        "url": "https://www.visitpanama.com"
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 40,
+      "typical": 100,
+      "max": 250
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 0,
+        "senior": 0,
+        "notes": "NO public transit system in Boquete. No bus routes within town. Shared colectivo minibuses run Boquete-David route ($2 one-way) but no fixed schedule for in-town service."
+      },
+      "singleRide": 2,
+      "coverage": "No local public transit. Boquete-David colectivos run from the central plaza approximately every 30 minutes (6am-6pm). No evening or weekend service expansion. Within Boquete, walking or private transport only.",
+      "seniorDiscount": "Pensionado holders may receive reduced fares on Boquete-David colectivos at driver's discretion, but no formal program."
+    },
+    "rideShare": {
+      "baseFare": 2,
+      "perKm": 0.5,
+      "typicalCrossTownTrip": {
+        "min": 2,
+        "typical": 3,
+        "max": 5
+      },
+      "availability": "No Uber or DiDi in Boquete. Local taxi drivers (mostly unmarked cars) available by phone or flagging down. Ask at hotels/restaurants for numbers. Some expats share rides.",
+      "notes": "Taxi to David approximately $20-30 one-way (negotiate in advance). Within Boquete $2-5. Limited availability after 8pm."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 50,
+        "initialRegistration": {
+          "min": 100,
+          "typical": 200,
+          "max": 400
+        },
+        "notes": "Same ATTT registration as rest of Panama. Annual revisado (inspection) required."
+      },
+      "insurance": {
+        "monthlyMin": 35,
+        "monthlyTypical": 55,
+        "monthlyMax": 100,
+        "notes": "Slightly lower premiums than Panama City due to less traffic. 4WD/SUV recommended for mountain roads."
+      },
+      "fuel": {
+        "pricePerLiter": 0.95,
+        "monthlyEstimate": {
+          "min": 40,
+          "typical": 75,
+          "max": 140
+        },
+        "notes": "Gas stations in Boquete and on road to David. Fuel same government-regulated price as rest of Panama. Less driving needed if living in town center."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 0,
+          "typical": 0,
+          "max": 30
+        },
+        "hourlyStreet": 0,
+        "notes": "Free street parking throughout Boquete. Most houses include parking. No parking meters or paid zones in town."
+      },
+      "tolls": {
+        "monthlyEstimate": 0,
+        "notes": "No toll roads in Chiriqui province. David to Panama City via Pan-American Highway is toll-free."
+      },
+      "seniorDiscounts": "Pensionado 15% discount on auto insurance with some providers. No toll or parking discounts (already free)."
+    },
+    "walkability": "Good within Boquete town center (a few blocks in each direction). Downtown to main plaza, restaurants, and shops easily walkable. However, many residential areas are spread along mountain roads with no sidewalks. Hilly terrain challenging for mobility-limited seniors.",
+    "cycling": {
+      "bikeShareMonthly": 0,
+      "infrastructure": "No bike share program. No dedicated bike lanes. Mountain roads are narrow and hilly. Some expats cycle for exercise but not practical as primary transport.",
+      "notes": "Mountain biking is popular as recreation. Road cycling dangerous due to narrow roads and lack of shoulders. Electric bikes gaining popularity for hill assistance."
+    },
+    "sources": [
+      {
+        "title": "Boquete Ning – Transportation",
+        "url": "https://boquete.ning.com/"
+      },
+      {
+        "title": "International Living – Living in Boquete",
+        "url": "https://internationalliving.com/countries/panama/boquete/"
+      },
+      {
+        "title": "Expat Exchange – Boquete Transport",
+        "url": "https://www.expatexchange.com/ctryguide/4750/112/Panama/Transportation-in-Boquete"
+      }
+    ],
+    "electricVehicle": {
+      "purchasePrice": {
+        "min": 30000,
+        "typical": 42000,
+        "max": 60000
+      },
+      "purchaseNotes": "Limited EV selection. Tesla not officially sold (grey import). BYD, Hyundai Ioniq 5, Nissan Leaf available through dealers in Panama City. Import duties apply.",
+      "federalIncentive": 0,
+      "stateIncentive": 0,
+      "incentiveNotes": "Law 295 (2022): EVs exempt from import duties and ITBMS (7% sales tax). Reduced annual vehicle tax. No EV purchase subsidy.",
+      "chargingHome": {
+        "installCost": {
+          "min": 400,
+          "typical": 800,
+          "max": 1500
+        },
+        "monthlyElectricity": {
+          "min": 20,
+          "typical": 35,
+          "max": 55
+        },
+        "notes": "Electricity ~$0.15-0.20/kWh. Panama electricity rates moderate. Boquete has reliable power (mostly)."
+      },
+      "chargingPublic": {
+        "perKwh": {
+          "min": 0.2,
+          "typical": 0.35,
+          "max": 0.5
+        },
+        "notes": "Very limited charging infrastructure in Boquete/Chiriquí. Some chargers at hotels and shopping centers in David. Growing network in Panama City."
+      },
+      "insurance": {
+        "monthly": {
+          "min": 60,
+          "typical": 90,
+          "max": 140
+        },
+        "notes": "ASSA, Mapfre Panama, SURA. EV-specific policies limited. Pensionado discount may apply."
+      },
+      "maintenance": {
+        "annual": {
+          "min": 300,
+          "typical": 500,
+          "max": 800
+        },
+        "notes": "Limited EV-certified mechanics in Boquete. May need to travel to David or Panama City for specialized service. Basic maintenance doable locally."
+      },
+      "registration": {
+        "annual": {
+          "min": 0,
+          "typical": 25,
+          "max": 50
+        },
+        "notes": "Reduced vehicle tax for EVs under Law 295. Annual revisado (inspection) required."
+      },
+      "batteryWarranty": "Varies by manufacturer. May be harder to claim warranty service in Panama.",
+      "depreciationNotes": "Small EV market means limited resale options. Consider whether you can maintain/service locally before buying.",
+      "totalMonthlyOwnership": {
+        "min": 120,
+        "typical": 200,
+        "max": 320
+      },
+      "totalMonthlyNotes": "Includes: charging ($35), insurance ($90), maintenance ($42/mo avg), registration ($2/mo). Excludes: purchase/loan payment, depreciation. Note: limited charging infrastructure in Boquete.",
+      "sources": [
+        {
+          "title": "Panama EV Law 295 - Gaceta Oficial",
+          "url": "https://www.gacetaoficial.gob.pa/"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 55,
+    "discounts": [
+      {
+        "category": "Restaurants",
+        "description": "Discount on meals at participating restaurants",
+        "discount": "25% off Monday-Thursday, 15% Friday-Sunday",
+        "details": "Same Pensionado law as Panama City. Most Boquete restaurants honor it; some smaller fondas may not.",
+        "source": "Law 6 of 1987"
+      },
+      {
+        "category": "Entertainment",
+        "description": "Movies, events, attractions",
+        "discount": "50% off admission",
+        "details": "Applies at David cinemas, park entrance fees, and community events that charge admission.",
+        "source": "Law 6 of 1987"
+      },
+      {
+        "category": "Medical Services",
+        "description": "Doctor visits, lab work, hospital fees",
+        "discount": "20% off medical consultations and procedures",
+        "details": "Applies at Boquete clinics and Hospital Chiriqui in David.",
+        "source": "Law 6 of 1987"
+      },
+      {
+        "category": "Dental Services",
+        "description": "All dental procedures",
+        "discount": "15% off dental services",
+        "details": "Honored by Boquete dentists. Present Pensionado card before treatment.",
+        "source": "Law 6 of 1987"
+      },
+      {
+        "category": "Prescriptions",
+        "description": "Pharmacy medications",
+        "discount": "15% off prescription medications",
+        "details": "Applies at Boquete pharmacies and David chains (Arrocha, Super Farmacia).",
+        "source": "Law 6 of 1987"
+      },
+      {
+        "category": "Airline Tickets",
+        "description": "Domestic flights from David airport",
+        "discount": "25% off airline tickets",
+        "details": "Air Panama flights from David to Panama City, Bocas del Toro. Must present card at booking.",
+        "source": "Law 6 of 1987"
+      },
+      {
+        "category": "Utility Bills",
+        "description": "Electricity and phone",
+        "discount": "25% off electricity (up to 600 kWh); 25% off phone",
+        "details": "Registered Pensionado holders receive automatic discount on residential utility bills.",
+        "source": "Law 6 of 1987"
+      },
+      {
+        "category": "Property Tax",
+        "description": "Property tax exemption on primary residence",
+        "discount": "Up to $120,000 exemption on property value",
+        "details": "New construction exempt for 20 years. Existing properties receive standard exemption. Boquete property values often fall within exemption range.",
+        "source": "Panama Fiscal Code"
+      }
+    ]
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 68,
+      "typical": 83,
+      "max": 100
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in Panama at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "+Movil Prepaid (Local)",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "2GB 4G",
+        "baseCost": 16,
+        "taxesAndFees": 2,
+        "monthlyTotal": 18,
+        "notes": "+Movil prepaid $8/mo per line + 7% ITBMS. 2GB data, unlimited local calls. Coverage good in Boquete town, limited in highlands."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      },
+      {
+        "title": "+Movil Panama",
+        "url": "https://www.masmovil.com.pa/"
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom house/cottage",
+    "monthlyBudget": {
+      "min": 700,
+      "max": 1200,
+      "typical": 900
+    },
+    "breakdown": {
+      "baseRent": 850,
+      "garbageCollection": 10,
+      "municipalFee": 10,
+      "total": 870
+    },
+    "taxNotes": "No rental tax in Panama. Property tax exemptions generous for new construction. No VAT on residential rent. Pensionado visa holders get 25% off utility bills and various discounts.",
+    "leaseTerms": "1-year typical but flexible. Many rentals are informal/expat-to-expat. Security deposit 1-2 months common.",
+    "marketNotes": "Boquete is a small mountain town (pop ~25,000) with large expat community. Houses range from basic Panamanian to luxury expat-built. Cooler climate (60-80°F) means no AC needed. Good availability year-round. Many furnished options.",
+    "sources": [
+      {
+        "name": "Boquete Ning Expat Community",
+        "url": "https://www.boquete.ning.com/"
+      },
+      {
+        "name": "Encuentra24 Boquete Rentals",
+        "url": "https://www.encuentra24.com/panama/bienes-raices-alquiler-casas/chiriqui-boquete"
+      }
+    ],
+    "housingSites": {
+      "rentals": [
+        {
+          "name": "Encuentra24",
+          "url": "https://www.encuentra24.com/panama-en/real-estate-for-rent/boquete",
+          "type": "rental"
+        },
+        {
+          "name": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/alquiler/boquete",
+          "type": "rental"
+        },
+        {
+          "name": "Point2Homes",
+          "url": "https://www.point2homes.com/PA/Real-Estate/Boquete.html",
+          "type": "purchase"
+        }
+      ]
+    }
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Romero",
+        "type": "supermarket",
+        "website": "https://www.rfrances.com/",
+        "notes": "Panama chain, good selection in small towns",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Romero Supermarket Panama",
+            "url": "https://www.youtube.com/watch?v=XjRf8WXFyVA"
+          },
+          {
+            "platform": "instagram",
+            "title": "@rfrances",
+            "url": "https://www.instagram.com/superromero/"
+          }
+        ]
+      },
+      {
+        "name": "El Rey",
+        "type": "supermarket",
+        "website": "https://www.elrey.com/",
+        "notes": "Panama chain with David location (30 min from Boquete)",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "El Rey Supermarket Panama",
+            "url": "https://www.youtube.com/watch?v=pQk3WF_AX6M"
+          },
+          {
+            "platform": "instagram",
+            "title": "@elreypty",
+            "url": "https://www.instagram.com/elreysupermercados/"
+          }
+        ]
+      },
+      {
+        "name": "Boquete Tuesday Market",
+        "type": "farmers-market",
+        "website": "https://www.visitboquete.com/",
+        "notes": "Weekly expat-friendly market, local produce and crafts",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Boquete Panama Tuesday Market",
+            "url": "https://www.youtube.com/watch?v=kP7eQ3ZxFpA"
+          },
+          {
+            "platform": "instagram",
+            "title": "@visitboquete",
+            "url": "https://www.instagram.com/visitboquete/"
+          }
+        ]
+      }
+    ]
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 45,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Farmers market or CSA box"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 30,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Bananas, berries, apples, citrus"
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Sweet Potatoes / Potatoes",
+            "monthlyCost": 11.25,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet staple"
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 9,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet vegetables"
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 7.5,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Digestive health, home-cooked diet"
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 37.5,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Primary protein for both adults & dog"
+          },
+          {
+            "name": "Ground Turkey / Beef",
+            "monthlyCost": 33.75,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean ground for dog food base"
+          },
+          {
+            "name": "Fish (salmon/tilapia)",
+            "monthlyCost": 30,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Omega-3 rich"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 11.25,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": "Eggs also for dog diet"
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Essential for balanced home-cooked dog diet"
+          },
+          {
+            "name": "Beans / Lentils",
+            "monthlyCost": 6,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "grains",
+        "name": "Grains & Starches",
+        "items": [
+          {
+            "name": "Rice (brown/white)",
+            "monthlyCost": 7.5,
+            "quantity": 5,
+            "unit": "lbs/month",
+            "forWhom": "shared",
+            "notes": "Dog diet carb source"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 11.25,
+            "quantity": 2,
+            "unit": "loaves/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 6,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Oats / Cereal",
+            "monthlyCost": 7.5,
+            "quantity": 1,
+            "unit": "container/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk / Plant Milk",
+            "monthlyCost": 11.25,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Cheese",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Yogurt / Kefir",
+            "monthlyCost": 11.25,
+            "quantity": 1,
+            "unit": "quart/week",
+            "forWhom": "shared",
+            "notes": "Probiotics for dog digestion too"
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 7.5,
+            "quantity": 1,
+            "unit": "unit/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Olive Oil / Cooking Oils",
+            "monthlyCost": 11.25,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Spices & Seasonings",
+            "monthlyCost": 7.5,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Canned Goods (tomatoes, beans)",
+            "monthlyCost": 9,
+            "quantity": 6,
+            "unit": "cans/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Condiments & Sauces",
+            "monthlyCost": 7.5,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 18.75,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tea",
+            "monthlyCost": 6,
+            "quantity": 1,
+            "unit": "box/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Wine / Beer",
+            "monthlyCost": 30,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Optional"
+          },
+          {
+            "name": "Sparkling Water / Juice",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "case/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "snacks",
+        "name": "Snacks & Treats",
+        "items": [
+          {
+            "name": "Nuts & Trail Mix",
+            "monthlyCost": 11.25,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Crackers / Chips",
+            "monthlyCost": 7.5,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Dark Chocolate",
+            "monthlyCost": 6,
+            "quantity": 4,
+            "unit": "bars/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "frozen",
+        "name": "Frozen Foods",
+        "items": [
+          {
+            "name": "Frozen Vegetables",
+            "monthlyCost": 9,
+            "quantity": 4,
+            "unit": "bags/month",
+            "forWhom": "shared",
+            "notes": "Backup for dog food prep"
+          },
+          {
+            "name": "Frozen Fruit (smoothies)",
+            "monthlyCost": 7.5,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Frozen Meals (convenience)",
+            "monthlyCost": 11.25,
+            "quantity": 4,
+            "unit": "meals/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "supplements",
+        "name": "Pet Supplements & Health",
+        "items": [
+          {
+            "name": "Joint Supplement (glucosamine)",
+            "monthlyCost": 22.5,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Essential for Bernese — hip/joint health"
+          },
+          {
+            "name": "Fish Oil (omega-3)",
+            "monthlyCost": 11.25,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Coat & skin health"
+          },
+          {
+            "name": "Multivitamin / Mineral Mix",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "container/month",
+            "forWhom": "dog",
+            "notes": "Balance home-cooked diet"
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 11.25,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "dog",
+            "notes": "Training & dental chews"
+          }
+        ]
+      }
+    ],
+    "monthlyTotal": 534
+  },
+  "healthcare": {
+    "system": "Private insurance + out-of-pocket",
+    "coverageSummary": "No public healthcare for expats. Private insurance required. Pre-existing condition exclusions common for first 12-24 months. Pensionado visa: 15-25% discount on medical services.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD"
+      ],
+      "costs": [
+        {
+          "item": "Private insurance premium",
+          "monthlyCost": 250,
+          "notes": "$225-275/mo. Pre-existing exclusions for AMD, obesity. Age loading for 60+. BUPA, Cigna, or local Pacific plans."
+        },
+        {
+          "item": "Anti-VEGF injections (out-of-pocket)",
+          "monthlyCost": 200,
+          "notes": "$800-1200/injection, 6-8/yr. Likely excluded from insurance. Must travel to Panama City or David."
+        },
+        {
+          "item": "Ophthalmologist visits",
+          "monthlyCost": 30,
+          "notes": "$60-100/visit in Panama City. Limited specialists in Boquete."
+        },
+        {
+          "item": "Endocrinologist",
+          "monthlyCost": 20,
+          "notes": "Available in David. $50-80/visit."
+        },
+        {
+          "item": "Pensionado discount savings",
+          "monthlyCost": -30,
+          "notes": "15% off medical consultations, 10-15% off hospital services."
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Gout",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Migraines"
+      ],
+      "costs": [
+        {
+          "item": "Private insurance premium",
+          "monthlyCost": 200,
+          "notes": "$180-220/mo. Pre-existing exclusion period for diabetes (12-24 months)."
+        },
+        {
+          "item": "Endocrinologist (diabetes)",
+          "monthlyCost": 25,
+          "notes": "Available in David. $50-80/visit quarterly."
+        },
+        {
+          "item": "Diabetes supplies",
+          "monthlyCost": 30,
+          "notes": "Glucose monitor, strips, lancets. Limited insurance coverage initially."
+        },
+        {
+          "item": "Specialist visits (rheumatology, neuro)",
+          "monthlyCost": 15,
+          "notes": "May need to travel to Panama City for specialists."
+        },
+        {
+          "item": "Pensionado discount savings",
+          "monthlyCost": -25,
+          "notes": "15% off medical consultations."
+        }
+      ]
+    },
+    "shared": [
+      {
+        "item": "Dental care (2 adults)",
+        "monthlyCost": 30,
+        "notes": "Good dental care in David at $40-80/visit. Pensionado 15% discount."
+      },
+      {
+        "item": "Medical travel (David/Panama City)",
+        "monthlyCost": 40,
+        "notes": "Specialist visits may require travel from Boquete to David (45 min) or Panama City."
+      },
+      {
+        "item": "Emergency reserve (monthly set-aside)",
+        "monthlyCost": 50,
+        "notes": "Higher out-of-pocket risk with pre-existing exclusions."
+      }
+    ],
+    "monthlyTotals": {
+      "person1": 470,
+      "person2": 245,
+      "shared": 120,
+      "household": 835
+    },
+    "notes": "First 1-2 years will have higher costs due to pre-existing condition exclusions on insurance. Anti-VEGF injections are the largest single expense — limited providers outside Panama City.",
+    "phaseTransition": null
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Black Hair Care",
+      "priceRange": {
+        "cut": "10-25",
+        "color": "30-70",
+        "fullService": "40-100"
+      },
+      "notes": "Very limited options in Boquete itself. David (45 min) has more salon options. Panama City has the best selection.",
+      "providers": [
+        {
+          "name": "Peluqueria Afro Style (David)",
+          "type": "Afro hair salon",
+          "address": "David, Chiriqui",
+          "distanceMi": 28,
+          "rating": 4.1,
+          "notes": "Best nearby option for Afro hair care. Braids, relaxers, color. In David.",
+          "website": ""
+        },
+        {
+          "name": "Local Boquete peluqueria",
+          "type": "General salon",
+          "address": "Boquete centro",
+          "distanceMi": 0,
+          "rating": 3.8,
+          "notes": "General salons can do basic cuts. For specialized care, travel to David or order products online.",
+          "website": ""
+        }
+      ]
+    },
+    "whiteHairCare": {
+      "label": "White/Caucasian Hair Care",
+      "priceRange": {
+        "cut": "8-20",
+        "color": "25-60",
+        "highlights": "35-80"
+      },
+      "notes": "Boquete has several peluquerias used by the expat community. Very affordable but quality varies. David has more options.",
+      "providers": [
+        {
+          "name": "Salon Irene",
+          "type": "Local salon",
+          "address": "Boquete centro",
+          "distanceMi": 0,
+          "rating": 4.3,
+          "notes": "Popular with expats. Good cuts and color at very low prices. English-speaking stylist.",
+          "website": ""
+        },
+        {
+          "name": "Peluqueria y Spa Glamour (David)",
+          "type": "Upscale salon",
+          "address": "David, Chiriqui",
+          "distanceMi": 28,
+          "rating": 4.5,
+          "notes": "Best salon in the region. Professional color work, highlights. Worth the drive from Boquete.",
+          "website": ""
+        }
+      ]
+    },
+    "mensBigTall": {
+      "label": "Men's Big & Tall Clothing",
+      "priceRange": {
+        "shirts": "10-30",
+        "pants": "12-25",
+        "suits": "50-150"
+      },
+      "notes": "Very limited in Boquete. David has basic options. For big & tall, online ordering (Amazon ships to Panama) or stock up on US trips is common among expats.",
+      "providers": [
+        {
+          "name": "Mall Nacional (David)",
+          "type": "Shopping mall",
+          "address": "David, Chiriqui",
+          "distanceMi": 28,
+          "rating": 3.8,
+          "notes": "Best local option. Limited extended sizes. Budget-friendly.",
+          "website": ""
+        },
+        {
+          "name": "Pricesmart (David)",
+          "type": "Warehouse club",
+          "address": "David, Chiriqui",
+          "distanceMi": 28,
+          "rating": 4.2,
+          "notes": "Costco-style warehouse. Some extended sizes in basics. Good for stocking up.",
+          "website": ""
+        }
+      ]
+    },
+    "womensClothing": {
+      "label": "Women's Regular Clothing",
+      "priceRange": {
+        "casual": "8-25",
+        "dresses": "15-45",
+        "professional": "20-60"
+      },
+      "notes": "Boquete has a few boutiques. David has more options. Many expats shop on US trips or order online.",
+      "providers": [
+        {
+          "name": "Mall Nacional (David)",
+          "type": "Shopping mall",
+          "address": "David, Chiriqui",
+          "distanceMi": 28,
+          "rating": 3.8,
+          "notes": "Best local option for regular women's clothing. Budget-friendly.",
+          "website": ""
+        },
+        {
+          "name": "Tuesday Morning Market (Boquete)",
+          "type": "Expat market",
+          "address": "Boquete",
+          "distanceMi": 0,
+          "rating": 4,
+          "notes": "Weekly market with some clothing vendors. Casual/resort wear. Expat community gathering.",
+          "website": ""
+        }
+      ]
+    },
+    "shoes": {
+      "label": "Shoes",
+      "priceRange": {
+        "casual": "15-40",
+        "dress": "25-65",
+        "athletic": "20-55",
+        "wideWidth": "20-50"
+      },
+      "notes": "Very limited shoe selection in Boquete. David malls or online ordering recommended. Wide widths nearly impossible to find locally.",
+      "providers": [
+        {
+          "name": "Payless / Hush Puppies (David)",
+          "type": "Shoe retailer",
+          "address": "David, Chiriqui",
+          "distanceMi": 28,
+          "rating": 3.9,
+          "notes": "Budget shoes. Limited sizes. Basic selection.",
+          "website": ""
+        },
+        {
+          "name": "Amazon / online delivery",
+          "type": "Online",
+          "address": "Ships to Boquete via Miami courier",
+          "distanceMi": 0,
+          "rating": 4,
+          "notes": "Many expats use Miami-based mail forwarding services (Mailboxes Etc, AirBox Express). Delivery 5-10 days.",
+          "website": ""
+        }
+      ]
+    }
+  }
+}

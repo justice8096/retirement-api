@@ -1,0 +1,245 @@
+{
+  "distanceUnit": "km",
+  "currency": "EUR",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "University Hospital Galway",
+      "address": "City center area, Galway, Ireland",
+      "distanceKm": 4,
+      "notes": "HSE public hospital, full emergency department, English-speaking staff",
+      "sources": [
+        {
+          "title": "University Hospital Galway",
+          "url": "https://www.hse.ie/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Boots Pharmacy",
+      "address": "City center area, Galway, Ireland",
+      "distanceKm": 1.5,
+      "notes": "Well-stocked pharmacy, prescription medications, some English spoken",
+      "sources": [
+        {
+          "title": "Boots Pharmacy",
+          "url": "https://www.boots.ie/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Tesco",
+      "address": "City center area, Galway, Ireland",
+      "distanceKm": 2,
+      "notes": "Large supermarket, wide range of products, online delivery available",
+      "sources": [
+        {
+          "title": "Tesco",
+          "url": "https://www.tesco.ie/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "Bank of Ireland",
+      "address": "City center area, Galway, Ireland",
+      "distanceKm": 2,
+      "notes": "Full-service bank, ATMs, English-speaking staff, online banking",
+      "sources": [
+        {
+          "title": "Bank of Ireland",
+          "url": "https://www.bankofireland.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Galway Medical Centre",
+      "address": "City center area, Galway, Ireland",
+      "distanceKm": 3,
+      "notes": "GP surgery, English-speaking doctors, appointment required",
+      "sources": [
+        {
+          "title": "Galway Medical Centre",
+          "url": "https://www.hse.ie/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Dental Clinic Galway Center",
+      "address": "City center area, Galway, Ireland",
+      "distanceKm": 3,
+      "notes": "General and cosmetic dentistry, some English-speaking dentists, modern equipment",
+      "sources": [
+        {
+          "title": "Dental Services Ireland",
+          "url": "https://www.dentalcouncil.ie/"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Veterinary Clinic Galway",
+      "address": "City center area, Galway, Ireland",
+      "distanceKm": 4,
+      "notes": "Full veterinary services, vaccinations, surgery, some English spoken",
+      "sources": [
+        {
+          "title": "Veterinary Services Ireland",
+          "url": "https://www.veterinaryireland.ie/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Parque Canino / Dog Park Galway",
+      "address": "Park area, Galway, Ireland",
+      "distanceKm": 5,
+      "notes": "Off-leash area, green space popular with dog owners, water available",
+      "sources": [
+        {
+          "title": "Parks in Galway",
+          "url": "https://www.coillte.ie/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "Flyefit",
+      "address": "City center area, Galway, Ireland",
+      "distanceKm": 3,
+      "notes": "Modern gym with cardio and weight equipment, group classes, monthly memberships",
+      "sources": [
+        {
+          "title": "Flyefit",
+          "url": "https://www.flyefit.ie/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "Church of Ireland Galway",
+      "address": "City center area, Galway, Ireland",
+      "distanceKm": 5,
+      "notes": "English-language services, expat community gathering point, social events",
+      "sources": [
+        {
+          "title": "Church of Ireland Galway",
+          "url": "https://www.ireland.anglican.org/"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Shannon Airport (SNN)",
+      "address": "Airport area",
+      "distanceKm": 85,
+      "notes": "International airport with domestic and international flights",
+      "sources": [
+        {
+          "title": "Shannon Airport",
+          "url": "https://www.shannonairport.ie/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Bus Éireann Galway",
+      "address": "City center area, Galway, Ireland",
+      "distanceKm": 2,
+      "notes": "National bus service, some rail connections, Leap card accepted",
+      "sources": [
+        {
+          "title": "Bus Éireann Galway",
+          "url": "https://www.buseireann.ie/"
+        }
+      ]
+    },
+    {
+      "categoryId": "coworking",
+      "name": "Dogpatch Labs Galway",
+      "address": "City center area, Galway, Ireland",
+      "distanceKm": 3,
+      "notes": "Coworking space, high-speed internet, meeting rooms, community events",
+      "sources": [
+        {
+          "title": "Dogpatch Labs Galway",
+          "url": "https://www.dogpatchlabs.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "Pet Grooming Galway",
+      "address": "City center area, Galway, Ireland",
+      "distanceKm": 4,
+      "notes": "Professional pet grooming services, bathing, clipping, appointment recommended",
+      "sources": [
+        {
+          "title": "Pet Services Galway",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "categoryId": "international_school",
+      "name": "InterNations Galway Expat Community",
+      "address": "City center area, Galway, Ireland",
+      "distanceKm": 4,
+      "notes": "International expat community center, social events, networking, relocation assistance",
+      "sources": [
+        {
+          "title": "InterNations Galway Expat Community",
+          "url": "https://www.internations.org/"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "Galway Cultural Center",
+      "description": "Cultural center with local art, history, and community events",
+      "distanceKm": 4,
+      "estimatedCostEUR": 8,
+      "frequency": "Tue-Sun 10:00-17:00",
+      "sources": [
+        {
+          "title": "Galway Culture",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "name": "Galway Central Park / Garden",
+      "description": "Main public park with walking trails, gardens, and green space",
+      "distanceKm": 3,
+      "estimatedCostEUR": 0,
+      "frequency": "Daily, dawn to dusk",
+      "sources": [
+        {
+          "title": "Parks in Galway",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "dining",
+      "name": "Galway Restaurant District",
+      "description": "Walkable area with diverse restaurants, cafes, and bars",
+      "distanceKm": 2,
+      "estimatedCostEUR": 25,
+      "frequency": "Daily, lunch and dinner service",
+      "sources": [
+        {
+          "title": "Dining in Galway",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    }
+  ]
+}

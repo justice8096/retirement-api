@@ -1,0 +1,173 @@
+{
+  "country": "France",
+  "region": "Brittany",
+  "overallInclusionScore": 6.5,
+  "lastUpdated": "2026-03-15",
+  "categories": {
+    "racial": {
+      "score": 6,
+      "summary": "France has strong anti-discrimination laws (Law 2008-496) but faces documented challenges with racial profiling and housing discrimination. Brittany is less diverse than Paris, which can mean both less systemic tension and more novelty-based staring/curiosity for people of color. ECRI and the EU Fundamental Rights Agency have repeatedly flagged France for ethnic profiling by police.",
+      "legalProtections": "Protected by French Constitution, EU Race Equality Directive 2000/43/EC, Defendeur des droits enforces complaints, Law 2008-496 prohibits direct and indirect discrimination",
+      "positiveFactors": [
+        "Strong legal framework with active enforcement body",
+        "Active anti-discrimination ombudsman (Defendeur des droits)",
+        "University cities like Rennes have diverse student populations",
+        "France collects discrimination complaint data for accountability"
+      ],
+      "riskFactors": [
+        "Police racial profiling documented by ECRI in 2022 and 2025 reports",
+        "Housing discrimination in rental market — SOS Racisme testing shows 30%+ callback gap",
+        "Rural Brittany is significantly less diverse than urban centers",
+        "France does not collect ethnic census data, making systemic issues harder to track"
+      ],
+      "sources": [
+        {
+          "title": "ECRI Report on France (6th cycle, 2022)",
+          "url": "https://www.coe.int/en/web/european-commission-against-racism-and-intolerance/france",
+          "type": "official"
+        },
+        {
+          "title": "Defendeur des droits Annual Report 2024",
+          "url": "https://www.defenseurdesdroits.fr/en",
+          "type": "official"
+        },
+        {
+          "title": "EU FRA Being Black in the EU (2023)",
+          "url": "https://fra.europa.eu/en/publication/2023/being-black-eu",
+          "type": "research"
+        },
+        {
+          "title": "SOS Racisme Annual Testing Report",
+          "url": "https://sos-racisme.org/",
+          "type": "research"
+        }
+      ]
+    },
+    "religious": {
+      "score": 6,
+      "summary": "France's strict laicite (secularism) policy can feel exclusionary to visibly religious individuals. The 2004 law banning conspicuous religious symbols in schools and the 2010 face-covering ban affect daily life. Antisemitic and anti-Muslim incidents are tracked nationally by SPCJ and CCIF/CFCM respectively. Brittany is historically Catholic but largely secular today.",
+      "legalProtections": "1905 Separation of Church and State law, religious discrimination prohibited under penal code Article 225-1, EU Framework Decision on racism and xenophobia",
+      "positiveFactors": [
+        "Freedom of worship fully protected",
+        "Diverse religious communities in Rennes and Brest",
+        "Government tracks and publishes hate crime statistics",
+        "DILCRAH coordinates anti-hate efforts across agencies"
+      ],
+      "riskFactors": [
+        "Laicite restrictions on religious symbols in public institutions and government employment",
+        "Rising antisemitic incidents — 1,676 recorded in 2023, a 4x increase per SPCJ",
+        "Anti-Muslim sentiment in political discourse, particularly around elections",
+        "2010 face-covering ban disproportionately affects Muslim women"
+      ],
+      "sources": [
+        {
+          "title": "US State Department International Religious Freedom Report - France 2023",
+          "url": "https://www.state.gov/reports/2023-report-on-international-religious-freedom/france/",
+          "type": "official"
+        },
+        {
+          "title": "DILCRAH National Plan Against Racism and Antisemitism",
+          "url": "https://www.dilcrah.gouv.fr/",
+          "type": "official"
+        },
+        {
+          "title": "SPCJ (Service de Protection de la Communaute Juive) Annual Report",
+          "url": "https://www.spcj.org/",
+          "type": "research"
+        }
+      ]
+    },
+    "countryOfOrigin": {
+      "score": 7,
+      "summary": "Americans and other Western expats are generally well-received in Brittany. The region has a long history of welcoming British retirees, particularly along the coast. Non-EU immigrants face more bureaucratic hurdles. France's points-based immigration rhetoric has increased but the legal framework for legal residents is strong.",
+      "legalProtections": "EU anti-discrimination directives, French labor code protections, long-stay visa holder rights under CESEDA immigration code",
+      "positiveFactors": [
+        "Established Anglo-speaking expat communities along Brittany coast",
+        "Positive attitudes toward American culture and tourism",
+        "Long tradition of immigration — 10% of French population is foreign-born",
+        "Strong consular support from US Embassy Paris and consulate Rennes"
+      ],
+      "riskFactors": [
+        "Administrative bureaucracy for non-EU nationals is significant and French-only",
+        "Political rhetoric around immigration has intensified across party lines",
+        "Preference for EU workers in some employment sectors",
+        "Prefecture appointment system for residence permits is notoriously backlogged"
+      ],
+      "sources": [
+        {
+          "title": "OECD International Migration Outlook - France",
+          "url": "https://www.oecd.org/en/publications/international-migration-outlook_1999124x.html",
+          "type": "research"
+        },
+        {
+          "title": "France Visas Official Portal",
+          "url": "https://france-visas.gouv.fr/en/web/france-visas/",
+          "type": "official"
+        },
+        {
+          "title": "US Embassy France - Citizen Services",
+          "url": "https://fr.usembassy.gov/u-s-citizen-services/",
+          "type": "official"
+        }
+      ]
+    },
+    "language": {
+      "score": 5,
+      "summary": "French language ability is strongly expected in daily life. Non-French speakers regularly encounter impatience or exclusion, especially outside tourist areas and university towns. Brittany also has Breton language cultural pride (though few speak it daily). France ranks moderate on the EF English Proficiency Index. Learning conversational French is essentially required for integration.",
+      "legalProtections": "French is the sole official language (Article 2 of Constitution). Toubon Law (1994) mandates French in government services, advertising, and workplace. No legal obligation to provide services in other languages.",
+      "positiveFactors": [
+        "Alliance Francaise and free OFII integration courses available",
+        "Younger generation (under 35) has significantly better English skills",
+        "Rennes university area is more multilingual",
+        "Tourist areas along the coast accommodate English speakers"
+      ],
+      "riskFactors": [
+        "Strong cultural expectation to speak French — seen as a matter of respect",
+        "All government services, healthcare, and legal proceedings in French only",
+        "Social isolation risk for non-French speakers, especially in rural Brittany",
+        "EF EPI ranks France 34th globally — 'moderate proficiency' band",
+        "Medical emergencies without French can be genuinely dangerous"
+      ],
+      "sources": [
+        {
+          "title": "Toubon Law (1994) - French Language Protection",
+          "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000349929",
+          "type": "official"
+        },
+        {
+          "title": "EF English Proficiency Index - France",
+          "url": "https://www.ef.com/wwen/epi/regions/europe/france/",
+          "type": "index"
+        },
+        {
+          "title": "OFII Integration Contract (CIR) - Language Requirements",
+          "url": "https://www.ofii.fr/le-contrat-d-integration-republicaine/",
+          "type": "official"
+        }
+      ]
+    }
+  },
+  "expat_experience": {
+    "communitySupport": "Several English-speaking expat groups in Rennes and along the north coast. Brittany British Association is well-established. American Women's Group in Paris extends to regional chapters. Online forums (Expat.com Brittany, InterNations Rennes) are active.",
+    "integrationResources": [
+      "Office Francais de l'Immigration et de l'Integration (OFII) — free French courses",
+      "Alliance Francaise Rennes — paid language courses",
+      "Rennes International Facebook group (~3,000 members)",
+      "Brittany British Association",
+      "Maison des Associations Rennes — volunteer opportunities for integration"
+    ],
+    "socialMediaSentiment": "Expat forums generally positive about Brittany. Common themes: beautiful countryside, affordable compared to Paris, but language barrier is the #1 challenge. Some Black American expats report better treatment than in the US but note occasional microaggressions.",
+    "sources": [
+      {
+        "title": "OFII Integration Services",
+        "url": "https://www.ofii.fr/",
+        "type": "official"
+      },
+      {
+        "title": "InterNations Rennes Community",
+        "url": "https://www.internations.org/rennes-expats",
+        "type": "media"
+      }
+    ]
+  }
+}

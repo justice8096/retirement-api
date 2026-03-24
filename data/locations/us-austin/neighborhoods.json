@@ -1,0 +1,268 @@
+{
+  "city": "Austin, Texas metro area",
+  "neighborhoods": [
+    {
+      "id": "tx-round-rock",
+      "name": "Round Rock",
+      "description": "Family-friendly suburb north of Austin along I-35 with excellent schools, H-E-B Plus flagship stores, Dell Technologies headquarters, and a growing downtown district",
+      "character": "Suburban family-oriented, tech corridor, chain retail, sports parks, rapidly growing",
+      "housing": {
+        "avgRentOneBedroomUSD": 1400,
+        "avgRentTwoBedroomUSD": 1800,
+        "buyPricePerSqmUSD": 2800,
+        "predominantType": "Single-family homes, newer subdivisions, townhomes, and apartment complexes",
+        "medianHomePrice": 380000
+      },
+      "walkabilityScore": 35,
+      "transitScore": 20,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "H-E-B Plus and multiple grocery options. Dell HQ brings tech jobs. Round Rock Express minor league baseball. Excellent Williamson County schools. Old Settlers Park and Brushy Creek trail system. 20 min to downtown Austin without traffic.",
+      "groceryAccess": "Excellent. H-E-B Plus (flagship), H-E-B, Costco, Walmart Supercenter, Sprouts, Trader Joe's all within short drive.",
+      "healthcareAccess": "Baylor Scott & White Round Rock, St. David's Round Rock Medical Center. Multiple urgent care and primary care options.",
+      "pros": [
+        "Lower cost of living than central Austin",
+        "Excellent schools (Round Rock ISD)",
+        "H-E-B Plus flagship store",
+        "Low crime rate",
+        "Growing restaurant and retail scene",
+        "No state income tax"
+      ],
+      "cons": [
+        "Car-dependent — minimal public transit",
+        "I-35 traffic congestion to/from Austin",
+        "Suburban sprawl — limited walkability",
+        "Summer heat with less tree cover than central Austin",
+        "Limited nightlife and cultural events compared to Austin proper"
+      ],
+      "sources": [
+        {
+          "title": "Zillow - Round Rock TX",
+          "url": "https://www.zillow.com/round-rock-tx/"
+        },
+        {
+          "title": "City of Round Rock",
+          "url": "https://www.roundrocktexas.gov/"
+        },
+        {
+          "title": "Walk Score - Round Rock",
+          "url": "https://www.walkscore.com/score/round-rock-tx"
+        }
+      ]
+    },
+    {
+      "id": "tx-cedar-park",
+      "name": "Cedar Park",
+      "description": "Growing northwest suburb near Lakeline Mall with a suburban feel, good schools, and easy access to Lake Travis and the Hill Country",
+      "character": "Suburban residential, family-friendly, Lakeline Mall area, Hill Country access, newer development",
+      "housing": {
+        "avgRentOneBedroomUSD": 1450,
+        "avgRentTwoBedroomUSD": 1900,
+        "buyPricePerSqmUSD": 2900,
+        "predominantType": "Single-family homes, master-planned communities, townhomes",
+        "medianHomePrice": 400000
+      },
+      "walkabilityScore": 30,
+      "transitScore": 18,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Lakeline Mall area retail hub. Cedar Park Center (H-E-B Center) hosts Texas Stars hockey and Austin Spurs basketball. MetroRail Red Line has Lakeline station. Close to Lake Travis for boating and swimming. Leander ISD schools.",
+      "groceryAccess": "Good. H-E-B, Costco (nearby), Walmart, Sprouts, Randalls within short drive.",
+      "healthcareAccess": "Cedar Park Regional Medical Center (Baylor Scott & White). Multiple urgent care clinics. Specialist access may require travel to Austin.",
+      "pros": [
+        "Family-friendly with good schools (Leander ISD)",
+        "Close to Lake Travis and Hill Country recreation",
+        "MetroRail Red Line connection to downtown Austin",
+        "Growing dining and retail options",
+        "Lower property taxes than Travis County (Williamson County)",
+        "Active community events and parks"
+      ],
+      "cons": [
+        "Car-dependent for most errands",
+        "US 183 traffic congestion during peak hours",
+        "Limited walkability outside Lakeline area",
+        "Fewer cultural amenities than central Austin",
+        "Rapid growth straining infrastructure"
+      ],
+      "sources": [
+        {
+          "title": "Zillow - Cedar Park TX",
+          "url": "https://www.zillow.com/cedar-park-tx/"
+        },
+        {
+          "title": "City of Cedar Park",
+          "url": "https://www.cedarparktexas.gov/"
+        },
+        {
+          "title": "Walk Score - Cedar Park",
+          "url": "https://www.walkscore.com/score/cedar-park-tx"
+        }
+      ]
+    },
+    {
+      "id": "tx-south-austin",
+      "name": "South Austin (78745/78748)",
+      "description": "Eclectic, laid-back neighborhoods south of Lady Bird Lake near Zilker Park, known for food trucks, local businesses, and the 'Keep Austin Weird' vibe",
+      "character": "Eclectic, artsy, food truck culture, Zilker Park adjacent, mix of old Austin and new development",
+      "housing": {
+        "avgRentOneBedroomUSD": 1600,
+        "avgRentTwoBedroomUSD": 2200,
+        "buyPricePerSqmUSD": 3800,
+        "predominantType": "Mix of older ranch homes, newer condos, duplexes, and apartment complexes",
+        "medianHomePrice": 450000
+      },
+      "walkabilityScore": 55,
+      "transitScore": 35,
+      "safetyRating": "moderate-high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Closest to Zilker Park, Barton Springs Pool, and Lady Bird Lake hike-and-bike trail. South Lamar and South Congress (SoCo) corridors with restaurants and shops. Food truck parks. More walkable than suburbs. Strong local business culture. Gentrifying rapidly.",
+      "groceryAccess": "Good. H-E-B (multiple locations including South Congress and William Cannon), Wheatsville Food Co-op, Trader Joe's, Sprouts nearby.",
+      "healthcareAccess": "St. David's South Austin Medical Center. Multiple primary care and urgent care clinics. Close to downtown hospital network.",
+      "pros": [
+        "Walking distance to Zilker Park, Barton Springs, Lady Bird Lake",
+        "Vibrant food truck and local restaurant scene",
+        "More walkable than suburban areas",
+        "Strong sense of community and local culture",
+        "CapMetro bus routes more frequent than suburbs",
+        "Dog-friendly patios and parks everywhere"
+      ],
+      "cons": [
+        "Higher cost of living than outer suburbs",
+        "Gentrification pushing prices up rapidly",
+        "MoPac and I-35 traffic congestion",
+        "Older housing stock may need maintenance",
+        "Parking can be difficult near SoCo and Zilker during events",
+        "Flash flood risk in some low-lying areas"
+      ],
+      "sources": [
+        {
+          "title": "Zillow - South Austin",
+          "url": "https://www.zillow.com/austin-tx/south-austin/"
+        },
+        {
+          "title": "Walk Score - South Austin",
+          "url": "https://www.walkscore.com/score/south-lamar-blvd-austin-tx"
+        },
+        {
+          "title": "Austin Parks and Recreation",
+          "url": "https://www.austintexas.gov/department/parks-and-recreation"
+        }
+      ]
+    },
+    {
+      "id": "tx-georgetown",
+      "name": "Georgetown",
+      "description": "Charming small city north of Austin with a historic Victorian downtown square, Sun City 55+ active adult community, and a strong retiree-friendly identity",
+      "character": "Small-city historic, retiree-friendly, Sun City 55+ community, Victorian downtown square",
+      "housing": {
+        "avgRentOneBedroomUSD": 1250,
+        "avgRentTwoBedroomUSD": 1650,
+        "buyPricePerSqmUSD": 2500,
+        "predominantType": "Single-family homes, Sun City 55+ community homes, historic downtown properties",
+        "medianHomePrice": 350000
+      },
+      "walkabilityScore": 40,
+      "transitScore": 15,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Sun City Texas is one of the largest 55+ active adult communities in the US (Del Webb). Historic Georgetown Square with shops, restaurants, and First Friday events. Blue Hole Park swimming. Georgetown municipal utility (lower electricity rates). Named 'Most Beautiful Town Square in Texas.'",
+      "groceryAccess": "Good. H-E-B, Walmart Supercenter, Randalls. Central Market and specialty stores require trip to Austin/Round Rock.",
+      "healthcareAccess": "St. David's Georgetown Hospital, Baylor Scott & White Georgetown. Growing medical services but specialists may require travel to Austin.",
+      "pros": [
+        "Sun City 55+ community with extensive amenities (golf, pools, clubs)",
+        "Beautiful historic downtown square",
+        "Lower cost of living than Austin proper",
+        "Georgetown municipal utility — competitive electricity rates",
+        "Low crime rate, strong community feel",
+        "Blue Hole Park, Lake Georgetown recreation"
+      ],
+      "cons": [
+        "30-40 min drive to downtown Austin",
+        "Very car-dependent — no meaningful public transit",
+        "Limited dining and entertainment compared to Austin",
+        "Fewer specialist healthcare options locally",
+        "Rapid growth changing small-town character",
+        "Summer heat with limited shade in newer developments"
+      ],
+      "sources": [
+        {
+          "title": "Zillow - Georgetown TX",
+          "url": "https://www.zillow.com/georgetown-tx/"
+        },
+        {
+          "title": "City of Georgetown",
+          "url": "https://www.georgetown.org/"
+        },
+        {
+          "title": "Sun City Texas (Del Webb)",
+          "url": "https://www.suncitytx.org/"
+        }
+      ]
+    },
+    {
+      "id": "tx-pflugerville",
+      "name": "Pflugerville",
+      "description": "Diverse, affordable, and rapidly growing northeast suburb with a mix of established neighborhoods and new master-planned communities",
+      "character": "Diverse suburban, affordable, fast-growing, family-friendly, community-oriented",
+      "housing": {
+        "avgRentOneBedroomUSD": 1350,
+        "avgRentTwoBedroomUSD": 1750,
+        "buyPricePerSqmUSD": 2600,
+        "predominantType": "Single-family homes, newer master-planned communities, townhomes, apartments",
+        "medianHomePrice": 370000
+      },
+      "walkabilityScore": 30,
+      "transitScore": 15,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "One of Austin's most diverse suburbs. Pflugerville Pfarmers Market. Lake Pflugerville for fishing and trails. Hendrickson High School well-regarded. SH 130 toll road provides bypass of I-35. Stone Hill Town Center retail hub. German heritage (original settlers).",
+      "groceryAccess": "Good. H-E-B (multiple locations), Walmart Supercenter, Asian grocery stores reflecting diverse community. Costco in nearby Round Rock.",
+      "healthcareAccess": "Ascension Seton Pflugerville clinic. Multiple urgent care options. Major hospitals in Austin and Round Rock within 15-20 min drive.",
+      "pros": [
+        "Most affordable option in Austin metro",
+        "Culturally diverse community",
+        "Lake Pflugerville recreation",
+        "SH 130 toll road avoids I-35 congestion",
+        "Good schools (Pflugerville ISD)",
+        "Active community events (Deutschen Pfest, Pfarmers Market)"
+      ],
+      "cons": [
+        "Car-dependent — very limited public transit",
+        "SH 130 tolls add up for frequent commuters",
+        "Fewer dining and entertainment options than Austin",
+        "Rapid growth straining roads and infrastructure",
+        "No local hospital — must travel to Austin or Round Rock",
+        "Can feel disconnected from Austin's cultural scene"
+      ],
+      "sources": [
+        {
+          "title": "Zillow - Pflugerville TX",
+          "url": "https://www.zillow.com/pflugerville-tx/"
+        },
+        {
+          "title": "City of Pflugerville",
+          "url": "https://www.pflugervilletx.gov/"
+        },
+        {
+          "title": "Walk Score - Pflugerville",
+          "url": "https://www.walkscore.com/score/pflugerville-tx"
+        }
+      ]
+    }
+  ]
+}

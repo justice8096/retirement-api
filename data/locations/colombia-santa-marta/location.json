@@ -1,0 +1,171 @@
+{
+  "id": "colombia-santa-marta",
+  "name": "Santa Marta, Colombia",
+  "country": "Colombia",
+  "region": "South America",
+  "cities": [
+    "Santa Marta"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Retirement (M-Type)",
+    "incomeRequirement": {
+      "monthly": 750,
+      "currency": "USD"
+    },
+    "notes": "Retirement visa requires ~$750/mo pension income."
+  },
+  "climate": {
+    "winterLowF": 73,
+    "summerHighF": 92,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 100
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 650,
+      "min": 500,
+      "max": 800,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 300,
+      "min": 220,
+      "max": 400,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 110,
+      "min": 70,
+      "max": 160,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 130,
+      "min": 70,
+      "max": 220,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 180,
+      "min": 100,
+      "max": 280,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 40,
+      "min": 25,
+      "max": 65,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 110,
+      "min": 50,
+      "max": 180,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 160,
+      "min": 100,
+      "max": 240,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 70,
+      "min": 40,
+      "max": 110,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 80,
+      "min": 65,
+      "max": 100,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 100,
+      "min": 60,
+      "max": 180,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 15,
+      "typical": 30,
+      "max": 65,
+      "annualInflation": 0.04,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 20,
+      "typical": 40,
+      "max": 80,
+      "annualInflation": 0.04
+    }
+  },
+  "healthcare": {
+    "system": "EPS public system; regional hospital. Barranquilla for specialists.",
+    "qualityRating": 5,
+    "dentalIncluded": false,
+    "waitTimes": "Moderate; limited specialists locally",
+    "prescriptionCoverage": "Basic availability; affordable"
+  },
+  "lifestyle": {
+    "internetSpeed": "25-50Mbps",
+    "dogFriendly": 6,
+    "expatCommunity": 4,
+    "englishPrevalence": 3,
+    "safetyRating": 5
+  },
+  "pros": [
+    "Affordable Caribbean beach city",
+    "Gateway to Tayrona National Park",
+    "Less touristy than Cartagena"
+  ],
+  "cons": [
+    "Infrastructure less developed than other cities",
+    "Limited English spoken",
+    "Hot year-round with fewer services"
+  ],
+  "taxes": {
+    "notes": "No tax on foreign-source income if under 183 days/year.",
+    "vatRate": 0.19,
+    "socialChargesRate": 0
+  }
+}

@@ -1,0 +1,316 @@
+{
+  "distanceUnit": "mi",
+  "currency": "USD",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Hospital of the University of Pennsylvania (Penn Medicine)",
+      "address": "3400 Spruce Street, Philadelphia, PA 19104",
+      "notes": "Top-ranked academic medical center, Level 1 trauma, comprehensive emergency and specialty services",
+      "sources": [
+        {
+          "title": "Penn Medicine",
+          "url": "https://www.pennmedicine.org/"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Rite Aid - Rittenhouse Square",
+      "address": "1800 Walnut Street, Philadelphia, PA 19103",
+      "notes": "Central location pharmacy, extended hours, vaccinations",
+      "sources": [
+        {
+          "title": "Rite Aid",
+          "url": "https://www.riteaid.com/"
+        }
+      ],
+      "distanceMi": 0.2
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Whole Foods Market - Center City",
+      "address": "2101 Pennsylvania Avenue, Philadelphia, PA 19130",
+      "notes": "Full organic and natural foods market, prepared foods, central location",
+      "sources": [
+        {
+          "title": "Whole Foods",
+          "url": "https://www.wholefoodsmarket.com/"
+        }
+      ],
+      "distanceMi": 0.6
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Trader Joe's - Center City",
+      "address": "2121 Market Street, Philadelphia, PA 19103",
+      "notes": "Popular grocery with affordable specialty items, small format, always busy",
+      "sources": [
+        {
+          "title": "Trader Joe's",
+          "url": "https://www.traderjoes.com/"
+        }
+      ],
+      "distanceMi": 0.3
+    },
+    {
+      "categoryId": "bank",
+      "name": "PNC Bank - Rittenhouse Square",
+      "address": "1600 Market Street, Philadelphia, PA 19103",
+      "notes": "Full-service branch, ATM, financial advisors, headquarters city",
+      "sources": [
+        {
+          "title": "PNC Bank",
+          "url": "https://www.pnc.com/"
+        }
+      ],
+      "distanceMi": 0.2
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Penn Medicine Primary Care Rittenhouse",
+      "address": "1800 Lombard Street, Philadelphia, PA 19146",
+      "notes": "Penn Medicine-affiliated primary care, accepting new patients, MyPennMedicine portal",
+      "sources": [
+        {
+          "title": "Penn Medicine Primary Care",
+          "url": "https://www.pennmedicine.org/for-patients-and-visitors/find-a-program-or-service/primary-care"
+        }
+      ],
+      "distanceMi": 0.3
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Philadelphia Dentistry - Center City",
+      "address": "1601 Walnut Street, Philadelphia, PA 19102",
+      "notes": "General and cosmetic dentistry, modern facility, same-day appointments",
+      "sources": [
+        {
+          "title": "Philadelphia Dentistry",
+          "url": "https://www.philadelphiadentistry.com/"
+        }
+      ],
+      "distanceMi": 0.2
+    },
+    {
+      "categoryId": "vet",
+      "name": "Penn Vet Ryan Hospital",
+      "address": "3900 Spruce Street, Philadelphia, PA 19104",
+      "notes": "University of Pennsylvania veterinary hospital, specialty and emergency care, 24/7",
+      "sources": [
+        {
+          "title": "Penn Vet",
+          "url": "https://www.vet.upenn.edu/veterinary-hospitals/ryan-veterinary-hospital"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Schuylkill River Dog Park",
+      "address": "Schuylkill River Trail at Locust Street, Philadelphia, PA 19103",
+      "notes": "Fenced riverside off-leash dog park, separate small/large dog areas",
+      "sources": [
+        {
+          "title": "Schuylkill River Trail",
+          "url": "https://www.schuylkillbanks.org/"
+        }
+      ],
+      "distanceMi": 0.5
+    },
+    {
+      "categoryId": "gym",
+      "name": "City Fitness - Rittenhouse",
+      "address": "1 South Broad Street, Philadelphia, PA 19107",
+      "notes": "Modern gym, rooftop pool, group classes, 24/7 access with membership",
+      "sources": [
+        {
+          "title": "City Fitness",
+          "url": "https://www.cityfitness.com/"
+        }
+      ],
+      "distanceMi": 0.3
+    },
+    {
+      "categoryId": "english_church",
+      "name": "Christ Church Philadelphia",
+      "address": "20 N American Street, Philadelphia, PA 19106",
+      "notes": "Historic church (1695), where Washington and Franklin worshipped, active parish",
+      "sources": [
+        {
+          "title": "Christ Church Philadelphia",
+          "url": "https://www.christchurchphila.org/"
+        }
+      ],
+      "distanceMi": 0.9
+    },
+    {
+      "categoryId": "airport",
+      "name": "Philadelphia International Airport (PHL)",
+      "address": "8000 Essington Avenue, Philadelphia, PA 19153",
+      "notes": "Major international airport, American Airlines hub, SEPTA Regional Rail to Center City",
+      "sources": [
+        {
+          "title": "PHL Airport",
+          "url": "https://www.phl.org/"
+        }
+      ],
+      "distanceMi": 7.5
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "30th Street Station (Amtrak/SEPTA)",
+      "address": "2955 Market Street, Philadelphia, PA 19104",
+      "notes": "Major Amtrak hub, Northeast Corridor to NYC (1.5 hrs) and DC (2 hrs), SEPTA Regional Rail",
+      "sources": [
+        {
+          "title": "Amtrak 30th Street",
+          "url": "https://www.amtrak.com/stations/phl"
+        }
+      ],
+      "distanceMi": 0.9
+    },
+    {
+      "categoryId": "coworking",
+      "name": "Industrious Philadelphia - Rittenhouse",
+      "address": "1700 Market Street, Philadelphia, PA 19103",
+      "notes": "Premium coworking, day passes, private offices, conference rooms, community events",
+      "sources": [
+        {
+          "title": "Industrious",
+          "url": "https://www.industriousoffice.com/"
+        }
+      ],
+      "distanceMi": 0.2
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "Philadelphia Museum of Art",
+      "description": "World-class art museum with 240,000+ works, famous Rocky steps, Impressionist galleries",
+      "frequency": "Thu-Mon 10:00-17:00, Wed until 20:45",
+      "sources": [
+        {
+          "title": "Philadelphia Museum of Art",
+          "url": "https://www.philamuseum.org/"
+        }
+      ],
+      "distanceMi": 1.2,
+      "estimatedCostUSD": 25
+    },
+    {
+      "type": "dining",
+      "name": "Reading Terminal Market",
+      "description": "Historic indoor market since 1893, Amish vendors, diverse food stalls, local artisan goods",
+      "frequency": "Daily 8:00-18:00, some vendors closed Sun",
+      "sources": [
+        {
+          "title": "Reading Terminal Market",
+          "url": "https://www.readingterminalmarket.org/"
+        }
+      ],
+      "distanceMi": 0.3,
+      "estimatedCostUSD": 15
+    },
+    {
+      "type": "historical",
+      "name": "Independence Hall",
+      "description": "Birthplace of the Declaration of Independence and US Constitution, UNESCO World Heritage Site",
+      "frequency": "Daily, timed entry tickets required (free), ranger-guided tours",
+      "sources": [
+        {
+          "title": "Independence National Historical Park",
+          "url": "https://www.nps.gov/inde/"
+        }
+      ],
+      "distanceMi": 0.9,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "outdoor",
+      "name": "Rittenhouse Square",
+      "description": "Elegant public park surrounded by cafés, galleries, and upscale shops, heart of Center City",
+      "frequency": "Open 24/7, farmers market Saturdays spring-fall",
+      "sources": [
+        {
+          "title": "Friends of Rittenhouse Square",
+          "url": "https://www.friendsofrittenhouse.org/"
+        }
+      ],
+      "distanceMi": 0.1,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "nature",
+      "name": "Fairmount Park (Wissahickon Valley)",
+      "description": "One of the largest urban parks in the US, 57 miles of trails, Wissahickon gorge, Forbidden Drive",
+      "frequency": "Open daily dawn to dusk",
+      "sources": [
+        {
+          "title": "Friends of the Wissahickon",
+          "url": "https://www.fow.org/"
+        }
+      ],
+      "distanceMi": 3.1,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "entertainment",
+      "name": "The Kimmel Center for the Performing Arts",
+      "description": "Home of the Philadelphia Orchestra, jazz, theater, and dance performances",
+      "frequency": "Season Sep-Jun, multiple performances weekly",
+      "sources": [
+        {
+          "title": "Kimmel Center",
+          "url": "https://www.kimmelculturalcampus.org/"
+        }
+      ],
+      "distanceMi": 0.3,
+      "estimatedCostUSD": 40
+    },
+    {
+      "type": "cultural",
+      "name": "The Barnes Foundation",
+      "description": "Extraordinary collection of Impressionist, Post-Impressionist, and early Modern art",
+      "frequency": "Wed-Mon 11:00-17:00",
+      "sources": [
+        {
+          "title": "The Barnes Foundation",
+          "url": "https://www.barnesfoundation.org/"
+        }
+      ],
+      "distanceMi": 1.2,
+      "estimatedCostUSD": 25
+    },
+    {
+      "type": "social",
+      "name": "Spruce Street Harbor Park",
+      "description": "Seasonal waterfront park with hammocks, floating gardens, food vendors, and light installations",
+      "frequency": "Seasonal May-Sep, daily",
+      "sources": [
+        {
+          "title": "Delaware River Waterfront",
+          "url": "https://www.delawareriverwaterfront.com/"
+        }
+      ],
+      "distanceMi": 1.2,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "historical",
+      "name": "Eastern State Penitentiary",
+      "description": "Haunting ruins of the world's first modern penitentiary, Al Capone's cell, audio tour by Steve Buscemi",
+      "frequency": "Daily 10:00-17:00, Terror Behind the Walls in fall",
+      "sources": [
+        {
+          "title": "Eastern State Penitentiary",
+          "url": "https://www.easternstate.org/"
+        }
+      ],
+      "distanceMi": 1.2,
+      "estimatedCostUSD": 19
+    }
+  ]
+}

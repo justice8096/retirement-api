@@ -1,0 +1,304 @@
+{
+  "distanceUnit": "mi",
+  "currency": "USD",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Duke University Hospital",
+      "address": "2301 Erwin Road, Durham, NC 27710",
+      "notes": "Top-ranked academic medical center, nationally recognized in cardiology, oncology, ophthalmology, and neurology. Level 1 trauma center.",
+      "sources": [
+        {
+          "title": "Duke Health",
+          "url": "https://www.dukehealth.org/"
+        }
+      ],
+      "distanceMi": 9.3
+    },
+    {
+      "categoryId": "hospital",
+      "name": "UNC Hospitals",
+      "address": "101 Manning Drive, Chapel Hill, NC 27514",
+      "notes": "Major academic medical center affiliated with UNC School of Medicine. Top-ranked in multiple specialties. NC Cancer Hospital on campus.",
+      "sources": [
+        {
+          "title": "UNC Health",
+          "url": "https://www.unchealthcare.org/"
+        }
+      ],
+      "distanceMi": 15.5
+    },
+    {
+      "categoryId": "hospital",
+      "name": "WakeMed Health & Hospitals",
+      "address": "3000 New Bern Avenue, Raleigh, NC 27610",
+      "notes": "Raleigh's largest hospital system, Level 1 trauma center, heart and vascular center, comprehensive emergency services.",
+      "sources": [
+        {
+          "title": "WakeMed",
+          "url": "https://www.wakemed.org/"
+        }
+      ],
+      "distanceMi": 3.1
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "CVS Pharmacy",
+      "address": "Multiple locations throughout Raleigh-Durham",
+      "notes": "Full pharmacy, vaccinations, MinuteClinic walk-in, extended hours. Dozens of locations across the Triangle.",
+      "sources": [
+        {
+          "title": "CVS",
+          "url": "https://www.cvs.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Harris Teeter",
+      "address": "Multiple locations throughout Raleigh-Durham",
+      "notes": "Full supermarket with deli, bakery, pharmacy, organic section. Major Triangle grocery chain with numerous locations.",
+      "sources": [
+        {
+          "title": "Harris Teeter",
+          "url": "https://www.harristeeter.com/"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Wegmans - Raleigh",
+      "address": "1240 Wake Towne Drive, Raleigh, NC 27609",
+      "notes": "Premium full-service supermarket with extensive prepared foods, restaurant-quality deli, organic produce, and in-store dining.",
+      "sources": [
+        {
+          "title": "Wegmans",
+          "url": "https://www.wegmans.com/"
+        }
+      ],
+      "distanceMi": 5.0
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "GoRaleigh Transit",
+      "address": "GoRaleigh Station, 214 S Blount St, Raleigh, NC 27601",
+      "notes": "Raleigh city bus system. Senior half-fare with Medicare card. Routes cover most of Raleigh metro. GoTriangle regional routes connect to Durham and Chapel Hill.",
+      "sources": [
+        {
+          "title": "GoRaleigh",
+          "url": "https://goraleigh.org/"
+        }
+      ],
+      "distanceMi": 0.6
+    },
+    {
+      "categoryId": "airport",
+      "name": "Raleigh-Durham International Airport (RDU)",
+      "address": "2400 John Brantley Blvd, Morrisville, NC 27560",
+      "notes": "Major regional airport with direct flights to most US cities and select international destinations. Located centrally between Raleigh and Durham.",
+      "sources": [
+        {
+          "title": "RDU Airport",
+          "url": "https://www.rdu.com/"
+        }
+      ],
+      "distanceMi": 7.5
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Duke Gardens - Sarah P. Duke Gardens",
+      "address": "420 Anderson Street, Durham, NC 27708",
+      "notes": "55-acre public garden on the Duke University campus. Free admission. Beautiful walking paths (dogs on leash welcome in designated areas).",
+      "sources": [
+        {
+          "title": "Duke Gardens",
+          "url": "https://gardens.duke.edu/"
+        }
+      ],
+      "distanceMi": 9.3
+    },
+    {
+      "categoryId": "vet",
+      "name": "NC State Veterinary Hospital",
+      "address": "1052 William Moore Drive, Raleigh, NC 27607",
+      "notes": "NC State College of Veterinary Medicine teaching hospital. Full-service specialty and emergency vet care. One of the top veterinary hospitals in the Southeast.",
+      "sources": [
+        {
+          "title": "NC State Veterinary Hospital",
+          "url": "https://hospital.cvm.ncsu.edu/"
+        }
+      ],
+      "distanceMi": 3.7
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Duke Primary Care - Raleigh",
+      "address": "3480 Wake Forest Road, Raleigh, NC 27609",
+      "notes": "Duke Health primary care clinic in Raleigh. Accepting new patients, MyChart portal, Medicare accepted.",
+      "sources": [
+        {
+          "title": "Duke Primary Care",
+          "url": "https://www.dukehealth.org/primary-care"
+        }
+      ],
+      "distanceMi": 3.1
+    },
+    {
+      "categoryId": "cultural",
+      "name": "NC Museum of Art",
+      "address": "2110 Blue Ridge Road, Raleigh, NC 27607",
+      "notes": "Free state art museum with extensive permanent collection, outdoor sculpture park and trails, rotating exhibitions. 164-acre Museum Park.",
+      "sources": [
+        {
+          "title": "NC Museum of Art",
+          "url": "https://ncartmuseum.org/"
+        }
+      ],
+      "distanceMi": 4.3
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "NC Museum of Art",
+      "description": "Free state art museum with European, American, and African art collections plus a 164-acre outdoor sculpture park",
+      "frequency": "Tue-Sun 10:00-17:00, free general admission",
+      "sources": [
+        {
+          "title": "NC Museum of Art",
+          "url": "https://ncartmuseum.org/"
+        }
+      ],
+      "distanceMi": 4.3,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "nature",
+      "name": "Sarah P. Duke Gardens",
+      "description": "55-acre public garden on the Duke campus with terraced gardens, Asian garden, and native woodland walks",
+      "frequency": "Daily 8:00-dusk, free admission",
+      "sources": [
+        {
+          "title": "Duke Gardens",
+          "url": "https://gardens.duke.edu/"
+        }
+      ],
+      "distanceMi": 9.3,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "outdoor",
+      "name": "William B. Umstead State Park",
+      "description": "5,600-acre state park between Raleigh and Durham with hiking trails, fishing lakes, and mountain biking",
+      "frequency": "Daily 8:00-sunset, free admission",
+      "sources": [
+        {
+          "title": "Umstead State Park",
+          "url": "https://www.ncparks.gov/state-parks/william-b-umstead-state-park"
+        }
+      ],
+      "distanceMi": 6.2,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "cultural",
+      "name": "NC Museum of Natural Sciences",
+      "description": "Largest natural history museum in the Southeast with live animals, dinosaur exhibits, and nature research center",
+      "frequency": "Daily 9:00-17:00, free general admission",
+      "sources": [
+        {
+          "title": "NC Museum of Natural Sciences",
+          "url": "https://naturalsciences.org/"
+        }
+      ],
+      "distanceMi": 1.2,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "dining",
+      "name": "Durham Food Scene",
+      "description": "Nationally recognized dining district with diverse restaurants, from James Beard-nominated chefs to authentic international cuisine",
+      "frequency": "Daily, restaurants concentrated in American Tobacco Campus and downtown Durham",
+      "sources": [
+        {
+          "title": "Discover Durham - Restaurants",
+          "url": "https://www.discoverdurham.com/restaurants/"
+        }
+      ],
+      "distanceMi": 9.3,
+      "estimatedCostUSD": 30
+    },
+    {
+      "type": "entertainment",
+      "name": "Durham Performing Arts Center (DPAC)",
+      "description": "2,700-seat performing arts venue hosting Broadway tours, concerts, comedy, and dance performances",
+      "frequency": "Regular performance schedule year-round",
+      "sources": [
+        {
+          "title": "DPAC",
+          "url": "https://www.dpacnc.com/"
+        }
+      ],
+      "distanceMi": 9.3,
+      "estimatedCostUSD": 60
+    },
+    {
+      "type": "shopping",
+      "name": "State Farmers Market",
+      "description": "Year-round farmers market with local produce, plants, restaurants, and seasonal events on 75 acres",
+      "frequency": "Mon-Sat 5:00-18:00, Sun 8:00-18:00",
+      "sources": [
+        {
+          "title": "NC State Farmers Market",
+          "url": "https://www.ncagr.gov/markets/facilities/markets/raleigh/"
+        }
+      ],
+      "distanceMi": 3.1,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "outdoor",
+      "name": "Neuse River Greenway Trail",
+      "description": "28-mile paved trail along the Neuse River, perfect for walking, cycling, and dog walking",
+      "frequency": "Open daily dawn to dusk",
+      "sources": [
+        {
+          "title": "Raleigh Parks - Greenways",
+          "url": "https://raleighnc.gov/parks/greenway-trails"
+        }
+      ],
+      "distanceMi": 2.5,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "social",
+      "name": "First Friday Raleigh",
+      "description": "Monthly art walk in downtown Raleigh with gallery openings, live music, and food trucks",
+      "frequency": "First Friday of each month, 6:00-21:00",
+      "sources": [
+        {
+          "title": "First Friday Raleigh",
+          "url": "https://www.firstfridayraleigh.com/"
+        }
+      ],
+      "distanceMi": 1.2,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "historical",
+      "name": "Historic Oakwood",
+      "description": "One of Raleigh's oldest neighborhoods with 450+ preserved Victorian homes and an annual candlelight tour",
+      "frequency": "Walking tours available year-round, candlelight tour in December",
+      "sources": [
+        {
+          "title": "Historic Oakwood",
+          "url": "https://www.historicoakwood.org/"
+        }
+      ],
+      "distanceMi": 1.2,
+      "estimatedCostUSD": 0
+    }
+  ]
+}

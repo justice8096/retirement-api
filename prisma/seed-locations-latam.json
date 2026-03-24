@@ -1,0 +1,6852 @@
+[
+  {
+    "id": "panama-city-bella-vista",
+    "name": "Panama City — Bella Vista, Panama",
+    "country": "Panama",
+    "region": "Central America",
+    "cities": [
+      "Panama City"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Pensionado",
+      "incomeRequirement": {
+        "monthly": 1000,
+        "currency": "USD"
+      },
+      "notes": "Pensionado visa requires $1,000/mo pension income. Extensive retiree discounts."
+    },
+    "climate": {
+      "winterLowF": 75,
+      "summerHighF": 90,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 175
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1500,
+        "min": 1200,
+        "max": 1800,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 500,
+        "min": 380,
+        "max": 650,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 180,
+        "min": 130,
+        "max": 250,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 250,
+        "min": 150,
+        "max": 400,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 300,
+        "min": 200,
+        "max": 450,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 200,
+        "min": 120,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 300,
+        "min": 200,
+        "max": 450,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 250,
+        "typical": 479,
+        "max": 700,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 80,
+        "typical": 150,
+        "max": 300,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "World-class private hospitals including Johns Hopkins-affiliated Punta Pacifica Hospital. Public CSS available.",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Short at private facilities; moderate at public",
+      "prescriptionCoverage": "Wide availability; Pensionado discounts apply"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 6,
+      "expatCommunity": 7,
+      "englishPrevalence": 6,
+      "safetyRating": 6
+    },
+    "pros": [
+      "Modern urban amenities and world-class dining",
+      "Excellent private healthcare infrastructure",
+      "Major international hub with direct flights"
+    ],
+    "cons": [
+      "Hot and humid year-round",
+      "Traffic congestion is severe",
+      "Higher cost of living than other Panama locations"
+    ],
+    "taxes": {
+      "notes": "No tax on foreign-source income. Panama City has higher living costs but extensive urban amenities.",
+      "vatRate": 0.07,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "panama-city-el-cangrejo",
+    "name": "Panama City — El Cangrejo, Panama",
+    "country": "Panama",
+    "region": "Central America",
+    "cities": [
+      "Panama City"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Pensionado",
+      "incomeRequirement": {
+        "monthly": 1000,
+        "currency": "USD"
+      },
+      "notes": "Pensionado visa requires $1,000/mo pension income."
+    },
+    "climate": {
+      "winterLowF": 75,
+      "summerHighF": 90,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 175
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1250,
+        "min": 1000,
+        "max": 1500,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 480,
+        "min": 350,
+        "max": 600,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 170,
+        "min": 120,
+        "max": 230,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 250,
+        "min": 150,
+        "max": 400,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 300,
+        "min": 200,
+        "max": 450,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 180,
+        "min": 100,
+        "max": 280,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 280,
+        "min": 180,
+        "max": 400,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 250,
+        "typical": 479,
+        "max": 700,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 80,
+        "typical": 150,
+        "max": 300,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "Access to Panama City's private hospital network. Multiple clinics nearby.",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Short at private facilities",
+      "prescriptionCoverage": "Wide availability with Pensionado discounts"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 6,
+      "expatCommunity": 6,
+      "englishPrevalence": 6,
+      "safetyRating": 6
+    },
+    "pros": [
+      "Central location with diverse dining and nightlife",
+      "More affordable than Bella Vista or Punta Pacifica",
+      "Walkable neighborhood with metro access"
+    ],
+    "cons": [
+      "Hot and humid climate",
+      "Some areas feel congested",
+      "Noise from busy streets"
+    ],
+    "taxes": {
+      "notes": "No tax on foreign-source income.",
+      "vatRate": 0.07,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "panama-city-casco-viejo",
+    "name": "Panama City — Casco Viejo, Panama",
+    "country": "Panama",
+    "region": "Central America",
+    "cities": [
+      "Panama City"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Pensionado",
+      "incomeRequirement": {
+        "monthly": 1000,
+        "currency": "USD"
+      },
+      "notes": "Pensionado visa requires $1,000/mo pension income."
+    },
+    "climate": {
+      "winterLowF": 75,
+      "summerHighF": 90,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 175
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1500,
+        "min": 1200,
+        "max": 1800,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 500,
+        "min": 380,
+        "max": 650,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 170,
+        "min": 120,
+        "max": 240,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 250,
+        "min": 150,
+        "max": 400,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 300,
+        "min": 200,
+        "max": 450,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 180,
+        "min": 100,
+        "max": 280,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 320,
+        "min": 200,
+        "max": 480,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 250,
+        "typical": 479,
+        "max": 700,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 80,
+        "typical": 150,
+        "max": 300,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "Access to Panama City's private hospital network.",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Short at private facilities",
+      "prescriptionCoverage": "Wide availability with Pensionado discounts"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 5,
+      "expatCommunity": 6,
+      "englishPrevalence": 6,
+      "safetyRating": 5
+    },
+    "pros": [
+      "UNESCO World Heritage historic district",
+      "Trendy restaurants, rooftop bars, and cultural venues",
+      "Walkable cobblestone streets with ocean views"
+    ],
+    "cons": [
+      "Ongoing construction and renovation noise",
+      "Limited parking and narrow streets",
+      "Some surrounding areas still transitioning"
+    ],
+    "taxes": {
+      "notes": "No tax on foreign-source income.",
+      "vatRate": 0.07,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "panama-city-punta-pacifica",
+    "name": "Panama City — Punta Pacifica, Panama",
+    "country": "Panama",
+    "region": "Central America",
+    "cities": [
+      "Panama City"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Pensionado",
+      "incomeRequirement": {
+        "monthly": 1000,
+        "currency": "USD"
+      },
+      "notes": "Pensionado visa requires $1,000/mo pension income."
+    },
+    "climate": {
+      "winterLowF": 75,
+      "summerHighF": 90,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 175
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1850,
+        "min": 1500,
+        "max": 2200,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 550,
+        "min": 420,
+        "max": 700,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 200,
+        "min": 150,
+        "max": 280,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 250,
+        "min": 150,
+        "max": 400,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 300,
+        "min": 200,
+        "max": 450,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 200,
+        "min": 120,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 350,
+        "min": 220,
+        "max": 500,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 250,
+        "typical": 479,
+        "max": 700,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 80,
+        "typical": 150,
+        "max": 300,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "Adjacent to Johns Hopkins-affiliated Punta Pacifica Hospital. Top-tier private care.",
+      "qualityRating": 9,
+      "dentalIncluded": false,
+      "waitTimes": "Minimal at private facilities",
+      "prescriptionCoverage": "Full availability; Pensionado discounts apply"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 6,
+      "expatCommunity": 7,
+      "englishPrevalence": 7,
+      "safetyRating": 7
+    },
+    "pros": [
+      "Upscale oceanfront high-rises with stunning views",
+      "Walking distance to top hospital",
+      "Modern amenities, pools, gyms in buildings"
+    ],
+    "cons": [
+      "Most expensive Panama neighborhood",
+      "Somewhat sterile/corporate feel",
+      "Hot and humid year-round"
+    ],
+    "taxes": {
+      "notes": "No tax on foreign-source income.",
+      "vatRate": 0.07,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "panama-city-costa-del-este",
+    "name": "Panama City — Costa del Este, Panama",
+    "country": "Panama",
+    "region": "Central America",
+    "cities": [
+      "Panama City"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Pensionado",
+      "incomeRequirement": {
+        "monthly": 1000,
+        "currency": "USD"
+      },
+      "notes": "Pensionado visa requires $1,000/mo pension income."
+    },
+    "climate": {
+      "winterLowF": 75,
+      "summerHighF": 90,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 175
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1700,
+        "min": 1400,
+        "max": 2000,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 520,
+        "min": 400,
+        "max": 680,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 190,
+        "min": 140,
+        "max": 260,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 250,
+        "min": 150,
+        "max": 400,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 300,
+        "min": 200,
+        "max": 450,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 220,
+        "min": 130,
+        "max": 320,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 300,
+        "min": 200,
+        "max": 450,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 250,
+        "typical": 479,
+        "max": 700,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 80,
+        "typical": 150,
+        "max": 300,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "Access to Panama City's private hospital network. Pacifica Salud nearby.",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Short at private facilities",
+      "prescriptionCoverage": "Wide availability with Pensionado discounts"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 7,
+      "expatCommunity": 6,
+      "englishPrevalence": 6,
+      "safetyRating": 7
+    },
+    "pros": [
+      "Planned suburban community with parks and green spaces",
+      "Family-friendly with modern shopping centers",
+      "Newer construction with good building standards"
+    ],
+    "cons": [
+      "Car-dependent suburban layout",
+      "Further from downtown attractions",
+      "Hot and humid year-round"
+    ],
+    "taxes": {
+      "notes": "No tax on foreign-source income.",
+      "vatRate": 0.07,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "panama-coronado",
+    "name": "Coronado, Panama",
+    "country": "Panama",
+    "region": "Central America",
+    "cities": [
+      "Coronado"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Pensionado",
+      "incomeRequirement": {
+        "monthly": 1000,
+        "currency": "USD"
+      },
+      "notes": "Pensionado visa requires $1,000/mo pension income."
+    },
+    "climate": {
+      "winterLowF": 72,
+      "summerHighF": 92,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 160
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1050,
+        "min": 800,
+        "max": 1300,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 420,
+        "min": 320,
+        "max": 550,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 150,
+        "min": 100,
+        "max": 220,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 200,
+        "min": 120,
+        "max": 350,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 150,
+        "max": 400,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 180,
+        "min": 100,
+        "max": 280,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 220,
+        "min": 140,
+        "max": 320,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 250,
+        "typical": 479,
+        "max": 700,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 80,
+        "typical": 150,
+        "max": 300,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "Local clinics; Panama City hospitals 1.5 hours away. San Fernando clinic in Coronado.",
+      "qualityRating": 6,
+      "dentalIncluded": false,
+      "waitTimes": "Moderate locally; travel needed for specialists",
+      "prescriptionCoverage": "Basic availability locally; full range in Panama City"
+    },
+    "lifestyle": {
+      "internetSpeed": "50-100Mbps",
+      "dogFriendly": 7,
+      "expatCommunity": 7,
+      "englishPrevalence": 6,
+      "safetyRating": 7
+    },
+    "pros": [
+      "Pacific beach lifestyle with established expat community",
+      "Gated communities with amenities and golf",
+      "Reasonably close to Panama City for services"
+    ],
+    "cons": [
+      "Hot and humid beach climate",
+      "Car required for most errands",
+      "Beach can be rough for swimming"
+    ],
+    "taxes": {
+      "notes": "No tax on foreign-source income.",
+      "vatRate": 0.07,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "panama-el-valle",
+    "name": "El Valle de Antón, Panama",
+    "country": "Panama",
+    "region": "Central America",
+    "cities": [
+      "El Valle de Antón"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Pensionado",
+      "incomeRequirement": {
+        "monthly": 1000,
+        "currency": "USD"
+      },
+      "notes": "Pensionado visa requires $1,000/mo pension income."
+    },
+    "climate": {
+      "winterLowF": 60,
+      "summerHighF": 82,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 190
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 800,
+        "min": 600,
+        "max": 1000,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 350,
+        "min": 260,
+        "max": 450,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 100,
+        "min": 70,
+        "max": 150,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 150,
+        "min": 80,
+        "max": 250,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 150,
+        "max": 400,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 130,
+        "min": 70,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 150,
+        "min": 90,
+        "max": 230,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 250,
+        "typical": 479,
+        "max": 700,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 80,
+        "typical": 150,
+        "max": 300,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "Basic local clinic only. Panama City hospitals 2 hours away.",
+      "qualityRating": 5,
+      "dentalIncluded": false,
+      "waitTimes": "Limited local options; travel required for most care",
+      "prescriptionCoverage": "Basic pharmacy locally; full range in Panama City"
+    },
+    "lifestyle": {
+      "internetSpeed": "25-50Mbps",
+      "dogFriendly": 7,
+      "expatCommunity": 5,
+      "englishPrevalence": 4,
+      "safetyRating": 8
+    },
+    "pros": [
+      "Unique volcanic crater setting with cooler climate",
+      "Affordable mountain living",
+      "Famous Sunday market and natural hot springs"
+    ],
+    "cons": [
+      "Very small town with limited services",
+      "Heavy rainfall during rainy season",
+      "Far from quality healthcare"
+    ],
+    "taxes": {
+      "notes": "No tax on foreign-source income.",
+      "vatRate": 0.07,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "panama-chitre",
+    "name": "Chitré, Panama",
+    "country": "Panama",
+    "region": "Central America",
+    "cities": [
+      "Chitré"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Pensionado",
+      "incomeRequirement": {
+        "monthly": 1000,
+        "currency": "USD"
+      },
+      "notes": "Pensionado visa requires $1,000/mo pension income."
+    },
+    "climate": {
+      "winterLowF": 70,
+      "summerHighF": 95,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 120
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 650,
+        "min": 500,
+        "max": 800,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 320,
+        "min": 240,
+        "max": 420,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 110,
+        "min": 75,
+        "max": 160,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 130,
+        "min": 70,
+        "max": 220,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 150,
+        "max": 400,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 120,
+        "min": 60,
+        "max": 190,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 130,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 250,
+        "typical": 479,
+        "max": 700,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 80,
+        "typical": 150,
+        "max": 300,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "Regional hospital in Chitré. Specialists limited; Panama City for complex care.",
+      "qualityRating": 5,
+      "dentalIncluded": false,
+      "waitTimes": "Moderate; limited specialist availability",
+      "prescriptionCoverage": "Basic availability locally"
+    },
+    "lifestyle": {
+      "internetSpeed": "25-50Mbps",
+      "dogFriendly": 6,
+      "expatCommunity": 3,
+      "englishPrevalence": 3,
+      "safetyRating": 7
+    },
+    "pros": [
+      "Driest region in Panama (Azuero Peninsula)",
+      "Very affordable cost of living",
+      "Authentic Panamanian culture and festivals"
+    ],
+    "cons": [
+      "Very hot during dry season",
+      "Minimal expat community",
+      "Limited English spoken"
+    ],
+    "taxes": {
+      "notes": "No tax on foreign-source income.",
+      "vatRate": 0.07,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "panama-david",
+    "name": "David, Panama",
+    "country": "Panama",
+    "region": "Central America",
+    "cities": [
+      "David"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Pensionado",
+      "incomeRequirement": {
+        "monthly": 1000,
+        "currency": "USD"
+      },
+      "notes": "Pensionado visa requires $1,000/mo pension income."
+    },
+    "climate": {
+      "winterLowF": 72,
+      "summerHighF": 95,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 170
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 750,
+        "min": 600,
+        "max": 900,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 350,
+        "min": 260,
+        "max": 450,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 120,
+        "min": 80,
+        "max": 170,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 160,
+        "min": 90,
+        "max": 260,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 150,
+        "max": 400,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 140,
+        "min": 70,
+        "max": 220,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 150,
+        "min": 90,
+        "max": 230,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 250,
+        "typical": 479,
+        "max": 700,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 80,
+        "typical": 150,
+        "max": 300,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "Hospital Chiriquí and Mae Lewis regional hospitals. Best healthcare hub outside Panama City.",
+      "qualityRating": 6,
+      "dentalIncluded": false,
+      "waitTimes": "Moderate; good for a regional city",
+      "prescriptionCoverage": "Good availability at local pharmacies"
+    },
+    "lifestyle": {
+      "internetSpeed": "50-100Mbps",
+      "dogFriendly": 6,
+      "expatCommunity": 5,
+      "englishPrevalence": 4,
+      "safetyRating": 6
+    },
+    "pros": [
+      "Regional hub with shopping, airport, and hospitals",
+      "Gateway to Boquete highlands (30 min drive)",
+      "Affordable with urban conveniences"
+    ],
+    "cons": [
+      "Very hot lowland climate",
+      "Limited cultural/entertainment options",
+      "Not as scenic as highland or beach alternatives"
+    ],
+    "taxes": {
+      "notes": "No tax on foreign-source income.",
+      "vatRate": 0.07,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "panama-pedasi",
+    "name": "Pedasí, Panama",
+    "country": "Panama",
+    "region": "Central America",
+    "cities": [
+      "Pedasí"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Pensionado",
+      "incomeRequirement": {
+        "monthly": 1000,
+        "currency": "USD"
+      },
+      "notes": "Pensionado visa requires $1,000/mo pension income."
+    },
+    "climate": {
+      "winterLowF": 70,
+      "summerHighF": 93,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 130
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 650,
+        "min": 500,
+        "max": 800,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 330,
+        "min": 250,
+        "max": 430,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 100,
+        "min": 65,
+        "max": 150,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 120,
+        "min": 60,
+        "max": 200,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 150,
+        "max": 400,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 130,
+        "min": 60,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 120,
+        "min": 70,
+        "max": 190,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 250,
+        "typical": 479,
+        "max": 700,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 80,
+        "typical": 150,
+        "max": 300,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "Small local clinic. Chitré hospital 45 min away; Panama City for specialists.",
+      "qualityRating": 4,
+      "dentalIncluded": false,
+      "waitTimes": "Very limited local options",
+      "prescriptionCoverage": "Basic pharmacy only"
+    },
+    "lifestyle": {
+      "internetSpeed": "25-50Mbps",
+      "dogFriendly": 7,
+      "expatCommunity": 4,
+      "englishPrevalence": 3,
+      "safetyRating": 8
+    },
+    "pros": [
+      "Quiet Pacific coast fishing village charm",
+      "Excellent surfing and whale watching",
+      "Very affordable with low crime"
+    ],
+    "cons": [
+      "Very small town with minimal services",
+      "Far from quality healthcare",
+      "Limited shopping and dining options"
+    ],
+    "taxes": {
+      "notes": "No tax on foreign-source income.",
+      "vatRate": 0.07,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "panama-volcan",
+    "name": "Volcán, Panama",
+    "country": "Panama",
+    "region": "Central America",
+    "cities": [
+      "Volcán"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Pensionado",
+      "incomeRequirement": {
+        "monthly": 1000,
+        "currency": "USD"
+      },
+      "notes": "Pensionado visa requires $1,000/mo pension income."
+    },
+    "climate": {
+      "winterLowF": 52,
+      "summerHighF": 78,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 185
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 650,
+        "min": 500,
+        "max": 800,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 340,
+        "min": 250,
+        "max": 440,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 100,
+        "min": 65,
+        "max": 150,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 130,
+        "min": 70,
+        "max": 220,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 150,
+        "max": 400,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 130,
+        "min": 70,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 120,
+        "min": 70,
+        "max": 190,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 250,
+        "typical": 479,
+        "max": 700,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 80,
+        "typical": 150,
+        "max": 300,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "Basic local clinic. David hospitals 45 min away.",
+      "qualityRating": 5,
+      "dentalIncluded": false,
+      "waitTimes": "Limited local care; David for most needs",
+      "prescriptionCoverage": "Basic pharmacy locally"
+    },
+    "lifestyle": {
+      "internetSpeed": "25-50Mbps",
+      "dogFriendly": 7,
+      "expatCommunity": 4,
+      "englishPrevalence": 4,
+      "safetyRating": 8
+    },
+    "pros": [
+      "Cool highland climate near Barú volcano",
+      "Very affordable and peaceful",
+      "Rich agricultural area with fresh produce"
+    ],
+    "cons": [
+      "Small town with limited amenities",
+      "Heavy rainfall during rainy season",
+      "Less developed expat infrastructure than Boquete"
+    ],
+    "taxes": {
+      "notes": "No tax on foreign-source income.",
+      "vatRate": 0.07,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "panama-bocas-del-toro",
+    "name": "Bocas del Toro, Panama",
+    "country": "Panama",
+    "region": "Central America",
+    "cities": [
+      "Bocas del Toro"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Pensionado",
+      "incomeRequirement": {
+        "monthly": 1000,
+        "currency": "USD"
+      },
+      "notes": "Pensionado visa requires $1,000/mo pension income."
+    },
+    "climate": {
+      "winterLowF": 73,
+      "summerHighF": 88,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 200
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 900,
+        "min": 700,
+        "max": 1100,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 420,
+        "min": 320,
+        "max": 550,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 130,
+        "min": 80,
+        "max": 190,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 140,
+        "min": 70,
+        "max": 230,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 150,
+        "max": 400,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 160,
+        "min": 90,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 200,
+        "min": 120,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 250,
+        "typical": 479,
+        "max": 700,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 80,
+        "typical": 150,
+        "max": 300,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "Basic island clinic. Mainland hospitals in Changuinola or David for serious care.",
+      "qualityRating": 4,
+      "dentalIncluded": false,
+      "waitTimes": "Very limited; boat/flight to mainland for specialists",
+      "prescriptionCoverage": "Limited island pharmacy"
+    },
+    "lifestyle": {
+      "internetSpeed": "25-50Mbps",
+      "dogFriendly": 6,
+      "expatCommunity": 6,
+      "englishPrevalence": 5,
+      "safetyRating": 5
+    },
+    "pros": [
+      "Caribbean island paradise with turquoise waters",
+      "Laid-back beach lifestyle",
+      "Growing expat and digital nomad community"
+    ],
+    "cons": [
+      "Isolated island location limits healthcare access",
+      "Very rainy climate year-round",
+      "Infrastructure can be unreliable (power, water)"
+    ],
+    "taxes": {
+      "notes": "No tax on foreign-source income.",
+      "vatRate": 0.07,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "panama-puerto-armuelles",
+    "name": "Puerto Armuelles, Panama",
+    "country": "Panama",
+    "region": "Central America",
+    "cities": [
+      "Puerto Armuelles"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Pensionado",
+      "incomeRequirement": {
+        "monthly": 1000,
+        "currency": "USD"
+      },
+      "notes": "Pensionado visa requires $1,000/mo pension income."
+    },
+    "climate": {
+      "winterLowF": 72,
+      "summerHighF": 90,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 180
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 550,
+        "min": 400,
+        "max": 700,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 300,
+        "min": 220,
+        "max": 400,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 90,
+        "min": 60,
+        "max": 140,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 110,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 150,
+        "max": 400,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 110,
+        "min": 50,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 100,
+        "min": 60,
+        "max": 160,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 250,
+        "typical": 479,
+        "max": 700,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 80,
+        "typical": 150,
+        "max": 300,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "Basic local clinic. David hospitals 1.5 hours away.",
+      "qualityRating": 4,
+      "dentalIncluded": false,
+      "waitTimes": "Very limited local options",
+      "prescriptionCoverage": "Basic pharmacy only"
+    },
+    "lifestyle": {
+      "internetSpeed": "25-50Mbps",
+      "dogFriendly": 6,
+      "expatCommunity": 4,
+      "englishPrevalence": 3,
+      "safetyRating": 6
+    },
+    "pros": [
+      "Extremely affordable Pacific coast living",
+      "Beachfront property still available at low cost",
+      "Small but friendly expat community"
+    ],
+    "cons": [
+      "Former banana company town still recovering economically",
+      "Very limited services and infrastructure",
+      "Remote location far from major amenities"
+    ],
+    "taxes": {
+      "notes": "No tax on foreign-source income.",
+      "vatRate": 0.07,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "costa-rica-central-valley",
+    "name": "Central Valley (San José, Escazú, Santa Ana), Costa Rica",
+    "country": "Costa Rica",
+    "region": "Central America",
+    "cities": [
+      "San José",
+      "Escazú",
+      "Santa Ana"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Pensionado",
+      "incomeRequirement": {
+        "monthly": 1000,
+        "currency": "USD"
+      },
+      "notes": "Pensionado visa requires $1,000/mo pension or retirement income. Must spend at least 4 months/year in Costa Rica."
+    },
+    "climate": {
+      "winterLowF": 60,
+      "summerHighF": 80,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 150
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1300,
+        "min": 1000,
+        "max": 1600,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 500,
+        "min": 380,
+        "max": 650,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 150,
+        "min": 100,
+        "max": 220,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 200,
+        "min": 100,
+        "max": 350,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 280,
+        "min": 180,
+        "max": 420,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 200,
+        "min": 120,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 280,
+        "min": 180,
+        "max": 400,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 40,
+        "max": 90,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 30,
+        "typical": 60,
+        "max": 120,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "CAJA (public universal healthcare) plus excellent private hospitals (CIMA, Clínica Bíblica). Among best in Latin America.",
+      "qualityRating": 8,
+      "dentalIncluded": true,
+      "waitTimes": "Short at private; moderate at CAJA public system",
+      "prescriptionCoverage": "CAJA covers prescriptions; private insurance also available"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 7,
+      "expatCommunity": 7,
+      "englishPrevalence": 5,
+      "safetyRating": 6
+    },
+    "pros": [
+      "Best healthcare infrastructure in Central America",
+      "Spring-like climate year-round in the valley",
+      "Large established expat community in Escazú/Santa Ana"
+    ],
+    "cons": [
+      "Traffic congestion in San José metro area",
+      "Higher cost of living than other Costa Rica areas",
+      "Air quality issues in urban core"
+    ],
+    "taxes": {
+      "notes": "Territorial tax system: only Costa Rica-sourced income is taxed. Foreign pensions and Social Security not taxed. CAJA mandatory contribution ~11% of declared income.",
+      "vatRate": 0.13,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "costa-rica-guanacaste",
+    "name": "Guanacaste (Tamarindo, Nosara, Liberia), Costa Rica",
+    "country": "Costa Rica",
+    "region": "Central America",
+    "cities": [
+      "Tamarindo",
+      "Nosara",
+      "Liberia"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Pensionado",
+      "incomeRequirement": {
+        "monthly": 1000,
+        "currency": "USD"
+      },
+      "notes": "Pensionado visa requires $1,000/mo pension income."
+    },
+    "climate": {
+      "winterLowF": 68,
+      "summerHighF": 95,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 100
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1250,
+        "min": 1000,
+        "max": 1500,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 480,
+        "min": 360,
+        "max": 620,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 160,
+        "min": 110,
+        "max": 230,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 180,
+        "min": 100,
+        "max": 300,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 280,
+        "min": 180,
+        "max": 420,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 200,
+        "min": 120,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 260,
+        "min": 160,
+        "max": 380,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 40,
+        "max": 90,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 30,
+        "typical": 60,
+        "max": 120,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "CAJA public system; Liberia has regional hospital. Private clinics in beach towns for basic care.",
+      "qualityRating": 6,
+      "dentalIncluded": true,
+      "waitTimes": "Moderate; San José for complex procedures",
+      "prescriptionCoverage": "Available through CAJA; private pharmacies in towns"
+    },
+    "lifestyle": {
+      "internetSpeed": "50-100Mbps",
+      "dogFriendly": 7,
+      "expatCommunity": 7,
+      "englishPrevalence": 6,
+      "safetyRating": 6
+    },
+    "pros": [
+      "Driest region with beautiful Pacific beaches",
+      "Strong surf/yoga/wellness culture",
+      "International airport in Liberia for easy access"
+    ],
+    "cons": [
+      "Tourist prices in Tamarindo and Nosara",
+      "Very hot during dry season",
+      "Car essential; roads can be rough in rainy season"
+    ],
+    "taxes": {
+      "notes": "Territorial tax system: foreign income not taxed.",
+      "vatRate": 0.13,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "costa-rica-arenal",
+    "name": "Arenal / Lake Arenal, Costa Rica",
+    "country": "Costa Rica",
+    "region": "Central America",
+    "cities": [
+      "Nuevo Arenal",
+      "La Fortuna",
+      "Tilarán"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Pensionado",
+      "incomeRequirement": {
+        "monthly": 1000,
+        "currency": "USD"
+      },
+      "notes": "Pensionado visa requires $1,000/mo pension income."
+    },
+    "climate": {
+      "winterLowF": 62,
+      "summerHighF": 85,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 180
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 900,
+        "min": 700,
+        "max": 1100,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 420,
+        "min": 320,
+        "max": 550,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 120,
+        "min": 80,
+        "max": 180,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 160,
+        "min": 80,
+        "max": 280,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 280,
+        "min": 180,
+        "max": 420,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 160,
+        "min": 90,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 180,
+        "min": 110,
+        "max": 270,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 40,
+        "max": 90,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 30,
+        "typical": 60,
+        "max": 120,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "CAJA clinics in La Fortuna; San José for specialists (2.5 hours).",
+      "qualityRating": 5,
+      "dentalIncluded": true,
+      "waitTimes": "Limited locally; travel to San José for complex care",
+      "prescriptionCoverage": "Available through CAJA system"
+    },
+    "lifestyle": {
+      "internetSpeed": "25-50Mbps",
+      "dogFriendly": 7,
+      "expatCommunity": 6,
+      "englishPrevalence": 5,
+      "safetyRating": 7
+    },
+    "pros": [
+      "Stunning volcanic lake scenery",
+      "Established and growing expat community",
+      "Affordable with cooler highland climate"
+    ],
+    "cons": [
+      "Windy conditions around the lake",
+      "Significant rainfall year-round",
+      "Remote from major healthcare facilities"
+    ],
+    "taxes": {
+      "notes": "Territorial tax system: foreign income not taxed.",
+      "vatRate": 0.13,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "costa-rica-puerto-viejo",
+    "name": "Puerto Viejo, Costa Rica",
+    "country": "Costa Rica",
+    "region": "Central America",
+    "cities": [
+      "Puerto Viejo de Talamanca"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Pensionado",
+      "incomeRequirement": {
+        "monthly": 1000,
+        "currency": "USD"
+      },
+      "notes": "Pensionado visa requires $1,000/mo pension income."
+    },
+    "climate": {
+      "winterLowF": 70,
+      "summerHighF": 88,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 200
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 800,
+        "min": 600,
+        "max": 1000,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 400,
+        "min": 300,
+        "max": 520,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 120,
+        "min": 80,
+        "max": 180,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 140,
+        "min": 70,
+        "max": 240,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 280,
+        "min": 180,
+        "max": 420,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 150,
+        "min": 80,
+        "max": 240,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 200,
+        "min": 120,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 40,
+        "max": 90,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 30,
+        "typical": 60,
+        "max": 120,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "CAJA clinic locally; Limón hospital 1 hour. San José 4+ hours for specialists.",
+      "qualityRating": 4,
+      "dentalIncluded": true,
+      "waitTimes": "Very limited locally",
+      "prescriptionCoverage": "Basic pharmacy; CAJA for essentials"
+    },
+    "lifestyle": {
+      "internetSpeed": "25-50Mbps",
+      "dogFriendly": 7,
+      "expatCommunity": 5,
+      "englishPrevalence": 5,
+      "safetyRating": 5
+    },
+    "pros": [
+      "Beautiful Caribbean beaches and reggae culture",
+      "Laid-back, bike-friendly coastal town",
+      "Diverse international community"
+    ],
+    "cons": [
+      "Very rainy with frequent flooding",
+      "Remote from quality healthcare",
+      "Petty theft can be an issue"
+    ],
+    "taxes": {
+      "notes": "Territorial tax system: foreign income not taxed.",
+      "vatRate": 0.13,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "costa-rica-atenas",
+    "name": "Atenas, Costa Rica",
+    "country": "Costa Rica",
+    "region": "Central America",
+    "cities": [
+      "Atenas"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Pensionado",
+      "incomeRequirement": {
+        "monthly": 1000,
+        "currency": "USD"
+      },
+      "notes": "Pensionado visa requires $1,000/mo pension income."
+    },
+    "climate": {
+      "winterLowF": 62,
+      "summerHighF": 82,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 140
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 850,
+        "min": 700,
+        "max": 1000,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 420,
+        "min": 320,
+        "max": 540,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 120,
+        "min": 80,
+        "max": 170,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 170,
+        "min": 90,
+        "max": 280,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 280,
+        "min": 180,
+        "max": 420,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 160,
+        "min": 90,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 180,
+        "min": 110,
+        "max": 270,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 40,
+        "max": 90,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 30,
+        "typical": 60,
+        "max": 120,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "CAJA clinic locally; San José hospitals 45 minutes away.",
+      "qualityRating": 7,
+      "dentalIncluded": true,
+      "waitTimes": "Moderate locally; good access to San José",
+      "prescriptionCoverage": "Available through CAJA; private pharmacies"
+    },
+    "lifestyle": {
+      "internetSpeed": "50-100Mbps",
+      "dogFriendly": 7,
+      "expatCommunity": 6,
+      "englishPrevalence": 5,
+      "safetyRating": 7
+    },
+    "pros": [
+      "Claimed 'best climate in the world' by National Geographic",
+      "Close to San José for healthcare and shopping",
+      "Established expat community in small-town setting"
+    ],
+    "cons": [
+      "Small town with limited nightlife",
+      "Car needed for most errands",
+      "Growing popularity increasing prices"
+    ],
+    "taxes": {
+      "notes": "Territorial tax system: foreign income not taxed.",
+      "vatRate": 0.13,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "costa-rica-grecia",
+    "name": "Grecia, Costa Rica",
+    "country": "Costa Rica",
+    "region": "Central America",
+    "cities": [
+      "Grecia"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Pensionado",
+      "incomeRequirement": {
+        "monthly": 1000,
+        "currency": "USD"
+      },
+      "notes": "Pensionado visa requires $1,000/mo pension income."
+    },
+    "climate": {
+      "winterLowF": 62,
+      "summerHighF": 82,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 145
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 750,
+        "min": 600,
+        "max": 900,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 400,
+        "min": 300,
+        "max": 520,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 110,
+        "min": 75,
+        "max": 160,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 160,
+        "min": 80,
+        "max": 260,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 280,
+        "min": 180,
+        "max": 420,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 150,
+        "min": 80,
+        "max": 230,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 160,
+        "min": 100,
+        "max": 240,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 40,
+        "max": 90,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 30,
+        "typical": 60,
+        "max": 120,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "CAJA clinic locally; San José hospitals under 1 hour.",
+      "qualityRating": 7,
+      "dentalIncluded": true,
+      "waitTimes": "Moderate; good San José access",
+      "prescriptionCoverage": "Available through CAJA system"
+    },
+    "lifestyle": {
+      "internetSpeed": "50-100Mbps",
+      "dogFriendly": 7,
+      "expatCommunity": 5,
+      "englishPrevalence": 4,
+      "safetyRating": 7
+    },
+    "pros": [
+      "Excellent spring-like climate similar to Atenas",
+      "More affordable than Atenas or Escazú",
+      "Famous red metal church and charming town center"
+    ],
+    "cons": [
+      "Smaller expat community than other CR locations",
+      "Limited English spoken outside expat circles",
+      "Small-town pace may not suit everyone"
+    ],
+    "taxes": {
+      "notes": "Territorial tax system: foreign income not taxed.",
+      "vatRate": 0.13,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "mexico-lake-chapala",
+    "name": "Lake Chapala / Ajijic, Mexico",
+    "country": "Mexico",
+    "region": "Central America",
+    "cities": [
+      "Ajijic",
+      "Chapala",
+      "San Juan Cosalá"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Temporary Resident",
+      "incomeRequirement": {
+        "monthly": 1500,
+        "currency": "USD"
+      },
+      "notes": "Temporary resident visa requires ~$1,500/mo income or ~$25,000 in savings. Renewable annually, converts to permanent after 4 years."
+    },
+    "climate": {
+      "winterLowF": 50,
+      "summerHighF": 80,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 80
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 900,
+        "min": 700,
+        "max": 1100,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 380,
+        "min": 280,
+        "max": 500,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 100,
+        "min": 65,
+        "max": 150,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 180,
+        "min": 90,
+        "max": 300,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 150,
+        "max": 380,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 140,
+        "min": 70,
+        "max": 220,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 200,
+        "min": 120,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 30,
+        "typical": 55,
+        "max": 120,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 75,
+        "max": 150,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "IMSS public system; excellent private hospitals in Guadalajara (45 min). Local clinics in Ajijic.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Short at local private clinics; Guadalajara for specialists",
+      "prescriptionCoverage": "Very affordable; many meds available over the counter"
+    },
+    "lifestyle": {
+      "internetSpeed": "50-100Mbps",
+      "dogFriendly": 7,
+      "expatCommunity": 9,
+      "englishPrevalence": 7,
+      "safetyRating": 7
+    },
+    "pros": [
+      "Largest US/Canadian expat community in Mexico",
+      "Spring-like climate year-round at lake elevation",
+      "Extremely well-established expat infrastructure"
+    ],
+    "cons": [
+      "Can feel like an American bubble",
+      "Lake water quality concerns",
+      "Limited direct international flights"
+    ],
+    "taxes": {
+      "notes": "Territorial tax for temporary residents: only Mexican-source income taxed. US pensions and Social Security not taxed by Mexico for temporary residents.",
+      "vatRate": 0.16,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "mexico-san-miguel-de-allende",
+    "name": "San Miguel de Allende, Mexico",
+    "country": "Mexico",
+    "region": "Central America",
+    "cities": [
+      "San Miguel de Allende"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Temporary Resident",
+      "incomeRequirement": {
+        "monthly": 1500,
+        "currency": "USD"
+      },
+      "notes": "Temporary resident visa requires ~$1,500/mo income or ~$25,000 savings."
+    },
+    "climate": {
+      "winterLowF": 42,
+      "summerHighF": 85,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 75
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1150,
+        "min": 900,
+        "max": 1400,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 420,
+        "min": 320,
+        "max": 550,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 110,
+        "min": 70,
+        "max": 160,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 180,
+        "min": 90,
+        "max": 300,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 150,
+        "max": 380,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 150,
+        "min": 80,
+        "max": 240,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 250,
+        "min": 160,
+        "max": 370,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 30,
+        "typical": 55,
+        "max": 120,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 75,
+        "max": 150,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "Local private clinics and hospitals. Querétaro (1.5 hours) for advanced care.",
+      "qualityRating": 6,
+      "dentalIncluded": false,
+      "waitTimes": "Short at private clinics locally",
+      "prescriptionCoverage": "Affordable; many OTC medications available"
+    },
+    "lifestyle": {
+      "internetSpeed": "50-100Mbps",
+      "dogFriendly": 7,
+      "expatCommunity": 8,
+      "englishPrevalence": 6,
+      "safetyRating": 7
+    },
+    "pros": [
+      "UNESCO World Heritage colonial architecture",
+      "Vibrant arts, culture, and food scene",
+      "Large welcoming expat community"
+    ],
+    "cons": [
+      "Winter nights can be cold (no central heating)",
+      "Prices inflated by tourism and expat demand",
+      "Cobblestone streets difficult for mobility issues"
+    ],
+    "taxes": {
+      "notes": "Territorial tax for temporary residents. Foreign income not taxed.",
+      "vatRate": 0.16,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "mexico-merida",
+    "name": "Mérida, Mexico",
+    "country": "Mexico",
+    "region": "Central America",
+    "cities": [
+      "Mérida"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Temporary Resident",
+      "incomeRequirement": {
+        "monthly": 1500,
+        "currency": "USD"
+      },
+      "notes": "Temporary resident visa requires ~$1,500/mo income or ~$25,000 savings."
+    },
+    "climate": {
+      "winterLowF": 62,
+      "summerHighF": 98,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 100
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 800,
+        "min": 600,
+        "max": 1000,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 350,
+        "min": 260,
+        "max": 460,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 130,
+        "min": 85,
+        "max": 200,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 160,
+        "min": 80,
+        "max": 270,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 150,
+        "max": 380,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 130,
+        "min": 60,
+        "max": 210,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 180,
+        "min": 110,
+        "max": 270,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 30,
+        "typical": 55,
+        "max": 120,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 75,
+        "max": 150,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "IMSS public system; several good private hospitals (Star Médica, Centro Médico de las Américas).",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Short at private facilities",
+      "prescriptionCoverage": "Very affordable; wide availability"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 6,
+      "expatCommunity": 6,
+      "englishPrevalence": 4,
+      "safetyRating": 8
+    },
+    "pros": [
+      "One of the safest cities in Mexico",
+      "Rich Mayan culture and excellent cuisine",
+      "Affordable with good infrastructure"
+    ],
+    "cons": [
+      "Extremely hot and humid summers",
+      "Less English spoken than other expat hubs",
+      "Hurricane zone (though inland)"
+    ],
+    "taxes": {
+      "notes": "Territorial tax for temporary residents. Foreign income not taxed.",
+      "vatRate": 0.16,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "mexico-puerto-vallarta",
+    "name": "Puerto Vallarta, Mexico",
+    "country": "Mexico",
+    "region": "Central America",
+    "cities": [
+      "Puerto Vallarta"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Temporary Resident",
+      "incomeRequirement": {
+        "monthly": 1500,
+        "currency": "USD"
+      },
+      "notes": "Temporary resident visa requires ~$1,500/mo income or ~$25,000 savings."
+    },
+    "climate": {
+      "winterLowF": 62,
+      "summerHighF": 93,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 90
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1150,
+        "min": 900,
+        "max": 1400,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 450,
+        "min": 340,
+        "max": 580,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 140,
+        "min": 90,
+        "max": 210,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 180,
+        "min": 90,
+        "max": 300,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 150,
+        "max": 380,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 160,
+        "min": 90,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 260,
+        "min": 160,
+        "max": 380,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 30,
+        "typical": 55,
+        "max": 120,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 75,
+        "max": 150,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "IMSS public system; several private hospitals (CMQ, San Javier). Medical tourism hub.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Short at private facilities; moderate at IMSS",
+      "prescriptionCoverage": "Affordable with wide availability"
+    },
+    "lifestyle": {
+      "internetSpeed": "50-100Mbps",
+      "dogFriendly": 7,
+      "expatCommunity": 7,
+      "englishPrevalence": 6,
+      "safetyRating": 6
+    },
+    "pros": [
+      "Beautiful Pacific beach with mountain backdrop",
+      "LGBTQ+-friendly with vibrant social scene",
+      "Excellent dining and nightlife"
+    ],
+    "cons": [
+      "Hot and humid summers with heavy rain",
+      "Tourist prices in popular zones",
+      "Seasonal (many expats leave in summer)"
+    ],
+    "taxes": {
+      "notes": "Territorial tax for temporary residents. Foreign income not taxed.",
+      "vatRate": 0.16,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "mexico-playa-del-carmen",
+    "name": "Playa del Carmen, Mexico",
+    "country": "Mexico",
+    "region": "Central America",
+    "cities": [
+      "Playa del Carmen"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Temporary Resident",
+      "incomeRequirement": {
+        "monthly": 1500,
+        "currency": "USD"
+      },
+      "notes": "Temporary resident visa requires ~$1,500/mo income or ~$25,000 savings."
+    },
+    "climate": {
+      "winterLowF": 68,
+      "summerHighF": 92,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 110
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1050,
+        "min": 800,
+        "max": 1300,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 430,
+        "min": 330,
+        "max": 560,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 140,
+        "min": 90,
+        "max": 210,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 170,
+        "min": 80,
+        "max": 280,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 150,
+        "max": 380,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 150,
+        "min": 80,
+        "max": 240,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 240,
+        "min": 150,
+        "max": 360,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 30,
+        "typical": 55,
+        "max": 120,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 75,
+        "max": 150,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "IMSS available; private hospitals in Cancún (1 hour). Growing local private clinics.",
+      "qualityRating": 6,
+      "dentalIncluded": false,
+      "waitTimes": "Moderate; Cancún for advanced care",
+      "prescriptionCoverage": "Affordable; pharmacies common"
+    },
+    "lifestyle": {
+      "internetSpeed": "50-100Mbps",
+      "dogFriendly": 6,
+      "expatCommunity": 6,
+      "englishPrevalence": 6,
+      "safetyRating": 5
+    },
+    "pros": [
+      "Caribbean beaches with turquoise water",
+      "International community and diverse dining",
+      "Convenient to Cancún airport for US flights"
+    ],
+    "cons": [
+      "Sargassum seaweed issues seasonally",
+      "Rising security concerns in Quintana Roo",
+      "Tourism-driven prices; less authentic feel"
+    ],
+    "taxes": {
+      "notes": "Territorial tax for temporary residents. Foreign income not taxed.",
+      "vatRate": 0.16,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "mexico-oaxaca",
+    "name": "Oaxaca City, Mexico",
+    "country": "Mexico",
+    "region": "Central America",
+    "cities": [
+      "Oaxaca City"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Temporary Resident",
+      "incomeRequirement": {
+        "monthly": 1500,
+        "currency": "USD"
+      },
+      "notes": "Temporary resident visa requires ~$1,500/mo income or ~$25,000 savings."
+    },
+    "climate": {
+      "winterLowF": 48,
+      "summerHighF": 85,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 85
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 650,
+        "min": 500,
+        "max": 800,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 320,
+        "min": 240,
+        "max": 420,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 80,
+        "min": 50,
+        "max": 130,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 140,
+        "min": 70,
+        "max": 240,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 150,
+        "max": 380,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 110,
+        "min": 50,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 150,
+        "min": 90,
+        "max": 230,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 30,
+        "typical": 55,
+        "max": 120,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 75,
+        "max": 150,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "IMSS public system; limited private hospitals. Mexico City for complex care.",
+      "qualityRating": 5,
+      "dentalIncluded": false,
+      "waitTimes": "Moderate; limited specialist availability",
+      "prescriptionCoverage": "Affordable; basic availability"
+    },
+    "lifestyle": {
+      "internetSpeed": "50-100Mbps",
+      "dogFriendly": 6,
+      "expatCommunity": 5,
+      "englishPrevalence": 4,
+      "safetyRating": 6
+    },
+    "pros": [
+      "World-renowned cuisine and mezcal culture",
+      "Rich indigenous heritage and artisan traditions",
+      "Very affordable cost of living"
+    ],
+    "cons": [
+      "Periodic political protests and road blockades",
+      "Winter nights can be chilly",
+      "Limited healthcare for complex needs"
+    ],
+    "taxes": {
+      "notes": "Territorial tax for temporary residents. Foreign income not taxed.",
+      "vatRate": 0.16,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "mexico-queretaro",
+    "name": "Querétaro, Mexico",
+    "country": "Mexico",
+    "region": "Central America",
+    "cities": [
+      "Querétaro"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Temporary Resident",
+      "incomeRequirement": {
+        "monthly": 1500,
+        "currency": "USD"
+      },
+      "notes": "Temporary resident visa requires ~$1,500/mo income or ~$25,000 savings."
+    },
+    "climate": {
+      "winterLowF": 42,
+      "summerHighF": 86,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 70
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 900,
+        "min": 700,
+        "max": 1100,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 380,
+        "min": 290,
+        "max": 500,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 100,
+        "min": 65,
+        "max": 150,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 170,
+        "min": 85,
+        "max": 280,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 150,
+        "max": 380,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 140,
+        "min": 70,
+        "max": 220,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 200,
+        "min": 120,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 30,
+        "typical": 55,
+        "max": 120,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 75,
+        "max": 150,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "IMSS public system; good private hospitals. Mexico City 2.5 hours for top-tier care.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Short at private facilities",
+      "prescriptionCoverage": "Affordable with wide availability"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 7,
+      "expatCommunity": 5,
+      "englishPrevalence": 4,
+      "safetyRating": 8
+    },
+    "pros": [
+      "One of Mexico's safest and fastest-growing cities",
+      "Modern infrastructure with colonial centro",
+      "Growing tech/business hub with good jobs"
+    ],
+    "cons": [
+      "Winter nights can be cold",
+      "Smaller expat community than Chapala or SMA",
+      "Less tourist infrastructure than beach towns"
+    ],
+    "taxes": {
+      "notes": "Territorial tax for temporary residents. Foreign income not taxed.",
+      "vatRate": 0.16,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "mexico-mazatlan",
+    "name": "Mazatlán, Mexico",
+    "country": "Mexico",
+    "region": "Central America",
+    "cities": [
+      "Mazatlán"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Temporary Resident",
+      "incomeRequirement": {
+        "monthly": 1500,
+        "currency": "USD"
+      },
+      "notes": "Temporary resident visa requires ~$1,500/mo income or ~$25,000 savings."
+    },
+    "climate": {
+      "winterLowF": 58,
+      "summerHighF": 93,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 75
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 800,
+        "min": 600,
+        "max": 1000,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 350,
+        "min": 260,
+        "max": 460,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 120,
+        "min": 80,
+        "max": 180,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 160,
+        "min": 80,
+        "max": 260,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 150,
+        "max": 380,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 130,
+        "min": 60,
+        "max": 210,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 180,
+        "min": 110,
+        "max": 270,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 30,
+        "typical": 55,
+        "max": 120,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 75,
+        "max": 150,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "IMSS public system; Sharp Mazatlán private hospital. Guadalajara for complex care.",
+      "qualityRating": 6,
+      "dentalIncluded": false,
+      "waitTimes": "Short at private; moderate at IMSS",
+      "prescriptionCoverage": "Affordable; good pharmacy availability"
+    },
+    "lifestyle": {
+      "internetSpeed": "50-100Mbps",
+      "dogFriendly": 7,
+      "expatCommunity": 5,
+      "englishPrevalence": 4,
+      "safetyRating": 6
+    },
+    "pros": [
+      "Affordable Pacific beach city with long malecón",
+      "Renovated historic centro with cultural revival",
+      "Growing expat community with authentic Mexican feel"
+    ],
+    "cons": [
+      "Hot and humid summers",
+      "Sinaloa state has security reputation issues",
+      "Seasonal—quieter in summer heat"
+    ],
+    "taxes": {
+      "notes": "Territorial tax for temporary residents. Foreign income not taxed.",
+      "vatRate": 0.16,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "colombia-medellin",
+    "name": "Medellín (El Poblado, Laureles), Colombia",
+    "country": "Colombia",
+    "region": "South America",
+    "cities": [
+      "Medellín"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Retirement (M-Type)",
+      "incomeRequirement": {
+        "monthly": 750,
+        "currency": "USD"
+      },
+      "notes": "Retirement visa requires ~$750/mo pension income (3x minimum wage). Renewable annually. Colombia also offers a digital nomad visa."
+    },
+    "climate": {
+      "winterLowF": 60,
+      "summerHighF": 80,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 180
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 950,
+        "min": 700,
+        "max": 1200,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 350,
+        "min": 260,
+        "max": 460,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 100,
+        "min": 65,
+        "max": 150,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 150,
+        "min": 80,
+        "max": 250,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 200,
+        "min": 120,
+        "max": 320,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 120,
+        "min": 60,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 200,
+        "min": 120,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 15,
+        "typical": 30,
+        "max": 65,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 20,
+        "typical": 40,
+        "max": 80,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "EPS public system; excellent private hospitals. Medellín is a medical tourism hub with top-rated clinics.",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Short at private hospitals; moderate at EPS",
+      "prescriptionCoverage": "Very affordable; wide availability"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 7,
+      "expatCommunity": 8,
+      "englishPrevalence": 4,
+      "safetyRating": 5
+    },
+    "pros": [
+      "Spring-like climate year-round ('City of Eternal Spring')",
+      "World-class healthcare at fraction of US cost",
+      "Large and growing expat community"
+    ],
+    "cons": [
+      "Security varies significantly by neighborhood",
+      "Expat reputation issues in some areas (El Poblado)",
+      "Language barrier—Spanish essential outside expat zones"
+    ],
+    "taxes": {
+      "notes": "No tax on foreign-source income if not a tax resident (under 183 days). If tax resident, worldwide income is taxed at progressive rates up to 39%.",
+      "vatRate": 0.19,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "colombia-pereira",
+    "name": "Pereira / Coffee Axis, Colombia",
+    "country": "Colombia",
+    "region": "South America",
+    "cities": [
+      "Pereira",
+      "Manizales",
+      "Armenia"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Retirement (M-Type)",
+      "incomeRequirement": {
+        "monthly": 750,
+        "currency": "USD"
+      },
+      "notes": "Retirement visa requires ~$750/mo pension income."
+    },
+    "climate": {
+      "winterLowF": 58,
+      "summerHighF": 78,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 170
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 550,
+        "min": 400,
+        "max": 700,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 280,
+        "min": 200,
+        "max": 380,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 120,
+        "min": 60,
+        "max": 200,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 180,
+        "min": 100,
+        "max": 280,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 100,
+        "min": 50,
+        "max": 170,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 130,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 15,
+        "typical": 30,
+        "max": 65,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 20,
+        "typical": 40,
+        "max": 80,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "EPS public system; regional hospitals in Pereira. Medellín or Bogotá for complex care.",
+      "qualityRating": 6,
+      "dentalIncluded": false,
+      "waitTimes": "Moderate; limited specialist availability locally",
+      "prescriptionCoverage": "Affordable; basic availability"
+    },
+    "lifestyle": {
+      "internetSpeed": "50-100Mbps",
+      "dogFriendly": 6,
+      "expatCommunity": 4,
+      "englishPrevalence": 3,
+      "safetyRating": 6
+    },
+    "pros": [
+      "UNESCO Coffee Cultural Landscape",
+      "Very affordable cost of living",
+      "Pleasant spring-like climate in coffee region"
+    ],
+    "cons": [
+      "Very limited English spoken",
+      "Small expat community",
+      "Less developed infrastructure than Medellín"
+    ],
+    "taxes": {
+      "notes": "No tax on foreign-source income if under 183 days/year.",
+      "vatRate": 0.19,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "colombia-cartagena",
+    "name": "Cartagena, Colombia",
+    "country": "Colombia",
+    "region": "South America",
+    "cities": [
+      "Cartagena"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Retirement (M-Type)",
+      "incomeRequirement": {
+        "monthly": 750,
+        "currency": "USD"
+      },
+      "notes": "Retirement visa requires ~$750/mo pension income."
+    },
+    "climate": {
+      "winterLowF": 75,
+      "summerHighF": 92,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 130
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 900,
+        "min": 700,
+        "max": 1100,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 380,
+        "min": 280,
+        "max": 500,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 130,
+        "min": 85,
+        "max": 190,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 150,
+        "min": 80,
+        "max": 250,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 200,
+        "min": 120,
+        "max": 320,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 130,
+        "min": 60,
+        "max": 210,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 220,
+        "min": 140,
+        "max": 330,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 15,
+        "typical": 30,
+        "max": 65,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 20,
+        "typical": 40,
+        "max": 80,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "EPS public system; good private clinics. Growing medical tourism sector.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Short at private facilities",
+      "prescriptionCoverage": "Affordable; good availability"
+    },
+    "lifestyle": {
+      "internetSpeed": "50-100Mbps",
+      "dogFriendly": 6,
+      "expatCommunity": 6,
+      "englishPrevalence": 4,
+      "safetyRating": 5
+    },
+    "pros": [
+      "Stunning UNESCO colonial walled city",
+      "Caribbean beach lifestyle",
+      "Growing international community"
+    ],
+    "cons": [
+      "Hot and humid year-round",
+      "Tourist area prices can be high",
+      "Aggressive street vendors in tourist zones"
+    ],
+    "taxes": {
+      "notes": "No tax on foreign-source income if under 183 days/year.",
+      "vatRate": 0.19,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "colombia-santa-marta",
+    "name": "Santa Marta, Colombia",
+    "country": "Colombia",
+    "region": "South America",
+    "cities": [
+      "Santa Marta"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Retirement (M-Type)",
+      "incomeRequirement": {
+        "monthly": 750,
+        "currency": "USD"
+      },
+      "notes": "Retirement visa requires ~$750/mo pension income."
+    },
+    "climate": {
+      "winterLowF": 73,
+      "summerHighF": 92,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 100
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 650,
+        "min": 500,
+        "max": 800,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 300,
+        "min": 220,
+        "max": 400,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 110,
+        "min": 70,
+        "max": 160,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 130,
+        "min": 70,
+        "max": 220,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 180,
+        "min": 100,
+        "max": 280,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 110,
+        "min": 50,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 160,
+        "min": 100,
+        "max": 240,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 15,
+        "typical": 30,
+        "max": 65,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 20,
+        "typical": 40,
+        "max": 80,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "EPS public system; regional hospital. Barranquilla for specialists.",
+      "qualityRating": 5,
+      "dentalIncluded": false,
+      "waitTimes": "Moderate; limited specialists locally",
+      "prescriptionCoverage": "Basic availability; affordable"
+    },
+    "lifestyle": {
+      "internetSpeed": "25-50Mbps",
+      "dogFriendly": 6,
+      "expatCommunity": 4,
+      "englishPrevalence": 3,
+      "safetyRating": 5
+    },
+    "pros": [
+      "Affordable Caribbean beach city",
+      "Gateway to Tayrona National Park",
+      "Less touristy than Cartagena"
+    ],
+    "cons": [
+      "Infrastructure less developed than other cities",
+      "Limited English spoken",
+      "Hot year-round with fewer services"
+    ],
+    "taxes": {
+      "notes": "No tax on foreign-source income if under 183 days/year.",
+      "vatRate": 0.19,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "colombia-bogota",
+    "name": "Bogotá (Chapinero, Usaquén), Colombia",
+    "country": "Colombia",
+    "region": "South America",
+    "cities": [
+      "Bogotá"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Retirement (M-Type)",
+      "incomeRequirement": {
+        "monthly": 750,
+        "currency": "USD"
+      },
+      "notes": "Retirement visa requires ~$750/mo pension income."
+    },
+    "climate": {
+      "winterLowF": 45,
+      "summerHighF": 65,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 185
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 800,
+        "min": 600,
+        "max": 1000,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 350,
+        "min": 260,
+        "max": 460,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 100,
+        "min": 65,
+        "max": 150,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 150,
+        "min": 80,
+        "max": 250,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 200,
+        "min": 120,
+        "max": 320,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 130,
+        "min": 60,
+        "max": 210,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 200,
+        "min": 120,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 15,
+        "typical": 30,
+        "max": 65,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 20,
+        "typical": 40,
+        "max": 80,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "EPS public system; Bogotá has Colombia's best hospitals (Fundación Santa Fe, Clínica del Country).",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Short at top private hospitals",
+      "prescriptionCoverage": "Affordable; widest availability in Colombia"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 7,
+      "expatCommunity": 6,
+      "englishPrevalence": 5,
+      "safetyRating": 5
+    },
+    "pros": [
+      "Cosmopolitan capital with world-class dining and culture",
+      "Best healthcare in Colombia",
+      "Affordable compared to major world capitals"
+    ],
+    "cons": [
+      "Cool and rainy climate (8,600 ft elevation)",
+      "Traffic congestion is severe",
+      "Altitude adjustment can be difficult"
+    ],
+    "taxes": {
+      "notes": "No tax on foreign-source income if under 183 days/year.",
+      "vatRate": 0.19,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "ecuador-cuenca",
+    "name": "Cuenca, Ecuador",
+    "country": "Ecuador",
+    "region": "South America",
+    "cities": [
+      "Cuenca"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Retirement (Jubilado)",
+      "incomeRequirement": {
+        "monthly": 1375,
+        "currency": "USD"
+      },
+      "notes": "Retirement visa requires $1,375/mo income (3x Ecuador minimum wage). Includes discounts on utilities, flights, and entertainment."
+    },
+    "climate": {
+      "winterLowF": 50,
+      "summerHighF": 70,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 140
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 700,
+        "min": 500,
+        "max": 900,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 300,
+        "min": 220,
+        "max": 400,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 130,
+        "min": 60,
+        "max": 220,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 180,
+        "min": 100,
+        "max": 280,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 100,
+        "min": 50,
+        "max": 170,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 150,
+        "min": 90,
+        "max": 230,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 25,
+        "typical": 45,
+        "max": 100,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 30,
+        "typical": 55,
+        "max": 110,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "IESS public system; good private hospitals (Hospital Monte Sinaí). Affordable private care.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Short at private; moderate at IESS public",
+      "prescriptionCoverage": "Affordable; many meds available without prescription"
+    },
+    "lifestyle": {
+      "internetSpeed": "50-100Mbps",
+      "dogFriendly": 6,
+      "expatCommunity": 8,
+      "englishPrevalence": 4,
+      "safetyRating": 6
+    },
+    "pros": [
+      "Large established expat community",
+      "UNESCO World Heritage colonial city",
+      "Very affordable with USD currency (no exchange risk)"
+    ],
+    "cons": [
+      "Altitude (8,400 ft) may cause adjustment issues",
+      "Cool climate may not suit warm-weather seekers",
+      "Political instability and occasional unrest in Ecuador"
+    ],
+    "taxes": {
+      "notes": "Ecuador uses USD. Income tax on worldwide income if fiscal resident, but retiree visa holders may qualify for exemptions. Progressive rates 0-37%. Jubilado discount benefits offset many costs.",
+      "vatRate": 0.15,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "ecuador-quito",
+    "name": "Quito, Ecuador",
+    "country": "Ecuador",
+    "region": "South America",
+    "cities": [
+      "Quito"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Retirement (Jubilado)",
+      "incomeRequirement": {
+        "monthly": 1375,
+        "currency": "USD"
+      },
+      "notes": "Retirement visa requires $1,375/mo income."
+    },
+    "climate": {
+      "winterLowF": 48,
+      "summerHighF": 68,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 150
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 800,
+        "min": 600,
+        "max": 1000,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 320,
+        "min": 240,
+        "max": 430,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 90,
+        "min": 55,
+        "max": 135,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 140,
+        "min": 70,
+        "max": 240,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 200,
+        "min": 120,
+        "max": 300,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 110,
+        "min": 50,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 170,
+        "min": 100,
+        "max": 260,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 25,
+        "typical": 45,
+        "max": 100,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 30,
+        "typical": 55,
+        "max": 110,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "IESS public system; best hospitals in Ecuador (Hospital Metropolitano, Clínica Pasteur).",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Short at private facilities",
+      "prescriptionCoverage": "Affordable; wide availability"
+    },
+    "lifestyle": {
+      "internetSpeed": "50-100Mbps",
+      "dogFriendly": 6,
+      "expatCommunity": 5,
+      "englishPrevalence": 4,
+      "safetyRating": 5
+    },
+    "pros": [
+      "Capital city with best healthcare and services",
+      "UNESCO World Heritage historic center",
+      "Uses USD with no exchange rate risk"
+    ],
+    "cons": [
+      "High altitude (9,350 ft) causes adjustment issues",
+      "Cool and rainy climate",
+      "Security concerns in some neighborhoods"
+    ],
+    "taxes": {
+      "notes": "Ecuador uses USD. Progressive income tax 0-37% on worldwide income for residents.",
+      "vatRate": 0.15,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "ecuador-cotacachi",
+    "name": "Cotacachi, Ecuador",
+    "country": "Ecuador",
+    "region": "South America",
+    "cities": [
+      "Cotacachi"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Retirement (Jubilado)",
+      "incomeRequirement": {
+        "monthly": 1375,
+        "currency": "USD"
+      },
+      "notes": "Retirement visa requires $1,375/mo income."
+    },
+    "climate": {
+      "winterLowF": 48,
+      "summerHighF": 70,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 130
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 550,
+        "min": 400,
+        "max": 700,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 260,
+        "min": 190,
+        "max": 350,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 70,
+        "min": 45,
+        "max": 110,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 100,
+        "min": 50,
+        "max": 180,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 180,
+        "min": 100,
+        "max": 280,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 80,
+        "min": 40,
+        "max": 140,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 100,
+        "min": 60,
+        "max": 160,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 25,
+        "typical": 45,
+        "max": 100,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 30,
+        "typical": 55,
+        "max": 110,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "Basic local clinic. Ibarra (30 min) or Quito (2 hours) for hospital care.",
+      "qualityRating": 5,
+      "dentalIncluded": false,
+      "waitTimes": "Very limited locally; travel needed",
+      "prescriptionCoverage": "Basic pharmacy"
+    },
+    "lifestyle": {
+      "internetSpeed": "25-50Mbps",
+      "dogFriendly": 6,
+      "expatCommunity": 5,
+      "englishPrevalence": 3,
+      "safetyRating": 6
+    },
+    "pros": [
+      "Extremely affordable highland living",
+      "Famous leather goods market",
+      "Small but established expat community"
+    ],
+    "cons": [
+      "Cool climate at altitude",
+      "Very small town with limited services",
+      "Far from quality healthcare"
+    ],
+    "taxes": {
+      "notes": "Ecuador uses USD. Jubilado discounts apply.",
+      "vatRate": 0.15,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "ecuador-vilcabamba",
+    "name": "Vilcabamba, Ecuador",
+    "country": "Ecuador",
+    "region": "South America",
+    "cities": [
+      "Vilcabamba"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Retirement (Jubilado)",
+      "incomeRequirement": {
+        "monthly": 1375,
+        "currency": "USD"
+      },
+      "notes": "Retirement visa requires $1,375/mo income."
+    },
+    "climate": {
+      "winterLowF": 55,
+      "summerHighF": 78,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 110
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 525,
+        "min": 400,
+        "max": 650,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 250,
+        "min": 180,
+        "max": 340,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 65,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 90,
+        "min": 45,
+        "max": 160,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 180,
+        "min": 100,
+        "max": 280,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 80,
+        "min": 40,
+        "max": 140,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 90,
+        "min": 50,
+        "max": 150,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 25,
+        "typical": 45,
+        "max": 100,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 30,
+        "typical": 55,
+        "max": 110,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "Very basic local clinic. Loja (1 hour) for hospital. Quito/Guayaquil for specialists.",
+      "qualityRating": 4,
+      "dentalIncluded": false,
+      "waitTimes": "Minimal local care available",
+      "prescriptionCoverage": "Very basic pharmacy"
+    },
+    "lifestyle": {
+      "internetSpeed": "25-50Mbps",
+      "dogFriendly": 6,
+      "expatCommunity": 5,
+      "englishPrevalence": 3,
+      "safetyRating": 6
+    },
+    "pros": [
+      "Known as 'Valley of Longevity' with pleasant climate",
+      "Extremely affordable cost of living",
+      "Peaceful rural setting with organic food culture"
+    ],
+    "cons": [
+      "Very remote with minimal services",
+      "Healthcare extremely limited",
+      "Small, isolated community"
+    ],
+    "taxes": {
+      "notes": "Ecuador uses USD. Jubilado discounts apply.",
+      "vatRate": 0.15,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "ecuador-salinas",
+    "name": "Salinas, Ecuador",
+    "country": "Ecuador",
+    "region": "South America",
+    "cities": [
+      "Salinas"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Retirement (Jubilado)",
+      "incomeRequirement": {
+        "monthly": 1375,
+        "currency": "USD"
+      },
+      "notes": "Retirement visa requires $1,375/mo income."
+    },
+    "climate": {
+      "winterLowF": 68,
+      "summerHighF": 85,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 40
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 650,
+        "min": 500,
+        "max": 800,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 300,
+        "min": 220,
+        "max": 400,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 90,
+        "min": 55,
+        "max": 140,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 120,
+        "min": 60,
+        "max": 200,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 180,
+        "min": 100,
+        "max": 280,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 100,
+        "min": 50,
+        "max": 170,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 150,
+        "min": 90,
+        "max": 230,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 25,
+        "typical": 45,
+        "max": 100,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 30,
+        "typical": 55,
+        "max": 110,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "Local clinics; Guayaquil (2.5 hours) for hospital care.",
+      "qualityRating": 5,
+      "dentalIncluded": false,
+      "waitTimes": "Limited locally; travel to Guayaquil for specialists",
+      "prescriptionCoverage": "Basic pharmacy availability"
+    },
+    "lifestyle": {
+      "internetSpeed": "25-50Mbps",
+      "dogFriendly": 6,
+      "expatCommunity": 5,
+      "englishPrevalence": 3,
+      "safetyRating": 6
+    },
+    "pros": [
+      "Warm coastal beach town with very little rain",
+      "Uses USD with no exchange risk",
+      "Popular with Ecuadorian and expat retirees"
+    ],
+    "cons": [
+      "Very seasonal—dead during off-season",
+      "Limited healthcare locally",
+      "Can feel isolated from major services"
+    ],
+    "taxes": {
+      "notes": "Ecuador uses USD. Jubilado discounts apply.",
+      "vatRate": 0.15,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "uruguay-montevideo",
+    "name": "Montevideo, Uruguay",
+    "country": "Uruguay",
+    "region": "South America",
+    "cities": [
+      "Montevideo"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Retirement Residence",
+      "incomeRequirement": {
+        "monthly": 1500,
+        "currency": "USD"
+      },
+      "notes": "Proof of stable income ~$1,500/mo required. Uruguay offers straightforward residency with path to citizenship."
+    },
+    "climate": {
+      "winterLowF": 42,
+      "summerHighF": 82,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 100
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1050,
+        "min": 800,
+        "max": 1300,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 450,
+        "min": 340,
+        "max": 580,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 150,
+        "min": 100,
+        "max": 220,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 180,
+        "min": 100,
+        "max": 300,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 150,
+        "max": 380,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 150,
+        "min": 80,
+        "max": 240,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 220,
+        "min": 140,
+        "max": 330,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 25,
+        "typical": 50,
+        "max": 110,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 35,
+        "typical": 70,
+        "max": 140,
+        "annualInflation": 0.045
+      }
+    },
+    "healthcare": {
+      "system": "FONASA public system; good private mutualistas (Hospital Británico, Médica Uruguaya). Quality comparable to developed nations.",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Moderate at public; short at private mutualistas",
+      "prescriptionCoverage": "Good coverage through mutualistas; pharmacies common"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 7,
+      "expatCommunity": 4,
+      "englishPrevalence": 3,
+      "safetyRating": 7
+    },
+    "pros": [
+      "Most stable democracy in South America",
+      "High quality of life with European feel",
+      "Good healthcare system and infrastructure"
+    ],
+    "cons": [
+      "Higher cost of living than most Latin American options",
+      "Cool winters (not warm-weather destination)",
+      "Smaller expat community; Spanish essential"
+    ],
+    "taxes": {
+      "notes": "Foreign income tax-exempt in year 1. After that, foreign income taxed at flat 12% (reduced from standard rates). Uruguay has 22% IVA (VAT).",
+      "vatRate": 0.22,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "uruguay-punta-del-este",
+    "name": "Punta del Este, Uruguay",
+    "country": "Uruguay",
+    "region": "South America",
+    "cities": [
+      "Punta del Este"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Retirement Residence",
+      "incomeRequirement": {
+        "monthly": 1500,
+        "currency": "USD"
+      },
+      "notes": "Proof of stable income ~$1,500/mo required."
+    },
+    "climate": {
+      "winterLowF": 40,
+      "summerHighF": 80,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 90
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1400,
+        "min": 1000,
+        "max": 1800,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 520,
+        "min": 400,
+        "max": 680,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 170,
+        "min": 120,
+        "max": 250,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 200,
+        "min": 120,
+        "max": 320,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 280,
+        "min": 170,
+        "max": 420,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 180,
+        "min": 100,
+        "max": 280,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 300,
+        "min": 200,
+        "max": 450,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 25,
+        "typical": 50,
+        "max": 110,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 35,
+        "typical": 70,
+        "max": 140,
+        "annualInflation": 0.045
+      }
+    },
+    "healthcare": {
+      "system": "Local clinics; Montevideo hospitals 1.5 hours for complex care.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Moderate locally; Montevideo for specialists",
+      "prescriptionCoverage": "Good pharmacy availability"
+    },
+    "lifestyle": {
+      "internetSpeed": "50-100Mbps",
+      "dogFriendly": 7,
+      "expatCommunity": 5,
+      "englishPrevalence": 4,
+      "safetyRating": 8
+    },
+    "pros": [
+      "Upscale resort town with beautiful beaches",
+      "Attracts international crowd (Argentine, Brazilian, European)",
+      "Very safe with high quality of life"
+    ],
+    "cons": [
+      "Very seasonal—dead in winter, expensive in summer",
+      "One of the most expensive places in South America",
+      "Cool winters and windy conditions"
+    ],
+    "taxes": {
+      "notes": "Foreign income tax-exempt year 1, then 12% flat rate on foreign income.",
+      "vatRate": 0.22,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "uruguay-colonia",
+    "name": "Colonia del Sacramento, Uruguay",
+    "country": "Uruguay",
+    "region": "South America",
+    "cities": [
+      "Colonia del Sacramento"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "Retirement Residence",
+      "incomeRequirement": {
+        "monthly": 1500,
+        "currency": "USD"
+      },
+      "notes": "Proof of stable income ~$1,500/mo required."
+    },
+    "climate": {
+      "winterLowF": 40,
+      "summerHighF": 82,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 95
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 800,
+        "min": 600,
+        "max": 1000,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 400,
+        "min": 300,
+        "max": 520,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 130,
+        "min": 85,
+        "max": 190,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 160,
+        "min": 90,
+        "max": 260,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 150,
+        "max": 380,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 40,
+        "min": 25,
+        "max": 65,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 120,
+        "min": 60,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 170,
+        "min": 100,
+        "max": 260,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 70,
+        "min": 40,
+        "max": 110,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 40,
+        "min": 20,
+        "max": 60,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 100,
+        "min": 60,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 25,
+        "typical": 50,
+        "max": 110,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 35,
+        "typical": 70,
+        "max": 140,
+        "annualInflation": 0.045
+      }
+    },
+    "healthcare": {
+      "system": "Local clinics; Montevideo hospitals 2.5 hours. Buenos Aires ferry 1 hour.",
+      "qualityRating": 6,
+      "dentalIncluded": false,
+      "waitTimes": "Limited locally; travel to Montevideo or Buenos Aires",
+      "prescriptionCoverage": "Basic pharmacy availability"
+    },
+    "lifestyle": {
+      "internetSpeed": "50-100Mbps",
+      "dogFriendly": 7,
+      "expatCommunity": 4,
+      "englishPrevalence": 3,
+      "safetyRating": 7
+    },
+    "pros": [
+      "UNESCO World Heritage charming colonial town",
+      "Affordable by Uruguay standards",
+      "Ferry access to Buenos Aires for services and culture"
+    ],
+    "cons": [
+      "Small town with limited services",
+      "Cool winters",
+      "Very limited English spoken"
+    ],
+    "taxes": {
+      "notes": "Foreign income tax-exempt year 1, then 12% flat rate on foreign income.",
+      "vatRate": 0.22,
+      "socialChargesRate": 0
+    }
+  }
+]

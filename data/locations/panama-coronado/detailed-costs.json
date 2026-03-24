@@ -1,0 +1,126 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 383,
+      "typical": 479,
+      "max": 529
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 350,
+        "withoutInsurance": 350,
+        "coverageNote": "No local insurance coverage for GLP-1. Cash price at Farmacia Arrocha or imported."
+      },
+      {
+        "name": "Levothyroxine (Synthroid) [P1]",
+        "monthlyCost": 8,
+        "withoutInsurance": 12,
+        "coverageNote": "Available at local pharmacies, no prescription required for many medications"
+      },
+      {
+        "name": "Atorvastatin 20mg [P1]",
+        "monthlyCost": 12,
+        "withoutInsurance": 18,
+        "coverageNote": "Generic widely available"
+      },
+      {
+        "name": "Montelukast [P1]",
+        "monthlyCost": 15,
+        "withoutInsurance": 20,
+        "coverageNote": "Available at major pharmacies"
+      },
+      {
+        "name": "Hydrochlorothiazide [P1]",
+        "monthlyCost": 6,
+        "withoutInsurance": 8,
+        "coverageNote": "Inexpensive generic"
+      },
+      {
+        "name": "Olmesartan [P1]",
+        "monthlyCost": 20,
+        "withoutInsurance": 30,
+        "coverageNote": "Brand or generic available"
+      },
+      {
+        "name": "Albuterol inhaler (Salbutamol) [P1]",
+        "monthlyCost": 8,
+        "withoutInsurance": 12,
+        "coverageNote": "OTC at pharmacies"
+      },
+      {
+        "name": "Metformin 500mg [P2]",
+        "monthlyCost": 6,
+        "withoutInsurance": 8,
+        "coverageNote": "Inexpensive generic"
+      },
+      {
+        "name": "Allopurinol [P2]",
+        "monthlyCost": 8,
+        "withoutInsurance": 12,
+        "coverageNote": "Generic available"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 8,
+        "withoutInsurance": 12,
+        "coverageNote": "Generic available"
+      },
+      {
+        "name": "Topiramate [P2]",
+        "monthlyCost": 18,
+        "withoutInsurance": 25,
+        "coverageNote": "Available at major pharmacies"
+      },
+      {
+        "name": "Metoprolol [P2]",
+        "monthlyCost": 8,
+        "withoutInsurance": 12,
+        "coverageNote": "Generic available"
+      },
+      {
+        "name": "Atorvastatin 20mg [P2]",
+        "monthlyCost": 12,
+        "withoutInsurance": 18,
+        "coverageNote": "Generic widely available"
+      }
+    ],
+    "pharmacyAccess": "Farmacia Arrocha (major chain), Metro Plus, and independent farmacias. Many medications available without prescription. Zona Libre in Colón offers discounted medications.",
+    "notes": "Panama has no universal drug coverage for expats. CSS (Caja de Seguro Social) covers residents who contribute. Most expats pay cash. Pensionado visa holders get 15-25% pharmacy discounts. GLP-1 drugs are expensive as they must be imported."
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 70,
+      "typical": 85,
+      "max": 105
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in Panama at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "+Movil Postpaid",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "3GB 4G/5G",
+        "baseCost": 20,
+        "taxesAndFees": 0,
+        "monthlyTotal": 20,
+        "notes": "2 lines ~$10/line. +Movil best coverage. ITBMS tax included."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      }
+    ]
+  }
+}

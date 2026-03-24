@@ -1,0 +1,159 @@
+{
+  "city": "Toulouse",
+  "neighborhoods": [
+    {
+      "id": "toulouse-capitole",
+      "name": "Capitole / Centre",
+      "description": "The historic heart of Toulouse centered on the grand Place du Capitole, with pink brick architecture, theatres, and vibrant cafe culture",
+      "character": "Urban core, walkable, culturally rich, bustling",
+      "housing": {
+        "avgRentOneBedroomEUR": 650,
+        "avgRentTwoBedroomEUR": 950,
+        "buyPricePerSqmEUR": 4800,
+        "predominantType": "Apartments in historic pink-brick Haussmann-style buildings"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 90,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "moderate",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Metro lines A and B intersect here. Weekly markets, excellent dining. Can be noisy -- student population keeps nightlife active.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Toulouse",
+          "url": "https://www.numbeo.com/cost-of-living/in/Toulouse"
+        },
+        {
+          "title": "SeLoger - Toulouse",
+          "url": "https://www.seloger.com/immobilier/achat/immo-toulouse-31/"
+        },
+        {
+          "title": "Toulouse Tourism",
+          "url": "https://www.toulouse-tourisme.com/"
+        }
+      ]
+    },
+    {
+      "id": "toulouse-saint-cyprien",
+      "name": "Saint-Cyprien",
+      "description": "Left-bank neighborhood across the Garonne from the center, with a village feel, art galleries, and the Abattoirs modern art museum",
+      "character": "Artsy, relaxed, increasingly trendy, river views",
+      "housing": {
+        "avgRentOneBedroomEUR": 580,
+        "avgRentTwoBedroomEUR": 850,
+        "buyPricePerSqmEUR": 4000,
+        "predominantType": "Mix of renovated older apartments and newer residences"
+      },
+      "walkabilityScore": 85,
+      "transitScore": 80,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Sunday morning market at Place Saint-Cyprien. Easy walk across Pont Neuf to the center. More authentic neighborhood feel than Capitole.",
+      "sources": [
+        {
+          "title": "SeLoger - Toulouse Saint-Cyprien",
+          "url": "https://www.seloger.com/immobilier/achat/immo-toulouse-31/quartier-saint-cyprien/"
+        },
+        {
+          "title": "Numbeo Cost of Living Toulouse",
+          "url": "https://www.numbeo.com/cost-of-living/in/Toulouse"
+        }
+      ]
+    },
+    {
+      "id": "toulouse-carmes",
+      "name": "Carmes",
+      "description": "Charming neighborhood south of Place du Capitole, centered on the covered Carmes market hall with narrow medieval streets",
+      "character": "Intimate historic, gourmet, residential calm near the center",
+      "housing": {
+        "avgRentOneBedroomEUR": 630,
+        "avgRentTwoBedroomEUR": 920,
+        "buyPricePerSqmEUR": 4600,
+        "predominantType": "Character apartments in 17th-19th century brick townhouses"
+      },
+      "walkabilityScore": 92,
+      "transitScore": 85,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The Marche des Carmes is one of the best covered markets in France. Quieter than Capitole but steps away. Popular with professionals and retirees.",
+      "sources": [
+        {
+          "title": "SeLoger - Toulouse Carmes",
+          "url": "https://www.seloger.com/immobilier/achat/immo-toulouse-31/quartier-carmes/"
+        },
+        {
+          "title": "Toulouse Tourism",
+          "url": "https://www.toulouse-tourisme.com/"
+        }
+      ]
+    },
+    {
+      "id": "toulouse-cote-pavee",
+      "name": "Cote Pavee",
+      "description": "Upscale residential neighborhood east of the center on gentle hills, known for green spaces, schools, and quiet tree-lined streets",
+      "character": "Suburban-feel within the city, family-oriented, leafy, calm",
+      "housing": {
+        "avgRentOneBedroomEUR": 600,
+        "avgRentTwoBedroomEUR": 880,
+        "buyPricePerSqmEUR": 4200,
+        "predominantType": "Houses with gardens and mid-century apartment buildings"
+      },
+      "walkabilityScore": 65,
+      "transitScore": 55,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Close to Jardin des Plantes and Canal du Midi. Good local bakeries and shops. Bus connections to Metro line B.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Toulouse",
+          "url": "https://www.numbeo.com/cost-of-living/in/Toulouse"
+        },
+        {
+          "title": "SeLoger - Toulouse Cote Pavee",
+          "url": "https://www.seloger.com/immobilier/achat/immo-toulouse-31/quartier-cote-pavee/"
+        }
+      ]
+    },
+    {
+      "id": "toulouse-tournefeuille",
+      "name": "Tournefeuille",
+      "description": "Suburban commune west of Toulouse with parks, modern amenities, and easy access to the Airbus employment zone",
+      "character": "Quiet suburb, spacious, modern, good value",
+      "housing": {
+        "avgRentOneBedroomEUR": 500,
+        "avgRentTwoBedroomEUR": 720,
+        "buyPricePerSqmEUR": 3200,
+        "predominantType": "Detached and semi-detached houses with gardens, some newer apartment complexes"
+      },
+      "walkabilityScore": 45,
+      "transitScore": 40,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "One of the most popular suburbs for families and retirees. Large supermarkets, medical facilities, and parks. 20 minutes to city center by bus/car.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Toulouse",
+          "url": "https://www.numbeo.com/cost-of-living/in/Toulouse"
+        },
+        {
+          "title": "Tournefeuille Official Site",
+          "url": "https://www.tournefeuille.fr/"
+        }
+      ]
+    }
+  ]
+}

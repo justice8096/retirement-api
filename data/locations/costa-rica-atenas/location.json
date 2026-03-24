@@ -1,0 +1,171 @@
+{
+  "id": "costa-rica-atenas",
+  "name": "Atenas, Costa Rica",
+  "country": "Costa Rica",
+  "region": "Central America",
+  "cities": [
+    "Atenas"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Pensionado",
+    "incomeRequirement": {
+      "monthly": 1000,
+      "currency": "USD"
+    },
+    "notes": "Pensionado visa requires $1,000/mo pension income."
+  },
+  "climate": {
+    "winterLowF": 62,
+    "summerHighF": 82,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 140
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 850,
+      "min": 700,
+      "max": 1000,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 420,
+      "min": 320,
+      "max": 540,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 120,
+      "min": 80,
+      "max": 170,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 170,
+      "min": 90,
+      "max": 280,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 280,
+      "min": 180,
+      "max": 420,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 40,
+      "min": 25,
+      "max": 65,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 160,
+      "min": 90,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 180,
+      "min": 110,
+      "max": 270,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 70,
+      "min": 40,
+      "max": 110,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 83,
+      "min": 68,
+      "max": 103,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 100,
+      "min": 60,
+      "max": 180,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 20,
+      "typical": 40,
+      "max": 90,
+      "annualInflation": 0.04,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 30,
+      "typical": 60,
+      "max": 120,
+      "annualInflation": 0.04
+    }
+  },
+  "healthcare": {
+    "system": "CAJA clinic locally; San José hospitals 45 minutes away.",
+    "qualityRating": 7,
+    "dentalIncluded": true,
+    "waitTimes": "Moderate locally; good access to San José",
+    "prescriptionCoverage": "Available through CAJA; private pharmacies"
+  },
+  "lifestyle": {
+    "internetSpeed": "50-100Mbps",
+    "dogFriendly": 7,
+    "expatCommunity": 6,
+    "englishPrevalence": 5,
+    "safetyRating": 7
+  },
+  "pros": [
+    "Claimed 'best climate in the world' by National Geographic",
+    "Close to San José for healthcare and shopping",
+    "Established expat community in small-town setting"
+  ],
+  "cons": [
+    "Small town with limited nightlife",
+    "Car needed for most errands",
+    "Growing popularity increasing prices"
+  ],
+  "taxes": {
+    "notes": "Territorial tax system: foreign income not taxed.",
+    "vatRate": 0.13,
+    "socialChargesRate": 0
+  }
+}

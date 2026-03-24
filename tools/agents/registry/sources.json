@@ -1,0 +1,329 @@
+{
+  "description": "Source registry for agent data collection. Each source is scored for quality and mapped to the agents that consume it.",
+  "sources": [
+    {
+      "id": "ecb-exchange-rates",
+      "label": "European Central Bank Exchange Rates",
+      "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html",
+      "type": "government",
+      "agentIds": ["exchange-rates"],
+      "locationsScope": "eur-all",
+      "qualityScore": 10,
+      "reliability": "Official ECB reference rates, updated daily on business days.",
+      "updateLag": "1 day",
+      "lastVerified": "2026-03-15",
+      "verifiedBy": "human",
+      "notes": "Primary source for EUR/USD rates. Use XML feed for automation.",
+      "refinementSuggestions": [
+        "Add ECB SDMX API endpoint for programmatic access",
+        "Track 90-day rolling average for optimistic/pessimistic range"
+      ]
+    },
+    {
+      "id": "zillow-rentals",
+      "label": "Zillow Rental Listings",
+      "url": "https://www.zillow.com/rental-manager/market-trends/",
+      "type": "marketplace",
+      "agentIds": ["housing"],
+      "locationsScope": "us-all",
+      "qualityScore": 9,
+      "reliability": "Largest US real estate platform. Rental Zestimates updated weekly.",
+      "updateLag": "1 week",
+      "lastVerified": "2026-03-15",
+      "verifiedBy": "human",
+      "notes": "Use for 2BR house rental comps in all 9 US locations. Filter by house/townhouse, 2+ bedrooms.",
+      "refinementSuggestions": [
+        "Cross-reference with Redfin for price accuracy",
+        "Track Zillow Observed Rent Index (ZORI) for trend data"
+      ]
+    },
+    {
+      "id": "rentometer",
+      "label": "Rentometer",
+      "url": "https://www.rentometer.com/",
+      "type": "aggregator",
+      "agentIds": ["housing"],
+      "locationsScope": "us-all",
+      "qualityScore": 9,
+      "reliability": "Aggregates rental data from multiple listing services. Strong for US metro areas.",
+      "updateLag": "2 weeks",
+      "lastVerified": "2026-03-15",
+      "verifiedBy": "human",
+      "notes": "Good cross-check against Zillow. Provides median and percentile ranges.",
+      "refinementSuggestions": [
+        "Use for validation rather than primary data",
+        "Check if API access is available for automation"
+      ]
+    },
+    {
+      "id": "seloger",
+      "label": "SeLoger (France Housing)",
+      "url": "https://www.seloger.com/",
+      "type": "marketplace",
+      "agentIds": ["housing"],
+      "locationsScope": "eur-all",
+      "qualityScore": 8,
+      "reliability": "Largest French real estate portal. Comprehensive rental listings.",
+      "updateLag": "1 week",
+      "lastVerified": "2026-03-15",
+      "verifiedBy": "human",
+      "notes": "Primary source for 4 French locations. Search for 'maison T3' (2BR house). Prices in EUR.",
+      "refinementSuggestions": [
+        "Add LeBonCoin as secondary French source",
+        "Track charges/fees separately from base rent"
+      ]
+    },
+    {
+      "id": "idealista",
+      "label": "Idealista (Spain & Portugal Housing)",
+      "url": "https://www.idealista.com/",
+      "type": "marketplace",
+      "agentIds": ["housing"],
+      "locationsScope": "eur-all",
+      "qualityScore": 8,
+      "reliability": "Dominant marketplace in Iberian peninsula. Extensive rental inventory.",
+      "updateLag": "1 week",
+      "lastVerified": "2026-03-15",
+      "verifiedBy": "human",
+      "notes": "Use for Alicante and Lisbon/Algarve. Search 2-bedroom houses. Prices in EUR.",
+      "refinementSuggestions": [
+        "Add Fotocasa as secondary Spain source",
+        "Track seasonal rental price variation for coastal areas"
+      ]
+    },
+    {
+      "id": "irs-gov",
+      "label": "IRS (US Federal Tax)",
+      "url": "https://www.irs.gov/newsroom/irs-provides-tax-inflation-adjustments",
+      "type": "government",
+      "agentIds": ["taxes"],
+      "locationsScope": "us-all",
+      "qualityScore": 10,
+      "reliability": "Official federal tax brackets, standard deductions, and filing thresholds.",
+      "updateLag": "Annual (November for next tax year)",
+      "lastVerified": "2026-03-15",
+      "verifiedBy": "human",
+      "notes": "Update annually when inflation adjustments are published. Also check Publication 915 for SS taxation thresholds.",
+      "refinementSuggestions": [
+        "Add state revenue department URLs for each US location",
+        "Track provisional income thresholds for SS taxation"
+      ]
+    },
+    {
+      "id": "medicare-gov",
+      "label": "Medicare.gov",
+      "url": "https://www.medicare.gov/plan-compare/",
+      "type": "government",
+      "agentIds": ["medicine", "vision-dental"],
+      "locationsScope": "us-all",
+      "qualityScore": 10,
+      "reliability": "Official Medicare plan finder. Part D formulary pricing, Advantage plan comparison.",
+      "updateLag": "Annual (October for next plan year)",
+      "lastVerified": "2026-03-15",
+      "verifiedBy": "human",
+      "notes": "Use Plan Finder for Part D drug costs by ZIP. Check IRMAA brackets for higher-income surcharges.",
+      "refinementSuggestions": [
+        "Add GoodRx for non-Medicare drug price cross-checks",
+        "Track Part B premium increases separately"
+      ]
+    },
+    {
+      "id": "tmobile-55-plus",
+      "label": "T-Mobile 55+ Plans",
+      "url": "https://www.t-mobile.com/cell-phone-plans/affordable-data-plans",
+      "type": "commercial",
+      "agentIds": ["cellphones"],
+      "locationsScope": "us-all",
+      "qualityScore": 9,
+      "reliability": "Direct carrier pricing. 55+ plans are age-verified, publicly listed.",
+      "updateLag": "Varies (plan changes announced in advance)",
+      "lastVerified": "2026-03-15",
+      "verifiedBy": "human",
+      "notes": "Primary US cell plan. 2 lines with taxes/fees included. Check for autopay discount.",
+      "refinementSuggestions": [
+        "Add Mint Mobile as budget alternative comparison",
+        "Track international roaming add-on costs for non-US locations"
+      ]
+    },
+    {
+      "id": "ssa-gov",
+      "label": "Social Security Administration",
+      "url": "https://www.ssa.gov/benefits/retirement/planner/",
+      "type": "government",
+      "agentIds": ["ss-benefits"],
+      "locationsScope": "none",
+      "qualityScore": 10,
+      "reliability": "Official benefit calculators, COLA announcements, trust fund projections.",
+      "updateLag": "Annual (October COLA, June trustees report)",
+      "lastVerified": "2026-03-15",
+      "verifiedBy": "human",
+      "notes": "Track COLA announcements, FRA tables, spousal benefit rules, and trust fund depletion projections.",
+      "refinementSuggestions": [
+        "Monitor CBO alternative depletion date estimates",
+        "Add breakeven analysis calculator for early vs delayed filing"
+      ]
+    },
+    {
+      "id": "ameli-fr",
+      "label": "Ameli.fr (French National Health Insurance)",
+      "url": "https://www.ameli.fr/assure/remboursements",
+      "type": "government",
+      "agentIds": ["medicine", "vision-dental"],
+      "locationsScope": "eur-all",
+      "qualityScore": 10,
+      "reliability": "Official French social security reimbursement rates and formulary.",
+      "updateLag": "Updated as policy changes",
+      "lastVerified": "2026-03-15",
+      "verifiedBy": "human",
+      "notes": "Primary source for French healthcare costs. Check PUMA eligibility for retirees and mutuelle (complementary insurance) requirements.",
+      "refinementSuggestions": [
+        "Add mutuelle comparison sites (LeLynx, Assurland) for top-up costs",
+        "Track ticket moderateur rates by care category"
+      ]
+    },
+    {
+      "id": "numbeo",
+      "label": "Numbeo Cost of Living",
+      "url": "https://www.numbeo.com/cost-of-living/",
+      "type": "crowdsourced",
+      "agentIds": ["housing", "groceries", "transportation", "entertainment", "utilities"],
+      "locationsScope": "all",
+      "qualityScore": 7,
+      "reliability": "Large crowdsourced dataset. Good for relative comparisons, less precise for absolute values.",
+      "updateLag": "Continuous (rolling averages)",
+      "lastVerified": "2026-03-15",
+      "verifiedBy": "human",
+      "notes": "Use as cross-check only, not primary source. Sample sizes vary by city. Good for spotting outlier values in primary data.",
+      "refinementSuggestions": [
+        "Weight by contributor count per city",
+        "Flag cities with fewer than 50 contributors"
+      ]
+    },
+    {
+      "id": "expatistan",
+      "label": "Expatistan Cost of Living",
+      "url": "https://www.expatistan.com/cost-of-living",
+      "type": "crowdsourced",
+      "agentIds": ["groceries", "entertainment", "transportation"],
+      "locationsScope": "all",
+      "qualityScore": 6,
+      "reliability": "Smaller crowdsourced dataset than Numbeo. Useful for expat-specific cost perspective.",
+      "updateLag": "Continuous",
+      "lastVerified": "2026-03-15",
+      "verifiedBy": "human",
+      "notes": "Secondary cross-check. Expat-oriented pricing may skew higher than local averages.",
+      "refinementSuggestions": [
+        "Compare item-level prices against Numbeo for consistency",
+        "Note where Expatistan and Numbeo diverge significantly"
+      ]
+    },
+    {
+      "id": "bls-cpi",
+      "label": "Bureau of Labor Statistics CPI",
+      "url": "https://www.bls.gov/cpi/",
+      "type": "government",
+      "agentIds": ["groceries", "housing", "transportation", "medicine", "utilities"],
+      "locationsScope": "us-all",
+      "qualityScore": 10,
+      "reliability": "Official US inflation data. CPI-U and CPI-W published monthly.",
+      "updateLag": "1 month",
+      "lastVerified": "2026-03-15",
+      "verifiedBy": "human",
+      "notes": "Use CPI category breakdowns to validate per-category inflation assumptions in COST_CATEGORIES. CPI-E (elderly) tracks closer to retiree spending.",
+      "refinementSuggestions": [
+        "Add regional CPI data for metro-area-specific inflation",
+        "Track CPI-E (experimental elderly index) for retiree-specific rates"
+      ]
+    },
+    {
+      "id": "encuentra24-panama",
+      "label": "Encuentra24 (Panama Housing)",
+      "url": "https://www.encuentra24.com/panama/bienes-raices-alquiler-de-casas",
+      "type": "marketplace",
+      "agentIds": ["housing"],
+      "locationsScope": "all",
+      "qualityScore": 7,
+      "reliability": "Largest Panama classifieds site. Rental inventory varies; Boquete has smaller sample sizes.",
+      "updateLag": "1-2 weeks",
+      "lastVerified": "2026-03-15",
+      "verifiedBy": "human",
+      "notes": "Primary source for Panama City and Boquete housing. Prices in USD. Filter for 2+ recamaras (bedrooms).",
+      "refinementSuggestions": [
+        "Add Compreoalquile.com as secondary Panama source",
+        "Track furnished vs unfurnished to ensure consistent comparison"
+      ]
+    },
+    {
+      "id": "ratp-idf-mobilites",
+      "label": "Ile-de-France Mobilites / Local Transit",
+      "url": "https://www.iledefrance-mobilites.fr/titres-et-tarifs",
+      "type": "government",
+      "agentIds": ["transportation"],
+      "locationsScope": "eur-all",
+      "qualityScore": 9,
+      "reliability": "Official French regional transit pricing. Each city has its own transit authority.",
+      "updateLag": "Annual (fare changes in January or September)",
+      "lastVerified": "2026-03-15",
+      "verifiedBy": "human",
+      "notes": "Use each city's local transit authority: TBM (Bordeaux area for Brittany comparisons), TCL (Lyon), TaM (Montpellier), Tisseo (Toulouse). Check senior/retiree discount tariffs.",
+      "refinementSuggestions": [
+        "Add TRAM Alicante and Carris/Metro Lisboa for Iberian transit",
+        "Track monthly pass vs pay-per-ride breakeven for retiree usage patterns"
+      ]
+    },
+    {
+      "id": "sns-portugal",
+      "label": "SNS Portugal (National Health Service)",
+      "url": "https://www.sns.gov.pt/",
+      "type": "government",
+      "agentIds": ["medicine", "vision-dental"],
+      "locationsScope": "eur-all",
+      "qualityScore": 8,
+      "reliability": "Official Portuguese health service. Covers taxas moderadoras (co-pays) and pharmacy pricing.",
+      "updateLag": "Updated as policy changes",
+      "lastVerified": "2026-03-15",
+      "verifiedBy": "human",
+      "notes": "Portugal SNS covers residents. Check NHR/IFICI status for tax-linked healthcare access. Pharmacy prices regulated by INFARMED.",
+      "refinementSuggestions": [
+        "Add INFARMED drug price database for prescription costs",
+        "Track private health insurance quotes for expats not yet in SNS"
+      ]
+    },
+    {
+      "id": "seg-social-spain",
+      "label": "Spanish Social Security Healthcare",
+      "url": "https://www.seg-social.es/",
+      "type": "government",
+      "agentIds": ["medicine", "vision-dental"],
+      "locationsScope": "eur-all",
+      "qualityScore": 8,
+      "reliability": "Official Spanish social security system. Covers public healthcare access for residents.",
+      "updateLag": "Updated as policy changes",
+      "lastVerified": "2026-03-15",
+      "verifiedBy": "human",
+      "notes": "Spain requires convenio especial for non-working residents. Check monthly premium and co-pay rates for Alicante.",
+      "refinementSuggestions": [
+        "Add private insurer quotes (Sanitas, Adeslas) as expat alternative",
+        "Track convenio especial premium adjustments"
+      ]
+    },
+    {
+      "id": "impots-gouv-fr",
+      "label": "French Tax Authority (impots.gouv.fr)",
+      "url": "https://www.impots.gouv.fr/particulier",
+      "type": "government",
+      "agentIds": ["taxes"],
+      "locationsScope": "eur-all",
+      "qualityScore": 10,
+      "reliability": "Official French income tax brackets, social charges (CSG/CRDS), and treaty provisions.",
+      "updateLag": "Annual (brackets published in Loi de Finances)",
+      "lastVerified": "2026-03-15",
+      "verifiedBy": "human",
+      "notes": "Check US-France tax treaty for pension taxation. Track CSG/CRDS rates on investment income for S1 form holders.",
+      "refinementSuggestions": [
+        "Add simulateur.impots.gouv.fr for scenario testing",
+        "Track taxe fonciere and taxe d'habitation for housing agent"
+      ]
+    }
+  ]
+}

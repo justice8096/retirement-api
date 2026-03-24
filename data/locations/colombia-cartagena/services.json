@@ -1,0 +1,249 @@
+{
+  "distanceUnit": "km",
+  "currency": "COP",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Clínica del Country",
+      "address": "City center area, Cartagena, Colombia",
+      "distanceKm": 5,
+      "notes": "Private hospital with emergency department, English-speaking specialists available",
+      "sources": [
+        {
+          "title": "Clínica del Country",
+          "url": "https://www.clinicadelcountry.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Droguería Olímpica",
+      "address": "City center area, Cartagena, Colombia",
+      "distanceKm": 1.5,
+      "notes": "Well-stocked pharmacy, prescription medications, some English spoken",
+      "sources": [
+        {
+          "title": "Droguería Olímpica",
+          "url": "https://www.olimpica.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Éxito",
+      "address": "City center area, Cartagena, Colombia",
+      "distanceKm": 2,
+      "notes": "Largest supermarket chain in Colombia, wide selection, imported goods",
+      "sources": [
+        {
+          "title": "Éxito",
+          "url": "https://www.exito.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "Bancolombia",
+      "address": "City center area, Cartagena, Colombia",
+      "distanceKm": 2,
+      "notes": "Largest bank in Colombia, ATMs widely available, some English-speaking staff",
+      "sources": [
+        {
+          "title": "Bancolombia",
+          "url": "https://www.bancolombia.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Colsanitas Cartagena",
+      "address": "City center area, Cartagena, Colombia",
+      "distanceKm": 3,
+      "notes": "Private healthcare network, English-speaking GPs available",
+      "sources": [
+        {
+          "title": "Colsanitas Cartagena",
+          "url": "https://www.colsanitas.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Dental Clinic Cartagena Center",
+      "address": "City center area, Cartagena, Colombia",
+      "distanceKm": 3,
+      "notes": "General and cosmetic dentistry, some English-speaking dentists, modern equipment",
+      "sources": [
+        {
+          "title": "Dental Services Colombia",
+          "url": "https://www.dentix.com/co/"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Veterinary Clinic Cartagena",
+      "address": "City center area, Cartagena, Colombia",
+      "distanceKm": 4,
+      "notes": "Full veterinary services, vaccinations, surgery, some English spoken",
+      "sources": [
+        {
+          "title": "Veterinary Services Colombia",
+          "url": "https://www.gabfrican.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Parque Canino / Dog Park Cartagena",
+      "address": "Park area, Cartagena, Colombia",
+      "distanceKm": 5,
+      "notes": "Off-leash area, green space popular with dog owners, water available",
+      "sources": [
+        {
+          "title": "Parks in Cartagena",
+          "url": "https://www.bogota.gov.co/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "Bodytech",
+      "address": "City center area, Cartagena, Colombia",
+      "distanceKm": 3,
+      "notes": "Modern gym with cardio and weight equipment, group classes, monthly memberships",
+      "sources": [
+        {
+          "title": "Bodytech",
+          "url": "https://www.bodytech.com.co/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "International Christian Fellowship Cartagena",
+      "address": "City center area, Cartagena, Colombia",
+      "distanceKm": 5,
+      "notes": "English-language services, expat community gathering point, social events",
+      "sources": [
+        {
+          "title": "International Christian Fellowship Cartagena",
+          "url": "https://www.internationalchristianfellowship.org/"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Rafael Núñez International Airport (CTG)",
+      "address": "Airport area",
+      "distanceKm": 8,
+      "notes": "International airport with domestic and international flights",
+      "sources": [
+        {
+          "title": "Rafael Núñez International Airport",
+          "url": "https://www.sacsa.com.co/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "TransMilenio / Metro Cartagena",
+      "address": "City center area, Cartagena, Colombia",
+      "distanceKm": 2,
+      "notes": "Bus rapid transit system, expanding metro, affordable fares",
+      "sources": [
+        {
+          "title": "TransMilenio",
+          "url": "https://www.transmilenio.gov.co/"
+        }
+      ]
+    },
+    {
+      "categoryId": "coworking",
+      "name": "WeWork Cartagena",
+      "address": "City center area, Cartagena, Colombia",
+      "distanceKm": 3,
+      "notes": "Coworking space, high-speed internet, meeting rooms, community events",
+      "sources": [
+        {
+          "title": "WeWork Cartagena",
+          "url": "https://www.wework.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "Pet Grooming Cartagena",
+      "address": "City center area, Cartagena, Colombia",
+      "distanceKm": 4,
+      "notes": "Professional pet grooming services, bathing, clipping, appointment recommended",
+      "sources": [
+        {
+          "title": "Pet Services Cartagena",
+          "url": "https://www.gabfrican.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "international_school",
+      "name": "InterNations Cartagena Expat Community",
+      "address": "City center area, Cartagena, Colombia",
+      "distanceKm": 4,
+      "notes": "International expat community center, social events, networking, relocation assistance",
+      "sources": [
+        {
+          "title": "InterNations Cartagena Expat Community",
+          "url": "https://www.internations.org/"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "Cartagena Cultural Center",
+      "description": "Cultural center with local art, history, and community events",
+      "distanceKm": 4,
+      "estimatedCostEUR": 8,
+      "frequency": "Tue-Sun 10:00-17:00",
+      "sources": [
+        {
+          "title": "Cartagena Culture",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "estimatedCostLocal": 8,
+      "localCurrency": "COP"
+    },
+    {
+      "type": "nature",
+      "name": "Cartagena Central Park / Garden",
+      "description": "Main public park with walking trails, gardens, and green space",
+      "distanceKm": 3,
+      "estimatedCostEUR": 0,
+      "frequency": "Daily, dawn to dusk",
+      "sources": [
+        {
+          "title": "Parks in Cartagena",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "dining",
+      "name": "Cartagena Restaurant District",
+      "description": "Walkable area with diverse restaurants, cafes, and bars",
+      "distanceKm": 2,
+      "estimatedCostEUR": 25,
+      "frequency": "Daily, lunch and dinner service",
+      "sources": [
+        {
+          "title": "Dining in Cartagena",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "estimatedCostLocal": 25,
+      "localCurrency": "COP"
+    }
+  ]
+}

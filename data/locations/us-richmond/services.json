@@ -1,0 +1,330 @@
+{
+  "distanceUnit": "mi",
+  "currency": "USD",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "VCU Medical Center",
+      "address": "1250 E Marshall Street, Richmond, VA 23298",
+      "notes": "Level 1 trauma center, academic medical center, comprehensive emergency and specialty services",
+      "sources": [
+        {
+          "title": "VCU Health",
+          "url": "https://www.vcuhealth.org/"
+        }
+      ],
+      "distanceMi": 0.9
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "CVS Pharmacy - Carytown",
+      "address": "3127 W Cary Street, Richmond, VA 23221",
+      "notes": "Full pharmacy, vaccinations, MinuteClinic walk-in, extended hours",
+      "sources": [
+        {
+          "title": "CVS",
+          "url": "https://www.cvs.com/"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Publix Super Market - Short Pump",
+      "address": "11500 W Broad Street, Richmond, VA 23233",
+      "notes": "Full supermarket with deli, bakery, pharmacy, organic section",
+      "sources": [
+        {
+          "title": "Publix",
+          "url": "https://www.publix.com/"
+        }
+      ],
+      "distanceMi": 9.3
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Ellwood Thompson's Local Market",
+      "address": "4 N Thompson Street, Richmond, VA 23221",
+      "notes": "Local organic and natural foods market, prepared foods, community favorite",
+      "sources": [
+        {
+          "title": "Ellwood Thompson's",
+          "url": "https://www.ellwoodthompsons.com/"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "bank",
+      "name": "Bank of America - Richmond Downtown",
+      "address": "1111 E Main Street, Richmond, VA 23219",
+      "notes": "Full-service branch, ATM, financial advisors, mobile banking",
+      "sources": [
+        {
+          "title": "Bank of America",
+          "url": "https://www.bankofamerica.com/"
+        }
+      ],
+      "distanceMi": 0.3
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "VCU Health Primary Care - Stony Point",
+      "address": "9000 Stony Point Parkway, Richmond, VA 23235",
+      "notes": "Academic primary care, accepting new patients, MyChart portal",
+      "sources": [
+        {
+          "title": "VCU Health Primary Care",
+          "url": "https://www.vcuhealth.org/services/primary-care"
+        }
+      ],
+      "distanceMi": 5.0
+    },
+    {
+      "categoryId": "dentist",
+      "name": "River Run Dental Spa",
+      "address": "7401 Beaufont Springs Drive, Richmond, VA 23225",
+      "notes": "Modern dental spa, general and cosmetic, sedation dentistry available",
+      "sources": [
+        {
+          "title": "River Run Dental",
+          "url": "https://www.riverrundental.com/"
+        }
+      ],
+      "distanceMi": 4.3
+    },
+    {
+      "categoryId": "vet",
+      "name": "Cary Street Veterinary Hospital",
+      "address": "3208 W Cary Street, Richmond, VA 23221",
+      "notes": "Full-service vet hospital, Carytown location, emergency referrals to VREC",
+      "sources": [
+        {
+          "title": "Cary Street Vet",
+          "url": "https://www.carystreetvet.com/"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Barker Field Dog Park",
+      "address": "900 N Arthur Ashe Boulevard, Richmond, VA 23220",
+      "notes": "Large fenced off-leash dog park, separate small dog area, near Byrd Park",
+      "sources": [
+        {
+          "title": "Richmond Parks",
+          "url": "https://www.rva.gov/parks-recreation"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "gym",
+      "name": "American Family Fitness - Midlothian",
+      "address": "2501 Westgate Drive, Richmond, VA 23225",
+      "notes": "Full-service gym, pool, group classes, personal training, family-friendly",
+      "sources": [
+        {
+          "title": "American Family Fitness",
+          "url": "https://www.amfamfit.com/"
+        }
+      ],
+      "distanceMi": 4.3
+    },
+    {
+      "categoryId": "english_church",
+      "name": "St. Paul's Episcopal Church",
+      "address": "815 E Grace Street, Richmond, VA 23219",
+      "notes": "Historic church (1845), active parish, where Lee attended during Civil War",
+      "sources": [
+        {
+          "title": "St. Paul's Richmond",
+          "url": "https://www.stpaulsrva.org/"
+        }
+      ],
+      "distanceMi": 0.3
+    },
+    {
+      "categoryId": "airport",
+      "name": "Richmond International Airport (RIC)",
+      "address": "1 Richard E Byrd Terminal Drive, Richmond, VA 23250",
+      "notes": "Direct flights to major US cities, international connections via hubs",
+      "sources": [
+        {
+          "title": "RIC Airport",
+          "url": "https://www.flyrichmond.com/"
+        }
+      ],
+      "distanceMi": 7.5
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Richmond Main Street Station (Amtrak)",
+      "address": "1500 E Main Street, Richmond, VA 23219",
+      "notes": "Amtrak Northeast Regional to DC (2 hrs), NYC (5.5 hrs), beautifully restored station",
+      "sources": [
+        {
+          "title": "Amtrak",
+          "url": "https://www.amtrak.com/stations/rvr"
+        }
+      ],
+      "distanceMi": 0.3
+    },
+    {
+      "categoryId": "coworking",
+      "name": "Gather Richmond - Scott's Addition",
+      "address": "409 E Main Street, Richmond, VA 23219",
+      "notes": "Multiple Richmond locations, day passes, private offices, community events",
+      "sources": [
+        {
+          "title": "Gather",
+          "url": "https://www.workatgather.com/"
+        }
+      ],
+      "distanceMi": 0.6
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "Virginia Museum of Fine Arts (VMFA)",
+      "description": "World-class free art museum with Fabergé eggs, Art Nouveau, Impressionist collections",
+      "frequency": "Daily 10:00-17:00, free general admission",
+      "sources": [
+        {
+          "title": "VMFA",
+          "url": "https://www.vmfa.museum/"
+        }
+      ],
+      "distanceMi": 1.9,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "shopping",
+      "name": "Carytown",
+      "description": "Mile-long strip of independent shops, restaurants, vintage stores, and cafés",
+      "frequency": "Daily, shops typically 10:00-18:00, restaurants later",
+      "sources": [
+        {
+          "title": "Carytown",
+          "url": "https://www.carytownrva.com/"
+        }
+      ],
+      "distanceMi": 1.9,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "outdoor",
+      "name": "James River Park System",
+      "description": "550+ acres of urban parkland along the James River, rapids, hiking, kayaking, swimming holes",
+      "frequency": "Open daily dawn to dusk, rapids best spring-fall",
+      "sources": [
+        {
+          "title": "James River Park",
+          "url": "https://jamesriverpark.org/"
+        }
+      ],
+      "distanceMi": 1.2,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "nature",
+      "name": "Lewis Ginter Botanical Garden",
+      "description": "50-acre botanical garden with conservatory, children's garden, seasonal displays",
+      "frequency": "Daily 9:00-17:00, extended summer hours",
+      "sources": [
+        {
+          "title": "Lewis Ginter",
+          "url": "https://www.lewisginter.org/"
+        }
+      ],
+      "distanceMi": 6.2,
+      "estimatedCostUSD": 18
+    },
+    {
+      "type": "historical",
+      "name": "American Civil War Museum",
+      "description": "Comprehensive museum at Historic Tredegar with artifacts from all perspectives of the Civil War",
+      "frequency": "Daily 10:00-17:00",
+      "sources": [
+        {
+          "title": "American Civil War Museum",
+          "url": "https://acwm.org/"
+        }
+      ],
+      "distanceMi": 0.9,
+      "estimatedCostUSD": 15
+    },
+    {
+      "type": "dining",
+      "name": "Scott's Addition Craft Beverage District",
+      "description": "Walkable neighborhood with 30+ breweries, cideries, meaderies, and distilleries",
+      "frequency": "Daily, most open afternoon-late evening",
+      "sources": [
+        {
+          "title": "Scott's Addition",
+          "url": "https://www.scottsaddition.com/"
+        }
+      ],
+      "distanceMi": 1.6,
+      "estimatedCostUSD": 20
+    },
+    {
+      "type": "entertainment",
+      "name": "The Byrd Theatre",
+      "description": "Beautifully restored 1928 movie palace in Carytown, Mighty Wurlitzer organ performances",
+      "frequency": "Nightly films, Saturday organ concert before evening show",
+      "sources": [
+        {
+          "title": "Byrd Theatre",
+          "url": "https://www.byrdtheatre.org/"
+        }
+      ],
+      "distanceMi": 1.9,
+      "estimatedCostUSD": 10
+    },
+    {
+      "type": "social",
+      "name": "First Fridays Art Walk",
+      "description": "Monthly art walk in the Broad Street Arts District with gallery openings and live music",
+      "frequency": "First Friday of each month, 5:00-21:00",
+      "sources": [
+        {
+          "title": "First Fridays RVA",
+          "url": "https://www.firstfridaysrva.com/"
+        }
+      ],
+      "distanceMi": 0.6,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "outdoor",
+      "name": "Belle Isle",
+      "description": "Island in the James River accessed via pedestrian bridge, hiking, rock hopping, Civil War ruins",
+      "frequency": "Open daily, accessible from downtown via footbridge",
+      "sources": [
+        {
+          "title": "James River Park",
+          "url": "https://jamesriverpark.org/"
+        }
+      ],
+      "distanceMi": 1.2,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "nature",
+      "name": "Maymont",
+      "description": "100-acre Victorian estate with Japanese garden, Italian garden, nature center, and wildlife exhibits",
+      "frequency": "Grounds daily 10:00-17:00, free admission (donations welcome)",
+      "sources": [
+        {
+          "title": "Maymont",
+          "url": "https://maymont.org/"
+        }
+      ],
+      "distanceMi": 1.9,
+      "estimatedCostUSD": 0
+    }
+  ]
+}

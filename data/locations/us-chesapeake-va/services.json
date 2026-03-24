@@ -1,0 +1,394 @@
+{
+  "distanceUnit": "mi",
+  "currency": "USD",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Chesapeake Regional Medical Center",
+      "address": "736 Battlefield Blvd N, Chesapeake, VA 23320",
+      "notes": "310-bed community hospital, Level III trauma center, cardiac care, cancer center, emergency department",
+      "sources": [
+        {
+          "title": "Chesapeake Regional Healthcare",
+          "url": "https://www.chesapeakeregional.com/"
+        }
+      ],
+      "distanceMi": 3.1
+    },
+    {
+      "categoryId": "hospital",
+      "name": "Sentara Norfolk General Hospital",
+      "address": "600 Gresham Dr, Norfolk, VA 23507",
+      "notes": "Level I trauma center, 525 beds, major teaching hospital, comprehensive specialty services. 20-25 min drive from Chesapeake.",
+      "sources": [
+        {
+          "title": "Sentara Norfolk General",
+          "url": "https://www.sentara.com/norfolk-general-hospital"
+        }
+      ],
+      "distanceMi": 11.2
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "CVS Pharmacy - Greenbrier",
+      "address": "1416 Greenbrier Pkwy, Chesapeake, VA 23320",
+      "notes": "Full-service pharmacy, drive-through, vaccinations, MinuteClinic inside",
+      "sources": [
+        {
+          "title": "CVS Pharmacy",
+          "url": "https://www.cvs.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Walgreens - Battlefield Blvd",
+      "address": "1300 Battlefield Blvd N, Chesapeake, VA 23320",
+      "notes": "Full-service pharmacy, drive-through, vaccinations, photo services",
+      "sources": [
+        {
+          "title": "Walgreens",
+          "url": "https://www.walgreens.com/"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Food Lion - Greenbrier",
+      "address": "1528 Sam's Circle, Chesapeake, VA 23320",
+      "notes": "Mid-range grocery chain, competitive prices, weekly specials. Multiple locations throughout Chesapeake.",
+      "sources": [
+        {
+          "title": "Food Lion",
+          "url": "https://www.foodlion.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Harris Teeter - Edinburgh Commons",
+      "address": "800 N Battlefield Blvd, Chesapeake, VA 23320",
+      "notes": "Upscale grocery with deli, bakery, organic section, pharmacy. Kroger-owned.",
+      "sources": [
+        {
+          "title": "Harris Teeter",
+          "url": "https://www.harristeeter.com/"
+        }
+      ],
+      "distanceMi": 2.5
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Kroger - Great Bridge",
+      "address": "737 Battlefield Blvd S, Chesapeake, VA 23322",
+      "notes": "Full-service grocery with pharmacy, deli, fuel points. ClickList pickup available.",
+      "sources": [
+        {
+          "title": "Kroger",
+          "url": "https://www.kroger.com/"
+        }
+      ],
+      "distanceMi": 3.7
+    },
+    {
+      "categoryId": "bank",
+      "name": "TowneBank - Chesapeake",
+      "address": "600 Battlefield Blvd N, Chesapeake, VA 23320",
+      "notes": "Regional bank headquartered in Hampton Roads. Full-service branch with wealth management. Multiple Chesapeake locations.",
+      "sources": [
+        {
+          "title": "TowneBank",
+          "url": "https://www.townebank.com/"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "bank",
+      "name": "Navy Federal Credit Union - Greenbrier",
+      "address": "1401 Greenbrier Pkwy, Chesapeake, VA 23320",
+      "notes": "Largest credit union in US, military-affiliated but open to many. Full-service branch, ATMs.",
+      "sources": [
+        {
+          "title": "Navy Federal Credit Union",
+          "url": "https://www.navyfederal.org/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "vet",
+      "name": "Greenbrier Veterinary Hospital",
+      "address": "1524 Volvo Pkwy, Chesapeake, VA 23320",
+      "notes": "Full-service veterinary clinic, wellness exams, surgery, dental, boarding",
+      "sources": [
+        {
+          "title": "Greenbrier Veterinary Hospital",
+          "url": "https://www.greenbriervet.com/"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "vet",
+      "name": "Chesapeake Animal Hospital",
+      "address": "1100 Battlefield Blvd N, Chesapeake, VA 23320",
+      "notes": "Small animal practice, preventive care, surgery, diagnostics",
+      "sources": [
+        {
+          "title": "Chesapeake Animal Hospital",
+          "url": "https://www.chesapeakeanimalhospital.com/"
+        }
+      ],
+      "distanceMi": 2.5
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Chesapeake City Park Dog Park",
+      "address": "900 City Park Dr, Chesapeake, VA 23320",
+      "notes": "Fenced off-leash dog park within the 165-acre Chesapeake City Park. Separate areas for large and small dogs.",
+      "sources": [
+        {
+          "title": "City of Chesapeake Parks",
+          "url": "https://www.cityofchesapeake.net/government/city-departments/parks-recreation-tourism/"
+        }
+      ],
+      "distanceMi": 3.1
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Northwest River Park",
+      "address": "1733 Indian Creek Rd, Chesapeake, VA 23322",
+      "notes": "763-acre park with hiking trails, camping, canoeing. Dogs allowed on leash on trails. Nature-focused park with wildlife.",
+      "sources": [
+        {
+          "title": "Northwest River Park",
+          "url": "https://www.cityofchesapeake.net/government/city-departments/parks-recreation-tourism/parks/northwest-river-park.htm"
+        }
+      ],
+      "distanceMi": 11.2
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Hampton Roads Transit (HRT) - Chesapeake",
+      "address": "Multiple stops along Battlefield Blvd and Military Hwy",
+      "notes": "Limited bus routes in Chesapeake. Routes 15, 20, 44 connect Greenbrier and South Norfolk to Norfolk and Virginia Beach. No light rail in Chesapeake.",
+      "sources": [
+        {
+          "title": "Hampton Roads Transit",
+          "url": "https://gohrt.com/"
+        }
+      ],
+      "distanceMi": 0.6
+    },
+    {
+      "categoryId": "airport",
+      "name": "Norfolk International Airport (ORF)",
+      "address": "2200 Norview Ave, Norfolk, VA 23518",
+      "notes": "Closest commercial airport, 20 min drive from Chesapeake. Nonstop flights to major US hubs. Airlines include Delta, American, United, Southwest.",
+      "sources": [
+        {
+          "title": "Norfolk International Airport",
+          "url": "https://www.norfolkairport.com/"
+        }
+      ],
+      "distanceMi": 9.3
+    },
+    {
+      "categoryId": "gym",
+      "name": "Planet Fitness - Greenbrier",
+      "address": "1432 Greenbrier Pkwy, Chesapeake, VA 23320",
+      "notes": "Budget gym, $10-25/mo, 24/7 access, tanning, massage chairs. No pool.",
+      "sources": [
+        {
+          "title": "Planet Fitness",
+          "url": "https://www.planetfitness.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "gym",
+      "name": "YMCA of South Hampton Roads - Great Bridge",
+      "address": "432 Kempsville Rd, Chesapeake, VA 23322",
+      "notes": "Pool, group classes, seniors programs, Silver Sneakers accepted. Family-friendly facility.",
+      "sources": [
+        {
+          "title": "YMCA South Hampton Roads",
+          "url": "https://www.ymcashr.org/"
+        }
+      ],
+      "distanceMi": 4.3
+    },
+    {
+      "categoryId": "library",
+      "name": "Chesapeake Central Library",
+      "address": "298 Cedar Rd, Chesapeake, VA 23322",
+      "notes": "Main branch of Chesapeake Public Library system. Free WiFi, computer access, book clubs, senior programs, digital resources (Libby, Hoopla).",
+      "sources": [
+        {
+          "title": "Chesapeake Public Library",
+          "url": "https://www.chesapeakepl.lib.va.us/"
+        }
+      ],
+      "distanceMi": 3.7
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Chesapeake Regional Primary Care - Greenbrier",
+      "address": "929 S Battlefield Blvd, Chesapeake, VA 23322",
+      "notes": "Primary care practice, internal medicine, accepting Medicare patients, same-day sick visits available",
+      "sources": [
+        {
+          "title": "Chesapeake Regional Healthcare",
+          "url": "https://www.chesapeakeregional.com/"
+        }
+      ],
+      "distanceMi": 2.5
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "PetSmart Grooming - Greenbrier",
+      "address": "1548 Sam's Circle, Chesapeake, VA 23320",
+      "notes": "Appointment and walk-in grooming, full-service baths and cuts, self-serve dog wash stations",
+      "sources": [
+        {
+          "title": "PetSmart",
+          "url": "https://www.petsmart.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    }
+  ],
+  "attractions": [
+    {
+      "type": "nature",
+      "name": "Great Dismal Swamp National Wildlife Refuge",
+      "description": "112,000-acre refuge with hiking trails, wildlife viewing, kayaking on Lake Drummond, and rich biodiversity",
+      "frequency": "Daily sunrise to sunset, free admission. Best seasons: spring and fall.",
+      "sources": [
+        {
+          "title": "US Fish & Wildlife - Great Dismal Swamp",
+          "url": "https://www.fws.gov/refuge/great-dismal-swamp"
+        }
+      ],
+      "distanceMi": 7.5,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "nature",
+      "name": "Northwest River Park",
+      "description": "763-acre park with hiking trails, campgrounds, canoeing, fishing, and nature programs",
+      "frequency": "Daily dawn to dusk, free admission. Camping and boat rentals available for a fee.",
+      "sources": [
+        {
+          "title": "City of Chesapeake - Northwest River Park",
+          "url": "https://www.cityofchesapeake.net/government/city-departments/parks-recreation-tourism/parks/northwest-river-park.htm"
+        }
+      ],
+      "distanceMi": 11.2,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "outdoor",
+      "name": "Chesapeake City Park",
+      "description": "165-acre park with trails, playgrounds, athletic fields, disc golf, dog park, and picnic areas",
+      "frequency": "Daily dawn to dusk, free admission",
+      "sources": [
+        {
+          "title": "City of Chesapeake Parks",
+          "url": "https://www.cityofchesapeake.net/government/city-departments/parks-recreation-tourism/"
+        }
+      ],
+      "distanceMi": 3.1,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "outdoor",
+      "name": "Virginia Beach Oceanfront",
+      "description": "3-mile boardwalk, sandy beach, restaurants, shops, and seasonal events. 30 minutes from Chesapeake.",
+      "frequency": "Year-round, free beach access. Parking fees apply in summer.",
+      "sources": [
+        {
+          "title": "Visit Virginia Beach",
+          "url": "https://www.visitvirginiabeach.com/"
+        }
+      ],
+      "distanceMi": 18.6,
+      "estimatedCostUSD": 10
+    },
+    {
+      "type": "historical",
+      "name": "Great Bridge Battlefield & Waterways History Museum",
+      "description": "Site of the 1775 Battle of Great Bridge, a key early American Revolution victory. Museum and walking trails.",
+      "frequency": "Tue-Sat 10:00-17:00, Sun 13:00-17:00, free admission",
+      "sources": [
+        {
+          "title": "City of Chesapeake - Great Bridge Battlefield",
+          "url": "https://www.cityofchesapeake.net/government/city-departments/parks-recreation-tourism/parks/great-bridge-battlefield.htm"
+        }
+      ],
+      "distanceMi": 5.0,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "cultural",
+      "name": "Chrysler Museum of Art (Norfolk)",
+      "description": "World-class art museum with 30,000+ objects spanning 5,000 years. Glass studio with live glassblowing.",
+      "frequency": "Wed-Sun 10:00-17:00, free admission",
+      "sources": [
+        {
+          "title": "Chrysler Museum of Art",
+          "url": "https://chrysler.org/"
+        }
+      ],
+      "distanceMi": 9.9,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "shopping",
+      "name": "Greenbrier Mall",
+      "description": "Regional shopping mall with department stores, retail shops, food court, and movie theater",
+      "frequency": "Mon-Sat 10:00-21:00, Sun 12:00-18:00",
+      "sources": [
+        {
+          "title": "Greenbrier Mall",
+          "url": "https://www.greenbriermall.com/"
+        }
+      ],
+      "distanceMi": 1.2,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "entertainment",
+      "name": "Norfolk Naval Station Tours",
+      "description": "Largest naval base in the world. Bus tours available through Naval Station Norfolk. View aircraft carriers and ships.",
+      "frequency": "Seasonal tours, typically spring-fall, reservations required",
+      "sources": [
+        {
+          "title": "Naval Station Norfolk Tours",
+          "url": "https://www.navstanorfolkmwrtours.com/"
+        }
+      ],
+      "distanceMi": 12.4,
+      "estimatedCostUSD": 10
+    },
+    {
+      "type": "nature",
+      "name": "First Landing State Park (Virginia Beach)",
+      "description": "2,888-acre state park at the mouth of the Chesapeake Bay with trails through cypress swamps and sandy beaches",
+      "frequency": "Daily dawn to dusk, parking fee $7-10",
+      "sources": [
+        {
+          "title": "Virginia State Parks - First Landing",
+          "url": "https://www.dcr.virginia.gov/state-parks/first-landing"
+        }
+      ],
+      "distanceMi": 17.4,
+      "estimatedCostUSD": 10
+    }
+  ]
+}

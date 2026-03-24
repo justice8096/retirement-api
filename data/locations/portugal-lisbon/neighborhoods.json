@@ -1,0 +1,197 @@
+{
+  "city": "Lisbon / Algarve",
+  "neighborhoods": [
+    {
+      "id": "lisbon-alfama",
+      "name": "Alfama (Lisbon)",
+      "description": "Oldest neighborhood in Lisbon, clinging to the hillside below Sao Jorge Castle, with narrow alleys, fado houses, and river views",
+      "character": "Historic, atmospheric, steep hills, fado music, authentic Lisbon",
+      "housing": {
+        "avgRentOneBedroomEUR": 900,
+        "avgRentTwoBedroomEUR": 1300,
+        "buyPricePerSqmEUR": 5500,
+        "predominantType": "Renovated apartments in historic buildings, many walk-up with no elevator"
+      },
+      "walkabilityScore": 80,
+      "transitScore": 72,
+      "safetyRating": "moderate-high",
+      "expats": {
+        "communitySize": "moderate",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Tram 28 runs through. Feira da Ladra flea market on Tuesdays and Saturdays. Very steep — mobility considerations important for retirees.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lisbon",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lisbon"
+        },
+        {
+          "title": "Idealista - Lisbon Alfama",
+          "url": "https://www.idealista.pt/en/arrendar-casas/lisboa/santa-maria-maior/"
+        },
+        {
+          "title": "Visit Lisboa",
+          "url": "https://www.visitlisboa.com/"
+        }
+      ]
+    },
+    {
+      "id": "lisbon-principe-real",
+      "name": "Principe Real (Lisbon)",
+      "description": "Trendy upscale neighborhood on a hilltop with a garden square, boutique shops, and some of Lisbon's best restaurants",
+      "character": "Upscale, trendy, LGBTQ-friendly, garden-centered, cosmopolitan",
+      "housing": {
+        "avgRentOneBedroomEUR": 1100,
+        "avgRentTwoBedroomEUR": 1600,
+        "buyPricePerSqmEUR": 7000,
+        "predominantType": "Renovated apartments in 19th-century buildings, some with garden views"
+      },
+      "walkabilityScore": 88,
+      "transitScore": 70,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Jardim do Principe Real is the social center. Saturday organic market. High concentration of international residents. Most expensive Lisbon neighborhood.",
+      "sources": [
+        {
+          "title": "Idealista - Principe Real",
+          "url": "https://www.idealista.pt/en/arrendar-casas/lisboa/misericordia/"
+        },
+        {
+          "title": "Expatistan Cost of Living Lisbon",
+          "url": "https://www.expatistan.com/cost-of-living/lisbon"
+        }
+      ]
+    },
+    {
+      "id": "lisbon-belem",
+      "name": "Belem (Lisbon)",
+      "description": "Western Lisbon district along the Tagus river with monuments, museums, waterfront promenades, and more space than central Lisbon",
+      "character": "Spacious, monumental, waterfront, quieter, cultural institutions",
+      "housing": {
+        "avgRentOneBedroomEUR": 800,
+        "avgRentTwoBedroomEUR": 1150,
+        "buyPricePerSqmEUR": 4800,
+        "predominantType": "Mix of historic and modern apartments, some newer developments with river views"
+      },
+      "walkabilityScore": 72,
+      "transitScore": 65,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Jeronimos Monastery, MAAT museum, Pasteis de Belem. Tram 15E and train to central Lisbon. More residential than tourist despite landmarks.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lisbon",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lisbon"
+        },
+        {
+          "title": "Idealista - Belem Lisbon",
+          "url": "https://www.idealista.pt/en/arrendar-casas/lisboa/belem/"
+        }
+      ]
+    },
+    {
+      "id": "lisbon-cascais",
+      "name": "Cascais",
+      "description": "Upscale coastal town 30km west of Lisbon, once a royal summer retreat, with beaches, marina, and year-round expat community",
+      "character": "Coastal resort town, upscale, strong expat community, beach lifestyle with Lisbon access",
+      "housing": {
+        "avgRentOneBedroomEUR": 900,
+        "avgRentTwoBedroomEUR": 1350,
+        "buyPricePerSqmEUR": 5200,
+        "predominantType": "Apartments and villas, mix of historic and modern, many with ocean views"
+      },
+      "walkabilityScore": 75,
+      "transitScore": 60,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Train to Lisbon center takes 40 minutes. International schools. Marina with restaurants. Guincho beach nearby for surfing. Very English-friendly.",
+      "sources": [
+        {
+          "title": "Idealista - Cascais",
+          "url": "https://www.idealista.pt/en/arrendar-casas/cascais/"
+        },
+        {
+          "title": "Visit Cascais",
+          "url": "https://www.visitcascais.com/"
+        },
+        {
+          "title": "Expatistan Cost of Living Cascais",
+          "url": "https://www.expatistan.com/cost-of-living/cascais"
+        }
+      ]
+    },
+    {
+      "id": "algarve-lagos",
+      "name": "Lagos (Algarve)",
+      "description": "Historic walled town in western Algarve with dramatic cliff beaches, a lively old town, and a large international community",
+      "character": "Coastal historic, beach-centric, backpacker-to-retiree mix, lively year-round",
+      "housing": {
+        "avgRentOneBedroomEUR": 650,
+        "avgRentTwoBedroomEUR": 950,
+        "buyPricePerSqmEUR": 3200,
+        "predominantType": "Apartments in old town, villas and condos in surrounding areas"
+      },
+      "walkabilityScore": 78,
+      "transitScore": 35,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Ponta da Piedade cliffs. Marina with waterfront dining. More lively than eastern Algarve. Good year-round community. Faro airport 1 hour.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lagos Portugal",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lagos-Portugal"
+        },
+        {
+          "title": "Idealista - Lagos",
+          "url": "https://www.idealista.pt/en/arrendar-casas/lagos/"
+        },
+        {
+          "title": "Visit Algarve",
+          "url": "https://www.visitalgarve.pt/"
+        }
+      ]
+    },
+    {
+      "id": "algarve-tavira",
+      "name": "Tavira (Algarve)",
+      "description": "Elegant town in eastern Algarve straddling the Gilao River, with Moorish architecture, a Roman bridge, and nearby Ilha de Tavira beach",
+      "character": "Quieter, authentic, Moorish heritage, island beach, less touristy than western Algarve",
+      "housing": {
+        "avgRentOneBedroomEUR": 550,
+        "avgRentTwoBedroomEUR": 800,
+        "buyPricePerSqmEUR": 2600,
+        "predominantType": "Townhouses in historic center and apartments/villas in surrounding areas"
+      },
+      "walkabilityScore": 74,
+      "transitScore": 30,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "moderate",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "More authentic Portuguese feel than Lagos or Albufeira. Ria Formosa Natural Park. Ilha de Tavira beach by ferry. Growing but still uncrowded.",
+      "sources": [
+        {
+          "title": "Idealista - Tavira",
+          "url": "https://www.idealista.pt/en/arrendar-casas/tavira/"
+        },
+        {
+          "title": "Visit Algarve - Tavira",
+          "url": "https://www.visitalgarve.pt/en/menu/73/tavira.aspx"
+        }
+      ]
+    }
+  ]
+}

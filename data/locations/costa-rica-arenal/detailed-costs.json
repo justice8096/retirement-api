@@ -1,0 +1,126 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 45,
+      "typical": 58,
+      "max": 370
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutida / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 270,
+        "withoutInsurance": 320,
+        "coverageNote": "Not covered by CCSS typically. Cash price at private pharmacies."
+      },
+      {
+        "name": "Levotiroxina [P1]",
+        "monthlyCost": 3,
+        "withoutInsurance": 6,
+        "coverageNote": "Available through CCSS or private pharmacies"
+      },
+      {
+        "name": "Atorvastatina 20mg [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 9,
+        "coverageNote": "Generic available"
+      },
+      {
+        "name": "Montelukast [P1]",
+        "monthlyCost": 5,
+        "withoutInsurance": 12,
+        "coverageNote": "Available at pharmacies"
+      },
+      {
+        "name": "Hidroclorotiazida [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 4,
+        "coverageNote": "CCSS formulary generic"
+      },
+      {
+        "name": "Olmesartán [P1]",
+        "monthlyCost": 8,
+        "withoutInsurance": 18,
+        "coverageNote": "Available at private pharmacies"
+      },
+      {
+        "name": "Salbutamol (inhalador) [P1]",
+        "monthlyCost": 3,
+        "withoutInsurance": 6,
+        "coverageNote": "CCSS formulary"
+      },
+      {
+        "name": "Metformina 500mg [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 4,
+        "coverageNote": "CCSS formulary generic"
+      },
+      {
+        "name": "Alopurinol [P2]",
+        "monthlyCost": 3,
+        "withoutInsurance": 6,
+        "coverageNote": "Generic available"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 3,
+        "withoutInsurance": 6,
+        "coverageNote": "Generic available"
+      },
+      {
+        "name": "Topiramato [P2]",
+        "monthlyCost": 8,
+        "withoutInsurance": 18,
+        "coverageNote": "Available at pharmacies"
+      },
+      {
+        "name": "Metoprolol [P2]",
+        "monthlyCost": 3,
+        "withoutInsurance": 6,
+        "coverageNote": "CCSS formulary"
+      },
+      {
+        "name": "Atorvastatina 20mg [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 9,
+        "coverageNote": "Generic available"
+      }
+    ],
+    "pharmacyAccess": "Farmacia Fischel, Farmacia La Bomba, Walmart pharmacy, and CCSS (Caja) pharmacies for enrolled members. Private pharmacies in most towns.",
+    "notes": "Costa Rica CCSS (Caja) provides universal healthcare including medications for enrolled residents (~7-11% of income). Legal residents must enroll. CCSS formulary covers most generics at no additional cost. Private pharmacies for non-formulary drugs."
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 68,
+      "typical": 83,
+      "max": 103
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in Costa Rica at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "Kolbi (ICE) Postpaid",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "5GB 4G",
+        "baseCost": 18,
+        "taxesAndFees": 0,
+        "monthlyTotal": 18,
+        "notes": "2 lines ~₡5,000/line (~$9). Kolbi is state telecom. Taxes included."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      }
+    ]
+  }
+}

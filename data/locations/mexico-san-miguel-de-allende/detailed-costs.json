@@ -1,0 +1,126 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 55,
+      "typical": 68,
+      "max": 385
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutida / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 280,
+        "withoutInsurance": 320,
+        "coverageNote": "Available at Farmacias del Ahorro, Similares. No IMSS coverage for expats typically."
+      },
+      {
+        "name": "Levotiroxina [P1]",
+        "monthlyCost": 3,
+        "withoutInsurance": 6,
+        "coverageNote": "Very inexpensive generic at Farmacia Similares"
+      },
+      {
+        "name": "Atorvastatina 20mg [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 8,
+        "coverageNote": "Generic widely available, very affordable"
+      },
+      {
+        "name": "Montelukast [P1]",
+        "monthlyCost": 5,
+        "withoutInsurance": 12,
+        "coverageNote": "Generic available at most pharmacies"
+      },
+      {
+        "name": "Hidroclorotiazida [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 4,
+        "coverageNote": "Inexpensive generic"
+      },
+      {
+        "name": "Olmesartán [P1]",
+        "monthlyCost": 8,
+        "withoutInsurance": 18,
+        "coverageNote": "Available at major pharmacy chains"
+      },
+      {
+        "name": "Salbutamol (inhalador) [P1]",
+        "monthlyCost": 3,
+        "withoutInsurance": 6,
+        "coverageNote": "OTC at pharmacies"
+      },
+      {
+        "name": "Metformina 500mg [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 4,
+        "coverageNote": "Very inexpensive at Farmacia Similares"
+      },
+      {
+        "name": "Alopurinol [P2]",
+        "monthlyCost": 3,
+        "withoutInsurance": 6,
+        "coverageNote": "Generic available"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 3,
+        "withoutInsurance": 6,
+        "coverageNote": "Generic available"
+      },
+      {
+        "name": "Topiramato [P2]",
+        "monthlyCost": 8,
+        "withoutInsurance": 18,
+        "coverageNote": "Available at pharmacy chains"
+      },
+      {
+        "name": "Metoprolol [P2]",
+        "monthlyCost": 3,
+        "withoutInsurance": 6,
+        "coverageNote": "Generic available"
+      },
+      {
+        "name": "Atorvastatina 20mg [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 8,
+        "coverageNote": "Generic widely available"
+      }
+    ],
+    "pharmacyAccess": "Farmacias del Ahorro, Farmacias Similares (Dr. Simi — very affordable generics), Farmacias Guadalajara, Walmart pharmacy. Many medications available without prescription.",
+    "notes": "Mexico offers very affordable generic medications. Farmacia Similares provides interchangeable generics at 50-80% below brand prices. IMSS (public insurance) available to residents for ~$500/yr but quality varies. Most expats use private pharmacies. GLP-1 drugs are expensive imports."
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 66,
+      "typical": 81,
+      "max": 101
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in Mexico at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "Telcel Postpaid",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "5GB 4G/5G",
+        "baseCost": 16,
+        "taxesAndFees": 0,
+        "monthlyTotal": 16,
+        "notes": "2 lines ~MX$150/line (~$8). Telcel has best coverage. IVA included."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      }
+    ]
+  }
+}

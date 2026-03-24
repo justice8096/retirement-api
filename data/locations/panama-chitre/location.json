@@ -1,0 +1,171 @@
+{
+  "id": "panama-chitre",
+  "name": "Chitré, Panama",
+  "country": "Panama",
+  "region": "Central America",
+  "cities": [
+    "Chitré"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Pensionado",
+    "incomeRequirement": {
+      "monthly": 1000,
+      "currency": "USD"
+    },
+    "notes": "Pensionado visa requires $1,000/mo pension income."
+  },
+  "climate": {
+    "winterLowF": 70,
+    "summerHighF": 95,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 120
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 650,
+      "min": 500,
+      "max": 800,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 320,
+      "min": 240,
+      "max": 420,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 110,
+      "min": 75,
+      "max": 160,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 130,
+      "min": 70,
+      "max": 220,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 250,
+      "min": 150,
+      "max": 400,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 40,
+      "min": 25,
+      "max": 65,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 120,
+      "min": 60,
+      "max": 190,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 130,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 70,
+      "min": 40,
+      "max": 110,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 85,
+      "min": 70,
+      "max": 105,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 100,
+      "min": 60,
+      "max": 180,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 250,
+      "typical": 479,
+      "max": 700,
+      "annualInflation": 0.04,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 80,
+      "typical": 150,
+      "max": 300,
+      "annualInflation": 0.04
+    }
+  },
+  "healthcare": {
+    "system": "Regional hospital in Chitré. Specialists limited; Panama City for complex care.",
+    "qualityRating": 5,
+    "dentalIncluded": false,
+    "waitTimes": "Moderate; limited specialist availability",
+    "prescriptionCoverage": "Basic availability locally"
+  },
+  "lifestyle": {
+    "internetSpeed": "25-50Mbps",
+    "dogFriendly": 6,
+    "expatCommunity": 3,
+    "englishPrevalence": 3,
+    "safetyRating": 7
+  },
+  "pros": [
+    "Driest region in Panama (Azuero Peninsula)",
+    "Very affordable cost of living",
+    "Authentic Panamanian culture and festivals"
+  ],
+  "cons": [
+    "Very hot during dry season",
+    "Minimal expat community",
+    "Limited English spoken"
+  ],
+  "taxes": {
+    "notes": "No tax on foreign-source income.",
+    "vatRate": 0.07,
+    "socialChargesRate": 0
+  }
+}

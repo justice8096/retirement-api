@@ -1,0 +1,159 @@
+{
+  "city": "Montpellier",
+  "neighborhoods": [
+    {
+      "id": "montpellier-ecusson",
+      "name": "L'Ecusson (Historic Center)",
+      "description": "Medieval city center with narrow pedestrian streets, Place de la Comedie, and abundant cafes and restaurants",
+      "character": "Dense urban historic, car-free core, vibrant student and cultural energy",
+      "housing": {
+        "avgRentOneBedroomEUR": 600,
+        "avgRentTwoBedroomEUR": 850,
+        "buyPricePerSqmEUR": 3800,
+        "predominantType": "Apartments in historic Haussmann and medieval buildings"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 80,
+      "safetyRating": "moderate-high",
+      "expats": {
+        "communitySize": "moderate",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Place de la Comedie is the social heart. Tram lines converge here. Very lively but can be noisy at night.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Montpellier",
+          "url": "https://www.numbeo.com/cost-of-living/in/Montpellier"
+        },
+        {
+          "title": "Montpellier Tourism",
+          "url": "https://www.montpellier-tourisme.fr/"
+        },
+        {
+          "title": "SeLoger - Montpellier Centre",
+          "url": "https://www.seloger.com/immobilier/achat/immo-montpellier-34/"
+        }
+      ]
+    },
+    {
+      "id": "montpellier-antigone",
+      "name": "Antigone / Port Marianne",
+      "description": "Modern neo-classical district designed by Ricardo Bofill, extending east from the center along the Lez river to newer Port Marianne",
+      "character": "Modern, spacious, planned urban with waterfront, newer construction",
+      "housing": {
+        "avgRentOneBedroomEUR": 620,
+        "avgRentTwoBedroomEUR": 880,
+        "buyPricePerSqmEUR": 4000,
+        "predominantType": "Modern apartments with balconies, many with river or park views"
+      },
+      "walkabilityScore": 82,
+      "transitScore": 78,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "moderate",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Odysseum shopping complex at the east end. Newer buildings mean better insulation and accessibility. Tram Lines 1 and 3.",
+      "sources": [
+        {
+          "title": "Expatistan Cost of Living Montpellier",
+          "url": "https://www.expatistan.com/cost-of-living/montpellier"
+        },
+        {
+          "title": "Montpellier Mediterranee Metropole",
+          "url": "https://www.montpellier3m.fr/"
+        }
+      ]
+    },
+    {
+      "id": "montpellier-les-aubes",
+      "name": "Les Aubes / Aiguelongue",
+      "description": "Residential hillside neighborhood north of the center, near the zoo and Lunaret park, with green surroundings",
+      "character": "Quiet residential, green, family-friendly, close to nature",
+      "housing": {
+        "avgRentOneBedroomEUR": 500,
+        "avgRentTwoBedroomEUR": 720,
+        "buyPricePerSqmEUR": 3200,
+        "predominantType": "Villas and houses with gardens, some apartment buildings"
+      },
+      "walkabilityScore": 50,
+      "transitScore": 45,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Adjacent to Parc Zoologique de Lunaret (free zoo). Good for dog owners with trails and green space. Bus service to center.",
+      "sources": [
+        {
+          "title": "SeLoger - Montpellier Nord",
+          "url": "https://www.seloger.com/immobilier/achat/immo-montpellier-34/"
+        },
+        {
+          "title": "Numbeo Cost of Living Montpellier",
+          "url": "https://www.numbeo.com/cost-of-living/in/Montpellier"
+        }
+      ]
+    },
+    {
+      "id": "montpellier-palavas",
+      "name": "Palavas-les-Flots",
+      "description": "Small beach town 12km south of Montpellier, directly on the Mediterranean with a canal-lined center",
+      "character": "Coastal resort, seasonal, small-town feel, beach lifestyle",
+      "housing": {
+        "avgRentOneBedroomEUR": 550,
+        "avgRentTwoBedroomEUR": 780,
+        "buyPricePerSqmEUR": 3600,
+        "predominantType": "Seaside apartments, many with sea views or canal-front"
+      },
+      "walkabilityScore": 72,
+      "transitScore": 40,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Tram Line 3 connects to Montpellier center in 30 minutes. Very touristy in summer. Dog-friendly beaches in off-season.",
+      "sources": [
+        {
+          "title": "Palavas-les-Flots Tourism",
+          "url": "https://www.ot-palavaslesflots.com/"
+        },
+        {
+          "title": "SeLoger - Palavas-les-Flots",
+          "url": "https://www.seloger.com/immobilier/achat/immo-palavas-les-flots-34/"
+        }
+      ]
+    },
+    {
+      "id": "montpellier-castelnau",
+      "name": "Castelnau-le-Lez",
+      "description": "Affluent suburban commune east of Montpellier, well-connected by tram with a village center and the Lez river",
+      "character": "Upscale suburban, village center with amenities, good schools",
+      "housing": {
+        "avgRentOneBedroomEUR": 560,
+        "avgRentTwoBedroomEUR": 790,
+        "buyPricePerSqmEUR": 3500,
+        "predominantType": "Villas, townhouses, and newer apartment complexes"
+      },
+      "walkabilityScore": 62,
+      "transitScore": 65,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Tram Line 2 provides direct center access. Riverside walking paths along the Lez. Good supermarkets and medical facilities.",
+      "sources": [
+        {
+          "title": "Ville de Castelnau-le-Lez",
+          "url": "https://www.castelnau-le-lez.fr/"
+        },
+        {
+          "title": "SeLoger - Castelnau-le-Lez",
+          "url": "https://www.seloger.com/immobilier/achat/immo-castelnau-le-lez-34/"
+        }
+      ]
+    }
+  ]
+}

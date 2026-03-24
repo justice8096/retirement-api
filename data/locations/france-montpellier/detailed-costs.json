@@ -1,0 +1,1258 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 29,
+      "typical": 36,
+      "max": 265
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 220,
+        "coverageNote": "Covered 65% by Securite Sociale for T2 diabetes. Mutuelle covers remainder. ~220 EUR/mo without coverage."
+      },
+      {
+        "name": "Levothyroxine (Levothyrox) [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 5,
+        "coverageNote": "65% covered by Securite Sociale; mutuelle covers ticket moderateur"
+      },
+      {
+        "name": "Atorvastatine 20mg [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 8,
+        "coverageNote": "65% covered by Securite Sociale"
+      },
+      {
+        "name": "Montelukast (Singulair) [P1]",
+        "monthlyCost": 3,
+        "withoutInsurance": 12,
+        "coverageNote": "65% covered by Securite Sociale"
+      },
+      {
+        "name": "Hydrochlorothiazide [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 4,
+        "coverageNote": "65% covered by Securite Sociale"
+      },
+      {
+        "name": "Olmesartan (Alteis/Olmetec) [P1]",
+        "monthlyCost": 3,
+        "withoutInsurance": 15,
+        "coverageNote": "65% covered by Securite Sociale"
+      },
+      {
+        "name": "Salbutamol (Ventoline) [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 4,
+        "coverageNote": "65% covered by Securite Sociale"
+      },
+      {
+        "name": "Metformine 500mg [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "100% covered under ALD (Affection Longue Duree) for diabetes"
+      },
+      {
+        "name": "Allopurinol [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 5,
+        "coverageNote": "65% covered by Securite Sociale"
+      },
+      {
+        "name": "Lisinopril (Zestril) [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 6,
+        "coverageNote": "65% covered by Securite Sociale"
+      },
+      {
+        "name": "Topiramate (Epitomax) [P2]",
+        "monthlyCost": 3,
+        "withoutInsurance": 15,
+        "coverageNote": "65% covered by Securite Sociale"
+      },
+      {
+        "name": "Metoprolol (Seloken) [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 6,
+        "coverageNote": "65% covered by Securite Sociale"
+      },
+      {
+        "name": "Atorvastatine 20mg [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 8,
+        "coverageNote": "65% covered by Securite Sociale"
+      }
+    ],
+    "pharmacyAccess": "Good pharmacy density in Montpellier center and surrounding communes. CHU de Montpellier is a major teaching hospital with specialized pharmacy. Pharmacie de garde for nights/weekends.",
+    "prescriptionSystem": "Ordonnance from médecin traitant required. Carte Vitale processes reimbursement automatically at pharmacy. Renouvelable prescriptions valid up to 1 year. Large student population means good availability of généralistes.",
+    "insuranceCoverage": "Sécurité Sociale covers 70% of most prescription medications. Mutuelle complémentaire covers remaining 30% (ticket modérateur). ALD (Affection Longue Durée) provides 100% coverage for chronic conditions.",
+    "sources": [
+      {
+        "title": "Ameli.fr - Remboursement des médicaments",
+        "url": "https://www.ameli.fr/assure/remboursements/rembourse/medicament-vaccin/medicament"
+      },
+      {
+        "title": "CHU de Montpellier",
+        "url": "https://www.chu-montpellier.fr/"
+      }
+    ]
+  },
+  "vision": {
+    "annualExamCost": {
+      "withInsurance": 0,
+      "withoutInsurance": 25,
+      "notes": "Consultation ophtalmologue conventionné secteur 1: €30, SS reimburses 70%, mutuelle covers rest"
+    },
+    "eyeglasses": {
+      "basicFrameAndLens": {
+        "min": 100,
+        "typical": 250,
+        "max": 600
+      },
+      "progressiveLens": {
+        "min": 200,
+        "typical": 400,
+        "max": 800
+      },
+      "contactLensesMonthly": {
+        "min": 20,
+        "typical": 35,
+        "max": 60
+      }
+    },
+    "insuranceCoverage": "100% Santé offers zero-cost glasses (Class A frames + lenses) every 2 years. Good selection of 100% Santé options at Montpellier opticians. Contact lenses reimbursed only for specific conditions.",
+    "specialistWaitTime": "2-5 months for ophthalmologist in Montpellier. Shorter than national average due to university hospital and medical school. Orthoptists can renew prescriptions. CHU Gui de Chauliac for complex cases.",
+    "seniorConsiderations": "Annual eye exams recommended for glaucoma and macular degeneration screening. Strong sun exposure in Mediterranean climate increases UV protection needs. 100% Santé covers tinted prescription lenses.",
+    "sources": [
+      {
+        "title": "Ameli.fr - 100% Santé optique",
+        "url": "https://www.ameli.fr/assure/remboursements/reste-charge-0/optique"
+      },
+      {
+        "title": "CHU Montpellier - Ophtalmologie",
+        "url": "https://www.chu-montpellier.fr/"
+      }
+    ]
+  },
+  "dental": {
+    "annualCleaningCost": {
+      "withInsurance": 0,
+      "withoutInsurance": 30,
+      "notes": "Détartrage: €28.92 tarif conventionné, 70% SS + mutuelle covers rest"
+    },
+    "commonProcedures": [
+      {
+        "procedure": "Filling",
+        "cost": {
+          "min": 30,
+          "typical": 50,
+          "max": 80
+        },
+        "coverageNote": "70% covered"
+      },
+      {
+        "procedure": "Crown (ceramic)",
+        "cost": {
+          "min": 300,
+          "typical": 500,
+          "max": 800
+        },
+        "coverageNote": "100% Santé available"
+      },
+      {
+        "procedure": "Root Canal",
+        "cost": {
+          "min": 150,
+          "typical": 250,
+          "max": 400
+        },
+        "coverageNote": "70% base"
+      },
+      {
+        "procedure": "Extraction",
+        "cost": {
+          "min": 50,
+          "typical": 80,
+          "max": 150
+        },
+        "coverageNote": "70% covered"
+      },
+      {
+        "procedure": "Dental Implant",
+        "cost": {
+          "min": 800,
+          "typical": 1500,
+          "max": 2500
+        },
+        "coverageNote": "Not covered by SS"
+      },
+      {
+        "procedure": "Dentures (full)",
+        "cost": {
+          "min": 500,
+          "typical": 1000,
+          "max": 2000
+        },
+        "coverageNote": "100% Santé option"
+      }
+    ],
+    "insuranceCoverage": "100% Santé reform guarantees zero-cost crowns and dentures (panier sans reste à charge). Devis obligatoire with 3-tier pricing display. University dental school provides lower-cost care.",
+    "dentistAvailability": "Good availability in Montpellier; university dental faculty provides additional capacity. Typical wait 1-3 weeks for routine appointments. Faculty of Dentistry at Université de Montpellier offers supervised care at reduced rates.",
+    "sources": [
+      {
+        "title": "Ameli.fr - 100% Santé dentaire",
+        "url": "https://www.ameli.fr/assure/remboursements/reste-charge-0/dentaire"
+      },
+      {
+        "title": "Ameli.fr - Soins et prothèses dentaires",
+        "url": "https://www.ameli.fr/assure/remboursements/rembourse/soins-protheses-dentaires"
+      }
+    ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 320,
+      "typical": 390,
+      "max": 490
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 275,
+        "seniorDiscounts": "Menu du jour widely available. No tipping expected.",
+        "notes": "Lunch for 2 at moderate restaurant: ~€28 (service included), 2x/week = ~€243/mo = ~$275/mo"
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 32,
+        "seniorDiscounts": "Competitive market.",
+        "notes": "Free/Orange/SFR 1 Gig fibre €25-30/mo."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 16,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€14.99/mo"
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 8,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€6.99/mo"
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 11,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€9.99/mo"
+      },
+      {
+        "name": "NFL RedZone",
+        "monthlyCost": 11,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "DAZN NFL Game Pass €19.99/mo during season (Sep-Feb). Annualized ~€10/mo (~$11). Includes RedZone, live games, NFL Network."
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 25,
+        "seniorDiscounts": "Municipal facilities offer senior rates."
+      },
+      {
+        "name": "Books/Media",
+        "monthlyCost": 15,
+        "seniorDiscounts": "Médiathèques free."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 18,
+        "seniorDiscounts": "No specific discounts.",
+        "notes": "Affordable café culture."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Free Freebox Fibre",
+        "url": "https://www.free.fr/freebox"
+      },
+      {
+        "title": "Netflix France",
+        "url": "https://help.netflix.com/fr/node/24926"
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 50,
+      "typical": 120,
+      "max": 350
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 51,
+        "senior": 26,
+        "notes": "TaM monthly pass. Tarif réduit for 65+ and low-income. 5 tram lines + 36 bus routes."
+      },
+      "singleRide": 1.6,
+      "coverage": "TaM (Transports de l'agglomération de Montpellier): 5 tram lines (T1-T5), 36 bus routes covering Montpellier and 31 surrounding communes. Tram reaches beach (Palavas) via Line 3.",
+      "seniorDiscount": "65+ tarif réduit: approximately 50% off monthly pass. Income-tested further reductions available. Free travel on certain social benefit schemes."
+    },
+    "rideShare": {
+      "baseFare": 3,
+      "perKm": 1.15,
+      "typicalCrossTownTrip": {
+        "min": 7,
+        "typical": 11,
+        "max": 18
+      },
+      "availability": "Uber available in Montpellier. Local taxi services well-established. Good coverage in city center and to airport/station.",
+      "notes": "Tram network reduces need for taxis. Place de la Comédie to Gare Saint-Roch: walkable. Tram to airport not yet available; shuttle or taxi needed."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 0,
+        "initialRegistration": {
+          "min": 180,
+          "typical": 380,
+          "max": 700
+        },
+        "notes": "Carte grise based on fiscal horsepower; Occitanie regional tax ~€44/CV"
+      },
+      "insurance": {
+        "monthlyMin": 40,
+        "monthlyTypical": 60,
+        "monthlyMax": 110,
+        "notes": "Moderate premiums; slightly lower than Lyon/Paris"
+      },
+      "fuel": {
+        "pricePerLiter": 1.75,
+        "monthlyEstimate": {
+          "min": 40,
+          "typical": 80,
+          "max": 180
+        },
+        "notes": "Diesel €1.65-1.75, SP95 €1.75-1.85; compact city reduces driving needs"
+      },
+      "contrôleTechnique": {
+        "cost": 78,
+        "frequency": "Every 2 years",
+        "notes": "Required for vehicles over 4 years old"
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 35,
+          "typical": 70,
+          "max": 130
+        },
+        "hourlyStreet": 1.5,
+        "notes": "TAM Stationnement manages city parking. Resident permits available. Park & Ride at tram termini."
+      },
+      "tolls": {
+        "monthlyEstimate": 15,
+        "notes": "A9/A709 autoroute tolled. Local trips mostly toll-free using city roads. Monthly estimate for occasional autoroute use."
+      },
+      "seniorDiscounts": "No specific car ownership discounts for seniors. ZFE (low emission zone) under discussion."
+    },
+    "walkability": "Excellent in Écusson (historic center), Antigone, and Port Marianne. Most daily needs walkable in central neighborhoods. Flat terrain throughout city makes walking easy. Pedestrianized streets in center.",
+    "cycling": {
+      "bikeShareMonthly": 0,
+      "infrastructure": "Vélomagg bike share: 57 stations, 500+ bikes across Montpellier. Free for first 30 min with subscription (€5/month). Over 200 km of cycling lanes. Flat terrain ideal for cycling.",
+      "notes": "Vélomagg subscription €5/month or €15/year (reduced rate). Electric bikes available. Major investment in cycling infrastructure ongoing. Tram + bike combination popular."
+    },
+    "sources": [
+      {
+        "title": "TaM - Tarifs et abonnements",
+        "url": "https://www.tam-voyages.com/tarifs/"
+      },
+      {
+        "title": "Vélomagg Montpellier",
+        "url": "https://www.tam-voyages.com/velomagg/"
+      },
+      {
+        "title": "Montpellier Méditerranée Métropole - Transports",
+        "url": "https://www.montpellier3m.fr/"
+      }
+    ],
+    "electricVehicle": {
+      "purchasePrice": {
+        "min": 25000,
+        "typical": 35000,
+        "max": 55000
+      },
+      "purchaseNotes": "Renault Megane E-Tech ~€35K, Peugeot e-208 ~€25K, Tesla Model 3 ~€40K, VW ID.4 ~€42K. Strong government incentives (bonus écologique).",
+      "federalIncentive": 4000,
+      "stateIncentive": 0,
+      "incentiveNotes": "Bonus écologique up to €4,000 for new EVs (income-dependent, €7,000 for low-income households). Prime à la conversion up to €5,000 additional for scrapping old diesel/petrol. Leasing social €100/mo for eligible households.",
+      "chargingHome": {
+        "installCost": {
+          "min": 300,
+          "typical": 800,
+          "max": 1500
+        },
+        "monthlyElectricity": {
+          "min": 25,
+          "typical": 40,
+          "max": 65
+        },
+        "notes": "Wallbox installation eligible for 300€ tax credit (CITE). EDF regulated tariff ~€0.22/kWh (Heures Creuses: ~€0.17/kWh). ~1,500 km/month = ~250 kWh = €43-55."
+      },
+      "chargingPublic": {
+        "perKwh": {
+          "min": 0.25,
+          "typical": 0.4,
+          "max": 0.65
+        },
+        "notes": "Ionity €0.39/kWh with subscription. TotalEnergies €0.30-0.45/kWh. Many free or low-cost municipal chargers in Brittany."
+      },
+      "insurance": {
+        "monthly": {
+          "min": 35,
+          "typical": 60,
+          "max": 100
+        },
+        "notes": "EV insurance often comparable to ICE in France. Bonus-malus system rewards low-emission vehicles. Shop MAIF, Matmut, Direct Assurance."
+      },
+      "maintenance": {
+        "annual": {
+          "min": 300,
+          "typical": 450,
+          "max": 700
+        },
+        "notes": "Contrôle technique (MOT) every 2 yrs after 4 yrs. No vidange (oil change). Tire rotation, cabin filter, brake fluid. French labor rates lower than US."
+      },
+      "registration": {
+        "annual": {
+          "min": 0,
+          "typical": 0,
+          "max": 0
+        },
+        "notes": "EVs exempt from carte grise regional tax in most régions including Brittany. No annual road tax (vignette Crit'Air 0 = green sticker, exempt from ZFE restrictions)."
+      },
+      "batteryWarranty": "8 years / 160,000 km. EU regulations guarantee 70% capacity retention.",
+      "depreciationNotes": "Similar to US rates. French market strong for used EVs due to ZFE regulations pushing demand. Renault/Peugeot hold value well domestically.",
+      "totalMonthlyOwnership": {
+        "min": 100,
+        "typical": 175,
+        "max": 280
+      },
+      "totalMonthlyNotes": "Includes: charging (€40), insurance (€60), maintenance (€38/mo avg). No registration fees. Excludes: purchase/loan payment, depreciation.",
+      "sources": [
+        {
+          "title": "Bonus écologique - Service-Public.fr",
+          "url": "https://www.service-public.fr/particuliers/vosdroits/F34014"
+        },
+        {
+          "title": "Prime à la conversion - Primealaconversion.gouv.fr",
+          "url": "https://www.primealaconversion.gouv.fr/"
+        },
+        {
+          "title": "Bornes de recharge - Chargemap",
+          "url": "https://chargemap.com/map"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 60,
+    "discounts": [
+      {
+        "category": "Transit",
+        "description": "TaM tarif réduit senior",
+        "discount": "~50% off monthly pass",
+        "details": "65+ with justificatif d'âge; income-tested further reductions",
+        "source": "https://www.tam-voyages.com/tarifs/"
+      },
+      {
+        "category": "Rail",
+        "description": "SNCF Avantage Senior",
+        "discount": "30% off",
+        "details": "€49/year for TGV/Intercités; liO train regional discounts also available",
+        "source": "https://www.sncf-connect.com/app/catalogue/description/carte-avantage-senior"
+      },
+      {
+        "category": "Museums",
+        "description": "EU 65+ free/reduced at national museums",
+        "discount": "Free/reduced",
+        "details": "Musée Fabre: reduced rate for 65+; many municipal museums free first Sunday",
+        "source": "https://museefabre.montpellier3m.fr/"
+      },
+      {
+        "category": "Cinema",
+        "description": "Tarif senior",
+        "discount": "€2-3 off",
+        "details": "60+ at most cinemas; typically €8-9 instead of €11-12",
+        "source": ""
+      },
+      {
+        "category": "Tax",
+        "description": "Taxe d'habitation exemption",
+        "discount": "Full exemption possible",
+        "details": "Income-tested; retirees with modest income often qualify",
+        "source": "https://www.service-public.fr/particuliers/vosdroits/F42"
+      },
+      {
+        "category": "Healthcare",
+        "description": "ALD 100% coverage",
+        "discount": "100%",
+        "details": "Chronic conditions fully covered; CHU Montpellier is major teaching hospital",
+        "source": "https://www.ameli.fr/assure/droits-demarches/maladie-accident-hospitalisation/affection-longue-duree/affection-longue-duree-702"
+      }
+    ]
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 70,
+      "typical": 85,
+      "max": 105
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in France at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "Free Mobile (Local)",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "110GB 5G",
+        "baseCost": 18,
+        "taxesAndFees": 0,
+        "monthlyTotal": 20,
+        "notes": "Free Mobile €8.99/mo per line (20% TVA included). 110GB 5G data, unlimited calls in France + 35 destinations. ~$20/mo for 2 lines."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      },
+      {
+        "title": "Free Mobile Plans",
+        "url": "https://mobile.free.fr/forfaits"
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom house (maison/villa)",
+    "monthlyBudget": {
+      "min": 950,
+      "max": 1400,
+      "typical": 1150
+    },
+    "breakdown": {
+      "baseRentEUR": 900,
+      "taxeOrduresMenageresEUR": 20,
+      "chargesLocativesEUR": 25,
+      "totalEUR": 945,
+      "exchangeRate": 1.08,
+      "totalUSD": 1021
+    },
+    "taxNotes": "Taxe d'habitation eliminated for primary residences. TEOM ~€230-270/year in Montpellier area. Montpellier has rent control (encadrement des loyers) since July 2022. No VAT on residential rent.",
+    "leaseTerms": "3-year lease unfurnished. Montpellier is zone tendue: 1-month notice, rent increase caps apply. Security deposit 1 month.",
+    "marketNotes": "Good availability of 2BR villas in Montpellier suburbs and nearby villages (Castelnau-le-Lez, Lattes, Pérols). Mediterranean climate makes outdoor living spaces common. Houses often include small garden.",
+    "sources": [
+      {
+        "name": "SeLoger Montpellier Rentals",
+        "url": "https://www.seloger.com/immobilier/locations/montpellier.htm"
+      },
+      {
+        "name": "Montpellier Encadrement des Loyers",
+        "url": "https://www.montpellier3m.fr/encadrement-des-loyers"
+      }
+    ],
+    "housingSites": {
+      "rentals": [
+        {
+          "name": "SeLoger",
+          "url": "https://www.seloger.com/immobilier/locations/immo-montpellier/",
+          "type": "rental"
+        },
+        {
+          "name": "LeBonCoin",
+          "url": "https://www.leboncoin.fr/recherche?category=10&locations=montpellier",
+          "type": "rental"
+        },
+        {
+          "name": "Logic-Immo",
+          "url": "https://www.logic-immo.com/vente-immobilier-montpellier/",
+          "type": "purchase"
+        }
+      ]
+    }
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Lidl",
+        "type": "discount-supermarket",
+        "website": "https://www.lidl.fr/",
+        "notes": "German discount chain, very popular in France",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Lidl France Tour",
+            "url": "https://www.youtube.com/watch?v=P0cWVSFi1mk"
+          },
+          {
+            "platform": "instagram",
+            "title": "@lidlfrance",
+            "url": "https://www.instagram.com/lidl.fr/"
+          }
+        ]
+      },
+      {
+        "name": "Grand Frais",
+        "type": "specialty-grocery",
+        "website": "https://www.grandfrais.com/",
+        "notes": "Fresh produce specialist",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Grand Frais Store Tour",
+            "url": "https://www.youtube.com/watch?v=7UdVP_ywS8A"
+          },
+          {
+            "platform": "instagram",
+            "title": "@grandfrais",
+            "url": "https://www.instagram.com/grandfrais/"
+          }
+        ]
+      },
+      {
+        "name": "Marché du Lez",
+        "type": "farmers-market",
+        "website": "https://www.montpellier-tourisme.fr/",
+        "notes": "Sunday organic market",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Montpellier Markets",
+            "url": "https://www.youtube.com/watch?v=dJ9vMFG3xkM"
+          },
+          {
+            "platform": "instagram",
+            "title": "@montpellier_tourisme",
+            "url": "https://www.instagram.com/montpellier_tourisme/"
+          }
+        ]
+      }
+    ]
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 51,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Farmers market or CSA box"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 34,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Bananas, berries, apples, citrus"
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 17,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Sweet Potatoes / Potatoes",
+            "monthlyCost": 12.75,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet staple"
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 10.2,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet vegetables"
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 8.5,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Digestive health, home-cooked diet"
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 42.5,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Primary protein for both adults & dog"
+          },
+          {
+            "name": "Ground Turkey / Beef",
+            "monthlyCost": 38.25,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean ground for dog food base"
+          },
+          {
+            "name": "Fish (salmon/tilapia)",
+            "monthlyCost": 34,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Omega-3 rich"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 12.75,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": "Eggs also for dog diet"
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 10.2,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Essential for balanced home-cooked dog diet"
+          },
+          {
+            "name": "Beans / Lentils",
+            "monthlyCost": 6.8,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "grains",
+        "name": "Grains & Starches",
+        "items": [
+          {
+            "name": "Rice (brown/white)",
+            "monthlyCost": 8.5,
+            "quantity": 5,
+            "unit": "lbs/month",
+            "forWhom": "shared",
+            "notes": "Dog diet carb source"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 12.75,
+            "quantity": 2,
+            "unit": "loaves/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 6.8,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Oats / Cereal",
+            "monthlyCost": 8.5,
+            "quantity": 1,
+            "unit": "container/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk / Plant Milk",
+            "monthlyCost": 12.75,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Cheese",
+            "monthlyCost": 17,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Yogurt / Kefir",
+            "monthlyCost": 12.75,
+            "quantity": 1,
+            "unit": "quart/week",
+            "forWhom": "shared",
+            "notes": "Probiotics for dog digestion too"
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 8.5,
+            "quantity": 1,
+            "unit": "unit/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Olive Oil / Cooking Oils",
+            "monthlyCost": 12.75,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Spices & Seasonings",
+            "monthlyCost": 8.5,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Canned Goods (tomatoes, beans)",
+            "monthlyCost": 10.2,
+            "quantity": 6,
+            "unit": "cans/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Condiments & Sauces",
+            "monthlyCost": 8.5,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 21.25,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tea",
+            "monthlyCost": 6.8,
+            "quantity": 1,
+            "unit": "box/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Wine / Beer",
+            "monthlyCost": 34,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Optional"
+          },
+          {
+            "name": "Sparkling Water / Juice",
+            "monthlyCost": 10.2,
+            "quantity": 1,
+            "unit": "case/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "snacks",
+        "name": "Snacks & Treats",
+        "items": [
+          {
+            "name": "Nuts & Trail Mix",
+            "monthlyCost": 12.75,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Crackers / Chips",
+            "monthlyCost": 8.5,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Dark Chocolate",
+            "monthlyCost": 6.8,
+            "quantity": 4,
+            "unit": "bars/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "frozen",
+        "name": "Frozen Foods",
+        "items": [
+          {
+            "name": "Frozen Vegetables",
+            "monthlyCost": 10.2,
+            "quantity": 4,
+            "unit": "bags/month",
+            "forWhom": "shared",
+            "notes": "Backup for dog food prep"
+          },
+          {
+            "name": "Frozen Fruit (smoothies)",
+            "monthlyCost": 8.5,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Frozen Meals (convenience)",
+            "monthlyCost": 12.75,
+            "quantity": 4,
+            "unit": "meals/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "supplements",
+        "name": "Pet Supplements & Health",
+        "items": [
+          {
+            "name": "Joint Supplement (glucosamine)",
+            "monthlyCost": 25.5,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Essential for Bernese — hip/joint health"
+          },
+          {
+            "name": "Fish Oil (omega-3)",
+            "monthlyCost": 12.75,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Coat & skin health"
+          },
+          {
+            "name": "Multivitamin / Mineral Mix",
+            "monthlyCost": 17,
+            "quantity": 1,
+            "unit": "container/month",
+            "forWhom": "dog",
+            "notes": "Balance home-cooked diet"
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 12.75,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "dog",
+            "notes": "Training & dental chews"
+          }
+        ]
+      }
+    ],
+    "monthlyTotal": 605
+  },
+  "healthcare": {
+    "system": "PUMA (universal) + Mutuelle complémentaire",
+    "coverageSummary": "Sécurité Sociale covers 70% of most care. Mutuelle covers remaining 30% + extras. ALD status for diabetes & hypertension provides 100% coverage for related care.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD"
+      ],
+      "costs": [
+        {
+          "item": "Mutuelle premium (enhanced tier)",
+          "monthlyCost": 70,
+          "notes": "Higher tier for ophthalmology coverage. ~€65-75/mo."
+        },
+        {
+          "item": "Anti-VEGF injections (Eylea)",
+          "monthlyCost": 0,
+          "notes": "Covered 100% at hospital (acte hospitalier). No out-of-pocket."
+        },
+        {
+          "item": "Ophthalmologist visits + OCT",
+          "monthlyCost": 5,
+          "notes": "Sector 2 specialist dépassements. Mutuelle covers most."
+        },
+        {
+          "item": "Médecin traitant visits",
+          "monthlyCost": 3,
+          "notes": "€1.50 franchise per visit after Sécu + mutuelle."
+        },
+        {
+          "item": "Lab work (thyroid, lipid panels)",
+          "monthlyCost": 2,
+          "notes": "Sécu covers 60-100% depending on ALD status."
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Gout",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Migraines"
+      ],
+      "costs": [
+        {
+          "item": "Mutuelle premium (standard tier)",
+          "monthlyCost": 55,
+          "notes": "Standard mutuelle. ALD covers most diabetes costs."
+        },
+        {
+          "item": "ALD coverage (diabetes + hypertension)",
+          "monthlyCost": 0,
+          "notes": "100% Sécu coverage for diabetes & hypertension care."
+        },
+        {
+          "item": "Endocrinologist visits",
+          "monthlyCost": 2,
+          "notes": "Covered under ALD. Minimal ticket modérateur."
+        },
+        {
+          "item": "Diabetes supplies",
+          "monthlyCost": 0,
+          "notes": "100% covered under ALD for T2 diabetes."
+        },
+        {
+          "item": "Specialist copays (rheumatology, neuro)",
+          "monthlyCost": 5,
+          "notes": "Non-ALD specialists: small copays after mutuelle."
+        }
+      ]
+    },
+    "shared": [
+      {
+        "item": "Dental care (2 adults)",
+        "monthlyCost": 10,
+        "notes": "RAC 0 reform: many dental prosthetics 100% covered. Some copays for complex work."
+      },
+      {
+        "item": "Vision care (2 adults)",
+        "monthlyCost": 5,
+        "notes": "Mutuelle covers glasses/contacts every 2 years. AMD specialist care covered by Sécu."
+      }
+    ],
+    "monthlyTotals": {
+      "person1": 80,
+      "person2": 62,
+      "shared": 15,
+      "household": 157
+    },
+    "notes": null,
+    "phaseTransition": null
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Black Hair Care",
+      "priceRange": {
+        "cut": "22-45",
+        "color": "55-115",
+        "fullService": "75-170"
+      },
+      "notes": "Montpellier has a diverse population with good Afro salon options, especially near Plan Cabanes and Antigone.",
+      "providers": [
+        {
+          "name": "Afro Queen Coiffure",
+          "type": "Afro hair salon",
+          "address": "Centre, Montpellier",
+          "distanceMi": 0,
+          "rating": 4.4,
+          "notes": "Braids, locs, weaves, natural hair, color. Popular with local community.",
+          "website": ""
+        },
+        {
+          "name": "Salon Nappy",
+          "type": "Natural hair salon",
+          "address": "Antigone, Montpellier",
+          "distanceMi": 1,
+          "rating": 4.5,
+          "notes": "Natural hair focus. DevaCurl products. Color on natural hair. Appointments.",
+          "website": ""
+        }
+      ]
+    },
+    "whiteHairCare": {
+      "label": "White/Caucasian Hair Care",
+      "priceRange": {
+        "cut": "20-40",
+        "color": "50-100",
+        "highlights": "65-130"
+      },
+      "notes": "Montpellier centre has affordable salons. Lower prices than Paris or Lyon.",
+      "providers": [
+        {
+          "name": "Franck Provost",
+          "type": "Upscale chain salon",
+          "address": "Place de la Comédie, Montpellier",
+          "distanceMi": 0,
+          "rating": 4.4,
+          "notes": "Reliable color and cuts. Central location. Good for highlights and grey blending.",
+          "website": ""
+        },
+        {
+          "name": "Mod's Hair",
+          "type": "Chain salon",
+          "address": "Montpellier centre",
+          "distanceMi": 0,
+          "rating": 4.3,
+          "notes": "Japanese-French salon chain. Good techniques, moderate prices.",
+          "website": ""
+        }
+      ]
+    },
+    "mensBigTall": {
+      "label": "Men's Big & Tall Clothing",
+      "priceRange": {
+        "shirts": "22-55",
+        "pants": "28-50",
+        "suits": "90-280"
+      },
+      "notes": "Polygone shopping center and Odysseum for retail. Kiabi at Lattes for budget big sizes.",
+      "providers": [
+        {
+          "name": "Kiabi (Lattes)",
+          "type": "Budget retailer",
+          "address": "Lattes, near Montpellier",
+          "distanceMi": 4,
+          "rating": 4,
+          "notes": "Budget big & tall. Up to 5XL. Good value.",
+          "website": ""
+        },
+        {
+          "name": "Polygone Shopping Centre",
+          "type": "Shopping mall",
+          "address": "Centre, Montpellier",
+          "distanceMi": 0,
+          "rating": 4.2,
+          "notes": "C&A, Celio (to 3XL). Central location with multiple options.",
+          "website": ""
+        }
+      ]
+    },
+    "womensClothing": {
+      "label": "Women's Regular Clothing",
+      "priceRange": {
+        "casual": "15-42",
+        "dresses": "28-75",
+        "professional": "35-95"
+      },
+      "notes": "Montpellier is a student city with affordable fashion. Polygone mall and Rue de la Loge for shopping.",
+      "providers": [
+        {
+          "name": "Polygone Shopping Centre",
+          "type": "Shopping mall",
+          "address": "Centre, Montpellier",
+          "distanceMi": 0,
+          "rating": 4.3,
+          "notes": "Zara, H&M, Mango plus French brands. Full range of regular sizes.",
+          "website": ""
+        },
+        {
+          "name": "Galeries Lafayette (Polygone)",
+          "type": "Department store",
+          "address": "Centre, Montpellier",
+          "distanceMi": 0,
+          "rating": 4.4,
+          "notes": "French department store. Good selection of women's clothing in all sizes.",
+          "website": ""
+        }
+      ]
+    },
+    "shoes": {
+      "label": "Shoes",
+      "priceRange": {
+        "casual": "28-65",
+        "dress": "45-100",
+        "athletic": "40-95",
+        "wideWidth": "35-85"
+      },
+      "notes": "Good shoe options at Polygone and Odysseum. Minelli and André for mid-range.",
+      "providers": [
+        {
+          "name": "Minelli",
+          "type": "Shoe retailer",
+          "address": "Polygone, Montpellier",
+          "distanceMi": 0,
+          "rating": 4.2,
+          "notes": "Quality French shoes. Women's and men's. Comfortable styles.",
+          "website": ""
+        },
+        {
+          "name": "La Halle aux Chaussures",
+          "type": "Shoe warehouse",
+          "address": "Near Montpellier",
+          "distanceMi": 4,
+          "rating": 4,
+          "notes": "Best value shoes. Extended sizes available. Wide options.",
+          "website": ""
+        }
+      ]
+    }
+  }
+}

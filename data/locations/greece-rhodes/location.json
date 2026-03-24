@@ -1,0 +1,178 @@
+{
+  "id": "greece-rhodes",
+  "name": "Rhodes, Greece",
+  "country": "Greece",
+  "region": "Southern Europe",
+  "cities": [
+    "Rhodes Town",
+    "Lindos",
+    "Ialyssos"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93
+  },
+  "visa": {
+    "type": "Financial Independence Visa",
+    "incomeRequirement": {
+      "monthly": 2000,
+      "currency": "EUR"
+    },
+    "notes": "Financially independent person visa requires ~€2,000/mo income proof."
+  },
+  "climate": {
+    "winterLowF": 50,
+    "summerHighF": 93,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 40
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 750,
+      "min": 600,
+      "max": 950,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 390,
+      "min": 310,
+      "max": 490,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 145,
+      "min": 105,
+      "max": 195,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 85,
+      "min": 55,
+      "max": 130,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 105,
+      "min": 70,
+      "max": 155,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 130,
+      "min": 80,
+      "max": 190,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 200,
+      "min": 140,
+      "max": 280,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 70,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 87,
+      "min": 72,
+      "max": 107,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 20,
+      "typical": 35,
+      "max": 70,
+      "annualInflation": 0.035,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 40,
+      "typical": 80,
+      "max": 160,
+      "annualInflation": 0.035
+    }
+  },
+  "healthcare": {
+    "system": "Rhodes General Hospital provides basic and emergency care. Specialist treatment may require Athens travel.",
+    "qualityRating": 6,
+    "dentalIncluded": false,
+    "waitTimes": "Public: 4-12 weeks. Complex cases need mainland referral.",
+    "prescriptionCoverage": "Standard EOPYY coverage with co-pays"
+  },
+  "lifestyle": {
+    "internetSpeed": "100Mbps+",
+    "dogFriendly": 6,
+    "expatCommunity": 5,
+    "englishPrevalence": 5,
+    "safetyRating": 9
+  },
+  "pros": [
+    "Very warm climate with 300+ days of sunshine",
+    "Medieval old town is a UNESCO World Heritage site",
+    "Affordable cost of living"
+  ],
+  "cons": [
+    "Tourism-dominated economy (very quiet off-season)",
+    "Limited specialist healthcare",
+    "Island isolation with seasonal flight connections"
+  ],
+  "taxes": {
+    "notes": "Greek progressive income tax 9%-44%. 7% flat tax option for foreign retirees.",
+    "vatRate": 24,
+    "socialChargesRate": 0
+  }
+}

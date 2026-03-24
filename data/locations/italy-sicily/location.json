@@ -1,0 +1,178 @@
+{
+  "id": "italy-sicily",
+  "name": "Sicily, Italy",
+  "country": "Italy",
+  "region": "Southern Europe",
+  "cities": [
+    "Palermo",
+    "Taormina",
+    "Catania"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93
+  },
+  "visa": {
+    "type": "Elective Residence Visa",
+    "incomeRequirement": {
+      "monthly": 2583,
+      "currency": "EUR"
+    },
+    "notes": "Elective residence visa requires ~€31K/year income."
+  },
+  "climate": {
+    "winterLowF": 46,
+    "summerHighF": 93,
+    "meetsWarmWinterReq": false,
+    "rainyDaysPerYear": 45
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 680,
+      "min": 530,
+      "max": 880,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 370,
+      "min": 290,
+      "max": 460,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 150,
+      "min": 110,
+      "max": 200,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 85,
+      "min": 55,
+      "max": 130,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 105,
+      "min": 70,
+      "max": 155,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 120,
+      "min": 75,
+      "max": 180,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 190,
+      "min": 130,
+      "max": 270,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 70,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 81,
+      "min": 66,
+      "max": 101,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 18,
+      "typical": 30,
+      "max": 65,
+      "annualInflation": 0.03,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 40,
+      "typical": 80,
+      "max": 160,
+      "annualInflation": 0.035
+    }
+  },
+  "healthcare": {
+    "system": "Italian SSN. Major hospitals in Palermo and Catania. Quality improving but historically underfunded vs northern Italy.",
+    "qualityRating": 6,
+    "dentalIncluded": false,
+    "waitTimes": "Public: 6-16 weeks. Private options available in major cities.",
+    "prescriptionCoverage": "SSN covers essential prescriptions with tiered co-pays"
+  },
+  "lifestyle": {
+    "internetSpeed": "100Mbps+",
+    "dogFriendly": 6,
+    "expatCommunity": 5,
+    "englishPrevalence": 3,
+    "safetyRating": 7
+  },
+  "pros": [
+    "Among the cheapest places to live in Western Europe",
+    "Incredible food, history, and natural beauty",
+    "Warm climate with mild winters"
+  ],
+  "cons": [
+    "Infrastructure and bureaucracy can be challenging",
+    "Limited specialist healthcare quality",
+    "Organized crime still present in some areas"
+  ],
+  "taxes": {
+    "notes": "Italian progressive income tax 23%-43%. 7% flat tax for retirees in southern towns under 20K population.",
+    "vatRate": 22,
+    "socialChargesRate": 0
+  }
+}

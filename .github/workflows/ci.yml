@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20, 22]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run shared tests
+        run: npm run test:shared
+
+      - name: Run API tests
+        run: npm test
+
+      - name: TypeScript type check
+        run: npm run typecheck
+
+      - name: Build
+        run: npm run build
+
+  security-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run npm audit
+        run: npm audit --audit-level=critical
+        continue-on-error: true
+
+      - name: Check for secrets in code
+        run: |
+          if grep -rn "sk_live_\|whsec_live_" \
+            --include="*.js" --include="*.ts" --include="*.json" \
+            --exclude-dir=node_modules --exclude-dir=.git \
+            src/ shared/; then
+            echo "::error::Potential live Stripe keys found in source code!"
+            exit 1
+          fi
+          echo "No secrets detected."

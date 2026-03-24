@@ -1,0 +1,171 @@
+{
+  "id": "ecuador-salinas",
+  "name": "Salinas, Ecuador",
+  "country": "Ecuador",
+  "region": "South America",
+  "cities": [
+    "Salinas"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Retirement (Jubilado)",
+    "incomeRequirement": {
+      "monthly": 1375,
+      "currency": "USD"
+    },
+    "notes": "Retirement visa requires $1,375/mo income."
+  },
+  "climate": {
+    "winterLowF": 68,
+    "summerHighF": 85,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 40
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 650,
+      "min": 500,
+      "max": 800,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 300,
+      "min": 220,
+      "max": 400,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 90,
+      "min": 55,
+      "max": 140,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 120,
+      "min": 60,
+      "max": 200,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 180,
+      "min": 100,
+      "max": 280,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 40,
+      "min": 25,
+      "max": 65,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 100,
+      "min": 50,
+      "max": 170,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 150,
+      "min": 90,
+      "max": 230,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 70,
+      "min": 40,
+      "max": 110,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 77,
+      "min": 62,
+      "max": 97,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 100,
+      "min": 60,
+      "max": 180,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 25,
+      "typical": 45,
+      "max": 100,
+      "annualInflation": 0.04,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 30,
+      "typical": 55,
+      "max": 110,
+      "annualInflation": 0.04
+    }
+  },
+  "healthcare": {
+    "system": "Local clinics; Guayaquil (2.5 hours) for hospital care.",
+    "qualityRating": 5,
+    "dentalIncluded": false,
+    "waitTimes": "Limited locally; travel to Guayaquil for specialists",
+    "prescriptionCoverage": "Basic pharmacy availability"
+  },
+  "lifestyle": {
+    "internetSpeed": "25-50Mbps",
+    "dogFriendly": 6,
+    "expatCommunity": 5,
+    "englishPrevalence": 3,
+    "safetyRating": 6
+  },
+  "pros": [
+    "Warm coastal beach town with very little rain",
+    "Uses USD with no exchange risk",
+    "Popular with Ecuadorian and expat retirees"
+  ],
+  "cons": [
+    "Very seasonal—dead during off-season",
+    "Limited healthcare locally",
+    "Can feel isolated from major services"
+  ],
+  "taxes": {
+    "notes": "Ecuador uses USD. Jubilado discounts apply.",
+    "vatRate": 0.15,
+    "socialChargesRate": 0
+  }
+}

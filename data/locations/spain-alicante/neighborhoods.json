@@ -1,0 +1,167 @@
+{
+  "city": "Alicante / Costa Blanca",
+  "neighborhoods": [
+    {
+      "id": "alicante-centro",
+      "name": "Centro / Casco Antiguo (Alicante)",
+      "description": "Historic center beneath Santa Barbara Castle with the Explanada promenade, port area, and Central Market",
+      "character": "Urban walkable, Mediterranean port city, mix of historic and modern",
+      "housing": {
+        "avgRentOneBedroomEUR": 550,
+        "avgRentTwoBedroomEUR": 750,
+        "buyPricePerSqmEUR": 2200,
+        "predominantType": "Apartments in renovated historic buildings and modern blocks"
+      },
+      "walkabilityScore": 90,
+      "transitScore": 72,
+      "safetyRating": "moderate-high",
+      "expats": {
+        "communitySize": "moderate",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Explanada de Espana is the social heart. Mercado Central for daily shopping. TRAM connects to northern Costa Blanca towns.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Alicante",
+          "url": "https://www.numbeo.com/cost-of-living/in/Alicante"
+        },
+        {
+          "title": "Idealista - Alicante Centro",
+          "url": "https://www.idealista.com/en/venta-viviendas/alicante-alicante/centro/"
+        },
+        {
+          "title": "Alicante Tourism",
+          "url": "https://www.alicanteturismo.com/"
+        }
+      ]
+    },
+    {
+      "id": "alicante-playa-san-juan",
+      "name": "Playa de San Juan",
+      "description": "Long sandy beach neighborhood north of Alicante center with a boardwalk promenade and resort atmosphere",
+      "character": "Beach lifestyle, modern, spacious, popular with both locals and expats",
+      "housing": {
+        "avgRentOneBedroomEUR": 600,
+        "avgRentTwoBedroomEUR": 850,
+        "buyPricePerSqmEUR": 2600,
+        "predominantType": "Modern apartments and beachfront condos, many with pools"
+      },
+      "walkabilityScore": 75,
+      "transitScore": 65,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "moderate",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "6km sandy beach. TRAM connects to Alicante center in 20 minutes. Quieter in winter. Good restaurants along the paseo.",
+      "sources": [
+        {
+          "title": "Idealista - San Juan Playa",
+          "url": "https://www.idealista.com/en/venta-viviendas/alicante-alicante/playa-de-san-juan/"
+        },
+        {
+          "title": "Numbeo Cost of Living Alicante",
+          "url": "https://www.numbeo.com/cost-of-living/in/Alicante"
+        }
+      ]
+    },
+    {
+      "id": "javea-port-arenal",
+      "name": "Javea (Xabia) - Port & Arenal",
+      "description": "Picturesque coastal town between Alicante and Valencia with a historic port area, sandy Arenal beach, and dramatic Montgo mountain backdrop",
+      "character": "Expat-popular coastal town, laid-back, scenic, strong British community",
+      "housing": {
+        "avgRentOneBedroomEUR": 600,
+        "avgRentTwoBedroomEUR": 850,
+        "buyPricePerSqmEUR": 2800,
+        "predominantType": "Villas with pools, townhouses, and apartments near Arenal beach"
+      },
+      "walkabilityScore": 60,
+      "transitScore": 25,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "One of the largest British expat communities in Spain. Montgo Natural Park for hiking. Car recommended. Multiple international restaurants.",
+      "sources": [
+        {
+          "title": "Idealista - Javea",
+          "url": "https://www.idealista.com/en/venta-viviendas/xabia-javea/"
+        },
+        {
+          "title": "Javea Connect - Expat Guide",
+          "url": "https://javeaconnect.com/"
+        },
+        {
+          "title": "Spain Property - Costa Blanca",
+          "url": "https://www.kyero.com/en/costa-blanca-property"
+        }
+      ]
+    },
+    {
+      "id": "denia-centre",
+      "name": "Denia - Centre & Port",
+      "description": "Historic port town with a Moorish castle, working fishing port, and ferry connections to Ibiza and Mallorca",
+      "character": "Authentic Spanish town with growing expat community, gastronomic reputation",
+      "housing": {
+        "avgRentOneBedroomEUR": 500,
+        "avgRentTwoBedroomEUR": 700,
+        "buyPricePerSqmEUR": 2200,
+        "predominantType": "Apartments in town center and villas in surrounding urbanizations"
+      },
+      "walkabilityScore": 72,
+      "transitScore": 35,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "moderate",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "UNESCO Creative City of Gastronomy. Ferry to Balearic Islands. More Spanish character than Javea. Quique Dacosta restaurant.",
+      "sources": [
+        {
+          "title": "Idealista - Denia",
+          "url": "https://www.idealista.com/en/venta-viviendas/denia-alicante/"
+        },
+        {
+          "title": "Denia Tourism",
+          "url": "https://www.denia.net/"
+        }
+      ]
+    },
+    {
+      "id": "altea-old-town",
+      "name": "Altea - Old Town",
+      "description": "Whitewashed hilltop village with blue-domed church, artist community, and sweeping Mediterranean views",
+      "character": "Artistic, bohemian, quiet, scenic hilltop with village charm",
+      "housing": {
+        "avgRentOneBedroomEUR": 520,
+        "avgRentTwoBedroomEUR": 730,
+        "buyPricePerSqmEUR": 2400,
+        "predominantType": "Townhouses in old village and apartments/villas in surrounding areas"
+      },
+      "walkabilityScore": 65,
+      "transitScore": 40,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "moderate",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Known as the 'artists' village' of Costa Blanca. TRAM connects to Alicante and Benidorm. Beautiful sunsets from the mirador.",
+      "sources": [
+        {
+          "title": "Idealista - Altea",
+          "url": "https://www.idealista.com/en/venta-viviendas/altea-alicante/"
+        },
+        {
+          "title": "Altea Tourism",
+          "url": "https://www.altea.es/turismo/"
+        },
+        {
+          "title": "Kyero - Costa Blanca Property",
+          "url": "https://www.kyero.com/en/costa-blanca-property"
+        }
+      ]
+    }
+  ]
+}

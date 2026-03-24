@@ -1,0 +1,159 @@
+{
+  "city": "Philadelphia",
+  "neighborhoods": [
+    {
+      "id": "philly-center-city",
+      "name": "Center City",
+      "description": "Philadelphia's downtown core between the Delaware and Schuylkill rivers, with high-rise living, cultural venues, and major transit hubs",
+      "character": "Urban core, highly walkable, culturally dense, transit-rich",
+      "housing": {
+        "avgRentOneBedroomUSD": 1700,
+        "avgRentTwoBedroomUSD": 2400,
+        "buyPricePerSqmUSD": 4500,
+        "predominantType": "High-rise condos, luxury apartments, and converted loft spaces"
+      },
+      "walkabilityScore": 97,
+      "transitScore": 90,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "SEPTA bus, subway, and trolley all converge here. Reading Terminal Market for daily shopping. Broad Street is the cultural spine with theaters and concert halls.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Philadelphia",
+          "url": "https://www.numbeo.com/cost-of-living/in/Philadelphia"
+        },
+        {
+          "title": "Zillow - Center City Philadelphia",
+          "url": "https://www.zillow.com/philadelphia-pa/center-city/"
+        },
+        {
+          "title": "Visit Philadelphia",
+          "url": "https://www.visitphilly.com/"
+        }
+      ]
+    },
+    {
+      "id": "philly-rittenhouse-square",
+      "name": "Rittenhouse Square",
+      "description": "Philadelphia's most prestigious residential neighborhood surrounding the elegant Rittenhouse Square park, with upscale dining and boutiques",
+      "character": "Upscale urban, park-centered, walkable, refined",
+      "housing": {
+        "avgRentOneBedroomUSD": 1900,
+        "avgRentTwoBedroomUSD": 2700,
+        "buyPricePerSqmUSD": 5500,
+        "predominantType": "Luxury condos, historic brownstones, and pre-war apartment buildings"
+      },
+      "walkabilityScore": 98,
+      "transitScore": 85,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The square itself is a social gathering place year-round. Farmer's market on Saturdays. Among the highest property values in Philadelphia. Fine dining concentration.",
+      "sources": [
+        {
+          "title": "Zillow - Rittenhouse Square",
+          "url": "https://www.zillow.com/philadelphia-pa/rittenhouse-square/"
+        },
+        {
+          "title": "Numbeo Cost of Living Philadelphia",
+          "url": "https://www.numbeo.com/cost-of-living/in/Philadelphia"
+        }
+      ]
+    },
+    {
+      "id": "philly-chestnut-hill",
+      "name": "Chestnut Hill",
+      "description": "Affluent neighborhood in northwest Philadelphia with a walkable main street, independent shops, and a village-in-the-city atmosphere",
+      "character": "Village-like, leafy, affluent, strong community identity",
+      "housing": {
+        "avgRentOneBedroomUSD": 1400,
+        "avgRentTwoBedroomUSD": 1900,
+        "buyPricePerSqmUSD": 3800,
+        "predominantType": "Large stone and stucco houses, some dating to the 1700s, plus newer townhouses"
+      },
+      "walkabilityScore": 72,
+      "transitScore": 60,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "SEPTA regional rail and bus service to Center City. Germantown Avenue offers boutique shopping and dining. Wissahickon Valley Park is adjacent for hiking.",
+      "sources": [
+        {
+          "title": "Zillow - Chestnut Hill Philadelphia",
+          "url": "https://www.zillow.com/philadelphia-pa/chestnut-hill/"
+        },
+        {
+          "title": "Chestnut Hill Business District",
+          "url": "https://www.chestnuthillpa.com/"
+        }
+      ]
+    },
+    {
+      "id": "philly-manayunk",
+      "name": "Manayunk",
+      "description": "Former mill town along the Schuylkill River and canal, now a vibrant neighborhood with Main Street restaurants, bars, and shops",
+      "character": "Hilly, lively Main Street, young-professional energy, river views",
+      "housing": {
+        "avgRentOneBedroomUSD": 1300,
+        "avgRentTwoBedroomUSD": 1750,
+        "buyPricePerSqmUSD": 3000,
+        "predominantType": "Rowhouses on steep hills, converted mill buildings, and newer condos"
+      },
+      "walkabilityScore": 78,
+      "transitScore": 55,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Very steep streets -- consider mobility before choosing. Manayunk Towpath along the canal is great for walking and cycling. SEPTA Manayunk/Norristown line stops here.",
+      "sources": [
+        {
+          "title": "Zillow - Manayunk",
+          "url": "https://www.zillow.com/philadelphia-pa/manayunk/"
+        },
+        {
+          "title": "Manayunk Development Corporation",
+          "url": "https://www.manayunk.com/"
+        }
+      ]
+    },
+    {
+      "id": "philly-old-city",
+      "name": "Old City",
+      "description": "Philadelphia's oldest neighborhood near Independence Hall and the Liberty Bell, blending colonial history with galleries, restaurants, and loft living",
+      "character": "Historic, artsy, tourist-adjacent, cobblestone streets",
+      "housing": {
+        "avgRentOneBedroomUSD": 1600,
+        "avgRentTwoBedroomUSD": 2300,
+        "buyPricePerSqmUSD": 4200,
+        "predominantType": "Converted warehouse lofts, modern condos, and historic rowhouses"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 80,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "First Friday art walks draw crowds monthly. Elfreth's Alley is the oldest residential street in America. Close to I-95 and the Ben Franklin Bridge to New Jersey.",
+      "sources": [
+        {
+          "title": "Zillow - Old City Philadelphia",
+          "url": "https://www.zillow.com/philadelphia-pa/old-city/"
+        },
+        {
+          "title": "Old City District",
+          "url": "https://www.oldcitydistrict.org/"
+        }
+      ]
+    }
+  ]
+}

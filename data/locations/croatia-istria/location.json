@@ -1,0 +1,178 @@
+{
+  "id": "croatia-istria",
+  "name": "Istria, Croatia",
+  "country": "Croatia",
+  "region": "Southern Europe",
+  "cities": [
+    "Rovinj",
+    "Pula",
+    "Poreč"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93
+  },
+  "visa": {
+    "type": "Temporary Stay Permit",
+    "incomeRequirement": {
+      "monthly": 1500,
+      "currency": "EUR"
+    },
+    "notes": "Temporary stay permit for financially independent persons. Digital nomad visa also available."
+  },
+  "climate": {
+    "winterLowF": 37,
+    "summerHighF": 86,
+    "meetsWarmWinterReq": false,
+    "rainyDaysPerYear": 80
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 800,
+      "min": 600,
+      "max": 1050,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 380,
+      "min": 300,
+      "max": 480,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 150,
+      "min": 110,
+      "max": 200,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 85,
+      "min": 55,
+      "max": 130,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 105,
+      "min": 70,
+      "max": 155,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 130,
+      "min": 80,
+      "max": 190,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 210,
+      "min": 150,
+      "max": 300,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 70,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 85,
+      "min": 70,
+      "max": 105,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 15,
+      "typical": 28,
+      "max": 60,
+      "annualInflation": 0.035,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 25,
+      "typical": 50,
+      "max": 100,
+      "annualInflation": 0.035
+    }
+  },
+  "healthcare": {
+    "system": "HZZO with Pula General Hospital. Italian-influenced region with decent care; Zagreb or Rijeka for complex cases.",
+    "qualityRating": 7,
+    "dentalIncluded": false,
+    "waitTimes": "Public: 4-12 weeks. Private clinics available in Pula.",
+    "prescriptionCoverage": "HZZO covers most prescriptions with small co-pays"
+  },
+  "lifestyle": {
+    "internetSpeed": "100Mbps+",
+    "dogFriendly": 7,
+    "expatCommunity": 5,
+    "englishPrevalence": 6,
+    "safetyRating": 9
+  },
+  "pros": [
+    "Italian-influenced cuisine with excellent truffles and wine",
+    "Affordable with charming coastal towns",
+    "Close to Italy and Slovenia for day trips"
+  ],
+  "cons": [
+    "Cooler winters than Dalmatian coast",
+    "Tourism-driven economy (quiet off-season)",
+    "Car essential for exploring the peninsula"
+  ],
+  "taxes": {
+    "notes": "Croatian progressive income tax 20%/30%. Municipal surtax may apply. No US-Croatia tax treaty.",
+    "vatRate": 25,
+    "socialChargesRate": 0
+  }
+}

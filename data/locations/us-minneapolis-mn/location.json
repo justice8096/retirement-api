@@ -1,0 +1,167 @@
+{
+  "id": "us-minneapolis-mn",
+  "name": "Minneapolis, MN",
+  "country": "United States",
+  "region": "US Midwest",
+  "cities": [
+    "Minneapolis"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "N/A (domestic)",
+    "notes": "US citizen â€” no visa required"
+  },
+  "climate": {
+    "winterLowF": 4,
+    "summerHighF": 83,
+    "meetsWarmWinterReq": false,
+    "rainyDaysPerYear": 115
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 1900,
+      "min": 1500,
+      "max": 2400,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 600,
+      "min": 500,
+      "max": 720,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 230,
+      "min": 180,
+      "max": 300,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 540,
+      "min": 440,
+      "max": 680,
+      "annualInflation": 0.05
+    },
+    "insurance": {
+      "typical": 300,
+      "min": 220,
+      "max": 400,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 200,
+      "min": 150,
+      "max": 300,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 60,
+      "min": 40,
+      "max": 90,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 300,
+      "min": 200,
+      "max": 400,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 330,
+      "min": 230,
+      "max": 440,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 100,
+      "min": 60,
+      "max": 150,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 120,
+      "min": 80,
+      "max": 160,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 62,
+      "min": 50,
+      "max": 77,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 65,
+      "typical": 91,
+      "max": 180,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 200,
+      "typical": 350,
+      "max": 600,
+      "annualInflation": 0.055
+    }
+  },
+  "healthcare": {
+    "system": "Private insurance (ACA/employer/Medicare)",
+    "qualityRating": 9,
+    "dentalIncluded": false,
+    "waitTimes": "Short to moderate",
+    "prescriptionCoverage": "Via insurance plan"
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps available",
+    "dogFriendly": 8,
+    "expatCommunity": 1,
+    "englishPrevalence": 10,
+    "safetyRating": 6
+  },
+  "pros": [
+    "Excellent healthcare (Mayo, Allina, Fairview systems)",
+    "Strong arts, music, and theater scene",
+    "Extensive parks and bike trail network"
+  ],
+  "cons": [
+    "Extremely cold, long winters",
+    "High state income tax (5.35-9.85%)",
+    "SS benefits partially taxed by state"
+  ],
+  "taxes": {
+    "notes": "Federal + MN state income tax (5.35-9.85%); SS partially taxed",
+    "vatRate": 0,
+    "socialChargesRate": 0
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "distanceUnit": "km",
+  "currency": "EUR",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Hospital General Universitario de Málaga",
+      "address": "City center area, Málaga, Spain",
+      "distanceKm": 6,
+      "notes": "Public hospital with 24hr emergency, some English-speaking staff",
+      "sources": [
+        {
+          "title": "Hospital General Universitario de Málaga",
+          "url": "https://www.san.gva.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Farmacia Málaga Centro",
+      "address": "City center area, Málaga, Spain",
+      "distanceKm": 1.5,
+      "notes": "Well-stocked pharmacy, prescription medications, some English spoken",
+      "sources": [
+        {
+          "title": "Farmacia Málaga Centro",
+          "url": "https://www.cofm.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Mercadona",
+      "address": "City center area, Málaga, Spain",
+      "distanceKm": 2,
+      "notes": "Spain's largest supermarket chain, fresh products, competitive prices",
+      "sources": [
+        {
+          "title": "Mercadona",
+          "url": "https://www.mercadona.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "CaixaBank Málaga",
+      "address": "City center area, Málaga, Spain",
+      "distanceKm": 2,
+      "notes": "Major Spanish bank, ATMs, some English-speaking staff, mobile banking",
+      "sources": [
+        {
+          "title": "CaixaBank Málaga",
+          "url": "https://www.caixabank.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Centro de Salud Málaga",
+      "address": "City center area, Málaga, Spain",
+      "distanceKm": 3,
+      "notes": "Public health center, GP services, some English-speaking doctors",
+      "sources": [
+        {
+          "title": "Centro de Salud Málaga",
+          "url": "https://www.san.gva.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Dental Clinic Málaga Center",
+      "address": "City center area, Málaga, Spain",
+      "distanceKm": 3,
+      "notes": "General and cosmetic dentistry, some English-speaking dentists, modern equipment",
+      "sources": [
+        {
+          "title": "Dental Services Spain",
+          "url": "https://www.consejodentistas.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Veterinary Clinic Málaga",
+      "address": "City center area, Málaga, Spain",
+      "distanceKm": 4,
+      "notes": "Full veterinary services, vaccinations, surgery, some English spoken",
+      "sources": [
+        {
+          "title": "Veterinary Services Spain",
+          "url": "https://www.colvet.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Parque Canino / Dog Park Málaga",
+      "address": "Park area, Málaga, Spain",
+      "distanceKm": 5,
+      "notes": "Off-leash area, green space popular with dog owners, water available",
+      "sources": [
+        {
+          "title": "Parks in Málaga",
+          "url": "https://www.spain.info/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "McFit Málaga",
+      "address": "City center area, Málaga, Spain",
+      "distanceKm": 3,
+      "notes": "Modern gym with cardio and weight equipment, group classes, monthly memberships",
+      "sources": [
+        {
+          "title": "McFit Málaga",
+          "url": "https://www.mcfit.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "Anglican Church of Málaga",
+      "address": "City center area, Málaga, Spain",
+      "distanceKm": 5,
+      "notes": "English-language services, expat community gathering point, social events",
+      "sources": [
+        {
+          "title": "Anglican Church of Málaga",
+          "url": "https://europe.anglican.org/"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Málaga-Costa del Sol Airport (AGP)",
+      "address": "Airport area",
+      "distanceKm": 10,
+      "notes": "International airport with domestic and international flights",
+      "sources": [
+        {
+          "title": "Málaga-Costa del Sol Airport",
+          "url": "https://www.aena.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Estación de Málaga / Metro",
+      "address": "City center area, Málaga, Spain",
+      "distanceKm": 2,
+      "notes": "Renfe rail, metro/tram, comprehensive bus network",
+      "sources": [
+        {
+          "title": "Estación de Málaga",
+          "url": "https://www.renfe.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "coworking",
+      "name": "Spaces Málaga",
+      "address": "City center area, Málaga, Spain",
+      "distanceKm": 3,
+      "notes": "Coworking space, high-speed internet, meeting rooms, community events",
+      "sources": [
+        {
+          "title": "Spaces Málaga",
+          "url": "https://www.spacesworks.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "Pet Grooming Málaga",
+      "address": "City center area, Málaga, Spain",
+      "distanceKm": 4,
+      "notes": "Professional pet grooming services, bathing, clipping, appointment recommended",
+      "sources": [
+        {
+          "title": "Pet Services Málaga",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "categoryId": "international_school",
+      "name": "InterNations Málaga Expat Community",
+      "address": "City center area, Málaga, Spain",
+      "distanceKm": 4,
+      "notes": "International expat community center, social events, networking, relocation assistance",
+      "sources": [
+        {
+          "title": "InterNations Málaga Expat Community",
+          "url": "https://www.internations.org/"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "Málaga Cultural Center",
+      "description": "Cultural center with local art, history, and community events",
+      "distanceKm": 4,
+      "estimatedCostEUR": 8,
+      "frequency": "Tue-Sun 10:00-17:00",
+      "sources": [
+        {
+          "title": "Málaga Culture",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "name": "Málaga Central Park / Garden",
+      "description": "Main public park with walking trails, gardens, and green space",
+      "distanceKm": 3,
+      "estimatedCostEUR": 0,
+      "frequency": "Daily, dawn to dusk",
+      "sources": [
+        {
+          "title": "Parks in Málaga",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "dining",
+      "name": "Málaga Restaurant District",
+      "description": "Walkable area with diverse restaurants, cafes, and bars",
+      "distanceKm": 2,
+      "estimatedCostEUR": 25,
+      "frequency": "Daily, lunch and dinner service",
+      "sources": [
+        {
+          "title": "Dining in Málaga",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    }
+  ]
+}

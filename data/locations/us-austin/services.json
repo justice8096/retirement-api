@@ -1,0 +1,386 @@
+{
+  "distanceUnit": "mi",
+  "currency": "USD",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Dell Seton Medical Center at UT",
+      "address": "1500 Red River St, Austin, TX 78701",
+      "notes": "Level I trauma center, teaching hospital affiliated with UT Dell Medical School, comprehensive emergency and specialty services",
+      "sources": [
+        {
+          "title": "Dell Seton Medical Center",
+          "url": "https://www.seton.net/locations/dell-seton/"
+        }
+      ],
+      "distanceMi": 3.1
+    },
+    {
+      "categoryId": "hospital",
+      "name": "St. David's Medical Center",
+      "address": "919 E 32nd St, Austin, TX 78705",
+      "notes": "Full-service hospital, cardiac care center, Level IV trauma, 350+ beds",
+      "sources": [
+        {
+          "title": "St. David's Medical Center",
+          "url": "https://stdavids.com/locations/st-davids-medical-center"
+        }
+      ],
+      "distanceMi": 3.7
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "H-E-B Pharmacy",
+      "address": "Multiple Austin metro locations",
+      "notes": "In-store pharmacy at most H-E-B locations, competitive pricing, free select generics, drive-through at many locations",
+      "sources": [
+        {
+          "title": "H-E-B Pharmacy",
+          "url": "https://www.heb.com/pharmacy"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "CVS Pharmacy",
+      "address": "Multiple Austin metro locations",
+      "notes": "24-hour locations available, drive-through, vaccinations, MinuteClinic inside select locations",
+      "sources": [
+        {
+          "title": "CVS Pharmacy",
+          "url": "https://www.cvs.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "grocery",
+      "name": "H-E-B",
+      "address": "Multiple Austin metro locations (40+ stores)",
+      "notes": "Dominant Texas grocery chain, excellent prices, high-quality store brand, curbside pickup and delivery available",
+      "sources": [
+        {
+          "title": "H-E-B",
+          "url": "https://www.heb.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "bank",
+      "name": "Chase Bank",
+      "address": "Multiple Austin metro locations",
+      "notes": "Full-service branches, financial advisors, ATMs, mobile banking. Largest US bank by assets.",
+      "sources": [
+        {
+          "title": "Chase Bank",
+          "url": "https://www.chase.com/"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "bank",
+      "name": "Wells Fargo",
+      "address": "Multiple Austin metro locations",
+      "notes": "Full-service branches, wealth management, ATMs, senior checking accounts available",
+      "sources": [
+        {
+          "title": "Wells Fargo",
+          "url": "https://www.wellsfargo.com/"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "bank",
+      "name": "University Federal Credit Union (UFCU)",
+      "address": "Multiple Austin metro locations",
+      "notes": "Austin-based credit union, open to all Travis/Williamson County residents. Lower fees, competitive rates, community-focused. Largest credit union in Austin.",
+      "sources": [
+        {
+          "title": "UFCU",
+          "url": "https://www.ufcu.org/"
+        }
+      ],
+      "distanceMi": 2.5
+    },
+    {
+      "categoryId": "postal",
+      "name": "USPS Austin Main Post Office",
+      "address": "8225 Cross Park Dr, Austin, TX 78754",
+      "notes": "Main distribution center. Multiple branch post offices throughout Austin metro. PO boxes available. Passport services at select locations.",
+      "sources": [
+        {
+          "title": "USPS",
+          "url": "https://www.usps.com/"
+        }
+      ],
+      "distanceMi": 5.0
+    },
+    {
+      "categoryId": "legal",
+      "name": "Texas RioGrande Legal Aid (TRLA) - Austin Office",
+      "address": "4920 N Interstate 35, Austin, TX 78751",
+      "notes": "Free legal services for low-income residents including seniors. Housing, benefits, consumer protection, family law.",
+      "sources": [
+        {
+          "title": "Texas RioGrande Legal Aid",
+          "url": "https://www.trla.org/"
+        }
+      ],
+      "distanceMi": 3.7
+    },
+    {
+      "categoryId": "legal",
+      "name": "Volunteer Legal Services of Central Texas",
+      "address": "816 Congress Ave #1100, Austin, TX 78701",
+      "notes": "Pro bono legal assistance for qualifying residents. Wills clinics, tenant rights, senior legal helpline.",
+      "sources": [
+        {
+          "title": "Volunteer Legal Services",
+          "url": "https://www.vlsoct.org/"
+        }
+      ],
+      "distanceMi": 3.1
+    },
+    {
+      "categoryId": "home_repair",
+      "name": "Austin Habitat for Humanity - Aging in Place Repairs",
+      "address": "500 W Ben White Blvd, Austin, TX 78704",
+      "notes": "Home repair and modification programs for seniors and low-income homeowners. Ramps, grab bars, weatherization.",
+      "sources": [
+        {
+          "title": "Austin Habitat for Humanity",
+          "url": "https://www.austinhabitat.org/"
+        }
+      ],
+      "distanceMi": 3.1
+    },
+    {
+      "categoryId": "home_repair",
+      "name": "Home Depot / Lowe's",
+      "address": "Multiple Austin metro locations",
+      "notes": "DIY supplies and professional installation services. Senior discount days at Lowe's (varies by location).",
+      "sources": [
+        {
+          "title": "Home Depot",
+          "url": "https://www.homedepot.com/"
+        },
+        {
+          "title": "Lowe's",
+          "url": "https://www.lowes.com/"
+        }
+      ],
+      "distanceMi": 2.5
+    },
+    {
+      "categoryId": "vet",
+      "name": "Emancipet",
+      "address": "7201 Levander Loop, Austin, TX 78702 (and other locations)",
+      "notes": "Low-cost veterinary clinic. Vaccinations, spay/neuter, wellness exams, dental cleanings at reduced prices. No appointment needed for many services. Nonprofit.",
+      "sources": [
+        {
+          "title": "Emancipet",
+          "url": "https://emancipet.org/"
+        }
+      ],
+      "distanceMi": 3.1
+    },
+    {
+      "categoryId": "vet",
+      "name": "Thrive Affordable Vet Care",
+      "address": "Multiple Austin metro locations (inside PetSmart)",
+      "notes": "Affordable veterinary care inside PetSmart locations. Wellness plans, vaccinations, sick visits.",
+      "sources": [
+        {
+          "title": "Thrive Pet Healthcare",
+          "url": "https://www.thrivepetcare.com/"
+        }
+      ],
+      "distanceMi": 2.5
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Red Bud Isle",
+      "address": "3401 Red Bud Trail, Austin, TX 78746",
+      "notes": "Off-leash dog park on a peninsula in Lady Bird Lake. Extremely popular. Swimming access for dogs. Free.",
+      "sources": [
+        {
+          "title": "Austin Parks - Red Bud Isle",
+          "url": "https://www.austintexas.gov/department/parks-and-recreation"
+        }
+      ],
+      "distanceMi": 3.7
+    },
+    {
+      "categoryId": "airport",
+      "name": "Austin-Bergstrom International Airport (AUS)",
+      "address": "3600 Presidential Blvd, Austin, TX 78719",
+      "notes": "Major airport with domestic and international flights. Nonstop to most US hubs. Live music in terminals. 15-20 min from downtown.",
+      "sources": [
+        {
+          "title": "Austin Airport",
+          "url": "https://www.austintexas.gov/airport"
+        }
+      ],
+      "distanceMi": 7.5
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "CapMetro Transit Center",
+      "address": "209 W 9th St, Austin, TX 78701",
+      "notes": "Central hub for CapMetro bus and MetroRail services. Red Line to Leander. Project Connect light rail expansion underway.",
+      "sources": [
+        {
+          "title": "CapMetro",
+          "url": "https://www.capmetro.org/"
+        }
+      ],
+      "distanceMi": 3.1
+    }
+  ],
+  "attractions": [
+    {
+      "type": "nature",
+      "name": "Zilker Park & Barton Springs Pool",
+      "description": "350-acre metropolitan park with natural spring-fed pool (68F year-round), botanical garden, and hike-and-bike trails",
+      "frequency": "Daily 5:00-22:00. Barton Springs Pool $5 adults, $2 seniors.",
+      "sources": [
+        {
+          "title": "Zilker Park",
+          "url": "https://www.austintexas.gov/department/zilker-metropolitan-park"
+        }
+      ],
+      "distanceMi": 3.1,
+      "estimatedCostUSD": 5
+    },
+    {
+      "type": "nature",
+      "name": "Lady Bird Lake Hike & Bike Trail",
+      "description": "10-mile loop trail around Lady Bird Lake, popular for walking, running, cycling, and kayaking",
+      "frequency": "Open 24/7, year-round",
+      "sources": [
+        {
+          "title": "The Trail Foundation",
+          "url": "https://thetrailfoundation.org/"
+        }
+      ],
+      "distanceMi": 2.5,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "entertainment",
+      "name": "South Congress Avenue (SoCo)",
+      "description": "Iconic Austin strip with boutique shops, food trucks, live music venues, and eclectic restaurants",
+      "frequency": "Shops and restaurants open daily, First Thursday events monthly",
+      "sources": [
+        {
+          "title": "South Congress",
+          "url": "https://www.southcongress.com/"
+        }
+      ],
+      "distanceMi": 3.1,
+      "estimatedCostUSD": 25
+    },
+    {
+      "type": "cultural",
+      "name": "Blanton Museum of Art",
+      "description": "University of Texas art museum with 21,000+ works, Latin American art collection, Ellsworth Kelly chapel",
+      "frequency": "Wed-Sun, free on Thursdays",
+      "sources": [
+        {
+          "title": "Blanton Museum",
+          "url": "https://blantonmuseum.org/"
+        }
+      ],
+      "distanceMi": 3.1,
+      "estimatedCostUSD": 12
+    },
+    {
+      "type": "nature",
+      "name": "Barton Creek Greenbelt",
+      "description": "13-mile natural greenbelt with hiking, rock climbing, swimming holes, and dog-friendly trails",
+      "frequency": "Open dawn to dusk, year-round. Swimming holes seasonal.",
+      "sources": [
+        {
+          "title": "Austin Greenbelt",
+          "url": "https://www.austintexas.gov/department/barton-creek-greenbelt"
+        }
+      ],
+      "distanceMi": 4.3,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "entertainment",
+      "name": "Live Music on 6th Street / Red River Cultural District",
+      "description": "World-famous live music scene with dozens of venues, many with free shows nightly",
+      "frequency": "Nightly, year-round. Major festivals: SXSW (March), ACL (October)",
+      "sources": [
+        {
+          "title": "Austin Live Music",
+          "url": "https://www.austintexas.org/things-to-do/live-music/"
+        }
+      ],
+      "distanceMi": 3.1,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "nature",
+      "name": "McKinney Falls State Park",
+      "description": "Texas state park within Austin city limits with waterfalls, hiking, camping, and wildlife viewing",
+      "frequency": "Daily 8:00-22:00, $6 adult entry",
+      "sources": [
+        {
+          "title": "McKinney Falls State Park",
+          "url": "https://tpwd.texas.gov/state-parks/mckinney-falls"
+        }
+      ],
+      "distanceMi": 7.5,
+      "estimatedCostUSD": 6
+    },
+    {
+      "type": "outdoor",
+      "name": "Lake Travis",
+      "description": "65-mile long Highland Lakes reservoir with boating, swimming, cliff jumping, and lakeside dining",
+      "frequency": "Year-round. Best swimming May-October. Boat rentals available.",
+      "sources": [
+        {
+          "title": "Lake Travis",
+          "url": "https://www.laketravis.com/"
+        }
+      ],
+      "distanceMi": 18.6,
+      "estimatedCostUSD": 15
+    },
+    {
+      "type": "shopping",
+      "name": "The Domain",
+      "description": "Upscale outdoor shopping center with restaurants, entertainment, Apple Store, and Nordstrom",
+      "frequency": "Mon-Sat 10:00-21:00, Sun 12:00-18:00",
+      "sources": [
+        {
+          "title": "The Domain",
+          "url": "https://www.thedomainaustin.com/"
+        }
+      ],
+      "distanceMi": 6.2,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "nature",
+      "name": "Congress Avenue Bridge Bat Colony",
+      "description": "World's largest urban bat colony — 1.5 million Mexican free-tailed bats emerge at sunset March-October",
+      "frequency": "Free viewing nightly at sunset, March-October",
+      "sources": [
+        {
+          "title": "Austin Bat Colony",
+          "url": "https://www.batcon.org/our-work/protect-restore/congress-avenue-bridge/"
+        }
+      ],
+      "distanceMi": 3.1,
+      "estimatedCostUSD": 0
+    }
+  ]
+}

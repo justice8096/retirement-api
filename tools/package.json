@@ -1,0 +1,11 @@
+{
+  "name": "@retirement/tools",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@retirement/shared": "*",
+    "better-sqlite3": "^12.8.0",
+    "sql.js": "^1.14.1"
+  }
+}

@@ -1,0 +1,357 @@
+{
+  "distanceUnit": "km",
+  "currency": "USD",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Hospital Punta Pacífica (Johns Hopkins affiliated)",
+      "address": "Boulevard Pacífica y Vía Punta Darién, Panama City",
+      "distanceKm": 3,
+      "notes": "Top private hospital, Johns Hopkins International affiliate, English-speaking staff",
+      "sources": [
+        {
+          "title": "Hospital Punta Pacífica",
+          "url": "https://www.hospitalpuntapacifica.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Farmacias Arrocha - Calle 50",
+      "address": "Calle 50, Bella Vista, Panama City",
+      "distanceKm": 0.5,
+      "notes": "Major pharmacy chain, wide stock, some US brands, English spoken",
+      "sources": [
+        {
+          "title": "Farmacias Arrocha",
+          "url": "https://www.arrocha.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Riba Smith Bella Vista",
+      "address": "Calle 45, Bella Vista, Panama City",
+      "distanceKm": 1,
+      "notes": "Upscale supermarket popular with expats, imported US/European products",
+      "sources": [
+        {
+          "title": "Riba Smith",
+          "url": "https://www.ribasmith.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "Banco General - Calle 50",
+      "address": "Calle 50, Panama City",
+      "distanceKm": 0.5,
+      "notes": "Largest private bank in Panama, English-speaking staff, expat accounts",
+      "sources": [
+        {
+          "title": "Banco General",
+          "url": "https://www.bgeneral.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Centro Médico Paitilla",
+      "address": "Avenida Balboa y Calle 53, Paitilla, Panama City",
+      "distanceKm": 2.5,
+      "notes": "Large private medical center, English-speaking doctors, walk-in and appointments",
+      "sources": [
+        {
+          "title": "Centro Médico Paitilla",
+          "url": "https://www.centromedicopaitilla.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Dental Studio Panama",
+      "address": "Torre Médica, Punta Pacífica, Panama City",
+      "distanceKm": 3,
+      "notes": "Modern dental clinic, English-speaking, dental tourism pricing",
+      "sources": [
+        {
+          "title": "Dental Studio Panama",
+          "url": "https://www.dentalstudiopanama.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Pet Center Veterinary Hospital",
+      "address": "Vía España, El Cangrejo, Panama City",
+      "distanceKm": 1.5,
+      "notes": "Full-service vet hospital, emergency care, English-speaking vets",
+      "sources": [
+        {
+          "title": "Pet Center Panama",
+          "url": "https://www.petcenterpanama.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Parque Omar",
+      "address": "Vía Porras, San Francisco, Panama City",
+      "distanceKm": 2,
+      "notes": "Large urban park with walking trails, popular with dog owners, open green spaces",
+      "sources": [
+        {
+          "title": "Parque Omar",
+          "url": "https://www.miambiente.gob.pa/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "PowerClub Panama",
+      "address": "Multiple locations, Panama City",
+      "distanceKm": 1,
+      "notes": "Premium gym chain, pools, group classes, modern equipment",
+      "sources": [
+        {
+          "title": "PowerClub",
+          "url": "https://www.powerclubpanama.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "Balboa Union Church",
+      "address": "Balboa, Ancón, Panama City",
+      "distanceKm": 5,
+      "notes": "English-language non-denominational church, historic former Canal Zone congregation",
+      "sources": [
+        {
+          "title": "Balboa Union Church",
+          "url": "https://www.balboaunionchurch.org/"
+        }
+      ]
+    },
+    {
+      "categoryId": "international_school",
+      "name": "American Society of Panama",
+      "address": "Clayton, Panama City",
+      "distanceKm": 6,
+      "notes": "Expat community center, social events, cultural activities, newcomer welcome",
+      "sources": [
+        {
+          "title": "American Society of Panama",
+          "url": "https://www.amsoc.org/"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Aeropuerto Internacional de Tocumen (PTY)",
+      "address": "Tocumen, Panama City",
+      "distanceKm": 24,
+      "notes": "Major hub for Copa Airlines, direct flights to US, Europe, Latin America",
+      "sources": [
+        {
+          "title": "Tocumen Airport",
+          "url": "https://www.tocumenpanama.aero/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Estación del Metro Albrook",
+      "address": "Terminal de Albrook, Panama City",
+      "distanceKm": 4,
+      "notes": "Metro Line 1 terminal, connected to Albrook bus terminal (largest in Latin America)",
+      "sources": [
+        {
+          "title": "Metro de Panamá",
+          "url": "https://www.elmetrodepanama.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "coworking",
+      "name": "Selina Cowork Casco Viejo",
+      "address": "Casco Viejo, Panama City",
+      "distanceKm": 2.5,
+      "notes": "Coworking in historic quarter, day passes, fast WiFi, community events",
+      "sources": [
+        {
+          "title": "Selina",
+          "url": "https://www.selina.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "Pet Spa Panama",
+      "address": "El Cangrejo, Panama City",
+      "distanceKm": 1.5,
+      "notes": "Dog grooming and spa services, pickup available",
+      "sources": [
+        {
+          "title": "Pet Spa Panama",
+          "url": "https://www.petspapanama.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_daycare",
+      "name": "Doggy Daycare Panama",
+      "address": "Clayton, Panama City",
+      "distanceKm": 6,
+      "notes": "Dog daycare and boarding, outdoor play areas, expat-owned",
+      "sources": [
+        {
+          "title": "Doggy Daycare Panama",
+          "url": "https://www.doggydaycarepanama.com/"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "historical",
+      "name": "Casco Viejo (Casco Antiguo)",
+      "description": "UNESCO World Heritage colonial quarter with plazas, churches, restaurants, and rooftop bars",
+      "distanceKm": 2.5,
+      "frequency": "Open 24/7, guided walking tours available daily",
+      "sources": [
+        {
+          "title": "Casco Viejo",
+          "url": "https://www.cascoviejo.org/"
+        }
+      ],
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "cultural",
+      "name": "BioMuseo (Museo de la Biodiversidad)",
+      "description": "Frank Gehry-designed museum showcasing Panama's natural history and biodiversity",
+      "distanceKm": 4,
+      "frequency": "Tue-Sun 10:00-16:00",
+      "sources": [
+        {
+          "title": "BioMuseo",
+          "url": "https://www.biomuseopanama.org/"
+        }
+      ],
+      "estimatedCostUSD": 18
+    },
+    {
+      "type": "nature",
+      "name": "Parque Nacional Soberanía",
+      "description": "Rainforest national park, Pipeline Road for world-class birdwatching",
+      "distanceKm": 25,
+      "frequency": "Day trip, open daily, best early morning for wildlife",
+      "sources": [
+        {
+          "title": "ANAM Panama",
+          "url": "https://www.miambiente.gob.pa/"
+        }
+      ],
+      "estimatedCostUSD": 5
+    },
+    {
+      "type": "entertainment",
+      "name": "Panama Canal Miraflores Locks Visitor Center",
+      "description": "Watch ships transit the canal, museum with interactive exhibits and observation deck",
+      "distanceKm": 12,
+      "frequency": "Daily 8:00-17:00, best viewing 9:00-11:00 and 14:00-16:00",
+      "sources": [
+        {
+          "title": "Panama Canal Authority",
+          "url": "https://www.pancanal.com/"
+        }
+      ],
+      "estimatedCostUSD": 15
+    },
+    {
+      "type": "outdoor",
+      "name": "Amador Causeway",
+      "description": "Scenic road linking three islands, cycling, walking, views of skyline and canal",
+      "distanceKm": 5,
+      "frequency": "Open 24/7, bike rentals available",
+      "sources": [
+        {
+          "title": "Visit Panama",
+          "url": "https://www.visitpanama.com/"
+        }
+      ],
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "dining",
+      "name": "Mercado de Mariscos",
+      "description": "Waterfront fish market with upstairs restaurant, fresh ceviche and seafood",
+      "distanceKm": 2,
+      "frequency": "Daily 5:00-17:00 (market), restaurant hours vary",
+      "sources": [
+        {
+          "title": "Visit Panama",
+          "url": "https://www.visitpanama.com/"
+        }
+      ],
+      "estimatedCostUSD": 10
+    },
+    {
+      "type": "shopping",
+      "name": "Multiplaza Pacific Mall",
+      "address": "Punta Pacífica, Panama City",
+      "description": "Upscale shopping mall with international brands, cinema, dining",
+      "distanceKm": 3,
+      "frequency": "Daily 10:00-21:00",
+      "sources": [
+        {
+          "title": "Multiplaza",
+          "url": "https://www.multiplaza.com/"
+        }
+      ],
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "social",
+      "name": "Calle Uruguay Nightlife District",
+      "description": "Popular street with bars, restaurants, and nightclubs in Bella Vista",
+      "distanceKm": 1,
+      "frequency": "Nightly, busiest Thu-Sat",
+      "sources": [
+        {
+          "title": "Visit Panama",
+          "url": "https://www.visitpanama.com/"
+        }
+      ],
+      "estimatedCostUSD": 15
+    },
+    {
+      "type": "nature",
+      "name": "Isla Contadora (Pearl Islands)",
+      "description": "Tropical island getaway with pristine beaches, 20 min flight from city",
+      "distanceKm": 70,
+      "frequency": "Weekend trip, daily flights",
+      "sources": [
+        {
+          "title": "Pearl Islands Tourism",
+          "url": "https://www.visitpanama.com/"
+        }
+      ],
+      "estimatedCostUSD": 100
+    },
+    {
+      "type": "religious",
+      "name": "Iglesia de San José (Golden Altar)",
+      "description": "17th-century church in Casco Viejo famous for its ornate gold-leaf baroque altar",
+      "distanceKm": 2.5,
+      "frequency": "Open for visits daily, active parish",
+      "sources": [
+        {
+          "title": "Casco Viejo",
+          "url": "https://www.cascoviejo.org/"
+        }
+      ],
+      "estimatedCostUSD": 0
+    }
+  ]
+}

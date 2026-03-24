@@ -1,0 +1,303 @@
+{
+  "distanceUnit": "mi",
+  "currency": "USD",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Memorial Health University Medical Center",
+      "address": "4700 Waters Avenue, Savannah, GA 31404",
+      "notes": "Level 1 trauma center, 612 beds, comprehensive emergency services",
+      "sources": [
+        {
+          "title": "Memorial Health",
+          "url": "https://www.memorialhealth.com/"
+        }
+      ],
+      "distanceMi": 3.1
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "CVS Pharmacy - Savannah Historic District",
+      "address": "101 E Bay Street, Savannah, GA 31401",
+      "notes": "Walk-in clinic inside, vaccinations, open extended hours",
+      "sources": [
+        {
+          "title": "CVS",
+          "url": "https://www.cvs.com/"
+        }
+      ],
+      "distanceMi": 0.2
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Kroger - Savannah Midtown",
+      "address": "311 E Gwinnett Street, Savannah, GA 31401",
+      "notes": "Full supermarket, pharmacy, deli, closest large grocery to historic district",
+      "sources": [
+        {
+          "title": "Kroger",
+          "url": "https://www.kroger.com/"
+        }
+      ],
+      "distanceMi": 0.9
+    },
+    {
+      "categoryId": "bank",
+      "name": "Wells Fargo - Savannah Bull Street",
+      "address": "1 Bull Street, Savannah, GA 31401",
+      "notes": "Full-service branch in historic district, ATM, financial advisors",
+      "sources": [
+        {
+          "title": "Wells Fargo",
+          "url": "https://www.wellsfargo.com/"
+        }
+      ],
+      "distanceMi": 0.1
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "SouthCoast Health Primary Care",
+      "address": "326 Commercial Drive, Savannah, GA 31406",
+      "notes": "Multi-physician primary care, accepting new patients, online portal",
+      "sources": [
+        {
+          "title": "SouthCoast Health",
+          "url": "https://www.southcoasthealth.com/"
+        }
+      ],
+      "distanceMi": 3.7
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Savannah Dental Solutions",
+      "address": "310 Eisenhower Drive, Savannah, GA 31406",
+      "notes": "General and cosmetic dentistry, same-day emergency appointments",
+      "sources": [
+        {
+          "title": "Savannah Dental Solutions",
+          "url": "https://www.savannahdentalsolutions.com/"
+        }
+      ],
+      "distanceMi": 3.1
+    },
+    {
+      "categoryId": "vet",
+      "name": "Savannah Veterinary Medical Center",
+      "address": "2 Eisenhower Drive, Savannah, GA 31406",
+      "notes": "Full-service vet hospital, emergency and specialty care, boarding",
+      "sources": [
+        {
+          "title": "Savannah Vet",
+          "url": "https://www.savannahveterinary.com/"
+        }
+      ],
+      "distanceMi": 3.1
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Forsyth Park Dog-Friendly Areas",
+      "address": "Forsyth Park, Savannah, GA 31401",
+      "notes": "30-acre park with designated dog walking areas, iconic fountain, shaded paths",
+      "sources": [
+        {
+          "title": "City of Savannah Parks",
+          "url": "https://www.savannahga.gov/1402/Parks-Recreation"
+        }
+      ],
+      "distanceMi": 0.3
+    },
+    {
+      "categoryId": "gym",
+      "name": "Old Town Athletic Club",
+      "address": "127 Abercorn Street, Savannah, GA 31401",
+      "notes": "Historic district gym, modern equipment, group fitness, personal training",
+      "sources": [
+        {
+          "title": "Old Town Athletic Club",
+          "url": "https://www.oldtownathleticclub.com/"
+        }
+      ],
+      "distanceMi": 0.2
+    },
+    {
+      "categoryId": "english_church",
+      "name": "Christ Church Episcopal Savannah",
+      "address": "28 Bull Street, Savannah, GA 31401",
+      "notes": "Historic church founded 1733, active parish, beautiful colonial architecture",
+      "sources": [
+        {
+          "title": "Christ Church Savannah",
+          "url": "https://www.christchurchsavannah.org/"
+        }
+      ],
+      "distanceMi": 0.1
+    },
+    {
+      "categoryId": "airport",
+      "name": "Savannah/Hilton Head International Airport (SAV)",
+      "address": "400 Airways Avenue, Savannah, GA 31408",
+      "notes": "Direct flights to major US cities, growing international connections",
+      "sources": [
+        {
+          "title": "SAV Airport",
+          "url": "https://www.savannahairport.com/"
+        }
+      ],
+      "distanceMi": 9.3
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Savannah DOT Free Shuttle",
+      "address": "Historic District, Savannah, GA 31401",
+      "notes": "Free downtown shuttle (DOT), connects major historic district points",
+      "sources": [
+        {
+          "title": "Chatham Area Transit",
+          "url": "https://www.catchacat.org/"
+        }
+      ],
+      "distanceMi": 0.1
+    },
+    {
+      "categoryId": "coworking",
+      "name": "The Creative Coast - Bull Street Labs",
+      "address": "2222 Bull Street, Savannah, GA 31401",
+      "notes": "Coworking and innovation hub, day passes, community events, fast WiFi",
+      "sources": [
+        {
+          "title": "Creative Coast",
+          "url": "https://www.thecreativecoast.org/"
+        }
+      ],
+      "distanceMi": 1.2
+    }
+  ],
+  "attractions": [
+    {
+      "type": "outdoor",
+      "name": "Forsyth Park",
+      "description": "Iconic 30-acre park with famous fountain, Spanish moss-draped oaks, weekend farmers market",
+      "frequency": "Open daily, farmers market Saturdays 9:00-13:00",
+      "sources": [
+        {
+          "title": "Visit Savannah",
+          "url": "https://www.visitsavannah.com/"
+        }
+      ],
+      "distanceMi": 0.3,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "historical",
+      "name": "River Street",
+      "description": "Cobblestone waterfront promenade with shops, restaurants, galleries along the Savannah River",
+      "frequency": "Open 24/7, shops and restaurants daily",
+      "sources": [
+        {
+          "title": "River Street Savannah",
+          "url": "https://www.riverstreetsavannah.com/"
+        }
+      ],
+      "distanceMi": 0.3,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "cultural",
+      "name": "SCAD Museum of Art",
+      "description": "Contemporary art museum by Savannah College of Art and Design, rotating exhibitions",
+      "frequency": "Tue-Sun 10:00-17:00",
+      "sources": [
+        {
+          "title": "SCAD Museum",
+          "url": "https://www.scadmoa.org/"
+        }
+      ],
+      "distanceMi": 0.5,
+      "estimatedCostUSD": 15
+    },
+    {
+      "type": "historical",
+      "name": "Wormsloe Historic Site",
+      "description": "Stunning 1.5-mile oak avenue leading to colonial estate ruins, living history demonstrations",
+      "frequency": "Daily 9:00-17:00, colonial life demos on weekends",
+      "sources": [
+        {
+          "title": "Wormsloe Historic Site",
+          "url": "https://www.gastateparks.org/Wormsloe"
+        }
+      ],
+      "distanceMi": 7.5,
+      "estimatedCostUSD": 10
+    },
+    {
+      "type": "nature",
+      "name": "Bonaventure Cemetery",
+      "description": "Hauntingly beautiful Victorian cemetery on bluffs above the Wilmington River, Spanish moss canopy",
+      "frequency": "Daily 8:00-17:00, guided tours available",
+      "sources": [
+        {
+          "title": "Bonaventure Historical Society",
+          "url": "https://www.bonaventurehistorical.org/"
+        }
+      ],
+      "distanceMi": 3.1,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "dining",
+      "name": "City Market Savannah",
+      "description": "Open-air market district with restaurants, galleries, and live music, Savannah's social hub",
+      "frequency": "Daily, restaurants and bars open late",
+      "sources": [
+        {
+          "title": "Savannah City Market",
+          "url": "https://www.savannahcitymarket.com/"
+        }
+      ],
+      "distanceMi": 0.2,
+      "estimatedCostUSD": 20
+    },
+    {
+      "type": "entertainment",
+      "name": "Savannah Theatre",
+      "description": "One of America's oldest continuously operating theaters (est. 1818), live shows and musicals",
+      "frequency": "Multiple shows weekly, Thu-Sun typical",
+      "sources": [
+        {
+          "title": "Savannah Theatre",
+          "url": "https://www.savannahtheatre.com/"
+        }
+      ],
+      "distanceMi": 0.2,
+      "estimatedCostUSD": 30
+    },
+    {
+      "type": "nature",
+      "name": "Tybee Island",
+      "description": "Barrier island beach community with lighthouse, pier, marine science center, 20 min from downtown",
+      "frequency": "Day trip, beach open year-round, lighthouse daily",
+      "sources": [
+        {
+          "title": "Visit Tybee",
+          "url": "https://www.visittybee.com/"
+        }
+      ],
+      "distanceMi": 15.5,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "social",
+      "name": "Savannah Squares Walking Tour",
+      "description": "Self-guided walk through 22 iconic squares, each with unique character, monuments, and live oaks",
+      "frequency": "Anytime, best morning or late afternoon",
+      "sources": [
+        {
+          "title": "Visit Savannah",
+          "url": "https://www.visitsavannah.com/"
+        }
+      ],
+      "distanceMi": 0.1,
+      "estimatedCostUSD": 0
+    }
+  ]
+}

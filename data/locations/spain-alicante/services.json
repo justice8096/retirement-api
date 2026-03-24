@@ -1,0 +1,330 @@
+{
+  "distanceUnit": "km",
+  "currency": "EUR",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Hospital General Universitario de Alicante (HGUA)",
+      "address": "Calle Pintor Baeza 12, 03010 Alicante",
+      "distanceKm": 2,
+      "notes": "Major public hospital, 24/7 emergency (Urgencias), some English-speaking doctors",
+      "sources": [
+        {
+          "title": "HGUA",
+          "url": "https://alfrfranciscoalicante.san.gva.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Farmacia Soler Esplanada",
+      "address": "Explanada de España, 03001 Alicante",
+      "distanceKm": 0.2,
+      "notes": "Central location on the main promenade, English spoken, extended hours",
+      "sources": [
+        {
+          "title": "Colegio Oficial de Farmacéuticos",
+          "url": "https://www.cofal.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Mercadona Alicante Centro",
+      "address": "Avenida Alfonso X El Sabio, 03002 Alicante",
+      "distanceKm": 0.5,
+      "notes": "Large Spanish supermarket chain, affordable, Mon-Sat 9:00-21:30",
+      "sources": [
+        {
+          "title": "Mercadona",
+          "url": "https://www.mercadona.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "CaixaBank Alicante Centro",
+      "address": "Rambla de Méndez Núñez, 03001 Alicante",
+      "distanceKm": 0.3,
+      "notes": "Major Spanish bank, English-speaking staff, ATM network, expat accounts",
+      "sources": [
+        {
+          "title": "CaixaBank",
+          "url": "https://www.caixabank.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Centro de Salud Plaza de América",
+      "address": "Plaza de América, 03005 Alicante",
+      "distanceKm": 1,
+      "notes": "Public health center, SIP card required, appointments via GVA salud app",
+      "sources": [
+        {
+          "title": "GVA Salud",
+          "url": "https://www.san.gva.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Clínica Dental Alicante Dr. Sergio Juan",
+      "address": "Calle General O'Donnell, 03003 Alicante",
+      "distanceKm": 0.6,
+      "notes": "Private dental clinic, English-speaking, modern equipment",
+      "sources": [
+        {
+          "title": "Dental Clinics Alicante",
+          "url": "https://www.clinicadentalsergiojuan.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Hospital Veterinario San Vicente",
+      "address": "Avenida de Novelda, 03010 Alicante",
+      "distanceKm": 3,
+      "notes": "24-hour veterinary hospital, emergency services, English spoken",
+      "sources": [
+        {
+          "title": "Hospital Vet San Vicente",
+          "url": "https://www.hospitalveterinarioanimal.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Parque Lo Morant",
+      "address": "Calle Poeta Quintana, 03012 Alicante",
+      "distanceKm": 2.5,
+      "notes": "Large park with dedicated off-leash dog area, shaded zones",
+      "sources": [
+        {
+          "title": "Ayuntamiento de Alicante",
+          "url": "https://www.alicante.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "Virgin Active Alicante",
+      "address": "Centro Comercial Panoramis, 03001 Alicante",
+      "distanceKm": 0.8,
+      "notes": "Premium gym with pool, spa, group classes, English-speaking trainers",
+      "sources": [
+        {
+          "title": "Virgin Active Spain",
+          "url": "https://www.virginactive.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "St. Nicholas Anglican Church Alicante",
+      "address": "Calle Reyes Católicos, 03003 Alicante",
+      "distanceKm": 0.5,
+      "notes": "English-language services, large British expat congregation on the Costa Blanca",
+      "sources": [
+        {
+          "title": "Diocese in Europe",
+          "url": "https://europe.anglican.org/"
+        }
+      ]
+    },
+    {
+      "categoryId": "international_school",
+      "name": "Alicante Expats Community Center",
+      "address": "Various locations, Alicante",
+      "distanceKm": 1,
+      "notes": "Active expat groups, English-language social events, newcomer support",
+      "sources": [
+        {
+          "title": "InterNations Alicante",
+          "url": "https://www.internations.org/alicante-expats"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Aeropuerto de Alicante-Elche Miguel Hernández (ALC)",
+      "address": "03195 L'Altet, Elche",
+      "distanceKm": 12,
+      "notes": "Major international airport, flights to all of Europe and UK, bus/tram to city",
+      "sources": [
+        {
+          "title": "Alicante Airport",
+          "url": "https://www.aena.es/en/alicante-elche.html"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Estación de Alicante Terminal (Renfe)",
+      "address": "Avenida de Salamanca, 03005 Alicante",
+      "distanceKm": 1,
+      "notes": "Main Renfe station, AVE high-speed to Madrid 2h20, regional trains, TRAM network",
+      "sources": [
+        {
+          "title": "Renfe",
+          "url": "https://www.renfe.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_daycare",
+      "name": "Guardería Canina Costa Blanca",
+      "address": "Partida de Bacarot, 03114 Alicante",
+      "distanceKm": 8,
+      "notes": "Dog daycare and boarding, outdoor runs, English-speaking owner",
+      "sources": [
+        {
+          "title": "Pet Boarding Alicante",
+          "url": "https://www.pagesjaunes.fr/"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "historical",
+      "name": "Castillo de Santa Bárbara",
+      "description": "Medieval fortress on Mount Benacantil with panoramic city and sea views",
+      "distanceKm": 0.8,
+      "estimatedCostEUR": 0,
+      "frequency": "Open daily, free elevator access from Postiguet beach",
+      "sources": [
+        {
+          "title": "Castillo de Santa Bárbara",
+          "url": "https://www.alicanteturismo.com/castillo-de-santa-barbara/"
+        }
+      ]
+    },
+    {
+      "type": "outdoor",
+      "name": "Playa del Postiguet",
+      "description": "Central city beach with Blue Flag status, golden sand, calm waters",
+      "distanceKm": 0.5,
+      "estimatedCostEUR": 0,
+      "frequency": "Year-round, lifeguards May-Sep",
+      "sources": [
+        {
+          "title": "Alicante Tourism",
+          "url": "https://www.alicanteturismo.com/"
+        }
+      ]
+    },
+    {
+      "type": "cultural",
+      "name": "MARQ - Museo Arqueológico de Alicante",
+      "description": "Award-winning archaeological museum covering prehistoric to modern eras",
+      "distanceKm": 1.5,
+      "estimatedCostEUR": 3,
+      "frequency": "Tue-Sun 10:00-19:00",
+      "sources": [
+        {
+          "title": "MARQ",
+          "url": "https://www.marqalicante.com/"
+        }
+      ]
+    },
+    {
+      "type": "dining",
+      "name": "Mercado Central de Alicante",
+      "description": "Modernist central market with fresh seafood, produce, and tapas bars",
+      "distanceKm": 0.3,
+      "estimatedCostEUR": 12,
+      "frequency": "Mon-Sat 7:00-14:30",
+      "sources": [
+        {
+          "title": "Mercado Central Alicante",
+          "url": "https://www.mercadocentralalicante.es/"
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "name": "Isla de Tabarca",
+      "description": "Protected marine reserve island reachable by ferry, snorkeling and seafood",
+      "distanceKm": 20,
+      "estimatedCostEUR": 15,
+      "frequency": "Ferry daily spring-autumn, weather permitting",
+      "sources": [
+        {
+          "title": "Isla de Tabarca",
+          "url": "https://www.alicanteturismo.com/isla-de-tabarca/"
+        }
+      ]
+    },
+    {
+      "type": "social",
+      "name": "Explanada de España",
+      "description": "Iconic mosaic-tiled promenade along the harbor, evening paseo culture",
+      "distanceKm": 0.1,
+      "estimatedCostEUR": 0,
+      "frequency": "Open 24/7, craft market evenings",
+      "sources": [
+        {
+          "title": "Alicante Tourism",
+          "url": "https://www.alicanteturismo.com/"
+        }
+      ]
+    },
+    {
+      "type": "shopping",
+      "name": "Centro Comercial Panoramis",
+      "description": "Waterfront shopping and entertainment center at the port",
+      "distanceKm": 0.5,
+      "estimatedCostEUR": 0,
+      "frequency": "Mon-Sat 10:00-22:00",
+      "sources": [
+        {
+          "title": "Panoramis",
+          "url": "https://www.panoramis.es/"
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "name": "Parque Natural de las Lagunas de la Mata y Torrevieja",
+      "description": "Salt lake nature reserve with flamingos and hiking trails",
+      "distanceKm": 45,
+      "estimatedCostEUR": 0,
+      "frequency": "Day trip, best Nov-Mar for flamingos",
+      "sources": [
+        {
+          "title": "GVA Parks",
+          "url": "https://parquesnaturales.gva.es/"
+        }
+      ]
+    },
+    {
+      "type": "entertainment",
+      "name": "Hogueras de San Juan Festival",
+      "description": "Alicante's major festival with bonfires, fireworks, parades in June",
+      "distanceKm": 0,
+      "estimatedCostEUR": 0,
+      "frequency": "Annual, June 20-24",
+      "sources": [
+        {
+          "title": "Hogueras de Alicante",
+          "url": "https://www.hogueras.org/"
+        }
+      ]
+    },
+    {
+      "type": "sports",
+      "name": "Real Club de Regatas de Alicante",
+      "description": "Yacht club and sailing center at the port, sailing courses available",
+      "distanceKm": 0.5,
+      "estimatedCostEUR": 30,
+      "frequency": "Year-round, courses and rentals",
+      "sources": [
+        {
+          "title": "RCRA",
+          "url": "https://www.rcra.es/"
+        }
+      ]
+    }
+  ]
+}

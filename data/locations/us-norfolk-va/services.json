@@ -1,0 +1,331 @@
+{
+  "distanceUnit": "mi",
+  "currency": "USD",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Sentara Norfolk General Hospital",
+      "address": "600 Gresham Drive, Norfolk, VA 23507",
+      "notes": "Level I Trauma Center and teaching hospital affiliated with Eastern Virginia Medical School (EVMS). Full emergency department, cardiac center, burn center.",
+      "sources": [
+        {
+          "title": "Sentara Norfolk General Hospital",
+          "url": "https://www.sentara.com/norfolk-general-hospital"
+        }
+      ],
+      "distanceMi": 1.6
+    },
+    {
+      "categoryId": "hospital",
+      "name": "Children's Hospital of The King's Daughters (CHKD)",
+      "address": "601 Children's Lane, Norfolk, VA 23507",
+      "notes": "Children's hospital adjacent to Sentara Norfolk General. Not relevant for retirees but indicates strength of local medical infrastructure.",
+      "sources": [
+        {
+          "title": "CHKD",
+          "url": "https://www.chkd.org/"
+        }
+      ],
+      "distanceMi": 1.7
+    },
+    {
+      "categoryId": "hospital",
+      "name": "Naval Medical Center Portsmouth",
+      "address": "620 John Paul Jones Circle, Portsmouth, VA 23708",
+      "notes": "Military hospital across the Elizabeth River in Portsmouth. Available to veterans and military retirees with Tricare.",
+      "sources": [
+        {
+          "title": "Naval Medical Center Portsmouth",
+          "url": "https://www.med.navy.mil/Portsmouth/"
+        }
+      ],
+      "distanceMi": 5.0
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "CVS Pharmacy - Ghent",
+      "address": "1601 Colley Avenue, Norfolk, VA 23517",
+      "notes": "Central Ghent location, open 7 days. Drive-through available. COVID and flu vaccines.",
+      "sources": [
+        {
+          "title": "CVS Pharmacy Locator",
+          "url": "https://www.cvs.com/store-locator/landing"
+        }
+      ],
+      "distanceMi": 0.3
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Walgreens - Granby Street",
+      "address": "7525 Granby Street, Norfolk, VA 23505",
+      "notes": "Full-service pharmacy with drive-through. Extended hours.",
+      "sources": [
+        {
+          "title": "Walgreens Store Locator",
+          "url": "https://www.walgreens.com/storelocator/find.jsp"
+        }
+      ],
+      "distanceMi": 2.5
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Harris Teeter - Ghent",
+      "address": "801 Boush Street, Norfolk, VA 23510",
+      "notes": "Full-service grocery in downtown/Ghent area. Deli, bakery, sushi bar. Open 6am-11pm.",
+      "sources": [
+        {
+          "title": "Harris Teeter Store Locator",
+          "url": "https://www.harristeeter.com/stores"
+        }
+      ],
+      "distanceMi": 0.5
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Kroger - Little Creek Road",
+      "address": "7543 Little Creek Road, Norfolk, VA 23518",
+      "notes": "Large format store with pharmacy, fuel center, and pickup/delivery service.",
+      "sources": [
+        {
+          "title": "Kroger Store Locator",
+          "url": "https://www.kroger.com/stores/search"
+        }
+      ],
+      "distanceMi": 4.3
+    },
+    {
+      "categoryId": "grocery",
+      "name": "ALDI - Norfolk",
+      "address": "1060 West 21st Street, Norfolk, VA 23517",
+      "notes": "Budget-friendly grocery option in Ghent area. Good for staples and produce.",
+      "sources": [
+        {
+          "title": "ALDI Store Locator",
+          "url": "https://stores.aldi.us/"
+        }
+      ],
+      "distanceMi": 0.9
+    },
+    {
+      "categoryId": "bank",
+      "name": "TowneBank - Downtown Norfolk",
+      "address": "100 East Main Street, Norfolk, VA 23510",
+      "notes": "Regional bank headquartered in Hampton Roads. Full-service branch with wealth management.",
+      "sources": [
+        {
+          "title": "TowneBank",
+          "url": "https://www.townebank.com/"
+        }
+      ],
+      "distanceMi": 0.6
+    },
+    {
+      "categoryId": "bank",
+      "name": "Navy Federal Credit Union - Norfolk",
+      "address": "1530 East Little Creek Road, Norfolk, VA 23518",
+      "notes": "World's largest credit union. Open to military, veterans, and their families. Multiple ATMs throughout Hampton Roads.",
+      "sources": [
+        {
+          "title": "Navy Federal Credit Union",
+          "url": "https://www.navyfederal.org/"
+        }
+      ],
+      "distanceMi": 4.0
+    },
+    {
+      "categoryId": "vet",
+      "name": "Boulevard Veterinary Hospital",
+      "address": "920 West 21st Street, Norfolk, VA 23517",
+      "notes": "Full-service veterinary clinic in Ghent area. Routine care, surgery, dental, and boarding.",
+      "sources": [
+        {
+          "title": "Boulevard Veterinary Hospital",
+          "url": "https://www.boulevardvet.com/"
+        }
+      ],
+      "distanceMi": 0.7
+    },
+    {
+      "categoryId": "vet",
+      "name": "Ghent Veterinary Clinic",
+      "address": "1310 Colley Avenue, Norfolk, VA 23517",
+      "notes": "Small animal practice in central Ghent. Wellness exams, vaccinations, and minor procedures.",
+      "sources": [
+        {
+          "title": "Ghent Veterinary Clinic",
+          "url": "https://www.ghentvet.com/"
+        }
+      ],
+      "distanceMi": 0.5
+    },
+    {
+      "categoryId": "vet-emergency",
+      "name": "Beach Veterinary Emergency Clinic",
+      "address": "1124 Independence Boulevard, Virginia Beach, VA 23455",
+      "notes": "24-hour emergency and critical care veterinary hospital in adjacent Virginia Beach. Closest emergency vet.",
+      "sources": [
+        {
+          "title": "Beach Veterinary Emergency Clinic",
+          "url": "https://www.beachvetec.com/"
+        }
+      ],
+      "distanceMi": 11.2
+    },
+    {
+      "categoryId": "transit",
+      "name": "The Tide Light Rail - Downtown Norfolk Station",
+      "address": "201 Monticello Avenue, Norfolk, VA 23510",
+      "notes": "Virginia's only light rail system. 7.4-mile route from Eastern Virginia Medical Center to Newtown Road with connections to Virginia Beach. $2.00 single ride.",
+      "sources": [
+        {
+          "title": "Hampton Roads Transit - The Tide",
+          "url": "https://gohrt.com/routes/tide/"
+        }
+      ],
+      "distanceMi": 0.6
+    },
+    {
+      "categoryId": "transit",
+      "name": "Hampton Roads Transit (HRT) Bus System",
+      "address": "1500 Monticello Avenue, Norfolk, VA 23510",
+      "notes": "Regional bus system serving Norfolk, Virginia Beach, Chesapeake, Hampton, and Newport News. $2.00 single ride, $4.50 day pass.",
+      "sources": [
+        {
+          "title": "Hampton Roads Transit",
+          "url": "https://gohrt.com/"
+        }
+      ],
+      "distanceMi": 0.7
+    },
+    {
+      "categoryId": "airport",
+      "name": "Norfolk International Airport (ORF)",
+      "address": "2200 Norview Avenue, Norfolk, VA 23518",
+      "notes": "Regional airport with nonstop service to major hubs (ATL, CLT, DFW, ORD, DCA, JFK, PHL). Airlines include Delta, American, United, Southwest, Frontier, Breeze.",
+      "sources": [
+        {
+          "title": "Norfolk International Airport",
+          "url": "https://www.norfolkairport.com/"
+        }
+      ],
+      "distanceMi": 5.0
+    },
+    {
+      "categoryId": "library",
+      "name": "Slover Library (Main Branch)",
+      "address": "235 East Plume Street, Norfolk, VA 23510",
+      "notes": "Norfolk's flagship library in a renovated 1904 building downtown. Maker spaces, recording studio, genealogy center, free Wi-Fi. Part of Norfolk Public Library system with 10 branches.",
+      "sources": [
+        {
+          "title": "Norfolk Public Library",
+          "url": "https://norfolkpubliclibrary.org/"
+        }
+      ],
+      "distanceMi": 0.6
+    },
+    {
+      "categoryId": "library",
+      "name": "Larchmont Library",
+      "address": "6525 Hampton Boulevard, Norfolk, VA 23508",
+      "notes": "Branch library serving the Larchmont-Edgewater and ODU area. Community programming, children's room, free Wi-Fi.",
+      "sources": [
+        {
+          "title": "Norfolk Public Library - Branches",
+          "url": "https://norfolkpubliclibrary.org/locations/"
+        }
+      ],
+      "distanceMi": 2.2
+    },
+    {
+      "categoryId": "dog-park",
+      "name": "Northside Park Dog Park",
+      "address": "8400 Tidewater Drive, Norfolk, VA 23503",
+      "notes": "Fenced off-leash dog park with separate areas for large and small dogs. Water fountains, benches.",
+      "sources": [
+        {
+          "title": "City of Norfolk Parks",
+          "url": "https://www.norfolk.gov/facilities"
+        }
+      ],
+      "distanceMi": 5.0
+    },
+    {
+      "categoryId": "dog-park",
+      "name": "Stockley Gardens",
+      "address": "Stockley Gardens, Norfolk, VA 23507",
+      "notes": "Popular Ghent park for dog walking (leash required). Twice-yearly Stockley Gardens Arts Festival. Not fenced but heavily used by dog owners.",
+      "sources": [
+        {
+          "title": "Stockley Gardens Arts Festival",
+          "url": "https://www.stockleygardens.com/"
+        }
+      ],
+      "distanceMi": 0.9
+    },
+    {
+      "categoryId": "gym",
+      "name": "Norfolk Fitness & Wellness Center",
+      "address": "7300 Newport Avenue, Norfolk, VA 23505",
+      "notes": "City-run recreation center with pool, gym, group fitness classes. Senior memberships available at reduced rates.",
+      "sources": [
+        {
+          "title": "Norfolk Recreation Centers",
+          "url": "https://www.norfolk.gov/recreation"
+        }
+      ],
+      "distanceMi": 3.1
+    },
+    {
+      "categoryId": "gym",
+      "name": "Planet Fitness - Norfolk",
+      "address": "740 West 22nd Street, Norfolk, VA 23517",
+      "notes": "Budget gym at $10-25/month. 24/7 access. Basic equipment and group fitness.",
+      "sources": [
+        {
+          "title": "Planet Fitness",
+          "url": "https://www.planetfitness.com/gyms/norfolk-va"
+        }
+      ],
+      "distanceMi": 0.9
+    },
+    {
+      "categoryId": "attraction",
+      "name": "Chrysler Museum of Art",
+      "address": "1 Memorial Place, Norfolk, VA 23510",
+      "notes": "World-class art museum with free admission. Over 30,000 works including a renowned glass collection and Perry Glass Studio.",
+      "sources": [
+        {
+          "title": "Chrysler Museum of Art",
+          "url": "https://chrysler.org/"
+        }
+      ],
+      "distanceMi": 0.9
+    },
+    {
+      "categoryId": "attraction",
+      "name": "Norfolk Botanical Garden",
+      "address": "6700 Azalea Garden Road, Norfolk, VA 23518",
+      "notes": "175-acre garden with themed gardens, boat tours, and walking trails. Adjacent to Norfolk International Airport. Senior admission discounts available.",
+      "sources": [
+        {
+          "title": "Norfolk Botanical Garden",
+          "url": "https://norfolkbotanicalgarden.org/"
+        }
+      ],
+      "distanceMi": 4.3
+    },
+    {
+      "categoryId": "attraction",
+      "name": "Nauticus & Battleship Wisconsin",
+      "address": "1 Waterside Drive, Norfolk, VA 23510",
+      "notes": "Maritime science center and WWII battleship on the downtown waterfront. Includes the Hampton Roads Naval Museum (free).",
+      "sources": [
+        {
+          "title": "Nauticus",
+          "url": "https://nauticus.org/"
+        }
+      ],
+      "distanceMi": 0.7
+    }
+  ]
+}

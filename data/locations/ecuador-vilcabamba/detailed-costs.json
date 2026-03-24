@@ -1,0 +1,126 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 35,
+      "typical": 45,
+      "max": 340
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutida / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 240,
+        "withoutInsurance": 290,
+        "coverageNote": "Not typically covered by IESS. Cash price at private pharmacies."
+      },
+      {
+        "name": "Levotiroxina [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 4,
+        "coverageNote": "Very affordable generic"
+      },
+      {
+        "name": "Atorvastatina 20mg [P1]",
+        "monthlyCost": 3,
+        "withoutInsurance": 6,
+        "coverageNote": "Generic widely available"
+      },
+      {
+        "name": "Montelukast [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Available at pharmacies"
+      },
+      {
+        "name": "Hidroclorotiazida [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 3,
+        "coverageNote": "Inexpensive generic"
+      },
+      {
+        "name": "Olmesartán [P1]",
+        "monthlyCost": 5,
+        "withoutInsurance": 14,
+        "coverageNote": "Available at pharmacy chains"
+      },
+      {
+        "name": "Salbutamol (inhalador) [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 4,
+        "coverageNote": "Affordable at pharmacies"
+      },
+      {
+        "name": "Metformina 500mg [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 3,
+        "coverageNote": "Very inexpensive generic"
+      },
+      {
+        "name": "Alopurinol [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 4,
+        "coverageNote": "Generic available"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 4,
+        "coverageNote": "Generic available"
+      },
+      {
+        "name": "Topiramato [P2]",
+        "monthlyCost": 5,
+        "withoutInsurance": 14,
+        "coverageNote": "Available at pharmacies"
+      },
+      {
+        "name": "Metoprolol [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 4,
+        "coverageNote": "Generic available"
+      },
+      {
+        "name": "Atorvastatina 20mg [P2]",
+        "monthlyCost": 3,
+        "withoutInsurance": 6,
+        "coverageNote": "Generic widely available"
+      }
+    ],
+    "pharmacyAccess": "Fybeca, Pharmacys, Medicity, and Cruz Azul pharmacy chains. Generics widely available. Many medications sold without prescription.",
+    "notes": "Ecuador IESS (public insurance) available to residents who contribute (~17.6% of declared income). Covers most formulary medications. Private pharmacies offer affordable generics. Ecuador uses USD so no currency risk. GLP-1 drugs are imported and expensive."
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 62,
+      "typical": 77,
+      "max": 97
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in Ecuador at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "Claro Ecuador Prepaid",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "6GB 4G",
+        "baseCost": 12,
+        "taxesAndFees": 0,
+        "monthlyTotal": 12,
+        "notes": "2 lines ~$6/line. Claro dominates market. Prices in USD (dollarized)."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      }
+    ]
+  }
+}

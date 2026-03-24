@@ -1,0 +1,126 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 29,
+      "typical": 36,
+      "max": 265
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 220,
+        "coverageNote": "Sécu reimburses 65% for diabetes indication; mutuelle covers rest. Without ALD, copay ~€10/mo."
+      },
+      {
+        "name": "Levothyroxine (Levothyrox) [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 5,
+        "coverageNote": "Fully reimbursed under Sécu (65%) + mutuelle"
+      },
+      {
+        "name": "Atorvastatine 20mg [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 8,
+        "coverageNote": "Sécu 65% + mutuelle top-up"
+      },
+      {
+        "name": "Montelukast (Singulair) [P1]",
+        "monthlyCost": 3,
+        "withoutInsurance": 12,
+        "coverageNote": "Sécu 65% reimbursement"
+      },
+      {
+        "name": "Hydrochlorothiazide [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 4,
+        "coverageNote": "Fully reimbursed generic"
+      },
+      {
+        "name": "Olmesartan (Alteis/Olmetec) [P1]",
+        "monthlyCost": 3,
+        "withoutInsurance": 15,
+        "coverageNote": "Sécu 65% + mutuelle"
+      },
+      {
+        "name": "Salbutamol (Ventoline) [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 4,
+        "coverageNote": "Fully reimbursed under Sécu"
+      },
+      {
+        "name": "Metformine 500mg [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "Fully reimbursed generic"
+      },
+      {
+        "name": "Allopurinol [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 5,
+        "coverageNote": "Sécu 65% reimbursement"
+      },
+      {
+        "name": "Lisinopril (Zestril) [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 6,
+        "coverageNote": "Sécu 65% + mutuelle"
+      },
+      {
+        "name": "Topiramate (Epitomax) [P2]",
+        "monthlyCost": 3,
+        "withoutInsurance": 15,
+        "coverageNote": "Sécu 65% reimbursement"
+      },
+      {
+        "name": "Metoprolol (Seloken) [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 6,
+        "coverageNote": "Sécu 65% + mutuelle"
+      },
+      {
+        "name": "Atorvastatine 20mg [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 8,
+        "coverageNote": "Sécu 65% + mutuelle top-up"
+      }
+    ],
+    "pharmacyAccess": "Pharmacies on nearly every block in French cities. Green cross signage. Pharmacists can dispense many medications with French prescription. EU prescriptions accepted.",
+    "notes": "France Sécurité Sociale reimburses 65-100% of approved medications. With ALD (Affection Longue Durée) status for chronic conditions, reimbursement reaches 100%. Mutuelle (supplementary insurance) covers the rest. Prices shown are after typical Sécu + mutuelle reimbursement."
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 70,
+      "typical": 85,
+      "max": 105
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in France at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "Free Mobile",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "110GB 5G",
+        "baseCost": 20,
+        "taxesAndFees": 0,
+        "monthlyTotal": 20,
+        "notes": "2 lines €9.99/line (~$11). Free Mobile best value. EU roaming included."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      }
+    ]
+  }
+}

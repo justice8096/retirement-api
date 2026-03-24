@@ -1,0 +1,315 @@
+{
+  "distanceUnit": "km",
+  "currency": "EUR",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "University Hospital Waterford (UHW)",
+      "address": "Dunmore Road, Waterford, X91 ER8E",
+      "distanceKm": 2,
+      "notes": "Main regional hospital for the Southeast. Emergency department, surgical services, oncology, cardiology. Part of South/South West Hospital Group. Public and private patients. Long ED wait times common.",
+      "sources": [
+        {
+          "title": "University Hospital Waterford - HSE",
+          "url": "https://www.hse.ie/eng/services/list/3/hospitals/waterford/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Boots Pharmacy Waterford",
+      "address": "City Square Shopping Centre, Waterford",
+      "distanceKm": 0.2,
+      "notes": "Full-service pharmacy. Flu vaccinations, prescription dispensing, health consultations. Open Mon-Sat. Multiple Boots and LloydsPharmacy locations in Waterford.",
+      "sources": [
+        {
+          "title": "Boots Ireland",
+          "url": "https://www.boots.ie/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "AIB (Allied Irish Banks) Waterford",
+      "address": "The Quay, Waterford",
+      "distanceKm": 0.3,
+      "notes": "Full-service branch. Current accounts, savings, mortgages. English-speaking (native). Opening an account requires proof of address and PPS number.",
+      "sources": [
+        {
+          "title": "AIB",
+          "url": "https://aib.ie/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "Bank of Ireland Waterford",
+      "address": "The Quay, Waterford",
+      "distanceKm": 0.3,
+      "notes": "Full-service branch. Largest bank in Ireland. Current accounts for new residents available with proof of ID and address.",
+      "sources": [
+        {
+          "title": "Bank of Ireland",
+          "url": "https://www.bankofireland.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "Permanent TSB (PTSB) Waterford",
+      "address": "Barronstrand Street, Waterford",
+      "distanceKm": 0.2,
+      "notes": "Retail bank with competitive current account offerings. Fewer branches than AIB/BOI but good digital banking.",
+      "sources": [
+        {
+          "title": "Permanent TSB",
+          "url": "https://www.permanenttsb.ie/"
+        }
+      ]
+    },
+    {
+      "categoryId": "postal",
+      "name": "An Post Waterford",
+      "address": "The Quay, Waterford",
+      "distanceKm": 0.3,
+      "notes": "Main post office. An Post handles mail, parcels, bill payments, foreign exchange, and some government services. Eircode (postal code) system used for addresses.",
+      "sources": [
+        {
+          "title": "An Post",
+          "url": "https://www.anpost.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "legal",
+      "name": "FLAC (Free Legal Advice Centres)",
+      "address": "Citizens Information Centre, Waterford",
+      "distanceKm": 0.5,
+      "notes": "Free legal advice clinics held at Citizens Information Centres. Covers immigration, housing, employment, consumer rights. Volunteer solicitors. Appointment required.",
+      "sources": [
+        {
+          "title": "FLAC - Free Legal Advice Centres",
+          "url": "https://www.flac.ie/"
+        }
+      ]
+    },
+    {
+      "categoryId": "legal",
+      "name": "Citizens Information Waterford",
+      "address": "35 The Quay, Waterford",
+      "distanceKm": 0.3,
+      "notes": "Free information, advice, and advocacy on public services and entitlements. Covers social welfare, healthcare, immigration, consumer rights. Walk-in and phone service.",
+      "sources": [
+        {
+          "title": "Citizens Information",
+          "url": "https://www.citizensinformation.ie/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Waterford City GP Practices",
+      "address": "Various locations, Waterford City",
+      "distanceKm": 1,
+      "notes": "Multiple GP practices in Waterford. Consultation €55-65 per visit. Over-70s GP visit card covers visits free. Register with a GP for ongoing care. Healthlink and online booking available.",
+      "sources": [
+        {
+          "title": "HSE Find a GP",
+          "url": "https://www2.hse.ie/services/find-a-gp/"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Waterford Veterinary Hospital",
+      "address": "Cork Road, Waterford",
+      "distanceKm": 3,
+      "notes": "Full-service veterinary hospital. Emergency care, surgery, dental, diagnostics. Multiple smaller vet clinics in Waterford city and surrounding towns.",
+      "sources": [
+        {
+          "title": "Veterinary Council of Ireland",
+          "url": "https://www.vci.ie/"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Tramore Veterinary Clinic",
+      "address": "Tramore, Co. Waterford",
+      "distanceKm": 12,
+      "notes": "Small animal veterinary clinic serving Tramore and surrounding coastal areas. Routine care, vaccinations, microchipping.",
+      "sources": [
+        {
+          "title": "Veterinary Council of Ireland - Find a Vet",
+          "url": "https://www.vci.ie/find-a-vet"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "People's Park Waterford",
+      "address": "Park Road, Waterford",
+      "distanceKm": 1,
+      "notes": "Victorian-era public park in city centre. Dogs allowed on leash. Playground, bandstand, walking paths. Popular with dog walkers.",
+      "sources": [
+        {
+          "title": "Waterford City & County Council - Parks",
+          "url": "https://www.waterfordcouncil.ie/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "WIT Arena (SETU Arena)",
+      "address": "Cork Road, Waterford",
+      "distanceKm": 3,
+      "notes": "Modern sports and fitness facility at South East Technological University. Gym, swimming pool, group fitness classes. Public membership available.",
+      "sources": [
+        {
+          "title": "SETU Arena",
+          "url": "https://www.wit.ie/arena"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Waterford Airport (WAT)",
+      "address": "Killowen, Waterford",
+      "distanceKm": 8,
+      "notes": "Small regional airport. Limited scheduled services. Cork Airport (120km) and Dublin Airport (170km) offer full international connections.",
+      "sources": [
+        {
+          "title": "Waterford Airport",
+          "url": "https://www.waterfordairport.ie/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Plunkett Station (Waterford Rail)",
+      "address": "Dock Road, Waterford",
+      "distanceKm": 0.5,
+      "notes": "Irish Rail station. Direct service to Dublin Heuston (2hr 10min), Limerick Junction, and Rosslare Europort (ferry to Wales/France). Bus Éireann services from adjacent bus station.",
+      "sources": [
+        {
+          "title": "Irish Rail - Waterford",
+          "url": "https://www.irishrail.ie/train-stations/waterford-plunkett"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "House of Waterford Crystal",
+      "description": "World-famous crystal factory tour and retail store. Watch master craftsmen create hand-cut crystal.",
+      "distanceKm": 0.5,
+      "estimatedCostEUR": 15,
+      "frequency": "Daily tours, year-round",
+      "sources": [
+        {
+          "title": "Waterford Crystal",
+          "url": "https://www.waterfordvisitorcentre.com/"
+        }
+      ]
+    },
+    {
+      "type": "historical",
+      "name": "Viking Triangle & Reginald's Tower",
+      "description": "Ireland's oldest civic building (1003 AD) and surrounding Viking-era quarter with three museums: Medieval Museum, Bishop's Palace, and Reginald's Tower.",
+      "distanceKm": 0.2,
+      "estimatedCostEUR": 10,
+      "frequency": "Open daily except some winter closures",
+      "sources": [
+        {
+          "title": "Waterford Treasures - Viking Triangle",
+          "url": "https://www.waterfordtreasures.com/"
+        }
+      ]
+    },
+    {
+      "type": "outdoor",
+      "name": "Waterford Greenway",
+      "description": "46km off-road cycling and walking trail from Waterford city to Dungarvan, following the old railway line through countryside and coast",
+      "distanceKm": 0,
+      "estimatedCostEUR": 0,
+      "frequency": "Open daily, year-round. Bike rental available at multiple points.",
+      "sources": [
+        {
+          "title": "Waterford Greenway",
+          "url": "https://www.visitwaterford.com/waterford-greenway/"
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "name": "Dunmore East Cliffs & Harbour",
+      "description": "Dramatic coastal cliffs, secluded coves, and a working fishing harbour. Cliff walks with sea views.",
+      "distanceKm": 16,
+      "estimatedCostEUR": 0,
+      "frequency": "Open year-round, best Apr-Oct",
+      "sources": [
+        {
+          "title": "Visit Waterford - Dunmore East",
+          "url": "https://www.visitwaterford.com/dunmore-east/"
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "name": "Copper Coast UNESCO Global Geopark",
+      "description": "17km stretch of dramatic coastline between Tramore and Dungarvan with 460-million-year geological formations, sea stacks, and coastal walks",
+      "distanceKm": 20,
+      "estimatedCostEUR": 0,
+      "frequency": "Open year-round. Geopark Centre in Bunmahon.",
+      "sources": [
+        {
+          "title": "Copper Coast Geopark",
+          "url": "https://www.coppercoastgeopark.com/"
+        }
+      ]
+    },
+    {
+      "type": "entertainment",
+      "name": "Theatre Royal Waterford",
+      "description": "Beautifully restored 19th-century theatre hosting drama, comedy, music, and cultural events throughout the year",
+      "distanceKm": 0.3,
+      "estimatedCostEUR": 20,
+      "frequency": "Regular performances, check schedule",
+      "sources": [
+        {
+          "title": "Theatre Royal Waterford",
+          "url": "https://www.theatreroyal.ie/"
+        }
+      ]
+    },
+    {
+      "type": "dining",
+      "name": "Waterford Food & Pub Scene",
+      "description": "Traditional Irish pubs with live trad music sessions, craft beer scene, and strong local food culture. Notable restaurants in city and Dungarvan.",
+      "distanceKm": 0,
+      "estimatedCostEUR": 15,
+      "frequency": "Nightly, especially Thu-Sun",
+      "sources": [
+        {
+          "title": "Visit Waterford - Food & Drink",
+          "url": "https://www.visitwaterford.com/food-drink/"
+        }
+      ]
+    },
+    {
+      "type": "sports",
+      "name": "Walsh Park (GAA)",
+      "description": "Home ground for Waterford GAA hurling and football. Hurling is the dominant sport in Waterford — fast-paced and uniquely Irish.",
+      "distanceKm": 1,
+      "estimatedCostEUR": 15,
+      "frequency": "Match days, Feb-Sep season (hurling championship peaks in summer)",
+      "sources": [
+        {
+          "title": "Waterford GAA",
+          "url": "https://www.waterfordgaa.ie/"
+        }
+      ]
+    }
+  ]
+}

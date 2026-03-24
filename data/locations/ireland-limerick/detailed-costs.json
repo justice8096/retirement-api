@@ -1,0 +1,126 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 32,
+      "typical": 40,
+      "max": 275
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 12,
+        "withoutInsurance": 230,
+        "coverageNote": "Covered under GMS medical card or Drugs Payment Scheme (€80/mo cap per family)"
+      },
+      {
+        "name": "Levothyroxine (Eltroxin) [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 8,
+        "coverageNote": "GMS or DPS covered"
+      },
+      {
+        "name": "Atorvastatin 20mg [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 9,
+        "coverageNote": "GMS or DPS; generic pricing applies"
+      },
+      {
+        "name": "Montelukast (Singulair) [P1]",
+        "monthlyCost": 3,
+        "withoutInsurance": 14,
+        "coverageNote": "GMS or DPS covered"
+      },
+      {
+        "name": "Hydrochlorothiazide [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 5,
+        "coverageNote": "GMS or DPS — inexpensive generic"
+      },
+      {
+        "name": "Olmesartan [P1]",
+        "monthlyCost": 3,
+        "withoutInsurance": 16,
+        "coverageNote": "GMS or DPS covered"
+      },
+      {
+        "name": "Salbutamol (Ventolin) [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 6,
+        "coverageNote": "GMS or DPS covered"
+      },
+      {
+        "name": "Metformin 500mg [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 5,
+        "coverageNote": "GMS or DPS — inexpensive generic"
+      },
+      {
+        "name": "Allopurinol [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 6,
+        "coverageNote": "GMS or DPS covered"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 7,
+        "coverageNote": "GMS or DPS covered"
+      },
+      {
+        "name": "Topiramate (Topamax) [P2]",
+        "monthlyCost": 3,
+        "withoutInsurance": 16,
+        "coverageNote": "GMS or DPS covered"
+      },
+      {
+        "name": "Metoprolol [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 7,
+        "coverageNote": "GMS or DPS covered"
+      },
+      {
+        "name": "Atorvastatin 20mg [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 9,
+        "coverageNote": "GMS or DPS; generic pricing applies"
+      }
+    ],
+    "pharmacyAccess": "Boots, LloydsPharmacy, and independent pharmacies throughout Ireland. Late-night pharmacies in cities. Prescription required for most medications.",
+    "notes": "Ireland has the Drugs Payment Scheme (DPS) capping family medication costs at €80/month. Medical card holders (income-tested or over-70) pay nothing. Over-70s get automatic medical card. Prices shown assume DPS or medical card coverage."
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 75,
+      "typical": 90,
+      "max": 110
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in Ireland at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "Three Ireland SIM-Only",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "Unlimited 5G",
+        "baseCost": 25,
+        "taxesAndFees": 0,
+        "monthlyTotal": 25,
+        "notes": "2 lines €12/line (~$13). Three has best 5G coverage. EU roaming included."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      }
+    ]
+  }
+}

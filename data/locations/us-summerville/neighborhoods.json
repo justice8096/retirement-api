@@ -1,0 +1,176 @@
+{
+  "city": "Summerville / Greater Charleston area",
+  "neighborhoods": [
+    {
+      "id": "sc-summerville-historic",
+      "name": "Summerville Historic District",
+      "description": "Charming downtown area with tree-lined streets, historic homes, Azalea Park, local shops and restaurants along Main Street",
+      "character": "Walkable downtown, Southern charm, historic architecture, small-town community feel",
+      "housing": {
+        "avgRentOneBedroomUSD": 1200,
+        "avgRentTwoBedroomUSD": 1600,
+        "buyPricePerSqmUSD": 2800,
+        "medianHomePriceUSD": 350000,
+        "predominantType": "Older single-family homes, bungalows, and some historic Victorians"
+      },
+      "walkabilityScore": 65,
+      "transitScore": 20,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The heart of Summerville. Azalea Park and Hutchinson Square host community events. Saturday farmers market. Walkable to restaurants, shops, and Dorchester County Library. Older housing stock with charm but may need updates.",
+      "sources": [
+        {
+          "title": "Zillow - Summerville SC",
+          "url": "https://www.zillow.com/summerville-sc/"
+        },
+        {
+          "title": "Town of Summerville",
+          "url": "https://www.summerville.sc.gov/"
+        },
+        {
+          "title": "Walk Score - Summerville SC",
+          "url": "https://www.walkscore.com/score/summerville-sc"
+        }
+      ]
+    },
+    {
+      "id": "sc-cane-bay-plantation",
+      "name": "Cane Bay Plantation",
+      "description": "Large master-planned community with new construction homes, Del Webb 55+ active adult section, resort-style amenities, and extensive trails",
+      "character": "Master-planned suburban, new construction, 55+ active adult community, resort amenities",
+      "housing": {
+        "avgRentOneBedroomUSD": 1400,
+        "avgRentTwoBedroomUSD": 1800,
+        "buyPricePerSqmUSD": 2600,
+        "medianHomePriceUSD": 380000,
+        "predominantType": "New construction single-family homes, townhomes, Del Webb 55+ patio homes"
+      },
+      "walkabilityScore": 35,
+      "transitScore": 10,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "One of SC's fastest-growing communities. Del Webb section is specifically designed for 55+ with clubhouse, pools, fitness center, pickleball, and organized activities. YMCA on-site. Miles of trails and lakes. Car required for everything outside the community.",
+      "sources": [
+        {
+          "title": "Cane Bay Plantation",
+          "url": "https://www.canebayplantation.com/"
+        },
+        {
+          "title": "Del Webb Cane Bay",
+          "url": "https://www.delwebb.com/homes/south-carolina/charleston/summerville/del-webb-at-cane-bay/"
+        },
+        {
+          "title": "Zillow - Cane Bay Summerville",
+          "url": "https://www.zillow.com/summerville-sc/cane-bay-plantation/"
+        }
+      ]
+    },
+    {
+      "id": "sc-nexton",
+      "name": "Nexton",
+      "description": "Modern mixed-use community with a walkable town center (Nexton Square), new construction homes, and a focus on connectivity and wellness",
+      "character": "Modern mixed-use, walkable town center, new urbanist design, tech-forward",
+      "housing": {
+        "avgRentOneBedroomUSD": 1500,
+        "avgRentTwoBedroomUSD": 1900,
+        "buyPricePerSqmUSD": 3000,
+        "medianHomePriceUSD": 400000,
+        "predominantType": "New construction single-family homes, townhomes, and apartments near town center"
+      },
+      "walkabilityScore": 50,
+      "transitScore": 15,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Nexton Square town center has restaurants, shops, and a Publix. Brighton Park Village is the 55+ section by Del Webb. Community-wide gigabit fiber internet. Trails, swim club, and dog park. The most modern feel in the Summerville area. Premium pricing reflects newer builds.",
+      "sources": [
+        {
+          "title": "Nexton Community",
+          "url": "https://www.nexton.com/"
+        },
+        {
+          "title": "Zillow - Nexton Summerville",
+          "url": "https://www.zillow.com/summerville-sc/nexton/"
+        },
+        {
+          "title": "Nexton Square",
+          "url": "https://www.nextonsquare.com/"
+        }
+      ]
+    },
+    {
+      "id": "sc-ladson",
+      "name": "Ladson",
+      "description": "Unincorporated community north of Summerville along the I-26 corridor, more affordable housing, industrial and commercial areas nearby",
+      "character": "Suburban affordable, industrial corridor, working class, practical",
+      "housing": {
+        "avgRentOneBedroomUSD": 1000,
+        "avgRentTwoBedroomUSD": 1350,
+        "buyPricePerSqmUSD": 1800,
+        "medianHomePriceUSD": 280000,
+        "predominantType": "Single-family ranch homes, manufactured homes, and older subdivisions"
+      },
+      "walkabilityScore": 20,
+      "transitScore": 15,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Most affordable option in the area. Close to I-26 for commuting. Exchange Park hosts the Coastal Carolina Fair. Walmart, Lowes, and commercial strip along US-78. Less charming than downtown Summerville but practical and budget-friendly. Some areas have flood risk.",
+      "sources": [
+        {
+          "title": "Zillow - Ladson SC",
+          "url": "https://www.zillow.com/ladson-sc/"
+        },
+        {
+          "title": "Numbeo Cost of Living Summerville Area",
+          "url": "https://www.numbeo.com/cost-of-living/in/Summerville-SC"
+        }
+      ]
+    },
+    {
+      "id": "sc-goose-creek",
+      "name": "Goose Creek",
+      "description": "City east of Summerville near Joint Base Charleston, affordable and diverse community with family-oriented neighborhoods",
+      "character": "Military-adjacent, affordable, diverse, family-oriented suburban",
+      "housing": {
+        "avgRentOneBedroomUSD": 1000,
+        "avgRentTwoBedroomUSD": 1300,
+        "buyPricePerSqmUSD": 1700,
+        "medianHomePriceUSD": 260000,
+        "predominantType": "Single-family homes, townhomes, and military housing communities"
+      },
+      "walkabilityScore": 25,
+      "transitScore": 15,
+      "safetyRating": "moderate-high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Strong military community due to Joint Base Charleston proximity. More diverse than Summerville proper. Crowfield Plantation golf community is a popular option. Goose Creek Reservoir and municipal recreation programs. Very affordable housing market. Car essential with spread out suburban layout.",
+      "sources": [
+        {
+          "title": "City of Goose Creek",
+          "url": "https://www.cityofgoosecreek.com/"
+        },
+        {
+          "title": "Zillow - Goose Creek SC",
+          "url": "https://www.zillow.com/goose-creek-sc/"
+        },
+        {
+          "title": "Joint Base Charleston",
+          "url": "https://www.jbcharleston.jb.mil/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,370 @@
+{
+  "distanceUnit": "km",
+  "currency": "EUR",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Hospital de Santa Maria (CHULN)",
+      "address": "Avenida Professor Egas Moniz, 1649-035 Lisboa",
+      "distanceKm": 4,
+      "notes": "Largest hospital in Portugal, university teaching hospital, 24/7 emergency",
+      "sources": [
+        {
+          "title": "CHULN",
+          "url": "https://www.chln.min-saude.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Farmácia Estácio - Rossio",
+      "address": "Praça Dom Pedro IV, 1100-200 Lisboa",
+      "distanceKm": 0.2,
+      "notes": "Central location, extended hours, English spoken, wide medication stock",
+      "sources": [
+        {
+          "title": "Farmácias Portuguesas",
+          "url": "https://www.farmaciasportuguesas.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Pingo Doce Baixa",
+      "address": "Rua do Ouro, 1100 Lisboa",
+      "distanceKm": 0.3,
+      "notes": "Major Portuguese supermarket chain, affordable, city center location",
+      "sources": [
+        {
+          "title": "Pingo Doce",
+          "url": "https://www.pingodoce.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "Millennium BCP - Baixa Chiado",
+      "address": "Rua Augusta, 1100-053 Lisboa",
+      "distanceKm": 0.2,
+      "notes": "Largest private bank in Portugal, English service, expat-friendly accounts",
+      "sources": [
+        {
+          "title": "Millennium BCP",
+          "url": "https://www.millenniumbcp.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "CUF Descobertas Hospital",
+      "address": "Rua Mário Botas, Parque das Nações, 1998-018 Lisboa",
+      "distanceKm": 7,
+      "notes": "Private hospital group, English-speaking GPs, online booking, short wait times",
+      "sources": [
+        {
+          "title": "CUF",
+          "url": "https://www.cuf.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Malo Clinic Lisbon",
+      "address": "Avenida dos Combatentes 43, 1600-042 Lisboa",
+      "distanceKm": 4.5,
+      "notes": "Internationally renowned dental clinic, English-speaking, dental tourism hub",
+      "sources": [
+        {
+          "title": "Malo Clinic",
+          "url": "https://www.maloclinics.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Hospital Veterinário do Restelo",
+      "address": "Rua Bartolomeu Dias, 1400-031 Lisboa",
+      "distanceKm": 6,
+      "notes": "24-hour veterinary hospital, emergency services, English spoken",
+      "sources": [
+        {
+          "title": "HV Restelo",
+          "url": "https://www.hvr.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Jardim da Estrela",
+      "address": "Praça da Estrela, 1200-667 Lisboa",
+      "distanceKm": 2,
+      "notes": "Beautiful historic garden, popular with dog walkers, shaded paths, duck pond",
+      "sources": [
+        {
+          "title": "CML Parks",
+          "url": "https://www.lisboa.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "Holmes Place Saldanha",
+      "address": "Avenida Fontes Pereira de Melo, 1050-116 Lisboa",
+      "distanceKm": 1.5,
+      "notes": "Premium fitness club, pool, spa, group classes, central location",
+      "sources": [
+        {
+          "title": "Holmes Place",
+          "url": "https://www.holmesplace.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "St. George's Church Lisbon (Anglican)",
+      "address": "Rua da Estrela 30, 1200-669 Lisboa",
+      "distanceKm": 2,
+      "notes": "Oldest Anglican church in Lisbon (1822), English services, active British community",
+      "sources": [
+        {
+          "title": "St George's Lisbon",
+          "url": "https://www.lisbonchaplaincy.org/"
+        }
+      ]
+    },
+    {
+      "categoryId": "international_school",
+      "name": "International Club of Portugal",
+      "address": "Rua de Santa Catarina, Lisboa",
+      "distanceKm": 1,
+      "notes": "English-speaking expat social club, cultural events, networking",
+      "sources": [
+        {
+          "title": "InterNations Lisbon",
+          "url": "https://www.internations.org/lisbon-expats"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Aeroporto Humberto Delgado (LIS)",
+      "address": "Alameda das Comunidades Portuguesas, 1700-111 Lisboa",
+      "distanceKm": 7,
+      "notes": "International airport, Metro Red Line connection, flights throughout Europe and beyond",
+      "sources": [
+        {
+          "title": "Lisbon Airport",
+          "url": "https://www.aeroportolisboa.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Estação do Rossio",
+      "address": "Praça Dom Pedro IV, 1100-200 Lisboa",
+      "distanceKm": 0.2,
+      "notes": "Central train station, Sintra line, Metro Green Line connection, iconic Manueline facade",
+      "sources": [
+        {
+          "title": "CP - Comboios de Portugal",
+          "url": "https://www.cp.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "coworking",
+      "name": "Second Home Lisboa",
+      "address": "Mercado da Ribeira, Avenida 24 de Julho, 1200-479 Lisboa",
+      "distanceKm": 1,
+      "notes": "Beautiful coworking in Time Out Market building, day passes, vibrant community",
+      "sources": [
+        {
+          "title": "Second Home",
+          "url": "https://secondhome.io/location/lisbon/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "Pet's Place Lisbon",
+      "address": "Campo de Ourique, Lisboa",
+      "distanceKm": 3,
+      "notes": "Dog grooming and pet shop, appointment-based, all breeds",
+      "sources": [
+        {
+          "title": "Pet's Place",
+          "url": "https://www.petsplace.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_daycare",
+      "name": "Dog Resort Lisbon",
+      "address": "Benfica, Lisboa",
+      "distanceKm": 6,
+      "notes": "Dog daycare and boarding, outdoor play areas, webcam for owners",
+      "sources": [
+        {
+          "title": "Dog Resort Lisbon",
+          "url": "https://www.dogresortlisboa.pt/"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "historical",
+      "name": "Castelo de São Jorge",
+      "description": "Moorish castle on the highest hill of Lisbon with panoramic views over the city and Tagus",
+      "distanceKm": 0.8,
+      "estimatedCostEUR": 10,
+      "frequency": "Daily 9:00-21:00 (summer), 9:00-18:00 (winter)",
+      "sources": [
+        {
+          "title": "Castelo de São Jorge",
+          "url": "https://castelodesaojorge.pt/"
+        }
+      ]
+    },
+    {
+      "type": "cultural",
+      "name": "Museu Nacional do Azulejo",
+      "description": "Unique museum dedicated to Portuguese decorative tiles, housed in a former convent",
+      "distanceKm": 3,
+      "estimatedCostEUR": 5,
+      "frequency": "Tue-Sun 10:00-18:00",
+      "sources": [
+        {
+          "title": "Museu do Azulejo",
+          "url": "https://www.museudoazulejo.gov.pt/"
+        }
+      ]
+    },
+    {
+      "type": "historical",
+      "name": "Mosteiro dos Jerónimos",
+      "description": "UNESCO World Heritage Manueline monastery in Belém, masterpiece of Portuguese architecture",
+      "distanceKm": 6,
+      "estimatedCostEUR": 10,
+      "frequency": "Tue-Sun 10:00-17:30",
+      "sources": [
+        {
+          "title": "Mosteiro dos Jerónimos",
+          "url": "https://www.patrimoniocultural.gov.pt/"
+        }
+      ]
+    },
+    {
+      "type": "outdoor",
+      "name": "Tram 28 Route",
+      "description": "Iconic vintage tram ride through historic neighborhoods: Graça, Alfama, Baixa, Estrela",
+      "distanceKm": 0,
+      "estimatedCostEUR": 3,
+      "frequency": "Daily, frequent service, use Viva Viagem card",
+      "sources": [
+        {
+          "title": "Carris",
+          "url": "https://www.carris.pt/"
+        }
+      ]
+    },
+    {
+      "type": "dining",
+      "name": "Time Out Market Lisboa",
+      "description": "Gourmet food hall in Mercado da Ribeira with top Lisbon chefs and restaurants",
+      "distanceKm": 1,
+      "estimatedCostEUR": 18,
+      "frequency": "Sun-Wed 10:00-24:00, Thu-Sat 10:00-02:00",
+      "sources": [
+        {
+          "title": "Time Out Market",
+          "url": "https://www.timeoutmarket.com/lisboa/"
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "name": "Parque Natural de Sintra-Cascais",
+      "description": "Fairy-tale palaces, lush forests, and Atlantic cliffs just 30 min from Lisbon",
+      "distanceKm": 30,
+      "estimatedCostEUR": 14,
+      "frequency": "Day trip by train, palace tickets vary",
+      "sources": [
+        {
+          "title": "Sintra Tourism",
+          "url": "https://www.parquesdesintra.pt/"
+        }
+      ]
+    },
+    {
+      "type": "entertainment",
+      "name": "Fado in Alfama",
+      "description": "Traditional Portuguese fado music in intimate venues throughout the Alfama quarter",
+      "distanceKm": 0.5,
+      "estimatedCostEUR": 25,
+      "frequency": "Nightly, reservations recommended, many venues",
+      "sources": [
+        {
+          "title": "Visit Lisboa",
+          "url": "https://www.visitlisboa.com/"
+        }
+      ]
+    },
+    {
+      "type": "social",
+      "name": "LX Factory",
+      "description": "Creative hub in a converted industrial complex with shops, restaurants, and events",
+      "distanceKm": 4,
+      "estimatedCostEUR": 0,
+      "frequency": "Daily, Sunday market popular",
+      "sources": [
+        {
+          "title": "LX Factory",
+          "url": "https://www.lxfactory.com/"
+        }
+      ]
+    },
+    {
+      "type": "outdoor",
+      "name": "Praia de Carcavelos",
+      "description": "Wide sandy beach 20 min from Lisbon by train, surfing, beach bars",
+      "distanceKm": 18,
+      "estimatedCostEUR": 0,
+      "frequency": "Year-round, train from Cais do Sodré",
+      "sources": [
+        {
+          "title": "Cascais Tourism",
+          "url": "https://www.visitcascais.com/"
+        }
+      ]
+    },
+    {
+      "type": "shopping",
+      "name": "Feira da Ladra (Thieves' Market)",
+      "description": "Lisbon's famous flea market in Campo de Santa Clara, antiques and curiosities",
+      "distanceKm": 1.5,
+      "estimatedCostEUR": 0,
+      "frequency": "Tuesdays and Saturdays, 9:00-18:00",
+      "sources": [
+        {
+          "title": "Visit Lisboa",
+          "url": "https://www.visitlisboa.com/"
+        }
+      ]
+    },
+    {
+      "type": "religious",
+      "name": "Sé de Lisboa (Lisbon Cathedral)",
+      "description": "12th-century Romanesque cathedral, oldest church in Lisbon, archaeological cloister",
+      "distanceKm": 0.5,
+      "estimatedCostEUR": 4,
+      "frequency": "Daily, cloister visits Mon-Sat",
+      "sources": [
+        {
+          "title": "Sé de Lisboa",
+          "url": "https://www.visitlisboa.com/"
+        }
+      ]
+    }
+  ]
+}

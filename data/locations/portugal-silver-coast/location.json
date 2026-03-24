@@ -1,0 +1,178 @@
+{
+  "id": "portugal-silver-coast",
+  "name": "Silver Coast, Portugal",
+  "country": "Portugal",
+  "region": "Southern Europe",
+  "cities": [
+    "Caldas da Rainha",
+    "Nazaré",
+    "São Martinho do Porto"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93
+  },
+  "visa": {
+    "type": "D7 Passive Income",
+    "incomeRequirement": {
+      "monthly": 760,
+      "currency": "EUR"
+    },
+    "notes": "D7 visa requires proof of passive income. NHR ended Jan 2024; IFICI replacement excludes pensions."
+  },
+  "climate": {
+    "winterLowF": 44,
+    "summerHighF": 82,
+    "meetsWarmWinterReq": false,
+    "rainyDaysPerYear": 80
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 860,
+      "min": 650,
+      "max": 1100,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 400,
+      "min": 320,
+      "max": 500,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 150,
+      "min": 110,
+      "max": 200,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 100,
+      "min": 65,
+      "max": 150,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 120,
+      "min": 80,
+      "max": 170,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 150,
+      "min": 100,
+      "max": 220,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 200,
+      "min": 140,
+      "max": 280,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 70,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 85,
+      "min": 70,
+      "max": 105,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 20,
+      "typical": 37,
+      "max": 80,
+      "annualInflation": 0.035,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 40,
+      "typical": 80,
+      "max": 160,
+      "annualInflation": 0.035
+    }
+  },
+  "healthcare": {
+    "system": "SNS public healthcare. Caldas da Rainha has a regional hospital. Larger facilities accessible in Lisbon (1 hour).",
+    "qualityRating": 6,
+    "dentalIncluded": false,
+    "waitTimes": "Longer waits in smaller towns (4-8 weeks for specialists)",
+    "prescriptionCoverage": "Standard SNS prescription coverage with co-pays"
+  },
+  "lifestyle": {
+    "internetSpeed": "100Mbps+",
+    "dogFriendly": 8,
+    "expatCommunity": 5,
+    "englishPrevalence": 5,
+    "safetyRating": 9
+  },
+  "pros": [
+    "Very affordable cost of living",
+    "Beautiful coastline with surfing culture",
+    "Close to Lisbon (1 hour) while maintaining small-town feel"
+  ],
+  "cons": [
+    "Smaller expat community than Algarve or Lisbon",
+    "Limited public transit between towns",
+    "Cooler and windier than southern Portugal"
+  ],
+  "taxes": {
+    "notes": "NHR ended Jan 2024. IFICI replacement excludes pensions. Standard progressive rates 14.5%-48%.",
+    "vatRate": 23,
+    "socialChargesRate": 0
+  }
+}

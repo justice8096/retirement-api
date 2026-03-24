@@ -1,0 +1,178 @@
+{
+  "id": "france-gascony",
+  "name": "Gascony, France",
+  "country": "France",
+  "region": "Western Europe",
+  "cities": [
+    "Auch",
+    "Condom",
+    "Mirande"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93
+  },
+  "visa": {
+    "type": "Long-Stay Visa (VLS-TS)",
+    "incomeRequirement": {
+      "monthly": 1500,
+      "currency": "EUR"
+    },
+    "notes": "Long-stay visa requires ~€1,500/mo income. Must apply at French consulate."
+  },
+  "climate": {
+    "winterLowF": 35,
+    "summerHighF": 85,
+    "meetsWarmWinterReq": false,
+    "rainyDaysPerYear": 110
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 850,
+      "min": 650,
+      "max": 1050,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 430,
+      "min": 340,
+      "max": 540,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 185,
+      "min": 140,
+      "max": 245,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 120,
+      "min": 80,
+      "max": 170,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 140,
+      "min": 95,
+      "max": 195,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 160,
+      "min": 110,
+      "max": 230,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 200,
+      "min": 140,
+      "max": 280,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 70,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 85,
+      "min": 70,
+      "max": 105,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 20,
+      "typical": 36,
+      "max": 75,
+      "annualInflation": 0.03,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 30,
+      "typical": 60,
+      "max": 120,
+      "annualInflation": 0.03
+    }
+  },
+  "healthcare": {
+    "system": "French Sécurité Sociale. Rural area with local clinics; Toulouse (1-1.5 hours) for specialist care.",
+    "qualityRating": 7,
+    "dentalIncluded": true,
+    "waitTimes": "GPs: same week. Specialists: 4-10 weeks. Toulouse for complex care.",
+    "prescriptionCoverage": "70% covered by Sécu, remainder by mutuelle"
+  },
+  "lifestyle": {
+    "internetSpeed": "100Mbps+",
+    "dogFriendly": 9,
+    "expatCommunity": 4,
+    "englishPrevalence": 3,
+    "safetyRating": 9
+  },
+  "pros": [
+    "Among the most affordable areas in France",
+    "Outstanding food and wine culture (Armagnac, duck)",
+    "Peaceful rural lifestyle with friendly locals"
+  ],
+  "cons": [
+    "Very limited English spoken",
+    "Car essential, minimal public transit",
+    "Small expat community, can feel isolated"
+  ],
+  "taxes": {
+    "notes": "French progressive income tax 11%-45%. Social charges ~9.1% on foreign income.",
+    "vatRate": 20,
+    "socialChargesRate": 9.1
+  }
+}

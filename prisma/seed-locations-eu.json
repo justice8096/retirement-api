@@ -1,0 +1,6944 @@
+[
+  {
+    "id": "portugal-algarve",
+    "name": "Algarve, Portugal",
+    "country": "Portugal",
+    "region": "Southern Europe",
+    "cities": [
+      "Faro",
+      "Lagos",
+      "Albufeira"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "D7 Passive Income",
+      "incomeRequirement": {
+        "monthly": 760,
+        "currency": "EUR"
+      },
+      "notes": "D7 visa requires proof of passive income. NHR ended Jan 2024; IFICI replacement excludes pensions; standard progressive rates 14.5%-48%."
+    },
+    "climate": {
+      "winterLowF": 50,
+      "summerHighF": 90,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 55
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1000,
+        "min": 800,
+        "max": 1200,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 430,
+        "min": 350,
+        "max": 540,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 160,
+        "min": 120,
+        "max": 215,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 110,
+        "min": 75,
+        "max": 160,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 130,
+        "min": 90,
+        "max": 180,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 160,
+        "min": 100,
+        "max": 240,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 250,
+        "min": 180,
+        "max": 350,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 37,
+        "max": 80,
+        "annualInflation": 0.035,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "SNS (Serviço Nacional de Saúde) - public universal healthcare with private option. Residents access public system via health center registration.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Moderate for specialists (2-6 weeks), shorter in Algarve due to lower population density",
+      "prescriptionCoverage": "Public system covers most prescriptions with co-pays of 0-90% depending on category"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 7,
+      "expatCommunity": 9,
+      "englishPrevalence": 7,
+      "safetyRating": 9
+    },
+    "pros": [
+      "Large established expat community",
+      "Warm year-round climate with 300+ days of sunshine",
+      "Affordable cost of living by Western European standards"
+    ],
+    "cons": [
+      "Tourist-heavy areas can feel less authentic",
+      "Limited public transit outside Faro",
+      "Summer heat can be intense (90F+)"
+    ],
+    "taxes": {
+      "notes": "NHR ended Jan 2024. IFICI replacement excludes pensions. Standard progressive rates 14.5%-48%. US-Portugal tax treaty helps avoid double taxation.",
+      "vatRate": 23,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "portugal-porto",
+    "name": "Porto, Portugal",
+    "country": "Portugal",
+    "region": "Southern Europe",
+    "cities": [
+      "Porto",
+      "Vila Nova de Gaia",
+      "Matosinhos"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "D7 Passive Income",
+      "incomeRequirement": {
+        "monthly": 760,
+        "currency": "EUR"
+      },
+      "notes": "D7 visa requires proof of passive income. NHR ended Jan 2024; IFICI replacement excludes pensions."
+    },
+    "climate": {
+      "winterLowF": 41,
+      "summerHighF": 79,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 110
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1000,
+        "min": 800,
+        "max": 1300,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 420,
+        "min": 340,
+        "max": 530,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 155,
+        "min": 115,
+        "max": 210,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 105,
+        "min": 70,
+        "max": 155,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 125,
+        "min": 85,
+        "max": 175,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 120,
+        "min": 75,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 240,
+        "min": 170,
+        "max": 340,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 37,
+        "max": 80,
+        "annualInflation": 0.035,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "SNS with Hospital de São João as major public hospital. Good private options via CUF and Lusíadas.",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Moderate (3-6 weeks for specialists)",
+      "prescriptionCoverage": "Public system covers most prescriptions with tiered co-pays"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 7,
+      "englishPrevalence": 7,
+      "safetyRating": 9
+    },
+    "pros": [
+      "More affordable than Lisbon with similar amenities",
+      "World-famous wine region (Port wine)",
+      "UNESCO World Heritage riverside district"
+    ],
+    "cons": [
+      "Cooler and rainier than southern Portugal",
+      "Hilly terrain throughout the city",
+      "Smaller international community than Lisbon"
+    ],
+    "taxes": {
+      "notes": "NHR ended Jan 2024. IFICI replacement excludes pensions. Standard progressive rates 14.5%-48%.",
+      "vatRate": 23,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "portugal-silver-coast",
+    "name": "Silver Coast, Portugal",
+    "country": "Portugal",
+    "region": "Southern Europe",
+    "cities": [
+      "Caldas da Rainha",
+      "Nazaré",
+      "São Martinho do Porto"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "D7 Passive Income",
+      "incomeRequirement": {
+        "monthly": 760,
+        "currency": "EUR"
+      },
+      "notes": "D7 visa requires proof of passive income. NHR ended Jan 2024; IFICI replacement excludes pensions."
+    },
+    "climate": {
+      "winterLowF": 44,
+      "summerHighF": 82,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 80
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 860,
+        "min": 650,
+        "max": 1100,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 400,
+        "min": 320,
+        "max": 500,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 150,
+        "min": 110,
+        "max": 200,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 100,
+        "min": 65,
+        "max": 150,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 120,
+        "min": 80,
+        "max": 170,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 150,
+        "min": 100,
+        "max": 220,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 200,
+        "min": 140,
+        "max": 280,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 37,
+        "max": 80,
+        "annualInflation": 0.035,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "SNS public healthcare. Caldas da Rainha has a regional hospital. Larger facilities accessible in Lisbon (1 hour).",
+      "qualityRating": 6,
+      "dentalIncluded": false,
+      "waitTimes": "Longer waits in smaller towns (4-8 weeks for specialists)",
+      "prescriptionCoverage": "Standard SNS prescription coverage with co-pays"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 8,
+      "expatCommunity": 5,
+      "englishPrevalence": 5,
+      "safetyRating": 9
+    },
+    "pros": [
+      "Very affordable cost of living",
+      "Beautiful coastline with surfing culture",
+      "Close to Lisbon (1 hour) while maintaining small-town feel"
+    ],
+    "cons": [
+      "Smaller expat community than Algarve or Lisbon",
+      "Limited public transit between towns",
+      "Cooler and windier than southern Portugal"
+    ],
+    "taxes": {
+      "notes": "NHR ended Jan 2024. IFICI replacement excludes pensions. Standard progressive rates 14.5%-48%.",
+      "vatRate": 23,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "portugal-cascais",
+    "name": "Cascais, Portugal",
+    "country": "Portugal",
+    "region": "Southern Europe",
+    "cities": [
+      "Cascais",
+      "Estoril",
+      "Sintra"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "D7 Passive Income",
+      "incomeRequirement": {
+        "monthly": 760,
+        "currency": "EUR"
+      },
+      "notes": "D7 visa requires proof of passive income. NHR ended Jan 2024; IFICI replacement excludes pensions."
+    },
+    "climate": {
+      "winterLowF": 47,
+      "summerHighF": 82,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 60
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1800,
+        "min": 1400,
+        "max": 2200,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 500,
+        "min": 400,
+        "max": 620,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 180,
+        "min": 135,
+        "max": 240,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 120,
+        "min": 80,
+        "max": 170,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 140,
+        "min": 100,
+        "max": 200,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 140,
+        "min": 90,
+        "max": 210,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 320,
+        "min": 220,
+        "max": 440,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 37,
+        "max": 80,
+        "annualInflation": 0.035,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "SNS public healthcare plus excellent private clinics. Easy access to Lisbon hospitals (30 min).",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Moderate (3-6 weeks for specialists); fast private options nearby",
+      "prescriptionCoverage": "Standard SNS coverage with co-pays; private insurance widely used"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 8,
+      "expatCommunity": 8,
+      "englishPrevalence": 8,
+      "safetyRating": 9
+    },
+    "pros": [
+      "Upscale beach town with excellent quality of life",
+      "Train connection to Lisbon (35 min)",
+      "Strong international community and English widely spoken"
+    ],
+    "cons": [
+      "One of the most expensive areas in Portugal",
+      "Crowded in summer tourist season",
+      "Housing market very competitive"
+    ],
+    "taxes": {
+      "notes": "NHR ended Jan 2024. IFICI replacement excludes pensions. Standard progressive rates 14.5%-48%.",
+      "vatRate": 23,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "spain-costa-del-sol",
+    "name": "Costa del Sol, Spain",
+    "country": "Spain",
+    "region": "Southern Europe",
+    "cities": [
+      "Málaga",
+      "Marbella",
+      "Fuengirola"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Non-Lucrative Visa",
+      "incomeRequirement": {
+        "monthly": 2400,
+        "currency": "EUR"
+      },
+      "notes": "Non-lucrative visa requires proof of sufficient funds (~€2,400/mo). Cannot work in Spain on this visa."
+    },
+    "climate": {
+      "winterLowF": 48,
+      "summerHighF": 92,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 45
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1500,
+        "min": 1200,
+        "max": 1800,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 450,
+        "min": 360,
+        "max": 560,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 170,
+        "min": 125,
+        "max": 225,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 115,
+        "min": 75,
+        "max": 165,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 135,
+        "min": 95,
+        "max": 190,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 150,
+        "min": 100,
+        "max": 220,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 280,
+        "min": 200,
+        "max": 400,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 15,
+        "typical": 23,
+        "max": 55,
+        "annualInflation": 0.03,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "Spanish public healthcare (SAS in Andalusia) is excellent. Private insurance (Sanitas, Adeslas) widely available and affordable.",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 2-8 weeks for specialists. Private: days to 2 weeks.",
+      "prescriptionCoverage": "Public covers most prescriptions with small co-pays; pensioners pay reduced rates"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 9,
+      "englishPrevalence": 7,
+      "safetyRating": 8
+    },
+    "pros": [
+      "Massive established British and international expat community",
+      "320+ days of sunshine per year",
+      "Excellent healthcare infrastructure in Málaga"
+    ],
+    "cons": [
+      "Tourist-heavy areas can feel like enclaves",
+      "Marbella significantly more expensive",
+      "Summer heat extreme in July-August"
+    ],
+    "taxes": {
+      "notes": "Spanish progressive income tax 19%-47%. Beckham Law may apply for new residents (flat 24% up to €600K). US-Spain tax treaty.",
+      "vatRate": 21,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "spain-valencia",
+    "name": "Valencia, Spain",
+    "country": "Spain",
+    "region": "Southern Europe",
+    "cities": [
+      "Valencia",
+      "Gandia",
+      "Sagunto"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Non-Lucrative Visa",
+      "incomeRequirement": {
+        "monthly": 2400,
+        "currency": "EUR"
+      },
+      "notes": "Non-lucrative visa requires proof of sufficient funds (~€2,400/mo). Cannot work in Spain on this visa."
+    },
+    "climate": {
+      "winterLowF": 43,
+      "summerHighF": 90,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 45
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1050,
+        "min": 800,
+        "max": 1300,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 420,
+        "min": 340,
+        "max": 530,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 155,
+        "min": 115,
+        "max": 210,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 110,
+        "min": 70,
+        "max": 160,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 125,
+        "min": 85,
+        "max": 180,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 110,
+        "min": 70,
+        "max": 170,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 250,
+        "min": 180,
+        "max": 350,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 15,
+        "typical": 23,
+        "max": 55,
+        "annualInflation": 0.03,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "Valencian public health system (Conselleria de Sanitat) with modern hospitals. Private options plentiful.",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 3-8 weeks for specialists. Private: under 2 weeks.",
+      "prescriptionCoverage": "Public covers most prescriptions with co-pays based on income"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 7,
+      "englishPrevalence": 5,
+      "safetyRating": 8
+    },
+    "pros": [
+      "Excellent value for a major Mediterranean city",
+      "City of Arts and Sciences, great cultural scene",
+      "Good metro and bus system, bikeable"
+    ],
+    "cons": [
+      "Less English spoken than Costa del Sol",
+      "Flash flooding risk in autumn (DANA events)",
+      "Summer humidity can be uncomfortable"
+    ],
+    "taxes": {
+      "notes": "Spanish progressive income tax 19%-47%. Valencia region may have slightly different regional rates.",
+      "vatRate": 21,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "spain-barcelona",
+    "name": "Barcelona, Spain",
+    "country": "Spain",
+    "region": "Southern Europe",
+    "cities": [
+      "Barcelona",
+      "Sitges",
+      "Badalona"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Non-Lucrative Visa",
+      "incomeRequirement": {
+        "monthly": 2400,
+        "currency": "EUR"
+      },
+      "notes": "Non-lucrative visa requires proof of sufficient funds (~€2,400/mo). Cannot work in Spain on this visa."
+    },
+    "climate": {
+      "winterLowF": 41,
+      "summerHighF": 87,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 55
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1900,
+        "min": 1600,
+        "max": 2200,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 500,
+        "min": 400,
+        "max": 630,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 175,
+        "min": 130,
+        "max": 235,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 120,
+        "min": 80,
+        "max": 170,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 140,
+        "min": 100,
+        "max": 200,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 120,
+        "min": 75,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 330,
+        "min": 230,
+        "max": 460,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 15,
+        "typical": 23,
+        "max": 55,
+        "annualInflation": 0.03,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "CatSalut (Catalan public health) with world-class hospitals like Hospital Clínic. Extensive private options.",
+      "qualityRating": 9,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 4-10 weeks for specialists. Private: under 2 weeks.",
+      "prescriptionCoverage": "Public covers most prescriptions; retirees get reduced co-pays"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 6,
+      "expatCommunity": 9,
+      "englishPrevalence": 7,
+      "safetyRating": 7
+    },
+    "pros": [
+      "World-class culture, architecture, food, and nightlife",
+      "Excellent metro and public transit system",
+      "Beach city with Mediterranean climate"
+    ],
+    "cons": [
+      "High cost of living, especially rent",
+      "Pickpocketing and petty crime in tourist areas",
+      "Political tensions around Catalan independence"
+    ],
+    "taxes": {
+      "notes": "Spanish progressive income tax 19%-47%. Catalonia has slightly higher regional surcharges.",
+      "vatRate": 21,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "spain-canary-islands",
+    "name": "Canary Islands, Spain",
+    "country": "Spain",
+    "region": "Southern Europe",
+    "cities": [
+      "Tenerife",
+      "Gran Canaria",
+      "Lanzarote"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Non-Lucrative Visa",
+      "incomeRequirement": {
+        "monthly": 2400,
+        "currency": "EUR"
+      },
+      "notes": "Non-lucrative visa requires proof of sufficient funds (~€2,400/mo). Cannot work in Spain on this visa."
+    },
+    "climate": {
+      "winterLowF": 59,
+      "summerHighF": 84,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 25
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1050,
+        "min": 800,
+        "max": 1300,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 440,
+        "min": 350,
+        "max": 560,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 145,
+        "min": 105,
+        "max": 195,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 110,
+        "min": 70,
+        "max": 160,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 125,
+        "min": 85,
+        "max": 180,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 140,
+        "min": 90,
+        "max": 210,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 250,
+        "min": 180,
+        "max": 350,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 15,
+        "typical": 23,
+        "max": 55,
+        "annualInflation": 0.03,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "Spanish SCS (Servicio Canario de Salud) with good hospitals in major cities. Air evacuation to mainland for complex cases.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 3-10 weeks for specialists. Private options more limited than mainland.",
+      "prescriptionCoverage": "Standard Spanish prescription coverage with co-pays"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 7,
+      "expatCommunity": 8,
+      "englishPrevalence": 6,
+      "safetyRating": 8
+    },
+    "pros": [
+      "Year-round warm and mild climate (eternal spring)",
+      "Lower IGIC tax (7%) instead of mainland VAT (21%)",
+      "Large Northern European expat community"
+    ],
+    "cons": [
+      "Island isolation - flights to mainland are 2.5+ hours",
+      "Limited shopping and cultural options vs mainland",
+      "Some goods more expensive due to shipping costs"
+    ],
+    "taxes": {
+      "notes": "Spanish progressive income tax 19%-47%. Canary Islands use IGIC (7%) instead of mainland IVA/VAT (21%).",
+      "vatRate": 7,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "greece-athens",
+    "name": "Athens, Greece",
+    "country": "Greece",
+    "region": "Southern Europe",
+    "cities": [
+      "Athens",
+      "Piraeus",
+      "Kifisia"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Financial Independence Visa",
+      "incomeRequirement": {
+        "monthly": 2000,
+        "currency": "EUR"
+      },
+      "notes": "Financially independent person visa requires ~€2,000/mo income proof. Renewable annually."
+    },
+    "climate": {
+      "winterLowF": 44,
+      "summerHighF": 95,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 50
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1100,
+        "min": 900,
+        "max": 1300,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 400,
+        "min": 320,
+        "max": 500,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 160,
+        "min": 120,
+        "max": 220,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 100,
+        "min": 65,
+        "max": 150,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 115,
+        "min": 75,
+        "max": 165,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 100,
+        "min": 60,
+        "max": 160,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 230,
+        "min": 160,
+        "max": 330,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 35,
+        "max": 70,
+        "annualInflation": 0.035,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "EOPYY national health system. Public hospitals adequate but strained. Private clinics good and affordable.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 4-12 weeks for specialists (system under strain). Private: 1-2 weeks.",
+      "prescriptionCoverage": "Public covers most prescriptions with co-pays of 10-25%"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 6,
+      "expatCommunity": 7,
+      "englishPrevalence": 6,
+      "safetyRating": 7
+    },
+    "pros": [
+      "Rich ancient history at your doorstep",
+      "Very affordable dining and daily costs",
+      "Good public transit (metro, buses, tram)"
+    ],
+    "cons": [
+      "Extreme summer heat (95F+ for weeks)",
+      "Air pollution can be poor in summer",
+      "Bureaucracy can be challenging for residents"
+    ],
+    "taxes": {
+      "notes": "Greek progressive income tax 9%-44%. Special 7% flat tax for foreign retirees transferring tax residency (10-year program). US-Greece tax treaty.",
+      "vatRate": 24,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "greece-crete",
+    "name": "Crete, Greece",
+    "country": "Greece",
+    "region": "Southern Europe",
+    "cities": [
+      "Chania",
+      "Heraklion",
+      "Rethymno"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Financial Independence Visa",
+      "incomeRequirement": {
+        "monthly": 2000,
+        "currency": "EUR"
+      },
+      "notes": "Financially independent person visa requires ~€2,000/mo income proof."
+    },
+    "climate": {
+      "winterLowF": 48,
+      "summerHighF": 90,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 50
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 800,
+        "min": 600,
+        "max": 1000,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 380,
+        "min": 300,
+        "max": 480,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 150,
+        "min": 110,
+        "max": 200,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 90,
+        "min": 60,
+        "max": 140,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 110,
+        "min": 70,
+        "max": 160,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 140,
+        "min": 90,
+        "max": 210,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 200,
+        "min": 140,
+        "max": 280,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 35,
+        "max": 70,
+        "annualInflation": 0.035,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "Regional hospital in Heraklion (PAGNI) is largest on the island. Limited specialist care may require travel to Athens.",
+      "qualityRating": 6,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 4-12 weeks. Complex cases may need Athens referral.",
+      "prescriptionCoverage": "Standard EOPYY coverage with co-pays"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 7,
+      "expatCommunity": 6,
+      "englishPrevalence": 5,
+      "safetyRating": 9
+    },
+    "pros": [
+      "Very affordable cost of living",
+      "Warm climate with beautiful beaches and mountains",
+      "Excellent Cretan cuisine and food culture"
+    ],
+    "cons": [
+      "Island isolation - ferry or flights to mainland",
+      "Limited specialist healthcare",
+      "Car essentially required outside cities"
+    ],
+    "taxes": {
+      "notes": "Greek progressive income tax 9%-44%. 7% flat tax option for foreign retirees.",
+      "vatRate": 24,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "greece-corfu",
+    "name": "Corfu, Greece",
+    "country": "Greece",
+    "region": "Southern Europe",
+    "cities": [
+      "Corfu Town",
+      "Sidari",
+      "Kassiopi"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Financial Independence Visa",
+      "incomeRequirement": {
+        "monthly": 2000,
+        "currency": "EUR"
+      },
+      "notes": "Financially independent person visa requires ~€2,000/mo income proof."
+    },
+    "climate": {
+      "winterLowF": 43,
+      "summerHighF": 88,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 100
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 750,
+        "min": 600,
+        "max": 950,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 390,
+        "min": 310,
+        "max": 490,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 150,
+        "min": 110,
+        "max": 200,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 85,
+        "min": 55,
+        "max": 130,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 105,
+        "min": 70,
+        "max": 155,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 130,
+        "min": 80,
+        "max": 190,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 190,
+        "min": 130,
+        "max": 270,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 35,
+        "max": 70,
+        "annualInflation": 0.035,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "Corfu General Hospital for basic care. Specialist treatment may require travel to Athens or Thessaloniki.",
+      "qualityRating": 6,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 4-12 weeks. Complex cases need mainland referral.",
+      "prescriptionCoverage": "Standard EOPYY coverage with co-pays"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 7,
+      "expatCommunity": 5,
+      "englishPrevalence": 5,
+      "safetyRating": 9
+    },
+    "pros": [
+      "Lush green Ionian island (unlike drier Aegean islands)",
+      "Venetian and British architectural heritage",
+      "Affordable and peaceful year-round lifestyle"
+    ],
+    "cons": [
+      "Rainier than other Greek islands",
+      "Very quiet in winter (many businesses close)",
+      "Limited healthcare facilities on island"
+    ],
+    "taxes": {
+      "notes": "Greek progressive income tax 9%-44%. 7% flat tax option for foreign retirees.",
+      "vatRate": 24,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "greece-rhodes",
+    "name": "Rhodes, Greece",
+    "country": "Greece",
+    "region": "Southern Europe",
+    "cities": [
+      "Rhodes Town",
+      "Lindos",
+      "Ialyssos"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Financial Independence Visa",
+      "incomeRequirement": {
+        "monthly": 2000,
+        "currency": "EUR"
+      },
+      "notes": "Financially independent person visa requires ~€2,000/mo income proof."
+    },
+    "climate": {
+      "winterLowF": 50,
+      "summerHighF": 93,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 40
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 750,
+        "min": 600,
+        "max": 950,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 390,
+        "min": 310,
+        "max": 490,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 145,
+        "min": 105,
+        "max": 195,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 85,
+        "min": 55,
+        "max": 130,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 105,
+        "min": 70,
+        "max": 155,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 130,
+        "min": 80,
+        "max": 190,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 200,
+        "min": 140,
+        "max": 280,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 35,
+        "max": 70,
+        "annualInflation": 0.035,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "Rhodes General Hospital provides basic and emergency care. Specialist treatment may require Athens travel.",
+      "qualityRating": 6,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 4-12 weeks. Complex cases need mainland referral.",
+      "prescriptionCoverage": "Standard EOPYY coverage with co-pays"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 6,
+      "expatCommunity": 5,
+      "englishPrevalence": 5,
+      "safetyRating": 9
+    },
+    "pros": [
+      "Very warm climate with 300+ days of sunshine",
+      "Medieval old town is a UNESCO World Heritage site",
+      "Affordable cost of living"
+    ],
+    "cons": [
+      "Tourism-dominated economy (very quiet off-season)",
+      "Limited specialist healthcare",
+      "Island isolation with seasonal flight connections"
+    ],
+    "taxes": {
+      "notes": "Greek progressive income tax 9%-44%. 7% flat tax option for foreign retirees.",
+      "vatRate": 24,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "greece-peloponnese",
+    "name": "Peloponnese, Greece",
+    "country": "Greece",
+    "region": "Southern Europe",
+    "cities": [
+      "Nafplio",
+      "Kalamata",
+      "Patras"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Financial Independence Visa",
+      "incomeRequirement": {
+        "monthly": 2000,
+        "currency": "EUR"
+      },
+      "notes": "Financially independent person visa requires ~€2,000/mo income proof."
+    },
+    "climate": {
+      "winterLowF": 42,
+      "summerHighF": 92,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 60
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 680,
+        "min": 550,
+        "max": 850,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 370,
+        "min": 290,
+        "max": 460,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 145,
+        "min": 105,
+        "max": 195,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 100,
+        "min": 65,
+        "max": 150,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 140,
+        "min": 90,
+        "max": 210,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 180,
+        "min": 120,
+        "max": 260,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 35,
+        "max": 70,
+        "annualInflation": 0.035,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "Regional hospitals in Patras and Kalamata. Basic care adequate; specialist care may require Athens travel (2-3 hours).",
+      "qualityRating": 6,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 4-12 weeks. Smaller towns have longer waits.",
+      "prescriptionCoverage": "Standard EOPYY coverage with co-pays"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 7,
+      "expatCommunity": 3,
+      "englishPrevalence": 4,
+      "safetyRating": 9
+    },
+    "pros": [
+      "Among the most affordable areas in the EU",
+      "Rich ancient history (Mycenae, Olympia, Epidaurus)",
+      "Authentic Greek mainland experience without mass tourism"
+    ],
+    "cons": [
+      "Very small expat community",
+      "Car essential for daily life",
+      "Limited English spoken outside tourist spots"
+    ],
+    "taxes": {
+      "notes": "Greek progressive income tax 9%-44%. 7% flat tax option for foreign retirees.",
+      "vatRate": 24,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "france-languedoc",
+    "name": "Languedoc, France",
+    "country": "France",
+    "region": "Western Europe",
+    "cities": [
+      "Montpellier",
+      "Béziers",
+      "Narbonne"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Long-Stay Visa (VLS-TS)",
+      "incomeRequirement": {
+        "monthly": 1500,
+        "currency": "EUR"
+      },
+      "notes": "Long-stay visa requires ~€1,500/mo income. Must apply at French consulate. Renewable annually."
+    },
+    "climate": {
+      "winterLowF": 37,
+      "summerHighF": 90,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 55
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1000,
+        "min": 800,
+        "max": 1200,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 460,
+        "min": 370,
+        "max": 580,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 175,
+        "min": 130,
+        "max": 230,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 130,
+        "min": 90,
+        "max": 185,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 150,
+        "min": 100,
+        "max": 210,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 130,
+        "min": 80,
+        "max": 190,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 260,
+        "min": 180,
+        "max": 360,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 36,
+        "max": 75,
+        "annualInflation": 0.03,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 30,
+        "typical": 60,
+        "max": 120,
+        "annualInflation": 0.03
+      }
+    },
+    "healthcare": {
+      "system": "French Sécurité Sociale (Assurance Maladie) - world-class system. Residents get carte vitale after 3 months. CHU Montpellier is a major university hospital.",
+      "qualityRating": 9,
+      "dentalIncluded": true,
+      "waitTimes": "GPs: same week. Specialists: 2-6 weeks. Shorter in Montpellier.",
+      "prescriptionCoverage": "70% covered by Sécu, remainder by mutuelle (supplemental insurance)"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 8,
+      "expatCommunity": 6,
+      "englishPrevalence": 4,
+      "safetyRating": 8
+    },
+    "pros": [
+      "Warm Mediterranean climate in southern France",
+      "Affordable by French standards",
+      "Montpellier is a vibrant university city with tram system"
+    ],
+    "cons": [
+      "French language essential for daily life",
+      "Mistral winds can be intense",
+      "Smaller international community than Côte d'Azur"
+    ],
+    "taxes": {
+      "notes": "French progressive income tax 11%-45%. Social charges ~9.1% on foreign income (CSG/CRDS). US-France tax treaty.",
+      "vatRate": 20,
+      "socialChargesRate": 9.1
+    }
+  },
+  {
+    "id": "france-dordogne",
+    "name": "Dordogne, France",
+    "country": "France",
+    "region": "Western Europe",
+    "cities": [
+      "Sarlat-la-Canéda",
+      "Bergerac",
+      "Périgueux"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Long-Stay Visa (VLS-TS)",
+      "incomeRequirement": {
+        "monthly": 1500,
+        "currency": "EUR"
+      },
+      "notes": "Long-stay visa requires ~€1,500/mo income. Must apply at French consulate."
+    },
+    "climate": {
+      "winterLowF": 34,
+      "summerHighF": 82,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 120
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 900,
+        "min": 700,
+        "max": 1100,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 440,
+        "min": 350,
+        "max": 550,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 185,
+        "min": 140,
+        "max": 245,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 125,
+        "min": 85,
+        "max": 175,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 145,
+        "min": 100,
+        "max": 200,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 160,
+        "min": 110,
+        "max": 230,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 220,
+        "min": 150,
+        "max": 310,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 36,
+        "max": 75,
+        "annualInflation": 0.03,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 30,
+        "typical": 60,
+        "max": 120,
+        "annualInflation": 0.03
+      }
+    },
+    "healthcare": {
+      "system": "French Sécurité Sociale. Rural area with good local clinics; larger hospitals in Périgueux and Bordeaux (1.5 hours).",
+      "qualityRating": 8,
+      "dentalIncluded": true,
+      "waitTimes": "GPs: same week. Specialists: 3-8 weeks. May need Bordeaux for complex care.",
+      "prescriptionCoverage": "70% covered by Sécu, remainder by mutuelle"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 9,
+      "expatCommunity": 6,
+      "englishPrevalence": 4,
+      "safetyRating": 9
+    },
+    "pros": [
+      "Stunning countryside with medieval villages and castles",
+      "World-class food culture (foie gras, truffles, wine)",
+      "Very affordable housing with large properties available"
+    ],
+    "cons": [
+      "Cold and damp winters",
+      "Car absolutely essential",
+      "Very limited public transit"
+    ],
+    "taxes": {
+      "notes": "French progressive income tax 11%-45%. Social charges ~9.1% on foreign income.",
+      "vatRate": 20,
+      "socialChargesRate": 9.1
+    }
+  },
+  {
+    "id": "france-gascony",
+    "name": "Gascony, France",
+    "country": "France",
+    "region": "Western Europe",
+    "cities": [
+      "Auch",
+      "Condom",
+      "Mirande"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Long-Stay Visa (VLS-TS)",
+      "incomeRequirement": {
+        "monthly": 1500,
+        "currency": "EUR"
+      },
+      "notes": "Long-stay visa requires ~€1,500/mo income. Must apply at French consulate."
+    },
+    "climate": {
+      "winterLowF": 35,
+      "summerHighF": 85,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 110
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 850,
+        "min": 650,
+        "max": 1050,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 430,
+        "min": 340,
+        "max": 540,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 185,
+        "min": 140,
+        "max": 245,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 120,
+        "min": 80,
+        "max": 170,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 140,
+        "min": 95,
+        "max": 195,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 160,
+        "min": 110,
+        "max": 230,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 200,
+        "min": 140,
+        "max": 280,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 36,
+        "max": 75,
+        "annualInflation": 0.03,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 30,
+        "typical": 60,
+        "max": 120,
+        "annualInflation": 0.03
+      }
+    },
+    "healthcare": {
+      "system": "French Sécurité Sociale. Rural area with local clinics; Toulouse (1-1.5 hours) for specialist care.",
+      "qualityRating": 7,
+      "dentalIncluded": true,
+      "waitTimes": "GPs: same week. Specialists: 4-10 weeks. Toulouse for complex care.",
+      "prescriptionCoverage": "70% covered by Sécu, remainder by mutuelle"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 9,
+      "expatCommunity": 4,
+      "englishPrevalence": 3,
+      "safetyRating": 9
+    },
+    "pros": [
+      "Among the most affordable areas in France",
+      "Outstanding food and wine culture (Armagnac, duck)",
+      "Peaceful rural lifestyle with friendly locals"
+    ],
+    "cons": [
+      "Very limited English spoken",
+      "Car essential, minimal public transit",
+      "Small expat community, can feel isolated"
+    ],
+    "taxes": {
+      "notes": "French progressive income tax 11%-45%. Social charges ~9.1% on foreign income.",
+      "vatRate": 20,
+      "socialChargesRate": 9.1
+    }
+  },
+  {
+    "id": "france-nice",
+    "name": "Nice / Côte d'Azur, France",
+    "country": "France",
+    "region": "Western Europe",
+    "cities": [
+      "Nice",
+      "Antibes",
+      "Cannes"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Long-Stay Visa (VLS-TS)",
+      "incomeRequirement": {
+        "monthly": 1500,
+        "currency": "EUR"
+      },
+      "notes": "Long-stay visa requires ~€1,500/mo income. Must apply at French consulate."
+    },
+    "climate": {
+      "winterLowF": 43,
+      "summerHighF": 86,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 60
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1900,
+        "min": 1600,
+        "max": 2200,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 530,
+        "min": 430,
+        "max": 660,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 185,
+        "min": 140,
+        "max": 245,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 140,
+        "min": 95,
+        "max": 195,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 160,
+        "min": 110,
+        "max": 220,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 130,
+        "min": 80,
+        "max": 190,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 350,
+        "min": 250,
+        "max": 480,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 36,
+        "max": 75,
+        "annualInflation": 0.03,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 30,
+        "typical": 60,
+        "max": 120,
+        "annualInflation": 0.03
+      }
+    },
+    "healthcare": {
+      "system": "French Sécurité Sociale. CHU Nice (Pasteur 2) and multiple private clinics. Excellent specialist care.",
+      "qualityRating": 9,
+      "dentalIncluded": true,
+      "waitTimes": "GPs: same week. Specialists: 2-6 weeks. Private options fast.",
+      "prescriptionCoverage": "70% covered by Sécu, remainder by mutuelle"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 8,
+      "englishPrevalence": 6,
+      "safetyRating": 7
+    },
+    "pros": [
+      "Glamorous Mediterranean lifestyle with stunning scenery",
+      "International airport with worldwide connections",
+      "Large international community and English widely understood"
+    ],
+    "cons": [
+      "Very high cost of living, especially rent",
+      "Crowded in summer tourist season",
+      "Petty crime (pickpocketing) in tourist areas"
+    ],
+    "taxes": {
+      "notes": "French progressive income tax 11%-45%. Social charges ~9.1% on foreign income.",
+      "vatRate": 20,
+      "socialChargesRate": 9.1
+    }
+  },
+  {
+    "id": "france-paris",
+    "name": "Paris, France",
+    "country": "France",
+    "region": "Western Europe",
+    "cities": [
+      "Paris",
+      "Versailles",
+      "Saint-Germain-en-Laye"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Long-Stay Visa (VLS-TS)",
+      "incomeRequirement": {
+        "monthly": 1500,
+        "currency": "EUR"
+      },
+      "notes": "Long-stay visa requires ~€1,500/mo income. Must apply at French consulate."
+    },
+    "climate": {
+      "winterLowF": 35,
+      "summerHighF": 79,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 110
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 2600,
+        "min": 2200,
+        "max": 3000,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 560,
+        "min": 450,
+        "max": 700,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 195,
+        "min": 150,
+        "max": 260,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 145,
+        "min": 100,
+        "max": 200,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 165,
+        "min": 115,
+        "max": 230,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 110,
+        "min": 70,
+        "max": 170,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 380,
+        "min": 270,
+        "max": 520,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 36,
+        "max": 75,
+        "annualInflation": 0.03,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 30,
+        "typical": 60,
+        "max": 120,
+        "annualInflation": 0.03
+      }
+    },
+    "healthcare": {
+      "system": "French Sécurité Sociale. AP-HP is the largest hospital system in Europe. World-class specialist care available.",
+      "qualityRating": 10,
+      "dentalIncluded": true,
+      "waitTimes": "GPs: same day to 1 week. Specialists: 1-4 weeks. Best access in France.",
+      "prescriptionCoverage": "70% covered by Sécu, remainder by mutuelle"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 9,
+      "englishPrevalence": 6,
+      "safetyRating": 7
+    },
+    "pros": [
+      "Unmatched cultural offerings (museums, theater, cuisine)",
+      "World-class public transit (metro, RER, buses)",
+      "International city with huge expat community"
+    ],
+    "cons": [
+      "Very high cost of living, especially rent",
+      "Cold, grey winters",
+      "Can feel overwhelming and fast-paced"
+    ],
+    "taxes": {
+      "notes": "French progressive income tax 11%-45%. Social charges ~9.1% on foreign income.",
+      "vatRate": 20,
+      "socialChargesRate": 9.1
+    }
+  },
+  {
+    "id": "france-toulon",
+    "name": "Toulon, France",
+    "country": "France",
+    "region": "Western Europe",
+    "cities": [
+      "Toulon",
+      "Hyères",
+      "La Seyne-sur-Mer"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Long-Stay Visa (VLS-TS)",
+      "incomeRequirement": {
+        "monthly": 1500,
+        "currency": "EUR"
+      },
+      "notes": "Long-stay visa requires ~€1,500/mo income. Must apply at French consulate."
+    },
+    "climate": {
+      "winterLowF": 41,
+      "summerHighF": 86,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 55
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1100,
+        "min": 900,
+        "max": 1400,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 470,
+        "min": 380,
+        "max": 590,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 175,
+        "min": 130,
+        "max": 230,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 130,
+        "min": 90,
+        "max": 185,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 150,
+        "min": 100,
+        "max": 210,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 130,
+        "min": 80,
+        "max": 190,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 260,
+        "min": 180,
+        "max": 360,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 36,
+        "max": 75,
+        "annualInflation": 0.03,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 30,
+        "typical": 60,
+        "max": 120,
+        "annualInflation": 0.03
+      }
+    },
+    "healthcare": {
+      "system": "French Sécurité Sociale. Hôpital Sainte Musse and military hospital (HIA Sainte-Anne). Good specialist access.",
+      "qualityRating": 8,
+      "dentalIncluded": true,
+      "waitTimes": "GPs: same week. Specialists: 2-6 weeks.",
+      "prescriptionCoverage": "70% covered by Sécu, remainder by mutuelle"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 8,
+      "expatCommunity": 4,
+      "englishPrevalence": 4,
+      "safetyRating": 7
+    },
+    "pros": [
+      "Mediterranean climate at significantly lower cost than Nice",
+      "French naval city with authentic character",
+      "Access to Porquerolles and Hyères islands"
+    ],
+    "cons": [
+      "Less glamorous and fewer amenities than Nice/Cannes",
+      "Smaller expat community",
+      "Some rougher neighborhoods in the city center"
+    ],
+    "taxes": {
+      "notes": "French progressive income tax 11%-45%. Social charges ~9.1% on foreign income.",
+      "vatRate": 20,
+      "socialChargesRate": 9.1
+    }
+  },
+  {
+    "id": "italy-abruzzo",
+    "name": "Abruzzo, Italy",
+    "country": "Italy",
+    "region": "Southern Europe",
+    "cities": [
+      "Pescara",
+      "L'Aquila",
+      "Chieti"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Elective Residence Visa",
+      "incomeRequirement": {
+        "monthly": 2583,
+        "currency": "EUR"
+      },
+      "notes": "Elective residence visa requires ~€31K/year income. Must demonstrate passive income and health insurance."
+    },
+    "climate": {
+      "winterLowF": 35,
+      "summerHighF": 86,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 75
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 700,
+        "min": 550,
+        "max": 900,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 380,
+        "min": 300,
+        "max": 480,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 165,
+        "min": 120,
+        "max": 220,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 95,
+        "min": 60,
+        "max": 140,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 110,
+        "min": 75,
+        "max": 160,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 140,
+        "min": 90,
+        "max": 210,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 200,
+        "min": 140,
+        "max": 280,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 18,
+        "typical": 30,
+        "max": 65,
+        "annualInflation": 0.03,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "Italian SSN (Servizio Sanitario Nazionale). Regional hospital in Pescara. Quality varies but adequate for most needs.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 4-12 weeks for specialists. Private affordable alternative.",
+      "prescriptionCoverage": "SSN covers essential prescriptions with tiered co-pays (ticket)"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 7,
+      "expatCommunity": 4,
+      "englishPrevalence": 3,
+      "safetyRating": 8
+    },
+    "pros": [
+      "Among the most affordable regions in Italy",
+      "Both mountains and coast within 30 minutes",
+      "Authentic Italian lifestyle without mass tourism"
+    ],
+    "cons": [
+      "Very limited English spoken",
+      "Small expat community",
+      "L'Aquila still recovering from 2009 earthquake"
+    ],
+    "taxes": {
+      "notes": "Italian progressive income tax 23%-43%. Italy offers 7% flat tax for retirees moving to southern regions (towns under 20K population). US-Italy tax treaty.",
+      "vatRate": 22,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "italy-puglia",
+    "name": "Puglia, Italy",
+    "country": "Italy",
+    "region": "Southern Europe",
+    "cities": [
+      "Lecce",
+      "Ostuni",
+      "Bari"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Elective Residence Visa",
+      "incomeRequirement": {
+        "monthly": 2583,
+        "currency": "EUR"
+      },
+      "notes": "Elective residence visa requires ~€31K/year income."
+    },
+    "climate": {
+      "winterLowF": 41,
+      "summerHighF": 90,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 55
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 750,
+        "min": 600,
+        "max": 950,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 380,
+        "min": 300,
+        "max": 480,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 155,
+        "min": 115,
+        "max": 210,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 90,
+        "min": 60,
+        "max": 135,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 110,
+        "min": 75,
+        "max": 160,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 140,
+        "min": 90,
+        "max": 210,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 200,
+        "min": 140,
+        "max": 280,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 18,
+        "typical": 30,
+        "max": 65,
+        "annualInflation": 0.03,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "Italian SSN. Policlinico di Bari for major care. Rural areas have less coverage.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 4-12 weeks. Private clinics in Bari and Lecce offer faster care.",
+      "prescriptionCoverage": "SSN covers essential prescriptions with tiered co-pays"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 7,
+      "expatCommunity": 5,
+      "englishPrevalence": 3,
+      "safetyRating": 8
+    },
+    "pros": [
+      "Beautiful Baroque architecture (Lecce is 'Florence of the South')",
+      "Excellent food and wine at very low prices",
+      "Stunning coastline and trulli houses in Ostuni/Alberobello"
+    ],
+    "cons": [
+      "Limited English spoken outside tourist areas",
+      "Public transit limited outside Bari",
+      "Southern Italian bureaucracy can be slow"
+    ],
+    "taxes": {
+      "notes": "Italian progressive income tax 23%-43%. 7% flat tax for retirees in southern towns under 20K population.",
+      "vatRate": 22,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "italy-sicily",
+    "name": "Sicily, Italy",
+    "country": "Italy",
+    "region": "Southern Europe",
+    "cities": [
+      "Palermo",
+      "Taormina",
+      "Catania"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Elective Residence Visa",
+      "incomeRequirement": {
+        "monthly": 2583,
+        "currency": "EUR"
+      },
+      "notes": "Elective residence visa requires ~€31K/year income."
+    },
+    "climate": {
+      "winterLowF": 46,
+      "summerHighF": 93,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 45
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 680,
+        "min": 530,
+        "max": 880,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 370,
+        "min": 290,
+        "max": 460,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 150,
+        "min": 110,
+        "max": 200,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 85,
+        "min": 55,
+        "max": 130,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 105,
+        "min": 70,
+        "max": 155,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 120,
+        "min": 75,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 190,
+        "min": 130,
+        "max": 270,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 18,
+        "typical": 30,
+        "max": 65,
+        "annualInflation": 0.03,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "Italian SSN. Major hospitals in Palermo and Catania. Quality improving but historically underfunded vs northern Italy.",
+      "qualityRating": 6,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 6-16 weeks. Private options available in major cities.",
+      "prescriptionCoverage": "SSN covers essential prescriptions with tiered co-pays"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 6,
+      "expatCommunity": 5,
+      "englishPrevalence": 3,
+      "safetyRating": 7
+    },
+    "pros": [
+      "Among the cheapest places to live in Western Europe",
+      "Incredible food, history, and natural beauty",
+      "Warm climate with mild winters"
+    ],
+    "cons": [
+      "Infrastructure and bureaucracy can be challenging",
+      "Limited specialist healthcare quality",
+      "Organized crime still present in some areas"
+    ],
+    "taxes": {
+      "notes": "Italian progressive income tax 23%-43%. 7% flat tax for retirees in southern towns under 20K population.",
+      "vatRate": 22,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "italy-tuscany",
+    "name": "Tuscany, Italy",
+    "country": "Italy",
+    "region": "Southern Europe",
+    "cities": [
+      "Lucca",
+      "Siena",
+      "Arezzo"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Elective Residence Visa",
+      "incomeRequirement": {
+        "monthly": 2583,
+        "currency": "EUR"
+      },
+      "notes": "Elective residence visa requires ~€31K/year income."
+    },
+    "climate": {
+      "winterLowF": 35,
+      "summerHighF": 90,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 80
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1300,
+        "min": 1000,
+        "max": 1600,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 450,
+        "min": 360,
+        "max": 570,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 175,
+        "min": 130,
+        "max": 235,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 110,
+        "min": 75,
+        "max": 160,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 130,
+        "min": 90,
+        "max": 185,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 150,
+        "min": 100,
+        "max": 220,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 270,
+        "min": 190,
+        "max": 380,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 18,
+        "typical": 30,
+        "max": 65,
+        "annualInflation": 0.03,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "Italian SSN. Excellent hospitals in Florence (AOU Careggi) accessible from most Tuscan towns. Good specialist care.",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 3-10 weeks. Private clinics widely available.",
+      "prescriptionCoverage": "SSN covers essential prescriptions with tiered co-pays"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 8,
+      "expatCommunity": 7,
+      "englishPrevalence": 5,
+      "safetyRating": 9
+    },
+    "pros": [
+      "Iconic rolling hills, vineyards, and Renaissance culture",
+      "Strong expat community in smaller towns like Lucca",
+      "Excellent food and wine at every price point"
+    ],
+    "cons": [
+      "Higher cost of living than southern Italy",
+      "Tourist congestion in popular areas",
+      "Car needed for rural living"
+    ],
+    "taxes": {
+      "notes": "Italian progressive income tax 23%-43%. 7% flat tax not available in most Tuscan towns (population over 20K).",
+      "vatRate": 22,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "italy-sardinia",
+    "name": "Sardinia, Italy",
+    "country": "Italy",
+    "region": "Southern Europe",
+    "cities": [
+      "Cagliari",
+      "Alghero",
+      "Olbia"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Elective Residence Visa",
+      "incomeRequirement": {
+        "monthly": 2583,
+        "currency": "EUR"
+      },
+      "notes": "Elective residence visa requires ~€31K/year income."
+    },
+    "climate": {
+      "winterLowF": 44,
+      "summerHighF": 90,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 50
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 850,
+        "min": 650,
+        "max": 1100,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 400,
+        "min": 320,
+        "max": 500,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 155,
+        "min": 115,
+        "max": 210,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 90,
+        "min": 60,
+        "max": 135,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 110,
+        "min": 75,
+        "max": 160,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 150,
+        "min": 100,
+        "max": 220,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 210,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 18,
+        "typical": 30,
+        "max": 65,
+        "annualInflation": 0.03,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "Italian SSN. AOU Cagliari for major care. Limited specialist care may require mainland travel.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 4-12 weeks. Complex cases may need mainland referral.",
+      "prescriptionCoverage": "SSN covers essential prescriptions with tiered co-pays"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 7,
+      "expatCommunity": 4,
+      "englishPrevalence": 3,
+      "safetyRating": 9
+    },
+    "pros": [
+      "Stunning beaches rivaling Caribbean quality",
+      "Warm Mediterranean climate",
+      "Unique Sardinian culture and cuisine"
+    ],
+    "cons": [
+      "Island isolation - flights or ferry to mainland",
+      "Car essential outside Cagliari",
+      "Limited English and smaller expat scene"
+    ],
+    "taxes": {
+      "notes": "Italian progressive income tax 23%-43%. 7% flat tax may apply in qualifying small towns.",
+      "vatRate": 22,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "italy-lake-region",
+    "name": "Italian Lake Region, Italy",
+    "country": "Italy",
+    "region": "Southern Europe",
+    "cities": [
+      "Stresa",
+      "Bellagio",
+      "Verbania"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Elective Residence Visa",
+      "incomeRequirement": {
+        "monthly": 2583,
+        "currency": "EUR"
+      },
+      "notes": "Elective residence visa requires ~€31K/year income."
+    },
+    "climate": {
+      "winterLowF": 32,
+      "summerHighF": 84,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 90
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1400,
+        "min": 1100,
+        "max": 1800,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 470,
+        "min": 380,
+        "max": 590,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 190,
+        "min": 145,
+        "max": 250,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 115,
+        "min": 75,
+        "max": 165,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 135,
+        "min": 95,
+        "max": 190,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 150,
+        "min": 100,
+        "max": 220,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 280,
+        "min": 200,
+        "max": 390,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 18,
+        "typical": 30,
+        "max": 65,
+        "annualInflation": 0.03,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "Italian SSN. Proximity to Milan (1-1.5 hours) gives access to world-class hospitals. Local hospitals adequate for routine care.",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 3-10 weeks. Milan private options easily accessible.",
+      "prescriptionCoverage": "SSN covers essential prescriptions with tiered co-pays"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 7,
+      "expatCommunity": 5,
+      "englishPrevalence": 4,
+      "safetyRating": 9
+    },
+    "pros": [
+      "Spectacularly scenic lakefront living",
+      "Close to Milan and Swiss border for shopping and travel",
+      "Mild microclimate (warmer than surrounding areas due to lakes)"
+    ],
+    "cons": [
+      "Higher cost of living than southern Italy",
+      "Cold winters with fog",
+      "Tourist-heavy in summer months"
+    ],
+    "taxes": {
+      "notes": "Italian progressive income tax 23%-43%. 7% flat tax not available (northern Italy, larger towns).",
+      "vatRate": 22,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "ireland-galway",
+    "name": "Galway, Ireland",
+    "country": "Ireland",
+    "region": "Western Europe",
+    "cities": [
+      "Galway",
+      "Salthill",
+      "Oranmore"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Stamp 0 (Retiree)",
+      "incomeRequirement": {
+        "monthly": 4167,
+        "currency": "EUR"
+      },
+      "notes": "Stamp 0 visa for retirees requires ~€50K/year income. Must have private health insurance."
+    },
+    "climate": {
+      "winterLowF": 38,
+      "summerHighF": 64,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 200
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1500,
+        "min": 1200,
+        "max": 1800,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 490,
+        "min": 390,
+        "max": 610,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 205,
+        "min": 155,
+        "max": 270,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 165,
+        "min": 115,
+        "max": 230,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 190,
+        "min": 135,
+        "max": 260,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 140,
+        "min": 90,
+        "max": 210,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 300,
+        "min": 210,
+        "max": 420,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 80,
+        "typical": 132,
+        "max": 250,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 60,
+        "typical": 120,
+        "max": 240,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "HSE with University Hospital Galway. Good general care; specialists may require Dublin travel.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 6-18 months. Private: 2-6 weeks.",
+      "prescriptionCoverage": "Private insurance required for Stamp 0 holders"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 9,
+      "expatCommunity": 6,
+      "englishPrevalence": 10,
+      "safetyRating": 9
+    },
+    "pros": [
+      "Vibrant arts, music, and pub culture",
+      "Stunning scenery (Connemara, Aran Islands nearby)",
+      "English-speaking with welcoming community"
+    ],
+    "cons": [
+      "Very rainy (200+ days/year)",
+      "Higher rents due to university town demand",
+      "Remote from major airports"
+    ],
+    "taxes": {
+      "notes": "Irish progressive income tax 20%/40%. USC 0.5-8%. US-Ireland tax treaty.",
+      "vatRate": 23,
+      "socialChargesRate": 4
+    }
+  },
+  {
+    "id": "ireland-cork",
+    "name": "Cork, Ireland",
+    "country": "Ireland",
+    "region": "Western Europe",
+    "cities": [
+      "Cork",
+      "Cobh",
+      "Kinsale"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Stamp 0 (Retiree)",
+      "incomeRequirement": {
+        "monthly": 4167,
+        "currency": "EUR"
+      },
+      "notes": "Stamp 0 visa for retirees requires ~€50K/year income. Must have private health insurance."
+    },
+    "climate": {
+      "winterLowF": 38,
+      "summerHighF": 66,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 185
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1500,
+        "min": 1200,
+        "max": 1800,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 490,
+        "min": 390,
+        "max": 610,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 205,
+        "min": 155,
+        "max": 270,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 165,
+        "min": 115,
+        "max": 230,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 190,
+        "min": 135,
+        "max": 260,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 140,
+        "min": 90,
+        "max": 210,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 290,
+        "min": 200,
+        "max": 400,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 80,
+        "typical": 132,
+        "max": 250,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 60,
+        "typical": 120,
+        "max": 240,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "HSE with Cork University Hospital (CUH) - one of Ireland's largest hospitals. Good specialist care.",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 6-18 months. Private: 2-6 weeks.",
+      "prescriptionCoverage": "Private insurance required for Stamp 0 holders"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 9,
+      "expatCommunity": 6,
+      "englishPrevalence": 10,
+      "safetyRating": 8
+    },
+    "pros": [
+      "Ireland's food capital with English Market and restaurant scene",
+      "Growing tech hub with Apple, EMC, and others",
+      "Good airport with European connections"
+    ],
+    "cons": [
+      "Rainy climate (185+ days/year)",
+      "Housing market very competitive",
+      "Public transit limited compared to Dublin"
+    ],
+    "taxes": {
+      "notes": "Irish progressive income tax 20%/40%. USC 0.5-8%. US-Ireland tax treaty.",
+      "vatRate": 23,
+      "socialChargesRate": 4
+    }
+  },
+  {
+    "id": "ireland-limerick",
+    "name": "Limerick, Ireland",
+    "country": "Ireland",
+    "region": "Western Europe",
+    "cities": [
+      "Limerick",
+      "Adare",
+      "Ennis"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Stamp 0 (Retiree)",
+      "incomeRequirement": {
+        "monthly": 4167,
+        "currency": "EUR"
+      },
+      "notes": "Stamp 0 visa for retirees requires ~€50K/year income. Must have private health insurance."
+    },
+    "climate": {
+      "winterLowF": 37,
+      "summerHighF": 65,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 190
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1250,
+        "min": 1000,
+        "max": 1500,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 470,
+        "min": 375,
+        "max": 590,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 200,
+        "min": 150,
+        "max": 265,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 155,
+        "min": 105,
+        "max": 215,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 180,
+        "min": 125,
+        "max": 245,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 140,
+        "min": 90,
+        "max": 210,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 260,
+        "min": 180,
+        "max": 360,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 80,
+        "typical": 132,
+        "max": 250,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 60,
+        "typical": 120,
+        "max": 240,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "HSE with University Hospital Limerick. Adequate general care; some specialties require Cork or Dublin.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 6-18 months. Private: 2-6 weeks.",
+      "prescriptionCoverage": "Private insurance required for Stamp 0 holders"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 9,
+      "expatCommunity": 4,
+      "englishPrevalence": 10,
+      "safetyRating": 8
+    },
+    "pros": [
+      "Most affordable major Irish city",
+      "Gateway to Wild Atlantic Way and Clare",
+      "Strong rugby culture and community spirit"
+    ],
+    "cons": [
+      "Rainy climate",
+      "Some areas have reputation for anti-social behavior",
+      "Fewer cultural amenities than Cork or Galway"
+    ],
+    "taxes": {
+      "notes": "Irish progressive income tax 20%/40%. USC 0.5-8%. US-Ireland tax treaty.",
+      "vatRate": 23,
+      "socialChargesRate": 4
+    }
+  },
+  {
+    "id": "ireland-wexford",
+    "name": "Wexford, Ireland",
+    "country": "Ireland",
+    "region": "Western Europe",
+    "cities": [
+      "Wexford",
+      "Enniscorthy",
+      "Gorey"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Stamp 0 (Retiree)",
+      "incomeRequirement": {
+        "monthly": 4167,
+        "currency": "EUR"
+      },
+      "notes": "Stamp 0 visa for retirees requires ~€50K/year income. Must have private health insurance."
+    },
+    "climate": {
+      "winterLowF": 37,
+      "summerHighF": 67,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 160
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1200,
+        "min": 950,
+        "max": 1450,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 465,
+        "min": 370,
+        "max": 580,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 200,
+        "min": 150,
+        "max": 265,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 155,
+        "min": 105,
+        "max": 215,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 180,
+        "min": 125,
+        "max": 245,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 150,
+        "min": 100,
+        "max": 220,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 240,
+        "min": 170,
+        "max": 340,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 80,
+        "typical": 132,
+        "max": 250,
+        "annualInflation": 0.04,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 60,
+        "typical": 120,
+        "max": 240,
+        "annualInflation": 0.04
+      }
+    },
+    "healthcare": {
+      "system": "HSE with Wexford General Hospital. Basic care adequate; Dublin (1.5 hours) for specialist care.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 6-18 months. Private: 2-6 weeks.",
+      "prescriptionCoverage": "Private insurance required for Stamp 0 holders"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 9,
+      "expatCommunity": 3,
+      "englishPrevalence": 10,
+      "safetyRating": 9
+    },
+    "pros": [
+      "Sunniest county in Ireland",
+      "Affordable by Irish standards",
+      "Beautiful beaches and historic Norman heritage"
+    ],
+    "cons": [
+      "Very small expat community",
+      "Limited cultural and dining scene",
+      "Car essential for daily life"
+    ],
+    "taxes": {
+      "notes": "Irish progressive income tax 20%/40%. USC 0.5-8%. US-Ireland tax treaty.",
+      "vatRate": 23,
+      "socialChargesRate": 4
+    }
+  },
+  {
+    "id": "croatia-dubrovnik",
+    "name": "Dubrovnik, Croatia",
+    "country": "Croatia",
+    "region": "Southern Europe",
+    "cities": [
+      "Dubrovnik",
+      "Cavtat",
+      "Mlini"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Temporary Stay Permit",
+      "incomeRequirement": {
+        "monthly": 1500,
+        "currency": "EUR"
+      },
+      "notes": "Temporary stay permit for retirees/financially independent persons. Digital nomad visa also available. Croatia joined Schengen and euro in 2023."
+    },
+    "climate": {
+      "winterLowF": 44,
+      "summerHighF": 88,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 90
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1050,
+        "min": 800,
+        "max": 1300,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 400,
+        "min": 320,
+        "max": 500,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 155,
+        "min": 115,
+        "max": 210,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 95,
+        "min": 60,
+        "max": 140,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 115,
+        "min": 75,
+        "max": 165,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 120,
+        "min": 75,
+        "max": 180,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 250,
+        "min": 180,
+        "max": 350,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 15,
+        "typical": 28,
+        "max": 60,
+        "annualInflation": 0.035,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 25,
+        "typical": 50,
+        "max": 100,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "HZZO (Croatian Health Insurance Fund). Dubrovnik General Hospital for basic care. Specialist care may require Split or Zagreb.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 4-12 weeks. Private clinics available in city.",
+      "prescriptionCoverage": "HZZO covers most prescriptions with small co-pays"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 6,
+      "expatCommunity": 5,
+      "englishPrevalence": 6,
+      "safetyRating": 9
+    },
+    "pros": [
+      "Stunning medieval walled city on the Adriatic",
+      "Excellent seafood and Mediterranean lifestyle",
+      "Croatia in EU and Schengen since 2023"
+    ],
+    "cons": [
+      "Extremely tourism-heavy (Game of Thrones effect)",
+      "Higher cost than rest of Croatia",
+      "Very crowded May-October"
+    ],
+    "taxes": {
+      "notes": "Croatian progressive income tax 20% (up to €50,400) and 30% above. Surtax may apply (0-18% depending on municipality). No US-Croatia tax treaty.",
+      "vatRate": 25,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "croatia-split",
+    "name": "Split, Croatia",
+    "country": "Croatia",
+    "region": "Southern Europe",
+    "cities": [
+      "Split",
+      "Trogir",
+      "Kaštela"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Temporary Stay Permit",
+      "incomeRequirement": {
+        "monthly": 1500,
+        "currency": "EUR"
+      },
+      "notes": "Temporary stay permit for financially independent persons. Digital nomad visa also available."
+    },
+    "climate": {
+      "winterLowF": 42,
+      "summerHighF": 90,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 75
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 850,
+        "min": 650,
+        "max": 1100,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 380,
+        "min": 300,
+        "max": 480,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 150,
+        "min": 110,
+        "max": 200,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 85,
+        "min": 55,
+        "max": 130,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 105,
+        "min": 70,
+        "max": 155,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 110,
+        "min": 70,
+        "max": 170,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 220,
+        "min": 150,
+        "max": 310,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 15,
+        "typical": 28,
+        "max": 60,
+        "annualInflation": 0.035,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 25,
+        "typical": 50,
+        "max": 100,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "HZZO with KBC Split (Clinical Hospital Center Split) - second largest hospital in Croatia. Good specialist care.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 4-12 weeks. Private clinics available.",
+      "prescriptionCoverage": "HZZO covers most prescriptions with small co-pays"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 6,
+      "expatCommunity": 5,
+      "englishPrevalence": 6,
+      "safetyRating": 9
+    },
+    "pros": [
+      "Diocletian's Palace - living in a Roman monument",
+      "Good ferry connections to islands",
+      "More affordable than Dubrovnik with better daily infrastructure"
+    ],
+    "cons": [
+      "Tourist crowds in summer",
+      "Limited public transit",
+      "Winter can feel quiet and grey"
+    ],
+    "taxes": {
+      "notes": "Croatian progressive income tax 20%/30%. Municipal surtax may apply. No US-Croatia tax treaty.",
+      "vatRate": 25,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "croatia-istria",
+    "name": "Istria, Croatia",
+    "country": "Croatia",
+    "region": "Southern Europe",
+    "cities": [
+      "Rovinj",
+      "Pula",
+      "Poreč"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Temporary Stay Permit",
+      "incomeRequirement": {
+        "monthly": 1500,
+        "currency": "EUR"
+      },
+      "notes": "Temporary stay permit for financially independent persons. Digital nomad visa also available."
+    },
+    "climate": {
+      "winterLowF": 37,
+      "summerHighF": 86,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 80
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 800,
+        "min": 600,
+        "max": 1050,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 380,
+        "min": 300,
+        "max": 480,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 150,
+        "min": 110,
+        "max": 200,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 85,
+        "min": 55,
+        "max": 130,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 105,
+        "min": 70,
+        "max": 155,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 130,
+        "min": 80,
+        "max": 190,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 210,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 15,
+        "typical": 28,
+        "max": 60,
+        "annualInflation": 0.035,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 25,
+        "typical": 50,
+        "max": 100,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "HZZO with Pula General Hospital. Italian-influenced region with decent care; Zagreb or Rijeka for complex cases.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 4-12 weeks. Private clinics available in Pula.",
+      "prescriptionCoverage": "HZZO covers most prescriptions with small co-pays"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 7,
+      "expatCommunity": 5,
+      "englishPrevalence": 6,
+      "safetyRating": 9
+    },
+    "pros": [
+      "Italian-influenced cuisine with excellent truffles and wine",
+      "Affordable with charming coastal towns",
+      "Close to Italy and Slovenia for day trips"
+    ],
+    "cons": [
+      "Cooler winters than Dalmatian coast",
+      "Tourism-driven economy (quiet off-season)",
+      "Car essential for exploring the peninsula"
+    ],
+    "taxes": {
+      "notes": "Croatian progressive income tax 20%/30%. Municipal surtax may apply. No US-Croatia tax treaty.",
+      "vatRate": 25,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "croatia-zagreb",
+    "name": "Zagreb, Croatia",
+    "country": "Croatia",
+    "region": "Southern Europe",
+    "cities": [
+      "Zagreb",
+      "Samobor",
+      "Velika Gorica"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Temporary Stay Permit",
+      "incomeRequirement": {
+        "monthly": 1500,
+        "currency": "EUR"
+      },
+      "notes": "Temporary stay permit for financially independent persons. Digital nomad visa also available."
+    },
+    "climate": {
+      "winterLowF": 28,
+      "summerHighF": 84,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 100
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 750,
+        "min": 600,
+        "max": 950,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 370,
+        "min": 290,
+        "max": 460,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 160,
+        "min": 120,
+        "max": 215,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 100,
+        "min": 65,
+        "max": 150,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 100,
+        "min": 60,
+        "max": 160,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 200,
+        "min": 140,
+        "max": 280,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 15,
+        "typical": 28,
+        "max": 60,
+        "annualInflation": 0.035,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 25,
+        "typical": 50,
+        "max": 100,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "HZZO with KBC Zagreb - Croatia's largest and best hospital. Full specialist care available.",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 3-10 weeks. Private: 1-2 weeks.",
+      "prescriptionCoverage": "HZZO covers most prescriptions with small co-pays"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 5,
+      "englishPrevalence": 7,
+      "safetyRating": 8
+    },
+    "pros": [
+      "Very affordable European capital",
+      "Best healthcare in Croatia",
+      "Good public tram and bus system"
+    ],
+    "cons": [
+      "Cold continental winters (below freezing)",
+      "No coast (2+ hours to the sea)",
+      "Earthquake damage (2020) still being repaired in some areas"
+    ],
+    "taxes": {
+      "notes": "Croatian progressive income tax 20%/30%. Zagreb has 18% municipal surtax. No US-Croatia tax treaty.",
+      "vatRate": 25,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "cyprus-paphos",
+    "name": "Paphos, Cyprus",
+    "country": "Cyprus",
+    "region": "Southern Europe",
+    "cities": [
+      "Paphos",
+      "Peyia",
+      "Polis Chrysochous"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Category F Immigration Permit",
+      "incomeRequirement": {
+        "monthly": 797,
+        "currency": "EUR"
+      },
+      "notes": "Category F permit requires ~€9,568/year + €4,613/dependent. Must deposit €15K-€30K in Cypriot bank. Very retiree-friendly."
+    },
+    "climate": {
+      "winterLowF": 50,
+      "summerHighF": 93,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 40
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 950,
+        "min": 750,
+        "max": 1200,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 410,
+        "min": 330,
+        "max": 520,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 155,
+        "min": 115,
+        "max": 210,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 100,
+        "min": 65,
+        "max": 150,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 120,
+        "min": 80,
+        "max": 170,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 140,
+        "min": 90,
+        "max": 210,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 230,
+        "min": 160,
+        "max": 330,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 35,
+        "max": 70,
+        "annualInflation": 0.035,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "GESY (General Healthcare System) introduced 2019. Paphos General Hospital for basic care. Private clinics good and affordable.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 2-8 weeks for specialists. Private: under 2 weeks.",
+      "prescriptionCoverage": "GESY covers most prescriptions with small co-pays"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 6,
+      "expatCommunity": 9,
+      "englishPrevalence": 8,
+      "safetyRating": 9
+    },
+    "pros": [
+      "Massive British expat community, English widely spoken",
+      "Warm year-round climate with 340 days of sunshine",
+      "Very favorable tax treatment for retirees (2.65% on pensions)"
+    ],
+    "cons": [
+      "Island isolation from mainland Europe",
+      "Hot, dry summers (93F+)",
+      "Car essential outside city centers"
+    ],
+    "taxes": {
+      "notes": "Cyprus: flat 2.65% on pension income for first €3,420, then 0%. Or opt for standard progressive rates 20%-35%. Very favorable for retirees. US-Cyprus tax treaty.",
+      "vatRate": 19,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "cyprus-limassol",
+    "name": "Limassol, Cyprus",
+    "country": "Cyprus",
+    "region": "Southern Europe",
+    "cities": [
+      "Limassol",
+      "Episkopi",
+      "Erimi"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Category F Immigration Permit",
+      "incomeRequirement": {
+        "monthly": 797,
+        "currency": "EUR"
+      },
+      "notes": "Category F permit requires ~€9,568/year + €4,613/dependent."
+    },
+    "climate": {
+      "winterLowF": 50,
+      "summerHighF": 95,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 35
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1100,
+        "min": 850,
+        "max": 1400,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 430,
+        "min": 340,
+        "max": 540,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 160,
+        "min": 120,
+        "max": 215,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 105,
+        "min": 70,
+        "max": 155,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 125,
+        "min": 85,
+        "max": 180,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 140,
+        "min": 90,
+        "max": 210,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 260,
+        "min": 180,
+        "max": 360,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 35,
+        "max": 70,
+        "annualInflation": 0.035,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "GESY public system plus strong private sector. Limassol General Hospital. Good quality care.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 2-8 weeks. Private: under 2 weeks.",
+      "prescriptionCoverage": "GESY covers most prescriptions with small co-pays"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 6,
+      "expatCommunity": 8,
+      "englishPrevalence": 8,
+      "safetyRating": 9
+    },
+    "pros": [
+      "Cosmopolitan business hub with international restaurants",
+      "Strong Russian and British expat communities",
+      "New marina and waterfront development"
+    ],
+    "cons": [
+      "Higher cost than other Cypriot cities",
+      "Traffic congestion in city center",
+      "Very hot and humid summers"
+    ],
+    "taxes": {
+      "notes": "Cyprus: flat 2.65% on pension income for first €3,420, then 0%. Very favorable for retirees.",
+      "vatRate": 19,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "cyprus-larnaca",
+    "name": "Larnaca, Cyprus",
+    "country": "Cyprus",
+    "region": "Southern Europe",
+    "cities": [
+      "Larnaca",
+      "Kiti",
+      "Pervolia"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Category F Immigration Permit",
+      "incomeRequirement": {
+        "monthly": 797,
+        "currency": "EUR"
+      },
+      "notes": "Category F permit requires ~€9,568/year + €4,613/dependent."
+    },
+    "climate": {
+      "winterLowF": 50,
+      "summerHighF": 95,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 30
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 850,
+        "min": 650,
+        "max": 1100,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 400,
+        "min": 320,
+        "max": 500,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 150,
+        "min": 110,
+        "max": 200,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 95,
+        "min": 60,
+        "max": 140,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 115,
+        "min": 75,
+        "max": 165,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 130,
+        "min": 80,
+        "max": 190,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 210,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 20,
+        "typical": 35,
+        "max": 70,
+        "annualInflation": 0.035,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "GESY public system. Larnaca General Hospital for basic care. Specialist care may require Nicosia or Limassol.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 2-8 weeks. Private: under 2 weeks.",
+      "prescriptionCoverage": "GESY covers most prescriptions with small co-pays"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 6,
+      "expatCommunity": 7,
+      "englishPrevalence": 8,
+      "safetyRating": 9
+    },
+    "pros": [
+      "Most affordable Cypriot city",
+      "International airport for easy travel",
+      "Relaxed beach town atmosphere"
+    ],
+    "cons": [
+      "Smaller and less cosmopolitan than Limassol",
+      "Limited cultural and dining scene",
+      "Very hot summers"
+    ],
+    "taxes": {
+      "notes": "Cyprus: flat 2.65% on pension income for first €3,420, then 0%. Very favorable for retirees.",
+      "vatRate": 19,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "malta-valletta",
+    "name": "Valletta, Malta",
+    "country": "Malta",
+    "region": "Southern Europe",
+    "cities": [
+      "Valletta",
+      "Floriana",
+      "Senglea"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Malta Retirement Programme",
+      "incomeRequirement": {
+        "monthly": 1193,
+        "currency": "EUR"
+      },
+      "notes": "Malta Retirement Programme requires property purchase/rental + €14,318/year income. 15% flat tax on remitted income, minimum €7,500/year tax."
+    },
+    "climate": {
+      "winterLowF": 50,
+      "summerHighF": 92,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 40
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1300,
+        "min": 1000,
+        "max": 1600,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 440,
+        "min": 350,
+        "max": 560,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 165,
+        "min": 120,
+        "max": 220,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 110,
+        "min": 75,
+        "max": 160,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 130,
+        "min": 90,
+        "max": 185,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 100,
+        "min": 60,
+        "max": 160,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 260,
+        "min": 180,
+        "max": 360,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 18,
+        "typical": 32,
+        "max": 65,
+        "annualInflation": 0.03,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "Mater Dei Hospital (public, free for residents). Good quality. Small island means all healthcare is nearby.",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 2-8 weeks for specialists. Private: under 2 weeks.",
+      "prescriptionCoverage": "Public healthcare provides free prescriptions for residents on approved list"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 5,
+      "expatCommunity": 8,
+      "englishPrevalence": 9,
+      "safetyRating": 9
+    },
+    "pros": [
+      "English is an official language",
+      "Warm year-round Mediterranean climate",
+      "Stunning historic capital (UNESCO World Heritage)"
+    ],
+    "cons": [
+      "Very small and densely populated island",
+      "Traffic congestion is severe",
+      "Limited green spaces and dog-walking areas"
+    ],
+    "taxes": {
+      "notes": "Malta Retirement Programme: 15% flat tax on remitted income, min €7,500/year. Standard rates 0%-35% otherwise. US-Malta tax treaty.",
+      "vatRate": 18,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "malta-sliema",
+    "name": "Sliema, Malta",
+    "country": "Malta",
+    "region": "Southern Europe",
+    "cities": [
+      "Sliema",
+      "St. Julian's",
+      "Gżira"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Malta Retirement Programme",
+      "incomeRequirement": {
+        "monthly": 1193,
+        "currency": "EUR"
+      },
+      "notes": "Malta Retirement Programme requires property purchase/rental + €14,318/year income. 15% flat tax on remitted income, minimum €7,500/year tax."
+    },
+    "climate": {
+      "winterLowF": 50,
+      "summerHighF": 92,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 40
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1400,
+        "min": 1100,
+        "max": 1700,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 450,
+        "min": 360,
+        "max": 570,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 165,
+        "min": 120,
+        "max": 220,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 110,
+        "min": 75,
+        "max": 160,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 130,
+        "min": 90,
+        "max": 185,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 90,
+        "min": 55,
+        "max": 150,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 280,
+        "min": 200,
+        "max": 390,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 18,
+        "typical": 32,
+        "max": 65,
+        "annualInflation": 0.03,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "Mater Dei Hospital nearby. Many private clinics in Sliema area. Good English-speaking medical staff.",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 2-8 weeks. Private: under 2 weeks.",
+      "prescriptionCoverage": "Public healthcare provides free prescriptions on approved list"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 5,
+      "expatCommunity": 9,
+      "englishPrevalence": 9,
+      "safetyRating": 8
+    },
+    "pros": [
+      "Modern waterfront area popular with expats",
+      "Walkable with shops, restaurants, and promenade",
+      "English widely spoken everywhere"
+    ],
+    "cons": [
+      "Construction boom causing noise and disruption",
+      "Higher rents than rest of Malta",
+      "Very crowded and built-up"
+    ],
+    "taxes": {
+      "notes": "Malta Retirement Programme: 15% flat tax on remitted income, min €7,500/year.",
+      "vatRate": 18,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "malta-gozo",
+    "name": "Gozo, Malta",
+    "country": "Malta",
+    "region": "Southern Europe",
+    "cities": [
+      "Victoria",
+      "Marsalforn",
+      "Xlendi"
+    ],
+    "currency": "EUR",
+    "exchangeRate": 0.93,
+    "exchangeRates": {
+      "optimistic": 0.85,
+      "pessimistic": 1.02,
+      "mid": 0.93
+    },
+    "visa": {
+      "type": "Malta Retirement Programme",
+      "incomeRequirement": {
+        "monthly": 1193,
+        "currency": "EUR"
+      },
+      "notes": "Malta Retirement Programme requires property purchase/rental + €14,318/year income. Gozo qualifies for reduced property requirements."
+    },
+    "climate": {
+      "winterLowF": 50,
+      "summerHighF": 90,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 40
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 900,
+        "min": 700,
+        "max": 1150,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 420,
+        "min": 330,
+        "max": 530,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 160,
+        "min": 120,
+        "max": 215,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 100,
+        "min": 65,
+        "max": 150,
+        "annualInflation": 0.04
+      },
+      "insurance": {
+        "typical": 120,
+        "min": 80,
+        "max": 170,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 110,
+        "min": 70,
+        "max": 170,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 200,
+        "min": 140,
+        "max": 280,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 60,
+        "min": 40,
+        "max": 100,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 100,
+        "min": 70,
+        "max": 140,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 50,
+        "min": 30,
+        "max": 80,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 120,
+        "min": 80,
+        "max": 200,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 18,
+        "typical": 32,
+        "max": 65,
+        "annualInflation": 0.03,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 40,
+        "typical": 80,
+        "max": 160,
+        "annualInflation": 0.035
+      }
+    },
+    "healthcare": {
+      "system": "Gozo General Hospital for basic care. Mater Dei Hospital on Malta main island (30 min ferry) for specialist care.",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Public: 2-8 weeks. Complex cases require ferry to Malta main island.",
+      "prescriptionCoverage": "Public healthcare provides free prescriptions on approved list"
+    },
+    "lifestyle": {
+      "internetSpeed": "100Mbps+",
+      "dogFriendly": 7,
+      "expatCommunity": 6,
+      "englishPrevalence": 9,
+      "safetyRating": 10
+    },
+    "pros": [
+      "Very affordable by Maltese standards",
+      "Quieter, more rural island lifestyle",
+      "English spoken, very safe, warm climate"
+    ],
+    "cons": [
+      "Dependent on ferry to Malta for specialist healthcare and shopping",
+      "Limited entertainment and dining options",
+      "Can feel isolated, especially in winter"
+    ],
+    "taxes": {
+      "notes": "Malta Retirement Programme: 15% flat tax on remitted income, min €7,500/year. Gozo has reduced property requirements.",
+      "vatRate": 18,
+      "socialChargesRate": 0
+    }
+  }
+]

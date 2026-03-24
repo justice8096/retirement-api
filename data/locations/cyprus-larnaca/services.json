@@ -1,0 +1,245 @@
+{
+  "distanceUnit": "km",
+  "currency": "EUR",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Larnaca General Hospital",
+      "address": "City center area, Larnaca, Cyprus",
+      "distanceKm": 5,
+      "notes": "Public hospital with 24hr emergency department, English widely spoken",
+      "sources": [
+        {
+          "title": "Larnaca General Hospital",
+          "url": "https://www.moh.gov.cy/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Larnaca Pharmacy",
+      "address": "City center area, Larnaca, Cyprus",
+      "distanceKm": 1.5,
+      "notes": "Well-stocked pharmacy, prescription medications, some English spoken",
+      "sources": [
+        {
+          "title": "Larnaca Pharmacy",
+          "url": "https://www.cypruspharmacy.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Alphamega Hypermarket",
+      "address": "City center area, Larnaca, Cyprus",
+      "distanceKm": 2,
+      "notes": "Large supermarket chain, imported goods, English labels",
+      "sources": [
+        {
+          "title": "Alphamega Hypermarket",
+          "url": "https://www.alphamega.com.cy/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "Bank of Cyprus",
+      "address": "City center area, Larnaca, Cyprus",
+      "distanceKm": 2,
+      "notes": "Largest bank in Cyprus, English-speaking staff, international transfers",
+      "sources": [
+        {
+          "title": "Bank of Cyprus",
+          "url": "https://www.bankofcyprus.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Larnaca Medical Center",
+      "address": "City center area, Larnaca, Cyprus",
+      "distanceKm": 3,
+      "notes": "Private clinic with English-speaking GPs, same-day appointments",
+      "sources": [
+        {
+          "title": "Larnaca Medical Center",
+          "url": "https://www.moh.gov.cy/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Dental Clinic Larnaca Center",
+      "address": "City center area, Larnaca, Cyprus",
+      "distanceKm": 3,
+      "notes": "General and cosmetic dentistry, some English-speaking dentists, modern equipment",
+      "sources": [
+        {
+          "title": "Dental Services Cyprus",
+          "url": "https://www.moh.gov.cy/"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Veterinary Clinic Larnaca",
+      "address": "City center area, Larnaca, Cyprus",
+      "distanceKm": 4,
+      "notes": "Full veterinary services, vaccinations, surgery, some English spoken",
+      "sources": [
+        {
+          "title": "Veterinary Services Cyprus",
+          "url": "https://www.moa.gov.cy/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Parque Canino / Dog Park Larnaca",
+      "address": "Park area, Larnaca, Cyprus",
+      "distanceKm": 5,
+      "notes": "Off-leash area, green space popular with dog owners, water available",
+      "sources": [
+        {
+          "title": "Parks in Larnaca",
+          "url": "https://www.visitcyprus.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "Larnaca Fitness Club",
+      "address": "City center area, Larnaca, Cyprus",
+      "distanceKm": 3,
+      "notes": "Modern gym with cardio and weight equipment, group classes, monthly memberships",
+      "sources": [
+        {
+          "title": "Larnaca Fitness Club",
+          "url": "https://www.visitcyprus.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "St. Andrew's Anglican Church Larnaca",
+      "address": "City center area, Larnaca, Cyprus",
+      "distanceKm": 5,
+      "notes": "English-language services, expat community gathering point, social events",
+      "sources": [
+        {
+          "title": "St. Andrew's Anglican Church Larnaca",
+          "url": "https://www.anglicanchurchcyprus.org/"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Larnaca International Airport (LCA)",
+      "address": "Airport area",
+      "distanceKm": 8,
+      "notes": "International airport with domestic and international flights",
+      "sources": [
+        {
+          "title": "Larnaca International Airport",
+          "url": "https://www.hermesairports.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Larnaca Bus Station",
+      "address": "City center area, Larnaca, Cyprus",
+      "distanceKm": 2,
+      "notes": "City bus service, connections to other cities, affordable fares",
+      "sources": [
+        {
+          "title": "Larnaca Bus Station",
+          "url": "https://www.cyprusbybus.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "coworking",
+      "name": "Regus Larnaca",
+      "address": "City center area, Larnaca, Cyprus",
+      "distanceKm": 3,
+      "notes": "Coworking space, high-speed internet, meeting rooms, community events",
+      "sources": [
+        {
+          "title": "Regus Larnaca",
+          "url": "https://www.regus.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "Pet Grooming Larnaca",
+      "address": "City center area, Larnaca, Cyprus",
+      "distanceKm": 4,
+      "notes": "Professional pet grooming services, bathing, clipping, appointment recommended",
+      "sources": [
+        {
+          "title": "Pet Services Larnaca",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "categoryId": "international_school",
+      "name": "InterNations Larnaca Expat Community",
+      "address": "City center area, Larnaca, Cyprus",
+      "distanceKm": 4,
+      "notes": "International expat community center, social events, networking, relocation assistance",
+      "sources": [
+        {
+          "title": "InterNations Larnaca Expat Community",
+          "url": "https://www.internations.org/"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "Larnaca Cultural Center",
+      "description": "Cultural center with local art, history, and community events",
+      "distanceKm": 4,
+      "estimatedCostEUR": 8,
+      "frequency": "Tue-Sun 10:00-17:00",
+      "sources": [
+        {
+          "title": "Larnaca Culture",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "name": "Larnaca Central Park / Garden",
+      "description": "Main public park with walking trails, gardens, and green space",
+      "distanceKm": 3,
+      "estimatedCostEUR": 0,
+      "frequency": "Daily, dawn to dusk",
+      "sources": [
+        {
+          "title": "Parks in Larnaca",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "dining",
+      "name": "Larnaca Restaurant District",
+      "description": "Walkable area with diverse restaurants, cafes, and bars",
+      "distanceKm": 2,
+      "estimatedCostEUR": 25,
+      "frequency": "Daily, lunch and dinner service",
+      "sources": [
+        {
+          "title": "Dining in Larnaca",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    }
+  ]
+}

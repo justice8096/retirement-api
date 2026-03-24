@@ -1,0 +1,126 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 20,
+      "typical": 26,
+      "max": 230
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 200,
+        "coverageNote": "GHS (GESY) covers for diabetes with endocrinologist referral"
+      },
+      {
+        "name": "Levothyroxine [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 5,
+        "coverageNote": "GHS reimbursed — €1 copay"
+      },
+      {
+        "name": "Atorvastatin 20mg [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 7,
+        "coverageNote": "GHS reimbursed generic — €1 copay"
+      },
+      {
+        "name": "Montelukast [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 10,
+        "coverageNote": "GHS reimbursed — €1 copay"
+      },
+      {
+        "name": "Hydrochlorothiazide [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "GHS reimbursed generic"
+      },
+      {
+        "name": "Olmesartan [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 13,
+        "coverageNote": "GHS reimbursed"
+      },
+      {
+        "name": "Salbutamol [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "GHS reimbursed"
+      },
+      {
+        "name": "Metformin 500mg [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 3,
+        "coverageNote": "GHS reimbursed generic — €1 copay"
+      },
+      {
+        "name": "Allopurinol [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 5,
+        "coverageNote": "GHS reimbursed"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 5,
+        "coverageNote": "GHS reimbursed"
+      },
+      {
+        "name": "Topiramate [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 12,
+        "coverageNote": "GHS reimbursed"
+      },
+      {
+        "name": "Metoprolol [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 5,
+        "coverageNote": "GHS reimbursed"
+      },
+      {
+        "name": "Atorvastatin 20mg [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 7,
+        "coverageNote": "GHS reimbursed generic — €1 copay"
+      }
+    ],
+    "pharmacyAccess": "Pharmacies in all Cypriot cities and towns. Both Greek-Cypriot pharmacies and international chains. EU prescriptions accepted.",
+    "notes": "Cyprus GHS (GESY — General Healthcare System, launched 2019) provides universal coverage with €1 copay per prescription. Residents and EU citizens enrolled automatically. Private pharmacies may stock wider range. EU EHIC accepted."
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 72,
+      "typical": 87,
+      "max": 107
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in Cyprus at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "Cyta Postpaid",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "10GB 4G/5G",
+        "baseCost": 22,
+        "taxesAndFees": 0,
+        "monthlyTotal": 22,
+        "notes": "2 lines ~€10/line. Cyta is incumbent carrier. EU roaming included."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      }
+    ]
+  }
+}

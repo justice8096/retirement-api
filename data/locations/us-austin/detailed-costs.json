@@ -1,0 +1,1267 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 73,
+      "typical": 91,
+      "max": 925
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic/Wegovy) [P1]",
+        "monthlyCost": 25,
+        "withoutInsurance": 900,
+        "coverageNote": "Medicare Part D covers for diabetes (tier 3). $25 copay typical. Without coverage ~$900/mo. IRA negotiated price TBD."
+      },
+      {
+        "name": "Levothyroxine (Synthroid) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 15,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Atorvastatin 20mg [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Montelukast (Singulair) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 15,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Hydrochlorothiazide (HCTZ) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 8,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Olmesartan/Medoxomil (Benicar) [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 30,
+        "coverageNote": "Medicare Part D generic tier 1-2; $4-15 copay"
+      },
+      {
+        "name": "Albuterol inhaler [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 35,
+        "coverageNote": "Medicare Part D tier 2; $10-25 copay. IRA cap applies."
+      },
+      {
+        "name": "Metformin 500mg [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Allopurinol (gout) [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Topiramate (Topamax) [P2]",
+        "monthlyCost": 10,
+        "withoutInsurance": 25,
+        "coverageNote": "Medicare Part D generic tier 1-2; $4-15 copay"
+      },
+      {
+        "name": "Metoprolol (Lopressor) [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Atorvastatin 20mg [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      }
+    ],
+    "pharmacyAccess": "Excellent. H-E-B Pharmacy (dominant in Austin, competitive pricing, free select generics), CVS, Walgreens, and Costco pharmacies widely available. Mail-order options through Medicare Part D plans (OptumRx, Express Scripts, Caremark).",
+    "prescriptionSystem": "Medicare Part D prescription drug plan. Choose standalone PDP or get coverage through Medicare Advantage. Annual out-of-pocket cap $2,000 under Inflation Reduction Act.",
+    "insuranceCoverage": "Medicare Part D covers most prescriptions with tiered copays. Generic drugs $0-15/month, preferred brands $30-50/month, specialty drugs 25-33% coinsurance up to $2,000 annual cap.",
+    "sources": [
+      {
+        "title": "Medicare Part D Costs - CMS.gov",
+        "url": "https://www.cms.gov/medicare/costs-getting-started"
+      },
+      {
+        "title": "Inflation Reduction Act Drug Provisions - KFF",
+        "url": "https://www.kff.org/medicare/issue-brief/how-will-the-prescription-drug-provisions-in-the-inflation-reduction-act-affect-medicare-beneficiaries/"
+      },
+      {
+        "title": "H-E-B Pharmacy",
+        "url": "https://www.heb.com/pharmacy"
+      },
+      {
+        "title": "GoodRx Drug Pricing",
+        "url": "https://www.goodrx.com/"
+      }
+    ]
+  },
+  "vision": {
+    "annualExamCost": {
+      "withInsurance": 25,
+      "withoutInsurance": 200,
+      "notes": "Original Medicare does NOT cover routine vision exams. Must have separate vision plan or Medicare Advantage with vision."
+    },
+    "eyeglasses": {
+      "basicFrameAndLens": {
+        "min": 100,
+        "typical": 200,
+        "max": 400
+      },
+      "progressiveLens": {
+        "min": 200,
+        "typical": 350,
+        "max": 600
+      },
+      "contactLensesMonthly": {
+        "min": 30,
+        "typical": 50,
+        "max": 80
+      }
+    },
+    "insuranceCoverage": "Need separate vision plan or Medicare Advantage with vision. Standalone vision plans (VSP, EyeMed) run $15-25/month and cover annual exam + $100-200 frame/lens allowance.",
+    "specialistWaitTime": "1-3 weeks for routine eye exams in Austin. Shorter waits at retail optometry (LensCrafters, Walmart Vision, Costco Optical). Ophthalmologist referrals 2-4 weeks.",
+    "seniorConsiderations": "Medicare covers cataract surgery and glaucoma screening. Annual glaucoma screening covered for high-risk beneficiaries. Diabetic retinopathy screening covered. One pair of eyeglasses or contacts after cataract surgery.",
+    "sources": [
+      {
+        "title": "Medicare Vision Coverage - Medicare.gov",
+        "url": "https://www.medicare.gov/coverage/eye-exams"
+      },
+      {
+        "title": "VSP Individual Vision Plans",
+        "url": "https://www.vspdirect.com/"
+      },
+      {
+        "title": "EyeMed Vision Plans",
+        "url": "https://www.eyemed.com/"
+      }
+    ]
+  },
+  "dental": {
+    "annualCleaningCost": {
+      "withInsurance": 30,
+      "withoutInsurance": 150,
+      "notes": "Original Medicare does NOT cover routine dental. Need separate dental plan or Medicare Advantage with dental."
+    },
+    "commonProcedures": [
+      {
+        "name": "Filling (composite)",
+        "withInsurance": 100,
+        "withoutInsurance": 250
+      },
+      {
+        "name": "Crown (porcelain)",
+        "withInsurance": 500,
+        "withoutInsurance": 1200
+      },
+      {
+        "name": "Root Canal (molar)",
+        "withInsurance": 450,
+        "withoutInsurance": 1100
+      },
+      {
+        "name": "Extraction (simple)",
+        "withInsurance": 80,
+        "withoutInsurance": 250
+      },
+      {
+        "name": "Implant (single)",
+        "withInsurance": 2000,
+        "withoutInsurance": 4500
+      },
+      {
+        "name": "Dentures (complete set)",
+        "withInsurance": 800,
+        "withoutInsurance": 2000
+      }
+    ],
+    "insuranceCoverage": "Need separate dental plan ($20-50/month) or Medicare Advantage with dental. Standalone plans (Delta Dental, Cigna) typically cover 100% preventive, 50-80% basic, 50% major procedures. Annual maximums $1,000-2,000.",
+    "dentistAvailability": "Excellent in Austin metro. Large number of dental practices, short wait times (1-2 weeks for routine). Many dentists accept dental discount plans for uninsured seniors.",
+    "sources": [
+      {
+        "title": "Medicare Dental Coverage - Medicare.gov",
+        "url": "https://www.medicare.gov/coverage/dental-services"
+      },
+      {
+        "title": "Delta Dental Individual Plans",
+        "url": "https://www.deltadental.com/"
+      },
+      {
+        "title": "ADA Fee Survey - Texas",
+        "url": "https://www.ada.org/resources/practice/practice-economics"
+      }
+    ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 420,
+      "typical": 500,
+      "max": 620
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 355,
+        "seniorDiscounts": "Many restaurants offer 10-15% senior discounts. AARP members get discounts at Denny's, Outback, and others.",
+        "notes": "Lunch for 2 at moderate restaurant ~$35 + 8.25% TX tax + 20% tip = ~$44/meal, 2x/week (~8.7/mo) = ~$355/mo"
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 65,
+        "seniorDiscounts": "Some providers offer senior plans. AT&T Fiber price lock options available.",
+        "notes": "AT&T Fiber 1 Gig $60-70/mo or Google Fiber $70/mo. No data caps on fiber."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 18,
+        "seniorDiscounts": "T-Mobile 55+ plans include Netflix.",
+        "notes": "$17.99/mo. 1080p, 2 screens, full library."
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 15,
+        "seniorDiscounts": "Medicaid recipients qualify for Prime at $6.99/mo.",
+        "notes": "$14.99/mo includes Prime Video, free shipping, Prime Reading."
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 13,
+        "seniorDiscounts": "No senior discount. Annual plan $99/yr ($8.25/mo).",
+        "notes": "$12.99/mo. Original content library."
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 25,
+        "seniorDiscounts": "SilverSneakers free gym membership through many Medicare Advantage plans."
+      },
+      {
+        "name": "Parks/Outdoors",
+        "monthlyCost": 10,
+        "seniorDiscounts": "America the Beautiful Senior Pass $20/year (lifetime $80) for national parks."
+      },
+      {
+        "name": "Books/Library",
+        "monthlyCost": 10,
+        "seniorDiscounts": "Austin Public Library system free. Senior book clubs and digital resources."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 25,
+        "seniorDiscounts": "McDonald's and Dunkin' offer senior coffee discounts in some locations."
+      }
+    ],
+    "sources": [
+      {
+        "title": "AT&T Fiber Plans",
+        "url": "https://www.att.com/internet/fiber/"
+      },
+      {
+        "title": "Google Fiber Austin",
+        "url": "https://fiber.google.com/cities/austin/"
+      },
+      {
+        "title": "Netflix Pricing",
+        "url": "https://help.netflix.com/en/node/24926"
+      },
+      {
+        "title": "AARP Member Discounts",
+        "url": "https://www.aarp.org/membership/benefits/discounts/"
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 220,
+      "typical": 330,
+      "max": 450
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 41.25,
+        "senior": 20.63,
+        "notes": "CapMetro local bus pass $41.25/mo, seniors 65+ ride half-fare. MetroRail Red Line connects downtown to Leander."
+      },
+      "singleRide": 1.25,
+      "coverage": "CapMetro operates bus routes and MetroRail Red Line (downtown to Leander). Project Connect light rail expansion underway. Coverage is limited compared to major transit cities — most suburbs require a car.",
+      "seniorDiscount": "Seniors 65+ get half-fare on all CapMetro services. Reduced fare ID card required."
+    },
+    "rideShare": {
+      "baseFare": 2.5,
+      "perKm": 1.2,
+      "typicalCrossTownTrip": {
+        "min": 12,
+        "typical": 20,
+        "max": 35
+      },
+      "availability": "Excellent throughout Austin metro. Uber and Lyft widely available 24/7.",
+      "notes": "Uber/Lyft prices surge during events (SXSW, ACL, UT game days). GoGoGrandparent service available for seniors who prefer phone-based ride ordering."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 75,
+        "initialRegistration": {
+          "min": 50,
+          "typical": 75,
+          "max": 90
+        },
+        "notes": "Texas vehicle registration $50.75/year base + county fees. Annual state inspection $7.50 (emissions + safety in Travis County). No personal property tax on vehicles in Texas."
+      },
+      "insurance": {
+        "monthlyMin": 100,
+        "monthlyTypical": 150,
+        "monthlyMax": 220,
+        "notes": "Texas insurance rates are moderate. Austin rates slightly above state average due to traffic. Senior safe driver discounts available (5-15%)."
+      },
+      "fuel": {
+        "pricePerLiter": 0.87,
+        "monthlyEstimate": {
+          "min": 70,
+          "typical": 120,
+          "max": 180
+        },
+        "notes": "~$3.30/gallon average in Austin. TX gas tax $0.20/gallon (among lowest in US). Typical senior drives 8,000-12,000 miles/year."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 0,
+          "typical": 50,
+          "max": 150
+        },
+        "hourlyStreet": 2,
+        "notes": "Free parking in most suburban areas and at H-E-B. Downtown Austin metered parking. Apartment complexes typically include 1 spot."
+      },
+      "tolls": {
+        "monthlyEstimate": 60,
+        "notes": "Austin has extensive toll roads: 183A, 290 Toll, MoPac Express Lane, 45 Toll, SH 130. TxTag required. Monthly cost varies greatly by commute pattern — can be significant for north-south travel."
+      },
+      "seniorDiscounts": "Texas Safe Driver discount for completing AARP Smart Driver course (5-15% insurance reduction). No vehicle property tax in Texas."
+    },
+    "walkability": "Low in most of Austin metro. Car-dependent suburbs (Round Rock, Cedar Park, Pflugerville). Some walkable areas downtown and in South Congress/South Lamar corridors. Lady Bird Lake trail is excellent for recreation but not commuting.",
+    "cycling": {
+      "bikeShareMonthly": 10,
+      "infrastructure": "Austin B-Cycle bike share available downtown and central Austin. Growing protected bike lane network. Lance Armstrong Bikeway. Most suburbs have limited cycling infrastructure.",
+      "notes": "Austin B-Cycle single trip $2.50, day pass $12, annual membership $100."
+    },
+    "sources": [
+      {
+        "title": "CapMetro Fares",
+        "url": "https://www.capmetro.org/fares"
+      },
+      {
+        "title": "TxDMV Vehicle Registration",
+        "url": "https://www.txdmv.gov/motorists/register-your-vehicle"
+      },
+      {
+        "title": "TxTag Toll Roads",
+        "url": "https://www.txtag.org/"
+      },
+      {
+        "title": "AAA Texas Gas Prices",
+        "url": "https://gasprices.aaa.com/?state=TX"
+      }
+    ],
+    "electricVehicle": {
+      "purchasePrice": {
+        "min": 28000,
+        "typical": 35000,
+        "max": 52000
+      },
+      "purchaseNotes": "Tesla Model 3 ~$35K, Model Y ~$45K, Hyundai Ioniq 5 ~$42K, Chevy Equinox EV ~$28K. Federal tax credit up to $7,500 (income limits apply). Some states add incentives.",
+      "federalIncentive": 7500,
+      "stateIncentive": 0,
+      "incentiveNotes": "Federal EV tax credit up to $7,500 under IRA (income < $150K single / $300K joint). Must be new vehicle, MSRP < $55K sedan / $80K SUV. Used EV credit up to $4,000.",
+      "chargingHome": {
+        "installCost": {
+          "min": 500,
+          "typical": 1200,
+          "max": 2500
+        },
+        "monthlyElectricity": {
+          "min": 30,
+          "typical": 50,
+          "max": 80
+        },
+        "notes": "Level 2 (240V) home charger. Electricity ~$0.12-0.16/kWh. ~1,000 mi/month = ~300 kWh = $36-48/mo."
+      },
+      "chargingPublic": {
+        "perKwh": {
+          "min": 0.3,
+          "typical": 0.43,
+          "max": 0.6
+        },
+        "notes": "Tesla Supercharger ~$0.40-0.50/kWh. Electrify America ~$0.43/kWh. ChargePoint varies. Free L2 chargers at some retailers."
+      },
+      "insurance": {
+        "monthly": {
+          "min": 140,
+          "typical": 180,
+          "max": 250
+        },
+        "notes": "EV insurance 15-25% higher than comparable ICE vehicle. Shop Liberty Mutual, Progressive, Tesla Insurance where available."
+      },
+      "maintenance": {
+        "annual": {
+          "min": 400,
+          "typical": 600,
+          "max": 900
+        },
+        "notes": "No oil changes, fewer brake jobs (regen braking). Tire rotation every 7,500 mi. Cabin air filter annually. Brake fluid every 2-3 yrs. 12V battery every 4-5 yrs (~$100). Tires wear faster on heavier EVs."
+      },
+      "registration": {
+        "annual": {
+          "min": 100,
+          "typical": 200,
+          "max": 300
+        },
+        "notes": "Many states add EV-specific fees ($100-275/yr) to replace lost gas tax revenue. Virginia: $64/yr EV fee."
+      },
+      "batteryWarranty": "8 years / 100,000 miles (federal minimum). Most manufacturers cover 70-80% capacity retention.",
+      "depreciationNotes": "EVs depreciate 40-50% in first 3 years, though Tesla holds value better. Used EV market improving. Budget ~$3,000-5,000/yr depreciation on $35K vehicle.",
+      "totalMonthlyOwnership": {
+        "min": 250,
+        "typical": 380,
+        "max": 550
+      },
+      "totalMonthlyNotes": "Includes: charging ($50), insurance ($180), maintenance ($50/mo avg), registration ($17/mo). Excludes: purchase/loan payment, depreciation.",
+      "sources": [
+        {
+          "title": "Federal EV Tax Credit - IRS",
+          "url": "https://www.irs.gov/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after"
+        },
+        {
+          "title": "EV Maintenance Costs - AAA",
+          "url": "https://www.aaa.com/autorepair/articles/ev-maintenance"
+        },
+        {
+          "title": "EV Charging Costs - DOE",
+          "url": "https://afdc.energy.gov/fuels/electricity-charging-home"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 65,
+    "discounts": [
+      {
+        "name": "Medicare",
+        "description": "Federal health insurance at 65. Part A (hospital) premium-free for most. Part B (medical) ~$185/month. Part D (drugs) $10-50/month.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "AARP Membership",
+        "description": "Annual membership $16. Discounts on insurance, dining, travel, retail, and entertainment. Available at age 50+.",
+        "eligibilityAge": 50
+      },
+      {
+        "name": "Texas No State Income Tax",
+        "description": "Texas has no state income tax, so Social Security benefits and all retirement income are not taxed at the state level. No age-related deduction needed.",
+        "eligibilityAge": 0
+      },
+      {
+        "name": "CapMetro Senior Transit Fare",
+        "description": "Half-price fares on all CapMetro bus and MetroRail services for riders 65+. Reduced Fare ID card required.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Travis County Senior Programs",
+        "description": "Free or reduced-cost recreation programs, senior centers, health screenings, tax preparation assistance through Area Agency on Aging of the Capital Area.",
+        "eligibilityAge": 60
+      },
+      {
+        "name": "Texas Property Tax Exemptions",
+        "description": "Homeowners 65+ qualify for additional $10,000 homestead exemption and school tax freeze. Renters benefit indirectly through landlord savings.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "America the Beautiful Senior Pass",
+        "description": "Lifetime pass to all national parks and federal recreation areas for $80 (or $20/year).",
+        "eligibilityAge": 62
+      },
+      {
+        "name": "SilverSneakers Fitness",
+        "description": "Free gym membership through participating Medicare Advantage and Medigap plans. Access to 17,000+ locations nationwide.",
+        "eligibilityAge": 65
+      }
+    ]
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 50,
+      "typical": 60,
+      "max": 75
+    },
+    "plans": [
+      {
+        "name": "T-Mobile 55+ Essentials",
+        "type": "US Domestic",
+        "lines": 2,
+        "dataPerLine": "Unlimited (50GB priority)",
+        "baseCost": 55,
+        "taxesAndFees": 5,
+        "monthlyTotal": 60,
+        "notes": "2 lines unlimited talk/text/data. TX wireless tax ~8% + federal USF. 5G included. Lower wireless taxes than Virginia."
+      }
+    ],
+    "sources": [
+      {
+        "title": "T-Mobile 55+ Plans",
+        "url": "https://www.t-mobile.com/cell-phone-plans/unlimited-55-plus"
+      },
+      {
+        "title": "TX Wireless Tax Rates",
+        "url": "https://taxfoundation.org/data/all/state/wireless-taxes-2024/"
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom single-family house",
+    "monthlyBudget": {
+      "min": 1800,
+      "max": 2600,
+      "typical": 2150
+    },
+    "breakdown": {
+      "baseRent": 2150,
+      "rentersInsurance": 40,
+      "localTaxesFees": 0,
+      "total": 2190,
+      "notes": "Water, sewage, and trash are separate utility bills — see utilities breakdown."
+    },
+    "taxNotes": "Texas has no rental tax. Property tax is among the highest in the US (~1.8-2.2% in Travis County) — landlord responsibility but significantly reflected in rent. Renter's insurance recommended but not legally required.",
+    "leaseTerms": "12-month standard lease. Security deposit typically 1 month rent ($2,150). Pet deposit common ($200-500, non-refundable pet fee common in TX).",
+    "marketNotes": "Austin rental market cooled from 2021-2023 tech boom peak but remains above national average. 2BR houses available in suburbs (Round Rock, Cedar Park, Pflugerville). Central Austin skews toward apartments/condos. New construction has increased supply.",
+    "sources": [
+      {
+        "name": "Zillow Austin Rental Market",
+        "url": "https://www.zillow.com/rental-manager/market-trends/austin-tx/"
+      },
+      {
+        "name": "Travis County Property Tax Rates",
+        "url": "https://tax-office.traviscountytx.gov/"
+      }
+    ],
+    "housingSites": {
+      "rentals": [
+        {
+          "name": "Zillow",
+          "url": "https://www.zillow.com/austin-tx/rentals/",
+          "type": "rental"
+        },
+        {
+          "name": "Apartments.com",
+          "url": "https://www.apartments.com/austin-tx/",
+          "type": "rental"
+        },
+        {
+          "name": "Realtor.com",
+          "url": "https://www.realtor.com/realestateandhomes-search/Austin_TX",
+          "type": "purchase"
+        }
+      ]
+    }
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "H-E-B",
+        "type": "supermarket",
+        "website": "https://www.heb.com/",
+        "notes": "Texas-based chain, dominant in Austin. Excellent prices, store brand quality.",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Inside H-E-B: Why Texans Love It",
+            "url": "https://www.youtube.com/watch?v=SXpEEMjHRYA"
+          },
+          {
+            "platform": "instagram",
+            "title": "H-E-B Official",
+            "url": "https://www.instagram.com/hebgrocery/"
+          }
+        ]
+      },
+      {
+        "name": "Central Market",
+        "type": "specialty-grocery",
+        "website": "https://centralmarket.com/",
+        "notes": "H-E-B's upscale brand. Specialty/organic items, cooking classes, prepared foods.",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Central Market Austin Tour",
+            "url": "https://www.youtube.com/watch?v=xQJg8bnCpzc"
+          },
+          {
+            "platform": "instagram",
+            "title": "Central Market Official",
+            "url": "https://www.instagram.com/centralmarket/"
+          }
+        ]
+      },
+      {
+        "name": "SFC Farmers' Market at Sunset Valley",
+        "type": "farmers-market",
+        "website": "https://www.sfcfarmersmarket.org/",
+        "notes": "Year-round Saturday market. Local produce, meats, artisan goods. Sustainable Food Center.",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "SFC Farmers Market Austin",
+            "url": "https://www.youtube.com/watch?v=7AH_K3VJ8Bs"
+          },
+          {
+            "platform": "instagram",
+            "title": "SFC Farmers Market",
+            "url": "https://www.instagram.com/sfcfarmersmarket/"
+          }
+        ]
+      }
+    ]
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 60,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Farmers market or CSA box"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 40,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Bananas, berries, apples, citrus"
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 20,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Sweet Potatoes / Potatoes",
+            "monthlyCost": 15,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet staple"
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 12,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet vegetables"
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 10,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Digestive health, home-cooked diet"
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 50,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Primary protein for both adults & dog"
+          },
+          {
+            "name": "Ground Turkey / Beef",
+            "monthlyCost": 45,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean ground for dog food base"
+          },
+          {
+            "name": "Fish (salmon/tilapia)",
+            "monthlyCost": 40,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Omega-3 rich"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": "Eggs also for dog diet"
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 12,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Essential for balanced home-cooked dog diet"
+          },
+          {
+            "name": "Beans / Lentils",
+            "monthlyCost": 8,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "grains",
+        "name": "Grains & Starches",
+        "items": [
+          {
+            "name": "Rice (brown/white)",
+            "monthlyCost": 10,
+            "quantity": 5,
+            "unit": "lbs/month",
+            "forWhom": "shared",
+            "notes": "Dog diet carb source"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "loaves/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 8,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Oats / Cereal",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "container/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk / Plant Milk",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Cheese",
+            "monthlyCost": 20,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Yogurt / Kefir",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "quart/week",
+            "forWhom": "shared",
+            "notes": "Probiotics for dog digestion too"
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "unit/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Olive Oil / Cooking Oils",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Spices & Seasonings",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Canned Goods (tomatoes, beans)",
+            "monthlyCost": 12,
+            "quantity": 6,
+            "unit": "cans/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Condiments & Sauces",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 25,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tea",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "box/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Wine / Beer",
+            "monthlyCost": 40,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Optional"
+          },
+          {
+            "name": "Sparkling Water / Juice",
+            "monthlyCost": 12,
+            "quantity": 1,
+            "unit": "case/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "snacks",
+        "name": "Snacks & Treats",
+        "items": [
+          {
+            "name": "Nuts & Trail Mix",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Crackers / Chips",
+            "monthlyCost": 10,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Dark Chocolate",
+            "monthlyCost": 8,
+            "quantity": 4,
+            "unit": "bars/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "frozen",
+        "name": "Frozen Foods",
+        "items": [
+          {
+            "name": "Frozen Vegetables",
+            "monthlyCost": 12,
+            "quantity": 4,
+            "unit": "bags/month",
+            "forWhom": "shared",
+            "notes": "Backup for dog food prep"
+          },
+          {
+            "name": "Frozen Fruit (smoothies)",
+            "monthlyCost": 10,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Frozen Meals (convenience)",
+            "monthlyCost": 15,
+            "quantity": 4,
+            "unit": "meals/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "supplements",
+        "name": "Pet Supplements & Health",
+        "items": [
+          {
+            "name": "Joint Supplement (glucosamine)",
+            "monthlyCost": 30,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Essential for Bernese — hip/joint health"
+          },
+          {
+            "name": "Fish Oil (omega-3)",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Coat & skin health"
+          },
+          {
+            "name": "Multivitamin / Mineral Mix",
+            "monthlyCost": 20,
+            "quantity": 1,
+            "unit": "container/month",
+            "forWhom": "dog",
+            "notes": "Balance home-cooked diet"
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "dog",
+            "notes": "Training & dental chews"
+          }
+        ]
+      }
+    ],
+    "monthlyTotal": 712
+  },
+  "healthcare": {
+    "system": "Medicare + Medigap supplement",
+    "coverageSummary": "Medicare Part A (free) + Part B ($174.70/mo pp) + Medigap Plan G (~$200/mo pp) + Part D (~$45/mo pp). IRA out-of-pocket cap $2,000/yr starting 2025.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD (macular degeneration)"
+      ],
+      "costs": [
+        {
+          "item": "Medicare Part B premium",
+          "monthlyCost": 175,
+          "notes": "Standard 2025 premium per person"
+        },
+        {
+          "item": "Medigap Plan G premium",
+          "monthlyCost": 210,
+          "notes": "Higher due to AMD + multiple conditions. Age-rated."
+        },
+        {
+          "item": "Part D premium",
+          "monthlyCost": 45,
+          "notes": "Tier 3 plan to cover GLP-1"
+        },
+        {
+          "item": "Anti-VEGF injections (Eylea/Lucentis)",
+          "monthlyCost": 80,
+          "notes": "Medicare covers 80%, Medigap covers 20% coinsurance. ~6-8 injections/yr at $40-50 copay each."
+        },
+        {
+          "item": "Ophthalmologist specialist visits",
+          "monthlyCost": 25,
+          "notes": "OCT scans every 4-8 weeks. Medicare + Medigap covers most."
+        },
+        {
+          "item": "Endocrinologist (thyroid monitoring)",
+          "monthlyCost": 10,
+          "notes": "Quarterly bloodwork/visits. Low copay with Medigap."
+        },
+        {
+          "item": "Pulmonologist (asthma check-ups)",
+          "monthlyCost": 8,
+          "notes": "Annual visit + as-needed. Mild asthma, infrequent."
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Gout",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Migraines"
+      ],
+      "costs": [
+        {
+          "item": "Medicare Part B premium",
+          "monthlyCost": 175,
+          "notes": "Standard 2025 premium per person"
+        },
+        {
+          "item": "Medigap Plan G premium",
+          "monthlyCost": 190,
+          "notes": "Slightly lower — no AMD, but diabetes management"
+        },
+        {
+          "item": "Part D premium",
+          "monthlyCost": 40,
+          "notes": "All generics — lower tier plan sufficient"
+        },
+        {
+          "item": "Endocrinologist (diabetes mgmt)",
+          "monthlyCost": 15,
+          "notes": "Quarterly A1C, bloodwork. Covered well by Medicare."
+        },
+        {
+          "item": "Diabetes supplies (strips, lancets)",
+          "monthlyCost": 25,
+          "notes": "Medicare Part B covers glucose monitors. Some copays."
+        },
+        {
+          "item": "Rheumatologist (gout monitoring)",
+          "monthlyCost": 8,
+          "notes": "Semi-annual visits. Uric acid monitoring."
+        },
+        {
+          "item": "Neurologist (migraine follow-up)",
+          "monthlyCost": 8,
+          "notes": "Annual-semi-annual visits for topiramate management."
+        }
+      ]
+    },
+    "shared": [
+      {
+        "item": "Dental insurance (2 adults)",
+        "monthlyCost": 70,
+        "notes": "Separate dental plan ~$35/person. Medicare does not cover dental."
+      },
+      {
+        "item": "Vision insurance (2 adults)",
+        "monthlyCost": 25,
+        "notes": "Basic vision plan. AMD specialist visits covered by Medicare Part B."
+      },
+      {
+        "item": "Annual physicals & preventive care",
+        "monthlyCost": 0,
+        "notes": "Covered 100% by Medicare — no copay for preventive."
+      }
+    ],
+    "monthlyTotals": {
+      "person1": 553,
+      "person2": 461,
+      "shared": 95,
+      "household": 1109
+    },
+    "notes": null,
+    "phaseTransition": null
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Black Hair Care",
+      "priceRange": {
+        "cut": "30-60",
+        "color": "75-140",
+        "fullService": "95-220"
+      },
+      "notes": "Austin's Black community is smaller but growing. East Austin and Pflugerville/Round Rock have the most options.",
+      "providers": [
+        {
+          "name": "Salon by Sweetie",
+          "type": "Full-service salon",
+          "address": "East Austin, TX",
+          "distanceMi": 8,
+          "rating": 4.8,
+          "notes": "Highly rated for natural hair, locs, color, protective styles. Black-owned.",
+          "website": ""
+        },
+        {
+          "name": "The Cut Creator",
+          "type": "Barber/salon",
+          "address": "Pflugerville, TX",
+          "distanceMi": 15,
+          "rating": 4.6,
+          "notes": "Cuts, fades, color for men and women. Experienced with textured hair.",
+          "website": ""
+        }
+      ]
+    },
+    "whiteHairCare": {
+      "label": "White/Caucasian Hair Care",
+      "priceRange": {
+        "cut": "35-60",
+        "color": "80-155",
+        "highlights": "110-200"
+      },
+      "notes": "South Congress, Domain, and downtown have the trendiest salons. Prices slightly above national average.",
+      "providers": [
+        {
+          "name": "Salon Misgav",
+          "type": "Upscale salon",
+          "address": "Downtown Austin",
+          "distanceMi": 10,
+          "rating": 4.8,
+          "notes": "Top Austin salon for color. Balayage specialists, grey blending.",
+          "website": ""
+        },
+        {
+          "name": "Birds Barbershop",
+          "type": "Hip salon/barber",
+          "address": "Multiple Austin locations",
+          "distanceMi": 5,
+          "rating": 4.6,
+          "notes": "Austin icon. Cuts and color for all. Walk-in friendly. Moderate prices.",
+          "website": ""
+        }
+      ]
+    },
+    "mensBigTall": {
+      "label": "Men's Big & Tall Clothing",
+      "priceRange": {
+        "shirts": "28-75",
+        "pants": "35-65",
+        "suits": "130-370"
+      },
+      "notes": "DXL north of Austin. Domain and Barton Creek Mall for department store extended sizes.",
+      "providers": [
+        {
+          "name": "DXL Big + Tall",
+          "type": "Specialty retail",
+          "address": "North Austin/Round Rock",
+          "distanceMi": 15,
+          "rating": 4.3,
+          "notes": "Full big & tall range. Good casual and western wear section.",
+          "website": "https://www.dxl.com/"
+        },
+        {
+          "name": "Nordstrom (Domain)",
+          "type": "Department store",
+          "address": "North Austin",
+          "distanceMi": 12,
+          "rating": 4.5,
+          "notes": "Extended sizes, tailoring. Best in-store selection in Austin area.",
+          "website": ""
+        }
+      ]
+    },
+    "womensClothing": {
+      "label": "Women's Regular Clothing",
+      "priceRange": {
+        "casual": "25-65",
+        "dresses": "45-120",
+        "professional": "55-145"
+      },
+      "notes": "The Domain, Barton Creek Mall, and South Congress boutiques. Austin style is casual-chic.",
+      "providers": [
+        {
+          "name": "Nordstrom (Domain)",
+          "type": "Department store",
+          "address": "North Austin",
+          "distanceMi": 12,
+          "rating": 4.6,
+          "notes": "Full women's range. Good mix of casual and professional.",
+          "website": ""
+        },
+        {
+          "name": "South Congress Boutiques",
+          "type": "Boutique district",
+          "address": "South Austin",
+          "distanceMi": 10,
+          "rating": 4.5,
+          "notes": "Indie boutiques, vintage, unique pieces. Austin vibe. Regular sizes.",
+          "website": ""
+        }
+      ]
+    },
+    "shoes": {
+      "label": "Shoes",
+      "priceRange": {
+        "casual": "38-90",
+        "dress": "65-140",
+        "athletic": "60-130",
+        "wideWidth": "48-120"
+      },
+      "notes": "Good selection at Domain and Barton Creek. Allen Premium Outlets 30 min north.",
+      "providers": [
+        {
+          "name": "DSW (Multiple locations)",
+          "type": "Shoe warehouse",
+          "address": "Austin area",
+          "distanceMi": 8,
+          "rating": 4.3,
+          "notes": "Wide widths available. Multiple locations.",
+          "website": "https://www.dsw.com/"
+        },
+        {
+          "name": "Nordstrom (Domain)",
+          "type": "Department store",
+          "address": "North Austin",
+          "distanceMi": 12,
+          "rating": 4.5,
+          "notes": "Best shoe department in Austin. Expert fitters. Extended sizes.",
+          "website": ""
+        }
+      ]
+    }
+  }
+}

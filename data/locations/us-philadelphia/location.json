@@ -1,0 +1,277 @@
+{
+  "id": "us-philadelphia",
+  "name": "Philadelphia, Pennsylvania",
+  "country": "United States",
+  "region": "Pennsylvania",
+  "cities": [
+    "Philadelphia"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Citizen",
+    "incomeRequirement": null,
+    "notes": "US citizen, no visa required."
+  },
+  "climate": {
+    "winterLowF": 25,
+    "summerHighF": 88,
+    "rainyDaysPerYear": 120,
+    "meetsWarmWinterReq": false
+  },
+  "monthlyCosts": {
+    "rent": {
+      "min": 1519,
+      "max": 2301,
+      "typical": 1910,
+      "type": "2-bedroom rowhouse/single-family house",
+      "annualInflation": 0.03,
+      "notes": "Philadelphia has no residential rental tax (commercial rentals taxed at 8. Water, sewage, and trash are separate utility bills (not included in rent).",
+      "gigInternetTypical": 1970,
+      "gigInternetCoverage": 85,
+      "gigInternetProviders": "Verizon Fios, Comcast Xfinity",
+      "gigInternetNotes": "Fios widely available in Philadelphia proper and most rowhouse neighborhoods. Some gaps in West/Southwest Philly. ~85% fiber coverage."
+    },
+    "groceries": {
+      "min": 1225,
+      "max": 1575,
+      "typical": 1400,
+      "notes": "2 adults + pet food",
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "min": 248,
+      "max": 403,
+      "typical": 310,
+      "annualInflation": 0.03,
+      "breakdown": {
+        "electricity": {
+          "typical": 125,
+          "notes": "PECO Energy. Moderate A/C; some electric heat in older homes."
+        },
+        "gas": {
+          "typical": 70,
+          "notes": "PGW (Philadelphia Gas Works). Primary heating, cooking."
+        },
+        "water": {
+          "typical": 55,
+          "notes": "Philadelphia Water Dept. Among highest water rates in US. Tiered pricing."
+        },
+        "sewage": {
+          "typical": 40,
+          "notes": "Billed with water. Philadelphia stormwater + sewer charges."
+        },
+        "trash": {
+          "typical": 20,
+          "notes": "City of Philadelphia Streets Dept. Included in city services for most residences."
+        }
+      },
+      "taxes": "Pennsylvania exempts residential utilities from 6% sales tax.",
+      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig). "
+    },
+    "healthcare": {
+      "min": 550,
+      "max": 850,
+      "typical": 650,
+      "notes": "Medicare Part B ($174.70/mo) + Medigap Plan G (~$200/mo x2 people) + Part D (~$45/mo x2) + dental/vision plans. Higher premiums reflect macular degeneration specialist coverage and frequent monitoring needs.",
+      "annualInflation": 0.055
+    },
+    "insurance": {
+      "min": 30,
+      "max": 50,
+      "typical": 40,
+      "annualInflation": 0.03
+    },
+    "petCare": {
+      "min": 120,
+      "max": 220,
+      "typical": 160,
+      "annualInflation": 0.04,
+      "notes": "Vet visits, vaccinations, flea/tick, pet insurance; Penn Vet nearby"
+    },
+    "petDaycare": {
+      "min": 310,
+      "max": 470,
+      "typical": 380,
+      "annualInflation": 0.03,
+      "notes": "Doggy daycare 2 days/week, large breed rate (~$44/day). Camp Bow Wow, Zoom Room, Lucky Dog Daycare. Prices vary by neighborhood."
+    },
+    "petGrooming": {
+      "min": 80,
+      "max": 150,
+      "typical": 110,
+      "annualInflation": 0.03,
+      "notes": "Bernese coat maintenance, professional grooming monthly"
+    },
+    "transportation": {
+      "min": 120,
+      "max": 250,
+      "typical": 170,
+      "notes": "SEPTA transit + walkable center city; car optional",
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "min": 420,
+      "max": 660,
+      "typical": 530,
+      "annualInflation": 0.025,
+      "notes": "Incl cable+1Gig internet, Netflix, Amazon Prime, Apple TV+, dining out (lunch for 2 2x/week w/ tax+tip)"
+    },
+    "clothing": {
+      "min": 100,
+      "max": 250,
+      "typical": 150,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "min": 40,
+      "max": 90,
+      "typical": 60,
+      "annualInflation": 0.02
+    },
+    "subscriptions": {
+      "min": 30,
+      "max": 80,
+      "typical": 50,
+      "annualInflation": 0.03,
+      "notes": "Streaming, news, apps"
+    },
+    "phoneCell": {
+      "min": 55,
+      "max": 90,
+      "typical": 68,
+      "annualInflation": 0.02,
+      "notes": "T-Mobile 55+ Essentials. 2 phones, 1.5GB+ high-speed data each, all taxes included."
+    },
+    "miscellaneous": {
+      "min": 100,
+      "max": 180,
+      "typical": 140,
+      "annualInflation": 0.025
+    },
+    "buffer": {
+      "min": 800,
+      "max": 800,
+      "typical": 800,
+      "annualInflation": 0.025,
+      "notes": "Monthly safety buffer for unexpected expenses"
+    },
+    "medicalOOP": {
+      "min": 325,
+      "max": 700,
+      "typical": 475,
+      "annualInflation": 0.055,
+      "notes": "Anti-VEGF injections for macular degeneration (~$300-400 OOP each, 6-10x/yr after Medicare 80%). Specialist visits: ophthalmologist q6-8wks, endocrinologist 2-4x/yr, cardiologist 1-2x/yr. Frequent labs: lipid panel, TSH, A1C, CMP 3-4x/yr each. Both adults: PCP visits quarterly."
+    },
+    "medicine": {
+      "min": 73,
+      "typical": 91,
+      "max": 925,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "taxes": {
+      "min": 0,
+      "typical": 0,
+      "max": 0,
+      "annualInflation": 0.02
+    }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true,
+      "brackets": [
+        {
+          "min": 0,
+          "max": 23850,
+          "rate": 0.1
+        },
+        {
+          "min": 23850,
+          "max": 96950,
+          "rate": 0.12
+        },
+        {
+          "min": 96950,
+          "max": 206700,
+          "rate": 0.22
+        },
+        {
+          "min": 206700,
+          "max": 394600,
+          "rate": 0.24
+        },
+        {
+          "min": 394600,
+          "max": 501050,
+          "rate": 0.32
+        },
+        {
+          "min": 501050,
+          "max": 751600,
+          "rate": 0.35
+        },
+        {
+          "min": 751600,
+          "max": null,
+          "rate": 0.37
+        }
+      ],
+      "standardDeduction": 30000
+    },
+    "stateIncomeTax": {
+      "rate": 0.0307,
+      "type": "flat",
+      "brackets": [
+        {
+          "min": 0,
+          "max": null,
+          "rate": 0.0307
+        }
+      ],
+      "deduction": 0,
+      "exemptions": "SS and all retirement income exempt from PA tax. City wage tax 3.75% on earned income only (not retirement)."
+    },
+    "salesTax": {
+      "rate": 0.08,
+      "notes": "6% state + 2% Philadelphia"
+    },
+    "propertyTax": {
+      "rate": 0
+    },
+    "socialCharges": null,
+    "vatRate": 0,
+    "estVehicleTax": 0,
+    "ssExempt": true,
+    "retirementExempt": true,
+    "notes": "PA exempts all retirement income from state tax."
+  },
+  "healthcare": {
+    "system": "Medicare (at 65) + private supplement",
+    "qualityRating": 9,
+    "waitTimes": "low-moderate",
+    "dentalIncluded": false,
+    "prescriptionCoverage": "Part D plan"
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps+ available (Verizon Fios/Comcast)",
+    "dogFriendly": 7,
+    "expatCommunity": 0,
+    "englishPrevalence": 10,
+    "safetyRating": 5
+  },
+  "pros": [
+    "World-class healthcare (Penn, Jefferson, Temple)",
+    "PA exempts SS and retirement income from state tax",
+    "Excellent public transit (SEPTA + Amtrak hub)",
+    "Rich cultural scene (museums, music, food)",
+    "More affordable than NYC/DC"
+  ],
+  "cons": [
+    "Cold winters (25F lows)",
+    "Philadelphia city wage tax (3.75%)",
+    "Higher crime in some areas",
+    "High sales tax (8%)",
+    "Aging infrastructure"
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 50,
+      "typical": 65,
+      "max": 380
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutida / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 280,
+        "withoutInsurance": 330,
+        "coverageNote": "Limited FONASA/mutualista coverage. Cash price at pharmacies."
+      },
+      {
+        "name": "Levotiroxina [P1]",
+        "monthlyCost": 3,
+        "withoutInsurance": 6,
+        "coverageNote": "FONASA mutualista covers with small copay"
+      },
+      {
+        "name": "Atorvastatina 20mg [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 8,
+        "coverageNote": "Generic available, mutualista covered"
+      },
+      {
+        "name": "Montelukast [P1]",
+        "monthlyCost": 5,
+        "withoutInsurance": 12,
+        "coverageNote": "Mutualista covered"
+      },
+      {
+        "name": "Hidroclorotiazida [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 4,
+        "coverageNote": "Inexpensive generic"
+      },
+      {
+        "name": "Olmesartán [P1]",
+        "monthlyCost": 8,
+        "withoutInsurance": 18,
+        "coverageNote": "Available at pharmacies"
+      },
+      {
+        "name": "Salbutamol (inhalador) [P1]",
+        "monthlyCost": 3,
+        "withoutInsurance": 6,
+        "coverageNote": "Mutualista covered"
+      },
+      {
+        "name": "Metformina 500mg [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 4,
+        "coverageNote": "Inexpensive generic, FONASA covered"
+      },
+      {
+        "name": "Alopurinol [P2]",
+        "monthlyCost": 3,
+        "withoutInsurance": 6,
+        "coverageNote": "Generic available"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 3,
+        "withoutInsurance": 6,
+        "coverageNote": "Generic available"
+      },
+      {
+        "name": "Topiramato [P2]",
+        "monthlyCost": 8,
+        "withoutInsurance": 18,
+        "coverageNote": "Available at pharmacies"
+      },
+      {
+        "name": "Metoprolol [P2]",
+        "monthlyCost": 3,
+        "withoutInsurance": 6,
+        "coverageNote": "Generic available"
+      },
+      {
+        "name": "Atorvastatina 20mg [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 8,
+        "coverageNote": "Generic available"
+      }
+    ],
+    "pharmacyAccess": "Farmashop, Farmacia San Roque, and independent farmacias. Prescription required for most medications. Generics available but selection smaller than larger Latin American markets.",
+    "notes": "Uruguay FONASA provides healthcare through mutualistas (private non-profit providers). Legal residents must enroll (4.5-8% of income). Medication coverage varies by mutualista plan. Uruguay is more expensive than other Latin American countries."
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 72,
+      "typical": 87,
+      "max": 107
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in Uruguay at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "Antel Postpaid",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "6GB 4G",
+        "baseCost": 22,
+        "taxesAndFees": 0,
+        "monthlyTotal": 22,
+        "notes": "2 lines ~UY$450/line (~$11). Antel is state telecom, best coverage."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      }
+    ]
+  }
+}

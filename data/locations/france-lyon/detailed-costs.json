@@ -1,0 +1,1258 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 29,
+      "typical": 36,
+      "max": 265
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 220,
+        "coverageNote": "Covered 65% by Securite Sociale for T2 diabetes. Mutuelle covers remainder. ~220 EUR/mo without coverage."
+      },
+      {
+        "name": "Levothyroxine (Levothyrox) [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 5,
+        "coverageNote": "65% covered by Securite Sociale; mutuelle covers ticket moderateur"
+      },
+      {
+        "name": "Atorvastatine 20mg [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 8,
+        "coverageNote": "65% covered by Securite Sociale"
+      },
+      {
+        "name": "Montelukast (Singulair) [P1]",
+        "monthlyCost": 3,
+        "withoutInsurance": 12,
+        "coverageNote": "65% covered by Securite Sociale"
+      },
+      {
+        "name": "Hydrochlorothiazide [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 4,
+        "coverageNote": "65% covered by Securite Sociale"
+      },
+      {
+        "name": "Olmesartan (Alteis/Olmetec) [P1]",
+        "monthlyCost": 3,
+        "withoutInsurance": 15,
+        "coverageNote": "65% covered by Securite Sociale"
+      },
+      {
+        "name": "Salbutamol (Ventoline) [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 4,
+        "coverageNote": "65% covered by Securite Sociale"
+      },
+      {
+        "name": "Metformine 500mg [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "100% covered under ALD (Affection Longue Duree) for diabetes"
+      },
+      {
+        "name": "Allopurinol [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 5,
+        "coverageNote": "65% covered by Securite Sociale"
+      },
+      {
+        "name": "Lisinopril (Zestril) [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 6,
+        "coverageNote": "65% covered by Securite Sociale"
+      },
+      {
+        "name": "Topiramate (Epitomax) [P2]",
+        "monthlyCost": 3,
+        "withoutInsurance": 15,
+        "coverageNote": "65% covered by Securite Sociale"
+      },
+      {
+        "name": "Metoprolol (Seloken) [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 6,
+        "coverageNote": "65% covered by Securite Sociale"
+      },
+      {
+        "name": "Atorvastatine 20mg [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 8,
+        "coverageNote": "65% covered by Securite Sociale"
+      }
+    ],
+    "pharmacyAccess": "Excellent pharmacy density in Lyon. Multiple pharmacies in every arrondissement. 24-hour pharmacie de garde available. Hospital pharmacies at Hospices Civils de Lyon (HCL) for specialized medications.",
+    "prescriptionSystem": "Ordonnance from médecin traitant required. Carte Vitale processes reimbursement automatically at pharmacy. Renouvelable prescriptions valid up to 1 year. Lyon has strong network of généralistes and specialists.",
+    "insuranceCoverage": "Sécurité Sociale covers 70% of most prescription medications. Mutuelle complémentaire covers remaining 30% (ticket modérateur). ALD (Affection Longue Durée) provides 100% coverage for chronic conditions.",
+    "sources": [
+      {
+        "title": "Ameli.fr - Remboursement des médicaments",
+        "url": "https://www.ameli.fr/assure/remboursements/rembourse/medicament-vaccin/medicament"
+      },
+      {
+        "title": "Hospices Civils de Lyon",
+        "url": "https://www.chu-lyon.fr/"
+      }
+    ]
+  },
+  "vision": {
+    "annualExamCost": {
+      "withInsurance": 0,
+      "withoutInsurance": 25,
+      "notes": "Consultation ophtalmologue conventionné secteur 1: €30, SS reimburses 70%, mutuelle covers rest. Secteur 2 dépassements possible in Lyon."
+    },
+    "eyeglasses": {
+      "basicFrameAndLens": {
+        "min": 100,
+        "typical": 280,
+        "max": 650
+      },
+      "progressiveLens": {
+        "min": 200,
+        "typical": 420,
+        "max": 850
+      },
+      "contactLensesMonthly": {
+        "min": 20,
+        "typical": 35,
+        "max": 60
+      }
+    },
+    "insuranceCoverage": "100% Santé offers zero-cost glasses (Class A frames + lenses) every 2 years. Many Lyon opticians carry good 100% Santé selections. Contact lenses reimbursed only for specific conditions.",
+    "specialistWaitTime": "2-4 months for ophthalmologist in Lyon; better than national average. Orthoptists can renew prescriptions. Major eye clinics: Clinique de la Part-Dieu, Centre Ophtalmologique Kléber.",
+    "seniorConsiderations": "Annual eye exams recommended for glaucoma and macular degeneration screening. 100% Santé particularly valuable for progressive lenses. Multiple low-vision specialists in Lyon.",
+    "sources": [
+      {
+        "title": "Ameli.fr - 100% Santé optique",
+        "url": "https://www.ameli.fr/assure/remboursements/reste-charge-0/optique"
+      },
+      {
+        "title": "Ameli.fr - Consultation ophtalmologue",
+        "url": "https://www.ameli.fr/assure/remboursements/consultations/que-rembourse-assurance-maladie"
+      }
+    ]
+  },
+  "dental": {
+    "annualCleaningCost": {
+      "withInsurance": 0,
+      "withoutInsurance": 30,
+      "notes": "Détartrage: €28.92 tarif conventionné, 70% SS + mutuelle covers rest"
+    },
+    "commonProcedures": [
+      {
+        "procedure": "Filling",
+        "cost": {
+          "min": 30,
+          "typical": 50,
+          "max": 80
+        },
+        "coverageNote": "70% covered"
+      },
+      {
+        "procedure": "Crown (ceramic)",
+        "cost": {
+          "min": 300,
+          "typical": 550,
+          "max": 900
+        },
+        "coverageNote": "100% Santé available"
+      },
+      {
+        "procedure": "Root Canal",
+        "cost": {
+          "min": 150,
+          "typical": 280,
+          "max": 450
+        },
+        "coverageNote": "70% base"
+      },
+      {
+        "procedure": "Extraction",
+        "cost": {
+          "min": 50,
+          "typical": 80,
+          "max": 150
+        },
+        "coverageNote": "70% covered"
+      },
+      {
+        "procedure": "Dental Implant",
+        "cost": {
+          "min": 900,
+          "typical": 1600,
+          "max": 2800
+        },
+        "coverageNote": "Not covered by SS"
+      },
+      {
+        "procedure": "Dentures (full)",
+        "cost": {
+          "min": 500,
+          "typical": 1100,
+          "max": 2200
+        },
+        "coverageNote": "100% Santé option"
+      }
+    ],
+    "insuranceCoverage": "100% Santé reform guarantees zero-cost crowns and dentures (panier sans reste à charge). Devis obligatoire with 3-tier pricing display. Lyon dentists may have higher dépassements on panier libre.",
+    "dentistAvailability": "Good availability in Lyon; shorter waits than rural France. Multiple dental centres de santé. University dental hospital (Hospices Civils) for complex cases. Typical wait 1-3 weeks for routine appointments.",
+    "sources": [
+      {
+        "title": "Ameli.fr - 100% Santé dentaire",
+        "url": "https://www.ameli.fr/assure/remboursements/reste-charge-0/dentaire"
+      },
+      {
+        "title": "Ameli.fr - Soins et prothèses dentaires",
+        "url": "https://www.ameli.fr/assure/remboursements/rembourse/soins-protheses-dentaires"
+      }
+    ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 350,
+      "typical": 420,
+      "max": 530
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 300,
+        "seniorDiscounts": "Bouchons lyonnais offer excellent value prix fixe menus. No tipping expected.",
+        "notes": "Lunch for 2 at moderate restaurant/bouchon: ~€30 (service included), 2x/week = ~€260/mo = ~$300/mo"
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 32,
+        "seniorDiscounts": "Competitive market.",
+        "notes": "Free/Orange/SFR 1 Gig fibre €25-30/mo. Includes TV."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 16,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€14.99/mo"
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 8,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€6.99/mo"
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 11,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€9.99/mo"
+      },
+      {
+        "name": "NFL RedZone",
+        "monthlyCost": 11,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "DAZN NFL Game Pass €19.99/mo during season (Sep-Feb). Annualized ~€10/mo (~$11). Includes RedZone, live games, NFL Network."
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 30,
+        "seniorDiscounts": "Municipal facilities offer senior rates."
+      },
+      {
+        "name": "Books/Media",
+        "monthlyCost": 15,
+        "seniorDiscounts": "Bibliothèque municipale free."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 22,
+        "seniorDiscounts": "No specific discounts.",
+        "notes": "Lyon café scene slightly pricier than rural Brittany."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Free Freebox Fibre",
+        "url": "https://www.free.fr/freebox"
+      },
+      {
+        "title": "Netflix France",
+        "url": "https://help.netflix.com/fr/node/24926"
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 50,
+      "typical": 120,
+      "max": 350
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 69,
+        "senior": 35,
+        "notes": "TCL monthly pass (abonnement mensuel). Senior tarif réduit for 65+ (tarif solidaire income-tested can be even lower)."
+      },
+      "singleRide": 1.9,
+      "coverage": "TCL network: 4 metro lines (A, B, C, D), 7 tram lines (T1-T7), 130+ bus lines, 2 funiculars. Excellent coverage across Lyon and suburbs (Grand Lyon area).",
+      "seniorDiscount": "65+ tarif réduit: ~50% off monthly pass. Income-tested tarif solidaire can reduce further. Free travel during off-peak possible with certain social benefits."
+    },
+    "rideShare": {
+      "baseFare": 3.5,
+      "perKm": 1.2,
+      "typicalCrossTownTrip": {
+        "min": 8,
+        "typical": 13,
+        "max": 22
+      },
+      "availability": "Uber, Bolt, and local taxis widely available. Good coverage across all arrondissements. Presqu'île to Part-Dieu ~€8-12.",
+      "notes": "Taxis available at ranks throughout city. TCL often faster than rideshare due to dedicated metro/tram lanes."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 0,
+        "initialRegistration": {
+          "min": 200,
+          "typical": 450,
+          "max": 800
+        },
+        "notes": "Carte grise based on fiscal horsepower; Auvergne-Rhône-Alpes regional tax ~€43/CV"
+      },
+      "insurance": {
+        "monthlyMin": 45,
+        "monthlyTypical": 70,
+        "monthlyMax": 130,
+        "notes": "Higher premiums than smaller cities due to urban driving and theft risk"
+      },
+      "fuel": {
+        "pricePerLiter": 1.78,
+        "monthlyEstimate": {
+          "min": 50,
+          "typical": 100,
+          "max": 200
+        },
+        "notes": "Diesel €1.68-1.78, SP95 €1.78-1.88; ZFE (low emission zone) restrictions in city center"
+      },
+      "contrôleTechnique": {
+        "cost": 80,
+        "frequency": "Every 2 years",
+        "notes": "Required for vehicles over 4 years old"
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 50,
+          "typical": 90,
+          "max": 160
+        },
+        "hourlyStreet": 2,
+        "notes": "LPA (Lyon Parc Auto) garages throughout city. Resident parking permits for on-street available by arrondissement."
+      },
+      "tolls": {
+        "monthlyEstimate": 30,
+        "notes": "Autoroutes around Lyon are tolled (A6, A7, A43). TEO tunnel toll €3.20/trip. Monthly cost depends on commute patterns."
+      },
+      "seniorDiscounts": "No specific car ownership discounts for seniors. ZFE restrictions may affect older vehicles."
+    },
+    "walkability": "Excellent in Presqu'île, Vieux Lyon, and central arrondissements (1st-6th). Most daily needs walkable in center. Hills in Croix-Rousse and Fourvière. Less walkable in eastern suburbs.",
+    "cycling": {
+      "bikeShareMonthly": 31,
+      "infrastructure": "Vélo'v bike share: 428 stations, 5000+ bikes. €31/year subscription, first 30 min free. Extensive cycling lanes along Rhône and Saône rivers. Lyon rated among best French cities for cycling.",
+      "notes": "Vélo'v is one of France's oldest and best bike-share systems. Electric Vélo'v available. New cycling infrastructure added yearly."
+    },
+    "sources": [
+      {
+        "title": "TCL - Tarifs et abonnements",
+        "url": "https://www.tcl.fr/tarifs"
+      },
+      {
+        "title": "Vélo'v Lyon",
+        "url": "https://velov.grandlyon.com/"
+      },
+      {
+        "title": "Lyon Parc Auto",
+        "url": "https://www.lpa.fr/"
+      }
+    ],
+    "electricVehicle": {
+      "purchasePrice": {
+        "min": 25000,
+        "typical": 35000,
+        "max": 55000
+      },
+      "purchaseNotes": "Renault Megane E-Tech ~€35K, Peugeot e-208 ~€25K, Tesla Model 3 ~€40K, VW ID.4 ~€42K. Strong government incentives (bonus écologique).",
+      "federalIncentive": 4000,
+      "stateIncentive": 0,
+      "incentiveNotes": "Bonus écologique up to €4,000 for new EVs (income-dependent, €7,000 for low-income households). Prime à la conversion up to €5,000 additional for scrapping old diesel/petrol. Leasing social €100/mo for eligible households.",
+      "chargingHome": {
+        "installCost": {
+          "min": 300,
+          "typical": 800,
+          "max": 1500
+        },
+        "monthlyElectricity": {
+          "min": 25,
+          "typical": 40,
+          "max": 65
+        },
+        "notes": "Wallbox installation eligible for 300€ tax credit (CITE). EDF regulated tariff ~€0.22/kWh (Heures Creuses: ~€0.17/kWh). ~1,500 km/month = ~250 kWh = €43-55."
+      },
+      "chargingPublic": {
+        "perKwh": {
+          "min": 0.25,
+          "typical": 0.4,
+          "max": 0.65
+        },
+        "notes": "Ionity €0.39/kWh with subscription. TotalEnergies €0.30-0.45/kWh. Many free or low-cost municipal chargers in Brittany."
+      },
+      "insurance": {
+        "monthly": {
+          "min": 35,
+          "typical": 60,
+          "max": 100
+        },
+        "notes": "EV insurance often comparable to ICE in France. Bonus-malus system rewards low-emission vehicles. Shop MAIF, Matmut, Direct Assurance."
+      },
+      "maintenance": {
+        "annual": {
+          "min": 300,
+          "typical": 450,
+          "max": 700
+        },
+        "notes": "Contrôle technique (MOT) every 2 yrs after 4 yrs. No vidange (oil change). Tire rotation, cabin filter, brake fluid. French labor rates lower than US."
+      },
+      "registration": {
+        "annual": {
+          "min": 0,
+          "typical": 0,
+          "max": 0
+        },
+        "notes": "EVs exempt from carte grise regional tax in most régions including Brittany. No annual road tax (vignette Crit'Air 0 = green sticker, exempt from ZFE restrictions)."
+      },
+      "batteryWarranty": "8 years / 160,000 km. EU regulations guarantee 70% capacity retention.",
+      "depreciationNotes": "Similar to US rates. French market strong for used EVs due to ZFE regulations pushing demand. Renault/Peugeot hold value well domestically.",
+      "totalMonthlyOwnership": {
+        "min": 100,
+        "typical": 175,
+        "max": 280
+      },
+      "totalMonthlyNotes": "Includes: charging (€40), insurance (€60), maintenance (€38/mo avg). No registration fees. Excludes: purchase/loan payment, depreciation.",
+      "sources": [
+        {
+          "title": "Bonus écologique - Service-Public.fr",
+          "url": "https://www.service-public.fr/particuliers/vosdroits/F34014"
+        },
+        {
+          "title": "Prime à la conversion - Primealaconversion.gouv.fr",
+          "url": "https://www.primealaconversion.gouv.fr/"
+        },
+        {
+          "title": "Bornes de recharge - Chargemap",
+          "url": "https://chargemap.com/map"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 60,
+    "discounts": [
+      {
+        "category": "Transit",
+        "description": "TCL tarif réduit senior",
+        "discount": "~50% off monthly pass",
+        "details": "65+ with carte TCL senior; income-tested tarif solidaire available",
+        "source": "https://www.tcl.fr/tarifs"
+      },
+      {
+        "category": "Rail",
+        "description": "SNCF Avantage Senior",
+        "discount": "30% off",
+        "details": "€49/year for TGV/Intercités",
+        "source": "https://www.sncf-connect.com/app/catalogue/description/carte-avantage-senior"
+      },
+      {
+        "category": "Museums",
+        "description": "EU 65+ free/reduced at national museums",
+        "discount": "Free/reduced",
+        "details": "Musée des Confluences: €5 reduced; many Lyon museums free first Sunday of month",
+        "source": "https://www.museedesconfluences.fr/"
+      },
+      {
+        "category": "Cinema",
+        "description": "Tarif senior",
+        "discount": "€2-3 off",
+        "details": "60+ at most cinemas; typically €9 instead of €12-13",
+        "source": ""
+      },
+      {
+        "category": "Tax",
+        "description": "Taxe d'habitation exemption",
+        "discount": "Full exemption possible",
+        "details": "Income-tested; retirees with modest income often qualify",
+        "source": "https://www.service-public.fr/particuliers/vosdroits/F42"
+      },
+      {
+        "category": "Healthcare",
+        "description": "ALD 100% coverage",
+        "discount": "100%",
+        "details": "Chronic conditions fully covered; Hospices Civils de Lyon is major teaching hospital",
+        "source": "https://www.ameli.fr/assure/droits-demarches/maladie-accident-hospitalisation/affection-longue-duree/affection-longue-duree-702"
+      }
+    ]
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 70,
+      "typical": 85,
+      "max": 105
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in France at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "Free Mobile (Local)",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "110GB 5G",
+        "baseCost": 18,
+        "taxesAndFees": 0,
+        "monthlyTotal": 20,
+        "notes": "Free Mobile €8.99/mo per line (20% TVA included). 110GB 5G data, unlimited calls in France + 35 destinations. ~$20/mo for 2 lines."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      },
+      {
+        "title": "Free Mobile Plans",
+        "url": "https://mobile.free.fr/forfaits"
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom house (maison)",
+    "monthlyBudget": {
+      "min": 1100,
+      "max": 1650,
+      "typical": 1350
+    },
+    "breakdown": {
+      "baseRentEUR": 1050,
+      "taxeOrduresMenageresEUR": 22,
+      "chargesLocativesEUR": 35,
+      "totalEUR": 1107,
+      "exchangeRate": 1.08,
+      "totalUSD": 1196
+    },
+    "taxNotes": "Taxe d'habitation eliminated for primary residences. TEOM ~€250-300/year in Lyon metro passed to tenant. Lyon is in a \"zone tendue\" (tight market) with rent control (encadrement des loyers) since Nov 2021. No VAT on residential rent.",
+    "leaseTerms": "3-year lease unfurnished. Lyon is zone tendue: 1-month notice to vacate, rent increases capped by INSEE reference index (IRL). Security deposit 1 month.",
+    "marketNotes": "Houses are scarce in central Lyon (mostly apartments). 2BR houses more available in suburbs: Tassin-la-Demi-Lune, Écully, Oullins, Caluire. Budget 10-20% more than apartment equivalent.",
+    "sources": [
+      {
+        "name": "SeLoger Lyon Rentals",
+        "url": "https://www.seloger.com/immobilier/locations/lyon.htm"
+      },
+      {
+        "name": "Lyon Encadrement des Loyers",
+        "url": "https://www.lyonmetropole.fr/encadrement-des-loyers"
+      }
+    ],
+    "housingSites": {
+      "rentals": [
+        {
+          "name": "SeLoger",
+          "url": "https://www.seloger.com/immobilier/locations/immo-lyon/",
+          "type": "rental"
+        },
+        {
+          "name": "LeBonCoin",
+          "url": "https://www.leboncoin.fr/recherche?category=10&locations=lyon",
+          "type": "rental"
+        },
+        {
+          "name": "Logic-Immo",
+          "url": "https://www.logic-immo.com/vente-immobilier-lyon/",
+          "type": "purchase"
+        }
+      ]
+    }
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Carrefour",
+        "type": "hypermarket",
+        "website": "https://www.carrefour.fr/",
+        "notes": "Multiple Lyon locations, City format in center",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Carrefour France Tour",
+            "url": "https://www.youtube.com/watch?v=kL7RfQp9_qY"
+          },
+          {
+            "platform": "instagram",
+            "title": "@carrefourfrance",
+            "url": "https://www.instagram.com/carrefourfrance/"
+          }
+        ]
+      },
+      {
+        "name": "Les Halles de Lyon Paul Bocuse",
+        "type": "specialty-grocery",
+        "website": "https://www.halles-de-lyon-paulbocuse.com/",
+        "notes": "Famous indoor food hall",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Les Halles de Lyon Paul Bocuse",
+            "url": "https://www.youtube.com/watch?v=9ZJhU2Lm1pg"
+          },
+          {
+            "platform": "instagram",
+            "title": "@hallesdebocuse",
+            "url": "https://www.instagram.com/hallesdebocuse/"
+          }
+        ]
+      },
+      {
+        "name": "Marché de la Croix-Rousse",
+        "type": "farmers-market",
+        "website": "https://www.lyon.fr/marche/marche-de-la-croix-rousse",
+        "notes": "Daily market, one of Lyon's best",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Marché Croix-Rousse Lyon",
+            "url": "https://www.youtube.com/watch?v=_vz6qPMF4qk"
+          },
+          {
+            "platform": "instagram",
+            "title": "@villedelyon",
+            "url": "https://www.instagram.com/villedelyon/"
+          }
+        ]
+      }
+    ]
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 51,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Farmers market or CSA box"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 34,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Bananas, berries, apples, citrus"
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 17,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Sweet Potatoes / Potatoes",
+            "monthlyCost": 12.75,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet staple"
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 10.2,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet vegetables"
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 8.5,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Digestive health, home-cooked diet"
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 42.5,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Primary protein for both adults & dog"
+          },
+          {
+            "name": "Ground Turkey / Beef",
+            "monthlyCost": 38.25,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean ground for dog food base"
+          },
+          {
+            "name": "Fish (salmon/tilapia)",
+            "monthlyCost": 34,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Omega-3 rich"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 12.75,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": "Eggs also for dog diet"
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 10.2,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Essential for balanced home-cooked dog diet"
+          },
+          {
+            "name": "Beans / Lentils",
+            "monthlyCost": 6.8,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "grains",
+        "name": "Grains & Starches",
+        "items": [
+          {
+            "name": "Rice (brown/white)",
+            "monthlyCost": 8.5,
+            "quantity": 5,
+            "unit": "lbs/month",
+            "forWhom": "shared",
+            "notes": "Dog diet carb source"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 12.75,
+            "quantity": 2,
+            "unit": "loaves/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 6.8,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Oats / Cereal",
+            "monthlyCost": 8.5,
+            "quantity": 1,
+            "unit": "container/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk / Plant Milk",
+            "monthlyCost": 12.75,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Cheese",
+            "monthlyCost": 17,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Yogurt / Kefir",
+            "monthlyCost": 12.75,
+            "quantity": 1,
+            "unit": "quart/week",
+            "forWhom": "shared",
+            "notes": "Probiotics for dog digestion too"
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 8.5,
+            "quantity": 1,
+            "unit": "unit/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Olive Oil / Cooking Oils",
+            "monthlyCost": 12.75,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Spices & Seasonings",
+            "monthlyCost": 8.5,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Canned Goods (tomatoes, beans)",
+            "monthlyCost": 10.2,
+            "quantity": 6,
+            "unit": "cans/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Condiments & Sauces",
+            "monthlyCost": 8.5,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 21.25,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tea",
+            "monthlyCost": 6.8,
+            "quantity": 1,
+            "unit": "box/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Wine / Beer",
+            "monthlyCost": 34,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Optional"
+          },
+          {
+            "name": "Sparkling Water / Juice",
+            "monthlyCost": 10.2,
+            "quantity": 1,
+            "unit": "case/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "snacks",
+        "name": "Snacks & Treats",
+        "items": [
+          {
+            "name": "Nuts & Trail Mix",
+            "monthlyCost": 12.75,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Crackers / Chips",
+            "monthlyCost": 8.5,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Dark Chocolate",
+            "monthlyCost": 6.8,
+            "quantity": 4,
+            "unit": "bars/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "frozen",
+        "name": "Frozen Foods",
+        "items": [
+          {
+            "name": "Frozen Vegetables",
+            "monthlyCost": 10.2,
+            "quantity": 4,
+            "unit": "bags/month",
+            "forWhom": "shared",
+            "notes": "Backup for dog food prep"
+          },
+          {
+            "name": "Frozen Fruit (smoothies)",
+            "monthlyCost": 8.5,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Frozen Meals (convenience)",
+            "monthlyCost": 12.75,
+            "quantity": 4,
+            "unit": "meals/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "supplements",
+        "name": "Pet Supplements & Health",
+        "items": [
+          {
+            "name": "Joint Supplement (glucosamine)",
+            "monthlyCost": 25.5,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Essential for Bernese — hip/joint health"
+          },
+          {
+            "name": "Fish Oil (omega-3)",
+            "monthlyCost": 12.75,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Coat & skin health"
+          },
+          {
+            "name": "Multivitamin / Mineral Mix",
+            "monthlyCost": 17,
+            "quantity": 1,
+            "unit": "container/month",
+            "forWhom": "dog",
+            "notes": "Balance home-cooked diet"
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 12.75,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "dog",
+            "notes": "Training & dental chews"
+          }
+        ]
+      }
+    ],
+    "monthlyTotal": 605
+  },
+  "healthcare": {
+    "system": "PUMA (universal) + Mutuelle complémentaire",
+    "coverageSummary": "Sécurité Sociale covers 70% of most care. Mutuelle covers remaining 30% + extras. ALD status for diabetes & hypertension provides 100% coverage for related care.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD"
+      ],
+      "costs": [
+        {
+          "item": "Mutuelle premium (enhanced tier)",
+          "monthlyCost": 70,
+          "notes": "Higher tier for ophthalmology coverage. ~€65-75/mo."
+        },
+        {
+          "item": "Anti-VEGF injections (Eylea)",
+          "monthlyCost": 0,
+          "notes": "Covered 100% at hospital (acte hospitalier). No out-of-pocket."
+        },
+        {
+          "item": "Ophthalmologist visits + OCT",
+          "monthlyCost": 5,
+          "notes": "Sector 2 specialist dépassements. Mutuelle covers most."
+        },
+        {
+          "item": "Médecin traitant visits",
+          "monthlyCost": 3,
+          "notes": "€1.50 franchise per visit after Sécu + mutuelle."
+        },
+        {
+          "item": "Lab work (thyroid, lipid panels)",
+          "monthlyCost": 2,
+          "notes": "Sécu covers 60-100% depending on ALD status."
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Gout",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Migraines"
+      ],
+      "costs": [
+        {
+          "item": "Mutuelle premium (standard tier)",
+          "monthlyCost": 55,
+          "notes": "Standard mutuelle. ALD covers most diabetes costs."
+        },
+        {
+          "item": "ALD coverage (diabetes + hypertension)",
+          "monthlyCost": 0,
+          "notes": "100% Sécu coverage for diabetes & hypertension care."
+        },
+        {
+          "item": "Endocrinologist visits",
+          "monthlyCost": 2,
+          "notes": "Covered under ALD. Minimal ticket modérateur."
+        },
+        {
+          "item": "Diabetes supplies",
+          "monthlyCost": 0,
+          "notes": "100% covered under ALD for T2 diabetes."
+        },
+        {
+          "item": "Specialist copays (rheumatology, neuro)",
+          "monthlyCost": 5,
+          "notes": "Non-ALD specialists: small copays after mutuelle."
+        }
+      ]
+    },
+    "shared": [
+      {
+        "item": "Dental care (2 adults)",
+        "monthlyCost": 10,
+        "notes": "RAC 0 reform: many dental prosthetics 100% covered. Some copays for complex work."
+      },
+      {
+        "item": "Vision care (2 adults)",
+        "monthlyCost": 5,
+        "notes": "Mutuelle covers glasses/contacts every 2 years. AMD specialist care covered by Sécu."
+      }
+    ],
+    "monthlyTotals": {
+      "person1": 80,
+      "person2": 62,
+      "shared": 15,
+      "household": 157
+    },
+    "notes": null,
+    "phaseTransition": null
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Black Hair Care",
+      "priceRange": {
+        "cut": "25-50",
+        "color": "60-130",
+        "fullService": "85-190"
+      },
+      "notes": "Lyon's Guillotiere and Part-Dieu areas have good Afro hair salons. Larger community than Brittany.",
+      "providers": [
+        {
+          "name": "Afro Look Coiffure",
+          "type": "Afro hair salon",
+          "address": "Guillotiere, Lyon 7e",
+          "distanceMi": 0,
+          "rating": 4.4,
+          "notes": "Popular Afro salon in Lyon. Braids, weaves, locs, natural hair, color.",
+          "website": ""
+        },
+        {
+          "name": "Salon Bouclé",
+          "type": "Curly/textured hair",
+          "address": "Lyon 3e",
+          "distanceMi": 2,
+          "rating": 4.6,
+          "notes": "Specializes in curly and coily hair. DevaCurl certified. Color services.",
+          "website": ""
+        }
+      ]
+    },
+    "whiteHairCare": {
+      "label": "White/Caucasian Hair Care",
+      "priceRange": {
+        "cut": "25-45",
+        "color": "55-110",
+        "highlights": "75-150"
+      },
+      "notes": "Lyon has excellent salons in the Presqu'île (2nd arr.) and Croix-Rousse areas.",
+      "providers": [
+        {
+          "name": "Dessange",
+          "type": "Upscale chain salon",
+          "address": "Presqu'île, Lyon 2e",
+          "distanceMi": 0,
+          "rating": 4.6,
+          "notes": "Premium French salon. Expert colorists. Balayage, highlights, color correction.",
+          "website": "https://www.dessange.com/"
+        },
+        {
+          "name": "Franck Provost",
+          "type": "Upscale chain salon",
+          "address": "Lyon (multiple)",
+          "distanceMi": 0,
+          "rating": 4.4,
+          "notes": "Reliable color work. Multiple locations. Senior-friendly.",
+          "website": ""
+        }
+      ]
+    },
+    "mensBigTall": {
+      "label": "Men's Big & Tall Clothing",
+      "priceRange": {
+        "shirts": "25-65",
+        "pants": "30-60",
+        "suits": "110-320"
+      },
+      "notes": "Lyon Part-Dieu shopping center is the best option. Kiabi in suburbs for budget options.",
+      "providers": [
+        {
+          "name": "C&A (Part-Dieu)",
+          "type": "Department store",
+          "address": "Centre Part-Dieu, Lyon",
+          "distanceMi": 0,
+          "rating": 4.1,
+          "notes": "Extended sizes to 4XL. Moderate prices. Good basics.",
+          "website": ""
+        },
+        {
+          "name": "Kiabi",
+          "type": "Budget retailer",
+          "address": "Lyon banlieue",
+          "distanceMi": 5,
+          "rating": 4,
+          "notes": "Men's up to 5XL at budget prices. Multiple locations around Lyon.",
+          "website": ""
+        }
+      ]
+    },
+    "womensClothing": {
+      "label": "Women's Regular Clothing",
+      "priceRange": {
+        "casual": "18-50",
+        "dresses": "35-90",
+        "professional": "45-110"
+      },
+      "notes": "Lyon is France's fashion second city. Excellent shopping on Rue de la République and at Part-Dieu.",
+      "providers": [
+        {
+          "name": "Galeries Lafayette (Part-Dieu)",
+          "type": "Department store",
+          "address": "Centre Part-Dieu, Lyon",
+          "distanceMi": 0,
+          "rating": 4.5,
+          "notes": "Full women's range. French and international brands. Sizes 34-52.",
+          "website": ""
+        },
+        {
+          "name": "Rue de la République boutiques",
+          "type": "Shopping street",
+          "address": "Presqu'île, Lyon",
+          "distanceMi": 0,
+          "rating": 4.4,
+          "notes": "Zara, H&M, Mango, COS plus local boutiques. Wide range of regular sizes.",
+          "website": ""
+        }
+      ]
+    },
+    "shoes": {
+      "label": "Shoes",
+      "priceRange": {
+        "casual": "30-75",
+        "dress": "55-120",
+        "athletic": "45-105",
+        "wideWidth": "40-95"
+      },
+      "notes": "Good shoe shopping on Rue de la République. La Halle and André for moderate prices.",
+      "providers": [
+        {
+          "name": "André",
+          "type": "Shoe retailer",
+          "address": "Lyon centre",
+          "distanceMi": 0,
+          "rating": 4.2,
+          "notes": "French shoe chain. Good quality at mid-range prices. Sizes to EU 46.",
+          "website": ""
+        },
+        {
+          "name": "La Halle aux Chaussures",
+          "type": "Shoe warehouse",
+          "address": "Lyon banlieue",
+          "distanceMi": 4,
+          "rating": 4.1,
+          "notes": "Discount shoes. Extended sizes. Wide fits in some brands.",
+          "website": ""
+        }
+      ]
+    }
+  }
+}

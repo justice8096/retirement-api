@@ -1,0 +1,173 @@
+{
+  "id": "costa-rica-arenal",
+  "name": "Arenal / Lake Arenal, Costa Rica",
+  "country": "Costa Rica",
+  "region": "Central America",
+  "cities": [
+    "Nuevo Arenal",
+    "La Fortuna",
+    "Tilarán"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Pensionado",
+    "incomeRequirement": {
+      "monthly": 1000,
+      "currency": "USD"
+    },
+    "notes": "Pensionado visa requires $1,000/mo pension income."
+  },
+  "climate": {
+    "winterLowF": 62,
+    "summerHighF": 85,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 180
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 900,
+      "min": 700,
+      "max": 1100,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 420,
+      "min": 320,
+      "max": 550,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 120,
+      "min": 80,
+      "max": 180,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 160,
+      "min": 80,
+      "max": 280,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 280,
+      "min": 180,
+      "max": 420,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 40,
+      "min": 25,
+      "max": 65,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 160,
+      "min": 90,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 180,
+      "min": 110,
+      "max": 270,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 70,
+      "min": 40,
+      "max": 110,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 83,
+      "min": 68,
+      "max": 103,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 100,
+      "min": 60,
+      "max": 180,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 20,
+      "typical": 40,
+      "max": 90,
+      "annualInflation": 0.04,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 30,
+      "typical": 60,
+      "max": 120,
+      "annualInflation": 0.04
+    }
+  },
+  "healthcare": {
+    "system": "CAJA clinics in La Fortuna; San José for specialists (2.5 hours).",
+    "qualityRating": 5,
+    "dentalIncluded": true,
+    "waitTimes": "Limited locally; travel to San José for complex care",
+    "prescriptionCoverage": "Available through CAJA system"
+  },
+  "lifestyle": {
+    "internetSpeed": "25-50Mbps",
+    "dogFriendly": 7,
+    "expatCommunity": 6,
+    "englishPrevalence": 5,
+    "safetyRating": 7
+  },
+  "pros": [
+    "Stunning volcanic lake scenery",
+    "Established and growing expat community",
+    "Affordable with cooler highland climate"
+  ],
+  "cons": [
+    "Windy conditions around the lake",
+    "Significant rainfall year-round",
+    "Remote from major healthcare facilities"
+  ],
+  "taxes": {
+    "notes": "Territorial tax system: foreign income not taxed.",
+    "vatRate": 0.13,
+    "socialChargesRate": 0
+  }
+}

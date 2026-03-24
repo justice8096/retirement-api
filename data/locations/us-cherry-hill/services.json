@@ -1,0 +1,316 @@
+{
+  "distanceUnit": "mi",
+  "currency": "USD",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Virtua Voorhees Hospital",
+      "address": "100 Bowman Drive, Voorhees, NJ 08043",
+      "notes": "Full-service hospital, 24/7 emergency, part of Virtua Health system, opened 2011",
+      "sources": [
+        {
+          "title": "Virtua Health",
+          "url": "https://www.virtua.org/"
+        }
+      ],
+      "distanceMi": 3.7
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "CVS Pharmacy - Cherry Hill",
+      "address": "1930 Route 70 East, Cherry Hill, NJ 08003",
+      "notes": "24-hour pharmacy, drive-through, MinuteClinic, vaccinations",
+      "sources": [
+        {
+          "title": "CVS",
+          "url": "https://www.cvs.com/"
+        }
+      ],
+      "distanceMi": 0.9
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Wegmans Cherry Hill",
+      "address": "2100 Route 70 West, Cherry Hill, NJ 08002",
+      "notes": "Large upscale grocery, prepared foods market, organic section, in-store dining",
+      "sources": [
+        {
+          "title": "Wegmans",
+          "url": "https://www.wegmans.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Trader Joe's - Cherry Hill",
+      "address": "930 Route 73 North, Marlton, NJ 08053",
+      "notes": "Popular grocery with affordable specialty items, nearby in Marlton",
+      "sources": [
+        {
+          "title": "Trader Joe's",
+          "url": "https://www.traderjoes.com/"
+        }
+      ],
+      "distanceMi": 3.1
+    },
+    {
+      "categoryId": "bank",
+      "name": "TD Bank - Cherry Hill",
+      "address": "1460 Route 70 East, Cherry Hill, NJ 08034",
+      "notes": "Full-service branch, extended hours, ATM, financial advisors",
+      "sources": [
+        {
+          "title": "TD Bank",
+          "url": "https://www.td.com/"
+        }
+      ],
+      "distanceMi": 0.6
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Virtua Primary Care - Cherry Hill",
+      "address": "1 Cooper Plaza, Camden, NJ 08103",
+      "notes": "Part of Virtua/Cooper health system, accepting new patients, patient portal",
+      "sources": [
+        {
+          "title": "Virtua Health",
+          "url": "https://www.virtua.org/"
+        }
+      ],
+      "distanceMi": 3.7
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Cherry Hill Dental Group",
+      "address": "1020 Kings Highway North, Cherry Hill, NJ 08034",
+      "notes": "General, cosmetic, and pediatric dentistry, evening appointments available",
+      "sources": [
+        {
+          "title": "Cherry Hill Dental Group",
+          "url": "https://www.cherryhilldentalgroup.com/"
+        }
+      ],
+      "distanceMi": 0.9
+    },
+    {
+      "categoryId": "vet",
+      "name": "Cherry Hill Dog & Cat Hospital",
+      "address": "2135 Route 38, Cherry Hill, NJ 08002",
+      "notes": "Full-service vet hospital, emergency care available, boarding",
+      "sources": [
+        {
+          "title": "Cherry Hill Dog & Cat Hospital",
+          "url": "https://www.cherryhilldogandcat.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Cooper River Park Dog Run",
+      "address": "North Park Drive, Cherry Hill, NJ 08002",
+      "notes": "Fenced off-leash dog park within Cooper River Park, scenic lake views",
+      "sources": [
+        {
+          "title": "Camden County Parks",
+          "url": "https://www.camdencounty.com/service/parks/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "gym",
+      "name": "LA Fitness - Cherry Hill",
+      "address": "2135 Route 38, Cherry Hill, NJ 08002",
+      "notes": "Full gym, pool, basketball courts, group classes, flexible memberships",
+      "sources": [
+        {
+          "title": "LA Fitness",
+          "url": "https://www.lafitness.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "english_church",
+      "name": "Resurrection Lutheran Church",
+      "address": "620 Kings Highway South, Cherry Hill, NJ 08034",
+      "notes": "Active congregation, community outreach programs, welcoming to newcomers",
+      "sources": [
+        {
+          "title": "Resurrection Lutheran",
+          "url": "https://www.resurrectioncherryhillnj.org/"
+        }
+      ],
+      "distanceMi": 0.9
+    },
+    {
+      "categoryId": "airport",
+      "name": "Philadelphia International Airport (PHL)",
+      "address": "8000 Essington Avenue, Philadelphia, PA 19153",
+      "notes": "Major international airport, 20 min drive from Cherry Hill, American Airlines hub",
+      "sources": [
+        {
+          "title": "PHL Airport",
+          "url": "https://www.phl.org/"
+        }
+      ],
+      "distanceMi": 9.9
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "NJ Transit - Cherry Hill Station (PATCO)",
+      "address": "Haddonfield Road, Cherry Hill, NJ 08002",
+      "notes": "PATCO Speedline to Philadelphia Center City in 15 min, connects to Amtrak at 30th St",
+      "sources": [
+        {
+          "title": "PATCO",
+          "url": "https://www.rfrsa.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "coworking",
+      "name": "Regus - Cherry Hill",
+      "address": "1060 Kings Highway North, Cherry Hill, NJ 08034",
+      "notes": "Professional coworking, day passes, private offices, conference rooms",
+      "sources": [
+        {
+          "title": "Regus",
+          "url": "https://www.regus.com/"
+        }
+      ],
+      "distanceMi": 0.9
+    }
+  ],
+  "attractions": [
+    {
+      "type": "entertainment",
+      "name": "Adventure Aquarium",
+      "description": "Major aquarium on Camden waterfront with sharks, penguins, hippos, and touch tanks",
+      "frequency": "Daily 10:00-17:00",
+      "sources": [
+        {
+          "title": "Adventure Aquarium",
+          "url": "https://www.adventureaquarium.com/"
+        }
+      ],
+      "distanceMi": 5.0,
+      "estimatedCostUSD": 35
+    },
+    {
+      "type": "outdoor",
+      "name": "Cooper River Park",
+      "description": "346-acre county park with lake, walking/biking trail, rowing, picnic areas",
+      "frequency": "Open daily dawn to dusk",
+      "sources": [
+        {
+          "title": "Camden County Parks",
+          "url": "https://www.camdencounty.com/service/parks/"
+        }
+      ],
+      "distanceMi": 1.2,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "shopping",
+      "name": "Cherry Hill Mall",
+      "description": "Premier South Jersey shopping destination with 160+ stores, dining, and entertainment",
+      "frequency": "Mon-Sat 10:00-21:00, Sun 11:00-18:00",
+      "sources": [
+        {
+          "title": "Cherry Hill Mall",
+          "url": "https://www.cherryhillmall.com/"
+        }
+      ],
+      "distanceMi": 0.6,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "cultural",
+      "name": "Philadelphia Museum of Art (via PATCO)",
+      "description": "World-class art museum, easily accessible via PATCO train to Philly in 15 minutes",
+      "frequency": "Thu-Mon 10:00-17:00, quick train ride from Cherry Hill",
+      "sources": [
+        {
+          "title": "Philadelphia Museum of Art",
+          "url": "https://www.philamuseum.org/"
+        }
+      ],
+      "distanceMi": 9.3,
+      "estimatedCostUSD": 25
+    },
+    {
+      "type": "historical",
+      "name": "Battleship New Jersey Museum",
+      "description": "WWII-era battleship permanently docked on Camden waterfront, self-guided and overnight tours",
+      "frequency": "Daily 10:00-15:00, extended summer hours",
+      "sources": [
+        {
+          "title": "Battleship New Jersey",
+          "url": "https://www.battleshipnewjersey.org/"
+        }
+      ],
+      "distanceMi": 5.0,
+      "estimatedCostUSD": 25
+    },
+    {
+      "type": "nature",
+      "name": "Pine Barrens (Wharton State Forest)",
+      "description": "1.1 million-acre pine forest, canoeing on Batsto River, hiking, cranberry bogs",
+      "frequency": "Day trip, open year-round, best spring-fall",
+      "sources": [
+        {
+          "title": "NJ State Parks - Wharton",
+          "url": "https://www.nj.gov/dep/parksandforests/parks/wharton.html"
+        }
+      ],
+      "distanceMi": 24.9,
+      "estimatedCostUSD": 5
+    },
+    {
+      "type": "dining",
+      "name": "Haddonfield Downtown Dining",
+      "description": "Charming historic town center with independent restaurants, cafés, and boutiques",
+      "frequency": "Daily, walkable downtown, various restaurant hours",
+      "sources": [
+        {
+          "title": "Downtown Haddonfield",
+          "url": "https://www.downtownhaddonfield.com/"
+        }
+      ],
+      "distanceMi": 3.1,
+      "estimatedCostUSD": 25
+    },
+    {
+      "type": "social",
+      "name": "Camden Waterfront Events",
+      "description": "BB&T Pavilion concerts, Wiggins Waterfront Park events, seasonal festivals on the Delaware",
+      "frequency": "Seasonal events, concerts spring-fall",
+      "sources": [
+        {
+          "title": "Camden Waterfront",
+          "url": "https://www.camdenwaterfront.com/"
+        }
+      ],
+      "distanceMi": 5.0,
+      "estimatedCostUSD": 30
+    },
+    {
+      "type": "outdoor",
+      "name": "Smithville Village & Lake",
+      "description": "Historic village with shops, restaurants, paddleboats on the lake, train rides",
+      "frequency": "Day trip, open daily, seasonal events",
+      "sources": [
+        {
+          "title": "Historic Smithville",
+          "url": "https://www.smithvillenj.com/"
+        }
+      ],
+      "distanceMi": 34.2,
+      "estimatedCostUSD": 0
+    }
+  ]
+}

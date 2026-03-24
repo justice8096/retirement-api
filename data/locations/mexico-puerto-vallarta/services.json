@@ -1,0 +1,249 @@
+{
+  "distanceUnit": "km",
+  "currency": "MXN",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Hospital Star Médica Puerto Vallarta",
+      "address": "City center area, Puerto Vallarta, Mexico",
+      "distanceKm": 8,
+      "notes": "Private hospital chain, bilingual staff, modern facilities",
+      "sources": [
+        {
+          "title": "Hospital Star Médica Puerto Vallarta",
+          "url": "https://www.starmedica.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Farmacias del Ahorro",
+      "address": "City center area, Puerto Vallarta, Mexico",
+      "distanceKm": 1.5,
+      "notes": "Well-stocked pharmacy, prescription medications, some English spoken",
+      "sources": [
+        {
+          "title": "Farmacias del Ahorro",
+          "url": "https://www.fahorro.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Soriana",
+      "address": "City center area, Puerto Vallarta, Mexico",
+      "distanceKm": 2,
+      "notes": "Major Mexican supermarket chain, wide selection, affordable prices",
+      "sources": [
+        {
+          "title": "Soriana",
+          "url": "https://www.soriana.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "BBVA México",
+      "address": "City center area, Puerto Vallarta, Mexico",
+      "distanceKm": 2,
+      "notes": "Major bank with ATMs nationwide, some English-speaking staff, online banking",
+      "sources": [
+        {
+          "title": "BBVA México",
+          "url": "https://www.bbva.mx/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Doctoralia Puerto Vallarta",
+      "address": "City center area, Puerto Vallarta, Mexico",
+      "distanceKm": 3,
+      "notes": "Private GP network, bilingual doctors available, online booking",
+      "sources": [
+        {
+          "title": "Doctoralia Puerto Vallarta",
+          "url": "https://www.doctoralia.com.mx/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Dental Clinic Puerto Vallarta Center",
+      "address": "City center area, Puerto Vallarta, Mexico",
+      "distanceKm": 3,
+      "notes": "General and cosmetic dentistry, some English-speaking dentists, modern equipment",
+      "sources": [
+        {
+          "title": "Dental Services Mexico",
+          "url": "https://www.doctoralia.com.mx/"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Veterinary Clinic Puerto Vallarta",
+      "address": "City center area, Puerto Vallarta, Mexico",
+      "distanceKm": 4,
+      "notes": "Full veterinary services, vaccinations, surgery, some English spoken",
+      "sources": [
+        {
+          "title": "Veterinary Services Mexico",
+          "url": "https://www.doctoralia.com.mx/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Parque Canino / Dog Park Puerto Vallarta",
+      "address": "Park area, Puerto Vallarta, Mexico",
+      "distanceKm": 5,
+      "notes": "Off-leash area, green space popular with dog owners, water available",
+      "sources": [
+        {
+          "title": "Parks in Puerto Vallarta",
+          "url": "https://www.gob.mx/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "Smart Fit",
+      "address": "City center area, Puerto Vallarta, Mexico",
+      "distanceKm": 3,
+      "notes": "Modern gym with cardio and weight equipment, group classes, monthly memberships",
+      "sources": [
+        {
+          "title": "Smart Fit",
+          "url": "https://www.smartfit.com.mx/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "Union Church Puerto Vallarta",
+      "address": "City center area, Puerto Vallarta, Mexico",
+      "distanceKm": 5,
+      "notes": "English-language services, expat community gathering point, social events",
+      "sources": [
+        {
+          "title": "Union Church Puerto Vallarta",
+          "url": "https://www.unionchurch.com.mx/"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Gustavo Díaz Ordaz International Airport (PVR)",
+      "address": "Airport area",
+      "distanceKm": 8,
+      "notes": "International airport with domestic and international flights",
+      "sources": [
+        {
+          "title": "Gustavo Díaz Ordaz International Airport",
+          "url": "https://www.aeropuertopuertovallarta.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Central de Autobuses Puerto Vallarta",
+      "address": "City center area, Puerto Vallarta, Mexico",
+      "distanceKm": 2,
+      "notes": "ADO/ETN intercity buses, local transit, affordable fares",
+      "sources": [
+        {
+          "title": "Central de Autobuses Puerto Vallarta",
+          "url": "https://www.ado.com.mx/"
+        }
+      ]
+    },
+    {
+      "categoryId": "coworking",
+      "name": "WeWork Puerto Vallarta",
+      "address": "City center area, Puerto Vallarta, Mexico",
+      "distanceKm": 3,
+      "notes": "Coworking space, high-speed internet, meeting rooms, community events",
+      "sources": [
+        {
+          "title": "WeWork Puerto Vallarta",
+          "url": "https://www.wework.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "Pet Grooming Puerto Vallarta",
+      "address": "City center area, Puerto Vallarta, Mexico",
+      "distanceKm": 4,
+      "notes": "Professional pet grooming services, bathing, clipping, appointment recommended",
+      "sources": [
+        {
+          "title": "Pet Services Puerto Vallarta",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "categoryId": "international_school",
+      "name": "InterNations Puerto Vallarta Expat Community",
+      "address": "City center area, Puerto Vallarta, Mexico",
+      "distanceKm": 4,
+      "notes": "International expat community center, social events, networking, relocation assistance",
+      "sources": [
+        {
+          "title": "InterNations Puerto Vallarta Expat Community",
+          "url": "https://www.internations.org/"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "Puerto Vallarta Cultural Center",
+      "description": "Cultural center with local art, history, and community events",
+      "distanceKm": 4,
+      "estimatedCostEUR": 8,
+      "frequency": "Tue-Sun 10:00-17:00",
+      "sources": [
+        {
+          "title": "Puerto Vallarta Culture",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "estimatedCostLocal": 8,
+      "localCurrency": "MXN"
+    },
+    {
+      "type": "nature",
+      "name": "Puerto Vallarta Central Park / Garden",
+      "description": "Main public park with walking trails, gardens, and green space",
+      "distanceKm": 3,
+      "estimatedCostEUR": 0,
+      "frequency": "Daily, dawn to dusk",
+      "sources": [
+        {
+          "title": "Parks in Puerto Vallarta",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "dining",
+      "name": "Puerto Vallarta Restaurant District",
+      "description": "Walkable area with diverse restaurants, cafes, and bars",
+      "distanceKm": 2,
+      "estimatedCostEUR": 25,
+      "frequency": "Daily, lunch and dinner service",
+      "sources": [
+        {
+          "title": "Dining in Puerto Vallarta",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "estimatedCostLocal": 25,
+      "localCurrency": "MXN"
+    }
+  ]
+}

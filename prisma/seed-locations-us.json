@@ -1,0 +1,6519 @@
+[
+  {
+    "id": "us-asheville-nc",
+    "name": "Asheville, NC",
+    "country": "United States",
+    "region": "US Southeast",
+    "cities": [
+      "Asheville"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 28,
+      "summerHighF": 85,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 120
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1400,
+        "min": 1100,
+        "max": 1800,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 550,
+        "min": 450,
+        "max": 650,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 220,
+        "min": 170,
+        "max": 280,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 550,
+        "min": 450,
+        "max": 700,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 300,
+        "min": 200,
+        "max": 400,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 300,
+        "min": 200,
+        "max": 400,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 300,
+        "min": 200,
+        "max": 400,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 9,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 7
+    },
+    "pros": [
+      "Vibrant arts and music scene",
+      "Beautiful Blue Ridge Mountain setting",
+      "Strong farm-to-table food culture"
+    ],
+    "cons": [
+      "Limited public transportation",
+      "Tourism crowds in peak seasons",
+      "Higher COL than NC average"
+    ],
+    "taxes": {
+      "notes": "Federal + NC state income tax (flat 4.5%)",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-tampa-fl",
+    "name": "Tampa, FL",
+    "country": "United States",
+    "region": "US Southeast",
+    "cities": [
+      "Tampa"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 52,
+      "summerHighF": 92,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 105
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1800,
+        "min": 1500,
+        "max": 2200,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 600,
+        "min": 500,
+        "max": 700,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 280,
+        "min": 220,
+        "max": 350,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 550,
+        "min": 450,
+        "max": 700,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 350,
+        "min": 250,
+        "max": 450,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 350,
+        "min": 250,
+        "max": 450,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 300,
+        "min": 200,
+        "max": 400,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 8,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 6
+    },
+    "pros": [
+      "No state income tax",
+      "Warm year-round climate",
+      "Growing metro with good healthcare"
+    ],
+    "cons": [
+      "Hurricane risk",
+      "Hot and humid summers",
+      "Car-dependent sprawl"
+    ],
+    "taxes": {
+      "notes": "Federal only â€” no FL state income tax",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-st-petersburg-fl",
+    "name": "St. Petersburg, FL",
+    "country": "United States",
+    "region": "US Southeast",
+    "cities": [
+      "St. Petersburg"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 54,
+      "summerHighF": 91,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 100
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1900,
+        "min": 1500,
+        "max": 2300,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 600,
+        "min": 500,
+        "max": 700,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 270,
+        "min": 210,
+        "max": 340,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 550,
+        "min": 450,
+        "max": 700,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 350,
+        "min": 250,
+        "max": 450,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 330,
+        "min": 230,
+        "max": 430,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 320,
+        "min": 220,
+        "max": 420,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 8,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 7
+    },
+    "pros": [
+      "No state income tax",
+      "Excellent waterfront and arts district",
+      "Sunshine City â€” 361 days of sun average"
+    ],
+    "cons": [
+      "Hurricane risk",
+      "Rising housing costs",
+      "Hot and humid summers"
+    ],
+    "taxes": {
+      "notes": "Federal only â€” no FL state income tax",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-pittsburgh-pa",
+    "name": "Pittsburgh, PA",
+    "country": "United States",
+    "region": "US Northeast",
+    "cities": [
+      "Pittsburgh"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 22,
+      "summerHighF": 84,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 152
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1500,
+        "min": 1200,
+        "max": 1900,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 550,
+        "min": 450,
+        "max": 650,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 230,
+        "min": 180,
+        "max": 300,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 500,
+        "min": 400,
+        "max": 650,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 280,
+        "min": 200,
+        "max": 380,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 280,
+        "min": 200,
+        "max": 380,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 280,
+        "min": 200,
+        "max": 380,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 9,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 6
+    },
+    "pros": [
+      "Very affordable for a major metro",
+      "World-class healthcare (UPMC)",
+      "Revitalized neighborhoods and food scene"
+    ],
+    "cons": [
+      "Cold, gray winters",
+      "Hilly terrain can be challenging",
+      "PA state income tax (3.07%) plus local taxes"
+    ],
+    "taxes": {
+      "notes": "Federal + PA flat state income tax (3.07%) + local earned income tax",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-nashville-tn",
+    "name": "Nashville, TN",
+    "country": "United States",
+    "region": "US Southeast",
+    "cities": [
+      "Nashville"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 30,
+      "summerHighF": 91,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 119
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 2000,
+        "min": 1600,
+        "max": 2500,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 600,
+        "min": 500,
+        "max": 700,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 240,
+        "min": 190,
+        "max": 310,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 550,
+        "min": 450,
+        "max": 700,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 300,
+        "min": 220,
+        "max": 400,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 350,
+        "min": 250,
+        "max": 450,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 350,
+        "min": 250,
+        "max": 450,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 9,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 8,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 6
+    },
+    "pros": [
+      "No state income tax",
+      "World-class music and entertainment",
+      "Strong job market and growing economy"
+    ],
+    "cons": [
+      "Rapid growth driving up housing costs",
+      "Hot, humid summers",
+      "Car-dependent with limited transit"
+    ],
+    "taxes": {
+      "notes": "Federal only â€” no TN state income tax",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-austin-tx",
+    "name": "Austin, TX",
+    "country": "United States",
+    "region": "US South Central",
+    "cities": [
+      "Austin"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 40,
+      "summerHighF": 97,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 88
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 2200,
+        "min": 1800,
+        "max": 2800,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 650,
+        "min": 550,
+        "max": 750,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 280,
+        "min": 220,
+        "max": 350,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 550,
+        "min": 450,
+        "max": 700,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 320,
+        "min": 230,
+        "max": 420,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 380,
+        "min": 280,
+        "max": 500,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 380,
+        "min": 280,
+        "max": 500,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 9,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 7
+    },
+    "pros": [
+      "No state income tax",
+      "Vibrant live music and culture",
+      "Strong tech economy and dining scene"
+    ],
+    "cons": [
+      "High and rising housing costs",
+      "Extreme summer heat",
+      "Severe traffic congestion"
+    ],
+    "taxes": {
+      "notes": "Federal only â€” no TX state income tax (high property taxes)",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-denver-co",
+    "name": "Denver, CO",
+    "country": "United States",
+    "region": "US Mountain West",
+    "cities": [
+      "Denver"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 17,
+      "summerHighF": 90,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 88
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 2300,
+        "min": 1900,
+        "max": 2800,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 650,
+        "min": 550,
+        "max": 780,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 220,
+        "min": 170,
+        "max": 290,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 580,
+        "min": 470,
+        "max": 720,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 320,
+        "min": 230,
+        "max": 420,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 370,
+        "min": 270,
+        "max": 480,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 350,
+        "min": 250,
+        "max": 450,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 9,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 7
+    },
+    "pros": [
+      "300+ days of sunshine",
+      "Easy access to Rocky Mountain recreation",
+      "Strong economy and cultural amenities"
+    ],
+    "cons": [
+      "Higher cost of living",
+      "Cold winters with snow",
+      "Altitude adjustment needed (5,280 ft)"
+    ],
+    "taxes": {
+      "notes": "Federal + CO flat state income tax (4.4%)",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-albuquerque-nm",
+    "name": "Albuquerque, NM",
+    "country": "United States",
+    "region": "US Southwest",
+    "cities": [
+      "Albuquerque"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 25,
+      "summerHighF": 94,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 61
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1200,
+        "min": 950,
+        "max": 1500,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 500,
+        "min": 400,
+        "max": 600,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 200,
+        "min": 150,
+        "max": 260,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 500,
+        "min": 400,
+        "max": 650,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 280,
+        "min": 200,
+        "max": 380,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 280,
+        "min": 200,
+        "max": 380,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 250,
+        "min": 170,
+        "max": 350,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 8,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 5
+    },
+    "pros": [
+      "Very low cost of living",
+      "Dry, sunny climate with 310 sunny days",
+      "Rich Native American and Hispanic cultural heritage"
+    ],
+    "cons": [
+      "Higher crime rates in some areas",
+      "Limited public transportation",
+      "Fewer major metro amenities"
+    ],
+    "taxes": {
+      "notes": "Federal + NM state income tax (1.7-5.9%); SS benefits exempt",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-fort-lauderdale-fl",
+    "name": "Fort Lauderdale, FL",
+    "country": "United States",
+    "region": "US Southeast",
+    "cities": [
+      "Fort Lauderdale"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 58,
+      "summerHighF": 91,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 129
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 2100,
+        "min": 1700,
+        "max": 2600,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 650,
+        "min": 550,
+        "max": 750,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 280,
+        "min": 220,
+        "max": 350,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 560,
+        "min": 450,
+        "max": 700,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 380,
+        "min": 280,
+        "max": 480,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 350,
+        "min": 250,
+        "max": 450,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 350,
+        "min": 250,
+        "max": 450,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 8,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 6
+    },
+    "pros": [
+      "No state income tax",
+      "Beautiful beaches and boating culture",
+      "Warm year-round weather"
+    ],
+    "cons": [
+      "High housing and insurance costs",
+      "Hurricane risk",
+      "Heavy tourist traffic in season"
+    ],
+    "taxes": {
+      "notes": "Federal only â€” no FL state income tax",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-miami-fl",
+    "name": "Miami, FL",
+    "country": "United States",
+    "region": "US Southeast",
+    "cities": [
+      "Miami"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 60,
+      "summerHighF": 92,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 135
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 2600,
+        "min": 2100,
+        "max": 3200,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 700,
+        "min": 600,
+        "max": 850,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 290,
+        "min": 230,
+        "max": 360,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 600,
+        "min": 480,
+        "max": 750,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 400,
+        "min": 300,
+        "max": 520,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 400,
+        "min": 300,
+        "max": 520,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 400,
+        "min": 300,
+        "max": 520,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 9,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 5
+    },
+    "pros": [
+      "No state income tax",
+      "Extremely diverse and multicultural",
+      "Warm tropical climate year-round"
+    ],
+    "cons": [
+      "Very high cost of living",
+      "Hurricane and flooding risk",
+      "Heavy traffic and car dependency"
+    ],
+    "taxes": {
+      "notes": "Federal only â€” no FL state income tax",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-chicago-il",
+    "name": "Chicago, IL",
+    "country": "United States",
+    "region": "US Midwest",
+    "cities": [
+      "Chicago"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 16,
+      "summerHighF": 84,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 125
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 2000,
+        "min": 1600,
+        "max": 2500,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 650,
+        "min": 550,
+        "max": 780,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 230,
+        "min": 180,
+        "max": 300,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 550,
+        "min": 450,
+        "max": 700,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 320,
+        "min": 230,
+        "max": 420,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 300,
+        "min": 200,
+        "max": 400,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 380,
+        "min": 280,
+        "max": 500,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 9,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 8,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 5
+    },
+    "pros": [
+      "World-class dining, arts, and architecture",
+      "Excellent public transit (CTA/Metra)",
+      "Beautiful lakefront and parks"
+    ],
+    "cons": [
+      "Harsh, long winters",
+      "High state and local taxes",
+      "Higher crime in some neighborhoods"
+    ],
+    "taxes": {
+      "notes": "Federal + IL flat state income tax (4.95%)",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-saint-paul-mn",
+    "name": "Saint Paul, MN",
+    "country": "United States",
+    "region": "US Midwest",
+    "cities": [
+      "Saint Paul"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 4,
+      "summerHighF": 84,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 115
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1400,
+        "min": 1100,
+        "max": 1800,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 550,
+        "min": 450,
+        "max": 650,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 230,
+        "min": 180,
+        "max": 300,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 520,
+        "min": 420,
+        "max": 660,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 280,
+        "min": 200,
+        "max": 380,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 280,
+        "min": 200,
+        "max": 380,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 280,
+        "min": 200,
+        "max": 380,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 9,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 8,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 7
+    },
+    "pros": [
+      "Affordable for a major metro area",
+      "Excellent healthcare system (Mayo Clinic nearby)",
+      "Strong cultural scene and parks"
+    ],
+    "cons": [
+      "Extremely cold winters",
+      "High state income tax (5.35-9.85%)",
+      "Shorter outdoor season"
+    ],
+    "taxes": {
+      "notes": "Federal + MN state income tax (5.35-9.85%); SS partially taxed",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-cleveland-oh",
+    "name": "Cleveland, OH",
+    "country": "United States",
+    "region": "US Midwest",
+    "cities": [
+      "Cleveland"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 20,
+      "summerHighF": 82,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 156
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1100,
+        "min": 850,
+        "max": 1400,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 500,
+        "min": 400,
+        "max": 600,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 210,
+        "min": 160,
+        "max": 270,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 480,
+        "min": 380,
+        "max": 620,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 260,
+        "min": 190,
+        "max": 360,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 260,
+        "min": 180,
+        "max": 360,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 240,
+        "min": 160,
+        "max": 340,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 9,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 5
+    },
+    "pros": [
+      "Very affordable cost of living",
+      "Cleveland Clinic â€” world-class healthcare",
+      "Lake Erie waterfront and cultural institutions"
+    ],
+    "cons": [
+      "Cold, gray winters with lake-effect snow",
+      "Population decline and economic challenges",
+      "Higher crime in some areas"
+    ],
+    "taxes": {
+      "notes": "Federal + OH state income tax (0-3.75%) + city income tax (~2%)",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-birmingham-al",
+    "name": "Birmingham, AL",
+    "country": "United States",
+    "region": "US Southeast",
+    "cities": [
+      "Birmingham"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 34,
+      "summerHighF": 93,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 117
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1050,
+        "min": 800,
+        "max": 1350,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 480,
+        "min": 380,
+        "max": 580,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 240,
+        "min": 190,
+        "max": 310,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 480,
+        "min": 380,
+        "max": 620,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 260,
+        "min": 190,
+        "max": 360,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 280,
+        "min": 200,
+        "max": 380,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 230,
+        "min": 160,
+        "max": 330,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 5
+    },
+    "pros": [
+      "Very low cost of living",
+      "Growing food and brewery scene",
+      "UAB Hospital â€” excellent medical center"
+    ],
+    "cons": [
+      "Hot, humid summers",
+      "Car-dependent with limited transit",
+      "Higher crime rates in some areas"
+    ],
+    "taxes": {
+      "notes": "Federal + AL state income tax (2-5%); SS benefits exempt",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-baltimore-md",
+    "name": "Baltimore, MD",
+    "country": "United States",
+    "region": "US Mid-Atlantic",
+    "cities": [
+      "Baltimore"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 26,
+      "summerHighF": 88,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 115
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1600,
+        "min": 1200,
+        "max": 2000,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 580,
+        "min": 480,
+        "max": 700,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 240,
+        "min": 190,
+        "max": 310,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 530,
+        "min": 430,
+        "max": 680,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 300,
+        "min": 220,
+        "max": 400,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 300,
+        "min": 200,
+        "max": 400,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 300,
+        "min": 200,
+        "max": 400,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 9,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 4
+    },
+    "pros": [
+      "Johns Hopkins â€” world-class healthcare",
+      "Affordable for the DC-Baltimore corridor",
+      "Inner Harbor and cultural attractions"
+    ],
+    "cons": [
+      "Higher crime rates",
+      "Cold winters",
+      "MD state income tax (2-5.75%) plus county tax"
+    ],
+    "taxes": {
+      "notes": "Federal + MD state income tax (2-5.75%) + county income tax",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-dallas-tx",
+    "name": "Dallas, TX",
+    "country": "United States",
+    "region": "US South Central",
+    "cities": [
+      "Dallas"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 35,
+      "summerHighF": 97,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 81
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 2100,
+        "min": 1700,
+        "max": 2600,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 620,
+        "min": 520,
+        "max": 740,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 270,
+        "min": 210,
+        "max": 350,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 550,
+        "min": 450,
+        "max": 700,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 320,
+        "min": 230,
+        "max": 420,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 380,
+        "min": 280,
+        "max": 500,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 340,
+        "min": 240,
+        "max": 450,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 9,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 6
+    },
+    "pros": [
+      "No state income tax",
+      "Diverse economy with strong job market",
+      "Major sports and cultural scene"
+    ],
+    "cons": [
+      "Extreme summer heat",
+      "Car-dependent sprawl",
+      "High property taxes offset income tax savings"
+    ],
+    "taxes": {
+      "notes": "Federal only â€” no TX state income tax (high property taxes)",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-milwaukee-wi",
+    "name": "Milwaukee, WI",
+    "country": "United States",
+    "region": "US Midwest",
+    "cities": [
+      "Milwaukee"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 14,
+      "summerHighF": 82,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 126
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1400,
+        "min": 1100,
+        "max": 1800,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 540,
+        "min": 440,
+        "max": 650,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 220,
+        "min": 170,
+        "max": 290,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 500,
+        "min": 400,
+        "max": 640,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 280,
+        "min": 200,
+        "max": 380,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 270,
+        "min": 190,
+        "max": 370,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 270,
+        "min": 190,
+        "max": 370,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 5
+    },
+    "pros": [
+      "Affordable for a major metro",
+      "Lake Michigan waterfront",
+      "Strong brewery and food culture"
+    ],
+    "cons": [
+      "Very cold, snowy winters",
+      "WI state income tax (3.54-7.65%)",
+      "Some neighborhoods have higher crime"
+    ],
+    "taxes": {
+      "notes": "Federal + WI state income tax (3.54-7.65%); SS benefits exempt",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-fort-worth-tx",
+    "name": "Fort Worth, TX",
+    "country": "United States",
+    "region": "US South Central",
+    "cities": [
+      "Fort Worth"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 34,
+      "summerHighF": 97,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 79
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1600,
+        "min": 1300,
+        "max": 2000,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 560,
+        "min": 460,
+        "max": 670,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 260,
+        "min": 200,
+        "max": 340,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 520,
+        "min": 420,
+        "max": 660,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 300,
+        "min": 220,
+        "max": 400,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 340,
+        "min": 240,
+        "max": 450,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 280,
+        "min": 200,
+        "max": 380,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 8,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 6
+    },
+    "pros": [
+      "No state income tax",
+      "More affordable than Dallas",
+      "Stockyards district and Western heritage"
+    ],
+    "cons": [
+      "Extreme summer heat",
+      "Car-dependent",
+      "High property taxes"
+    ],
+    "taxes": {
+      "notes": "Federal only â€” no TX state income tax (high property taxes)",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-palm-bay-fl",
+    "name": "Palm Bay, FL",
+    "country": "United States",
+    "region": "US Southeast",
+    "cities": [
+      "Palm Bay"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 50,
+      "summerHighF": 92,
+      "meetsWarmWinterReq": true,
+      "rainyDaysPerYear": 115
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1300,
+        "min": 1050,
+        "max": 1600,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 520,
+        "min": 420,
+        "max": 620,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 260,
+        "min": 200,
+        "max": 330,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 500,
+        "min": 400,
+        "max": 640,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 320,
+        "min": 230,
+        "max": 420,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 320,
+        "min": 220,
+        "max": 420,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 250,
+        "min": 170,
+        "max": 350,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 6
+    },
+    "pros": [
+      "No state income tax",
+      "Affordable Florida living on Space Coast",
+      "Near Kennedy Space Center and beaches"
+    ],
+    "cons": [
+      "Hurricane risk",
+      "Limited dining and cultural options",
+      "Car-dependent suburban sprawl"
+    ],
+    "taxes": {
+      "notes": "Federal only â€” no FL state income tax",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-norfolk-va",
+    "name": "Norfolk, VA",
+    "country": "United States",
+    "region": "US Mid-Atlantic",
+    "cities": [
+      "Norfolk"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 32,
+      "summerHighF": 88,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 115
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1350,
+        "min": 1050,
+        "max": 1700,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 540,
+        "min": 440,
+        "max": 650,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 230,
+        "min": 180,
+        "max": 300,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 500,
+        "min": 400,
+        "max": 640,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 280,
+        "min": 200,
+        "max": 380,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 300,
+        "min": 200,
+        "max": 400,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 270,
+        "min": 190,
+        "max": 370,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 5
+    },
+    "pros": [
+      "Coastal city with naval heritage",
+      "Moderate cost of living",
+      "Proximity to Virginia Beach and Chesapeake Bay"
+    ],
+    "cons": [
+      "Flood-prone low-lying areas",
+      "Military-dependent economy",
+      "VA state income tax (2-5.75%)"
+    ],
+    "taxes": {
+      "notes": "Federal + VA state income tax (2-5.75%); SS partially exempt for age 65+",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-virginia-beach-va",
+    "name": "Virginia Beach, VA",
+    "country": "United States",
+    "region": "US Mid-Atlantic",
+    "cities": [
+      "Virginia Beach"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 33,
+      "summerHighF": 87,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 115
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1600,
+        "min": 1250,
+        "max": 2000,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 560,
+        "min": 460,
+        "max": 670,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 240,
+        "min": 190,
+        "max": 310,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 520,
+        "min": 420,
+        "max": 660,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 300,
+        "min": 220,
+        "max": 400,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 320,
+        "min": 220,
+        "max": 420,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 300,
+        "min": 200,
+        "max": 400,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 8,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 7
+    },
+    "pros": [
+      "Beautiful oceanfront with boardwalk",
+      "Low crime rate for a beach city",
+      "Good schools and family-friendly"
+    ],
+    "cons": [
+      "Tourist crowds in summer",
+      "Higher housing costs than inland VA",
+      "VA state income tax (2-5.75%)"
+    ],
+    "taxes": {
+      "notes": "Federal + VA state income tax (2-5.75%); SS partially exempt for age 65+",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-portsmouth-va",
+    "name": "Portsmouth, VA",
+    "country": "United States",
+    "region": "US Mid-Atlantic",
+    "cities": [
+      "Portsmouth"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 32,
+      "summerHighF": 88,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 115
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1100,
+        "min": 850,
+        "max": 1400,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 500,
+        "min": 400,
+        "max": 600,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 220,
+        "min": 170,
+        "max": 290,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 480,
+        "min": 380,
+        "max": 620,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 260,
+        "min": 190,
+        "max": 360,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 280,
+        "min": 200,
+        "max": 380,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 230,
+        "min": 160,
+        "max": 330,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 5
+    },
+    "pros": [
+      "Very affordable coastal Virginia living",
+      "Historic Olde Towne district",
+      "Access to Hampton Roads metro amenities"
+    ],
+    "cons": [
+      "Higher crime rates",
+      "Flood-prone areas",
+      "Limited local job market"
+    ],
+    "taxes": {
+      "notes": "Federal + VA state income tax (2-5.75%); SS partially exempt for age 65+",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-lynchburg-va",
+    "name": "Lynchburg, VA",
+    "country": "United States",
+    "region": "US Mid-Atlantic",
+    "cities": [
+      "Lynchburg"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 26,
+      "summerHighF": 87,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 113
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 950,
+        "min": 750,
+        "max": 1200,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 470,
+        "min": 380,
+        "max": 570,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 210,
+        "min": 160,
+        "max": 270,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 460,
+        "min": 370,
+        "max": 600,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 180,
+        "max": 340,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 260,
+        "min": 180,
+        "max": 360,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 220,
+        "min": 150,
+        "max": 320,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 6,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 8,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 6
+    },
+    "pros": [
+      "Very affordable cost of living",
+      "Beautiful Blue Ridge Mountain views",
+      "Small-city charm with college-town feel"
+    ],
+    "cons": [
+      "Limited job market and amenities",
+      "Socially conservative community",
+      "Cold winters for Virginia"
+    ],
+    "taxes": {
+      "notes": "Federal + VA state income tax (2-5.75%); SS partially exempt for age 65+",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-little-rock-ar",
+    "name": "Little Rock, AR",
+    "country": "United States",
+    "region": "US South Central",
+    "cities": [
+      "Little Rock"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 32,
+      "summerHighF": 93,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 104
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1000,
+        "min": 800,
+        "max": 1300,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 470,
+        "min": 380,
+        "max": 570,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 230,
+        "min": 180,
+        "max": 300,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 470,
+        "min": 370,
+        "max": 600,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 260,
+        "min": 190,
+        "max": 360,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 270,
+        "min": 190,
+        "max": 370,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 230,
+        "min": 160,
+        "max": 330,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 5
+    },
+    "pros": [
+      "Very low cost of living",
+      "State capital with moderate amenities",
+      "Mild winters compared to northern cities"
+    ],
+    "cons": [
+      "Higher crime rates",
+      "Hot, humid summers",
+      "Limited public transportation"
+    ],
+    "taxes": {
+      "notes": "Federal + AR state income tax (2-4.4%); SS exempt up to $6,000",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-san-marcos-tx",
+    "name": "San Marcos, TX",
+    "country": "United States",
+    "region": "US South Central",
+    "cities": [
+      "San Marcos"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 38,
+      "summerHighF": 96,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 83
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1300,
+        "min": 1000,
+        "max": 1600,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 520,
+        "min": 420,
+        "max": 620,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 250,
+        "min": 200,
+        "max": 320,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 500,
+        "min": 400,
+        "max": 640,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 280,
+        "min": 200,
+        "max": 380,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 300,
+        "min": 200,
+        "max": 400,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 260,
+        "min": 180,
+        "max": 360,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 8,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 7
+    },
+    "pros": [
+      "No state income tax",
+      "Hill Country beauty with San Marcos River",
+      "Affordable college town between Austin and San Antonio"
+    ],
+    "cons": [
+      "Hot summers",
+      "College-town dynamics (noise, parking)",
+      "Limited metro amenities"
+    ],
+    "taxes": {
+      "notes": "Federal only â€” no TX state income tax (high property taxes)",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-killeen-tx",
+    "name": "Killeen, TX",
+    "country": "United States",
+    "region": "US South Central",
+    "cities": [
+      "Killeen"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 36,
+      "summerHighF": 97,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 76
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1000,
+        "min": 800,
+        "max": 1300,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 480,
+        "min": 380,
+        "max": 580,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 250,
+        "min": 200,
+        "max": 320,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 470,
+        "min": 370,
+        "max": 600,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 260,
+        "min": 190,
+        "max": 360,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 300,
+        "min": 200,
+        "max": 400,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 220,
+        "min": 150,
+        "max": 320,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 6,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 5
+    },
+    "pros": [
+      "No state income tax",
+      "Very affordable housing",
+      "Near Fort Cavazos military base"
+    ],
+    "cons": [
+      "Extreme summer heat",
+      "Military-dependent economy",
+      "Limited cultural amenities"
+    ],
+    "taxes": {
+      "notes": "Federal only â€” no TX state income tax (high property taxes)",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-st-augustine-fl",
+    "name": "St. Augustine, FL",
+    "country": "United States",
+    "region": "US Southeast",
+    "cities": [
+      "St. Augustine"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 45,
+      "summerHighF": 91,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 112
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1500,
+        "min": 1200,
+        "max": 1900,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 550,
+        "min": 450,
+        "max": 660,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 260,
+        "min": 200,
+        "max": 330,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 510,
+        "min": 410,
+        "max": 650,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 320,
+        "min": 230,
+        "max": 420,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 300,
+        "min": 200,
+        "max": 400,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 300,
+        "min": 200,
+        "max": 400,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 8,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 7
+    },
+    "pros": [
+      "No state income tax",
+      "Oldest city in US with rich history",
+      "Beautiful beaches and walkable downtown"
+    ],
+    "cons": [
+      "Tourism-driven economy with seasonal crowds",
+      "Hurricane risk",
+      "Higher housing costs for a small city"
+    ],
+    "taxes": {
+      "notes": "Federal only â€” no FL state income tax",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-quincy-fl",
+    "name": "Quincy, FL",
+    "country": "United States",
+    "region": "US Southeast",
+    "cities": [
+      "Quincy"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 38,
+      "summerHighF": 93,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 108
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 750,
+        "min": 600,
+        "max": 950,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 430,
+        "min": 350,
+        "max": 530,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 240,
+        "min": 190,
+        "max": 310,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 450,
+        "min": 360,
+        "max": 580,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 180,
+        "max": 340,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 280,
+        "min": 200,
+        "max": 380,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 200,
+        "min": 130,
+        "max": 280,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 5,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 5
+    },
+    "pros": [
+      "No state income tax",
+      "Extremely affordable",
+      "Small-town quiet living near Tallahassee"
+    ],
+    "cons": [
+      "Very limited amenities and services",
+      "Rural with no public transit",
+      "Limited healthcare options nearby"
+    ],
+    "taxes": {
+      "notes": "Federal only â€” no FL state income tax",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-lorain-oh",
+    "name": "Lorain, OH",
+    "country": "United States",
+    "region": "US Midwest",
+    "cities": [
+      "Lorain"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 20,
+      "summerHighF": 82,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 155
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 850,
+        "min": 650,
+        "max": 1100,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 470,
+        "min": 380,
+        "max": 570,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 210,
+        "min": 160,
+        "max": 270,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 460,
+        "min": 370,
+        "max": 600,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 180,
+        "max": 340,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 260,
+        "min": 180,
+        "max": 360,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 210,
+        "min": 140,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 6,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 5
+    },
+    "pros": [
+      "Extremely affordable housing",
+      "Lake Erie waterfront access",
+      "Close to Cleveland metro amenities"
+    ],
+    "cons": [
+      "Cold, gray winters with lake-effect snow",
+      "Economic decline and population loss",
+      "Limited local amenities"
+    ],
+    "taxes": {
+      "notes": "Federal + OH state income tax (0-3.75%) + city income tax (~2.5%)",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-fort-wayne-in",
+    "name": "Fort Wayne, IN",
+    "country": "United States",
+    "region": "US Midwest",
+    "cities": [
+      "Fort Wayne"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 18,
+      "summerHighF": 84,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 130
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 950,
+        "min": 750,
+        "max": 1200,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 480,
+        "min": 380,
+        "max": 580,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 210,
+        "min": 160,
+        "max": 270,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 470,
+        "min": 370,
+        "max": 600,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 260,
+        "min": 190,
+        "max": 360,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 270,
+        "min": 190,
+        "max": 370,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 230,
+        "min": 160,
+        "max": 330,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 6
+    },
+    "pros": [
+      "Very affordable cost of living",
+      "Revitalized downtown with riverfront",
+      "Friendly Midwest community feel"
+    ],
+    "cons": [
+      "Cold winters",
+      "Limited public transit",
+      "IN flat state income tax (3.05%) plus county tax"
+    ],
+    "taxes": {
+      "notes": "Federal + IN flat state income tax (3.05%) + county income tax; SS exempt",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-lapeer-mi",
+    "name": "Lapeer, MI",
+    "country": "United States",
+    "region": "US Midwest",
+    "cities": [
+      "Lapeer"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 14,
+      "summerHighF": 82,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 135
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 800,
+        "min": 600,
+        "max": 1000,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 460,
+        "min": 370,
+        "max": 560,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 220,
+        "min": 170,
+        "max": 290,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 460,
+        "min": 370,
+        "max": 600,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 260,
+        "min": 190,
+        "max": 360,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 280,
+        "min": 200,
+        "max": 380,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 200,
+        "min": 130,
+        "max": 280,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 6,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 7
+    },
+    "pros": [
+      "Extremely affordable housing",
+      "Small-town charm with rural surroundings",
+      "Low crime for the area"
+    ],
+    "cons": [
+      "Very cold winters",
+      "Very limited amenities and dining",
+      "Car required â€” no public transit"
+    ],
+    "taxes": {
+      "notes": "Federal + MI flat state income tax (4.25%); SS partially exempt",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-port-huron-mi",
+    "name": "Port Huron, MI",
+    "country": "United States",
+    "region": "US Midwest",
+    "cities": [
+      "Port Huron"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 16,
+      "summerHighF": 82,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 135
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 850,
+        "min": 650,
+        "max": 1100,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 470,
+        "min": 380,
+        "max": 570,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 220,
+        "min": 170,
+        "max": 290,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 460,
+        "min": 370,
+        "max": 600,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 260,
+        "min": 190,
+        "max": 360,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 270,
+        "min": 190,
+        "max": 370,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 210,
+        "min": 140,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 6,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 6
+    },
+    "pros": [
+      "Affordable waterfront living on Lake Huron",
+      "Blue Water Bridge to Canada",
+      "Small-city pace with scenic beauty"
+    ],
+    "cons": [
+      "Very cold winters",
+      "Limited job market",
+      "Fewer amenities than larger metros"
+    ],
+    "taxes": {
+      "notes": "Federal + MI flat state income tax (4.25%); SS partially exempt",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-oakland-county-mi",
+    "name": "Oakland County, MI",
+    "country": "United States",
+    "region": "US Midwest",
+    "cities": [
+      "Pontiac",
+      "Troy",
+      "Royal Oak",
+      "Farmington Hills"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 16,
+      "summerHighF": 83,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 135
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1400,
+        "min": 1100,
+        "max": 1800,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 560,
+        "min": 460,
+        "max": 670,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 230,
+        "min": 180,
+        "max": 300,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 520,
+        "min": 420,
+        "max": 660,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 300,
+        "min": 220,
+        "max": 400,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 320,
+        "min": 220,
+        "max": 420,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 280,
+        "min": 200,
+        "max": 380,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 8,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 8,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 7
+    },
+    "pros": [
+      "Affluent suburban area with good schools",
+      "Proximity to Detroit metro amenities",
+      "Diverse communities with good dining"
+    ],
+    "cons": [
+      "Cold winters",
+      "Car-dependent suburbs",
+      "MI state income tax (4.25%) plus some city taxes"
+    ],
+    "taxes": {
+      "notes": "Federal + MI flat state income tax (4.25%); some cities add local tax; SS partially exempt",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-armstrong-county-pa",
+    "name": "Armstrong County, PA",
+    "country": "United States",
+    "region": "US Northeast",
+    "cities": [
+      "Kittanning",
+      "Ford City"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 18,
+      "summerHighF": 83,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 148
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 700,
+        "min": 550,
+        "max": 900,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 440,
+        "min": 350,
+        "max": 540,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 210,
+        "min": 160,
+        "max": 270,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 450,
+        "min": 360,
+        "max": 580,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 240,
+        "min": 170,
+        "max": 330,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 280,
+        "min": 200,
+        "max": 380,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 200,
+        "min": 130,
+        "max": 280,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 5,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 8,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 7
+    },
+    "pros": [
+      "Extremely affordable rural living",
+      "Scenic Allegheny River valley",
+      "Low crime rate and quiet community"
+    ],
+    "cons": [
+      "Very limited amenities and healthcare",
+      "Cold winters",
+      "Remote â€” Pittsburgh is 45+ min drive"
+    ],
+    "taxes": {
+      "notes": "Federal + PA flat state income tax (3.07%) + local earned income tax",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-williamsport-pa",
+    "name": "Williamsport, PA",
+    "country": "United States",
+    "region": "US Northeast",
+    "cities": [
+      "Williamsport"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 18,
+      "summerHighF": 84,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 140
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 850,
+        "min": 650,
+        "max": 1100,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 470,
+        "min": 380,
+        "max": 570,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 210,
+        "min": 160,
+        "max": 270,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 460,
+        "min": 370,
+        "max": 600,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 180,
+        "max": 340,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 260,
+        "min": 180,
+        "max": 360,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 210,
+        "min": 140,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 6,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 6
+    },
+    "pros": [
+      "Affordable small-city living",
+      "Home of Little League World Series",
+      "Scenic Susquehanna River setting"
+    ],
+    "cons": [
+      "Cold winters",
+      "Limited job market and metro amenities",
+      "PA state income tax plus local taxes"
+    ],
+    "taxes": {
+      "notes": "Federal + PA flat state income tax (3.07%) + local earned income tax",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-minneapolis-mn",
+    "name": "Minneapolis, MN",
+    "country": "United States",
+    "region": "US Midwest",
+    "cities": [
+      "Minneapolis"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 4,
+      "summerHighF": 83,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 115
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1900,
+        "min": 1500,
+        "max": 2400,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 600,
+        "min": 500,
+        "max": 720,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 230,
+        "min": 180,
+        "max": 300,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 540,
+        "min": 440,
+        "max": 680,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 300,
+        "min": 220,
+        "max": 400,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 300,
+        "min": 200,
+        "max": 400,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 330,
+        "min": 230,
+        "max": 440,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 9,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 8,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 6
+    },
+    "pros": [
+      "Excellent healthcare (Mayo, Allina, Fairview systems)",
+      "Strong arts, music, and theater scene",
+      "Extensive parks and bike trail network"
+    ],
+    "cons": [
+      "Extremely cold, long winters",
+      "High state income tax (5.35-9.85%)",
+      "SS benefits partially taxed by state"
+    ],
+    "taxes": {
+      "notes": "Federal + MN state income tax (5.35-9.85%); SS partially taxed",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-skowhegan-me",
+    "name": "Skowhegan, ME",
+    "country": "United States",
+    "region": "US Northeast",
+    "cities": [
+      "Skowhegan"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 5,
+      "summerHighF": 80,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 130
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 750,
+        "min": 600,
+        "max": 950,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 470,
+        "min": 380,
+        "max": 570,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 250,
+        "min": 200,
+        "max": 320,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 460,
+        "min": 370,
+        "max": 600,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 260,
+        "min": 190,
+        "max": 360,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 280,
+        "min": 200,
+        "max": 380,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 200,
+        "min": 130,
+        "max": 280,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 5,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 8,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 7
+    },
+    "pros": [
+      "Extremely affordable housing",
+      "Rural New England charm",
+      "Low crime and safe community"
+    ],
+    "cons": [
+      "Extremely cold, long winters",
+      "Very remote with limited services",
+      "Higher heating costs"
+    ],
+    "taxes": {
+      "notes": "Federal + ME state income tax (5.8-7.15%); SS exempt",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-grand-forks-nd",
+    "name": "Grand Forks, ND",
+    "country": "United States",
+    "region": "US Midwest",
+    "cities": [
+      "Grand Forks"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": -3,
+      "summerHighF": 82,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 100
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 800,
+        "min": 600,
+        "max": 1000,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 470,
+        "min": 380,
+        "max": 570,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 240,
+        "min": 190,
+        "max": 310,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 460,
+        "min": 370,
+        "max": 600,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 250,
+        "min": 180,
+        "max": 340,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 260,
+        "min": 180,
+        "max": 360,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 210,
+        "min": 140,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 7,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 8
+    },
+    "pros": [
+      "Very affordable cost of living",
+      "University of North Dakota adds cultural life",
+      "Low crime and safe community"
+    ],
+    "cons": [
+      "Extreme cold â€” winter lows below 0F",
+      "Flood risk from Red River",
+      "Very remote and isolated"
+    ],
+    "taxes": {
+      "notes": "Federal + ND state income tax (0-2.5%); very low rates",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  },
+  {
+    "id": "us-yulee-fl",
+    "name": "Yulee, FL",
+    "country": "United States",
+    "region": "US Southeast",
+    "cities": [
+      "Yulee"
+    ],
+    "currency": "USD",
+    "exchangeRate": 1.0,
+    "visa": {
+      "type": "N/A (domestic)",
+      "notes": "US citizen â€” no visa required"
+    },
+    "climate": {
+      "winterLowF": 42,
+      "summerHighF": 92,
+      "meetsWarmWinterReq": false,
+      "rainyDaysPerYear": 112
+    },
+    "monthlyCosts": {
+      "rent": {
+        "typical": 1400,
+        "min": 1100,
+        "max": 1750,
+        "annualInflation": 0.04
+      },
+      "groceries": {
+        "typical": 530,
+        "min": 430,
+        "max": 640,
+        "annualInflation": 0.03
+      },
+      "utilities": {
+        "typical": 260,
+        "min": 200,
+        "max": 330,
+        "annualInflation": 0.035
+      },
+      "healthcare": {
+        "typical": 500,
+        "min": 400,
+        "max": 640,
+        "annualInflation": 0.05
+      },
+      "insurance": {
+        "typical": 300,
+        "min": 220,
+        "max": 400,
+        "annualInflation": 0.04
+      },
+      "petCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "petDaycare": {
+        "typical": 200,
+        "min": 150,
+        "max": 300,
+        "annualInflation": 0.03
+      },
+      "petGrooming": {
+        "typical": 60,
+        "min": 40,
+        "max": 90,
+        "annualInflation": 0.03
+      },
+      "transportation": {
+        "typical": 310,
+        "min": 210,
+        "max": 410,
+        "annualInflation": 0.03
+      },
+      "entertainment": {
+        "typical": 250,
+        "min": 170,
+        "max": 350,
+        "annualInflation": 0.03
+      },
+      "clothing": {
+        "typical": 100,
+        "min": 60,
+        "max": 150,
+        "annualInflation": 0.02
+      },
+      "personalCare": {
+        "typical": 80,
+        "min": 50,
+        "max": 120,
+        "annualInflation": 0.03
+      },
+      "subscriptions": {
+        "typical": 120,
+        "min": 80,
+        "max": 160,
+        "annualInflation": 0.05
+      },
+      "phoneCell": {
+        "typical": 70,
+        "min": 50,
+        "max": 100,
+        "annualInflation": 0.02
+      },
+      "taxes": {
+        "typical": 0,
+        "min": 0,
+        "max": 0,
+        "annualInflation": 0
+      },
+      "miscellaneous": {
+        "typical": 150,
+        "min": 100,
+        "max": 250,
+        "annualInflation": 0.03
+      },
+      "medicine": {
+        "min": 65,
+        "typical": 91,
+        "max": 180,
+        "annualInflation": 0.045,
+        "notes": "Monthly prescription medication costs for household"
+      },
+      "buffer": {
+        "min": 50,
+        "typical": 100,
+        "max": 200,
+        "annualInflation": 0.025
+      },
+      "medicalOOP": {
+        "min": 200,
+        "typical": 350,
+        "max": 600,
+        "annualInflation": 0.055
+      }
+    },
+    "healthcare": {
+      "system": "Private insurance (ACA/employer/Medicare)",
+      "qualityRating": 7,
+      "dentalIncluded": false,
+      "waitTimes": "Short to moderate",
+      "prescriptionCoverage": "Via insurance plan"
+    },
+    "lifestyle": {
+      "internetSpeed": "1Gbps available",
+      "dogFriendly": 8,
+      "expatCommunity": 1,
+      "englishPrevalence": 10,
+      "safetyRating": 7
+    },
+    "pros": [
+      "No state income tax",
+      "Affordable north Florida suburb near Amelia Island",
+      "Warm climate with proximity to Jacksonville"
+    ],
+    "cons": [
+      "Suburban/rural with limited walkability",
+      "Hurricane risk",
+      "Limited local dining and entertainment"
+    ],
+    "taxes": {
+      "notes": "Federal only â€” no FL state income tax",
+      "vatRate": 0,
+      "socialChargesRate": 0
+    }
+  }
+]

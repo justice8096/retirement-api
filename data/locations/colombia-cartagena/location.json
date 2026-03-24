@@ -1,0 +1,171 @@
+{
+  "id": "colombia-cartagena",
+  "name": "Cartagena, Colombia",
+  "country": "Colombia",
+  "region": "South America",
+  "cities": [
+    "Cartagena"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Retirement (M-Type)",
+    "incomeRequirement": {
+      "monthly": 750,
+      "currency": "USD"
+    },
+    "notes": "Retirement visa requires ~$750/mo pension income."
+  },
+  "climate": {
+    "winterLowF": 75,
+    "summerHighF": 92,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 130
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 900,
+      "min": 700,
+      "max": 1100,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 380,
+      "min": 280,
+      "max": 500,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 130,
+      "min": 85,
+      "max": 190,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 150,
+      "min": 80,
+      "max": 250,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 200,
+      "min": 120,
+      "max": 320,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 40,
+      "min": 25,
+      "max": 65,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 130,
+      "min": 60,
+      "max": 210,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 220,
+      "min": 140,
+      "max": 330,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 70,
+      "min": 40,
+      "max": 110,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 80,
+      "min": 65,
+      "max": 100,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 100,
+      "min": 60,
+      "max": 180,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 15,
+      "typical": 30,
+      "max": 65,
+      "annualInflation": 0.04,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 20,
+      "typical": 40,
+      "max": 80,
+      "annualInflation": 0.04
+    }
+  },
+  "healthcare": {
+    "system": "EPS public system; good private clinics. Growing medical tourism sector.",
+    "qualityRating": 7,
+    "dentalIncluded": false,
+    "waitTimes": "Short at private facilities",
+    "prescriptionCoverage": "Affordable; good availability"
+  },
+  "lifestyle": {
+    "internetSpeed": "50-100Mbps",
+    "dogFriendly": 6,
+    "expatCommunity": 6,
+    "englishPrevalence": 4,
+    "safetyRating": 5
+  },
+  "pros": [
+    "Stunning UNESCO colonial walled city",
+    "Caribbean beach lifestyle",
+    "Growing international community"
+  ],
+  "cons": [
+    "Hot and humid year-round",
+    "Tourist area prices can be high",
+    "Aggressive street vendors in tourist zones"
+  ],
+  "taxes": {
+    "notes": "No tax on foreign-source income if under 183 days/year.",
+    "vatRate": 0.19,
+    "socialChargesRate": 0
+  }
+}

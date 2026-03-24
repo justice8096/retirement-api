@@ -1,0 +1,290 @@
+{
+  "id": "us-atlanta",
+  "name": "Atlanta, Georgia",
+  "country": "United States",
+  "region": "Georgia",
+  "cities": [
+    "Atlanta",
+    "Decatur",
+    "Marietta",
+    "Roswell"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Citizen",
+    "incomeRequirement": null,
+    "notes": "US citizen, no visa required."
+  },
+  "climate": {
+    "winterLowF": 33,
+    "summerHighF": 89,
+    "rainyDaysPerYear": 115,
+    "meetsWarmWinterReq": false
+  },
+  "monthlyCosts": {
+    "rent": {
+      "min": 1624,
+      "max": 2507,
+      "typical": 2015,
+      "type": "2-bedroom single-family house",
+      "annualInflation": 0.035,
+      "notes": "Georgia has no residential rental tax. Water, sewage, and trash are separate utility bills (not included in rent).",
+      "gigInternetTypical": 2095,
+      "gigInternetCoverage": 75,
+      "gigInternetProviders": "AT&T Fiber, Google Fiber",
+      "gigInternetNotes": "AT&T Fiber ~58% by FCC data, Google Fiber expanding. Best coverage in Buckhead, Chastain Park, Collier Heights. Gaps in downtown/Midtown. ~75% combined fiber coverage."
+    },
+    "groceries": {
+      "min": 1200,
+      "max": 1600,
+      "typical": 1400,
+      "notes": "2 adults + pet food",
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "min": 248,
+      "max": 403,
+      "typical": 310,
+      "annualInflation": 0.03,
+      "breakdown": {
+        "electricity": {
+          "typical": 155,
+          "notes": "Georgia Power. Heavy A/C (May–Sep), moderate electric heat supplement."
+        },
+        "gas": {
+          "typical": 45,
+          "notes": "Atlanta Gas Light. Natural gas heating (Dec–Feb), cooking, water heater."
+        },
+        "water": {
+          "typical": 50,
+          "notes": "City of Atlanta Dept of Watershed Mgmt / DeKalb County Water. Among higher US water rates."
+        },
+        "sewage": {
+          "typical": 35,
+          "notes": "Billed with water. Atlanta/DeKalb sewer charges."
+        },
+        "trash": {
+          "typical": 25,
+          "notes": "City of Atlanta Dept of Public Works. Weekly curbside collection included in city services."
+        }
+      },
+      "taxes": "Georgia exempts residential water/sewer from sales tax. Electricity subject to 4% state + local.",
+      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig). "
+    },
+    "healthcare": {
+      "min": 550,
+      "max": 850,
+      "typical": 650,
+      "notes": "Medicare Part B ($174.70/mo) + Medigap Plan G (~$200/mo x2 people) + Part D (~$45/mo x2) + dental/vision plans. Higher premiums reflect macular degeneration specialist coverage and frequent monitoring needs.",
+      "annualInflation": 0.055
+    },
+    "insurance": {
+      "min": 35,
+      "max": 55,
+      "typical": 45,
+      "annualInflation": 0.03
+    },
+    "petCare": {
+      "min": 120,
+      "max": 220,
+      "typical": 165,
+      "annualInflation": 0.04,
+      "notes": "Vet visits, vaccinations, flea/tick year-round, pet insurance"
+    },
+    "petDaycare": {
+      "min": 290,
+      "max": 440,
+      "typical": 360,
+      "annualInflation": 0.03,
+      "notes": "Doggy daycare 2 days/week, large breed rate (~$42/day). Camp Bow Wow, Dogtopia Atlanta. Metro Atlanta pricing slightly higher than rural GA."
+    },
+    "petGrooming": {
+      "min": 85,
+      "max": 160,
+      "typical": 115,
+      "annualInflation": 0.03,
+      "notes": "Bernese coat maintenance, professional grooming monthly"
+    },
+    "transportation": {
+      "min": 150,
+      "max": 300,
+      "typical": 220,
+      "notes": "Car-dependent but MARTA rail/bus available in core metro",
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "min": 410,
+      "max": 640,
+      "typical": 520,
+      "annualInflation": 0.025,
+      "notes": "Incl cable+1Gig internet, Netflix, Amazon Prime, Apple TV+, dining out (lunch for 2 2x/week w/ tax+tip)"
+    },
+    "clothing": {
+      "min": 90,
+      "max": 200,
+      "typical": 130,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "min": 35,
+      "max": 80,
+      "typical": 55,
+      "annualInflation": 0.02
+    },
+    "subscriptions": {
+      "min": 30,
+      "max": 80,
+      "typical": 50,
+      "annualInflation": 0.03,
+      "notes": "Streaming, news, apps"
+    },
+    "phoneCell": {
+      "min": 50,
+      "max": 80,
+      "typical": 62,
+      "annualInflation": 0.02,
+      "notes": "T-Mobile 55+ Essentials. 2 phones, 1.5GB+ high-speed data each, all taxes included."
+    },
+    "miscellaneous": {
+      "min": 80,
+      "max": 160,
+      "typical": 115,
+      "annualInflation": 0.025
+    },
+    "buffer": {
+      "min": 800,
+      "max": 800,
+      "typical": 800,
+      "annualInflation": 0.025,
+      "notes": "Monthly safety buffer for unexpected expenses"
+    },
+    "medicalOOP": {
+      "min": 325,
+      "max": 700,
+      "typical": 475,
+      "annualInflation": 0.055,
+      "notes": "Anti-VEGF injections for macular degeneration (~$300-400 OOP each, 6-10x/yr after Medicare 80%). Specialist visits: ophthalmologist q6-8wks, endocrinologist 2-4x/yr, cardiologist 1-2x/yr. Frequent labs: lipid panel, TSH, A1C, CMP 3-4x/yr each. Both adults: PCP visits quarterly."
+    },
+    "medicine": {
+      "min": 73,
+      "typical": 91,
+      "max": 925,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "taxes": {
+      "min": 0,
+      "typical": 0,
+      "max": 0,
+      "annualInflation": 0.02
+    }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true,
+      "brackets": [
+        {
+          "min": 0,
+          "max": 23850,
+          "rate": 0.1
+        },
+        {
+          "min": 23850,
+          "max": 96950,
+          "rate": 0.12
+        },
+        {
+          "min": 96950,
+          "max": 206700,
+          "rate": 0.22
+        },
+        {
+          "min": 206700,
+          "max": 394600,
+          "rate": 0.24
+        },
+        {
+          "min": 394600,
+          "max": 501050,
+          "rate": 0.32
+        },
+        {
+          "min": 501050,
+          "max": 751600,
+          "rate": 0.35
+        },
+        {
+          "min": 751600,
+          "max": null,
+          "rate": 0.37
+        }
+      ],
+      "standardDeduction": 30000
+    },
+    "stateIncomeTax": {
+      "rate": 0.0549,
+      "type": "graduated",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 7000,
+          "rate": 0.01
+        },
+        {
+          "min": 7000,
+          "max": 10000,
+          "rate": 0.02
+        },
+        {
+          "min": 10000,
+          "max": null,
+          "rate": 0.0549
+        }
+      ],
+      "deduction": 6500,
+      "exemptions": "$65K retirement income exclusion per person (65+). SS partially exempt."
+    },
+    "salesTax": {
+      "rate": 0.089,
+      "notes": "4% state + 4.9% Fulton County"
+    },
+    "propertyTax": {
+      "rate": 0
+    },
+    "socialCharges": null,
+    "vatRate": 0,
+    "estVehicleTax": 250,
+    "ssExempt": false,
+    "notes": "GA state income tax 1-5.49%."
+  },
+  "healthcare": {
+    "system": "Medicare (at 65) + private supplement",
+    "qualityRating": 8,
+    "waitTimes": "varies",
+    "dentalIncluded": false,
+    "prescriptionCoverage": "Part D plan"
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps available (AT&T Fiber/Comcast)",
+    "dogFriendly": 7,
+    "expatCommunity": 0,
+    "englishPrevalence": 10,
+    "safetyRating": 7
+  },
+  "pros": [
+    "Major metro with world-class healthcare (Emory, CDC)",
+    "MARTA rail and bus transit system",
+    "Hartsfield-Jackson International Airport — busiest in the world",
+    "Diverse food scene and cultural attractions",
+    "Mild winters (33F lows)",
+    "No state income tax on first $65K retirement income per person"
+  ],
+  "cons": [
+    "Hot, humid summers (89F)",
+    "Traffic congestion among worst in the US",
+    "Higher cost of living than rural Georgia",
+    "Georgia state income tax (1-5.49%)",
+    "Some areas have higher crime rates"
+  ]
+}

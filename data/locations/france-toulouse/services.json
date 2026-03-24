@@ -1,0 +1,356 @@
+{
+  "distanceUnit": "km",
+  "currency": "EUR",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "CHU de Toulouse - Hôpital Purpan",
+      "address": "Place du Docteur Baylac, 31059 Toulouse",
+      "distanceKm": 4,
+      "notes": "Major teaching hospital, 24/7 emergency, trauma center, English-speaking staff available",
+      "sources": [
+        {
+          "title": "CHU Toulouse",
+          "url": "https://www.chu-toulouse.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Grande Pharmacie de la Place du Capitole",
+      "address": "Place du Capitole, 31000 Toulouse",
+      "distanceKm": 0.1,
+      "notes": "Central pharmacy, wide stock, some English spoken, open Mon-Sat",
+      "sources": [
+        {
+          "title": "Ordre National des Pharmaciens",
+          "url": "https://www.ordre.pharmacien.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Monoprix Toulouse Centre",
+      "address": "39 Rue d'Alsace-Lorraine, 31000 Toulouse",
+      "distanceKm": 0.2,
+      "notes": "City center supermarket, fresh produce, prepared foods, daily essentials",
+      "sources": [
+        {
+          "title": "Monoprix",
+          "url": "https://www.monoprix.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "BNP Paribas Toulouse Capitole",
+      "address": "Place du Capitole, 31000 Toulouse",
+      "distanceKm": 0.1,
+      "notes": "Full-service branch, ATM 24/7, English-speaking advisors by appointment",
+      "sources": [
+        {
+          "title": "BNP Paribas",
+          "url": "https://mabanque.bnpparibas/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Maison de Santé Saint-Cyprien",
+      "address": "Rue de la République, 31300 Toulouse",
+      "distanceKm": 1.5,
+      "notes": "Multi-practitioner clinic, Doctolib booking, some English-speaking GPs",
+      "sources": [
+        {
+          "title": "Doctolib Toulouse",
+          "url": "https://www.doctolib.fr/medecin-generaliste/toulouse"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Centre Dentaire Toulouse Jean Jaurès",
+      "address": "Allées Jean Jaurès, 31000 Toulouse",
+      "distanceKm": 0.5,
+      "notes": "Modern dental clinic, general and cosmetic, Doctolib appointments",
+      "sources": [
+        {
+          "title": "Doctolib Dentists Toulouse",
+          "url": "https://www.doctolib.fr/dentiste/toulouse"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Clinique Vétérinaire du Capitole",
+      "address": "Rue Bayard, 31000 Toulouse",
+      "distanceKm": 0.5,
+      "notes": "Full-service vet clinic, small animal specialist, emergency referrals",
+      "sources": [
+        {
+          "title": "Pages Jaunes Vétérinaire Toulouse",
+          "url": "https://www.pagesjaunes.fr/annuaire/toulouse-31/veterinaires"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Jardin des Plantes de Toulouse",
+      "address": "Allée Jules Guesde, 31400 Toulouse",
+      "distanceKm": 1,
+      "notes": "7-hectare botanical garden and park, dogs allowed on leash, playground, duck pond",
+      "sources": [
+        {
+          "title": "Ville de Toulouse",
+          "url": "https://www.toulouse.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "Fitness Park Toulouse Centre",
+      "address": "Rue Bayard, 31000 Toulouse",
+      "distanceKm": 0.4,
+      "notes": "24/7 gym, modern equipment, group classes, flexible memberships",
+      "sources": [
+        {
+          "title": "Fitness Park",
+          "url": "https://www.fitnesspark.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "Christ Church Toulouse (Anglican)",
+      "address": "20 Rue Mage, 31000 Toulouse",
+      "distanceKm": 0.5,
+      "notes": "English-language Anglican services, active expat community",
+      "sources": [
+        {
+          "title": "Diocese in Europe",
+          "url": "https://europe.anglican.org/"
+        }
+      ]
+    },
+    {
+      "categoryId": "international_school",
+      "name": "Toulouse International Community (TIC)",
+      "address": "Various locations, 31000 Toulouse",
+      "distanceKm": 1,
+      "notes": "Expat social group, Airbus community integration, regular meetups",
+      "sources": [
+        {
+          "title": "InterNations Toulouse",
+          "url": "https://www.internations.org/toulouse-expats"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Aéroport Toulouse-Blagnac (TLS)",
+      "address": "31700 Blagnac",
+      "distanceKm": 8,
+      "notes": "International airport, flights across Europe, airport shuttle and tram to city center",
+      "sources": [
+        {
+          "title": "Toulouse Airport",
+          "url": "https://www.toulouse.aeroport.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Gare de Toulouse-Matabiau",
+      "address": "Boulevard Pierre Sémard, 31500 Toulouse",
+      "distanceKm": 1,
+      "notes": "TGV station, 4h10 to Paris, metro and bus connections, regional trains",
+      "sources": [
+        {
+          "title": "SNCF",
+          "url": "https://www.sncf.com/fr/gares/toulouse-matabiau/FRTLS"
+        }
+      ]
+    },
+    {
+      "categoryId": "coworking",
+      "name": "La Cantine Toulouse",
+      "address": "Rue Gabriel Péri, 31000 Toulouse",
+      "distanceKm": 0.6,
+      "notes": "Tech-focused coworking space, day passes, community events, fast WiFi",
+      "sources": [
+        {
+          "title": "La Cantine Toulouse",
+          "url": "https://www.lacantine-toulouse.org/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "Toilettage Canin Toulouse Centre",
+      "address": "Rue des Filatiers, 31000 Toulouse",
+      "distanceKm": 0.4,
+      "notes": "Dog and cat grooming, appointment-based, central location",
+      "sources": [
+        {
+          "title": "Pages Jaunes Toilettage Toulouse",
+          "url": "https://www.pagesjaunes.fr/annuaire/toulouse-31/toilettage-animaux"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_daycare",
+      "name": "Dog Resort Toulouse",
+      "address": "Route de Revel, 31400 Toulouse",
+      "distanceKm": 5,
+      "notes": "Dog daycare and boarding, outdoor play areas, pickup service available",
+      "sources": [
+        {
+          "title": "Dog Resort Toulouse",
+          "url": "https://www.pagesjaunes.fr/annuaire/toulouse-31/garde-animaux"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "Cité de l'Espace",
+      "description": "Space-themed interactive museum with planetarium, real Mir station, Ariane 5 rocket replica",
+      "distanceKm": 8,
+      "estimatedCostEUR": 25,
+      "frequency": "Daily 10:00-18:00, extended summer hours",
+      "sources": [
+        {
+          "title": "Cité de l'Espace",
+          "url": "https://www.cite-espace.com/"
+        }
+      ]
+    },
+    {
+      "type": "historical",
+      "name": "Basilique Saint-Sernin",
+      "description": "Largest remaining Romanesque church in Europe, UNESCO World Heritage, 11th century",
+      "distanceKm": 0.5,
+      "estimatedCostEUR": 0,
+      "frequency": "Open daily, free entry to nave, crypt visits available",
+      "sources": [
+        {
+          "title": "Basilique Saint-Sernin",
+          "url": "https://www.basilique-saint-sernin.fr/"
+        }
+      ]
+    },
+    {
+      "type": "outdoor",
+      "name": "Canal du Midi",
+      "description": "UNESCO World Heritage canal, 240km of tree-lined towpaths for cycling, walking, and boating",
+      "distanceKm": 1,
+      "estimatedCostEUR": 0,
+      "frequency": "Year-round, boat rentals available spring-autumn",
+      "sources": [
+        {
+          "title": "Canal du Midi",
+          "url": "https://www.canaldumidi.com/"
+        }
+      ]
+    },
+    {
+      "type": "dining",
+      "name": "Marché Victor Hugo",
+      "description": "Iconic covered market with fresh produce, charcuterie, cheese, and upstairs restaurants",
+      "distanceKm": 0.3,
+      "estimatedCostEUR": 15,
+      "frequency": "Tue-Sun 6:00-14:00, restaurants open for lunch",
+      "sources": [
+        {
+          "title": "Marché Victor Hugo",
+          "url": "https://www.marche-victor-hugo.fr/"
+        }
+      ]
+    },
+    {
+      "type": "entertainment",
+      "name": "Airbus Factory Tour (Manatour)",
+      "description": "Guided tour of Airbus A380 assembly line, see aircraft being built from start to finish",
+      "distanceKm": 10,
+      "estimatedCostEUR": 17,
+      "frequency": "Mon-Sat, advance booking required, tours in English available",
+      "sources": [
+        {
+          "title": "Manatour Airbus Visit",
+          "url": "https://www.manatour.fr/"
+        }
+      ]
+    },
+    {
+      "type": "cultural",
+      "name": "Musée des Augustins",
+      "description": "Fine arts museum in a Gothic monastery, sculpture from Roman to modern, paintings collection",
+      "distanceKm": 0.3,
+      "estimatedCostEUR": 5,
+      "frequency": "Wed-Mon 10:00-18:00, closed Tue",
+      "sources": [
+        {
+          "title": "Musée des Augustins",
+          "url": "https://www.augustins.org/"
+        }
+      ]
+    },
+    {
+      "type": "social",
+      "name": "Place du Capitole",
+      "description": "Grand central square surrounded by cafés, site of weekly markets and cultural events",
+      "distanceKm": 0.1,
+      "estimatedCostEUR": 0,
+      "frequency": "Open 24/7, Wednesday and Saturday markets",
+      "sources": [
+        {
+          "title": "Toulouse Tourism",
+          "url": "https://www.toulouse-tourisme.com/"
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "name": "Jardin Japonais de Toulouse",
+      "description": "Tranquil Japanese garden with tea pavilion, koi ponds, zen rock garden",
+      "distanceKm": 3,
+      "estimatedCostEUR": 0,
+      "frequency": "Open daily, dawn to dusk",
+      "sources": [
+        {
+          "title": "Toulouse Parks",
+          "url": "https://www.toulouse.fr/"
+        }
+      ]
+    },
+    {
+      "type": "sports",
+      "name": "Stadium de Toulouse",
+      "description": "Home of Stade Toulousain (rugby) and Toulouse FC (football), major match venue",
+      "distanceKm": 3.5,
+      "estimatedCostEUR": 25,
+      "frequency": "Match days, rugby season Sep-Jun, football Aug-May",
+      "sources": [
+        {
+          "title": "Stade Toulousain",
+          "url": "https://www.stadetoulousain.fr/"
+        }
+      ]
+    },
+    {
+      "type": "historical",
+      "name": "Couvent des Jacobins",
+      "description": "13th-century Dominican monastery with extraordinary palm-tree vault and resting place of Thomas Aquinas",
+      "distanceKm": 0.3,
+      "estimatedCostEUR": 5,
+      "frequency": "Daily 10:00-18:00",
+      "sources": [
+        {
+          "title": "Les Jacobins Toulouse",
+          "url": "https://www.jacobins.toulouse.fr/"
+        }
+      ]
+    }
+  ]
+}

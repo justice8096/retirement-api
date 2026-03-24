@@ -1,0 +1,245 @@
+{
+  "distanceUnit": "km",
+  "currency": "EUR",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "General Hospital of Nafplio",
+      "address": "City center area, Nafplio, Greece",
+      "distanceKm": 5,
+      "notes": "Public hospital with 24hr emergency, some English-speaking doctors",
+      "sources": [
+        {
+          "title": "General Hospital of Nafplio",
+          "url": "https://www.moh.gov.gr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Pharmacy (Φαρμακείο) Nafplio Center",
+      "address": "City center area, Nafplio, Greece",
+      "distanceKm": 1.5,
+      "notes": "Well-stocked pharmacy, prescription medications, some English spoken",
+      "sources": [
+        {
+          "title": "Pharmacy (Φαρμακείο) Nafplio Center",
+          "url": "https://www.pfs.gr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Sklavenitis",
+      "address": "City center area, Nafplio, Greece",
+      "distanceKm": 2,
+      "notes": "Major Greek supermarket chain, wide selection, competitive prices",
+      "sources": [
+        {
+          "title": "Sklavenitis",
+          "url": "https://www.sklavenitis.gr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "National Bank of Greece",
+      "address": "City center area, Nafplio, Greece",
+      "distanceKm": 2,
+      "notes": "Largest Greek bank, ATMs, some English-speaking staff",
+      "sources": [
+        {
+          "title": "National Bank of Greece",
+          "url": "https://www.nbg.gr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Nafplio Medical Center",
+      "address": "City center area, Nafplio, Greece",
+      "distanceKm": 3,
+      "notes": "Private clinic, English-speaking GPs, walk-ins accepted",
+      "sources": [
+        {
+          "title": "Nafplio Medical Center",
+          "url": "https://www.healthgreece.gr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Dental Clinic Nafplio Center",
+      "address": "City center area, Nafplio, Greece",
+      "distanceKm": 3,
+      "notes": "General and cosmetic dentistry, some English-speaking dentists, modern equipment",
+      "sources": [
+        {
+          "title": "Dental Services Greece",
+          "url": "https://www.healthgreece.gr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Veterinary Clinic Nafplio",
+      "address": "City center area, Nafplio, Greece",
+      "distanceKm": 4,
+      "notes": "Full veterinary services, vaccinations, surgery, some English spoken",
+      "sources": [
+        {
+          "title": "Veterinary Services Greece",
+          "url": "https://www.vethellas.gr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Parque Canino / Dog Park Nafplio",
+      "address": "Park area, Nafplio, Greece",
+      "distanceKm": 5,
+      "notes": "Off-leash area, green space popular with dog owners, water available",
+      "sources": [
+        {
+          "title": "Parks in Nafplio",
+          "url": "https://www.visitgreece.gr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "Holmes Place Nafplio",
+      "address": "City center area, Nafplio, Greece",
+      "distanceKm": 3,
+      "notes": "Modern gym with cardio and weight equipment, group classes, monthly memberships",
+      "sources": [
+        {
+          "title": "Holmes Place Nafplio",
+          "url": "https://www.holmesplace.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "St. Paul's Anglican Church Nafplio",
+      "address": "City center area, Nafplio, Greece",
+      "distanceKm": 5,
+      "notes": "English-language services, expat community gathering point, social events",
+      "sources": [
+        {
+          "title": "St. Paul's Anglican Church Nafplio",
+          "url": "https://www.anglicanchurch.gr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Athens International Airport (ATH)",
+      "address": "Airport area",
+      "distanceKm": 140,
+      "notes": "International airport with domestic and international flights",
+      "sources": [
+        {
+          "title": "Athens International Airport",
+          "url": "https://www.aia.gr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "KTEL / Metro Nafplio",
+      "address": "City center area, Nafplio, Greece",
+      "distanceKm": 2,
+      "notes": "Intercity buses, metro (Athens), ferry services to islands",
+      "sources": [
+        {
+          "title": "KTEL",
+          "url": "https://www.ktelbus.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "coworking",
+      "name": "Impact Hub Nafplio",
+      "address": "City center area, Nafplio, Greece",
+      "distanceKm": 3,
+      "notes": "Coworking space, high-speed internet, meeting rooms, community events",
+      "sources": [
+        {
+          "title": "Impact Hub Nafplio",
+          "url": "https://www.impacthub.net/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "Pet Grooming Nafplio",
+      "address": "City center area, Nafplio, Greece",
+      "distanceKm": 4,
+      "notes": "Professional pet grooming services, bathing, clipping, appointment recommended",
+      "sources": [
+        {
+          "title": "Pet Services Nafplio",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "categoryId": "international_school",
+      "name": "InterNations Nafplio Expat Community",
+      "address": "City center area, Nafplio, Greece",
+      "distanceKm": 4,
+      "notes": "International expat community center, social events, networking, relocation assistance",
+      "sources": [
+        {
+          "title": "InterNations Nafplio Expat Community",
+          "url": "https://www.internations.org/"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "Nafplio Cultural Center",
+      "description": "Cultural center with local art, history, and community events",
+      "distanceKm": 4,
+      "estimatedCostEUR": 8,
+      "frequency": "Tue-Sun 10:00-17:00",
+      "sources": [
+        {
+          "title": "Nafplio Culture",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "name": "Nafplio Central Park / Garden",
+      "description": "Main public park with walking trails, gardens, and green space",
+      "distanceKm": 3,
+      "estimatedCostEUR": 0,
+      "frequency": "Daily, dawn to dusk",
+      "sources": [
+        {
+          "title": "Parks in Nafplio",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "dining",
+      "name": "Nafplio Restaurant District",
+      "description": "Walkable area with diverse restaurants, cafes, and bars",
+      "distanceKm": 2,
+      "estimatedCostEUR": 25,
+      "frequency": "Daily, lunch and dinner service",
+      "sources": [
+        {
+          "title": "Dining in Nafplio",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    }
+  ]
+}

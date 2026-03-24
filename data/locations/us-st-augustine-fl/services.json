@@ -1,0 +1,232 @@
+{
+  "distanceUnit": "mi",
+  "currency": "USD",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "St. Augustine Regional Medical Center",
+      "address": "City center area, St. Augustine, United States",
+      "notes": "Full-service hospital with 24hr emergency department",
+      "sources": [
+        {
+          "title": "St. Augustine Regional Medical Center",
+          "url": "https://www.aha.org/"
+        }
+      ],
+      "distanceMi": 5.0
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "CVS Pharmacy - St. Augustine",
+      "address": "City center area, St. Augustine, United States",
+      "notes": "24-hour pharmacy, drive-through, vaccinations available",
+      "sources": [
+        {
+          "title": "CVS Pharmacy",
+          "url": "https://www.cvs.com/"
+        }
+      ],
+      "distanceMi": 0.9
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Kroger - St. Augustine",
+      "address": "City center area, St. Augustine, United States",
+      "notes": "Full-service supermarket with pharmacy, deli, bakery, organic section",
+      "sources": [
+        {
+          "title": "Kroger",
+          "url": "https://www.kroger.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "bank",
+      "name": "Bank of America - St. Augustine",
+      "address": "City center area, St. Augustine, United States",
+      "notes": "Full-service branch with financial advisors, ATM, mobile banking",
+      "sources": [
+        {
+          "title": "Bank of America",
+          "url": "https://www.bankofamerica.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "MedExpress Urgent Care - St. Augustine",
+      "address": "City center area, St. Augustine, United States",
+      "notes": "Walk-in clinic, accepting new patients, same-day appointments",
+      "sources": [
+        {
+          "title": "MedExpress Urgent Care",
+          "url": "https://www.medexpress.com/"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Aspen Dental - St. Augustine",
+      "address": "City center area, St. Augustine, United States",
+      "notes": "General and cosmetic dentistry, accepts most insurance, new patient specials",
+      "sources": [
+        {
+          "title": "Aspen Dental",
+          "url": "https://www.aspendental.com/"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "vet",
+      "name": "VCA Animal Hospital - St. Augustine",
+      "address": "City center area, St. Augustine, United States",
+      "notes": "Full-service veterinary hospital, emergency referrals, boarding available",
+      "sources": [
+        {
+          "title": "VCA Hospitals",
+          "url": "https://vcahospitals.com/"
+        }
+      ],
+      "distanceMi": 2.5
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "St. Augustine Dog Park",
+      "address": "Park area, St. Augustine, United States",
+      "notes": "Fenced off-leash area, separate small and large dog sections, water stations",
+      "sources": [
+        {
+          "title": "St. Augustine Parks & Recreation",
+          "url": "https://www.nrpa.org/"
+        }
+      ],
+      "distanceMi": 3.1
+    },
+    {
+      "categoryId": "gym",
+      "name": "Planet Fitness - St. Augustine",
+      "address": "City center area, St. Augustine, United States",
+      "notes": "Budget-friendly gym, cardio and weight equipment, 24/7 access at most locations",
+      "sources": [
+        {
+          "title": "Planet Fitness",
+          "url": "https://www.planetfitness.com/"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "airport",
+      "name": "Jacksonville International Airport (JAX)",
+      "address": "Airport area",
+      "notes": "International airport with domestic and international flights",
+      "sources": [
+        {
+          "title": "Jacksonville International Airport",
+          "url": "https://www.flyjax.com/"
+        }
+      ],
+      "distanceMi": 37.3
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "St. Augustine Transit Center",
+      "address": "City center area, St. Augustine, United States",
+      "notes": "Local bus service, some express routes, park-and-ride available",
+      "sources": [
+        {
+          "title": "St. Augustine Transit Center",
+          "url": "https://www.apta.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "coworking",
+      "name": "WeWork - St. Augustine",
+      "address": "City center area, St. Augustine, United States",
+      "notes": "Premium coworking, private offices, conference rooms, high-speed internet",
+      "sources": [
+        {
+          "title": "WeWork",
+          "url": "https://www.wework.com/"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "PetSmart Grooming - St. Augustine",
+      "address": "City center area, St. Augustine, United States",
+      "notes": "Professional grooming salon, walk-in and appointment, self-serve wash stations",
+      "sources": [
+        {
+          "title": "PetSmart",
+          "url": "https://www.petsmart.com/"
+        }
+      ],
+      "distanceMi": 2.5
+    },
+    {
+      "categoryId": "pet_daycare",
+      "name": "Camp Bow Wow - St. Augustine",
+      "address": "City area, St. Augustine, United States",
+      "notes": "Dog daycare and boarding, web cameras, indoor/outdoor play areas, trained counselors",
+      "sources": [
+        {
+          "title": "Camp Bow Wow",
+          "url": "https://www.campbowwow.com/"
+        }
+      ],
+      "distanceMi": 3.7
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "St. Augustine Museum of Art",
+      "description": "Art museum with permanent and rotating exhibitions",
+      "frequency": "Tue-Sun 10:00-17:00",
+      "sources": [
+        {
+          "title": "St. Augustine Culture",
+          "url": "https://www.nea.gov/"
+        }
+      ],
+      "distanceMi": 2.5,
+      "estimatedCostUSD": 15
+    },
+    {
+      "type": "nature",
+      "name": "St. Augustine Central Park / Garden",
+      "description": "Main public park with walking trails, gardens, and green space",
+      "frequency": "Daily, dawn to dusk",
+      "sources": [
+        {
+          "title": "Parks in St. Augustine",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "distanceMi": 1.9,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "dining",
+      "name": "St. Augustine Restaurant District",
+      "description": "Walkable area with diverse restaurants, cafes, and bars",
+      "frequency": "Daily, lunch and dinner service",
+      "sources": [
+        {
+          "title": "Dining in St. Augustine",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "distanceMi": 1.2,
+      "estimatedCostUSD": 25
+    }
+  ]
+}

@@ -1,0 +1,1259 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 73,
+      "typical": 91,
+      "max": 925
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic/Wegovy) [P1]",
+        "monthlyCost": 25,
+        "withoutInsurance": 900,
+        "coverageNote": "Medicare Part D covers for diabetes (tier 3). $25 copay typical. Without coverage ~$900/mo. IRA negotiated price TBD."
+      },
+      {
+        "name": "Levothyroxine (Synthroid) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 15,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Atorvastatin 20mg [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Montelukast (Singulair) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 15,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Hydrochlorothiazide (HCTZ) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 8,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Olmesartan/Medoxomil (Benicar) [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 30,
+        "coverageNote": "Medicare Part D generic tier 1-2; $4-15 copay"
+      },
+      {
+        "name": "Albuterol inhaler [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 35,
+        "coverageNote": "Medicare Part D tier 2; $10-25 copay. IRA cap applies."
+      },
+      {
+        "name": "Metformin 500mg [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Allopurinol (gout) [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Topiramate (Topamax) [P2]",
+        "monthlyCost": 10,
+        "withoutInsurance": 25,
+        "coverageNote": "Medicare Part D generic tier 1-2; $4-15 copay"
+      },
+      {
+        "name": "Metoprolol (Lopressor) [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Atorvastatin 20mg [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      }
+    ],
+    "pharmacyAccess": "Excellent. CVS, Walgreens, Walmart, Costco pharmacies widely available throughout Northern Virginia. Mail-order options through Medicare Part D plans (OptumRx, Express Scripts, Caremark).",
+    "prescriptionSystem": "Medicare Part D prescription drug plan. Choose standalone PDP or get coverage through Medicare Advantage. Annual out-of-pocket cap $2,000 under Inflation Reduction Act.",
+    "insuranceCoverage": "Medicare Part D covers most prescriptions with tiered copays. Generic drugs $0-15/month, preferred brands $30-50/month, specialty drugs 25-33% coinsurance up to $2,000 annual cap.",
+    "sources": [
+      {
+        "title": "Medicare Part D Costs - CMS.gov",
+        "url": "https://www.cms.gov/medicare/costs-getting-started"
+      },
+      {
+        "title": "Inflation Reduction Act Drug Provisions - KFF",
+        "url": "https://www.kff.org/medicare/issue-brief/how-will-the-prescription-drug-provisions-in-the-inflation-reduction-act-affect-medicare-beneficiaries/"
+      },
+      {
+        "title": "GoodRx Drug Pricing",
+        "url": "https://www.goodrx.com/"
+      }
+    ]
+  },
+  "vision": {
+    "annualExamCost": {
+      "withInsurance": 25,
+      "withoutInsurance": 200,
+      "notes": "Original Medicare does NOT cover routine vision exams. Must have separate vision plan or Medicare Advantage with vision."
+    },
+    "eyeglasses": {
+      "basicFrameAndLens": {
+        "min": 100,
+        "typical": 200,
+        "max": 400
+      },
+      "progressiveLens": {
+        "min": 200,
+        "typical": 350,
+        "max": 600
+      },
+      "contactLensesMonthly": {
+        "min": 30,
+        "typical": 50,
+        "max": 80
+      }
+    },
+    "insuranceCoverage": "Need separate vision plan or Medicare Advantage with vision. Standalone vision plans (VSP, EyeMed) run $15-25/month and cover annual exam + $100-200 frame/lens allowance.",
+    "specialistWaitTime": "1-3 weeks for routine eye exams in Northern Virginia. Shorter waits at retail optometry (LensCrafters, Walmart Vision). Ophthalmologist referrals 2-4 weeks.",
+    "seniorConsiderations": "Medicare covers cataract surgery and glaucoma screening. Annual glaucoma screening covered for high-risk beneficiaries. Diabetic retinopathy screening covered. One pair of eyeglasses or contacts after cataract surgery.",
+    "sources": [
+      {
+        "title": "Medicare Vision Coverage - Medicare.gov",
+        "url": "https://www.medicare.gov/coverage/eye-exams"
+      },
+      {
+        "title": "VSP Individual Vision Plans",
+        "url": "https://www.vspdirect.com/"
+      },
+      {
+        "title": "EyeMed Vision Plans",
+        "url": "https://www.eyemed.com/"
+      }
+    ]
+  },
+  "dental": {
+    "annualCleaningCost": {
+      "withInsurance": 30,
+      "withoutInsurance": 150,
+      "notes": "Original Medicare does NOT cover routine dental. Need separate dental plan or Medicare Advantage with dental."
+    },
+    "commonProcedures": [
+      {
+        "name": "Filling (composite)",
+        "withInsurance": 100,
+        "withoutInsurance": 250
+      },
+      {
+        "name": "Crown (porcelain)",
+        "withInsurance": 500,
+        "withoutInsurance": 1200
+      },
+      {
+        "name": "Root Canal (molar)",
+        "withInsurance": 450,
+        "withoutInsurance": 1100
+      },
+      {
+        "name": "Extraction (simple)",
+        "withInsurance": 80,
+        "withoutInsurance": 250
+      },
+      {
+        "name": "Implant (single)",
+        "withInsurance": 2000,
+        "withoutInsurance": 4500
+      },
+      {
+        "name": "Dentures (complete set)",
+        "withInsurance": 800,
+        "withoutInsurance": 2000
+      }
+    ],
+    "insuranceCoverage": "Need separate dental plan ($20-50/month) or Medicare Advantage with dental. Standalone plans (Delta Dental, Cigna) typically cover 100% preventive, 50-80% basic, 50% major procedures. Annual maximums $1,000-2,000.",
+    "dentistAvailability": "Excellent in Northern Virginia. Large number of dental practices, short wait times (1-2 weeks for routine). Many dentists accept dental discount plans for uninsured seniors.",
+    "sources": [
+      {
+        "title": "Medicare Dental Coverage - Medicare.gov",
+        "url": "https://www.medicare.gov/coverage/dental-services"
+      },
+      {
+        "title": "Delta Dental Individual Plans",
+        "url": "https://www.deltadental.com/"
+      },
+      {
+        "title": "ADA Fee Survey - Virginia",
+        "url": "https://www.ada.org/resources/practice/practice-economics"
+      }
+    ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 440,
+      "typical": 530,
+      "max": 650
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 355,
+        "seniorDiscounts": "Many restaurants offer 10-15% senior discounts. AARP members get discounts at Denny's, Outback, and others.",
+        "notes": "Lunch for 2 at moderate restaurant ~$35 + 6% tax + 20% tip = ~$44/meal, 2x/week (~8.7/mo) = ~$355/mo"
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 75,
+        "seniorDiscounts": "Some providers offer senior plans. Xfinity 5-year price lock at $60/mo available.",
+        "notes": "Xfinity 1 Gig $60-70/mo or Verizon FiOS $75/mo. No data caps."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 18,
+        "seniorDiscounts": "T-Mobile 55+ plans include Netflix.",
+        "notes": "$17.99/mo. 1080p, 2 screens, full library."
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 15,
+        "seniorDiscounts": "Medicaid recipients qualify for Prime at $6.99/mo.",
+        "notes": "$14.99/mo includes Prime Video, free shipping, Prime Reading."
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 13,
+        "seniorDiscounts": "No senior discount. Annual plan $99/yr ($8.25/mo).",
+        "notes": "$12.99/mo. Original content library."
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 25,
+        "seniorDiscounts": "SilverSneakers free gym membership through many Medicare Advantage plans."
+      },
+      {
+        "name": "Parks/Outdoors",
+        "monthlyCost": 10,
+        "seniorDiscounts": "America the Beautiful Senior Pass $20/year (lifetime $80) for national parks."
+      },
+      {
+        "name": "Books/Library",
+        "monthlyCost": 10,
+        "seniorDiscounts": "Fairfax County Library system free. Senior book clubs and digital resources."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 25,
+        "seniorDiscounts": "McDonald's and Dunkin' offer senior coffee discounts in some locations."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Xfinity 1 Gig Plans",
+        "url": "https://www.xfinity.com/gig"
+      },
+      {
+        "title": "Netflix Pricing",
+        "url": "https://help.netflix.com/en/node/24926"
+      },
+      {
+        "title": "AARP Member Discounts",
+        "url": "https://www.aarp.org/membership/benefits/discounts/"
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 200,
+      "typical": 300,
+      "max": 400
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 130,
+        "senior": 65,
+        "notes": "WMATA Metro Senior SmarTrip card gives half-fare during off-peak. Fairfax Connector senior fare $0.85."
+      },
+      "singleRide": 2.25,
+      "coverage": "WMATA Metro covers major NoVA corridors (Orange/Silver/Blue lines). Fairfax Connector buses serve suburban areas. VRE commuter rail connects Fredericksburg/Manassas to DC.",
+      "seniorDiscount": "Seniors 65+ get half-fare on WMATA Metro during off-peak hours and all day on buses. Must have Senior SmarTrip card."
+    },
+    "rideShare": {
+      "baseFare": 2.5,
+      "perKm": 1.2,
+      "typicalCrossTownTrip": {
+        "min": 12,
+        "typical": 18,
+        "max": 30
+      },
+      "availability": "Excellent throughout Northern Virginia. Uber and Lyft widely available 24/7.",
+      "notes": "Uber/Lyft prices surge during rush hours. GoGoGrandparent service available for seniors who prefer phone-based ride ordering."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 45,
+        "initialRegistration": {
+          "min": 45,
+          "typical": 50,
+          "max": 60
+        },
+        "notes": "Virginia charges personal property tax on vehicles, assessed by locality. Fairfax County rate $4.57 per $100 of assessed value. On a $25,000 car this is ~$1,140/year. State vehicle registration $33-53/year."
+      },
+      "insurance": {
+        "monthlyMin": 120,
+        "monthlyTypical": 170,
+        "monthlyMax": 250,
+        "notes": "Virginia has higher-than-average car insurance rates. NoVA premiums higher due to traffic density. Senior safe driver discounts available (5-15%)."
+      },
+      "fuel": {
+        "pricePerLiter": 0.93,
+        "monthlyEstimate": {
+          "min": 80,
+          "typical": 130,
+          "max": 200
+        },
+        "notes": "~$3.50/gallon average in Virginia. VA gas tax $0.294/gallon. Typical senior drives 8,000-12,000 miles/year."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 50,
+          "typical": 100,
+          "max": 200
+        },
+        "hourlyStreet": 2.5,
+        "notes": "Free parking in most suburban areas. Apartment complexes typically include 1 spot. Metro station parking $4.95-5.75/day."
+      },
+      "tolls": {
+        "monthlyEstimate": 40,
+        "notes": "I-66 Inside the Beltway tolling, Dulles Toll Road ($3.25-6.50), I-495 Express Lanes (variable pricing). E-ZPass recommended. Monthly cost varies greatly by commute pattern."
+      },
+      "seniorDiscounts": "Virginia Safe Driver discount for completing AARP Smart Driver course (5-15% insurance reduction). Some counties offer vehicle property tax relief for seniors."
+    },
+    "walkability": "Low to moderate in Northern Virginia suburbs. Walkable areas near Metro stations (Arlington, Tysons). Most of Fairfax County requires a car for daily errands.",
+    "cycling": {
+      "bikeShareMonthly": 8,
+      "infrastructure": "Capital Bikeshare available near Metro stations in Arlington/Alexandria. Protected bike lanes expanding in urban areas. Most suburbs have limited cycling infrastructure.",
+      "notes": "Capital Bikeshare single trip $2, day pass $8, annual $95."
+    },
+    "sources": [
+      {
+        "title": "WMATA Metro Fares",
+        "url": "https://www.wmata.com/fares/"
+      },
+      {
+        "title": "Fairfax County Personal Property Tax",
+        "url": "https://www.fairfaxcounty.gov/taxes/personal-property-tax"
+      },
+      {
+        "title": "Virginia DMV Registration",
+        "url": "https://www.dmv.virginia.gov/vehicles/registration"
+      },
+      {
+        "title": "Virginia Gas Tax - VDOT",
+        "url": "https://www.virginiadot.org/info/resources/gas_tax_history.asp"
+      }
+    ],
+    "electricVehicle": {
+      "purchasePrice": {
+        "min": 28000,
+        "typical": 35000,
+        "max": 52000
+      },
+      "purchaseNotes": "Tesla Model 3 ~$35K, Model Y ~$45K, Hyundai Ioniq 5 ~$42K, Chevy Equinox EV ~$28K. Federal tax credit up to $7,500 (income limits apply). Some states add incentives.",
+      "federalIncentive": 7500,
+      "stateIncentive": 0,
+      "incentiveNotes": "Federal EV tax credit up to $7,500 under IRA (income < $150K single / $300K joint). Must be new vehicle, MSRP < $55K sedan / $80K SUV. Used EV credit up to $4,000.",
+      "chargingHome": {
+        "installCost": {
+          "min": 500,
+          "typical": 1200,
+          "max": 2500
+        },
+        "monthlyElectricity": {
+          "min": 30,
+          "typical": 50,
+          "max": 80
+        },
+        "notes": "Level 2 (240V) home charger. Electricity ~$0.12-0.16/kWh. ~1,000 mi/month = ~300 kWh = $36-48/mo."
+      },
+      "chargingPublic": {
+        "perKwh": {
+          "min": 0.3,
+          "typical": 0.43,
+          "max": 0.6
+        },
+        "notes": "Tesla Supercharger ~$0.40-0.50/kWh. Electrify America ~$0.43/kWh. ChargePoint varies. Free L2 chargers at some retailers."
+      },
+      "insurance": {
+        "monthly": {
+          "min": 140,
+          "typical": 180,
+          "max": 250
+        },
+        "notes": "EV insurance 15-25% higher than comparable ICE vehicle. Shop Liberty Mutual, Progressive, Tesla Insurance where available."
+      },
+      "maintenance": {
+        "annual": {
+          "min": 400,
+          "typical": 600,
+          "max": 900
+        },
+        "notes": "No oil changes, fewer brake jobs (regen braking). Tire rotation every 7,500 mi. Cabin air filter annually. Brake fluid every 2-3 yrs. 12V battery every 4-5 yrs (~$100). Tires wear faster on heavier EVs."
+      },
+      "registration": {
+        "annual": {
+          "min": 100,
+          "typical": 200,
+          "max": 300
+        },
+        "notes": "Many states add EV-specific fees ($100-275/yr) to replace lost gas tax revenue. Virginia: $64/yr EV fee."
+      },
+      "batteryWarranty": "8 years / 100,000 miles (federal minimum). Most manufacturers cover 70-80% capacity retention.",
+      "depreciationNotes": "EVs depreciate 40-50% in first 3 years, though Tesla holds value better. Used EV market improving. Budget ~$3,000-5,000/yr depreciation on $35K vehicle.",
+      "totalMonthlyOwnership": {
+        "min": 250,
+        "typical": 380,
+        "max": 550
+      },
+      "totalMonthlyNotes": "Includes: charging ($50), insurance ($180), maintenance ($50/mo avg), registration ($17/mo). Excludes: purchase/loan payment, depreciation.",
+      "sources": [
+        {
+          "title": "Federal EV Tax Credit - IRS",
+          "url": "https://www.irs.gov/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after"
+        },
+        {
+          "title": "EV Maintenance Costs - AAA",
+          "url": "https://www.aaa.com/autorepair/articles/ev-maintenance"
+        },
+        {
+          "title": "EV Charging Costs - DOE",
+          "url": "https://afdc.energy.gov/fuels/electricity-charging-home"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 65,
+    "discounts": [
+      {
+        "name": "Medicare",
+        "description": "Federal health insurance at 65. Part A (hospital) premium-free for most. Part B (medical) ~$185/month. Part D (drugs) $10-50/month.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "AARP Membership",
+        "description": "Annual membership $16. Discounts on insurance, dining, travel, retail, and entertainment. Available at age 50+.",
+        "eligibilityAge": 50
+      },
+      {
+        "name": "Virginia Social Security Tax Exemption",
+        "description": "Virginia fully exempts Social Security benefits from state income tax. Additional $12,000 age deduction per person at 65+.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "WMATA Senior Transit Fare",
+        "description": "Half-price Metro fares during off-peak hours and all-day bus fares for riders 65+. Senior SmarTrip card required.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Fairfax County Senior Programs",
+        "description": "Free or reduced-cost recreation programs, senior centers, health screenings, tax preparation assistance, and Meals on Wheels.",
+        "eligibilityAge": 60
+      },
+      {
+        "name": "Virginia Personal Property Tax Relief",
+        "description": "Some Virginia localities offer personal property tax relief for seniors meeting income requirements. Fairfax County offers tax deferral for 65+.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "America the Beautiful Senior Pass",
+        "description": "Lifetime pass to all national parks and federal recreation areas for $80 (or $20/year).",
+        "eligibilityAge": 62
+      },
+      {
+        "name": "SilverSneakers Fitness",
+        "description": "Free gym membership through participating Medicare Advantage and Medigap plans. Access to 17,000+ locations nationwide.",
+        "eligibilityAge": 65
+      }
+    ]
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 50,
+      "typical": 62,
+      "max": 80
+    },
+    "plans": [
+      {
+        "name": "T-Mobile 55+ Essentials",
+        "type": "US Domestic",
+        "lines": 2,
+        "dataPerLine": "Unlimited (50GB priority)",
+        "baseCost": 55,
+        "taxesAndFees": 7,
+        "monthlyTotal": 62,
+        "notes": "2 lines unlimited talk/text/data. VA wireless tax ~9% + federal USF. 5G included."
+      }
+    ],
+    "sources": [
+      {
+        "title": "T-Mobile 55+ Plans",
+        "url": "https://www.t-mobile.com/cell-phone-plans/unlimited-55-plus"
+      },
+      {
+        "title": "VA Wireless Tax Rates",
+        "url": "https://taxfoundation.org/data/all/state/wireless-taxes-2024/"
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom single-family house",
+    "monthlyBudget": {
+      "min": 2500,
+      "max": 3500,
+      "typical": 3000
+    },
+    "breakdown": {
+      "baseRent": 2850,
+      "rentersInsurance": 35,
+      "localTaxesFees": 0,
+      "total": 2885,
+      "notes": "Water, sewage, and trash are separate utility bills — see utilities breakdown."
+    },
+    "taxNotes": "Virginia has no rental tax. Property tax (avg 1.15% Fairfax County) is landlord responsibility but built into rent. Renter's insurance recommended but not legally required.",
+    "leaseTerms": "12-month standard lease. Security deposit max 2 months rent ($6,000). Pet deposit common ($300-500).",
+    "marketNotes": "Fairfax County/NoVA is one of the most expensive rental markets in the US outside major cities. 2BR houses are scarce; most rentals are apartments/townhomes. Expect competition.",
+    "sources": [
+      {
+        "name": "Zillow Fairfax County Rental Market",
+        "url": "https://www.zillow.com/rental-manager/market-trends/fairfax-county-va/"
+      },
+      {
+        "name": "Fairfax County Property Tax Rates",
+        "url": "https://www.fairfaxcounty.gov/taxes/real-estate-tax"
+      }
+    ],
+    "housingSites": {
+      "rentals": [
+        {
+          "name": "Zillow",
+          "url": "https://www.zillow.com/virginia/rentals/",
+          "type": "rental"
+        },
+        {
+          "name": "Apartments.com",
+          "url": "https://www.apartments.com/va/",
+          "type": "rental"
+        },
+        {
+          "name": "Realtor.com",
+          "url": "https://www.realtor.com/realestateandhomes-search/Virginia",
+          "type": "purchase"
+        }
+      ]
+    }
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Wegmans",
+        "type": "supermarket",
+        "website": "https://www.wegmans.com/",
+        "notes": "Popular in NoVA, great prepared foods",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Why Everyone Loves Wegmans",
+            "url": "https://www.youtube.com/watch?v=8gKSFdBcBwY"
+          },
+          {
+            "platform": "instagram",
+            "title": "@wegmans",
+            "url": "https://www.instagram.com/wegmans/"
+          }
+        ]
+      },
+      {
+        "name": "Trader Joe's",
+        "type": "specialty-grocery",
+        "website": "https://www.traderjoes.com/",
+        "notes": "Affordable specialty items, strong following",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Trader Joe's Store Tour",
+            "url": "https://www.youtube.com/watch?v=wJ2UJCdVXHY"
+          },
+          {
+            "platform": "instagram",
+            "title": "@traderjoes",
+            "url": "https://www.instagram.com/traderjoes/"
+          }
+        ]
+      },
+      {
+        "name": "Fairfax County Farmers Markets",
+        "type": "farmers-market",
+        "website": "https://www.fairfaxcounty.gov/parks/farmersmarkets/",
+        "notes": "Multiple locations, seasonal",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Northern Virginia Farmers Markets",
+            "url": "https://www.youtube.com/watch?v=KLvHR_wJpEE"
+          },
+          {
+            "platform": "instagram",
+            "title": "@fairfaxcountyparkauthority",
+            "url": "https://www.instagram.com/fairfaxcountyparks/"
+          }
+        ]
+      }
+    ]
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 60,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Farmers market or CSA box"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 40,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Bananas, berries, apples, citrus"
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 20,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Sweet Potatoes / Potatoes",
+            "monthlyCost": 15,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet staple"
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 12,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet vegetables"
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 10,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Digestive health, home-cooked diet"
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 50,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Primary protein for both adults & dog"
+          },
+          {
+            "name": "Ground Turkey / Beef",
+            "monthlyCost": 45,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean ground for dog food base"
+          },
+          {
+            "name": "Fish (salmon/tilapia)",
+            "monthlyCost": 40,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Omega-3 rich"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": "Eggs also for dog diet"
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 12,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Essential for balanced home-cooked dog diet"
+          },
+          {
+            "name": "Beans / Lentils",
+            "monthlyCost": 8,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "grains",
+        "name": "Grains & Starches",
+        "items": [
+          {
+            "name": "Rice (brown/white)",
+            "monthlyCost": 10,
+            "quantity": 5,
+            "unit": "lbs/month",
+            "forWhom": "shared",
+            "notes": "Dog diet carb source"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "loaves/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 8,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Oats / Cereal",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "container/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk / Plant Milk",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Cheese",
+            "monthlyCost": 20,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Yogurt / Kefir",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "quart/week",
+            "forWhom": "shared",
+            "notes": "Probiotics for dog digestion too"
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "unit/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Olive Oil / Cooking Oils",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Spices & Seasonings",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Canned Goods (tomatoes, beans)",
+            "monthlyCost": 12,
+            "quantity": 6,
+            "unit": "cans/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Condiments & Sauces",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 25,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tea",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "box/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Wine / Beer",
+            "monthlyCost": 40,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Optional"
+          },
+          {
+            "name": "Sparkling Water / Juice",
+            "monthlyCost": 12,
+            "quantity": 1,
+            "unit": "case/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "snacks",
+        "name": "Snacks & Treats",
+        "items": [
+          {
+            "name": "Nuts & Trail Mix",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Crackers / Chips",
+            "monthlyCost": 10,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Dark Chocolate",
+            "monthlyCost": 8,
+            "quantity": 4,
+            "unit": "bars/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "frozen",
+        "name": "Frozen Foods",
+        "items": [
+          {
+            "name": "Frozen Vegetables",
+            "monthlyCost": 12,
+            "quantity": 4,
+            "unit": "bags/month",
+            "forWhom": "shared",
+            "notes": "Backup for dog food prep"
+          },
+          {
+            "name": "Frozen Fruit (smoothies)",
+            "monthlyCost": 10,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Frozen Meals (convenience)",
+            "monthlyCost": 15,
+            "quantity": 4,
+            "unit": "meals/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "supplements",
+        "name": "Pet Supplements & Health",
+        "items": [
+          {
+            "name": "Joint Supplement (glucosamine)",
+            "monthlyCost": 30,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Essential for Bernese — hip/joint health"
+          },
+          {
+            "name": "Fish Oil (omega-3)",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Coat & skin health"
+          },
+          {
+            "name": "Multivitamin / Mineral Mix",
+            "monthlyCost": 20,
+            "quantity": 1,
+            "unit": "container/month",
+            "forWhom": "dog",
+            "notes": "Balance home-cooked diet"
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "dog",
+            "notes": "Training & dental chews"
+          }
+        ]
+      }
+    ],
+    "monthlyTotal": 712
+  },
+  "healthcare": {
+    "system": "Medicare + Medigap supplement",
+    "coverageSummary": "Medicare Part A (free) + Part B ($174.70/mo pp) + Medigap Plan G (~$200/mo pp) + Part D (~$45/mo pp). IRA out-of-pocket cap $2,000/yr starting 2025.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD (macular degeneration)"
+      ],
+      "costs": [
+        {
+          "item": "Medicare Part B premium",
+          "monthlyCost": 175,
+          "notes": "Standard 2025 premium per person"
+        },
+        {
+          "item": "Medigap Plan G premium",
+          "monthlyCost": 210,
+          "notes": "Higher due to AMD + multiple conditions. Age-rated."
+        },
+        {
+          "item": "Part D premium",
+          "monthlyCost": 45,
+          "notes": "Tier 3 plan to cover GLP-1"
+        },
+        {
+          "item": "Anti-VEGF injections (Eylea/Lucentis)",
+          "monthlyCost": 80,
+          "notes": "Medicare covers 80%, Medigap covers 20% coinsurance. ~6-8 injections/yr at $40-50 copay each."
+        },
+        {
+          "item": "Ophthalmologist specialist visits",
+          "monthlyCost": 25,
+          "notes": "OCT scans every 4-8 weeks. Medicare + Medigap covers most."
+        },
+        {
+          "item": "Endocrinologist (thyroid monitoring)",
+          "monthlyCost": 10,
+          "notes": "Quarterly bloodwork/visits. Low copay with Medigap."
+        },
+        {
+          "item": "Pulmonologist (asthma check-ups)",
+          "monthlyCost": 8,
+          "notes": "Annual visit + as-needed. Mild asthma, infrequent."
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Gout",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Migraines"
+      ],
+      "costs": [
+        {
+          "item": "Medicare Part B premium",
+          "monthlyCost": 175,
+          "notes": "Standard 2025 premium per person"
+        },
+        {
+          "item": "Medigap Plan G premium",
+          "monthlyCost": 190,
+          "notes": "Slightly lower — no AMD, but diabetes management"
+        },
+        {
+          "item": "Part D premium",
+          "monthlyCost": 40,
+          "notes": "All generics — lower tier plan sufficient"
+        },
+        {
+          "item": "Endocrinologist (diabetes mgmt)",
+          "monthlyCost": 15,
+          "notes": "Quarterly A1C, bloodwork. Covered well by Medicare."
+        },
+        {
+          "item": "Diabetes supplies (strips, lancets)",
+          "monthlyCost": 25,
+          "notes": "Medicare Part B covers glucose monitors. Some copays."
+        },
+        {
+          "item": "Rheumatologist (gout monitoring)",
+          "monthlyCost": 8,
+          "notes": "Semi-annual visits. Uric acid monitoring."
+        },
+        {
+          "item": "Neurologist (migraine follow-up)",
+          "monthlyCost": 8,
+          "notes": "Annual-semi-annual visits for topiramate management."
+        }
+      ]
+    },
+    "shared": [
+      {
+        "item": "Dental insurance (2 adults)",
+        "monthlyCost": 70,
+        "notes": "Separate dental plan ~$35/person. Medicare does not cover dental."
+      },
+      {
+        "item": "Vision insurance (2 adults)",
+        "monthlyCost": 25,
+        "notes": "Basic vision plan. AMD specialist visits covered by Medicare Part B."
+      },
+      {
+        "item": "Annual physicals & preventive care",
+        "monthlyCost": 0,
+        "notes": "Covered 100% by Medicare — no copay for preventive."
+      }
+    ],
+    "monthlyTotals": {
+      "person1": 553,
+      "person2": 461,
+      "shared": 95,
+      "household": 1109
+    },
+    "notes": null,
+    "phaseTransition": null
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Black Hair Care",
+      "priceRange": {
+        "cut": "35-65",
+        "color": "85-150",
+        "fullService": "120-250"
+      },
+      "notes": "Northern Virginia has a strong network of Black-owned salons, especially along the Route 1 corridor and in neighborhoods like Alexandria and Woodbridge.",
+      "providers": [
+        {
+          "name": "Progressions Salon Spa",
+          "type": "Full-service salon",
+          "address": "Rockville, MD",
+          "distanceMi": 18,
+          "rating": 4.8,
+          "notes": "Award-winning salon specializing in natural hair, locs, color, silk press. Black-owned.",
+          "website": "https://www.progressionssalon.com/"
+        },
+        {
+          "name": "Hair Cuttery / Dominican Blowout Studios",
+          "type": "Salon",
+          "address": "Falls Church, VA",
+          "distanceMi": 5,
+          "rating": 4.5,
+          "notes": "Multiple stylists experienced with textured hair, color services, protective styles.",
+          "website": ""
+        }
+      ]
+    },
+    "whiteHairCare": {
+      "label": "White/Caucasian Hair Care",
+      "priceRange": {
+        "cut": "30-55",
+        "color": "80-150",
+        "highlights": "120-200"
+      },
+      "notes": "Abundant options throughout Fairfax County and Arlington. Many high-end salons in Tysons, Mosaic District, and Old Town Alexandria.",
+      "providers": [
+        {
+          "name": "Salon Nordine",
+          "type": "Upscale salon",
+          "address": "Tysons Corner, VA",
+          "distanceMi": 4,
+          "rating": 4.7,
+          "notes": "High-end salon with color specialists, balayage, highlights.",
+          "website": "https://www.salonnordine.com/"
+        },
+        {
+          "name": "Salon deZEN",
+          "type": "Boutique salon",
+          "address": "Fairfax, VA",
+          "distanceMi": 3,
+          "rating": 4.8,
+          "notes": "Personalized service, ammonia-free color options, experienced colorists.",
+          "website": "https://www.salondezenva.com/"
+        }
+      ]
+    },
+    "mensBigTall": {
+      "label": "Men's Big & Tall Clothing",
+      "priceRange": {
+        "shirts": "30-80",
+        "pants": "40-70",
+        "suits": "150-400"
+      },
+      "notes": "DXL is the primary brick-and-mortar option. Nordstrom at Tysons carries extended sizes. Online options (Amazon, King Size) ship quickly to the area.",
+      "providers": [
+        {
+          "name": "DXL Big + Tall",
+          "type": "Specialty retail",
+          "address": "Fairfax, VA (Fair Oaks area)",
+          "distanceMi": 8,
+          "rating": 4.3,
+          "notes": "Dedicated big & tall retailer. Sizes up to 8XL and 72 waist. Brands: Polo, Nautica, Harbor Bay.",
+          "website": "https://www.dxl.com/"
+        },
+        {
+          "name": "Nordstrom (Tysons Galleria)",
+          "type": "Department store",
+          "address": "McLean, VA",
+          "distanceMi": 5,
+          "rating": 4.5,
+          "notes": "Extended sizes in-store and online. Good selection of dress shirts, suits in larger sizes.",
+          "website": "https://www.nordstrom.com/"
+        }
+      ]
+    },
+    "womensClothing": {
+      "label": "Women's Regular Clothing",
+      "priceRange": {
+        "casual": "25-60",
+        "dresses": "50-120",
+        "professional": "60-150"
+      },
+      "notes": "Excellent shopping at Tysons Corner Center, Fair Oaks Mall, and Mosaic District. Wide range from budget (Target, Old Navy) to mid-range (Loft, Banana Republic) to upscale (Nordstrom).",
+      "providers": [
+        {
+          "name": "Nordstrom (Tysons Corner)",
+          "type": "Department store",
+          "address": "McLean, VA",
+          "distanceMi": 5,
+          "rating": 4.6,
+          "notes": "Full range of women's sizes (0-24+). Strong regular-size selection, good alterations department.",
+          "website": "https://www.nordstrom.com/"
+        },
+        {
+          "name": "LOFT / Ann Taylor (Mosaic District)",
+          "type": "Women's specialty",
+          "address": "Fairfax, VA",
+          "distanceMi": 6,
+          "rating": 4.4,
+          "notes": "Regular and plus sizes. Work-to-weekend styles. Frequent 40-50% off sales.",
+          "website": "https://www.loft.com/"
+        }
+      ]
+    },
+    "shoes": {
+      "label": "Shoes",
+      "priceRange": {
+        "casual": "40-90",
+        "dress": "70-150",
+        "athletic": "60-130",
+        "wideWidth": "50-120"
+      },
+      "notes": "Good selection for wide widths at DSW, Nordstrom, and New Balance stores. Tysons area has the best variety.",
+      "providers": [
+        {
+          "name": "DSW (Tysons / Fairfax)",
+          "type": "Shoe warehouse",
+          "address": "Fairfax, VA",
+          "distanceMi": 5,
+          "rating": 4.3,
+          "notes": "Wide width options. Men's up to 16. Women's wide and extra-wide. Good clearance section.",
+          "website": "https://www.dsw.com/"
+        },
+        {
+          "name": "Nordstrom Rack (Fair Lakes)",
+          "type": "Discount department",
+          "address": "Fairfax, VA",
+          "distanceMi": 7,
+          "rating": 4.2,
+          "notes": "Discounted name-brand shoes in extended sizes. Good for dress shoes and boots.",
+          "website": "https://www.nordstromrack.com/"
+        }
+      ]
+    }
+  }
+}

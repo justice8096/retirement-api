@@ -1,0 +1,700 @@
+{
+  "meta": {
+    "description": "Default weekly grocery list for 2 adults + 1 large dog (home-cooked diet)",
+    "household": {
+      "adults": 2,
+      "dogs": 1,
+      "dogBreed": "Bernese Mountain Dog",
+      "dogWeightLbs": 100
+    },
+    "frequency": "weekly",
+    "estimatedWeeklyUSD": 371.25,
+    "estimatedMonthlyUSD": 1609
+  },
+  "categories": [
+    {
+      "id": "produce",
+      "label": "Fresh Produce",
+      "items": [
+        {
+          "name": "Sweet Potatoes",
+          "quantity": 5,
+          "unit": "lbs",
+          "weeklyPriceUSD": 5,
+          "forWhom": "shared",
+          "isDefault": true,
+          "notes": "Carb source for dog meals + adults"
+        },
+        {
+          "name": "Carrots",
+          "quantity": 3,
+          "unit": "lbs",
+          "weeklyPriceUSD": 3,
+          "forWhom": "shared",
+          "isDefault": true,
+          "notes": "Dog-safe vegetable, good for stews"
+        },
+        {
+          "name": "Green Beans",
+          "quantity": 2,
+          "unit": "lbs",
+          "weeklyPriceUSD": 4,
+          "forWhom": "shared",
+          "isDefault": true,
+          "notes": "Low-cal vegetable for dog meals"
+        },
+        {
+          "name": "Peas (frozen or fresh)",
+          "quantity": 2,
+          "unit": "lbs",
+          "weeklyPriceUSD": 3.5,
+          "forWhom": "shared",
+          "isDefault": true,
+          "notes": "Protein-rich vegetable for dog + adults"
+        },
+        {
+          "name": "Blueberries",
+          "quantity": 2,
+          "unit": "pints",
+          "weeklyPriceUSD": 7,
+          "forWhom": "shared",
+          "isDefault": true,
+          "notes": "Antioxidants — safe treat for dog"
+        },
+        {
+          "name": "Bananas",
+          "quantity": 1,
+          "unit": "bunch",
+          "weeklyPriceUSD": 1.5,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Apples",
+          "quantity": 3,
+          "unit": "lbs",
+          "weeklyPriceUSD": 4.5,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Leafy Greens (spinach/kale)",
+          "quantity": 2,
+          "unit": "bags",
+          "weeklyPriceUSD": 6,
+          "forWhom": "shared",
+          "isDefault": true,
+          "notes": "Spinach OK for dog in small amounts"
+        },
+        {
+          "name": "Broccoli",
+          "quantity": 2,
+          "unit": "heads",
+          "weeklyPriceUSD": 4,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Tomatoes",
+          "quantity": 2,
+          "unit": "lbs",
+          "weeklyPriceUSD": 4,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Onions",
+          "quantity": 2,
+          "unit": "lbs",
+          "weeklyPriceUSD": 2,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": "Toxic to dogs — adults only"
+        },
+        {
+          "name": "Garlic",
+          "quantity": 1,
+          "unit": "head",
+          "weeklyPriceUSD": 0.75,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": "Toxic to dogs — adults only"
+        },
+        {
+          "name": "Bell Peppers",
+          "quantity": 3,
+          "unit": "each",
+          "weeklyPriceUSD": 4.5,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Lemons/Limes",
+          "quantity": 4,
+          "unit": "each",
+          "weeklyPriceUSD": 2,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Avocados",
+          "quantity": 3,
+          "unit": "each",
+          "weeklyPriceUSD": 4.5,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Pumpkin (canned, pure)",
+          "quantity": 2,
+          "unit": "cans",
+          "weeklyPriceUSD": 4,
+          "forWhom": "dog",
+          "isDefault": true,
+          "notes": "Digestive aid for the dog"
+        }
+      ]
+    },
+    {
+      "id": "proteins",
+      "label": "Proteins",
+      "items": [
+        {
+          "name": "Chicken Thighs (bone-in)",
+          "quantity": 5,
+          "unit": "lbs",
+          "weeklyPriceUSD": 12.5,
+          "forWhom": "dog",
+          "isDefault": true,
+          "notes": "Primary protein for dog meals — cook and debone"
+        },
+        {
+          "name": "Ground Turkey",
+          "quantity": 3,
+          "unit": "lbs",
+          "weeklyPriceUSD": 13.5,
+          "forWhom": "dog",
+          "isDefault": true,
+          "notes": "Lean protein rotation for dog"
+        },
+        {
+          "name": "Beef Liver",
+          "quantity": 1,
+          "unit": "lb",
+          "weeklyPriceUSD": 3.5,
+          "forWhom": "dog",
+          "isDefault": true,
+          "notes": "Organ meat 1-2x/week — rich in vitamins A, B, iron"
+        },
+        {
+          "name": "Chicken Hearts",
+          "quantity": 1,
+          "unit": "lb",
+          "weeklyPriceUSD": 3,
+          "forWhom": "dog",
+          "isDefault": true,
+          "notes": "Organ meat rotation — taurine source"
+        },
+        {
+          "name": "Sardines (canned in water)",
+          "quantity": 3,
+          "unit": "cans",
+          "weeklyPriceUSD": 6,
+          "forWhom": "dog",
+          "isDefault": true,
+          "notes": "Omega-3 source, 2-3 cans/week for large breed"
+        },
+        {
+          "name": "Eggs",
+          "quantity": 2,
+          "unit": "dozen",
+          "weeklyPriceUSD": 8,
+          "forWhom": "shared",
+          "isDefault": true,
+          "notes": "Dog gets 2-3/week (shell is calcium); adults use rest"
+        },
+        {
+          "name": "Chicken Breast",
+          "quantity": 3,
+          "unit": "lbs",
+          "weeklyPriceUSD": 10.5,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Salmon Fillets",
+          "quantity": 1.5,
+          "unit": "lbs",
+          "weeklyPriceUSD": 15,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": "Heart-healthy; 2 meals/week"
+        },
+        {
+          "name": "Ground Beef (90/10)",
+          "quantity": 2,
+          "unit": "lbs",
+          "weeklyPriceUSD": 12,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Pork Tenderloin",
+          "quantity": 1.5,
+          "unit": "lbs",
+          "weeklyPriceUSD": 7.5,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Deli Turkey/Ham",
+          "quantity": 1,
+          "unit": "lb",
+          "weeklyPriceUSD": 7,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "grains",
+      "label": "Grains & Starches",
+      "items": [
+        {
+          "name": "Brown Rice",
+          "quantity": 5,
+          "unit": "lbs",
+          "weeklyPriceUSD": 4.5,
+          "forWhom": "shared",
+          "isDefault": true,
+          "notes": "Carb staple for dog meals + adults"
+        },
+        {
+          "name": "White Rice",
+          "quantity": 2,
+          "unit": "lbs",
+          "weeklyPriceUSD": 2,
+          "forWhom": "dog",
+          "isDefault": true,
+          "notes": "Easier to digest for dog; used when stomach is upset"
+        },
+        {
+          "name": "Oatmeal (rolled oats)",
+          "quantity": 2,
+          "unit": "lbs",
+          "weeklyPriceUSD": 4,
+          "forWhom": "shared",
+          "isDefault": true,
+          "notes": "Breakfast for adults; occasional dog meal addition"
+        },
+        {
+          "name": "Whole Wheat Pasta",
+          "quantity": 2,
+          "unit": "lbs",
+          "weeklyPriceUSD": 3.5,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Whole Wheat Bread",
+          "quantity": 2,
+          "unit": "loaves",
+          "weeklyPriceUSD": 7,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Tortillas",
+          "quantity": 1,
+          "unit": "pkg",
+          "weeklyPriceUSD": 3.5,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Potatoes",
+          "quantity": 3,
+          "unit": "lbs",
+          "weeklyPriceUSD": 3,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "dairy",
+      "label": "Dairy & Alternatives",
+      "items": [
+        {
+          "name": "Plain Yogurt (whole milk)",
+          "quantity": 2,
+          "unit": "32oz",
+          "weeklyPriceUSD": 8,
+          "forWhom": "shared",
+          "isDefault": true,
+          "notes": "Probiotics — dog gets 2-3 tbsp/day; adults eat rest"
+        },
+        {
+          "name": "Cottage Cheese",
+          "quantity": 1,
+          "unit": "16oz",
+          "weeklyPriceUSD": 4,
+          "forWhom": "shared",
+          "isDefault": true,
+          "notes": "Protein + calcium for dog; adults use in meals"
+        },
+        {
+          "name": "Milk (2%)",
+          "quantity": 1,
+          "unit": "gallon",
+          "weeklyPriceUSD": 4.5,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Cheddar Cheese",
+          "quantity": 1,
+          "unit": "lb",
+          "weeklyPriceUSD": 5.5,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Butter",
+          "quantity": 1,
+          "unit": "lb",
+          "weeklyPriceUSD": 5,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Parmesan Cheese",
+          "quantity": 1,
+          "unit": "wedge",
+          "weeklyPriceUSD": 6,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "pantry",
+      "label": "Pantry Staples",
+      "items": [
+        {
+          "name": "Olive Oil (extra virgin)",
+          "quantity": 1,
+          "unit": "750ml",
+          "weeklyPriceUSD": 3.5,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": "Biweekly purchase amortized"
+        },
+        {
+          "name": "Coconut Oil",
+          "quantity": 1,
+          "unit": "14oz",
+          "weeklyPriceUSD": 2,
+          "forWhom": "dog",
+          "isDefault": true,
+          "notes": "Coat health — 1 tsp/day for large breed; lasts ~3 weeks"
+        },
+        {
+          "name": "Canned Beans (black, kidney)",
+          "quantity": 4,
+          "unit": "cans",
+          "weeklyPriceUSD": 5,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Canned Tomatoes (diced)",
+          "quantity": 3,
+          "unit": "cans",
+          "weeklyPriceUSD": 4.5,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Chicken Broth (low sodium)",
+          "quantity": 2,
+          "unit": "32oz",
+          "weeklyPriceUSD": 5,
+          "forWhom": "shared",
+          "isDefault": true,
+          "notes": "Low-sodium for dog meals; adults use for cooking"
+        },
+        {
+          "name": "Peanut Butter (natural, no xylitol)",
+          "quantity": 1,
+          "unit": "16oz",
+          "weeklyPriceUSD": 4,
+          "forWhom": "shared",
+          "isDefault": true,
+          "notes": "MUST be xylitol-free for dog safety; Kong filling"
+        },
+        {
+          "name": "Honey",
+          "quantity": 1,
+          "unit": "12oz",
+          "weeklyPriceUSD": 1.5,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": "Monthly purchase amortized"
+        },
+        {
+          "name": "Spices & Seasonings",
+          "quantity": 1,
+          "unit": "assorted",
+          "weeklyPriceUSD": 2,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": "Salt, pepper, cumin, paprika, etc. Amortized"
+        },
+        {
+          "name": "Vinegar (apple cider)",
+          "quantity": 1,
+          "unit": "16oz",
+          "weeklyPriceUSD": 1,
+          "forWhom": "shared",
+          "isDefault": true,
+          "notes": "Small amount in dog food for digestion; adults use in cooking"
+        },
+        {
+          "name": "Flour (all-purpose)",
+          "quantity": 1,
+          "unit": "5lbs",
+          "weeklyPriceUSD": 1,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": "Monthly amortized"
+        }
+      ]
+    },
+    {
+      "id": "beverages",
+      "label": "Beverages",
+      "items": [
+        {
+          "name": "Coffee (ground)",
+          "quantity": 1,
+          "unit": "12oz bag",
+          "weeklyPriceUSD": 9,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Tea (assorted)",
+          "quantity": 1,
+          "unit": "box",
+          "weeklyPriceUSD": 4,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Orange Juice",
+          "quantity": 1,
+          "unit": "64oz",
+          "weeklyPriceUSD": 5,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Sparkling Water",
+          "quantity": 2,
+          "unit": "12-packs",
+          "weeklyPriceUSD": 8,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Wine (table)",
+          "quantity": 2,
+          "unit": "bottles",
+          "weeklyPriceUSD": 16,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "snacks",
+      "label": "Snacks & Treats",
+      "items": [
+        {
+          "name": "Mixed Nuts (unsalted)",
+          "quantity": 1,
+          "unit": "lb",
+          "weeklyPriceUSD": 8,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": "Heart-healthy snacking"
+        },
+        {
+          "name": "Dark Chocolate (70%+)",
+          "quantity": 2,
+          "unit": "bars",
+          "weeklyPriceUSD": 6,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": "TOXIC to dogs — store safely"
+        },
+        {
+          "name": "Crackers (whole grain)",
+          "quantity": 1,
+          "unit": "box",
+          "weeklyPriceUSD": 4,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Dried Fruit (no raisins)",
+          "quantity": 1,
+          "unit": "bag",
+          "weeklyPriceUSD": 5,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": "No raisins/grapes — toxic to dogs"
+        },
+        {
+          "name": "Dog Dental Chews",
+          "quantity": 7,
+          "unit": "each",
+          "weeklyPriceUSD": 10,
+          "forWhom": "dog",
+          "isDefault": true,
+          "notes": "Daily dental chew for large breed"
+        },
+        {
+          "name": "Dog Training Treats",
+          "quantity": 1,
+          "unit": "bag",
+          "weeklyPriceUSD": 5,
+          "forWhom": "dog",
+          "isDefault": true,
+          "notes": "Small, low-calorie treats"
+        }
+      ]
+    },
+    {
+      "id": "frozen",
+      "label": "Frozen Foods",
+      "items": [
+        {
+          "name": "Frozen Mixed Vegetables",
+          "quantity": 3,
+          "unit": "lbs",
+          "weeklyPriceUSD": 6,
+          "forWhom": "shared",
+          "isDefault": true,
+          "notes": "Backup for dog meal prep when fresh runs low"
+        },
+        {
+          "name": "Frozen Berries",
+          "quantity": 2,
+          "unit": "lbs",
+          "weeklyPriceUSD": 7,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": "Smoothies"
+        },
+        {
+          "name": "Ice Cream",
+          "quantity": 1,
+          "unit": "pint",
+          "weeklyPriceUSD": 5.5,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": ""
+        },
+        {
+          "name": "Frozen Fish Fillets",
+          "quantity": 1,
+          "unit": "lb",
+          "weeklyPriceUSD": 7,
+          "forWhom": "adults",
+          "isDefault": true,
+          "notes": "Backup protein"
+        }
+      ]
+    },
+    {
+      "id": "supplements",
+      "label": "Pet Supplements & Health",
+      "items": [
+        {
+          "name": "Glucosamine/Chondroitin (large breed)",
+          "quantity": 1,
+          "unit": "monthly supply",
+          "weeklyPriceUSD": 7.5,
+          "forWhom": "dog",
+          "isDefault": true,
+          "notes": "Joint support — Bernese prone to hip dysplasia; amortized weekly"
+        },
+        {
+          "name": "Fish Oil Capsules (dog)",
+          "quantity": 1,
+          "unit": "bottle",
+          "weeklyPriceUSD": 3,
+          "forWhom": "dog",
+          "isDefault": true,
+          "notes": "Omega-3 for coat/joints; 2 capsules/day for 100 lb dog; amortized"
+        },
+        {
+          "name": "Probiotics (dog)",
+          "quantity": 1,
+          "unit": "monthly supply",
+          "weeklyPriceUSD": 4,
+          "forWhom": "dog",
+          "isDefault": true,
+          "notes": "Digestive health supplement; amortized weekly"
+        },
+        {
+          "name": "Vitamin E (dog)",
+          "quantity": 1,
+          "unit": "bottle",
+          "weeklyPriceUSD": 1.5,
+          "forWhom": "dog",
+          "isDefault": true,
+          "notes": "Antioxidant supplement with home-cooked diet; amortized"
+        },
+        {
+          "name": "Eggshell Powder / Calcium",
+          "quantity": 1,
+          "unit": "container",
+          "weeklyPriceUSD": 1,
+          "forWhom": "dog",
+          "isDefault": true,
+          "notes": "Calcium supplement for balanced home-cooked diet; amortized"
+        }
+      ]
+    }
+  ]
+}

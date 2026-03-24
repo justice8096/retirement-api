@@ -1,0 +1,358 @@
+{
+  "id": "ireland-waterford",
+  "name": "Waterford, Ireland",
+  "country": "Ireland",
+  "region": "Munster",
+  "cities": [
+    "Waterford",
+    "Tramore",
+    "Dunmore East",
+    "Dungarvan"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 1.05,
+  "visa": {
+    "type": "Stamp 0 / Long Stay Visa",
+    "incomeRequirement": null,
+    "notes": "Non-EEA nationals need long-stay visa. Proof of sufficient income and private health insurance required. No automatic right to work."
+  },
+  "climate": {
+    "winterLowF": 35,
+    "summerHighF": 68,
+    "rainyDaysPerYear": 200,
+    "meetsWarmWinterReq": false
+  },
+  "monthlyCosts": {
+    "rent": {
+      "min": 950,
+      "max": 1500,
+      "typical": 1200,
+      "type": "2-bedroom house",
+      "annualInflation": 0.03,
+      "notes": "Much cheaper than Dublin. Waterford city and surrounding towns. HAP (Housing Assistance Payment) caps apply for subsidized tenants but not relevant for private renters.",
+      "gigInternetTypical": 1260,
+      "gigInternetCoverage": 70,
+      "gigInternetProviders": "SIRO (via Vodafone, Eir, Digiweb), Open Eir",
+      "gigInternetNotes": "SIRO FTTH available in Waterford city and surrounding towns (up to 2Gbps). Coverage expanding — 695K premises nationally, targeting 770K. Not all rental properties connected yet. Moderate premium for verified fiber addresses."
+    },
+    "groceries": {
+      "min": 950,
+      "max": 1250,
+      "typical": 1100,
+      "annualInflation": 0.025,
+      "notes": "2 adults + large dog. VAT 0% on groceries. Aldi, Lidl, Tesco widely available. Dunmore East farmers market seasonal."
+    },
+    "utilities": {
+      "min": 190,
+      "max": 320,
+      "typical": 250,
+      "annualInflation": 0.03,
+      "breakdown": {
+        "electricity": {
+          "typical": 120,
+          "notes": "Electric Ireland or SSE Airtricity. Higher in winter for heating. Carbon tax applied. No A/C needed."
+        },
+        "gas": {
+          "typical": 55,
+          "notes": "Bord Gáis Energy. Gas central heating (Oct-Apr primary). Cooking. Not all homes have gas — some are oil-heated."
+        },
+        "water": {
+          "typical": 0,
+          "notes": "Irish Water — no domestic water charges. Fully funded through general taxation."
+        },
+        "sewage": {
+          "typical": 0,
+          "notes": "No domestic sewage charges. Irish Water covers wastewater treatment."
+        },
+        "trash": {
+          "typical": 30,
+          "notes": "Private collection (Curbside, Panda). Pay by weight/lift system. Recycling included."
+        }
+      },
+      "taxes": "VAT at 13.5% on electricity and gas. Carbon tax on fossil fuels adds to energy costs.",
+      "notes": "Electricity, gas, trash. Water and sewage free. Internet is in entertainment. Oil heating common in older homes — budget €100-150/mo in winter if applicable."
+    },
+    "healthcare": {
+      "min": 400,
+      "max": 700,
+      "typical": 550,
+      "breakdown": {
+        "privateInsurance": 350,
+        "gpVisitsCopays": 100
+      },
+      "notes": "Private insurance (VHI/Laya Healthcare) ~€220-280/person/mo for 2 adults with pre-existing conditions. Higher loading for macular degeneration, obesity, hypertension. GMS Medical Card may apply based on income. Anti-VEGF injections covered through public ophthalmology. DPS scheme caps drug costs at €80/mo.",
+      "annualInflation": 0.05
+    },
+    "insurance": {
+      "min": 25,
+      "max": 45,
+      "typical": 35,
+      "type": "renter's insurance",
+      "annualInflation": 0.02
+    },
+    "petCare": {
+      "min": 100,
+      "max": 200,
+      "typical": 140,
+      "annualInflation": 0.03,
+      "notes": "Vet visits, vaccinations, flea/tick prevention. Pet insurance available through Allianz, Petinsurance.ie. Microchipping mandatory."
+    },
+    "petDaycare": {
+      "min": 220,
+      "max": 400,
+      "typical": 300,
+      "annualInflation": 0.03,
+      "notes": "Doggy daycare 2 days/week, large breed rate (~€35/day). Limited commercial daycare in Waterford area; in-home pet sitters and dog walkers more common."
+    },
+    "petGrooming": {
+      "min": 65,
+      "max": 120,
+      "typical": 90,
+      "annualInflation": 0.025,
+      "notes": "Bernese coat maintenance, professional grooming monthly. Several groomers in Waterford city."
+    },
+    "transportation": {
+      "min": 200,
+      "max": 380,
+      "typical": 280,
+      "notes": "Car needed outside city center. Bus Éireann local service limited. Fuel expensive ~€1.70/liter. Irish Rail to Dublin ~2hr. Parking affordable.",
+      "annualInflation": 0.025
+    },
+    "entertainment": {
+      "min": 350,
+      "max": 550,
+      "typical": 440,
+      "annualInflation": 0.02,
+      "notes": "Incl broadband (SIRO 1Gig €50-60), Netflix €14, Amazon Prime €9, Apple TV+ €10, dining out (~€280/mo, no tipping culture), gym €35, pubs/culture €30."
+    },
+    "clothing": {
+      "min": 80,
+      "max": 180,
+      "typical": 120,
+      "annualInflation": 0.02,
+      "notes": "VAT 0% on children's clothing. Adult clothing VAT 23%. Penneys (Primark), TK Maxx, Dunnes Stores for value."
+    },
+    "personalCare": {
+      "min": 35,
+      "max": 80,
+      "typical": 55,
+      "annualInflation": 0.02
+    },
+    "subscriptions": {
+      "min": 25,
+      "max": 70,
+      "typical": 45,
+      "annualInflation": 0.03,
+      "notes": "Streaming, news, apps"
+    },
+    "phoneCell": {
+      "min": 55,
+      "max": 90,
+      "typical": 70,
+      "annualInflation": 0.02,
+      "notes": "Vodafone Ireland 2 SIMs ~€20/mo each (unlimited data) + keep T-Mobile US 55+ at $55/mo (~€50) for US banking/2FA."
+    },
+    "miscellaneous": {
+      "min": 60,
+      "max": 150,
+      "typical": 100,
+      "notes": "Virtual US mailbox, NCT (car inspection), TV licence (€160/yr), pet licence, miscellaneous fees",
+      "annualInflation": 0.02
+    },
+    "buffer": {
+      "min": 800,
+      "max": 800,
+      "typical": 800,
+      "annualInflation": 0.025,
+      "notes": "Monthly safety buffer for unexpected expenses"
+    },
+    "medicalOOP": {
+      "min": 60,
+      "max": 200,
+      "typical": 110,
+      "annualInflation": 0.05,
+      "notes": "Public system: long waits for ophthalmology (anti-VEGF). Private: faster access but higher OOP. GP visits €55-65 without Medical Card. DPS caps prescriptions at €80/mo. Frequent specialist visits: ophthalmologist, endocrinologist, cardiologist. Labs via GP referral."
+    },
+    "medicine": {
+      "min": 45,
+      "typical": 132,
+      "max": 217,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "taxes": {
+      "min": 0,
+      "typical": 0,
+      "max": 0,
+      "annualInflation": 0.02
+    }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true,
+      "brackets": [
+        {
+          "min": 0,
+          "max": 23850,
+          "rate": 0.1
+        },
+        {
+          "min": 23850,
+          "max": 96950,
+          "rate": 0.12
+        },
+        {
+          "min": 96950,
+          "max": 206700,
+          "rate": 0.22
+        },
+        {
+          "min": 206700,
+          "max": 394600,
+          "rate": 0.24
+        },
+        {
+          "min": 394600,
+          "max": 501050,
+          "rate": 0.32
+        },
+        {
+          "min": 501050,
+          "max": 751600,
+          "rate": 0.35
+        },
+        {
+          "min": 751600,
+          "max": null,
+          "rate": 0.37
+        }
+      ],
+      "standardDeduction": 30000,
+      "foreignTaxCredit": true
+    },
+    "stateIncomeTax": {
+      "rate": 0.4,
+      "type": "progressive",
+      "label": "Irish Income Tax + USC + PRSI",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 42000,
+          "rate": 0.2
+        },
+        {
+          "min": 42000,
+          "max": null,
+          "rate": 0.4
+        }
+      ],
+      "additionalCharges": [
+        {
+          "name": "Universal Social Charge (USC)",
+          "brackets": [
+            {
+              "min": 0,
+              "max": 12012,
+              "rate": 0.005
+            },
+            {
+              "min": 12012,
+              "max": 25760,
+              "rate": 0.02
+            },
+            {
+              "min": 25760,
+              "max": 70044,
+              "rate": 0.04
+            },
+            {
+              "min": 70044,
+              "max": null,
+              "rate": 0.08
+            }
+          ]
+        },
+        {
+          "name": "PRSI (Pay Related Social Insurance)",
+          "rate": 0.04,
+          "notes": "Class S for self-employed income. May not apply to all retirement income."
+        }
+      ],
+      "deduction": 0,
+      "exemptions": "US-Ireland Double Taxation Agreement prevents double taxation. Foreign tax credit available. US Social Security may be taxable in Ireland depending on residency status. Personal tax credit €1,875 per person, age credit €245 for 65+."
+    },
+    "salesTax": {
+      "rate": 0,
+      "notes": "No separate sales tax (VAT included in prices)"
+    },
+    "propertyTax": {
+      "rate": 0.0018,
+      "notes": "Local Property Tax (LPT) ~0.18% of property value. Paid by property owner (landlord) but may be factored into rent."
+    },
+    "socialCharges": null,
+    "vatRate": 0.23,
+    "vatReduced": [
+      {
+        "rate": 0.135,
+        "applies": "restaurants, hot food, tourism, electricity, gas"
+      },
+      {
+        "rate": 0.09,
+        "applies": "newspapers, e-publications"
+      },
+      {
+        "rate": 0,
+        "applies": "food/groceries, children's clothing, oral medicines"
+      }
+    ],
+    "estVehicleTax": 500,
+    "ssExempt": false,
+    "ssTaxedInCountry": false,
+    "notes": "US-Ireland Double Taxation Agreement (DTA). US SS benefits generally taxable only in the US under the treaty. Irish income tax rates are high but foreign tax credits offset double taxation. No separate state/local income tax — all national."
+  },
+  "healthcare": {
+    "system": "HSE (public) + private insurance",
+    "qualityRating": 7,
+    "waitTimes": "long",
+    "dentalIncluded": false,
+    "prescriptionCoverage": "DPS caps at €80/month; medical card covers fully for low-income",
+    "notes": "University Hospital Waterford (UHW) is the regional hospital. Public system has long waiting lists for specialist and elective procedures. Private insurance (VHI, Laya Healthcare, Irish Life Health) provides faster access. GP visits not covered by insurance — €55-65 per visit. Over-70s eligible for GP visit card regardless of income."
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps FTTH available via SIRO fiber in Waterford. Vodafone, Eir providers.",
+    "dogFriendly": 7,
+    "expatCommunity": 6,
+    "englishPrevalence": 10,
+    "safetyRating": 9,
+    "notes": "English-speaking country. Waterford is Ireland's oldest city (Viking heritage, founded 914 AD). Beautiful southeast coastline. Copper Coast UNESCO Global Geopark. Waterford Greenway (46km cycling/walking trail). Growing but smaller expat community than Dublin or Galway."
+  },
+  "pros": [
+    "English-speaking country — no language barrier",
+    "Very safe (low crime rates)",
+    "Rich Viking heritage and cultural history (Waterford Crystal, Viking Triangle)",
+    "Affordable by Irish standards (much cheaper than Dublin)",
+    "EU membership provides healthcare and travel access across Europe",
+    "Mild climate — no extreme heat or cold",
+    "Beautiful southeast coastline (Copper Coast, Dunmore East)",
+    "Close to Dublin by train (2 hours) and Waterford Airport for regional flights",
+    "LGBTQ+ friendly (same-sex marriage since 2015)",
+    "Strong pub and community culture"
+  ],
+  "cons": [
+    "Very rainy (200+ days/year of precipitation)",
+    "Does not meet warm winter requirement (35F lows)",
+    "Smaller city with fewer amenities than Dublin or Cork",
+    "Long public healthcare waiting lists (HSE system)",
+    "High tax rates (income tax 40% + USC 8% + PRSI 4%)",
+    "Car-dependent outside Waterford city center",
+    "Far from family in US (7+ hour flight to East Coast)",
+    "High cost of living compared to continental Europe",
+    "Limited direct international flights from Waterford Airport"
+  ],
+  "exchangeRates": {
+    "optimistic": 0.88,
+    "pessimistic": 1.05,
+    "mid": 0.95,
+    "note": "EUR per 1 USD. Based on historical range. Optimistic = strong EUR (good for USD→EUR), Pessimistic = weak EUR. Using 1.05 USD per EUR for cost calculations."
+  }
+}

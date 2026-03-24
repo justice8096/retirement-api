@@ -1,0 +1,159 @@
+{
+  "city": "Raleigh-Durham",
+  "neighborhoods": [
+    {
+      "id": "raleigh-downtown",
+      "name": "Downtown Raleigh",
+      "description": "Revitalized urban core with walkable streets, museums, restaurants, and a growing residential population centered around Fayetteville Street",
+      "character": "Urban walkable, cultural, revitalizing, government center",
+      "housing": {
+        "avgRentOneBedroomUSD": 1400,
+        "avgRentTwoBedroomUSD": 2000,
+        "buyPricePerSqmUSD": 3200,
+        "predominantType": "Modern apartments and condos, some converted warehouse lofts"
+      },
+      "walkabilityScore": 82,
+      "transitScore": 45,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "NC Museum of Natural Sciences and NC Museum of History are free. Fayetteville Street pedestrian mall is the social heart. First Friday gallery walks, growing restaurant scene, and proximity to state government offices.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Raleigh",
+          "url": "https://www.numbeo.com/cost-of-living/in/Raleigh"
+        },
+        {
+          "title": "Zillow - Downtown Raleigh",
+          "url": "https://www.zillow.com/raleigh-nc/"
+        },
+        {
+          "title": "Visit Raleigh",
+          "url": "https://www.visitraleigh.com/"
+        }
+      ]
+    },
+    {
+      "id": "raleigh-durham-duke",
+      "name": "Durham (near Duke)",
+      "description": "Vibrant city anchored by Duke University with a thriving food scene, historic tobacco warehouse district, and strong arts community",
+      "character": "University-adjacent, diverse, progressive, creative",
+      "housing": {
+        "avgRentOneBedroomUSD": 1300,
+        "avgRentTwoBedroomUSD": 1900,
+        "buyPricePerSqmUSD": 2800,
+        "predominantType": "Mix of bungalows, renovated mill housing, and newer apartments"
+      },
+      "walkabilityScore": 70,
+      "transitScore": 30,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "American Tobacco Campus is a dining and entertainment hub in converted tobacco warehouses. Durham Bulls Athletic Park nearby. Duke Gardens and Duke Chapel are landmarks. Ninth Street and Brightleaf Square are walkable commercial areas.",
+      "sources": [
+        {
+          "title": "Zillow - Durham NC",
+          "url": "https://www.zillow.com/durham-nc/"
+        },
+        {
+          "title": "Discover Durham",
+          "url": "https://www.discoverdurham.com/"
+        }
+      ]
+    },
+    {
+      "id": "raleigh-chapel-hill",
+      "name": "Chapel Hill",
+      "description": "Classic college town surrounding UNC-Chapel Hill with tree-lined streets, Franklin Street shops, and a progressive community atmosphere",
+      "character": "College town, walkable downtown, progressive, intellectual",
+      "housing": {
+        "avgRentOneBedroomUSD": 1350,
+        "avgRentTwoBedroomUSD": 1950,
+        "buyPricePerSqmUSD": 3100,
+        "predominantType": "Single-family homes, condos, and apartments near campus"
+      },
+      "walkabilityScore": 75,
+      "transitScore": 40,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Franklin Street is the walkable main drag with restaurants, bookstores, and cafes. UNC campus is beautiful and open to the public. Chapel Hill Transit is fare-free. Strong community of retirees drawn to university culture.",
+      "sources": [
+        {
+          "title": "Zillow - Chapel Hill NC",
+          "url": "https://www.zillow.com/chapel-hill-nc/"
+        },
+        {
+          "title": "Chapel Hill Visitors Bureau",
+          "url": "https://www.visitchapelhill.org/"
+        }
+      ]
+    },
+    {
+      "id": "raleigh-cary",
+      "name": "Cary",
+      "description": "Affluent planned suburb between Raleigh and Durham known for top-rated safety, excellent parks, and diverse population driven by Research Triangle tech workers",
+      "character": "Suburban, safe, family-oriented, diverse, well-planned",
+      "housing": {
+        "avgRentOneBedroomUSD": 1450,
+        "avgRentTwoBedroomUSD": 2100,
+        "buyPricePerSqmUSD": 2900,
+        "predominantType": "Single-family homes in planned communities, townhouses, and newer apartments"
+      },
+      "walkabilityScore": 35,
+      "transitScore": 20,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Consistently ranked among the safest cities in America. Large South Asian and East Asian communities. Bond Park and Hemlock Bluffs nature preserve. Waverly Place and Fenton mixed-use developments. Car-dependent but very well-maintained infrastructure.",
+      "sources": [
+        {
+          "title": "Zillow - Cary NC",
+          "url": "https://www.zillow.com/cary-nc/"
+        },
+        {
+          "title": "Town of Cary",
+          "url": "https://www.townofcary.org/"
+        }
+      ]
+    },
+    {
+      "id": "raleigh-north-hills",
+      "name": "North Hills / Midtown Raleigh",
+      "description": "Raleigh's premier mixed-use district with upscale shopping, dining, medical offices, and residential towers in a walkable suburban setting",
+      "character": "Mixed-use, upscale, walkable suburban, modern",
+      "housing": {
+        "avgRentOneBedroomUSD": 1500,
+        "avgRentTwoBedroomUSD": 2200,
+        "buyPricePerSqmUSD": 3400,
+        "predominantType": "Luxury apartments, condos, and townhouses in mixed-use developments"
+      },
+      "walkabilityScore": 72,
+      "transitScore": 35,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "North Hills is Raleigh's 'Midtown' with retail, restaurants, offices, and residences in one walkable area. REI, Whole Foods, and numerous restaurants. Close to I-440 beltline. Popular with professionals and active retirees who want suburban amenities without full car dependence.",
+      "sources": [
+        {
+          "title": "Zillow - North Hills Raleigh",
+          "url": "https://www.zillow.com/raleigh-nc/north-hills/"
+        },
+        {
+          "title": "North Hills",
+          "url": "https://www.northhillsraleigh.com/"
+        }
+      ]
+    }
+  ]
+}

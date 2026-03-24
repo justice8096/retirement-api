@@ -1,0 +1,3467 @@
+{
+  "meta": {
+    "description": "Retirement planning location index \u00e2\u20ac\u201d lightweight summary for dashboard boot",
+    "lastUpdated": "2026-03-23",
+    "totalLocations": 137,
+    "dataVersion": 2,
+    "note": "Full location data loaded on demand from data/locations/{id}/"
+  },
+  "householdProfile": {
+    "adults": 2,
+    "agesAtStart": [
+      60,
+      60
+    ],
+    "pets": [
+      {
+        "type": "dog",
+        "breed": "Bernese Mountain Dog",
+        "size": "large",
+        "currentAge": 4,
+        "expectedLifespan": 11,
+        "birthYear": 2022
+      }
+    ],
+    "targetAnnualIncome": 72000,
+    "planningHorizon": {
+      "startYear": 2027,
+      "endYear": 2060
+    },
+    "requirements": [
+      "gigabit-internet",
+      "warm-winters",
+      "dog-friendly",
+      "expat-community"
+    ]
+  },
+  "locations": [
+    {
+      "id": "colombia-bogota",
+      "name": "Bogot\u00c3\u00a1 (Chapinero, Usaqu\u00c3\u00a9n), Colombia",
+      "country": "Colombia",
+      "region": "South America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2650,
+      "climate": {
+        "winterLowF": 45,
+        "summerHighF": 65,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 7,
+        "expatCommunity": 6,
+        "safety": 5,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 5
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "colombia-cartagena",
+      "name": "Cartagena, Colombia",
+      "country": "Colombia",
+      "region": "South America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2830,
+      "climate": {
+        "winterLowF": 75,
+        "summerHighF": 92,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 6,
+        "expatCommunity": 6,
+        "safety": 5,
+        "internetSpeed": "50-100Mbps",
+        "englishPrevalence": 4
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "colombia-medellin",
+      "name": "Medell\u00c3\u00adn (El Poblado, Laureles), Colombia",
+      "country": "Colombia",
+      "region": "South America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2790,
+      "climate": {
+        "winterLowF": 60,
+        "summerHighF": 80,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 7,
+        "expatCommunity": 8,
+        "safety": 5,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 4
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "colombia-pereira",
+      "name": "Pereira / Coffee Axis, Colombia",
+      "country": "Colombia",
+      "region": "South America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2160,
+      "climate": {
+        "winterLowF": 58,
+        "summerHighF": 78,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 6,
+        "expatCommunity": 4,
+        "safety": 6,
+        "internetSpeed": "50-100Mbps",
+        "englishPrevalence": 3
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "colombia-santa-marta",
+      "name": "Santa Marta, Colombia",
+      "country": "Colombia",
+      "region": "South America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2360,
+      "climate": {
+        "winterLowF": 73,
+        "summerHighF": 92,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 5,
+        "dogFriendly": 6,
+        "expatCommunity": 4,
+        "safety": 5,
+        "internetSpeed": "25-50Mbps",
+        "englishPrevalence": 3
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "costa-rica-arenal",
+      "name": "Arenal / Lake Arenal, Costa Rica",
+      "country": "Costa Rica",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2970,
+      "climate": {
+        "winterLowF": 62,
+        "summerHighF": 85,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 5,
+        "dogFriendly": 7,
+        "expatCommunity": 6,
+        "safety": 7,
+        "internetSpeed": "25-50Mbps",
+        "englishPrevalence": 5
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "costa-rica-atenas",
+      "name": "Atenas, Costa Rica",
+      "country": "Costa Rica",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2930,
+      "climate": {
+        "winterLowF": 62,
+        "summerHighF": 82,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 6,
+        "safety": 7,
+        "internetSpeed": "50-100Mbps",
+        "englishPrevalence": 5
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "costa-rica-central-valley",
+      "name": "Central Valley (San Jos\u00c3\u00a9, Escaz\u00c3\u00ba, Santa Ana), Costa Rica",
+      "country": "Costa Rica",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 3660,
+      "climate": {
+        "winterLowF": 60,
+        "summerHighF": 80,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 7,
+        "expatCommunity": 7,
+        "safety": 6,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 5
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "costa-rica-grecia",
+      "name": "Grecia, Costa Rica",
+      "country": "Costa Rica",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2760,
+      "climate": {
+        "winterLowF": 62,
+        "summerHighF": 82,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 5,
+        "safety": 7,
+        "internetSpeed": "50-100Mbps",
+        "englishPrevalence": 4
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "costa-rica-guanacaste",
+      "name": "Guanacaste (Tamarindo, Nosara, Liberia), Costa Rica",
+      "country": "Costa Rica",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 3560,
+      "climate": {
+        "winterLowF": 68,
+        "summerHighF": 95,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 7,
+        "expatCommunity": 7,
+        "safety": 6,
+        "internetSpeed": "50-100Mbps",
+        "englishPrevalence": 6
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "costa-rica-puerto-viejo",
+      "name": "Puerto Viejo, Costa Rica",
+      "country": "Costa Rica",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2840,
+      "climate": {
+        "winterLowF": 70,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 4,
+        "dogFriendly": 7,
+        "expatCommunity": 5,
+        "safety": 5,
+        "internetSpeed": "25-50Mbps",
+        "englishPrevalence": 5
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "croatia-dubrovnik",
+      "name": "Dubrovnik, Croatia",
+      "country": "Croatia",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3261,
+      "climate": {
+        "winterLowF": 44,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 6,
+        "expatCommunity": 5,
+        "safety": 9,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 6
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "croatia-istria",
+      "name": "Istria, Croatia",
+      "country": "Croatia",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 2912,
+      "climate": {
+        "winterLowF": 37,
+        "summerHighF": 86,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 5,
+        "safety": 9,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 6
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "croatia-split",
+      "name": "Split, Croatia",
+      "country": "Croatia",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 2955,
+      "climate": {
+        "winterLowF": 42,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 6,
+        "expatCommunity": 5,
+        "safety": 9,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 6
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "croatia-zagreb",
+      "name": "Zagreb, Croatia",
+      "country": "Croatia",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 2804,
+      "climate": {
+        "winterLowF": 28,
+        "summerHighF": 84,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 7,
+        "expatCommunity": 5,
+        "safety": 8,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 7
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "cyprus-larnaca",
+      "name": "Larnaca, Cyprus",
+      "country": "Cyprus",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3048,
+      "climate": {
+        "winterLowF": 50,
+        "summerHighF": 95,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 6,
+        "expatCommunity": 7,
+        "safety": 9,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 8
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "cyprus-limassol",
+      "name": "Limassol, Cyprus",
+      "country": "Cyprus",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3446,
+      "climate": {
+        "winterLowF": 50,
+        "summerHighF": 95,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 6,
+        "expatCommunity": 8,
+        "safety": 9,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 8
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "cyprus-paphos",
+      "name": "Paphos, Cyprus",
+      "country": "Cyprus",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3215,
+      "climate": {
+        "winterLowF": 50,
+        "summerHighF": 93,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 6,
+        "expatCommunity": 9,
+        "safety": 9,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 8
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "ecuador-cotacachi",
+      "name": "Cotacachi, Ecuador",
+      "country": "Ecuador",
+      "region": "South America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2090,
+      "climate": {
+        "winterLowF": 48,
+        "summerHighF": 70,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 5,
+        "dogFriendly": 6,
+        "expatCommunity": 5,
+        "safety": 6,
+        "internetSpeed": "25-50Mbps",
+        "englishPrevalence": 3
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "ecuador-cuenca",
+      "name": "Cuenca, Ecuador",
+      "country": "Ecuador",
+      "region": "South America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2390,
+      "climate": {
+        "winterLowF": 50,
+        "summerHighF": 70,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 6,
+        "expatCommunity": 8,
+        "safety": 6,
+        "internetSpeed": "50-100Mbps",
+        "englishPrevalence": 4
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "ecuador-quito",
+      "name": "Quito, Ecuador",
+      "country": "Ecuador",
+      "region": "South America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2580,
+      "climate": {
+        "winterLowF": 48,
+        "summerHighF": 68,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 6,
+        "expatCommunity": 5,
+        "safety": 5,
+        "internetSpeed": "50-100Mbps",
+        "englishPrevalence": 4
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "ecuador-salinas",
+      "name": "Salinas, Ecuador",
+      "country": "Ecuador",
+      "region": "South America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2340,
+      "climate": {
+        "winterLowF": 68,
+        "summerHighF": 85,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 5,
+        "dogFriendly": 6,
+        "expatCommunity": 5,
+        "safety": 6,
+        "internetSpeed": "25-50Mbps",
+        "englishPrevalence": 3
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "ecuador-vilcabamba",
+      "name": "Vilcabamba, Ecuador",
+      "country": "Ecuador",
+      "region": "South America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2030,
+      "climate": {
+        "winterLowF": 55,
+        "summerHighF": 78,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 4,
+        "dogFriendly": 6,
+        "expatCommunity": 5,
+        "safety": 6,
+        "internetSpeed": "25-50Mbps",
+        "englishPrevalence": 3
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "france-brittany",
+      "name": "Brittany, France",
+      "country": "France",
+      "region": "Brittany",
+      "currency": "EUR",
+      "exchangeRate": 1.05,
+      "monthlyCostUSD": 4996,
+      "climate": {
+        "winterLowF": 38,
+        "summerHighF": 72,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 10,
+        "expatCommunity": 7,
+        "safety": 8,
+        "internetSpeed": "1Gbps FTTH available in cities",
+        "englishPrevalence": 4
+      },
+      "inclusionScore": 6.5,
+      "neighborhoodCount": 5,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "france-dordogne",
+      "name": "Dordogne, France",
+      "country": "France",
+      "region": "Western Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3270,
+      "climate": {
+        "winterLowF": 34,
+        "summerHighF": 82,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 9,
+        "expatCommunity": 6,
+        "safety": 9,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 4
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "france-gascony",
+      "name": "Gascony, France",
+      "country": "France",
+      "region": "Western Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3173,
+      "climate": {
+        "winterLowF": 35,
+        "summerHighF": 85,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 9,
+        "expatCommunity": 4,
+        "safety": 9,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 3
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "france-languedoc",
+      "name": "Languedoc, France",
+      "country": "France",
+      "region": "Western Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3410,
+      "climate": {
+        "winterLowF": 37,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 8,
+        "expatCommunity": 6,
+        "safety": 8,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 4
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "france-lyon",
+      "name": "Lyon, France",
+      "country": "France",
+      "region": "Auvergne-Rhone-Alpes",
+      "currency": "EUR",
+      "exchangeRate": 1.05,
+      "monthlyCostUSD": 5543,
+      "climate": {
+        "winterLowF": 30,
+        "summerHighF": 82,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 9,
+        "expatCommunity": 7,
+        "safety": 7,
+        "internetSpeed": "1Gbps FTTH widely available",
+        "englishPrevalence": 5
+      },
+      "inclusionScore": 7,
+      "neighborhoodCount": 5,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "france-montpellier",
+      "name": "Montpellier, France",
+      "country": "France",
+      "region": "Occitanie",
+      "currency": "EUR",
+      "exchangeRate": 1.05,
+      "monthlyCostUSD": 5157,
+      "climate": {
+        "winterLowF": 36,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 9,
+        "expatCommunity": 8,
+        "safety": 7,
+        "internetSpeed": "1Gbps FTTH available",
+        "englishPrevalence": 5
+      },
+      "inclusionScore": 7,
+      "neighborhoodCount": 5,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "france-nice",
+      "name": "Nice / C\u00c3\u00b4te d'Azur, France",
+      "country": "France",
+      "region": "Western Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 4582,
+      "climate": {
+        "winterLowF": 43,
+        "summerHighF": 86,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 7,
+        "expatCommunity": 8,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 6
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "france-paris",
+      "name": "Paris, France",
+      "country": "France",
+      "region": "Western Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 5399,
+      "climate": {
+        "winterLowF": 35,
+        "summerHighF": 79,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 10,
+        "dogFriendly": 7,
+        "expatCommunity": 9,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 6
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "france-toulon",
+      "name": "Toulon, France",
+      "country": "France",
+      "region": "Western Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3528,
+      "climate": {
+        "winterLowF": 41,
+        "summerHighF": 86,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 8,
+        "expatCommunity": 4,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 4
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "france-toulouse",
+      "name": "Toulouse, France",
+      "country": "France",
+      "region": "Occitanie",
+      "currency": "EUR",
+      "exchangeRate": 0.92,
+      "monthlyCostUSD": 5055,
+      "climate": {
+        "winterLowF": 34,
+        "summerHighF": 86,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 9,
+        "expatCommunity": 7,
+        "safety": 7,
+        "internetSpeed": "1Gbps FTTH widely available",
+        "englishPrevalence": 5
+      },
+      "inclusionScore": 7,
+      "neighborhoodCount": 5,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "greece-athens",
+      "name": "Athens, Greece",
+      "country": "Greece",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3323,
+      "climate": {
+        "winterLowF": 44,
+        "summerHighF": 95,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 6,
+        "expatCommunity": 7,
+        "safety": 7,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 6
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "greece-corfu",
+      "name": "Corfu, Greece",
+      "country": "Greece",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 2887,
+      "climate": {
+        "winterLowF": 43,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 7,
+        "expatCommunity": 5,
+        "safety": 9,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 5
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "greece-crete",
+      "name": "Crete, Greece",
+      "country": "Greece",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 2962,
+      "climate": {
+        "winterLowF": 48,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 7,
+        "expatCommunity": 6,
+        "safety": 9,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 5
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "greece-peloponnese",
+      "name": "Peloponnese, Greece",
+      "country": "Greece",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 2774,
+      "climate": {
+        "winterLowF": 42,
+        "summerHighF": 92,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 7,
+        "expatCommunity": 3,
+        "safety": 9,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 4
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "greece-rhodes",
+      "name": "Rhodes, Greece",
+      "country": "Greece",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 2892,
+      "climate": {
+        "winterLowF": 50,
+        "summerHighF": 93,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 6,
+        "expatCommunity": 5,
+        "safety": 9,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 5
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "ireland-cork",
+      "name": "Cork, Ireland",
+      "country": "Ireland",
+      "region": "Western Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 4303,
+      "climate": {
+        "winterLowF": 38,
+        "summerHighF": 66,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 9,
+        "expatCommunity": 6,
+        "safety": 8,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "ireland-galway",
+      "name": "Galway, Ireland",
+      "country": "Ireland",
+      "region": "Western Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 4314,
+      "climate": {
+        "winterLowF": 38,
+        "summerHighF": 64,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 9,
+        "expatCommunity": 6,
+        "safety": 9,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "ireland-limerick",
+      "name": "Limerick, Ireland",
+      "country": "Ireland",
+      "region": "Western Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3954,
+      "climate": {
+        "winterLowF": 37,
+        "summerHighF": 65,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 9,
+        "expatCommunity": 4,
+        "safety": 8,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "ireland-waterford",
+      "name": "Waterford, Ireland",
+      "country": "Ireland",
+      "region": "Munster",
+      "currency": "EUR",
+      "exchangeRate": 1.05,
+      "monthlyCostUSD": 5540,
+      "climate": {
+        "winterLowF": 35,
+        "summerHighF": 68,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 6,
+        "safety": 9,
+        "internetSpeed": "1Gbps FTTH available (SIRO fiber, Vodafone, Eir)",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": 8,
+      "neighborhoodCount": 5,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "ireland-wexford",
+      "name": "Wexford, Ireland",
+      "country": "Ireland",
+      "region": "Western Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3884,
+      "climate": {
+        "winterLowF": 37,
+        "summerHighF": 67,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 9,
+        "expatCommunity": 3,
+        "safety": 9,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "italy-abruzzo",
+      "name": "Abruzzo, Italy",
+      "country": "Italy",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 2871,
+      "climate": {
+        "winterLowF": 35,
+        "summerHighF": 86,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 4,
+        "safety": 8,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 3
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "italy-lake-region",
+      "name": "Italian Lake Region, Italy",
+      "country": "Italy",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3892,
+      "climate": {
+        "winterLowF": 32,
+        "summerHighF": 84,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 7,
+        "expatCommunity": 5,
+        "safety": 9,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 4
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "italy-puglia",
+      "name": "Puglia, Italy",
+      "country": "Italy",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 2909,
+      "climate": {
+        "winterLowF": 41,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 5,
+        "safety": 8,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 3
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "italy-sardinia",
+      "name": "Sardinia, Italy",
+      "country": "Italy",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3059,
+      "climate": {
+        "winterLowF": 44,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 4,
+        "safety": 9,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 3
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "italy-sicily",
+      "name": "Sicily, Italy",
+      "country": "Italy",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 2774,
+      "climate": {
+        "winterLowF": 46,
+        "summerHighF": 93,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 6,
+        "expatCommunity": 5,
+        "safety": 7,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 3
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "italy-tuscany",
+      "name": "Tuscany, Italy",
+      "country": "Italy",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3726,
+      "climate": {
+        "winterLowF": 35,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 8,
+        "expatCommunity": 7,
+        "safety": 9,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 5
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "malta-gozo",
+      "name": "Gozo, Malta",
+      "country": "Malta",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3110,
+      "climate": {
+        "winterLowF": 50,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 6,
+        "safety": 10,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 9
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "malta-sliema",
+      "name": "Sliema, Malta",
+      "country": "Malta",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3771,
+      "climate": {
+        "winterLowF": 50,
+        "summerHighF": 92,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 5,
+        "expatCommunity": 9,
+        "safety": 8,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 9
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "malta-valletta",
+      "name": "Valletta, Malta",
+      "country": "Malta",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3642,
+      "climate": {
+        "winterLowF": 50,
+        "summerHighF": 92,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 5,
+        "expatCommunity": 8,
+        "safety": 9,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 9
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "mexico-lake-chapala",
+      "name": "Lake Chapala / Ajijic, Mexico",
+      "country": "Mexico",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2930,
+      "climate": {
+        "winterLowF": 50,
+        "summerHighF": 80,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 9,
+        "safety": 7,
+        "internetSpeed": "50-100Mbps",
+        "englishPrevalence": 7
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "mexico-mazatlan",
+      "name": "Mazatl\u00c3\u00a1n, Mexico",
+      "country": "Mexico",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2770,
+      "climate": {
+        "winterLowF": 58,
+        "summerHighF": 93,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 7,
+        "expatCommunity": 5,
+        "safety": 6,
+        "internetSpeed": "50-100Mbps",
+        "englishPrevalence": 4
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "mexico-merida",
+      "name": "M\u00c3\u00a9rida, Mexico",
+      "country": "Mexico",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2780,
+      "climate": {
+        "winterLowF": 62,
+        "summerHighF": 98,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 6,
+        "expatCommunity": 6,
+        "safety": 8,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 4
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "mexico-oaxaca",
+      "name": "Oaxaca City, Mexico",
+      "country": "Mexico",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2480,
+      "climate": {
+        "winterLowF": 48,
+        "summerHighF": 85,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 5,
+        "dogFriendly": 6,
+        "expatCommunity": 5,
+        "safety": 6,
+        "internetSpeed": "50-100Mbps",
+        "englishPrevalence": 4
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "mexico-playa-del-carmen",
+      "name": "Playa del Carmen, Mexico",
+      "country": "Mexico",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 3210,
+      "climate": {
+        "winterLowF": 68,
+        "summerHighF": 92,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 6,
+        "expatCommunity": 6,
+        "safety": 5,
+        "internetSpeed": "50-100Mbps",
+        "englishPrevalence": 6
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "mexico-puerto-vallarta",
+      "name": "Puerto Vallarta, Mexico",
+      "country": "Mexico",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 3370,
+      "climate": {
+        "winterLowF": 62,
+        "summerHighF": 93,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 7,
+        "safety": 6,
+        "internetSpeed": "50-100Mbps",
+        "englishPrevalence": 6
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "mexico-queretaro",
+      "name": "Quer\u00c3\u00a9taro, Mexico",
+      "country": "Mexico",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2920,
+      "climate": {
+        "winterLowF": 42,
+        "summerHighF": 86,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 5,
+        "safety": 8,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 4
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "mexico-san-miguel-de-allende",
+      "name": "San Miguel de Allende, Mexico",
+      "country": "Mexico",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 3290,
+      "climate": {
+        "winterLowF": 42,
+        "summerHighF": 85,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 7,
+        "expatCommunity": 8,
+        "safety": 7,
+        "internetSpeed": "50-100Mbps",
+        "englishPrevalence": 6
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "panama-bocas-del-toro",
+      "name": "Bocas del Toro, Panama",
+      "country": "Panama",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 3479,
+      "climate": {
+        "winterLowF": 73,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 4,
+        "dogFriendly": 6,
+        "expatCommunity": 6,
+        "safety": 5,
+        "internetSpeed": "25-50Mbps",
+        "englishPrevalence": 5
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "panama-boquete",
+      "name": "Boquete, Panama",
+      "country": "Panama",
+      "region": "Chiriqui",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4607,
+      "climate": {
+        "winterLowF": 55,
+        "summerHighF": 78,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 8,
+        "expatCommunity": 9,
+        "safety": 8,
+        "internetSpeed": "100-300Mbps; fiber expanding",
+        "englishPrevalence": 7
+      },
+      "inclusionScore": 7.5,
+      "neighborhoodCount": 5,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "panama-chitre",
+      "name": "Chitr\u00c3\u00a9, Panama",
+      "country": "Panama",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2989,
+      "climate": {
+        "winterLowF": 70,
+        "summerHighF": 95,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 5,
+        "dogFriendly": 6,
+        "expatCommunity": 3,
+        "safety": 7,
+        "internetSpeed": "25-50Mbps",
+        "englishPrevalence": 3
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "panama-city",
+      "name": "Panama City, Panama",
+      "country": "Panama",
+      "region": "Panama Province",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5429,
+      "climate": {
+        "winterLowF": 75,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 6,
+        "expatCommunity": 8,
+        "safety": 5,
+        "internetSpeed": "500Mbps-1Gbps in city",
+        "englishPrevalence": 6
+      },
+      "inclusionScore": 7,
+      "neighborhoodCount": 5,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "panama-city-bella-vista",
+      "name": "Panama City \u00e2\u20ac\u201d Bella Vista, Panama",
+      "country": "Panama",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4509,
+      "climate": {
+        "winterLowF": 75,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 6,
+        "expatCommunity": 7,
+        "safety": 6,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 6
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "panama-city-casco-viejo",
+      "name": "Panama City \u00e2\u20ac\u201d Casco Viejo, Panama",
+      "country": "Panama",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4499,
+      "climate": {
+        "winterLowF": 75,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 5,
+        "expatCommunity": 6,
+        "safety": 5,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 6
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "panama-city-costa-del-este",
+      "name": "Panama City \u00e2\u20ac\u201d Costa del Este, Panama",
+      "country": "Panama",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4759,
+      "climate": {
+        "winterLowF": 75,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 7,
+        "expatCommunity": 6,
+        "safety": 7,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 6
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "panama-city-el-cangrejo",
+      "name": "Panama City \u00e2\u20ac\u201d El Cangrejo, Panama",
+      "country": "Panama",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4189,
+      "climate": {
+        "winterLowF": 75,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 6,
+        "expatCommunity": 6,
+        "safety": 6,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 6
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "panama-city-punta-pacifica",
+      "name": "Panama City \u00e2\u20ac\u201d Punta Pacifica, Panama",
+      "country": "Panama",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4979,
+      "climate": {
+        "winterLowF": 75,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 6,
+        "expatCommunity": 7,
+        "safety": 7,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 7
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "panama-coronado",
+      "name": "Coronado, Panama",
+      "country": "Panama",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 3749,
+      "climate": {
+        "winterLowF": 72,
+        "summerHighF": 92,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 7,
+        "expatCommunity": 7,
+        "safety": 7,
+        "internetSpeed": "50-100Mbps",
+        "englishPrevalence": 6
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "panama-david",
+      "name": "David, Panama",
+      "country": "Panama",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 3199,
+      "climate": {
+        "winterLowF": 72,
+        "summerHighF": 95,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 6,
+        "expatCommunity": 5,
+        "safety": 6,
+        "internetSpeed": "50-100Mbps",
+        "englishPrevalence": 4
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "panama-el-valle",
+      "name": "El Valle de Ant\u00c3\u00b3n, Panama",
+      "country": "Panama",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 3209,
+      "climate": {
+        "winterLowF": 60,
+        "summerHighF": 82,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 5,
+        "dogFriendly": 7,
+        "expatCommunity": 5,
+        "safety": 8,
+        "internetSpeed": "25-50Mbps",
+        "englishPrevalence": 4
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "panama-pedasi",
+      "name": "Pedas\u00c3\u00ad, Panama",
+      "country": "Panama",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2979,
+      "climate": {
+        "winterLowF": 70,
+        "summerHighF": 93,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 4,
+        "dogFriendly": 7,
+        "expatCommunity": 4,
+        "safety": 8,
+        "internetSpeed": "25-50Mbps",
+        "englishPrevalence": 3
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "panama-puerto-armuelles",
+      "name": "Puerto Armuelles, Panama",
+      "country": "Panama",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2789,
+      "climate": {
+        "winterLowF": 72,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 4,
+        "dogFriendly": 6,
+        "expatCommunity": 4,
+        "safety": 6,
+        "internetSpeed": "25-50Mbps",
+        "englishPrevalence": 3
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "panama-volcan",
+      "name": "Volc\u00c3\u00a1n, Panama",
+      "country": "Panama",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2999,
+      "climate": {
+        "winterLowF": 52,
+        "summerHighF": 78,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 5,
+        "dogFriendly": 7,
+        "expatCommunity": 4,
+        "safety": 8,
+        "internetSpeed": "25-50Mbps",
+        "englishPrevalence": 4
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "portugal-algarve",
+      "name": "Algarve, Portugal",
+      "country": "Portugal",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3362,
+      "climate": {
+        "winterLowF": 50,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 9,
+        "safety": 9,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 7
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "portugal-cascais",
+      "name": "Cascais, Portugal",
+      "country": "Portugal",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 4395,
+      "climate": {
+        "winterLowF": 47,
+        "summerHighF": 82,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 8,
+        "expatCommunity": 8,
+        "safety": 9,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 8
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "portugal-lisbon",
+      "name": "Lisbon/Algarve, Portugal",
+      "country": "Portugal",
+      "region": "Lisboa / Algarve",
+      "currency": "EUR",
+      "exchangeRate": 1.05,
+      "monthlyCostUSD": 5061,
+      "climate": {
+        "winterLowF": 46,
+        "summerHighF": 85,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 9,
+        "safety": 9,
+        "internetSpeed": "1Gbps fiber widely available",
+        "englishPrevalence": 8
+      },
+      "inclusionScore": 7.5,
+      "neighborhoodCount": 6,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "portugal-porto",
+      "name": "Porto, Portugal",
+      "country": "Portugal",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3282,
+      "climate": {
+        "winterLowF": 41,
+        "summerHighF": 79,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 7,
+        "expatCommunity": 7,
+        "safety": 9,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 7
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "portugal-silver-coast",
+      "name": "Silver Coast, Portugal",
+      "country": "Portugal",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3083,
+      "climate": {
+        "winterLowF": 44,
+        "summerHighF": 82,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 8,
+        "expatCommunity": 5,
+        "safety": 9,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 5
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "spain-alicante",
+      "name": "Alicante / Costa Blanca, Spain",
+      "country": "Spain",
+      "region": "Valencia",
+      "currency": "EUR",
+      "exchangeRate": 1.05,
+      "monthlyCostUSD": 4720,
+      "climate": {
+        "winterLowF": 45,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 8,
+        "expatCommunity": 9,
+        "safety": 8,
+        "internetSpeed": "1Gbps fiber available",
+        "englishPrevalence": 7
+      },
+      "inclusionScore": 7.5,
+      "neighborhoodCount": 5,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "spain-barcelona",
+      "name": "Barcelona, Spain",
+      "country": "Spain",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 4471,
+      "climate": {
+        "winterLowF": 41,
+        "summerHighF": 87,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 6,
+        "expatCommunity": 9,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 7
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "spain-canary-islands",
+      "name": "Canary Islands, Spain",
+      "country": "Spain",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3369,
+      "climate": {
+        "winterLowF": 59,
+        "summerHighF": 84,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 8,
+        "safety": 8,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 6
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "spain-costa-del-sol",
+      "name": "Costa del Sol, Spain",
+      "country": "Spain",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3949,
+      "climate": {
+        "winterLowF": 48,
+        "summerHighF": 92,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 7,
+        "expatCommunity": 9,
+        "safety": 8,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 7
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "spain-valencia",
+      "name": "Valencia, Spain",
+      "country": "Spain",
+      "region": "Southern Europe",
+      "currency": "EUR",
+      "exchangeRate": 0.93,
+      "monthlyCostUSD": 3326,
+      "climate": {
+        "winterLowF": 43,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 7,
+        "expatCommunity": 7,
+        "safety": 8,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 5
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "uruguay-colonia",
+      "name": "Colonia del Sacramento, Uruguay",
+      "country": "Uruguay",
+      "region": "South America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 2800,
+      "climate": {
+        "winterLowF": 40,
+        "summerHighF": 82,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 7,
+        "expatCommunity": 4,
+        "safety": 7,
+        "internetSpeed": "50-100Mbps",
+        "englishPrevalence": 3
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "uruguay-montevideo",
+      "name": "Montevideo, Uruguay",
+      "country": "Uruguay",
+      "region": "South America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 3220,
+      "climate": {
+        "winterLowF": 42,
+        "summerHighF": 82,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 7,
+        "expatCommunity": 4,
+        "safety": 7,
+        "internetSpeed": "100Mbps+",
+        "englishPrevalence": 3
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "uruguay-punta-del-este",
+      "name": "Punta del Este, Uruguay",
+      "country": "Uruguay",
+      "region": "South America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 3820,
+      "climate": {
+        "winterLowF": 40,
+        "summerHighF": 80,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 5,
+        "safety": 8,
+        "internetSpeed": "50-100Mbps",
+        "englishPrevalence": 4
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-albuquerque-nm",
+      "name": "Albuquerque, NM",
+      "country": "United States",
+      "region": "US Southwest",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4611,
+      "climate": {
+        "winterLowF": 25,
+        "summerHighF": 94,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 8,
+        "expatCommunity": 1,
+        "safety": 5,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-armstrong-county-pa",
+      "name": "Armstrong County, PA",
+      "country": "United States",
+      "region": "US Northeast",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 3921,
+      "climate": {
+        "winterLowF": 18,
+        "summerHighF": 83,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 5,
+        "dogFriendly": 8,
+        "expatCommunity": 1,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-asheville-nc",
+      "name": "Asheville, NC",
+      "country": "United States",
+      "region": "US Southeast",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5021,
+      "climate": {
+        "winterLowF": 28,
+        "summerHighF": 85,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 9,
+        "expatCommunity": 1,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-atlanta",
+      "name": "Atlanta, Georgia",
+      "country": "United States",
+      "region": "Georgia",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 7578,
+      "climate": {
+        "winterLowF": 33,
+        "summerHighF": 89,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 7,
+        "expatCommunity": 0,
+        "safety": 7,
+        "internetSpeed": "1Gbps available (AT&T Fiber/Comcast)",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": 7.5,
+      "neighborhoodCount": 5,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-austin",
+      "name": "Austin, Texas",
+      "country": "United States",
+      "region": "Texas",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 8011,
+      "climate": {
+        "winterLowF": 38,
+        "summerHighF": 97,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 9,
+        "expatCommunity": 0,
+        "safety": 7,
+        "internetSpeed": "1Gbps available (AT&T Fiber, Google Fiber, Spectrum)",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": 8,
+      "neighborhoodCount": 5,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-austin-tx",
+      "name": "Austin, TX",
+      "country": "United States",
+      "region": "US South Central",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 6161,
+      "climate": {
+        "winterLowF": 40,
+        "summerHighF": 97,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 9,
+        "expatCommunity": 1,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-baltimore-md",
+      "name": "Baltimore, MD",
+      "country": "United States",
+      "region": "US Mid-Atlantic",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5251,
+      "climate": {
+        "winterLowF": 26,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 7,
+        "expatCommunity": 1,
+        "safety": 4,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-birmingham-al",
+      "name": "Birmingham, AL",
+      "country": "United States",
+      "region": "US Southeast",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4421,
+      "climate": {
+        "winterLowF": 34,
+        "summerHighF": 93,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 7,
+        "expatCommunity": 1,
+        "safety": 5,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-cherry-hill",
+      "name": "Cherry Hill, New Jersey",
+      "country": "United States",
+      "region": "New Jersey",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 7861,
+      "climate": {
+        "winterLowF": 24,
+        "summerHighF": 87,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 7,
+        "expatCommunity": 0,
+        "safety": 8,
+        "internetSpeed": "1Gbps+ available (Verizon Fios/Comcast)",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": 7.5,
+      "neighborhoodCount": 5,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-chesapeake-va"
+    },
+    {
+      "id": "us-chicago-il",
+      "name": "Chicago, IL",
+      "country": "United States",
+      "region": "US Midwest",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5831,
+      "climate": {
+        "winterLowF": 16,
+        "summerHighF": 84,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 8,
+        "expatCommunity": 1,
+        "safety": 5,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-cleveland-oh",
+      "name": "Cleveland, OH",
+      "country": "United States",
+      "region": "US Midwest",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4451,
+      "climate": {
+        "winterLowF": 20,
+        "summerHighF": 82,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 7,
+        "expatCommunity": 1,
+        "safety": 5,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-dallas-tx",
+      "name": "Dallas, TX",
+      "country": "United States",
+      "region": "US South Central",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5981,
+      "climate": {
+        "winterLowF": 35,
+        "summerHighF": 97,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 7,
+        "expatCommunity": 1,
+        "safety": 6,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-denver-co",
+      "name": "Denver, CO",
+      "country": "United States",
+      "region": "US Mountain West",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 6191,
+      "climate": {
+        "winterLowF": 17,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 9,
+        "expatCommunity": 1,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-florida",
+      "name": "Florida, USA",
+      "country": "United States",
+      "region": "Florida",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 7739,
+      "climate": {
+        "winterLowF": 55,
+        "summerHighF": 92,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 6,
+        "expatCommunity": 0,
+        "safety": 6,
+        "internetSpeed": "1Gbps available in metro areas",
+        "englishPrevalence": 9
+      },
+      "inclusionScore": 6,
+      "neighborhoodCount": 5,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-fort-lauderdale-fl",
+      "name": "Fort Lauderdale, FL",
+      "country": "United States",
+      "region": "US Southeast",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 6071,
+      "climate": {
+        "winterLowF": 58,
+        "summerHighF": 91,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 8,
+        "expatCommunity": 1,
+        "safety": 6,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-fort-wayne-in",
+      "name": "Fort Wayne, IN",
+      "country": "United States",
+      "region": "US Midwest",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4271,
+      "climate": {
+        "winterLowF": 18,
+        "summerHighF": 84,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 1,
+        "safety": 6,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-fort-worth-tx",
+      "name": "Fort Worth, TX",
+      "country": "United States",
+      "region": "US South Central",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5261,
+      "climate": {
+        "winterLowF": 34,
+        "summerHighF": 97,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 8,
+        "expatCommunity": 1,
+        "safety": 6,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-grand-forks-nd",
+      "name": "Grand Forks, ND",
+      "country": "United States",
+      "region": "US Midwest",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4091,
+      "climate": {
+        "winterLowF": -3,
+        "summerHighF": 82,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 1,
+        "safety": 8,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-killeen-tx",
+      "name": "Killeen, TX",
+      "country": "United States",
+      "region": "US South Central",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4381,
+      "climate": {
+        "winterLowF": 36,
+        "summerHighF": 97,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 7,
+        "expatCommunity": 1,
+        "safety": 5,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-lapeer-mi",
+      "name": "Lapeer, MI",
+      "country": "United States",
+      "region": "US Midwest",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4081,
+      "climate": {
+        "winterLowF": 14,
+        "summerHighF": 82,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 7,
+        "expatCommunity": 1,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-little-rock-ar",
+      "name": "Little Rock, AR",
+      "country": "United States",
+      "region": "US South Central",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4331,
+      "climate": {
+        "winterLowF": 32,
+        "summerHighF": 93,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 1,
+        "safety": 5,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-lorain-oh",
+      "name": "Lorain, OH",
+      "country": "United States",
+      "region": "US Midwest",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4111,
+      "climate": {
+        "winterLowF": 20,
+        "summerHighF": 82,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 7,
+        "expatCommunity": 1,
+        "safety": 5,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-lynchburg-va",
+      "name": "Lynchburg, VA",
+      "country": "United States",
+      "region": "US Mid-Atlantic",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4221,
+      "climate": {
+        "winterLowF": 26,
+        "summerHighF": 87,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 8,
+        "expatCommunity": 1,
+        "safety": 6,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-miami-fl",
+      "name": "Miami, FL",
+      "country": "United States",
+      "region": "US Southeast",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 6791,
+      "climate": {
+        "winterLowF": 60,
+        "summerHighF": 92,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 7,
+        "expatCommunity": 1,
+        "safety": 5,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-milwaukee-wi",
+      "name": "Milwaukee, WI",
+      "country": "United States",
+      "region": "US Midwest",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4881,
+      "climate": {
+        "winterLowF": 14,
+        "summerHighF": 82,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 7,
+        "expatCommunity": 1,
+        "safety": 5,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-minneapolis-mn",
+      "name": "Minneapolis, MN",
+      "country": "United States",
+      "region": "US Midwest",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5601,
+      "climate": {
+        "winterLowF": 4,
+        "summerHighF": 83,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 8,
+        "expatCommunity": 1,
+        "safety": 6,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-nashville-tn",
+      "name": "Nashville, TN",
+      "country": "United States",
+      "region": "US Southeast",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5791,
+      "climate": {
+        "winterLowF": 30,
+        "summerHighF": 91,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 8,
+        "expatCommunity": 1,
+        "safety": 6,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-norfolk-va",
+      "name": "Norfolk, VA",
+      "country": "United States",
+      "region": "US Mid-Atlantic",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4871,
+      "climate": {
+        "winterLowF": 32,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 7,
+        "expatCommunity": 1,
+        "safety": 5,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-oakland-county-mi",
+      "name": "Oakland County, MI",
+      "country": "United States",
+      "region": "US Midwest",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5011,
+      "climate": {
+        "winterLowF": 16,
+        "summerHighF": 83,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 8,
+        "expatCommunity": 1,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-palm-bay-fl",
+      "name": "Palm Bay, FL",
+      "country": "United States",
+      "region": "US Southeast",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4871,
+      "climate": {
+        "winterLowF": 50,
+        "summerHighF": 92,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 1,
+        "safety": 6,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-philadelphia",
+      "name": "Philadelphia, Pennsylvania",
+      "country": "United States",
+      "region": "Pennsylvania",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 7494,
+      "climate": {
+        "winterLowF": 25,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 7,
+        "expatCommunity": 0,
+        "safety": 5,
+        "internetSpeed": "1Gbps+ available (Verizon Fios/Comcast)",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": 7,
+      "neighborhoodCount": 5,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-pittsburgh-pa",
+      "name": "Pittsburgh, PA",
+      "country": "United States",
+      "region": "US Northeast",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5021,
+      "climate": {
+        "winterLowF": 22,
+        "summerHighF": 84,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 7,
+        "expatCommunity": 1,
+        "safety": 6,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-port-huron-mi",
+      "name": "Port Huron, MI",
+      "country": "United States",
+      "region": "US Midwest",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4141,
+      "climate": {
+        "winterLowF": 16,
+        "summerHighF": 82,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 7,
+        "expatCommunity": 1,
+        "safety": 6,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-portsmouth-va",
+      "name": "Portsmouth, VA",
+      "country": "United States",
+      "region": "US Mid-Atlantic",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4471,
+      "climate": {
+        "winterLowF": 32,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 1,
+        "safety": 5,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-quincy-fl",
+      "name": "Quincy, FL",
+      "country": "United States",
+      "region": "US Southeast",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4001,
+      "climate": {
+        "winterLowF": 38,
+        "summerHighF": 93,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 5,
+        "dogFriendly": 7,
+        "expatCommunity": 1,
+        "safety": 5,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-raleigh",
+      "name": "Raleigh-Durham, North Carolina",
+      "country": "United States",
+      "region": "North Carolina",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 7333,
+      "climate": {
+        "winterLowF": 30,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 8,
+        "expatCommunity": 0,
+        "safety": 8,
+        "internetSpeed": "1Gbps available (Google Fiber/AT&T Fiber)",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": 7.5,
+      "neighborhoodCount": 5,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-richmond",
+      "name": "Richmond, Virginia",
+      "country": "United States",
+      "region": "Virginia",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 7123,
+      "climate": {
+        "winterLowF": 28,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 8,
+        "expatCommunity": 0,
+        "safety": 6,
+        "internetSpeed": "1Gbps+ available (Verizon Fios/Comcast)",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": 6.5,
+      "neighborhoodCount": 5,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-saint-paul-mn",
+      "name": "Saint Paul, MN",
+      "country": "United States",
+      "region": "US Midwest",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4941,
+      "climate": {
+        "winterLowF": 4,
+        "summerHighF": 84,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 8,
+        "expatCommunity": 1,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-san-marcos-tx",
+      "name": "San Marcos, TX",
+      "country": "United States",
+      "region": "US South Central",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4811,
+      "climate": {
+        "winterLowF": 38,
+        "summerHighF": 96,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 8,
+        "expatCommunity": 1,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-savannah",
+      "name": "Savannah, Georgia",
+      "country": "United States",
+      "region": "Georgia",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 6844,
+      "climate": {
+        "winterLowF": 38,
+        "summerHighF": 92,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 8,
+        "expatCommunity": 0,
+        "safety": 6,
+        "internetSpeed": "1Gbps available (Comcast/AT&T Fiber)",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": 6.5,
+      "neighborhoodCount": 5,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-skowhegan-me",
+      "name": "Skowhegan, ME",
+      "country": "United States",
+      "region": "US Northeast",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4071,
+      "climate": {
+        "winterLowF": 5,
+        "summerHighF": 80,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 5,
+        "dogFriendly": 8,
+        "expatCommunity": 1,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-st-augustine-fl",
+      "name": "St. Augustine, FL",
+      "country": "United States",
+      "region": "US Southeast",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5141,
+      "climate": {
+        "winterLowF": 45,
+        "summerHighF": 91,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 8,
+        "expatCommunity": 1,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-st-petersburg-fl",
+      "name": "St. Petersburg, FL",
+      "country": "United States",
+      "region": "US Southeast",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5721,
+      "climate": {
+        "winterLowF": 54,
+        "summerHighF": 91,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 8,
+        "expatCommunity": 1,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-summerville",
+      "name": "Summerville, South Carolina",
+      "country": "United States",
+      "region": "South Carolina",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 7174,
+      "climate": {
+        "winterLowF": 35,
+        "summerHighF": 92,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 8,
+        "expatCommunity": 0,
+        "safety": 8,
+        "internetSpeed": "1Gbps available (Comcast/Home Telecom Fiber)",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": 5,
+      "neighborhoodCount": 5,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-tampa-fl",
+      "name": "Tampa, FL",
+      "country": "United States",
+      "region": "US Southeast",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5631,
+      "climate": {
+        "winterLowF": 52,
+        "summerHighF": 92,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 8,
+        "expatCommunity": 1,
+        "safety": 6,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-virginia",
+      "name": "Fairfax VA, USA (Base)",
+      "country": "United States",
+      "region": "Virginia",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 9058,
+      "climate": {
+        "winterLowF": 24,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 7,
+        "expatCommunity": 0,
+        "safety": 8,
+        "internetSpeed": "1Gbps+ widely available (Verizon Fios, Cox)",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": 7,
+      "neighborhoodCount": 5,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-virginia-beach-va",
+      "name": "Virginia Beach, VA",
+      "country": "United States",
+      "region": "US Mid-Atlantic",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5241,
+      "climate": {
+        "winterLowF": 33,
+        "summerHighF": 87,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 8,
+        "expatCommunity": 1,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-williamsport-pa",
+      "name": "Williamsport, PA",
+      "country": "United States",
+      "region": "US Northeast",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4111,
+      "climate": {
+        "winterLowF": 18,
+        "summerHighF": 84,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 7,
+        "expatCommunity": 1,
+        "safety": 6,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-yulee-fl",
+      "name": "Yulee, FL",
+      "country": "United States",
+      "region": "US Southeast",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4951,
+      "climate": {
+        "winterLowF": 42,
+        "summerHighF": 92,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 8,
+        "expatCommunity": 1,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    }
+  ]
+}

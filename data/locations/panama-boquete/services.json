@@ -1,0 +1,316 @@
+{
+  "distanceUnit": "km",
+  "currency": "USD",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Hospital Chiriquí",
+      "address": "Avenida 3a Sur, David, Chiriquí",
+      "distanceKm": 40,
+      "notes": "Nearest major hospital, 24/7 emergency, some English-speaking staff, 45 min drive from Boquete",
+      "sources": [
+        {
+          "title": "Hospital Chiriquí",
+          "url": "https://www.hospitalchiriqui.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Farmacia Don Bosco Boquete",
+      "address": "Avenida Central, Boquete, Chiriquí",
+      "distanceKm": 0.3,
+      "notes": "Local pharmacy in town center, basic medications, personal care products",
+      "sources": [
+        {
+          "title": "Visit Boquete",
+          "url": "https://www.visitboquete.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Romero Supermarket Boquete",
+      "address": "Avenida Central, Boquete, Chiriquí",
+      "distanceKm": 0.5,
+      "notes": "Largest supermarket in town, fresh produce, imported goods, local products",
+      "sources": [
+        {
+          "title": "Supermercados Romero",
+          "url": "https://www.superromero.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "Banco Nacional de Panamá - Boquete",
+      "address": "Avenida Central, Boquete, Chiriquí",
+      "distanceKm": 0.3,
+      "notes": "Full-service branch, ATM, expat account services",
+      "sources": [
+        {
+          "title": "Banco Nacional de Panamá",
+          "url": "https://www.banconal.com.pa/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Boquete Health Center (Centro de Salud)",
+      "address": "Avenida Central, Boquete, Chiriquí",
+      "distanceKm": 0.4,
+      "notes": "Government health clinic, basic care and consultations, limited English",
+      "sources": [
+        {
+          "title": "MINSA Panama",
+          "url": "https://www.minsa.gob.pa/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Dental Center Boquete",
+      "address": "Avenida Central, Boquete, Chiriquí",
+      "distanceKm": 0.5,
+      "notes": "General and cosmetic dentistry, English-speaking dentist, expat-friendly pricing",
+      "sources": [
+        {
+          "title": "Boquete Dental",
+          "url": "https://www.visitboquete.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Clínica Veterinaria Boquete",
+      "address": "Avenida Central, Boquete, Chiriquí",
+      "distanceKm": 0.6,
+      "notes": "Small animal vet, vaccinations, spay/neuter, some English spoken",
+      "sources": [
+        {
+          "title": "Boquete Vet Clinic",
+          "url": "https://www.visitboquete.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Boquete River Trail (Sendero del Río)",
+      "address": "Along Río Caldera, Boquete, Chiriquí",
+      "distanceKm": 0.5,
+      "notes": "Riverside walking path, dogs allowed off-leash in quieter sections, scenic mountain views",
+      "sources": [
+        {
+          "title": "Visit Boquete",
+          "url": "https://www.visitboquete.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "Boquete Fitness & Spa",
+      "address": "Calle 6a Sur, Boquete, Chiriquí",
+      "distanceKm": 0.4,
+      "notes": "Small local gym, weights and cardio, yoga classes, popular with expats",
+      "sources": [
+        {
+          "title": "Boquete Fitness",
+          "url": "https://www.visitboquete.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "Boquete Community Church",
+      "address": "Alto Boquete, Chiriquí",
+      "distanceKm": 1,
+      "notes": "English-language non-denominational church, active expat congregation",
+      "sources": [
+        {
+          "title": "Boquete Community Church",
+          "url": "https://www.boquetecommunitychurch.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "international_school",
+      "name": "Boquete Community Players & Library",
+      "address": "Alto Boquete, Chiriquí",
+      "distanceKm": 1,
+      "notes": "Expat community center, English library, theater group, social events",
+      "sources": [
+        {
+          "title": "Boquete Library",
+          "url": "https://www.boquetecommunityplayers.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Aeropuerto Enrique Malek (DAV)",
+      "address": "David, Chiriquí",
+      "distanceKm": 45,
+      "notes": "Regional airport, domestic flights to Panama City (1 hr), 45 min drive from Boquete",
+      "sources": [
+        {
+          "title": "David Airport",
+          "url": "https://www.visitpanama.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Boquete Bus Terminal",
+      "address": "Avenida Central, Boquete, Chiriquí",
+      "distanceKm": 0.3,
+      "notes": "Local buses to David (1 hr, $1.75), colectivos to surrounding areas",
+      "sources": [
+        {
+          "title": "Visit Boquete",
+          "url": "https://www.visitboquete.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "coworking",
+      "name": "Boquete Coworking at Kotowa Coffee House",
+      "address": "Avenida Central, Boquete, Chiriquí",
+      "distanceKm": 0.3,
+      "notes": "Informal coworking with strong WiFi, popular with digital nomads, great coffee",
+      "sources": [
+        {
+          "title": "Kotowa Coffee",
+          "url": "https://www.kotowacoffee.com/"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "outdoor",
+      "name": "Volcán Barú",
+      "description": "Panama's highest peak (3,475m), see both Pacific and Atlantic oceans from summit, overnight hike or 4x4",
+      "distanceKm": 15,
+      "frequency": "Year-round, best dry season Dec-Apr, guide recommended",
+      "sources": [
+        {
+          "title": "ANAM Panama",
+          "url": "https://www.miambiente.gob.pa/"
+        }
+      ],
+      "estimatedCostUSD": 10
+    },
+    {
+      "type": "nature",
+      "name": "Lost Waterfalls Trail (Las Tres Cascadas)",
+      "description": "Moderate 3.5km trail through cloud forest to three stunning waterfalls",
+      "distanceKm": 5,
+      "frequency": "Daily, best in morning, muddy in rainy season (May-Nov)",
+      "sources": [
+        {
+          "title": "Visit Boquete",
+          "url": "https://www.visitboquete.com/"
+        }
+      ],
+      "estimatedCostUSD": 5
+    },
+    {
+      "type": "cultural",
+      "name": "Kotowa Coffee Estate Tour",
+      "description": "Award-winning estate tour covering coffee cultivation, processing, and tasting",
+      "distanceKm": 6,
+      "frequency": "Daily tours by reservation, 2-3 hours",
+      "sources": [
+        {
+          "title": "Kotowa Coffee",
+          "url": "https://www.kotowacoffee.com/"
+        }
+      ],
+      "estimatedCostUSD": 30
+    },
+    {
+      "type": "nature",
+      "name": "Caldera Hot Springs",
+      "description": "Natural volcanic hot springs in the Caldera River valley, relaxing soak in jungle setting",
+      "distanceKm": 18,
+      "frequency": "Open daily, best to visit with local guide",
+      "sources": [
+        {
+          "title": "Visit Boquete",
+          "url": "https://www.visitboquete.com/"
+        }
+      ],
+      "estimatedCostUSD": 5
+    },
+    {
+      "type": "outdoor",
+      "name": "Pipeline Trail (Sendero Los Quetzales)",
+      "description": "Famous 9.6km birdwatching trail through cloud forest, resplendent quetzal sightings",
+      "distanceKm": 8,
+      "frequency": "Best early morning Jan-May for quetzals, guide recommended",
+      "sources": [
+        {
+          "title": "Visit Boquete",
+          "url": "https://www.visitboquete.com/"
+        }
+      ],
+      "estimatedCostUSD": 5
+    },
+    {
+      "type": "dining",
+      "name": "Boquete Tuesday Market",
+      "description": "Weekly expat and local market with fresh produce, baked goods, crafts, and food stalls",
+      "distanceKm": 0.3,
+      "frequency": "Every Tuesday 8:00-12:00",
+      "sources": [
+        {
+          "title": "Boquete Ning Community",
+          "url": "https://www.visitboquete.com/"
+        }
+      ],
+      "estimatedCostUSD": 10
+    },
+    {
+      "type": "social",
+      "name": "Boquete Jazz & Blues Festival",
+      "description": "Annual music festival attracting international artists, held in outdoor mountain venues",
+      "distanceKm": 0.5,
+      "frequency": "Annual, typically February",
+      "sources": [
+        {
+          "title": "Boquete Jazz Festival",
+          "url": "https://www.boquetejazzfestival.com/"
+        }
+      ],
+      "estimatedCostUSD": 25
+    },
+    {
+      "type": "nature",
+      "name": "Finca Lérida Coffee Estate & Birding",
+      "description": "Historic coffee estate with birdwatching trails, over 500 species recorded in the region",
+      "distanceKm": 4,
+      "frequency": "Daily, best birding at dawn",
+      "sources": [
+        {
+          "title": "Finca Lérida",
+          "url": "https://www.fincalerida.com/"
+        }
+      ],
+      "estimatedCostUSD": 15
+    },
+    {
+      "type": "entertainment",
+      "name": "Boquete Flower & Coffee Festival (Feria de las Flores y del Café)",
+      "description": "Major annual fair with flower shows, coffee competitions, live music, and local food",
+      "distanceKm": 0.5,
+      "frequency": "Annual, 10 days in January",
+      "sources": [
+        {
+          "title": "Feria de Boquete",
+          "url": "https://www.visitpanama.com/"
+        }
+      ],
+      "estimatedCostUSD": 5
+    }
+  ]
+}

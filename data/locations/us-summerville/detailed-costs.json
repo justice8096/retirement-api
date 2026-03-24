@@ -1,0 +1,1271 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 73,
+      "typical": 91,
+      "max": 925
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic/Wegovy) [P1]",
+        "monthlyCost": 25,
+        "withoutInsurance": 900,
+        "coverageNote": "Medicare Part D covers for diabetes (tier 3). $25 copay typical. Without coverage ~$900/mo. IRA negotiated price TBD."
+      },
+      {
+        "name": "Levothyroxine (Synthroid) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 15,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Atorvastatin 20mg [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Montelukast (Singulair) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 15,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Hydrochlorothiazide (HCTZ) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 8,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Olmesartan/Medoxomil (Benicar) [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 30,
+        "coverageNote": "Medicare Part D generic tier 1-2; $4-15 copay"
+      },
+      {
+        "name": "Albuterol inhaler [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 35,
+        "coverageNote": "Medicare Part D tier 2; $10-25 copay. IRA cap applies."
+      },
+      {
+        "name": "Metformin 500mg [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Allopurinol (gout) [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Topiramate (Topamax) [P2]",
+        "monthlyCost": 10,
+        "withoutInsurance": 25,
+        "coverageNote": "Medicare Part D generic tier 1-2; $4-15 copay"
+      },
+      {
+        "name": "Metoprolol (Lopressor) [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Atorvastatin 20mg [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      }
+    ],
+    "pharmacyAccess": "Good coverage. CVS, Walgreens, and Walmart pharmacies throughout Summerville and Ladson. Publix Pharmacy offers select generic medications free (lisinopril, metformin, amlodipine, others). Mail-order options through Medicare Part D plans (OptumRx, Express Scripts, Caremark).",
+    "prescriptionSystem": "Medicare Part D prescription drug plan. Choose standalone PDP or get coverage through Medicare Advantage. Annual out-of-pocket cap $2,000 under Inflation Reduction Act.",
+    "insuranceCoverage": "Medicare Part D covers most prescriptions with tiered copays. Generic drugs $0-15/month, preferred brands $30-50/month, specialty drugs 25-33% coinsurance up to $2,000 annual cap.",
+    "sources": [
+      {
+        "title": "Medicare Part D Costs - CMS.gov",
+        "url": "https://www.cms.gov/medicare/costs-getting-started"
+      },
+      {
+        "title": "Inflation Reduction Act Drug Provisions - KFF",
+        "url": "https://www.kff.org/medicare/issue-brief/how-will-the-prescription-drug-provisions-in-the-inflation-reduction-act-affect-medicare-beneficiaries/"
+      },
+      {
+        "title": "Publix Free Medication Program",
+        "url": "https://www.publix.com/pharmacy-wellness/pharmacy/pharmacy-services/free-medication-program"
+      },
+      {
+        "title": "GoodRx Drug Pricing",
+        "url": "https://www.goodrx.com/"
+      }
+    ]
+  },
+  "vision": {
+    "annualExamCost": {
+      "withInsurance": 25,
+      "withoutInsurance": 175,
+      "notes": "Original Medicare does NOT cover routine vision exams. Must have separate vision plan or Medicare Advantage with vision."
+    },
+    "eyeglasses": {
+      "basicFrameAndLens": {
+        "min": 100,
+        "typical": 200,
+        "max": 400
+      },
+      "progressiveLens": {
+        "min": 200,
+        "typical": 350,
+        "max": 600
+      },
+      "contactLensesMonthly": {
+        "min": 30,
+        "typical": 50,
+        "max": 80
+      }
+    },
+    "insuranceCoverage": "Need separate vision plan or Medicare Advantage with vision. Standalone vision plans (VSP, EyeMed) run $15-25/month and cover annual exam + $100-200 frame/lens allowance.",
+    "specialistWaitTime": "1-2 weeks for routine eye exams in Summerville. Walmart Vision Center and retail optometry available. Ophthalmologist referrals through MUSC in Charleston (2-4 weeks).",
+    "seniorConsiderations": "Medicare covers cataract surgery and glaucoma screening. Annual glaucoma screening covered for high-risk beneficiaries. Diabetic retinopathy screening covered. One pair of eyeglasses or contacts after cataract surgery.",
+    "sources": [
+      {
+        "title": "Medicare Vision Coverage - Medicare.gov",
+        "url": "https://www.medicare.gov/coverage/eye-exams"
+      },
+      {
+        "title": "VSP Individual Vision Plans",
+        "url": "https://www.vspdirect.com/"
+      },
+      {
+        "title": "EyeMed Vision Plans",
+        "url": "https://www.eyemed.com/"
+      }
+    ]
+  },
+  "dental": {
+    "annualCleaningCost": {
+      "withInsurance": 30,
+      "withoutInsurance": 140,
+      "notes": "Original Medicare does NOT cover routine dental. Need separate dental plan or Medicare Advantage with dental."
+    },
+    "commonProcedures": [
+      {
+        "name": "Filling (composite)",
+        "withInsurance": 90,
+        "withoutInsurance": 220
+      },
+      {
+        "name": "Crown (porcelain)",
+        "withInsurance": 450,
+        "withoutInsurance": 1100
+      },
+      {
+        "name": "Root Canal (molar)",
+        "withInsurance": 400,
+        "withoutInsurance": 1000
+      },
+      {
+        "name": "Extraction (simple)",
+        "withInsurance": 75,
+        "withoutInsurance": 220
+      },
+      {
+        "name": "Implant (single)",
+        "withInsurance": 1800,
+        "withoutInsurance": 4000
+      },
+      {
+        "name": "Dentures (complete set)",
+        "withInsurance": 700,
+        "withoutInsurance": 1800
+      }
+    ],
+    "insuranceCoverage": "Need separate dental plan ($20-50/month) or Medicare Advantage with dental. Standalone plans (Delta Dental, Cigna) typically cover 100% preventive, 50-80% basic, 50% major procedures. Annual maximums $1,000-2,000.",
+    "dentistAvailability": "Good in Summerville. Multiple dental practices in the area with reasonable wait times (1-2 weeks for routine). Many dentists accept dental discount plans for uninsured seniors. MUSC dental school in Charleston offers reduced-cost services.",
+    "sources": [
+      {
+        "title": "Medicare Dental Coverage - Medicare.gov",
+        "url": "https://www.medicare.gov/coverage/dental-services"
+      },
+      {
+        "title": "Delta Dental Individual Plans",
+        "url": "https://www.deltadental.com/"
+      },
+      {
+        "title": "ADA Fee Survey - South Carolina",
+        "url": "https://www.ada.org/resources/practice/practice-economics"
+      }
+    ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 380,
+      "typical": 460,
+      "max": 560
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 320,
+        "seniorDiscounts": "Many restaurants offer 10-15% senior discounts. AARP members get discounts at Denny's, Outback, and others.",
+        "notes": "Lunch for 2 at moderate restaurant ~$40/meal with SC 8% sales tax + 20% tip, 2x/week (~8.7/mo) = ~$320/mo. Cheaper than NoVA — Southern dining is great value."
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 70,
+        "seniorDiscounts": "Some providers offer senior plans. Xfinity 5-year price lock available.",
+        "notes": "Comcast/Xfinity 1 Gig $65-75/mo or Home Telecom Fiber (local provider, excellent service). Home Telecom is Summerville-area local company."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 18,
+        "seniorDiscounts": "T-Mobile 55+ plans include Netflix.",
+        "notes": "$17.99/mo. 1080p, 2 screens, full library."
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 15,
+        "seniorDiscounts": "Medicaid recipients qualify for Prime at $6.99/mo.",
+        "notes": "$14.99/mo includes Prime Video, free shipping, Prime Reading."
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 13,
+        "seniorDiscounts": "No senior discount. Annual plan $99/yr ($8.25/mo).",
+        "notes": "$12.99/mo. Original content library."
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 20,
+        "seniorDiscounts": "SilverSneakers free gym membership through many Medicare Advantage plans. Planet Fitness $10/mo basic.",
+        "notes": "Planet Fitness, Anytime Fitness in Summerville. Lower cost than NoVA market."
+      },
+      {
+        "name": "Parks/Outdoors",
+        "monthlyCost": 8,
+        "seniorDiscounts": "America the Beautiful Senior Pass $20/year (lifetime $80) for national parks. SC state park senior discounts.",
+        "notes": "Azalea Park, Sawmill Branch Trail, Givhans Ferry State Park nearby. Charleston beaches 30 min."
+      },
+      {
+        "name": "Books/Library",
+        "monthlyCost": 8,
+        "seniorDiscounts": "Dorchester County Library system free. Senior book clubs and digital resources via Libby/Overdrive.",
+        "notes": "Summerville branch of Dorchester County Library. Free inter-library loan."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 20,
+        "seniorDiscounts": "McDonald's and Dunkin' offer senior coffee discounts in some locations.",
+        "notes": "Lower prices than NoVA. Local spots on Main Street plus chains."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Comcast/Xfinity Plans",
+        "url": "https://www.xfinity.com/gig"
+      },
+      {
+        "title": "Home Telecom Fiber",
+        "url": "https://www.hometelecom.com/"
+      },
+      {
+        "title": "Netflix Pricing",
+        "url": "https://help.netflix.com/en/node/24926"
+      },
+      {
+        "title": "AARP Member Discounts",
+        "url": "https://www.aarp.org/membership/benefits/discounts/"
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 200,
+      "typical": 290,
+      "max": 400
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 48,
+        "senior": 24,
+        "notes": "CARTA (Charleston Area Regional Transportation Authority) provides limited bus service. Summerville routes are infrequent — primarily for commuters to North Charleston/Charleston."
+      },
+      "singleRide": 2,
+      "coverage": "CARTA operates limited fixed routes connecting Summerville to North Charleston and downtown Charleston. Service frequency is low (30-60 min headways). Not practical as primary transportation — car is essential.",
+      "seniorDiscount": "Seniors 65+ and Medicare cardholders ride CARTA at half fare. Must show Medicare card or senior ID."
+    },
+    "rideShare": {
+      "baseFare": 2,
+      "perKm": 1,
+      "typicalCrossTownTrip": {
+        "min": 8,
+        "typical": 14,
+        "max": 22
+      },
+      "availability": "Moderate in Summerville. Uber and Lyft available but fewer drivers than metro areas. Wait times 5-15 min typical.",
+      "notes": "Uber/Lyft available. Longer trips to Charleston $25-40. GoGoGrandparent service available for seniors who prefer phone-based ride ordering."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 40,
+        "initialRegistration": {
+          "min": 40,
+          "typical": 45,
+          "max": 55
+        },
+        "notes": "SC registration fee $40/year. Property tax on vehicles assessed annually by Dorchester County. 6% assessment ratio on market value, taxed at local millage rate. On a $25,000 car roughly $200-300/year."
+      },
+      "insurance": {
+        "monthlyMin": 80,
+        "monthlyTypical": 120,
+        "monthlyMax": 180,
+        "notes": "South Carolina has lower-than-average car insurance rates. Summerville is suburban with low traffic density. Senior safe driver discounts available (5-15%)."
+      },
+      "fuel": {
+        "pricePerLiter": 0.85,
+        "monthlyEstimate": {
+          "min": 70,
+          "typical": 110,
+          "max": 170
+        },
+        "notes": "~$3.20/gallon average in SC. SC gas tax $0.28/gallon. Typical senior drives 8,000-12,000 miles/year. Gas prices consistently below national average."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 0,
+          "typical": 0,
+          "max": 50
+        },
+        "hourlyStreet": 0,
+        "notes": "Free parking virtually everywhere in Summerville. Downtown Summerville has free street parking and public lots. Apartments typically include parking."
+      },
+      "tolls": {
+        "monthlyEstimate": 0,
+        "notes": "No toll roads in the Summerville/Charleston area. I-26 corridor is toll-free."
+      },
+      "seniorDiscounts": "SC Safe Driver discount for completing AARP Smart Driver course (5-15% insurance reduction). SC offers property tax relief on vehicles for seniors 65+ meeting income requirements."
+    },
+    "walkability": "Low in most of Summerville. Historic downtown is walkable for errands within a small radius. Newer developments (Nexton, Cane Bay) have some walkable town centers. A car is essential for daily life.",
+    "cycling": {
+      "bikeShareMonthly": 0,
+      "infrastructure": "Limited cycling infrastructure. Sawmill Branch Trail provides some off-road cycling. Some newer developments include multi-use paths. Road cycling is possible but bike lanes are sparse.",
+      "notes": "No bike-share program in Summerville. Charleston has Holy Spokes bike share but does not extend to Summerville."
+    },
+    "sources": [
+      {
+        "title": "CARTA Transit",
+        "url": "https://www.ridecarta.com/"
+      },
+      {
+        "title": "SC DMV Vehicle Registration",
+        "url": "https://www.scdmvonline.com/"
+      },
+      {
+        "title": "AAA Gas Prices - South Carolina",
+        "url": "https://gasprices.aaa.com/?state=SC"
+      },
+      {
+        "title": "Dorchester County Vehicle Tax",
+        "url": "https://www.dorchestercountysc.gov/"
+      }
+    ],
+    "electricVehicle": {
+      "purchasePrice": {
+        "min": 28000,
+        "typical": 35000,
+        "max": 52000
+      },
+      "purchaseNotes": "Tesla Model 3 ~$35K, Model Y ~$45K, Hyundai Ioniq 5 ~$42K, Chevy Equinox EV ~$28K. Federal tax credit up to $7,500 (income limits apply). Some states add incentives.",
+      "federalIncentive": 7500,
+      "stateIncentive": 0,
+      "incentiveNotes": "Federal EV tax credit up to $7,500 under IRA (income < $150K single / $300K joint). Must be new vehicle, MSRP < $55K sedan / $80K SUV. Used EV credit up to $4,000.",
+      "chargingHome": {
+        "installCost": {
+          "min": 500,
+          "typical": 1200,
+          "max": 2500
+        },
+        "monthlyElectricity": {
+          "min": 30,
+          "typical": 50,
+          "max": 80
+        },
+        "notes": "Level 2 (240V) home charger. Electricity ~$0.12-0.16/kWh. ~1,000 mi/month = ~300 kWh = $36-48/mo."
+      },
+      "chargingPublic": {
+        "perKwh": {
+          "min": 0.3,
+          "typical": 0.43,
+          "max": 0.6
+        },
+        "notes": "Tesla Supercharger ~$0.40-0.50/kWh. Electrify America ~$0.43/kWh. ChargePoint varies. Free L2 chargers at some retailers."
+      },
+      "insurance": {
+        "monthly": {
+          "min": 140,
+          "typical": 180,
+          "max": 250
+        },
+        "notes": "EV insurance 15-25% higher than comparable ICE vehicle. Shop Liberty Mutual, Progressive, Tesla Insurance where available."
+      },
+      "maintenance": {
+        "annual": {
+          "min": 400,
+          "typical": 600,
+          "max": 900
+        },
+        "notes": "No oil changes, fewer brake jobs (regen braking). Tire rotation every 7,500 mi. Cabin air filter annually. Brake fluid every 2-3 yrs. 12V battery every 4-5 yrs (~$100). Tires wear faster on heavier EVs."
+      },
+      "registration": {
+        "annual": {
+          "min": 100,
+          "typical": 200,
+          "max": 300
+        },
+        "notes": "Many states add EV-specific fees ($100-275/yr) to replace lost gas tax revenue. Virginia: $64/yr EV fee."
+      },
+      "batteryWarranty": "8 years / 100,000 miles (federal minimum). Most manufacturers cover 70-80% capacity retention.",
+      "depreciationNotes": "EVs depreciate 40-50% in first 3 years, though Tesla holds value better. Used EV market improving. Budget ~$3,000-5,000/yr depreciation on $35K vehicle.",
+      "totalMonthlyOwnership": {
+        "min": 250,
+        "typical": 380,
+        "max": 550
+      },
+      "totalMonthlyNotes": "Includes: charging ($50), insurance ($180), maintenance ($50/mo avg), registration ($17/mo). Excludes: purchase/loan payment, depreciation.",
+      "sources": [
+        {
+          "title": "Federal EV Tax Credit - IRS",
+          "url": "https://www.irs.gov/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after"
+        },
+        {
+          "title": "EV Maintenance Costs - AAA",
+          "url": "https://www.aaa.com/autorepair/articles/ev-maintenance"
+        },
+        {
+          "title": "EV Charging Costs - DOE",
+          "url": "https://afdc.energy.gov/fuels/electricity-charging-home"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 65,
+    "discounts": [
+      {
+        "name": "Medicare",
+        "description": "Federal health insurance at 65. Part A (hospital) premium-free for most. Part B (medical) ~$185/month. Part D (drugs) $10-50/month.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "AARP Membership",
+        "description": "Annual membership $16. Discounts on insurance, dining, travel, retail, and entertainment. Available at age 50+.",
+        "eligibilityAge": 50
+      },
+      {
+        "name": "South Carolina Social Security Tax Exemption",
+        "description": "South Carolina fully exempts Social Security benefits from state income tax. Additional $10,000 retirement income deduction for 65+.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "SC Homestead Exemption",
+        "description": "Homeowners 65+ exempt from property tax on first $50,000 of fair market value. Significant savings for homeowners.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "CARTA Senior Transit Fare",
+        "description": "Half-price bus fares for riders 65+ and Medicare cardholders on all CARTA routes.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Dorchester County Senior Services",
+        "description": "Senior center programs, Meals on Wheels, transportation assistance, and free tax preparation through Dorchester Seniors Inc.",
+        "eligibilityAge": 60
+      },
+      {
+        "name": "America the Beautiful Senior Pass",
+        "description": "Lifetime pass to all national parks and federal recreation areas for $80 (or $20/year).",
+        "eligibilityAge": 62
+      },
+      {
+        "name": "SilverSneakers Fitness",
+        "description": "Free gym membership through participating Medicare Advantage and Medigap plans. Access to 17,000+ locations nationwide.",
+        "eligibilityAge": 65
+      }
+    ]
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 50,
+      "typical": 60,
+      "max": 75
+    },
+    "plans": [
+      {
+        "name": "T-Mobile 55+ Essentials",
+        "type": "US Domestic",
+        "lines": 2,
+        "dataPerLine": "Unlimited (50GB priority)",
+        "baseCost": 55,
+        "taxesAndFees": 4,
+        "monthlyTotal": 59,
+        "notes": "2 lines unlimited talk/text/data. SC wireless tax ~7% + federal USF. 5G included. T-Mobile coverage good in Summerville area."
+      }
+    ],
+    "sources": [
+      {
+        "title": "T-Mobile 55+ Plans",
+        "url": "https://www.t-mobile.com/cell-phone-plans/unlimited-55-plus"
+      },
+      {
+        "title": "SC Wireless Tax Rates",
+        "url": "https://taxfoundation.org/data/all/state/wireless-taxes-2024/"
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom single-family house",
+    "monthlyBudget": {
+      "min": 1400,
+      "max": 2100,
+      "typical": 1700
+    },
+    "breakdown": {
+      "baseRent": 1700,
+      "rentersInsurance": 38,
+      "localTaxesFees": 0,
+      "total": 1738,
+      "notes": "Water, sewage, and trash are separate utility bills — see utilities breakdown."
+    },
+    "taxNotes": "South Carolina has no rental tax. Property tax (avg 0.55% effective rate, Dorchester County) is landlord responsibility but built into rent. Renter's insurance recommended but not legally required.",
+    "leaseTerms": "12-month standard lease. Security deposit max 1 month rent in SC ($1,700). Pet deposit common ($200-400).",
+    "marketNotes": "Summerville rental market is growing rapidly as Charleston metro expands. 2BR houses are available and more common than in metro areas. Much more affordable than Charleston proper. New construction in Cane Bay and Nexton adding inventory.",
+    "sources": [
+      {
+        "name": "Zillow Summerville SC Rental Market",
+        "url": "https://www.zillow.com/rental-manager/market-trends/summerville-sc/"
+      },
+      {
+        "name": "Dorchester County Property Tax Rates",
+        "url": "https://www.dorchestercountysc.gov/"
+      }
+    ],
+    "housingSites": {
+      "rentals": [
+        {
+          "name": "Zillow",
+          "url": "https://www.zillow.com/summerville-sc/rentals/",
+          "type": "rental"
+        },
+        {
+          "name": "Apartments.com",
+          "url": "https://www.apartments.com/summerville-sc/",
+          "type": "rental"
+        },
+        {
+          "name": "Realtor.com",
+          "url": "https://www.realtor.com/realestateandhomes-search/Summerville_SC",
+          "type": "purchase"
+        }
+      ]
+    }
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Publix",
+        "type": "supermarket",
+        "website": "https://www.publix.com/",
+        "notes": "Southeast chain, excellent deli/bakery. BOGO deals. Free select medications. Multiple locations in Summerville.",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Why Publix Is The Best Grocery Store",
+            "url": "https://www.youtube.com/watch?v=mNKrKcVpOcM"
+          },
+          {
+            "platform": "instagram",
+            "title": "Publix Official",
+            "url": "https://www.instagram.com/publix/"
+          }
+        ]
+      },
+      {
+        "name": "Lidl",
+        "type": "discount-supermarket",
+        "website": "https://www.lidl.com/",
+        "notes": "German discount grocer. Excellent prices on produce, bakery, and store brands. Summerville location on N Main St.",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Lidl Grocery Haul",
+            "url": "https://www.youtube.com/watch?v=QJY2nBkfKwg"
+          },
+          {
+            "platform": "instagram",
+            "title": "Lidl US Official",
+            "url": "https://www.instagram.com/lidlus/"
+          }
+        ]
+      },
+      {
+        "name": "Summerville Farmers Market",
+        "type": "farmers-market",
+        "website": "https://www.summervillefarmersmarket.com/",
+        "notes": "Saturdays at Hutchinson Square downtown. Local SC produce, honey, baked goods, crafts. Seasonal April-November.",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Summerville SC Farmers Market",
+            "url": "https://www.youtube.com/watch?v=FhGRkD1yNhY"
+          },
+          {
+            "platform": "instagram",
+            "title": "Summerville Farmers Market",
+            "url": "https://www.instagram.com/summervillefarmersmarket/"
+          }
+        ]
+      }
+    ]
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 60,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Farmers market or CSA box"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 40,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Bananas, berries, apples, citrus"
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 20,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Sweet Potatoes / Potatoes",
+            "monthlyCost": 15,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet staple"
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 12,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet vegetables"
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 10,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Digestive health, home-cooked diet"
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 50,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Primary protein for both adults & dog"
+          },
+          {
+            "name": "Ground Turkey / Beef",
+            "monthlyCost": 45,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean ground for dog food base"
+          },
+          {
+            "name": "Fish (salmon/tilapia)",
+            "monthlyCost": 40,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Omega-3 rich"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": "Eggs also for dog diet"
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 12,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Essential for balanced home-cooked dog diet"
+          },
+          {
+            "name": "Beans / Lentils",
+            "monthlyCost": 8,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "grains",
+        "name": "Grains & Starches",
+        "items": [
+          {
+            "name": "Rice (brown/white)",
+            "monthlyCost": 10,
+            "quantity": 5,
+            "unit": "lbs/month",
+            "forWhom": "shared",
+            "notes": "Dog diet carb source"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "loaves/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 8,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Oats / Cereal",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "container/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk / Plant Milk",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Cheese",
+            "monthlyCost": 20,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Yogurt / Kefir",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "quart/week",
+            "forWhom": "shared",
+            "notes": "Probiotics for dog digestion too"
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "unit/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Olive Oil / Cooking Oils",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Spices & Seasonings",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Canned Goods (tomatoes, beans)",
+            "monthlyCost": 12,
+            "quantity": 6,
+            "unit": "cans/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Condiments & Sauces",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 25,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tea",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "box/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Wine / Beer",
+            "monthlyCost": 40,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Optional"
+          },
+          {
+            "name": "Sparkling Water / Juice",
+            "monthlyCost": 12,
+            "quantity": 1,
+            "unit": "case/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "snacks",
+        "name": "Snacks & Treats",
+        "items": [
+          {
+            "name": "Nuts & Trail Mix",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Crackers / Chips",
+            "monthlyCost": 10,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Dark Chocolate",
+            "monthlyCost": 8,
+            "quantity": 4,
+            "unit": "bars/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "frozen",
+        "name": "Frozen Foods",
+        "items": [
+          {
+            "name": "Frozen Vegetables",
+            "monthlyCost": 12,
+            "quantity": 4,
+            "unit": "bags/month",
+            "forWhom": "shared",
+            "notes": "Backup for dog food prep"
+          },
+          {
+            "name": "Frozen Fruit (smoothies)",
+            "monthlyCost": 10,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Frozen Meals (convenience)",
+            "monthlyCost": 15,
+            "quantity": 4,
+            "unit": "meals/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "supplements",
+        "name": "Pet Supplements & Health",
+        "items": [
+          {
+            "name": "Joint Supplement (glucosamine)",
+            "monthlyCost": 30,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Essential for Bernese — hip/joint health"
+          },
+          {
+            "name": "Fish Oil (omega-3)",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Coat & skin health"
+          },
+          {
+            "name": "Multivitamin / Mineral Mix",
+            "monthlyCost": 20,
+            "quantity": 1,
+            "unit": "container/month",
+            "forWhom": "dog",
+            "notes": "Balance home-cooked diet"
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "dog",
+            "notes": "Training & dental chews"
+          }
+        ]
+      }
+    ],
+    "monthlyTotal": 712
+  },
+  "healthcare": {
+    "system": "Medicare + Medigap supplement",
+    "coverageSummary": "Medicare Part A (free) + Part B ($174.70/mo pp) + Medigap Plan G (~$200/mo pp) + Part D (~$45/mo pp). IRA out-of-pocket cap $2,000/yr starting 2025.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD (macular degeneration)"
+      ],
+      "costs": [
+        {
+          "item": "Medicare Part B premium",
+          "monthlyCost": 175,
+          "notes": "Standard 2025 premium per person"
+        },
+        {
+          "item": "Medigap Plan G premium",
+          "monthlyCost": 210,
+          "notes": "Higher due to AMD + multiple conditions. Age-rated."
+        },
+        {
+          "item": "Part D premium",
+          "monthlyCost": 45,
+          "notes": "Tier 3 plan to cover GLP-1"
+        },
+        {
+          "item": "Anti-VEGF injections (Eylea/Lucentis)",
+          "monthlyCost": 80,
+          "notes": "Medicare covers 80%, Medigap covers 20% coinsurance. ~6-8 injections/yr at $40-50 copay each."
+        },
+        {
+          "item": "Ophthalmologist specialist visits",
+          "monthlyCost": 25,
+          "notes": "OCT scans every 4-8 weeks. Medicare + Medigap covers most."
+        },
+        {
+          "item": "Endocrinologist (thyroid monitoring)",
+          "monthlyCost": 10,
+          "notes": "Quarterly bloodwork/visits. Low copay with Medigap."
+        },
+        {
+          "item": "Pulmonologist (asthma check-ups)",
+          "monthlyCost": 8,
+          "notes": "Annual visit + as-needed. Mild asthma, infrequent."
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Gout",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Migraines"
+      ],
+      "costs": [
+        {
+          "item": "Medicare Part B premium",
+          "monthlyCost": 175,
+          "notes": "Standard 2025 premium per person"
+        },
+        {
+          "item": "Medigap Plan G premium",
+          "monthlyCost": 190,
+          "notes": "Slightly lower — no AMD, but diabetes management"
+        },
+        {
+          "item": "Part D premium",
+          "monthlyCost": 40,
+          "notes": "All generics — lower tier plan sufficient"
+        },
+        {
+          "item": "Endocrinologist (diabetes mgmt)",
+          "monthlyCost": 15,
+          "notes": "Quarterly A1C, bloodwork. Covered well by Medicare."
+        },
+        {
+          "item": "Diabetes supplies (strips, lancets)",
+          "monthlyCost": 25,
+          "notes": "Medicare Part B covers glucose monitors. Some copays."
+        },
+        {
+          "item": "Rheumatologist (gout monitoring)",
+          "monthlyCost": 8,
+          "notes": "Semi-annual visits. Uric acid monitoring."
+        },
+        {
+          "item": "Neurologist (migraine follow-up)",
+          "monthlyCost": 8,
+          "notes": "Annual-semi-annual visits for topiramate management."
+        }
+      ]
+    },
+    "shared": [
+      {
+        "item": "Dental insurance (2 adults)",
+        "monthlyCost": 70,
+        "notes": "Separate dental plan ~$35/person. Medicare does not cover dental."
+      },
+      {
+        "item": "Vision insurance (2 adults)",
+        "monthlyCost": 25,
+        "notes": "Basic vision plan. AMD specialist visits covered by Medicare Part B."
+      },
+      {
+        "item": "Annual physicals & preventive care",
+        "monthlyCost": 0,
+        "notes": "Covered 100% by Medicare — no copay for preventive."
+      }
+    ],
+    "monthlyTotals": {
+      "person1": 553,
+      "person2": 461,
+      "shared": 95,
+      "household": 1109
+    },
+    "notes": null,
+    "phaseTransition": null
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Black Hair Care",
+      "priceRange": {
+        "cut": "28-50",
+        "color": "65-130",
+        "fullService": "85-200"
+      },
+      "notes": "Charleston metro area has a strong Gullah/Geechee heritage and excellent Black hair care, especially in North Charleston and downtown.",
+      "providers": [
+        {
+          "name": "Textures Hair Studio",
+          "type": "Natural hair salon",
+          "address": "North Charleston, SC",
+          "distanceMi": 12,
+          "rating": 4.7,
+          "notes": "Natural hair specialist. Locs, twists, color, silk press. Black-owned.",
+          "website": ""
+        },
+        {
+          "name": "Crown Hair Studio",
+          "type": "Full-service salon",
+          "address": "Charleston, SC",
+          "distanceMi": 18,
+          "rating": 4.6,
+          "notes": "All textures welcome. Color, braids, weaves. Experienced stylists.",
+          "website": ""
+        }
+      ]
+    },
+    "whiteHairCare": {
+      "label": "White/Caucasian Hair Care",
+      "priceRange": {
+        "cut": "25-48",
+        "color": "65-125",
+        "highlights": "85-165"
+      },
+      "notes": "Summerville and Mt. Pleasant have good salon options. Lower prices than major metros.",
+      "providers": [
+        {
+          "name": "Salon Revival",
+          "type": "Boutique salon",
+          "address": "Summerville, SC",
+          "distanceMi": 3,
+          "rating": 4.7,
+          "notes": "Local favorite. Skilled colorists, highlights, grey blending. Friendly atmosphere.",
+          "website": ""
+        },
+        {
+          "name": "Salon Mia Bella",
+          "type": "Full-service salon",
+          "address": "Summerville, SC",
+          "distanceMi": 4,
+          "rating": 4.5,
+          "notes": "Cuts, color, treatments. Good for mature hair care needs.",
+          "website": ""
+        }
+      ]
+    },
+    "mensBigTall": {
+      "label": "Men's Big & Tall Clothing",
+      "priceRange": {
+        "shirts": "25-60",
+        "pants": "32-58",
+        "suits": "110-290"
+      },
+      "notes": "Limited big & tall in Summerville proper. Tanger Outlets in North Charleston. DXL in Charleston area.",
+      "providers": [
+        {
+          "name": "DXL Big + Tall",
+          "type": "Specialty retail",
+          "address": "North Charleston, SC",
+          "distanceMi": 15,
+          "rating": 4.3,
+          "notes": "Nearest dedicated big & tall store to Summerville.",
+          "website": "https://www.dxl.com/"
+        },
+        {
+          "name": "Belk (Northwoods Mall)",
+          "type": "Department store",
+          "address": "North Charleston, SC",
+          "distanceMi": 12,
+          "rating": 4,
+          "notes": "Extended sizes section. Good for basics and dress shirts.",
+          "website": ""
+        }
+      ]
+    },
+    "womensClothing": {
+      "label": "Women's Regular Clothing",
+      "priceRange": {
+        "casual": "20-48",
+        "dresses": "35-90",
+        "professional": "40-110"
+      },
+      "notes": "Tanger Outlets in North Charleston for deals. Mt. Pleasant Town Centre for full-price retail.",
+      "providers": [
+        {
+          "name": "Tanger Outlets (North Charleston)",
+          "type": "Outlet center",
+          "address": "North Charleston, SC",
+          "distanceMi": 14,
+          "rating": 4.3,
+          "notes": "J.Crew, LOFT, Banana Republic, Ann Taylor outlets. Good deals.",
+          "website": ""
+        },
+        {
+          "name": "Belk (Northwoods Mall)",
+          "type": "Department store",
+          "address": "North Charleston, SC",
+          "distanceMi": 12,
+          "rating": 4.1,
+          "notes": "Full women's regular sizes. Alterations available.",
+          "website": ""
+        }
+      ]
+    },
+    "shoes": {
+      "label": "Shoes",
+      "priceRange": {
+        "casual": "32-75",
+        "dress": "55-115",
+        "athletic": "48-110",
+        "wideWidth": "42-100"
+      },
+      "notes": "Tanger Outlets best for shoe deals. DSW in North Charleston.",
+      "providers": [
+        {
+          "name": "DSW (North Charleston)",
+          "type": "Shoe warehouse",
+          "address": "North Charleston, SC",
+          "distanceMi": 14,
+          "rating": 4.3,
+          "notes": "Wide widths. Good selection. Near Tanger Outlets.",
+          "website": "https://www.dsw.com/"
+        },
+        {
+          "name": "Rack Room Shoes (Summerville)",
+          "type": "Shoe retailer",
+          "address": "Summerville, SC",
+          "distanceMi": 3,
+          "rating": 4.1,
+          "notes": "Local option for mid-range shoes. Athletic and casual.",
+          "website": ""
+        }
+      ]
+    }
+  }
+}

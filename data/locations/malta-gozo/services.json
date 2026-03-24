@@ -1,0 +1,245 @@
+{
+  "distanceUnit": "km",
+  "currency": "EUR",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Mater Dei Hospital",
+      "address": "City center area, Victoria, Malta",
+      "distanceKm": 8,
+      "notes": "Main public hospital, full emergency services, English-speaking staff",
+      "sources": [
+        {
+          "title": "Mater Dei Hospital",
+          "url": "https://www.gov.mt/en/Government/Government%20of%20Malta/Ministries%20and%20Entities/Pages/MATER-DEI-HOSPITAL.aspx"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Brown's Pharmacy",
+      "address": "City center area, Victoria, Malta",
+      "distanceKm": 1.5,
+      "notes": "Well-stocked pharmacy, prescription medications, some English spoken",
+      "sources": [
+        {
+          "title": "Brown's Pharmacy",
+          "url": "https://www.brownspharmacy.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Park Towers Supermarket",
+      "address": "City center area, Victoria, Malta",
+      "distanceKm": 2,
+      "notes": "Well-stocked supermarket, imported and local goods",
+      "sources": [
+        {
+          "title": "Park Towers Supermarket",
+          "url": "https://www.parktowerssupermarket.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "Bank of Valletta",
+      "address": "City center area, Victoria, Malta",
+      "distanceKm": 2,
+      "notes": "Major Maltese bank, English-speaking staff, ATMs, online banking",
+      "sources": [
+        {
+          "title": "Bank of Valletta",
+          "url": "https://www.bov.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Victoria Health Centre",
+      "address": "City center area, Victoria, Malta",
+      "distanceKm": 3,
+      "notes": "Public health centre, English-speaking doctors, walk-ins and appointments",
+      "sources": [
+        {
+          "title": "Victoria Health Centre",
+          "url": "https://www.gov.mt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Dental Clinic Victoria Center",
+      "address": "City center area, Victoria, Malta",
+      "distanceKm": 3,
+      "notes": "General and cosmetic dentistry, some English-speaking dentists, modern equipment",
+      "sources": [
+        {
+          "title": "Dental Services Malta",
+          "url": "https://www.gov.mt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Veterinary Clinic Victoria",
+      "address": "City center area, Victoria, Malta",
+      "distanceKm": 4,
+      "notes": "Full veterinary services, vaccinations, surgery, some English spoken",
+      "sources": [
+        {
+          "title": "Veterinary Services Malta",
+          "url": "https://www.gov.mt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Parque Canino / Dog Park Victoria",
+      "address": "Park area, Victoria, Malta",
+      "distanceKm": 5,
+      "notes": "Off-leash area, green space popular with dog owners, water available",
+      "sources": [
+        {
+          "title": "Parks in Victoria",
+          "url": "https://www.visitmalta.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "The Gym Malta",
+      "address": "City center area, Victoria, Malta",
+      "distanceKm": 3,
+      "notes": "Modern gym with cardio and weight equipment, group classes, monthly memberships",
+      "sources": [
+        {
+          "title": "The Gym Malta",
+          "url": "https://www.thegymmalta.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "Holy Trinity Anglican Church",
+      "address": "City center area, Victoria, Malta",
+      "distanceKm": 5,
+      "notes": "English-language services, expat community gathering point, social events",
+      "sources": [
+        {
+          "title": "Holy Trinity Anglican Church",
+          "url": "https://anglicanchurchmalta.org/"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Malta International Airport (MLA)",
+      "address": "Airport area",
+      "distanceKm": 35,
+      "notes": "International airport with domestic and international flights",
+      "sources": [
+        {
+          "title": "Malta International Airport",
+          "url": "https://www.maltairport.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Malta Public Transport",
+      "address": "City center area, Victoria, Malta",
+      "distanceKm": 2,
+      "notes": "Island-wide bus network, Tallinja card, affordable fares",
+      "sources": [
+        {
+          "title": "Malta Public Transport",
+          "url": "https://www.publictransport.com.mt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "coworking",
+      "name": "SOHO Office Space",
+      "address": "City center area, Victoria, Malta",
+      "distanceKm": 3,
+      "notes": "Coworking space, high-speed internet, meeting rooms, community events",
+      "sources": [
+        {
+          "title": "SOHO Office Space",
+          "url": "https://www.sohooffice.com.mt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "Pet Grooming Victoria",
+      "address": "City center area, Victoria, Malta",
+      "distanceKm": 4,
+      "notes": "Professional pet grooming services, bathing, clipping, appointment recommended",
+      "sources": [
+        {
+          "title": "Pet Services Victoria",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "categoryId": "international_school",
+      "name": "InterNations Malta Expat Community",
+      "address": "City center area, Victoria, Malta",
+      "distanceKm": 4,
+      "notes": "International expat community center, social events, networking, relocation assistance",
+      "sources": [
+        {
+          "title": "InterNations Malta Expat Community",
+          "url": "https://www.internations.org/"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "Victoria Cultural Center",
+      "description": "Cultural center with local art, history, and community events",
+      "distanceKm": 4,
+      "estimatedCostEUR": 8,
+      "frequency": "Tue-Sun 10:00-17:00",
+      "sources": [
+        {
+          "title": "Victoria Culture",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "name": "Victoria Central Park / Garden",
+      "description": "Main public park with walking trails, gardens, and green space",
+      "distanceKm": 3,
+      "estimatedCostEUR": 0,
+      "frequency": "Daily, dawn to dusk",
+      "sources": [
+        {
+          "title": "Parks in Victoria",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "dining",
+      "name": "Victoria Restaurant District",
+      "description": "Walkable area with diverse restaurants, cafes, and bars",
+      "distanceKm": 2,
+      "estimatedCostEUR": 25,
+      "frequency": "Daily, lunch and dinner service",
+      "sources": [
+        {
+          "title": "Dining in Victoria",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    }
+  ]
+}

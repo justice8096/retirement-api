@@ -1,0 +1,167 @@
+{
+  "id": "us-grand-forks-nd",
+  "name": "Grand Forks, ND",
+  "country": "United States",
+  "region": "US Midwest",
+  "cities": [
+    "Grand Forks"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "N/A (domestic)",
+    "notes": "US citizen â€” no visa required"
+  },
+  "climate": {
+    "winterLowF": -3,
+    "summerHighF": 82,
+    "meetsWarmWinterReq": false,
+    "rainyDaysPerYear": 100
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 800,
+      "min": 600,
+      "max": 1000,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 470,
+      "min": 380,
+      "max": 570,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 240,
+      "min": 190,
+      "max": 310,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 460,
+      "min": 370,
+      "max": 600,
+      "annualInflation": 0.05
+    },
+    "insurance": {
+      "typical": 250,
+      "min": 180,
+      "max": 340,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 200,
+      "min": 150,
+      "max": 300,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 60,
+      "min": 40,
+      "max": 90,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 260,
+      "min": 180,
+      "max": 360,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 210,
+      "min": 140,
+      "max": 300,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 100,
+      "min": 60,
+      "max": 150,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 120,
+      "min": 80,
+      "max": 160,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 60,
+      "min": 50,
+      "max": 75,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 65,
+      "typical": 91,
+      "max": 180,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 200,
+      "typical": 350,
+      "max": 600,
+      "annualInflation": 0.055
+    }
+  },
+  "healthcare": {
+    "system": "Private insurance (ACA/employer/Medicare)",
+    "qualityRating": 7,
+    "dentalIncluded": false,
+    "waitTimes": "Short to moderate",
+    "prescriptionCoverage": "Via insurance plan"
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps available",
+    "dogFriendly": 7,
+    "expatCommunity": 1,
+    "englishPrevalence": 10,
+    "safetyRating": 8
+  },
+  "pros": [
+    "Very affordable cost of living",
+    "University of North Dakota adds cultural life",
+    "Low crime and safe community"
+  ],
+  "cons": [
+    "Extreme cold â€” winter lows below 0F",
+    "Flood risk from Red River",
+    "Very remote and isolated"
+  ],
+  "taxes": {
+    "notes": "Federal + ND state income tax (0-2.5%); very low rates",
+    "vatRate": 0,
+    "socialChargesRate": 0
+  }
+}

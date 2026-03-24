@@ -1,0 +1,325 @@
+{
+  "id": "portugal-lisbon",
+  "name": "Lisbon/Algarve, Portugal",
+  "country": "Portugal",
+  "region": "Lisboa / Algarve",
+  "cities": [
+    "Lisbon",
+    "Faro",
+    "Lagos"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "visa": {
+    "type": "D7 Passive Income Visa",
+    "incomeRequirement": {
+      "monthly": 705,
+      "annual": 8460,
+      "currency": "EUR"
+    },
+    "applicationFee": 80,
+    "notes": "Lowest income threshold in EU. A2 Portuguese for permanent residency after 5 years."
+  },
+  "climate": {
+    "winterLowF": 46,
+    "summerHighF": 85,
+    "rainyDaysPerYear": 85,
+    "meetsWarmWinterReq": true
+  },
+  "monthlyCosts": {
+    "rent": {
+      "min": 1100,
+      "max": 1800,
+      "typical": 1400,
+      "type": "2-bedroom house (moradia)",
+      "annualInflation": 0.035,
+      "notes": "No VAT on residential rent.",
+      "gigInternetTypical": 1415,
+      "gigInternetCoverage": 96,
+      "gigInternetProviders": "MEO (PT), NOS, Vodafone",
+      "gigInternetNotes": "Portugal 95% FTTH coverage (ANACOM, Q3 2025). Lisbon metro 99.9% penetration. Algarve at 95.8% and growing. Three-way ISP competition. Fiber is default infrastructure. Essentially no rent premium."
+    },
+    "groceries": {
+      "min": 785,
+      "max": 1050,
+      "typical": 910,
+      "annualInflation": 0.025
+    },
+    "utilities": {
+      "min": 116,
+      "max": 189,
+      "typical": 145,
+      "annualInflation": 0.03,
+      "breakdown": {
+        "electricity": {
+          "typical": 80,
+          "notes": "EDP/Endesa. Moderate A/C in summer (Lisbon 85°F). Electric heating in winter. 6% IVA on first 150kWh, 23% above."
+        },
+        "gas": {
+          "typical": 30,
+          "notes": "Galp/EDP. Natural gas or butano for cooking/water heater. Mild winters, less heating."
+        },
+        "water": {
+          "typical": 35,
+          "notes": "EPAL (Lisbon) / municipal. Includes saneamento (sewage) and resíduos (waste) as line items. 6% IVA."
+        },
+        "sewage": {
+          "typical": 0,
+          "notes": "Included in water bill as saneamento."
+        },
+        "trash": {
+          "typical": 0,
+          "notes": "Included in water bill as taxa de resíduos sólidos."
+        }
+      },
+      "taxes": "IVA: 6% on electricity (≤150kWh), 23% above; 6% on water; 23% on gas. All included in bills.",
+      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig). Trash included in rent. Sewage included in water bill."
+    },
+    "healthcare": {
+      "min": 70,
+      "max": 220,
+      "typical": 130,
+      "notes": "SNS public healthcare after NHR/D7 visa residency. Private insurance optional (~€80-120/person/mo with pre-existing conditions). Anti-VEGF injections available through SNS hospitals. Pre-existing condition loading on private plans. GLP-1 covered through SNS for diabetes.",
+      "annualInflation": 0.045
+    },
+    "insurance": {
+      "min": 20,
+      "max": 30,
+      "typical": 25,
+      "annualInflation": 0.02
+    },
+    "petCare": {
+      "min": 60,
+      "max": 140,
+      "typical": 90,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "min": 180,
+      "max": 310,
+      "typical": 240,
+      "annualInflation": 0.03,
+      "notes": "Hired pet sitter 2 days/week (~€26/visit). Limited commercial daycare in Greater Lisbon. In-home pet sitting via Rover.com, PetSitting.pt, local services. Algarve has fewer options than Lisbon."
+    },
+    "petGrooming": {
+      "min": 45,
+      "max": 95,
+      "typical": 65,
+      "annualInflation": 0.025
+    },
+    "transportation": {
+      "min": 60,
+      "max": 120,
+      "typical": 80,
+      "annualInflation": 0.02
+    },
+    "entertainment": {
+      "min": 290,
+      "max": 450,
+      "typical": 360,
+      "annualInflation": 0.02,
+      "notes": "Incl cable+1Gig internet, Netflix, Amazon Prime, Apple TV+, NFL RedZone (DAZN), dining out (lunch for 2 2x/week w/ tax+tip)"
+    },
+    "clothing": {
+      "min": 60,
+      "max": 150,
+      "typical": 100,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "min": 25,
+      "max": 60,
+      "typical": 40,
+      "annualInflation": 0.02
+    },
+    "subscriptions": {
+      "min": 30,
+      "max": 80,
+      "typical": 50,
+      "annualInflation": 0.03,
+      "notes": "Streaming, news, apps"
+    },
+    "phoneCell": {
+      "min": 70,
+      "max": 105,
+      "typical": 85,
+      "annualInflation": 0.02,
+      "notes": "Google Fi Flexible (US Number) + WTF by NOS (Local). 2 phones, 1.5GB+ high-speed data each, all taxes included."
+    },
+    "miscellaneous": {
+      "min": 50,
+      "max": 100,
+      "typical": 75,
+      "annualInflation": 0.02
+    },
+    "buffer": {
+      "min": 800,
+      "max": 800,
+      "typical": 800,
+      "annualInflation": 0.025,
+      "notes": "Monthly safety buffer for unexpected expenses"
+    },
+    "medicalOOP": {
+      "min": 40,
+      "max": 140,
+      "typical": 75,
+      "annualInflation": 0.045,
+      "notes": "SNS covers specialist visits (€4.50 taxa moderadora) and hospital-based anti-VEGF injections. Private labs: €15-30 per panel. Frequent monitoring needed: ophthalmologist, endocrinologist. Prescription copays income-based; 95% reimbursement for pensioners."
+    },
+    "medicine": {
+      "min": 30,
+      "typical": 37,
+      "max": 243,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "taxes": {
+      "min": 0,
+      "typical": 0,
+      "max": 0,
+      "annualInflation": 0.02
+    }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true,
+      "brackets": [
+        {
+          "min": 0,
+          "max": 23850,
+          "rate": 0.1
+        },
+        {
+          "min": 23850,
+          "max": 96950,
+          "rate": 0.12
+        },
+        {
+          "min": 96950,
+          "max": 206700,
+          "rate": 0.22
+        },
+        {
+          "min": 206700,
+          "max": 394600,
+          "rate": 0.24
+        },
+        {
+          "min": 394600,
+          "max": 501050,
+          "rate": 0.32
+        },
+        {
+          "min": 501050,
+          "max": 751600,
+          "rate": 0.35
+        },
+        {
+          "min": 751600,
+          "max": null,
+          "rate": 0.37
+        }
+      ],
+      "standardDeduction": 30000,
+      "foreignTaxCredit": true
+    },
+    "stateIncomeTax": {
+      "rate": 0.48,
+      "type": "progressive",
+      "label": "Portuguese Income Tax (IRS)",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 8704,
+          "rate": 0.125
+        },
+        {
+          "min": 8704,
+          "max": 13133,
+          "rate": 0.16
+        },
+        {
+          "min": 13133,
+          "max": 18612,
+          "rate": 0.215
+        },
+        {
+          "min": 18612,
+          "max": 24090,
+          "rate": 0.244
+        },
+        {
+          "min": 24090,
+          "max": 30672,
+          "rate": 0.314
+        },
+        {
+          "min": 30672,
+          "max": 44959,
+          "rate": 0.349
+        },
+        {
+          "min": 44959,
+          "max": 48586,
+          "rate": 0.431
+        },
+        {
+          "min": 48586,
+          "max": 90393,
+          "rate": 0.446
+        },
+        {
+          "min": 90393,
+          "max": null,
+          "rate": 0.48
+        }
+      ],
+      "deduction": 4432,
+      "exemptions": "NHR ended Jan 2024 (IFICI replacement excludes pensions). Foreign pensions/retirement income taxed at standard progressive rates 12.5-48%. US-Portugal treaty provides foreign tax credit."
+    },
+    "salesTax": {
+      "rate": 0
+    },
+    "propertyTax": {
+      "rate": 0
+    },
+    "socialCharges": null,
+    "vatRate": 0.23,
+    "estVehicleTax": 0,
+    "ssExempt": false,
+    "ssTaxedInCountry": true,
+    "notes": "NHR ended 2024. Pensions taxed at standard rates 12.5-48%. US-Portugal tax treaty for foreign tax credit."
+  },
+  "healthcare": {
+    "system": "SNS (public) after residency",
+    "qualityRating": 7,
+    "waitTimes": "moderate-long",
+    "dentalIncluded": false,
+    "prescriptionCoverage": "partial"
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps fiber widely available",
+    "dogFriendly": 7,
+    "expatCommunity": 9,
+    "englishPrevalence": 8,
+    "safetyRating": 9
+  },
+  "pros": [
+    "Lowest visa threshold (EUR 705/mo)",
+    "High English proficiency",
+    "Very safe",
+    "Great climate (Algarve)",
+    "Strong expat community"
+  ],
+  "cons": [
+    "Rising rents (especially Lisbon)",
+    "Longer healthcare waits",
+    "Language barrier for permanent residency"
+  ],
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93,
+    "note": "EUR per 1 USD. Based on 2016-2026 historical range. Optimistic = strong EUR (good for USD→EUR), Pessimistic = weak EUR."
+  }
+}

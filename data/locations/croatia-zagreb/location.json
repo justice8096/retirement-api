@@ -1,0 +1,178 @@
+{
+  "id": "croatia-zagreb",
+  "name": "Zagreb, Croatia",
+  "country": "Croatia",
+  "region": "Southern Europe",
+  "cities": [
+    "Zagreb",
+    "Samobor",
+    "Velika Gorica"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93
+  },
+  "visa": {
+    "type": "Temporary Stay Permit",
+    "incomeRequirement": {
+      "monthly": 1500,
+      "currency": "EUR"
+    },
+    "notes": "Temporary stay permit for financially independent persons. Digital nomad visa also available."
+  },
+  "climate": {
+    "winterLowF": 28,
+    "summerHighF": 84,
+    "meetsWarmWinterReq": false,
+    "rainyDaysPerYear": 100
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 750,
+      "min": 600,
+      "max": 950,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 370,
+      "min": 290,
+      "max": 460,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 160,
+      "min": 120,
+      "max": 215,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 100,
+      "min": 65,
+      "max": 150,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 100,
+      "min": 60,
+      "max": 160,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 200,
+      "min": 140,
+      "max": 280,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 70,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 85,
+      "min": 70,
+      "max": 105,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 15,
+      "typical": 28,
+      "max": 60,
+      "annualInflation": 0.035,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 25,
+      "typical": 50,
+      "max": 100,
+      "annualInflation": 0.035
+    }
+  },
+  "healthcare": {
+    "system": "HZZO with KBC Zagreb - Croatia's largest and best hospital. Full specialist care available.",
+    "qualityRating": 8,
+    "dentalIncluded": false,
+    "waitTimes": "Public: 3-10 weeks. Private: 1-2 weeks.",
+    "prescriptionCoverage": "HZZO covers most prescriptions with small co-pays"
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps available",
+    "dogFriendly": 7,
+    "expatCommunity": 5,
+    "englishPrevalence": 7,
+    "safetyRating": 8
+  },
+  "pros": [
+    "Very affordable European capital",
+    "Best healthcare in Croatia",
+    "Good public tram and bus system"
+  ],
+  "cons": [
+    "Cold continental winters (below freezing)",
+    "No coast (2+ hours to the sea)",
+    "Earthquake damage (2020) still being repaired in some areas"
+  ],
+  "taxes": {
+    "notes": "Croatian progressive income tax 20%/30%. Zagreb has 18% municipal surtax. No US-Croatia tax treaty.",
+    "vatRate": 25,
+    "socialChargesRate": 0
+  }
+}

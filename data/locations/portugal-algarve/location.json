@@ -1,0 +1,178 @@
+{
+  "id": "portugal-algarve",
+  "name": "Algarve, Portugal",
+  "country": "Portugal",
+  "region": "Southern Europe",
+  "cities": [
+    "Faro",
+    "Lagos",
+    "Albufeira"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93
+  },
+  "visa": {
+    "type": "D7 Passive Income",
+    "incomeRequirement": {
+      "monthly": 760,
+      "currency": "EUR"
+    },
+    "notes": "D7 visa requires proof of passive income. NHR ended Jan 2024; IFICI replacement excludes pensions; standard progressive rates 14.5%-48%."
+  },
+  "climate": {
+    "winterLowF": 50,
+    "summerHighF": 90,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 55
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 1000,
+      "min": 800,
+      "max": 1200,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 430,
+      "min": 350,
+      "max": 540,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 160,
+      "min": 120,
+      "max": 215,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 110,
+      "min": 75,
+      "max": 160,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 130,
+      "min": 90,
+      "max": 180,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 160,
+      "min": 100,
+      "max": 240,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 250,
+      "min": 180,
+      "max": 350,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 70,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 85,
+      "min": 70,
+      "max": 105,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 20,
+      "typical": 37,
+      "max": 80,
+      "annualInflation": 0.035,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 40,
+      "typical": 80,
+      "max": 160,
+      "annualInflation": 0.035
+    }
+  },
+  "healthcare": {
+    "system": "SNS (Serviço Nacional de Saúde) - public universal healthcare with private option. Residents access public system via health center registration.",
+    "qualityRating": 7,
+    "dentalIncluded": false,
+    "waitTimes": "Moderate for specialists (2-6 weeks), shorter in Algarve due to lower population density",
+    "prescriptionCoverage": "Public system covers most prescriptions with co-pays of 0-90% depending on category"
+  },
+  "lifestyle": {
+    "internetSpeed": "100Mbps+",
+    "dogFriendly": 7,
+    "expatCommunity": 9,
+    "englishPrevalence": 7,
+    "safetyRating": 9
+  },
+  "pros": [
+    "Large established expat community",
+    "Warm year-round climate with 300+ days of sunshine",
+    "Affordable cost of living by Western European standards"
+  ],
+  "cons": [
+    "Tourist-heavy areas can feel less authentic",
+    "Limited public transit outside Faro",
+    "Summer heat can be intense (90F+)"
+  ],
+  "taxes": {
+    "notes": "NHR ended Jan 2024. IFICI replacement excludes pensions. Standard progressive rates 14.5%-48%. US-Portugal tax treaty helps avoid double taxation.",
+    "vatRate": 23,
+    "socialChargesRate": 0
+  }
+}

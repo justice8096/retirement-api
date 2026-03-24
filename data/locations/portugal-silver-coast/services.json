@@ -1,0 +1,245 @@
+{
+  "distanceUnit": "km",
+  "currency": "EUR",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Hospital de Caldas da Rainha",
+      "address": "City center area, Caldas da Rainha, Portugal",
+      "distanceKm": 5,
+      "notes": "SNS public hospital with emergency department, some English-speaking staff",
+      "sources": [
+        {
+          "title": "Hospital de Caldas da Rainha",
+          "url": "https://www.sns.gov.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Farmácia Central de Caldas da Rainha",
+      "address": "City center area, Caldas da Rainha, Portugal",
+      "distanceKm": 1.5,
+      "notes": "Well-stocked pharmacy, prescription medications, some English spoken",
+      "sources": [
+        {
+          "title": "Farmácia Central de Caldas da Rainha",
+          "url": "https://www.farmaciasportuguesas.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Continente",
+      "address": "City center area, Caldas da Rainha, Portugal",
+      "distanceKm": 2,
+      "notes": "Largest Portuguese supermarket chain, wide selection, online delivery",
+      "sources": [
+        {
+          "title": "Continente",
+          "url": "https://www.continente.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "Millennium BCP",
+      "address": "City center area, Caldas da Rainha, Portugal",
+      "distanceKm": 2,
+      "notes": "Largest private bank in Portugal, some English-speaking staff, ATMs",
+      "sources": [
+        {
+          "title": "Millennium BCP",
+          "url": "https://www.millenniumbcp.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Centro de Saúde de Caldas da Rainha",
+      "address": "City center area, Caldas da Rainha, Portugal",
+      "distanceKm": 3,
+      "notes": "SNS public health center, GP registration, some English-speaking doctors",
+      "sources": [
+        {
+          "title": "Centro de Saúde de Caldas da Rainha",
+          "url": "https://www.sns.gov.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Dental Clinic Caldas da Rainha Center",
+      "address": "City center area, Caldas da Rainha, Portugal",
+      "distanceKm": 3,
+      "notes": "General and cosmetic dentistry, some English-speaking dentists, modern equipment",
+      "sources": [
+        {
+          "title": "Dental Services Portugal",
+          "url": "https://www.omd.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Veterinary Clinic Caldas da Rainha",
+      "address": "City center area, Caldas da Rainha, Portugal",
+      "distanceKm": 4,
+      "notes": "Full veterinary services, vaccinations, surgery, some English spoken",
+      "sources": [
+        {
+          "title": "Veterinary Services Portugal",
+          "url": "https://www.omv.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Parque Canino / Dog Park Caldas da Rainha",
+      "address": "Park area, Caldas da Rainha, Portugal",
+      "distanceKm": 5,
+      "notes": "Off-leash area, green space popular with dog owners, water available",
+      "sources": [
+        {
+          "title": "Parks in Caldas da Rainha",
+          "url": "https://www.visitportugal.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "Fitness Hut Caldas da Rainha",
+      "address": "City center area, Caldas da Rainha, Portugal",
+      "distanceKm": 3,
+      "notes": "Modern gym with cardio and weight equipment, group classes, monthly memberships",
+      "sources": [
+        {
+          "title": "Fitness Hut Caldas da Rainha",
+          "url": "https://www.fitnesshut.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "St. George's Anglican Church Caldas da Rainha",
+      "address": "City center area, Caldas da Rainha, Portugal",
+      "distanceKm": 5,
+      "notes": "English-language services, expat community gathering point, social events",
+      "sources": [
+        {
+          "title": "St. George's Anglican Church Caldas da Rainha",
+          "url": "https://europe.anglican.org/"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Lisbon Humberto Delgado Airport (LIS)",
+      "address": "Airport area",
+      "distanceKm": 90,
+      "notes": "International airport with domestic and international flights",
+      "sources": [
+        {
+          "title": "Lisbon Humberto Delgado Airport",
+          "url": "https://www.aeroportolisboa.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Estação de Caldas da Rainha / Metro",
+      "address": "City center area, Caldas da Rainha, Portugal",
+      "distanceKm": 2,
+      "notes": "CP rail, metro, comprehensive bus network, Viva Viagem card",
+      "sources": [
+        {
+          "title": "Estação de Caldas da Rainha",
+          "url": "https://www.cp.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "coworking",
+      "name": "Second Home Caldas da Rainha",
+      "address": "City center area, Caldas da Rainha, Portugal",
+      "distanceKm": 3,
+      "notes": "Coworking space, high-speed internet, meeting rooms, community events",
+      "sources": [
+        {
+          "title": "Second Home Caldas da Rainha",
+          "url": "https://www.secondhome.io/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "Pet Grooming Caldas da Rainha",
+      "address": "City center area, Caldas da Rainha, Portugal",
+      "distanceKm": 4,
+      "notes": "Professional pet grooming services, bathing, clipping, appointment recommended",
+      "sources": [
+        {
+          "title": "Pet Services Caldas da Rainha",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "categoryId": "international_school",
+      "name": "InterNations Caldas da Rainha Expat Community",
+      "address": "City center area, Caldas da Rainha, Portugal",
+      "distanceKm": 4,
+      "notes": "International expat community center, social events, networking, relocation assistance",
+      "sources": [
+        {
+          "title": "InterNations Caldas da Rainha Expat Community",
+          "url": "https://www.internations.org/"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "Caldas da Rainha Cultural Center",
+      "description": "Cultural center with local art, history, and community events",
+      "distanceKm": 4,
+      "estimatedCostEUR": 8,
+      "frequency": "Tue-Sun 10:00-17:00",
+      "sources": [
+        {
+          "title": "Caldas da Rainha Culture",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "name": "Caldas da Rainha Central Park / Garden",
+      "description": "Main public park with walking trails, gardens, and green space",
+      "distanceKm": 3,
+      "estimatedCostEUR": 0,
+      "frequency": "Daily, dawn to dusk",
+      "sources": [
+        {
+          "title": "Parks in Caldas da Rainha",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "dining",
+      "name": "Caldas da Rainha Restaurant District",
+      "description": "Walkable area with diverse restaurants, cafes, and bars",
+      "distanceKm": 2,
+      "estimatedCostEUR": 25,
+      "frequency": "Daily, lunch and dinner service",
+      "sources": [
+        {
+          "title": "Dining in Caldas da Rainha",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    }
+  ]
+}

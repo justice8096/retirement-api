@@ -1,0 +1,178 @@
+{
+  "id": "cyprus-limassol",
+  "name": "Limassol, Cyprus",
+  "country": "Cyprus",
+  "region": "Southern Europe",
+  "cities": [
+    "Limassol",
+    "Episkopi",
+    "Erimi"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93
+  },
+  "visa": {
+    "type": "Category F Immigration Permit",
+    "incomeRequirement": {
+      "monthly": 797,
+      "currency": "EUR"
+    },
+    "notes": "Category F permit requires ~€9,568/year + €4,613/dependent."
+  },
+  "climate": {
+    "winterLowF": 50,
+    "summerHighF": 95,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 35
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 1100,
+      "min": 850,
+      "max": 1400,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 430,
+      "min": 340,
+      "max": 540,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 160,
+      "min": 120,
+      "max": 215,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 105,
+      "min": 70,
+      "max": 155,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 125,
+      "min": 85,
+      "max": 180,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 140,
+      "min": 90,
+      "max": 210,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 260,
+      "min": 180,
+      "max": 360,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 70,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 87,
+      "min": 72,
+      "max": 107,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 20,
+      "typical": 35,
+      "max": 70,
+      "annualInflation": 0.035,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 40,
+      "typical": 80,
+      "max": 160,
+      "annualInflation": 0.035
+    }
+  },
+  "healthcare": {
+    "system": "GESY public system plus strong private sector. Limassol General Hospital. Good quality care.",
+    "qualityRating": 7,
+    "dentalIncluded": false,
+    "waitTimes": "Public: 2-8 weeks. Private: under 2 weeks.",
+    "prescriptionCoverage": "GESY covers most prescriptions with small co-pays"
+  },
+  "lifestyle": {
+    "internetSpeed": "100Mbps+",
+    "dogFriendly": 6,
+    "expatCommunity": 8,
+    "englishPrevalence": 8,
+    "safetyRating": 9
+  },
+  "pros": [
+    "Cosmopolitan business hub with international restaurants",
+    "Strong Russian and British expat communities",
+    "New marina and waterfront development"
+  ],
+  "cons": [
+    "Higher cost than other Cypriot cities",
+    "Traffic congestion in city center",
+    "Very hot and humid summers"
+  ],
+  "taxes": {
+    "notes": "Cyprus: flat 2.65% on pension income for first €3,420, then 0%. Very favorable for retirees.",
+    "vatRate": 19,
+    "socialChargesRate": 0
+  }
+}

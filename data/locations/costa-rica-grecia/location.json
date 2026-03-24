@@ -1,0 +1,171 @@
+{
+  "id": "costa-rica-grecia",
+  "name": "Grecia, Costa Rica",
+  "country": "Costa Rica",
+  "region": "Central America",
+  "cities": [
+    "Grecia"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Pensionado",
+    "incomeRequirement": {
+      "monthly": 1000,
+      "currency": "USD"
+    },
+    "notes": "Pensionado visa requires $1,000/mo pension income."
+  },
+  "climate": {
+    "winterLowF": 62,
+    "summerHighF": 82,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 145
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 750,
+      "min": 600,
+      "max": 900,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 400,
+      "min": 300,
+      "max": 520,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 110,
+      "min": 75,
+      "max": 160,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 160,
+      "min": 80,
+      "max": 260,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 280,
+      "min": 180,
+      "max": 420,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 40,
+      "min": 25,
+      "max": 65,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 150,
+      "min": 80,
+      "max": 230,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 160,
+      "min": 100,
+      "max": 240,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 70,
+      "min": 40,
+      "max": 110,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 83,
+      "min": 68,
+      "max": 103,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 100,
+      "min": 60,
+      "max": 180,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 20,
+      "typical": 40,
+      "max": 90,
+      "annualInflation": 0.04,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 30,
+      "typical": 60,
+      "max": 120,
+      "annualInflation": 0.04
+    }
+  },
+  "healthcare": {
+    "system": "CAJA clinic locally; San José hospitals under 1 hour.",
+    "qualityRating": 7,
+    "dentalIncluded": true,
+    "waitTimes": "Moderate; good San José access",
+    "prescriptionCoverage": "Available through CAJA system"
+  },
+  "lifestyle": {
+    "internetSpeed": "50-100Mbps",
+    "dogFriendly": 7,
+    "expatCommunity": 5,
+    "englishPrevalence": 4,
+    "safetyRating": 7
+  },
+  "pros": [
+    "Excellent spring-like climate similar to Atenas",
+    "More affordable than Atenas or Escazú",
+    "Famous red metal church and charming town center"
+  ],
+  "cons": [
+    "Smaller expat community than other CR locations",
+    "Limited English spoken outside expat circles",
+    "Small-town pace may not suit everyone"
+  ],
+  "taxes": {
+    "notes": "Territorial tax system: foreign income not taxed.",
+    "vatRate": 0.13,
+    "socialChargesRate": 0
+  }
+}

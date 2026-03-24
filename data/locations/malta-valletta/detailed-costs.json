@@ -1,0 +1,126 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 20,
+      "typical": 26,
+      "max": 228
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 195,
+        "coverageNote": "GFL (Government Formulary List) covers for diabetes with specialist prescription"
+      },
+      {
+        "name": "Levothyroxine [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 5,
+        "coverageNote": "GFL — free with pink card"
+      },
+      {
+        "name": "Atorvastatin 20mg [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 7,
+        "coverageNote": "GFL — free with pink card"
+      },
+      {
+        "name": "Montelukast [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 10,
+        "coverageNote": "GFL covered"
+      },
+      {
+        "name": "Hydrochlorothiazide [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "GFL — free with pink card"
+      },
+      {
+        "name": "Olmesartan [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 12,
+        "coverageNote": "GFL covered"
+      },
+      {
+        "name": "Salbutamol [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "GFL — free with pink card"
+      },
+      {
+        "name": "Metformin 500mg [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 3,
+        "coverageNote": "GFL — free with pink card"
+      },
+      {
+        "name": "Allopurinol [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 5,
+        "coverageNote": "GFL covered"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 5,
+        "coverageNote": "GFL covered"
+      },
+      {
+        "name": "Topiramate [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 12,
+        "coverageNote": "GFL covered"
+      },
+      {
+        "name": "Metoprolol [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 5,
+        "coverageNote": "GFL covered"
+      },
+      {
+        "name": "Atorvastatin 20mg [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 7,
+        "coverageNote": "GFL — free with pink card"
+      }
+    ],
+    "pharmacyAccess": "Pharmacies in all Maltese towns with rotating duty pharmacy system. Brown & Associates, Remedies, and independent pharmacies. EU prescriptions accepted.",
+    "notes": "Malta provides free medications through the Government Formulary List (GFL) for residents with pink card (Schedule V for chronic conditions). EU citizens can access via EHIC. Private pharmacies charge reasonable prices for non-formulary items."
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 72,
+      "typical": 87,
+      "max": 107
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in Malta at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "GO Malta Postpaid",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "10GB 4G/5G",
+        "baseCost": 22,
+        "taxesAndFees": 0,
+        "monthlyTotal": 22,
+        "notes": "2 lines ~€10/line. GO is largest carrier. EU roaming included."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      }
+    ]
+  }
+}

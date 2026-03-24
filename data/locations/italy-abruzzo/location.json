@@ -1,0 +1,178 @@
+{
+  "id": "italy-abruzzo",
+  "name": "Abruzzo, Italy",
+  "country": "Italy",
+  "region": "Southern Europe",
+  "cities": [
+    "Pescara",
+    "L'Aquila",
+    "Chieti"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93
+  },
+  "visa": {
+    "type": "Elective Residence Visa",
+    "incomeRequirement": {
+      "monthly": 2583,
+      "currency": "EUR"
+    },
+    "notes": "Elective residence visa requires ~€31K/year income. Must demonstrate passive income and health insurance."
+  },
+  "climate": {
+    "winterLowF": 35,
+    "summerHighF": 86,
+    "meetsWarmWinterReq": false,
+    "rainyDaysPerYear": 75
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 700,
+      "min": 550,
+      "max": 900,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 380,
+      "min": 300,
+      "max": 480,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 165,
+      "min": 120,
+      "max": 220,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 95,
+      "min": 60,
+      "max": 140,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 110,
+      "min": 75,
+      "max": 160,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 140,
+      "min": 90,
+      "max": 210,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 200,
+      "min": 140,
+      "max": 280,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 70,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 81,
+      "min": 66,
+      "max": 101,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 18,
+      "typical": 30,
+      "max": 65,
+      "annualInflation": 0.03,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 40,
+      "typical": 80,
+      "max": 160,
+      "annualInflation": 0.035
+    }
+  },
+  "healthcare": {
+    "system": "Italian SSN (Servizio Sanitario Nazionale). Regional hospital in Pescara. Quality varies but adequate for most needs.",
+    "qualityRating": 7,
+    "dentalIncluded": false,
+    "waitTimes": "Public: 4-12 weeks for specialists. Private affordable alternative.",
+    "prescriptionCoverage": "SSN covers essential prescriptions with tiered co-pays (ticket)"
+  },
+  "lifestyle": {
+    "internetSpeed": "100Mbps+",
+    "dogFriendly": 7,
+    "expatCommunity": 4,
+    "englishPrevalence": 3,
+    "safetyRating": 8
+  },
+  "pros": [
+    "Among the most affordable regions in Italy",
+    "Both mountains and coast within 30 minutes",
+    "Authentic Italian lifestyle without mass tourism"
+  ],
+  "cons": [
+    "Very limited English spoken",
+    "Small expat community",
+    "L'Aquila still recovering from 2009 earthquake"
+  ],
+  "taxes": {
+    "notes": "Italian progressive income tax 23%-43%. Italy offers 7% flat tax for retirees moving to southern regions (towns under 20K population). US-Italy tax treaty.",
+    "vatRate": 22,
+    "socialChargesRate": 0
+  }
+}

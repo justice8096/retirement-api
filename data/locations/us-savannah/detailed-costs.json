@@ -1,0 +1,1255 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 73,
+      "typical": 91,
+      "max": 925
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic/Wegovy) [P1]",
+        "monthlyCost": 25,
+        "withoutInsurance": 900,
+        "coverageNote": "Medicare Part D covers for diabetes (tier 3). $25 copay typical. Without coverage ~$900/mo. IRA negotiated price TBD."
+      },
+      {
+        "name": "Levothyroxine (Synthroid) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 15,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Atorvastatin 20mg [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Montelukast (Singulair) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 15,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Hydrochlorothiazide (HCTZ) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 8,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Olmesartan/Medoxomil (Benicar) [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 30,
+        "coverageNote": "Medicare Part D generic tier 1-2; $4-15 copay"
+      },
+      {
+        "name": "Albuterol inhaler [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 35,
+        "coverageNote": "Medicare Part D tier 2; $10-25 copay. IRA cap applies."
+      },
+      {
+        "name": "Metformin 500mg [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Allopurinol (gout) [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Topiramate (Topamax) [P2]",
+        "monthlyCost": 10,
+        "withoutInsurance": 25,
+        "coverageNote": "Medicare Part D generic tier 1-2; $4-15 copay"
+      },
+      {
+        "name": "Metoprolol (Lopressor) [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Atorvastatin 20mg [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      }
+    ],
+    "pharmacyAccess": "Good. CVS, Walgreens, Walmart pharmacies in Savannah area. Publix pharmacies offer select free generics (antibiotics, lisinopril, metformin). Mail-order through Part D plans available.",
+    "prescriptionSystem": "Medicare Part D prescription drug plan. Choose standalone PDP or Medicare Advantage with drug coverage. Annual out-of-pocket cap $2,000 under Inflation Reduction Act.",
+    "insuranceCoverage": "Medicare Part D covers most prescriptions with tiered copays. Generic drugs $0-15/month, preferred brands $30-50/month, specialty drugs 25-33% coinsurance up to $2,000 annual cap.",
+    "sources": [
+      {
+        "title": "Medicare Part D Costs - CMS.gov",
+        "url": "https://www.cms.gov/medicare/costs-getting-started"
+      },
+      {
+        "title": "Publix Free Medication Program",
+        "url": "https://www.publix.com/pharmacy/free-medication-program"
+      },
+      {
+        "title": "GoodRx Drug Pricing",
+        "url": "https://www.goodrx.com/"
+      }
+    ]
+  },
+  "vision": {
+    "annualExamCost": {
+      "withInsurance": 20,
+      "withoutInsurance": 160,
+      "notes": "Original Medicare does NOT cover routine vision exams. Must have separate vision plan or Medicare Advantage with vision."
+    },
+    "eyeglasses": {
+      "basicFrameAndLens": {
+        "min": 80,
+        "typical": 170,
+        "max": 330
+      },
+      "progressiveLens": {
+        "min": 170,
+        "typical": 280,
+        "max": 500
+      },
+      "contactLensesMonthly": {
+        "min": 25,
+        "typical": 45,
+        "max": 70
+      }
+    },
+    "insuranceCoverage": "Need separate vision plan or Medicare Advantage with vision. Standalone vision plans (VSP, EyeMed) run $15-25/month and cover annual exam + $100-200 frame/lens allowance.",
+    "specialistWaitTime": "1-3 weeks for routine eye exams. Savannah has adequate optometry coverage. Ophthalmology at St. Joseph's/Candler or Memorial Health for specialist referrals (2-4 weeks).",
+    "seniorConsiderations": "Medicare covers cataract surgery and glaucoma screening. Annual glaucoma screening covered for high-risk beneficiaries. Diabetic retinopathy screening covered. One pair of eyeglasses or contacts after cataract surgery.",
+    "sources": [
+      {
+        "title": "Medicare Vision Coverage - Medicare.gov",
+        "url": "https://www.medicare.gov/coverage/eye-exams"
+      },
+      {
+        "title": "VSP Individual Vision Plans",
+        "url": "https://www.vspdirect.com/"
+      },
+      {
+        "title": "St. Joseph's/Candler Health System",
+        "url": "https://www.sjchs.org/"
+      }
+    ]
+  },
+  "dental": {
+    "annualCleaningCost": {
+      "withInsurance": 20,
+      "withoutInsurance": 120,
+      "notes": "Original Medicare does NOT cover routine dental. Need separate dental plan or Medicare Advantage with dental."
+    },
+    "commonProcedures": [
+      {
+        "name": "Filling (composite)",
+        "withInsurance": 80,
+        "withoutInsurance": 200
+      },
+      {
+        "name": "Crown (porcelain)",
+        "withInsurance": 400,
+        "withoutInsurance": 950
+      },
+      {
+        "name": "Root Canal (molar)",
+        "withInsurance": 375,
+        "withoutInsurance": 900
+      },
+      {
+        "name": "Extraction (simple)",
+        "withInsurance": 65,
+        "withoutInsurance": 200
+      },
+      {
+        "name": "Implant (single)",
+        "withInsurance": 1700,
+        "withoutInsurance": 3800
+      },
+      {
+        "name": "Dentures (complete set)",
+        "withInsurance": 650,
+        "withoutInsurance": 1600
+      }
+    ],
+    "insuranceCoverage": "Need separate dental plan ($20-45/month) or Medicare Advantage with dental. Standalone plans (Delta Dental of Georgia, Humana) typically cover 100% preventive, 50-80% basic, 50% major. Annual maximums $1,000-2,000.",
+    "dentistAvailability": "Adequate in Savannah. Fewer providers than larger metros but wait times still reasonable (1-3 weeks). Some dental practices cater to seniors and accept discount plans.",
+    "sources": [
+      {
+        "title": "Medicare Dental Coverage - Medicare.gov",
+        "url": "https://www.medicare.gov/coverage/dental-services"
+      },
+      {
+        "title": "Georgia Dental Association",
+        "url": "https://www.gadental.org/"
+      },
+      {
+        "title": "Humana Dental Plans - Georgia",
+        "url": "https://www.humana.com/dental-insurance/georgia"
+      }
+    ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 380,
+      "typical": 480,
+      "max": 600
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 310,
+        "seniorDiscounts": "Southern restaurants often have lunch specials. AARP discounts at chains.",
+        "notes": "Lunch for 2 at moderate restaurant ~$30 + 7% tax + 20% tip = ~$38/meal, 2x/week = ~$310/mo"
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 70,
+        "seniorDiscounts": "Xfinity and AT&T serve Savannah area.",
+        "notes": "Xfinity 1 Gig $60-70/mo or AT&T Fiber $80/mo."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 18,
+        "seniorDiscounts": "T-Mobile 55+ plans include Netflix.",
+        "notes": "$17.99/mo"
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 15,
+        "seniorDiscounts": "Medicaid recipients qualify for Prime at $6.99/mo.",
+        "notes": "$14.99/mo"
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 13,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "$12.99/mo"
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 20,
+        "seniorDiscounts": "SilverSneakers free with many Medicare Advantage plans."
+      },
+      {
+        "name": "Parks/Outdoors",
+        "monthlyCost": 10,
+        "seniorDiscounts": "Savannah has many free parks and squares."
+      },
+      {
+        "name": "Books/Library",
+        "monthlyCost": 8,
+        "seniorDiscounts": "Live Oak Public Libraries free."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 20,
+        "seniorDiscounts": "Senior coffee discounts at major chains."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Xfinity Plans",
+        "url": "https://www.xfinity.com/gig"
+      },
+      {
+        "title": "Netflix Pricing",
+        "url": "https://help.netflix.com/en/node/24926"
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 150,
+      "typical": 220,
+      "max": 300
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 55,
+        "senior": 27,
+        "notes": "Chatham Area Transit (CAT) monthly pass. Seniors 65+ ride for half-fare. Free DOT downtown shuttle."
+      },
+      "singleRide": 1.5,
+      "coverage": "Limited. CAT bus covers main Savannah corridors but frequency is low (30-60 min headways). Free DOT (Downtown) shuttle loops through historic district. Very car-dependent outside downtown.",
+      "seniorDiscount": "Seniors 65+ get half-fare on all CAT routes with Medicare card. Free DOT shuttle available to all."
+    },
+    "rideShare": {
+      "baseFare": 2,
+      "perKm": 0.95,
+      "typicalCrossTownTrip": {
+        "min": 7,
+        "typical": 12,
+        "max": 20
+      },
+      "availability": "Moderate. Uber and Lyft available in Savannah area but fewer drivers than major metros. Wait times can be 5-15 minutes.",
+      "notes": "GoGoGrandparent available. Chatham County Senior Citizens Inc. offers subsidized transportation for seniors. Taxi services also available."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 20,
+        "initialRegistration": {
+          "min": 20,
+          "typical": 25,
+          "max": 35
+        },
+        "notes": "Georgia registration $20/year. Title fee $18. No personal property tax on vehicles in Georgia (unlike Virginia). Ad valorem tax (TAVT) is one-time at purchase (6.6% of value)."
+      },
+      "insurance": {
+        "monthlyMin": 90,
+        "monthlyTypical": 130,
+        "monthlyMax": 190,
+        "notes": "Georgia car insurance rates near national average. Savannah rates moderate. Senior safe driver discounts available (5-15%)."
+      },
+      "fuel": {
+        "pricePerLiter": 0.85,
+        "monthlyEstimate": {
+          "min": 65,
+          "typical": 100,
+          "max": 160
+        },
+        "notes": "~$3.20/gallon average in Savannah. GA gas tax $0.312/gallon. Typical senior drives 8,000-12,000 miles/year. Lower fuel costs than Northeast."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 0,
+          "typical": 30,
+          "max": 100
+        },
+        "hourlyStreet": 1.25,
+        "notes": "Free parking in most residential and suburban areas. Historic district metered parking $1.25/hour. Monthly parking passes for historic district $85-130."
+      },
+      "tolls": {
+        "monthlyEstimate": 5,
+        "notes": "Minimal tolls in Savannah area. GA 400 toll removed. Occasional bridge tolls on I-95 corridor for travel to SC. Peach Pass for managed lanes on I-16 corridor."
+      },
+      "seniorDiscounts": "Georgia Mature Driver discount for completing AARP Smart Driver course (5-15% insurance reduction). Chatham County Senior Citizens offers door-to-door transport for qualifying seniors."
+    },
+    "walkability": "High in historic district. Savannah's grid layout with 22 squares makes the historic core very walkable. Outside the historic district, car-dependent. Tybee Island requires car or bus.",
+    "cycling": {
+      "bikeShareMonthly": 0,
+      "infrastructure": "Flat terrain is bike-friendly. Some bike lanes in historic district and Ardsley Park. Savannah is one of the more bikeable small cities in the South. No formal bike share program.",
+      "notes": "Flat city with mild winters makes cycling viable 9-10 months/year. Heat limits summer cycling. Bike rental shops available."
+    },
+    "sources": [
+      {
+        "title": "Chatham Area Transit (CAT)",
+        "url": "https://www.catchacat.org/"
+      },
+      {
+        "title": "Georgia DOR Motor Vehicle Registration",
+        "url": "https://dor.georgia.gov/motor-vehicles"
+      },
+      {
+        "title": "Georgia TAVT Calculator",
+        "url": "https://dor.georgia.gov/title-ad-valorem-tax-tavt"
+      },
+      {
+        "title": "Savannah DOT Free Shuttle",
+        "url": "https://www.connectonthedot.com/"
+      }
+    ],
+    "electricVehicle": {
+      "purchasePrice": {
+        "min": 28000,
+        "typical": 35000,
+        "max": 52000
+      },
+      "purchaseNotes": "Tesla Model 3 ~$35K, Model Y ~$45K, Hyundai Ioniq 5 ~$42K, Chevy Equinox EV ~$28K. Federal tax credit up to $7,500 (income limits apply). Some states add incentives.",
+      "federalIncentive": 7500,
+      "stateIncentive": 0,
+      "incentiveNotes": "Federal EV tax credit up to $7,500 under IRA (income < $150K single / $300K joint). Must be new vehicle, MSRP < $55K sedan / $80K SUV. Used EV credit up to $4,000.",
+      "chargingHome": {
+        "installCost": {
+          "min": 500,
+          "typical": 1200,
+          "max": 2500
+        },
+        "monthlyElectricity": {
+          "min": 30,
+          "typical": 50,
+          "max": 80
+        },
+        "notes": "Level 2 (240V) home charger. Electricity ~$0.12-0.16/kWh. ~1,000 mi/month = ~300 kWh = $36-48/mo."
+      },
+      "chargingPublic": {
+        "perKwh": {
+          "min": 0.3,
+          "typical": 0.43,
+          "max": 0.6
+        },
+        "notes": "Tesla Supercharger ~$0.40-0.50/kWh. Electrify America ~$0.43/kWh. ChargePoint varies. Free L2 chargers at some retailers."
+      },
+      "insurance": {
+        "monthly": {
+          "min": 140,
+          "typical": 180,
+          "max": 250
+        },
+        "notes": "EV insurance 15-25% higher than comparable ICE vehicle. Shop Liberty Mutual, Progressive, Tesla Insurance where available."
+      },
+      "maintenance": {
+        "annual": {
+          "min": 400,
+          "typical": 600,
+          "max": 900
+        },
+        "notes": "No oil changes, fewer brake jobs (regen braking). Tire rotation every 7,500 mi. Cabin air filter annually. Brake fluid every 2-3 yrs. 12V battery every 4-5 yrs (~$100). Tires wear faster on heavier EVs."
+      },
+      "registration": {
+        "annual": {
+          "min": 100,
+          "typical": 200,
+          "max": 300
+        },
+        "notes": "Many states add EV-specific fees ($100-275/yr) to replace lost gas tax revenue. Virginia: $64/yr EV fee."
+      },
+      "batteryWarranty": "8 years / 100,000 miles (federal minimum). Most manufacturers cover 70-80% capacity retention.",
+      "depreciationNotes": "EVs depreciate 40-50% in first 3 years, though Tesla holds value better. Used EV market improving. Budget ~$3,000-5,000/yr depreciation on $35K vehicle.",
+      "totalMonthlyOwnership": {
+        "min": 250,
+        "typical": 380,
+        "max": 550
+      },
+      "totalMonthlyNotes": "Includes: charging ($50), insurance ($180), maintenance ($50/mo avg), registration ($17/mo). Excludes: purchase/loan payment, depreciation.",
+      "sources": [
+        {
+          "title": "Federal EV Tax Credit - IRS",
+          "url": "https://www.irs.gov/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after"
+        },
+        {
+          "title": "EV Maintenance Costs - AAA",
+          "url": "https://www.aaa.com/autorepair/articles/ev-maintenance"
+        },
+        {
+          "title": "EV Charging Costs - DOE",
+          "url": "https://afdc.energy.gov/fuels/electricity-charging-home"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 65,
+    "discounts": [
+      {
+        "name": "Medicare",
+        "description": "Federal health insurance at 65. Part A (hospital) premium-free for most. Part B (medical) ~$185/month. Part D (drugs) $10-50/month.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "AARP Membership",
+        "description": "Annual membership $16. Discounts on insurance, dining, travel, retail, and entertainment. Available at age 50+.",
+        "eligibilityAge": 50
+      },
+      {
+        "name": "Georgia Tax Breaks",
+        "description": "Georgia exempts up to $65,000 of retirement income per person (65+) from state income tax. Social Security partially exempt. Georgia income tax rate 1-5.49%.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "CAT Senior Transit Fare",
+        "description": "Half-price bus fares for riders 65+. Present Medicare card as proof. Free DOT downtown shuttle for everyone.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Chatham County Senior Services",
+        "description": "Senior Citizens Inc. offers meals, transportation, activities, and social services. Multiple senior center locations in Chatham County.",
+        "eligibilityAge": 60
+      },
+      {
+        "name": "Georgia Homestead Exemption",
+        "description": "Standard $2,000 homestead exemption. Additional exemptions for seniors 62+ and 65+ that can exempt school taxes and additional county taxes based on income.",
+        "eligibilityAge": 62
+      },
+      {
+        "name": "America the Beautiful Senior Pass",
+        "description": "Lifetime pass to all national parks and federal recreation areas for $80 (or $20/year). Fort Pulaski National Monument nearby.",
+        "eligibilityAge": 62
+      },
+      {
+        "name": "SilverSneakers Fitness",
+        "description": "Free gym membership through participating Medicare Advantage and Medigap plans. Access to 17,000+ locations nationwide.",
+        "eligibilityAge": 65
+      }
+    ]
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 50,
+      "typical": 63,
+      "max": 82
+    },
+    "plans": [
+      {
+        "name": "T-Mobile 55+ Essentials",
+        "type": "US Domestic",
+        "lines": 2,
+        "dataPerLine": "Unlimited (50GB priority)",
+        "baseCost": 55,
+        "taxesAndFees": 8,
+        "monthlyTotal": 63,
+        "notes": "2 lines unlimited talk/text/data. GA wireless tax ~12% + federal USF. 5G included."
+      }
+    ],
+    "sources": [
+      {
+        "title": "T-Mobile 55+ Plans",
+        "url": "https://www.t-mobile.com/cell-phone-plans/unlimited-55-plus"
+      },
+      {
+        "title": "GA Wireless Tax Rates",
+        "url": "https://taxfoundation.org/data/all/state/wireless-taxes-2024/"
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom single-family house",
+    "monthlyBudget": {
+      "min": 1400,
+      "max": 2100,
+      "typical": 1700
+    },
+    "breakdown": {
+      "baseRent": 1600,
+      "rentersInsurance": 30,
+      "localTaxesFees": 0,
+      "total": 1630,
+      "notes": "Water, sewage, and trash are separate utility bills — see utilities breakdown."
+    },
+    "taxNotes": "Georgia has no residential rental tax. Chatham County property tax millage rate ~34 mills — landlord responsibility. Georgia offers homestead exemptions but only for owner-occupied properties.",
+    "leaseTerms": "12-month standard lease. No statutory limit on security deposit in Georgia. Typical deposit is 1-2 months rent.",
+    "marketNotes": "Historic district 2BR houses command premium ($2,000+). Better value in Midtown, Ardsley Park, and Thunderbolt. Hurricane insurance adds to landlord costs reflected in rent.",
+    "sources": [
+      {
+        "name": "Zillow Savannah Rental Market",
+        "url": "https://www.zillow.com/rental-manager/market-trends/savannah-ga/"
+      },
+      {
+        "name": "Chatham County Tax Commissioner",
+        "url": "https://www.chathamcountytax.com/"
+      }
+    ],
+    "housingSites": {
+      "rentals": [
+        {
+          "name": "Zillow",
+          "url": "https://www.zillow.com/savannah-ga/rentals/",
+          "type": "rental"
+        },
+        {
+          "name": "Apartments.com",
+          "url": "https://www.apartments.com/savannah-ga/",
+          "type": "rental"
+        },
+        {
+          "name": "Realtor.com",
+          "url": "https://www.realtor.com/realestateandhomes-search/Savannah_GA",
+          "type": "purchase"
+        }
+      ]
+    }
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Kroger",
+        "type": "supermarket",
+        "website": "https://www.kroger.com/",
+        "notes": "Multiple Savannah locations, fuel points",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Kroger Store Tour",
+            "url": "https://www.youtube.com/watch?v=bT0C1lgSfcM"
+          },
+          {
+            "platform": "instagram",
+            "title": "@krogerco",
+            "url": "https://www.instagram.com/krogerco/"
+          }
+        ]
+      },
+      {
+        "name": "Fresh Market",
+        "type": "specialty-grocery",
+        "website": "https://www.thefreshmarket.com/",
+        "notes": "Upscale, quality produce/meats",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "The Fresh Market Tour",
+            "url": "https://www.youtube.com/watch?v=H8d4nBpGMX0"
+          },
+          {
+            "platform": "instagram",
+            "title": "@thefreshmarket",
+            "url": "https://www.instagram.com/thefreshmarket/"
+          }
+        ]
+      },
+      {
+        "name": "Forsyth Farmers' Market",
+        "type": "farmers-market",
+        "website": "https://forsythfarmersmarket.org/",
+        "notes": "Saturday mornings in Forsyth Park",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Forsyth Farmers Market Savannah",
+            "url": "https://www.youtube.com/watch?v=TlRGBu_YJkE"
+          },
+          {
+            "platform": "instagram",
+            "title": "@forsythfarmersmarket",
+            "url": "https://www.instagram.com/forsythfarmersmarket/"
+          }
+        ]
+      }
+    ]
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 60,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Farmers market or CSA box"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 40,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Bananas, berries, apples, citrus"
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 20,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Sweet Potatoes / Potatoes",
+            "monthlyCost": 15,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet staple"
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 12,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet vegetables"
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 10,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Digestive health, home-cooked diet"
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 50,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Primary protein for both adults & dog"
+          },
+          {
+            "name": "Ground Turkey / Beef",
+            "monthlyCost": 45,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean ground for dog food base"
+          },
+          {
+            "name": "Fish (salmon/tilapia)",
+            "monthlyCost": 40,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Omega-3 rich"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": "Eggs also for dog diet"
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 12,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Essential for balanced home-cooked dog diet"
+          },
+          {
+            "name": "Beans / Lentils",
+            "monthlyCost": 8,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "grains",
+        "name": "Grains & Starches",
+        "items": [
+          {
+            "name": "Rice (brown/white)",
+            "monthlyCost": 10,
+            "quantity": 5,
+            "unit": "lbs/month",
+            "forWhom": "shared",
+            "notes": "Dog diet carb source"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "loaves/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 8,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Oats / Cereal",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "container/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk / Plant Milk",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Cheese",
+            "monthlyCost": 20,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Yogurt / Kefir",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "quart/week",
+            "forWhom": "shared",
+            "notes": "Probiotics for dog digestion too"
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "unit/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Olive Oil / Cooking Oils",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Spices & Seasonings",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Canned Goods (tomatoes, beans)",
+            "monthlyCost": 12,
+            "quantity": 6,
+            "unit": "cans/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Condiments & Sauces",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 25,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tea",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "box/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Wine / Beer",
+            "monthlyCost": 40,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Optional"
+          },
+          {
+            "name": "Sparkling Water / Juice",
+            "monthlyCost": 12,
+            "quantity": 1,
+            "unit": "case/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "snacks",
+        "name": "Snacks & Treats",
+        "items": [
+          {
+            "name": "Nuts & Trail Mix",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Crackers / Chips",
+            "monthlyCost": 10,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Dark Chocolate",
+            "monthlyCost": 8,
+            "quantity": 4,
+            "unit": "bars/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "frozen",
+        "name": "Frozen Foods",
+        "items": [
+          {
+            "name": "Frozen Vegetables",
+            "monthlyCost": 12,
+            "quantity": 4,
+            "unit": "bags/month",
+            "forWhom": "shared",
+            "notes": "Backup for dog food prep"
+          },
+          {
+            "name": "Frozen Fruit (smoothies)",
+            "monthlyCost": 10,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Frozen Meals (convenience)",
+            "monthlyCost": 15,
+            "quantity": 4,
+            "unit": "meals/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "supplements",
+        "name": "Pet Supplements & Health",
+        "items": [
+          {
+            "name": "Joint Supplement (glucosamine)",
+            "monthlyCost": 30,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Essential for Bernese — hip/joint health"
+          },
+          {
+            "name": "Fish Oil (omega-3)",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Coat & skin health"
+          },
+          {
+            "name": "Multivitamin / Mineral Mix",
+            "monthlyCost": 20,
+            "quantity": 1,
+            "unit": "container/month",
+            "forWhom": "dog",
+            "notes": "Balance home-cooked diet"
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "dog",
+            "notes": "Training & dental chews"
+          }
+        ]
+      }
+    ],
+    "monthlyTotal": 712
+  },
+  "healthcare": {
+    "system": "Medicare + Medigap supplement",
+    "coverageSummary": "Medicare Part A (free) + Part B ($174.70/mo pp) + Medigap Plan G (~$200/mo pp) + Part D (~$45/mo pp). IRA out-of-pocket cap $2,000/yr starting 2025.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD (macular degeneration)"
+      ],
+      "costs": [
+        {
+          "item": "Medicare Part B premium",
+          "monthlyCost": 175,
+          "notes": "Standard 2025 premium per person"
+        },
+        {
+          "item": "Medigap Plan G premium",
+          "monthlyCost": 210,
+          "notes": "Higher due to AMD + multiple conditions. Age-rated."
+        },
+        {
+          "item": "Part D premium",
+          "monthlyCost": 45,
+          "notes": "Tier 3 plan to cover GLP-1"
+        },
+        {
+          "item": "Anti-VEGF injections (Eylea/Lucentis)",
+          "monthlyCost": 80,
+          "notes": "Medicare covers 80%, Medigap covers 20% coinsurance. ~6-8 injections/yr at $40-50 copay each."
+        },
+        {
+          "item": "Ophthalmologist specialist visits",
+          "monthlyCost": 25,
+          "notes": "OCT scans every 4-8 weeks. Medicare + Medigap covers most."
+        },
+        {
+          "item": "Endocrinologist (thyroid monitoring)",
+          "monthlyCost": 10,
+          "notes": "Quarterly bloodwork/visits. Low copay with Medigap."
+        },
+        {
+          "item": "Pulmonologist (asthma check-ups)",
+          "monthlyCost": 8,
+          "notes": "Annual visit + as-needed. Mild asthma, infrequent."
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Gout",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Migraines"
+      ],
+      "costs": [
+        {
+          "item": "Medicare Part B premium",
+          "monthlyCost": 175,
+          "notes": "Standard 2025 premium per person"
+        },
+        {
+          "item": "Medigap Plan G premium",
+          "monthlyCost": 190,
+          "notes": "Slightly lower — no AMD, but diabetes management"
+        },
+        {
+          "item": "Part D premium",
+          "monthlyCost": 40,
+          "notes": "All generics — lower tier plan sufficient"
+        },
+        {
+          "item": "Endocrinologist (diabetes mgmt)",
+          "monthlyCost": 15,
+          "notes": "Quarterly A1C, bloodwork. Covered well by Medicare."
+        },
+        {
+          "item": "Diabetes supplies (strips, lancets)",
+          "monthlyCost": 25,
+          "notes": "Medicare Part B covers glucose monitors. Some copays."
+        },
+        {
+          "item": "Rheumatologist (gout monitoring)",
+          "monthlyCost": 8,
+          "notes": "Semi-annual visits. Uric acid monitoring."
+        },
+        {
+          "item": "Neurologist (migraine follow-up)",
+          "monthlyCost": 8,
+          "notes": "Annual-semi-annual visits for topiramate management."
+        }
+      ]
+    },
+    "shared": [
+      {
+        "item": "Dental insurance (2 adults)",
+        "monthlyCost": 70,
+        "notes": "Separate dental plan ~$35/person. Medicare does not cover dental."
+      },
+      {
+        "item": "Vision insurance (2 adults)",
+        "monthlyCost": 25,
+        "notes": "Basic vision plan. AMD specialist visits covered by Medicare Part B."
+      },
+      {
+        "item": "Annual physicals & preventive care",
+        "monthlyCost": 0,
+        "notes": "Covered 100% by Medicare — no copay for preventive."
+      }
+    ],
+    "monthlyTotals": {
+      "person1": 553,
+      "person2": 461,
+      "shared": 95,
+      "household": 1109
+    },
+    "notes": null,
+    "phaseTransition": null
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Black Hair Care",
+      "priceRange": {
+        "cut": "30-55",
+        "color": "70-130",
+        "fullService": "90-200"
+      },
+      "notes": "Savannah has a strong Black community with many experienced salons, particularly along MLK Jr. Blvd and the Southside.",
+      "providers": [
+        {
+          "name": "The Hair Gallery Savannah",
+          "type": "Full-service salon",
+          "address": "Savannah, GA",
+          "distanceMi": 5,
+          "rating": 4.7,
+          "notes": "Natural hair, locs, color, weaves, braids. Black-owned. Walk-ins welcome.",
+          "website": ""
+        },
+        {
+          "name": "Kinks & Curls Natural Hair Salon",
+          "type": "Natural hair salon",
+          "address": "Savannah, GA",
+          "distanceMi": 7,
+          "rating": 4.6,
+          "notes": "Specializes in natural hair care, TWA to waist-length. Color services, deep conditioning.",
+          "website": ""
+        }
+      ]
+    },
+    "whiteHairCare": {
+      "label": "White/Caucasian Hair Care",
+      "priceRange": {
+        "cut": "25-50",
+        "color": "65-130",
+        "highlights": "90-170"
+      },
+      "notes": "Historic district and Southside have good salon options. Lower prices than major metros.",
+      "providers": [
+        {
+          "name": "Civetta Salon",
+          "type": "Upscale salon",
+          "address": "Savannah Historic District",
+          "distanceMi": 3,
+          "rating": 4.8,
+          "notes": "Highly rated for color and highlights. Experienced with grey coverage and blending.",
+          "website": ""
+        },
+        {
+          "name": "Fantastic Sams / Great Clips",
+          "type": "Chain salon",
+          "address": "Savannah, GA",
+          "distanceMi": 4,
+          "rating": 4,
+          "notes": "Budget-friendly cuts and basic color. Senior discount available.",
+          "website": ""
+        }
+      ]
+    },
+    "mensBigTall": {
+      "label": "Men's Big & Tall Clothing",
+      "priceRange": {
+        "shirts": "25-65",
+        "pants": "35-60",
+        "suits": "120-300"
+      },
+      "notes": "Limited big & tall brick-and-mortar in Savannah. DXL in nearby Jacksonville (2 hrs). Online shopping recommended.",
+      "providers": [
+        {
+          "name": "Belk (Oglethorpe Mall)",
+          "type": "Department store",
+          "address": "Savannah, GA",
+          "distanceMi": 6,
+          "rating": 4.1,
+          "notes": "Extended sizes section. Southern brands. Good for dress shirts and khakis.",
+          "website": ""
+        },
+        {
+          "name": "Walmart / Target",
+          "type": "Big box retail",
+          "address": "Savannah, GA",
+          "distanceMi": 5,
+          "rating": 3.8,
+          "notes": "George and Goodfellow brands go up to 3XL/44 waist. Budget-friendly basics.",
+          "website": ""
+        }
+      ]
+    },
+    "womensClothing": {
+      "label": "Women's Regular Clothing",
+      "priceRange": {
+        "casual": "20-50",
+        "dresses": "35-90",
+        "professional": "40-110"
+      },
+      "notes": "Oglethorpe Mall and Tanger Outlets (Pooler) provide good shopping. Broughton Street downtown has boutiques.",
+      "providers": [
+        {
+          "name": "Belk (Oglethorpe Mall)",
+          "type": "Department store",
+          "address": "Savannah, GA",
+          "distanceMi": 6,
+          "rating": 4.2,
+          "notes": "Full women's department. Regular sizes well-stocked. Alterations available.",
+          "website": ""
+        },
+        {
+          "name": "Tanger Outlets (Pooler)",
+          "type": "Outlet center",
+          "address": "Pooler, GA",
+          "distanceMi": 12,
+          "rating": 4.3,
+          "notes": "J.Crew, Banana Republic, LOFT outlets. 30-70% off retail. Great for stocking up.",
+          "website": ""
+        }
+      ]
+    },
+    "shoes": {
+      "label": "Shoes",
+      "priceRange": {
+        "casual": "35-75",
+        "dress": "55-120",
+        "athletic": "50-110",
+        "wideWidth": "45-100"
+      },
+      "notes": "DSW at the outlet mall, Belk carries comfort brands. Rack Room Shoes is a good local option.",
+      "providers": [
+        {
+          "name": "DSW (Pooler)",
+          "type": "Shoe warehouse",
+          "address": "Pooler, GA",
+          "distanceMi": 12,
+          "rating": 4.3,
+          "notes": "Wide widths available. Good selection of comfort and dress shoes.",
+          "website": "https://www.dsw.com/"
+        },
+        {
+          "name": "Rack Room Shoes",
+          "type": "Shoe retailer",
+          "address": "Savannah, GA",
+          "distanceMi": 6,
+          "rating": 4.1,
+          "notes": "Mid-range prices. Athletic, casual, dress. Extended sizes in some styles.",
+          "website": ""
+        }
+      ]
+    }
+  }
+}

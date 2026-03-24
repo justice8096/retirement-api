@@ -1,0 +1,163 @@
+{
+  "city": "Waterford / Southeast Coast",
+  "neighborhoods": [
+    {
+      "id": "waterford-city-centre",
+      "name": "Waterford City Centre (Viking Triangle)",
+      "description": "The historic heart of Ireland's oldest city, centred on the Viking Triangle with medieval museums, Reginald's Tower, and a compact walkable core along the River Suir",
+      "character": "Urban historic, walkable, culturally rich with Viking and medieval heritage",
+      "housing": {
+        "avgRentOneBedroomEUR": 900,
+        "avgRentTwoBedroomEUR": 1200,
+        "buyPricePerSqmEUR": 2200,
+        "predominantType": "Apartments and terraced houses in city centre, modern developments along the quays"
+      },
+      "walkabilityScore": 85,
+      "transitScore": 60,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small-growing",
+        "englishPrevalence": "native"
+      },
+      "character_notes": "Viking Triangle museums, Waterford Crystal visitor centre nearby. Weekly farmers market. Theatre Royal. Vibrant pub scene on John Street and The Quay. Bus Éireann hub.",
+      "sources": [
+        {
+          "title": "Daft.ie - Waterford City Rentals",
+          "url": "https://www.daft.ie/property-for-rent/waterford-city"
+        },
+        {
+          "title": "Visit Waterford - Viking Triangle",
+          "url": "https://www.visitwaterford.com/viking-triangle/"
+        },
+        {
+          "title": "Waterford City & County Council",
+          "url": "https://www.waterfordcouncil.ie/"
+        }
+      ]
+    },
+    {
+      "id": "tramore",
+      "name": "Tramore",
+      "description": "Popular seaside town 11km south of Waterford city with a long sandy beach, amusement park, and family-friendly atmosphere",
+      "character": "Seaside suburban, beach lifestyle, family-oriented with growing year-round community",
+      "housing": {
+        "avgRentOneBedroomEUR": 850,
+        "avgRentTwoBedroomEUR": 1100,
+        "buyPricePerSqmEUR": 2600,
+        "predominantType": "Semi-detached houses and modern estates, some coastal apartments"
+      },
+      "walkabilityScore": 65,
+      "transitScore": 35,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "native"
+      },
+      "character_notes": "3km Blue Flag beach. Tramore Racecourse. Good selection of pubs and restaurants. Surf school. 15-minute drive to Waterford city. Splashworld water park. Growing commuter town.",
+      "sources": [
+        {
+          "title": "Daft.ie - Tramore Rentals",
+          "url": "https://www.daft.ie/property-for-rent/tramore-waterford"
+        },
+        {
+          "title": "Visit Waterford - Tramore",
+          "url": "https://www.visitwaterford.com/tramore/"
+        }
+      ]
+    },
+    {
+      "id": "dunmore-east",
+      "name": "Dunmore East",
+      "description": "Picturesque fishing village on the southeast coast with dramatic cliff walks, quiet coves, and a charming harbour",
+      "character": "Quiet coastal village, scenic, popular with artists and retirees, expat-friendly",
+      "housing": {
+        "avgRentOneBedroomEUR": 750,
+        "avgRentTwoBedroomEUR": 1000,
+        "buyPricePerSqmEUR": 2800,
+        "predominantType": "Cottages, detached houses, some newer developments. Holiday lets convert to long-term in winter."
+      },
+      "walkabilityScore": 50,
+      "transitScore": 15,
+      "safetyRating": "very high",
+      "expats": {
+        "communitySize": "small-but-established",
+        "englishPrevalence": "native"
+      },
+      "character_notes": "Popular with international visitors and retirees. Cliff walks to Counsellors Strand. Active fishing harbour. Seasonal farmers market. Limited services — 20-minute drive to Waterford city for shopping. Adventure centre and sailing club.",
+      "sources": [
+        {
+          "title": "Daft.ie - Dunmore East Rentals",
+          "url": "https://www.daft.ie/property-for-rent/dunmore-east-waterford"
+        },
+        {
+          "title": "Visit Waterford - Dunmore East",
+          "url": "https://www.visitwaterford.com/dunmore-east/"
+        }
+      ]
+    },
+    {
+      "id": "ferrybank",
+      "name": "Ferrybank",
+      "description": "Suburban area across the River Suir from Waterford city centre, straddling the Waterford-Kilkenny border with shopping centres and residential estates",
+      "character": "Suburban, convenient, good value housing with easy access to city centre",
+      "housing": {
+        "avgRentOneBedroomEUR": 800,
+        "avgRentTwoBedroomEUR": 1000,
+        "buyPricePerSqmEUR": 1800,
+        "predominantType": "Modern housing estates, semi-detached and detached houses with gardens"
+      },
+      "walkabilityScore": 45,
+      "transitScore": 40,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "native"
+      },
+      "character_notes": "Ferrybank Shopping Centre. Waterford Crystal visitor centre nearby. Bridge walk to city centre (10 min). Good schools. More space and value than city centre. Some areas technically in County Kilkenny.",
+      "sources": [
+        {
+          "title": "Daft.ie - Ferrybank Rentals",
+          "url": "https://www.daft.ie/property-for-rent/ferrybank-waterford"
+        },
+        {
+          "title": "Waterford City & County Council",
+          "url": "https://www.waterfordcouncil.ie/"
+        }
+      ]
+    },
+    {
+      "id": "dungarvan",
+      "name": "Dungarvan",
+      "description": "Attractive harbour town 30 minutes west of Waterford, known as a food destination with the Waterford Greenway cycling trail terminus",
+      "character": "Small-town charm, food culture, active lifestyle with Greenway, growing destination",
+      "housing": {
+        "avgRentOneBedroomEUR": 750,
+        "avgRentTwoBedroomEUR": 950,
+        "buyPricePerSqmEUR": 2000,
+        "predominantType": "Terraced and semi-detached houses in town, rural cottages and farmhouses in surrounding area"
+      },
+      "walkabilityScore": 70,
+      "transitScore": 25,
+      "safetyRating": "very high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "native"
+      },
+      "character_notes": "Waterford Greenway terminus (46km cycling/walking trail from Waterford city). West Waterford Festival of Food. Excellent restaurants including Tannery (Michelin-rated). Dungarvan Brewing Company. Harbour walks. Nearest town to Copper Coast UNESCO Global Geopark.",
+      "sources": [
+        {
+          "title": "Daft.ie - Dungarvan Rentals",
+          "url": "https://www.daft.ie/property-for-rent/dungarvan-waterford"
+        },
+        {
+          "title": "Visit Waterford - Dungarvan",
+          "url": "https://www.visitwaterford.com/dungarvan/"
+        },
+        {
+          "title": "Waterford Greenway",
+          "url": "https://www.visitwaterford.com/waterford-greenway/"
+        }
+      ]
+    }
+  ]
+}

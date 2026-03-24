@@ -1,0 +1,245 @@
+{
+  "distanceUnit": "km",
+  "currency": "USD",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Hospital Vozandes",
+      "address": "City center area, Vilcabamba, Ecuador",
+      "distanceKm": 5,
+      "notes": "Private hospital with English-speaking physicians, modern equipment",
+      "sources": [
+        {
+          "title": "Hospital Vozandes",
+          "url": "https://www.hospitalvozandes.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Fybeca",
+      "address": "City center area, Vilcabamba, Ecuador",
+      "distanceKm": 1.5,
+      "notes": "Well-stocked pharmacy, prescription medications, some English spoken",
+      "sources": [
+        {
+          "title": "Fybeca",
+          "url": "https://www.fybeca.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Supermaxi",
+      "address": "City center area, Vilcabamba, Ecuador",
+      "distanceKm": 2,
+      "notes": "Largest supermarket chain, imported and local goods",
+      "sources": [
+        {
+          "title": "Supermaxi",
+          "url": "https://www.supermaxi.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "Banco Pichincha",
+      "address": "City center area, Vilcabamba, Ecuador",
+      "distanceKm": 2,
+      "notes": "Largest bank in Ecuador, ATMs, some English-speaking staff",
+      "sources": [
+        {
+          "title": "Banco Pichincha",
+          "url": "https://www.pichincha.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Clínica Vilcabamba",
+      "address": "City center area, Vilcabamba, Ecuador",
+      "distanceKm": 3,
+      "notes": "Private clinic with English-speaking doctors available",
+      "sources": [
+        {
+          "title": "Clínica Vilcabamba",
+          "url": "https://www.salud.gob.ec/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Dental Clinic Vilcabamba Center",
+      "address": "City center area, Vilcabamba, Ecuador",
+      "distanceKm": 3,
+      "notes": "General and cosmetic dentistry, some English-speaking dentists, modern equipment",
+      "sources": [
+        {
+          "title": "Dental Services Ecuador",
+          "url": "https://www.salud.gob.ec/"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Veterinary Clinic Vilcabamba",
+      "address": "City center area, Vilcabamba, Ecuador",
+      "distanceKm": 4,
+      "notes": "Full veterinary services, vaccinations, surgery, some English spoken",
+      "sources": [
+        {
+          "title": "Veterinary Services Ecuador",
+          "url": "https://www.veterinaria.ec/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Parque Canino / Dog Park Vilcabamba",
+      "address": "Park area, Vilcabamba, Ecuador",
+      "distanceKm": 5,
+      "notes": "Off-leash area, green space popular with dog owners, water available",
+      "sources": [
+        {
+          "title": "Parks in Vilcabamba",
+          "url": "https://www.quito.gob.ec/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "Serfitness",
+      "address": "City center area, Vilcabamba, Ecuador",
+      "distanceKm": 3,
+      "notes": "Modern gym with cardio and weight equipment, group classes, monthly memberships",
+      "sources": [
+        {
+          "title": "Serfitness",
+          "url": "https://www.serfitness.com.ec/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "English-Speaking Christian Fellowship",
+      "address": "City center area, Vilcabamba, Ecuador",
+      "distanceKm": 5,
+      "notes": "English-language services, expat community gathering point, social events",
+      "sources": [
+        {
+          "title": "English-Speaking Christian Fellowship",
+          "url": "https://www.escfquito.org/"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Ciudad de Catamayo Airport (LOH)",
+      "address": "Airport area",
+      "distanceKm": 35,
+      "notes": "International airport with domestic and international flights",
+      "sources": [
+        {
+          "title": "Ciudad de Catamayo Airport",
+          "url": "https://www.aerocivil.gob.ec/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "MetroQ / Trole Vilcabamba",
+      "address": "City center area, Vilcabamba, Ecuador",
+      "distanceKm": 2,
+      "notes": "Bus rapid transit and trolleybus system, affordable fares",
+      "sources": [
+        {
+          "title": "MetroQ",
+          "url": "https://www.quito.gob.ec/"
+        }
+      ]
+    },
+    {
+      "categoryId": "coworking",
+      "name": "Impaqto Coworking Vilcabamba",
+      "address": "City center area, Vilcabamba, Ecuador",
+      "distanceKm": 3,
+      "notes": "Coworking space, high-speed internet, meeting rooms, community events",
+      "sources": [
+        {
+          "title": "Impaqto Coworking Vilcabamba",
+          "url": "https://www.impaqto.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "Pet Grooming Vilcabamba",
+      "address": "City center area, Vilcabamba, Ecuador",
+      "distanceKm": 4,
+      "notes": "Professional pet grooming services, bathing, clipping, appointment recommended",
+      "sources": [
+        {
+          "title": "Pet Services Vilcabamba",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "categoryId": "international_school",
+      "name": "Gringo Tree Expat Community",
+      "address": "City center area, Vilcabamba, Ecuador",
+      "distanceKm": 4,
+      "notes": "International expat community center, social events, networking, relocation assistance",
+      "sources": [
+        {
+          "title": "Gringo Tree Expat Community",
+          "url": "https://www.gringotree.com/"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "Vilcabamba Cultural Center",
+      "description": "Cultural center with local art, history, and community events",
+      "distanceKm": 4,
+      "frequency": "Tue-Sun 10:00-17:00",
+      "sources": [
+        {
+          "title": "Vilcabamba Culture",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "estimatedCostUSD": 8
+    },
+    {
+      "type": "nature",
+      "name": "Vilcabamba Central Park / Garden",
+      "description": "Main public park with walking trails, gardens, and green space",
+      "distanceKm": 3,
+      "frequency": "Daily, dawn to dusk",
+      "sources": [
+        {
+          "title": "Parks in Vilcabamba",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "dining",
+      "name": "Vilcabamba Restaurant District",
+      "description": "Walkable area with diverse restaurants, cafes, and bars",
+      "distanceKm": 2,
+      "frequency": "Daily, lunch and dinner service",
+      "sources": [
+        {
+          "title": "Dining in Vilcabamba",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "estimatedCostUSD": 25
+    }
+  ]
+}

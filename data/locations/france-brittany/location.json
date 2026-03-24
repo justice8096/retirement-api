@@ -1,0 +1,314 @@
+{
+  "id": "france-brittany",
+  "name": "Brittany, France",
+  "country": "France",
+  "region": "Brittany",
+  "cities": [
+    "Vannes",
+    "Quimper",
+    "Dinard",
+    "Saint-Malo"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "visa": {
+    "type": "Long-Stay Visa (VLS-TS)",
+    "incomeRequirement": null,
+    "notes": "Proof of sufficient resources required"
+  },
+  "climate": {
+    "winterLowF": 38,
+    "summerHighF": 72,
+    "rainyDaysPerYear": 160,
+    "meetsWarmWinterReq": false
+  },
+  "monthlyCosts": {
+    "rent": {
+      "min": 750,
+      "max": 1150,
+      "typical": 950,
+      "type": "2-bedroom house (maison)",
+      "annualInflation": 0.02,
+      "notes": "Taxe d'habitation eliminated for primary residences (2023).",
+      "gigInternetTypical": 960,
+      "gigInternetCoverage": 92,
+      "gigInternetProviders": "Orange, SFR, Bouygues Telecom, Free",
+      "gigInternetNotes": "France has 92% national FTTH coverage (Arcep, Mar 2025). 60% of subscriptions are 1Gbps+. Four ISPs compete at virtually every address (98% have 3+ providers). Gig internet is the default, not a premium amenity. Fibre box included in standard €30-40/mo triple-play bundles."
+    },
+    "groceries": {
+      "min": 1050,
+      "max": 1135,
+      "typical": 1100,
+      "notes": "2 adults + pet food",
+      "annualInflation": 0.025
+    },
+    "utilities": {
+      "min": 152,
+      "max": 247,
+      "typical": 190,
+      "annualInflation": 0.025,
+      "breakdown": {
+        "electricity": {
+          "typical": 90,
+          "notes": "EDF tarif bleu. ~8,000 kWh/yr. Electric radiator supplement in older homes. No A/C needed."
+        },
+        "gas": {
+          "typical": 60,
+          "notes": "Engie/GRDF. Natural gas central heating (Oct–Apr primary). Cooking."
+        },
+        "water": {
+          "typical": 40,
+          "notes": "Veolia/Suez. Includes assainissement (sewage treatment). ~120m³/yr for 2 adults."
+        },
+        "sewage": {
+          "typical": 0,
+          "notes": "Included in water bill as assainissement collectif."
+        },
+        "trash": {
+          "typical": 0,
+          "notes": "TEOM (taxe d'enlèvement des ordures ménagères) included in rent — €18/mo."
+        }
+      },
+      "taxes": "TVA included in bills: 5.5% on water/assainissement, 20% on electricity/gas.",
+      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig). Trash included in rent. Sewage included in water bill."
+    },
+    "healthcare": {
+      "min": 80,
+      "max": 180,
+      "typical": 120,
+      "breakdown": {
+        "mutuelle": 50,
+        "copays": 25
+      },
+      "notes": "PUMA universal coverage + Mutuelle complémentaire (~€55-80/person/mo, higher tier for chronic conditions). ALD (Affection Longue Durée) provides 100% coverage for hypertension and diabetes. Macular degeneration: anti-VEGF injections covered 100% at hospital. Hypothyroidism monitoring covered. GLP-1 covered for diabetes indication.",
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "min": 25,
+      "max": 35,
+      "typical": 25,
+      "type": "renter's insurance",
+      "annualInflation": 0.02
+    },
+    "petCare": {
+      "min": 80,
+      "max": 160,
+      "typical": 110,
+      "annualInflation": 0.03,
+      "notes": "Vet visits, vaccinations, flea/tick, pet insurance"
+    },
+    "petDaycare": {
+      "min": 200,
+      "max": 340,
+      "typical": 260,
+      "annualInflation": 0.025,
+      "notes": "Hired pet sitter 2 days/week (~€28/visit). Commercial daycare (garde canine) limited in Brittany; in-home pet sitting more common. Large breed surcharge applies. Rover.com and local garde d'animaux services."
+    },
+    "petGrooming": {
+      "min": 60,
+      "max": 120,
+      "typical": 80,
+      "annualInflation": 0.025,
+      "notes": "Bernese coat maintenance, professional grooming monthly"
+    },
+    "transportation": {
+      "min": 100,
+      "max": 200,
+      "typical": 150,
+      "notes": "Public transit + occasional car rental",
+      "annualInflation": 0.02
+    },
+    "entertainment": {
+      "min": 320,
+      "max": 490,
+      "typical": 390,
+      "annualInflation": 0.02,
+      "notes": "Incl cable+1Gig internet, Netflix, Amazon Prime, Apple TV+, NFL RedZone (DAZN), dining out (lunch for 2 2x/week w/ tax+tip)"
+    },
+    "clothing": {
+      "min": 80,
+      "max": 180,
+      "typical": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "min": 30,
+      "max": 70,
+      "typical": 50,
+      "annualInflation": 0.02
+    },
+    "subscriptions": {
+      "min": 30,
+      "max": 80,
+      "typical": 50,
+      "annualInflation": 0.03,
+      "notes": "Streaming, news, apps"
+    },
+    "phoneCell": {
+      "min": 70,
+      "max": 105,
+      "typical": 85,
+      "annualInflation": 0.02,
+      "notes": "Google Fi Flexible (US Number) + Free Mobile (Local). 2 phones, 1.5GB+ high-speed data each, all taxes included."
+    },
+    "miscellaneous": {
+      "min": 50,
+      "max": 100,
+      "typical": 75,
+      "notes": "Virtual mailbox, phone, etc.",
+      "annualInflation": 0.02
+    },
+    "buffer": {
+      "min": 800,
+      "max": 800,
+      "typical": 800,
+      "annualInflation": 0.025,
+      "notes": "Monthly safety buffer for unexpected expenses"
+    },
+    "medicalOOP": {
+      "min": 25,
+      "max": 100,
+      "typical": 55,
+      "annualInflation": 0.04,
+      "notes": "ALD status for hypertension/diabetes provides 100% Sécu coverage on related care. Anti-VEGF injections performed at hospital: 100% covered. Mutuelle covers ticket modérateur and dépassements d'honoraires. OOP mainly for non-remboursé items, some specialist surcharges, and comfort options."
+    },
+    "medicine": {
+      "min": 29,
+      "typical": 36,
+      "max": 265,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "taxes": {
+      "min": 0,
+      "typical": 0,
+      "max": 0,
+      "annualInflation": 0.02
+    }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true,
+      "brackets": [
+        {
+          "min": 0,
+          "max": 23850,
+          "rate": 0.1
+        },
+        {
+          "min": 23850,
+          "max": 96950,
+          "rate": 0.12
+        },
+        {
+          "min": 96950,
+          "max": 206700,
+          "rate": 0.22
+        },
+        {
+          "min": 206700,
+          "max": 394600,
+          "rate": 0.24
+        },
+        {
+          "min": 394600,
+          "max": 501050,
+          "rate": 0.32
+        },
+        {
+          "min": 501050,
+          "max": 751600,
+          "rate": 0.35
+        },
+        {
+          "min": 751600,
+          "max": null,
+          "rate": 0.37
+        }
+      ],
+      "standardDeduction": 30000,
+      "foreignTaxCredit": true
+    },
+    "stateIncomeTax": {
+      "rate": 0.3,
+      "type": "progressive",
+      "label": "French Income Tax",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 11294,
+          "rate": 0
+        },
+        {
+          "min": 11294,
+          "max": 28797,
+          "rate": 0.11
+        },
+        {
+          "min": 28797,
+          "max": 82341,
+          "rate": 0.3
+        },
+        {
+          "min": 82341,
+          "max": 177106,
+          "rate": 0.41
+        }
+      ],
+      "deduction": 0,
+      "exemptions": "US-France treaty prevents double taxation. Foreign tax credit offsets. SS taxed only in France at 6.6% after allowance."
+    },
+    "salesTax": {
+      "rate": 0,
+      "notes": "No separate sales tax (VAT included in prices)"
+    },
+    "propertyTax": {
+      "rate": 0,
+      "notes": "Taxe d'habitation abolished for primary residence"
+    },
+    "socialCharges": {
+      "rate": 0.065,
+      "name": "CSM",
+      "basis": "passive income above threshold",
+      "annualThreshold": 3660
+    },
+    "vatRate": 0.2,
+    "estVehicleTax": 0,
+    "ssExempt": false,
+    "ssTaxedInCountry": true,
+    "notes": "US-France tax treaty. Foreign tax credit offsets French tax against US federal."
+  },
+  "healthcare": {
+    "system": "PUMA (universal)",
+    "qualityRating": 9,
+    "waitTimes": "moderate",
+    "dentalIncluded": true,
+    "prescriptionCoverage": "70-100%"
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps FTTH available in cities",
+    "dogFriendly": 10,
+    "expatCommunity": 7,
+    "englishPrevalence": 4,
+    "safetyRating": 8
+  },
+  "pros": [
+    "Excellent healthcare (PUMA)",
+    "No pet fees",
+    "Dog-friendly culture",
+    "Good transit",
+    "Beautiful coastline"
+  ],
+  "cons": [
+    "Cool/rainy winters (38F lows)",
+    "Limited English",
+    "Complex tax situation with US",
+    "Distance from US"
+  ],
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93,
+    "note": "EUR per 1 USD. Based on 2016-2026 historical range. Optimistic = strong EUR (good for USD→EUR), Pessimistic = weak EUR."
+  }
+}

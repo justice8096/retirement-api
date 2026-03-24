@@ -1,0 +1,155 @@
+{
+  "city": "Cherry Hill",
+  "neighborhoods": [
+    {
+      "id": "cherry-hill-barclay-farm",
+      "name": "Barclay Farm",
+      "description": "Well-established residential community in central Cherry Hill with mature trees, swim club, and proximity to schools and shopping",
+      "character": "Classic suburban, family-oriented, well-maintained, community-focused",
+      "housing": {
+        "avgRentOneBedroomUSD": 1300,
+        "avgRentTwoBedroomUSD": 1700,
+        "buyPricePerSqmUSD": 2400,
+        "predominantType": "Split-level and colonial single-family homes from the 1960s-70s"
+      },
+      "walkabilityScore": 40,
+      "transitScore": 30,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Active civic association. Community pool and tennis. Close to Cherry Hill Mall and Route 70 shopping corridor. PATCO Haddonfield station is a short drive.",
+      "sources": [
+        {
+          "title": "Zillow - Cherry Hill NJ",
+          "url": "https://www.zillow.com/cherry-hill-nj/"
+        },
+        {
+          "title": "Numbeo Cost of Living Cherry Hill",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cherry-Hill"
+        }
+      ]
+    },
+    {
+      "id": "cherry-hill-kingston-estates",
+      "name": "Kingston Estates",
+      "description": "Upscale residential neighborhood in the eastern section of Cherry Hill with larger lots, mature landscaping, and quiet cul-de-sacs",
+      "character": "Affluent suburban, spacious, quiet, well-established",
+      "housing": {
+        "avgRentOneBedroomUSD": 1400,
+        "avgRentTwoBedroomUSD": 1900,
+        "buyPricePerSqmUSD": 2800,
+        "predominantType": "Large colonial and contemporary homes on half-acre or larger lots"
+      },
+      "walkabilityScore": 25,
+      "transitScore": 20,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "One of Cherry Hill's premier neighborhoods. Near Cherry Hill East High School. Very car-dependent but well-positioned for NJ Turnpike and I-295 access.",
+      "sources": [
+        {
+          "title": "Zillow - Kingston Estates Cherry Hill",
+          "url": "https://www.zillow.com/cherry-hill-nj/kingston-estates/"
+        },
+        {
+          "title": "Cherry Hill Township",
+          "url": "https://www.cherryhillnj.com/"
+        }
+      ]
+    },
+    {
+      "id": "cherry-hill-erlton",
+      "name": "Erlton",
+      "description": "Walkable western Cherry Hill neighborhood adjacent to Haddonfield borough, with a small-town feel and PATCO train access",
+      "character": "Walkable suburban, transit-accessible, community-oriented",
+      "housing": {
+        "avgRentOneBedroomUSD": 1200,
+        "avgRentTwoBedroomUSD": 1600,
+        "buyPricePerSqmUSD": 2500,
+        "predominantType": "Cape Cod and ranch-style homes from the 1950s-60s, some townhouses"
+      },
+      "walkabilityScore": 60,
+      "transitScore": 55,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Walking distance to PATCO Haddonfield station for direct train to Philadelphia (15 minutes). Adjacent to charming downtown Haddonfield with shops and restaurants.",
+      "sources": [
+        {
+          "title": "Zillow - Erlton Cherry Hill",
+          "url": "https://www.zillow.com/cherry-hill-nj/erlton/"
+        },
+        {
+          "title": "PATCO Speedline",
+          "url": "https://www.rfrail.com/patco/"
+        }
+      ]
+    },
+    {
+      "id": "cherry-hill-mall-area",
+      "name": "Cherry Hill Mall Area",
+      "description": "Central commercial zone surrounding the landmark Cherry Hill Mall, with diverse dining, retail, and a mix of housing options",
+      "character": "Commercial-adjacent, convenient, diverse, moderate density",
+      "housing": {
+        "avgRentOneBedroomUSD": 1250,
+        "avgRentTwoBedroomUSD": 1650,
+        "buyPricePerSqmUSD": 2200,
+        "predominantType": "Apartment complexes, condos, and townhouse communities"
+      },
+      "walkabilityScore": 55,
+      "transitScore": 40,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Cherry Hill Mall was one of the first enclosed malls in the eastern US. Strong Korean and Indian restaurant scene on Route 70. NJ Transit bus connections.",
+      "sources": [
+        {
+          "title": "Zillow - Cherry Hill NJ",
+          "url": "https://www.zillow.com/cherry-hill-nj/"
+        },
+        {
+          "title": "Cherry Hill Township",
+          "url": "https://www.cherryhillnj.com/"
+        }
+      ]
+    },
+    {
+      "id": "cherry-hill-springdale",
+      "name": "Springdale",
+      "description": "Residential neighborhood in southern Cherry Hill near Springdale Road, with a mix of established homes and access to county parks",
+      "character": "Quiet residential, park-adjacent, affordable, suburban",
+      "housing": {
+        "avgRentOneBedroomUSD": 1150,
+        "avgRentTwoBedroomUSD": 1500,
+        "buyPricePerSqmUSD": 2100,
+        "predominantType": "Ranch and bi-level homes from the 1960s-70s with yards"
+      },
+      "walkabilityScore": 35,
+      "transitScore": 25,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Near Croft Farm, which offers arts programs, trails, and community events. More affordable than northern Cherry Hill neighborhoods. Good access to I-295.",
+      "sources": [
+        {
+          "title": "Zillow - Cherry Hill NJ",
+          "url": "https://www.zillow.com/cherry-hill-nj/"
+        },
+        {
+          "title": "Camden County Parks - Croft Farm",
+          "url": "https://www.camdencounty.com/service/parks/croft-farm/"
+        }
+      ]
+    }
+  ]
+}

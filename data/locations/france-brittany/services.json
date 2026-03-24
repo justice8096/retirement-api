@@ -1,0 +1,330 @@
+{
+  "distanceUnit": "km",
+  "currency": "EUR",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "CHU de Rennes - Hôpital Pontchaillou",
+      "address": "2 Rue Henri Le Guilloux, 35000 Rennes",
+      "distanceKm": 2.5,
+      "notes": "Major teaching hospital, full emergency department, some English-speaking staff",
+      "sources": [
+        {
+          "title": "CHU Rennes Official",
+          "url": "https://www.chu-rennes.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Pharmacie de la Place Sainte-Anne",
+      "address": "Place Sainte-Anne, 35000 Rennes",
+      "distanceKm": 0.3,
+      "notes": "Central pharmacy, extended hours, some English spoken",
+      "sources": [
+        {
+          "title": "Ordre National des Pharmaciens",
+          "url": "https://www.ordre.pharmacien.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Carrefour City Rennes Centre",
+      "address": "20 Rue de Nemours, 35000 Rennes",
+      "distanceKm": 0.4,
+      "notes": "Central supermarket, open Mon-Sat until 21:00",
+      "sources": [
+        {
+          "title": "Carrefour",
+          "url": "https://www.carrefour.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "BNP Paribas Rennes République",
+      "address": "Place de la République, 35000 Rennes",
+      "distanceKm": 0.2,
+      "notes": "Full-service branch with English-speaking advisors, ATM available 24/7",
+      "sources": [
+        {
+          "title": "BNP Paribas",
+          "url": "https://mabanque.bnpparibas/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Maison de Santé Pluriprofessionnelle Centre",
+      "address": "Rue de la Visitation, 35000 Rennes",
+      "distanceKm": 0.6,
+      "notes": "Multi-practitioner clinic, appointments via Doctolib, some English-speaking GPs",
+      "sources": [
+        {
+          "title": "Doctolib",
+          "url": "https://www.doctolib.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Cabinet Dentaire du Colombier",
+      "address": "Rue du Colombier, 35000 Rennes",
+      "distanceKm": 0.8,
+      "notes": "General and cosmetic dentistry, Doctolib booking available",
+      "sources": [
+        {
+          "title": "Doctolib Dentists Rennes",
+          "url": "https://www.doctolib.fr/dentiste/rennes"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Clinique Vétérinaire du Thabor",
+      "address": "Rue de Paris, 35000 Rennes",
+      "distanceKm": 1.2,
+      "notes": "Full-service veterinary clinic, emergency care available",
+      "sources": [
+        {
+          "title": "Clinique Vétérinaire du Thabor",
+          "url": "https://www.veterinaire-thabor-rennes.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Parc du Thabor",
+      "address": "Place Saint-Melaine, 35000 Rennes",
+      "distanceKm": 0.8,
+      "notes": "10-hectare formal gardens and park, dogs allowed on leash, beautiful botanical areas",
+      "sources": [
+        {
+          "title": "Ville de Rennes - Parc du Thabor",
+          "url": "https://metropole.rennes.fr/le-parc-du-thabor"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "Fitness Park Rennes Centre",
+      "address": "Rue d'Isly, 35000 Rennes",
+      "distanceKm": 0.5,
+      "notes": "Modern gym, 24/7 access with membership, group classes available",
+      "sources": [
+        {
+          "title": "Fitness Park",
+          "url": "https://www.fitnesspark.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "All Saints Anglican Church Rennes",
+      "address": "Rue de la Cochardière, 35000 Rennes",
+      "distanceKm": 3.5,
+      "notes": "Anglican services in English, welcoming expat community",
+      "sources": [
+        {
+          "title": "Diocese in Europe",
+          "url": "https://europe.anglican.org/"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Aéroport Rennes Bretagne (RNS)",
+      "address": "35136 Saint-Jacques-de-la-Lande",
+      "distanceKm": 7,
+      "notes": "Flights to London, Dublin, Amsterdam, and domestic; bus connection to city center",
+      "sources": [
+        {
+          "title": "Rennes Airport",
+          "url": "https://www.rennes.aeroport.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Gare de Rennes",
+      "address": "19 Place de la Gare, 35000 Rennes",
+      "distanceKm": 1,
+      "notes": "TGV station, 1h25 to Paris, metro line connection, bus hub",
+      "sources": [
+        {
+          "title": "SNCF",
+          "url": "https://www.sncf.com/fr/gares/rennes/FRDRE"
+        }
+      ]
+    },
+    {
+      "categoryId": "coworking",
+      "name": "Le Catalyseur Rennes",
+      "address": "Rue de la Chalotais, 35000 Rennes",
+      "distanceKm": 0.4,
+      "notes": "Modern coworking space, day passes and monthly memberships, meeting rooms",
+      "sources": [
+        {
+          "title": "Le Catalyseur",
+          "url": "https://www.lecatalyseur.co/"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Clinique Vétérinaire des Lices",
+      "address": "Boulevard de la Liberté, 35000 Rennes",
+      "distanceKm": 0.6,
+      "notes": "Central location, small animal specialist, emergency referrals",
+      "sources": [
+        {
+          "title": "Pages Jaunes Vétérinaire Rennes",
+          "url": "https://www.pagesjaunes.fr/annuaire/rennes-35/veterinaires"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "Musée de Bretagne",
+      "description": "Regional history and culture museum housed in Les Champs Libres cultural center",
+      "distanceKm": 0.5,
+      "estimatedCostEUR": 0,
+      "frequency": "Permanent collection free, special exhibits 4-8 EUR",
+      "sources": [
+        {
+          "title": "Musée de Bretagne",
+          "url": "https://www.musee-bretagne.fr/"
+        }
+      ]
+    },
+    {
+      "type": "historical",
+      "name": "Parlement de Bretagne",
+      "description": "17th-century former Breton parliament building with guided tours of ornate interiors",
+      "distanceKm": 0.3,
+      "estimatedCostEUR": 7,
+      "frequency": "Guided tours available, check seasonal schedule",
+      "sources": [
+        {
+          "title": "Rennes Tourism",
+          "url": "https://www.tourisme-rennes.com/"
+        }
+      ]
+    },
+    {
+      "type": "outdoor",
+      "name": "Parc du Thabor",
+      "description": "Elegant 10-hectare park with French and English gardens, aviary, and rose garden",
+      "distanceKm": 0.8,
+      "estimatedCostEUR": 0,
+      "frequency": "Open daily, dawn to dusk",
+      "sources": [
+        {
+          "title": "Rennes Métropole",
+          "url": "https://metropole.rennes.fr/le-parc-du-thabor"
+        }
+      ]
+    },
+    {
+      "type": "dining",
+      "name": "Marché des Lices",
+      "description": "One of France's largest Saturday morning markets, fresh produce, seafood, crêpes",
+      "distanceKm": 0.4,
+      "estimatedCostEUR": 15,
+      "frequency": "Every Saturday 7:00-13:30",
+      "sources": [
+        {
+          "title": "Marché des Lices",
+          "url": "https://www.tourisme-rennes.com/fr/decouvrir-rennes/marche-des-lices/"
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "name": "Forêt de Brocéliande",
+      "description": "Legendary Arthurian forest, hiking trails through ancient woodland",
+      "distanceKm": 35,
+      "estimatedCostEUR": 0,
+      "frequency": "Day trip, open year-round",
+      "sources": [
+        {
+          "title": "Brocéliande Tourism",
+          "url": "https://www.broceliande-vacances.com/"
+        }
+      ]
+    },
+    {
+      "type": "entertainment",
+      "name": "Les Champs Libres",
+      "description": "Cultural complex with planetarium, science museum, and library",
+      "distanceKm": 0.5,
+      "estimatedCostEUR": 6,
+      "frequency": "Tue-Sun, varies by venue",
+      "sources": [
+        {
+          "title": "Les Champs Libres",
+          "url": "https://www.leschampslibres.fr/"
+        }
+      ]
+    },
+    {
+      "type": "social",
+      "name": "Rue de la Soif (Rue Saint-Michel)",
+      "description": "Famous bar street in old town, lively social atmosphere, pub culture",
+      "distanceKm": 0.2,
+      "estimatedCostEUR": 10,
+      "frequency": "Nightly, especially Thu-Sat",
+      "sources": [
+        {
+          "title": "Rennes Tourism",
+          "url": "https://www.tourisme-rennes.com/"
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "name": "Côte d'Émeraude (Emerald Coast)",
+      "description": "Stunning coastline including Saint-Malo, Dinard, and Cap Fréhel",
+      "distanceKm": 65,
+      "estimatedCostEUR": 0,
+      "frequency": "Day trip, best Apr-Oct",
+      "sources": [
+        {
+          "title": "Saint-Malo Tourism",
+          "url": "https://www.saint-malo-tourisme.com/"
+        }
+      ]
+    },
+    {
+      "type": "historical",
+      "name": "Saint-Malo Walled City",
+      "description": "Medieval walled port city, walk the ramparts, corsair history",
+      "distanceKm": 70,
+      "estimatedCostEUR": 0,
+      "frequency": "Day trip, open year-round",
+      "sources": [
+        {
+          "title": "Saint-Malo Tourism",
+          "url": "https://www.saint-malo-tourisme.com/"
+        }
+      ]
+    },
+    {
+      "type": "sports",
+      "name": "Stade Roazhon Park",
+      "description": "Home of Stade Rennais FC, Ligue 1 football matches",
+      "distanceKm": 3,
+      "estimatedCostEUR": 25,
+      "frequency": "Match days, Aug-May season",
+      "sources": [
+        {
+          "title": "Stade Rennais FC",
+          "url": "https://www.staderennais.com/"
+        }
+      ]
+    }
+  ]
+}

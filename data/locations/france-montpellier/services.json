@@ -1,0 +1,330 @@
+{
+  "distanceUnit": "km",
+  "currency": "EUR",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "CHU de Montpellier - Hôpital Lapeyronie",
+      "address": "371 Avenue du Doyen Gaston Giraud, 34090 Montpellier",
+      "distanceKm": 3.5,
+      "notes": "Major university hospital, full emergency services, trauma center",
+      "sources": [
+        {
+          "title": "CHU Montpellier",
+          "url": "https://www.chu-montpellier.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Pharmacie de la Comédie",
+      "address": "Place de la Comédie, 34000 Montpellier",
+      "distanceKm": 0.1,
+      "notes": "Central location, open late, multilingual staff",
+      "sources": [
+        {
+          "title": "Ordre National des Pharmaciens",
+          "url": "https://www.ordre.pharmacien.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Carrefour City Montpellier Comédie",
+      "address": "Rue de la Loge, 34000 Montpellier",
+      "distanceKm": 0.2,
+      "notes": "Convenient city-center grocery, open Mon-Sat until 22:00",
+      "sources": [
+        {
+          "title": "Carrefour",
+          "url": "https://www.carrefour.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "Société Générale Montpellier Comédie",
+      "address": "Place de la Comédie, 34000 Montpellier",
+      "distanceKm": 0.1,
+      "notes": "Major bank branch, ATM, English service available by appointment",
+      "sources": [
+        {
+          "title": "Société Générale",
+          "url": "https://www.societegenerale.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Centre Médical Antigone",
+      "address": "Quartier Antigone, 34000 Montpellier",
+      "distanceKm": 0.8,
+      "notes": "Multi-practitioner medical center, Doctolib appointments",
+      "sources": [
+        {
+          "title": "Doctolib Montpellier",
+          "url": "https://www.doctolib.fr/medecin-generaliste/montpellier"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Centre Dentaire Montpellier Ecusson",
+      "address": "Rue Foch, 34000 Montpellier",
+      "distanceKm": 0.3,
+      "notes": "Central dental practice, general and orthodontic care",
+      "sources": [
+        {
+          "title": "Doctolib Dentists Montpellier",
+          "url": "https://www.doctolib.fr/dentiste/montpellier"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Clinique Vétérinaire de l'Ecusson",
+      "address": "Rue de l'Université, 34000 Montpellier",
+      "distanceKm": 0.5,
+      "notes": "Central vet clinic, cats and dogs, vaccinations, surgery",
+      "sources": [
+        {
+          "title": "Pages Jaunes Vétérinaire Montpellier",
+          "url": "https://www.pagesjaunes.fr/annuaire/montpellier-34/veterinaires"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Esplanade Charles de Gaulle",
+      "address": "Esplanade Charles de Gaulle, 34000 Montpellier",
+      "distanceKm": 0.2,
+      "notes": "Large tree-lined promenade, dogs on leash, central meeting spot",
+      "sources": [
+        {
+          "title": "Montpellier Tourism",
+          "url": "https://www.montpellier-tourisme.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "Keep Cool Montpellier Centre",
+      "address": "Rue de Maguelone, 34000 Montpellier",
+      "distanceKm": 0.3,
+      "notes": "Affordable gym, no commitment options, cardio and weights",
+      "sources": [
+        {
+          "title": "Keep Cool",
+          "url": "https://www.keepcool.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "Anglican Church of Montpellier",
+      "address": "Rue de Rondelet, 34000 Montpellier",
+      "distanceKm": 0.6,
+      "notes": "English-language services, small but welcoming expat congregation",
+      "sources": [
+        {
+          "title": "Diocese in Europe",
+          "url": "https://europe.anglican.org/"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Aéroport Montpellier Méditerranée (MPL)",
+      "address": "34130 Mauguio",
+      "distanceKm": 8,
+      "notes": "Flights to London, Paris, Amsterdam, Brussels; shuttle bus to center",
+      "sources": [
+        {
+          "title": "Montpellier Airport",
+          "url": "https://www.montpellier.aeroport.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Gare Saint-Roch Montpellier",
+      "address": "Place Auguste Gibert, 34000 Montpellier",
+      "distanceKm": 0.5,
+      "notes": "Main train station, TGV to Paris in 3h20, tram connections",
+      "sources": [
+        {
+          "title": "SNCF",
+          "url": "https://www.gares-sncf.com/fr/gare/frxmj/montpellier-saint-roch"
+        }
+      ]
+    },
+    {
+      "categoryId": "coworking",
+      "name": "Le Buro Montpellier",
+      "address": "Rue de l'Industrie, 34000 Montpellier",
+      "distanceKm": 1.2,
+      "notes": "Coworking with private offices, meeting rooms, startup community",
+      "sources": [
+        {
+          "title": "Le Buro",
+          "url": "https://www.leburo.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "Dog'Style Montpellier",
+      "address": "Rue du Faubourg de la Saunerie, 34000 Montpellier",
+      "distanceKm": 0.4,
+      "notes": "Professional dog grooming, all breeds",
+      "sources": [
+        {
+          "title": "Pages Jaunes Toilettage Montpellier",
+          "url": "https://www.pagesjaunes.fr/annuaire/montpellier-34/toilettage-animaux"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "Musée Fabre",
+      "description": "One of France's leading fine arts museums with Impressionist and modern collections",
+      "distanceKm": 0.2,
+      "estimatedCostEUR": 8,
+      "frequency": "Tue-Sun 10:00-18:00",
+      "sources": [
+        {
+          "title": "Musée Fabre",
+          "url": "https://museefabre.montpellier3m.fr/"
+        }
+      ]
+    },
+    {
+      "type": "historical",
+      "name": "Place de la Comédie",
+      "description": "Grand central square, one of the largest pedestrian areas in Europe, 18th-century architecture",
+      "distanceKm": 0,
+      "estimatedCostEUR": 0,
+      "frequency": "Open 24/7, busiest on market days",
+      "sources": [
+        {
+          "title": "Montpellier Tourism",
+          "url": "https://www.montpellier-tourisme.fr/"
+        }
+      ]
+    },
+    {
+      "type": "outdoor",
+      "name": "Promenade du Peyrou",
+      "description": "Royal promenade with triumphal arch, water tower, and panoramic views to the Pyrenees",
+      "distanceKm": 0.8,
+      "estimatedCostEUR": 0,
+      "frequency": "Open daily, flea market Saturdays",
+      "sources": [
+        {
+          "title": "Montpellier Tourism",
+          "url": "https://www.montpellier-tourisme.fr/"
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "name": "Plage de Palavas-les-Flots",
+      "description": "Mediterranean beach resort 15 min from city by tram, sandy beaches",
+      "distanceKm": 12,
+      "estimatedCostEUR": 0,
+      "frequency": "Year-round, best May-Oct, tram line 3",
+      "sources": [
+        {
+          "title": "Palavas Tourism",
+          "url": "https://www.palavaslesflots.com/"
+        }
+      ]
+    },
+    {
+      "type": "dining",
+      "name": "Halles Castellane",
+      "description": "Covered market with fresh local produce, cheese, wine, and prepared foods",
+      "distanceKm": 0.3,
+      "estimatedCostEUR": 15,
+      "frequency": "Mon-Sat 7:00-14:00",
+      "sources": [
+        {
+          "title": "Montpellier Tourism",
+          "url": "https://www.montpellier-tourisme.fr/"
+        }
+      ]
+    },
+    {
+      "type": "entertainment",
+      "name": "Opéra Comédie",
+      "description": "19th-century opera house with regular performances of opera, ballet, and concerts",
+      "distanceKm": 0.1,
+      "estimatedCostEUR": 30,
+      "frequency": "Season Oct-Jun",
+      "sources": [
+        {
+          "title": "Opéra Orchestre Montpellier",
+          "url": "https://www.opera-orchestre-montpellier.fr/"
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "name": "Pic Saint-Loup",
+      "description": "Iconic limestone peak north of Montpellier, hiking and renowned wine region",
+      "distanceKm": 20,
+      "estimatedCostEUR": 0,
+      "frequency": "Day trip, year-round hiking",
+      "sources": [
+        {
+          "title": "Grand Pic Saint-Loup Tourism",
+          "url": "https://www.tourisme-picsaintloup.fr/"
+        }
+      ]
+    },
+    {
+      "type": "social",
+      "name": "Place Jean Jaurès",
+      "description": "Trendy square with terraces, restaurants, and nightlife hub in the Ecusson",
+      "distanceKm": 0.3,
+      "estimatedCostEUR": 12,
+      "frequency": "Daily, liveliest evenings and weekends",
+      "sources": [
+        {
+          "title": "Montpellier Tourism",
+          "url": "https://www.montpellier-tourisme.fr/"
+        }
+      ]
+    },
+    {
+      "type": "historical",
+      "name": "Cathédrale Saint-Pierre",
+      "description": "Imposing 14th-century Gothic cathedral in the heart of the old town",
+      "distanceKm": 0.5,
+      "estimatedCostEUR": 0,
+      "frequency": "Open daily for visits",
+      "sources": [
+        {
+          "title": "Montpellier Tourism",
+          "url": "https://www.montpellier-tourisme.fr/"
+        }
+      ]
+    },
+    {
+      "type": "sports",
+      "name": "Stade de la Mosson",
+      "description": "Home of Montpellier HSC football club, Ligue 1 matches",
+      "distanceKm": 5,
+      "estimatedCostEUR": 20,
+      "frequency": "Match days Aug-May",
+      "sources": [
+        {
+          "title": "MHSC",
+          "url": "https://www.mhscfoot.com/"
+        }
+      ]
+    }
+  ]
+}

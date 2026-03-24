@@ -1,0 +1,159 @@
+{
+  "city": "Boquete",
+  "neighborhoods": [
+    {
+      "id": "alto-boquete",
+      "name": "Alto Boquete",
+      "description": "Elevated residential area above downtown with sweeping views of Volcan Baru and lush coffee plantations",
+      "character": "Quiet hillside, expat-popular, cooler microclimate",
+      "housing": {
+        "avgRentOneBedroomUSD": 650,
+        "avgRentTwoBedroomUSD": 900,
+        "buyPricePerSqmUSD": 1200,
+        "predominantType": "Modern houses and gated community villas on large lots"
+      },
+      "walkabilityScore": 30,
+      "transitScore": 15,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Many expat-built homes with mountain views. Requires a car. Cooler temperatures year-round due to elevation (~1,400m).",
+      "sources": [
+        {
+          "title": "International Living - Boquete Guide",
+          "url": "https://internationalliving.com/countries/panama/boquete/"
+        },
+        {
+          "title": "Numbeo Cost of Living Boquete",
+          "url": "https://www.numbeo.com/cost-of-living/in/Boquete"
+        },
+        {
+          "title": "Panama Relocation Tours",
+          "url": "https://www.panamarelocationtours.com/boquete/"
+        }
+      ]
+    },
+    {
+      "id": "downtown-boquete",
+      "name": "Downtown Boquete",
+      "description": "The compact town center along the Rio Caldera with shops, restaurants, the Tuesday market, and essential services",
+      "character": "Small-town walkable, mixed local-expat, convenient",
+      "housing": {
+        "avgRentOneBedroomUSD": 550,
+        "avgRentTwoBedroomUSD": 800,
+        "buyPricePerSqmUSD": 1400,
+        "predominantType": "Apartments and small houses within walking distance of shops and services"
+      },
+      "walkabilityScore": 75,
+      "transitScore": 30,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Tuesday market is a social hub. Most restaurants and medical clinics are here. Flat terrain makes walking easy.",
+      "sources": [
+        {
+          "title": "Boquete Guide",
+          "url": "https://www.boqueteguide.com/"
+        },
+        {
+          "title": "Numbeo Cost of Living Boquete",
+          "url": "https://www.numbeo.com/cost-of-living/in/Boquete"
+        }
+      ]
+    },
+    {
+      "id": "volcancito",
+      "name": "Volcancito",
+      "description": "Rural hillside community northwest of downtown, known for coffee farms, cooler temperatures, and panoramic volcano views",
+      "character": "Rural, scenic, very quiet, coffee-country living",
+      "housing": {
+        "avgRentOneBedroomUSD": 500,
+        "avgRentTwoBedroomUSD": 700,
+        "buyPricePerSqmUSD": 900,
+        "predominantType": "Fincas, standalone houses, and custom-built homes on large plots"
+      },
+      "walkabilityScore": 15,
+      "transitScore": 5,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "moderate",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Some of the best coffee in the world is grown here. Very steep roads -- 4x4 recommended. Misty mornings with stunning sunsets.",
+      "sources": [
+        {
+          "title": "International Living - Boquete",
+          "url": "https://internationalliving.com/countries/panama/boquete/"
+        },
+        {
+          "title": "Panama Relocation Tours",
+          "url": "https://www.panamarelocationtours.com/boquete/"
+        }
+      ]
+    },
+    {
+      "id": "jaramillo",
+      "name": "Jaramillo",
+      "description": "Popular expat neighborhood east of downtown with established residential communities and river valley setting",
+      "character": "Suburban expat enclave, green, family-friendly",
+      "housing": {
+        "avgRentOneBedroomUSD": 600,
+        "avgRentTwoBedroomUSD": 850,
+        "buyPricePerSqmUSD": 1100,
+        "predominantType": "Gated community houses and independent homes with gardens"
+      },
+      "walkabilityScore": 25,
+      "transitScore": 10,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Home to Valle Escondido and other gated communities with pools and clubhouses. Well-maintained roads. 5-minute drive to downtown.",
+      "sources": [
+        {
+          "title": "Boquete Guide - Neighborhoods",
+          "url": "https://www.boqueteguide.com/neighborhoods"
+        },
+        {
+          "title": "International Living - Boquete",
+          "url": "https://internationalliving.com/countries/panama/boquete/"
+        }
+      ]
+    },
+    {
+      "id": "palmira",
+      "name": "Palmira",
+      "description": "Lower-elevation area south of Boquete along the main road from David, warmer and more affordable than hillside neighborhoods",
+      "character": "Semi-rural, warmer, budget-friendly, gateway to Boquete",
+      "housing": {
+        "avgRentOneBedroomUSD": 400,
+        "avgRentTwoBedroomUSD": 600,
+        "buyPricePerSqmUSD": 750,
+        "predominantType": "Local-style houses and newer affordable construction"
+      },
+      "walkabilityScore": 20,
+      "transitScore": 20,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More integrated with Panamanian culture. Warmer than central Boquete. Bus connections to David are accessible from here.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living David/Boquete",
+          "url": "https://www.numbeo.com/cost-of-living/in/David-Panama"
+        },
+        {
+          "title": "Panama Relocation Tours",
+          "url": "https://www.panamarelocationtours.com/boquete/"
+        }
+      ]
+    }
+  ]
+}

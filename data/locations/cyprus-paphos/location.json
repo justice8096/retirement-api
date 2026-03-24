@@ -1,0 +1,178 @@
+{
+  "id": "cyprus-paphos",
+  "name": "Paphos, Cyprus",
+  "country": "Cyprus",
+  "region": "Southern Europe",
+  "cities": [
+    "Paphos",
+    "Peyia",
+    "Polis Chrysochous"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93
+  },
+  "visa": {
+    "type": "Category F Immigration Permit",
+    "incomeRequirement": {
+      "monthly": 797,
+      "currency": "EUR"
+    },
+    "notes": "Category F permit requires ~€9,568/year + €4,613/dependent. Must deposit €15K-€30K in Cypriot bank. Very retiree-friendly."
+  },
+  "climate": {
+    "winterLowF": 50,
+    "summerHighF": 93,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 40
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 950,
+      "min": 750,
+      "max": 1200,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 410,
+      "min": 330,
+      "max": 520,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 155,
+      "min": 115,
+      "max": 210,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 100,
+      "min": 65,
+      "max": 150,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 120,
+      "min": 80,
+      "max": 170,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 140,
+      "min": 90,
+      "max": 210,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 230,
+      "min": 160,
+      "max": 330,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 70,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 87,
+      "min": 72,
+      "max": 107,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 20,
+      "typical": 35,
+      "max": 70,
+      "annualInflation": 0.035,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 40,
+      "typical": 80,
+      "max": 160,
+      "annualInflation": 0.035
+    }
+  },
+  "healthcare": {
+    "system": "GESY (General Healthcare System) introduced 2019. Paphos General Hospital for basic care. Private clinics good and affordable.",
+    "qualityRating": 7,
+    "dentalIncluded": false,
+    "waitTimes": "Public: 2-8 weeks for specialists. Private: under 2 weeks.",
+    "prescriptionCoverage": "GESY covers most prescriptions with small co-pays"
+  },
+  "lifestyle": {
+    "internetSpeed": "100Mbps+",
+    "dogFriendly": 6,
+    "expatCommunity": 9,
+    "englishPrevalence": 8,
+    "safetyRating": 9
+  },
+  "pros": [
+    "Massive British expat community, English widely spoken",
+    "Warm year-round climate with 340 days of sunshine",
+    "Very favorable tax treatment for retirees (2.65% on pensions)"
+  ],
+  "cons": [
+    "Island isolation from mainland Europe",
+    "Hot, dry summers (93F+)",
+    "Car essential outside city centers"
+  ],
+  "taxes": {
+    "notes": "Cyprus: flat 2.65% on pension income for first €3,420, then 0%. Or opt for standard progressive rates 20%-35%. Very favorable for retirees. US-Cyprus tax treaty.",
+    "vatRate": 19,
+    "socialChargesRate": 0
+  }
+}

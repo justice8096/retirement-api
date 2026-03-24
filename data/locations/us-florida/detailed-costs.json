@@ -1,0 +1,1255 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 73,
+      "typical": 91,
+      "max": 925
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic/Wegovy) [P1]",
+        "monthlyCost": 25,
+        "withoutInsurance": 900,
+        "coverageNote": "Medicare Part D covers for diabetes (tier 3). $25 copay typical. Without coverage ~$900/mo. IRA negotiated price TBD."
+      },
+      {
+        "name": "Levothyroxine (Synthroid) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 15,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Atorvastatin 20mg [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Montelukast (Singulair) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 15,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Hydrochlorothiazide (HCTZ) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 8,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Olmesartan/Medoxomil (Benicar) [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 30,
+        "coverageNote": "Medicare Part D generic tier 1-2; $4-15 copay"
+      },
+      {
+        "name": "Albuterol inhaler [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 35,
+        "coverageNote": "Medicare Part D tier 2; $10-25 copay. IRA cap applies."
+      },
+      {
+        "name": "Metformin 500mg [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Allopurinol (gout) [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Topiramate (Topamax) [P2]",
+        "monthlyCost": 10,
+        "withoutInsurance": 25,
+        "coverageNote": "Medicare Part D generic tier 1-2; $4-15 copay"
+      },
+      {
+        "name": "Metoprolol (Lopressor) [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Atorvastatin 20mg [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      }
+    ],
+    "pharmacyAccess": "Excellent. CVS, Walgreens, Walmart, Publix pharmacies ubiquitous. Publix offers select generic medications free (antibiotics, lisinopril, metformin). Mail-order through Part D plans available.",
+    "prescriptionSystem": "Medicare Part D prescription drug plan. Florida has a large Medicare Advantage market with many $0-premium plans that include drug coverage. Annual out-of-pocket cap $2,000 under Inflation Reduction Act.",
+    "insuranceCoverage": "Medicare Part D covers most prescriptions. Florida's large retiree population means highly competitive Medicare Advantage market with generous drug benefits. Many plans offer $0 copay on tier 1 generics.",
+    "sources": [
+      {
+        "title": "Medicare Part D Costs - CMS.gov",
+        "url": "https://www.cms.gov/medicare/costs-getting-started"
+      },
+      {
+        "title": "Publix Free Medication Program",
+        "url": "https://www.publix.com/pharmacy/free-medication-program"
+      },
+      {
+        "title": "Florida SHINE (Medicare Counseling)",
+        "url": "https://www.floridashine.org/"
+      }
+    ]
+  },
+  "vision": {
+    "annualExamCost": {
+      "withInsurance": 25,
+      "withoutInsurance": 175,
+      "notes": "Original Medicare does NOT cover routine vision exams. Must have separate vision plan or Medicare Advantage with vision."
+    },
+    "eyeglasses": {
+      "basicFrameAndLens": {
+        "min": 100,
+        "typical": 200,
+        "max": 400
+      },
+      "progressiveLens": {
+        "min": 200,
+        "typical": 350,
+        "max": 600
+      },
+      "contactLensesMonthly": {
+        "min": 30,
+        "typical": 50,
+        "max": 80
+      }
+    },
+    "insuranceCoverage": "Need separate vision plan or Medicare Advantage with vision. Many FL Medicare Advantage plans include comprehensive vision benefits with $0-25 exam copay and $100-250 eyewear allowance.",
+    "specialistWaitTime": "1-2 weeks for routine eye exams. Florida has a high density of optometrists and ophthalmologists due to retiree population. Shorter waits than national average.",
+    "seniorConsiderations": "Medicare covers cataract surgery and glaucoma screening. Annual glaucoma screening covered for high-risk beneficiaries. Diabetic retinopathy screening covered. Florida ophthalmologists experienced with age-related conditions.",
+    "sources": [
+      {
+        "title": "Medicare Vision Coverage - Medicare.gov",
+        "url": "https://www.medicare.gov/coverage/eye-exams"
+      },
+      {
+        "title": "VSP Individual Vision Plans",
+        "url": "https://www.vspdirect.com/"
+      },
+      {
+        "title": "Florida Medicare Advantage Plans - Medicare.gov",
+        "url": "https://www.medicare.gov/plan-compare/"
+      }
+    ]
+  },
+  "dental": {
+    "annualCleaningCost": {
+      "withInsurance": 25,
+      "withoutInsurance": 140,
+      "notes": "Original Medicare does NOT cover routine dental. Need separate dental plan or Medicare Advantage with dental."
+    },
+    "commonProcedures": [
+      {
+        "name": "Filling (composite)",
+        "withInsurance": 90,
+        "withoutInsurance": 225
+      },
+      {
+        "name": "Crown (porcelain)",
+        "withInsurance": 450,
+        "withoutInsurance": 1100
+      },
+      {
+        "name": "Root Canal (molar)",
+        "withInsurance": 400,
+        "withoutInsurance": 1000
+      },
+      {
+        "name": "Extraction (simple)",
+        "withInsurance": 75,
+        "withoutInsurance": 225
+      },
+      {
+        "name": "Implant (single)",
+        "withInsurance": 1800,
+        "withoutInsurance": 4000
+      },
+      {
+        "name": "Dentures (complete set)",
+        "withInsurance": 750,
+        "withoutInsurance": 1800
+      }
+    ],
+    "insuranceCoverage": "Need separate dental plan ($20-50/month) or Medicare Advantage with dental. Many FL Medicare Advantage plans include dental with $0 preventive copay. Standalone plans (Delta Dental, Humana) popular.",
+    "dentistAvailability": "Excellent. Florida's large retiree population supports a high density of dental providers. Many practices cater specifically to seniors. Wait times typically 1-2 weeks.",
+    "sources": [
+      {
+        "title": "Medicare Dental Coverage - Medicare.gov",
+        "url": "https://www.medicare.gov/coverage/dental-services"
+      },
+      {
+        "title": "Florida Dental Association",
+        "url": "https://www.floridadental.org/"
+      },
+      {
+        "title": "Humana Dental Plans - Florida",
+        "url": "https://www.humana.com/dental-insurance/florida"
+      }
+    ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 400,
+      "typical": 500,
+      "max": 620
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 330,
+        "seniorDiscounts": "Early bird specials common in FL. AARP restaurant discounts widely accepted.",
+        "notes": "Lunch for 2 at moderate restaurant ~$32 + 6% tax + 20% tip = ~$40/meal, 2x/week = ~$330/mo"
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 70,
+        "seniorDiscounts": "AT&T and Xfinity offer senior/AARP discounts on select plans.",
+        "notes": "Xfinity 1 Gig $60-70/mo or AT&T Fiber $80/mo."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 18,
+        "seniorDiscounts": "T-Mobile 55+ plans include Netflix.",
+        "notes": "$17.99/mo"
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 15,
+        "seniorDiscounts": "Medicaid recipients qualify for Prime at $6.99/mo.",
+        "notes": "$14.99/mo"
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 13,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "$12.99/mo"
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 25,
+        "seniorDiscounts": "SilverSneakers free with many Medicare Advantage plans."
+      },
+      {
+        "name": "Parks/Outdoors",
+        "monthlyCost": 10,
+        "seniorDiscounts": "FL state parks senior discount. National parks Senior Pass."
+      },
+      {
+        "name": "Books/Library",
+        "monthlyCost": 10,
+        "seniorDiscounts": "Free library system."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 20,
+        "seniorDiscounts": "Senior coffee discounts at major chains."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Xfinity Florida Plans",
+        "url": "https://www.xfinity.com/gig"
+      },
+      {
+        "title": "Netflix Pricing",
+        "url": "https://help.netflix.com/en/node/24926"
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 200,
+      "typical": 300,
+      "max": 400
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 70,
+        "senior": 35,
+        "notes": "LYNX bus (Orlando) senior monthly pass $25. SunRail monthly pass $79.50 (no specific senior pass). Varies by metro area."
+      },
+      "singleRide": 2,
+      "coverage": "Limited. LYNX bus in Orlando, SunRail commuter rail (Orlando), Brightline (Miami-Orlando-West Palm Beach). Most FL metro areas have basic bus service only. Very car-dependent state.",
+      "seniorDiscount": "Most FL transit agencies offer 50% discount for riders 65+ with Medicare card. LYNX half-fare $1.00. Miami-Dade Metrorail half-fare for seniors."
+    },
+    "rideShare": {
+      "baseFare": 2.25,
+      "perKm": 1.1,
+      "typicalCrossTownTrip": {
+        "min": 10,
+        "typical": 16,
+        "max": 25
+      },
+      "availability": "Good in metro areas (Orlando, Tampa, Miami, Fort Lauderdale). Limited in smaller cities and rural areas.",
+      "notes": "GoGoGrandparent available for seniors preferring phone-based ride ordering. Some FL counties offer subsidized senior transportation services."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 75,
+        "initialRegistration": {
+          "min": 225,
+          "typical": 350,
+          "max": 450
+        },
+        "notes": "Florida initial registration includes title fee ($77.25), plate fee ($28), registration ($46.15-56.15), and local fees. No personal property tax on vehicles. Annual renewal ~$75."
+      },
+      "insurance": {
+        "monthlyMin": 100,
+        "monthlyTypical": 150,
+        "monthlyMax": 220,
+        "notes": "Florida car insurance moderate. No-fault state requiring PIP coverage. Senior safe driver discounts available (5-15%). Rates vary significantly by county."
+      },
+      "fuel": {
+        "pricePerLiter": 0.9,
+        "monthlyEstimate": {
+          "min": 75,
+          "typical": 120,
+          "max": 180
+        },
+        "notes": "~$3.40/gallon average in Florida. FL gas tax $0.362/gallon (combined state/local). Typical senior drives 8,000-12,000 miles/year."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 0,
+          "typical": 50,
+          "max": 150
+        },
+        "hourlyStreet": 2,
+        "notes": "Free parking common in suburban areas. Downtown areas in Miami/Tampa charge $2-4/hour. Most apartment complexes include parking."
+      },
+      "tolls": {
+        "monthlyEstimate": 60,
+        "notes": "Florida has extensive toll roads. SunPass transponder required for many highways. Florida's Turnpike, I-4 Express, 417, 429, Sawgrass Expressway. Can add $40-100/month depending on driving patterns."
+      },
+      "seniorDiscounts": "Florida Mature Driver course (AARP Smart Driver) gives 5-15% insurance discount. Some counties offer free or subsidized senior transport (dial-a-ride programs)."
+    },
+    "walkability": "Low in most areas. Walkable pockets in downtown Miami, St. Petersburg, Winter Park. Most Florida development is suburban and car-dependent.",
+    "cycling": {
+      "bikeShareMonthly": 20,
+      "infrastructure": "Improving. Some bike lanes in urban areas. Pinellas Trail, trails along coast. Heat and rain limit cycling 4-5 months/year.",
+      "notes": "CitiBike Miami $5/ride or $17/month. Tampa Bay bike share available. Infrastructure varies widely by city."
+    },
+    "sources": [
+      {
+        "title": "LYNX Bus - Orlando",
+        "url": "https://www.golynx.com/fares/"
+      },
+      {
+        "title": "SunRail Commuter Rail",
+        "url": "https://sunrail.com/tickets-suncards/fares/"
+      },
+      {
+        "title": "Florida DMV Registration",
+        "url": "https://www.flhsmv.gov/motor-vehicles-tags-titles/"
+      },
+      {
+        "title": "Florida SunPass Toll Info",
+        "url": "https://www.sunpass.com/"
+      }
+    ],
+    "electricVehicle": {
+      "purchasePrice": {
+        "min": 28000,
+        "typical": 35000,
+        "max": 52000
+      },
+      "purchaseNotes": "Tesla Model 3 ~$35K, Model Y ~$45K, Hyundai Ioniq 5 ~$42K, Chevy Equinox EV ~$28K. Federal tax credit up to $7,500 (income limits apply). Some states add incentives.",
+      "federalIncentive": 7500,
+      "stateIncentive": 0,
+      "incentiveNotes": "Federal EV tax credit up to $7,500 under IRA (income < $150K single / $300K joint). Must be new vehicle, MSRP < $55K sedan / $80K SUV. Used EV credit up to $4,000.",
+      "chargingHome": {
+        "installCost": {
+          "min": 500,
+          "typical": 1200,
+          "max": 2500
+        },
+        "monthlyElectricity": {
+          "min": 30,
+          "typical": 50,
+          "max": 80
+        },
+        "notes": "Level 2 (240V) home charger. Electricity ~$0.12-0.16/kWh. ~1,000 mi/month = ~300 kWh = $36-48/mo."
+      },
+      "chargingPublic": {
+        "perKwh": {
+          "min": 0.3,
+          "typical": 0.43,
+          "max": 0.6
+        },
+        "notes": "Tesla Supercharger ~$0.40-0.50/kWh. Electrify America ~$0.43/kWh. ChargePoint varies. Free L2 chargers at some retailers."
+      },
+      "insurance": {
+        "monthly": {
+          "min": 140,
+          "typical": 180,
+          "max": 250
+        },
+        "notes": "EV insurance 15-25% higher than comparable ICE vehicle. Shop Liberty Mutual, Progressive, Tesla Insurance where available."
+      },
+      "maintenance": {
+        "annual": {
+          "min": 400,
+          "typical": 600,
+          "max": 900
+        },
+        "notes": "No oil changes, fewer brake jobs (regen braking). Tire rotation every 7,500 mi. Cabin air filter annually. Brake fluid every 2-3 yrs. 12V battery every 4-5 yrs (~$100). Tires wear faster on heavier EVs."
+      },
+      "registration": {
+        "annual": {
+          "min": 100,
+          "typical": 200,
+          "max": 300
+        },
+        "notes": "Many states add EV-specific fees ($100-275/yr) to replace lost gas tax revenue. Virginia: $64/yr EV fee."
+      },
+      "batteryWarranty": "8 years / 100,000 miles (federal minimum). Most manufacturers cover 70-80% capacity retention.",
+      "depreciationNotes": "EVs depreciate 40-50% in first 3 years, though Tesla holds value better. Used EV market improving. Budget ~$3,000-5,000/yr depreciation on $35K vehicle.",
+      "totalMonthlyOwnership": {
+        "min": 250,
+        "typical": 380,
+        "max": 550
+      },
+      "totalMonthlyNotes": "Includes: charging ($50), insurance ($180), maintenance ($50/mo avg), registration ($17/mo). Excludes: purchase/loan payment, depreciation.",
+      "sources": [
+        {
+          "title": "Federal EV Tax Credit - IRS",
+          "url": "https://www.irs.gov/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after"
+        },
+        {
+          "title": "EV Maintenance Costs - AAA",
+          "url": "https://www.aaa.com/autorepair/articles/ev-maintenance"
+        },
+        {
+          "title": "EV Charging Costs - DOE",
+          "url": "https://afdc.energy.gov/fuels/electricity-charging-home"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 65,
+    "discounts": [
+      {
+        "name": "Medicare",
+        "description": "Federal health insurance at 65. Part A (hospital) premium-free for most. Part B (medical) ~$185/month. Part D (drugs) $10-50/month. Florida has one of the most competitive Medicare Advantage markets.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "AARP Membership",
+        "description": "Annual membership $16. Discounts on insurance, dining, travel, retail, and entertainment. Available at age 50+.",
+        "eligibilityAge": 50
+      },
+      {
+        "name": "No State Income Tax",
+        "description": "Florida has no state income tax. All retirement income (SS, pensions, 401k withdrawals, IRA distributions) is tax-free at the state level.",
+        "eligibilityAge": 0
+      },
+      {
+        "name": "Florida Senior Transit Discounts",
+        "description": "Most FL transit agencies offer 50% fare reduction for riders 65+. Present Medicare card or state ID as proof.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Florida Homestead Exemption",
+        "description": "Primary residence exemption reduces assessed property value by $50,000. Additional $50,000 exemption for seniors 65+ with household income under $36,614.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "SHINE Medicare Counseling",
+        "description": "Free Medicare counseling service for Florida seniors. Help choosing plans, understanding benefits, and resolving billing issues.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "America the Beautiful Senior Pass",
+        "description": "Lifetime pass to all national parks and federal recreation areas for $80 (or $20/year).",
+        "eligibilityAge": 62
+      },
+      {
+        "name": "SilverSneakers Fitness",
+        "description": "Free gym membership through participating Medicare Advantage and Medigap plans. Access to 17,000+ locations nationwide.",
+        "eligibilityAge": 65
+      }
+    ]
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 50,
+      "typical": 63,
+      "max": 82
+    },
+    "plans": [
+      {
+        "name": "T-Mobile 55+ Essentials",
+        "type": "US Domestic",
+        "lines": 2,
+        "dataPerLine": "Unlimited (50GB priority)",
+        "baseCost": 55,
+        "taxesAndFees": 8,
+        "monthlyTotal": 63,
+        "notes": "2 lines unlimited talk/text/data. FL wireless tax ~13% + Communications Services Tax. 5G included."
+      }
+    ],
+    "sources": [
+      {
+        "title": "T-Mobile 55+ Plans",
+        "url": "https://www.t-mobile.com/cell-phone-plans/unlimited-55-plus"
+      },
+      {
+        "title": "FL Wireless Tax Rates",
+        "url": "https://taxfoundation.org/data/all/state/wireless-taxes-2024/"
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom single-family house",
+    "monthlyBudget": {
+      "min": 1800,
+      "max": 2700,
+      "typical": 2200
+    },
+    "breakdown": {
+      "baseRent": 2070,
+      "rentersInsurance": 40,
+      "localTaxesFees": 0,
+      "total": 2110,
+      "notes": "Water, sewage, and trash are separate utility bills — see utilities breakdown."
+    },
+    "taxNotes": "Florida residential rent exempt from sales tax since June 2023 (was previously taxed at 5.5% + county surtax). No state income tax. Property tax is landlord responsibility. Higher renter's insurance due to hurricane risk.",
+    "leaseTerms": "12-month standard lease. No statutory limit on security deposit. Landlord must hold deposit in separate account. Florida Residential Landlord and Tenant Act applies.",
+    "marketNotes": "Market varies significantly: Tampa/St. Pete $1,800-2,400, Orlando $1,700-2,300, Jacksonville $1,500-2,000, Miami $2,500+. Prices surged 2021-2023, now stabilizing. Hurricane insurance costs push up rents.",
+    "sources": [
+      {
+        "name": "Zillow Florida Rental Market",
+        "url": "https://www.zillow.com/rental-manager/market-trends/fl/"
+      },
+      {
+        "name": "FL Dept of Revenue - Sales Tax on Rent",
+        "url": "https://floridarevenue.com/taxes/taxesfees/Pages/sales_tax.aspx"
+      }
+    ],
+    "housingSites": {
+      "rentals": [
+        {
+          "name": "Zillow",
+          "url": "https://www.zillow.com/florida/rentals/",
+          "type": "rental"
+        },
+        {
+          "name": "Apartments.com",
+          "url": "https://www.apartments.com/fl/",
+          "type": "rental"
+        },
+        {
+          "name": "Realtor.com",
+          "url": "https://www.realtor.com/realestateandhomes-search/Florida",
+          "type": "purchase"
+        }
+      ]
+    }
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Publix",
+        "type": "supermarket",
+        "website": "https://www.publix.com/",
+        "notes": "Dominant in FL, BOGO deals",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Publix Store Tour",
+            "url": "https://www.youtube.com/watch?v=mNKrKcVpOcM"
+          },
+          {
+            "platform": "instagram",
+            "title": "@publix",
+            "url": "https://www.instagram.com/publix/"
+          }
+        ]
+      },
+      {
+        "name": "Trader Joe's",
+        "type": "specialty-grocery",
+        "website": "https://www.traderjoes.com/",
+        "notes": "University Parkway location",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Trader Joe's Store Tour",
+            "url": "https://www.youtube.com/watch?v=wJ2UJCdVXHY"
+          },
+          {
+            "platform": "instagram",
+            "title": "@traderjoes",
+            "url": "https://www.instagram.com/traderjoes/"
+          }
+        ]
+      },
+      {
+        "name": "Sarasota Farmers Market",
+        "type": "farmers-market",
+        "website": "https://www.sarasotafarmersmarket.org/",
+        "notes": "Downtown, year-round Saturday",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Sarasota Farmers Market",
+            "url": "https://www.youtube.com/watch?v=wLzH7_lhXMQ"
+          },
+          {
+            "platform": "instagram",
+            "title": "@sarasotafarmersmarket",
+            "url": "https://www.instagram.com/sarasotafarmersmarket/"
+          }
+        ]
+      }
+    ]
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 60,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Farmers market or CSA box"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 40,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Bananas, berries, apples, citrus"
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 20,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Sweet Potatoes / Potatoes",
+            "monthlyCost": 15,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet staple"
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 12,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet vegetables"
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 10,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Digestive health, home-cooked diet"
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 50,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Primary protein for both adults & dog"
+          },
+          {
+            "name": "Ground Turkey / Beef",
+            "monthlyCost": 45,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean ground for dog food base"
+          },
+          {
+            "name": "Fish (salmon/tilapia)",
+            "monthlyCost": 40,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Omega-3 rich"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": "Eggs also for dog diet"
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 12,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Essential for balanced home-cooked dog diet"
+          },
+          {
+            "name": "Beans / Lentils",
+            "monthlyCost": 8,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "grains",
+        "name": "Grains & Starches",
+        "items": [
+          {
+            "name": "Rice (brown/white)",
+            "monthlyCost": 10,
+            "quantity": 5,
+            "unit": "lbs/month",
+            "forWhom": "shared",
+            "notes": "Dog diet carb source"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "loaves/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 8,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Oats / Cereal",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "container/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk / Plant Milk",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Cheese",
+            "monthlyCost": 20,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Yogurt / Kefir",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "quart/week",
+            "forWhom": "shared",
+            "notes": "Probiotics for dog digestion too"
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "unit/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Olive Oil / Cooking Oils",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Spices & Seasonings",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Canned Goods (tomatoes, beans)",
+            "monthlyCost": 12,
+            "quantity": 6,
+            "unit": "cans/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Condiments & Sauces",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 25,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tea",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "box/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Wine / Beer",
+            "monthlyCost": 40,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Optional"
+          },
+          {
+            "name": "Sparkling Water / Juice",
+            "monthlyCost": 12,
+            "quantity": 1,
+            "unit": "case/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "snacks",
+        "name": "Snacks & Treats",
+        "items": [
+          {
+            "name": "Nuts & Trail Mix",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Crackers / Chips",
+            "monthlyCost": 10,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Dark Chocolate",
+            "monthlyCost": 8,
+            "quantity": 4,
+            "unit": "bars/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "frozen",
+        "name": "Frozen Foods",
+        "items": [
+          {
+            "name": "Frozen Vegetables",
+            "monthlyCost": 12,
+            "quantity": 4,
+            "unit": "bags/month",
+            "forWhom": "shared",
+            "notes": "Backup for dog food prep"
+          },
+          {
+            "name": "Frozen Fruit (smoothies)",
+            "monthlyCost": 10,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Frozen Meals (convenience)",
+            "monthlyCost": 15,
+            "quantity": 4,
+            "unit": "meals/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "supplements",
+        "name": "Pet Supplements & Health",
+        "items": [
+          {
+            "name": "Joint Supplement (glucosamine)",
+            "monthlyCost": 30,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Essential for Bernese — hip/joint health"
+          },
+          {
+            "name": "Fish Oil (omega-3)",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Coat & skin health"
+          },
+          {
+            "name": "Multivitamin / Mineral Mix",
+            "monthlyCost": 20,
+            "quantity": 1,
+            "unit": "container/month",
+            "forWhom": "dog",
+            "notes": "Balance home-cooked diet"
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "dog",
+            "notes": "Training & dental chews"
+          }
+        ]
+      }
+    ],
+    "monthlyTotal": 712
+  },
+  "healthcare": {
+    "system": "Medicare + Medigap supplement",
+    "coverageSummary": "Medicare Part A (free) + Part B ($174.70/mo pp) + Medigap Plan G (~$200/mo pp) + Part D (~$45/mo pp). IRA out-of-pocket cap $2,000/yr starting 2025.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD (macular degeneration)"
+      ],
+      "costs": [
+        {
+          "item": "Medicare Part B premium",
+          "monthlyCost": 175,
+          "notes": "Standard 2025 premium per person"
+        },
+        {
+          "item": "Medigap Plan G premium",
+          "monthlyCost": 210,
+          "notes": "Higher due to AMD + multiple conditions. Age-rated."
+        },
+        {
+          "item": "Part D premium",
+          "monthlyCost": 45,
+          "notes": "Tier 3 plan to cover GLP-1"
+        },
+        {
+          "item": "Anti-VEGF injections (Eylea/Lucentis)",
+          "monthlyCost": 80,
+          "notes": "Medicare covers 80%, Medigap covers 20% coinsurance. ~6-8 injections/yr at $40-50 copay each."
+        },
+        {
+          "item": "Ophthalmologist specialist visits",
+          "monthlyCost": 25,
+          "notes": "OCT scans every 4-8 weeks. Medicare + Medigap covers most."
+        },
+        {
+          "item": "Endocrinologist (thyroid monitoring)",
+          "monthlyCost": 10,
+          "notes": "Quarterly bloodwork/visits. Low copay with Medigap."
+        },
+        {
+          "item": "Pulmonologist (asthma check-ups)",
+          "monthlyCost": 8,
+          "notes": "Annual visit + as-needed. Mild asthma, infrequent."
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Gout",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Migraines"
+      ],
+      "costs": [
+        {
+          "item": "Medicare Part B premium",
+          "monthlyCost": 175,
+          "notes": "Standard 2025 premium per person"
+        },
+        {
+          "item": "Medigap Plan G premium",
+          "monthlyCost": 190,
+          "notes": "Slightly lower — no AMD, but diabetes management"
+        },
+        {
+          "item": "Part D premium",
+          "monthlyCost": 40,
+          "notes": "All generics — lower tier plan sufficient"
+        },
+        {
+          "item": "Endocrinologist (diabetes mgmt)",
+          "monthlyCost": 15,
+          "notes": "Quarterly A1C, bloodwork. Covered well by Medicare."
+        },
+        {
+          "item": "Diabetes supplies (strips, lancets)",
+          "monthlyCost": 25,
+          "notes": "Medicare Part B covers glucose monitors. Some copays."
+        },
+        {
+          "item": "Rheumatologist (gout monitoring)",
+          "monthlyCost": 8,
+          "notes": "Semi-annual visits. Uric acid monitoring."
+        },
+        {
+          "item": "Neurologist (migraine follow-up)",
+          "monthlyCost": 8,
+          "notes": "Annual-semi-annual visits for topiramate management."
+        }
+      ]
+    },
+    "shared": [
+      {
+        "item": "Dental insurance (2 adults)",
+        "monthlyCost": 70,
+        "notes": "Separate dental plan ~$35/person. Medicare does not cover dental."
+      },
+      {
+        "item": "Vision insurance (2 adults)",
+        "monthlyCost": 25,
+        "notes": "Basic vision plan. AMD specialist visits covered by Medicare Part B."
+      },
+      {
+        "item": "Annual physicals & preventive care",
+        "monthlyCost": 0,
+        "notes": "Covered 100% by Medicare — no copay for preventive."
+      }
+    ],
+    "monthlyTotals": {
+      "person1": 553,
+      "person2": 461,
+      "shared": 95,
+      "household": 1109
+    },
+    "notes": null,
+    "phaseTransition": null
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Black Hair Care",
+      "priceRange": {
+        "cut": "30-55",
+        "color": "75-140",
+        "fullService": "100-220"
+      },
+      "notes": "South Florida has an excellent selection of Black hair salons. Central FL also well-served.",
+      "providers": [
+        {
+          "name": "Curl Envy Natural Hair Studio",
+          "type": "Natural hair salon",
+          "address": "Orlando area",
+          "distanceMi": 15,
+          "rating": 4.8,
+          "notes": "Specializes in natural hair, locs, twist-outs, color on natural hair. Black-owned.",
+          "website": ""
+        },
+        {
+          "name": "Tresses Hair Studio",
+          "type": "Full-service salon",
+          "address": "Tampa area",
+          "distanceMi": 20,
+          "rating": 4.6,
+          "notes": "Color, relaxers, protective styles, silk press. Experienced with all textures.",
+          "website": ""
+        }
+      ]
+    },
+    "whiteHairCare": {
+      "label": "White/Caucasian Hair Care",
+      "priceRange": {
+        "cut": "25-50",
+        "color": "70-140",
+        "highlights": "100-180"
+      },
+      "notes": "Plentiful options statewide. Many salons cater to retirees with senior discount days.",
+      "providers": [
+        {
+          "name": "Salon Lofts",
+          "type": "Suite-style salon",
+          "address": "Multiple FL locations",
+          "distanceMi": 5,
+          "rating": 4.5,
+          "notes": "Individual stylists in private suites. Color specialists available. Competitive pricing.",
+          "website": "https://www.salonlofts.com/"
+        },
+        {
+          "name": "Aveda Salon & Spa",
+          "type": "Full-service salon",
+          "address": "Local Aveda partner",
+          "distanceMi": 8,
+          "rating": 4.6,
+          "notes": "Plant-based color products, gentle on aging hair. Highlights, balayage, grey blending.",
+          "website": ""
+        }
+      ]
+    },
+    "mensBigTall": {
+      "label": "Men's Big & Tall Clothing",
+      "priceRange": {
+        "shirts": "25-70",
+        "pants": "35-65",
+        "suits": "130-350"
+      },
+      "notes": "DXL stores in most metro areas. Burlington and Ross carry some big sizes at discount prices.",
+      "providers": [
+        {
+          "name": "DXL Big + Tall",
+          "type": "Specialty retail",
+          "address": "Multiple FL locations",
+          "distanceMi": 10,
+          "rating": 4.3,
+          "notes": "Primary big & tall destination. Lightweight fabrics suited for FL climate.",
+          "website": "https://www.dxl.com/"
+        },
+        {
+          "name": "Bealls / Belk",
+          "type": "Department store",
+          "address": "Multiple FL locations",
+          "distanceMi": 6,
+          "rating": 4.1,
+          "notes": "Southern department stores with extended size sections. Good for casual and resort wear.",
+          "website": ""
+        }
+      ]
+    },
+    "womensClothing": {
+      "label": "Women's Regular Clothing",
+      "priceRange": {
+        "casual": "20-50",
+        "dresses": "40-100",
+        "professional": "50-120"
+      },
+      "notes": "Major malls and outlet centers throughout FL. Climate-appropriate clothing year-round.",
+      "providers": [
+        {
+          "name": "Chico's",
+          "type": "Women's specialty",
+          "address": "Multiple FL locations",
+          "distanceMi": 5,
+          "rating": 4.4,
+          "notes": "FL-based retailer. Sizes 000-4 (equiv. 0-20). Great for travel-friendly, wrinkle-free clothing.",
+          "website": "https://www.chicos.com/"
+        },
+        {
+          "name": "Macy's / Dillard's",
+          "type": "Department store",
+          "address": "Local mall",
+          "distanceMi": 8,
+          "rating": 4.2,
+          "notes": "Full regular-size range. Good sales and loyalty programs. Alterations available.",
+          "website": ""
+        }
+      ]
+    },
+    "shoes": {
+      "label": "Shoes",
+      "priceRange": {
+        "casual": "35-80",
+        "dress": "60-130",
+        "athletic": "55-120",
+        "wideWidth": "45-110"
+      },
+      "notes": "Shoe shopping is easy in FL. Open-toe and sandal-friendly climate means more options.",
+      "providers": [
+        {
+          "name": "DSW",
+          "type": "Shoe warehouse",
+          "address": "Multiple FL locations",
+          "distanceMi": 6,
+          "rating": 4.3,
+          "notes": "Wide width selection. Good clearance. Comfort brands like Clarks, ECCO, Vionic.",
+          "website": "https://www.dsw.com/"
+        },
+        {
+          "name": "Famous Footwear",
+          "type": "Shoe retailer",
+          "address": "Multiple FL locations",
+          "distanceMi": 5,
+          "rating": 4.1,
+          "notes": "Mid-range prices. Frequent BOGO sales. Athletic and casual shoes in extended sizes.",
+          "website": ""
+        }
+      ]
+    }
+  }
+}

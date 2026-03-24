@@ -1,0 +1,245 @@
+{
+  "distanceUnit": "km",
+  "currency": "EUR",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "KBC Zagreb",
+      "address": "City center area, Zagreb, Croatia",
+      "distanceKm": 4,
+      "notes": "Public university hospital, full emergency services, some English-speaking staff",
+      "sources": [
+        {
+          "title": "KBC Zagreb",
+          "url": "https://www.kbc-zagreb.hr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Ljekarna Mandić",
+      "address": "City center area, Zagreb, Croatia",
+      "distanceKm": 1.5,
+      "notes": "Well-stocked pharmacy, prescription medications, some English spoken",
+      "sources": [
+        {
+          "title": "Ljekarna Mandić",
+          "url": "https://www.ljekarne.hr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Konzum",
+      "address": "City center area, Zagreb, Croatia",
+      "distanceKm": 2,
+      "notes": "Largest supermarket chain, wide selection, some imported goods",
+      "sources": [
+        {
+          "title": "Konzum",
+          "url": "https://www.konzum.hr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "Zagrebačka banka",
+      "address": "City center area, Zagreb, Croatia",
+      "distanceKm": 2,
+      "notes": "Largest Croatian bank (UniCredit group), ATMs, some English support",
+      "sources": [
+        {
+          "title": "Zagrebačka banka",
+          "url": "https://www.zaba.hr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Dom Zdravlja Zagreb",
+      "address": "City center area, Zagreb, Croatia",
+      "distanceKm": 3,
+      "notes": "Public health center, GP services, some English-speaking doctors",
+      "sources": [
+        {
+          "title": "Dom Zdravlja Zagreb",
+          "url": "https://www.hzzo.hr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Dental Clinic Zagreb Center",
+      "address": "City center area, Zagreb, Croatia",
+      "distanceKm": 3,
+      "notes": "General and cosmetic dentistry, some English-speaking dentists, modern equipment",
+      "sources": [
+        {
+          "title": "Dental Services Croatia",
+          "url": "https://www.hkdm.hr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Veterinary Clinic Zagreb",
+      "address": "City center area, Zagreb, Croatia",
+      "distanceKm": 4,
+      "notes": "Full veterinary services, vaccinations, surgery, some English spoken",
+      "sources": [
+        {
+          "title": "Veterinary Services Croatia",
+          "url": "https://www.vef.unizg.hr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Parque Canino / Dog Park Zagreb",
+      "address": "Park area, Zagreb, Croatia",
+      "distanceKm": 5,
+      "notes": "Off-leash area, green space popular with dog owners, water available",
+      "sources": [
+        {
+          "title": "Parks in Zagreb",
+          "url": "https://www.zagreb.hr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "Fitness Center Gym",
+      "address": "City center area, Zagreb, Croatia",
+      "distanceKm": 3,
+      "notes": "Modern gym with cardio and weight equipment, group classes, monthly memberships",
+      "sources": [
+        {
+          "title": "Fitness Center Gym",
+          "url": "https://www.fitness.hr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "International Church of Zagreb",
+      "address": "City center area, Zagreb, Croatia",
+      "distanceKm": 5,
+      "notes": "English-language services, expat community gathering point, social events",
+      "sources": [
+        {
+          "title": "International Church of Zagreb",
+          "url": "https://www.internationalchurchzagreb.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Franjo Tuđman Airport (ZAG)",
+      "address": "Airport area",
+      "distanceKm": 15,
+      "notes": "International airport with domestic and international flights",
+      "sources": [
+        {
+          "title": "Franjo Tuđman Airport",
+          "url": "https://www.zagreb-airport.hr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "ZET / City Transit Zagreb",
+      "address": "City center area, Zagreb, Croatia",
+      "distanceKm": 2,
+      "notes": "Trams, buses, and ferry services, affordable public transit",
+      "sources": [
+        {
+          "title": "ZET",
+          "url": "https://www.zet.hr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "coworking",
+      "name": "Impact Hub Zagreb",
+      "address": "City center area, Zagreb, Croatia",
+      "distanceKm": 3,
+      "notes": "Coworking space, high-speed internet, meeting rooms, community events",
+      "sources": [
+        {
+          "title": "Impact Hub Zagreb",
+          "url": "https://www.impacthub.net/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "Pet Grooming Zagreb",
+      "address": "City center area, Zagreb, Croatia",
+      "distanceKm": 4,
+      "notes": "Professional pet grooming services, bathing, clipping, appointment recommended",
+      "sources": [
+        {
+          "title": "Pet Services Zagreb",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "categoryId": "international_school",
+      "name": "InterNations Zagreb Expat Community",
+      "address": "City center area, Zagreb, Croatia",
+      "distanceKm": 4,
+      "notes": "International expat community center, social events, networking, relocation assistance",
+      "sources": [
+        {
+          "title": "InterNations Zagreb Expat Community",
+          "url": "https://www.internations.org/"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "Zagreb Cultural Center",
+      "description": "Cultural center with local art, history, and community events",
+      "distanceKm": 4,
+      "estimatedCostEUR": 8,
+      "frequency": "Tue-Sun 10:00-17:00",
+      "sources": [
+        {
+          "title": "Zagreb Culture",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "name": "Zagreb Central Park / Garden",
+      "description": "Main public park with walking trails, gardens, and green space",
+      "distanceKm": 3,
+      "estimatedCostEUR": 0,
+      "frequency": "Daily, dawn to dusk",
+      "sources": [
+        {
+          "title": "Parks in Zagreb",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "dining",
+      "name": "Zagreb Restaurant District",
+      "description": "Walkable area with diverse restaurants, cafes, and bars",
+      "distanceKm": 2,
+      "estimatedCostEUR": 25,
+      "frequency": "Daily, lunch and dinner service",
+      "sources": [
+        {
+          "title": "Dining in Zagreb",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    }
+  ]
+}

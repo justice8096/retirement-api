@@ -1,0 +1,301 @@
+{
+  "id": "us-cherry-hill",
+  "name": "Cherry Hill, New Jersey",
+  "country": "United States",
+  "region": "New Jersey",
+  "cities": [
+    "Cherry Hill",
+    "Haddonfield",
+    "Voorhees"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Citizen",
+    "incomeRequirement": null,
+    "notes": "US citizen, no visa required."
+  },
+  "climate": {
+    "winterLowF": 24,
+    "summerHighF": 87,
+    "rainyDaysPerYear": 120,
+    "meetsWarmWinterReq": false
+  },
+  "monthlyCosts": {
+    "rent": {
+      "min": 1815,
+      "max": 2596,
+      "typical": 2205,
+      "type": "2-bedroom single-family house",
+      "annualInflation": 0.03,
+      "notes": "New Jersey has no residential rental tax. Water, sewage, and trash are separate utility bills (not included in rent).",
+      "gigInternetTypical": 2250,
+      "gigInternetCoverage": 95,
+      "gigInternetProviders": "Verizon Fios (95%), Comcast Xfinity",
+      "gigInternetNotes": "94.7% fiber availability in Cherry Hill per BroadbandNow. Fios is near-universal; essentially no premium for gig-capable rentals."
+    },
+    "groceries": {
+      "min": 1225,
+      "max": 1575,
+      "typical": 1400,
+      "notes": "2 adults + pet food; no sales tax on groceries in NJ",
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "min": 248,
+      "max": 403,
+      "typical": 310,
+      "annualInflation": 0.03,
+      "breakdown": {
+        "electricity": {
+          "typical": 130,
+          "notes": "PSE&G/JCP&L. Moderate A/C needs; electric heat supplement."
+        },
+        "gas": {
+          "typical": 75,
+          "notes": "PSE&G. Natural gas primary heat (cold NJ winters), cooking, water heater."
+        },
+        "water": {
+          "typical": 45,
+          "notes": "NJ American Water. 2-adult household."
+        },
+        "sewage": {
+          "typical": 35,
+          "notes": "Camden County MUA. Billed separately or with water."
+        },
+        "trash": {
+          "typical": 25,
+          "notes": "Township municipal collection. Some areas included in property tax."
+        }
+      },
+      "taxes": "New Jersey exempts residential utilities from sales tax.",
+      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig). "
+    },
+    "healthcare": {
+      "min": 550,
+      "max": 850,
+      "typical": 650,
+      "notes": "Medicare Part B ($174.70/mo) + Medigap Plan G (~$200/mo x2 people) + Part D (~$45/mo x2) + dental/vision plans. Higher premiums reflect macular degeneration specialist coverage and frequent monitoring needs.",
+      "annualInflation": 0.055
+    },
+    "insurance": {
+      "min": 35,
+      "max": 55,
+      "typical": 45,
+      "notes": "NJ insurance tends higher",
+      "annualInflation": 0.03
+    },
+    "petCare": {
+      "min": 120,
+      "max": 220,
+      "typical": 160,
+      "annualInflation": 0.04,
+      "notes": "Vet visits, vaccinations, flea/tick, pet insurance"
+    },
+    "petDaycare": {
+      "min": 300,
+      "max": 460,
+      "typical": 370,
+      "annualInflation": 0.03,
+      "notes": "Doggy daycare 2 days/week, large breed rate (~$43/day). Camp Bow Wow Maple Shade, Dogtopia Cherry Hill. South Jersey pricing."
+    },
+    "petGrooming": {
+      "min": 80,
+      "max": 150,
+      "typical": 110,
+      "annualInflation": 0.03,
+      "notes": "Bernese coat maintenance, professional grooming monthly"
+    },
+    "transportation": {
+      "min": 200,
+      "max": 380,
+      "typical": 280,
+      "notes": "Car-dependent suburb; PATCO to Philly available",
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "min": 420,
+      "max": 640,
+      "typical": 520,
+      "annualInflation": 0.025,
+      "notes": "Incl cable+1Gig internet, Netflix, Amazon Prime, Apple TV+, dining out (lunch for 2 2x/week w/ tax+tip)"
+    },
+    "clothing": {
+      "min": 100,
+      "max": 230,
+      "typical": 140,
+      "notes": "No sales tax on clothing in NJ",
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "min": 40,
+      "max": 90,
+      "typical": 60,
+      "annualInflation": 0.02
+    },
+    "subscriptions": {
+      "min": 30,
+      "max": 80,
+      "typical": 50,
+      "annualInflation": 0.03,
+      "notes": "Streaming, news, apps"
+    },
+    "phoneCell": {
+      "min": 52,
+      "max": 85,
+      "typical": 65,
+      "annualInflation": 0.02,
+      "notes": "T-Mobile 55+ Essentials. 2 phones, 1.5GB+ high-speed data each, all taxes included."
+    },
+    "miscellaneous": {
+      "min": 90,
+      "max": 170,
+      "typical": 130,
+      "annualInflation": 0.025
+    },
+    "buffer": {
+      "min": 800,
+      "max": 800,
+      "typical": 800,
+      "annualInflation": 0.025,
+      "notes": "Monthly safety buffer for unexpected expenses"
+    },
+    "medicalOOP": {
+      "min": 325,
+      "max": 700,
+      "typical": 475,
+      "annualInflation": 0.055,
+      "notes": "Anti-VEGF injections for macular degeneration (~$300-400 OOP each, 6-10x/yr after Medicare 80%). Specialist visits: ophthalmologist q6-8wks, endocrinologist 2-4x/yr, cardiologist 1-2x/yr. Frequent labs: lipid panel, TSH, A1C, CMP 3-4x/yr each. Both adults: PCP visits quarterly."
+    },
+    "medicine": {
+      "min": 73,
+      "typical": 91,
+      "max": 925,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "taxes": {
+      "min": 0,
+      "typical": 0,
+      "max": 0,
+      "annualInflation": 0.02
+    }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true,
+      "brackets": [
+        {
+          "min": 0,
+          "max": 23850,
+          "rate": 0.1
+        },
+        {
+          "min": 23850,
+          "max": 96950,
+          "rate": 0.12
+        },
+        {
+          "min": 96950,
+          "max": 206700,
+          "rate": 0.22
+        },
+        {
+          "min": 206700,
+          "max": 394600,
+          "rate": 0.24
+        },
+        {
+          "min": 394600,
+          "max": 501050,
+          "rate": 0.32
+        },
+        {
+          "min": 501050,
+          "max": 751600,
+          "rate": 0.35
+        },
+        {
+          "min": 751600,
+          "max": null,
+          "rate": 0.37
+        }
+      ],
+      "standardDeduction": 30000
+    },
+    "stateIncomeTax": {
+      "rate": 0.0637,
+      "type": "progressive",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 20000,
+          "rate": 0.014
+        },
+        {
+          "min": 20000,
+          "max": 35000,
+          "rate": 0.0175
+        },
+        {
+          "min": 35000,
+          "max": 40000,
+          "rate": 0.035
+        },
+        {
+          "min": 40000,
+          "max": 75000,
+          "rate": 0.05525
+        },
+        {
+          "min": 75000,
+          "max": 500000,
+          "rate": 0.0637
+        }
+      ],
+      "deduction": 0,
+      "exemptions": "SS exempt. Retirement income exclusion up to $100K for couples (income <$150K)."
+    },
+    "salesTax": {
+      "rate": 0.06625,
+      "notes": "6.625% state rate"
+    },
+    "propertyTax": {
+      "rate": 0
+    },
+    "socialCharges": null,
+    "vatRate": 0,
+    "estVehicleTax": 0,
+    "ssExempt": true,
+    "notes": "NJ progressive income tax."
+  },
+  "healthcare": {
+    "system": "Medicare (at 65) + private supplement",
+    "qualityRating": 9,
+    "waitTimes": "low-moderate",
+    "dentalIncluded": false,
+    "prescriptionCoverage": "Part D plan"
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps+ available (Verizon Fios/Comcast)",
+    "dogFriendly": 7,
+    "expatCommunity": 0,
+    "englishPrevalence": 10,
+    "safetyRating": 8
+  },
+  "pros": [
+    "Quiet suburb with access to Philly via PATCO",
+    "NJ exempts SS from state tax",
+    "No sales tax on groceries or clothing",
+    "Good schools and suburban amenities",
+    "Access to Philly healthcare (Penn, Jefferson)",
+    "Lower crime than Philadelphia"
+  ],
+  "cons": [
+    "Cold winters (24F lows)",
+    "Higher NJ state income tax rates",
+    "Car-dependent",
+    "Higher property insurance than some areas",
+    "NJ cost of living above national average"
+  ]
+}

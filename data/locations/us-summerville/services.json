@@ -1,0 +1,419 @@
+{
+  "distanceUnit": "mi",
+  "currency": "USD",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Summerville Medical Center (Roper St. Francis)",
+      "address": "295 Midland Pkwy, Summerville, SC 29485",
+      "notes": "Full-service community hospital, emergency department, orthopedics, cardiology. Part of Roper St. Francis Healthcare system.",
+      "sources": [
+        {
+          "title": "Roper St. Francis - Summerville Medical Center",
+          "url": "https://www.rfrancis.com/locations/summerville-medical-center"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "hospital",
+      "name": "MUSC Health - Medical University of South Carolina",
+      "address": "171 Ashley Ave, Charleston, SC 29425",
+      "notes": "Top-tier academic medical center, Level 1 trauma center, nationally ranked specialties (cancer, cardiology, GI). 30-minute drive from Summerville.",
+      "sources": [
+        {
+          "title": "MUSC Health",
+          "url": "https://muschealth.org/"
+        }
+      ],
+      "distanceMi": 24.9
+    },
+    {
+      "categoryId": "hospital",
+      "name": "Trident Medical Center",
+      "address": "9330 Medical Plaza Dr, North Charleston, SC 29406",
+      "notes": "Large HCA hospital in North Charleston, Level 2 trauma center, cardiac surgery, stroke center. 15-minute drive from Summerville.",
+      "sources": [
+        {
+          "title": "Trident Medical Center",
+          "url": "https://tridentmedicalcenter.com/"
+        }
+      ],
+      "distanceMi": 12.4
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "CVS Pharmacy - Summerville",
+      "address": "1301 N Main St, Summerville, SC 29483",
+      "notes": "Drive-through, vaccinations, MinuteClinic inside. Open 7 days.",
+      "sources": [
+        {
+          "title": "CVS",
+          "url": "https://www.cvs.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Walgreens Pharmacy - Summerville",
+      "address": "401 N Main St, Summerville, SC 29483",
+      "notes": "Drive-through pharmacy, vaccinations, photo services.",
+      "sources": [
+        {
+          "title": "Walgreens",
+          "url": "https://www.walgreens.com/"
+        }
+      ],
+      "distanceMi": 0.6
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Publix Pharmacy - Summerville",
+      "address": "1235 N Main St, Summerville, SC 29483",
+      "notes": "Free select generic medications (lisinopril, metformin, amlodipine, others). Convenient in-store pharmacy while grocery shopping.",
+      "sources": [
+        {
+          "title": "Publix Pharmacy",
+          "url": "https://www.publix.com/pharmacy-wellness"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "bank",
+      "name": "Wells Fargo - Summerville",
+      "address": "140 S Main St, Summerville, SC 29483",
+      "notes": "Full-service branch with financial advisors, ATM, online/mobile banking. National bank with wide ATM network.",
+      "sources": [
+        {
+          "title": "Wells Fargo",
+          "url": "https://www.wellsfargo.com/"
+        }
+      ],
+      "distanceMi": 0.6
+    },
+    {
+      "categoryId": "bank",
+      "name": "Bank of America - Summerville",
+      "address": "1600 N Main St, Summerville, SC 29483",
+      "notes": "Full-service branch with financial advisors, ATM, Merrill Lynch wealth management. National bank with wide ATM network.",
+      "sources": [
+        {
+          "title": "Bank of America",
+          "url": "https://www.bankofamerica.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "bank",
+      "name": "South State Bank - Summerville",
+      "address": "105 E Richardson Ave, Summerville, SC 29483",
+      "notes": "Regional bank headquartered in SC. Excellent local customer service, competitive rates. Strong community banking presence throughout the Lowcountry.",
+      "sources": [
+        {
+          "title": "South State Bank",
+          "url": "https://www.southstatebank.com/"
+        }
+      ],
+      "distanceMi": 0.6
+    },
+    {
+      "categoryId": "postal",
+      "name": "USPS - Summerville Post Office",
+      "address": "120 E 3rd North St, Summerville, SC 29483",
+      "notes": "Full-service post office. PO boxes, package pickup, passport services. Mon-Fri 8:30-5, Sat 9-12.",
+      "sources": [
+        {
+          "title": "USPS",
+          "url": "https://www.usps.com/"
+        }
+      ],
+      "distanceMi": 0.6
+    },
+    {
+      "categoryId": "legal",
+      "name": "South Carolina Legal Aid (Lowcountry Office)",
+      "address": "2803 Carner Ave, North Charleston, SC 29405",
+      "notes": "Free civil legal services for low-income residents. Covers housing, consumer, family law, public benefits. Serves Dorchester, Berkeley, and Charleston counties.",
+      "sources": [
+        {
+          "title": "SC Legal Aid",
+          "url": "https://sclegal.org/"
+        }
+      ],
+      "distanceMi": 12.4
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Roper St. Francis Primary Care - Summerville",
+      "address": "315 Midland Pkwy, Summerville, SC 29485",
+      "notes": "Primary care and internal medicine, accepting new patients, MyChart online portal. Part of Roper St. Francis network.",
+      "sources": [
+        {
+          "title": "Roper St. Francis Primary Care",
+          "url": "https://www.rfrancis.com/"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Summerville Family & Cosmetic Dentistry",
+      "address": "609 N Cedar St, Summerville, SC 29483",
+      "notes": "General and cosmetic dentistry, accepts most insurance and dental discount plans.",
+      "sources": [
+        {
+          "title": "Summerville Family & Cosmetic Dentistry",
+          "url": "https://www.summervilledentist.com/"
+        }
+      ],
+      "distanceMi": 0.9
+    },
+    {
+      "categoryId": "home_repair",
+      "name": "Lowe's - Summerville",
+      "address": "1317 N Main St, Summerville, SC 29483",
+      "notes": "Full home improvement store. Installation services for flooring, windows, doors, appliances. Pro referral network for contractors.",
+      "sources": [
+        {
+          "title": "Lowe's",
+          "url": "https://www.lowes.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "home_repair",
+      "name": "Home Depot - Summerville",
+      "address": "501 Azalea Square Blvd, Summerville, SC 29483",
+      "notes": "Home improvement, tool rental, installation services, contractor referrals.",
+      "sources": [
+        {
+          "title": "Home Depot",
+          "url": "https://www.homedepot.com/"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "vet",
+      "name": "Summerville Animal Hospital",
+      "address": "805 N Main St, Summerville, SC 29483",
+      "notes": "Full-service veterinary hospital, wellness exams, surgery, dental, boarding referrals.",
+      "sources": [
+        {
+          "title": "Summerville Animal Hospital",
+          "url": "https://www.summervilleanimalhospital.com/"
+        }
+      ],
+      "distanceMi": 0.9
+    },
+    {
+      "categoryId": "vet",
+      "name": "Banfield Pet Hospital - Summerville PetSmart",
+      "address": "1310 N Main St, Summerville, SC 29483",
+      "notes": "Inside PetSmart. Wellness plans available for routine care. Convenient for combined vet visit and pet supply shopping.",
+      "sources": [
+        {
+          "title": "Banfield Pet Hospital",
+          "url": "https://www.banfield.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "PetSmart Grooming - Summerville",
+      "address": "1310 N Main St, Summerville, SC 29483",
+      "notes": "Walk-in and appointment grooming, self-serve wash stations. Large breed grooming available.",
+      "sources": [
+        {
+          "title": "PetSmart",
+          "url": "https://www.petsmart.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "pet_daycare",
+      "name": "Camp Bow Wow - Summerville",
+      "address": "119 Farmington Rd, Summerville, SC 29483",
+      "notes": "Doggy daycare and overnight boarding. Webcam access. Indoor and outdoor play areas. Large breed friendly.",
+      "sources": [
+        {
+          "title": "Camp Bow Wow Summerville",
+          "url": "https://www.campbowwow.com/summerville/"
+        }
+      ],
+      "distanceMi": 2.5
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Azalea Park",
+      "address": "S Main St, Summerville, SC 29483",
+      "notes": "Beautiful 12-acre park in downtown Summerville. Paved walking paths, butterfly garden, public art. Dogs welcome on leash. Hosts Flowertown Festival annually.",
+      "sources": [
+        {
+          "title": "Town of Summerville Parks",
+          "url": "https://www.summerville.sc.gov/"
+        }
+      ],
+      "distanceMi": 0.6
+    },
+    {
+      "categoryId": "airport",
+      "name": "Charleston International Airport (CHS)",
+      "address": "5500 International Blvd, North Charleston, SC 29418",
+      "notes": "Regional airport with direct flights to major US hubs (ATL, CLT, DFW, ORD, JFK, DCA). Southwest, Delta, American, United, JetBlue. 20-25 min drive from Summerville.",
+      "sources": [
+        {
+          "title": "Charleston Airport",
+          "url": "https://www.iflychs.com/"
+        }
+      ],
+      "distanceMi": 13.7
+    },
+    {
+      "categoryId": "gym",
+      "name": "Planet Fitness - Summerville",
+      "address": "1525 N Main St, Summerville, SC 29483",
+      "notes": "Budget gym, $10/mo basic membership. Open 24/5. Good for seniors on SilverSneakers or budget-conscious.",
+      "sources": [
+        {
+          "title": "Planet Fitness",
+          "url": "https://www.planetfitness.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "english_church",
+      "name": "Summerville Baptist Church",
+      "address": "417 Central Ave, Summerville, SC 29483",
+      "notes": "Large established church in downtown Summerville. Multiple Sunday services, active senior ministry, community outreach programs.",
+      "sources": [
+        {
+          "title": "Summerville Baptist Church",
+          "url": "https://www.sbc-summerville.org/"
+        }
+      ],
+      "distanceMi": 0.6
+    }
+  ],
+  "attractions": [
+    {
+      "type": "nature",
+      "name": "Azalea Park & Sawmill Branch Trail",
+      "description": "12-acre downtown park with azalea gardens and connected multi-use trail for walking and cycling",
+      "frequency": "Open daily, dawn to dusk. Flowertown Festival each April.",
+      "sources": [
+        {
+          "title": "Town of Summerville",
+          "url": "https://www.summerville.sc.gov/"
+        }
+      ],
+      "distanceMi": 0.6,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "nature",
+      "name": "Givhans Ferry State Park",
+      "description": "Lowcountry state park on the Edisto River with kayaking, camping, nature trails, and picnic areas",
+      "frequency": "Daily 6am-9pm. $6 adult admission.",
+      "sources": [
+        {
+          "title": "SC State Parks",
+          "url": "https://southcarolinaparks.com/givhans-ferry"
+        }
+      ],
+      "distanceMi": 15.5,
+      "estimatedCostUSD": 5
+    },
+    {
+      "type": "cultural",
+      "name": "Historic Downtown Charleston",
+      "description": "World-renowned historic district with Rainbow Row, The Battery, museums, galleries, and James Beard Award restaurants",
+      "frequency": "Day trip, 30-min drive. Restaurants, shopping, and culture.",
+      "sources": [
+        {
+          "title": "Visit Charleston",
+          "url": "https://www.charlestoncvb.com/"
+        }
+      ],
+      "distanceMi": 24.9,
+      "estimatedCostUSD": 20
+    },
+    {
+      "type": "nature",
+      "name": "Folly Beach",
+      "description": "Laid-back beach town south of Charleston with 6 miles of sandy beach, surfing, and the Folly Beach Pier",
+      "frequency": "Day trip, ~45 min drive from Summerville. Free beach access, paid parking.",
+      "sources": [
+        {
+          "title": "City of Folly Beach",
+          "url": "https://www.cityoffollybeach.com/"
+        }
+      ],
+      "distanceMi": 34.2,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "historical",
+      "name": "Middleton Place Plantation",
+      "description": "National Historic Landmark with America's oldest landscaped gardens, house museum, and stableyards",
+      "frequency": "Daily 9:00-17:00, seasonal events",
+      "sources": [
+        {
+          "title": "Middleton Place",
+          "url": "https://www.middletonplace.org/"
+        }
+      ],
+      "distanceMi": 18.6,
+      "estimatedCostUSD": 30
+    },
+    {
+      "type": "shopping",
+      "name": "Tanger Outlets - North Charleston",
+      "description": "Outlet shopping center with 80+ stores, name-brand discounts",
+      "frequency": "Mon-Sat 10-9, Sun 11-7",
+      "sources": [
+        {
+          "title": "Tanger Outlets Charleston",
+          "url": "https://www.tangeroutlets.com/charleston"
+        }
+      ],
+      "distanceMi": 11.2,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "entertainment",
+      "name": "North Charleston Coliseum & Performing Arts Center",
+      "description": "Major venue for concerts, shows, and events serving the greater Charleston area",
+      "frequency": "Events throughout the year, check schedule",
+      "sources": [
+        {
+          "title": "North Charleston Coliseum",
+          "url": "https://www.northcharlestoncoliseumpac.com/"
+        }
+      ],
+      "distanceMi": 12.4,
+      "estimatedCostUSD": 40
+    },
+    {
+      "type": "nature",
+      "name": "Cypress Gardens",
+      "description": "170-acre swamp garden with boat tours through blackwater cypress swamp, walking trails, butterfly house",
+      "frequency": "Daily 9:00-17:00, boat tours included with admission",
+      "sources": [
+        {
+          "title": "Cypress Gardens",
+          "url": "https://www.cypressgardens.berkeleycountysc.gov/"
+        }
+      ],
+      "distanceMi": 15.5,
+      "estimatedCostUSD": 10
+    }
+  ]
+}

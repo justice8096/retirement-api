@@ -1,0 +1,178 @@
+{
+  "id": "france-nice",
+  "name": "Nice / Côte d'Azur, France",
+  "country": "France",
+  "region": "Western Europe",
+  "cities": [
+    "Nice",
+    "Antibes",
+    "Cannes"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93
+  },
+  "visa": {
+    "type": "Long-Stay Visa (VLS-TS)",
+    "incomeRequirement": {
+      "monthly": 1500,
+      "currency": "EUR"
+    },
+    "notes": "Long-stay visa requires ~€1,500/mo income. Must apply at French consulate."
+  },
+  "climate": {
+    "winterLowF": 43,
+    "summerHighF": 86,
+    "meetsWarmWinterReq": false,
+    "rainyDaysPerYear": 60
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 1900,
+      "min": 1600,
+      "max": 2200,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 530,
+      "min": 430,
+      "max": 660,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 185,
+      "min": 140,
+      "max": 245,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 140,
+      "min": 95,
+      "max": 195,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 160,
+      "min": 110,
+      "max": 220,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 130,
+      "min": 80,
+      "max": 190,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 350,
+      "min": 250,
+      "max": 480,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 70,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 85,
+      "min": 70,
+      "max": 105,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 20,
+      "typical": 36,
+      "max": 75,
+      "annualInflation": 0.03,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 30,
+      "typical": 60,
+      "max": 120,
+      "annualInflation": 0.03
+    }
+  },
+  "healthcare": {
+    "system": "French Sécurité Sociale. CHU Nice (Pasteur 2) and multiple private clinics. Excellent specialist care.",
+    "qualityRating": 9,
+    "dentalIncluded": true,
+    "waitTimes": "GPs: same week. Specialists: 2-6 weeks. Private options fast.",
+    "prescriptionCoverage": "70% covered by Sécu, remainder by mutuelle"
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps available",
+    "dogFriendly": 7,
+    "expatCommunity": 8,
+    "englishPrevalence": 6,
+    "safetyRating": 7
+  },
+  "pros": [
+    "Glamorous Mediterranean lifestyle with stunning scenery",
+    "International airport with worldwide connections",
+    "Large international community and English widely understood"
+  ],
+  "cons": [
+    "Very high cost of living, especially rent",
+    "Crowded in summer tourist season",
+    "Petty crime (pickpocketing) in tourist areas"
+  ],
+  "taxes": {
+    "notes": "French progressive income tax 11%-45%. Social charges ~9.1% on foreign income.",
+    "vatRate": 20,
+    "socialChargesRate": 9.1
+  }
+}

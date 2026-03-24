@@ -1,0 +1,100 @@
+{
+  "serviceCategories": [
+    {
+      "id": "hospital",
+      "label": "Hospital / Emergency",
+      "icon": "🏥",
+      "essential": true
+    },
+    {
+      "id": "pharmacy",
+      "label": "Pharmacy",
+      "icon": "💊",
+      "essential": true
+    },
+    {
+      "id": "grocery",
+      "label": "Grocery / Supermarket",
+      "icon": "🛒",
+      "essential": true
+    },
+    {
+      "id": "bank",
+      "label": "Bank / ATM",
+      "icon": "🏦",
+      "essential": true
+    },
+    {
+      "id": "doctor_gp",
+      "label": "General Practitioner",
+      "icon": "👨‍⚕️",
+      "essential": true
+    },
+    {
+      "id": "dentist",
+      "label": "Dentist",
+      "icon": "🦷",
+      "essential": false
+    },
+    {
+      "id": "vet",
+      "label": "Veterinarian",
+      "icon": "🐾",
+      "essential": true
+    },
+    {
+      "id": "dog_park",
+      "label": "Dog Park / Green Space",
+      "icon": "🌳",
+      "essential": false
+    },
+    {
+      "id": "gym",
+      "label": "Gym / Fitness",
+      "icon": "🏋️",
+      "essential": false
+    },
+    {
+      "id": "english_church",
+      "label": "English-Speaking Church",
+      "icon": "⛪",
+      "essential": false
+    },
+    {
+      "id": "international_school",
+      "label": "International Community Center",
+      "icon": "🌐",
+      "essential": false
+    },
+    {
+      "id": "airport",
+      "label": "International Airport",
+      "icon": "✈️",
+      "essential": true
+    },
+    {
+      "id": "public_transit",
+      "label": "Public Transit Hub",
+      "icon": "🚇",
+      "essential": true
+    },
+    {
+      "id": "coworking",
+      "label": "Coworking Space",
+      "icon": "💻",
+      "essential": false
+    },
+    {
+      "id": "pet_groomer",
+      "label": "Pet Groomer",
+      "icon": "✂️",
+      "essential": false
+    },
+    {
+      "id": "pet_daycare",
+      "label": "Pet Daycare",
+      "icon": "🐕",
+      "essential": false
+    }
+  ]
+}

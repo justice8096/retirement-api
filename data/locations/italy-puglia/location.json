@@ -1,0 +1,178 @@
+{
+  "id": "italy-puglia",
+  "name": "Puglia, Italy",
+  "country": "Italy",
+  "region": "Southern Europe",
+  "cities": [
+    "Lecce",
+    "Ostuni",
+    "Bari"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93
+  },
+  "visa": {
+    "type": "Elective Residence Visa",
+    "incomeRequirement": {
+      "monthly": 2583,
+      "currency": "EUR"
+    },
+    "notes": "Elective residence visa requires ~€31K/year income."
+  },
+  "climate": {
+    "winterLowF": 41,
+    "summerHighF": 90,
+    "meetsWarmWinterReq": false,
+    "rainyDaysPerYear": 55
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 750,
+      "min": 600,
+      "max": 950,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 380,
+      "min": 300,
+      "max": 480,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 155,
+      "min": 115,
+      "max": 210,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 90,
+      "min": 60,
+      "max": 135,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 110,
+      "min": 75,
+      "max": 160,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 140,
+      "min": 90,
+      "max": 210,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 200,
+      "min": 140,
+      "max": 280,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 70,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 81,
+      "min": 66,
+      "max": 101,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 18,
+      "typical": 30,
+      "max": 65,
+      "annualInflation": 0.03,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 40,
+      "typical": 80,
+      "max": 160,
+      "annualInflation": 0.035
+    }
+  },
+  "healthcare": {
+    "system": "Italian SSN. Policlinico di Bari for major care. Rural areas have less coverage.",
+    "qualityRating": 7,
+    "dentalIncluded": false,
+    "waitTimes": "Public: 4-12 weeks. Private clinics in Bari and Lecce offer faster care.",
+    "prescriptionCoverage": "SSN covers essential prescriptions with tiered co-pays"
+  },
+  "lifestyle": {
+    "internetSpeed": "100Mbps+",
+    "dogFriendly": 7,
+    "expatCommunity": 5,
+    "englishPrevalence": 3,
+    "safetyRating": 8
+  },
+  "pros": [
+    "Beautiful Baroque architecture (Lecce is 'Florence of the South')",
+    "Excellent food and wine at very low prices",
+    "Stunning coastline and trulli houses in Ostuni/Alberobello"
+  ],
+  "cons": [
+    "Limited English spoken outside tourist areas",
+    "Public transit limited outside Bari",
+    "Southern Italian bureaucracy can be slow"
+  ],
+  "taxes": {
+    "notes": "Italian progressive income tax 23%-43%. 7% flat tax for retirees in southern towns under 20K population.",
+    "vatRate": 22,
+    "socialChargesRate": 0
+  }
+}

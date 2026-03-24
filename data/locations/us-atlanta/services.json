@@ -1,0 +1,290 @@
+{
+  "distanceUnit": "mi",
+  "currency": "USD",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Emory University Hospital",
+      "address": "1364 Clifton Road NE, Atlanta, GA 30322",
+      "notes": "World-class academic medical center, affiliated with CDC, nationally ranked in multiple specialties",
+      "sources": [
+        {
+          "title": "Emory Healthcare",
+          "url": "https://www.emoryhealthcare.org/"
+        }
+      ],
+      "distanceMi": 5.0
+    },
+    {
+      "categoryId": "hospital",
+      "name": "Piedmont Atlanta Hospital",
+      "address": "1968 Peachtree Road NW, Atlanta, GA 30309",
+      "notes": "Major regional hospital, 600+ beds, comprehensive heart center, emergency and trauma services",
+      "sources": [
+        {
+          "title": "Piedmont Healthcare",
+          "url": "https://www.piedmont.org/"
+        }
+      ],
+      "distanceMi": 3.1
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "CVS Pharmacy - Midtown Atlanta",
+      "address": "725 Ponce De Leon Avenue NE, Atlanta, GA 30306",
+      "notes": "Walk-in MinuteClinic inside, vaccinations, open extended hours",
+      "sources": [
+        {
+          "title": "CVS",
+          "url": "https://www.cvs.com/"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Publix Super Market - Midtown",
+      "address": "595 Piedmont Avenue NE, Atlanta, GA 30308",
+      "notes": "Full supermarket, pharmacy with select free generics, deli, bakery",
+      "sources": [
+        {
+          "title": "Publix",
+          "url": "https://www.publix.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Kroger - Decatur",
+      "address": "2875 North Decatur Road, Decatur, GA 30033",
+      "notes": "Full supermarket, pharmacy, fuel center, closest large Kroger to Decatur neighborhoods",
+      "sources": [
+        {
+          "title": "Kroger",
+          "url": "https://www.kroger.com/"
+        }
+      ],
+      "distanceMi": 6.2
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "MARTA - Five Points Station",
+      "address": "30 Alabama Street SW, Atlanta, GA 30303",
+      "notes": "Central hub of MARTA rail system, connects all 4 rail lines, bus connections throughout metro Atlanta",
+      "sources": [
+        {
+          "title": "MARTA",
+          "url": "https://www.itsmarta.com/"
+        }
+      ],
+      "distanceMi": 0.6
+    },
+    {
+      "categoryId": "airport",
+      "name": "Hartsfield-Jackson Atlanta International Airport (ATL)",
+      "address": "6000 N Terminal Parkway, Atlanta, GA 30320",
+      "notes": "World's busiest airport, direct MARTA rail connection, nonstop flights to 150+ domestic and 70+ international destinations",
+      "sources": [
+        {
+          "title": "ATL Airport",
+          "url": "https://www.atl.com/"
+        }
+      ],
+      "distanceMi": 9.3
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Piedmont Park Dog Park",
+      "address": "400 Park Drive NE, Atlanta, GA 30309",
+      "notes": "Large off-leash dog park within 185-acre Piedmont Park, separate areas for large and small dogs",
+      "sources": [
+        {
+          "title": "Piedmont Park Conservancy",
+          "url": "https://www.piedmontpark.org/"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "vet",
+      "name": "BluePearl Pet Hospital - Midtown Atlanta",
+      "address": "1455 Monroe Drive NE, Atlanta, GA 30324",
+      "notes": "24/7 emergency and specialty veterinary care, board-certified specialists",
+      "sources": [
+        {
+          "title": "BluePearl",
+          "url": "https://bluepearlvet.com/"
+        }
+      ],
+      "distanceMi": 2.5
+    },
+    {
+      "categoryId": "gym",
+      "name": "LA Fitness - Buckhead",
+      "address": "3340 Peachtree Road NE, Atlanta, GA 30326",
+      "notes": "Full gym, pool, group fitness classes, SilverSneakers accepted at select locations",
+      "sources": [
+        {
+          "title": "LA Fitness",
+          "url": "https://www.lafitness.com/"
+        }
+      ],
+      "distanceMi": 3.7
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Emory Clinic - Primary Care",
+      "address": "1365 Clifton Road NE, Atlanta, GA 30322",
+      "notes": "Multi-physician primary care within Emory Healthcare system, accepting new patients, online portal",
+      "sources": [
+        {
+          "title": "Emory Clinic",
+          "url": "https://www.emoryhealthcare.org/primary-care/"
+        }
+      ],
+      "distanceMi": 5.0
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Atlanta Dental Spa - Buckhead",
+      "address": "3189 Maple Drive NE, Atlanta, GA 30305",
+      "notes": "General and cosmetic dentistry, modern facility, sedation dentistry available",
+      "sources": [
+        {
+          "title": "Atlanta Dental Spa",
+          "url": "https://www.atlantadentalspa.com/"
+        }
+      ],
+      "distanceMi": 3.7
+    }
+  ],
+  "attractions": [
+    {
+      "type": "outdoor",
+      "name": "Piedmont Park",
+      "description": "185-acre park in Midtown with walking trails, lake, farmers market, dog park, and skyline views",
+      "frequency": "Open daily, Green Market Saturdays 9:00-13:00",
+      "sources": [
+        {
+          "title": "Piedmont Park Conservancy",
+          "url": "https://www.piedmontpark.org/"
+        }
+      ],
+      "distanceMi": 1.9,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "outdoor",
+      "name": "Atlanta BeltLine",
+      "description": "22-mile multi-use trail loop connecting 45 neighborhoods with parks, public art, restaurants, and retail",
+      "frequency": "Open 24/7, best morning and evening",
+      "sources": [
+        {
+          "title": "Atlanta BeltLine",
+          "url": "https://beltline.org/"
+        }
+      ],
+      "distanceMi": 0.6,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "cultural",
+      "name": "High Museum of Art",
+      "description": "Leading art museum in the Southeast with collections spanning 15,000+ works from antiquity to present",
+      "frequency": "Tue-Sun 10:00-17:00, free second Sunday of each month",
+      "sources": [
+        {
+          "title": "High Museum of Art",
+          "url": "https://www.high.org/"
+        }
+      ],
+      "distanceMi": 2.5,
+      "estimatedCostUSD": 20
+    },
+    {
+      "type": "nature",
+      "name": "Atlanta Botanical Garden",
+      "description": "30-acre garden in Midtown adjacent to Piedmont Park with seasonal exhibits, canopy walk, and orchid collection",
+      "frequency": "Tue-Sun 9:00-19:00, seasonal evening events",
+      "sources": [
+        {
+          "title": "Atlanta Botanical Garden",
+          "url": "https://www.atlantabg.org/"
+        }
+      ],
+      "distanceMi": 1.9,
+      "estimatedCostUSD": 25
+    },
+    {
+      "type": "historical",
+      "name": "Martin Luther King Jr. National Historical Park",
+      "description": "Birth home, church, and memorial of Dr. King in the Sweet Auburn historic district",
+      "frequency": "Daily 9:00-17:00, free guided tours of birth home",
+      "sources": [
+        {
+          "title": "NPS - MLK National Historical Park",
+          "url": "https://www.nps.gov/malu/"
+        }
+      ],
+      "distanceMi": 1.9,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "entertainment",
+      "name": "Fox Theatre",
+      "description": "Iconic 1929 Moorish-Egyptian revival theater hosting Broadway shows, concerts, and comedy",
+      "frequency": "Events weekly, tours available",
+      "sources": [
+        {
+          "title": "Fox Theatre",
+          "url": "https://www.foxtheatre.org/"
+        }
+      ],
+      "distanceMi": 1.9,
+      "estimatedCostUSD": 50
+    },
+    {
+      "type": "dining",
+      "name": "Ponce City Market",
+      "description": "Mixed-use development in former Sears building with food hall, shops, rooftop amusements, and BeltLine access",
+      "frequency": "Daily, restaurants and shops open 10:00-21:00",
+      "sources": [
+        {
+          "title": "Ponce City Market",
+          "url": "https://www.poncecitymarket.com/"
+        }
+      ],
+      "distanceMi": 2.5,
+      "estimatedCostUSD": 25
+    },
+    {
+      "type": "nature",
+      "name": "Kennesaw Mountain National Battlefield Park",
+      "description": "2,965-acre park with Civil War history, 22 miles of hiking trails, and panoramic views of metro Atlanta",
+      "frequency": "Daily dawn to dusk, visitor center 9:00-17:00",
+      "sources": [
+        {
+          "title": "NPS - Kennesaw Mountain",
+          "url": "https://www.nps.gov/kemo/"
+        }
+      ],
+      "distanceMi": 18.6,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "social",
+      "name": "Decatur Square",
+      "description": "Walkable town square with independent restaurants, bookshops, craft breweries, and community events year-round",
+      "frequency": "Daily, farmers market Wednesdays, festivals throughout year",
+      "sources": [
+        {
+          "title": "Visit Decatur",
+          "url": "https://www.decaturga.com/"
+        }
+      ],
+      "distanceMi": 6.2,
+      "estimatedCostUSD": 15
+    }
+  ]
+}

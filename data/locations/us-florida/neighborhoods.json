@@ -1,0 +1,171 @@
+{
+  "city": "Sarasota / Tampa Bay area",
+  "neighborhoods": [
+    {
+      "id": "fl-sarasota-downtown",
+      "name": "Downtown Sarasota",
+      "description": "Walkable downtown core along the bayfront with cultural venues, restaurants, Selby Gardens, and Bayfront Park",
+      "character": "Urban walkable, cultural, bayfront living, retiree-popular",
+      "housing": {
+        "avgRentOneBedroomUSD": 1800,
+        "avgRentTwoBedroomUSD": 2400,
+        "buyPricePerSqmUSD": 5000,
+        "predominantType": "Bayfront condos, mid-rise apartments, and some historic bungalows"
+      },
+      "walkabilityScore": 78,
+      "transitScore": 40,
+      "safetyRating": "moderate-high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Ringling Museum, Sarasota Opera, and Selby Botanical Gardens. Saturday farmers market. Strong arts and culture scene popular with retirees.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Sarasota",
+          "url": "https://www.numbeo.com/cost-of-living/in/Sarasota-FL"
+        },
+        {
+          "title": "Zillow - Sarasota FL",
+          "url": "https://www.zillow.com/sarasota-fl/"
+        },
+        {
+          "title": "Visit Sarasota",
+          "url": "https://www.visitsarasota.com/"
+        }
+      ]
+    },
+    {
+      "id": "fl-siesta-key",
+      "name": "Siesta Key",
+      "description": "Barrier island known for its white quartz sand beach, consistently ranked among top US beaches, with a laid-back village center",
+      "character": "Beach island, relaxed, vacation-feel year-round, nature-oriented",
+      "housing": {
+        "avgRentOneBedroomUSD": 1900,
+        "avgRentTwoBedroomUSD": 2600,
+        "buyPricePerSqmUSD": 5500,
+        "predominantType": "Beach condos, single-family homes, and some older cottages"
+      },
+      "walkabilityScore": 45,
+      "transitScore": 15,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Siesta Key Village has shops and restaurants. Bridge to mainland Sarasota. Very seasonal — busy in winter, quieter in summer. Dog beach available.",
+      "sources": [
+        {
+          "title": "Zillow - Siesta Key FL",
+          "url": "https://www.zillow.com/siesta-key-fl/"
+        },
+        {
+          "title": "Visit Sarasota - Siesta Key",
+          "url": "https://www.visitsarasota.com/siesta-key"
+        }
+      ]
+    },
+    {
+      "id": "fl-st-petersburg-downtown",
+      "name": "Downtown St. Petersburg",
+      "description": "Revitalized waterfront downtown with the Dali Museum, craft breweries, murals, and a walkable grid along Tampa Bay",
+      "character": "Urban arts district, walkable waterfront, craft beer culture, progressive",
+      "housing": {
+        "avgRentOneBedroomUSD": 1700,
+        "avgRentTwoBedroomUSD": 2300,
+        "buyPricePerSqmUSD": 4200,
+        "predominantType": "Condos, loft conversions, and mid-rise apartments"
+      },
+      "walkabilityScore": 82,
+      "transitScore": 45,
+      "safetyRating": "moderate-high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Major arts renaissance in recent years. Dali Museum, Imagine Museum. Saturday Morning Market. More walkable than most Florida cities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living St. Petersburg FL",
+          "url": "https://www.numbeo.com/cost-of-living/in/Saint-Petersburg-FL"
+        },
+        {
+          "title": "Walk Score - Downtown St. Petersburg",
+          "url": "https://www.walkscore.com/score/central-ave-st-petersburg-fl"
+        },
+        {
+          "title": "Visit St. Pete Clearwater",
+          "url": "https://www.visitstpeteclearwater.com/"
+        }
+      ]
+    },
+    {
+      "id": "fl-venice",
+      "name": "Venice, FL",
+      "description": "Small city south of Sarasota with an Italian-inspired downtown, Venice Beach, and a strong retiree community",
+      "character": "Small-town retiree haven, Italian-themed downtown, shark tooth beaches",
+      "housing": {
+        "avgRentOneBedroomUSD": 1500,
+        "avgRentTwoBedroomUSD": 2000,
+        "buyPricePerSqmUSD": 3500,
+        "predominantType": "55+ communities, single-family homes, and condos"
+      },
+      "walkabilityScore": 55,
+      "transitScore": 20,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Known for shark tooth fossil hunting on beaches. Venetian Waterway Park trail. Many 55+ active adult communities. Quieter than Sarasota.",
+      "sources": [
+        {
+          "title": "Zillow - Venice FL",
+          "url": "https://www.zillow.com/venice-fl/"
+        },
+        {
+          "title": "Numbeo Cost of Living Venice FL",
+          "url": "https://www.numbeo.com/cost-of-living/in/Venice-FL"
+        },
+        {
+          "title": "Venice Area Chamber",
+          "url": "https://www.venicechamber.com/"
+        }
+      ]
+    },
+    {
+      "id": "fl-fort-myers-downtown",
+      "name": "Downtown Fort Myers / River District",
+      "description": "Revitalized downtown along the Caloosahatchee River with Edison & Ford estates, restaurants, and a growing urban core",
+      "character": "Revitalizing downtown, river views, historic estates, more affordable",
+      "housing": {
+        "avgRentOneBedroomUSD": 1400,
+        "avgRentTwoBedroomUSD": 1900,
+        "buyPricePerSqmUSD": 3200,
+        "predominantType": "Condos, apartments, and historic homes in surrounding neighborhoods"
+      },
+      "walkabilityScore": 62,
+      "transitScore": 25,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Edison & Ford Winter Estates. River District nightlife. More affordable than Sarasota. Southwest Florida International Airport nearby.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Fort Myers",
+          "url": "https://www.numbeo.com/cost-of-living/in/Fort-Myers-FL"
+        },
+        {
+          "title": "Zillow - Fort Myers FL",
+          "url": "https://www.zillow.com/fort-myers-fl/"
+        },
+        {
+          "title": "Visit Fort Myers",
+          "url": "https://www.fortmyers-sanibel.com/"
+        }
+      ]
+    }
+  ]
+}

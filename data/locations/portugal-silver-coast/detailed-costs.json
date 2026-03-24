@@ -1,0 +1,126 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 30,
+      "typical": 37,
+      "max": 243
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutido / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 12,
+        "withoutInsurance": 200,
+        "coverageNote": "SNS covers for diabetes at 90% reimbursement. Without SNS ~€200/mo."
+      },
+      {
+        "name": "Levotiroxina [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 5,
+        "coverageNote": "SNS reimbursed 69-90%"
+      },
+      {
+        "name": "Atorvastatina 20mg [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 7,
+        "coverageNote": "SNS reimbursed generic"
+      },
+      {
+        "name": "Montelucaste [P1]",
+        "monthlyCost": 3,
+        "withoutInsurance": 12,
+        "coverageNote": "SNS reimbursed 69%"
+      },
+      {
+        "name": "Hidroclorotiazida [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "SNS reimbursed generic"
+      },
+      {
+        "name": "Olmesartan [P1]",
+        "monthlyCost": 3,
+        "withoutInsurance": 14,
+        "coverageNote": "SNS reimbursed 69%"
+      },
+      {
+        "name": "Salbutamol [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 4,
+        "coverageNote": "SNS reimbursed"
+      },
+      {
+        "name": "Metformina 500mg [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 3,
+        "coverageNote": "SNS reimbursed generic"
+      },
+      {
+        "name": "Alopurinol [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 5,
+        "coverageNote": "SNS reimbursed generic"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 6,
+        "coverageNote": "SNS reimbursed"
+      },
+      {
+        "name": "Topiramato [P2]",
+        "monthlyCost": 3,
+        "withoutInsurance": 14,
+        "coverageNote": "SNS reimbursed"
+      },
+      {
+        "name": "Metoprolol [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 5,
+        "coverageNote": "SNS reimbursed"
+      },
+      {
+        "name": "Atorvastatina 20mg [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 7,
+        "coverageNote": "SNS reimbursed generic"
+      }
+    ],
+    "pharmacyAccess": "Farmácias well-distributed in Portuguese cities with green cross signage. 24h pharmacies available in Lisbon and Porto. EU prescriptions accepted.",
+    "notes": "Portugal SNS reimburses 15-90% depending on medication tier and pensioner status. Pensioners and low-income residents get higher reimbursement. Generic substitution is standard. Prices shown assume SNS enrollment."
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 70,
+      "typical": 85,
+      "max": 105
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in Portugal at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "NOS Postpaid",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "10GB 5G",
+        "baseCost": 20,
+        "taxesAndFees": 0,
+        "monthlyTotal": 20,
+        "notes": "2 lines ~€9/line (~$10). NOS or MEO best coverage. EU roaming included."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1261 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 30,
+      "typical": 37,
+      "max": 243
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutido / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 12,
+        "withoutInsurance": 200,
+        "coverageNote": "SNS covers for T2 diabetes; 90% subsidy for pensioners. ~200 EUR/mo without."
+      },
+      {
+        "name": "Levotiroxina [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 5,
+        "coverageNote": "SNS Regime A: 90% covered for pensioners"
+      },
+      {
+        "name": "Atorvastatina 20mg [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 7,
+        "coverageNote": "SNS Regime C: 37% covered; higher with NHR/pensioner status"
+      },
+      {
+        "name": "Montelucaste [P1]",
+        "monthlyCost": 3,
+        "withoutInsurance": 12,
+        "coverageNote": "SNS Regime B: 69% covered"
+      },
+      {
+        "name": "Hidroclorotiazida [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "SNS Regime A: 90% covered for pensioners"
+      },
+      {
+        "name": "Olmesartan [P1]",
+        "monthlyCost": 3,
+        "withoutInsurance": 14,
+        "coverageNote": "SNS Regime C: 37% covered"
+      },
+      {
+        "name": "Salbutamol [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 4,
+        "coverageNote": "SNS Regime A: 90% covered"
+      },
+      {
+        "name": "Metformina 500mg [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 3,
+        "coverageNote": "SNS Regime A: 90% covered"
+      },
+      {
+        "name": "Alopurinol [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 5,
+        "coverageNote": "SNS Regime A: 90% covered"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 6,
+        "coverageNote": "SNS Regime A: 90% covered"
+      },
+      {
+        "name": "Topiramato [P2]",
+        "monthlyCost": 3,
+        "withoutInsurance": 14,
+        "coverageNote": "SNS Regime B: 69% covered"
+      },
+      {
+        "name": "Metoprolol [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 5,
+        "coverageNote": "SNS Regime A: 90% covered"
+      },
+      {
+        "name": "Atorvastatina 20mg [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 7,
+        "coverageNote": "SNS Regime C: 37% covered"
+      }
+    ],
+    "pharmacyAccess": "Excellent. Pharmacies (farmácias) are ubiquitous in Lisbon with green cross signs. Rotating duty pharmacies (farmácias de serviço) open 24/7. Online pharmacy ordering available. Many medications cheaper than US/UK equivalents.",
+    "prescriptionSystem": "SNS electronic prescription (receita eletrónica) issued by family doctor (médico de família) at local health center (centro de saúde). Chronic condition prescriptions renewable for 6 months. Subsidy tiers: A (90%), B (69%), C (37%), D (15%). Pensioners with income below social threshold get highest subsidy rates.",
+    "insuranceCoverage": "SNS public healthcare available after registering at local centro de saúde with residency permit. Covers most prescriptions with copay. Private insurance ($50-150/mo) offers faster access and additional coverage. ADSE (civil servant plan) not available to expats. During D7 visa initial period, private insurance is primary.",
+    "sources": [
+      {
+        "title": "SNS Portal – Medicamentos",
+        "url": "https://www.sns.gov.pt/sns-saude-mais/medicamentos/"
+      },
+      {
+        "title": "Infarmed – Comparticipações",
+        "url": "https://www.infarmed.pt/web/infarmed/comparticipacoes"
+      }
+    ]
+  },
+  "vision": {
+    "annualExamCost": {
+      "withInsurance": 0,
+      "withoutInsurance": 50,
+      "notes": "SNS covers ophthalmology referrals through centro de saúde (long wait). Private exam €40-60. Optical shops offer free basic screenings."
+    },
+    "eyeglasses": {
+      "basicFrameAndLens": {
+        "min": 50,
+        "typical": 100,
+        "max": 250
+      },
+      "progressiveLens": {
+        "min": 120,
+        "typical": 250,
+        "max": 500
+      },
+      "contactLensesMonthly": {
+        "min": 15,
+        "typical": 30,
+        "max": 55
+      }
+    },
+    "insuranceCoverage": "SNS covers ophthalmology consultations and cataract surgery (with wait). Glasses and contacts NOT covered by SNS. Private insurance often includes €100-200 annual optical allowance. MultiOpticas and Wells (Sonae) optical chains competitive on pricing.",
+    "specialistWaitTime": "Public SNS ophthalmology: 3-12 months for non-urgent referral. Private: 1-3 weeks. Cataract surgery public wait can be 6-18 months. SIGIC voucher system allows public patients to use private providers after exceeding wait time limits.",
+    "seniorConsiderations": "Portugal has high rates of age-related eye conditions. Annual screening recommended. SNS covers diabetic retinopathy screening. Hospital de Santa Maria and Hospital de São José have full ophthalmology departments. Private clinics like Clínica Oftalmológica de Lisboa offer premium care.",
+    "sources": [
+      {
+        "title": "SNS Portal – Oftalmologia",
+        "url": "https://www.sns.gov.pt/"
+      },
+      {
+        "title": "MultiOpticas Portugal",
+        "url": "https://www.multiopticas.pt/"
+      }
+    ]
+  },
+  "dental": {
+    "annualCleaningCost": {
+      "withInsurance": 15,
+      "withoutInsurance": 60,
+      "notes": "Dental NOT covered by SNS (except limited emergency care and cheque-dentista vouchers for specific groups). Pay-as-you-go or private dental insurance."
+    },
+    "commonProcedures": [
+      {
+        "procedure": "Filling",
+        "cost": {
+          "min": 40,
+          "typical": 65,
+          "max": 120
+        },
+        "coverageNote": "Not covered by SNS. Private dental plans cover basic fillings."
+      },
+      {
+        "procedure": "Crown",
+        "cost": {
+          "min": 250,
+          "typical": 400,
+          "max": 650
+        },
+        "coverageNote": "Not covered by SNS. Private plans cover 50-70%. Dental tourism from UK/Nordics keeps quality high."
+      },
+      {
+        "procedure": "Root Canal",
+        "cost": {
+          "min": 100,
+          "typical": 180,
+          "max": 300
+        },
+        "coverageNote": "Not covered by SNS. Significantly cheaper than UK/US prices."
+      },
+      {
+        "procedure": "Extraction",
+        "cost": {
+          "min": 50,
+          "typical": 80,
+          "max": 150
+        },
+        "coverageNote": "Emergency extractions may be covered by SNS in limited cases."
+      },
+      {
+        "procedure": "Implant",
+        "cost": {
+          "min": 600,
+          "typical": 1000,
+          "max": 1800
+        },
+        "coverageNote": "Portugal is a popular dental tourism destination. High-quality implants at 40-60% of UK prices."
+      },
+      {
+        "procedure": "Dentures",
+        "cost": {
+          "min": 350,
+          "typical": 600,
+          "max": 1100
+        },
+        "coverageNote": "Not covered by SNS. Cheque-dentista program does not cover dentures for seniors (limited to pregnant women and youth)."
+      }
+    ],
+    "insuranceCoverage": "SNS does NOT cover adult dental care. Cheque-dentista voucher program limited to pregnant women, children, and elderly in specific social programs. Private dental insurance €15-35/month covers cleanings and basic procedures. Dental plans from Médis, Multicare, and AdvanceCare popular. Many expats pay out-of-pocket given low costs.",
+    "dentistAvailability": "Excellent in Lisbon. Many modern clinics with English-speaking staff. Portugal trains many dentists (Universidade de Lisboa, ISCSEM). Dental tourism infrastructure well-developed. No referral needed for private dentists. Walk-in appointments often available.",
+    "sources": [
+      {
+        "title": "Ordem dos Médicos Dentistas",
+        "url": "https://www.omd.pt/"
+      },
+      {
+        "title": "SNS – Cheque Dentista",
+        "url": "https://www.sns.gov.pt/sns-saude-mais/cheque-dentista/"
+      }
+    ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 290,
+      "typical": 360,
+      "max": 450
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 240,
+        "seniorDiscounts": "Prato do dia (dish of the day) excellent value. Small tip 5-10% customary.",
+        "notes": "Lunch for 2 at moderate restaurant: ~€22 + 10% tip = ~€24, 2x/week = ~€209/mo = ~$240/mo"
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 38,
+        "seniorDiscounts": "No specific senior discounts.",
+        "notes": "MEO/NOS/Vodafone 1 Gig fibre €30-40/mo."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 15,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€13.99/mo in Portugal."
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 5,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€4.99/mo in Portugal."
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 11,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€9.99/mo in Eurozone."
+      },
+      {
+        "name": "NFL RedZone",
+        "monthlyCost": 11,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "DAZN NFL Game Pass €19.99/mo during season (Sep-Feb). Annualized ~€10/mo (~$11). Includes RedZone, live games, NFL Network."
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 25,
+        "seniorDiscounts": "Municipal gyms offer senior rates."
+      },
+      {
+        "name": "Books/Media",
+        "monthlyCost": 12,
+        "seniorDiscounts": "Public libraries free."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 15,
+        "seniorDiscounts": "Pastel de nata + café ~€2-3. Very affordable.",
+        "notes": "Coffee culture is a way of life."
+      }
+    ],
+    "sources": [
+      {
+        "title": "MEO Internet",
+        "url": "https://www.meo.pt/internet"
+      },
+      {
+        "title": "Netflix Portugal",
+        "url": "https://help.netflix.com/pt/node/24926"
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 30,
+      "typical": 80,
+      "max": 180
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 40,
+        "senior": 20,
+        "notes": "Lisboa Viva Navegante Metropolitano pass covers all metro, bus (Carris), trams, ferries, and CP trains within Lisbon metro area. €40 regular, €20 for 65+ (social tariff)."
+      },
+      "singleRide": 1.65,
+      "coverage": "Excellent. Lisbon Metro (4 lines), Carris buses (100+ routes), iconic trams (28E), elevadores (funiculars), Transtejo ferries to Almada/Cacilhas, CP suburban trains (Sintra, Cascais, Setúbal lines). Navegante pass covers all.",
+      "seniorDiscount": "65+ with Portuguese residency eligible for Navegante 65+ at €20/mo (vs €40 regular). Sub-23 also discounted. Apply at Navegante shops with CC or residency card."
+    },
+    "rideShare": {
+      "baseFare": 3.25,
+      "perKm": 0.9,
+      "typicalCrossTownTrip": {
+        "min": 5,
+        "typical": 8,
+        "max": 15
+      },
+      "availability": "Uber and Bolt widely available. FreeNow (formerly myTaxi) for traditional taxis. Very easy to get rides throughout Lisbon and surrounding areas.",
+      "notes": "Airport to city center €10-15 by Uber/Bolt. Regular taxis slightly more. Surge pricing during peak tourist season."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 30,
+        "initialRegistration": {
+          "min": 150,
+          "typical": 500,
+          "max": 2000
+        },
+        "notes": "IUC (Imposto Único de Circulação) annual road tax based on engine/emissions. ISV (Imposto Sobre Veículos) one-time import tax can be very high for imported vehicles."
+      },
+      "insurance": {
+        "monthlyMin": 20,
+        "monthlyTypical": 40,
+        "monthlyMax": 75,
+        "notes": "Third-party (responsabilidade civil) from €20/mo. Comprehensive (todos os riscos) €40-75/mo. Fidelidade, Allianz, Tranquilidade are major insurers."
+      },
+      "fuel": {
+        "pricePerLiter": 1.7,
+        "monthlyEstimate": {
+          "min": 50,
+          "typical": 90,
+          "max": 150
+        },
+        "notes": "Gasoline €1.65-1.80/L. Diesel €1.55-1.65/L. Portugal has among the highest fuel costs in Europe. City driving rarely needed with excellent public transit."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 30,
+          "typical": 60,
+          "max": 120
+        },
+        "hourlyStreet": 1.4,
+        "notes": "EMEL manages Lisbon street parking. Resident permit available with morada fiscal. Garage parking €60-120/mo in central areas. Many neighborhoods have limited parking."
+      },
+      "tolls": {
+        "monthlyEstimate": 25,
+        "notes": "A1, A2, A5 and other motorways have tolls. Via Verde electronic toll system. Ponte 25 de Abril bridge toll €1.85. Monthly estimate assumes occasional trips to Sintra/Cascais/Algarve."
+      },
+      "seniorDiscounts": "No specific senior discounts on car ownership. CP Cartão Sénior for trains makes car ownership less necessary."
+    },
+    "walkability": "Very walkable in central neighborhoods (Chiado, Baixa, Alfama) though extremely hilly. Seven hills can be challenging for seniors with mobility issues. Elevadores (funiculars) and elevador de Santa Justa help with hills. Belém area flat along the river. Cascais/Estoril line coastal areas flat and walkable.",
+    "cycling": {
+      "bikeShareMonthly": 20,
+      "infrastructure": "GIRA bike share system with electric and regular bikes. Growing network of cycle paths, especially along the riverfront (Belém to Parque das Nações). Hills make cycling challenging in many areas. E-bikes increasingly popular.",
+      "notes": "GIRA annual pass €25. Riverfront bike path is excellent and flat. Cycling in hilly neighborhoods not practical. Electric scooters (Bolt, Lime) also available."
+    },
+    "sources": [
+      {
+        "title": "Navegante – Monthly Pass",
+        "url": "https://www.navegante.pt/"
+      },
+      {
+        "title": "Metro de Lisboa",
+        "url": "https://www.metrolisboa.pt/"
+      },
+      {
+        "title": "CP Comboios de Portugal",
+        "url": "https://www.cp.pt/"
+      },
+      {
+        "title": "GIRA Bike Share",
+        "url": "https://www.gira-bicicletasdelisboa.pt/"
+      }
+    ],
+    "electricVehicle": {
+      "purchasePrice": {
+        "min": 25000,
+        "typical": 35000,
+        "max": 52000
+      },
+      "purchaseNotes": "Dacia Spring ~€23K, Renault Megane E-Tech ~€36K, Tesla Model 3 ~€42K. ISV (registration tax) exemption for EVs is significant savings.",
+      "federalIncentive": 4000,
+      "stateIncentive": 0,
+      "incentiveNotes": "Incentivo pela introdução no consumo de veículos de zero emissões: €4,000 subsidy for new EV. Full ISV (Imposto sobre Veículos) exemption (saves €2,000-8,000). Full IUC (annual tax) exemption.",
+      "chargingHome": {
+        "installCost": {
+          "min": 400,
+          "typical": 800,
+          "max": 1500
+        },
+        "monthlyElectricity": {
+          "min": 25,
+          "typical": 40,
+          "max": 60
+        },
+        "notes": "Electricity ~€0.16-0.22/kWh (bi-hourly tariff: off-peak much cheaper). MOBI.E network growing."
+      },
+      "chargingPublic": {
+        "perKwh": {
+          "min": 0.25,
+          "typical": 0.4,
+          "max": 0.6
+        },
+        "notes": "MOBI.E national network. EDP, Galp, Prio operators. Some free municipal chargers in Lisbon."
+      },
+      "insurance": {
+        "monthly": {
+          "min": 30,
+          "typical": 50,
+          "max": 85
+        },
+        "notes": "Fidelidade, Ageas, Tranquilidade. EV-specific policies emerging."
+      },
+      "maintenance": {
+        "annual": {
+          "min": 250,
+          "typical": 400,
+          "max": 600
+        },
+        "notes": "IPO (inspection) every 2 yrs after 4 yrs. Lower labor rates than Northern Europe."
+      },
+      "registration": {
+        "annual": {
+          "min": 0,
+          "typical": 0,
+          "max": 0
+        },
+        "notes": "Full IUC (Imposto Único de Circulação) exemption for 100% electric vehicles."
+      },
+      "batteryWarranty": "8 years / 160,000 km (EU standard).",
+      "depreciationNotes": "Growing EV market. ISV exemption makes new EVs attractive; used market developing.",
+      "totalMonthlyOwnership": {
+        "min": 85,
+        "typical": 150,
+        "max": 240
+      },
+      "totalMonthlyNotes": "Includes: charging (€40), insurance (€50), maintenance (€33/mo avg). No registration fees. Excludes: purchase/loan payment, depreciation.",
+      "sources": [
+        {
+          "title": "Incentivo EV - Fundo Ambiental",
+          "url": "https://www.fundoambiental.pt/"
+        },
+        {
+          "title": "MOBI.E Rede de Carregamento",
+          "url": "https://www.mobie.pt/"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 65,
+    "discounts": [
+      {
+        "category": "Public Transit",
+        "description": "Navegante 65+ monthly pass",
+        "discount": "50% off (€20 vs €40)",
+        "details": "Covers metro, bus, tram, ferry, and suburban trains across greater Lisbon. Apply at Navegante shops with residency documentation.",
+        "source": "Navegante / Transportes de Lisboa"
+      },
+      {
+        "category": "Train Travel",
+        "description": "CP Cartão Sénior",
+        "discount": "50% off most CP train tickets",
+        "details": "Available to anyone 65+. Annual card. Valid on Alfa Pendular, Intercidades, Regional, and InterRegional services. Best value for Porto/Algarve trips.",
+        "source": "CP Comboios de Portugal"
+      },
+      {
+        "category": "Museums & Culture",
+        "description": "Reduced entry at national museums and monuments",
+        "discount": "50% off or free for 65+",
+        "details": "Most national museums offer 50% senior discount. Many free on first Sunday. Lisboa Card includes 30+ museums. Gulbenkian free on Sundays for all.",
+        "source": "DGPC (Direção-Geral do Património Cultural)"
+      },
+      {
+        "category": "Prescription Medication",
+        "description": "SNS subsidy for pensioners",
+        "discount": "37-90% subsidy depending on medication tier",
+        "details": "Automatic with SNS registration. Higher subsidy tiers for chronic conditions and low-income pensioners. Applied at pharmacy with electronic prescription.",
+        "source": "Infarmed / SNS"
+      },
+      {
+        "category": "Municipal Services",
+        "description": "Reduced rates at municipal sports, pools, and cultural centers",
+        "discount": "30-50% off",
+        "details": "Câmara Municipal de Lisboa offers reduced tariffs for 65+ residents at municipal swimming pools, gyms, and cultural programming.",
+        "source": "Câmara Municipal de Lisboa"
+      },
+      {
+        "category": "Universidade Sénior",
+        "description": "Subsidized university courses for seniors",
+        "discount": "Low-cost courses (€20-50/year)",
+        "details": "RUTIS network of senior universities across Portugal. Wide range of subjects. Social and educational program for 50+.",
+        "source": "RUTIS – Rede de Universidades da Terceira Idade"
+      },
+      {
+        "category": "Cinema",
+        "description": "Reduced ticket prices at major chains",
+        "discount": "20-30% off regular ticket price",
+        "details": "NOS Cinemas and UCI offer weekday senior rates. Combined with Monday/Tuesday promotions for best savings.",
+        "source": "NOS Cinemas"
+      },
+      {
+        "category": "Tax Benefits",
+        "description": "IRS income tax deductions for 65+",
+        "discount": "Higher personal deduction and health expense deductions",
+        "details": "Portuguese tax system allows additional deductions for residents 65+. NHR regime (if still applicable) may offer further benefits. Consult tax advisor.",
+        "source": "Autoridade Tributária"
+      }
+    ]
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 70,
+      "typical": 85,
+      "max": 105
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in Portugal at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "WTF by NOS (Local)",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "5GB 4G/5G",
+        "baseCost": 16,
+        "taxesAndFees": 0,
+        "monthlyTotal": 20,
+        "notes": "WTF (NOS sub-brand) €8.99/mo per line (23% IVA included). 5GB data, unlimited calls in Portugal. ~$20/mo for 2 lines."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      },
+      {
+        "title": "WTF by NOS",
+        "url": "https://www.nos.pt/particulares/tarifarios"
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom house (moradia)",
+    "monthlyBudget": {
+      "min": 1100,
+      "max": 1800,
+      "typical": 1400
+    },
+    "breakdown": {
+      "baseRentEUR": 1150,
+      "condominioFeesEUR": 30,
+      "totalEUR": 1180,
+      "exchangeRate": 1.08,
+      "totalUSD": 1274
+    },
+    "taxNotes": "No VAT on residential rent. IMI (property tax) is landlord responsibility. Landlord pays 25% tax on rental income (can impact pricing). Tenant stamp duty (Imposto de Selo) of 10% on rent applies — typically built into advertised rent. Condomínio fees for shared properties passed to tenant.",
+    "leaseTerms": "Minimum lease varies: typically 1-year with automatic renewal up to 3 years. NRAU (New Urban Rental Law) governs. Security deposit usually 2 months. Rent increases capped by INE inflation coefficient (2.16% for 2025).",
+    "marketNotes": "Lisbon city proper: 2BR houses extremely rare and expensive. Better value in Greater Lisbon: Cascais, Sintra, Almada, Setúbal. Algarve towns (Faro, Lagos, Tavira) offer more houses. Golden Visa demand inflated market but cooling since visa changes.",
+    "sources": [
+      {
+        "name": "Idealista Portugal Rentals",
+        "url": "https://www.idealista.pt/en/arrendar-casas/lisboa/"
+      },
+      {
+        "name": "Portugal NRAU Rental Law",
+        "url": "https://www.portaldahabitacao.pt/arrendamento"
+      }
+    ],
+    "housingSites": {
+      "rentals": [
+        {
+          "name": "Idealista",
+          "url": "https://www.idealista.pt/en/arrendar-casas/lisboa/",
+          "type": "rental"
+        },
+        {
+          "name": "Imovirtual",
+          "url": "https://www.imovirtual.com/en/results/rent/lisboa/",
+          "type": "rental"
+        },
+        {
+          "name": "RE/MAX",
+          "url": "https://remax.pt/en/comprar/apartamento/lisboa",
+          "type": "purchase"
+        }
+      ]
+    }
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Continente",
+        "type": "hypermarket",
+        "website": "https://www.continente.pt/",
+        "notes": "Portugal's largest chain",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Continente Supermarket Portugal",
+            "url": "https://www.youtube.com/watch?v=2dMcPGlVhRc"
+          },
+          {
+            "platform": "instagram",
+            "title": "@continaborente",
+            "url": "https://www.instagram.com/continente/"
+          }
+        ]
+      },
+      {
+        "name": "Pingo Doce",
+        "type": "supermarket",
+        "website": "https://www.pingodoce.pt/",
+        "notes": "Quality house brands, Jerónimo Martins group",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Pingo Doce Portugal Tour",
+            "url": "https://www.youtube.com/watch?v=vfGL_JXjBhc"
+          },
+          {
+            "platform": "instagram",
+            "title": "@pingodoce",
+            "url": "https://www.instagram.com/pingodoce/"
+          }
+        ]
+      },
+      {
+        "name": "Mercado da Ribeira / Time Out Market",
+        "type": "specialty-grocery",
+        "website": "https://www.timeoutmarket.com/lisboa/",
+        "notes": "Historic riverside market + food hall",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Time Out Market Lisbon",
+            "url": "https://www.youtube.com/watch?v=nYwKA1Z8A90"
+          },
+          {
+            "platform": "instagram",
+            "title": "@timeoutmarketlisboa",
+            "url": "https://www.instagram.com/timeoutmarketlisboa/"
+          }
+        ]
+      }
+    ]
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 39,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Farmers market or CSA box"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 26,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Bananas, berries, apples, citrus"
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 13,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Sweet Potatoes / Potatoes",
+            "monthlyCost": 9.75,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet staple"
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 7.8,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet vegetables"
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 6.5,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Digestive health, home-cooked diet"
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 32.5,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Primary protein for both adults & dog"
+          },
+          {
+            "name": "Ground Turkey / Beef",
+            "monthlyCost": 29.25,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean ground for dog food base"
+          },
+          {
+            "name": "Fish (salmon/tilapia)",
+            "monthlyCost": 26,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Omega-3 rich"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 9.75,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": "Eggs also for dog diet"
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 7.8,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Essential for balanced home-cooked dog diet"
+          },
+          {
+            "name": "Beans / Lentils",
+            "monthlyCost": 5.2,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "grains",
+        "name": "Grains & Starches",
+        "items": [
+          {
+            "name": "Rice (brown/white)",
+            "monthlyCost": 6.5,
+            "quantity": 5,
+            "unit": "lbs/month",
+            "forWhom": "shared",
+            "notes": "Dog diet carb source"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 9.75,
+            "quantity": 2,
+            "unit": "loaves/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 5.2,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Oats / Cereal",
+            "monthlyCost": 6.5,
+            "quantity": 1,
+            "unit": "container/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk / Plant Milk",
+            "monthlyCost": 9.75,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Cheese",
+            "monthlyCost": 13,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Yogurt / Kefir",
+            "monthlyCost": 9.75,
+            "quantity": 1,
+            "unit": "quart/week",
+            "forWhom": "shared",
+            "notes": "Probiotics for dog digestion too"
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 6.5,
+            "quantity": 1,
+            "unit": "unit/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Olive Oil / Cooking Oils",
+            "monthlyCost": 9.75,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Spices & Seasonings",
+            "monthlyCost": 6.5,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Canned Goods (tomatoes, beans)",
+            "monthlyCost": 7.8,
+            "quantity": 6,
+            "unit": "cans/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Condiments & Sauces",
+            "monthlyCost": 6.5,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 16.25,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tea",
+            "monthlyCost": 5.2,
+            "quantity": 1,
+            "unit": "box/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Wine / Beer",
+            "monthlyCost": 26,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Optional"
+          },
+          {
+            "name": "Sparkling Water / Juice",
+            "monthlyCost": 7.8,
+            "quantity": 1,
+            "unit": "case/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "snacks",
+        "name": "Snacks & Treats",
+        "items": [
+          {
+            "name": "Nuts & Trail Mix",
+            "monthlyCost": 9.75,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Crackers / Chips",
+            "monthlyCost": 6.5,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Dark Chocolate",
+            "monthlyCost": 5.2,
+            "quantity": 4,
+            "unit": "bars/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "frozen",
+        "name": "Frozen Foods",
+        "items": [
+          {
+            "name": "Frozen Vegetables",
+            "monthlyCost": 7.8,
+            "quantity": 4,
+            "unit": "bags/month",
+            "forWhom": "shared",
+            "notes": "Backup for dog food prep"
+          },
+          {
+            "name": "Frozen Fruit (smoothies)",
+            "monthlyCost": 6.5,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Frozen Meals (convenience)",
+            "monthlyCost": 9.75,
+            "quantity": 4,
+            "unit": "meals/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "supplements",
+        "name": "Pet Supplements & Health",
+        "items": [
+          {
+            "name": "Joint Supplement (glucosamine)",
+            "monthlyCost": 19.5,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Essential for Bernese — hip/joint health"
+          },
+          {
+            "name": "Fish Oil (omega-3)",
+            "monthlyCost": 9.75,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Coat & skin health"
+          },
+          {
+            "name": "Multivitamin / Mineral Mix",
+            "monthlyCost": 13,
+            "quantity": 1,
+            "unit": "container/month",
+            "forWhom": "dog",
+            "notes": "Balance home-cooked diet"
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 9.75,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "dog",
+            "notes": "Training & dental chews"
+          }
+        ]
+      }
+    ],
+    "monthlyTotal": 463
+  },
+  "healthcare": {
+    "system": "SNS public + optional private insurance",
+    "coverageSummary": "SNS available after D7/NHR visa residency. Public system covers most care with modest copays (€5-15 taxas moderadoras). Optional private insurance for faster access.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD"
+      ],
+      "costs": [
+        {
+          "item": "Private insurance (Multicare/Médis)",
+          "monthlyCost": 100,
+          "notes": "~€90-110/mo. Pre-existing loading for AMD. Age surcharge."
+        },
+        {
+          "item": "Anti-VEGF injections (SNS hospital)",
+          "monthlyCost": 0,
+          "notes": "Covered at SNS hospitals (Hospital de Santa Maria, etc.). No copay."
+        },
+        {
+          "item": "Ophthalmologist (SNS)",
+          "monthlyCost": 3,
+          "notes": "Taxa moderadora €5-7 per specialist visit. Can use private for faster."
+        },
+        {
+          "item": "Private ophthalmology visits",
+          "monthlyCost": 15,
+          "notes": "If using private: €40-60/visit, insurance covers partially."
+        },
+        {
+          "item": "Specialist visits (endocrinology)",
+          "monthlyCost": 5,
+          "notes": "SNS copay €5 or private with insurance."
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Gout",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Migraines"
+      ],
+      "costs": [
+        {
+          "item": "Private insurance (Multicare/Médis)",
+          "monthlyCost": 85,
+          "notes": "~€80-90/mo. Pre-existing loading for diabetes."
+        },
+        {
+          "item": "Endocrinologist (SNS/private)",
+          "monthlyCost": 5,
+          "notes": "SNS copay or private with insurance copay."
+        },
+        {
+          "item": "Diabetes supplies",
+          "monthlyCost": 5,
+          "notes": "SNS covers most supplies. Some out-of-pocket for extras."
+        },
+        {
+          "item": "Specialist copays",
+          "monthlyCost": 5,
+          "notes": "SNS taxas moderadoras for rheumatology, neurology."
+        }
+      ]
+    },
+    "shared": [
+      {
+        "item": "Dental care (2 adults)",
+        "monthlyCost": 15,
+        "notes": "SNS covers basic dental (cheque-dentista). Private insurance adds more coverage."
+      },
+      {
+        "item": "SNS user fees (taxas moderadoras)",
+        "monthlyCost": 5,
+        "notes": "€5-15 per visit. Exempt if income < threshold or chronic disease."
+      }
+    ],
+    "monthlyTotals": {
+      "person1": 123,
+      "person2": 100,
+      "shared": 20,
+      "household": 243
+    },
+    "notes": null,
+    "phaseTransition": null
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Black Hair Care",
+      "priceRange": {
+        "cut": "18-35",
+        "color": "45-95",
+        "fullService": "65-150"
+      },
+      "notes": "Lisbon has a large Afro-Portuguese community, especially in neighborhoods like Mouraria, Arroios, and Amadora. Good selection of Afro salons.",
+      "providers": [
+        {
+          "name": "African Queen Cabeleireiro",
+          "type": "Afro hair salon",
+          "address": "Mouraria, Lisbon",
+          "distanceMi": 0,
+          "rating": 4.5,
+          "notes": "Popular Afro salon in multicultural Mouraria. Braids, locs, weaves, color.",
+          "website": ""
+        },
+        {
+          "name": "Beleza Negra",
+          "type": "Full-service salon",
+          "address": "Arroios, Lisbon",
+          "distanceMi": 1,
+          "rating": 4.3,
+          "notes": "African and Brazilian hair care. All textures. Color, relaxers, natural styles.",
+          "website": ""
+        }
+      ]
+    },
+    "whiteHairCare": {
+      "label": "White/Caucasian Hair Care",
+      "priceRange": {
+        "cut": "15-30",
+        "color": "35-75",
+        "highlights": "50-100"
+      },
+      "notes": "Lisbon has excellent affordable salons throughout the city. Chiado and Principe Real for upscale options.",
+      "providers": [
+        {
+          "name": "Cabeleireiro Tiago Parente",
+          "type": "Upscale salon",
+          "address": "Principe Real, Lisbon",
+          "distanceMi": 0,
+          "rating": 4.7,
+          "notes": "Celebrity stylist salon. Expert color. Highlights, balayage. Premium but still cheaper than US.",
+          "website": ""
+        },
+        {
+          "name": "Head Office",
+          "type": "Boutique salon",
+          "address": "Santos, Lisbon",
+          "distanceMi": 1,
+          "rating": 4.5,
+          "notes": "Expat-friendly. English-speaking stylists. Good color work. Moderate prices.",
+          "website": ""
+        }
+      ]
+    },
+    "mensBigTall": {
+      "label": "Men's Big & Tall Clothing",
+      "priceRange": {
+        "shirts": "15-45",
+        "pants": "20-40",
+        "suits": "70-220"
+      },
+      "notes": "El Corte Inglés in Lisbon is the best option for in-store big sizes. Primark and online retailers supplement.",
+      "providers": [
+        {
+          "name": "El Corte Inglés (Lisboa)",
+          "type": "Department store",
+          "address": "São Sebastião, Lisbon",
+          "distanceMi": 2,
+          "rating": 4.3,
+          "notes": "Extended sizes section. Best in-store selection for big & tall in Lisbon.",
+          "website": ""
+        },
+        {
+          "name": "Primark (Colombo Centre)",
+          "type": "Budget retailer",
+          "address": "Centro Colombo, Lisbon",
+          "distanceMi": 4,
+          "rating": 4,
+          "notes": "Very affordable. Up to 3XL. Massive store. Good for basics.",
+          "website": ""
+        }
+      ]
+    },
+    "womensClothing": {
+      "label": "Women's Regular Clothing",
+      "priceRange": {
+        "casual": "10-30",
+        "dresses": "20-55",
+        "professional": "25-70"
+      },
+      "notes": "Lisbon is extremely affordable for clothing. Chiado and Avenida da Liberdade for fashion shopping. Portuguese brands are good quality.",
+      "providers": [
+        {
+          "name": "El Corte Inglés",
+          "type": "Department store",
+          "address": "São Sebastião, Lisbon",
+          "distanceMi": 2,
+          "rating": 4.4,
+          "notes": "Full women's department. European sizes 34-52. Alterations.",
+          "website": ""
+        },
+        {
+          "name": "Chiado shopping district",
+          "type": "Shopping area",
+          "address": "Chiado, Lisbon",
+          "distanceMi": 0,
+          "rating": 4.6,
+          "notes": "Zara, Mango, Stradivarius, plus local Portuguese boutiques. Very affordable regular sizes.",
+          "website": ""
+        }
+      ]
+    },
+    "shoes": {
+      "label": "Shoes",
+      "priceRange": {
+        "casual": "20-50",
+        "dress": "35-80",
+        "athletic": "30-70",
+        "wideWidth": "25-60"
+      },
+      "notes": "Portugal is a major EU shoe producer (3rd largest). Outstanding quality and prices. Brands like Seaside, Aldo (local), Fly London.",
+      "providers": [
+        {
+          "name": "Seaside",
+          "type": "Portuguese shoe chain",
+          "address": "Multiple Lisbon locations",
+          "distanceMi": 0,
+          "rating": 4.3,
+          "notes": "Portuguese shoe retailer. Very affordable. Men's and women's. Good comfort shoes.",
+          "website": ""
+        },
+        {
+          "name": "Sapataria do Carmo",
+          "type": "Boutique shoe store",
+          "address": "Chiado, Lisbon",
+          "distanceMi": 0,
+          "rating": 4.5,
+          "notes": "Curated Portuguese and European shoes. Mid-range prices. Quality leather. Extended sizes.",
+          "website": ""
+        }
+      ]
+    }
+  }
+}

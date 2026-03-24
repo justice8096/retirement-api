@@ -1,0 +1,245 @@
+{
+  "distanceUnit": "km",
+  "currency": "EUR",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Hospital General Universitario de Valencia",
+      "address": "City center area, Valencia, Spain",
+      "distanceKm": 6,
+      "notes": "Public hospital with 24hr emergency, some English-speaking staff",
+      "sources": [
+        {
+          "title": "Hospital General Universitario de Valencia",
+          "url": "https://www.san.gva.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Farmacia Valencia Centro",
+      "address": "City center area, Valencia, Spain",
+      "distanceKm": 1.5,
+      "notes": "Well-stocked pharmacy, prescription medications, some English spoken",
+      "sources": [
+        {
+          "title": "Farmacia Valencia Centro",
+          "url": "https://www.cofm.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Mercadona",
+      "address": "City center area, Valencia, Spain",
+      "distanceKm": 2,
+      "notes": "Spain's largest supermarket chain, fresh products, competitive prices",
+      "sources": [
+        {
+          "title": "Mercadona",
+          "url": "https://www.mercadona.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "CaixaBank Valencia",
+      "address": "City center area, Valencia, Spain",
+      "distanceKm": 2,
+      "notes": "Major Spanish bank, ATMs, some English-speaking staff, mobile banking",
+      "sources": [
+        {
+          "title": "CaixaBank Valencia",
+          "url": "https://www.caixabank.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Centro de Salud Valencia",
+      "address": "City center area, Valencia, Spain",
+      "distanceKm": 3,
+      "notes": "Public health center, GP services, some English-speaking doctors",
+      "sources": [
+        {
+          "title": "Centro de Salud Valencia",
+          "url": "https://www.san.gva.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Dental Clinic Valencia Center",
+      "address": "City center area, Valencia, Spain",
+      "distanceKm": 3,
+      "notes": "General and cosmetic dentistry, some English-speaking dentists, modern equipment",
+      "sources": [
+        {
+          "title": "Dental Services Spain",
+          "url": "https://www.consejodentistas.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Veterinary Clinic Valencia",
+      "address": "City center area, Valencia, Spain",
+      "distanceKm": 4,
+      "notes": "Full veterinary services, vaccinations, surgery, some English spoken",
+      "sources": [
+        {
+          "title": "Veterinary Services Spain",
+          "url": "https://www.colvet.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Parque Canino / Dog Park Valencia",
+      "address": "Park area, Valencia, Spain",
+      "distanceKm": 5,
+      "notes": "Off-leash area, green space popular with dog owners, water available",
+      "sources": [
+        {
+          "title": "Parks in Valencia",
+          "url": "https://www.spain.info/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "McFit Valencia",
+      "address": "City center area, Valencia, Spain",
+      "distanceKm": 3,
+      "notes": "Modern gym with cardio and weight equipment, group classes, monthly memberships",
+      "sources": [
+        {
+          "title": "McFit Valencia",
+          "url": "https://www.mcfit.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "Anglican Church of Valencia",
+      "address": "City center area, Valencia, Spain",
+      "distanceKm": 5,
+      "notes": "English-language services, expat community gathering point, social events",
+      "sources": [
+        {
+          "title": "Anglican Church of Valencia",
+          "url": "https://europe.anglican.org/"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Valencia Airport (VLC)",
+      "address": "Airport area",
+      "distanceKm": 10,
+      "notes": "International airport with domestic and international flights",
+      "sources": [
+        {
+          "title": "Valencia Airport",
+          "url": "https://www.aena.es/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Estación de Valencia / Metro",
+      "address": "City center area, Valencia, Spain",
+      "distanceKm": 2,
+      "notes": "Renfe rail, metro/tram, comprehensive bus network",
+      "sources": [
+        {
+          "title": "Estación de Valencia",
+          "url": "https://www.renfe.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "coworking",
+      "name": "Spaces Valencia",
+      "address": "City center area, Valencia, Spain",
+      "distanceKm": 3,
+      "notes": "Coworking space, high-speed internet, meeting rooms, community events",
+      "sources": [
+        {
+          "title": "Spaces Valencia",
+          "url": "https://www.spacesworks.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "Pet Grooming Valencia",
+      "address": "City center area, Valencia, Spain",
+      "distanceKm": 4,
+      "notes": "Professional pet grooming services, bathing, clipping, appointment recommended",
+      "sources": [
+        {
+          "title": "Pet Services Valencia",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "categoryId": "international_school",
+      "name": "InterNations Valencia Expat Community",
+      "address": "City center area, Valencia, Spain",
+      "distanceKm": 4,
+      "notes": "International expat community center, social events, networking, relocation assistance",
+      "sources": [
+        {
+          "title": "InterNations Valencia Expat Community",
+          "url": "https://www.internations.org/"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "Valencia Cultural Center",
+      "description": "Cultural center with local art, history, and community events",
+      "distanceKm": 4,
+      "estimatedCostEUR": 8,
+      "frequency": "Tue-Sun 10:00-17:00",
+      "sources": [
+        {
+          "title": "Valencia Culture",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "name": "Valencia Central Park / Garden",
+      "description": "Main public park with walking trails, gardens, and green space",
+      "distanceKm": 3,
+      "estimatedCostEUR": 0,
+      "frequency": "Daily, dawn to dusk",
+      "sources": [
+        {
+          "title": "Parks in Valencia",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "dining",
+      "name": "Valencia Restaurant District",
+      "description": "Walkable area with diverse restaurants, cafes, and bars",
+      "distanceKm": 2,
+      "estimatedCostEUR": 25,
+      "frequency": "Daily, lunch and dinner service",
+      "sources": [
+        {
+          "title": "Dining in Valencia",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    }
+  ]
+}

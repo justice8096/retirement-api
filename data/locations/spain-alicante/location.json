@@ -1,0 +1,301 @@
+{
+  "id": "spain-alicante",
+  "name": "Alicante / Costa Blanca, Spain",
+  "country": "Spain",
+  "region": "Valencia",
+  "cities": [
+    "Alicante",
+    "Benidorm",
+    "Denia",
+    "Javea"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "visa": {
+    "type": "Non-Lucrative Visa (NLV)",
+    "incomeRequirement": {
+      "monthly": 2400,
+      "annual": 28800,
+      "currency": "EUR"
+    },
+    "applicationFee": 80,
+    "notes": "No work permitted; A2 Spanish for permanent residency after 5 years"
+  },
+  "climate": {
+    "winterLowF": 45,
+    "summerHighF": 90,
+    "rainyDaysPerYear": 45,
+    "meetsWarmWinterReq": true
+  },
+  "monthlyCosts": {
+    "rent": {
+      "min": 750,
+      "max": 1200,
+      "typical": 950,
+      "type": "2-bedroom house/villa (chalet)",
+      "annualInflation": 0.03,
+      "notes": "No VAT (IVA) on residential rent in Spain.",
+      "gigInternetTypical": 970,
+      "gigInternetCoverage": 89,
+      "gigInternetProviders": "Movistar, Orange, Vodafone, MásMóvil",
+      "gigInternetNotes": "Spain has 88.76% national FTTH household coverage (CNMC, Sep 2024). 95.2% population has fiber access. Very competitive market with 4 major providers. Costa Blanca residential areas well-served. Minimal premium."
+    },
+    "groceries": {
+      "min": 875,
+      "max": 1050,
+      "typical": 960,
+      "annualInflation": 0.025
+    },
+    "utilities": {
+      "min": 116,
+      "max": 189,
+      "typical": 145,
+      "annualInflation": 0.03,
+      "breakdown": {
+        "electricity": {
+          "typical": 85,
+          "notes": "Iberdrola/Endesa. A/C significant May–Sep (90°F summers). Electric heating in winter mild."
+        },
+        "gas": {
+          "typical": 25,
+          "notes": "Natural gas or butano (propane canister ~€15/refill). Mild winters, less heating needed."
+        },
+        "water": {
+          "typical": 35,
+          "notes": "AMAEM (Alicante municipal water). Includes alcantarillado (sewage). Tiered rates, water scarcity surcharges."
+        },
+        "sewage": {
+          "typical": 0,
+          "notes": "Included in water bill as alcantarillado."
+        },
+        "trash": {
+          "typical": 0,
+          "notes": "Basura (garbage tax) included in rent — €8/mo."
+        }
+      },
+      "taxes": "IVA included in bills: 10% on electricity, 10% on gas, 10% on water/sewage.",
+      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig). Trash included in rent. Sewage included in water bill."
+    },
+    "healthcare": {
+      "min": 150,
+      "max": 350,
+      "typical": 220,
+      "notes": "Private insurance required for NLV visa (Sanitas/Adeslas ~€100-140/person/mo, higher with pre-existing conditions: hypertension, hypothyroidism, macular degeneration, obesity). After residency, can access public SNS. Anti-VEGF injections available through public system. Pre-existing condition loading 20-40% on premiums.",
+      "annualInflation": 0.045
+    },
+    "insurance": {
+      "min": 20,
+      "max": 30,
+      "typical": 25,
+      "annualInflation": 0.02
+    },
+    "petCare": {
+      "min": 70,
+      "max": 150,
+      "typical": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "min": 170,
+      "max": 290,
+      "typical": 220,
+      "annualInflation": 0.03,
+      "notes": "Hired pet sitter 2 days/week (~€24/visit). Commercial daycare very limited on Costa Blanca. In-home pet sitting via Rover.com, Gudog, local cuidadores. Many expat pet sitters available."
+    },
+    "petGrooming": {
+      "min": 50,
+      "max": 100,
+      "typical": 70,
+      "annualInflation": 0.025
+    },
+    "transportation": {
+      "min": 80,
+      "max": 150,
+      "typical": 100,
+      "annualInflation": 0.02
+    },
+    "entertainment": {
+      "min": 290,
+      "max": 450,
+      "typical": 360,
+      "annualInflation": 0.02,
+      "notes": "Incl cable+1Gig internet, Netflix, Amazon Prime, Apple TV+, NFL RedZone (DAZN), dining out (lunch for 2 2x/week w/ tax+tip)"
+    },
+    "clothing": {
+      "min": 70,
+      "max": 150,
+      "typical": 100,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "min": 25,
+      "max": 60,
+      "typical": 40,
+      "annualInflation": 0.02
+    },
+    "subscriptions": {
+      "min": 30,
+      "max": 80,
+      "typical": 50,
+      "annualInflation": 0.03,
+      "notes": "Streaming, news, apps"
+    },
+    "phoneCell": {
+      "min": 68,
+      "max": 100,
+      "typical": 82,
+      "annualInflation": 0.02,
+      "notes": "Google Fi Flexible (US Number) + Digi Mobil (Local). 2 phones, 1.5GB+ high-speed data each, all taxes included."
+    },
+    "miscellaneous": {
+      "min": 50,
+      "max": 100,
+      "typical": 75,
+      "annualInflation": 0.02
+    },
+    "buffer": {
+      "min": 800,
+      "max": 800,
+      "typical": 800,
+      "annualInflation": 0.025,
+      "notes": "Monthly safety buffer for unexpected expenses"
+    },
+    "medicalOOP": {
+      "min": 35,
+      "max": 150,
+      "typical": 70,
+      "annualInflation": 0.04,
+      "notes": "SNS public system covers specialist visits and anti-VEGF injections at no cost. Private insurance copays for specialist visits €20-40. Frequent monitoring: ophthalmologist, endocrinologist, cardiologist. Prescription copays 10% for pensioners (max €8.23/mo)."
+    },
+    "medicine": {
+      "min": 18,
+      "typical": 23,
+      "max": 224,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "taxes": {
+      "min": 0,
+      "typical": 0,
+      "max": 0,
+      "annualInflation": 0.02
+    }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true,
+      "brackets": [
+        {
+          "min": 0,
+          "max": 23850,
+          "rate": 0.1
+        },
+        {
+          "min": 23850,
+          "max": 96950,
+          "rate": 0.12
+        },
+        {
+          "min": 96950,
+          "max": 206700,
+          "rate": 0.22
+        },
+        {
+          "min": 206700,
+          "max": 394600,
+          "rate": 0.24
+        },
+        {
+          "min": 394600,
+          "max": 501050,
+          "rate": 0.32
+        },
+        {
+          "min": 501050,
+          "max": 751600,
+          "rate": 0.35
+        },
+        {
+          "min": 751600,
+          "max": null,
+          "rate": 0.37
+        }
+      ],
+      "standardDeduction": 30000,
+      "foreignTaxCredit": true
+    },
+    "stateIncomeTax": {
+      "rate": 0.245,
+      "type": "progressive",
+      "label": "Spanish Income Tax (IRPF)",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 12450,
+          "rate": 0.19
+        },
+        {
+          "min": 12450,
+          "max": 20200,
+          "rate": 0.24
+        },
+        {
+          "min": 20200,
+          "max": 35200,
+          "rate": 0.3
+        },
+        {
+          "min": 35200,
+          "max": 60000,
+          "rate": 0.37
+        }
+      ],
+      "deduction": 5550,
+      "exemptions": "US-Spain tax treaty. Beckham Law flat 24% possible for new residents. SS per treaty."
+    },
+    "salesTax": {
+      "rate": 0
+    },
+    "propertyTax": {
+      "rate": 0
+    },
+    "socialCharges": null,
+    "vatRate": 0.21,
+    "estVehicleTax": 0,
+    "ssExempt": false,
+    "ssTaxedInCountry": true,
+    "notes": "US-Spain tax treaty. Valencia region may add surcharge."
+  },
+  "healthcare": {
+    "system": "Public (after residency) + private",
+    "qualityRating": 8,
+    "waitTimes": "moderate-long for public",
+    "dentalIncluded": false,
+    "prescriptionCoverage": "varies"
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps fiber available",
+    "dogFriendly": 8,
+    "expatCommunity": 9,
+    "englishPrevalence": 7,
+    "safetyRating": 8
+  },
+  "pros": [
+    "Warm winters (45F+)",
+    "Large English-speaking expat community",
+    "Lower cost than France",
+    "Beautiful beaches"
+  ],
+  "cons": [
+    "Higher visa income requirement (EUR 2400/mo)",
+    "Private insurance needed initially",
+    "A2 Spanish required for permanent residency",
+    "Hot summers"
+  ],
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93,
+    "note": "EUR per 1 USD. Based on 2016-2026 historical range. Optimistic = strong EUR (good for USD→EUR), Pessimistic = weak EUR."
+  }
+}

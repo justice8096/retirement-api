@@ -1,0 +1,1265 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 45,
+      "typical": 132,
+      "max": 217
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide/GLP-1 (Ozempic)",
+        "monthlyCost": 80,
+        "coverageNote": "GMS Medical Card covers for diabetes. DPS scheme caps at €80/month for all drugs."
+      },
+      {
+        "name": "Levothyroxine/Synthroid (Thyroid)",
+        "monthlyCost": 5,
+        "coverageNote": "GMS Medical Card: free. DPS scheme: counts toward €80/mo cap."
+      },
+      {
+        "name": "Atorvastatin 40mg #1 (Cholesterol)",
+        "monthlyCost": 5,
+        "coverageNote": "GMS/DPS covered."
+      },
+      {
+        "name": "Atorvastatin 40mg #2 (Cholesterol)",
+        "monthlyCost": 5,
+        "coverageNote": "GMS/DPS covered. Second household member."
+      },
+      {
+        "name": "Montelukast/Singulair (Asthma/Allergy)",
+        "monthlyCost": 10,
+        "coverageNote": "GMS/DPS covered; generic widely available."
+      },
+      {
+        "name": "Hydrochlorothiazide (Blood Pressure)",
+        "monthlyCost": 4,
+        "coverageNote": "GMS/DPS covered; very low cost generic."
+      },
+      {
+        "name": "Olmesartan Medoxomil (Blood Pressure)",
+        "monthlyCost": 12,
+        "coverageNote": "GMS/DPS covered; ARB class medication."
+      },
+      {
+        "name": "Salbutamol/Ventolin (Rescue Inhaler)",
+        "monthlyCost": 5,
+        "coverageNote": "GMS/DPS covered; widely available."
+      },
+      {
+        "name": "Metformin (Diabetes)",
+        "monthlyCost": 4,
+        "coverageNote": "GMS Medical Card: free. Long-term illness scheme covers diabetes."
+      },
+      {
+        "name": "Allopurinol (Gout)",
+        "monthlyCost": 5,
+        "coverageNote": "GMS/DPS covered."
+      },
+      {
+        "name": "Lisinopril (Blood Pressure)",
+        "monthlyCost": 5,
+        "coverageNote": "GMS/DPS covered."
+      },
+      {
+        "name": "Topiramate/Topamax (Migraine)",
+        "monthlyCost": 10,
+        "coverageNote": "GMS/DPS covered."
+      },
+      {
+        "name": "Metoprolol (Heart Rate)",
+        "monthlyCost": 5,
+        "coverageNote": "GMS/DPS covered."
+      }
+    ],
+    "pharmacyAccess": "Excellent. Boots, LloydsPharmacy, and independent pharmacies throughout Waterford city and surrounding towns. Late-night pharmacy available. Pharmacies can provide flu vaccinations and minor ailment consultations.",
+    "prescriptionSystem": "Prescriptions from GP required. Dispensed at any pharmacy. DPS (Drugs Payment Scheme) caps household drug costs at €80/month. Medical card holders (income-tested, automatic for over-70s earning under €1,050/week) get free prescriptions with €1.50 per item charge. Long Term Illness (LTI) scheme covers specific chronic conditions free.",
+    "insuranceCoverage": "Private health insurance (VHI, Laya, Irish Life Health) does not typically cover outpatient prescriptions. DPS is the primary cost-capping mechanism. Medical card or GP visit card available based on income/age.",
+    "sources": [
+      {
+        "title": "HSE Drugs Payment Scheme",
+        "url": "https://www2.hse.ie/services/drugs-payment-scheme/"
+      },
+      {
+        "title": "HSE Medical Card",
+        "url": "https://www2.hse.ie/services/medical-cards/"
+      },
+      {
+        "title": "HSE Long Term Illness Scheme",
+        "url": "https://www2.hse.ie/services/long-term-illness-scheme/"
+      }
+    ]
+  },
+  "vision": {
+    "annualExamCost": {
+      "withInsurance": 15,
+      "withoutInsurance": 50,
+      "notes": "Eye exams €40-60 at opticians (Specsavers, Vision Express). Some private health plans cover annual eye test. Medical card holders get free eye exams through HSE."
+    },
+    "eyeglasses": {
+      "basicFrameAndLens": {
+        "min": 80,
+        "typical": 180,
+        "max": 400
+      },
+      "progressiveLens": {
+        "min": 180,
+        "typical": 350,
+        "max": 650
+      },
+      "contactLensesMonthly": {
+        "min": 25,
+        "typical": 40,
+        "max": 70
+      }
+    },
+    "insuranceCoverage": "Some private health plans (VHI, Laya) include optical benefit — typically €50-75 toward glasses every 2 years. PRSI Treatment Benefit Scheme provides free eye exam and €42 toward glasses for those with sufficient PRSI contributions.",
+    "specialistWaitTime": "2-4 weeks for routine optician appointments in Waterford. Ophthalmologist referral through HSE can take 6-18 months. Private ophthalmologists seen within 2-4 weeks.",
+    "seniorConsiderations": "Over-70s with medical card get free eye exams. Cataract surgery covered by HSE but long public waiting lists (12-24 months). Private cataract surgery €2,500-3,500 per eye, covered by most private health insurance plans.",
+    "sources": [
+      {
+        "title": "HSE Eye and Ear Services",
+        "url": "https://www2.hse.ie/services/eye-and-ear-services/"
+      },
+      {
+        "title": "PRSI Treatment Benefit - Optical",
+        "url": "https://www.gov.ie/en/service/3efb82-treatment-benefit-scheme/"
+      },
+      {
+        "title": "Specsavers Ireland",
+        "url": "https://www.specsavers.ie/"
+      }
+    ]
+  },
+  "dental": {
+    "annualCleaningCost": {
+      "withInsurance": 40,
+      "withoutInsurance": 80,
+      "notes": "Dental cleaning €65-95 in Waterford. Some private plans cover one annual cleaning. PRSI Treatment Benefit covers one free annual exam (not cleaning)."
+    },
+    "commonProcedures": [
+      {
+        "procedure": "Filling",
+        "cost": {
+          "min": 80,
+          "typical": 120,
+          "max": 180
+        },
+        "coverageNote": "Not covered by most private plans. PRSI covers basic fillings for eligible contributors."
+      },
+      {
+        "procedure": "Crown (porcelain)",
+        "cost": {
+          "min": 600,
+          "typical": 900,
+          "max": 1300
+        },
+        "coverageNote": "Some private plans cover 50%. Long wait if through HSE dental service."
+      },
+      {
+        "procedure": "Root Canal",
+        "cost": {
+          "min": 400,
+          "typical": 650,
+          "max": 1000
+        },
+        "coverageNote": "Partially covered by some private plans."
+      },
+      {
+        "procedure": "Extraction (simple)",
+        "cost": {
+          "min": 80,
+          "typical": 130,
+          "max": 200
+        },
+        "coverageNote": "PRSI Treatment Benefit covers extractions for eligible contributors."
+      },
+      {
+        "procedure": "Dental Implant (single)",
+        "cost": {
+          "min": 1500,
+          "typical": 2500,
+          "max": 4000
+        },
+        "coverageNote": "Not covered by HSE. Some premium private plans partially cover."
+      },
+      {
+        "procedure": "Dentures (complete set)",
+        "cost": {
+          "min": 800,
+          "typical": 1500,
+          "max": 2500
+        },
+        "coverageNote": "Medical card holders eligible for HSE denture service. Long waiting lists."
+      }
+    ],
+    "insuranceCoverage": "Irish dental insurance is limited. VHI DeCare dental plans offer annual cleanings and basic coverage for €20-40/month. PRSI Treatment Benefit provides one free annual exam and some treatments for workers with sufficient contributions. Medical card holders get basic dental through HSE.",
+    "dentistAvailability": "Good availability in Waterford city. Several private practices and dental clinics. HSE dental service has long waiting lists. Smiles Dental and independent practices accept most plans.",
+    "sources": [
+      {
+        "title": "PRSI Treatment Benefit - Dental",
+        "url": "https://www.gov.ie/en/service/3efb82-treatment-benefit-scheme/"
+      },
+      {
+        "title": "VHI DeCare Dental",
+        "url": "https://www.vhi.ie/dental"
+      },
+      {
+        "title": "HSE Dental Services",
+        "url": "https://www2.hse.ie/services/dental-services/"
+      }
+    ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 350,
+      "typical": 440,
+      "max": 550
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 280,
+        "seniorDiscounts": "Early bird menus common (€20-28 for 2-3 courses). No tipping expected (10% appreciated for excellent service).",
+        "notes": "Lunch/dinner for 2 at moderate restaurant ~€50-60 (VAT 13.5% included, no tip obligation), 2x/week = ~€280/mo"
+      },
+      {
+        "name": "Broadband (SIRO 1Gig)",
+        "monthlyCost": 55,
+        "seniorDiscounts": "No specific senior discounts. SIRO fiber available in Waterford.",
+        "notes": "Vodafone Gigabit Broadband €50-60/mo via SIRO fiber network. Eir Fibre also available. No data caps."
+      },
+      {
+        "name": "Netflix (Standard)",
+        "monthlyCost": 18,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€13.99/mo in Ireland (~$15). Standard plan, 2 screens."
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 9,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€8.99/mo includes Prime Video, free delivery."
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 10,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€9.99/mo in Ireland."
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 35,
+        "seniorDiscounts": "Waterford City Council leisure centres offer senior rates. Kingfisher Club, WIT Arena.",
+        "notes": "Gym membership €30-45/mo. Swimming pools available."
+      },
+      {
+        "name": "Pubs/Culture",
+        "monthlyCost": 30,
+        "seniorDiscounts": "OAP (Old Age Pensioner) discounts at some venues and events.",
+        "notes": "Traditional Irish pub culture. Live music sessions (trad). Theatre Royal Waterford, Waterford Museum of Treasures."
+      },
+      {
+        "name": "Books/Library",
+        "monthlyCost": 8,
+        "seniorDiscounts": "Waterford City Library free membership. Borrowing free.",
+        "notes": "Public library system excellent. Book clubs, digital lending (BorrowBox)."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Vodafone Ireland Broadband",
+        "url": "https://n.vodafone.ie/shop/broadband.html"
+      },
+      {
+        "title": "SIRO Fibre Broadband",
+        "url": "https://siro.ie/"
+      },
+      {
+        "title": "Netflix Ireland",
+        "url": "https://help.netflix.com/en/node/24926"
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 200,
+      "typical": 280,
+      "max": 380
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 80,
+        "senior": 0,
+        "notes": "Free Travel Pass (FTP) available for all Irish residents aged 66+ — covers Bus Éireann, Irish Rail, Dublin Bus, Luas nationwide. Under-66 Bus Éireann monthly pass ~€80."
+      },
+      "singleRide": 2.5,
+      "coverage": "Bus Éireann serves Waterford city and regional routes. Limited frequency outside peak hours. Irish Rail connects Waterford to Dublin Heuston (2hr 10min). No local rail/tram.",
+      "seniorDiscount": "Free Travel Pass at age 66 covers all public transport nationwide. One of the best senior transit benefits in Europe."
+    },
+    "rideShare": {
+      "baseFare": 4,
+      "perKm": 1.3,
+      "typicalCrossTownTrip": {
+        "min": 8,
+        "typical": 14,
+        "max": 22
+      },
+      "availability": "FreeNow (mytaxi) available in Waterford. Uber not widely operational in Ireland outside Dublin. Local taxi services reliable.",
+      "notes": "Taxi regulated by NTA. Fixed airport transfer rates available."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 0,
+        "initialRegistration": {
+          "min": 200,
+          "typical": 400,
+          "max": 800
+        },
+        "notes": "Vehicle Registration Tax (VRT) applies to imported vehicles — significant cost (up to 37% of value). Motor tax based on CO2 emissions, €120-2,350/year depending on vehicle."
+      },
+      "insurance": {
+        "monthlyMin": 60,
+        "monthlyTypical": 100,
+        "monthlyMax": 180,
+        "notes": "Irish car insurance historically expensive. Named driver experience from abroad may not transfer. Shop around — quotes vary wildly. Liberty Insurance, AXA, Aviva."
+      },
+      "fuel": {
+        "pricePerLiter": 1.7,
+        "monthlyEstimate": {
+          "min": 80,
+          "typical": 130,
+          "max": 200
+        },
+        "notes": "Petrol ~€1.65-1.80/liter, diesel ~€1.55-1.70/liter. Carbon tax increasing annually. Typical senior drives 10,000-15,000 km/year."
+      },
+      "nct": {
+        "cost": 55,
+        "frequency": "Every 2 years (annually after 10 years old)",
+        "notes": "National Car Test (NCT) required for roadworthiness. Test centres in Waterford."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 20,
+          "typical": 50,
+          "max": 100
+        },
+        "hourlyStreet": 1.5,
+        "notes": "Parking affordable compared to Dublin. Free parking in suburban areas and smaller towns. City centre disc parking system."
+      },
+      "tolls": {
+        "monthlyEstimate": 15,
+        "notes": "M9 motorway (Waterford-Dublin) has toll at Waterford bypass. €1.90 per trip. Occasional Dublin M50 tolls if travelling to capital."
+      },
+      "seniorDiscounts": "Free Travel Pass covers public transport but not car ownership costs. No specific car insurance or tax discounts for seniors."
+    },
+    "walkability": "Waterford city centre is compact and walkable, especially the Viking Triangle area. Tramore and Dunmore East have walkable village centres. Car essential for connecting towns and rural areas.",
+    "cycling": {
+      "bikeShareMonthly": 0,
+      "infrastructure": "Waterford Greenway (46km) is one of Ireland's best cycling routes, connecting Waterford to Dungarvan. City cycling infrastructure improving but limited. No bike share scheme yet.",
+      "notes": "Greenway is a major amenity for recreation. Flat terrain along river and coast makes cycling practical."
+    },
+    "sources": [
+      {
+        "title": "Free Travel Pass - Dept. of Social Protection",
+        "url": "https://www.gov.ie/en/service/73561-free-travel-in-ireland/"
+      },
+      {
+        "title": "Bus Éireann Waterford",
+        "url": "https://www.buseireann.ie/"
+      },
+      {
+        "title": "Irish Rail",
+        "url": "https://www.irishrail.ie/"
+      },
+      {
+        "title": "Motor Tax Rates - Revenue",
+        "url": "https://www.revenue.ie/en/importing-vehicles/guide-to-vrt/index.aspx"
+      }
+    ],
+    "electricVehicle": {
+      "purchasePrice": {
+        "min": 28000,
+        "typical": 38000,
+        "max": 55000
+      },
+      "purchaseNotes": "Hyundai Kona Electric ~€38K, Volkswagen ID.3 ~€35K, Tesla Model 3 ~€43K. SEAI grants available.",
+      "federalIncentive": 5000,
+      "stateIncentive": 0,
+      "incentiveNotes": "SEAI grant up to €5,000 for new EV purchase. VRT (Vehicle Registration Tax) relief up to €5,000. Home charger grant €300 from SEAI. Toll reductions on M50.",
+      "chargingHome": {
+        "installCost": {
+          "min": 500,
+          "typical": 900,
+          "max": 1600
+        },
+        "monthlyElectricity": {
+          "min": 30,
+          "typical": 50,
+          "max": 75
+        },
+        "notes": "Electricity ~€0.25-0.35/kWh (among highest in EU). Night rate tariffs help. SEAI €300 home charger grant."
+      },
+      "chargingPublic": {
+        "perKwh": {
+          "min": 0.3,
+          "typical": 0.49,
+          "max": 0.69
+        },
+        "notes": "ESB eCars network. Ionity on motorways. Some free chargers at retail locations."
+      },
+      "insurance": {
+        "monthly": {
+          "min": 50,
+          "typical": 80,
+          "max": 130
+        },
+        "notes": "Irish motor insurance among the most expensive in Europe. Shop around: AXA, Aviva, Liberty. EV premiums declining."
+      },
+      "maintenance": {
+        "annual": {
+          "min": 350,
+          "typical": 500,
+          "max": 750
+        },
+        "notes": "NCT (inspection) every 2 yrs after 4 yrs. Higher labor rates than continental Europe."
+      },
+      "registration": {
+        "annual": {
+          "min": 0,
+          "typical": 120,
+          "max": 120
+        },
+        "notes": "Motor tax for EVs: €120/year (lowest band). VRT relief up to €5,000."
+      },
+      "batteryWarranty": "8 years / 160,000 km (EU standard).",
+      "depreciationNotes": "Strong EV demand in Ireland due to high fuel costs and government incentives. Good resale values.",
+      "totalMonthlyOwnership": {
+        "min": 140,
+        "typical": 220,
+        "max": 340
+      },
+      "totalMonthlyNotes": "Includes: charging (€50), insurance (€80), maintenance (€42/mo avg), motor tax (€10/mo). Excludes: purchase/loan payment, depreciation.",
+      "sources": [
+        {
+          "title": "SEAI EV Grants",
+          "url": "https://www.seai.ie/grants/electric-vehicle-grants/"
+        },
+        {
+          "title": "ESB eCars",
+          "url": "https://esb.ie/ecars"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 66,
+    "discounts": [
+      {
+        "category": "Transit",
+        "description": "Free Travel Pass",
+        "discount": "100% free",
+        "details": "All public transport nationwide (Bus Éireann, Irish Rail, Dublin Bus, Luas, DART) free for 66+. Companion pass available for those who cannot travel alone.",
+        "source": "https://www.gov.ie/en/service/73561-free-travel-in-ireland/"
+      },
+      {
+        "category": "Healthcare",
+        "description": "GP Visit Card for Over-70s",
+        "discount": "Free GP visits",
+        "details": "Automatic entitlement to GP visit card for everyone aged 70+, regardless of income. Covers GP consultations free of charge.",
+        "source": "https://www2.hse.ie/services/gp-visit-cards/gp-visit-cards-for-over-70s/"
+      },
+      {
+        "category": "State Pension",
+        "description": "State Pension (Contributory)",
+        "discount": "€277.30/week",
+        "details": "For those with sufficient Irish PRSI contributions. Not applicable to US citizens unless they worked in Ireland. Non-contributory pension (means-tested) €266/week for residents.",
+        "source": "https://www.gov.ie/en/service/e6f908-state-pension-contributory/"
+      },
+      {
+        "category": "Utilities",
+        "description": "Household Benefits Package",
+        "discount": "€35/month electricity or gas allowance",
+        "details": "For those aged 70+ (or 66+ if living alone). Free TV licence included. Must be resident in Ireland.",
+        "source": "https://www.gov.ie/en/service/00d05-household-benefits/"
+      },
+      {
+        "category": "Tax",
+        "description": "Age Tax Credit",
+        "discount": "€245 per person",
+        "details": "Additional tax credit for persons aged 65+. Married couple gets €490 combined.",
+        "source": "https://www.revenue.ie/en/personal-tax-credits-reliefs-and-exemptions/age-related/index.aspx"
+      },
+      {
+        "category": "Prescriptions",
+        "description": "DPS Cap + Medical Card",
+        "discount": "€80/month cap or free",
+        "details": "DPS caps drug costs at €80/month for all. Over-70s with income under €1,050/week (single) qualify for full medical card — free prescriptions, hospital care, dental, optical.",
+        "source": "https://www2.hse.ie/services/drugs-payment-scheme/"
+      }
+    ]
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 55,
+      "typical": 70,
+      "max": 90
+    },
+    "plans": [
+      {
+        "name": "Vodafone Ireland (Local)",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "Unlimited 5G",
+        "baseCost": 20,
+        "taxesAndFees": 0,
+        "monthlyTotal": 20,
+        "notes": "Vodafone Ireland SIM-only €10/mo per line (VAT included). Unlimited data, calls, texts within Ireland and EU roaming included. Three Ireland also competitive at €10-15/mo."
+      },
+      {
+        "name": "T-Mobile US 55+ Essentials (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "Unlimited (50GB priority)",
+        "baseCost": 55,
+        "taxesAndFees": 0,
+        "monthlyTotal": 50,
+        "notes": "Keep T-Mobile US for banking/2FA/US calls. $55/mo for 2 lines (~€50). International roaming available but not designed for permanent use abroad — primarily for trips home."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Vodafone Ireland SIM Only Plans",
+        "url": "https://n.vodafone.ie/shop/pay-monthly-plans.html"
+      },
+      {
+        "title": "Three Ireland Plans",
+        "url": "https://www.three.ie/plans/"
+      },
+      {
+        "title": "T-Mobile 55+ Plans",
+        "url": "https://www.t-mobile.com/cell-phone-plans/unlimited-55-plus"
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom house",
+    "monthlyBudget": {
+      "min": 950,
+      "max": 1500,
+      "typical": 1200
+    },
+    "breakdown": {
+      "baseRentEUR": 1150,
+      "binChargesEUR": 25,
+      "rentersInsuranceEUR": 30,
+      "totalEUR": 1205,
+      "exchangeRate": 1.05,
+      "totalUSD": 1265
+    },
+    "taxNotes": "No stamp duty on residential leases. Tenancy registration with RTB (Residential Tenancies Board) mandatory — landlord responsibility. Rent Pressure Zones (RPZ) cap annual rent increases at 2% in designated areas. Waterford city is an RPZ. No VAT on residential rent.",
+    "leaseTerms": "12-month fixed term standard, then Part 4 tenancy rights (up to 6 years security of tenure). Security deposit typically 1 month rent. Pet deposits not standard but landlord may request. 28-day notice to terminate during first 6 months.",
+    "marketNotes": "Waterford rental market tighter than pre-2020 but much more available than Dublin. 2-bedroom houses available in city and surrounding towns. Older stone cottages and modern estates. Daft.ie and MyHome.ie are main listing sites.",
+    "sources": [
+      {
+        "name": "Daft.ie - Waterford Rentals",
+        "url": "https://www.daft.ie/property-for-rent/waterford"
+      },
+      {
+        "name": "RTB Rent Pressure Zones",
+        "url": "https://www.rtb.ie/rent-pressure-zones"
+      },
+      {
+        "name": "MyHome.ie - Waterford",
+        "url": "https://www.myhome.ie/rentals/waterford"
+      }
+    ],
+    "housingSites": {
+      "rentals": [
+        {
+          "name": "Daft.ie",
+          "url": "https://www.daft.ie/property-for-rent/waterford",
+          "type": "rental"
+        },
+        {
+          "name": "MyHome.ie",
+          "url": "https://www.myhome.ie/rentals/waterford/property-to-rent",
+          "type": "rental"
+        },
+        {
+          "name": "PropertyPal",
+          "url": "https://www.propertypal.com/property-for-sale/waterford",
+          "type": "purchase"
+        }
+      ]
+    }
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Aldi Ireland",
+        "type": "discount-supermarket",
+        "website": "https://www.aldi.ie/",
+        "notes": "German discounter, very popular in Ireland. Excellent value for groceries. Multiple locations in Waterford.",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Aldi Ireland Grocery Haul",
+            "url": "https://www.youtube.com/watch?v=QZjKl1Rq5Qs"
+          },
+          {
+            "platform": "instagram",
+            "title": "@aldiireland",
+            "url": "https://www.instagram.com/aldiireland/"
+          }
+        ]
+      },
+      {
+        "name": "Tesco Ireland",
+        "type": "supermarket",
+        "website": "https://www.tesco.ie/",
+        "notes": "Largest supermarket chain in Ireland. Tesco Extra in Waterford Retail Park. Clubcard loyalty program with significant savings.",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Tesco Ireland Store Tour",
+            "url": "https://www.youtube.com/watch?v=dF2j9m1xH7M"
+          },
+          {
+            "platform": "instagram",
+            "title": "@tescoirl",
+            "url": "https://www.instagram.com/tescoirl/"
+          }
+        ]
+      },
+      {
+        "name": "Dunmore East Farmers Market",
+        "type": "farmers-market",
+        "website": "https://www.visitwaterford.com/",
+        "notes": "Seasonal coastal farmers market. Fresh fish, local produce, artisan foods. Summer weekends.",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Dunmore East Village Guide",
+            "url": "https://www.youtube.com/watch?v=Z9xN7xB2N5k"
+          },
+          {
+            "platform": "instagram",
+            "title": "@visitwaterford",
+            "url": "https://www.instagram.com/visitwaterford/"
+          }
+        ]
+      }
+    ]
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 57,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Farmers market or CSA box"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 38,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Bananas, berries, apples, citrus"
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 19,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Sweet Potatoes / Potatoes",
+            "monthlyCost": 14.25,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet staple"
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 11.4,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet vegetables"
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 9.5,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Digestive health, home-cooked diet"
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 47.5,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Primary protein for both adults & dog"
+          },
+          {
+            "name": "Ground Turkey / Beef",
+            "monthlyCost": 42.75,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean ground for dog food base"
+          },
+          {
+            "name": "Fish (salmon/tilapia)",
+            "monthlyCost": 38,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Omega-3 rich"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 14.25,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": "Eggs also for dog diet"
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 11.4,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Essential for balanced home-cooked dog diet"
+          },
+          {
+            "name": "Beans / Lentils",
+            "monthlyCost": 7.6,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "grains",
+        "name": "Grains & Starches",
+        "items": [
+          {
+            "name": "Rice (brown/white)",
+            "monthlyCost": 9.5,
+            "quantity": 5,
+            "unit": "lbs/month",
+            "forWhom": "shared",
+            "notes": "Dog diet carb source"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 14.25,
+            "quantity": 2,
+            "unit": "loaves/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 7.6,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Oats / Cereal",
+            "monthlyCost": 9.5,
+            "quantity": 1,
+            "unit": "container/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk / Plant Milk",
+            "monthlyCost": 14.25,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Cheese",
+            "monthlyCost": 19,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Yogurt / Kefir",
+            "monthlyCost": 14.25,
+            "quantity": 1,
+            "unit": "quart/week",
+            "forWhom": "shared",
+            "notes": "Probiotics for dog digestion too"
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 9.5,
+            "quantity": 1,
+            "unit": "unit/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Olive Oil / Cooking Oils",
+            "monthlyCost": 14.25,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Spices & Seasonings",
+            "monthlyCost": 9.5,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Canned Goods (tomatoes, beans)",
+            "monthlyCost": 11.4,
+            "quantity": 6,
+            "unit": "cans/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Condiments & Sauces",
+            "monthlyCost": 9.5,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 23.75,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tea",
+            "monthlyCost": 7.6,
+            "quantity": 1,
+            "unit": "box/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Wine / Beer",
+            "monthlyCost": 38,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Optional"
+          },
+          {
+            "name": "Sparkling Water / Juice",
+            "monthlyCost": 11.4,
+            "quantity": 1,
+            "unit": "case/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "snacks",
+        "name": "Snacks & Treats",
+        "items": [
+          {
+            "name": "Nuts & Trail Mix",
+            "monthlyCost": 14.25,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Crackers / Chips",
+            "monthlyCost": 9.5,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Dark Chocolate",
+            "monthlyCost": 7.6,
+            "quantity": 4,
+            "unit": "bars/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "frozen",
+        "name": "Frozen Foods",
+        "items": [
+          {
+            "name": "Frozen Vegetables",
+            "monthlyCost": 11.4,
+            "quantity": 4,
+            "unit": "bags/month",
+            "forWhom": "shared",
+            "notes": "Backup for dog food prep"
+          },
+          {
+            "name": "Frozen Fruit (smoothies)",
+            "monthlyCost": 9.5,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Frozen Meals (convenience)",
+            "monthlyCost": 14.25,
+            "quantity": 4,
+            "unit": "meals/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "supplements",
+        "name": "Pet Supplements & Health",
+        "items": [
+          {
+            "name": "Joint Supplement (glucosamine)",
+            "monthlyCost": 28.5,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Essential for Bernese — hip/joint health"
+          },
+          {
+            "name": "Fish Oil (omega-3)",
+            "monthlyCost": 14.25,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Coat & skin health"
+          },
+          {
+            "name": "Multivitamin / Mineral Mix",
+            "monthlyCost": 19,
+            "quantity": 1,
+            "unit": "container/month",
+            "forWhom": "dog",
+            "notes": "Balance home-cooked diet"
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 14.25,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "dog",
+            "notes": "Training & dental chews"
+          }
+        ]
+      }
+    ],
+    "monthlyTotal": 676
+  },
+  "healthcare": {
+    "system": "HSE public + private insurance",
+    "coverageSummary": "HSE provides public healthcare. Private insurance (VHI/Laya) for faster access. Medical Card possible based on income. DPS caps drug costs at €80/month.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD"
+      ],
+      "costs": [
+        {
+          "item": "Private insurance (VHI/Laya)",
+          "monthlyCost": 250,
+          "notes": "~€230-270/mo. Community rating (no age loading in Ireland). Higher plan for ophthalmology."
+        },
+        {
+          "item": "Anti-VEGF injections (HSE)",
+          "monthlyCost": 0,
+          "notes": "Covered through public ophthalmology department. Long waiting list — private may be faster."
+        },
+        {
+          "item": "Anti-VEGF injections (private, if needed)",
+          "monthlyCost": 50,
+          "notes": "If public wait too long: €500-800/injection privately. Insurance may cover partially."
+        },
+        {
+          "item": "GP visits",
+          "monthlyCost": 20,
+          "notes": "€50-65/visit, ~4/year. GP Visit Card may cover if income qualifies."
+        },
+        {
+          "item": "Specialist visits (consultants)",
+          "monthlyCost": 15,
+          "notes": "Private insurance covers consultant visits with excess/copay."
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Gout",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Migraines"
+      ],
+      "costs": [
+        {
+          "item": "Private insurance (VHI/Laya)",
+          "monthlyCost": 220,
+          "notes": "~€200-240/mo. Standard plan sufficient for diabetes management."
+        },
+        {
+          "item": "GP visits",
+          "monthlyCost": 20,
+          "notes": "€50-65/visit for diabetes monitoring. Apply for GP Visit Card."
+        },
+        {
+          "item": "Diabetes supplies",
+          "monthlyCost": 15,
+          "notes": "Long-Term Illness scheme covers diabetes supplies free."
+        },
+        {
+          "item": "Specialist visits (consultants)",
+          "monthlyCost": 10,
+          "notes": "Private insurance covers with excess."
+        }
+      ]
+    },
+    "shared": [
+      {
+        "item": "Dental care (2 adults)",
+        "monthlyCost": 30,
+        "notes": "PRSI dental benefits limited. Private dental ~€50-80/visit."
+      },
+      {
+        "item": "DPS scheme (drug payment)",
+        "monthlyCost": 0,
+        "notes": "Caps household drug costs at €80/month."
+      },
+      {
+        "item": "Long-Term Illness scheme",
+        "monthlyCost": 0,
+        "notes": "Free supplies for diabetes, thyroid conditions. Apply after residency."
+      }
+    ],
+    "monthlyTotals": {
+      "person1": 335,
+      "person2": 265,
+      "shared": 30,
+      "household": 630
+    },
+    "notes": null,
+    "phaseTransition": null
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Black Hair Care",
+      "priceRange": {
+        "cut": "25-45",
+        "color": "55-110",
+        "fullService": "75-160"
+      },
+      "notes": "Waterford has a growing African community (especially Nigerian and South African). Limited but quality options. Cork (1.5 hrs) and Dublin have more.",
+      "providers": [
+        {
+          "name": "Afroglam Hair Studio",
+          "type": "Afro hair salon",
+          "address": "Waterford city centre",
+          "distanceMi": 0,
+          "rating": 4.4,
+          "notes": "Best local option for Afro hair. Braids, locs, weaves, color. Black-owned.",
+          "website": ""
+        },
+        {
+          "name": "Glam African Hair (Cork)",
+          "type": "Full-service salon",
+          "address": "Cork city (1.5 hrs)",
+          "distanceMi": 70,
+          "rating": 4.6,
+          "notes": "Larger salon with more specialists. Worth the trip for complex styles or color.",
+          "website": ""
+        }
+      ]
+    },
+    "whiteHairCare": {
+      "label": "White/Caucasian Hair Care",
+      "priceRange": {
+        "cut": "25-45",
+        "color": "55-100",
+        "highlights": "75-140"
+      },
+      "notes": "Waterford has several good salons on the Quay and in the city centre.",
+      "providers": [
+        {
+          "name": "Hairworks",
+          "type": "Full-service salon",
+          "address": "The Quay, Waterford",
+          "distanceMi": 0,
+          "rating": 4.6,
+          "notes": "Well-established Waterford salon. Color specialists. Highlights, grey blending.",
+          "website": ""
+        },
+        {
+          "name": "Peter Mark",
+          "type": "Irish salon chain",
+          "address": "Waterford city centre",
+          "distanceMi": 0,
+          "rating": 4.3,
+          "notes": "Ireland's largest salon chain. Consistent quality. Good value for color services.",
+          "website": ""
+        }
+      ]
+    },
+    "mensBigTall": {
+      "label": "Men's Big & Tall Clothing",
+      "priceRange": {
+        "shirts": "25-60",
+        "pants": "30-55",
+        "suits": "100-280"
+      },
+      "notes": "Limited big & tall in Waterford. Penney's/Primark for budget. Dunnes Stores carries some extended sizes. Online from ASOS or Jacamo.",
+      "providers": [
+        {
+          "name": "Dunnes Stores",
+          "type": "Irish department store",
+          "address": "Waterford city centre",
+          "distanceMi": 0,
+          "rating": 4.1,
+          "notes": "Irish retailer with extended sizes to 3XL. Good value menswear. Quality basics.",
+          "website": ""
+        },
+        {
+          "name": "Penney's (Primark)",
+          "type": "Budget retailer",
+          "address": "Waterford city centre",
+          "distanceMi": 0,
+          "rating": 4,
+          "notes": "Very affordable. Sizes to 3XL. Great for basics and casual wear.",
+          "website": ""
+        }
+      ]
+    },
+    "womensClothing": {
+      "label": "Women's Regular Clothing",
+      "priceRange": {
+        "casual": "18-45",
+        "dresses": "30-75",
+        "professional": "40-100"
+      },
+      "notes": "Waterford city centre and City Square shopping centre. Good variety for a smaller city.",
+      "providers": [
+        {
+          "name": "Dunnes Stores",
+          "type": "Irish department store",
+          "address": "Waterford city centre",
+          "distanceMi": 0,
+          "rating": 4.2,
+          "notes": "Strong women's section. Savida and Gallery lines. Irish sizes 8-22.",
+          "website": ""
+        },
+        {
+          "name": "Penney's (Primark)",
+          "type": "Budget retailer",
+          "address": "City Square, Waterford",
+          "distanceMi": 0,
+          "rating": 4.1,
+          "notes": "Ultra-affordable fashion. Sizes 6-24. Good basics and trendy pieces.",
+          "website": ""
+        }
+      ]
+    },
+    "shoes": {
+      "label": "Shoes",
+      "priceRange": {
+        "casual": "25-60",
+        "dress": "45-100",
+        "athletic": "40-90",
+        "wideWidth": "35-80"
+      },
+      "notes": "Irish shoe sizing differs from US (use UK sizing + 1 for US). Wide widths available at Ecco and specialist stores.",
+      "providers": [
+        {
+          "name": "Ecco (Waterford)",
+          "type": "Comfort shoe store",
+          "address": "Waterford city centre",
+          "distanceMi": 0,
+          "rating": 4.4,
+          "notes": "Danish comfort shoes. Wide widths available. Good for walking. Men's and women's.",
+          "website": ""
+        },
+        {
+          "name": "Shoe Zone / Schuh",
+          "type": "Shoe retailer",
+          "address": "Waterford city",
+          "distanceMi": 0,
+          "rating": 4,
+          "notes": "Budget to mid-range shoes. Casual, dress, athletic. Some extended sizes.",
+          "website": ""
+        }
+      ]
+    }
+  }
+}

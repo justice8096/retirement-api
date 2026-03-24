@@ -1,0 +1,178 @@
+{
+  "id": "cyprus-larnaca",
+  "name": "Larnaca, Cyprus",
+  "country": "Cyprus",
+  "region": "Southern Europe",
+  "cities": [
+    "Larnaca",
+    "Kiti",
+    "Pervolia"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93
+  },
+  "visa": {
+    "type": "Category F Immigration Permit",
+    "incomeRequirement": {
+      "monthly": 797,
+      "currency": "EUR"
+    },
+    "notes": "Category F permit requires ~€9,568/year + €4,613/dependent."
+  },
+  "climate": {
+    "winterLowF": 50,
+    "summerHighF": 95,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 30
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 850,
+      "min": 650,
+      "max": 1100,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 400,
+      "min": 320,
+      "max": 500,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 150,
+      "min": 110,
+      "max": 200,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 95,
+      "min": 60,
+      "max": 140,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 115,
+      "min": 75,
+      "max": 165,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 130,
+      "min": 80,
+      "max": 190,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 210,
+      "min": 150,
+      "max": 300,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 70,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 87,
+      "min": 72,
+      "max": 107,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 20,
+      "typical": 35,
+      "max": 70,
+      "annualInflation": 0.035,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 40,
+      "typical": 80,
+      "max": 160,
+      "annualInflation": 0.035
+    }
+  },
+  "healthcare": {
+    "system": "GESY public system. Larnaca General Hospital for basic care. Specialist care may require Nicosia or Limassol.",
+    "qualityRating": 7,
+    "dentalIncluded": false,
+    "waitTimes": "Public: 2-8 weeks. Private: under 2 weeks.",
+    "prescriptionCoverage": "GESY covers most prescriptions with small co-pays"
+  },
+  "lifestyle": {
+    "internetSpeed": "100Mbps+",
+    "dogFriendly": 6,
+    "expatCommunity": 7,
+    "englishPrevalence": 8,
+    "safetyRating": 9
+  },
+  "pros": [
+    "Most affordable Cypriot city",
+    "International airport for easy travel",
+    "Relaxed beach town atmosphere"
+  ],
+  "cons": [
+    "Smaller and less cosmopolitan than Limassol",
+    "Limited cultural and dining scene",
+    "Very hot summers"
+  ],
+  "taxes": {
+    "notes": "Cyprus: flat 2.65% on pension income for first €3,420, then 0%. Very favorable for retirees.",
+    "vatRate": 19,
+    "socialChargesRate": 0
+  }
+}

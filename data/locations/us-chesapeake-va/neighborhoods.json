@@ -1,0 +1,159 @@
+{
+  "city": "Chesapeake",
+  "neighborhoods": [
+    {
+      "id": "chesapeake-greenbrier",
+      "name": "Greenbrier",
+      "description": "Major commercial and retail hub in central Chesapeake with shopping centers, restaurants, and a mix of single-family homes and apartment complexes along Greenbrier Parkway",
+      "character": "Suburban commercial, retail-oriented, convenient, moderate density",
+      "housing": {
+        "avgRentOneBedroomUSD": 1100,
+        "avgRentTwoBedroomUSD": 1350,
+        "buyPricePerSqmUSD": 2200,
+        "predominantType": "Single-family homes, townhomes, and apartment complexes near retail centers"
+      },
+      "walkabilityScore": 45,
+      "transitScore": 25,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Most convenient area for errands and shopping. Greenbrier Mall, Sam's Club, Target, multiple grocery stores all nearby. Good restaurant selection. Easy access to I-64 and Chesapeake Expressway. Medical facilities nearby.",
+      "sources": [
+        {
+          "title": "Zillow - Greenbrier Chesapeake VA",
+          "url": "https://www.zillow.com/chesapeake-va/greenbrier/"
+        },
+        {
+          "title": "Walk Score - Greenbrier Chesapeake",
+          "url": "https://www.walkscore.com/score/greenbrier-pkwy-chesapeake-va"
+        },
+        {
+          "title": "Numbeo Cost of Living Chesapeake VA",
+          "url": "https://www.numbeo.com/cost-of-living/in/Chesapeake"
+        }
+      ]
+    },
+    {
+      "id": "chesapeake-great-bridge",
+      "name": "Great Bridge",
+      "description": "Historic area in southern Chesapeake centered around the Great Bridge Lock and the Intracoastal Waterway, with a charming small-town village center and surrounding suburban neighborhoods",
+      "character": "Historic small-town, waterfront, family-oriented, quieter suburban",
+      "housing": {
+        "avgRentOneBedroomUSD": 1050,
+        "avgRentTwoBedroomUSD": 1300,
+        "buyPricePerSqmUSD": 2100,
+        "predominantType": "Single-family homes on larger lots, some waterfront properties, newer subdivisions"
+      },
+      "walkabilityScore": 30,
+      "transitScore": 15,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Historic Battlefield Park commemorating the 1775 Battle of Great Bridge. Small village center with local shops and restaurants. Popular with boaters due to Intracoastal Waterway access. Good schools. Quieter and more rural-feeling than northern Chesapeake.",
+      "sources": [
+        {
+          "title": "Zillow - Great Bridge Chesapeake VA",
+          "url": "https://www.zillow.com/chesapeake-va/great-bridge/"
+        },
+        {
+          "title": "City of Chesapeake - Great Bridge Battlefield",
+          "url": "https://www.cityofchesapeake.net/government/city-departments/parks-recreation-tourism/parks/great-bridge-battlefield.htm"
+        }
+      ]
+    },
+    {
+      "id": "chesapeake-deep-creek",
+      "name": "Deep Creek",
+      "description": "Northwestern Chesapeake neighborhood bordering Norfolk and Portsmouth, with a more urban feel, mixed housing, and proximity to the Great Dismal Swamp",
+      "character": "Urban-suburban transition, working-class, diverse, close to Norfolk",
+      "housing": {
+        "avgRentOneBedroomUSD": 950,
+        "avgRentTwoBedroomUSD": 1150,
+        "buyPricePerSqmUSD": 1700,
+        "predominantType": "Older single-family homes, duplexes, and modest apartment complexes"
+      },
+      "walkabilityScore": 35,
+      "transitScore": 20,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Most affordable area of Chesapeake. Close to Great Dismal Swamp NWR trailheads. Easy access to Portsmouth and Norfolk via I-664 and US-17. More diverse and working-class than southern Chesapeake. Deep Creek Lock Park along the Dismal Swamp Canal.",
+      "sources": [
+        {
+          "title": "Zillow - Deep Creek Chesapeake VA",
+          "url": "https://www.zillow.com/chesapeake-va/deep-creek/"
+        },
+        {
+          "title": "Great Dismal Swamp NWR - US Fish & Wildlife",
+          "url": "https://www.fws.gov/refuge/great-dismal-swamp"
+        }
+      ]
+    },
+    {
+      "id": "chesapeake-western-branch",
+      "name": "Western Branch",
+      "description": "Established suburban neighborhood in northern Chesapeake known for good schools, parks, and quiet residential streets with convenient access to I-664 and Suffolk",
+      "character": "Suburban residential, family-oriented, established, well-maintained",
+      "housing": {
+        "avgRentOneBedroomUSD": 1100,
+        "avgRentTwoBedroomUSD": 1350,
+        "buyPricePerSqmUSD": 2000,
+        "predominantType": "Single-family homes in established subdivisions, some newer townhome developments"
+      },
+      "walkabilityScore": 25,
+      "transitScore": 15,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Quiet, well-established suburban community. Western Branch Park has trails, sports fields, and a community center. Good access to I-664 for commuting. Nearby Bennett's Creek commercial area has grocery stores and restaurants. Strong neighborhood associations.",
+      "sources": [
+        {
+          "title": "Zillow - Western Branch Chesapeake VA",
+          "url": "https://www.zillow.com/chesapeake-va/western-branch/"
+        },
+        {
+          "title": "City of Chesapeake Parks & Recreation",
+          "url": "https://www.cityofchesapeake.net/government/city-departments/parks-recreation-tourism/"
+        }
+      ]
+    },
+    {
+      "id": "chesapeake-south-norfolk",
+      "name": "South Norfolk / Edinburgh",
+      "description": "Historic urban neighborhood in the northernmost part of Chesapeake, originally an independent city, with a walkable main street and proximity to Norfolk",
+      "character": "Historic urban, walkable core, revitalizing, diverse",
+      "housing": {
+        "avgRentOneBedroomUSD": 975,
+        "avgRentTwoBedroomUSD": 1175,
+        "buyPricePerSqmUSD": 1600,
+        "predominantType": "Historic bungalows, row houses, older single-family homes, and some newer infill"
+      },
+      "walkabilityScore": 55,
+      "transitScore": 30,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Most walkable part of Chesapeake with a small-town urban feel. Historic district with early 1900s architecture. Revitalizing with new restaurants and small businesses. Elizabeth River access. Best HRT bus service in Chesapeake. Close to Norfolk and Portsmouth.",
+      "sources": [
+        {
+          "title": "Zillow - South Norfolk Chesapeake VA",
+          "url": "https://www.zillow.com/chesapeake-va/south-norfolk/"
+        },
+        {
+          "title": "City of Chesapeake - South Norfolk",
+          "url": "https://www.cityofchesapeake.net/"
+        }
+      ]
+    }
+  ]
+}

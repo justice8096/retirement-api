@@ -1,0 +1,299 @@
+{
+  "id": "us-summerville",
+  "name": "Summerville, South Carolina",
+  "country": "United States",
+  "region": "South Carolina",
+  "cities": [
+    "Summerville",
+    "Ladson",
+    "Goose Creek",
+    "North Charleston"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Citizen",
+    "incomeRequirement": null,
+    "notes": "US citizen, no visa required."
+  },
+  "climate": {
+    "winterLowF": 35,
+    "summerHighF": 92,
+    "rainyDaysPerYear": 105,
+    "meetsWarmWinterReq": false
+  },
+  "monthlyCosts": {
+    "rent": {
+      "min": 1400,
+      "max": 2100,
+      "typical": 1700,
+      "type": "2-bedroom single-family house",
+      "annualInflation": 0.03,
+      "notes": "Summerville is significantly cheaper than nearby Charleston. Water/sewage/trash typically separate.",
+      "gigInternetTypical": 1800,
+      "gigInternetCoverage": 58,
+      "gigInternetProviders": "Home Telecom Fiber (24%), AT&T (86%), Comcast",
+      "gigInternetNotes": "Home Telecom provides true FTTH to ~24% of Summerville at up to 1Gbps symmetric. AT&T covers 86% but mix of fiber/DSL. Overall fiber availability 58-72% depending on source. Fiber concentrated in newer developments."
+    },
+    "groceries": {
+      "min": 1200,
+      "max": 1600,
+      "typical": 1380,
+      "annualInflation": 0.03,
+      "notes": "Below national average. Publix, Lidl, Walmart Neighborhood Market, and Harris Teeter available. No sales tax on groceries in SC."
+    },
+    "utilities": {
+      "min": 210,
+      "max": 380,
+      "typical": 280,
+      "annualInflation": 0.035,
+      "breakdown": {
+        "electricity": {
+          "typical": 145,
+          "notes": "Berkeley Electric Cooperative or Dominion Energy. A/C heavy May-Sep ($180-240). Mild winter heating ($80-110)."
+        },
+        "gas": {
+          "typical": 30,
+          "notes": "Piedmont Natural Gas or SCE&G. Minimal needs — cooking, water heater. Some homes all-electric."
+        },
+        "water": {
+          "typical": 45,
+          "notes": "Summerville Commissioners of Public Works. 2-adult household."
+        },
+        "sewage": {
+          "typical": 35,
+          "notes": "Billed with water. Dorchester County Water and Sewer."
+        },
+        "trash": {
+          "typical": 25,
+          "notes": "Dorchester County Solid Waste. Curbside pickup."
+        }
+      },
+      "taxes": "South Carolina has no sales tax on residential utilities for seniors 65+ (homestead exemption).",
+      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment."
+    },
+    "healthcare": {
+      "min": 550,
+      "max": 850,
+      "typical": 650,
+      "notes": "Medicare Part B ($174.70/mo) + Medigap Plan G (~$200/mo x2 people) + Part D (~$45/mo x2) + dental/vision plans. Higher premiums reflect macular degeneration specialist coverage and frequent monitoring needs.",
+      "annualInflation": 0.055
+    },
+    "insurance": {
+      "min": 30,
+      "max": 50,
+      "typical": 38,
+      "type": "renter's insurance",
+      "annualInflation": 0.03
+    },
+    "petCare": {
+      "min": 120,
+      "max": 210,
+      "typical": 155,
+      "annualInflation": 0.04,
+      "notes": "Affordable vet care. Multiple clinics in Summerville/Ladson area."
+    },
+    "petDaycare": {
+      "min": 280,
+      "max": 440,
+      "typical": 340,
+      "annualInflation": 0.035,
+      "notes": "Doggy daycare 2 days/week, large breed rate (~$40/day). Camp Bow Wow Summerville, Happy Tails."
+    },
+    "petGrooming": {
+      "min": 75,
+      "max": 140,
+      "typical": 100,
+      "annualInflation": 0.03,
+      "notes": "Bernese coat maintenance, professional grooming monthly."
+    },
+    "transportation": {
+      "min": 200,
+      "max": 400,
+      "typical": 290,
+      "notes": "Car-dependent. CARTA bus service limited. Gas prices moderate. Low insurance rates. 30-min drive to Charleston.",
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "min": 380,
+      "max": 560,
+      "typical": 460,
+      "annualInflation": 0.025,
+      "notes": "Incl cable+1Gig internet, Netflix, Amazon Prime, Apple TV+, dining out. Close to Charleston for nightlife/culture."
+    },
+    "clothing": {
+      "min": 80,
+      "max": 200,
+      "typical": 130,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "min": 35,
+      "max": 90,
+      "typical": 55,
+      "annualInflation": 0.02
+    },
+    "subscriptions": {
+      "min": 25,
+      "max": 70,
+      "typical": 50,
+      "annualInflation": 0.03,
+      "notes": "Streaming, news, apps"
+    },
+    "phoneCell": {
+      "min": 50,
+      "max": 75,
+      "typical": 60,
+      "annualInflation": 0.02,
+      "notes": "T-Mobile 55+ Essentials. 2 phones. SC wireless tax ~7%."
+    },
+    "miscellaneous": {
+      "min": 80,
+      "max": 180,
+      "typical": 120,
+      "annualInflation": 0.025,
+      "notes": "Low misc costs. Free parking everywhere. No tolls in area."
+    },
+    "buffer": {
+      "min": 800,
+      "max": 800,
+      "typical": 800,
+      "annualInflation": 0.025,
+      "notes": "Monthly safety buffer for unexpected expenses"
+    },
+    "medicalOOP": {
+      "min": 325,
+      "max": 700,
+      "typical": 475,
+      "annualInflation": 0.055,
+      "notes": "Anti-VEGF injections for macular degeneration (~$300-400 OOP each, 6-10x/yr after Medicare 80%). Specialist visits: ophthalmologist q6-8wks, endocrinologist 2-4x/yr, cardiologist 1-2x/yr. Frequent labs: lipid panel, TSH, A1C, CMP 3-4x/yr each. Both adults: PCP visits quarterly."
+    },
+    "medicine": {
+      "min": 73,
+      "typical": 91,
+      "max": 925,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "taxes": {
+      "min": 0,
+      "typical": 0,
+      "max": 0,
+      "annualInflation": 0.02
+    }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true,
+      "brackets": [
+        {
+          "min": 0,
+          "max": 23850,
+          "rate": 0.1
+        },
+        {
+          "min": 23850,
+          "max": 96950,
+          "rate": 0.12
+        },
+        {
+          "min": 96950,
+          "max": 206700,
+          "rate": 0.22
+        },
+        {
+          "min": 206700,
+          "max": 394600,
+          "rate": 0.24
+        },
+        {
+          "min": 394600,
+          "max": 501050,
+          "rate": 0.32
+        },
+        {
+          "min": 501050,
+          "max": 751600,
+          "rate": 0.35
+        },
+        {
+          "min": 751600,
+          "max": null,
+          "rate": 0.37
+        }
+      ],
+      "standardDeduction": 30000
+    },
+    "stateIncomeTax": {
+      "rate": 0.065,
+      "type": "top-marginal",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 3460,
+          "rate": 0
+        },
+        {
+          "min": 3460,
+          "max": 17330,
+          "rate": 0.03
+        },
+        {
+          "min": 17330,
+          "max": null,
+          "rate": 0.065
+        }
+      ],
+      "deduction": 16800,
+      "exemptions": "SC exempts up to $10,000 in retirement income for 65+. SS fully exempt from SC tax."
+    },
+    "salesTax": {
+      "rate": 0.08,
+      "notes": "Dorchester County 8% (6% state + 2% local). Groceries taxed at 0% (unprepared food exempt in SC)."
+    },
+    "propertyTax": {
+      "rate": 0,
+      "notes": "Renters: no direct property tax. SC property tax moderate (~0.55% effective rate). Homestead exemption for 65+ on first $50K."
+    },
+    "socialCharges": null,
+    "vatRate": 0,
+    "estVehicleTax": 300,
+    "ssExempt": true,
+    "notes": "SC income tax capped at 6.5%. SS fully exempt. $10K retirement income deduction for 65+. No sales tax on groceries."
+  },
+  "healthcare": {
+    "system": "Medicare (at 65) + private supplement",
+    "qualityRating": 8,
+    "waitTimes": "moderate",
+    "dentalIncluded": false,
+    "prescriptionCoverage": "Part D plan",
+    "notes": "Summerville Medical Center (Roper St. Francis). MUSC (Medical University of SC) 30 min in Charleston — nationally ranked teaching hospital. Trident Medical Center in North Charleston."
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps available (Comcast/Home Telecom Fiber)",
+    "dogFriendly": 8,
+    "expatCommunity": 0,
+    "englishPrevalence": 10,
+    "safetyRating": 8,
+    "notes": "Azalea Park, Sawmill Branch Trail. 'Flowertown in the Pines' — charming Southern small-town feel. 30 min to Charleston beaches and downtown. Moderate pace of life."
+  },
+  "pros": [
+    "Very affordable cost of living",
+    "No sales tax on groceries",
+    "SS fully exempt from state tax",
+    "Close to Charleston (culture, beaches, dining)",
+    "MUSC — world-class healthcare 30 min away",
+    "Charming Southern small-town character",
+    "Lower insurance/vehicle costs than Northeast",
+    "Mild winters"
+  ],
+  "cons": [
+    "Hot humid summers (92F+, high humidity)",
+    "Car-dependent — minimal public transit",
+    "Hurricane risk zone (coastal proximity)",
+    "State income tax (6.5% top rate)",
+    "Limited nightlife in Summerville proper",
+    "Flood insurance may be needed in some areas",
+    "Limited direct flight options (CHS airport)"
+  ]
+}

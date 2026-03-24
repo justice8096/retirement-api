@@ -1,0 +1,279 @@
+{
+  "id": "panama-city",
+  "name": "Panama City, Panama",
+  "country": "Panama",
+  "region": "Panama Province",
+  "cities": [
+    "Panama City",
+    "Coronado",
+    "Boquete"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Pensionado Visa",
+    "incomeRequirement": {
+      "monthly": 1000,
+      "annual": 12000,
+      "currency": "USD"
+    },
+    "notes": "One of the easiest retirement visas worldwide"
+  },
+  "climate": {
+    "winterLowF": 75,
+    "summerHighF": 90,
+    "rainyDaysPerYear": 180,
+    "meetsWarmWinterReq": true
+  },
+  "monthlyCosts": {
+    "rent": {
+      "min": 1000,
+      "max": 1700,
+      "typical": 1300,
+      "type": "2-bedroom house",
+      "annualInflation": 0.03,
+      "notes": "No rental tax in Panama.",
+      "gigInternetTypical": 1370,
+      "gigInternetCoverage": 70,
+      "gigInternetProviders": "+Móvil (Cable & Wireless), Tigo (Cable Onda)",
+      "gigInternetNotes": "80%+ broadband coverage in Panama City. Fiber available in modern buildings and newer residential areas. +Móvil and Tigo dominate with plans up to 500Mbps-1Gbps. Telca (Telecable) entering 2025. Older residential areas may be cable-only."
+    },
+    "groceries": {
+      "min": 700,
+      "max": 1050,
+      "typical": 875,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "min": 120,
+      "max": 195,
+      "typical": 150,
+      "annualInflation": 0.03,
+      "breakdown": {
+        "electricity": {
+          "typical": 100,
+          "notes": "Naturgy/ENSA. A/C is primary cost — runs year-round in tropical climate. 7% ITBMS applies."
+        },
+        "gas": {
+          "typical": 15,
+          "notes": "Propane (tanque) for cooking only. No natural gas infrastructure."
+        },
+        "water": {
+          "typical": 25,
+          "notes": "IDAAN (national water authority). Very affordable residential water. No ITBMS on residential water."
+        },
+        "sewage": {
+          "typical": 10,
+          "notes": "Billed with water or included in municipal services."
+        },
+        "trash": {
+          "typical": 0,
+          "notes": "Garbage collection included in rent — $15/mo."
+        }
+      },
+      "taxes": "ITBMS 7% on electricity (included in bill). Water/sewer exempt for residential.",
+      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig). Trash included in rent."
+    },
+    "healthcare": {
+      "min": 300,
+      "max": 600,
+      "typical": 450,
+      "notes": "Private insurance required (~$175-275/person/mo, higher with pre-existing conditions). Better specialist access than Boquete: Johns Hopkins-affiliated Punta Pacifica hospital. Anti-VEGF injections available locally. Pre-existing condition exclusions first 12-24 months.",
+      "annualInflation": 0.06
+    },
+    "insurance": {
+      "min": 15,
+      "max": 25,
+      "typical": 20,
+      "annualInflation": 0.02
+    },
+    "petCare": {
+      "min": 60,
+      "max": 140,
+      "typical": 90,
+      "annualInflation": 0.035
+    },
+    "petDaycare": {
+      "min": 140,
+      "max": 250,
+      "typical": 190,
+      "annualInflation": 0.03,
+      "notes": "Hired pet sitter 2 days/week (~$22/visit). Some commercial facilities in Panama City but limited for large breeds. Expat-run pet sitting services available. Pensionado discounts may apply."
+    },
+    "petGrooming": {
+      "min": 40,
+      "max": 90,
+      "typical": 60,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "min": 100,
+      "max": 200,
+      "typical": 150,
+      "annualInflation": 0.025
+    },
+    "entertainment": {
+      "min": 310,
+      "max": 480,
+      "typical": 380,
+      "annualInflation": 0.025,
+      "notes": "Incl cable+1Gig internet, Netflix, Amazon Prime, Apple TV+, NFL RedZone (DAZN), dining out (lunch for 2 2x/week w/ tax+tip)"
+    },
+    "clothing": {
+      "min": 50,
+      "max": 120,
+      "typical": 80,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "min": 20,
+      "max": 50,
+      "typical": 35,
+      "annualInflation": 0.02
+    },
+    "subscriptions": {
+      "min": 30,
+      "max": 80,
+      "typical": 50,
+      "annualInflation": 0.03,
+      "notes": "Streaming, news, apps"
+    },
+    "phoneCell": {
+      "min": 70,
+      "max": 105,
+      "typical": 85,
+      "annualInflation": 0.02,
+      "notes": "Google Fi Flexible (US Number) + +Movil Postpaid (Local). 2 phones, 1.5GB+ high-speed data each, all taxes included."
+    },
+    "miscellaneous": {
+      "min": 50,
+      "max": 100,
+      "typical": 75,
+      "annualInflation": 0.025
+    },
+    "buffer": {
+      "min": 800,
+      "max": 800,
+      "typical": 800,
+      "annualInflation": 0.025,
+      "notes": "Monthly safety buffer for unexpected expenses"
+    },
+    "medicalOOP": {
+      "min": 85,
+      "max": 300,
+      "typical": 160,
+      "annualInflation": 0.06,
+      "notes": "Good specialist access in city: ophthalmology, endocrinology, cardiology. Anti-VEGF injections $400-700 each at private clinics. Pensionado discount 15-25%. Labs $15-30. Better infrastructure than Boquete for frequent specialist monitoring."
+    },
+    "medicine": {
+      "min": 383,
+      "typical": 479,
+      "max": 529,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "taxes": {
+      "min": 0,
+      "typical": 0,
+      "max": 0,
+      "annualInflation": 0.02
+    }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true,
+      "brackets": [
+        {
+          "min": 0,
+          "max": 23850,
+          "rate": 0.1
+        },
+        {
+          "min": 23850,
+          "max": 96950,
+          "rate": 0.12
+        },
+        {
+          "min": 96950,
+          "max": 206700,
+          "rate": 0.22
+        },
+        {
+          "min": 206700,
+          "max": 394600,
+          "rate": 0.24
+        },
+        {
+          "min": 394600,
+          "max": 501050,
+          "rate": 0.32
+        },
+        {
+          "min": 501050,
+          "max": 751600,
+          "rate": 0.35
+        },
+        {
+          "min": 751600,
+          "max": null,
+          "rate": 0.37
+        }
+      ],
+      "standardDeduction": 30000
+    },
+    "stateIncomeTax": {
+      "rate": 0,
+      "type": "territorial",
+      "label": "Panama Income Tax",
+      "brackets": [],
+      "deduction": 0,
+      "exemptions": "Territorial system: foreign-sourced income (SS, 401k, investments) NOT taxed in Panama."
+    },
+    "salesTax": {
+      "rate": 0
+    },
+    "propertyTax": {
+      "rate": 0
+    },
+    "socialCharges": null,
+    "vatRate": 0.07,
+    "estVehicleTax": 0,
+    "ssExempt": true,
+    "notes": "Territorial tax: only Panama-sourced income taxed."
+  },
+  "healthcare": {
+    "system": "Private (good quality in Panama City)",
+    "qualityRating": 7,
+    "waitTimes": "low for private",
+    "dentalIncluded": false,
+    "prescriptionCoverage": "varies by plan"
+  },
+  "lifestyle": {
+    "internetSpeed": "500Mbps-1Gbps in city",
+    "dogFriendly": 6,
+    "expatCommunity": 8,
+    "englishPrevalence": 6,
+    "safetyRating": 5
+  },
+  "oneTimeCosts": {
+    "petTransport": {
+      "min": 7500,
+      "max": 9000,
+      "notes": "Shared charter flight (Perro Air, IGO Panama) from Miami"
+    }
+  },
+  "pros": [
+    "USD currency (no exchange risk)",
+    "Territorial tax (no income tax on US income)",
+    "Warm year-round",
+    "Low visa threshold",
+    "Pensionado discounts"
+  ],
+  "cons": [
+    "Pet transport expensive ($7.5-9K)",
+    "Private healthcare only",
+    "Rainy season (May-Dec)",
+    "Safety concerns",
+    "Limited gigabit internet outside city"
+  ]
+}

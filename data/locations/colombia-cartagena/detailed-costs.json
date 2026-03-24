@@ -1,0 +1,126 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 40,
+      "typical": 52,
+      "max": 350
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutida / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 250,
+        "withoutInsurance": 300,
+        "coverageNote": "EPS may cover for diabetes diagnosis. Otherwise cash at Droguería or imported."
+      },
+      {
+        "name": "Levotiroxina [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 5,
+        "coverageNote": "Very affordable generic"
+      },
+      {
+        "name": "Atorvastatina 20mg [P1]",
+        "monthlyCost": 3,
+        "withoutInsurance": 7,
+        "coverageNote": "Generic widely available"
+      },
+      {
+        "name": "Montelukast [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Available at droguerías"
+      },
+      {
+        "name": "Hidroclorotiazida [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 3,
+        "coverageNote": "Inexpensive generic"
+      },
+      {
+        "name": "Olmesartán [P1]",
+        "monthlyCost": 6,
+        "withoutInsurance": 15,
+        "coverageNote": "Available at pharmacy chains"
+      },
+      {
+        "name": "Salbutamol (inhalador) [P1]",
+        "monthlyCost": 3,
+        "withoutInsurance": 5,
+        "coverageNote": "Affordable at pharmacies"
+      },
+      {
+        "name": "Metformina 500mg [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 3,
+        "coverageNote": "Very inexpensive generic"
+      },
+      {
+        "name": "Alopurinol [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 5,
+        "coverageNote": "Generic available"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 5,
+        "coverageNote": "Generic available"
+      },
+      {
+        "name": "Topiramato [P2]",
+        "monthlyCost": 5,
+        "withoutInsurance": 14,
+        "coverageNote": "Available at pharmacies"
+      },
+      {
+        "name": "Metoprolol [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 5,
+        "coverageNote": "Generic available"
+      },
+      {
+        "name": "Atorvastatina 20mg [P2]",
+        "monthlyCost": 3,
+        "withoutInsurance": 7,
+        "coverageNote": "Generic widely available"
+      }
+    ],
+    "pharmacyAccess": "Droguería La Rebaja, Farmatodo, Cruz Verde, Colsubsidio pharmacies throughout cities. Many generics available without prescription.",
+    "notes": "Colombia EPS (public health insurance) covers most medications for enrolled residents (~$50-80/mo contribution). Expats with visa can enroll in EPS. Private insurance (medicina prepagada) also available. Generic prices are very low. GLP-1 drugs are expensive imports."
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 65,
+      "typical": 80,
+      "max": 100
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in Colombia at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "Claro Colombia Postpaid",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "10GB 4G/5G",
+        "baseCost": 15,
+        "taxesAndFees": 0,
+        "monthlyTotal": 15,
+        "notes": "2 lines ~30,000 COP/line (~$7.50). Claro is largest carrier. Taxes included."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      }
+    ]
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "id": "us-fort-lauderdale-fl",
+  "name": "Fort Lauderdale, FL",
+  "country": "United States",
+  "region": "US Southeast",
+  "cities": [
+    "Fort Lauderdale"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "N/A (domestic)",
+    "notes": "US citizen â€” no visa required"
+  },
+  "climate": {
+    "winterLowF": 58,
+    "summerHighF": 91,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 129
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 2100,
+      "min": 1700,
+      "max": 2600,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 650,
+      "min": 550,
+      "max": 750,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 280,
+      "min": 220,
+      "max": 350,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 560,
+      "min": 450,
+      "max": 700,
+      "annualInflation": 0.05
+    },
+    "insurance": {
+      "typical": 380,
+      "min": 280,
+      "max": 480,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 200,
+      "min": 150,
+      "max": 300,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 60,
+      "min": 40,
+      "max": 90,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 350,
+      "min": 250,
+      "max": 450,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 350,
+      "min": 250,
+      "max": 450,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 100,
+      "min": 60,
+      "max": 150,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 120,
+      "min": 80,
+      "max": 160,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 59,
+      "min": 50,
+      "max": 74,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 65,
+      "typical": 91,
+      "max": 180,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 200,
+      "typical": 350,
+      "max": 600,
+      "annualInflation": 0.055
+    }
+  },
+  "healthcare": {
+    "system": "Private insurance (ACA/employer/Medicare)",
+    "qualityRating": 8,
+    "dentalIncluded": false,
+    "waitTimes": "Short to moderate",
+    "prescriptionCoverage": "Via insurance plan"
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps available",
+    "dogFriendly": 8,
+    "expatCommunity": 1,
+    "englishPrevalence": 10,
+    "safetyRating": 6
+  },
+  "pros": [
+    "No state income tax",
+    "Beautiful beaches and boating culture",
+    "Warm year-round weather"
+  ],
+  "cons": [
+    "High housing and insurance costs",
+    "Hurricane risk",
+    "Heavy tourist traffic in season"
+  ],
+  "taxes": {
+    "notes": "Federal only â€” no FL state income tax",
+    "vatRate": 0,
+    "socialChargesRate": 0
+  }
+}

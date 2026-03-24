@@ -1,0 +1,343 @@
+{
+  "distanceUnit": "km",
+  "currency": "EUR",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Hôpital Edouard Herriot - Hospices Civils de Lyon",
+      "address": "5 Place d'Arsonval, 69003 Lyon",
+      "distanceKm": 2,
+      "notes": "Major hospital, 24/7 emergency, trauma center, English-speaking staff available",
+      "sources": [
+        {
+          "title": "Hospices Civils de Lyon",
+          "url": "https://www.chu-lyon.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Grande Pharmacie Lyonnaise",
+      "address": "22 Rue de la République, 69002 Lyon",
+      "distanceKm": 0.2,
+      "notes": "Large central pharmacy, wide stock, English spoken",
+      "sources": [
+        {
+          "title": "Ordre National des Pharmaciens",
+          "url": "https://www.ordre.pharmacien.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Monoprix Lyon Bellecour",
+      "address": "32 Rue de la République, 69002 Lyon",
+      "distanceKm": 0.1,
+      "notes": "Full supermarket in city center, daily essentials and gourmet section",
+      "sources": [
+        {
+          "title": "Monoprix",
+          "url": "https://www.monoprix.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "Crédit Lyonnais (LCL) Bellecour",
+      "address": "Place Bellecour, 69002 Lyon",
+      "distanceKm": 0.1,
+      "notes": "Full-service branch, ATM, English-speaking staff by appointment",
+      "sources": [
+        {
+          "title": "LCL",
+          "url": "https://www.lcl.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Centre Médical Part-Dieu",
+      "address": "Rue du Docteur Bouchut, 69003 Lyon",
+      "distanceKm": 1.5,
+      "notes": "Walk-in and appointment-based GP clinic, Doctolib booking, English available",
+      "sources": [
+        {
+          "title": "Doctolib Lyon",
+          "url": "https://www.doctolib.fr/medecin-generaliste/lyon"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Centre Dentaire Lyon Bellecour",
+      "address": "Rue Victor Hugo, 69002 Lyon",
+      "distanceKm": 0.3,
+      "notes": "Modern dental clinic, cosmetic and general, Doctolib appointments",
+      "sources": [
+        {
+          "title": "Doctolib Dentists Lyon",
+          "url": "https://www.doctolib.fr/dentiste/lyon"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "VetAgora Lyon",
+      "address": "27 Rue de Créqui, 69006 Lyon",
+      "distanceKm": 1.8,
+      "notes": "Full-service vet clinic, emergency referrals, dog and cat specialists",
+      "sources": [
+        {
+          "title": "VetAgora",
+          "url": "https://www.vetagora-lyon.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Parc de la Tête d'Or",
+      "address": "69006 Lyon",
+      "distanceKm": 2.5,
+      "notes": "117-hectare park, free zoo, lake, dogs allowed on leash, large green spaces",
+      "sources": [
+        {
+          "title": "Parc de la Tête d'Or",
+          "url": "https://www.loisirs-parcdelatetedor.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "Neoness Lyon Part-Dieu",
+      "address": "Centre Commercial Part-Dieu, 69003 Lyon",
+      "distanceKm": 1.5,
+      "notes": "Modern gym, group classes, flexible memberships, open 6am-11pm",
+      "sources": [
+        {
+          "title": "Neoness",
+          "url": "https://www.neoness.fr/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "Holy Trinity Anglican Church Lyon",
+      "address": "24 Rue Lanterne, 69001 Lyon",
+      "distanceKm": 0.8,
+      "notes": "English-language Anglican services, active expat community",
+      "sources": [
+        {
+          "title": "Holy Trinity Lyon",
+          "url": "https://www.holytrinitylyon.org/"
+        }
+      ]
+    },
+    {
+      "categoryId": "international_school",
+      "name": "Lyon English Speaking Community (LESC)",
+      "address": "Various locations, 69000 Lyon",
+      "distanceKm": 1,
+      "notes": "Expat social group, regular meetups, integration support",
+      "sources": [
+        {
+          "title": "InterNations Lyon",
+          "url": "https://www.internations.org/lyon-expats"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Aéroport Lyon-Saint Exupéry (LYS)",
+      "address": "69125 Colombier-Saugnieu",
+      "distanceKm": 25,
+      "notes": "Major international airport, Rhônexpress tram to Part-Dieu in 30 min",
+      "sources": [
+        {
+          "title": "Lyon Airport",
+          "url": "https://www.lyonaeroports.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Gare de Lyon Part-Dieu",
+      "address": "5 Place Charles Béraudier, 69003 Lyon",
+      "distanceKm": 1.5,
+      "notes": "Major TGV hub, 2h to Paris, metro/tram connections, bus terminal",
+      "sources": [
+        {
+          "title": "SNCF Gare Part-Dieu",
+          "url": "https://www.gares-sncf.com/fr/gare/frlpd/lyon-part-dieu"
+        }
+      ]
+    },
+    {
+      "categoryId": "coworking",
+      "name": "La Cordée Coworking Lyon",
+      "address": "11 Rue de la Poulaillerie, 69002 Lyon",
+      "distanceKm": 0.3,
+      "notes": "Popular coworking chain, day passes, private offices, community events",
+      "sources": [
+        {
+          "title": "La Cordée",
+          "url": "https://www.la-cordee.net/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "Au Poil dans ses Pattes Lyon",
+      "address": "Rue de la Charité, 69002 Lyon",
+      "distanceKm": 0.5,
+      "notes": "Dog and cat grooming, appointment-based",
+      "sources": [
+        {
+          "title": "Pages Jaunes Toilettage Lyon",
+          "url": "https://www.pagesjaunes.fr/annuaire/lyon-69/toilettage-animaux"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "Musée des Beaux-Arts de Lyon",
+      "description": "One of France's largest fine arts museums, housed in a 17th-century abbey",
+      "distanceKm": 0.5,
+      "estimatedCostEUR": 8,
+      "frequency": "Wed-Mon 10:00-18:00, closed Tue",
+      "sources": [
+        {
+          "title": "MBA Lyon",
+          "url": "https://www.mba-lyon.fr/"
+        }
+      ]
+    },
+    {
+      "type": "historical",
+      "name": "Vieux Lyon & Traboules",
+      "description": "UNESCO World Heritage Renaissance quarter with hidden passageways (traboules)",
+      "distanceKm": 0.8,
+      "estimatedCostEUR": 0,
+      "frequency": "Self-guided or guided tours daily",
+      "sources": [
+        {
+          "title": "Lyon Tourism",
+          "url": "https://www.lyon-france.com/"
+        }
+      ]
+    },
+    {
+      "type": "outdoor",
+      "name": "Parc de la Tête d'Or",
+      "description": "Massive urban park with free zoo, botanical garden, boating lake",
+      "distanceKm": 2.5,
+      "estimatedCostEUR": 0,
+      "frequency": "Open daily 6:30-22:30 (summer)",
+      "sources": [
+        {
+          "title": "Parc Tête d'Or",
+          "url": "https://www.loisirs-parcdelatetedor.com/"
+        }
+      ]
+    },
+    {
+      "type": "dining",
+      "name": "Les Halles de Lyon Paul Bocuse",
+      "description": "Legendary covered food market with gourmet stalls, charcuterie, cheese, pastries",
+      "distanceKm": 1.5,
+      "estimatedCostEUR": 20,
+      "frequency": "Tue-Sun 7:00-19:00",
+      "sources": [
+        {
+          "title": "Halles Paul Bocuse",
+          "url": "https://www.halles-de-lyon-paulbocuse.com/"
+        }
+      ]
+    },
+    {
+      "type": "historical",
+      "name": "Basilique Notre-Dame de Fourvière",
+      "description": "Iconic hilltop basilica with panoramic views over Lyon, stunning mosaics",
+      "distanceKm": 1.5,
+      "estimatedCostEUR": 0,
+      "frequency": "Open daily, funicular access from Vieux Lyon",
+      "sources": [
+        {
+          "title": "Fourvière",
+          "url": "https://www.fourviere.org/"
+        }
+      ]
+    },
+    {
+      "type": "entertainment",
+      "name": "Opéra National de Lyon",
+      "description": "World-class opera house with ballet and concert performances",
+      "distanceKm": 0.5,
+      "estimatedCostEUR": 35,
+      "frequency": "Season Sep-Jul, multiple performances weekly",
+      "sources": [
+        {
+          "title": "Opéra de Lyon",
+          "url": "https://www.opera-lyon.com/"
+        }
+      ]
+    },
+    {
+      "type": "cultural",
+      "name": "Musée des Confluences",
+      "description": "Striking contemporary science and anthropology museum at the confluence of rivers",
+      "distanceKm": 3.5,
+      "estimatedCostEUR": 9,
+      "frequency": "Tue-Sun 10:30-18:30",
+      "sources": [
+        {
+          "title": "Musée des Confluences",
+          "url": "https://www.museedesconfluences.fr/"
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "name": "Monts du Lyonnais",
+      "description": "Rolling hills west of Lyon for hiking, cycling, and countryside escapes",
+      "distanceKm": 25,
+      "estimatedCostEUR": 0,
+      "frequency": "Day trip, year-round",
+      "sources": [
+        {
+          "title": "Monts du Lyonnais Tourism",
+          "url": "https://www.montsdulyonnaistourisme.fr/"
+        }
+      ]
+    },
+    {
+      "type": "shopping",
+      "name": "Centre Commercial Part-Dieu",
+      "description": "One of Europe's largest urban shopping centers with 260+ shops",
+      "distanceKm": 1.5,
+      "estimatedCostEUR": 0,
+      "frequency": "Mon-Sat 9:30-20:00",
+      "sources": [
+        {
+          "title": "Part-Dieu Shopping",
+          "url": "https://www.centrecommercial-partdieu.com/"
+        }
+      ]
+    },
+    {
+      "type": "social",
+      "name": "Berges du Rhône",
+      "description": "5km riverside promenade with bars, food trucks, and weekend social gatherings",
+      "distanceKm": 0.3,
+      "estimatedCostEUR": 0,
+      "frequency": "Open 24/7, most lively spring-autumn",
+      "sources": [
+        {
+          "title": "Lyon France",
+          "url": "https://www.lyon-france.com/"
+        }
+      ]
+    }
+  ]
+}

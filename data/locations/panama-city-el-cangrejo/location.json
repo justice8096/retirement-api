@@ -1,0 +1,171 @@
+{
+  "id": "panama-city-el-cangrejo",
+  "name": "Panama City — El Cangrejo, Panama",
+  "country": "Panama",
+  "region": "Central America",
+  "cities": [
+    "Panama City"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Pensionado",
+    "incomeRequirement": {
+      "monthly": 1000,
+      "currency": "USD"
+    },
+    "notes": "Pensionado visa requires $1,000/mo pension income."
+  },
+  "climate": {
+    "winterLowF": 75,
+    "summerHighF": 90,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 175
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 1250,
+      "min": 1000,
+      "max": 1500,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 480,
+      "min": 350,
+      "max": 600,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 170,
+      "min": 120,
+      "max": 230,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 250,
+      "min": 150,
+      "max": 400,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 300,
+      "min": 200,
+      "max": 450,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 40,
+      "min": 25,
+      "max": 65,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 180,
+      "min": 100,
+      "max": 280,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 280,
+      "min": 180,
+      "max": 400,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 70,
+      "min": 40,
+      "max": 110,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 85,
+      "min": 70,
+      "max": 105,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 100,
+      "min": 60,
+      "max": 180,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 250,
+      "typical": 479,
+      "max": 700,
+      "annualInflation": 0.04,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 80,
+      "typical": 150,
+      "max": 300,
+      "annualInflation": 0.04
+    }
+  },
+  "healthcare": {
+    "system": "Access to Panama City's private hospital network. Multiple clinics nearby.",
+    "qualityRating": 8,
+    "dentalIncluded": false,
+    "waitTimes": "Short at private facilities",
+    "prescriptionCoverage": "Wide availability with Pensionado discounts"
+  },
+  "lifestyle": {
+    "internetSpeed": "100Mbps+",
+    "dogFriendly": 6,
+    "expatCommunity": 6,
+    "englishPrevalence": 6,
+    "safetyRating": 6
+  },
+  "pros": [
+    "Central location with diverse dining and nightlife",
+    "More affordable than Bella Vista or Punta Pacifica",
+    "Walkable neighborhood with metro access"
+  ],
+  "cons": [
+    "Hot and humid climate",
+    "Some areas feel congested",
+    "Noise from busy streets"
+  ],
+  "taxes": {
+    "notes": "No tax on foreign-source income.",
+    "vatRate": 0.07,
+    "socialChargesRate": 0
+  }
+}

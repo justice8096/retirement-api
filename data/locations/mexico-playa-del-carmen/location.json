@@ -1,0 +1,171 @@
+{
+  "id": "mexico-playa-del-carmen",
+  "name": "Playa del Carmen, Mexico",
+  "country": "Mexico",
+  "region": "Central America",
+  "cities": [
+    "Playa del Carmen"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Temporary Resident",
+    "incomeRequirement": {
+      "monthly": 1500,
+      "currency": "USD"
+    },
+    "notes": "Temporary resident visa requires ~$1,500/mo income or ~$25,000 savings."
+  },
+  "climate": {
+    "winterLowF": 68,
+    "summerHighF": 92,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 110
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 1050,
+      "min": 800,
+      "max": 1300,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 430,
+      "min": 330,
+      "max": 560,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 140,
+      "min": 90,
+      "max": 210,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 170,
+      "min": 80,
+      "max": 280,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 250,
+      "min": 150,
+      "max": 380,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 40,
+      "min": 25,
+      "max": 65,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 150,
+      "min": 80,
+      "max": 240,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 240,
+      "min": 150,
+      "max": 360,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 70,
+      "min": 40,
+      "max": 110,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 81,
+      "min": 66,
+      "max": 101,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 100,
+      "min": 60,
+      "max": 180,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 30,
+      "typical": 55,
+      "max": 120,
+      "annualInflation": 0.04,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 40,
+      "typical": 75,
+      "max": 150,
+      "annualInflation": 0.04
+    }
+  },
+  "healthcare": {
+    "system": "IMSS available; private hospitals in Cancún (1 hour). Growing local private clinics.",
+    "qualityRating": 6,
+    "dentalIncluded": false,
+    "waitTimes": "Moderate; Cancún for advanced care",
+    "prescriptionCoverage": "Affordable; pharmacies common"
+  },
+  "lifestyle": {
+    "internetSpeed": "50-100Mbps",
+    "dogFriendly": 6,
+    "expatCommunity": 6,
+    "englishPrevalence": 6,
+    "safetyRating": 5
+  },
+  "pros": [
+    "Caribbean beaches with turquoise water",
+    "International community and diverse dining",
+    "Convenient to Cancún airport for US flights"
+  ],
+  "cons": [
+    "Sargassum seaweed issues seasonally",
+    "Rising security concerns in Quintana Roo",
+    "Tourism-driven prices; less authentic feel"
+  ],
+  "taxes": {
+    "notes": "Territorial tax for temporary residents. Foreign income not taxed.",
+    "vatRate": 0.16,
+    "socialChargesRate": 0
+  }
+}

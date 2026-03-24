@@ -1,0 +1,178 @@
+{
+  "id": "malta-valletta",
+  "name": "Valletta, Malta",
+  "country": "Malta",
+  "region": "Southern Europe",
+  "cities": [
+    "Valletta",
+    "Floriana",
+    "Senglea"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93
+  },
+  "visa": {
+    "type": "Malta Retirement Programme",
+    "incomeRequirement": {
+      "monthly": 1193,
+      "currency": "EUR"
+    },
+    "notes": "Malta Retirement Programme requires property purchase/rental + €14,318/year income. 15% flat tax on remitted income, minimum €7,500/year tax."
+  },
+  "climate": {
+    "winterLowF": 50,
+    "summerHighF": 92,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 40
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 1300,
+      "min": 1000,
+      "max": 1600,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 440,
+      "min": 350,
+      "max": 560,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 165,
+      "min": 120,
+      "max": 220,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 110,
+      "min": 75,
+      "max": 160,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 130,
+      "min": 90,
+      "max": 185,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 100,
+      "min": 60,
+      "max": 160,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 260,
+      "min": 180,
+      "max": 360,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 70,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 87,
+      "min": 72,
+      "max": 107,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 18,
+      "typical": 32,
+      "max": 65,
+      "annualInflation": 0.03,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 40,
+      "typical": 80,
+      "max": 160,
+      "annualInflation": 0.035
+    }
+  },
+  "healthcare": {
+    "system": "Mater Dei Hospital (public, free for residents). Good quality. Small island means all healthcare is nearby.",
+    "qualityRating": 8,
+    "dentalIncluded": false,
+    "waitTimes": "Public: 2-8 weeks for specialists. Private: under 2 weeks.",
+    "prescriptionCoverage": "Public healthcare provides free prescriptions for residents on approved list"
+  },
+  "lifestyle": {
+    "internetSpeed": "100Mbps+",
+    "dogFriendly": 5,
+    "expatCommunity": 8,
+    "englishPrevalence": 9,
+    "safetyRating": 9
+  },
+  "pros": [
+    "English is an official language",
+    "Warm year-round Mediterranean climate",
+    "Stunning historic capital (UNESCO World Heritage)"
+  ],
+  "cons": [
+    "Very small and densely populated island",
+    "Traffic congestion is severe",
+    "Limited green spaces and dog-walking areas"
+  ],
+  "taxes": {
+    "notes": "Malta Retirement Programme: 15% flat tax on remitted income, min €7,500/year. Standard rates 0%-35% otherwise. US-Malta tax treaty.",
+    "vatRate": 18,
+    "socialChargesRate": 0
+  }
+}

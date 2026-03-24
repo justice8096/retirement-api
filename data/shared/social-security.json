@@ -1,0 +1,48 @@
+{
+  "husband": {
+    "fullRetirementAge": 67,
+    "piaMonthly": 2400,
+    "birthYear": 1966,
+    "benefitByAge": {
+      "62": 1680,
+      "63": 1800,
+      "64": 1920,
+      "65": 2080,
+      "66": 2240,
+      "67": 2400,
+      "68": 2592,
+      "69": 2784,
+      "70": 2976
+    }
+  },
+  "wife": {
+    "fullRetirementAge": 67,
+    "piaMonthly": 1600,
+    "birthYear": 1966,
+    "benefitByAge": {
+      "62": 1120,
+      "63": 1200,
+      "64": 1280,
+      "65": 1387,
+      "66": 1493,
+      "67": 1600,
+      "68": 1728,
+      "69": 1856,
+      "70": 1984
+    }
+  },
+  "spousalBenefit": {
+    "maxRate": 0.5,
+    "notes": "Spousal benefit is up to 50% of higher earner's PIA. Only available if spouse has filed. Reduced if taken before FRA."
+  },
+  "trustFundDepletion": {
+    "projectedYear": 2033,
+    "benefitCutPercent": 23,
+    "notes": "SSA projects trust fund depletion by 2033, resulting in ~23% benefit cut if Congress doesn't act"
+  },
+  "cola": {
+    "historicalAverage": 0.026,
+    "recentAverage": 0.033,
+    "projectedRate": 0.025
+  }
+}

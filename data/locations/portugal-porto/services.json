@@ -1,0 +1,245 @@
+{
+  "distanceUnit": "km",
+  "currency": "EUR",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Hospital de Porto",
+      "address": "City center area, Porto, Portugal",
+      "distanceKm": 5,
+      "notes": "SNS public hospital with emergency department, some English-speaking staff",
+      "sources": [
+        {
+          "title": "Hospital de Porto",
+          "url": "https://www.sns.gov.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "Farmácia Central de Porto",
+      "address": "City center area, Porto, Portugal",
+      "distanceKm": 1.5,
+      "notes": "Well-stocked pharmacy, prescription medications, some English spoken",
+      "sources": [
+        {
+          "title": "Farmácia Central de Porto",
+          "url": "https://www.farmaciasportuguesas.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Continente",
+      "address": "City center area, Porto, Portugal",
+      "distanceKm": 2,
+      "notes": "Largest Portuguese supermarket chain, wide selection, online delivery",
+      "sources": [
+        {
+          "title": "Continente",
+          "url": "https://www.continente.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "bank",
+      "name": "Millennium BCP",
+      "address": "City center area, Porto, Portugal",
+      "distanceKm": 2,
+      "notes": "Largest private bank in Portugal, some English-speaking staff, ATMs",
+      "sources": [
+        {
+          "title": "Millennium BCP",
+          "url": "https://www.millenniumbcp.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Centro de Saúde de Porto",
+      "address": "City center area, Porto, Portugal",
+      "distanceKm": 3,
+      "notes": "SNS public health center, GP registration, some English-speaking doctors",
+      "sources": [
+        {
+          "title": "Centro de Saúde de Porto",
+          "url": "https://www.sns.gov.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Dental Clinic Porto Center",
+      "address": "City center area, Porto, Portugal",
+      "distanceKm": 3,
+      "notes": "General and cosmetic dentistry, some English-speaking dentists, modern equipment",
+      "sources": [
+        {
+          "title": "Dental Services Portugal",
+          "url": "https://www.omd.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "vet",
+      "name": "Veterinary Clinic Porto",
+      "address": "City center area, Porto, Portugal",
+      "distanceKm": 4,
+      "notes": "Full veterinary services, vaccinations, surgery, some English spoken",
+      "sources": [
+        {
+          "title": "Veterinary Services Portugal",
+          "url": "https://www.omv.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Parque Canino / Dog Park Porto",
+      "address": "Park area, Porto, Portugal",
+      "distanceKm": 5,
+      "notes": "Off-leash area, green space popular with dog owners, water available",
+      "sources": [
+        {
+          "title": "Parks in Porto",
+          "url": "https://www.visitportugal.com/"
+        }
+      ]
+    },
+    {
+      "categoryId": "gym",
+      "name": "Fitness Hut Porto",
+      "address": "City center area, Porto, Portugal",
+      "distanceKm": 3,
+      "notes": "Modern gym with cardio and weight equipment, group classes, monthly memberships",
+      "sources": [
+        {
+          "title": "Fitness Hut Porto",
+          "url": "https://www.fitnesshut.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "english_church",
+      "name": "St. George's Anglican Church Porto",
+      "address": "City center area, Porto, Portugal",
+      "distanceKm": 5,
+      "notes": "English-language services, expat community gathering point, social events",
+      "sources": [
+        {
+          "title": "St. George's Anglican Church Porto",
+          "url": "https://europe.anglican.org/"
+        }
+      ]
+    },
+    {
+      "categoryId": "airport",
+      "name": "Porto Francisco Sá Carneiro Airport (OPO)",
+      "address": "Airport area",
+      "distanceKm": 12,
+      "notes": "International airport with domestic and international flights",
+      "sources": [
+        {
+          "title": "Porto Francisco Sá Carneiro Airport",
+          "url": "https://www.aeroportoporto.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Estação de Porto / Metro",
+      "address": "City center area, Porto, Portugal",
+      "distanceKm": 2,
+      "notes": "CP rail, metro, comprehensive bus network, Viva Viagem card",
+      "sources": [
+        {
+          "title": "Estação de Porto",
+          "url": "https://www.cp.pt/"
+        }
+      ]
+    },
+    {
+      "categoryId": "coworking",
+      "name": "Second Home Porto",
+      "address": "City center area, Porto, Portugal",
+      "distanceKm": 3,
+      "notes": "Coworking space, high-speed internet, meeting rooms, community events",
+      "sources": [
+        {
+          "title": "Second Home Porto",
+          "url": "https://www.secondhome.io/"
+        }
+      ]
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "Pet Grooming Porto",
+      "address": "City center area, Porto, Portugal",
+      "distanceKm": 4,
+      "notes": "Professional pet grooming services, bathing, clipping, appointment recommended",
+      "sources": [
+        {
+          "title": "Pet Services Porto",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "categoryId": "international_school",
+      "name": "InterNations Porto Expat Community",
+      "address": "City center area, Porto, Portugal",
+      "distanceKm": 4,
+      "notes": "International expat community center, social events, networking, relocation assistance",
+      "sources": [
+        {
+          "title": "InterNations Porto Expat Community",
+          "url": "https://www.internations.org/"
+        }
+      ]
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "Porto Cultural Center",
+      "description": "Cultural center with local art, history, and community events",
+      "distanceKm": 4,
+      "estimatedCostEUR": 8,
+      "frequency": "Tue-Sun 10:00-17:00",
+      "sources": [
+        {
+          "title": "Porto Culture",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "name": "Porto Central Park / Garden",
+      "description": "Main public park with walking trails, gardens, and green space",
+      "distanceKm": 3,
+      "estimatedCostEUR": 0,
+      "frequency": "Daily, dawn to dusk",
+      "sources": [
+        {
+          "title": "Parks in Porto",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    },
+    {
+      "type": "dining",
+      "name": "Porto Restaurant District",
+      "description": "Walkable area with diverse restaurants, cafes, and bars",
+      "distanceKm": 2,
+      "estimatedCostEUR": 25,
+      "frequency": "Daily, lunch and dinner service",
+      "sources": [
+        {
+          "title": "Dining in Porto",
+          "url": "https://www.google.com/maps/"
+        }
+      ]
+    }
+  ]
+}

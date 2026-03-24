@@ -1,0 +1,159 @@
+{
+  "city": "Lyon",
+  "neighborhoods": [
+    {
+      "id": "lyon-presquile",
+      "name": "Presqu'ile (1er & 2e)",
+      "description": "The peninsula between the Rhone and Saone rivers, Lyon's commercial and cultural heart with Place Bellecour",
+      "character": "Dense urban, premier shopping and dining, UNESCO World Heritage",
+      "housing": {
+        "avgRentOneBedroomEUR": 750,
+        "avgRentTwoBedroomEUR": 1100,
+        "buyPricePerSqmEUR": 5500,
+        "predominantType": "Haussmann-era apartments, often with high ceilings and parquet floors"
+      },
+      "walkabilityScore": 96,
+      "transitScore": 90,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "moderate",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Place Bellecour is Europe's largest pedestrian square. Lyon's famous bouchons (traditional restaurants) concentrated here.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lyon",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lyon"
+        },
+        {
+          "title": "Lyon France - Official City Guide",
+          "url": "https://www.lyon-france.com/"
+        },
+        {
+          "title": "SeLoger - Lyon 2e",
+          "url": "https://www.seloger.com/immobilier/achat/immo-lyon-2eme-69/"
+        }
+      ]
+    },
+    {
+      "id": "lyon-vieux-lyon",
+      "name": "Vieux Lyon (5e)",
+      "description": "Medieval and Renaissance quarter at the foot of Fourviere hill, one of Europe's largest intact Renaissance neighborhoods",
+      "character": "Historic, touristic, narrow traboules (passageways), charming but compact",
+      "housing": {
+        "avgRentOneBedroomEUR": 700,
+        "avgRentTwoBedroomEUR": 1050,
+        "buyPricePerSqmEUR": 5000,
+        "predominantType": "Renovated apartments in Renaissance-era buildings"
+      },
+      "walkabilityScore": 88,
+      "transitScore": 82,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "UNESCO World Heritage. Many buildings date to 15th-16th century. Can be noisy on weekends due to nightlife.",
+      "sources": [
+        {
+          "title": "UNESCO Lyon Historic Site",
+          "url": "https://whc.unesco.org/en/list/872"
+        },
+        {
+          "title": "SeLoger - Lyon 5e",
+          "url": "https://www.seloger.com/immobilier/achat/immo-lyon-5eme-69/"
+        }
+      ]
+    },
+    {
+      "id": "lyon-monplaisir",
+      "name": "Monplaisir (8e)",
+      "description": "Authentic residential neighborhood in the 8th arrondissement, birthplace of cinema (Lumiere brothers), with local markets and village feel",
+      "character": "Residential village-within-a-city, local shops, quieter pace",
+      "housing": {
+        "avgRentOneBedroomEUR": 580,
+        "avgRentTwoBedroomEUR": 820,
+        "buyPricePerSqmEUR": 3800,
+        "predominantType": "Mix of older apartment buildings and newer residences"
+      },
+      "walkabilityScore": 82,
+      "transitScore": 78,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The Lumiere Institute and museum is here. Excellent daily market on Place Monplaisir. Metro D provides quick access to center.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lyon",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lyon"
+        },
+        {
+          "title": "Lyon France - Neighborhoods Guide",
+          "url": "https://www.lyon-france.com/decouvrir-lyon/les-quartiers-de-lyon"
+        }
+      ]
+    },
+    {
+      "id": "lyon-caluire",
+      "name": "Caluire-et-Cuire",
+      "description": "Suburban commune directly north of Lyon, on the heights above the Saone with views over the city. Residential and green.",
+      "character": "Suburban, family-oriented, green spaces, quieter than central Lyon",
+      "housing": {
+        "avgRentOneBedroomEUR": 520,
+        "avgRentTwoBedroomEUR": 750,
+        "buyPricePerSqmEUR": 3400,
+        "predominantType": "Houses with gardens and apartment complexes with parking"
+      },
+      "walkabilityScore": 55,
+      "transitScore": 60,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Popular with families and retirees seeking quiet but city access. Metro C connects to central Lyon in 15 minutes.",
+      "sources": [
+        {
+          "title": "SeLoger - Caluire-et-Cuire",
+          "url": "https://www.seloger.com/immobilier/achat/immo-caluire-et-cuire-69/"
+        },
+        {
+          "title": "Ville de Caluire-et-Cuire",
+          "url": "https://www.ville-caluire.fr/"
+        }
+      ]
+    },
+    {
+      "id": "lyon-villeurbanne",
+      "name": "Villeurbanne (Gratte-Ciel)",
+      "description": "Adjacent city merged with Lyon's east, the Gratte-Ciel area is a 1930s Art Deco ensemble recently renovated with new amenities",
+      "character": "Urban, diverse, good transit, more affordable than central Lyon",
+      "housing": {
+        "avgRentOneBedroomEUR": 550,
+        "avgRentTwoBedroomEUR": 780,
+        "buyPricePerSqmEUR": 3200,
+        "predominantType": "Art Deco apartments and modern new-build residences"
+      },
+      "walkabilityScore": 80,
+      "transitScore": 85,
+      "safetyRating": "moderate-high",
+      "expats": {
+        "communitySize": "moderate",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Major renovation completed 2023. TNP national theater is here. Metro A provides fast connection to Lyon center.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Villeurbanne",
+          "url": "https://www.numbeo.com/cost-of-living/in/Villeurbanne"
+        },
+        {
+          "title": "Ville de Villeurbanne",
+          "url": "https://www.villeurbanne.fr/"
+        }
+      ]
+    }
+  ]
+}

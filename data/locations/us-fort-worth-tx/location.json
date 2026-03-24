@@ -1,0 +1,167 @@
+{
+  "id": "us-fort-worth-tx",
+  "name": "Fort Worth, TX",
+  "country": "United States",
+  "region": "US South Central",
+  "cities": [
+    "Fort Worth"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "N/A (domestic)",
+    "notes": "US citizen â€” no visa required"
+  },
+  "climate": {
+    "winterLowF": 34,
+    "summerHighF": 97,
+    "meetsWarmWinterReq": false,
+    "rainyDaysPerYear": 79
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 1600,
+      "min": 1300,
+      "max": 2000,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 560,
+      "min": 460,
+      "max": 670,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 260,
+      "min": 200,
+      "max": 340,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 520,
+      "min": 420,
+      "max": 660,
+      "annualInflation": 0.05
+    },
+    "insurance": {
+      "typical": 300,
+      "min": 220,
+      "max": 400,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 200,
+      "min": 150,
+      "max": 300,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 60,
+      "min": 40,
+      "max": 90,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 340,
+      "min": 240,
+      "max": 450,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 280,
+      "min": 200,
+      "max": 380,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 100,
+      "min": 60,
+      "max": 150,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 120,
+      "min": 80,
+      "max": 160,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 62,
+      "min": 50,
+      "max": 77,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 65,
+      "typical": 91,
+      "max": 180,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 200,
+      "typical": 350,
+      "max": 600,
+      "annualInflation": 0.055
+    }
+  },
+  "healthcare": {
+    "system": "Private insurance (ACA/employer/Medicare)",
+    "qualityRating": 8,
+    "dentalIncluded": false,
+    "waitTimes": "Short to moderate",
+    "prescriptionCoverage": "Via insurance plan"
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps available",
+    "dogFriendly": 8,
+    "expatCommunity": 1,
+    "englishPrevalence": 10,
+    "safetyRating": 6
+  },
+  "pros": [
+    "No state income tax",
+    "More affordable than Dallas",
+    "Stockyards district and Western heritage"
+  ],
+  "cons": [
+    "Extreme summer heat",
+    "Car-dependent",
+    "High property taxes"
+  ],
+  "taxes": {
+    "notes": "Federal only â€” no TX state income tax (high property taxes)",
+    "vatRate": 0,
+    "socialChargesRate": 0
+  }
+}

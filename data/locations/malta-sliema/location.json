@@ -1,0 +1,178 @@
+{
+  "id": "malta-sliema",
+  "name": "Sliema, Malta",
+  "country": "Malta",
+  "region": "Southern Europe",
+  "cities": [
+    "Sliema",
+    "St. Julian's",
+    "Gżira"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93
+  },
+  "visa": {
+    "type": "Malta Retirement Programme",
+    "incomeRequirement": {
+      "monthly": 1193,
+      "currency": "EUR"
+    },
+    "notes": "Malta Retirement Programme requires property purchase/rental + €14,318/year income. 15% flat tax on remitted income, minimum €7,500/year tax."
+  },
+  "climate": {
+    "winterLowF": 50,
+    "summerHighF": 92,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 40
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 1400,
+      "min": 1100,
+      "max": 1700,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 450,
+      "min": 360,
+      "max": 570,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 165,
+      "min": 120,
+      "max": 220,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 110,
+      "min": 75,
+      "max": 160,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 130,
+      "min": 90,
+      "max": 185,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 90,
+      "min": 55,
+      "max": 150,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 280,
+      "min": 200,
+      "max": 390,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 70,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 87,
+      "min": 72,
+      "max": 107,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 18,
+      "typical": 32,
+      "max": 65,
+      "annualInflation": 0.03,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 40,
+      "typical": 80,
+      "max": 160,
+      "annualInflation": 0.035
+    }
+  },
+  "healthcare": {
+    "system": "Mater Dei Hospital nearby. Many private clinics in Sliema area. Good English-speaking medical staff.",
+    "qualityRating": 8,
+    "dentalIncluded": false,
+    "waitTimes": "Public: 2-8 weeks. Private: under 2 weeks.",
+    "prescriptionCoverage": "Public healthcare provides free prescriptions on approved list"
+  },
+  "lifestyle": {
+    "internetSpeed": "100Mbps+",
+    "dogFriendly": 5,
+    "expatCommunity": 9,
+    "englishPrevalence": 9,
+    "safetyRating": 8
+  },
+  "pros": [
+    "Modern waterfront area popular with expats",
+    "Walkable with shops, restaurants, and promenade",
+    "English widely spoken everywhere"
+  ],
+  "cons": [
+    "Construction boom causing noise and disruption",
+    "Higher rents than rest of Malta",
+    "Very crowded and built-up"
+  ],
+  "taxes": {
+    "notes": "Malta Retirement Programme: 15% flat tax on remitted income, min €7,500/year.",
+    "vatRate": 18,
+    "socialChargesRate": 0
+  }
+}

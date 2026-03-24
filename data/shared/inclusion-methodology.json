@@ -1,0 +1,129 @@
+{
+  "methodology": {
+    "description": "Assessment based on official government reports, international indices, academic research, NGO reports, and documented social media sentiment analysis. Scores range from 1 (very high discrimination risk) to 10 (very inclusive/low risk).",
+    "disclaimer": "These assessments reflect documented patterns and published research as of early 2026. Individual experiences vary significantly. This is not legal advice. Always verify current conditions before relocating.",
+    "scoringScale": {
+      "9-10": "Very inclusive — strong legal protections, positive social attitudes, active integration programs",
+      "7-8": "Generally inclusive — good legal framework, occasional incidents, supportive expat community",
+      "5-6": "Mixed — legal protections exist but social attitudes vary, some documented incidents",
+      "3-4": "Concerning — weak enforcement, notable social tensions, frequent documented incidents",
+      "1-2": "High risk — systemic discrimination, poor legal protections, hostile social environment"
+    },
+    "categoryWeights": {
+      "racial": 0.3,
+      "religious": 0.2,
+      "countryOfOrigin": 0.25,
+      "language": 0.25
+    }
+  },
+  "comparativeAnalysis": {
+    "overallRankings": [
+      {
+        "locationId": "spain-alicante",
+        "score": 7.5,
+        "strengths": "Massive established expat community, strong legal framework, economic incentive for welcome",
+        "weaknesses": "Language barrier, two-tier system between Western and non-Western immigrants"
+      },
+      {
+        "locationId": "portugal-lisbon",
+        "score": 7.5,
+        "strengths": "Excellent English proficiency, strong legal protections, welcoming culture",
+        "weaknesses": "Housing crisis creating anti-foreigner sentiment, Afro-Portuguese discrimination"
+      },
+      {
+        "locationId": "panama-boquete",
+        "score": 7.5,
+        "strengths": "Premier expat retirement community, Pensionado program, English-friendly, dollar economy",
+        "weaknesses": "Colorism, expat bubble risk, indigenous marginalization, limited healthcare"
+      },
+      {
+        "locationId": "us-cherry-hill",
+        "score": 7.5,
+        "strengths": "Strong NJ civil rights laws, diverse community, large Jewish community, Philadelphia metro access",
+        "weaknesses": "High property taxes, suburban car-dependency, county-level inequities"
+      },
+      {
+        "locationId": "france-lyon",
+        "score": 7,
+        "strengths": "International business culture, strong diversity infrastructure",
+        "weaknesses": "Language barrier, laicite restrictions, racial profiling"
+      },
+      {
+        "locationId": "france-montpellier",
+        "score": 7,
+        "strengths": "Young diverse population, university culture, growing expat community",
+        "weaknesses": "Language barrier, regional far-right presence, housing competition"
+      },
+      {
+        "locationId": "france-toulouse",
+        "score": 7,
+        "strengths": "Aerospace industry brings international diversity, university city, strong legal framework",
+        "weaknesses": "Language barrier, laicite restrictions, suburban segregation"
+      },
+      {
+        "locationId": "panama-city",
+        "score": 7,
+        "strengths": "Pensionado program, dollar economy, genuinely multiracial society",
+        "weaknesses": "Colorism, indigenous marginalization, rising costs"
+      },
+      {
+        "locationId": "us-philadelphia",
+        "score": 7,
+        "strengths": "Deep civil rights history, genuinely diverse, strong local civil rights law, affordable for Northeast",
+        "weaknesses": "Extreme neighborhood segregation, racial wealth gap, crime concerns"
+      },
+      {
+        "locationId": "us-virginia",
+        "score": 7,
+        "strengths": "NoVA extreme diversity, no language barrier, strong civil rights framework",
+        "weaknesses": "Urban-rural divide, Confederate legacy, political polarization"
+      },
+      {
+        "locationId": "france-brittany",
+        "score": 6.5,
+        "strengths": "Strong legal framework, established British expat community, affordable",
+        "weaknesses": "Language barrier severe, less diverse, rural isolation risk"
+      },
+      {
+        "locationId": "us-savannah",
+        "score": 6.5,
+        "strengths": "Strong Black culture, LGBTQ+-friendly, civil rights legacy, welcoming tourism economy",
+        "weaknesses": "Deep South racial history, structural racial inequities, surrounding area conservative"
+      },
+      {
+        "locationId": "us-richmond",
+        "score": 6.5,
+        "strengths": "Active confrontation of Confederate history, strong Black culture, Virginia civil rights laws",
+        "weaknesses": "Deep residential segregation, racial wealth gap, gentrification tensions"
+      },
+      {
+        "locationId": "us-florida",
+        "score": 6,
+        "strengths": "No language barrier, massive retiree infrastructure, diverse metro areas",
+        "weaknesses": "Hostile political climate on race/immigration, Stand Your Ground, travel advisories"
+      }
+    ],
+    "bestForCategories": {
+      "racialInclusion": {
+        "locationId": "spain-alicante",
+        "score": 7,
+        "note": "Large diverse population normalizes foreign presence; Portugal close second"
+      },
+      "religiousFreedom": {
+        "locationId": "spain-alicante",
+        "score": 8,
+        "note": "No laicite restrictions, formal cooperation with multiple faiths; US locations tied"
+      },
+      "countryOfOriginWelcome": {
+        "locationId": "panama-city",
+        "score": 8,
+        "note": "Pensionado program specifically designed for retirees; Spain and Portugal tied second"
+      },
+      "languageAccessibility": {
+        "locationId": "us-virginia",
+        "score": 9,
+        "note": "English-speaking country; Portugal (score 8) best among non-English countries"
+      }
+    }
+  }
+}

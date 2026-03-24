@@ -1,0 +1,126 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 22,
+      "typical": 28,
+      "max": 235
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 200,
+        "coverageNote": "SSN covers for diabetes (Piano Terapeutico). Specialist prescription required."
+      },
+      {
+        "name": "Levotiroxina (Eutirox) [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 5,
+        "coverageNote": "SSN Class A — fully reimbursed"
+      },
+      {
+        "name": "Atorvastatina 20mg [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 7,
+        "coverageNote": "SSN Class A — fully reimbursed, small regional copay possible"
+      },
+      {
+        "name": "Montelukast [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 10,
+        "coverageNote": "SSN Class A reimbursed"
+      },
+      {
+        "name": "Idroclorotiazide [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "SSN Class A — fully reimbursed"
+      },
+      {
+        "name": "Olmesartan (Olmetec) [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 12,
+        "coverageNote": "SSN Class A reimbursed"
+      },
+      {
+        "name": "Salbutamolo (Ventolin) [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "SSN Class A — fully reimbursed"
+      },
+      {
+        "name": "Metformina 500mg [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "SSN Class A — fully reimbursed"
+      },
+      {
+        "name": "Allopurinolo [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "SSN Class A — fully reimbursed"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 5,
+        "coverageNote": "SSN Class A reimbursed"
+      },
+      {
+        "name": "Topiramato [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 12,
+        "coverageNote": "SSN Class A reimbursed"
+      },
+      {
+        "name": "Metoprololo (Lopresor) [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 5,
+        "coverageNote": "SSN Class A — fully reimbursed"
+      },
+      {
+        "name": "Atorvastatina 20mg [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 7,
+        "coverageNote": "SSN Class A — fully reimbursed"
+      }
+    ],
+    "pharmacyAccess": "Farmacie abundant in all Italian cities with green cross signage. Rotating 24h farmacia di turno system. EU prescriptions accepted. Parafarmacie sell OTC at lower prices.",
+    "notes": "Italy SSN (Servizio Sanitario Nazionale) provides universal coverage. Class A medications (essential) are fully reimbursed with possible small regional copay (€1-4 per prescription). Residents enrolled in SSN pay based on income. EU health card (EHIC/GHIC) accepted for temporary stays."
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 66,
+      "typical": 81,
+      "max": 101
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in Italy at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "Iliad Italia",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "120GB 5G",
+        "baseCost": 16,
+        "taxesAndFees": 0,
+        "monthlyTotal": 16,
+        "notes": "2 lines €7.99/line (~$8.50). Iliad disrupted Italian market with low prices. EU roaming included."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      }
+    ]
+  }
+}

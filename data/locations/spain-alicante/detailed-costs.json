@@ -1,0 +1,1259 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 18,
+      "typical": 23,
+      "max": 224
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutida / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 8,
+        "withoutInsurance": 190,
+        "coverageNote": "SNS covers for T2 diabetes; pensioners pay 10% (max 8 EUR/mo). ~190 EUR/mo private."
+      },
+      {
+        "name": "Levotiroxina (Eutirox) [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "SNS pensioner: 10% copay, max 8 EUR/mo cap"
+      },
+      {
+        "name": "Atorvastatina 20mg [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 6,
+        "coverageNote": "SNS pensioner: 10% copay"
+      },
+      {
+        "name": "Montelukast [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 10,
+        "coverageNote": "SNS pensioner: 10% copay"
+      },
+      {
+        "name": "Hidroclorotiazida [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 3,
+        "coverageNote": "SNS pensioner: 10% copay"
+      },
+      {
+        "name": "Olmesartan (Openvas) [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 12,
+        "coverageNote": "SNS pensioner: 10% copay"
+      },
+      {
+        "name": "Salbutamol (Ventolin) [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 3,
+        "coverageNote": "SNS pensioner: 10% copay"
+      },
+      {
+        "name": "Metformina 500mg [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 3,
+        "coverageNote": "SNS pensioner: 10% copay"
+      },
+      {
+        "name": "Alopurinol [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "SNS pensioner: 10% copay"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 5,
+        "coverageNote": "SNS pensioner: 10% copay"
+      },
+      {
+        "name": "Topiramato [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 12,
+        "coverageNote": "SNS pensioner: 10% copay"
+      },
+      {
+        "name": "Metoprolol [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 5,
+        "coverageNote": "SNS pensioner: 10% copay"
+      },
+      {
+        "name": "Atorvastatina 20mg [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 6,
+        "coverageNote": "SNS pensioner: 10% copay"
+      }
+    ],
+    "pharmacyAccess": "Excellent. Pharmacies on nearly every block in Alicante city center with rotating 24-hour duty pharmacies (farmacias de guardia). Many medications available without prescription that would require one elsewhere.",
+    "prescriptionSystem": "SNS electronic prescription (receta electrónica) linked to SIP health card. Doctor issues renewable prescriptions for chronic conditions (up to 1 year). Pensioners with income under €18,000 pay 0% copay; €18,000-100,000 pay 10% capped at €8.23/month.",
+    "insuranceCoverage": "Public SNS covers most prescription drugs after gaining residency. Private insurance (required for NLV visa) typically covers 80-100% of medications. During initial NLV period before public coverage, private plan is primary.",
+    "sources": [
+      {
+        "title": "Spanish Ministry of Health – Pharmaceutical Copayment",
+        "url": "https://www.sanidad.gob.es/profesionales/farmacia/pdf/copago_farmaceutico.pdf"
+      },
+      {
+        "title": "GVA Health Portal – SIP Card",
+        "url": "https://www.san.gva.es/en/web/dgf/tarjeta-sip"
+      }
+    ]
+  },
+  "vision": {
+    "annualExamCost": {
+      "withInsurance": 0,
+      "withoutInsurance": 60,
+      "notes": "SNS covers basic eye exams. Private ophthalmologists charge €40-80. Optical shops offer free basic checks."
+    },
+    "eyeglasses": {
+      "basicFrameAndLens": {
+        "min": 60,
+        "typical": 120,
+        "max": 250
+      },
+      "progressiveLens": {
+        "min": 150,
+        "typical": 300,
+        "max": 600
+      },
+      "contactLensesMonthly": {
+        "min": 20,
+        "typical": 35,
+        "max": 60
+      }
+    },
+    "insuranceCoverage": "SNS covers ophthalmology referrals and cataract surgery. Glasses and contact lenses are NOT covered by public healthcare. Private insurance often includes one pair of glasses every 2 years or a €100-150 annual allowance.",
+    "specialistWaitTime": "Public ophthalmology wait: 2-6 months for non-urgent. Private: 1-2 weeks. Cataract surgery public wait can be 3-9 months.",
+    "seniorConsiderations": "High prevalence of age-related macular degeneration and glaucoma monitoring. Annual retinal exams recommended. SNS covers diabetic retinopathy screening. Alicante has Hospital General Universitario with full ophthalmology department.",
+    "sources": [
+      {
+        "title": "Colegio Nacional de Ópticos-Optometristas",
+        "url": "https://www.cnoo.es/"
+      },
+      {
+        "title": "GVA Health – Ophthalmology Services",
+        "url": "https://www.san.gva.es/en/web/hospital-general-alacant"
+      }
+    ]
+  },
+  "dental": {
+    "annualCleaningCost": {
+      "withInsurance": 0,
+      "withoutInsurance": 50,
+      "notes": "Dental is NOT covered by SNS public healthcare (except extractions and emergencies for children). Private dental insurance or pay-as-you-go."
+    },
+    "commonProcedures": [
+      {
+        "procedure": "Filling",
+        "cost": {
+          "min": 40,
+          "typical": 60,
+          "max": 100
+        },
+        "coverageNote": "Not covered by SNS. Private dental plans cover 1-2 per year."
+      },
+      {
+        "procedure": "Crown",
+        "cost": {
+          "min": 200,
+          "typical": 350,
+          "max": 550
+        },
+        "coverageNote": "Not covered by SNS. Private plans cover 50-70% typically."
+      },
+      {
+        "procedure": "Root Canal",
+        "cost": {
+          "min": 120,
+          "typical": 200,
+          "max": 350
+        },
+        "coverageNote": "Not covered by SNS. Private plans partially cover."
+      },
+      {
+        "procedure": "Extraction",
+        "cost": {
+          "min": 50,
+          "typical": 80,
+          "max": 150
+        },
+        "coverageNote": "Basic extractions covered by SNS in limited cases. Private plans cover fully."
+      },
+      {
+        "procedure": "Implant",
+        "cost": {
+          "min": 600,
+          "typical": 900,
+          "max": 1500
+        },
+        "coverageNote": "Not covered by SNS or most private plans. Spain is popular for dental tourism due to competitive implant pricing."
+      },
+      {
+        "procedure": "Dentures",
+        "cost": {
+          "min": 400,
+          "typical": 700,
+          "max": 1200
+        },
+        "coverageNote": "Not covered by SNS. Some private plans offer partial coverage."
+      }
+    ],
+    "insuranceCoverage": "SNS does NOT cover adult dental care (only emergency extractions). Private dental insurance runs €15-40/month and typically includes 1-2 cleanings, X-rays, and discounts on procedures. Dental clinics like Vitaldent and Sanitas Dental offer membership plans.",
+    "dentistAvailability": "Excellent in Alicante. Many private dental clinics, some with English-speaking staff catering to expats. No referral needed for private dentists. Dental tourism from Northern Europe keeps quality high and prices competitive.",
+    "sources": [
+      {
+        "title": "Consejo General de Dentistas de España",
+        "url": "https://www.consejodentistas.es/"
+      },
+      {
+        "title": "Sanitas Dental Plans",
+        "url": "https://www.sanitas.es/seguros-dentales"
+      }
+    ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 290,
+      "typical": 360,
+      "max": 450
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 245,
+        "seniorDiscounts": "Menu del día excellent value (€10-14 for 3 courses). Small tip 5-10% customary.",
+        "notes": "Lunch for 2: menú del día ~€24 + 5% tip = ~€25, 2x/week = ~€217/mo = ~$245/mo"
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 38,
+        "seniorDiscounts": "No specific senior discounts.",
+        "notes": "Movistar/Orange/MásMóvil 1 Gig fibre €30-40/mo."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 14,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€12.99/mo in Spain."
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 5,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€4.99/mo (€49.90/yr) in Spain."
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 11,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€9.99/mo in Eurozone."
+      },
+      {
+        "name": "NFL RedZone",
+        "monthlyCost": 11,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "DAZN NFL Game Pass €19.99/mo during season (Sep-Feb). Annualized ~€10/mo (~$11). Includes RedZone, live games, NFL Network."
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 25,
+        "seniorDiscounts": "Municipal gyms offer senior rates."
+      },
+      {
+        "name": "Books/Media",
+        "monthlyCost": 12,
+        "seniorDiscounts": "Public libraries free."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 15,
+        "seniorDiscounts": "Café con leche ~€1.50-2.50."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Movistar Internet",
+        "url": "https://www.movistar.es/internet/"
+      },
+      {
+        "title": "Netflix Spain",
+        "url": "https://help.netflix.com/es/node/24926"
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 30,
+      "typical": 100,
+      "max": 200
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 38,
+        "senior": 20,
+        "notes": "TAM (Transporte Alicante Metropolitano) monthly Bono. TRAM Alicante (tram/light rail) has separate tariff. Combined bus+tram available."
+      },
+      "singleRide": 1.45,
+      "coverage": "TAM urban bus network covers Alicante city well. TRAM Alicante connects to Benidorm, Denia along the coast. Cercanías rail to Elche and Murcia.",
+      "seniorDiscount": "Pensionistas with Tarjeta TAM get up to 50% discount. TRAM offers reduced Bono for pensionistas and 65+. Must register with valid residency."
+    },
+    "rideShare": {
+      "baseFare": 3.5,
+      "perKm": 0.95,
+      "typicalCrossTownTrip": {
+        "min": 5,
+        "typical": 8,
+        "max": 14
+      },
+      "availability": "Uber and Cabify operate in Alicante. Regular taxis also plentiful with taxi stands throughout the city.",
+      "notes": "Taxi from airport to city center approximately €18-22. Uber/Cabify slightly cheaper."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 60,
+        "initialRegistration": {
+          "min": 200,
+          "typical": 400,
+          "max": 800
+        },
+        "notes": "Impuesto de circulación (road tax) varies by engine size. Initial matriculación tax 4.75% for used imports."
+      },
+      "insurance": {
+        "monthlyMin": 25,
+        "monthlyTypical": 45,
+        "monthlyMax": 80,
+        "notes": "Third-party (terceros) from €25/mo. Comprehensive (todo riesgo) €50-80/mo. Higher for non-Spanish license holders initially."
+      },
+      "fuel": {
+        "pricePerLiter": 1.55,
+        "monthlyEstimate": {
+          "min": 50,
+          "typical": 80,
+          "max": 130
+        },
+        "notes": "Gasoline €1.50-1.65/L. Diesel €1.40-1.55/L. Moderate driving needs in coastal area."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 40,
+          "typical": 70,
+          "max": 120
+        },
+        "hourlyStreet": 1.2,
+        "notes": "Resident parking (SER zona azul) much cheaper with empadronamiento. Underground garages €60-120/mo."
+      },
+      "tolls": {
+        "monthlyEstimate": 15,
+        "notes": "AP-7 motorway now free. Some remaining toll sections on other autopistas. Minimal for local driving."
+      },
+      "seniorDiscounts": "No specific senior discounts on car ownership. Tarjeta Dorada for Renfe trains (25-40% off) is the main transport discount."
+    },
+    "walkability": "Excellent in Alicante city center and Explanada de España area. Flat along the coast, hilly near castle. Most daily errands walkable in central neighborhoods. Beach promenade extends several kilometers.",
+    "cycling": {
+      "bikeShareMonthly": 30,
+      "infrastructure": "Growing network of bike lanes along the coast and through the city. Alicante BiciAli public bike share system. Flat terrain along the coast is ideal for cycling.",
+      "notes": "Weather is cycling-friendly year-round. Hills near the castle area can be challenging."
+    },
+    "sources": [
+      {
+        "title": "TRAM Alicante – Fares",
+        "url": "https://www.tramalicante.es/page.php?id_page=tarifas"
+      },
+      {
+        "title": "TAM Alicante Bus",
+        "url": "https://www.subus.es/alicante/"
+      },
+      {
+        "title": "Renfe Tarjeta Dorada",
+        "url": "https://www.renfe.com/es/en/experiences/renfe-cards/gold-card"
+      }
+    ],
+    "electricVehicle": {
+      "purchasePrice": {
+        "min": 24000,
+        "typical": 34000,
+        "max": 52000
+      },
+      "purchaseNotes": "Dacia Spring ~€22K, Renault Megane E-Tech ~€35K, Tesla Model 3 ~€40K, Hyundai Ioniq 5 ~€45K. MOVES III incentives available.",
+      "federalIncentive": 7000,
+      "stateIncentive": 0,
+      "incentiveNotes": "Plan MOVES III: up to €7,000 subsidy for new EV purchase (scrapping old vehicle required for max). Reduced registration tax (0% for EVs vs 4.75% for ICE). Some municipalities reduce IVTM (road tax) up to 75%.",
+      "chargingHome": {
+        "installCost": {
+          "min": 400,
+          "typical": 900,
+          "max": 1800
+        },
+        "monthlyElectricity": {
+          "min": 20,
+          "typical": 35,
+          "max": 55
+        },
+        "notes": "Electricity ~€0.15-0.25/kWh (variable by hour, use supervalle/nocturna tariff). Solar potential excellent on Costa Blanca."
+      },
+      "chargingPublic": {
+        "perKwh": {
+          "min": 0.3,
+          "typical": 0.45,
+          "max": 0.7
+        },
+        "notes": "Iberdrola, Endesa, Repsol networks. Some free chargers at shopping centers. Ionity on highways."
+      },
+      "insurance": {
+        "monthly": {
+          "min": 25,
+          "typical": 50,
+          "max": 85
+        },
+        "notes": "Competitive rates. Línea Directa, Mapfre, Mutua Madrileña. EVs sometimes cheaper to insure due to lower theft rates."
+      },
+      "maintenance": {
+        "annual": {
+          "min": 250,
+          "typical": 400,
+          "max": 600
+        },
+        "notes": "ITV (MOT) every 2 yrs after 4 yrs. No oil changes. Lower labor rates. Spanish workshops increasingly EV-capable."
+      },
+      "registration": {
+        "annual": {
+          "min": 0,
+          "typical": 15,
+          "max": 30
+        },
+        "notes": "IVTM (impuesto vehículos) reduced 50-75% for EVs in many municipalities. Alicante offers 75% reduction."
+      },
+      "batteryWarranty": "8 years / 160,000 km (EU standard).",
+      "depreciationNotes": "EV market growing fast in Spain. Government incentives support resale values. Solar charging potential reduces long-term costs.",
+      "totalMonthlyOwnership": {
+        "min": 80,
+        "typical": 145,
+        "max": 230
+      },
+      "totalMonthlyNotes": "Includes: charging (€35), insurance (€50), maintenance (€33/mo avg), registration (€1/mo). Excludes: purchase/loan payment, depreciation.",
+      "sources": [
+        {
+          "title": "Plan MOVES III - IDAE",
+          "url": "https://www.idae.es/ayudas-y-financiacion/para-movilidad-y-vehiculos/programa-moves-iii"
+        },
+        {
+          "title": "Puntos de recarga - Electromaps",
+          "url": "https://www.electromaps.com/en/charging-stations"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 65,
+    "discounts": [
+      {
+        "category": "Public Transit",
+        "description": "Pensionista TAM and TRAM passes",
+        "discount": "40-50% off monthly passes",
+        "details": "Must have residency (empadronamiento) and pensioner status or be 65+. Apply at TAM/TRAM offices with SIP card.",
+        "source": "TAM Alicante"
+      },
+      {
+        "category": "Train Travel",
+        "description": "Renfe Tarjeta Dorada (Gold Card)",
+        "discount": "25-40% off all Renfe trains",
+        "details": "Available to anyone 60+. Costs €6/year. Valid on AVE, Cercanías, Media Distancia, and Larga Distancia.",
+        "source": "Renfe"
+      },
+      {
+        "category": "Prescription Medication",
+        "description": "SNS pensioner copay reduction",
+        "discount": "0% copay (income <€18K) or 10% capped at €8.23/mo",
+        "details": "Automatic once registered in SNS as pensioner. Applied at pharmacy with electronic prescription.",
+        "source": "Spanish Ministry of Health"
+      },
+      {
+        "category": "Museums & Culture",
+        "description": "Reduced entry at museums and cultural venues",
+        "discount": "30-100% off admission",
+        "details": "MARQ €2 reduced rate (normally €5). Many museums free for 65+. First Sunday of month often free for all.",
+        "source": "MARQ Alicante / Ayuntamiento"
+      },
+      {
+        "category": "Municipal Sports",
+        "description": "Polideportivo (public sports center) discounts",
+        "discount": "30-40% off membership and classes",
+        "details": "Municipal sports centers offer Tarifa Jubilado. Must be empadronado.",
+        "source": "Ayuntamiento de Alicante"
+      },
+      {
+        "category": "University Courses",
+        "description": "Universitat Permanent (senior university program)",
+        "discount": "Subsidized courses at University of Alicante",
+        "details": "Cultural, language, history, and technology courses for 55+. Very affordable annual enrollment.",
+        "source": "Universidad de Alicante"
+      },
+      {
+        "category": "Tax Benefits",
+        "description": "Income tax deductions for pensioners",
+        "discount": "Higher personal allowance for 65+ (€1,150 extra) and 75+ (€1,400 extra)",
+        "details": "Applied automatically in IRPF tax return. Reduces taxable income.",
+        "source": "Agencia Tributaria"
+      }
+    ]
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 68,
+      "typical": 82,
+      "max": 100
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in Spain at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "Digi Mobil (Local)",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "5GB 4G/5G",
+        "baseCost": 14,
+        "taxesAndFees": 0,
+        "monthlyTotal": 17,
+        "notes": "Digi Mobil €7/mo per line (21% IVA included). 5GB data, unlimited calls in Spain. Cheapest quality option. ~$17/mo for 2 lines."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      },
+      {
+        "title": "Digi Mobil Spain",
+        "url": "https://www.digimobil.es/tarifas-movil"
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom house/villa (chalet)",
+    "monthlyBudget": {
+      "min": 750,
+      "max": 1200,
+      "typical": 950
+    },
+    "breakdown": {
+      "baseRentEUR": 750,
+      "basuraGarbageEUR": 8,
+      "communityFeesEUR": 25,
+      "totalEUR": 783,
+      "exchangeRate": 1.08,
+      "totalUSD": 846
+    },
+    "taxNotes": "No VAT (IVA) on residential rent in Spain. IBI (property tax) is landlord responsibility. Basura (garbage collection) ~€90-110/year often charged to tenant. Community fees (comunidad) for urbanizaciones passed to tenant. Tenant must register on the padrón (municipal register).",
+    "leaseTerms": "5-year lease minimum (Ley de Arrendamientos Urbanos, LAU 2023 reform). Landlord cannot terminate before 5 years unless personal need. Security deposit: 1 month legally (fianza). Rent increases capped by INE index (max 3% in 2024, 2% in 2025).",
+    "marketNotes": "Costa Blanca has excellent availability of 2BR villas/chalets, especially in urbanizaciones (gated communities) outside city center. Playa de San Juan, Campello, Mutxamel offer good value. Many come with pool access.",
+    "sources": [
+      {
+        "name": "Idealista Alicante Rentals",
+        "url": "https://www.idealista.com/en/alquiler-viviendas/alicante-alicante/"
+      },
+      {
+        "name": "Spain LAU Rental Law",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003"
+      }
+    ],
+    "housingSites": {
+      "rentals": [
+        {
+          "name": "Idealista",
+          "url": "https://www.idealista.com/en/alquiler-viviendas/alicante-alacant/alicante/",
+          "type": "rental"
+        },
+        {
+          "name": "Fotocasa",
+          "url": "https://www.fotocasa.es/es/alquiler/viviendas/alicante-alacant/alicante/l",
+          "type": "rental"
+        },
+        {
+          "name": "Kyero",
+          "url": "https://www.kyero.com/en/alicante-province-property-for-sale-0l3",
+          "type": "purchase"
+        }
+      ]
+    }
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Mercadona",
+        "type": "supermarket",
+        "website": "https://www.mercadona.es/",
+        "notes": "Spain's #1 chain, excellent quality/price",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Inside Mercadona Spain",
+            "url": "https://www.youtube.com/watch?v=hD-HQbORF4Y"
+          },
+          {
+            "platform": "instagram",
+            "title": "@mercadona",
+            "url": "https://www.instagram.com/mercadona/"
+          }
+        ]
+      },
+      {
+        "name": "Consum",
+        "type": "supermarket",
+        "website": "https://www.consum.es/",
+        "notes": "Regional Valencia chain, strong in Alicante",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Consum Supermarket Spain",
+            "url": "https://www.youtube.com/watch?v=TxWQ4Pbp3xY"
+          },
+          {
+            "platform": "instagram",
+            "title": "@supermercadosconsum",
+            "url": "https://www.instagram.com/supermercadosconsum/"
+          }
+        ]
+      },
+      {
+        "name": "Mercado Central de Alicante",
+        "type": "farmers-market",
+        "website": "https://www.alicanteturismo.com/",
+        "notes": "Historic central market, fresh seafood",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Mercado Central Alicante",
+            "url": "https://www.youtube.com/watch?v=y6h_3V7z5FE"
+          },
+          {
+            "platform": "instagram",
+            "title": "@alicanteturismo",
+            "url": "https://www.instagram.com/alicanteturismo/"
+          }
+        ]
+      }
+    ]
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 42,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Farmers market or CSA box"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 28,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Bananas, berries, apples, citrus"
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 14,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Sweet Potatoes / Potatoes",
+            "monthlyCost": 10.5,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet staple"
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 8.4,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet vegetables"
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 7,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Digestive health, home-cooked diet"
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 35,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Primary protein for both adults & dog"
+          },
+          {
+            "name": "Ground Turkey / Beef",
+            "monthlyCost": 31.5,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean ground for dog food base"
+          },
+          {
+            "name": "Fish (salmon/tilapia)",
+            "monthlyCost": 28,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Omega-3 rich"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 10.5,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": "Eggs also for dog diet"
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 8.4,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Essential for balanced home-cooked dog diet"
+          },
+          {
+            "name": "Beans / Lentils",
+            "monthlyCost": 5.6,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "grains",
+        "name": "Grains & Starches",
+        "items": [
+          {
+            "name": "Rice (brown/white)",
+            "monthlyCost": 7,
+            "quantity": 5,
+            "unit": "lbs/month",
+            "forWhom": "shared",
+            "notes": "Dog diet carb source"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 10.5,
+            "quantity": 2,
+            "unit": "loaves/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 5.6,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Oats / Cereal",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "container/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk / Plant Milk",
+            "monthlyCost": 10.5,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Cheese",
+            "monthlyCost": 14,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Yogurt / Kefir",
+            "monthlyCost": 10.5,
+            "quantity": 1,
+            "unit": "quart/week",
+            "forWhom": "shared",
+            "notes": "Probiotics for dog digestion too"
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "unit/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Olive Oil / Cooking Oils",
+            "monthlyCost": 10.5,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Spices & Seasonings",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Canned Goods (tomatoes, beans)",
+            "monthlyCost": 8.4,
+            "quantity": 6,
+            "unit": "cans/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Condiments & Sauces",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 17.5,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tea",
+            "monthlyCost": 5.6,
+            "quantity": 1,
+            "unit": "box/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Wine / Beer",
+            "monthlyCost": 28,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Optional"
+          },
+          {
+            "name": "Sparkling Water / Juice",
+            "monthlyCost": 8.4,
+            "quantity": 1,
+            "unit": "case/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "snacks",
+        "name": "Snacks & Treats",
+        "items": [
+          {
+            "name": "Nuts & Trail Mix",
+            "monthlyCost": 10.5,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Crackers / Chips",
+            "monthlyCost": 7,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Dark Chocolate",
+            "monthlyCost": 5.6,
+            "quantity": 4,
+            "unit": "bars/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "frozen",
+        "name": "Frozen Foods",
+        "items": [
+          {
+            "name": "Frozen Vegetables",
+            "monthlyCost": 8.4,
+            "quantity": 4,
+            "unit": "bags/month",
+            "forWhom": "shared",
+            "notes": "Backup for dog food prep"
+          },
+          {
+            "name": "Frozen Fruit (smoothies)",
+            "monthlyCost": 7,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Frozen Meals (convenience)",
+            "monthlyCost": 10.5,
+            "quantity": 4,
+            "unit": "meals/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "supplements",
+        "name": "Pet Supplements & Health",
+        "items": [
+          {
+            "name": "Joint Supplement (glucosamine)",
+            "monthlyCost": 21,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Essential for Bernese — hip/joint health"
+          },
+          {
+            "name": "Fish Oil (omega-3)",
+            "monthlyCost": 10.5,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Coat & skin health"
+          },
+          {
+            "name": "Multivitamin / Mineral Mix",
+            "monthlyCost": 14,
+            "quantity": 1,
+            "unit": "container/month",
+            "forWhom": "dog",
+            "notes": "Balance home-cooked diet"
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 10.5,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "dog",
+            "notes": "Training & dental chews"
+          }
+        ]
+      }
+    ],
+    "monthlyTotal": 498
+  },
+  "healthcare": {
+    "system": "SNS public + private insurance (visa requirement)",
+    "coverageSummary": "Private insurance required for NLV visa (~2 years). After permanent residency, can access SNS public healthcare. Pre-existing condition loading 20-40% on private premiums.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD"
+      ],
+      "costs": [
+        {
+          "item": "Private insurance (Sanitas/Adeslas)",
+          "monthlyCost": 130,
+          "notes": "~€120-140/mo. Pre-existing loading for AMD + obesity. Age surcharge for 60+."
+        },
+        {
+          "item": "Anti-VEGF injections (private)",
+          "monthlyCost": 60,
+          "notes": "Private: €300-500/injection, 6-8/yr. Insurance covers partially. Switch to SNS ASAP."
+        },
+        {
+          "item": "Anti-VEGF injections (SNS, after residency)",
+          "monthlyCost": 0,
+          "notes": "SNS covers 100% once you have residency. No copay for hospital procedures."
+        },
+        {
+          "item": "Ophthalmologist private visits",
+          "monthlyCost": 15,
+          "notes": "Private insurance covers with copay ~€10-20/visit."
+        },
+        {
+          "item": "Specialist visits (endocrinology, pulmonology)",
+          "monthlyCost": 10,
+          "notes": "Private insurance copays ~€10-15/visit."
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Gout",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Migraines"
+      ],
+      "costs": [
+        {
+          "item": "Private insurance (Sanitas/Adeslas)",
+          "monthlyCost": 110,
+          "notes": "~€100-120/mo. Pre-existing loading for diabetes. Age surcharge."
+        },
+        {
+          "item": "Endocrinologist (private)",
+          "monthlyCost": 10,
+          "notes": "Private copay ~€10-15/visit. Quarterly."
+        },
+        {
+          "item": "Diabetes supplies",
+          "monthlyCost": 10,
+          "notes": "Glucose strips partially covered by private insurance."
+        },
+        {
+          "item": "Specialist copays (rheumatology, neuro)",
+          "monthlyCost": 8,
+          "notes": "Semi-annual visits. ~€10-15 copay each."
+        }
+      ]
+    },
+    "shared": [
+      {
+        "item": "Dental coverage",
+        "monthlyCost": 15,
+        "notes": "Private insurance includes basic dental. Complex work has copays."
+      },
+      {
+        "item": "Pensioner drug copay cap",
+        "monthlyCost": 0,
+        "notes": "SNS: pensioners pay max 10% copay, capped at €8/mo for pharmacy."
+      }
+    ],
+    "monthlyTotals": {
+      "person1": 215,
+      "person2": 138,
+      "shared": 15,
+      "household": 368
+    },
+    "notes": "Costs shown for initial private insurance period. After ~2 years residency, switch to SNS reduces costs significantly. SNS pensioner copays are minimal (10% up to €8/mo).",
+    "phaseTransition": {
+      "year1to2": {
+        "label": "Private Insurance (visa requirement)",
+        "totalEstimate": 370
+      },
+      "year3plus": {
+        "label": "SNS Public Healthcare",
+        "totalEstimate": 50
+      }
+    }
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Black Hair Care",
+      "priceRange": {
+        "cut": "20-40",
+        "color": "50-100",
+        "fullService": "70-160"
+      },
+      "notes": "Alicante has a growing African community. Salons are found in the Carolinas and Benalua neighborhoods. Fewer options than larger Spanish cities.",
+      "providers": [
+        {
+          "name": "Afro Beauty Peluqueria",
+          "type": "Afro hair salon",
+          "address": "Centro, Alicante",
+          "distanceMi": 0,
+          "rating": 4.3,
+          "notes": "Braids, locs, weaves, natural hair care. Experienced with all textures.",
+          "website": ""
+        },
+        {
+          "name": "Belleza Africana",
+          "type": "Full-service salon",
+          "address": "Benalua, Alicante",
+          "distanceMi": 1,
+          "rating": 4.2,
+          "notes": "African and Caribbean hair care. Relaxers, color, protective styles.",
+          "website": ""
+        }
+      ]
+    },
+    "whiteHairCare": {
+      "label": "White/Caucasian Hair Care",
+      "priceRange": {
+        "cut": "15-30",
+        "color": "40-85",
+        "highlights": "55-110"
+      },
+      "notes": "Spanish peluquerias are generally affordable. Many good options along Avenida Maisonnave and in the Ensanche area.",
+      "providers": [
+        {
+          "name": "Llongueras",
+          "type": "Upscale chain salon",
+          "address": "Centro, Alicante",
+          "distanceMi": 0,
+          "rating": 4.5,
+          "notes": "Premium Spanish salon chain. Expert colorists. Highlights, balayage. Known for quality.",
+          "website": ""
+        },
+        {
+          "name": "Marco Aldany",
+          "type": "Chain salon",
+          "address": "Alicante (multiple)",
+          "distanceMi": 0,
+          "rating": 4.2,
+          "notes": "Good value chain. Cuts and color at moderate prices. Walk-in friendly.",
+          "website": ""
+        }
+      ]
+    },
+    "mensBigTall": {
+      "label": "Men's Big & Tall Clothing",
+      "priceRange": {
+        "shirts": "18-50",
+        "pants": "22-45",
+        "suits": "80-250"
+      },
+      "notes": "Spain uses EU sizing. Kiabi and Primark carry extended sizes. El Corte Inglés has the best in-store selection for larger sizes.",
+      "providers": [
+        {
+          "name": "El Corte Inglés",
+          "type": "Department store",
+          "address": "Centro, Alicante",
+          "distanceMi": 0,
+          "rating": 4.4,
+          "notes": "Spain's premier department store. Extended sizes section. Tailoring available. Best in-store selection.",
+          "website": ""
+        },
+        {
+          "name": "Kiabi / Primark",
+          "type": "Budget retailer",
+          "address": "Centro Comercial, Alicante",
+          "distanceMi": 3,
+          "rating": 4,
+          "notes": "Budget extended sizes. Primark up to 3XL. Kiabi to 5XL. Very affordable.",
+          "website": ""
+        }
+      ]
+    },
+    "womensClothing": {
+      "label": "Women's Regular Clothing",
+      "priceRange": {
+        "casual": "12-35",
+        "dresses": "25-65",
+        "professional": "30-85"
+      },
+      "notes": "Alicante is very affordable for clothing. Zara, Mango, and H&M on Avenida Maisonnave. El Corte Inglés for more upscale options.",
+      "providers": [
+        {
+          "name": "El Corte Inglés",
+          "type": "Department store",
+          "address": "Centro, Alicante",
+          "distanceMi": 0,
+          "rating": 4.5,
+          "notes": "Full women's department. Spanish sizes 34-52. Alterations available.",
+          "website": ""
+        },
+        {
+          "name": "Zara / Mango (Maisonnave)",
+          "type": "Fashion retail",
+          "address": "Centro, Alicante",
+          "distanceMi": 0,
+          "rating": 4.4,
+          "notes": "Zara and Mango are headquartered in Spain — best selection and prices here.",
+          "website": ""
+        }
+      ]
+    },
+    "shoes": {
+      "label": "Shoes",
+      "priceRange": {
+        "casual": "25-55",
+        "dress": "40-90",
+        "athletic": "35-80",
+        "wideWidth": "30-70"
+      },
+      "notes": "Spain is a major shoe-producing country. Excellent quality at lower prices than US. Elche (30 min away) is the shoe capital.",
+      "providers": [
+        {
+          "name": "El Corte Inglés (shoe dept)",
+          "type": "Department store",
+          "address": "Centro, Alicante",
+          "distanceMi": 0,
+          "rating": 4.4,
+          "notes": "Excellent shoe department. Spanish brands (Pikolinos, Camper). Extended sizes.",
+          "website": ""
+        },
+        {
+          "name": "Pikolinos Factory Outlet (Elche)",
+          "type": "Factory outlet",
+          "address": "Elche (30 min south)",
+          "distanceMi": 15,
+          "rating": 4.7,
+          "notes": "Famous Spanish comfort shoe brand. Factory prices. Wide widths available. Worth the trip.",
+          "website": ""
+        }
+      ]
+    }
+  }
+}

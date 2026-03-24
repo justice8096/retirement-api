@@ -1,0 +1,163 @@
+{
+  "city": "Vannes / Saint-Malo area",
+  "neighborhoods": [
+    {
+      "id": "vannes-centre-historique",
+      "name": "Centre Historique (Vannes)",
+      "description": "Medieval walled city center with half-timbered houses, cobblestone streets, and a vibrant market scene along the port",
+      "character": "Urban historic, walkable, culturally rich with maritime charm",
+      "housing": {
+        "avgRentOneBedroomEUR": 550,
+        "avgRentTwoBedroomEUR": 750,
+        "buyPricePerSqmEUR": 3400,
+        "predominantType": "Renovated apartments in historic stone and half-timbered buildings"
+      },
+      "walkabilityScore": 90,
+      "transitScore": 70,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Wednesday and Saturday markets on Place des Lices. Walking distance to the Gulf of Morbihan.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Vannes",
+          "url": "https://www.numbeo.com/cost-of-living/in/Vannes"
+        },
+        {
+          "title": "French Property - Brittany Guide",
+          "url": "https://www.french-property.com/guides/france/brittany"
+        },
+        {
+          "title": "Vannes Tourism Office",
+          "url": "https://www.tourisme-vannes.com/"
+        }
+      ]
+    },
+    {
+      "id": "saint-malo-intra-muros",
+      "name": "Intra-Muros (Saint-Malo)",
+      "description": "The walled old city of Saint-Malo, fully rebuilt after WWII, surrounded by ramparts with ocean views",
+      "character": "Compact, tourist-heavy in summer, dramatic coastal setting",
+      "housing": {
+        "avgRentOneBedroomEUR": 620,
+        "avgRentTwoBedroomEUR": 880,
+        "buyPricePerSqmEUR": 4800,
+        "predominantType": "Apartments in granite buildings within the walled city"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 50,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Very seasonal — quiet winters, packed summers. Parking is extremely limited. Best for those who love the sea.",
+      "sources": [
+        {
+          "title": "SeLoger - Saint-Malo Property",
+          "url": "https://www.seloger.com/immobilier/achat/immo-saint-malo-35/"
+        },
+        {
+          "title": "Saint-Malo Tourism",
+          "url": "https://www.saint-malo-tourisme.com/"
+        }
+      ]
+    },
+    {
+      "id": "vannes-conleau",
+      "name": "Conleau (Vannes)",
+      "description": "Residential peninsula south of Vannes center, facing the Gulf of Morbihan with beaches and waterfront promenades",
+      "character": "Quiet residential, waterfront, family-oriented",
+      "housing": {
+        "avgRentOneBedroomEUR": 500,
+        "avgRentTwoBedroomEUR": 700,
+        "buyPricePerSqmEUR": 3600,
+        "predominantType": "Houses and low-rise apartments with garden access"
+      },
+      "walkabilityScore": 55,
+      "transitScore": 40,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Popular with retirees already. Thalassotherapy center nearby. 15-minute walk to Vannes center.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Vannes",
+          "url": "https://www.numbeo.com/cost-of-living/in/Vannes"
+        },
+        {
+          "title": "French Property - Morbihan",
+          "url": "https://www.french-property.com/guides/france/brittany/morbihan"
+        }
+      ]
+    },
+    {
+      "id": "dinard-centre",
+      "name": "Dinard Centre",
+      "description": "Belle Epoque seaside resort town across the Rance estuary from Saint-Malo, known for elegant villas and calm beaches",
+      "character": "Upscale coastal resort, quieter than Saint-Malo, genteel atmosphere",
+      "housing": {
+        "avgRentOneBedroomEUR": 580,
+        "avgRentTwoBedroomEUR": 800,
+        "buyPricePerSqmEUR": 4200,
+        "predominantType": "Apartments in Belle Epoque villas and modern residences"
+      },
+      "walkabilityScore": 75,
+      "transitScore": 35,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Historically popular with British expats. Film festival in autumn. Ferry to Saint-Malo takes 10 minutes.",
+      "sources": [
+        {
+          "title": "Dinard Tourism Office",
+          "url": "https://www.dfrfrancia.org/dinard"
+        },
+        {
+          "title": "SeLoger - Dinard Property",
+          "url": "https://www.seloger.com/immobilier/achat/immo-dinard-35/"
+        },
+        {
+          "title": "French Property - Ille-et-Vilaine",
+          "url": "https://www.french-property.com/guides/france/brittany/ille-et-vilaine"
+        }
+      ]
+    },
+    {
+      "id": "quimper-centre",
+      "name": "Centre-Ville (Quimper)",
+      "description": "Charming cathedral city at the confluence of two rivers, capital of traditional Breton culture with excellent markets",
+      "character": "Small-city walkable, culturally Breton, affordable",
+      "housing": {
+        "avgRentOneBedroomEUR": 430,
+        "avgRentTwoBedroomEUR": 600,
+        "buyPricePerSqmEUR": 2200,
+        "predominantType": "Apartments in historic center and houses in surrounding areas"
+      },
+      "walkabilityScore": 82,
+      "transitScore": 45,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Most affordable city in the Brittany selection. Famous Faience pottery tradition. Festival de Cornouaille in July.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Quimper",
+          "url": "https://www.numbeo.com/cost-of-living/in/Quimper"
+        },
+        {
+          "title": "Quimper Tourism",
+          "url": "https://www.quimper-tourisme.bzh/"
+        }
+      ]
+    }
+  ]
+}

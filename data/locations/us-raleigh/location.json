@@ -1,0 +1,282 @@
+{
+  "id": "us-raleigh",
+  "name": "Raleigh-Durham, North Carolina",
+  "country": "United States",
+  "region": "North Carolina",
+  "cities": [
+    "Raleigh",
+    "Durham",
+    "Chapel Hill",
+    "Cary"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Citizen",
+    "incomeRequirement": null,
+    "notes": "US citizen, no visa required."
+  },
+  "climate": {
+    "winterLowF": 30,
+    "summerHighF": 90,
+    "rainyDaysPerYear": 110,
+    "meetsWarmWinterReq": false
+  },
+  "monthlyCosts": {
+    "rent": {
+      "min": 1519,
+      "max": 2301,
+      "typical": 1910,
+      "type": "2-bedroom single-family house",
+      "annualInflation": 0.035,
+      "notes": "North Carolina has no rental tax. Research Triangle area with strong demand. Water, sewage, and trash are separate utility bills (not included in rent).",
+      "gigInternetTypical": 1970,
+      "gigInternetCoverage": 70,
+      "gigInternetProviders": "Google Fiber (56%), AT&T Fiber (80%)",
+      "gigInternetNotes": "Google Fiber covers 56% of Raleigh, AT&T 80%. Research Triangle area well-served. Durham has similar coverage. New Google Fiber neighborhoods in Chapel Hill/Carrboro."
+    },
+    "groceries": {
+      "min": 1150,
+      "max": 1550,
+      "typical": 1350,
+      "notes": "2 adults + pet food",
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "min": 232,
+      "max": 377,
+      "typical": 290,
+      "annualInflation": 0.03,
+      "breakdown": {
+        "electricity": {
+          "typical": 135,
+          "notes": "Duke Energy Progress. A/C in summer, heat pump common. Moderate 4-season climate."
+        },
+        "gas": {
+          "typical": 55,
+          "notes": "PSNC Energy (Dominion). Natural gas heating (Nov–Mar), cooking."
+        },
+        "water": {
+          "typical": 45,
+          "notes": "Raleigh Public Utilities / Durham Water Mgmt."
+        },
+        "sewage": {
+          "typical": 30,
+          "notes": "Billed with water. Wake County / Durham wastewater."
+        },
+        "trash": {
+          "typical": 25,
+          "notes": "City of Raleigh Solid Waste. Weekly curbside collection."
+        }
+      },
+      "taxes": "North Carolina: 7% combined sales tax applies to electricity and gas. Water/sewer exempt.",
+      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig). "
+    },
+    "healthcare": {
+      "min": 550,
+      "max": 850,
+      "typical": 650,
+      "notes": "Medicare Part B ($174.70/mo) + Medigap Plan G (~$200/mo x2 people) + Part D (~$45/mo x2) + dental/vision plans. Higher premiums reflect macular degeneration specialist coverage and frequent monitoring needs.",
+      "annualInflation": 0.055
+    },
+    "insurance": {
+      "min": 30,
+      "max": 55,
+      "typical": 40,
+      "annualInflation": 0.03
+    },
+    "petCare": {
+      "min": 115,
+      "max": 210,
+      "typical": 160,
+      "annualInflation": 0.04,
+      "notes": "Vet visits, vaccinations, flea/tick, pet insurance"
+    },
+    "petDaycare": {
+      "min": 280,
+      "max": 430,
+      "typical": 350,
+      "annualInflation": 0.03,
+      "notes": "Doggy daycare 2 days/week, large breed rate (~$40/day). Camp Bow Wow, Dogtopia Raleigh."
+    },
+    "petGrooming": {
+      "min": 80,
+      "max": 155,
+      "typical": 110,
+      "annualInflation": 0.03,
+      "notes": "Bernese coat maintenance, professional grooming monthly"
+    },
+    "transportation": {
+      "min": 140,
+      "max": 280,
+      "typical": 210,
+      "notes": "Car-dependent; GoRaleigh bus, GoDurham Transit in cities",
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "min": 400,
+      "max": 620,
+      "typical": 500,
+      "annualInflation": 0.025,
+      "notes": "Incl cable+1Gig internet, Netflix, Amazon Prime, Apple TV+, dining out (lunch for 2 2x/week w/ tax+tip)"
+    },
+    "clothing": {
+      "min": 85,
+      "max": 200,
+      "typical": 125,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "min": 35,
+      "max": 80,
+      "typical": 50,
+      "annualInflation": 0.02
+    },
+    "subscriptions": {
+      "min": 30,
+      "max": 80,
+      "typical": 50,
+      "annualInflation": 0.03,
+      "notes": "Streaming, news, apps"
+    },
+    "phoneCell": {
+      "min": 50,
+      "max": 80,
+      "typical": 62,
+      "annualInflation": 0.02,
+      "notes": "T-Mobile 55+ Essentials. 2 phones, 1.5GB+ high-speed data each, all taxes included."
+    },
+    "miscellaneous": {
+      "min": 80,
+      "max": 150,
+      "typical": 110,
+      "annualInflation": 0.025
+    },
+    "buffer": {
+      "min": 800,
+      "max": 800,
+      "typical": 800,
+      "annualInflation": 0.025,
+      "notes": "Monthly safety buffer for unexpected expenses"
+    },
+    "medicalOOP": {
+      "min": 325,
+      "max": 700,
+      "typical": 475,
+      "annualInflation": 0.055,
+      "notes": "Anti-VEGF injections for macular degeneration (~$300-400 OOP each, 6-10x/yr after Medicare 80%). Specialist visits: ophthalmologist q6-8wks, endocrinologist 2-4x/yr, cardiologist 1-2x/yr. Frequent labs: lipid panel, TSH, A1C, CMP 3-4x/yr each. Both adults: PCP visits quarterly."
+    },
+    "medicine": {
+      "min": 73,
+      "typical": 91,
+      "max": 925,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "taxes": {
+      "min": 0,
+      "typical": 0,
+      "max": 0,
+      "annualInflation": 0.02
+    }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true,
+      "brackets": [
+        {
+          "min": 0,
+          "max": 23850,
+          "rate": 0.1
+        },
+        {
+          "min": 23850,
+          "max": 96950,
+          "rate": 0.12
+        },
+        {
+          "min": 96950,
+          "max": 206700,
+          "rate": 0.22
+        },
+        {
+          "min": 206700,
+          "max": 394600,
+          "rate": 0.24
+        },
+        {
+          "min": 394600,
+          "max": 501050,
+          "rate": 0.32
+        },
+        {
+          "min": 501050,
+          "max": 751600,
+          "rate": 0.35
+        },
+        {
+          "min": 751600,
+          "max": null,
+          "rate": 0.37
+        }
+      ],
+      "standardDeduction": 30000
+    },
+    "stateIncomeTax": {
+      "rate": 0.045,
+      "type": "flat",
+      "brackets": [
+        {
+          "min": 0,
+          "max": null,
+          "rate": 0.045
+        }
+      ],
+      "deduction": 25500,
+      "exemptions": "NC flat 4.5% rate (2026, reduced from 4.75% in 2025). SS fully exempt from NC tax. No retirement income exclusion beyond SS exemption."
+    },
+    "salesTax": {
+      "rate": 0.0725,
+      "notes": "4.75% state + 2.5% Wake County"
+    },
+    "propertyTax": {
+      "rate": 0
+    },
+    "socialCharges": null,
+    "vatRate": 0,
+    "estVehicleTax": 200,
+    "ssExempt": true,
+    "notes": "NC flat state income tax with SS exemption. No retirement income exclusion beyond SS."
+  },
+  "healthcare": {
+    "system": "Medicare (at 65) + private supplement",
+    "qualityRating": 9,
+    "waitTimes": "varies",
+    "dentalIncluded": false,
+    "prescriptionCoverage": "Part D plan"
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps available (Google Fiber/AT&T Fiber)",
+    "dogFriendly": 8,
+    "expatCommunity": 0,
+    "englishPrevalence": 10,
+    "safetyRating": 8
+  },
+  "pros": [
+    "World-class healthcare (Duke University Hospital, UNC Hospitals)",
+    "Research Triangle tech/biotech economy",
+    "Google Fiber availability",
+    "No Social Security tax",
+    "Moderate cost of living for metro area",
+    "Excellent universities (Duke, UNC, NC State)",
+    "Mild climate with four seasons",
+    "Diverse food scene"
+  ],
+  "cons": [
+    "Hot humid summers",
+    "Growing rapidly (traffic increasing)",
+    "State income tax on retirement withdrawals (no exclusion beyond SS)",
+    "Tornado risk",
+    "Car-dependent outside downtown cores"
+  ]
+}

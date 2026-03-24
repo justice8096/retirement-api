@@ -1,0 +1,178 @@
+{
+  "id": "spain-canary-islands",
+  "name": "Canary Islands, Spain",
+  "country": "Spain",
+  "region": "Southern Europe",
+  "cities": [
+    "Tenerife",
+    "Gran Canaria",
+    "Lanzarote"
+  ],
+  "currency": "EUR",
+  "exchangeRate": 0.93,
+  "exchangeRates": {
+    "optimistic": 0.85,
+    "pessimistic": 1.02,
+    "mid": 0.93
+  },
+  "visa": {
+    "type": "Non-Lucrative Visa",
+    "incomeRequirement": {
+      "monthly": 2400,
+      "currency": "EUR"
+    },
+    "notes": "Non-lucrative visa requires proof of sufficient funds (~€2,400/mo). Cannot work in Spain on this visa."
+  },
+  "climate": {
+    "winterLowF": 59,
+    "summerHighF": 84,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 25
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 1050,
+      "min": 800,
+      "max": 1300,
+      "annualInflation": 0.04
+    },
+    "groceries": {
+      "typical": 440,
+      "min": 350,
+      "max": 560,
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "typical": 145,
+      "min": 105,
+      "max": 195,
+      "annualInflation": 0.035
+    },
+    "healthcare": {
+      "typical": 110,
+      "min": 70,
+      "max": 160,
+      "annualInflation": 0.04
+    },
+    "insurance": {
+      "typical": 125,
+      "min": 85,
+      "max": 180,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 140,
+      "min": 90,
+      "max": 210,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 250,
+      "min": 180,
+      "max": 350,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 70,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 79,
+      "min": 64,
+      "max": 99,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "typical": 120,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "min": 15,
+      "typical": 23,
+      "max": 55,
+      "annualInflation": 0.03,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 40,
+      "typical": 80,
+      "max": 160,
+      "annualInflation": 0.035
+    }
+  },
+  "healthcare": {
+    "system": "Spanish SCS (Servicio Canario de Salud) with good hospitals in major cities. Air evacuation to mainland for complex cases.",
+    "qualityRating": 7,
+    "dentalIncluded": false,
+    "waitTimes": "Public: 3-10 weeks for specialists. Private options more limited than mainland.",
+    "prescriptionCoverage": "Standard Spanish prescription coverage with co-pays"
+  },
+  "lifestyle": {
+    "internetSpeed": "100Mbps+",
+    "dogFriendly": 7,
+    "expatCommunity": 8,
+    "englishPrevalence": 6,
+    "safetyRating": 8
+  },
+  "pros": [
+    "Year-round warm and mild climate (eternal spring)",
+    "Lower IGIC tax (7%) instead of mainland VAT (21%)",
+    "Large Northern European expat community"
+  ],
+  "cons": [
+    "Island isolation - flights to mainland are 2.5+ hours",
+    "Limited shopping and cultural options vs mainland",
+    "Some goods more expensive due to shipping costs"
+  ],
+  "taxes": {
+    "notes": "Spanish progressive income tax 19%-47%. Canary Islands use IGIC (7%) instead of mainland IVA/VAT (21%).",
+    "vatRate": 7,
+    "socialChargesRate": 0
+  }
+}

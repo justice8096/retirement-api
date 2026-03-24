@@ -1,0 +1,330 @@
+{
+  "distanceUnit": "mi",
+  "currency": "USD",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Inova Fairfax Medical Campus",
+      "address": "3300 Gallows Road, Falls Church, VA 22042",
+      "notes": "Level 1 trauma center, 923 beds, comprehensive emergency and specialty services",
+      "sources": [
+        {
+          "title": "Inova Fairfax",
+          "url": "https://www.inova.org/locations/inova-fairfax-medical-campus"
+        }
+      ],
+      "distanceMi": 3.1
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "CVS Pharmacy - Tysons Corner",
+      "address": "8180 Leesburg Pike, Tysons, VA 22182",
+      "notes": "24-hour pharmacy, drive-through, vaccinations, MinuteClinic inside",
+      "sources": [
+        {
+          "title": "CVS",
+          "url": "https://www.cvs.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Wegmans Tysons Corner",
+      "address": "1550 Cornerside Blvd, Tysons, VA 22182",
+      "notes": "Large upscale grocery with prepared foods, organic section, pharmacy",
+      "sources": [
+        {
+          "title": "Wegmans",
+          "url": "https://www.wegmans.com/"
+        }
+      ],
+      "distanceMi": 1.9
+    },
+    {
+      "categoryId": "bank",
+      "name": "Bank of America - Tysons Corner",
+      "address": "8300 Boone Blvd, Tysons, VA 22182",
+      "notes": "Full-service branch with financial advisors, ATM, mobile banking",
+      "sources": [
+        {
+          "title": "Bank of America",
+          "url": "https://www.bankofamerica.com/"
+        }
+      ],
+      "distanceMi": 1.6
+    },
+    {
+      "categoryId": "doctor_gp",
+      "name": "Inova Primary Care - Tysons",
+      "address": "8110 Gatehouse Road, Falls Church, VA 22042",
+      "notes": "Primary care practice, accepting new patients, MyChart online portal",
+      "sources": [
+        {
+          "title": "Inova Primary Care",
+          "url": "https://www.inova.org/our-services/primary-care"
+        }
+      ],
+      "distanceMi": 2.5
+    },
+    {
+      "categoryId": "dentist",
+      "name": "Tysons Dentistry",
+      "address": "8230 Old Courthouse Road, Tysons, VA 22182",
+      "notes": "General and cosmetic dentistry, same-day appointments available",
+      "sources": [
+        {
+          "title": "Tysons Dentistry",
+          "url": "https://www.tysonsdentistry.com/"
+        }
+      ],
+      "distanceMi": 1.6
+    },
+    {
+      "categoryId": "vet",
+      "name": "VCA Tysons Corner Animal Hospital",
+      "address": "8430 Arlington Blvd, Fairfax, VA 22031",
+      "notes": "Full-service veterinary hospital, emergency referrals, boarding available",
+      "sources": [
+        {
+          "title": "VCA Hospitals",
+          "url": "https://vcahospitals.com/"
+        }
+      ],
+      "distanceMi": 2.5
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Blake Lane Dog Park",
+      "address": "10033 Blake Lane, Oakton, VA 22124",
+      "notes": "Fenced off-leash park, separate small and large dog areas, water stations",
+      "sources": [
+        {
+          "title": "Fairfax County Parks",
+          "url": "https://www.fairfaxcounty.gov/parks/"
+        }
+      ],
+      "distanceMi": 3.7
+    },
+    {
+      "categoryId": "gym",
+      "name": "Lifetime Fitness Reston",
+      "address": "1757 Fountain Drive, Reston, VA 20190",
+      "notes": "Premium fitness club, pool, spa, tennis courts, group classes",
+      "sources": [
+        {
+          "title": "Life Time",
+          "url": "https://www.lifetime.life/"
+        }
+      ],
+      "distanceMi": 5.0
+    },
+    {
+      "categoryId": "english_church",
+      "name": "McLean Bible Church",
+      "address": "8925 Leesburg Pike, Vienna, VA 22182",
+      "notes": "Large non-denominational church, multiple Sunday services, community programs",
+      "sources": [
+        {
+          "title": "McLean Bible Church",
+          "url": "https://www.mcleanbible.org/"
+        }
+      ],
+      "distanceMi": 3.1
+    },
+    {
+      "categoryId": "airport",
+      "name": "Washington Dulles International Airport (IAD)",
+      "address": "1 Saarinen Circle, Dulles, VA 20166",
+      "notes": "Major international airport, Silver Line Metro connection, flights worldwide",
+      "sources": [
+        {
+          "title": "Dulles Airport",
+          "url": "https://www.flydulles.com/"
+        }
+      ],
+      "distanceMi": 12.4
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "Tysons Metro Station (Silver Line)",
+      "address": "8500 Leesburg Pike, Tysons, VA 22182",
+      "notes": "WMATA Silver Line, direct to DC in 25 min, Dulles Airport connection",
+      "sources": [
+        {
+          "title": "WMATA",
+          "url": "https://www.wmata.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "coworking",
+      "name": "WeWork Tysons Corner",
+      "address": "1775 Tysons Blvd, Tysons, VA 22102",
+      "notes": "Premium coworking, private offices, conference rooms, networking events",
+      "sources": [
+        {
+          "title": "WeWork",
+          "url": "https://www.wework.com/"
+        }
+      ],
+      "distanceMi": 1.6
+    },
+    {
+      "categoryId": "pet_groomer",
+      "name": "Petco Grooming Salon Tysons",
+      "address": "8348 Leesburg Pike, Tysons, VA 22182",
+      "notes": "Walk-in and appointment grooming, self-serve wash stations",
+      "sources": [
+        {
+          "title": "Petco",
+          "url": "https://www.petco.com/"
+        }
+      ],
+      "distanceMi": 1.2
+    }
+  ],
+  "attractions": [
+    {
+      "type": "cultural",
+      "name": "Smithsonian National Air and Space Museum (Udvar-Hazy Center)",
+      "description": "Massive annex with Space Shuttle Discovery, SR-71 Blackbird, hundreds of aircraft",
+      "frequency": "Daily 10:00-17:30, free admission, parking fee applies",
+      "sources": [
+        {
+          "title": "Smithsonian NASM",
+          "url": "https://airandspace.si.edu/udvar-hazy-center"
+        }
+      ],
+      "distanceMi": 9.3,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "nature",
+      "name": "Great Falls Park",
+      "description": "Dramatic waterfalls on the Potomac River, hiking trails, rock climbing",
+      "frequency": "Daily dawn to dusk, vehicle entrance fee",
+      "sources": [
+        {
+          "title": "National Park Service",
+          "url": "https://www.nps.gov/grfa/"
+        }
+      ],
+      "distanceMi": 7.5,
+      "estimatedCostUSD": 15
+    },
+    {
+      "type": "historical",
+      "name": "Mount Vernon (George Washington's Estate)",
+      "description": "First president's plantation estate, museum, gardens, river views",
+      "frequency": "Daily 9:00-17:00, extended summer hours",
+      "sources": [
+        {
+          "title": "Mount Vernon",
+          "url": "https://www.mountvernon.org/"
+        }
+      ],
+      "distanceMi": 18.6,
+      "estimatedCostUSD": 25
+    },
+    {
+      "type": "outdoor",
+      "name": "W&OD Trail",
+      "description": "45-mile paved rail trail from Arlington to Purcellville, cycling and walking",
+      "frequency": "Open 24/7, year-round",
+      "sources": [
+        {
+          "title": "NOVA Parks",
+          "url": "https://www.novaparks.com/parks/washington-and-old-dominion-railroad-regional-park"
+        }
+      ],
+      "distanceMi": 1.9,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "shopping",
+      "name": "Tysons Galleria",
+      "description": "Upscale shopping mall with Neiman Marcus, Saks, luxury brands",
+      "frequency": "Mon-Sat 10:00-21:00, Sun 12:00-18:00",
+      "sources": [
+        {
+          "title": "Tysons Galleria",
+          "url": "https://www.tysonsgalleria.com/"
+        }
+      ],
+      "distanceMi": 1.6,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "dining",
+      "name": "Reston Town Center",
+      "description": "Walkable mixed-use area with 30+ restaurants, seasonal events, fountain square",
+      "frequency": "Restaurants open daily, seasonal farmers market",
+      "sources": [
+        {
+          "title": "Reston Town Center",
+          "url": "https://www.restontowncenter.com/"
+        }
+      ],
+      "distanceMi": 5.0,
+      "estimatedCostUSD": 25
+    },
+    {
+      "type": "entertainment",
+      "name": "Wolf Trap National Park for the Performing Arts",
+      "description": "Only national park dedicated to performing arts, outdoor amphitheater",
+      "frequency": "Summer season Jun-Sep, indoor performances year-round",
+      "sources": [
+        {
+          "title": "Wolf Trap",
+          "url": "https://www.wolftrap.org/"
+        }
+      ],
+      "distanceMi": 3.7,
+      "estimatedCostUSD": 30
+    },
+    {
+      "type": "social",
+      "name": "Washington DC National Mall",
+      "description": "All major monuments, museums, and memorials, 30 min Metro ride from Tysons",
+      "frequency": "Open 24/7, museums daily 10:00-17:30",
+      "sources": [
+        {
+          "title": "National Mall NPS",
+          "url": "https://www.nps.gov/nama/"
+        }
+      ],
+      "distanceMi": 11.2,
+      "estimatedCostUSD": 0
+    },
+    {
+      "type": "nature",
+      "name": "Shenandoah National Park",
+      "description": "Blue Ridge Mountains, Skyline Drive, 500+ miles of hiking trails",
+      "frequency": "Day or weekend trip, best spring and fall",
+      "sources": [
+        {
+          "title": "NPS Shenandoah",
+          "url": "https://www.nps.gov/shen/"
+        }
+      ],
+      "distanceMi": 74.6,
+      "estimatedCostUSD": 25
+    },
+    {
+      "type": "sports",
+      "name": "Nationals Park",
+      "description": "Home of Washington Nationals MLB baseball, accessible via Metro",
+      "frequency": "Baseball season Apr-Oct",
+      "sources": [
+        {
+          "title": "Washington Nationals",
+          "url": "https://www.mlb.com/nationals"
+        }
+      ],
+      "distanceMi": 12.4,
+      "estimatedCostUSD": 30
+    }
+  ]
+}

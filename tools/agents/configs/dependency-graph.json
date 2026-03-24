@@ -1,0 +1,35 @@
+{
+  "description": "Execution dependency graph. Each wave runs serially; agents within a wave run in parallel.",
+  "waves": [
+    {
+      "wave": 0,
+      "label": "Foundation",
+      "agents": ["exchange-rates", "taxes", "ss-benefits"],
+      "notes": "No dependencies. exchange-rates must complete before any EUR cost agent."
+    },
+    {
+      "wave": 1,
+      "label": "Core Costs",
+      "agents": [
+        "housing", "entertainment", "transportation", "medicine",
+        "vision-dental", "groceries", "cellphones", "utilities", "petcare"
+      ],
+      "notes": "All depend on exchange-rates (wave 0). Run in parallel within this wave."
+    },
+    {
+      "wave": 2,
+      "label": "Qualitative Data",
+      "agents": ["neighborhoods", "services", "inclusion"],
+      "notes": "No data dependencies on waves 0-1. Grouped here for logical sequencing."
+    },
+    {
+      "wave": 3,
+      "label": "Post-Processing",
+      "agents": ["index-sync"],
+      "notes": "Reads all updated location.json files and recomputes monthlyCostUSD totals."
+    }
+  ],
+  "alwaysRunLast": ["build-db"],
+  "critical": ["exchange-rates"],
+  "criticalNote": "If exchange-rates fails, all wave 1 EUR agents must be skipped or run with stale rate warning."
+}

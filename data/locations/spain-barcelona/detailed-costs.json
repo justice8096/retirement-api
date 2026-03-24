@@ -1,0 +1,126 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 18,
+      "typical": 23,
+      "max": 224
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutida / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 8,
+        "withoutInsurance": 190,
+        "coverageNote": "SNS covers for diabetes. Pensioners pay 10% capped at €8.23/mo per medication."
+      },
+      {
+        "name": "Levotiroxina (Eutirox) [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "SNS reimbursed; pensioner copay minimal"
+      },
+      {
+        "name": "Atorvastatina 20mg [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 6,
+        "coverageNote": "SNS reimbursed generic"
+      },
+      {
+        "name": "Montelukast [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 10,
+        "coverageNote": "SNS reimbursed"
+      },
+      {
+        "name": "Hidroclorotiazida [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 3,
+        "coverageNote": "SNS reimbursed generic"
+      },
+      {
+        "name": "Olmesartan (Openvas) [P1]",
+        "monthlyCost": 2,
+        "withoutInsurance": 12,
+        "coverageNote": "SNS reimbursed"
+      },
+      {
+        "name": "Salbutamol (Ventolin) [P1]",
+        "monthlyCost": 1,
+        "withoutInsurance": 3,
+        "coverageNote": "SNS reimbursed"
+      },
+      {
+        "name": "Metformina 500mg [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 3,
+        "coverageNote": "SNS reimbursed generic"
+      },
+      {
+        "name": "Alopurinol [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 4,
+        "coverageNote": "SNS reimbursed generic"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 5,
+        "coverageNote": "SNS reimbursed"
+      },
+      {
+        "name": "Topiramato [P2]",
+        "monthlyCost": 2,
+        "withoutInsurance": 12,
+        "coverageNote": "SNS reimbursed"
+      },
+      {
+        "name": "Metoprolol [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 5,
+        "coverageNote": "SNS reimbursed"
+      },
+      {
+        "name": "Atorvastatina 20mg [P2]",
+        "monthlyCost": 1,
+        "withoutInsurance": 6,
+        "coverageNote": "SNS reimbursed generic"
+      }
+    ],
+    "pharmacyAccess": "Farmacias abundant in all Spanish cities. Green cross signage with rotating 24h duty pharmacies (farmacia de guardia). EU prescriptions accepted.",
+    "notes": "Spain SNS (Sistema Nacional de Salud) covers most medications. Pensioners pay 10% copay capped at €8.23-18.52/mo depending on income. Non-residents need private insurance or pay full price. Prices shown assume resident/pensioner status."
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 64,
+      "typical": 79,
+      "max": 99
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in Spain at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "Digi Mobil",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "5GB 4G/5G",
+        "baseCost": 14,
+        "taxesAndFees": 0,
+        "monthlyTotal": 14,
+        "notes": "2 lines €3/line (~$3.25) + €4/line data. Digi is cheapest carrier. EU roaming included."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      }
+    ]
+  }
+}

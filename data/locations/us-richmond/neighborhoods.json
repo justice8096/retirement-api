@@ -1,0 +1,159 @@
+{
+  "city": "Richmond",
+  "neighborhoods": [
+    {
+      "id": "richmond-the-fan",
+      "name": "The Fan",
+      "description": "Richmond's signature neighborhood of colorful Victorian rowhouses on tree-lined streets that fan out from Monroe Park",
+      "character": "Urban walkable, eclectic, vibrant, architecturally rich",
+      "housing": {
+        "avgRentOneBedroomUSD": 1200,
+        "avgRentTwoBedroomUSD": 1700,
+        "buyPricePerSqmUSD": 3000,
+        "predominantType": "Victorian and Edwardian rowhouses, many divided into apartments"
+      },
+      "walkabilityScore": 88,
+      "transitScore": 50,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Strong restaurant and cafe scene along Robinson and Lombardy Streets. VCU campus borders the area. Monument Avenue runs through the northern edge.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Richmond",
+          "url": "https://www.numbeo.com/cost-of-living/in/Richmond"
+        },
+        {
+          "title": "Zillow - The Fan Richmond",
+          "url": "https://www.zillow.com/richmond-va/the-fan/"
+        },
+        {
+          "title": "Visit Richmond",
+          "url": "https://www.visitrichmondva.com/"
+        }
+      ]
+    },
+    {
+      "id": "richmond-carytown",
+      "name": "Carytown",
+      "description": "Walkable shopping and dining district along Cary Street with independent boutiques, restaurants, and the historic Byrd Theatre",
+      "character": "Walkable commercial, trendy, neighborhood-oriented",
+      "housing": {
+        "avgRentOneBedroomUSD": 1150,
+        "avgRentTwoBedroomUSD": 1600,
+        "buyPricePerSqmUSD": 2800,
+        "predominantType": "Apartments above shops, bungalows, and small houses on side streets"
+      },
+      "walkabilityScore": 90,
+      "transitScore": 45,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Annual Watermelon Festival draws large crowds. Byrd Theatre shows second-run films for a few dollars. Excellent walkability to daily needs.",
+      "sources": [
+        {
+          "title": "Zillow - Carytown Richmond",
+          "url": "https://www.zillow.com/richmond-va/carytown/"
+        },
+        {
+          "title": "Numbeo Cost of Living Richmond",
+          "url": "https://www.numbeo.com/cost-of-living/in/Richmond"
+        }
+      ]
+    },
+    {
+      "id": "richmond-church-hill",
+      "name": "Church Hill",
+      "description": "Richmond's oldest neighborhood on a hilltop east of downtown, centered on St. John's Church where Patrick Henry gave his famous speech",
+      "character": "Historic, revitalizing, community-focused, views of the James River",
+      "housing": {
+        "avgRentOneBedroomUSD": 1100,
+        "avgRentTwoBedroomUSD": 1500,
+        "buyPricePerSqmUSD": 2500,
+        "predominantType": "Federal and Greek Revival row houses, many recently renovated"
+      },
+      "walkabilityScore": 75,
+      "transitScore": 40,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Rapidly gentrifying with new restaurants and cafes. Chimborazo Park offers panoramic city views. Some blocks are very polished, others still transitioning.",
+      "sources": [
+        {
+          "title": "Zillow - Church Hill Richmond",
+          "url": "https://www.zillow.com/richmond-va/church-hill/"
+        },
+        {
+          "title": "Visit Richmond",
+          "url": "https://www.visitrichmondva.com/"
+        }
+      ]
+    },
+    {
+      "id": "richmond-short-pump",
+      "name": "Short Pump",
+      "description": "Affluent western suburb in Henrico County with upscale shopping, top-rated schools, and modern residential developments",
+      "character": "Suburban, upscale, car-dependent, family-oriented",
+      "housing": {
+        "avgRentOneBedroomUSD": 1300,
+        "avgRentTwoBedroomUSD": 1800,
+        "buyPricePerSqmUSD": 2600,
+        "predominantType": "Single-family homes in planned communities and luxury townhouses"
+      },
+      "walkabilityScore": 30,
+      "transitScore": 20,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Short Pump Town Center is a major retail destination. Excellent healthcare access -- Henrico Doctors Hospital nearby. 20 minutes to downtown Richmond.",
+      "sources": [
+        {
+          "title": "Zillow - Short Pump",
+          "url": "https://www.zillow.com/short-pump-va/"
+        },
+        {
+          "title": "Numbeo Cost of Living Richmond",
+          "url": "https://www.numbeo.com/cost-of-living/in/Richmond"
+        }
+      ]
+    },
+    {
+      "id": "richmond-museum-district",
+      "name": "Museum District",
+      "description": "Refined residential neighborhood anchored by the Virginia Museum of Fine Arts, with stately homes and quiet, leafy streets",
+      "character": "Cultural, quiet residential, established, museum-adjacent",
+      "housing": {
+        "avgRentOneBedroomUSD": 1150,
+        "avgRentTwoBedroomUSD": 1650,
+        "buyPricePerSqmUSD": 2900,
+        "predominantType": "Tudor and Colonial Revival houses, apartments in converted homes"
+      },
+      "walkabilityScore": 80,
+      "transitScore": 45,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "VMFA is free and world-class. Boulevard is a major corridor with dining options. Quieter and slightly more upscale than The Fan next door.",
+      "sources": [
+        {
+          "title": "Zillow - Museum District Richmond",
+          "url": "https://www.zillow.com/richmond-va/museum-district/"
+        },
+        {
+          "title": "Virginia Museum of Fine Arts",
+          "url": "https://vmfa.museum/"
+        }
+      ]
+    }
+  ]
+}

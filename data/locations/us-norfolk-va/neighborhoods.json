@@ -1,0 +1,159 @@
+{
+  "city": "Norfolk",
+  "neighborhoods": [
+    {
+      "id": "norfolk-ghent",
+      "name": "Ghent",
+      "description": "Norfolk's most walkable urban village with locally owned shops, restaurants, and cafes along Colley Avenue and 21st Street. A mix of early-1900s row houses, apartments, and bungalows with a strong arts and dining scene.",
+      "character": "Urban walkable, artsy, eclectic, restaurant-heavy",
+      "housing": {
+        "avgRentOneBedroomUSD": 1420,
+        "avgRentTwoBedroomUSD": 1860,
+        "buyPricePerSqmUSD": 2800,
+        "predominantType": "Row houses, bungalows, and mid-rise apartment buildings from early 1900s"
+      },
+      "walkabilityScore": 82,
+      "transitScore": 45,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Ghent is the cultural heart of Norfolk. The Naro Expanded Cinema, Plot coffee, and dozens of independent restaurants line Colley Ave. Saturday farmers market at the Chrysler Museum. Very dog-friendly with sidewalk dining.",
+      "sources": [
+        {
+          "title": "Apartments.com - Ghent Norfolk",
+          "url": "https://www.apartments.com/ghent-norfolk-va/"
+        },
+        {
+          "title": "Niche - Ghent Norfolk",
+          "url": "https://www.niche.com/places-to-live/n/ghent-norfolk-va/"
+        },
+        {
+          "title": "Walk Score - Ghent Norfolk",
+          "url": "https://www.walkscore.com/VA/Norfolk/Ghent"
+        }
+      ]
+    },
+    {
+      "id": "norfolk-colonial-place",
+      "name": "Colonial Place",
+      "description": "A quiet, established residential neighborhood on a peninsula surrounded by the Lafayette River, with tree-lined streets, waterfront parks, and a strong sense of community.",
+      "character": "Residential, waterfront, family-oriented, quiet",
+      "housing": {
+        "avgRentOneBedroomUSD": 1300,
+        "avgRentTwoBedroomUSD": 1750,
+        "buyPricePerSqmUSD": 2400,
+        "predominantType": "Colonial and Cape Cod-style single-family homes, some duplexes"
+      },
+      "walkabilityScore": 55,
+      "transitScore": 30,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "One of Norfolk's most desirable neighborhoods. The Colonial Place Civic League is very active. Waterfront lots along the Lafayette River offer kayaking and sunset views. Car recommended for errands.",
+      "sources": [
+        {
+          "title": "Apartments.com - Colonial Place Norfolk",
+          "url": "https://www.apartments.com/colonial-place-riverview-norfolk-va/"
+        },
+        {
+          "title": "Niche - Colonial Place Norfolk",
+          "url": "https://www.niche.com/places-to-live/n/colonial-place-norfolk-va/"
+        }
+      ]
+    },
+    {
+      "id": "norfolk-freemason",
+      "name": "Freemason District",
+      "description": "Norfolk's oldest residential neighborhood featuring cobblestone streets, three centuries of architectural styles, and waterfront condos along the Elizabeth River. Walking distance to downtown and the Waterside District.",
+      "character": "Historic urban, upscale, walkable to downtown, waterfront",
+      "housing": {
+        "avgRentOneBedroomUSD": 1500,
+        "avgRentTwoBedroomUSD": 2000,
+        "buyPricePerSqmUSD": 3200,
+        "predominantType": "Historic row houses, converted warehouse lofts, waterfront condominiums"
+      },
+      "walkabilityScore": 88,
+      "transitScore": 55,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The most historic neighborhood in Norfolk, with homes dating to the 1700s. Walking distance to Town Point Park, Waterside District, and the Tide light rail. Popular with professionals and empty-nesters seeking walkable urban living.",
+      "sources": [
+        {
+          "title": "Downtown Norfolk - Freemason",
+          "url": "https://www.downtownnorfolk.org/living/neighborhoods"
+        },
+        {
+          "title": "Norfolk Historical Society",
+          "url": "https://www.norfolkhistorical.org/"
+        }
+      ]
+    },
+    {
+      "id": "norfolk-larchmont-edgewater",
+      "name": "Larchmont-Edgewater",
+      "description": "A prestigious residential neighborhood west of Colonial Place near Old Dominion University, known for waterfront homes on the Lafayette River, top-rated schools, and a quiet suburban feel within city limits.",
+      "character": "Suburban residential, affluent, waterfront, university-adjacent",
+      "housing": {
+        "avgRentOneBedroomUSD": 1350,
+        "avgRentTwoBedroomUSD": 1800,
+        "buyPricePerSqmUSD": 2900,
+        "predominantType": "Single-family homes, Tudor and Colonial Revival styles, some waterfront estates"
+      },
+      "walkabilityScore": 45,
+      "transitScore": 25,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Home to ODU faculty, military officers, and professionals. The Larchmont Library is a community anchor. Beautiful tree canopy and the Larchmont Village shopping area offers a small-town feel. Car needed for most errands.",
+      "sources": [
+        {
+          "title": "Walk Score - Larchmont-Edgewater",
+          "url": "https://www.walkscore.com/VA/Norfolk/Larchmont-Edgewater"
+        },
+        {
+          "title": "Niche - Edgewater-Larchmont Norfolk",
+          "url": "https://www.niche.com/places-to-live/n/edgewater-larchmont-norfolk-va/"
+        }
+      ]
+    },
+    {
+      "id": "norfolk-ocean-view",
+      "name": "Ocean View",
+      "description": "A revitalizing beachfront neighborhood along the Chesapeake Bay with new construction, affordable housing, and direct beach access. Norfolk's most beach-oriented community with a growing restaurant scene.",
+      "character": "Beachfront, up-and-coming, affordable, casual",
+      "housing": {
+        "avgRentOneBedroomUSD": 1150,
+        "avgRentTwoBedroomUSD": 1450,
+        "buyPricePerSqmUSD": 1900,
+        "predominantType": "Mix of new construction townhouses, renovated cottages, and older apartments"
+      },
+      "walkabilityScore": 40,
+      "transitScore": 25,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Ocean View Beach Park and the Community Beach are the main draws. The East Beach development has brought upscale townhomes. Several new breweries and restaurants along Ocean View Ave. Active redevelopment with rising property values.",
+      "sources": [
+        {
+          "title": "City of Norfolk - Ocean View",
+          "url": "https://www.norfolk.gov/"
+        },
+        {
+          "title": "CoVA Collective Realty - Best Neighborhoods in Norfolk",
+          "url": "https://covacollectiverealty.com/blog-best-neighborhoods-in-norfolk/"
+        }
+      ]
+    }
+  ]
+}

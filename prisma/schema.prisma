@@ -1,0 +1,251 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Identity ───────────────────────────────────────────────────────────────
+
+enum SubscriptionTier {
+  free
+  basic
+  premium
+  admin
+}
+
+model User {
+  id              String           @id @default(uuid())
+  authProviderId  String           @unique @map("auth_provider_id")
+  email           String           @unique
+  displayName     String?          @map("display_name")
+  tier            SubscriptionTier @default(free)
+  stripeCustomerId String?        @map("stripe_customer_id")
+  createdAt       DateTime         @default(now()) @map("created_at")
+  updatedAt       DateTime         @updatedAt @map("updated_at")
+
+  household        HouseholdProfile?
+  financialSettings UserFinancialSettings?
+  preferences      UserPreferences?
+  customLocations  UserCustomLocation[]
+  locationOverrides UserLocationOverride[]
+  scenarios        UserScenario[]
+  groceryData      UserGroceryData?
+
+  @@map("users")
+}
+
+// ─── Household ──────────────────────────────────────────────────────────────
+
+model HouseholdProfile {
+  id                String   @id @default(uuid())
+  userId            String   @unique @map("user_id")
+  adultsCount       Int      @default(2) @map("adults_count")
+  targetAnnualIncome String?  @map("target_annual_income") // Encrypted at rest (AES-256-GCM)
+  planningStartYear Int      @default(2026) @map("planning_start_year")
+  planningYears     Int      @default(35) @map("planning_years")
+  requirements      Json?    // ["gigabit-internet", "warm-winters", "dog-friendly"]
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  user    User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  members HouseholdMember[]
+  pets    HouseholdPet[]
+
+  @@map("household_profiles")
+}
+
+model HouseholdMember {
+  id          String  @id @default(uuid())
+  householdId String  @map("household_id")
+  role        String  @default("primary") // 'primary', 'spouse', 'dependent'
+  name        String?
+  birthYear   Int     @map("birth_year")
+  ssPia       String?  @map("ss_pia")       // Monthly PIA at FRA — encrypted at rest (AES-256-GCM)
+  ssFra       Int?    @map("ss_fra")        // Full Retirement Age
+  ssClaimAge  Int?    @map("ss_claim_age")
+  sortOrder   Int     @default(0) @map("sort_order")
+
+  household HouseholdProfile @relation(fields: [householdId], references: [id], onDelete: Cascade)
+
+  @@index([householdId])
+  @@map("household_members")
+}
+
+model HouseholdPet {
+  id               String  @id @default(uuid())
+  householdId      String  @map("household_id")
+  type             String  @default("dog")
+  breed            String?
+  size             String? // 'small', 'medium', 'large'
+  birthYear        Int     @map("birth_year")
+  expectedLifespan Int     @default(12) @map("expected_lifespan")
+
+  household HouseholdProfile @relation(fields: [householdId], references: [id], onDelete: Cascade)
+
+  @@index([householdId])
+  @@map("household_pets")
+}
+
+// ─── Financial Settings ─────────────────────────────────────────────────────
+
+model UserFinancialSettings {
+  userId           String   @id @map("user_id")
+  portfolioBalance String   @default("500000") @map("portfolio_balance") // Encrypted at rest (AES-256-GCM)
+  fxDriftEnabled   Boolean  @default(true) @map("fx_drift_enabled")
+  fxDriftAnnualRate Decimal @default(0.01) @map("fx_drift_annual_rate")
+  ssCutEnabled     Boolean  @default(true) @map("ss_cut_enabled")
+  ssCutYear        Int      @default(2033) @map("ss_cut_year")
+  ssCola           Decimal  @default(2.5) @map("ss_cola")
+  updatedAt        DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("user_financial_settings")
+}
+
+// ─── Preferences (replaces ~48 usePersistedState keys) ──────────────────────
+
+model UserPreferences {
+  userId      String   @id @map("user_id")
+  preferences Json     @default("{}") // Single JSONB blob for all tab state
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("user_preferences")
+}
+
+// ─── Custom Locations & Overrides ───────────────────────────────────────────
+
+model UserCustomLocation {
+  id           String   @id @default(uuid())
+  userId       String   @map("user_id")
+  locationData Json     @map("location_data") // Full location object
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("user_custom_locations")
+}
+
+model UserLocationOverride {
+  id                  String   @id @default(uuid())
+  userId              String   @map("user_id")
+  baseLocationId      String   @map("base_location_id")
+  baseLocationVersion Int      @default(1) @map("base_location_version")
+  overrides           Json     // Partial cost/field overrides
+  createdAt           DateTime @default(now()) @map("created_at")
+  updatedAt           DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, baseLocationId])
+  @@index([userId])
+  @@map("user_location_overrides")
+}
+
+// ─── Saved Scenarios ────────────────────────────────────────────────────────
+
+model UserScenario {
+  id           String   @id @default(uuid())
+  userId       String   @map("user_id")
+  name         String
+  scenarioData Json     @map("scenario_data")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("user_scenarios")
+}
+
+// ─── Grocery Data ───────────────────────────────────────────────────────────
+
+model UserGroceryData {
+  userId    String   @id @map("user_id")
+  overrides Json     @default("{}")
+  lists     Json     @default("{}")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("user_grocery_data")
+}
+
+// ─── Admin-Managed Location Data (replaces JSON files) ──────────────────────
+
+model AdminLocation {
+  id           String   @id // e.g., 'france-brittany'
+  version      Int      @default(1)
+  locationData Json     @map("location_data") // Full location.json content
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  // Denormalized columns for fast filtering/search at scale (100+ locations)
+  name         String   @default("") // Extracted from locationData.name
+  country      String   @default("") // Extracted from locationData.country
+  region       String   @default("") // Extracted from locationData.region
+  currency     String   @default("USD")
+  monthlyCostTotal Int  @default(0) @map("monthly_cost_total") // Sum of all typical costs (USD)
+
+  supplements AdminLocationSupplement[]
+  history     AdminLocationHistory[]
+
+  @@index([country])
+  @@index([region])
+  @@index([currency])
+  @@index([monthlyCostTotal])
+  @@index([name])
+  @@map("admin_locations")
+}
+
+model AdminLocationSupplement {
+  locationId String @map("location_id")
+  dataType   String @map("data_type") // 'neighborhoods', 'services', 'inclusion', 'detailed-costs', 'local-info'
+  data       Json
+  updatedAt  DateTime @updatedAt @map("updated_at")
+
+  location AdminLocation @relation(fields: [locationId], references: [id], onDelete: Cascade)
+
+  @@id([locationId, dataType])
+  @@index([locationId])
+  @@map("admin_location_supplements")
+}
+
+model AdminSharedData {
+  key       String   @id // 'service-categories', 'inclusion-methodology', 'grocery-defaults', etc.
+  data      Json
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("admin_shared_data")
+}
+
+// ─── Webhook Idempotency ─────────────────────────────────────────────────────
+
+model ProcessedEvent {
+  eventId     String   @id @map("event_id") // Stripe event ID (e.g., 'evt_xxx')
+  eventType   String   @map("event_type")
+  processedAt DateTime @default(now()) @map("processed_at")
+
+  @@index([processedAt])
+  @@map("processed_events")
+}
+
+model AdminLocationHistory {
+  id           Int      @id @default(autoincrement())
+  locationId   String   @map("location_id")
+  version      Int
+  locationData Json     @map("location_data")
+  changedBy    String?  @map("changed_by")
+  changedAt    DateTime @default(now()) @map("changed_at")
+
+  location AdminLocation @relation(fields: [locationId], references: [id], onDelete: Cascade)
+
+  @@index([locationId, version])
+  @@map("admin_location_history")
+}

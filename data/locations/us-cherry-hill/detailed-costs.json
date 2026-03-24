@@ -1,0 +1,1255 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 73,
+      "typical": 91,
+      "max": 925
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic/Wegovy) [P1]",
+        "monthlyCost": 25,
+        "withoutInsurance": 900,
+        "coverageNote": "Medicare Part D covers for diabetes (tier 3). $25 copay typical. Without coverage ~$900/mo. IRA negotiated price TBD."
+      },
+      {
+        "name": "Levothyroxine (Synthroid) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 15,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Atorvastatin 20mg [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Montelukast (Singulair) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 15,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Hydrochlorothiazide (HCTZ) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 8,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Olmesartan/Medoxomil (Benicar) [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 30,
+        "coverageNote": "Medicare Part D generic tier 1-2; $4-15 copay"
+      },
+      {
+        "name": "Albuterol inhaler [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 35,
+        "coverageNote": "Medicare Part D tier 2; $10-25 copay. IRA cap applies."
+      },
+      {
+        "name": "Metformin 500mg [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Allopurinol (gout) [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Topiramate (Topamax) [P2]",
+        "monthlyCost": 10,
+        "withoutInsurance": 25,
+        "coverageNote": "Medicare Part D generic tier 1-2; $4-15 copay"
+      },
+      {
+        "name": "Metoprolol (Lopressor) [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Atorvastatin 20mg [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      }
+    ],
+    "pharmacyAccess": "Excellent. CVS, Walgreens, Walmart, ShopRite, Wegmans pharmacies throughout Cherry Hill/South Jersey area. Close proximity to Philadelphia hospital pharmacies. Mail-order through Part D plans.",
+    "prescriptionSystem": "Medicare Part D prescription drug plan. Choose standalone PDP or Medicare Advantage with drug coverage. Annual out-of-pocket cap $2,000 under Inflation Reduction Act. NJ PAAD program for additional prescription assistance.",
+    "insuranceCoverage": "Medicare Part D covers most prescriptions. New Jersey's PAAD (Pharmaceutical Assistance to the Aged and Disabled) provides additional prescription coverage for NJ seniors with income under $28,769 (single) or $35,270 (couple).",
+    "sources": [
+      {
+        "title": "Medicare Part D Costs - CMS.gov",
+        "url": "https://www.cms.gov/medicare/costs-getting-started"
+      },
+      {
+        "title": "NJ PAAD Prescription Program",
+        "url": "https://www.state.nj.us/humanservices/doas/services/paad/"
+      },
+      {
+        "title": "GoodRx Drug Pricing",
+        "url": "https://www.goodrx.com/"
+      }
+    ]
+  },
+  "vision": {
+    "annualExamCost": {
+      "withInsurance": 25,
+      "withoutInsurance": 190,
+      "notes": "Original Medicare does NOT cover routine vision exams. Must have separate vision plan or Medicare Advantage with vision."
+    },
+    "eyeglasses": {
+      "basicFrameAndLens": {
+        "min": 100,
+        "typical": 200,
+        "max": 400
+      },
+      "progressiveLens": {
+        "min": 200,
+        "typical": 350,
+        "max": 600
+      },
+      "contactLensesMonthly": {
+        "min": 30,
+        "typical": 50,
+        "max": 80
+      }
+    },
+    "insuranceCoverage": "Need separate vision plan or Medicare Advantage with vision. Standalone vision plans (VSP, EyeMed) run $15-25/month. Access to Philadelphia's Wills Eye Hospital via PATCO for specialist care.",
+    "specialistWaitTime": "1-2 weeks for routine eye exams in Cherry Hill area. Excellent access to Philadelphia ophthalmology (Wills Eye Hospital, Penn) via PATCO. Local optometrists widely available.",
+    "seniorConsiderations": "Medicare covers cataract surgery and glaucoma screening. Annual glaucoma screening covered for high-risk beneficiaries. Diabetic retinopathy screening covered. PATCO provides easy access to world-class Philly eye care.",
+    "sources": [
+      {
+        "title": "Medicare Vision Coverage - Medicare.gov",
+        "url": "https://www.medicare.gov/coverage/eye-exams"
+      },
+      {
+        "title": "Wills Eye Hospital",
+        "url": "https://www.willseye.org/"
+      },
+      {
+        "title": "VSP Individual Vision Plans",
+        "url": "https://www.vspdirect.com/"
+      }
+    ]
+  },
+  "dental": {
+    "annualCleaningCost": {
+      "withInsurance": 30,
+      "withoutInsurance": 150,
+      "notes": "Original Medicare does NOT cover routine dental. Need separate dental plan or Medicare Advantage with dental."
+    },
+    "commonProcedures": [
+      {
+        "name": "Filling (composite)",
+        "withInsurance": 100,
+        "withoutInsurance": 250
+      },
+      {
+        "name": "Crown (porcelain)",
+        "withInsurance": 500,
+        "withoutInsurance": 1200
+      },
+      {
+        "name": "Root Canal (molar)",
+        "withInsurance": 450,
+        "withoutInsurance": 1100
+      },
+      {
+        "name": "Extraction (simple)",
+        "withInsurance": 80,
+        "withoutInsurance": 250
+      },
+      {
+        "name": "Implant (single)",
+        "withInsurance": 2000,
+        "withoutInsurance": 4500
+      },
+      {
+        "name": "Dentures (complete set)",
+        "withInsurance": 800,
+        "withoutInsurance": 2000
+      }
+    ],
+    "insuranceCoverage": "Need separate dental plan ($20-50/month) or Medicare Advantage with dental. Standalone plans (Delta Dental of New Jersey, Cigna, Guardian) widely available. Penn Dental in Philly accessible via PATCO for lower-cost care.",
+    "dentistAvailability": "Excellent in Cherry Hill/South Jersey suburbs. Many dental practices, short wait times (1-2 weeks). Penn Dental Medicine accessible via PATCO for reduced-cost dental care.",
+    "sources": [
+      {
+        "title": "Medicare Dental Coverage - Medicare.gov",
+        "url": "https://www.medicare.gov/coverage/dental-services"
+      },
+      {
+        "title": "Delta Dental of New Jersey",
+        "url": "https://www.deltadentalnj.com/"
+      },
+      {
+        "title": "Penn Dental Medicine - Patient Care",
+        "url": "https://www.dental.upenn.edu/patient-care/"
+      }
+    ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 420,
+      "typical": 520,
+      "max": 640
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 345,
+        "seniorDiscounts": "AARP restaurant discounts. Cherry Hill Mall area dining options.",
+        "notes": "Lunch for 2 at moderate restaurant ~$33 + 6.625% tax + 20% tip = ~$42/meal, 2x/week = ~$345/mo"
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 70,
+        "seniorDiscounts": "Xfinity and Verizon FiOS available.",
+        "notes": "Xfinity 1 Gig $60-70/mo or Verizon FiOS $75/mo."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 18,
+        "seniorDiscounts": "T-Mobile 55+ plans include Netflix.",
+        "notes": "$17.99/mo"
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 15,
+        "seniorDiscounts": "Medicaid recipients qualify for Prime at $6.99/mo.",
+        "notes": "$14.99/mo"
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 13,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "$12.99/mo"
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 25,
+        "seniorDiscounts": "SilverSneakers free with many Medicare Advantage plans."
+      },
+      {
+        "name": "Parks/Outdoors",
+        "monthlyCost": 10,
+        "seniorDiscounts": "NJ state parks. Cooper River Park free."
+      },
+      {
+        "name": "Books/Library",
+        "monthlyCost": 8,
+        "seniorDiscounts": "Camden County Library system free."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 20,
+        "seniorDiscounts": "Senior coffee discounts at major chains."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Xfinity Plans",
+        "url": "https://www.xfinity.com/gig"
+      },
+      {
+        "title": "Netflix Pricing",
+        "url": "https://help.netflix.com/en/node/24926"
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 200,
+      "typical": 280,
+      "max": 380
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 90,
+        "senior": 45,
+        "notes": "PATCO Hi-Speedline monthly pass varies by zone ($58-90 regular). NJ Transit bus senior fare half-price. Seniors 62+ get reduced PATCO fare."
+      },
+      "singleRide": 1.4,
+      "coverage": "PATCO Hi-Speedline connects Cherry Hill (Woodcrest/Haddonfield stations) to downtown Philadelphia in 20-25 minutes. NJ Transit buses serve Cherry Hill area. Car still needed for most local errands in suburbs.",
+      "seniorDiscount": "PATCO offers reduced fares for seniors 62+ with Senior Citizen reduced fare ID. NJ Transit offers half-fare for seniors 62+ on buses. SEPTA Senior Key Card honored for free rides when crossing into Philly."
+    },
+    "rideShare": {
+      "baseFare": 2.5,
+      "perKm": 1.15,
+      "typicalCrossTownTrip": {
+        "min": 10,
+        "typical": 15,
+        "max": 25
+      },
+      "availability": "Good. Uber and Lyft available in Cherry Hill area. May have slightly longer waits than Philadelphia proper.",
+      "notes": "GoGoGrandparent available. Camden County offers Access Link paratransit for eligible disabled/senior residents. Taxi services available."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 70,
+        "initialRegistration": {
+          "min": 100,
+          "typical": 150,
+          "max": 200
+        },
+        "notes": "NJ registration $35-84/year depending on vehicle weight. Title fee $60. No personal property tax on vehicles in NJ. NJ does not charge sales tax on used cars from private sellers (under certain conditions)."
+      },
+      "insurance": {
+        "monthlyMin": 140,
+        "monthlyTypical": 195,
+        "monthlyMax": 290,
+        "notes": "New Jersey has some of the highest car insurance rates in the US. No-fault state. Cherry Hill suburban rates lower than urban NJ but still above national average. Senior safe driver discounts 5-15%."
+      },
+      "fuel": {
+        "pricePerLiter": 0.88,
+        "monthlyEstimate": {
+          "min": 75,
+          "typical": 120,
+          "max": 185
+        },
+        "notes": "~$3.35/gallon average in NJ. NJ gas tax $0.424/gallon. NJ is one of two states (with Oregon) where attendants pump gas. Typical senior drives 8,000-12,000 miles/year."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 0,
+          "typical": 30,
+          "max": 75
+        },
+        "hourlyStreet": 0,
+        "notes": "Free parking at most Cherry Hill shopping centers, restaurants, and residential areas. Suburban parking is generally free. PATCO station parking free at Woodcrest, $1/day at Haddonfield."
+      },
+      "tolls": {
+        "monthlyEstimate": 30,
+        "notes": "NJ Turnpike and Atlantic City Expressway tolls if traveling. Ben Franklin Bridge $5 (eastbound to NJ only — free westbound to Philly). PATCO avoids bridge toll. E-ZPass recommended."
+      },
+      "seniorDiscounts": "NJ Mature Driver discount for completing AARP Smart Driver course (5-15% insurance reduction). Camden County Senior Services offers transportation assistance for qualifying seniors."
+    },
+    "walkability": "Low. Cherry Hill is a typical NJ suburb — car-dependent for most errands. Haddonfield downtown is walkable. PATCO stations provide walkable transit hubs. Voorhees Town Center moderately walkable.",
+    "cycling": {
+      "bikeShareMonthly": 0,
+      "infrastructure": "Limited. Some bike lanes on main roads. Cooper River Park trail for recreation. NJ Bike & Walk Coalition advocating for improvements. Suburban road design not optimized for cycling.",
+      "notes": "No formal bike share program in Cherry Hill. Cooper River Park and cross-county trail system provide recreational options. Camden County improving bike infrastructure."
+    },
+    "sources": [
+      {
+        "title": "PATCO Hi-Speedline Fares",
+        "url": "https://www.rfrpatco.org/schedules-fares/fares/"
+      },
+      {
+        "title": "NJ Transit Senior/Disabled Fares",
+        "url": "https://www.njtransit.com/reduced-fare"
+      },
+      {
+        "title": "NJ MVC Registration",
+        "url": "https://www.nj.gov/mvc/vehicles/regtitle.htm"
+      },
+      {
+        "title": "Camden County Senior Services",
+        "url": "https://www.camdencounty.com/service/senior-and-disabled-services/"
+      }
+    ],
+    "electricVehicle": {
+      "purchasePrice": {
+        "min": 28000,
+        "typical": 35000,
+        "max": 52000
+      },
+      "purchaseNotes": "Tesla Model 3 ~$35K, Model Y ~$45K, Hyundai Ioniq 5 ~$42K, Chevy Equinox EV ~$28K. Federal tax credit up to $7,500 (income limits apply). Some states add incentives.",
+      "federalIncentive": 7500,
+      "stateIncentive": 0,
+      "incentiveNotes": "Federal EV tax credit up to $7,500 under IRA (income < $150K single / $300K joint). Must be new vehicle, MSRP < $55K sedan / $80K SUV. Used EV credit up to $4,000.",
+      "chargingHome": {
+        "installCost": {
+          "min": 500,
+          "typical": 1200,
+          "max": 2500
+        },
+        "monthlyElectricity": {
+          "min": 30,
+          "typical": 50,
+          "max": 80
+        },
+        "notes": "Level 2 (240V) home charger. Electricity ~$0.12-0.16/kWh. ~1,000 mi/month = ~300 kWh = $36-48/mo."
+      },
+      "chargingPublic": {
+        "perKwh": {
+          "min": 0.3,
+          "typical": 0.43,
+          "max": 0.6
+        },
+        "notes": "Tesla Supercharger ~$0.40-0.50/kWh. Electrify America ~$0.43/kWh. ChargePoint varies. Free L2 chargers at some retailers."
+      },
+      "insurance": {
+        "monthly": {
+          "min": 140,
+          "typical": 180,
+          "max": 250
+        },
+        "notes": "EV insurance 15-25% higher than comparable ICE vehicle. Shop Liberty Mutual, Progressive, Tesla Insurance where available."
+      },
+      "maintenance": {
+        "annual": {
+          "min": 400,
+          "typical": 600,
+          "max": 900
+        },
+        "notes": "No oil changes, fewer brake jobs (regen braking). Tire rotation every 7,500 mi. Cabin air filter annually. Brake fluid every 2-3 yrs. 12V battery every 4-5 yrs (~$100). Tires wear faster on heavier EVs."
+      },
+      "registration": {
+        "annual": {
+          "min": 100,
+          "typical": 200,
+          "max": 300
+        },
+        "notes": "Many states add EV-specific fees ($100-275/yr) to replace lost gas tax revenue. Virginia: $64/yr EV fee."
+      },
+      "batteryWarranty": "8 years / 100,000 miles (federal minimum). Most manufacturers cover 70-80% capacity retention.",
+      "depreciationNotes": "EVs depreciate 40-50% in first 3 years, though Tesla holds value better. Used EV market improving. Budget ~$3,000-5,000/yr depreciation on $35K vehicle.",
+      "totalMonthlyOwnership": {
+        "min": 250,
+        "typical": 380,
+        "max": 550
+      },
+      "totalMonthlyNotes": "Includes: charging ($50), insurance ($180), maintenance ($50/mo avg), registration ($17/mo). Excludes: purchase/loan payment, depreciation.",
+      "sources": [
+        {
+          "title": "Federal EV Tax Credit - IRS",
+          "url": "https://www.irs.gov/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after"
+        },
+        {
+          "title": "EV Maintenance Costs - AAA",
+          "url": "https://www.aaa.com/autorepair/articles/ev-maintenance"
+        },
+        {
+          "title": "EV Charging Costs - DOE",
+          "url": "https://afdc.energy.gov/fuels/electricity-charging-home"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 65,
+    "discounts": [
+      {
+        "name": "Medicare",
+        "description": "Federal health insurance at 65. Part A (hospital) premium-free for most. Part B (medical) ~$185/month. Part D (drugs) $10-50/month. Access to Philadelphia hospital systems (Penn, Jefferson) via PATCO.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "AARP Membership",
+        "description": "Annual membership $16. Discounts on insurance, dining, travel, retail, and entertainment. Available at age 50+.",
+        "eligibilityAge": 50
+      },
+      {
+        "name": "NJ Social Security Tax Exemption",
+        "description": "New Jersey fully exempts Social Security benefits from state income tax. NJ also excludes up to $100,000 of retirement income for couples with gross income under $150,000.",
+        "eligibilityAge": 62
+      },
+      {
+        "name": "NJ No Sales Tax on Groceries/Clothing",
+        "description": "New Jersey charges no sales tax on groceries, clothing, or shoes. Significant ongoing savings compared to states that tax these essentials.",
+        "eligibilityAge": 0
+      },
+      {
+        "name": "PATCO/NJ Transit Senior Fares",
+        "description": "Reduced PATCO fares for seniors 62+. NJ Transit half-fare on buses for 62+. SEPTA Senior Key Card honored for free rides in Philadelphia.",
+        "eligibilityAge": 62
+      },
+      {
+        "name": "NJ PAAD Prescription Assistance",
+        "description": "NJ Pharmaceutical Assistance to the Aged and Disabled covers prescription copays ($6-9) for seniors 65+ with income under $28,769 (single) or $35,270 (couple).",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Camden County Senior Services",
+        "description": "Transportation assistance, Meals on Wheels, senior centers, health screenings, legal services, and SHIP Medicare counseling.",
+        "eligibilityAge": 60
+      },
+      {
+        "name": "SilverSneakers Fitness",
+        "description": "Free gym membership through participating Medicare Advantage and Medigap plans. Access to 17,000+ locations nationwide.",
+        "eligibilityAge": 65
+      }
+    ]
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 52,
+      "typical": 65,
+      "max": 85
+    },
+    "plans": [
+      {
+        "name": "T-Mobile 55+ Essentials",
+        "type": "US Domestic",
+        "lines": 2,
+        "dataPerLine": "Unlimited (50GB priority)",
+        "baseCost": 55,
+        "taxesAndFees": 10,
+        "monthlyTotal": 65,
+        "notes": "2 lines unlimited talk/text/data. NJ wireless tax ~14% + surcharges. 5G included."
+      }
+    ],
+    "sources": [
+      {
+        "title": "T-Mobile 55+ Plans",
+        "url": "https://www.t-mobile.com/cell-phone-plans/unlimited-55-plus"
+      },
+      {
+        "title": "NJ Wireless Tax Rates",
+        "url": "https://taxfoundation.org/data/all/state/wireless-taxes-2024/"
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom single-family house",
+    "monthlyBudget": {
+      "min": 1900,
+      "max": 2700,
+      "typical": 2300
+    },
+    "breakdown": {
+      "baseRent": 2175,
+      "rentersInsurance": 30,
+      "localTaxesFees": 0,
+      "total": 2205,
+      "notes": "Water, sewage, and trash are separate utility bills — see utilities breakdown."
+    },
+    "taxNotes": "New Jersey has no residential rental tax. NJ has highest property taxes in the US (avg 2.23%) but this is landlord responsibility. Cherry Hill/Camden County slightly below state average.",
+    "leaseTerms": "12-month standard lease. Security deposit max 1.5 months rent (~$3,450). NJ tenant protections are strong.",
+    "marketNotes": "South Jersey suburban market with good availability of 2BR houses. More affordable than neighboring Philadelphia suburbs on the PA side.",
+    "sources": [
+      {
+        "name": "Zillow Cherry Hill Rentals",
+        "url": "https://www.zillow.com/rental-manager/market-trends/cherry-hill-nj/"
+      },
+      {
+        "name": "NJ Division of Taxation",
+        "url": "https://www.nj.gov/treasury/taxation/"
+      }
+    ],
+    "housingSites": {
+      "rentals": [
+        {
+          "name": "Zillow",
+          "url": "https://www.zillow.com/cherry-hill-nj/rentals/",
+          "type": "rental"
+        },
+        {
+          "name": "Apartments.com",
+          "url": "https://www.apartments.com/cherry-hill-nj/",
+          "type": "rental"
+        },
+        {
+          "name": "Realtor.com",
+          "url": "https://www.realtor.com/realestateandhomes-search/Cherry-hill_NJ",
+          "type": "purchase"
+        }
+      ]
+    }
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Wegmans",
+        "type": "supermarket",
+        "website": "https://www.wegmans.com/",
+        "notes": "Cherry Hill location, very popular",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Why Everyone Loves Wegmans",
+            "url": "https://www.youtube.com/watch?v=8gKSFdBcBwY"
+          },
+          {
+            "platform": "instagram",
+            "title": "@wegmans",
+            "url": "https://www.instagram.com/wegmans/"
+          }
+        ]
+      },
+      {
+        "name": "ALDI",
+        "type": "discount-supermarket",
+        "website": "https://www.aldi.us/",
+        "notes": "Budget-friendly, great prices",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "ALDI Store Tour",
+            "url": "https://www.youtube.com/watch?v=VBj4LVyET3Y"
+          },
+          {
+            "platform": "instagram",
+            "title": "@aldiusa",
+            "url": "https://www.instagram.com/aldiusa/"
+          }
+        ]
+      },
+      {
+        "name": "Collingswood Farmers' Market",
+        "type": "farmers-market",
+        "website": "https://www.communityfmm.org/collingswood",
+        "notes": "Year-round, nationally recognized",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Collingswood Farmers Market NJ",
+            "url": "https://www.youtube.com/watch?v=YkLQPGqdC8s"
+          },
+          {
+            "platform": "instagram",
+            "title": "@collingswoodfarmersmarket",
+            "url": "https://www.instagram.com/collingswoodfarmersmkt/"
+          }
+        ]
+      }
+    ]
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 60,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Farmers market or CSA box"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 40,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Bananas, berries, apples, citrus"
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 20,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Sweet Potatoes / Potatoes",
+            "monthlyCost": 15,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet staple"
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 12,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet vegetables"
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 10,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Digestive health, home-cooked diet"
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 50,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Primary protein for both adults & dog"
+          },
+          {
+            "name": "Ground Turkey / Beef",
+            "monthlyCost": 45,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean ground for dog food base"
+          },
+          {
+            "name": "Fish (salmon/tilapia)",
+            "monthlyCost": 40,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Omega-3 rich"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": "Eggs also for dog diet"
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 12,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Essential for balanced home-cooked dog diet"
+          },
+          {
+            "name": "Beans / Lentils",
+            "monthlyCost": 8,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "grains",
+        "name": "Grains & Starches",
+        "items": [
+          {
+            "name": "Rice (brown/white)",
+            "monthlyCost": 10,
+            "quantity": 5,
+            "unit": "lbs/month",
+            "forWhom": "shared",
+            "notes": "Dog diet carb source"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "loaves/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 8,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Oats / Cereal",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "container/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk / Plant Milk",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Cheese",
+            "monthlyCost": 20,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Yogurt / Kefir",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "quart/week",
+            "forWhom": "shared",
+            "notes": "Probiotics for dog digestion too"
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "unit/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Olive Oil / Cooking Oils",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Spices & Seasonings",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Canned Goods (tomatoes, beans)",
+            "monthlyCost": 12,
+            "quantity": 6,
+            "unit": "cans/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Condiments & Sauces",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 25,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tea",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "box/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Wine / Beer",
+            "monthlyCost": 40,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Optional"
+          },
+          {
+            "name": "Sparkling Water / Juice",
+            "monthlyCost": 12,
+            "quantity": 1,
+            "unit": "case/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "snacks",
+        "name": "Snacks & Treats",
+        "items": [
+          {
+            "name": "Nuts & Trail Mix",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Crackers / Chips",
+            "monthlyCost": 10,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Dark Chocolate",
+            "monthlyCost": 8,
+            "quantity": 4,
+            "unit": "bars/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "frozen",
+        "name": "Frozen Foods",
+        "items": [
+          {
+            "name": "Frozen Vegetables",
+            "monthlyCost": 12,
+            "quantity": 4,
+            "unit": "bags/month",
+            "forWhom": "shared",
+            "notes": "Backup for dog food prep"
+          },
+          {
+            "name": "Frozen Fruit (smoothies)",
+            "monthlyCost": 10,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Frozen Meals (convenience)",
+            "monthlyCost": 15,
+            "quantity": 4,
+            "unit": "meals/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "supplements",
+        "name": "Pet Supplements & Health",
+        "items": [
+          {
+            "name": "Joint Supplement (glucosamine)",
+            "monthlyCost": 30,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Essential for Bernese — hip/joint health"
+          },
+          {
+            "name": "Fish Oil (omega-3)",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Coat & skin health"
+          },
+          {
+            "name": "Multivitamin / Mineral Mix",
+            "monthlyCost": 20,
+            "quantity": 1,
+            "unit": "container/month",
+            "forWhom": "dog",
+            "notes": "Balance home-cooked diet"
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 15,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "dog",
+            "notes": "Training & dental chews"
+          }
+        ]
+      }
+    ],
+    "monthlyTotal": 712
+  },
+  "healthcare": {
+    "system": "Medicare + Medigap supplement",
+    "coverageSummary": "Medicare Part A (free) + Part B ($174.70/mo pp) + Medigap Plan G (~$200/mo pp) + Part D (~$45/mo pp). IRA out-of-pocket cap $2,000/yr starting 2025.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD (macular degeneration)"
+      ],
+      "costs": [
+        {
+          "item": "Medicare Part B premium",
+          "monthlyCost": 175,
+          "notes": "Standard 2025 premium per person"
+        },
+        {
+          "item": "Medigap Plan G premium",
+          "monthlyCost": 210,
+          "notes": "Higher due to AMD + multiple conditions. Age-rated."
+        },
+        {
+          "item": "Part D premium",
+          "monthlyCost": 45,
+          "notes": "Tier 3 plan to cover GLP-1"
+        },
+        {
+          "item": "Anti-VEGF injections (Eylea/Lucentis)",
+          "monthlyCost": 80,
+          "notes": "Medicare covers 80%, Medigap covers 20% coinsurance. ~6-8 injections/yr at $40-50 copay each."
+        },
+        {
+          "item": "Ophthalmologist specialist visits",
+          "monthlyCost": 25,
+          "notes": "OCT scans every 4-8 weeks. Medicare + Medigap covers most."
+        },
+        {
+          "item": "Endocrinologist (thyroid monitoring)",
+          "monthlyCost": 10,
+          "notes": "Quarterly bloodwork/visits. Low copay with Medigap."
+        },
+        {
+          "item": "Pulmonologist (asthma check-ups)",
+          "monthlyCost": 8,
+          "notes": "Annual visit + as-needed. Mild asthma, infrequent."
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Gout",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Migraines"
+      ],
+      "costs": [
+        {
+          "item": "Medicare Part B premium",
+          "monthlyCost": 175,
+          "notes": "Standard 2025 premium per person"
+        },
+        {
+          "item": "Medigap Plan G premium",
+          "monthlyCost": 190,
+          "notes": "Slightly lower — no AMD, but diabetes management"
+        },
+        {
+          "item": "Part D premium",
+          "monthlyCost": 40,
+          "notes": "All generics — lower tier plan sufficient"
+        },
+        {
+          "item": "Endocrinologist (diabetes mgmt)",
+          "monthlyCost": 15,
+          "notes": "Quarterly A1C, bloodwork. Covered well by Medicare."
+        },
+        {
+          "item": "Diabetes supplies (strips, lancets)",
+          "monthlyCost": 25,
+          "notes": "Medicare Part B covers glucose monitors. Some copays."
+        },
+        {
+          "item": "Rheumatologist (gout monitoring)",
+          "monthlyCost": 8,
+          "notes": "Semi-annual visits. Uric acid monitoring."
+        },
+        {
+          "item": "Neurologist (migraine follow-up)",
+          "monthlyCost": 8,
+          "notes": "Annual-semi-annual visits for topiramate management."
+        }
+      ]
+    },
+    "shared": [
+      {
+        "item": "Dental insurance (2 adults)",
+        "monthlyCost": 70,
+        "notes": "Separate dental plan ~$35/person. Medicare does not cover dental."
+      },
+      {
+        "item": "Vision insurance (2 adults)",
+        "monthlyCost": 25,
+        "notes": "Basic vision plan. AMD specialist visits covered by Medicare Part B."
+      },
+      {
+        "item": "Annual physicals & preventive care",
+        "monthlyCost": 0,
+        "notes": "Covered 100% by Medicare — no copay for preventive."
+      }
+    ],
+    "monthlyTotals": {
+      "person1": 553,
+      "person2": 461,
+      "shared": 95,
+      "household": 1109
+    },
+    "notes": null,
+    "phaseTransition": null
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Black Hair Care",
+      "priceRange": {
+        "cut": "30-60",
+        "color": "75-140",
+        "fullService": "100-230"
+      },
+      "notes": "Camden County and nearby Philadelphia provide excellent Black hair care options.",
+      "providers": [
+        {
+          "name": "Duafe Holistic Hair Care",
+          "type": "Natural hair salon",
+          "address": "West Philadelphia (across river)",
+          "distanceMi": 12,
+          "rating": 4.9,
+          "notes": "Top-rated natural hair salon. Worth the trip across the bridge. By appointment.",
+          "website": ""
+        },
+        {
+          "name": "Styles by Sav",
+          "type": "Full-service salon",
+          "address": "Cherry Hill, NJ area",
+          "distanceMi": 5,
+          "rating": 4.5,
+          "notes": "Local salon experienced with textured hair, braids, color, silk press.",
+          "website": ""
+        }
+      ]
+    },
+    "whiteHairCare": {
+      "label": "White/Caucasian Hair Care",
+      "priceRange": {
+        "cut": "30-55",
+        "color": "80-150",
+        "highlights": "100-190"
+      },
+      "notes": "Cherry Hill has many well-established salons along Haddonfield Road and Route 70.",
+      "providers": [
+        {
+          "name": "Pistachio Hair Studio",
+          "type": "Boutique salon",
+          "address": "Cherry Hill, NJ",
+          "distanceMi": 3,
+          "rating": 4.7,
+          "notes": "Highly rated local salon. Color specialists, grey blending, balayage.",
+          "website": ""
+        },
+        {
+          "name": "Salon Bella Vita",
+          "type": "Full-service salon",
+          "address": "Voorhees, NJ",
+          "distanceMi": 5,
+          "rating": 4.6,
+          "notes": "Aveda concept salon. Gentle color products. Experienced with mature hair.",
+          "website": ""
+        }
+      ]
+    },
+    "mensBigTall": {
+      "label": "Men's Big & Tall Clothing",
+      "priceRange": {
+        "shirts": "28-75",
+        "pants": "38-68",
+        "suits": "140-380"
+      },
+      "notes": "DXL in Cherry Hill area. Close proximity to King of Prussia for Nordstrom extended sizes.",
+      "providers": [
+        {
+          "name": "DXL Big + Tall",
+          "type": "Specialty retail",
+          "address": "Cherry Hill, NJ",
+          "distanceMi": 4,
+          "rating": 4.3,
+          "notes": "Convenient local big & tall store. Full size range.",
+          "website": "https://www.dxl.com/"
+        },
+        {
+          "name": "Macy's (Cherry Hill Mall)",
+          "type": "Department store",
+          "address": "Cherry Hill, NJ",
+          "distanceMi": 2,
+          "rating": 4.2,
+          "notes": "Extended sizes section. Men's big & tall department in-store.",
+          "website": ""
+        }
+      ]
+    },
+    "womensClothing": {
+      "label": "Women's Regular Clothing",
+      "priceRange": {
+        "casual": "25-60",
+        "dresses": "45-120",
+        "professional": "55-140"
+      },
+      "notes": "Cherry Hill Mall is the primary shopping destination. Moorestown Mall nearby for additional options.",
+      "providers": [
+        {
+          "name": "Macy's (Cherry Hill Mall)",
+          "type": "Department store",
+          "address": "Cherry Hill, NJ",
+          "distanceMi": 2,
+          "rating": 4.3,
+          "notes": "Full women's regular size range. Good sales events.",
+          "website": ""
+        },
+        {
+          "name": "LOFT / White House Black Market",
+          "type": "Women's specialty",
+          "address": "Cherry Hill Mall",
+          "distanceMi": 2,
+          "rating": 4.4,
+          "notes": "Regular sizes. Work and casual styles. Frequent promotions.",
+          "website": ""
+        }
+      ]
+    },
+    "shoes": {
+      "label": "Shoes",
+      "priceRange": {
+        "casual": "38-85",
+        "dress": "65-140",
+        "athletic": "58-125",
+        "wideWidth": "48-115"
+      },
+      "notes": "Good shoe options at Cherry Hill Mall and nearby Route 70 retail corridor.",
+      "providers": [
+        {
+          "name": "DSW (Cherry Hill)",
+          "type": "Shoe warehouse",
+          "address": "Cherry Hill, NJ",
+          "distanceMi": 3,
+          "rating": 4.3,
+          "notes": "Wide widths available. Good variety of comfort and fashion brands.",
+          "website": "https://www.dsw.com/"
+        },
+        {
+          "name": "Nordstrom Rack (Cherry Hill)",
+          "type": "Discount department",
+          "address": "Cherry Hill, NJ",
+          "distanceMi": 4,
+          "rating": 4.2,
+          "notes": "Discounted designer shoes. Extended sizes available.",
+          "website": ""
+        }
+      ]
+    }
+  }
+}

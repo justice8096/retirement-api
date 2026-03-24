@@ -1,0 +1,277 @@
+{
+  "id": "us-chesapeake-va",
+  "name": "Chesapeake, VA",
+  "country": "United States",
+  "region": "US Mid-Atlantic",
+  "cities": [
+    "Chesapeake"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "N/A (domestic)",
+    "notes": "US citizen — no visa required"
+  },
+  "climate": {
+    "winterLowF": 31,
+    "summerHighF": 89,
+    "rainyDaysPerYear": 115,
+    "meetsWarmWinterReq": false
+  },
+  "monthlyCosts": {
+    "rent": {
+      "min": 1150,
+      "max": 1650,
+      "typical": 1350,
+      "type": "2-bedroom house",
+      "annualInflation": 0.04,
+      "notes": "Chesapeake 2BR house rental slightly below Norfolk/Virginia Beach average"
+    },
+    "groceries": {
+      "min": 1100,
+      "max": 1450,
+      "typical": 1275,
+      "annualInflation": 0.03,
+      "notes": "2 adults + pet food. Food Lion, Kroger, Harris Teeter, Walmart available."
+    },
+    "utilities": {
+      "min": 230,
+      "max": 380,
+      "typical": 295,
+      "annualInflation": 0.035,
+      "breakdown": {
+        "electricity": 135,
+        "gas": 55,
+        "water": 50,
+        "internet": 35,
+        "waste": 20
+      }
+    },
+    "healthcare": {
+      "min": 400,
+      "max": 700,
+      "typical": 550,
+      "notes": "Medicare Part B + Medigap Plan G + Part D + dental/vision. Chesapeake Regional Medical Center nearby.",
+      "annualInflation": 0.05
+    },
+    "insurance": {
+      "min": 30,
+      "max": 50,
+      "typical": 40,
+      "type": "renter's insurance",
+      "annualInflation": 0.04,
+      "notes": "Flood insurance may be needed in low-lying areas — adds $50-150/mo if required"
+    },
+    "petCare": {
+      "min": 110,
+      "max": 200,
+      "typical": 150,
+      "annualInflation": 0.03,
+      "notes": "Vet visits, vaccinations, flea/tick, pet insurance. Multiple vet clinics in Chesapeake."
+    },
+    "petDaycare": {
+      "min": 400,
+      "max": 700,
+      "typical": 550,
+      "annualInflation": 0.03,
+      "notes": "Doggy daycare 2 days/week, large breed rate. Camp Bow Wow Chesapeake, Dogtopia nearby."
+    },
+    "petGrooming": {
+      "min": 75,
+      "max": 140,
+      "typical": 100,
+      "annualInflation": 0.03,
+      "notes": "Bernese coat maintenance, professional grooming monthly. Hampton Roads grooming prices near national average."
+    },
+    "transportation": {
+      "min": 200,
+      "max": 400,
+      "typical": 290,
+      "notes": "Car-dependent. HRT bus service limited in Chesapeake. Gas, insurance, maintenance costs.",
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "min": 380,
+      "max": 580,
+      "typical": 470,
+      "annualInflation": 0.03,
+      "notes": "Incl cable+1Gig internet, Netflix, Amazon Prime, Apple TV+, dining out (lunch for 2 2x/week w/ tax+tip)"
+    },
+    "clothing": {
+      "min": 80,
+      "max": 200,
+      "typical": 130,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "min": 40,
+      "max": 90,
+      "typical": 60,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "min": 30,
+      "max": 75,
+      "typical": 50,
+      "annualInflation": 0.05,
+      "notes": "Streaming, news, apps"
+    },
+    "phoneCell": {
+      "typical": 62,
+      "min": 50,
+      "max": 77,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0
+    },
+    "miscellaneous": {
+      "min": 100,
+      "max": 220,
+      "typical": 150,
+      "annualInflation": 0.03,
+      "notes": "Vehicle personal property tax, miscellaneous fees, household supplies"
+    },
+    "medicine": {
+      "min": 45,
+      "typical": 140,
+      "max": 320,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "buffer": {
+      "min": 50,
+      "typical": 100,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 200,
+      "typical": 350,
+      "max": 600,
+      "annualInflation": 0.055
+    }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true,
+      "brackets": [
+        {
+          "min": 0,
+          "max": 23850,
+          "rate": 0.1
+        },
+        {
+          "min": 23850,
+          "max": 96950,
+          "rate": 0.12
+        },
+        {
+          "min": 96950,
+          "max": 206700,
+          "rate": 0.22
+        },
+        {
+          "min": 206700,
+          "max": 394600,
+          "rate": 0.24
+        },
+        {
+          "min": 394600,
+          "max": 501050,
+          "rate": 0.32
+        },
+        {
+          "min": 501050,
+          "max": 751600,
+          "rate": 0.35
+        },
+        {
+          "min": 751600,
+          "max": null,
+          "rate": 0.37
+        }
+      ],
+      "standardDeduction": 30000
+    },
+    "stateIncomeTax": {
+      "rate": 0.0575,
+      "type": "top-marginal",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 3000,
+          "rate": 0.02
+        },
+        {
+          "min": 3000,
+          "max": 5000,
+          "rate": 0.03
+        },
+        {
+          "min": 5000,
+          "max": 17000,
+          "rate": 0.05
+        },
+        {
+          "min": 17000,
+          "max": null,
+          "rate": 0.0575
+        }
+      ],
+      "deduction": 24000,
+      "exemptions": "Age 65+ deduction $12K/person. SS fully exempt from VA tax."
+    },
+    "salesTax": {
+      "rate": 0.06,
+      "notes": "Chesapeake 6% (4.3% state + 1% local + 0.7% Hampton Roads regional transit)"
+    },
+    "propertyTax": {
+      "rate": 0,
+      "notes": "Renters: no direct property tax. Vehicle personal property tax $4.08/$100 assessed value in Chesapeake."
+    },
+    "socialCharges": null,
+    "vatRate": 0,
+    "estVehicleTax": 1020,
+    "ssExempt": true,
+    "notes": "Chesapeake sales tax 6%. Vehicle personal property tax $4.08/$100 assessed value."
+  },
+  "healthcare": {
+    "system": "Private insurance (ACA/employer/Medicare)",
+    "qualityRating": 8,
+    "waitTimes": "Short to moderate",
+    "dentalIncluded": false,
+    "prescriptionCoverage": "Via insurance plan",
+    "notes": "Chesapeake Regional Medical Center (310 beds, Level III trauma). Sentara hospitals in Norfolk/Virginia Beach within 20 minutes. Naval Medical Center Portsmouth nearby for eligible veterans."
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps available (Cox, Verizon Fios)",
+    "dogFriendly": 8,
+    "expatCommunity": 1,
+    "englishPrevalence": 10,
+    "safetyRating": 7,
+    "notes": "Great Dismal Swamp NWR, Chesapeake City Park (city's largest), Northwest River Park (763 acres). Dog-friendly parks and trails. Military community presence."
+  },
+  "pros": [
+    "Lower cost of living than Norfolk/Virginia Beach",
+    "Suburban with good parks and trails",
+    "Great Dismal Swamp National Wildlife Refuge nearby",
+    "Lower crime rate than neighboring cities",
+    "No visa needed — domestic relocation",
+    "SS fully exempt from VA state income tax",
+    "Proximity to Virginia Beach oceanfront (30 min)",
+    "Strong military community and VA healthcare access"
+  ],
+  "cons": [
+    "Car-dependent suburban layout",
+    "Limited public transit (HRT bus only)",
+    "VA state income tax (2-5.75%)",
+    "Flood risk in low-lying areas — may require flood insurance",
+    "Humid summers with high heat index",
+    "Limited walkability in most neighborhoods",
+    "Vehicle personal property tax adds ~$1,000/year"
+  ]
+}
