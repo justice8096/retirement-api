@@ -122,5 +122,436 @@
         "url": "https://fi.google.com/about/plans"
       }
     ]
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 28,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Local market or supermarket"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 18,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Tropical fruits widely available"
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Potatoes / Sweet Potatoes",
+            "monthlyCost": 6,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet staple"
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 5,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet vegetables"
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 4,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Digestive health"
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 23,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Primary protein for adults & dog"
+          },
+          {
+            "name": "Ground Beef / Turkey",
+            "monthlyCost": 20,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean ground for dog food base"
+          },
+          {
+            "name": "Fish (local catch)",
+            "monthlyCost": 18,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Fresh local fish often cheaper than US"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 6,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 5,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Home-cooked dog diet essential"
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk",
+            "monthlyCost": 6,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Cheese (local + imported)",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": "Local cheese very affordable"
+          },
+          {
+            "name": "Yogurt",
+            "monthlyCost": 5,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 4,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Rice / Pasta / Beans",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "monthly stock",
+            "forWhom": "shared",
+            "notes": "Staples very affordable locally"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Canned Goods / Sauces",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Cooking Oils / Spices",
+            "monthlyCost": 5,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Snacks / Crackers",
+            "monthlyCost": 6,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee (ground/beans)",
+            "monthlyCost": 8,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": "Excellent local coffee in most LATAM countries"
+          },
+          {
+            "name": "Water (filtered/bottled)",
+            "monthlyCost": 6,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": "Garrafon/filtered water delivery common"
+          },
+          {
+            "name": "Juice / Soft Drinks",
+            "monthlyCost": 5,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Beer / Wine",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": "Local beer very affordable"
+          }
+        ]
+      },
+      {
+        "id": "pet",
+        "name": "Pet Food & Supplements",
+        "items": [
+          {
+            "name": "Premium Dog Food (kibble)",
+            "monthlyCost": 25,
+            "quantity": 30,
+            "unit": "lbs/month",
+            "forWhom": "dog",
+            "notes": "Imported premium brands cost more; local brands available"
+          },
+          {
+            "name": "Dog Supplements (glucosamine, fish oil)",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": ""
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 5,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom house/apartment",
+    "monthlyBudget": {
+      "min": 600,
+      "max": 1000,
+      "typical": 800
+    },
+    "breakdown": {
+      "baseRent": 736,
+      "administracion": 64,
+      "deposit": "800 (1 month typical)",
+      "rentersInsurance": 0,
+      "localTaxesFees": 0,
+      "total": 800,
+      "notes": "Administracion (building fees) typically 8-12% of rent. Includes security, common areas, sometimes water."
+    },
+    "taxNotes": "No VAT on residential rent. Estrato system (1-6) determines utility rates. Expat areas are typically estrato 4-6 (higher utility rates).",
+    "leaseTerms": "12-month lease standard. Security deposit 1-2 months. Lease renewal automatic unless notified 3 months before expiry.",
+    "marketNotes": "El Poblado and Laureles most popular for expats in Medellin. Furnished rentals widely available. Prices negotiable for longer terms.",
+    "sources": [
+      {
+        "name": "FincaRaiz",
+        "url": "https://www.fincaraiz.com.co/"
+      },
+      {
+        "name": "Metrocuadrado",
+        "url": "https://www.metrocuadrado.com/"
+      }
+    ]
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Exito",
+        "type": "supermarket",
+        "website": "https://www.exito.com/",
+        "notes": "Largest supermarket chain in Colombia"
+      },
+      {
+        "name": "Jumbo (Cencosud)",
+        "type": "supermarket",
+        "website": "https://www.tiendasjumbo.co/",
+        "notes": "Large-format stores with wide imported selection"
+      },
+      {
+        "name": "Olimpica",
+        "type": "supermarket",
+        "website": "https://www.olimpica.com/",
+        "notes": "Colombian chain with pharmacies and good prices"
+      },
+      {
+        "name": "D1",
+        "type": "discount",
+        "website": "https://d1.com.co/",
+        "notes": "Hard-discount store, excellent prices on basics"
+      },
+      {
+        "name": "Ara",
+        "type": "discount",
+        "website": "https://www.ara.com.co/",
+        "notes": "Discount chain similar to Aldi format"
+      }
+    ]
+  },
+  "healthcare": {
+    "system": "EPS (mandatory public) + Private prepagada",
+    "coverageSummary": "EPS mandatory enrollment covers most services. Private prepagada (prepaid medicine) $80-200/mo adds faster access and better facilities.",
+    "gpVisit": {
+      "withInsurance": 5,
+      "withoutInsurance": 20,
+      "notes": "EPS covers GP visits with small copay. Private prepagada offers same-day appointments."
+    },
+    "specialist": {
+      "withInsurance": 15,
+      "withoutInsurance": 50,
+      "notes": "Specialist visits very affordable. Colombia has excellent medical training programs."
+    },
+    "privateInsurance": {
+      "monthlyPerPerson": 150,
+      "notes": "Colsanitas, Sura, or international plans. Prepagada plans $80-200/mo cover most services."
+    },
+    "emergency": {
+      "withInsurance": 20,
+      "withoutInsurance": 300,
+      "notes": "Emergency care is mandatory by law regardless of insurance status."
+    },
+    "dental": {
+      "cleaning": 20,
+      "filling": 25,
+      "crown": 150,
+      "notes": "Excellent dental care at fraction of US prices."
+    },
+    "notes": "Colombia has a highly rated healthcare system. Medical tourism is growing. Medellin has world-class hospitals like Clinica Las Americas."
+  },
+  "personalCare": {
+    "hairCare": {
+      "mensCut": {
+        "min": 4,
+        "typical": 8,
+        "max": 15,
+        "notes": "Barbershops very affordable"
+      },
+      "womensCut": {
+        "min": 10,
+        "typical": 20,
+        "max": 40,
+        "notes": "Wide range of salons"
+      },
+      "colorTreatment": {
+        "min": 20,
+        "typical": 40,
+        "max": 80,
+        "notes": ""
+      }
+    },
+    "fitness": {
+      "gymMonthly": {
+        "min": 15,
+        "typical": 25,
+        "max": 45,
+        "notes": "Bodytech, Smart Fit available in Bogotá (Chapinero, Usaquén), Colombia"
+      },
+      "yogaClassDrop": {
+        "min": 3,
+        "typical": 6,
+        "max": 12,
+        "notes": ""
+      }
+    },
+    "spa": {
+      "massage60min": {
+        "min": 12,
+        "typical": 25,
+        "max": 50,
+        "notes": "Spa services very affordable"
+      },
+      "manicure": {
+        "min": 4,
+        "typical": 8,
+        "max": 15,
+        "notes": ""
+      }
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 57,
+    "programName": "Programa Colombia Mayor",
+    "discounts": [
+      {
+        "name": "Colombia Mayor Subsidy",
+        "description": "Government subsidy program for seniors in poverty. Monthly payment varies by municipality (~$20-40/mo).",
+        "eligibilityAge": 57
+      },
+      {
+        "name": "Transit Fare Reduction",
+        "description": "Seniors (women 57+, men 62+) eligible for subsidized transit fares with cedula. Varies by city.",
+        "eligibilityAge": 57
+      },
+      {
+        "name": "Healthcare via EPS",
+        "description": "Mandatory EPS enrollment covers comprehensive healthcare. Pensioners contribute based on income.",
+        "eligibilityAge": 57
+      },
+      {
+        "name": "Cultural Access",
+        "description": "Reduced or free entry to national parks (Parques Nacionales) and cultural events for seniors 62+.",
+        "eligibilityAge": 62
+      },
+      {
+        "name": "Caja de Compensacion",
+        "description": "Cajas offer subsidized recreation, fitness, tourism, and education programs for affiliates and seniors.",
+        "eligibilityAge": 57
+      }
+    ]
   }
 }

@@ -122,5 +122,646 @@
         "url": "https://fi.google.com/about/plans"
       }
     ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 280,
+      "typical": 350,
+      "max": 438
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 225,
+        "seniorDiscounts": "Prato do dia (daily dish) €7-12, includes bread and drink at many restaurants.",
+        "notes": "Lunch for 2: prato do dia ~€22-25, 2x/week = ~€200/mo = ~$225/mo in Cascais, Portugal."
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 40,
+        "seniorDiscounts": "No specific senior discounts.",
+        "notes": "NOS/MEO/Vodafone fiber 1 Gig €30-40/mo. ~$34-45/mo."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 14,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€12.99/mo in Portugal. ~$14/mo."
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 6,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€4.99/mo. Includes Prime Video. ~$6/mo."
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 8,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€6.99/mo. ~$8/mo."
+      },
+      {
+        "name": "NFL RedZone",
+        "monthlyCost": 15,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "DAZN NFL Game Pass €19.99/mo during season. Annualized ~€13/mo (~$15)."
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 22,
+        "seniorDiscounts": "Ginásios municipais offer senior rates €10-20/mo.",
+        "notes": "Fitness Hut/Solinca €15-30/mo, municipal gyms cheaper. ~$17-34/mo."
+      },
+      {
+        "name": "Parks/Outdoors",
+        "monthlyCost": 0,
+        "seniorDiscounts": "Senior 65+ discounts at monuments and museums. Parks free.",
+        "notes": "Free parks, beaches, coastal walks, hiking."
+      },
+      {
+        "name": "Books/Media",
+        "monthlyCost": 8,
+        "seniorDiscounts": "Bibliotecas municipais free.",
+        "notes": "Public libraries free. Budget for books, newspapers."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 12,
+        "seniorDiscounts": "No specific discounts. Coffee culture very affordable.",
+        "notes": "Café (espresso) ~€0.70-1.00, meia de leite ~€1.20. Budget for 2 visits/week. ~$12/mo."
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 40,
+      "typical": 86,
+      "max": 288
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 44,
+        "senior": 22,
+        "notes": "Cascais transit pass. Seniors 65+ eligible for passes sub23/+65 with up to 50% discount on municipal transit. Navegante card in Lisbon metro area."
+      },
+      "singleRide": 1.72,
+      "coverage": "Urban bus and tram network in major cities. Metro in Lisbon and Porto. CP (Comboios de Portugal) rail connects regions.",
+      "seniorDiscount": "Seniors 65+ eligible for passes sub23/+65 with up to 50% discount on municipal transit. Navegante card in Lisbon metro area."
+    },
+    "rideShare": {
+      "baseFare": 3.74,
+      "perKm": 0.92,
+      "typicalCrossTownTrip": {
+        "min": 7,
+        "typical": 10,
+        "max": 14
+      },
+      "availability": "Uber and Bolt widely available and affordable. Taxis regulated with meters."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 0,
+        "initialRegistration": {
+          "min": 150,
+          "typical": 300,
+          "max": 500
+        },
+        "notes": "IUC (Imposto Único de Circulação) annual vehicle tax based on engine and CO2. Inspecção (inspection) required regularly."
+      },
+      "insurance": {
+        "monthlyMin": 29,
+        "monthlyTypical": 40,
+        "monthlyMax": 69,
+        "notes": "Third-party from ~$25/mo. Comprehensive (contra todos os riscos) $35-60/mo. Rates among lowest in Western Europe."
+      },
+      "fuel": {
+        "pricePerLiter": 1.7,
+        "monthlyEstimate": {
+          "min": 46,
+          "typical": 81,
+          "max": 126
+        },
+        "notes": "Gasolina ~$1.65-1.75/L. Gasóleo (diesel) ~$1.55-1.65/L."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 46,
+          "typical": 69,
+          "max": 92
+        },
+        "hourlyStreet": 1.15,
+        "notes": "EMEL parking in Lisbon with resident discounts. Underground garages $40-80/mo. Free parking easier outside city cores."
+      },
+      "tolls": {
+        "monthlyEstimate": 23,
+        "notes": "Estimated monthly toll/highway costs for Cascais area."
+      },
+      "seniorDiscounts": "Seniors 65+ eligible for passes sub23/+65 with up to 50% discount on municipal transit. Navegante card in Lisbon metro area."
+    },
+    "walkability": "Good walkability in city centers, though hilly terrain in Lisbon and Porto. Compact neighborhoods.",
+    "monthlyEstimate": {
+      "carFree": {
+        "min": 40,
+        "typical": 86,
+        "max": 138,
+        "notes": "Transit pass + occasional ride-share. Good for urban core living."
+      },
+      "withCar": {
+        "min": 184,
+        "typical": 288,
+        "max": 425,
+        "notes": "Includes insurance, fuel, parking, maintenance. Higher urban parking and insurance costs."
+      }
+    }
+  },
+  "visionDental": {
+    "monthlyBudget": {
+      "min": 30,
+      "typical": 60,
+      "max": 100
+    },
+    "vision": {
+      "eyeExam": {
+        "withInsurance": 0,
+        "withoutInsurance": 28,
+        "notes": "Consulta de oftalmologia ~25 EUR. SNS (public health) covers referral. Private ~25-40 EUR."
+      },
+      "glasses": {
+        "basic": 68,
+        "progressive": 170,
+        "contacts12mo": 140,
+        "notes": "Basic frames+lenses ~60 EUR at chains like MultiOpticas, Wells. Progressive ~150 EUR. Not covered by SNS."
+      },
+      "insurance": {
+        "monthlyPremium": 0,
+        "coverage": "SNS covers ophthalmology referrals; glasses/contacts not covered",
+        "notes": "No standalone vision insurance typical. Private health (Multicare, Medis) may include vision."
+      }
+    },
+    "dental": {
+      "cleaning": {
+        "withInsurance": 8,
+        "withoutInsurance": 40,
+        "notes": "Destartarizacao ~35 EUR. Cheque-dentista program covers some preventive dental for eligible residents."
+      },
+      "filling": {
+        "withInsurance": 23,
+        "withoutInsurance": 57,
+        "notes": "Obturacao composta ~50 EUR. Most dental care is private in Portugal."
+      },
+      "crown": {
+        "withInsurance": 228,
+        "withoutInsurance": 342,
+        "notes": "Coroa ceramica ~300 EUR. Portugal is a dental tourism destination; prices competitive."
+      },
+      "insurance": {
+        "monthlyPremium": 14,
+        "coverage": "Private dental plan (Multicare Dental, Medicare), 2 cleanings/year, discounted treatments",
+        "notes": "Dental-only plans ~12 EUR/mo. Cheque-dentista program provides limited free preventive dental for SNS users."
+      }
+    },
+    "annualEstimate": {
+      "withInsurance": {
+        "premiums": 168,
+        "outOfPocket": 130,
+        "total": 298,
+        "monthlyEquiv": 25
+      },
+      "withoutInsurance": {
+        "outOfPocket": 320,
+        "monthlyEquiv": 27
+      }
+    }
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 32,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Local markets or supermarket"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 25,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Seasonal local fruit"
+          },
+          {
+            "name": "Leafy Greens",
+            "monthlyCost": 11,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tomatoes",
+            "monthlyCost": 7,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": "Local grown"
+          },
+          {
+            "name": "Potatoes/Onions",
+            "monthlyCost": 6,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "protein",
+        "name": "Protein",
+        "items": [
+          {
+            "name": "Chicken breast",
+            "monthlyCost": 23,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "~€5.4/kg"
+          },
+          {
+            "name": "Ground beef",
+            "monthlyCost": 27,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "~€6.4/kg"
+          },
+          {
+            "name": "Fish (local catch)",
+            "monthlyCost": 25,
+            "quantity": 1.5,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "Market fish, seasonal"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 9,
+            "quantity": 4,
+            "unit": "dozen/month",
+            "forWhom": "shared",
+            "notes": "~€2.0/dozen"
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy",
+        "items": [
+          {
+            "name": "Milk",
+            "monthlyCost": 7,
+            "quantity": 8,
+            "unit": "liters/month",
+            "forWhom": "shared",
+            "notes": "~€0.9/L"
+          },
+          {
+            "name": "Cheese (local + imported)",
+            "monthlyCost": 13,
+            "quantity": 1,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": "Mix of local and imported"
+          },
+          {
+            "name": "Yogurt",
+            "monthlyCost": 6,
+            "quantity": 8,
+            "unit": "pots/month",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Bread",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "daily",
+            "forWhom": "shared",
+            "notes": "Local bakery or supermarket"
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 6,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Rice",
+            "monthlyCost": 4,
+            "quantity": 1,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Olive oil",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "L/month",
+            "forWhom": "shared",
+            "notes": "~€4.6/L"
+          },
+          {
+            "name": "Canned goods/sauces",
+            "monthlyCost": 11,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "adults",
+            "notes": "Ground coffee ~€2.5/250g"
+          },
+          {
+            "name": "Water",
+            "monthlyCost": 6,
+            "quantity": 20,
+            "unit": "bottles/month",
+            "forWhom": "shared",
+            "notes": "Tap safe in most areas; mineral preferred"
+          },
+          {
+            "name": "Wine",
+            "monthlyCost": 16,
+            "quantity": 4,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Local wine ~€3.6/bottle"
+          },
+          {
+            "name": "Beer",
+            "monthlyCost": 10,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Local beer ~€1.1/500ml"
+          }
+        ]
+      },
+      {
+        "id": "pet",
+        "name": "Pet Food",
+        "items": [
+          {
+            "name": "Premium dog food",
+            "monthlyCost": 39,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": "Royal Canin/Hills from pet shops or vet clinics"
+          },
+          {
+            "name": "Dog treats",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom house or ground-floor apartment",
+    "monthlyBudget": {
+      "min": 1440,
+      "max": 2340,
+      "typical": 1800
+    },
+    "breakdown": {
+      "baseRent": 1800,
+      "rentersInsurance": 0,
+      "localTaxesFees": 0,
+      "total": 1800,
+      "notes": "Renter's insurance not standard in most European countries. Utilities billed separately."
+    },
+    "taxNotes": "No rental tax for tenants. IMI (property tax) is landlord responsibility. Stamp duty on lease (10% of first month rent, typically shared).",
+    "leaseTerms": "1-year minimum lease (renewable). Security deposit 1-2 months rent. 120-day notice period for tenants on contracts over 1 year.",
+    "marketNotes": "Upscale Lisbon coast suburb. Premium pricing. Beautiful but competitive market."
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Continente",
+        "type": "hypermarket",
+        "website": "https://www.continente.pt/",
+        "notes": "Portugal's largest chain (Sonae group). Hypermarkets and Modelo format.",
+        "videos": []
+      },
+      {
+        "name": "Pingo Doce",
+        "type": "supermarket",
+        "website": "https://www.pingodoce.pt/",
+        "notes": "Jerónimo Martins group. Good fresh section, competitive prices.",
+        "videos": []
+      },
+      {
+        "name": "Lidl",
+        "type": "discount-supermarket",
+        "website": "https://www.lidl.pt/",
+        "notes": "Best prices. Strong bakery section. Growing store count.",
+        "videos": []
+      },
+      {
+        "name": "Aldi",
+        "type": "discount-supermarket",
+        "website": "https://www.aldi.pt/",
+        "notes": "Expanding in Portugal. Budget-friendly basics.",
+        "videos": []
+      },
+      {
+        "name": "Mercados municipais",
+        "type": "farmers-market",
+        "website": "",
+        "notes": "Municipal markets with fresh fish, produce, flowers. Best prices on seasonal items.",
+        "videos": []
+      }
+    ]
+  },
+  "healthcare": {
+    "system": "SNS (Serviço Nacional de Saúde) + Private supplement",
+    "coverageSummary": "Portugal provides public healthcare via SNS for residents (NHR/visa holders eligible). Small copays (taxas moderadoras) €4-18 for visits. Private insurance recommended for faster specialist access.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD"
+      ],
+      "costs": [
+        {
+          "item": "Private health insurance (Médis/Multicare)",
+          "monthlyCost": 130,
+          "notes": "Comprehensive policy for AMD coverage. Age-rated."
+        },
+        {
+          "item": "GP visits (médico de família)",
+          "monthlyCost": 5,
+          "notes": "SNS copay €4.50/visit. ~1/month"
+        },
+        {
+          "item": "Specialist visits (ophthalmologist)",
+          "monthlyCost": 15,
+          "notes": "Private for AMD monitoring. SNS wait can be months."
+        },
+        {
+          "item": "Lab work",
+          "monthlyCost": 5,
+          "notes": "Quarterly blood tests. SNS or private lab."
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Gout"
+      ],
+      "costs": [
+        {
+          "item": "Private health insurance",
+          "monthlyCost": 110,
+          "notes": "Standard Médis/Multicare plan"
+        },
+        {
+          "item": "GP visits",
+          "monthlyCost": 5,
+          "notes": "SNS copay €4.50/visit"
+        },
+        {
+          "item": "Specialist visits (endocrinologist)",
+          "monthlyCost": 10,
+          "notes": "Quarterly diabetes management"
+        },
+        {
+          "item": "Lab work",
+          "monthlyCost": 5,
+          "notes": "HbA1c + metabolic panel"
+        }
+      ]
+    }
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Hair Care",
+      "priceRange": {
+        "cut": "10-22",
+        "color": "35-65",
+        "fullService": "55-95"
+      },
+      "notes": "Afro hair salons available in Lisbon/Porto, fewer in smaller cities. Brazilian and Cape Verdean community salons.",
+      "providers": [
+        {
+          "name": "Afro/Brazilian hair salons",
+          "type": "Salon",
+          "address": "City center",
+          "distanceKm": 5,
+          "rating": 4.2,
+          "notes": "Textured hair, braids, relaxers",
+          "website": ""
+        },
+        {
+          "name": "Local cabeleireiro",
+          "type": "Salon",
+          "address": "Various",
+          "distanceKm": 2,
+          "rating": 4.3,
+          "notes": "Standard Portuguese salon",
+          "website": ""
+        }
+      ]
+    },
+    "clothing": {
+      "label": "Clothing & Shoes",
+      "monthlyBudget": {
+        "min": 30,
+        "typical": 60,
+        "max": 100
+      },
+      "stores": [
+        {
+          "name": "Primark / Pepco",
+          "notes": "Budget chains, widespread"
+        },
+        {
+          "name": "Zara / H&M / Bershka",
+          "notes": "Mid-range, in shopping centres"
+        },
+        {
+          "name": "Saldos (seasonal sales)",
+          "notes": "Sales in Jan and Aug — 30-60% off"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 60,
+    "discounts": [
+      {
+        "name": "Passe Social+ / Sub23 Senior",
+        "description": "Reduced-rate monthly transit pass for 65+ in Lisbon/Porto metro areas (~50% off).",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "CP Senior Rail Card",
+        "description": "Comboios de Portugal offers 50% off rail travel for 65+.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Museum discounts",
+        "description": "Free or 50% off entry at national museums and monuments for 65+.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "IRS deductions",
+        "description": "Additional tax deductions for residents 65+ including healthcare expense deductions.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Pharmacy copay cap",
+        "description": "Pensioners on SNS get reduced medication copays. Many chronic medications free or deeply discounted.",
+        "eligibilityAge": 0
+      }
+    ]
   }
 }

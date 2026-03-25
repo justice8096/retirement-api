@@ -122,5 +122,656 @@
         "url": "https://fi.google.com/about/plans"
       }
     ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 235,
+      "typical": 294,
+      "max": 368
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 190,
+        "seniorDiscounts": "Marenda (set lunch) €7-10 at konobe. No tipping expected, rounding up common.",
+        "notes": "Lunch for 2 at konoba ~€18-20, 2x/week = ~€170/mo = ~$190/mo in Zagreb, Croatia."
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 28,
+        "seniorDiscounts": "No specific senior discounts.",
+        "notes": "A1/T-Com/Iskon fiber €20-28/mo. ~$22-32/mo."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 12,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€10.99/mo in Croatia. ~$12/mo."
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 6,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€4.99/mo. Includes Prime Video. ~$6/mo."
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 8,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€6.99/mo. ~$8/mo."
+      },
+      {
+        "name": "NFL RedZone",
+        "monthlyCost": 15,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "DAZN NFL Game Pass €19.99/mo during season. Annualized ~€13/mo (~$15)."
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 20,
+        "seniorDiscounts": "Some municipal sports centres offer senior rates.",
+        "notes": "Local gyms €15-25/mo. ~$17-28/mo."
+      },
+      {
+        "name": "Parks/Outdoors",
+        "monthlyCost": 0,
+        "seniorDiscounts": "National park entry fees €5-15, some senior discounts.",
+        "notes": "Free beaches, parks, coastal walks. National parks have entry fees."
+      },
+      {
+        "name": "Books/Media",
+        "monthlyCost": 5,
+        "seniorDiscounts": "Public libraries (knjižnica) free.",
+        "notes": "Public libraries free. Budget for books."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 10,
+        "seniorDiscounts": "No specific discounts. Coffee culture very affordable.",
+        "notes": "Kava (coffee) ~€1.20-2.00. Budget for 2 visits/week. ~$10/mo."
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 29,
+      "typical": 63,
+      "max": 241
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 35,
+        "senior": 18,
+        "notes": "Zagreb transit pass. Seniors 65+ eligible for 50% reduced transit passes in most cities. Registration at transit office with valid ID."
+      },
+      "singleRide": 1.15,
+      "coverage": "ZET trams and buses in Zagreb. Local bus networks in Split and Dubrovnik. Intercity buses via FlixBus and Croatia Bus.",
+      "seniorDiscount": "Seniors 65+ eligible for 50% reduced transit passes in most cities. Registration at transit office with valid ID."
+    },
+    "rideShare": {
+      "baseFare": 3.22,
+      "perKm": 0.92,
+      "typicalCrossTownTrip": {
+        "min": 6,
+        "typical": 9,
+        "max": 12
+      },
+      "availability": "Uber available in Zagreb, Split, Dubrovnik. Bolt also operates. Taxis regulated with meters."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 30,
+        "initialRegistration": {
+          "min": 100,
+          "typical": 200,
+          "max": 400
+        },
+        "notes": "Annual registration includes road tax based on engine size. Tehnički pregled (inspection) required annually."
+      },
+      "insurance": {
+        "monthlyMin": 23,
+        "monthlyTypical": 35,
+        "monthlyMax": 57,
+        "notes": "Third-party (AO) mandatory from ~$20/mo. Kasko (comprehensive) $30-50/mo. Croatia adopted EUR in 2023."
+      },
+      "fuel": {
+        "pricePerLiter": 1.6,
+        "monthlyEstimate": {
+          "min": 46,
+          "typical": 69,
+          "max": 109
+        },
+        "notes": "Eurosuper 95 ~$1.55-1.65/L. Eurodiesel ~$1.50-1.60/L."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 35,
+          "typical": 46,
+          "max": 57
+        },
+        "hourlyStreet": 0.92,
+        "notes": "Zone-based parking in cities (Zone 1 most expensive). Resident permits available. Coastal areas pricier in summer."
+      },
+      "tolls": {
+        "monthlyEstimate": 17,
+        "notes": "Estimated monthly toll/highway costs for Zagreb area."
+      },
+      "seniorDiscounts": "Seniors 65+ eligible for 50% reduced transit passes in most cities. Registration at transit office with valid ID."
+    },
+    "walkability": "Excellent walkability in old town areas. Compact coastal cities are very pedestrian-friendly.",
+    "monthlyEstimate": {
+      "carFree": {
+        "min": 29,
+        "typical": 63,
+        "max": 103,
+        "notes": "Transit pass + occasional ride-share. Good for urban core living."
+      },
+      "withCar": {
+        "min": 150,
+        "typical": 241,
+        "max": 345,
+        "notes": "Includes insurance, fuel, parking, maintenance. Higher urban parking and insurance costs."
+      }
+    }
+  },
+  "visionDental": {
+    "monthlyBudget": {
+      "min": 20,
+      "typical": 45,
+      "max": 80
+    },
+    "vision": {
+      "eyeExam": {
+        "withInsurance": 0,
+        "withoutInsurance": 17,
+        "notes": "Pregled ociju ~15 EUR. HZZO (public health) covers ophthalmology. Private ~15-25 EUR."
+      },
+      "glasses": {
+        "basic": 45,
+        "progressive": 120,
+        "contacts12mo": 100,
+        "notes": "Basic frames+lenses ~40 EUR. Progressive ~100 EUR. HZZO subsidizes glasses for children and some adults."
+      },
+      "insurance": {
+        "monthlyPremium": 0,
+        "coverage": "HZZO covers ophthalmology; partial glasses subsidy for eligible patients",
+        "notes": "No standalone vision insurance. Supplemental HZZO (dopunsko) ~10 EUR/mo covers participation fees for all medical visits."
+      }
+    },
+    "dental": {
+      "cleaning": {
+        "withInsurance": 0,
+        "withoutInsurance": 28,
+        "notes": "Ciscenje zubi ~25 EUR. HZZO covers 1 free preventive dental visit per year."
+      },
+      "filling": {
+        "withInsurance": 8,
+        "withoutInsurance": 40,
+        "notes": "Plomba ~35 EUR. Basic fillings covered by HZZO with small participation fee."
+      },
+      "crown": {
+        "withInsurance": 140,
+        "withoutInsurance": 228,
+        "notes": "Krunica ~200 EUR. Croatia is a dental tourism hub; prices 50-70% less than Western EU."
+      },
+      "insurance": {
+        "monthlyPremium": 10,
+        "coverage": "HZZO supplemental (dopunsko), covers participation fees + basic dental",
+        "notes": "Supplemental insurance ~10 EUR/mo. Covers participation fees (20% copay). Basic dental (cleanings, fillings, extractions) covered by public HZZO."
+      }
+    },
+    "annualEstimate": {
+      "withInsurance": {
+        "premiums": 120,
+        "outOfPocket": 80,
+        "total": 200,
+        "monthlyEquiv": 17
+      },
+      "withoutInsurance": {
+        "outOfPocket": 230,
+        "monthlyEquiv": 19
+      }
+    }
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 24,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Local markets or supermarket"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 18,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Seasonal local fruit"
+          },
+          {
+            "name": "Leafy Greens",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tomatoes",
+            "monthlyCost": 5,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": "Local grown"
+          },
+          {
+            "name": "Potatoes/Onions",
+            "monthlyCost": 4,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "protein",
+        "name": "Protein",
+        "items": [
+          {
+            "name": "Chicken breast",
+            "monthlyCost": 17,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "~€4.0/kg"
+          },
+          {
+            "name": "Ground beef",
+            "monthlyCost": 20,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "~€4.8/kg"
+          },
+          {
+            "name": "Fish (local catch)",
+            "monthlyCost": 18,
+            "quantity": 1.5,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "Market fish, seasonal"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 6,
+            "quantity": 4,
+            "unit": "dozen/month",
+            "forWhom": "shared",
+            "notes": "~€1.5/dozen"
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy",
+        "items": [
+          {
+            "name": "Milk",
+            "monthlyCost": 5,
+            "quantity": 8,
+            "unit": "liters/month",
+            "forWhom": "shared",
+            "notes": "~€0.6/L"
+          },
+          {
+            "name": "Cheese (local + imported)",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": "Mix of local and imported"
+          },
+          {
+            "name": "Yogurt",
+            "monthlyCost": 4,
+            "quantity": 8,
+            "unit": "pots/month",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Bread",
+            "monthlyCost": 6,
+            "quantity": 1,
+            "unit": "daily",
+            "forWhom": "shared",
+            "notes": "Local bakery or supermarket"
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 4,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Rice",
+            "monthlyCost": 3,
+            "quantity": 1,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Olive oil",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "L/month",
+            "forWhom": "shared",
+            "notes": "~€3.4/L"
+          },
+          {
+            "name": "Canned goods/sauces",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 6,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "adults",
+            "notes": "Ground coffee ~€1.9/250g"
+          },
+          {
+            "name": "Water",
+            "monthlyCost": 4,
+            "quantity": 20,
+            "unit": "bottles/month",
+            "forWhom": "shared",
+            "notes": "Tap safe in most areas; mineral preferred"
+          },
+          {
+            "name": "Wine",
+            "monthlyCost": 12,
+            "quantity": 4,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Local wine ~€2.6/bottle"
+          },
+          {
+            "name": "Beer",
+            "monthlyCost": 7,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Local beer ~€0.8/500ml"
+          }
+        ]
+      },
+      {
+        "id": "pet",
+        "name": "Pet Food",
+        "items": [
+          {
+            "name": "Premium dog food",
+            "monthlyCost": 29,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": "Royal Canin/Hills from pet shops or vet clinics"
+          },
+          {
+            "name": "Dog treats",
+            "monthlyCost": 6,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom house or ground-floor apartment",
+    "monthlyBudget": {
+      "min": 600,
+      "max": 975,
+      "typical": 750
+    },
+    "breakdown": {
+      "baseRent": 750,
+      "rentersInsurance": 0,
+      "localTaxesFees": 0,
+      "total": 750,
+      "notes": "Renter's insurance not standard in most European countries. Utilities billed separately."
+    },
+    "taxNotes": "No rental tax for tenants. Landlord pays income tax on rental income. Communal charges (komunalna naknada) vary by municipality.",
+    "leaseTerms": "1-year lease standard, renewable. Security deposit 1-2 months rent. 30-day notice typical for either party.",
+    "marketNotes": "Capital city, most affordable. Good apartment stock. Suburban houses available. Best value Croatian location."
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Konzum",
+        "type": "supermarket",
+        "website": "https://www.konzum.hr/",
+        "notes": "Croatia's largest chain (Fortenova). Super and Maxi formats.",
+        "videos": []
+      },
+      {
+        "name": "Lidl",
+        "type": "discount-supermarket",
+        "website": "https://www.lidl.hr/",
+        "notes": "Best prices. Popular since 2006 entry. Growing store network.",
+        "videos": []
+      },
+      {
+        "name": "Kaufland",
+        "type": "hypermarket",
+        "website": "https://www.kaufland.hr/",
+        "notes": "Schwarz Group hypermarket. Large selection, competitive prices.",
+        "videos": []
+      },
+      {
+        "name": "Spar",
+        "type": "supermarket",
+        "website": "https://www.spar.hr/",
+        "notes": "Interspar hypermarkets and Spar supermarkets. Good fresh sections.",
+        "videos": []
+      },
+      {
+        "name": "Tržnica",
+        "type": "farmers-market",
+        "website": "",
+        "notes": "Daily open-air markets (tržnica) in every city. Fresh local produce, cheese, honey.",
+        "videos": []
+      }
+    ]
+  },
+  "healthcare": {
+    "system": "HZZO (Croatian Health Insurance Fund) + Private supplement",
+    "coverageSummary": "Croatia provides public healthcare via HZZO for residents (mandatory insurance ~€50/mo). Good public system. Private insurance optional for faster specialist access.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD"
+      ],
+      "costs": [
+        {
+          "item": "HZZO mandatory insurance",
+          "monthlyCost": 50,
+          "notes": "~€50/mo mandatory health contribution"
+        },
+        {
+          "item": "Private supplement (Croatia Osiguranje)",
+          "monthlyCost": 60,
+          "notes": "Dopunsko + additional private coverage"
+        },
+        {
+          "item": "GP visits (liječnik opće prakse)",
+          "monthlyCost": 0,
+          "notes": "Free with HZZO registration"
+        },
+        {
+          "item": "Specialist visits (ophthalmologist)",
+          "monthlyCost": 15,
+          "notes": "Private for faster AMD monitoring"
+        },
+        {
+          "item": "Lab work",
+          "monthlyCost": 5,
+          "notes": "Covered by HZZO, small copay for some tests"
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Gout"
+      ],
+      "costs": [
+        {
+          "item": "HZZO mandatory insurance",
+          "monthlyCost": 50,
+          "notes": "~€50/mo mandatory"
+        },
+        {
+          "item": "Private supplement",
+          "monthlyCost": 45,
+          "notes": "Dopunsko + additional"
+        },
+        {
+          "item": "GP visits",
+          "monthlyCost": 0,
+          "notes": "Free with HZZO"
+        },
+        {
+          "item": "Specialist visits",
+          "monthlyCost": 10,
+          "notes": "Endocrinologist quarterly"
+        },
+        {
+          "item": "Lab work",
+          "monthlyCost": 5,
+          "notes": "HbA1c + uric acid panels"
+        }
+      ]
+    }
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Hair Care",
+      "priceRange": {
+        "cut": "10-20",
+        "color": "30-55",
+        "fullService": "45-85"
+      },
+      "notes": "Very few Afro hair salons. Zagreb has limited options. Bring own products, consider online ordering.",
+      "providers": [
+        {
+          "name": "International hair salons",
+          "type": "Salon",
+          "address": "City center",
+          "distanceKm": 5,
+          "rating": 4.0,
+          "notes": "Some salons with multi-textured experience",
+          "website": ""
+        },
+        {
+          "name": "Local frizerski salon",
+          "type": "Salon",
+          "address": "Various",
+          "distanceKm": 2,
+          "rating": 4.3,
+          "notes": "Standard Croatian salon",
+          "website": ""
+        }
+      ]
+    },
+    "clothing": {
+      "label": "Clothing & Shoes",
+      "monthlyBudget": {
+        "min": 30,
+        "typical": 55,
+        "max": 90
+      },
+      "stores": [
+        {
+          "name": "Pepco / KiK",
+          "notes": "Budget European chains"
+        },
+        {
+          "name": "Zara / H&M / Reserved",
+          "notes": "Mid-range in shopping centres"
+        },
+        {
+          "name": "Popusti (seasonal sales)",
+          "notes": "Sales in Jan and Jul — 30-60% off"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 60,
+    "discounts": [
+      {
+        "name": "HŽ Senior Rail Discount",
+        "description": "30% off Hrvatske željeznice (Croatian Railways) for 60+.",
+        "eligibilityAge": 60
+      },
+      {
+        "name": "ZET/Promet Senior Pass",
+        "description": "Free or reduced local transit for 65+ in Zagreb, Split, and other cities.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Museum discounts",
+        "description": "Reduced entry at national museums for 60+. Some free days.",
+        "eligibilityAge": 60
+      },
+      {
+        "name": "HZZO dopunsko exemption",
+        "description": "Supplementary health insurance (dopunsko) free for pensioners with pension below threshold.",
+        "eligibilityAge": 0
+      },
+      {
+        "name": "Utility subsidies",
+        "description": "Municipal energy assistance programs for low-income pensioners.",
+        "eligibilityAge": 0
+      }
+    ]
   }
 }

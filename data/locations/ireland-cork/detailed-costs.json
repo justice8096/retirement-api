@@ -122,5 +122,646 @@
         "url": "https://fi.google.com/about/plans"
       }
     ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 374,
+      "typical": 467,
+      "max": 584
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 290,
+        "seniorDiscounts": "Early bird menus widely available €15-25 for 2-3 courses.",
+        "notes": "Lunch for 2 at moderate restaurant ~€30-35, 2x/week = ~€260/mo = ~$290/mo in Cork, Ireland."
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 62,
+        "seniorDiscounts": "No specific senior discounts. Some providers offer loyalty rates.",
+        "notes": "Virgin Media/Sky 1 Gig €45-60/mo. ~$50-68/mo."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 14,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€12.99/mo in Ireland. ~$14/mo."
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 10,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€8.99/mo. Includes Prime Video. ~$10/mo."
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 8,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€6.99/mo. ~$8/mo."
+      },
+      {
+        "name": "NFL RedZone",
+        "monthlyCost": 18,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "DAZN NFL Game Pass €19.99/mo during season. Sky Sports NFL alternative. Annualized ~$18/mo."
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 39,
+        "seniorDiscounts": "Some local leisure centres offer over-65 rates.",
+        "notes": "Flyefit/Ben Dunne €30-40/mo, leisure centres €25-35/mo. ~$34-45/mo."
+      },
+      {
+        "name": "Parks/Outdoors",
+        "monthlyCost": 0,
+        "seniorDiscounts": "OPW Heritage Card €40/yr (seniors €30) for all heritage sites.",
+        "notes": "Free parks, coastal walks, greenways, national parks."
+      },
+      {
+        "name": "Books/Media",
+        "monthlyCost": 8,
+        "seniorDiscounts": "Public libraries free with library card.",
+        "notes": "Public libraries free. Budget for books, newspapers."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 18,
+        "seniorDiscounts": "No specific discounts.",
+        "notes": "Coffee ~€3.50-4.50. Budget for 2 visits/week. ~$18/mo."
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 69,
+      "typical": 115,
+      "max": 437
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 115,
+        "senior": 0,
+        "notes": "Irish residents 66+ qualify for Free Travel Pass (unlimited free public transport nationwide). Non-residents may not qualify immediately."
+      },
+      "singleRide": 2.64,
+      "coverage": "Bus Éireann intercity and local routes. Dublin Bus, Luas tram, and DART rail in Dublin. Limited rural transit.",
+      "seniorDiscount": "Irish residents 66+ qualify for Free Travel Pass (unlimited free public transport nationwide). Non-residents may not qualify immediately."
+    },
+    "rideShare": {
+      "baseFare": 4.37,
+      "perKm": 1.49,
+      "typicalCrossTownTrip": {
+        "min": 14,
+        "typical": 18,
+        "max": 23
+      },
+      "availability": "Uber available as taxi booking only (no UberX). FreeNow app for taxis. Traditional taxi ranks."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 0,
+        "initialRegistration": {
+          "min": 200,
+          "typical": 400,
+          "max": 600
+        },
+        "notes": "Annual motor tax based on CO2 emissions. NCT (National Car Test) required every 2 years."
+      },
+      "insurance": {
+        "monthlyMin": 69,
+        "monthlyTypical": 92,
+        "monthlyMax": 138,
+        "notes": "Third-party from ~$60/mo. Comprehensive $80-120/mo. Insurance costs are among the highest in Europe."
+      },
+      "fuel": {
+        "pricePerLiter": 1.8,
+        "monthlyEstimate": {
+          "min": 81,
+          "typical": 115,
+          "max": 173
+        },
+        "notes": "Petrol ~$1.75-1.85/L. Diesel ~$1.65-1.80/L."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 115,
+          "typical": 150,
+          "max": 207
+        },
+        "hourlyStreet": 2.88,
+        "notes": "Pay-and-display in town centers. Resident permits available in some areas. Multi-story car parks $100-180/mo."
+      },
+      "tolls": {
+        "monthlyEstimate": 29,
+        "notes": "Estimated monthly toll/highway costs for Cork area."
+      },
+      "seniorDiscounts": "Irish residents 66+ qualify for Free Travel Pass (unlimited free public transport nationwide). Non-residents may not qualify immediately."
+    },
+    "walkability": "Walkable town centers, especially in smaller cities. Larger cities have good pedestrian infrastructure.",
+    "monthlyEstimate": {
+      "carFree": {
+        "min": 69,
+        "typical": 115,
+        "max": 184,
+        "notes": "Transit pass + occasional ride-share. Good for urban core living."
+      },
+      "withCar": {
+        "min": 299,
+        "typical": 437,
+        "max": 610,
+        "notes": "Includes insurance, fuel, parking, maintenance. Higher urban parking and insurance costs."
+      }
+    }
+  },
+  "visionDental": {
+    "monthlyBudget": {
+      "min": 50,
+      "typical": 85,
+      "max": 140
+    },
+    "vision": {
+      "eyeExam": {
+        "withInsurance": 10,
+        "withoutInsurance": 56,
+        "notes": "Eye test ~50 EUR. PRSI Treatment Benefit covers 1 free eye exam every 2 years for eligible contributors."
+      },
+      "glasses": {
+        "basic": 100,
+        "progressive": 230,
+        "contacts12mo": 190,
+        "notes": "Frames+lenses ~90 EUR with PRSI contribution. Progressive ~200 EUR. PRSI gives up to 51.50 EUR toward glasses every 2 years."
+      },
+      "insurance": {
+        "monthlyPremium": 0,
+        "coverage": "PRSI Treatment Benefit covers 1 exam/2yr + 51.50 EUR glasses contribution",
+        "notes": "No separate vision insurance. Private health insurance (VHI, Laya, Irish Life) may include optical benefit. Medical card holders get free eye tests."
+      }
+    },
+    "dental": {
+      "cleaning": {
+        "withInsurance": 20,
+        "withoutInsurance": 67,
+        "notes": "Scale and polish ~60 EUR. PRSI covers 1 free dental exam + cleaning per year for eligible PRSI contributors."
+      },
+      "filling": {
+        "withInsurance": 40,
+        "withoutInsurance": 112,
+        "notes": "Composite filling ~100 EUR. PRSI does not cover fillings. Private dental plan recommended."
+      },
+      "crown": {
+        "withInsurance": 450,
+        "withoutInsurance": 672,
+        "notes": "Porcelain crown ~600 EUR. Major work expensive; dental plans help with 25-40% discount."
+      },
+      "insurance": {
+        "monthlyPremium": 20,
+        "coverage": "DeCare Dental or equivalent, PRSI exam + cleaning, 30% off treatments",
+        "notes": "Dental plans ~18 EUR/mo. DeCare is main Irish dental insurer. Medical card provides free dental for low-income residents."
+      }
+    },
+    "annualEstimate": {
+      "withInsurance": {
+        "premiums": 240,
+        "outOfPocket": 180,
+        "total": 420,
+        "monthlyEquiv": 35
+      },
+      "withoutInsurance": {
+        "outOfPocket": 550,
+        "monthlyEquiv": 46
+      }
+    }
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 31,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Local markets or supermarket"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 24,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Seasonal local fruit"
+          },
+          {
+            "name": "Leafy Greens",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tomatoes",
+            "monthlyCost": 7,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": "Local grown"
+          },
+          {
+            "name": "Potatoes/Onions",
+            "monthlyCost": 6,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "protein",
+        "name": "Protein",
+        "items": [
+          {
+            "name": "Chicken breast",
+            "monthlyCost": 22,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "~€5.2/kg"
+          },
+          {
+            "name": "Ground beef",
+            "monthlyCost": 27,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "~€6.3/kg"
+          },
+          {
+            "name": "Fish (local catch)",
+            "monthlyCost": 24,
+            "quantity": 1.5,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "Market fish, seasonal"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 8,
+            "quantity": 4,
+            "unit": "dozen/month",
+            "forWhom": "shared",
+            "notes": "~€2.0/dozen"
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy",
+        "items": [
+          {
+            "name": "Milk",
+            "monthlyCost": 7,
+            "quantity": 8,
+            "unit": "liters/month",
+            "forWhom": "shared",
+            "notes": "~€0.8/L"
+          },
+          {
+            "name": "Cheese (local + imported)",
+            "monthlyCost": 13,
+            "quantity": 1,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": "Mix of local and imported"
+          },
+          {
+            "name": "Yogurt",
+            "monthlyCost": 6,
+            "quantity": 8,
+            "unit": "pots/month",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Bread",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "daily",
+            "forWhom": "shared",
+            "notes": "Local bakery or supermarket"
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 6,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Rice",
+            "monthlyCost": 4,
+            "quantity": 1,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Olive oil",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "L/month",
+            "forWhom": "shared",
+            "notes": "~€4.5/L"
+          },
+          {
+            "name": "Canned goods/sauces",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "adults",
+            "notes": "Ground coffee ~€2.4/250g"
+          },
+          {
+            "name": "Water",
+            "monthlyCost": 6,
+            "quantity": 20,
+            "unit": "bottles/month",
+            "forWhom": "shared",
+            "notes": "Tap safe in most areas; mineral preferred"
+          },
+          {
+            "name": "Wine",
+            "monthlyCost": 15,
+            "quantity": 4,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Local wine ~€3.5/bottle"
+          },
+          {
+            "name": "Beer",
+            "monthlyCost": 10,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Local beer ~€1.0/500ml"
+          }
+        ]
+      },
+      {
+        "id": "pet",
+        "name": "Pet Food",
+        "items": [
+          {
+            "name": "Premium dog food",
+            "monthlyCost": 38,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": "Royal Canin/Hills from pet shops or vet clinics"
+          },
+          {
+            "name": "Dog treats",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom house or ground-floor apartment",
+    "monthlyBudget": {
+      "min": 1200,
+      "max": 1950,
+      "typical": 1500
+    },
+    "breakdown": {
+      "baseRent": 1500,
+      "rentersInsurance": 0,
+      "localTaxesFees": 0,
+      "total": 1500,
+      "notes": "Renter's insurance not standard in most European countries. Utilities billed separately."
+    },
+    "taxNotes": "No rental tax for tenants. LPT (Local Property Tax) is landlord responsibility. No stamp duty on residential leases.",
+    "leaseTerms": "Part 4 tenancy rights after 6 months (up to 6-year security). Rent Pressure Zones cap increases at 2%/year. Security deposit 1 month rent. 28-day notice minimum.",
+    "marketNotes": "Second city, more affordable than Dublin. Mix of terraced houses and suburban estates. Rental supply tight."
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Tesco Ireland",
+        "type": "supermarket",
+        "website": "https://www.tesco.ie/",
+        "notes": "Largest chain in Ireland. Superstore, Metro, and Express formats.",
+        "videos": []
+      },
+      {
+        "name": "SuperValu",
+        "type": "supermarket",
+        "website": "https://www.supervalu.ie/",
+        "notes": "Musgrave-owned. Strong community presence, good fresh food.",
+        "videos": []
+      },
+      {
+        "name": "Lidl",
+        "type": "discount-supermarket",
+        "website": "https://www.lidl.ie/",
+        "notes": "Budget-friendly. Popular bakery. Weekly themed promotions.",
+        "videos": []
+      },
+      {
+        "name": "Aldi",
+        "type": "discount-supermarket",
+        "website": "https://www.aldi.ie/",
+        "notes": "Growing presence. Good value on everyday items.",
+        "videos": []
+      },
+      {
+        "name": "Farmers markets",
+        "type": "farmers-market",
+        "website": "",
+        "notes": "Weekly markets in most towns. Local artisan cheese, bread, organic produce.",
+        "videos": []
+      }
+    ]
+  },
+  "healthcare": {
+    "system": "HSE (Health Service Executive) + Private supplement",
+    "coverageSummary": "Ireland provides public healthcare via HSE. GP Visit Card available for 70+ (free GP visits). Hospital care free in public hospitals (may wait). Private insurance (VHI, Laya) common for faster access.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD"
+      ],
+      "costs": [
+        {
+          "item": "Private health insurance (VHI/Laya)",
+          "monthlyCost": 180,
+          "notes": "Comprehensive plan, age-rated. AMD coverage."
+        },
+        {
+          "item": "GP visits",
+          "monthlyCost": 15,
+          "notes": "€50-65/visit, ~1/month. Free with GP Visit Card at 70+."
+        },
+        {
+          "item": "Specialist visits (ophthalmologist)",
+          "monthlyCost": 20,
+          "notes": "Private for AMD monitoring. Public wait 6-12 months."
+        },
+        {
+          "item": "Lab work",
+          "monthlyCost": 10,
+          "notes": "Quarterly blood tests. Some free via GP, others private."
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Gout"
+      ],
+      "costs": [
+        {
+          "item": "Private health insurance",
+          "monthlyCost": 160,
+          "notes": "Standard VHI/Laya plan"
+        },
+        {
+          "item": "GP visits",
+          "monthlyCost": 15,
+          "notes": "€50-65/visit. Free at 70+ with GP Visit Card."
+        },
+        {
+          "item": "Specialist visits",
+          "monthlyCost": 15,
+          "notes": "Endocrinologist quarterly"
+        },
+        {
+          "item": "Lab work",
+          "monthlyCost": 10,
+          "notes": "HbA1c + metabolic panel"
+        }
+      ]
+    }
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Hair Care",
+      "priceRange": {
+        "cut": "25-45",
+        "color": "60-100",
+        "fullService": "85-150"
+      },
+      "notes": "Afro hair salons in Dublin and Cork. Growing number of diversity-focused salons.",
+      "providers": [
+        {
+          "name": "Afro hair salons",
+          "type": "Salon",
+          "address": "City center",
+          "distanceKm": 5,
+          "rating": 4.2,
+          "notes": "Textured hair, braids, locs",
+          "website": ""
+        },
+        {
+          "name": "Local hairdresser",
+          "type": "Salon",
+          "address": "Various",
+          "distanceKm": 2,
+          "rating": 4.4,
+          "notes": "Standard salon",
+          "website": ""
+        }
+      ]
+    },
+    "clothing": {
+      "label": "Clothing & Shoes",
+      "monthlyBudget": {
+        "min": 50,
+        "typical": 85,
+        "max": 140
+      },
+      "stores": [
+        {
+          "name": "Penneys (Primark)",
+          "notes": "Ireland's original Primark — very affordable"
+        },
+        {
+          "name": "Dunnes Stores / M&S",
+          "notes": "Mid-range Irish and British chains"
+        },
+        {
+          "name": "Sales (Jan/Jul)",
+          "notes": "Post-Christmas and summer clearances — 30-60% off"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 60,
+    "discounts": [
+      {
+        "name": "Free Travel Pass",
+        "description": "Free public transport (bus, rail, DART, Luas) for all residents 66+. Covers entire country.",
+        "eligibilityAge": 66
+      },
+      {
+        "name": "Household Benefits Package",
+        "description": "Free electricity/gas allowance and free TV licence for 70+ (or 66+ on certain payments).",
+        "eligibilityAge": 66
+      },
+      {
+        "name": "GP Visit Card",
+        "description": "Free GP visits for all residents 70+. Under 70 available if income below threshold.",
+        "eligibilityAge": 70
+      },
+      {
+        "name": "Drug Payment Scheme",
+        "description": "Maximum €80/month family copay on prescription drugs. Medical card holders (means-tested) pay nothing.",
+        "eligibilityAge": 0
+      },
+      {
+        "name": "Heritage Card Senior",
+        "description": "Reduced entry at OPW heritage sites for 60+. Some sites free.",
+        "eligibilityAge": 60
+      }
+    ]
   }
 }

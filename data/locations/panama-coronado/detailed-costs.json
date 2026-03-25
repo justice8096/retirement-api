@@ -122,5 +122,440 @@
         "url": "https://fi.google.com/about/plans"
       }
     ]
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 33,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Local market or supermarket"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 21,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Tropical fruits widely available"
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 11,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Potatoes / Sweet Potatoes",
+            "monthlyCost": 7,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet staple"
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 6,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet vegetables"
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 5,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Digestive health"
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 27,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Primary protein for adults & dog"
+          },
+          {
+            "name": "Ground Beef / Turkey",
+            "monthlyCost": 24,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean ground for dog food base"
+          },
+          {
+            "name": "Fish (local catch)",
+            "monthlyCost": 21,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Fresh local fish often cheaper than US"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 7,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 6,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Home-cooked dog diet essential"
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk",
+            "monthlyCost": 7,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Cheese (local + imported)",
+            "monthlyCost": 12,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": "Local cheese very affordable"
+          },
+          {
+            "name": "Yogurt",
+            "monthlyCost": 6,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 5,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Rice / Pasta / Beans",
+            "monthlyCost": 12,
+            "quantity": 1,
+            "unit": "monthly stock",
+            "forWhom": "shared",
+            "notes": "Staples very affordable locally"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Canned Goods / Sauces",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Cooking Oils / Spices",
+            "monthlyCost": 6,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Snacks / Crackers",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee (ground/beans)",
+            "monthlyCost": 9,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": "Excellent local coffee in most LATAM countries"
+          },
+          {
+            "name": "Water (filtered/bottled)",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": "Garrafon/filtered water delivery common"
+          },
+          {
+            "name": "Juice / Soft Drinks",
+            "monthlyCost": 6,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Beer / Wine",
+            "monthlyCost": 12,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": "Local beer very affordable"
+          }
+        ]
+      },
+      {
+        "id": "pet",
+        "name": "Pet Food & Supplements",
+        "items": [
+          {
+            "name": "Premium Dog Food (kibble)",
+            "monthlyCost": 30,
+            "quantity": 30,
+            "unit": "lbs/month",
+            "forWhom": "dog",
+            "notes": "Imported premium brands cost more; local brands available"
+          },
+          {
+            "name": "Dog Supplements (glucosamine, fish oil)",
+            "monthlyCost": 12,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": ""
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 6,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom house/apartment",
+    "monthlyBudget": {
+      "min": 788,
+      "max": 1313,
+      "typical": 1050
+    },
+    "breakdown": {
+      "baseRent": 966,
+      "condoFees": 84,
+      "deposit": "1050 (1 month typical)",
+      "rentersInsurance": 0,
+      "localTaxesFees": 0,
+      "total": 1050,
+      "notes": "No rental tax in Panama. Condo fees (cuota de mantenimiento) common in apartment buildings."
+    },
+    "taxNotes": "No rental income tax for tenants. No VAT/ITBMS on residential rent. Property tax exemptions for new construction (up to 20 years).",
+    "leaseTerms": "12-month lease standard. Security deposit 1 month rent. Pensionado visa holders may get preferential lease terms.",
+    "marketNotes": "Panama City most expensive. Boquete and beach towns significantly cheaper. USD currency eliminates exchange risk.",
+    "sources": [
+      {
+        "name": "Compreoalquile",
+        "url": "https://www.compreoalquile.com/"
+      },
+      {
+        "name": "Encuentra24 Panama",
+        "url": "https://www.encuentra24.com/panama"
+      }
+    ]
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Riba Smith",
+        "type": "supermarket",
+        "website": "https://www.ribasmith.com/",
+        "notes": "Premium supermarket, excellent imported selection, expat favorite"
+      },
+      {
+        "name": "Super 99",
+        "type": "supermarket",
+        "website": "https://www.super99.com/",
+        "notes": "Largest local chain, good prices on local products"
+      },
+      {
+        "name": "PriceSmart",
+        "type": "warehouse",
+        "website": "https://www.pricesmart.com/",
+        "notes": "Costco-style warehouse club, great for bulk buying"
+      },
+      {
+        "name": "El Rey",
+        "type": "supermarket",
+        "website": "https://www.elrey.com/",
+        "notes": "Local chain with competitive pricing"
+      }
+    ]
+  },
+  "healthcare": {
+    "system": "CSS (public) + Private insurance",
+    "coverageSummary": "CSS public system available to Pensionado visa holders. Private insurance $200-350/mo per person. Many expats use private hospitals exclusively.",
+    "gpVisit": {
+      "withInsurance": 15,
+      "withoutInsurance": 40,
+      "notes": "Private GP visits $30-50. Pensionado discount 15-25% at many providers."
+    },
+    "specialist": {
+      "withInsurance": 25,
+      "withoutInsurance": 80,
+      "notes": "Specialists $60-100 without insurance. Hospital Punta Pacifica (Johns Hopkins affiliated)."
+    },
+    "privateInsurance": {
+      "monthlyPerPerson": 250,
+      "notes": "ASSA, Mapfre, or international plans. Pensionado visa may offer group rates."
+    },
+    "emergency": {
+      "withInsurance": 50,
+      "withoutInsurance": 600,
+      "notes": "Private ER visit $300-800. CSS emergency care available but lower quality."
+    },
+    "dental": {
+      "cleaning": 35,
+      "filling": 50,
+      "crown": 250,
+      "notes": "Good quality dental care. Prices 40-60% less than US."
+    },
+    "notes": "Panama has Johns Hopkins-affiliated hospital. Pensionado visa holders get 15-25% discounts on healthcare. Panama City has best facilities."
+  },
+  "personalCare": {
+    "hairCare": {
+      "mensCut": {
+        "min": 6,
+        "typical": 12,
+        "max": 25,
+        "notes": "Good barber shops throughout"
+      },
+      "womensCut": {
+        "min": 15,
+        "typical": 30,
+        "max": 50,
+        "notes": "Wide range of quality salons"
+      },
+      "colorTreatment": {
+        "min": 30,
+        "typical": 55,
+        "max": 100,
+        "notes": ""
+      }
+    },
+    "fitness": {
+      "gymMonthly": {
+        "min": 20,
+        "typical": 35,
+        "max": 55,
+        "notes": "PowerClub, Gold's Gym available in Coronado, Panama"
+      },
+      "yogaClassDrop": {
+        "min": 8,
+        "typical": 12,
+        "max": 18,
+        "notes": ""
+      }
+    },
+    "spa": {
+      "massage60min": {
+        "min": 20,
+        "typical": 35,
+        "max": 65,
+        "notes": "Pensionado discounts at some spas"
+      },
+      "manicure": {
+        "min": 6,
+        "typical": 10,
+        "max": 18,
+        "notes": ""
+      }
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 55,
+    "programName": "Jubilado/Pensionado Program",
+    "discounts": [
+      {
+        "name": "Jubilado/Pensionado Discounts",
+        "description": "One of the world's best senior discount programs. Women 55+, men 60+ (or retirees of any age with Pensionado visa).",
+        "eligibilityAge": 55
+      },
+      {
+        "name": "Medical Services",
+        "description": "15-25% off medical consultations, dental, eye exams, and hospital services.",
+        "eligibilityAge": 55
+      },
+      {
+        "name": "Transportation",
+        "description": "25% off domestic flights, 15% off bus fares, 15-20% off boat/ferry travel.",
+        "eligibilityAge": 55
+      },
+      {
+        "name": "Restaurants & Entertainment",
+        "description": "10-25% off restaurant meals (Mon-Thu typically), 25-50% off movies, entertainment, and hotels.",
+        "eligibilityAge": 55
+      },
+      {
+        "name": "Utilities & Services",
+        "description": "25% off electricity (first 500 kWh), 25% off water, 25% off phone service. One of the most generous utility discount programs globally.",
+        "eligibilityAge": 55
+      },
+      {
+        "name": "Property Tax Exemption",
+        "description": "Tax exemption on primary residence (up to $120,000 assessed value). New construction exempt up to 20 years.",
+        "eligibilityAge": 55
+      },
+      {
+        "name": "Closing Costs",
+        "description": "15% off mortgage closing costs and professional services (lawyers, architects).",
+        "eligibilityAge": 55
+      }
+    ]
   }
 }

@@ -122,5 +122,646 @@
         "url": "https://fi.google.com/about/plans"
       }
     ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 252,
+      "typical": 315,
+      "max": 394
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 200,
+        "seniorDiscounts": "Taverna menus affordable. No tipping expected but 5-10% appreciated.",
+        "notes": "Lunch for 2 at taverna ~€20-22, 2x/week = ~€180/mo = ~$200/mo in Crete, Greece."
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 34,
+        "seniorDiscounts": "No specific senior discounts.",
+        "notes": "Cosmote/Vodafone/Wind fiber €25-35/mo. ~$28-40/mo."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 13,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€11.99/mo in Greece. ~$13/mo."
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 6,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€4.99/mo. Includes Prime Video. ~$6/mo."
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 8,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€6.99/mo. ~$8/mo."
+      },
+      {
+        "name": "NFL RedZone",
+        "monthlyCost": 15,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "DAZN NFL Game Pass €19.99/mo during season. Annualized ~€13/mo (~$15)."
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 22,
+        "seniorDiscounts": "Municipal gyms (dimotiko gymnastirio) offer senior rates.",
+        "notes": "Local gyms €15-25/mo, municipal facilities cheaper. ~$17-28/mo."
+      },
+      {
+        "name": "Parks/Outdoors",
+        "monthlyCost": 0,
+        "seniorDiscounts": "EU citizens 65+ free entry to archaeological sites and museums.",
+        "notes": "Free beaches, parks, hiking trails, ancient sites (seniors free)."
+      },
+      {
+        "name": "Books/Media",
+        "monthlyCost": 5,
+        "seniorDiscounts": "Public libraries free.",
+        "notes": "Public libraries limited but free. Budget for books."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 12,
+        "seniorDiscounts": "No specific discounts. Kafeneio culture affordable.",
+        "notes": "Greek coffee/frappé ~€1.50-3.00. Budget for 2 visits/week. ~$12/mo."
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 26,
+      "typical": 51,
+      "max": 187
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 26,
+        "senior": 13,
+        "notes": "Crete transit pass. Seniors 65+ eligible for reduced fares (up to 50% off) on OASA transit in Athens. Island transit discounts vary."
+      },
+      "singleRide": 1.02,
+      "coverage": "Athens metro, tram, and bus network. KTEL intercity buses. Island locations rely on ferries and local buses.",
+      "seniorDiscount": "Seniors 65+ eligible for reduced fares (up to 50% off) on OASA transit in Athens. Island transit discounts vary."
+    },
+    "rideShare": {
+      "baseFare": 2.89,
+      "perKm": 0.63,
+      "typicalCrossTownTrip": {
+        "min": 4,
+        "typical": 7,
+        "max": 9
+      },
+      "availability": "Uber available in Athens. BEAT app popular. Taxis with meters throughout. Island taxis may use fixed fares."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 0,
+        "initialRegistration": {
+          "min": 150,
+          "typical": 300,
+          "max": 500
+        },
+        "notes": "Road tax (teli) annual, based on engine size. KTEO inspection every 2 years."
+      },
+      "insurance": {
+        "monthlyMin": 17,
+        "monthlyTypical": 26,
+        "monthlyMax": 43,
+        "notes": "Third-party mandatory, from ~$20/mo. Comprehensive $30-50/mo. Rates among lowest in EU."
+      },
+      "fuel": {
+        "pricePerLiter": 1.7,
+        "monthlyEstimate": {
+          "min": 34,
+          "typical": 55,
+          "max": 85
+        },
+        "notes": "Unleaded ~$1.65-1.75/L. Diesel ~$1.55-1.65/L. Island fuel prices may be 5-10% higher."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 26,
+          "typical": 38,
+          "max": 51
+        },
+        "hourlyStreet": 0.85,
+        "notes": "Controlled parking zones in cities. Free parking easier on islands and smaller towns."
+      },
+      "tolls": {
+        "monthlyEstimate": 13,
+        "notes": "Estimated monthly toll/highway costs for Crete area."
+      },
+      "seniorDiscounts": "Seniors 65+ eligible for reduced fares (up to 50% off) on OASA transit in Athens. Island transit discounts vary."
+    },
+    "walkability": "Excellent walkability in town centers and islands. Compact Greek towns designed for pedestrians.",
+    "monthlyEstimate": {
+      "carFree": {
+        "min": 26,
+        "typical": 51,
+        "max": 85,
+        "notes": "Transit pass + occasional ride-share. Limited transit — may need more ride-share trips."
+      },
+      "withCar": {
+        "min": 119,
+        "typical": 187,
+        "max": 272,
+        "notes": "Includes insurance, fuel, parking, maintenance. Moderate suburban costs."
+      }
+    }
+  },
+  "visionDental": {
+    "monthlyBudget": {
+      "min": 25,
+      "typical": 50,
+      "max": 90
+    },
+    "vision": {
+      "eyeExam": {
+        "withInsurance": 0,
+        "withoutInsurance": 23,
+        "notes": "Exam ~20 EUR. EOPYY (public health) covers ophthalmologist referral. Private ~20-30 EUR."
+      },
+      "glasses": {
+        "basic": 57,
+        "progressive": 140,
+        "contacts12mo": 115,
+        "notes": "Basic frames+lenses ~50 EUR. Progressive ~120 EUR. EOPYY provides partial glasses reimbursement with referral."
+      },
+      "insurance": {
+        "monthlyPremium": 0,
+        "coverage": "EOPYY covers ophthalmology + partial glasses reimbursement with prescription",
+        "notes": "No standalone vision insurance. Private health (Interamerican, Ethniki) may include optical. EOPYY reimburses ~40-100 EUR for glasses with prescription."
+      }
+    },
+    "dental": {
+      "cleaning": {
+        "withInsurance": 8,
+        "withoutInsurance": 34,
+        "notes": "Katharismos ~30 EUR. Very limited public dental via EOPYY. Most dental is private."
+      },
+      "filling": {
+        "withInsurance": 20,
+        "withoutInsurance": 45,
+        "notes": "Sfragisma ~40 EUR. Private dental very affordable by EU standards."
+      },
+      "crown": {
+        "withInsurance": 170,
+        "withoutInsurance": 285,
+        "notes": "Stefani porselanis ~250 EUR. Greece is a dental tourism destination. Quality excellent."
+      },
+      "insurance": {
+        "monthlyPremium": 12,
+        "coverage": "Private dental plan, free cleanings, 30% off treatments",
+        "notes": "Dental plans ~10 EUR/mo through private insurers. EOPYY covers minimal preventive dental only."
+      }
+    },
+    "annualEstimate": {
+      "withInsurance": {
+        "premiums": 144,
+        "outOfPocket": 100,
+        "total": 244,
+        "monthlyEquiv": 20
+      },
+      "withoutInsurance": {
+        "outOfPocket": 280,
+        "monthlyEquiv": 23
+      }
+    }
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 24,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Local markets or supermarket"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 19,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Seasonal local fruit"
+          },
+          {
+            "name": "Leafy Greens",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tomatoes",
+            "monthlyCost": 5,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": "Local grown"
+          },
+          {
+            "name": "Potatoes/Onions",
+            "monthlyCost": 4,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "protein",
+        "name": "Protein",
+        "items": [
+          {
+            "name": "Chicken breast",
+            "monthlyCost": 17,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "~€4.1/kg"
+          },
+          {
+            "name": "Ground beef",
+            "monthlyCost": 21,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "~€4.9/kg"
+          },
+          {
+            "name": "Fish (local catch)",
+            "monthlyCost": 19,
+            "quantity": 1.5,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "Market fish, seasonal"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 7,
+            "quantity": 4,
+            "unit": "dozen/month",
+            "forWhom": "shared",
+            "notes": "~€1.5/dozen"
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy",
+        "items": [
+          {
+            "name": "Milk",
+            "monthlyCost": 5,
+            "quantity": 8,
+            "unit": "liters/month",
+            "forWhom": "shared",
+            "notes": "~€0.7/L"
+          },
+          {
+            "name": "Cheese (local + imported)",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": "Mix of local and imported"
+          },
+          {
+            "name": "Yogurt",
+            "monthlyCost": 4,
+            "quantity": 8,
+            "unit": "pots/month",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Bread",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "daily",
+            "forWhom": "shared",
+            "notes": "Local bakery or supermarket"
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 4,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Rice",
+            "monthlyCost": 3,
+            "quantity": 1,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Olive oil",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "L/month",
+            "forWhom": "shared",
+            "notes": "~€3.5/L"
+          },
+          {
+            "name": "Canned goods/sauces",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "adults",
+            "notes": "Ground coffee ~€1.9/250g"
+          },
+          {
+            "name": "Water",
+            "monthlyCost": 4,
+            "quantity": 20,
+            "unit": "bottles/month",
+            "forWhom": "shared",
+            "notes": "Tap safe in most areas; mineral preferred"
+          },
+          {
+            "name": "Wine",
+            "monthlyCost": 12,
+            "quantity": 4,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Local wine ~€2.7/bottle"
+          },
+          {
+            "name": "Beer",
+            "monthlyCost": 8,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Local beer ~€0.8/500ml"
+          }
+        ]
+      },
+      {
+        "id": "pet",
+        "name": "Pet Food",
+        "items": [
+          {
+            "name": "Premium dog food",
+            "monthlyCost": 30,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": "Royal Canin/Hills from pet shops or vet clinics"
+          },
+          {
+            "name": "Dog treats",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom house or ground-floor apartment",
+    "monthlyBudget": {
+      "min": 640,
+      "max": 1040,
+      "typical": 800
+    },
+    "breakdown": {
+      "baseRent": 800,
+      "rentersInsurance": 0,
+      "localTaxesFees": 0,
+      "total": 800,
+      "notes": "Renter's insurance not standard in most European countries. Utilities billed separately."
+    },
+    "taxNotes": "No rental tax for tenants. ENFIA (property tax) is landlord responsibility. Stamp duty 3.6% on annual rent (typically landlord pays).",
+    "leaseTerms": "3-year minimum lease (even if contract says less). Security deposit 2 months rent. Landlord must give 3-month notice; tenant 1-month notice.",
+    "marketNotes": "Largest island, varied market. Affordable outside Chania/Heraklion centers. Good selection year-round."
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Sklavenitis",
+        "type": "supermarket",
+        "website": "https://www.sklavenitis.gr/",
+        "notes": "Largest Greek chain after Marinopoulos merger. Good prices.",
+        "videos": []
+      },
+      {
+        "name": "AB Vassilopoulos",
+        "type": "supermarket",
+        "website": "https://www.ab.gr/",
+        "notes": "Ahold Delhaize owned. Premium selection, good fresh departments.",
+        "videos": []
+      },
+      {
+        "name": "Lidl",
+        "type": "discount-supermarket",
+        "website": "https://www.lidl.gr/",
+        "notes": "Best prices on staples. Expanding rapidly in Greece.",
+        "videos": []
+      },
+      {
+        "name": "Masoutis",
+        "type": "supermarket",
+        "website": "https://www.masoutis.gr/",
+        "notes": "Strong in northern Greece. Good regional products.",
+        "videos": []
+      },
+      {
+        "name": "Laïkí agorá",
+        "type": "farmers-market",
+        "website": "",
+        "notes": "Weekly street markets (λαϊκή αγορά). Best prices on produce, olives, cheese, fish.",
+        "videos": []
+      }
+    ]
+  },
+  "healthcare": {
+    "system": "EOPYY (National Organization for Healthcare) + Private supplement",
+    "coverageSummary": "Greece provides public healthcare via EOPYY for residents with social insurance. Retirees can access via bilateral agreements or voluntary EOPYY enrollment. Private insurance affordable and common for expats.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD"
+      ],
+      "costs": [
+        {
+          "item": "Private health insurance (Ethniki/Interamerican)",
+          "monthlyCost": 110,
+          "notes": "Comprehensive policy, age-rated. AMD specialist coverage."
+        },
+        {
+          "item": "GP visits (pathologos)",
+          "monthlyCost": 10,
+          "notes": "€20-40/visit private. EOPYY copay €5 for contracted doctors."
+        },
+        {
+          "item": "Specialist visits (ophthalmologist)",
+          "monthlyCost": 15,
+          "notes": "Private for AMD. Public wait can be weeks."
+        },
+        {
+          "item": "Lab work",
+          "monthlyCost": 5,
+          "notes": "Quarterly blood tests. €10-20 private or covered by EOPYY."
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Gout"
+      ],
+      "costs": [
+        {
+          "item": "Private health insurance",
+          "monthlyCost": 90,
+          "notes": "Standard policy"
+        },
+        {
+          "item": "GP visits",
+          "monthlyCost": 10,
+          "notes": "€20-40/visit private"
+        },
+        {
+          "item": "Specialist visits",
+          "monthlyCost": 10,
+          "notes": "Endocrinologist quarterly"
+        },
+        {
+          "item": "Lab work",
+          "monthlyCost": 5,
+          "notes": "HbA1c + uric acid panels"
+        }
+      ]
+    }
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Hair Care",
+      "priceRange": {
+        "cut": "10-20",
+        "color": "35-60",
+        "fullService": "50-90"
+      },
+      "notes": "Very limited Afro hair salons. Athens has a few in Omonoia/Victoria area. Bring own products.",
+      "providers": [
+        {
+          "name": "Afro hair salons (Athens)",
+          "type": "Salon",
+          "address": "Athens center",
+          "distanceKm": 10,
+          "rating": 4.0,
+          "notes": "Limited options, mainly in immigrant neighborhoods",
+          "website": ""
+        },
+        {
+          "name": "Local kομμωτήριο",
+          "type": "Salon",
+          "address": "Various",
+          "distanceKm": 2,
+          "rating": 4.3,
+          "notes": "Standard Greek salon",
+          "website": ""
+        }
+      ]
+    },
+    "clothing": {
+      "label": "Clothing & Shoes",
+      "monthlyBudget": {
+        "min": 30,
+        "typical": 55,
+        "max": 95
+      },
+      "stores": [
+        {
+          "name": "Jumbo / Pepco",
+          "notes": "Budget options"
+        },
+        {
+          "name": "Zara / H&M / Bershka",
+          "notes": "Mid-range, in shopping centers"
+        },
+        {
+          "name": "Εκπτώσεις (seasonal sales)",
+          "notes": "Sales in Jan/Feb and Jul/Aug — 30-60% off"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 60,
+    "discounts": [
+      {
+        "name": "OASA Senior Transit Card",
+        "description": "Reduced-rate public transport (50% off) for 65+ in Athens/Thessaloniki.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "OSE Senior Rail Discount",
+        "description": "25% off rail travel for 60+ with OSE/Hellenic Train.",
+        "eligibilityAge": 60
+      },
+      {
+        "name": "Free museum entry",
+        "description": "EU citizens 65+ get free entry to all state archaeological sites and museums.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "EOPYY medication copay",
+        "description": "Pensioners pay 10% copay on chronic disease medications (vs 25% standard). Some medications free.",
+        "eligibilityAge": 0
+      },
+      {
+        "name": "KAPI Senior Centers",
+        "description": "Municipal senior centers (ΚΑΠΗ) offering free meals, healthcare screening, social activities for 60+.",
+        "eligibilityAge": 60
+      }
+    ]
   }
 }

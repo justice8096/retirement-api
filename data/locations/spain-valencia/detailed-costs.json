@@ -122,5 +122,646 @@
         "url": "https://fi.google.com/about/plans"
       }
     ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 302,
+      "typical": 377,
+      "max": 471
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 245,
+        "seniorDiscounts": "Menu del día widely available €10-15, includes drink. No tipping expected.",
+        "notes": "Lunch for 2: menú del día ~€25 (drink included), 2x/week = ~€217/mo = ~$245/mo in Valencia, Spain."
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 38,
+        "seniorDiscounts": "No specific senior discounts.",
+        "notes": "Movistar/Vodafone fiber €30-40/mo. O2 1 Gig €35/mo. ~$34-45/mo."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 14,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€12.99/mo in Spain. ~$14/mo."
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 6,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€4.99/mo (€49.90/yr). Includes Prime Video. ~$6/mo."
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 8,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€6.99/mo. ~$8/mo."
+      },
+      {
+        "name": "NFL RedZone",
+        "monthlyCost": 15,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "DAZN NFL Game Pass €19.99/mo during season (Sep-Feb). Annualized ~€13/mo (~$15)."
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 28,
+        "seniorDiscounts": "Municipal polideportivos offer senior rates €15-25/mo.",
+        "notes": "Basic Fit/McFit €20-30/mo, municipal gyms €15-25/mo. ~$22-34/mo."
+      },
+      {
+        "name": "Parks/Outdoors",
+        "monthlyCost": 0,
+        "seniorDiscounts": "Free parks and beaches. Senior transit passes available.",
+        "notes": "Free beaches, parks, paseos, hiking in sierras."
+      },
+      {
+        "name": "Books/Media",
+        "monthlyCost": 8,
+        "seniorDiscounts": "Bibliotecas públicas free with resident card.",
+        "notes": "Public libraries free. Budget for books, newspapers."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 15,
+        "seniorDiscounts": "No specific discounts. Café con leche very affordable.",
+        "notes": "Café con leche ~€1.50-2.00. Budget for 2 visits/week. ~$15/mo."
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 46,
+      "typical": 98,
+      "max": 322
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 49,
+        "senior": 25,
+        "notes": "Valencia transit pass. Pensionistas and those 65+ eligible for 50% discounts on local transit passes. Registration with tarjeta de transporte required."
+      },
+      "singleRide": 1.61,
+      "coverage": "Urban bus network with good city coverage. Metro in larger cities. Cercanías commuter rail for nearby towns.",
+      "seniorDiscount": "Pensionistas and those 65+ eligible for 50% discounts on local transit passes. Registration with tarjeta de transporte required."
+    },
+    "rideShare": {
+      "baseFare": 4.02,
+      "perKm": 1.09,
+      "typicalCrossTownTrip": {
+        "min": 9,
+        "typical": 13,
+        "max": 16
+      },
+      "availability": "Uber and Cabify available in major cities. Taxis regulated and metered."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 55,
+        "initialRegistration": {
+          "min": 150,
+          "typical": 350,
+          "max": 700
+        },
+        "notes": "Impuesto de circulación (road tax) varies by engine size. Annual inspection (ITV) for vehicles over 4 years."
+      },
+      "insurance": {
+        "monthlyMin": 35,
+        "monthlyTypical": 46,
+        "monthlyMax": 81,
+        "notes": "Third-party (terceros) from ~$30/mo. Comprehensive (todo riesgo) $40-70/mo."
+      },
+      "fuel": {
+        "pricePerLiter": 1.6,
+        "monthlyEstimate": {
+          "min": 52,
+          "typical": 86,
+          "max": 138
+        },
+        "notes": "Gasoline ~$1.55-1.65/L. Diesel ~$1.45-1.55/L."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 57,
+          "typical": 81,
+          "max": 115
+        },
+        "hourlyStreet": 1.38,
+        "notes": "Resident parking (zona azul) much cheaper with empadronamiento. Underground garages $50-100/mo."
+      },
+      "tolls": {
+        "monthlyEstimate": 17,
+        "notes": "Estimated monthly toll/highway costs for Valencia area."
+      },
+      "seniorDiscounts": "Pensionistas and those 65+ eligible for 50% discounts on local transit passes. Registration with tarjeta de transporte required."
+    },
+    "walkability": "Excellent walkability in most city centers. Compact neighborhoods with shops and services.",
+    "monthlyEstimate": {
+      "carFree": {
+        "min": 46,
+        "typical": 98,
+        "max": 161,
+        "notes": "Transit pass + occasional ride-share. Good for urban core living."
+      },
+      "withCar": {
+        "min": 207,
+        "typical": 322,
+        "max": 460,
+        "notes": "Includes insurance, fuel, parking, maintenance. Higher urban parking and insurance costs."
+      }
+    }
+  },
+  "visionDental": {
+    "monthlyBudget": {
+      "min": 35,
+      "typical": 65,
+      "max": 110
+    },
+    "vision": {
+      "eyeExam": {
+        "withInsurance": 0,
+        "withoutInsurance": 34,
+        "notes": "Exam ~30 EUR. Public health covers ophthalmologist referral. Private clinics charge 30-50 EUR."
+      },
+      "glasses": {
+        "basic": 90,
+        "progressive": 200,
+        "contacts12mo": 170,
+        "notes": "Basic frames+lenses ~80 EUR at chains like Optica2000 or Alain Afflelou. Progressive ~180 EUR. Not covered by public health."
+      },
+      "insurance": {
+        "monthlyPremium": 0,
+        "coverage": "Public health covers ophthalmology referrals; glasses/contacts not covered",
+        "notes": "No standalone vision insurance typical. Private health plans (Sanitas, Adeslas ~60 EUR/mo) include ophthalmology but not glasses."
+      }
+    },
+    "dental": {
+      "cleaning": {
+        "withInsurance": 0,
+        "withoutInsurance": 45,
+        "notes": "Limpieza dental ~40 EUR. Often included free with dental plan (seguro dental)."
+      },
+      "filling": {
+        "withInsurance": 34,
+        "withoutInsurance": 68,
+        "notes": "Empaste composite ~60 EUR. Dental plans cover 20-50% of basic treatments."
+      },
+      "crown": {
+        "withInsurance": 285,
+        "withoutInsurance": 400,
+        "notes": "Corona de porcelana ~350 EUR. Dental plans typically discount 20-30% on major work."
+      },
+      "insurance": {
+        "monthlyPremium": 17,
+        "coverage": "Seguro dental (Sanitas Dental, DKV), free cleanings, 20-50% off treatments",
+        "notes": "Dental-only plan ~15 EUR/mo. Includes free cleanings, x-rays, and discounted fillings/crowns. No annual maximum typical."
+      }
+    },
+    "annualEstimate": {
+      "withInsurance": {
+        "premiums": 204,
+        "outOfPocket": 150,
+        "total": 354,
+        "monthlyEquiv": 30
+      },
+      "withoutInsurance": {
+        "outOfPocket": 380,
+        "monthlyEquiv": 32
+      }
+    }
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 27,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Local markets or supermarket"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 21,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Seasonal local fruit"
+          },
+          {
+            "name": "Leafy Greens",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tomatoes",
+            "monthlyCost": 6,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": "Local grown"
+          },
+          {
+            "name": "Potatoes/Onions",
+            "monthlyCost": 5,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "protein",
+        "name": "Protein",
+        "items": [
+          {
+            "name": "Chicken breast",
+            "monthlyCost": 19,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "~€4.5/kg"
+          },
+          {
+            "name": "Ground beef",
+            "monthlyCost": 23,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "~€5.4/kg"
+          },
+          {
+            "name": "Fish (local catch)",
+            "monthlyCost": 21,
+            "quantity": 1.5,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "Market fish, seasonal"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 7,
+            "quantity": 4,
+            "unit": "dozen/month",
+            "forWhom": "shared",
+            "notes": "~€1.7/dozen"
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy",
+        "items": [
+          {
+            "name": "Milk",
+            "monthlyCost": 6,
+            "quantity": 8,
+            "unit": "liters/month",
+            "forWhom": "shared",
+            "notes": "~€0.7/L"
+          },
+          {
+            "name": "Cheese (local + imported)",
+            "monthlyCost": 11,
+            "quantity": 1,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": "Mix of local and imported"
+          },
+          {
+            "name": "Yogurt",
+            "monthlyCost": 5,
+            "quantity": 8,
+            "unit": "pots/month",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Bread",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "daily",
+            "forWhom": "shared",
+            "notes": "Local bakery or supermarket"
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 5,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Rice",
+            "monthlyCost": 4,
+            "quantity": 1,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Olive oil",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "L/month",
+            "forWhom": "shared",
+            "notes": "~€3.9/L"
+          },
+          {
+            "name": "Canned goods/sauces",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "adults",
+            "notes": "Ground coffee ~€2.1/250g"
+          },
+          {
+            "name": "Water",
+            "monthlyCost": 5,
+            "quantity": 20,
+            "unit": "bottles/month",
+            "forWhom": "shared",
+            "notes": "Tap safe in most areas; mineral preferred"
+          },
+          {
+            "name": "Wine",
+            "monthlyCost": 13,
+            "quantity": 4,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Local wine ~€3.0/bottle"
+          },
+          {
+            "name": "Beer",
+            "monthlyCost": 8,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Local beer ~€0.9/500ml"
+          }
+        ]
+      },
+      {
+        "id": "pet",
+        "name": "Pet Food",
+        "items": [
+          {
+            "name": "Premium dog food",
+            "monthlyCost": 33,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": "Royal Canin/Hills from pet shops or vet clinics"
+          },
+          {
+            "name": "Dog treats",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom house or ground-floor apartment",
+    "monthlyBudget": {
+      "min": 840,
+      "max": 1365,
+      "typical": 1050
+    },
+    "breakdown": {
+      "baseRent": 1050,
+      "rentersInsurance": 0,
+      "localTaxesFees": 0,
+      "total": 1050,
+      "notes": "Renter's insurance not standard in most European countries. Utilities billed separately."
+    },
+    "taxNotes": "No rental tax for tenants. IBI (property tax) is landlord responsibility. Comunidad (HOA) fees typically included or landlord responsibility.",
+    "leaseTerms": "5-year lease (Ley de Arrendamientos Urbanos). Tenant can leave after 6 months with 30-day notice. Security deposit 1-2 months rent. Landlord must justify rent increases.",
+    "marketNotes": "Affordable major city. Good mix of old-town apartments and suburban houses. Growing digital nomad scene."
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Mercadona",
+        "type": "supermarket",
+        "website": "https://www.mercadona.es/",
+        "notes": "Spain's largest chain. Excellent Hacendado own brand. Fresh bakery and deli.",
+        "videos": []
+      },
+      {
+        "name": "Lidl",
+        "type": "discount-supermarket",
+        "website": "https://www.lidl.es/",
+        "notes": "Best prices on staples. Growing Spanish presence.",
+        "videos": []
+      },
+      {
+        "name": "Carrefour",
+        "type": "hypermarket",
+        "website": "https://www.carrefour.es/",
+        "notes": "Hypermarkets in larger cities. Good international selection.",
+        "videos": []
+      },
+      {
+        "name": "Consum",
+        "type": "supermarket",
+        "website": "https://www.consum.es/",
+        "notes": "Valencian cooperative, strong in eastern Spain.",
+        "videos": []
+      },
+      {
+        "name": "Mercados municipales",
+        "type": "farmers-market",
+        "website": "",
+        "notes": "Municipal markets in every city. Fresh fish, meat, produce at competitive prices.",
+        "videos": []
+      }
+    ]
+  },
+  "healthcare": {
+    "system": "Seguridad Social + Private supplement",
+    "coverageSummary": "Spain provides free public healthcare via Seguridad Social for residents. Convenio Especial allows retirees to buy in (~€60/mo pp). Private insurance (Sanitas, Adeslas) recommended for shorter waits.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD"
+      ],
+      "costs": [
+        {
+          "item": "Private health insurance (Sanitas/Adeslas)",
+          "monthlyCost": 140,
+          "notes": "Comprehensive policy, age-rated for 60+. AMD coverage."
+        },
+        {
+          "item": "GP visits (médico de cabecera)",
+          "monthlyCost": 0,
+          "notes": "Free via public system or included in private"
+        },
+        {
+          "item": "Specialist visits (ophthalmologist)",
+          "monthlyCost": 15,
+          "notes": "AMD monitoring via private for shorter waits"
+        },
+        {
+          "item": "Lab work",
+          "monthlyCost": 5,
+          "notes": "Quarterly blood panels. Free in public, fast via private."
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Gout"
+      ],
+      "costs": [
+        {
+          "item": "Private health insurance",
+          "monthlyCost": 120,
+          "notes": "Standard private plan"
+        },
+        {
+          "item": "GP visits",
+          "monthlyCost": 0,
+          "notes": "Included in private plan"
+        },
+        {
+          "item": "Specialist visits (endocrinologist)",
+          "monthlyCost": 10,
+          "notes": "Quarterly diabetes management"
+        },
+        {
+          "item": "Lab work",
+          "monthlyCost": 5,
+          "notes": "HbA1c + uric acid panels"
+        }
+      ]
+    }
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Hair Care",
+      "priceRange": {
+        "cut": "12-25",
+        "color": "40-70",
+        "fullService": "60-100"
+      },
+      "notes": "Afro hair salons (peluquerías afro) available in major cities, especially areas with Latin American communities.",
+      "providers": [
+        {
+          "name": "Peluquerías afro",
+          "type": "Salon",
+          "address": "City center",
+          "distanceKm": 5,
+          "rating": 4.2,
+          "notes": "Specialized in Afro-textured hair, braids",
+          "website": ""
+        },
+        {
+          "name": "Local peluquería",
+          "type": "Salon",
+          "address": "Various",
+          "distanceKm": 2,
+          "rating": 4.3,
+          "notes": "Standard Spanish salon",
+          "website": ""
+        }
+      ]
+    },
+    "clothing": {
+      "label": "Clothing & Shoes",
+      "monthlyBudget": {
+        "min": 35,
+        "typical": 65,
+        "max": 110
+      },
+      "stores": [
+        {
+          "name": "Primark / Pepco",
+          "notes": "Budget basics"
+        },
+        {
+          "name": "Zara / Mango / H&M",
+          "notes": "Spanish-founded mid-range brands"
+        },
+        {
+          "name": "Rebajas (seasonal sales)",
+          "notes": "Major sales in Jan and July — 30-70% off"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 60,
+    "discounts": [
+      {
+        "name": "Tarjeta Dorada Renfe",
+        "description": "Senior rail card (€6/yr) for 25-40% off all Renfe trains including AVE. Available at 60+.",
+        "eligibilityAge": 60
+      },
+      {
+        "name": "Abono Tercera Edad",
+        "description": "Reduced-rate or free local transport pass for 65+ in most cities.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "IMSERSO holiday program",
+        "description": "Government-subsidized vacation packages for 65+ pensioners. Beach and spa trips at ~50% off.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Museum/cultural discounts",
+        "description": "Free or reduced entry at national museums for 65+. EU citizens 65+ often free.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Pharmacy discounts",
+        "description": "Pensioners pay 10% copay on prescriptions (capped at €8-18/month depending on income).",
+        "eligibilityAge": 0
+      }
+    ]
   }
 }

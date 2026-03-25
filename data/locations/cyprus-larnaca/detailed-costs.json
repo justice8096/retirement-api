@@ -122,5 +122,656 @@
         "url": "https://fi.google.com/about/plans"
       }
     ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 280,
+      "typical": 350,
+      "max": 438
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 220,
+        "seniorDiscounts": "Meze platters good value for 2. Service charge often included.",
+        "notes": "Lunch for 2 at taverna ~€22-25, 2x/week = ~€200/mo = ~$220/mo in Larnaca, Cyprus."
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 40,
+        "seniorDiscounts": "No specific senior discounts.",
+        "notes": "Cyta/Epic fiber €30-40/mo. ~$34-45/mo."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 14,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€12.99/mo. ~$14/mo."
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 6,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€4.99/mo. Includes Prime Video. ~$6/mo."
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 8,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€6.99/mo. ~$8/mo."
+      },
+      {
+        "name": "NFL RedZone",
+        "monthlyCost": 15,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "DAZN NFL Game Pass €19.99/mo during season. Annualized ~$15/mo."
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 28,
+        "seniorDiscounts": "Some municipal facilities offer senior rates.",
+        "notes": "Local gyms €20-30/mo. ~$22-34/mo."
+      },
+      {
+        "name": "Parks/Outdoors",
+        "monthlyCost": 0,
+        "seniorDiscounts": "Some archaeological sites offer senior discounts.",
+        "notes": "Free beaches, parks, nature trails, coastal walks."
+      },
+      {
+        "name": "Books/Media",
+        "monthlyCost": 5,
+        "seniorDiscounts": "Public libraries free.",
+        "notes": "Public libraries available. Budget for books, English-language press."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 14,
+        "seniorDiscounts": "No specific discounts.",
+        "notes": "Cyprus coffee/frappé ~€2.00-3.50. Budget for 2 visits/week. ~$14/mo."
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 26,
+      "typical": 51,
+      "max": 179
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 30,
+        "senior": 15,
+        "notes": "Larnaca transit pass. Seniors 65+ eligible for 50% discounts on public buses. Registration at bus company offices with valid ID."
+      },
+      "singleRide": 1.27,
+      "coverage": "Intercity and urban bus routes operated by OSEL (Limassol), OSYPA (Paphos). No rail system. Car is common for daily transport.",
+      "seniorDiscount": "Seniors 65+ eligible for 50% discounts on public buses. Registration at bus company offices with valid ID."
+    },
+    "rideShare": {
+      "baseFare": 2.98,
+      "perKm": 0.72,
+      "typicalCrossTownTrip": {
+        "min": 5,
+        "typical": 8,
+        "max": 10
+      },
+      "availability": "Uber not officially available. Bolt operates in major cities. Traditional taxis regulated with meters."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 0,
+        "initialRegistration": {
+          "min": 150,
+          "typical": 300,
+          "max": 500
+        },
+        "notes": "Annual road tax based on CO2 emissions. MOT (inspection) required for vehicles over 4 years."
+      },
+      "insurance": {
+        "monthlyMin": 21,
+        "monthlyTypical": 30,
+        "monthlyMax": 47,
+        "notes": "Third-party mandatory from ~$25/mo. Comprehensive $35-55/mo. Drive on the left side of the road."
+      },
+      "fuel": {
+        "pricePerLiter": 1.6,
+        "monthlyEstimate": {
+          "min": 34,
+          "typical": 51,
+          "max": 81
+        },
+        "notes": "Unleaded 95 ~$1.55-1.65/L. Diesel ~$1.50-1.60/L."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 26,
+          "typical": 38,
+          "max": 51
+        },
+        "hourlyStreet": 0.85,
+        "notes": "Free parking widely available outside city centers. Municipal lots in towns. Malls offer free parking."
+      },
+      "tolls": {
+        "monthlyEstimate": 0,
+        "notes": "Estimated monthly toll/highway costs for Larnaca area."
+      },
+      "seniorDiscounts": "Seniors 65+ eligible for 50% discounts on public buses. Registration at bus company offices with valid ID."
+    },
+    "walkability": "Moderate walkability in coastal towns. Most daily life relies on car travel due to suburban sprawl.",
+    "monthlyEstimate": {
+      "carFree": {
+        "min": 26,
+        "typical": 51,
+        "max": 85,
+        "notes": "Transit pass + occasional ride-share. Limited transit — may need more ride-share trips."
+      },
+      "withCar": {
+        "min": 111,
+        "typical": 179,
+        "max": 264,
+        "notes": "Includes insurance, fuel, parking, maintenance. Moderate suburban costs."
+      }
+    }
+  },
+  "visionDental": {
+    "monthlyBudget": {
+      "min": 30,
+      "typical": 55,
+      "max": 95
+    },
+    "vision": {
+      "eyeExam": {
+        "withInsurance": 0,
+        "withoutInsurance": 28,
+        "notes": "Eye exam ~25 EUR. GHS (GESY public health) covers ophthalmology with small copay (~6 EUR)."
+      },
+      "glasses": {
+        "basic": 68,
+        "progressive": 170,
+        "contacts12mo": 140,
+        "notes": "Basic frames+lenses ~60 EUR. Progressive ~150 EUR. Not covered by GESY. Local and chain opticians available."
+      },
+      "insurance": {
+        "monthlyPremium": 0,
+        "coverage": "GESY (GHS) covers ophthalmology with small copay; glasses not covered",
+        "notes": "No standalone vision insurance. GESY contribution ~2.65% of income. Private health plans (Bupa Cyprus, Interlife) may add optical."
+      }
+    },
+    "dental": {
+      "cleaning": {
+        "withInsurance": 8,
+        "withoutInsurance": 45,
+        "notes": "Katharismos ~40 EUR. GESY covers limited preventive dental (1 exam + cleaning/year)."
+      },
+      "filling": {
+        "withInsurance": 25,
+        "withoutInsurance": 57,
+        "notes": "Sfragisma ~50 EUR. GESY covers basic fillings with copay. Private dental for faster service."
+      },
+      "crown": {
+        "withInsurance": 250,
+        "withoutInsurance": 400,
+        "notes": "Stefani ~350 EUR. Private dental recommended for major work. Good quality specialists available."
+      },
+      "insurance": {
+        "monthlyPremium": 15,
+        "coverage": "GESY preventive dental + private dental plan for comprehensive coverage",
+        "notes": "GESY covers basic dental with copays. Private dental plans ~15 EUR/mo for enhanced coverage. Cyprus dental costs moderate by EU standards."
+      }
+    },
+    "annualEstimate": {
+      "withInsurance": {
+        "premiums": 180,
+        "outOfPocket": 130,
+        "total": 310,
+        "monthlyEquiv": 26
+      },
+      "withoutInsurance": {
+        "outOfPocket": 380,
+        "monthlyEquiv": 32
+      }
+    }
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 26,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Local markets or supermarket"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 20,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Seasonal local fruit"
+          },
+          {
+            "name": "Leafy Greens",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tomatoes",
+            "monthlyCost": 6,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": "Local grown"
+          },
+          {
+            "name": "Potatoes/Onions",
+            "monthlyCost": 5,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "protein",
+        "name": "Protein",
+        "items": [
+          {
+            "name": "Chicken breast",
+            "monthlyCost": 18,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "~€4.3/kg"
+          },
+          {
+            "name": "Ground beef",
+            "monthlyCost": 22,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "~€5.1/kg"
+          },
+          {
+            "name": "Fish (local catch)",
+            "monthlyCost": 20,
+            "quantity": 1.5,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "Market fish, seasonal"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 7,
+            "quantity": 4,
+            "unit": "dozen/month",
+            "forWhom": "shared",
+            "notes": "~€1.6/dozen"
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy",
+        "items": [
+          {
+            "name": "Milk",
+            "monthlyCost": 6,
+            "quantity": 8,
+            "unit": "liters/month",
+            "forWhom": "shared",
+            "notes": "~€0.7/L"
+          },
+          {
+            "name": "Cheese (local + imported)",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": "Mix of local and imported"
+          },
+          {
+            "name": "Yogurt",
+            "monthlyCost": 5,
+            "quantity": 8,
+            "unit": "pots/month",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Bread",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "daily",
+            "forWhom": "shared",
+            "notes": "Local bakery or supermarket"
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 5,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Rice",
+            "monthlyCost": 3,
+            "quantity": 1,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Olive oil",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "L/month",
+            "forWhom": "shared",
+            "notes": "~€3.7/L"
+          },
+          {
+            "name": "Canned goods/sauces",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "adults",
+            "notes": "Ground coffee ~€2.0/250g"
+          },
+          {
+            "name": "Water",
+            "monthlyCost": 5,
+            "quantity": 20,
+            "unit": "bottles/month",
+            "forWhom": "shared",
+            "notes": "Tap safe in most areas; mineral preferred"
+          },
+          {
+            "name": "Wine",
+            "monthlyCost": 13,
+            "quantity": 4,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Local wine ~€2.9/bottle"
+          },
+          {
+            "name": "Beer",
+            "monthlyCost": 8,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Local beer ~€0.9/500ml"
+          }
+        ]
+      },
+      {
+        "id": "pet",
+        "name": "Pet Food",
+        "items": [
+          {
+            "name": "Premium dog food",
+            "monthlyCost": 31,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": "Royal Canin/Hills from pet shops or vet clinics"
+          },
+          {
+            "name": "Dog treats",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom house or ground-floor apartment",
+    "monthlyBudget": {
+      "min": 680,
+      "max": 1105,
+      "typical": 850
+    },
+    "breakdown": {
+      "baseRent": 850,
+      "rentersInsurance": 0,
+      "localTaxesFees": 0,
+      "total": 850,
+      "notes": "Renter's insurance not standard in most European countries. Utilities billed separately."
+    },
+    "taxNotes": "No rental tax for tenants. Immovable property tax abolished in 2017. Municipal taxes are low. Stamp duty on lease agreements is minimal.",
+    "leaseTerms": "1-year lease standard, renewable. Security deposit 1-2 months rent. Statutory tenancy protection after 1 year continuous occupation.",
+    "marketNotes": "Affordable coastal city. Mix of apartments and small houses. Good international airport access."
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Alphamega",
+        "type": "supermarket",
+        "website": "https://www.alphamega.com.cy/",
+        "notes": "Cyprus's largest chain. Hypermarket and supermarket formats.",
+        "videos": []
+      },
+      {
+        "name": "Lidl",
+        "type": "discount-supermarket",
+        "website": "https://www.lidl.com.cy/",
+        "notes": "Entered Cyprus 2024. Best prices on staples.",
+        "videos": []
+      },
+      {
+        "name": "Papantoniou",
+        "type": "supermarket",
+        "website": "https://www.papantoniou.com.cy/",
+        "notes": "Family-owned chain. Good fresh and local products.",
+        "videos": []
+      },
+      {
+        "name": "Metro",
+        "type": "supermarket",
+        "website": "",
+        "notes": "Local chain in Limassol/Nicosia area.",
+        "videos": []
+      },
+      {
+        "name": "Municipal markets",
+        "type": "farmers-market",
+        "website": "",
+        "notes": "Local produce markets. Fresh halloumi, olives, seasonal fruit.",
+        "videos": []
+      }
+    ]
+  },
+  "healthcare": {
+    "system": "GESY/GHS (General Healthcare System) + Private supplement",
+    "coverageSummary": "Cyprus launched universal healthcare (GESY) in 2019. All residents contribute 2.65% of income. Covers GP, specialist, hospital, pharmacy. Private insurance optional for premium services.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD"
+      ],
+      "costs": [
+        {
+          "item": "GESY contribution",
+          "monthlyCost": 40,
+          "notes": "2.65% of income. Pensioners pay 1.7%."
+        },
+        {
+          "item": "Private supplement",
+          "monthlyCost": 80,
+          "notes": "For faster AMD specialist access"
+        },
+        {
+          "item": "GP visits (personal doctor)",
+          "monthlyCost": 2,
+          "notes": "€1 copay per GESY visit"
+        },
+        {
+          "item": "Specialist visits (ophthalmologist)",
+          "monthlyCost": 10,
+          "notes": "€6 copay via GESY or private"
+        },
+        {
+          "item": "Lab work",
+          "monthlyCost": 5,
+          "notes": "Covered by GESY with small copay"
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Gout"
+      ],
+      "costs": [
+        {
+          "item": "GESY contribution",
+          "monthlyCost": 40,
+          "notes": "2.65% of income"
+        },
+        {
+          "item": "Private supplement",
+          "monthlyCost": 65,
+          "notes": "Standard policy"
+        },
+        {
+          "item": "GP visits",
+          "monthlyCost": 2,
+          "notes": "€1 copay per GESY visit"
+        },
+        {
+          "item": "Specialist visits",
+          "monthlyCost": 8,
+          "notes": "Endocrinologist quarterly"
+        },
+        {
+          "item": "Lab work",
+          "monthlyCost": 5,
+          "notes": "HbA1c + metabolic panel"
+        }
+      ]
+    }
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Hair Care",
+      "priceRange": {
+        "cut": "12-22",
+        "color": "40-70",
+        "fullService": "60-100"
+      },
+      "notes": "Limited Afro hair salons, mainly in Limassol and Nicosia. Growing diversity due to expat community.",
+      "providers": [
+        {
+          "name": "International hair salons",
+          "type": "Salon",
+          "address": "City center",
+          "distanceKm": 5,
+          "rating": 4.1,
+          "notes": "Some salons with textured hair experience",
+          "website": ""
+        },
+        {
+          "name": "Local κομμωτήριο",
+          "type": "Salon",
+          "address": "Various",
+          "distanceKm": 2,
+          "rating": 4.3,
+          "notes": "Standard Cypriot salon",
+          "website": ""
+        }
+      ]
+    },
+    "clothing": {
+      "label": "Clothing & Shoes",
+      "monthlyBudget": {
+        "min": 35,
+        "typical": 65,
+        "max": 110
+      },
+      "stores": [
+        {
+          "name": "Primark (online) / Pepco",
+          "notes": "Budget options, Primark not yet on island"
+        },
+        {
+          "name": "Zara / H&M / Debenhams",
+          "notes": "Mid-range in Limassol/Nicosia malls"
+        },
+        {
+          "name": "Sales (Jan/Jul)",
+          "notes": "Seasonal sales — 30-50% off"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 60,
+    "discounts": [
+      {
+        "name": "OSEL Senior Bus Pass",
+        "description": "Free or €0.50 bus fares for 65+ on public buses throughout Cyprus.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "GESY reduced contribution",
+        "description": "Pensioners pay reduced 1.7% GESY healthcare contribution (vs 2.65% for workers).",
+        "eligibilityAge": 0
+      },
+      {
+        "name": "Museum discounts",
+        "description": "Reduced entry at Department of Antiquities sites for 65+.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Municipal property tax relief",
+        "description": "Some municipalities offer property tax reductions for pensioners.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Social pension",
+        "description": "Basic social pension for residents 65+ with insufficient contributions. ~€351/mo minimum.",
+        "eligibilityAge": 65
+      }
+    ]
   }
 }

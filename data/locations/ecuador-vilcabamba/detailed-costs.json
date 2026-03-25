@@ -122,5 +122,439 @@
         "url": "https://fi.google.com/about/plans"
       }
     ]
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 20,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Local market or supermarket"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 13,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Tropical fruits widely available"
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 6,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Potatoes / Sweet Potatoes",
+            "monthlyCost": 4,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet staple"
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 4,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet vegetables"
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 3,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Digestive health"
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 16,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Primary protein for adults & dog"
+          },
+          {
+            "name": "Ground Beef / Turkey",
+            "monthlyCost": 14,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean ground for dog food base"
+          },
+          {
+            "name": "Fish (local catch)",
+            "monthlyCost": 13,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Fresh local fish often cheaper than US"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 4,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 4,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Home-cooked dog diet essential"
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk",
+            "monthlyCost": 4,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Cheese (local + imported)",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": "Local cheese very affordable"
+          },
+          {
+            "name": "Yogurt",
+            "monthlyCost": 4,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 3,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Rice / Pasta / Beans",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "monthly stock",
+            "forWhom": "shared",
+            "notes": "Staples very affordable locally"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 5,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Canned Goods / Sauces",
+            "monthlyCost": 5,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Cooking Oils / Spices",
+            "monthlyCost": 4,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Snacks / Crackers",
+            "monthlyCost": 4,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee (ground/beans)",
+            "monthlyCost": 5,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": "Excellent local coffee in most LATAM countries"
+          },
+          {
+            "name": "Water (filtered/bottled)",
+            "monthlyCost": 4,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": "Garrafon/filtered water delivery common"
+          },
+          {
+            "name": "Juice / Soft Drinks",
+            "monthlyCost": 4,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Beer / Wine",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": "Local beer very affordable"
+          }
+        ]
+      },
+      {
+        "id": "pet",
+        "name": "Pet Food & Supplements",
+        "items": [
+          {
+            "name": "Premium Dog Food (kibble)",
+            "monthlyCost": 18,
+            "quantity": 30,
+            "unit": "lbs/month",
+            "forWhom": "dog",
+            "notes": "Imported premium brands cost more; local brands available"
+          },
+          {
+            "name": "Dog Supplements (glucosamine, fish oil)",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": ""
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 4,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom house/apartment",
+    "monthlyBudget": {
+      "min": 394,
+      "max": 656,
+      "typical": 525
+    },
+    "breakdown": {
+      "baseRent": 499,
+      "deposit": "525 (1 month typical)",
+      "rentersInsurance": 0,
+      "localTaxesFees": 0,
+      "total": 499,
+      "notes": "No rental tax. Utilities typically separate. Some buildings include water."
+    },
+    "taxNotes": "No VAT/IVA on residential rent. USD currency. Tercera edad (65+) get 50% discount on property tax if owning.",
+    "leaseTerms": "12-month lease standard. Security deposit 1 month. Leases can be in USD. Strong tenant protections under Ecuadorian law.",
+    "marketNotes": "Cuenca most popular expat city with lowest costs. Quito more urban/expensive. Coastal towns very affordable but hotter.",
+    "sources": [
+      {
+        "name": "Plusvalia",
+        "url": "https://www.plusvalia.com/"
+      },
+      {
+        "name": "OLX Ecuador",
+        "url": "https://www.olx.com.ec/"
+      }
+    ]
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Supermaxi",
+        "type": "supermarket",
+        "website": "https://www.supermaxi.com/",
+        "notes": "Largest supermarket chain in Ecuador, wide selection"
+      },
+      {
+        "name": "Mi Comisariato",
+        "type": "supermarket",
+        "website": "https://www.micomisariato.com/",
+        "notes": "Major chain, primarily coastal cities"
+      },
+      {
+        "name": "Coral Hipermercados",
+        "type": "supermarket",
+        "website": "https://www.corporacionfavorita.com/",
+        "notes": "Large-format stores in major cities"
+      },
+      {
+        "name": "Tia",
+        "type": "discount",
+        "website": "https://www.tia.com.ec/",
+        "notes": "Discount chain, great for basics and household items"
+      }
+    ]
+  },
+  "healthcare": {
+    "system": "IESS (public) + Private insurance",
+    "coverageSummary": "IESS voluntary enrollment ~$80/mo covers comprehensive care. Private insurance $100-250/mo. Tercera edad (65+) gets 50% discounts on many services.",
+    "gpVisit": {
+      "withInsurance": 5,
+      "withoutInsurance": 25,
+      "notes": "GP visits very affordable. IESS covers fully. Private clinics $15-30."
+    },
+    "specialist": {
+      "withInsurance": 10,
+      "withoutInsurance": 50,
+      "notes": "Specialists $30-60 without insurance. Cuenca and Quito have excellent specialists."
+    },
+    "privateInsurance": {
+      "monthlyPerPerson": 150,
+      "notes": "Humana Ecuador, BMI, or international plans. Tercera edad discounts may apply."
+    },
+    "emergency": {
+      "withInsurance": 10,
+      "withoutInsurance": 300,
+      "notes": "IESS emergency care free for members. Private ER $200-500."
+    },
+    "dental": {
+      "cleaning": 20,
+      "filling": 20,
+      "crown": 150,
+      "notes": "Dental care extremely affordable. Many dentists trained in US/EU."
+    },
+    "notes": "Ecuador offers excellent value healthcare. Cuenca has modern hospitals. Tercera edad cardholders get 50% off many medical services by law."
+  },
+  "personalCare": {
+    "hairCare": {
+      "mensCut": {
+        "min": 3,
+        "typical": 6,
+        "max": 12,
+        "notes": "Very affordable barbershops"
+      },
+      "womensCut": {
+        "min": 8,
+        "typical": 15,
+        "max": 35,
+        "notes": "Salons in all cities"
+      },
+      "colorTreatment": {
+        "min": 15,
+        "typical": 30,
+        "max": 60,
+        "notes": ""
+      }
+    },
+    "fitness": {
+      "gymMonthly": {
+        "min": 15,
+        "typical": 25,
+        "max": 40,
+        "notes": "Local gyms and chains in Vilcabamba, Ecuador"
+      },
+      "yogaClassDrop": {
+        "min": 3,
+        "typical": 6,
+        "max": 12,
+        "notes": "Growing yoga community in expat areas"
+      }
+    },
+    "spa": {
+      "massage60min": {
+        "min": 10,
+        "typical": 20,
+        "max": 45,
+        "notes": "Excellent value spa services"
+      },
+      "manicure": {
+        "min": 3,
+        "typical": 6,
+        "max": 12,
+        "notes": ""
+      }
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 65,
+    "programName": "Tercera Edad (Ley del Anciano)",
+    "discounts": [
+      {
+        "name": "Tercera Edad Card",
+        "description": "Government-mandated senior benefits for adults 65+. One of the most comprehensive senior discount programs in Latin America.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Transportation",
+        "description": "50% off public transit, domestic flights, and intercity buses. By law.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Utilities",
+        "description": "50% discount on electricity (first 120 kWh), water (first 20 cubic meters), and phone service.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Entertainment & Culture",
+        "description": "50% off movies, cultural events, sports events, and national park entry.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Healthcare",
+        "description": "50% off medical services at private clinics and pharmacies. IESS covers most care for enrolled members.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Tax Benefits",
+        "description": "Income tax rebate on IVA (VAT) paid. Property tax discounts. No tax on pensions up to certain limits.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Priority Service",
+        "description": "Priority lines at banks, government offices, and commercial establishments. Required by law.",
+        "eligibilityAge": 65
+      }
+    ]
   }
 }

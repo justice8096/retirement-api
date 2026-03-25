@@ -122,5 +122,646 @@
         "url": "https://fi.google.com/about/plans"
       }
     ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 284,
+      "typical": 355,
+      "max": 444
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 225,
+        "seniorDiscounts": "Set lunch menus €10-15 at many restaurants.",
+        "notes": "Lunch for 2 at moderate restaurant ~€22-25, 2x/week = ~€200/mo = ~$225/mo in Sliema, Malta."
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 40,
+        "seniorDiscounts": "GO/Melita offer senior-friendly packages.",
+        "notes": "GO/Melita fiber 1 Gig €30-40/mo. ~$34-45/mo."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 14,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€12.99/mo. ~$14/mo."
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 6,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€4.99/mo. Includes Prime Video. ~$6/mo."
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 8,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€6.99/mo. ~$8/mo."
+      },
+      {
+        "name": "NFL RedZone",
+        "monthlyCost": 15,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "DAZN NFL Game Pass €19.99/mo during season. Annualized ~$15/mo."
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 28,
+        "seniorDiscounts": "Some local centres offer senior rates.",
+        "notes": "Local gyms €20-30/mo. ~$22-34/mo."
+      },
+      {
+        "name": "Parks/Outdoors",
+        "monthlyCost": 0,
+        "seniorDiscounts": "Heritage Malta card offers senior discounts for museums/sites.",
+        "notes": "Free coastal walks, public gardens, swimming spots."
+      },
+      {
+        "name": "Books/Media",
+        "monthlyCost": 5,
+        "seniorDiscounts": "Public libraries free.",
+        "notes": "Public libraries free. English widely spoken. Budget for books."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 14,
+        "seniorDiscounts": "No specific discounts.",
+        "notes": "Coffee ~€2.00-3.50. Budget for 2 visits/week. ~$14/mo."
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 29,
+      "typical": 63,
+      "max": 230
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 41,
+        "senior": 0,
+        "notes": "Residents 60+ ride Malta Public Transport for free with Tallinja personalized card."
+      },
+      "singleRide": 1.72,
+      "coverage": "Malta Public Transport buses cover most of the island. Gozo bus network separate. Ferries between Malta, Gozo, and Comino.",
+      "seniorDiscount": "Residents 60+ ride Malta Public Transport for free with Tallinja personalized card."
+    },
+    "rideShare": {
+      "baseFare": 4.02,
+      "perKm": 1.03,
+      "typicalCrossTownTrip": {
+        "min": 7,
+        "typical": 10,
+        "max": 14
+      },
+      "availability": "Bolt available. Uber not in Malta. Traditional white taxis and eCabs app. Short distances on small island."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 0,
+        "initialRegistration": {
+          "min": 200,
+          "typical": 350,
+          "max": 600
+        },
+        "notes": "Annual road license fee based on CO2. VRT (vehicle registration tax) on import. Inspection (VRT test) periodically."
+      },
+      "insurance": {
+        "monthlyMin": 29,
+        "monthlyTypical": 40,
+        "monthlyMax": 63,
+        "notes": "Third-party mandatory from ~$25/mo. Comprehensive $35-55/mo. Small island means shorter commutes."
+      },
+      "fuel": {
+        "pricePerLiter": 1.6,
+        "monthlyEstimate": {
+          "min": 40,
+          "typical": 63,
+          "max": 98
+        },
+        "notes": "Unleaded ~$1.55-1.65/L. Diesel ~$1.45-1.55/L. Limited EV charging infrastructure."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 35,
+          "typical": 52,
+          "max": 69
+        },
+        "hourlyStreet": 1.15,
+        "notes": "CVA controlled parking in Valletta. Street parking competitive. Some buildings include garage spaces."
+      },
+      "tolls": {
+        "monthlyEstimate": 0,
+        "notes": "Estimated monthly toll/highway costs for Sliema area."
+      },
+      "seniorDiscounts": "Residents 60+ ride Malta Public Transport for free with Tallinja personalized card."
+    },
+    "walkability": "Good walkability in Valletta, Sliema, St. Julians. Island is small but hilly in parts. Car useful for broader access.",
+    "monthlyEstimate": {
+      "carFree": {
+        "min": 29,
+        "typical": 63,
+        "max": 103,
+        "notes": "Transit pass + occasional ride-share. Good for urban core living."
+      },
+      "withCar": {
+        "min": 138,
+        "typical": 230,
+        "max": 334,
+        "notes": "Includes insurance, fuel, parking, maintenance. Higher urban parking and insurance costs."
+      }
+    }
+  },
+  "visionDental": {
+    "monthlyBudget": {
+      "min": 30,
+      "typical": 60,
+      "max": 100
+    },
+    "vision": {
+      "eyeExam": {
+        "withInsurance": 0,
+        "withoutInsurance": 28,
+        "notes": "Eye exam ~25 EUR. Public health covers ophthalmology at Mater Dei Hospital with referral. Private ~25-40 EUR."
+      },
+      "glasses": {
+        "basic": 68,
+        "progressive": 170,
+        "contacts12mo": 140,
+        "notes": "Basic frames+lenses ~60 EUR. Progressive ~150 EUR. Several optician chains (Specsavers, EyeQ) on the islands."
+      },
+      "insurance": {
+        "monthlyPremium": 0,
+        "coverage": "Public health covers ophthalmology referrals; glasses not covered",
+        "notes": "No standalone vision insurance common. Private health plans available. Public system provides free eye care at government clinics."
+      }
+    },
+    "dental": {
+      "cleaning": {
+        "withInsurance": 10,
+        "withoutInsurance": 45,
+        "notes": "Tindif ~40 EUR. Government dental clinic offers free basic dental for residents (long waits)."
+      },
+      "filling": {
+        "withInsurance": 25,
+        "withoutInsurance": 57,
+        "notes": "Filling ~50 EUR. Government dental clinic covers basic fillings free; private is faster."
+      },
+      "crown": {
+        "withInsurance": 260,
+        "withoutInsurance": 400,
+        "notes": "Crown ~350 EUR. Limited dental specialists on island; some travel to Sicily for major work."
+      },
+      "insurance": {
+        "monthlyPremium": 15,
+        "coverage": "Private dental plan, free cleanings, discounted treatments",
+        "notes": "Private dental plans ~15 EUR/mo. Government dental clinic provides free basic care for residents. Private dental recommended for faster service and major work."
+      }
+    },
+    "annualEstimate": {
+      "withInsurance": {
+        "premiums": 180,
+        "outOfPocket": 140,
+        "total": 320,
+        "monthlyEquiv": 27
+      },
+      "withoutInsurance": {
+        "outOfPocket": 400,
+        "monthlyEquiv": 33
+      }
+    }
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 50,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Local markets or supermarket"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 38,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Oranges, figs, prickly pear, grapes"
+          },
+          {
+            "name": "Leafy Greens",
+            "monthlyCost": 16,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tomatoes",
+            "monthlyCost": 11,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": "Local grown"
+          },
+          {
+            "name": "Potatoes/Onions",
+            "monthlyCost": 9,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "protein",
+        "name": "Protein",
+        "items": [
+          {
+            "name": "Chicken breast",
+            "monthlyCost": 35,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "~€7.50/kg"
+          },
+          {
+            "name": "Ground beef",
+            "monthlyCost": 42,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "~€9/kg"
+          },
+          {
+            "name": "Fish (local catch)",
+            "monthlyCost": 38,
+            "quantity": 1.5,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "Lampuki, swordfish, sea bass"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 13,
+            "quantity": 4,
+            "unit": "dozen/month",
+            "forWhom": "shared",
+            "notes": "~€2.80/dozen"
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy",
+        "items": [
+          {
+            "name": "Milk",
+            "monthlyCost": 11,
+            "quantity": 8,
+            "unit": "liters/month",
+            "forWhom": "shared",
+            "notes": "~€1.20/L"
+          },
+          {
+            "name": "Cheese (gbejna + others)",
+            "monthlyCost": 20,
+            "quantity": 1,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": "Local gbejna + imported"
+          },
+          {
+            "name": "Yogurt",
+            "monthlyCost": 9,
+            "quantity": 8,
+            "unit": "pots/month",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Bread (Maltese ftira)",
+            "monthlyCost": 13,
+            "quantity": 1,
+            "unit": "daily",
+            "forWhom": "shared",
+            "notes": "Traditional Maltese bread"
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 9,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Rice",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Olive oil",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "L/month",
+            "forWhom": "shared",
+            "notes": "~€6.50/L"
+          },
+          {
+            "name": "Canned goods/sauces",
+            "monthlyCost": 16,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 13,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "adults",
+            "notes": "Ground coffee ~€3.50/250g"
+          },
+          {
+            "name": "Water",
+            "monthlyCost": 9,
+            "quantity": 20,
+            "unit": "bottles/month",
+            "forWhom": "shared",
+            "notes": "Tap safe but mineral preferred"
+          },
+          {
+            "name": "Wine",
+            "monthlyCost": 24,
+            "quantity": 4,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Local Marsovin/Meridiana ~€5.50"
+          },
+          {
+            "name": "Beer",
+            "monthlyCost": 15,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Cisk lager ~€1.80/500ml"
+          }
+        ]
+      },
+      {
+        "id": "pet",
+        "name": "Pet Food",
+        "items": [
+          {
+            "name": "Premium dog food",
+            "monthlyCost": 61,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": "Royal Canin/Hills from pet shops"
+          },
+          {
+            "name": "Dog treats",
+            "monthlyCost": 13,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom house or ground-floor apartment",
+    "monthlyBudget": {
+      "min": 1120,
+      "max": 1820,
+      "typical": 1400
+    },
+    "breakdown": {
+      "baseRent": 1400,
+      "rentersInsurance": 0,
+      "localTaxesFees": 0,
+      "total": 1400,
+      "notes": "No renters insurance tradition in Malta. Water/electricity via ARMS Ltd billed separately."
+    },
+    "taxNotes": "No rental tax in Malta. Stamp duty (1%) paid on lease registration. Property tax is landlord responsibility.",
+    "leaseTerms": "1-year standard lease. Security deposit 1 month rent. Agency fee typically half month rent. Contracts must be registered with Housing Authority.",
+    "marketNotes": "Sliema is Malta's most popular expat area. Modern seafront apartments. Very competitive market."
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Lidl",
+        "type": "discount-supermarket",
+        "website": "https://www.lidl.com.mt/",
+        "notes": "Best prices, growing presence",
+        "videos": []
+      },
+      {
+        "name": "Pavi Supermarket",
+        "type": "supermarket",
+        "website": "https://www.pavi.com.mt/",
+        "notes": "Largest Maltese chain",
+        "videos": []
+      },
+      {
+        "name": "Tower Supermarket",
+        "type": "supermarket",
+        "website": "https://www.towersupermarkets.com/",
+        "notes": "Popular in Sliema/St Julians",
+        "videos": []
+      },
+      {
+        "name": "Scott's Supermarket",
+        "type": "supermarket",
+        "website": "",
+        "notes": "Multiple locations",
+        "videos": []
+      },
+      {
+        "name": "GreatBuy / Valyou",
+        "type": "supermarket",
+        "website": "",
+        "notes": "Budget-friendly chain",
+        "videos": []
+      }
+    ]
+  },
+  "healthcare": {
+    "system": "Malta National Health Service + Private Supplement",
+    "coverageSummary": "Malta provides free public healthcare to all residents via Mater Dei Hospital. Private health insurance recommended for shorter wait times.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD"
+      ],
+      "costs": [
+        {
+          "item": "Private health insurance",
+          "monthlyCost": 130,
+          "notes": "Bupa/Laferla comprehensive"
+        },
+        {
+          "item": "GP visits (private)",
+          "monthlyCost": 15,
+          "notes": "€15-25/visit, ~1/month"
+        },
+        {
+          "item": "Specialist visits",
+          "monthlyCost": 25,
+          "notes": "Ophthalmologist for AMD"
+        },
+        {
+          "item": "Lab work",
+          "monthlyCost": 10,
+          "notes": "Quarterly blood tests"
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Gout"
+      ],
+      "costs": [
+        {
+          "item": "Private health insurance",
+          "monthlyCost": 110,
+          "notes": "Bupa/Laferla standard"
+        },
+        {
+          "item": "GP visits (private)",
+          "monthlyCost": 15,
+          "notes": "€15-25/visit"
+        },
+        {
+          "item": "Specialist visits",
+          "monthlyCost": 15,
+          "notes": "Endocrinologist quarterly"
+        },
+        {
+          "item": "Lab work",
+          "monthlyCost": 10,
+          "notes": "HbA1c + lipid panel"
+        }
+      ]
+    }
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Hair Care",
+      "priceRange": {
+        "cut": "12-20",
+        "color": "40-70",
+        "fullService": "60-100"
+      },
+      "notes": "Limited diversity-focused salons. Most in Sliema/St Julians area.",
+      "providers": [
+        {
+          "name": "Toni & Guy",
+          "type": "Salon",
+          "address": "Sliema",
+          "distanceKm": 5,
+          "rating": 4.5,
+          "notes": "International chain",
+          "website": ""
+        },
+        {
+          "name": "Headlines Hair Salon",
+          "type": "Salon",
+          "address": "Valletta",
+          "distanceKm": 3,
+          "rating": 4.3,
+          "notes": "Popular local salon",
+          "website": ""
+        }
+      ]
+    },
+    "clothing": {
+      "label": "Clothing & Shoes",
+      "monthlyBudget": {
+        "min": 40,
+        "typical": 70,
+        "max": 120
+      },
+      "stores": [
+        {
+          "name": "Zara / H&M",
+          "notes": "The Point shopping mall, Sliema"
+        },
+        {
+          "name": "Bay Street Complex",
+          "notes": "St Julians, multiple outlets"
+        },
+        {
+          "name": "Local boutiques",
+          "notes": "Republic Street, Valletta"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 60,
+    "discounts": [
+      {
+        "name": "Tallinja Free Bus Pass",
+        "description": "Free public bus travel for residents 60+.",
+        "eligibilityAge": 60
+      },
+      {
+        "name": "Heritage Malta Senior Card",
+        "description": "Reduced entry (50%) to all Heritage Malta museums and temples.",
+        "eligibilityAge": 60
+      },
+      {
+        "name": "Government Pharmaceutical List",
+        "description": "Free medicines for chronic conditions via Schedule V at government pharmacies.",
+        "eligibilityAge": 0
+      },
+      {
+        "name": "EU Senior Museum Pass",
+        "description": "EU citizens 60+ get reduced rates at cultural sites.",
+        "eligibilityAge": 60
+      },
+      {
+        "name": "ARMS Eco-Reduction",
+        "description": "Reduced water/electricity tariff for pensioners (~25% saving on base usage).",
+        "eligibilityAge": 60
+      }
+    ]
   }
 }

@@ -122,5 +122,430 @@
         "url": "https://fi.google.com/about/plans"
       }
     ]
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 41,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Local market or supermarket"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 26,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Tropical fruits widely available"
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 13,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Potatoes / Sweet Potatoes",
+            "monthlyCost": 9,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet staple"
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 7,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet vegetables"
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 6,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Digestive health"
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 33,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Primary protein for adults & dog"
+          },
+          {
+            "name": "Ground Beef / Turkey",
+            "monthlyCost": 30,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean ground for dog food base"
+          },
+          {
+            "name": "Fish (local catch)",
+            "monthlyCost": 26,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Fresh local fish often cheaper than US"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 9,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Home-cooked dog diet essential"
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk",
+            "monthlyCost": 9,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Cheese (local + imported)",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": "Local cheese very affordable"
+          },
+          {
+            "name": "Yogurt",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 6,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Rice / Pasta / Beans",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "monthly stock",
+            "forWhom": "shared",
+            "notes": "Staples very affordable locally"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 11,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Canned Goods / Sauces",
+            "monthlyCost": 11,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Cooking Oils / Spices",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Snacks / Crackers",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee (ground/beans)",
+            "monthlyCost": 11,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": "Excellent local coffee in most LATAM countries"
+          },
+          {
+            "name": "Water (filtered/bottled)",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": "Garrafon/filtered water delivery common"
+          },
+          {
+            "name": "Juice / Soft Drinks",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Beer / Wine",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": "Local beer very affordable"
+          }
+        ]
+      },
+      {
+        "id": "pet",
+        "name": "Pet Food & Supplements",
+        "items": [
+          {
+            "name": "Premium Dog Food (kibble)",
+            "monthlyCost": 37,
+            "quantity": 30,
+            "unit": "lbs/month",
+            "forWhom": "dog",
+            "notes": "Imported premium brands cost more; local brands available"
+          },
+          {
+            "name": "Dog Supplements (glucosamine, fish oil)",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": ""
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom house/apartment",
+    "monthlyBudget": {
+      "min": 1050,
+      "max": 1750,
+      "typical": 1400
+    },
+    "breakdown": {
+      "baseRent": 1260,
+      "gastosComunes": 140,
+      "deposit": "2800 (2 months typical)",
+      "rentersInsurance": 0,
+      "localTaxesFees": 0,
+      "total": 1400,
+      "notes": "Gastos comunes (common expenses) typically 10-15% of rent in apartments. Houses may not have this fee."
+    },
+    "taxNotes": "No VAT on residential rent. IRPF (income tax on rent) is landlord responsibility. Rents often denominated in USD or indexed to Unidad Indexada (UI).",
+    "leaseTerms": "24-month minimum lease by law. Security deposit 2-3 months rent. Garantia de alquiler (rental guarantee) required from bank or insurance company.",
+    "marketNotes": "Montevideo most expensive. Punta del Este seasonal (summer premium Dec-Feb). Colonia del Sacramento quieter and cheaper.",
+    "sources": [
+      {
+        "name": "Gallito",
+        "url": "https://www.gallito.com.uy/"
+      },
+      {
+        "name": "InfoCasas",
+        "url": "https://www.infocasas.com.uy/"
+      }
+    ]
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Tienda Inglesa",
+        "type": "supermarket",
+        "website": "https://www.tiendainglesa.com.uy/",
+        "notes": "Premium supermarket, excellent imported selection"
+      },
+      {
+        "name": "Disco",
+        "type": "supermarket",
+        "website": "https://www.disco.com.uy/",
+        "notes": "Major chain with wide product range"
+      },
+      {
+        "name": "Devoto",
+        "type": "supermarket",
+        "website": "https://www.devoto.com.uy/",
+        "notes": "Mid-range supermarket, good prepared foods"
+      },
+      {
+        "name": "Ta-Ta",
+        "type": "discount",
+        "website": "https://www.tata.com.uy/",
+        "notes": "Budget-friendly chain, largest network in Uruguay"
+      }
+    ]
+  },
+  "healthcare": {
+    "system": "FONASA (mutual) + Private mutualistas",
+    "coverageSummary": "FONASA/mutualista enrollment mandatory for residents. Contributions income-based (~3-8%). Covers comprehensive care. Private supplemental available.",
+    "gpVisit": {
+      "withInsurance": 5,
+      "withoutInsurance": 40,
+      "notes": "Mutualista covers GP with small copay (ticket moderador). Good primary care network."
+    },
+    "specialist": {
+      "withInsurance": 15,
+      "withoutInsurance": 70,
+      "notes": "Specialist referral through mutualista. Private specialists $50-80."
+    },
+    "privateInsurance": {
+      "monthlyPerPerson": 200,
+      "notes": "BlueCross, ASSE, or mutualista upgrade. International plans available."
+    },
+    "emergency": {
+      "withInsurance": 10,
+      "withoutInsurance": 500,
+      "notes": "Emergency care covered by mutualista. Hospital Britanico well-regarded for expats."
+    },
+    "dental": {
+      "cleaning": 30,
+      "filling": 35,
+      "crown": 200,
+      "notes": "Mutualista covers basic dental. Private dental affordable by US standards."
+    },
+    "notes": "Uruguay has a well-developed healthcare system. Hospital Britanico in Montevideo is popular with English-speaking expats. Good pharmacies throughout."
+  },
+  "personalCare": {
+    "hairCare": {
+      "mensCut": {
+        "min": 8,
+        "typical": 15,
+        "max": 25,
+        "notes": "Barbershops in all neighborhoods"
+      },
+      "womensCut": {
+        "min": 18,
+        "typical": 35,
+        "max": 55,
+        "notes": "Good salons in Montevideo and Punta del Este"
+      },
+      "colorTreatment": {
+        "min": 35,
+        "typical": 60,
+        "max": 110,
+        "notes": ""
+      }
+    },
+    "fitness": {
+      "gymMonthly": {
+        "min": 25,
+        "typical": 40,
+        "max": 60,
+        "notes": "Smart Fit, local gyms in Punta del Este, Uruguay"
+      },
+      "yogaClassDrop": {
+        "min": 8,
+        "typical": 12,
+        "max": 18,
+        "notes": ""
+      }
+    },
+    "spa": {
+      "massage60min": {
+        "min": 20,
+        "typical": 35,
+        "max": 60,
+        "notes": ""
+      },
+      "manicure": {
+        "min": 8,
+        "typical": 12,
+        "max": 20,
+        "notes": ""
+      }
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 65,
+    "programName": "BPS (Banco de Prevision Social) Senior Benefits",
+    "discounts": [
+      {
+        "name": "BPS Pension",
+        "description": "BPS provides retirement pensions based on contributions. Minimum pension guaranteed for residents with sufficient contribution years.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "ASSE Healthcare",
+        "description": "ASSE public healthcare system available to all residents. Seniors can access through mutualistas with income-based contributions.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Transit Discounts",
+        "description": "Reduced public transit fares for seniors in Montevideo (STM card). Free transport for some low-income seniors.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Cultural Access",
+        "description": "Reduced or free entry to museums, cultural events, and public recreation programs for seniors.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Pharmacy Benefits",
+        "description": "FONASA covers medications through mutualista pharmacy network. Co-pays reduced for common medications.",
+        "eligibilityAge": 65
+      }
+    ]
   }
 }

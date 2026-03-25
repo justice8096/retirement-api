@@ -122,5 +122,429 @@
         "url": "https://fi.google.com/about/plans"
       }
     ]
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 39,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Local market or supermarket"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 25,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Tropical fruits widely available"
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 13,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Potatoes / Sweet Potatoes",
+            "monthlyCost": 9,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet staple"
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 7,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet vegetables"
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 6,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Digestive health"
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 32,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Primary protein for adults & dog"
+          },
+          {
+            "name": "Ground Beef / Turkey",
+            "monthlyCost": 29,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean ground for dog food base"
+          },
+          {
+            "name": "Fish (local catch)",
+            "monthlyCost": 25,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Fresh local fish often cheaper than US"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 9,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Home-cooked dog diet essential"
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk",
+            "monthlyCost": 9,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Cheese (local + imported)",
+            "monthlyCost": 14,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": "Local cheese very affordable"
+          },
+          {
+            "name": "Yogurt",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 6,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Rice / Pasta / Beans",
+            "monthlyCost": 14,
+            "quantity": 1,
+            "unit": "monthly stock",
+            "forWhom": "shared",
+            "notes": "Staples very affordable locally"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 11,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Canned Goods / Sauces",
+            "monthlyCost": 11,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Cooking Oils / Spices",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Snacks / Crackers",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee (ground/beans)",
+            "monthlyCost": 11,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": "Excellent local coffee in most LATAM countries"
+          },
+          {
+            "name": "Water (filtered/bottled)",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": "Garrafon/filtered water delivery common"
+          },
+          {
+            "name": "Juice / Soft Drinks",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Beer / Wine",
+            "monthlyCost": 14,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": "Local beer very affordable"
+          }
+        ]
+      },
+      {
+        "id": "pet",
+        "name": "Pet Food & Supplements",
+        "items": [
+          {
+            "name": "Premium Dog Food (kibble)",
+            "monthlyCost": 36,
+            "quantity": 30,
+            "unit": "lbs/month",
+            "forWhom": "dog",
+            "notes": "Imported premium brands cost more; local brands available"
+          },
+          {
+            "name": "Dog Supplements (glucosamine, fish oil)",
+            "monthlyCost": 14,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": ""
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom house",
+    "monthlyBudget": {
+      "min": 975,
+      "max": 1625,
+      "typical": 1300
+    },
+    "breakdown": {
+      "baseRent": 1235,
+      "deposit": "2600 (2 months typical)",
+      "rentersInsurance": 20,
+      "localTaxesFees": 0,
+      "total": 1255,
+      "notes": "Security deposit typically 2 months rent. Water/electricity separate."
+    },
+    "taxNotes": "No VAT on residential rent. Property tax (Impuesto sobre Bienes Inmuebles) 0.25% annually, paid by owner.",
+    "leaseTerms": "12-month minimum lease (3-year implied term under Costa Rican law). Security deposit 1-2 months. Tenants have strong legal protections.",
+    "marketNotes": "Central Valley (Escazu, Santa Ana) most expensive. Guanacaste beach areas seasonal pricing. Furnished rentals common for expats.",
+    "sources": [
+      {
+        "name": "Encuentra24",
+        "url": "https://www.encuentra24.com/costa-rica"
+      },
+      {
+        "name": "CRListing",
+        "url": "https://www.crlisting.com/"
+      }
+    ]
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Auto Mercado",
+        "type": "supermarket",
+        "website": "https://www.automercado.cr/",
+        "notes": "Upscale grocery, imported products, expat-popular"
+      },
+      {
+        "name": "Walmart Costa Rica",
+        "type": "supermarket",
+        "website": "https://www.walmart.co.cr/",
+        "notes": "Wide selection, competitive prices"
+      },
+      {
+        "name": "MasxMenos",
+        "type": "supermarket",
+        "website": "https://www.masxmenos.cr/",
+        "notes": "Owned by Walmart, mid-range pricing"
+      },
+      {
+        "name": "PriceSmart",
+        "type": "warehouse",
+        "website": "https://www.pricesmart.com/",
+        "notes": "Costco equivalent, membership-based bulk buying"
+      }
+    ]
+  },
+  "healthcare": {
+    "system": "CCSS (Caja) public + Private",
+    "coverageSummary": "CCSS (Caja) enrollment mandatory for residents, ~$80-150/mo based on income. Covers comprehensive care including dental and pharmacy. Private insurance optional.",
+    "gpVisit": {
+      "withInsurance": 0,
+      "withoutInsurance": 40,
+      "notes": "Caja covers GP visits fully. Wait times can be long for non-urgent care."
+    },
+    "specialist": {
+      "withInsurance": 0,
+      "withoutInsurance": 80,
+      "notes": "Caja covers specialists but wait times 1-3 months. Private $60-100 per visit."
+    },
+    "privateInsurance": {
+      "monthlyPerPerson": 180,
+      "notes": "INS (national insurer) or international plans. Private supplements Caja for faster access."
+    },
+    "emergency": {
+      "withInsurance": 0,
+      "withoutInsurance": 400,
+      "notes": "CCSS emergency care free for members. Private ER $300-600."
+    },
+    "dental": {
+      "cleaning": 35,
+      "filling": 40,
+      "crown": 250,
+      "notes": "Caja covers basic dental. Private dental still much cheaper than US."
+    },
+    "notes": "Costa Rica consistently ranks high in healthcare quality. CCSS provides universal coverage. Many US-trained doctors in private practice."
+  },
+  "personalCare": {
+    "hairCare": {
+      "mensCut": {
+        "min": 8,
+        "typical": 12,
+        "max": 25,
+        "notes": "Barber shops and salons in all towns"
+      },
+      "womensCut": {
+        "min": 15,
+        "typical": 30,
+        "max": 55,
+        "notes": "Higher prices in expat areas"
+      },
+      "colorTreatment": {
+        "min": 30,
+        "typical": 55,
+        "max": 100,
+        "notes": ""
+      }
+    },
+    "fitness": {
+      "gymMonthly": {
+        "min": 25,
+        "typical": 35,
+        "max": 55,
+        "notes": "MultiSpa, Gold's Gym available in Central Valley (San José, Escazú, Santa Ana), Costa Rica"
+      },
+      "yogaClassDrop": {
+        "min": 8,
+        "typical": 12,
+        "max": 18,
+        "notes": "Popular in expat communities"
+      }
+    },
+    "spa": {
+      "massage60min": {
+        "min": 25,
+        "typical": 40,
+        "max": 70,
+        "notes": "Good spa options in tourist/expat areas"
+      },
+      "manicure": {
+        "min": 8,
+        "typical": 12,
+        "max": 20,
+        "notes": ""
+      }
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 65,
+    "programName": "Ciudadano de Oro (Golden Citizen)",
+    "discounts": [
+      {
+        "name": "Ciudadano de Oro Card",
+        "description": "Government senior card providing discounts on transportation, entertainment, and some services for residents 65+.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "CCSS Healthcare",
+        "description": "CCSS (Caja) provides comprehensive healthcare including dental and pharmacy for enrolled residents. Pensionado visa holders eligible.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Public Transit",
+        "description": "Bus fare exemptions or reductions for Ciudadano de Oro cardholders on public buses.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Property Tax Exemption",
+        "description": "Primary residence exemption from property tax for homes valued under certain thresholds.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Recreation & Culture",
+        "description": "Reduced entry to national parks and cultural events. Free access to some public recreation programs.",
+        "eligibilityAge": 65
+      }
+    ]
   }
 }

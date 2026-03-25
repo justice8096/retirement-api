@@ -122,5 +122,440 @@
         "url": "https://fi.google.com/about/plans"
       }
     ]
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 25,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Local market or supermarket"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 16,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Tropical fruits widely available"
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Potatoes / Sweet Potatoes",
+            "monthlyCost": 5,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet staple"
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 5,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet vegetables"
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 4,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Digestive health"
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 21,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Primary protein for adults & dog"
+          },
+          {
+            "name": "Ground Beef / Turkey",
+            "monthlyCost": 18,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean ground for dog food base"
+          },
+          {
+            "name": "Fish (local catch)",
+            "monthlyCost": 16,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Fresh local fish often cheaper than US"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 5,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 5,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Home-cooked dog diet essential"
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk",
+            "monthlyCost": 5,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Cheese (local + imported)",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": "Local cheese very affordable"
+          },
+          {
+            "name": "Yogurt",
+            "monthlyCost": 5,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 4,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Rice / Pasta / Beans",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "monthly stock",
+            "forWhom": "shared",
+            "notes": "Staples very affordable locally"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Canned Goods / Sauces",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Cooking Oils / Spices",
+            "monthlyCost": 5,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Snacks / Crackers",
+            "monthlyCost": 5,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee (ground/beans)",
+            "monthlyCost": 7,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": "Excellent local coffee in most LATAM countries"
+          },
+          {
+            "name": "Water (filtered/bottled)",
+            "monthlyCost": 5,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": "Garrafon/filtered water delivery common"
+          },
+          {
+            "name": "Juice / Soft Drinks",
+            "monthlyCost": 5,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Beer / Wine",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": "Local beer very affordable"
+          }
+        ]
+      },
+      {
+        "id": "pet",
+        "name": "Pet Food & Supplements",
+        "items": [
+          {
+            "name": "Premium Dog Food (kibble)",
+            "monthlyCost": 23,
+            "quantity": 30,
+            "unit": "lbs/month",
+            "forWhom": "dog",
+            "notes": "Imported premium brands cost more; local brands available"
+          },
+          {
+            "name": "Dog Supplements (glucosamine, fish oil)",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": ""
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 5,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom house",
+    "monthlyBudget": {
+      "min": 488,
+      "max": 813,
+      "typical": 650
+    },
+    "breakdown": {
+      "baseRent": 618,
+      "deposit": "650 (1 month typical)",
+      "rentersInsurance": 15,
+      "localTaxesFees": 0,
+      "total": 633,
+      "notes": "No rental tax in Mexico. Predial (property tax) is landlord responsibility. Water may be included."
+    },
+    "taxNotes": "No VAT/IVA on residential rent. Predial property tax paid by owner. Foreign renters can sign contracts in pesos or USD.",
+    "leaseTerms": "12-month lease standard. Security deposit typically 1 month rent. Some landlords require aval (guarantor) or additional deposit for foreigners.",
+    "marketNotes": "Expat-popular areas command premium rents. Furnished rentals common and preferred by expats. Negotiate directly with owners for best rates.",
+    "sources": [
+      {
+        "name": "Inmuebles24",
+        "url": "https://www.inmuebles24.com/"
+      },
+      {
+        "name": "Segundamano",
+        "url": "https://www.segundamano.mx/"
+      }
+    ]
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Soriana",
+        "type": "supermarket",
+        "website": "https://www.soriana.com/",
+        "notes": "Major Mexican supermarket chain with competitive prices"
+      },
+      {
+        "name": "Chedraui",
+        "type": "supermarket",
+        "website": "https://www.chedraui.com.mx/",
+        "notes": "Large supermarket chain, good for bulk staples"
+      },
+      {
+        "name": "Walmart Mexico",
+        "type": "supermarket",
+        "website": "https://www.walmart.com.mx/",
+        "notes": "Familiar format with local and imported products"
+      },
+      {
+        "name": "La Comer",
+        "type": "supermarket",
+        "website": "https://www.lacomer.com.mx/",
+        "notes": "Mid-to-high range, good produce and deli"
+      },
+      {
+        "name": "Costco Mexico",
+        "type": "warehouse",
+        "website": "https://www.costco.com.mx/",
+        "notes": "Bulk buying, imported American brands, membership required"
+      }
+    ]
+  },
+  "healthcare": {
+    "system": "IMSS (public) + Private insurance",
+    "coverageSummary": "IMSS voluntary enrollment ~$400/year for permanent residents. Private insurance $150-300/mo per person depending on age/conditions. Out-of-pocket GP visits $20-40.",
+    "gpVisit": {
+      "withInsurance": 10,
+      "withoutInsurance": 30,
+      "notes": "GP consultations very affordable; many doctors trained in US/EU"
+    },
+    "specialist": {
+      "withInsurance": 25,
+      "withoutInsurance": 80,
+      "notes": "Specialist visits $50-100 without insurance. Major cities have excellent specialists."
+    },
+    "privateInsurance": {
+      "monthlyPerPerson": 200,
+      "notes": "GNP Seguros, AXA Mexico, or international plans. Pre-existing conditions may be excluded first year."
+    },
+    "emergency": {
+      "withInsurance": 50,
+      "withoutInsurance": 500,
+      "notes": "Private hospital ER visit $200-800 without insurance. IMSS free with enrollment."
+    },
+    "dental": {
+      "cleaning": 30,
+      "filling": 40,
+      "crown": 200,
+      "notes": "Dental tourism hub. Prices 50-70% less than US."
+    },
+    "notes": "Mexico has world-class private hospitals in major cities. IMSS provides basic coverage. Many expats use combination of IMSS + private insurance."
+  },
+  "personalCare": {
+    "hairCare": {
+      "mensCut": {
+        "min": 5,
+        "typical": 10,
+        "max": 20,
+        "notes": "Barbershops (barberías) widely available"
+      },
+      "womensCut": {
+        "min": 15,
+        "typical": 25,
+        "max": 45,
+        "notes": "Salons range from basic to upscale"
+      },
+      "colorTreatment": {
+        "min": 25,
+        "typical": 50,
+        "max": 100,
+        "notes": ""
+      }
+    },
+    "fitness": {
+      "gymMonthly": {
+        "min": 20,
+        "typical": 30,
+        "max": 50,
+        "notes": "Smart Fit, Sport City available in Oaxaca City, Mexico"
+      },
+      "yogaClassDrop": {
+        "min": 5,
+        "typical": 8,
+        "max": 15,
+        "notes": "Yoga popular in expat areas"
+      }
+    },
+    "spa": {
+      "massage60min": {
+        "min": 15,
+        "typical": 30,
+        "max": 60,
+        "notes": "Excellent spa culture, very affordable"
+      },
+      "manicure": {
+        "min": 5,
+        "typical": 10,
+        "max": 20,
+        "notes": ""
+      }
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 60,
+    "programName": "INAPAM (Instituto Nacional de las Personas Adultas Mayores)",
+    "discounts": [
+      {
+        "name": "INAPAM Card",
+        "description": "Free government-issued senior card for adults 60+. Provides 10-50% discounts on transportation, restaurants, hotels, medicine, and cultural events.",
+        "eligibilityAge": 60
+      },
+      {
+        "name": "Public Transit Discount",
+        "description": "INAPAM cardholders get 50% off public transit, intercity buses, and some domestic flights.",
+        "eligibilityAge": 60
+      },
+      {
+        "name": "Healthcare Discounts",
+        "description": "IMSS enrollment available. INAPAM card provides discounts at pharmacies (5-15%) and some private clinics.",
+        "eligibilityAge": 60
+      },
+      {
+        "name": "Cultural & Recreation",
+        "description": "Free or reduced entry to museums, archaeological sites, national parks, and cultural events with INAPAM card.",
+        "eligibilityAge": 60
+      },
+      {
+        "name": "Property Tax Reduction",
+        "description": "Some municipalities offer predial (property tax) reductions for seniors. Varies by state.",
+        "eligibilityAge": 60
+      },
+      {
+        "name": "Utility Discounts",
+        "description": "CFE (electricity) offers tariff reductions for seniors in some states. Water discounts available in some municipalities.",
+        "eligibilityAge": 60
+      }
+    ]
   }
 }

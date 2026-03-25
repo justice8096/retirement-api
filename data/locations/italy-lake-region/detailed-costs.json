@@ -122,5 +122,656 @@
         "url": "https://fi.google.com/about/plans"
       }
     ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 300,
+      "typical": 375,
+      "max": 469
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 250,
+        "seniorDiscounts": "Pranzo (lunch) menus available €10-15 at trattorie. Coperto (cover charge) €1-3.",
+        "notes": "Lunch for 2 at trattoria ~€28 + coperto, 2x/week = ~€220/mo = ~$250/mo in Italian Lake Region, Italy."
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 34,
+        "seniorDiscounts": "No specific senior discounts.",
+        "notes": "TIM/Vodafone/Fastweb fiber 1 Gig €25-35/mo. ~$28-40/mo."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 14,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€12.99/mo in Italy. ~$14/mo."
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 6,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€4.99/mo (€49.90/yr). Includes Prime Video. ~$6/mo."
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 8,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€6.99/mo. ~$8/mo."
+      },
+      {
+        "name": "NFL RedZone",
+        "monthlyCost": 15,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "DAZN NFL Game Pass €19.99/mo during season. Annualized ~€13/mo (~$15)."
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 28,
+        "seniorDiscounts": "Palestre comunali (municipal gyms) offer senior rates.",
+        "notes": "Virgin Active/McFit €25-40/mo, municipal gyms €15-25/mo. ~$22-34/mo."
+      },
+      {
+        "name": "Parks/Outdoors",
+        "monthlyCost": 0,
+        "seniorDiscounts": "EU citizens 65+ get free/reduced museum entry. Parks free.",
+        "notes": "Free parks, piazzas, coastal walks, hiking."
+      },
+      {
+        "name": "Books/Media",
+        "monthlyCost": 8,
+        "seniorDiscounts": "Biblioteche comunali free.",
+        "notes": "Public libraries free. Budget for newspapers, books."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 12,
+        "seniorDiscounts": "No specific discounts. Espresso at the bar is very cheap.",
+        "notes": "Espresso €1-1.50 at the bar, cappuccino €1.50-2.00. Budget for 2 visits/week. ~$12/mo."
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 52,
+      "typical": 103,
+      "max": 379
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 49,
+        "senior": 29,
+        "notes": "Italian Lake Region transit pass. Seniors 65+ eligible for reduced fares (abbonamento agevolato) on local transit. Registration at transit office required."
+      },
+      "singleRide": 1.72,
+      "coverage": "Urban bus network in most cities. Metro in Rome, Milan, Naples. Regional train (Trenitalia) connects towns.",
+      "seniorDiscount": "Seniors 65+ eligible for reduced fares (abbonamento agevolato) on local transit. Registration at transit office required."
+    },
+    "rideShare": {
+      "baseFare": 4.02,
+      "perKm": 1.26,
+      "typicalCrossTownTrip": {
+        "min": 9,
+        "typical": 14,
+        "max": 17
+      },
+      "availability": "Uber available in major cities (limited to Uber Black in some). Taxis regulated with meters. FreeNow app for taxis."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 0,
+        "initialRegistration": {
+          "min": 250,
+          "typical": 400,
+          "max": 700
+        },
+        "notes": "Bollo auto (road tax) annual, based on engine power (kW). Revisione (inspection) every 2 years after 4th year."
+      },
+      "insurance": {
+        "monthlyMin": 46,
+        "monthlyTypical": 63,
+        "monthlyMax": 103,
+        "notes": "RCA (third-party) mandatory, ~$40-55/mo. Kasko (comprehensive) $55-90/mo. Rates vary significantly by region."
+      },
+      "fuel": {
+        "pricePerLiter": 1.8,
+        "monthlyEstimate": {
+          "min": 63,
+          "typical": 98,
+          "max": 150
+        },
+        "notes": "Benzina (gasoline) ~$1.75-1.85/L. Gasolio (diesel) ~$1.65-1.75/L. Self-service (fai da te) cheaper than attended."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 69,
+          "typical": 98,
+          "max": 138
+        },
+        "hourlyStreet": 1.72,
+        "notes": "Blue-line (strisce blu) parking metered. White-line free. Resident permits available. ZTL zones restrict car access in city centers."
+      },
+      "tolls": {
+        "monthlyEstimate": 35,
+        "notes": "Estimated monthly toll/highway costs for Italian Lake Region area."
+      },
+      "seniorDiscounts": "Seniors 65+ eligible for reduced fares (abbonamento agevolato) on local transit. Registration at transit office required."
+    },
+    "walkability": "Excellent walkability in historic centers. Many errands manageable on foot in town cores.",
+    "monthlyEstimate": {
+      "carFree": {
+        "min": 52,
+        "typical": 103,
+        "max": 173,
+        "notes": "Transit pass + occasional ride-share. Good for urban core living."
+      },
+      "withCar": {
+        "min": 230,
+        "typical": 379,
+        "max": 541,
+        "notes": "Includes insurance, fuel, parking, maintenance. Higher urban parking and insurance costs."
+      }
+    }
+  },
+  "visionDental": {
+    "monthlyBudget": {
+      "min": 40,
+      "typical": 70,
+      "max": 120
+    },
+    "vision": {
+      "eyeExam": {
+        "withInsurance": 0,
+        "withoutInsurance": 34,
+        "notes": "Visita oculistica ~30 EUR. SSN (public health) covers ophthalmologist with GP referral. Private ~30-50 EUR."
+      },
+      "glasses": {
+        "basic": 90,
+        "progressive": 200,
+        "contacts12mo": 170,
+        "notes": "Basic frames+lenses ~80 EUR at chains like GrandVision, Salmoiraghi. Progressive ~180 EUR. Not covered by SSN."
+      },
+      "insurance": {
+        "monthlyPremium": 0,
+        "coverage": "SSN covers ophthalmology referrals; glasses/contacts not covered",
+        "notes": "No standalone vision insurance common. Private health (Unisalute, Generali) may include vision benefits."
+      }
+    },
+    "dental": {
+      "cleaning": {
+        "withInsurance": 10,
+        "withoutInsurance": 57,
+        "notes": "Pulizia dentale ~50 EUR. Very limited public dental for adults."
+      },
+      "filling": {
+        "withInsurance": 34,
+        "withoutInsurance": 80,
+        "notes": "Otturazione composita ~70 EUR. Private dental is standard; public waitlists are long."
+      },
+      "crown": {
+        "withInsurance": 285,
+        "withoutInsurance": 455,
+        "notes": "Corona in ceramica ~400 EUR. Dental funds (fondi sanitari) through employers reduce costs."
+      },
+      "insurance": {
+        "monthlyPremium": 17,
+        "coverage": "Private dental plan or fondo sanitario, discounted cleanings and treatments",
+        "notes": "Dental-only plans ~15 EUR/mo (DentaVox, Unisalute Dental). Free cleanings, 30-50% off treatments. Fondi sanitari via CCNL employment contracts common."
+      }
+    },
+    "annualEstimate": {
+      "withInsurance": {
+        "premiums": 204,
+        "outOfPocket": 160,
+        "total": 364,
+        "monthlyEquiv": 30
+      },
+      "withoutInsurance": {
+        "outOfPocket": 400,
+        "monthlyEquiv": 33
+      }
+    }
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 30,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Local markets or supermarket"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 23,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Seasonal local fruit"
+          },
+          {
+            "name": "Leafy Greens",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tomatoes",
+            "monthlyCost": 7,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": "Local grown"
+          },
+          {
+            "name": "Potatoes/Onions",
+            "monthlyCost": 5,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "protein",
+        "name": "Protein",
+        "items": [
+          {
+            "name": "Chicken breast",
+            "monthlyCost": 21,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "~€5.0/kg"
+          },
+          {
+            "name": "Ground beef",
+            "monthlyCost": 26,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "~€6.0/kg"
+          },
+          {
+            "name": "Fish (local catch)",
+            "monthlyCost": 23,
+            "quantity": 1.5,
+            "unit": "kg/month",
+            "forWhom": "adults",
+            "notes": "Market fish, seasonal"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 8,
+            "quantity": 4,
+            "unit": "dozen/month",
+            "forWhom": "shared",
+            "notes": "~€1.9/dozen"
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy",
+        "items": [
+          {
+            "name": "Milk",
+            "monthlyCost": 7,
+            "quantity": 8,
+            "unit": "liters/month",
+            "forWhom": "shared",
+            "notes": "~€0.8/L"
+          },
+          {
+            "name": "Cheese (local + imported)",
+            "monthlyCost": 12,
+            "quantity": 1,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": "Mix of local and imported"
+          },
+          {
+            "name": "Yogurt",
+            "monthlyCost": 5,
+            "quantity": 8,
+            "unit": "pots/month",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Bread",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "daily",
+            "forWhom": "shared",
+            "notes": "Local bakery or supermarket"
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 5,
+            "quantity": 2,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Rice",
+            "monthlyCost": 4,
+            "quantity": 1,
+            "unit": "kg/month",
+            "forWhom": "shared",
+            "notes": ""
+          },
+          {
+            "name": "Olive oil",
+            "monthlyCost": 9,
+            "quantity": 1,
+            "unit": "L/month",
+            "forWhom": "shared",
+            "notes": "~€4.4/L"
+          },
+          {
+            "name": "Canned goods/sauces",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "shared",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "adults",
+            "notes": "Ground coffee ~€2.3/250g"
+          },
+          {
+            "name": "Water",
+            "monthlyCost": 5,
+            "quantity": 20,
+            "unit": "bottles/month",
+            "forWhom": "shared",
+            "notes": "Tap safe in most areas; mineral preferred"
+          },
+          {
+            "name": "Wine",
+            "monthlyCost": 15,
+            "quantity": 4,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Local wine ~€3.4/bottle"
+          },
+          {
+            "name": "Beer",
+            "monthlyCost": 9,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Local beer ~€1.0/500ml"
+          }
+        ]
+      },
+      {
+        "id": "pet",
+        "name": "Pet Food",
+        "items": [
+          {
+            "name": "Premium dog food",
+            "monthlyCost": 37,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": "Royal Canin/Hills from pet shops or vet clinics"
+          },
+          {
+            "name": "Dog treats",
+            "monthlyCost": 8,
+            "quantity": 1,
+            "unit": "monthly",
+            "forWhom": "dog",
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom house or ground-floor apartment",
+    "monthlyBudget": {
+      "min": 1120,
+      "max": 1820,
+      "typical": 1400
+    },
+    "breakdown": {
+      "baseRent": 1400,
+      "rentersInsurance": 0,
+      "localTaxesFees": 0,
+      "total": 1400,
+      "notes": "Renter's insurance not standard in most European countries. Utilities billed separately."
+    },
+    "taxNotes": "No rental tax for tenants. Registration tax (imposta di registro) 2% of annual rent, split 50/50. IMU property tax is landlord responsibility.",
+    "leaseTerms": "4+4 year lease (contratto libero) most common. Cedolare secca (flat-rate tax) landlords may not increase rent. Security deposit 2-3 months. 6-month notice to terminate.",
+    "marketNotes": "Premium market around Como/Garda/Maggiore. Apartments and small houses. Seasonal tourist pressure."
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Esselunga",
+        "type": "supermarket",
+        "website": "https://www.esselunga.it/",
+        "notes": "Highest quality Italian chain. Strong in northern/central Italy.",
+        "videos": []
+      },
+      {
+        "name": "Conad",
+        "type": "supermarket",
+        "website": "https://www.conad.it/",
+        "notes": "Cooperative chain, excellent own-brand Sapori & Dintorni line.",
+        "videos": []
+      },
+      {
+        "name": "Lidl",
+        "type": "discount-supermarket",
+        "website": "https://www.lidl.it/",
+        "notes": "Best prices. Italian-sourced products. Weekly specials.",
+        "videos": []
+      },
+      {
+        "name": "Eurospin",
+        "type": "discount-supermarket",
+        "website": "https://www.eurospin.it/",
+        "notes": "Italian discount chain. Very low prices, limited selection.",
+        "videos": []
+      },
+      {
+        "name": "Mercati rionali",
+        "type": "farmers-market",
+        "website": "",
+        "notes": "Neighborhood markets for produce, cheese, cured meats. Open daily or weekly depending on town.",
+        "videos": []
+      }
+    ]
+  },
+  "healthcare": {
+    "system": "SSN (Servizio Sanitario Nazionale) + Private supplement",
+    "coverageSummary": "Italy provides universal healthcare via SSN for residents. Annual registration fee ~€400 for voluntary enrollment. Ticket (copay) €10-36 for visits/tests. Private insurance recommended for shorter waits.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD"
+      ],
+      "costs": [
+        {
+          "item": "SSN voluntary enrollment",
+          "monthlyCost": 35,
+          "notes": "~€400/yr per person for non-EU residents"
+        },
+        {
+          "item": "Private health insurance (UniSalute/Generali)",
+          "monthlyCost": 120,
+          "notes": "Supplemental for AMD specialist access, age-rated"
+        },
+        {
+          "item": "GP visits (medico di base)",
+          "monthlyCost": 0,
+          "notes": "Free with SSN registration"
+        },
+        {
+          "item": "Specialist visits (ophthalmologist)",
+          "monthlyCost": 15,
+          "notes": "Private for faster AMD monitoring"
+        },
+        {
+          "item": "Lab work",
+          "monthlyCost": 5,
+          "notes": "Ticket copay ~€10-36 or free with exemption"
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Gout"
+      ],
+      "costs": [
+        {
+          "item": "SSN voluntary enrollment",
+          "monthlyCost": 35,
+          "notes": "~€400/yr per person"
+        },
+        {
+          "item": "Private health insurance",
+          "monthlyCost": 100,
+          "notes": "Standard supplemental policy"
+        },
+        {
+          "item": "GP visits (medico di base)",
+          "monthlyCost": 0,
+          "notes": "Free with SSN"
+        },
+        {
+          "item": "Specialist visits",
+          "monthlyCost": 10,
+          "notes": "Endocrinologist quarterly"
+        },
+        {
+          "item": "Lab work",
+          "monthlyCost": 5,
+          "notes": "HbA1c + metabolic panel"
+        }
+      ]
+    }
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Hair Care",
+      "priceRange": {
+        "cut": "15-30",
+        "color": "45-80",
+        "fullService": "65-120"
+      },
+      "notes": "Afro hair salons (parrucchieri afro) in major cities. Stronger presence in Rome, Milan, Naples.",
+      "providers": [
+        {
+          "name": "Parrucchieri afro",
+          "type": "Salon",
+          "address": "City center",
+          "distanceKm": 8,
+          "rating": 4.1,
+          "notes": "Textured hair, braids, extensions",
+          "website": ""
+        },
+        {
+          "name": "Local parrucchiere",
+          "type": "Salon",
+          "address": "Various",
+          "distanceKm": 2,
+          "rating": 4.4,
+          "notes": "Italian salon, good for color and cuts",
+          "website": ""
+        }
+      ]
+    },
+    "clothing": {
+      "label": "Clothing & Shoes",
+      "monthlyBudget": {
+        "min": 40,
+        "typical": 70,
+        "max": 120
+      },
+      "stores": [
+        {
+          "name": "OVS / Tezenis",
+          "notes": "Budget Italian chains"
+        },
+        {
+          "name": "Zara / H&M / Benetton",
+          "notes": "Mid-range, in centri commerciali"
+        },
+        {
+          "name": "Saldi (seasonal sales)",
+          "notes": "Government-regulated sales in Jan and July — 30-70% off"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 60,
+    "discounts": [
+      {
+        "name": "Carta Argento Trenitalia",
+        "description": "Senior rail card (€30/yr) for 15% off base and 10% off Frecce trains. Available at 60+.",
+        "eligibilityAge": 60
+      },
+      {
+        "name": "Abbonamento agevolato (local transit)",
+        "description": "Reduced-rate monthly transit pass for 65+ in most cities (30-50% off).",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Free museum entry",
+        "description": "EU citizens 65+ get free entry to all state museums and archaeological sites (prima domenica free for all).",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "Ticket exemption (Esenzione)",
+        "description": "Seniors 65+ with income below threshold exempt from healthcare copays (ticket sanitario).",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "ISEE-based utility discounts",
+        "description": "Bonus sociale for electricity, gas, and water based on ISEE income threshold. Available regardless of age.",
+        "eligibilityAge": 0
+      }
+    ]
   }
 }
