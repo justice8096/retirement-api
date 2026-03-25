@@ -18,7 +18,10 @@
     "db:generate": "prisma generate",
     "tailscale:serve": "bash tools/tailscale-serve.sh",
     "tailscale:funnel": "bash tools/tailscale-serve.sh --funnel",
-    "tailscale:stop": "bash tools/tailscale-serve.sh --stop"
+    "tailscale:stop": "bash tools/tailscale-serve.sh --stop",
+    "db:backup": "bash tools/backup-db.sh",
+    "db:backup:local": "bash tools/backup-db.sh --local-only",
+    "db:backup:setup": "powershell -ExecutionPolicy Bypass -File tools/setup-backup-schedule.ps1"
   },
   "imports": {
     "#shared/*": "./shared/*"
