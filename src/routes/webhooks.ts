@@ -14,7 +14,9 @@ import Stripe from 'stripe';
 import type { FastifyInstance, FastifyBaseLogger } from 'fastify';
 import prisma from '../db/prisma.js';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+const stripe = process.env.STRIPE_SECRET_KEY
+  ? new Stripe(process.env.STRIPE_SECRET_KEY)
+  : null;
 
 // Map Stripe price IDs to subscription tiers
 function priceToTier(priceId: string | undefined): string {
@@ -24,6 +26,10 @@ function priceToTier(priceId: string | undefined): string {
 }
 
 export default async function webhookRoutes(app: FastifyInstance): Promise<void> {
+  if (!stripe) {
+    app.log.warn('Stripe not configured — webhook routes disabled');
+    return;
+  }
   // Stripe sends raw body — must parse it ourselves for signature verification
   app.addContentTypeParser(
     'application/json',

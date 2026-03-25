@@ -13,7 +13,9 @@ import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
 import { requireAuth } from '../middleware/auth.js';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+const stripe = process.env.STRIPE_SECRET_KEY
+  ? new Stripe(process.env.STRIPE_SECRET_KEY)
+  : null;
 
 const ALLOWED_PRICES = new Set(
   [process.env.STRIPE_PRICE_BASIC, process.env.STRIPE_PRICE_PREMIUM].filter(Boolean) as string[]
@@ -24,6 +26,10 @@ const checkoutSchema = z.object({
 }).strict();
 
 export default async function billingRoutes(app: FastifyInstance): Promise<void> {
+  if (!stripe) {
+    app.log.warn('Stripe not configured — billing routes disabled');
+    return;
+  }
   app.addHook('preHandler', requireAuth);
 
   // POST /api/billing/checkout — create a Stripe Checkout Session
