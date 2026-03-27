@@ -58,15 +58,16 @@ model HouseholdProfile {
 }
 
 model HouseholdMember {
-  id          String  @id @default(uuid())
-  householdId String  @map("household_id")
-  role        String  @default("primary") // 'primary', 'spouse', 'dependent'
-  name        String?
-  birthYear   Int     @map("birth_year")
-  ssPia       String?  @map("ss_pia")       // Monthly PIA at FRA — encrypted at rest (AES-256-GCM)
-  ssFra       Int?    @map("ss_fra")        // Full Retirement Age
-  ssClaimAge  Int?    @map("ss_claim_age")
-  sortOrder   Int     @default(0) @map("sort_order")
+  id             String  @id @default(uuid())
+  householdId    String  @map("household_id")
+  role           String  @default("primary") // 'primary', 'spouse', 'dependent'
+  dependentType  String? @map("dependent_type") // 'adult' | 'child' — only when role='dependent'
+  name           String?
+  birthYear      Int     @map("birth_year")
+  ssPia          String?  @map("ss_pia")       // Monthly PIA at FRA — encrypted at rest (AES-256-GCM)
+  ssFra          Int?    @map("ss_fra")        // Full Retirement Age
+  ssClaimAge     Int?    @map("ss_claim_age")
+  sortOrder      Int     @default(0) @map("sort_order")
 
   household HouseholdProfile @relation(fields: [householdId], references: [id], onDelete: Cascade)
 
@@ -77,11 +78,15 @@ model HouseholdMember {
 model HouseholdPet {
   id               String  @id @default(uuid())
   householdId      String  @map("household_id")
-  type             String  @default("dog")
+  name             String? // Pet name (e.g., "Luna")
+  type             String  @default("dog") // 'dog' | 'cat'
   breed            String?
-  size             String? // 'small', 'medium', 'large'
+  size             String? // 'small', 'medium', 'large' — kept for backward compat
+  weight           Int?    // Exact weight in pounds (dogs only)
+  weightTier       String? @map("weight_tier") // Derived: 'small' | 'medium' | 'large' | 'giant'
   birthYear        Int     @map("birth_year")
   expectedLifespan Int     @default(12) @map("expected_lifespan")
+  sortOrder        Int     @default(0) @map("sort_order")
 
   household HouseholdProfile @relation(fields: [householdId], references: [id], onDelete: Cascade)
 
