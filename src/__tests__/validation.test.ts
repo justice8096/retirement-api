@@ -18,11 +18,29 @@ const financialSchema = z.object({
 
 const memberSchema = z.object({
   role: z.enum(['primary', 'spouse', 'dependent']).default('primary'),
+  dependentType: z.enum(['adult', 'child']).nullable().optional(),
   name: z.string().max(100).nullable().optional(),
   birthYear: z.number().int().min(1920).max(2030),
   ssPia: z.number().min(0).max(50000).nullable().optional(),
   ssFra: z.number().int().min(62).max(70).nullable().optional(),
   ssClaimAge: z.number().int().min(62).max(75).nullable().optional(),
+  sortOrder: z.number().int().min(0).default(0),
+}).refine(
+  (data) => {
+    if (data.role === 'dependent') return data.dependentType != null;
+    return data.dependentType == null || data.dependentType === undefined;
+  },
+  { message: 'dependentType is required for dependents and must be null/omitted for non-dependents' }
+);
+
+const petSchema = z.object({
+  name: z.string().max(100).nullable().optional(),
+  type: z.enum(['dog', 'cat']).default('dog'),
+  breed: z.string().max(100).nullable().optional(),
+  size: z.enum(['small', 'medium', 'large']).nullable().optional(),
+  weight: z.number().int().min(1).max(300).nullable().optional(),
+  birthYear: z.number().int().min(2000).max(2030),
+  expectedLifespan: z.number().int().min(1).max(30).default(12),
   sortOrder: z.number().int().min(0).default(0),
 });
 
@@ -30,6 +48,15 @@ const scenarioSchema = z.object({
   name: z.string().min(1).max(200),
   scenarioData: z.record(z.unknown()),
 }).strict();
+
+// ─── Weight tier derivation (replicated from household.ts) ───────────────
+function deriveWeightTier(type: string, weight: number | null | undefined): string | null {
+  if (type !== 'dog' || !weight) return null;
+  if (weight < 25) return 'small';
+  if (weight <= 50) return 'medium';
+  if (weight <= 100) return 'large';
+  return 'giant';
+}
 
 describe('financialSchema', () => {
   it('accepts valid partial update', () => {
@@ -113,6 +140,167 @@ describe('memberSchema', () => {
     expect(memberSchema.safeParse({ birthYear: 1966, ssClaimAge: 62 }).success).toBe(true);
     expect(memberSchema.safeParse({ birthYear: 1966, ssClaimAge: 75 }).success).toBe(true);
     expect(memberSchema.safeParse({ birthYear: 1966, ssClaimAge: 76 }).success).toBe(false);
+  });
+
+  // ─── Dependent type tests ───────────────────────────────────────────
+  it('accepts dependent with dependentType=adult', () => {
+    const result = memberSchema.safeParse({
+      role: 'dependent',
+      dependentType: 'adult',
+      name: 'Mom',
+      birthYear: 1940,
+    });
+    expect(result.success).toBe(true);
+  });
+
+  it('accepts dependent with dependentType=child', () => {
+    const result = memberSchema.safeParse({
+      role: 'dependent',
+      dependentType: 'child',
+      name: 'Junior',
+      birthYear: 2010,
+    });
+    expect(result.success).toBe(true);
+  });
+
+  it('rejects dependent without dependentType', () => {
+    const result = memberSchema.safeParse({
+      role: 'dependent',
+      name: 'Unknown',
+      birthYear: 1990,
+    });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects primary with dependentType set', () => {
+    const result = memberSchema.safeParse({
+      role: 'primary',
+      dependentType: 'adult',
+      birthYear: 1966,
+    });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects spouse with dependentType set', () => {
+    const result = memberSchema.safeParse({
+      role: 'spouse',
+      dependentType: 'child',
+      birthYear: 1966,
+    });
+    expect(result.success).toBe(false);
+  });
+
+  it('accepts primary without dependentType (backward compat)', () => {
+    const result = memberSchema.safeParse({
+      role: 'primary',
+      birthYear: 1966,
+      ssPia: 2400,
+    });
+    expect(result.success).toBe(true);
+  });
+});
+
+describe('petSchema', () => {
+  it('accepts dog with weight and name', () => {
+    const result = petSchema.safeParse({
+      name: 'Luna',
+      type: 'dog',
+      breed: 'Bernese Mountain Dog',
+      weight: 110,
+      birthYear: 2022,
+      expectedLifespan: 11,
+    });
+    expect(result.success).toBe(true);
+  });
+
+  it('accepts cat without weight', () => {
+    const result = petSchema.safeParse({
+      name: 'Milo',
+      type: 'cat',
+      birthYear: 2023,
+      expectedLifespan: 16,
+    });
+    expect(result.success).toBe(true);
+  });
+
+  it('accepts legacy payload (no name, no weight, no sortOrder)', () => {
+    const result = petSchema.safeParse({
+      type: 'dog',
+      breed: 'Labrador',
+      size: 'large',
+      birthYear: 2020,
+      expectedLifespan: 12,
+    });
+    expect(result.success).toBe(true);
+  });
+
+  it('rejects type other than dog or cat', () => {
+    const result = petSchema.safeParse({
+      type: 'parrot',
+      birthYear: 2020,
+    });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects weight below 1', () => {
+    const result = petSchema.safeParse({
+      type: 'dog',
+      weight: 0,
+      birthYear: 2020,
+    });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects weight above 300', () => {
+    const result = petSchema.safeParse({
+      type: 'dog',
+      weight: 350,
+      birthYear: 2020,
+    });
+    expect(result.success).toBe(false);
+  });
+
+  it('accepts weight at boundaries', () => {
+    expect(petSchema.safeParse({ type: 'dog', weight: 1, birthYear: 2020 }).success).toBe(true);
+    expect(petSchema.safeParse({ type: 'dog', weight: 300, birthYear: 2020 }).success).toBe(true);
+  });
+
+  it('defaults type to dog when omitted', () => {
+    const result = petSchema.safeParse({ birthYear: 2022 });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.type).toBe('dog');
+    }
+  });
+
+  it('defaults expectedLifespan to 12 when omitted', () => {
+    const result = petSchema.safeParse({ birthYear: 2022 });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.expectedLifespan).toBe(12);
+    }
+  });
+});
+
+describe('deriveWeightTier', () => {
+  it('returns null for cats', () => {
+    expect(deriveWeightTier('cat', 10)).toBeNull();
+  });
+
+  it('returns null for dogs without weight', () => {
+    expect(deriveWeightTier('dog', null)).toBeNull();
+    expect(deriveWeightTier('dog', undefined)).toBeNull();
+  });
+
+  it('maps weight boundaries correctly', () => {
+    expect(deriveWeightTier('dog', 1)).toBe('small');
+    expect(deriveWeightTier('dog', 24)).toBe('small');
+    expect(deriveWeightTier('dog', 25)).toBe('medium');
+    expect(deriveWeightTier('dog', 50)).toBe('medium');
+    expect(deriveWeightTier('dog', 51)).toBe('large');
+    expect(deriveWeightTier('dog', 100)).toBe('large');
+    expect(deriveWeightTier('dog', 101)).toBe('giant');
+    expect(deriveWeightTier('dog', 200)).toBe('giant');
   });
 });
 

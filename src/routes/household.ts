@@ -7,21 +7,31 @@ import { encryptField, decryptField } from '../middleware/encryption.js';
 const memberSchema = z.object({
   id: z.string().uuid().optional(),
   role: z.enum(['primary', 'spouse', 'dependent']).default('primary'),
+  dependentType: z.enum(['adult', 'child']).nullable().optional(),
   name: z.string().max(100).nullable().optional(),
   birthYear: z.number().int().min(1920).max(2030),
   ssPia: z.number().min(0).max(50000).nullable().optional(),
   ssFra: z.number().int().min(62).max(70).nullable().optional(),
   ssClaimAge: z.number().int().min(62).max(75).nullable().optional(),
   sortOrder: z.number().int().min(0).default(0),
-});
+}).refine(
+  (data) => {
+    if (data.role === 'dependent') return data.dependentType != null;
+    return data.dependentType == null || data.dependentType === undefined;
+  },
+  { message: 'dependentType is required for dependents and must be null/omitted for non-dependents' }
+);
 
 const petSchema = z.object({
   id: z.string().uuid().optional(),
-  type: z.string().max(50).default('dog'),
+  name: z.string().max(100).nullable().optional(),
+  type: z.enum(['dog', 'cat']).default('dog'),
   breed: z.string().max(100).nullable().optional(),
   size: z.enum(['small', 'medium', 'large']).nullable().optional(),
+  weight: z.number().int().min(1).max(300).nullable().optional(),
   birthYear: z.number().int().min(2000).max(2030),
   expectedLifespan: z.number().int().min(1).max(30).default(12),
+  sortOrder: z.number().int().min(0).default(0),
 });
 
 const householdSchema = z.object({
@@ -33,6 +43,15 @@ const householdSchema = z.object({
   members: z.array(memberSchema).optional(),
   pets: z.array(petSchema).optional(),
 }).strict();
+
+/** Derive dog weight tier from exact weight in pounds. Cats return null. */
+function deriveWeightTier(type: string, weight: number | null | undefined): string | null {
+  if (type !== 'dog' || !weight) return null;
+  if (weight < 25) return 'small';
+  if (weight <= 50) return 'medium';
+  if (weight <= 100) return 'large';
+  return 'giant';
+}
 
 interface HouseholdWithRelations {
   targetAnnualIncome: unknown;
@@ -62,7 +81,7 @@ export default async function householdRoutes(app: FastifyInstance): Promise<voi
       where: { userId: request.userId },
       include: {
         members: { orderBy: { sortOrder: 'asc' } },
-        pets: true,
+        pets: { orderBy: { sortOrder: 'asc' } },
       },
     });
 
@@ -102,6 +121,7 @@ export default async function householdRoutes(app: FastifyInstance): Promise<voi
             data: members.map((m, i) => ({
               householdId: household.id,
               role: m.role,
+              dependentType: m.dependentType ?? null,
               name: m.name ?? null,
               birthYear: m.birthYear,
               ssPia: encryptField(m.ssPia),  // Encrypt SS PIA
@@ -118,13 +138,17 @@ export default async function householdRoutes(app: FastifyInstance): Promise<voi
         await tx.householdPet.deleteMany({ where: { householdId: household.id } });
         if (pets.length > 0) {
           await tx.householdPet.createMany({
-            data: pets.map((p) => ({
+            data: pets.map((p, i) => ({
               householdId: household.id,
+              name: p.name ?? null,
               type: p.type,
               breed: p.breed ?? null,
               size: p.size ?? null,
+              weight: p.weight ?? null,
+              weightTier: deriveWeightTier(p.type, p.weight),
               birthYear: p.birthYear,
               expectedLifespan: p.expectedLifespan,
+              sortOrder: p.sortOrder ?? i,
             })),
           });
         }
@@ -134,7 +158,7 @@ export default async function householdRoutes(app: FastifyInstance): Promise<voi
         where: { id: household.id },
         include: {
           members: { orderBy: { sortOrder: 'asc' } },
-          pets: true,
+          pets: { orderBy: { sortOrder: 'asc' } },
         },
       });
     });
@@ -142,3 +166,5 @@ export default async function householdRoutes(app: FastifyInstance): Promise<voi
     return decryptHousehold(result as HouseholdWithRelations);
   });
 }
+
+export { memberSchema, petSchema, householdSchema, deriveWeightTier };
