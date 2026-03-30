@@ -33,7 +33,13 @@ const petSchema = z.object({
   birthYear: z.number().int().min(2000).max(2030),
   expectedLifespan: z.number().int().min(1).max(50).default(12),
   sortOrder: z.number().int().min(0).default(0),
-});
+}).refine(
+  (data) => {
+    if (data.feedingMode != null) return data.type === 'dog' || data.type === 'cat';
+    return true;
+  },
+  { message: 'feedingMode is only supported for dogs and cats' }
+);
 
 const householdSchema = z.object({
   adultsCount: z.number().int().min(1).max(10).default(2),

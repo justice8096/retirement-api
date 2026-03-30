@@ -35,14 +35,21 @@ const memberSchema = z.object({
 
 const petSchema = z.object({
   name: z.string().max(100).nullable().optional(),
-  type: z.enum(['dog', 'cat']).default('dog'),
+  type: z.enum(['dog', 'cat', 'bird', 'rabbit', 'fish', 'horse', 'reptile']).default('dog'),
   breed: z.string().max(100).nullable().optional(),
   size: z.enum(['small', 'medium', 'large']).nullable().optional(),
-  weight: z.number().int().min(1).max(300).nullable().optional(),
+  weight: z.number().int().min(1).max(2500).nullable().optional(),
+  feedingMode: z.enum(['commercial', 'homemade']).nullable().optional(),
   birthYear: z.number().int().min(2000).max(2030),
-  expectedLifespan: z.number().int().min(1).max(30).default(12),
+  expectedLifespan: z.number().int().min(1).max(50).default(12),
   sortOrder: z.number().int().min(0).default(0),
-});
+}).refine(
+  (data) => {
+    if (data.feedingMode != null) return data.type === 'dog' || data.type === 'cat';
+    return true;
+  },
+  { message: 'feedingMode is only supported for dogs and cats' }
+);
 
 const scenarioSchema = z.object({
   name: z.string().min(1).max(200),
@@ -234,7 +241,13 @@ describe('petSchema', () => {
     expect(result.success).toBe(true);
   });
 
-  it('rejects type other than dog or cat', () => {
+  it('accepts all 7 pet types', () => {
+    for (const type of ['dog', 'cat', 'bird', 'rabbit', 'fish', 'horse', 'reptile']) {
+      expect(petSchema.safeParse({ type, birthYear: 2020 }).success).toBe(true);
+    }
+  });
+
+  it('rejects unknown pet type', () => {
     const result = petSchema.safeParse({
       type: 'parrot',
       birthYear: 2020,
@@ -251,10 +264,10 @@ describe('petSchema', () => {
     expect(result.success).toBe(false);
   });
 
-  it('rejects weight above 300', () => {
+  it('rejects weight above 2500', () => {
     const result = petSchema.safeParse({
-      type: 'dog',
-      weight: 350,
+      type: 'horse',
+      weight: 2501,
       birthYear: 2020,
     });
     expect(result.success).toBe(false);
@@ -262,7 +275,39 @@ describe('petSchema', () => {
 
   it('accepts weight at boundaries', () => {
     expect(petSchema.safeParse({ type: 'dog', weight: 1, birthYear: 2020 }).success).toBe(true);
-    expect(petSchema.safeParse({ type: 'dog', weight: 300, birthYear: 2020 }).success).toBe(true);
+    expect(petSchema.safeParse({ type: 'horse', weight: 2500, birthYear: 2020 }).success).toBe(true);
+  });
+
+  it('accepts horse with high weight and long lifespan', () => {
+    const result = petSchema.safeParse({
+      type: 'horse',
+      weight: 1200,
+      birthYear: 2015,
+      expectedLifespan: 30,
+    });
+    expect(result.success).toBe(true);
+  });
+
+  it('accepts lifespan up to 50', () => {
+    expect(petSchema.safeParse({ type: 'bird', birthYear: 2020, expectedLifespan: 50 }).success).toBe(true);
+    expect(petSchema.safeParse({ type: 'bird', birthYear: 2020, expectedLifespan: 51 }).success).toBe(false);
+  });
+
+  it('accepts feedingMode for dogs and cats', () => {
+    expect(petSchema.safeParse({ type: 'dog', feedingMode: 'homemade', birthYear: 2020 }).success).toBe(true);
+    expect(petSchema.safeParse({ type: 'dog', feedingMode: 'commercial', birthYear: 2020 }).success).toBe(true);
+    expect(petSchema.safeParse({ type: 'cat', feedingMode: 'homemade', birthYear: 2020 }).success).toBe(true);
+  });
+
+  it('rejects feedingMode for non-dog/cat types', () => {
+    expect(petSchema.safeParse({ type: 'bird', feedingMode: 'commercial', birthYear: 2020 }).success).toBe(false);
+    expect(petSchema.safeParse({ type: 'horse', feedingMode: 'homemade', birthYear: 2020 }).success).toBe(false);
+    expect(petSchema.safeParse({ type: 'fish', feedingMode: 'commercial', birthYear: 2020 }).success).toBe(false);
+  });
+
+  it('accepts null feedingMode for any type', () => {
+    expect(petSchema.safeParse({ type: 'bird', feedingMode: null, birthYear: 2020 }).success).toBe(true);
+    expect(petSchema.safeParse({ type: 'dog', feedingMode: null, birthYear: 2020 }).success).toBe(true);
   });
 
   it('defaults type to dog when omitted', () => {
@@ -283,8 +328,10 @@ describe('petSchema', () => {
 });
 
 describe('deriveWeightTier', () => {
-  it('returns null for cats', () => {
+  it('returns null for non-dog types', () => {
     expect(deriveWeightTier('cat', 10)).toBeNull();
+    expect(deriveWeightTier('horse', 1000)).toBeNull();
+    expect(deriveWeightTier('bird', 2)).toBeNull();
   });
 
   it('returns null for dogs without weight', () => {
