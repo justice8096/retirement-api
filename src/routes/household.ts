@@ -25,12 +25,13 @@ const memberSchema = z.object({
 const petSchema = z.object({
   id: z.string().uuid().optional(),
   name: z.string().max(100).nullable().optional(),
-  type: z.enum(['dog', 'cat']).default('dog'),
+  type: z.enum(['dog', 'cat', 'bird', 'rabbit', 'fish', 'horse', 'reptile']).default('dog'),
   breed: z.string().max(100).nullable().optional(),
   size: z.enum(['small', 'medium', 'large']).nullable().optional(),
-  weight: z.number().int().min(1).max(300).nullable().optional(),
+  weight: z.number().int().min(1).max(2500).nullable().optional(),
+  feedingMode: z.enum(['commercial', 'homemade']).nullable().optional(),
   birthYear: z.number().int().min(2000).max(2030),
-  expectedLifespan: z.number().int().min(1).max(30).default(12),
+  expectedLifespan: z.number().int().min(1).max(50).default(12),
   sortOrder: z.number().int().min(0).default(0),
 });
 
@@ -44,7 +45,7 @@ const householdSchema = z.object({
   pets: z.array(petSchema).optional(),
 }).strict();
 
-/** Derive dog weight tier from exact weight in pounds. Cats return null. */
+/** Derive dog weight tier from exact weight in pounds. Non-dogs return null. */
 function deriveWeightTier(type: string, weight: number | null | undefined): string | null {
   if (type !== 'dog' || !weight) return null;
   if (weight < 25) return 'small';
@@ -146,6 +147,7 @@ export default async function householdRoutes(app: FastifyInstance): Promise<voi
               size: p.size ?? null,
               weight: p.weight ?? null,
               weightTier: deriveWeightTier(p.type, p.weight),
+              feedingMode: p.feedingMode ?? null,
               birthYear: p.birthYear,
               expectedLifespan: p.expectedLifespan,
               sortOrder: p.sortOrder ?? i,

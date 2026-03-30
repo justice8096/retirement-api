@@ -79,11 +79,12 @@ model HouseholdPet {
   id               String  @id @default(uuid())
   householdId      String  @map("household_id")
   name             String? // Pet name (e.g., "Luna")
-  type             String  @default("dog") // 'dog' | 'cat'
+  type             String  @default("dog") // 'dog' | 'cat' | 'bird' | 'rabbit' | 'fish' | 'horse' | 'reptile'
   breed            String?
   size             String? // 'small', 'medium', 'large' — kept for backward compat
-  weight           Int?    // Exact weight in pounds (dogs only)
-  weightTier       String? @map("weight_tier") // Derived: 'small' | 'medium' | 'large' | 'giant'
+  weight           Int?    // Exact weight in pounds (dogs, horses)
+  weightTier       String? @map("weight_tier") // Derived: 'small' | 'medium' | 'large' | 'giant' (dogs only)
+  feedingMode      String? @map("feeding_mode") // 'commercial' | 'homemade' (dogs/cats only)
   birthYear        Int     @map("birth_year")
   expectedLifespan Int     @default(12) @map("expected_lifespan")
   sortOrder        Int     @default(0) @map("sort_order")
