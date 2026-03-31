@@ -51,7 +51,12 @@ await app.register(helmet, {
   contentSecurityPolicy: process.env.NODE_ENV === 'production' ? undefined : false,
 });
 // Build Redis store for distributed rate limiting (falls back to in-memory)
-const redisClient = await buildRedisStore() as { quit: () => Promise<void> } | undefined;
+let redisClient: { quit: () => Promise<void> } | undefined;
+try {
+  redisClient = await buildRedisStore() as { quit: () => Promise<void> } | undefined;
+} catch (err) {
+  app.log.warn(err, 'Failed to build Redis store for rate limiting — using in-memory');
+}
 await app.register(rateLimit, {
   ...rateLimitConfig,
   ...(redisClient ? { redis: redisClient } : {}),
@@ -85,27 +90,71 @@ await registerClerk(app);
 // ─── Global Error Handler ─────────────────────────────────────────────────
 
 app.setErrorHandler((error: FastifyError, request: FastifyRequest, reply: FastifyReply) => {
-  request.log.error(error);
+  // Suppress noisy error logging for expected errors
+  const isExpected = error.statusCode && error.statusCode < 500;
+  if (!isExpected) {
+    request.log.error(error);
+  }
 
-  // Zod validation errors
+  // ── Zod / Fastify validation errors ──────────────────────────
   if (error.validation) {
     return reply.code(400).send({ error: 'Validation error', details: error.validation });
   }
 
-  // Prisma known errors
-  if ((error as unknown as { code: string }).code === 'P2025') {
+  // ── Body limit exceeded (413 Payload Too Large) ──────────────
+  if (error.statusCode === 413 || error.code === 'FST_ERR_CTP_BODY_TOO_LARGE') {
+    return reply.code(413).send({ error: 'Request body too large', limit: '1MB' });
+  }
+
+  // ── Invalid content type (415) ───────────────────────────────
+  if (error.code === 'FST_ERR_CTP_INVALID_MEDIA_TYPE') {
+    return reply.code(415).send({ error: 'Unsupported content type' });
+  }
+
+  // ── Invalid JSON body ────────────────────────────────────────
+  if (error.statusCode === 400 && (error.code === 'FST_ERR_CTP_INVALID_CONTENT_LENGTH' || error.message?.includes('JSON'))) {
+    return reply.code(400).send({ error: 'Invalid request body' });
+  }
+
+  // ── Rate limit exceeded ──────────────────────────────────────
+  if (error.statusCode === 429 || error.statusCode === 403 ||
+      (error as unknown as { code?: string }).code === 'FST_ERR_RATE_LIMIT' ||
+      error.message?.includes('rate limit') || error.message?.includes('Rate limit') ||
+      error.message?.includes('Too many')) {
+    const retryAfter = (error as unknown as { retryAfter?: number }).retryAfter || 60;
+    reply.header('retry-after', String(retryAfter));
+    return reply.code(error.statusCode || 429).send({
+      error: 'Too many requests',
+      retryAfter,
+      limit: (error as unknown as { limit?: number }).limit,
+    });
+  }
+
+  // ── Prisma known errors ──────────────────────────────────────
+  const prismaCode = (error as unknown as { code?: string }).code;
+  if (prismaCode === 'P2025') {
     return reply.code(404).send({ error: 'Record not found' });
   }
-  if ((error as unknown as { code: string }).code === 'P2002') {
+  if (prismaCode === 'P2002') {
     return reply.code(409).send({ error: 'Duplicate record' });
   }
-
-  // Rate limit
-  if (error.statusCode === 429) {
-    return reply.code(429).send({ error: 'Too many requests' });
+  // Prisma connection errors
+  if (prismaCode === 'P2024' || prismaCode === 'P1001' || prismaCode === 'P1002') {
+    captureException(error, { method: request.method, url: request.url });
+    return reply.code(503).send({ error: 'Service temporarily unavailable' });
   }
 
-  // Report 5xx errors to Sentry
+  // ── Redis / IO errors from rate-limit or cache ───────────────
+  const errName = (error as unknown as { name?: string }).name || '';
+  const errMsg = error.message || '';
+  if (errName === 'MaxRetriesPerRequestError' || errMsg.includes('ECONNREFUSED') ||
+      errMsg.includes('ECONNRESET') || errMsg.includes('Redis')) {
+    request.log.warn({ err: errMsg }, 'Redis error — request allowed through');
+    // Don't crash on Redis failures — let the request proceed without rate limiting
+    return reply.code(503).send({ error: 'Service temporarily degraded' });
+  }
+
+  // ── Report 5xx errors to Sentry ──────────────────────────────
   const statusCode = error.statusCode || 500;
   if (statusCode >= 500) {
     captureException(error, {

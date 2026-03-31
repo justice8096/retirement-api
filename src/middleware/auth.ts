@@ -34,7 +34,15 @@ export async function requireAuth(request: FastifyRequest, reply: FastifyReply):
     return;
   }
 
-  const auth = getAuth(request);
+  let auth: ReturnType<typeof getAuth>;
+  try {
+    auth = getAuth(request);
+  } catch (err) {
+    // Clerk SDK can throw on malformed/invalid tokens — treat as 401, not 500
+    request.log.warn({ err: (err as Error).message }, 'Clerk getAuth threw — rejecting as 401');
+    reply.code(401).send({ error: 'Invalid authentication token' });
+    return;
+  }
 
   if (!auth?.userId) {
     reply.code(401).send({ error: 'Authentication required' });
@@ -45,17 +53,23 @@ export async function requireAuth(request: FastifyRequest, reply: FastifyReply):
   request.authProviderId = auth.userId;
 
   // Find or create local DB user
-  request.user = await prisma.user.upsert({
-    where: { authProviderId: auth.userId },
-    update: { updatedAt: new Date() },
-    create: {
-      authProviderId: auth.userId,
-      email: (auth as unknown as { sessionClaims?: { email?: string; name?: string } }).sessionClaims?.email ?? `${auth.userId}@placeholder.local`,
-      displayName: (auth as unknown as { sessionClaims?: { email?: string; name?: string } }).sessionClaims?.name ?? null,
-    },
-  });
+  try {
+    request.user = await prisma.user.upsert({
+      where: { authProviderId: auth.userId },
+      update: { updatedAt: new Date() },
+      create: {
+        authProviderId: auth.userId,
+        email: (auth as unknown as { sessionClaims?: { email?: string; name?: string } }).sessionClaims?.email ?? `${auth.userId}@placeholder.local`,
+        displayName: (auth as unknown as { sessionClaims?: { email?: string; name?: string } }).sessionClaims?.name ?? null,
+      },
+    });
 
-  request.userId = request.user.id;
+    request.userId = request.user.id;
+  } catch (err) {
+    request.log.error({ err: (err as Error).message }, 'Failed to upsert user from Clerk auth');
+    reply.code(500).send({ error: 'Authentication processing failed' });
+    return;
+  }
 }
 
 // ─── Tier guard: requireAuth + minimum tier check ─────────────────────────
