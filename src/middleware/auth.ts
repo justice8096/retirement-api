@@ -11,7 +11,33 @@
  */
 import { clerkPlugin, getAuth } from '@clerk/fastify';
 import type { FastifyInstance, FastifyRequest, FastifyReply } from 'fastify';
+import type { User } from '@prisma/client';
 import prisma from '../db/prisma.js';
+
+// ─── User cache — avoids DB upsert on every authenticated request ─────────
+// Key: Clerk authProviderId → { user, expiresAt }
+// TTL: 10 seconds — short enough to pick up tier changes quickly
+
+const USER_CACHE_TTL_MS = 10_000;
+const userCache = new Map<string, { user: User; expiresAt: number }>();
+
+function getCachedUser(authProviderId: string): User | null {
+  const entry = userCache.get(authProviderId);
+  if (entry && entry.expiresAt > Date.now()) return entry.user;
+  if (entry) userCache.delete(authProviderId);
+  return null;
+}
+
+function setCachedUser(authProviderId: string, user: User): void {
+  userCache.set(authProviderId, { user, expiresAt: Date.now() + USER_CACHE_TTL_MS });
+  // Prevent unbounded growth: evict expired entries when map grows large
+  if (userCache.size > 500) {
+    const now = Date.now();
+    for (const [key, val] of userCache) {
+      if (val.expiresAt <= now) userCache.delete(key);
+    }
+  }
+}
 
 // ─── Clerk plugin registration ────────────────────────────────────────────
 
@@ -52,8 +78,15 @@ export async function requireAuth(request: FastifyRequest, reply: FastifyReply):
   // Clerk subject ID (e.g. "user_2abc...")
   request.authProviderId = auth.userId;
 
-  // Find or create local DB user
+  // Find or create local DB user (with short-lived cache to avoid DB hit on every request)
   try {
+    const cached = getCachedUser(auth.userId);
+    if (cached) {
+      request.user = cached;
+      request.userId = cached.id;
+      return;
+    }
+
     request.user = await prisma.user.upsert({
       where: { authProviderId: auth.userId },
       update: { updatedAt: new Date() },
@@ -64,6 +97,7 @@ export async function requireAuth(request: FastifyRequest, reply: FastifyReply):
       },
     });
 
+    setCachedUser(auth.userId, request.user);
     request.userId = request.user.id;
   } catch (err) {
     request.log.error({ err: (err as Error).message }, 'Failed to upsert user from Clerk auth');

@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
+import { cached } from '../lib/cache.js';
 
 interface LocationData {
   name: string;
@@ -158,43 +159,49 @@ export default async function locationRoutes(app: FastifyInstance): Promise<void
 
   // GET /api/locations/all — lightweight index of all locations (for dropdowns/selectors)
   // Returns only id + name + country + region — no JSONB, no pagination needed
+  // Cached for 5 minutes — this is the most frequently hit endpoint (every page load)
   app.get('/all', async (request, reply) => {
     try {
-      const locations = await prisma.adminLocation.findMany({
-        select: { id: true, name: true, country: true, region: true, currency: true, monthlyCostTotal: true },
-        orderBy: { name: 'asc' },
-      });
-      return locations;
+      return await cached('locations:all', () =>
+        prisma.adminLocation.findMany({
+          select: { id: true, name: true, country: true, region: true, currency: true, monthlyCostTotal: true },
+          orderBy: { name: 'asc' },
+        }),
+      );
     } catch (err) {
       request.log.error({ err: (err as Error).message }, 'Failed to query all locations');
       return reply.code(500).send({ error: 'Failed to query locations' });
     }
   });
 
-  // GET /api/locations/countries — distinct country list for filter UIs
+  // GET /api/locations/countries — distinct country list for filter UIs (cached 5 min)
   app.get('/countries', async (request, reply) => {
     try {
-      const rows = await prisma.adminLocation.findMany({
-        select: { country: true },
-        distinct: ['country'],
-        orderBy: { country: 'asc' },
+      return await cached('locations:countries', async () => {
+        const rows = await prisma.adminLocation.findMany({
+          select: { country: true },
+          distinct: ['country'],
+          orderBy: { country: 'asc' },
+        });
+        return rows.map((r) => r.country).filter(Boolean);
       });
-      return rows.map((r) => r.country).filter(Boolean);
     } catch (err) {
       request.log.error({ err: (err as Error).message }, 'Failed to query countries');
       return reply.code(500).send({ error: 'Failed to query countries' });
     }
   });
 
-  // GET /api/locations/regions — distinct region list for filter UIs
+  // GET /api/locations/regions — distinct region list for filter UIs (cached 5 min)
   app.get('/regions', async (request, reply) => {
     try {
-      const rows = await prisma.adminLocation.findMany({
-        select: { region: true },
-        distinct: ['region'],
-        orderBy: { region: 'asc' },
+      return await cached('locations:regions', async () => {
+        const rows = await prisma.adminLocation.findMany({
+          select: { region: true },
+          distinct: ['region'],
+          orderBy: { region: 'asc' },
+        });
+        return rows.map((r) => r.region).filter(Boolean);
       });
-      return rows.map((r) => r.region).filter(Boolean);
     } catch (err) {
       request.log.error({ err: (err as Error).message }, 'Failed to query regions');
       return reply.code(500).send({ error: 'Failed to query regions' });
