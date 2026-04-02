@@ -16,6 +16,39 @@ enum SubscriptionTier {
   admin
 }
 
+// ─── Contribution & Feature Unlock Enums ────────────────────────────────────
+
+enum ContributionType {
+  cost_correction
+  new_location
+  review_rating
+  supplemental_data
+}
+
+enum ContributionStatus {
+  pending
+  approved
+  rejected
+}
+
+enum FeatureSet {
+  basic
+  premium
+}
+
+enum UnlockReason {
+  contribution
+  purchase
+  grandfathered
+  admin_grant
+}
+
+enum GrantedReason {
+  purchase
+  grandfathered
+  admin_grant
+}
+
 model User {
   id              String           @id @default(uuid())
   authProviderId  String           @unique @map("auth_provider_id")
@@ -33,6 +66,10 @@ model User {
   locationOverrides UserLocationOverride[]
   scenarios        UserScenario[]
   groceryData      UserGroceryData?
+  releasePurchases UserReleasePurchase[]
+  contributions    Contribution[]
+  badges           UserBadge[]
+  featureUnlocks   UserFeatureUnlock[]
 
   @@map("users")
 }
@@ -79,11 +116,12 @@ model HouseholdPet {
   id               String  @id @default(uuid())
   householdId      String  @map("household_id")
   name             String? // Pet name (e.g., "Luna")
-  type             String  @default("dog") // 'dog' | 'cat'
+  type             String  @default("dog") // 'dog' | 'cat' | 'bird' | 'rabbit' | 'fish' | 'horse' | 'reptile'
   breed            String?
   size             String? // 'small', 'medium', 'large' — kept for backward compat
-  weight           Int?    // Exact weight in pounds (dogs only)
-  weightTier       String? @map("weight_tier") // Derived: 'small' | 'medium' | 'large' | 'giant'
+  weight           Int?    // Exact weight in pounds (dogs, horses)
+  weightTier       String? @map("weight_tier") // Derived: 'small' | 'medium' | 'large' | 'giant' (dogs only)
+  feedingMode      String? @map("feeding_mode") // 'commercial' | 'homemade' (dogs/cats only)
   birthYear        Int     @map("birth_year")
   expectedLifespan Int     @default(12) @map("expected_lifespan")
   sortOrder        Int     @default(0) @map("sort_order")
@@ -253,4 +291,92 @@ model AdminLocationHistory {
 
   @@index([locationId, version])
   @@map("admin_location_history")
+}
+
+// ─── Data Releases (pay-per-update) ─────────────────────────────────────────
+
+model DataRelease {
+  id            String    @id @default(uuid())
+  version       Int       @unique
+  title         String    // e.g. "Spring 2026 Data Update"
+  description   String?
+  priceUsd      Int       @default(0) @map("price_usd") // Price in cents (0 = free)
+  stripePriceId String?   @map("stripe_price_id")
+  publishedAt   DateTime? @map("published_at")
+  createdAt     DateTime  @default(now()) @map("created_at")
+
+  purchases UserReleasePurchase[]
+
+  @@index([publishedAt])
+  @@map("data_releases")
+}
+
+model UserReleasePurchase {
+  id            String       @id @default(uuid())
+  userId        String       @map("user_id")
+  releaseId     String       @map("release_id")
+  grantedReason GrantedReason @map("granted_reason")
+  createdAt     DateTime     @default(now()) @map("created_at")
+
+  user    User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  release DataRelease @relation(fields: [releaseId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, releaseId])
+  @@index([userId])
+  @@map("user_release_purchases")
+}
+
+// ─── Contributions (earn features by adding data) ───────────────────────────
+
+model Contribution {
+  id           String             @id @default(uuid())
+  userId       String             @map("user_id")
+  type         ContributionType
+  status       ContributionStatus @default(pending)
+  locationId   String?            @map("location_id") // Related location (optional for new_location type)
+  title        String
+  data         Json               // Contribution payload (cost corrections, reviews, etc.)
+  adminNotes   String?            @map("admin_notes")
+  reviewedAt   DateTime?          @map("reviewed_at")
+  reviewedBy   String?            @map("reviewed_by")
+  createdAt    DateTime           @default(now()) @map("created_at")
+  updatedAt    DateTime           @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([status])
+  @@index([type])
+  @@map("contributions")
+}
+
+// ─── Badges (cosmetic achievement markers) ──────────────────────────────────
+
+model UserBadge {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  badgeKey  String   @map("badge_key") // founding_member, cost_corrector, data_pioneer, etc.
+  awardedAt DateTime @default(now()) @map("awarded_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, badgeKey])
+  @@index([userId])
+  @@map("user_badges")
+}
+
+// ─── Feature Unlocks (separate from badges) ─────────────────────────────────
+
+model UserFeatureUnlock {
+  id           String       @id @default(uuid())
+  userId       String       @map("user_id")
+  featureSet   FeatureSet   @map("feature_set")
+  unlockedVia  UnlockReason @map("unlocked_via")
+  createdAt    DateTime     @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, featureSet])
+  @@index([userId])
+  @@map("user_feature_unlocks")
 }
