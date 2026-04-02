@@ -1,14 +1,12 @@
 /**
  * Stripe webhook handler.
  *
- * Handles subscription lifecycle events to keep the local user tier in sync
- * with Stripe billing state.
+ * Handles both legacy subscription events (grandfathered users) and new
+ * one-time payment events for releases and feature purchases.
  *
  * Environment:
  *   STRIPE_SECRET_KEY      — Stripe API key
  *   STRIPE_WEBHOOK_SECRET  — Webhook endpoint signing secret
- *   STRIPE_PRICE_BASIC     — Price ID for basic tier
- *   STRIPE_PRICE_PREMIUM   — Price ID for premium tier
  */
 import Stripe from 'stripe';
 import type { FastifyInstance, FastifyBaseLogger } from 'fastify';
@@ -17,13 +15,6 @@ import prisma from '../db/prisma.js';
 const stripe = process.env.STRIPE_SECRET_KEY
   ? new Stripe(process.env.STRIPE_SECRET_KEY)
   : null;
-
-// Map Stripe price IDs to subscription tiers
-function priceToTier(priceId: string | undefined): string {
-  if (priceId === process.env.STRIPE_PRICE_PREMIUM) return 'premium';
-  if (priceId === process.env.STRIPE_PRICE_BASIC) return 'basic';
-  return 'free';
-}
 
 export default async function webhookRoutes(app: FastifyInstance): Promise<void> {
   if (!stripe) {
@@ -79,14 +70,18 @@ export default async function webhookRoutes(app: FastifyInstance): Promise<void>
       }
 
       case 'customer.subscription.updated': {
-        const subscription = event.data.object as Stripe.Subscription;
-        await handleSubscriptionUpdated(subscription, request.log);
+        // Legacy: grandfathered subscriptions — no-op (don't change tiers)
+        request.log.info('Legacy subscription.updated — no tier changes for grandfathered users');
         break;
       }
 
       case 'customer.subscription.deleted': {
+        // Legacy: don't downgrade grandfathered users
         const subscription = event.data.object as Stripe.Subscription;
-        await handleSubscriptionDeleted(subscription, request.log);
+        request.log.info(
+          { customerId: subscription.customer },
+          'Legacy subscription.deleted — grandfathered users retain access'
+        );
         break;
       }
 
@@ -130,15 +125,86 @@ export async function cleanupProcessedEvents(olderThanDays = 7): Promise<number>
 // ─── Event Handlers ───────────────────────────────────────────────────────
 
 async function handleCheckoutCompleted(session: Stripe.Checkout.Session, log: FastifyBaseLogger): Promise<void> {
+  const metadataType = session.metadata?.type;
+  const userId = session.metadata?.userId;
+
+  if (!userId) {
+    // Legacy checkout without metadata — try subscription flow
+    await handleLegacyCheckout(session, log);
+    return;
+  }
+
+  if (metadataType === 'release') {
+    // One-time payment for a data release
+    const releaseId = session.metadata?.releaseId;
+    if (!releaseId) {
+      log.warn({ sessionId: session.id }, 'Release checkout missing releaseId in metadata');
+      return;
+    }
+
+    try {
+      await prisma.userReleasePurchase.upsert({
+        where: { userId_releaseId: { userId, releaseId } },
+        update: {},
+        create: { userId, releaseId, grantedReason: 'purchase' },
+      });
+      log.info({ userId, releaseId }, 'Release purchase recorded');
+    } catch (err) {
+      log.error({ err: (err as Error).message, userId, releaseId }, 'Failed to record release purchase');
+    }
+
+  } else if (metadataType === 'feature') {
+    // One-time payment for feature access
+    const featureSet = session.metadata?.featureSet as 'basic' | 'premium' | undefined;
+    if (!featureSet || (featureSet !== 'basic' && featureSet !== 'premium')) {
+      log.warn({ sessionId: session.id }, 'Feature checkout missing valid featureSet in metadata');
+      return;
+    }
+
+    try {
+      await prisma.userFeatureUnlock.upsert({
+        where: { userId_featureSet: { userId, featureSet } },
+        update: {},
+        create: { userId, featureSet, unlockedVia: 'purchase' },
+      });
+
+      // If purchasing premium, also grant basic
+      if (featureSet === 'premium') {
+        await prisma.userFeatureUnlock.upsert({
+          where: { userId_featureSet: { userId, featureSet: 'basic' } },
+          update: {},
+          create: { userId, featureSet: 'basic', unlockedVia: 'purchase' },
+        });
+      }
+
+      log.info({ userId, featureSet }, 'Feature unlock recorded');
+    } catch (err) {
+      log.error({ err: (err as Error).message, userId, featureSet }, 'Failed to record feature unlock');
+    }
+
+  } else {
+    // Unknown metadata type — fall back to legacy
+    await handleLegacyCheckout(session, log);
+  }
+}
+
+/**
+ * Legacy handler for subscription-based checkouts (before migration).
+ * Keeps backward compat during transition period.
+ */
+async function handleLegacyCheckout(session: Stripe.Checkout.Session, log: FastifyBaseLogger): Promise<void> {
   const customerId = session.customer as string | null;
   const subscriptionId = session.subscription as string | null;
 
   if (!customerId || !subscriptionId) return;
 
   // Get the subscription to find the price
-  const subscription = await stripe.subscriptions.retrieve(subscriptionId);
+  const subscription = await stripe!.subscriptions.retrieve(subscriptionId);
   const priceId = subscription.items.data[0]?.price?.id;
-  const tier = priceToTier(priceId);
+
+  let tier: 'free' | 'basic' | 'premium' = 'free';
+  if (priceId === process.env.STRIPE_PRICE_PREMIUM) tier = 'premium';
+  else if (priceId === process.env.STRIPE_PRICE_BASIC) tier = 'basic';
 
   // Find user by Stripe customer ID and update tier
   const user = await prisma.user.findFirst({
@@ -150,42 +216,8 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session, log: Fa
       where: { id: user.id },
       data: { tier },
     });
-    log.info({ userId: user.id, tier }, 'User tier updated after checkout');
+    log.info({ userId: user.id, tier }, 'Legacy: user tier updated after checkout');
   } else {
     log.warn({ customerId }, 'No user found for Stripe customer');
-  }
-}
-
-async function handleSubscriptionUpdated(subscription: Stripe.Subscription, log: FastifyBaseLogger): Promise<void> {
-  const customerId = subscription.customer as string;
-  const priceId = subscription.items.data[0]?.price?.id;
-  const tier = subscription.status === 'active' ? priceToTier(priceId) : 'free';
-
-  const user = await prisma.user.findFirst({
-    where: { stripeCustomerId: customerId },
-  });
-
-  if (user) {
-    await prisma.user.update({
-      where: { id: user.id },
-      data: { tier },
-    });
-    log.info({ userId: user.id, tier, status: subscription.status }, 'Subscription updated');
-  }
-}
-
-async function handleSubscriptionDeleted(subscription: Stripe.Subscription, log: FastifyBaseLogger): Promise<void> {
-  const customerId = subscription.customer as string;
-
-  const user = await prisma.user.findFirst({
-    where: { stripeCustomerId: customerId },
-  });
-
-  if (user) {
-    await prisma.user.update({
-      where: { id: user.id },
-      data: { tier: 'free' },
-    });
-    log.info({ userId: user.id }, 'Subscription deleted, reverted to free tier');
   }
 }

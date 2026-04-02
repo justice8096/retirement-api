@@ -19,6 +19,22 @@ const historyQuerySchema = z.object({
   limit: z.coerce.number().int().min(1).max(50).default(20),
 }).strict();
 
+const createReleaseSchema = z.object({
+  version: z.number().int().min(1),
+  title: z.string().min(1).max(500),
+  description: z.string().max(2000).optional(),
+  priceUsd: z.number().int().min(0).default(0),
+  stripePriceId: z.string().max(200).optional(),
+}).strict();
+
+const updateReleaseSchema = z.object({
+  title: z.string().min(1).max(500).optional(),
+  description: z.string().max(2000).optional(),
+  priceUsd: z.number().int().min(0).optional(),
+  stripePriceId: z.string().max(200).optional(),
+  publish: z.boolean().optional(),
+}).strict();
+
 /**
  * Extract denormalized fields from locationData JSONB for indexed search/filter.
  * Called on create and update to keep search columns in sync.
@@ -165,6 +181,60 @@ export default async function adminRoutes(app: FastifyInstance): Promise<void> {
         totalPages: Math.ceil(total / q.limit),
       },
     };
+  });
+
+  // ─── Data Release Management ────────────────────────────────────────────
+
+  // POST /api/admin/releases — create a draft release
+  app.post('/releases', async (request, reply) => {
+    const parsed = createReleaseSchema.safeParse(request.body);
+    if (!parsed.success) {
+      return reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
+    }
+
+    const existing = await prisma.dataRelease.findUnique({ where: { version: parsed.data.version } });
+    if (existing) {
+      return reply.code(409).send({ error: `Release v${parsed.data.version} already exists` });
+    }
+
+    const release = await prisma.dataRelease.create({
+      data: {
+        version: parsed.data.version,
+        title: parsed.data.title,
+        description: parsed.data.description,
+        priceUsd: parsed.data.priceUsd,
+        stripePriceId: parsed.data.stripePriceId,
+      },
+    });
+
+    return reply.code(201).send(release);
+  });
+
+  // PATCH /api/admin/releases/:id — update/publish a release
+  app.patch('/releases/:id', async (request, reply) => {
+    const { id } = request.params as { id: string };
+    const parsed = updateReleaseSchema.safeParse(request.body);
+    if (!parsed.success) {
+      return reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
+    }
+
+    const existing = await prisma.dataRelease.findUnique({ where: { id } });
+    if (!existing) {
+      return reply.code(404).send({ error: 'Release not found' });
+    }
+
+    const release = await prisma.dataRelease.update({
+      where: { id },
+      data: {
+        ...(parsed.data.title !== undefined && { title: parsed.data.title }),
+        ...(parsed.data.description !== undefined && { description: parsed.data.description }),
+        ...(parsed.data.priceUsd !== undefined && { priceUsd: parsed.data.priceUsd }),
+        ...(parsed.data.stripePriceId !== undefined && { stripePriceId: parsed.data.stripePriceId }),
+        ...(parsed.data.publish && { publishedAt: new Date() }),
+      },
+    });
+
+    return release;
   });
 
   // POST /api/admin/locations/reindex — rebuild denormalized search columns for all locations

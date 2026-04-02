@@ -129,6 +129,54 @@ export function requireTier(minimumTier: 'basic' | 'premium' | 'admin') {
   };
 }
 
+// ─── Feature guard: requireAuth + feature set check ──────────────────────
+
+/**
+ * Factory that returns a preHandler enforcing a feature set unlock.
+ * Checks UserFeatureUnlock table. Admin users and grandfathered users pass through.
+ * Usage: `{ preHandler: requireFeature('basic') }`
+ */
+export function requireFeature(featureSet: 'basic' | 'premium') {
+  return async (request: FastifyRequest, reply: FastifyReply): Promise<void> => {
+    await requireAuth(request, reply);
+    if (reply.sent) return;
+
+    // Admin always passes
+    if (request.user.tier === 'admin') return;
+
+    // Check feature unlock table
+    const unlock = await prisma.userFeatureUnlock.findUnique({
+      where: {
+        userId_featureSet: {
+          userId: request.userId,
+          featureSet,
+        },
+      },
+    });
+
+    if (unlock) return; // User has this feature unlocked
+
+    // Premium unlock also covers basic
+    if (featureSet === 'basic') {
+      const premiumUnlock = await prisma.userFeatureUnlock.findUnique({
+        where: {
+          userId_featureSet: {
+            userId: request.userId,
+            featureSet: 'premium',
+          },
+        },
+      });
+      if (premiumUnlock) return;
+    }
+
+    reply.code(403).send({
+      error: `Requires ${featureSet} access`,
+      unlockOptions: ['contribute', 'purchase'],
+    });
+    return;
+  };
+}
+
 // ─── Admin guard: requireAuth + admin tier ────────────────────────────────
 
 export async function requireAdmin(request: FastifyRequest, reply: FastifyReply): Promise<void> {

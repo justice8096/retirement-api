@@ -28,6 +28,9 @@ import adminRoutes from './routes/admin.js';
 import billingRoutes from './routes/billing.js';
 import webhookRoutes from './routes/webhooks.js';
 import healthRoutes from './routes/health.js';
+import releaseRoutes from './routes/releases.js';
+import contributionRoutes, { adminContributionRoutes } from './routes/contributions.js';
+import badgeRoutes from './routes/badges.js';
 
 const app = Fastify({
   logger: true,
@@ -179,8 +182,12 @@ await app.register(scenarioRoutes, { prefix: '/api/me/scenarios' });
 await app.register(groceryRoutes, { prefix: '/api/me/groceries' });
 await app.register(customLocationRoutes, { prefix: '/api/me/locations' });
 await app.register(adminRoutes, { prefix: '/api/admin' });
+await app.register(adminContributionRoutes, { prefix: '/api/admin/contributions' });
 await app.register(billingRoutes, { prefix: '/api/billing' });
 await app.register(webhookRoutes, { prefix: '/api/webhooks' });
+await app.register(releaseRoutes, { prefix: '/api/releases' });
+await app.register(contributionRoutes, { prefix: '/api/contributions' });
+await app.register(badgeRoutes, { prefix: '/api/badges' });
 
 // ─── Start ────────────────────────────────────────────────────────────────
 
