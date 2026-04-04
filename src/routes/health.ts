@@ -4,6 +4,7 @@ import prisma from '../db/prisma.js';
 import { cleanupProcessedEvents } from './webhooks.js';
 import { requireAdmin, requireAuth, clerkEnabled } from '../middleware/auth.js';
 import { getAuth } from '@clerk/fastify';
+import { isEncryptionEnabled } from '../middleware/encryption.js';
 
 const cleanupSchema = z.object({
   olderThanDays: z.number().int().min(1).max(365).default(7),
@@ -66,16 +67,24 @@ export default async function healthRoutes(app: FastifyInstance): Promise<void> 
       health.checks.redis = { status: 'info', message: 'Not configured (using in-memory rate limiting)' };
     }
 
-    // Only expose config/memory details to authenticated users (prevent info disclosure)
-    let isAuthenticated = false;
+    // Encryption check — report unhealthy in production if missing
+    if (process.env.NODE_ENV === 'production' && !isEncryptionEnabled()) {
+      health.checks.encryption = { status: 'error', message: 'Encryption not configured in production' };
+      health.status = 'degraded';
+    }
+
+    // Only expose config/memory details to admin users (prevent info disclosure)
+    let isAdmin = false;
     if (clerkEnabled) {
       try {
         const auth = getAuth(_request);
-        isAuthenticated = !!auth?.userId;
+        if (auth?.userId) {
+          isAdmin = _request.user?.tier === 'admin';
+        }
       } catch { /* unauthenticated — OK for basic health check */ }
     }
 
-    if (isAuthenticated) {
+    if (isAdmin) {
       // Encryption key configured
       health.checks.encryption = {
         status: process.env.ENCRYPTION_MASTER_KEY ? 'ok' : 'warning',

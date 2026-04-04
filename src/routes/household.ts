@@ -102,7 +102,7 @@ export default async function householdRoutes(app: FastifyInstance): Promise<voi
   app.put('/', async (request, _reply) => {
     const parsed = householdSchema.safeParse(request.body);
     if (!parsed.success) {
-      return { error: 'Validation failed', details: parsed.error.issues };
+      return _reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
     }
 
     const { members, pets, ...profileData } = parsed.data;

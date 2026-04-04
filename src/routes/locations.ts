@@ -19,12 +19,6 @@ interface LocationData {
  */
 const safeString = (maxLen: number = 200) =>
   z.string().max(maxLen).refine((val) => {
-    const lower = val.toLowerCase();
-
-    // SQL injection patterns
-    if (/('|"|;|--|\b(union|select|insert|update|delete|drop|alter|exec|execute|xp_|sp_)\b)/i.test(val)) return false;
-    if (/(\bor\b\s+\d+=\d+|\band\b\s+\d+=\d+)/i.test(val)) return false;
-
     // XSS patterns
     if (/<[a-z/!]|javascript:|on\w+\s*=/i.test(val)) return false;
     if (/\$\{|%3c|%3e/i.test(val)) return false;

@@ -35,32 +35,38 @@ export default async function webhookRoutes(app: FastifyInstance): Promise<void>
       return reply.code(400).send({ error: 'Missing stripe-signature header' });
     }
 
+    const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+    if (!webhookSecret) {
+      request.log.error('STRIPE_WEBHOOK_SECRET not configured');
+      return reply.code(500).send({ error: 'Webhook verification not configured' });
+    }
+
     let event: Stripe.Event;
     try {
       event = stripe.webhooks.constructEvent(
         request.body as Buffer, // raw Buffer
         sig,
-        process.env.STRIPE_WEBHOOK_SECRET!,
+        webhookSecret,
       );
     } catch (err) {
       request.log.warn(`Webhook signature verification failed: ${(err as Error).message}`);
       return reply.code(400).send({ error: 'Invalid signature' });
     }
 
-    // Idempotency: skip if already processed
+    request.log.info({ eventId: event.id, type: event.type }, 'Stripe webhook received');
+
+    // Idempotency: insert first with unique constraint to prevent race conditions
     try {
-      const existing = await prisma.processedEvent.findUnique({
-        where: { eventId: event.id },
+      await prisma.processedEvent.create({
+        data: { eventId: event.id, eventType: event.type },
       });
-      if (existing) {
+    } catch (err: any) {
+      if (err.code === 'P2002') {
         request.log.info({ eventId: event.id }, 'Duplicate webhook event, skipping');
         return { received: true, duplicate: true };
       }
-    } catch {
       // Table may not exist yet (pre-migration) — proceed without idempotency
     }
-
-    request.log.info({ eventId: event.id, type: event.type }, 'Stripe webhook received');
 
     switch (event.type) {
       case 'checkout.session.completed': {
@@ -93,15 +99,6 @@ export default async function webhookRoutes(app: FastifyInstance): Promise<void>
 
       default:
         request.log.info({ type: event.type }, 'Unhandled webhook event type');
-    }
-
-    // Record as processed
-    try {
-      await prisma.processedEvent.create({
-        data: { eventId: event.id, eventType: event.type },
-      });
-    } catch {
-      // Ignore if table doesn't exist yet or unique constraint (race condition)
     }
 
     return { received: true };

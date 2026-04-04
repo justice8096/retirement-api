@@ -30,11 +30,50 @@ const featureCheckoutSchema = z.object({
 }).strict();
 
 export default async function billingRoutes(app: FastifyInstance): Promise<void> {
+  app.addHook('preHandler', requireAuth);
+
+  // GET /api/billing/status — always available (no Stripe required)
+  app.get('/status', async (request, reply) => {
+    reply.header('Cache-Control', 'private, no-store');
+
+    const [featureUnlocks, releasePurchases, latestRelease, badges, isFoundingMember] = await Promise.all([
+      prisma.userFeatureUnlock.findMany({
+        where: { userId: request.userId },
+        select: { featureSet: true, unlockedVia: true },
+      }),
+      prisma.userReleasePurchase.findMany({
+        where: { userId: request.userId },
+        include: { release: { select: { version: true } } },
+      }),
+      prisma.dataRelease.findFirst({
+        where: { publishedAt: { not: null } },
+        orderBy: { version: 'desc' },
+        select: { version: true },
+      }),
+      prisma.userBadge.findMany({
+        where: { userId: request.userId },
+        select: { badgeKey: true },
+      }),
+      prisma.userBadge.findFirst({
+        where: { userId: request.userId, badgeKey: 'founding_member' },
+      }),
+    ]);
+
+    return {
+      tier: request.user.tier,
+      featureUnlocks: featureUnlocks.map((u) => u.featureSet),
+      purchasedReleases: releasePurchases.map((p) => p.release.version),
+      latestRelease: latestRelease?.version ?? 0,
+      isFoundingMember: !!isFoundingMember,
+      badges: badges.map((b) => b.badgeKey),
+      stripeCustomerId: request.user.stripeCustomerId ? '***' : null,
+    };
+  });
+
   if (!stripe) {
-    app.log.warn('Stripe not configured — billing routes disabled');
+    app.log.warn('Stripe not configured — billing routes disabled (status endpoint still active)');
     return;
   }
-  app.addHook('preHandler', requireAuth);
 
   // POST /api/billing/checkout-feature — one-time purchase for feature set
   app.post('/checkout-feature', async (request, reply) => {
@@ -106,41 +145,4 @@ export default async function billingRoutes(app: FastifyInstance): Promise<void>
     return { url: session.url };
   });
 
-  // GET /api/billing/status — comprehensive billing/access status
-  app.get('/status', async (request, reply) => {
-    reply.header('Cache-Control', 'private, no-store');
-
-    const [featureUnlocks, releasePurchases, latestRelease, badges, isFoundingMember] = await Promise.all([
-      prisma.userFeatureUnlock.findMany({
-        where: { userId: request.userId },
-        select: { featureSet: true, unlockedVia: true },
-      }),
-      prisma.userReleasePurchase.findMany({
-        where: { userId: request.userId },
-        include: { release: { select: { version: true } } },
-      }),
-      prisma.dataRelease.findFirst({
-        where: { publishedAt: { not: null } },
-        orderBy: { version: 'desc' },
-        select: { version: true },
-      }),
-      prisma.userBadge.findMany({
-        where: { userId: request.userId },
-        select: { badgeKey: true },
-      }),
-      prisma.userBadge.findFirst({
-        where: { userId: request.userId, badgeKey: 'founding_member' },
-      }),
-    ]);
-
-    return {
-      tier: request.user.tier, // Legacy — admin check still uses this
-      featureUnlocks: featureUnlocks.map((u) => u.featureSet),
-      purchasedReleases: releasePurchases.map((p) => p.release.version),
-      latestRelease: latestRelease?.version ?? 0,
-      isFoundingMember: !!isFoundingMember,
-      badges: badges.map((b) => b.badgeKey),
-      stripeCustomerId: request.user.stripeCustomerId ? '***' : null,
-    };
-  });
 }

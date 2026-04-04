@@ -31,6 +31,7 @@ export default async function releaseRoutes(app: FastifyInstance): Promise<void>
         // requireAuth would set request.userId, but we don't want to block on auth failure
         // Instead, query purchases for all releases and let the frontend know
         await requireAuth(request, _reply);
+        if (_reply.sent) return;
         if (request.userId) {
           const purchases = await prisma.userReleasePurchase.findMany({
             where: { userId: request.userId },

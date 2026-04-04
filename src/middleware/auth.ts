@@ -14,6 +14,35 @@ import type { FastifyInstance, FastifyRequest, FastifyReply } from 'fastify';
 import type { User } from '@prisma/client';
 import prisma from '../db/prisma.js';
 
+// ─── Clerk user profile fetch ────────────────────────────────────────────���
+
+/**
+ * Fetches the full user profile from Clerk's Backend API.
+ * Used on first sign-in to get the real email + name,
+ * since the JWT session claims may not include them by default.
+ */
+async function fetchClerkUser(clerkUserId: string): Promise<{ email: string | null; name: string | null }> {
+  const secretKey = process.env.CLERK_SECRET_KEY;
+  if (!secretKey) return { email: null, name: null };
+  try {
+    const res = await fetch(`https://api.clerk.com/v1/users/${clerkUserId}`, {
+      headers: { Authorization: `Bearer ${secretKey}` },
+    });
+    if (!res.ok) return { email: null, name: null };
+    const data = await res.json() as {
+      email_addresses?: Array<{ email_address?: string }>;
+      first_name?: string | null;
+      last_name?: string | null;
+    };
+    const email = data.email_addresses?.[0]?.email_address ?? null;
+    const parts = [data.first_name, data.last_name].filter(Boolean);
+    const name = parts.length > 0 ? parts.join(' ') : null;
+    return { email, name };
+  } catch {
+    return { email: null, name: null };
+  }
+}
+
 // ─── User cache — avoids DB upsert on every authenticated request ─────────
 // Key: Clerk authProviderId → { user, expiresAt }
 // TTL: 10 seconds — short enough to pick up tier changes quickly
@@ -87,15 +116,36 @@ export async function requireAuth(request: FastifyRequest, reply: FastifyReply):
       return;
     }
 
-    request.user = await prisma.user.upsert({
-      where: { authProviderId: auth.userId },
-      update: { updatedAt: new Date() },
-      create: {
-        authProviderId: auth.userId,
-        email: (auth as unknown as { sessionClaims?: { email?: string; name?: string } }).sessionClaims?.email ?? `${auth.userId}@placeholder.local`,
-        displayName: (auth as unknown as { sessionClaims?: { email?: string; name?: string } }).sessionClaims?.name ?? null,
-      },
-    });
+    // Check if user already exists
+    let existingUser = await prisma.user.findUnique({ where: { authProviderId: auth.userId } });
+
+    if (existingUser) {
+      // Backfill email/name if user was created with a placeholder
+      if (existingUser.email.endsWith('@placeholder.local') || !existingUser.displayName) {
+        const clerkProfile = await fetchClerkUser(auth.userId);
+        const updates: { email?: string; displayName?: string; updatedAt: Date } = { updatedAt: new Date() };
+        if (clerkProfile.email && existingUser.email.endsWith('@placeholder.local')) {
+          updates.email = clerkProfile.email;
+        }
+        if (clerkProfile.name && !existingUser.displayName) {
+          updates.displayName = clerkProfile.name;
+        }
+        existingUser = await prisma.user.update({ where: { id: existingUser.id }, data: updates });
+      } else {
+        await prisma.user.update({ where: { id: existingUser.id }, data: { updatedAt: new Date() } });
+      }
+      request.user = existingUser;
+    } else {
+      // New user — fetch real email/name from Clerk Backend API
+      const clerkProfile = await fetchClerkUser(auth.userId);
+      request.user = await prisma.user.create({
+        data: {
+          authProviderId: auth.userId,
+          email: clerkProfile.email ?? `${auth.userId}@placeholder.local`,
+          displayName: clerkProfile.name ?? null,
+        },
+      });
+    }
 
     setCachedUser(auth.userId, request.user);
     request.userId = request.user.id;

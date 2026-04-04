@@ -111,6 +111,9 @@ export default async function adminRoutes(app: FastifyInstance): Promise<void> {
     }
 
     const { id } = request.params as { id: string };
+    const idSchema = z.string().min(1).max(200).regex(/^[a-zA-Z0-9_-]+$/);
+    const idParsed = idSchema.safeParse(id);
+    if (!idParsed.success) return reply.code(400).send({ error: 'Invalid location ID' });
 
     const existing = await prisma.adminLocation.findUnique({ where: { id } });
     if (!existing) return reply.code(404).send({ error: 'Location not found' });
@@ -146,6 +149,9 @@ export default async function adminRoutes(app: FastifyInstance): Promise<void> {
   // DELETE /api/admin/locations/:id — delete location and all supplements/history
   app.delete('/locations/:id', async (request, reply) => {
     const { id } = request.params as { id: string };
+    const idSchema = z.string().min(1).max(200).regex(/^[a-zA-Z0-9_-]+$/);
+    const idParsed = idSchema.safeParse(id);
+    if (!idParsed.success) return reply.code(400).send({ error: 'Invalid location ID' });
 
     const existing = await prisma.adminLocation.findUnique({ where: { id } });
     if (!existing) return reply.code(404).send({ error: 'Location not found' });
