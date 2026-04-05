@@ -5,3 +5,6 @@ export { getRMDStartAge, getDistributionPeriod, calcRMD, calcCoupleRMD, RMD_PENA
 export { getFxMultiplier, getInflationMultiplier, getInflationFxMultiplier, getAvgInflationMultiplier, getTypicalMonthly, getProjectedMonthly, projectCosts } from './inflation.js';
 export { fmt, fmtK, pct } from './formatting.js';
 export { CURRENT_YEAR, COLORS, CAT_COLORS, PROJ_CAT_LABELS, COST_CATEGORIES, TAB_CONFIG } from './constants.js';
+export { calcFixedPercentageWithdrawal, calcConstantPercentageWithdrawal, calcGuardrailsWithdrawal, calcVPWWithdrawal, calcBucketWithdrawal, calcFloorCeilingWithdrawal, calcWithdrawal, VPW_DIVISORS } from './withdrawalStrategies.js';
+export { calcFIRENumber, calcFIREProgress, calcCoastFIRE, calcBaristaFIRE, calcTimeToFIRE, calcFIREVariants, calc72tSEPP } from './fire.js';
+export { calcSpendingSmile, calcDecliningSpending, calcEssentialDiscretionary, applySpendingModel } from './spendingModels.js';

@@ -45,7 +45,7 @@ const householdSchema = z.object({
   adultsCount: z.number().int().min(1).max(10).default(2),
   targetAnnualIncome: z.number().min(0).max(10_000_000).nullable().optional(),
   planningStartYear: z.number().int().min(2024).max(2050).default(2026),
-  planningYears: z.number().int().min(1).max(60).default(35),
+  planningYears: z.number().int().min(1).max(70).default(40),
   requirements: z.array(z.string()).nullable().optional(),
   members: z.array(memberSchema).optional(),
   pets: z.array(petSchema).optional(),

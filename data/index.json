@@ -2361,31 +2361,6 @@
       "hasDetailedCosts": null
     },
     {
-      "id": "us-austin-tx",
-      "name": "Austin, TX",
-      "country": "United States",
-      "region": "US South Central",
-      "currency": "USD",
-      "exchangeRate": 1,
-      "monthlyCostUSD": 6161,
-      "climate": {
-        "winterLowF": 40,
-        "summerHighF": 97,
-        "meetsWarmWinterReq": false
-      },
-      "scores": {
-        "healthcare": 8,
-        "dogFriendly": 9,
-        "expatCommunity": 1,
-        "safety": 7,
-        "internetSpeed": "1Gbps available",
-        "englishPrevalence": 10
-      },
-      "inclusionScore": null,
-      "neighborhoodCount": 0,
-      "hasDetailedCosts": null
-    },
-    {
       "id": "us-baltimore-md",
       "name": "Baltimore, MD",
       "country": "United States",
@@ -2430,6 +2405,31 @@
         "safety": 5,
         "internetSpeed": "1Gbps available",
         "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-camden-nj",
+      "name": "Camden, New Jersey",
+      "country": "United States",
+      "region": "New Jersey",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4445,
+      "climate": {
+        "winterLowF": 24,
+        "summerHighF": 87,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 5,
+        "expatCommunity": 0,
+        "safety": 4,
+        "internetSpeed": "1Gbps available (Comcast Xfinity)",
+        "englishPrevalence": 8
       },
       "inclusionScore": null,
       "neighborhoodCount": 0,

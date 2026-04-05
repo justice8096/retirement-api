@@ -61,6 +61,7 @@ model User {
 
   household        HouseholdProfile?
   financialSettings UserFinancialSettings?
+  withdrawalStrategy UserWithdrawalStrategy?
   preferences      UserPreferences?
   customLocations  UserCustomLocation[]
   locationOverrides UserLocationOverride[]
@@ -82,7 +83,7 @@ model HouseholdProfile {
   adultsCount       Int      @default(2) @map("adults_count")
   targetAnnualIncome String?  @map("target_annual_income") // Encrypted at rest (AES-256-GCM)
   planningStartYear Int      @default(2026) @map("planning_start_year")
-  planningYears     Int      @default(35) @map("planning_years")
+  planningYears     Int      @default(40) @map("planning_years")
   requirements      Json?    // ["gigabit-internet", "warm-winters", "dog-friendly"]
   createdAt         DateTime @default(now()) @map("created_at")
   updatedAt         DateTime @updatedAt @map("updated_at")
@@ -142,11 +143,75 @@ model UserFinancialSettings {
   ssCutEnabled     Boolean  @default(true) @map("ss_cut_enabled")
   ssCutYear        Int      @default(2033) @map("ss_cut_year")
   ssCola           Decimal  @default(2.5) @map("ss_cola")
+
+  // ─── Asset Allocation ──────────────────────────────────────────────
+  equityPct         Decimal  @default(0.60) @map("equity_pct")
+  bondPct           Decimal  @default(0.30) @map("bond_pct")
+  cashPct           Decimal  @default(0.10) @map("cash_pct")
+  intlPct           Decimal  @default(0.20) @map("intl_pct")
+
+  // ─── Return Assumptions ────────────────────────────────────────────
+  expectedReturn    Decimal  @default(0.07) @map("expected_return")
+  expectedInflation Decimal  @default(0.025) @map("expected_inflation")
+
+  // ─── FIRE Settings ─────────────────────────────────────────────────
+  retirementPath    String   @default("traditional") @map("retirement_path") // traditional | fire | explore
+  fireTargetAge     Int?     @map("fire_target_age")
+  annualSavings     Decimal? @map("annual_savings")
+  savingsRate       Decimal? @map("savings_rate")
+
+  // ─── Multi-Account Balances (encrypted) ────────────────────────────
+  traditionalBalance String? @map("traditional_balance") // Encrypted
+  rothBalance        String? @map("roth_balance")        // Encrypted
+  taxableBalance     String? @map("taxable_balance")     // Encrypted
+  hsaBalance         String? @map("hsa_balance")         // Encrypted
+
   updatedAt        DateTime @updatedAt @map("updated_at")
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("user_financial_settings")
+}
+
+// ─── Withdrawal Strategy ───────────────────────────────────────────────────────
+
+model UserWithdrawalStrategy {
+  id                String   @id @default(uuid())
+  userId            String   @unique @map("user_id")
+  strategyType      String   @default("fixed") @map("strategy_type") // fixed | constant | guardrails | vpw | bucket | floor-ceiling
+
+  // Fixed / Constant Percentage
+  withdrawalRate    Decimal  @default(0.04) @map("withdrawal_rate")
+
+  // Guardrails (Guyton-Klinger)
+  ceilingRate       Decimal? @map("ceiling_rate")     // e.g., 0.06
+  floorRate         Decimal? @map("floor_rate")       // e.g., 0.03
+  adjustmentPct     Decimal? @map("adjustment_pct")   // e.g., 0.10 (10% cut/raise)
+
+  // Bucket Strategy
+  bucket1Years      Int?     @map("bucket1_years")    // Short-term (cash/bonds)
+  bucket2Years      Int?     @map("bucket2_years")    // Medium-term (balanced)
+  refillThreshold   Decimal? @map("refill_threshold") // Years of spending before refill
+
+  // Floor-and-Ceiling
+  essentialSpending Decimal? @map("essential_spending")
+  discretionaryBudget Decimal? @map("discretionary_budget")
+  maxDiscretionaryRate Decimal? @map("max_discretionary_rate")
+
+  // Spending Model
+  spendingModel     String   @default("level") @map("spending_model") // level | smile | declining | essential-first
+  declineRate       Decimal? @map("decline_rate")     // For declining model (e.g., 0.015)
+
+  // Roth Conversion
+  rothConversionEnabled Boolean @default(false) @map("roth_conversion_enabled")
+  rothConversionAmount  Decimal? @map("roth_conversion_amount") // Annual target
+  rothConversionEndAge  Int?    @map("roth_conversion_end_age")
+
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("user_withdrawal_strategies")
 }
 
 // ─── Preferences (replaces ~48 usePersistedState keys) ──────────────────────
@@ -199,6 +264,13 @@ model UserScenario {
   userId       String   @map("user_id")
   name         String
   scenarioData Json     @map("scenario_data")
+  scenarioType      String   @default("deterministic") @map("scenario_type") // deterministic | monte_carlo | historical
+  successRate       Decimal? @map("success_rate")        // 0-100 (Monte Carlo)
+  medianBalance     Decimal? @map("median_balance")      // Median ending balance
+  p10Balance        Decimal? @map("p10_balance")         // 10th percentile
+  p90Balance        Decimal? @map("p90_balance")         // 90th percentile
+  simulationRuns    Int?     @map("simulation_runs")     // Number of MC runs
+  isFavorite        Boolean  @default(false) @map("is_favorite")
   createdAt    DateTime @default(now()) @map("created_at")
   updatedAt    DateTime @updatedAt @map("updated_at")
 
