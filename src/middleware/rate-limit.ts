@@ -2,7 +2,7 @@
  * Per-tier rate limiting configuration.
  *
  * Tiers:
- *   - unauthenticated: 30 req/min (public endpoints)
+ *   - unauthenticated: 100 req/min (public endpoints)
  *   - free:            60 req/min
  *   - basic:          120 req/min
  *   - premium:        300 req/min
@@ -20,7 +20,7 @@ const TIER_LIMITS: Record<string, number> = {
   admin: 600,
 };
 
-const DEFAULT_LIMIT = 30; // unauthenticated
+const DEFAULT_LIMIT = 100; // unauthenticated (auth resolves after rate-limit in dev)
 
 /**
  * Build a Redis store for @fastify/rate-limit if REDIS_URL is set.
@@ -35,8 +35,9 @@ async function buildRedisStore(): Promise<unknown> {
   if (!redisUrl) return undefined; // use default in-memory store
 
   try {
-    const { default: Redis } = await import('ioredis');
-    const client = new Redis(redisUrl, {
+    const ioredis = await import('ioredis');
+    const Redis = ioredis.default || ioredis;
+    const client = new (Redis as any)(redisUrl, {
       maxRetriesPerRequest: 1,
       enableOfflineQueue: false,
       lazyConnect: true,

@@ -36,7 +36,7 @@ function memSet(key: string, data: string, ttlMs: number): void {
 
 // ─── Redis client (lazy-initialized, optional) ───────────────────────────
 
-let redisClient: { get: (key: string) => Promise<string | null>; setex: (key: string, seconds: number, value: string) => Promise<unknown> } | null = null;
+let redisClient: any = null;
 let redisInitialized = false;
 
 async function getRedis() {
@@ -47,9 +47,10 @@ async function getRedis() {
   if (!redisUrl) return null;
 
   try {
-    // @ts-expect-error — ioredis is an optional production dependency (not in devDependencies)
-    const { default: Redis } = await import('ioredis');
-    const client = new Redis(redisUrl, {
+    // Use dynamic require to handle ESM module
+    const ioredis = await import('ioredis');
+    const Redis = ioredis.default || ioredis;
+    const client = new (Redis as any)(redisUrl, {
       maxRetriesPerRequest: 1,
       enableOfflineQueue: false,
       lazyConnect: true,

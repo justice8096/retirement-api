@@ -3,6 +3,7 @@ import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
 import { requireAuth, requireTier } from '../middleware/auth.js';
 import { safeJsonRecord } from '../middleware/sanitize.js';
+import type { InputJsonValue } from '@prisma/client/runtime/library.js';
 
 const customLocationSchema = z.object({
   locationData: safeJsonRecord,
@@ -46,7 +47,7 @@ export default async function customLocationRoutes(app: FastifyInstance): Promis
     const location = await prisma.userCustomLocation.create({
       data: {
         userId: request.userId,
-        locationData: parsed.data.locationData,
+        locationData: parsed.data.locationData as InputJsonValue,
       },
     });
 
@@ -69,7 +70,7 @@ export default async function customLocationRoutes(app: FastifyInstance): Promis
 
     const location = await prisma.userCustomLocation.update({
       where: { id },
-      data: { locationData: parsed.data.locationData },
+      data: { locationData: parsed.data.locationData as InputJsonValue },
     });
 
     return location;
@@ -122,14 +123,14 @@ export default async function customLocationRoutes(app: FastifyInstance): Promis
         },
       },
       update: {
-        overrides: parsed.data.overrides,
+        overrides: parsed.data.overrides as InputJsonValue,
         baseLocationVersion: baseLoc.version,
       },
       create: {
         userId: request.userId,
         baseLocationId: parsed.data.baseLocationId,
         baseLocationVersion: baseLoc.version,
-        overrides: parsed.data.overrides,
+        overrides: parsed.data.overrides as InputJsonValue,
       },
     });
 

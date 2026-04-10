@@ -37,7 +37,7 @@ let _keyWarned = false;
 export function validateEncryptionConfig(): void {
   const key = getMasterKey();
   if (!key && process.env.NODE_ENV === 'production') {
-    console.error('[encryption] ⚠ ENCRYPTION_MASTER_KEY not set in production — financial data will be stored UNENCRYPTED. Set a 32-byte hex key (64 chars).');
+    throw new Error('[encryption] ENCRYPTION_MASTER_KEY must be set in production. Set a 32-byte hex key (64 chars). Aborting startup.');
   }
 }
 

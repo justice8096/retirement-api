@@ -3,6 +3,7 @@ import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
 import { requireAuth, requireTier } from '../middleware/auth.js';
 import { safeJsonRecord } from '../middleware/sanitize.js';
+import type { InputJsonValue } from '@prisma/client/runtime/library.js';
 
 const scenarioSchema = z.object({
   name: z.string().min(1).max(200),
@@ -43,7 +44,7 @@ export default async function scenarioRoutes(app: FastifyInstance): Promise<void
       data: {
         userId: request.userId,
         name: parsed.data.name,
-        scenarioData: parsed.data.scenarioData,
+        scenarioData: parsed.data.scenarioData as InputJsonValue,
       },
     });
 
@@ -69,7 +70,7 @@ export default async function scenarioRoutes(app: FastifyInstance): Promise<void
       where: { id },
       data: {
         name: parsed.data.name,
-        scenarioData: parsed.data.scenarioData,
+        scenarioData: parsed.data.scenarioData as InputJsonValue,
       },
     });
 

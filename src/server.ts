@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import { randomUUID } from 'node:crypto';
 import Fastify from 'fastify';
 import type { FastifyError, FastifyRequest, FastifyReply } from 'fastify';
 import cors from '@fastify/cors';
@@ -20,6 +21,7 @@ import locationRoutes from './routes/locations.js';
 import userRoutes from './routes/users.js';
 import householdRoutes from './routes/household.js';
 import financialRoutes from './routes/financial.js';
+import withdrawalRoutes from './routes/withdrawal.js';
 import preferencesRoutes from './routes/preferences.js';
 import scenarioRoutes from './routes/scenarios.js';
 import groceryRoutes from './routes/groceries.js';
@@ -35,7 +37,7 @@ import badgeRoutes from './routes/badges.js';
 const app = Fastify({
   logger: true,
   bodyLimit: 1_048_576, // 1 MB
-  genReqId: () => `req-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`,
+  genReqId: () => randomUUID(),
   requestIdHeader: 'x-request-id',
 });
 
@@ -46,6 +48,10 @@ const corsOrigins = (process.env.CORS_ORIGIN || process.env.APP_URL || 'http://l
   .split(',')
   .map((o) => o.trim())
   .filter(Boolean);
+if (corsOrigins.includes('*')) {
+  console.warn('[security] CORS_ORIGIN=* is not allowed with credentials: true, using default');
+  corsOrigins.splice(0, corsOrigins.length, 'http://localhost:5173');
+}
 await app.register(cors, {
   origin: corsOrigins.length === 1 ? corsOrigins[0] : corsOrigins,
   credentials: true,
@@ -177,6 +183,7 @@ await app.register(locationRoutes, { prefix: '/api/locations' });
 await app.register(userRoutes, { prefix: '/api/me' });
 await app.register(householdRoutes, { prefix: '/api/me/household' });
 await app.register(financialRoutes, { prefix: '/api/me/financial' });
+await app.register(withdrawalRoutes, { prefix: '/api/me/withdrawal' });
 await app.register(preferencesRoutes, { prefix: '/api/me/preferences' });
 await app.register(scenarioRoutes, { prefix: '/api/me/scenarios' });
 await app.register(groceryRoutes, { prefix: '/api/me/groceries' });

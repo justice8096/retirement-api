@@ -3,6 +3,7 @@ import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
 import { requireAuth } from '../middleware/auth.js';
 import { safeJsonRecord } from '../middleware/sanitize.js';
+import type { InputJsonValue } from '@prisma/client/runtime/library.js';
 
 const grocerySchema = z.object({
   overrides: safeJsonRecord.optional(),
@@ -29,10 +30,19 @@ export default async function groceryRoutes(app: FastifyInstance): Promise<void>
       return reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
     }
 
+    // Cast optional fields to InputJsonValue
+    const data: Record<string, InputJsonValue> = {};
+    if (parsed.data.overrides !== undefined) {
+      data.overrides = parsed.data.overrides as InputJsonValue;
+    }
+    if (parsed.data.lists !== undefined) {
+      data.lists = parsed.data.lists as InputJsonValue;
+    }
+
     const result = await prisma.userGroceryData.upsert({
       where: { userId: request.userId },
-      update: parsed.data,
-      create: { userId: request.userId, ...parsed.data },
+      update: data,
+      create: { userId: request.userId, ...data },
     });
 
     return result;

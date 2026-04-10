@@ -46,10 +46,10 @@ done
 if [ -n "$RESTORE_FILE" ]; then
   echo "=== Restoring from: $RESTORE_FILE ==="
   if [[ "$RESTORE_FILE" == *.gz ]]; then
-    gunzip -c "$RESTORE_FILE" | PGPASSWORD="${PGPASSWORD:-postgres}" \
+    gunzip -c "$RESTORE_FILE" | PGPASSWORD="${PGPASSWORD:?PGPASSWORD environment variable must be set}" \
       "/c/Program Files/PostgreSQL/16/bin/psql" -U "$DB_USER" -h "$DB_HOST" -p "$DB_PORT" -d "$DB_NAME" 2>&1
   else
-    PGPASSWORD="${PGPASSWORD:-postgres}" \
+    PGPASSWORD="${PGPASSWORD:?PGPASSWORD environment variable must be set}" \
       "/c/Program Files/PostgreSQL/16/bin/psql" -U "$DB_USER" -h "$DB_HOST" -p "$DB_PORT" -d "$DB_NAME" -f "$RESTORE_FILE" 2>&1
   fi
   echo "Restore complete."
@@ -67,7 +67,7 @@ mkdir -p "$LOCAL_BACKUP_DIR"
 
 # Dump database (compressed)
 echo "Dumping $DB_NAME..."
-PGPASSWORD="${PGPASSWORD:-postgres}" "$PG_DUMP" \
+PGPASSWORD="${PGPASSWORD:?PGPASSWORD environment variable must be set}" "$PG_DUMP" \
   -U "$DB_USER" \
   -h "$DB_HOST" \
   -p "$DB_PORT" \

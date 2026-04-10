@@ -19,7 +19,7 @@ $Trigger = New-ScheduledTaskTrigger -Daily -At "2:00AM"
 # Create action: run bash script
 $Action = New-ScheduledTaskAction `
     -Execute $BashPath `
-    -Argument "-l -c 'export PGPASSWORD=postgres; bash D:/retirement-api/tools/backup-db.sh >> D:/backups/retirement-db/backup.log 2>&1'" `
+    -Argument "-l -c 'bash D:/retirement-api/tools/backup-db.sh >> D:/backups/retirement-db/backup.log 2>&1'" `
     -WorkingDirectory "D:\retirement-api"
 
 # Settings: run whether logged in or not, don't stop if on battery

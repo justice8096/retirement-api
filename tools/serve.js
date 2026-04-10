@@ -15,6 +15,7 @@ const MIME = {
 createServer((req, res) => {
   var url = new URL(req.url, 'http://localhost');
   var filePath = join(ROOT, decodeURIComponent(url.pathname));
+  if (!filePath.startsWith(ROOT)) { res.writeHead(403); res.end('Forbidden'); return; }
   if (filePath.endsWith('/')) filePath += 'index.html';
   if (!existsSync(filePath)) { res.writeHead(404); res.end('Not found'); return; }
   var ext = extname(filePath);

@@ -3,6 +3,7 @@ import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
 import { requireAuth } from '../middleware/auth.js';
 import { safeJsonRecord } from '../middleware/sanitize.js';
+import type { InputJsonValue } from '@prisma/client/runtime/library.js';
 
 // Preferences is a single JSONB blob — we validate it's an object but strip dangerous keys
 const preferencesSchema = safeJsonRecord;
@@ -35,8 +36,8 @@ export default async function preferencesRoutes(app: FastifyInstance): Promise<v
 
     const result = await prisma.userPreferences.upsert({
       where: { userId: request.userId },
-      update: { preferences: merged },
-      create: { userId: request.userId, preferences: merged },
+      update: { preferences: merged as InputJsonValue },
+      create: { userId: request.userId, preferences: merged as InputJsonValue },
     });
 
     return result.preferences;

@@ -1,0 +1,287 @@
+{
+  "id": "us-camden-nj",
+  "name": "Camden, New Jersey",
+  "country": "United States",
+  "region": "New Jersey",
+  "cities": [
+    "Camden",
+    "Pennsauken",
+    "Collingswood"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Citizen",
+    "incomeRequirement": null,
+    "notes": "US citizen, no visa required."
+  },
+  "climate": {
+    "winterLowF": 24,
+    "summerHighF": 87,
+    "rainyDaysPerYear": 120,
+    "meetsWarmWinterReq": false
+  },
+  "monthlyCosts": {
+    "rent": {
+      "min": 900,
+      "max": 1600,
+      "typical": 1200,
+      "type": "2-bedroom apartment",
+      "annualInflation": 0.035,
+      "notes": "New Jersey has no residential rental tax. Water, sewage, and trash are separate utility bills (not included in rent).",
+      "gigInternetTypical": 1250,
+      "gigInternetCoverage": 75,
+      "gigInternetProviders": "Comcast Xfinity, Verizon Fios (limited)",
+      "gigInternetNotes": "75% fiber availability. Comcast Xfinity is primary provider in Camden proper."
+    },
+    "groceries": {
+      "min": 700,
+      "max": 1050,
+      "typical": 850,
+      "notes": "2 adults; no sales tax on groceries in NJ",
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "min": 180,
+      "max": 350,
+      "typical": 250,
+      "annualInflation": 0.03,
+      "breakdown": {
+        "electricity": {
+          "typical": 100,
+          "notes": "PSE&G. Moderate A/C needs; electric heat supplement."
+        },
+        "gas": {
+          "typical": 60,
+          "notes": "PSE&G. Natural gas primary heat (cold NJ winters), cooking, water heater."
+        },
+        "water": {
+          "typical": 35,
+          "notes": "NJ American Water. 2-adult household."
+        },
+        "sewage": {
+          "typical": 30,
+          "notes": "Camden County MUA. Billed separately or with water."
+        },
+        "trash": {
+          "typical": 25,
+          "notes": "Municipal collection. Some areas included in property tax."
+        }
+      },
+      "taxes": "New Jersey exempts residential utilities from sales tax.",
+      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig)."
+    },
+    "healthcare": {
+      "min": 400,
+      "max": 750,
+      "typical": 550,
+      "notes": "Medicare Part B ($174.70/mo) + Medigap Plan G (~$150/mo x2 people) + Part D (~$45/mo x2). Cooper University Hospital is a Level 1 trauma center.",
+      "annualInflation": 0.05
+    },
+    "insurance": {
+      "min": 150,
+      "max": 280,
+      "typical": 200,
+      "notes": "Renters/auto insurance",
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "min": 60,
+      "max": 150,
+      "typical": 100,
+      "annualInflation": 0.03,
+      "notes": "Vet visits, vaccinations, flea/tick"
+    },
+    "transportation": {
+      "min": 250,
+      "max": 500,
+      "typical": 350,
+      "notes": "PATCO light rail to Philadelphia available; car optional but recommended",
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "min": 100,
+      "max": 350,
+      "typical": 200,
+      "annualInflation": 0.025,
+      "notes": "Incl cable+1Gig internet, streaming services, occasional dining out"
+    },
+    "clothing": {
+      "min": 60,
+      "max": 180,
+      "typical": 100,
+      "notes": "No sales tax on clothing in NJ",
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "min": 50,
+      "max": 130,
+      "typical": 80,
+      "annualInflation": 0.025
+    },
+    "subscriptions": {
+      "min": 50,
+      "max": 120,
+      "typical": 80,
+      "annualInflation": 0.03,
+      "notes": "Streaming, news, apps"
+    },
+    "phoneCell": {
+      "min": 50,
+      "max": 130,
+      "typical": 85,
+      "annualInflation": 0.02,
+      "notes": "T-Mobile 55+ or similar budget carriers. 2 phones with basic data."
+    },
+    "miscellaneous": {
+      "min": 80,
+      "max": 250,
+      "typical": 150,
+      "annualInflation": 0.025
+    },
+    "buffer": {
+      "min": 100,
+      "max": 350,
+      "typical": 200,
+      "annualInflation": 0.025,
+      "notes": "Monthly safety buffer for unexpected expenses"
+    },
+    "medicalOOP": {
+      "min": 100,
+      "max": 350,
+      "typical": 200,
+      "annualInflation": 0.05,
+      "notes": "Routine medical out-of-pocket, specialist visits, labs"
+    },
+    "medicine": {
+      "min": 75,
+      "typical": 150,
+      "max": 275,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household"
+    },
+    "taxes": {
+      "min": 0,
+      "typical": 0,
+      "max": 0,
+      "annualInflation": 0.02
+    }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true,
+      "brackets": [
+        {
+          "min": 0,
+          "max": 23850,
+          "rate": 0.1
+        },
+        {
+          "min": 23850,
+          "max": 96950,
+          "rate": 0.12
+        },
+        {
+          "min": 96950,
+          "max": 206700,
+          "rate": 0.22
+        },
+        {
+          "min": 206700,
+          "max": 394600,
+          "rate": 0.24
+        },
+        {
+          "min": 394600,
+          "max": 501050,
+          "rate": 0.32
+        },
+        {
+          "min": 501050,
+          "max": 751600,
+          "rate": 0.35
+        },
+        {
+          "min": 751600,
+          "max": null,
+          "rate": 0.37
+        }
+      ],
+      "standardDeduction": 30000
+    },
+    "stateIncomeTax": {
+      "rate": 0.0637,
+      "type": "progressive",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 20000,
+          "rate": 0.014
+        },
+        {
+          "min": 20000,
+          "max": 35000,
+          "rate": 0.0175
+        },
+        {
+          "min": 35000,
+          "max": 40000,
+          "rate": 0.035
+        },
+        {
+          "min": 40000,
+          "max": 75000,
+          "rate": 0.05525
+        },
+        {
+          "min": 75000,
+          "max": 500000,
+          "rate": 0.0637
+        }
+      ],
+      "deduction": 0,
+      "exemptions": "SS exempt. Retirement income exclusion up to $100K for couples (income <$150K)."
+    },
+    "salesTax": {
+      "rate": 0.06625,
+      "notes": "6.625% state rate"
+    },
+    "propertyTax": {
+      "rate": 0
+    },
+    "socialCharges": null,
+    "vatRate": 0,
+    "estVehicleTax": 0,
+    "ssExempt": true,
+    "notes": "NJ progressive income tax."
+  },
+  "healthcare": {
+    "system": "Medicare (at 65) + private supplement",
+    "qualityRating": 8,
+    "waitTimes": "moderate",
+    "dentalIncluded": false,
+    "prescriptionCoverage": "Part D plan"
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps available (Comcast Xfinity)",
+    "dogFriendly": 5,
+    "expatCommunity": 0,
+    "englishPrevalence": 8,
+    "safetyRating": 4
+  },
+  "pros": [
+    "Significantly lower cost of living than surrounding NJ suburbs",
+    "PATCO light rail to Philadelphia available",
+    "NJ exempts SS from state tax",
+    "No sales tax on groceries or clothing",
+    "Cooper University Hospital — major Level 1 trauma center",
+    "Access to Philly cultural institutions and healthcare"
+  ],
+  "cons": [
+    "Cold winters (24F lows)",
+    "Higher crime rates than average (though improving)",
+    "Less car-dependent than suburbs but PATCO focused on commuters",
+    "Limited gig internet coverage (75% vs 95%+ in suburbs)",
+    "Urban location with mixed neighborhoods"
+  ]
+}
