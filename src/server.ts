@@ -1,4 +1,4 @@
-﻿import 'dotenv/config';
+import 'dotenv/config';
 import { randomUUID } from 'node:crypto';
 import Fastify from 'fastify';
 import type { FastifyError, FastifyRequest, FastifyReply } from 'fastify';
@@ -41,7 +41,7 @@ const app = Fastify({
   requestIdHeader: 'x-request-id',
 });
 
-// â”€â”€â”€ Security Plugins â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── Security Plugins ─────────────────────────────────────────────────────
 
 // Support multiple frontend origins via CORS_ORIGIN (comma-separated)
 const corsOrigins = (process.env.CORS_ORIGIN || process.env.APP_URL || '')
@@ -64,7 +64,7 @@ let redisClient: { quit: () => Promise<void> } | undefined;
 try {
   redisClient = await buildRedisStore() as { quit: () => Promise<void> } | undefined;
 } catch (err) {
-  app.log.warn(err, 'Failed to build Redis store for rate limiting â€” using in-memory');
+  app.log.warn(err, 'Failed to build Redis store for rate limiting — using in-memory');
 }
 await app.register(rateLimit, {
   ...rateLimitConfig,
@@ -72,7 +72,16 @@ await app.register(rateLimit, {
 });
 await app.register(cookie);
 
-// â”€â”€â”€ Request Timing â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// --- Content Language ---
+app.addHook('onSend', (request, reply, payload, done) => {
+  const contentType = reply.getHeader('content-type');
+  if (typeof contentType === 'string' && contentType.includes('text/html')) {
+    reply.header('Content-Language', 'en');
+  }
+  done(null, payload);
+});
+
+// ─── Request Timing ──────────────────────────────────────────────────────
 
 app.addHook('onRequest', (request, _reply, done) => {
   request.startTime = process.hrtime.bigint();
@@ -92,11 +101,11 @@ app.addHook('onResponse', (request, reply, done) => {
   done();
 });
 
-// â”€â”€â”€ Auth (Clerk) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── Auth (Clerk) ─────────────────────────────────────────────────────────
 
 await registerClerk(app);
 
-// â”€â”€â”€ Global Error Handler â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── Global Error Handler ─────────────────────────────────────────────────
 
 app.setErrorHandler((error: FastifyError, request: FastifyRequest, reply: FastifyReply) => {
   // Suppress noisy error logging for expected errors
@@ -105,27 +114,27 @@ app.setErrorHandler((error: FastifyError, request: FastifyRequest, reply: Fastif
     request.log.error(error);
   }
 
-  // â”€â”€ Zod / Fastify validation errors â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Zod / Fastify validation errors ──────────────────────────
   if (error.validation) {
     return reply.code(400).send({ error: 'Validation error', details: error.validation });
   }
 
-  // â”€â”€ Body limit exceeded (413 Payload Too Large) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Body limit exceeded (413 Payload Too Large) ──────────────
   if (error.statusCode === 413 || error.code === 'FST_ERR_CTP_BODY_TOO_LARGE') {
     return reply.code(413).send({ error: 'Request body too large', limit: '1MB' });
   }
 
-  // â”€â”€ Invalid content type (415) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Invalid content type (415) ───────────────────────────────
   if (error.code === 'FST_ERR_CTP_INVALID_MEDIA_TYPE') {
     return reply.code(415).send({ error: 'Unsupported content type' });
   }
 
-  // â”€â”€ Invalid JSON body â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Invalid JSON body ────────────────────────────────────────
   if (error.statusCode === 400 && (error.code === 'FST_ERR_CTP_INVALID_CONTENT_LENGTH' || error.message?.includes('JSON'))) {
     return reply.code(400).send({ error: 'Invalid request body' });
   }
 
-  // â”€â”€ Rate limit exceeded â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Rate limit exceeded ──────────────────────────────────────
   if (error.statusCode === 429 || error.statusCode === 403 ||
       (error as unknown as { code?: string }).code === 'FST_ERR_RATE_LIMIT' ||
       error.message?.includes('rate limit') || error.message?.includes('Rate limit') ||
@@ -139,7 +148,7 @@ app.setErrorHandler((error: FastifyError, request: FastifyRequest, reply: Fastif
     });
   }
 
-  // â”€â”€ Prisma known errors â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Prisma known errors ──────────────────────────────────────
   const prismaCode = (error as unknown as { code?: string }).code;
   if (prismaCode === 'P2025') {
     return reply.code(404).send({ error: 'Record not found' });
@@ -153,17 +162,17 @@ app.setErrorHandler((error: FastifyError, request: FastifyRequest, reply: Fastif
     return reply.code(503).send({ error: 'Service temporarily unavailable' });
   }
 
-  // â”€â”€ Redis / IO errors from rate-limit or cache â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Redis / IO errors from rate-limit or cache ───────────────
   const errName = (error as unknown as { name?: string }).name || '';
   const errMsg = error.message || '';
   if (errName === 'MaxRetriesPerRequestError' || errMsg.includes('ECONNREFUSED') ||
       errMsg.includes('ECONNRESET') || errMsg.includes('Redis')) {
-    request.log.warn({ err: errMsg }, 'Redis error â€” request allowed through');
-    // Don't crash on Redis failures â€” let the request proceed without rate limiting
+    request.log.warn({ err: errMsg }, 'Redis error — request allowed through');
+    // Don't crash on Redis failures — let the request proceed without rate limiting
     return reply.code(503).send({ error: 'Service temporarily degraded' });
   }
 
-  // â”€â”€ Report 5xx errors to Sentry â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Report 5xx errors to Sentry ──────────────────────────────
   const statusCode = error.statusCode || 500;
   if (statusCode >= 500) {
     captureException(error, {
@@ -176,7 +185,7 @@ app.setErrorHandler((error: FastifyError, request: FastifyRequest, reply: Fastif
   return reply.code(statusCode).send({ error: message });
 });
 
-// â”€â”€â”€ Routes â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── Routes ───────────────────────────────────────────────────────────────
 
 await app.register(healthRoutes, { prefix: '/api' });
 await app.register(locationRoutes, { prefix: '/api/locations' });
@@ -196,7 +205,7 @@ await app.register(releaseRoutes, { prefix: '/api/releases' });
 await app.register(contributionRoutes, { prefix: '/api/contributions' });
 await app.register(badgeRoutes, { prefix: '/api/badges' });
 
-// â”€â”€â”€ Start â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── Start ────────────────────────────────────────────────────────────────
 
 const port = parseInt(process.env.PORT || '3000', 10);
 try {
@@ -206,7 +215,7 @@ try {
   process.exit(1);
 }
 
-// â”€â”€â”€ Scheduled Tasks â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── Scheduled Tasks ──────────────────────────────────────────────────────
 
 // Cleanup old processed webhook events daily (24h interval)
 import { cleanupProcessedEvents } from './routes/webhooks.js';
@@ -236,7 +245,7 @@ function startCleanupScheduler(): void {
 
 startCleanupScheduler();
 
-// â”€â”€â”€ Graceful Shutdown â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── Graceful Shutdown ───────────────────────────────────────────────────
 
 async function shutdown(signal: string): Promise<void> {
   app.log.info({ signal }, 'Received signal, shutting down gracefully');
@@ -257,3 +266,6 @@ async function shutdown(signal: string): Promise<void> {
 
 process.on('SIGTERM', () => shutdown('SIGTERM'));
 process.on('SIGINT', () => shutdown('SIGINT'));
+
+
+
