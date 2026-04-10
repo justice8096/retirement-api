@@ -3,6 +3,7 @@ import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
 import { requireAdmin } from '../middleware/auth.js';
 import { safeJsonRecord } from '../middleware/sanitize.js';
+import type { InputJsonValue } from '@prisma/client/runtime/library.js';
 
 const locationSchema = z.object({
   id: z.string().min(1).max(100).regex(/^[a-z0-9-]+$/),
@@ -81,7 +82,7 @@ export default async function adminRoutes(app: FastifyInstance): Promise<void> {
       const location = await tx.adminLocation.create({
         data: {
           id: parsed.data.id,
-          locationData: parsed.data.locationData,
+          locationData: parsed.data.locationData as InputJsonValue,
           version: 1,
           ...searchFields,
         },
@@ -92,7 +93,7 @@ export default async function adminRoutes(app: FastifyInstance): Promise<void> {
         data: {
           locationId: location.id,
           version: 1,
-          locationData: parsed.data.locationData,
+          locationData: parsed.data.locationData as InputJsonValue,
           changedBy: request.user.email,
         },
       });
@@ -125,7 +126,7 @@ export default async function adminRoutes(app: FastifyInstance): Promise<void> {
       const location = await tx.adminLocation.update({
         where: { id },
         data: {
-          locationData: parsed.data.locationData,
+          locationData: parsed.data.locationData as InputJsonValue,
           version: newVersion,
           ...searchFields,
         },
@@ -135,7 +136,7 @@ export default async function adminRoutes(app: FastifyInstance): Promise<void> {
         data: {
           locationId: id,
           version: newVersion,
-          locationData: parsed.data.locationData,
+          locationData: parsed.data.locationData as InputJsonValue,
           changedBy: parsed.data.changedBy ?? request.user.email,
         },
       });

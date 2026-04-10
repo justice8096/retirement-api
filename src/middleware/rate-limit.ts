@@ -35,8 +35,9 @@ async function buildRedisStore(): Promise<unknown> {
   if (!redisUrl) return undefined; // use default in-memory store
 
   try {
-    const { default: Redis } = await import('ioredis');
-    const client = new Redis(redisUrl, {
+    const ioredis = await import('ioredis');
+    const Redis = ioredis.default || ioredis;
+    const client = new (Redis as any)(redisUrl, {
       maxRetriesPerRequest: 1,
       enableOfflineQueue: false,
       lazyConnect: true,
