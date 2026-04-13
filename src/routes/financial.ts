@@ -4,10 +4,12 @@ import prisma from '../db/prisma.js';
 import { requireAuth } from '../middleware/auth.js';
 import { encryptField, decryptField } from '../middleware/encryption.js';
 
+// Validates client-side values (percentages as whole numbers, balances in dollars).
+// Unknown fields (e.g. userId, updatedAt) are silently stripped by Zod defaults.
 const financialSchema = z.object({
   portfolioBalance: z.number().min(0).max(100_000_000).optional(),
   fxDriftEnabled: z.boolean().optional(),
-  fxDriftAnnualRate: z.number().min(-0.1).max(0.2).optional(),
+  fxDriftAnnualRate: z.number().min(-10).max(20).optional(), // client sends %, e.g. 1 = 1%/yr
   ssCutEnabled: z.boolean().optional(),
   ssCutYear: z.number().int().min(2025).max(2050).optional(),
   ssCola: z.number().min(0).max(10).optional(),
@@ -33,12 +35,13 @@ const financialSchema = z.object({
   rothBalance: z.number().min(0).max(100_000_000).nullable().optional(),
   taxableBalance: z.number().min(0).max(100_000_000).nullable().optional(),
   hsaBalance: z.number().min(0).max(100_000_000).nullable().optional(),
-}).strict();
+});
 
+// Defaults sent to client when no DB record exists (client-side format).
 const DEFAULTS = {
   portfolioBalance: 500000,
   fxDriftEnabled: true,
-  fxDriftAnnualRate: 0.01,
+  fxDriftAnnualRate: 1,    // 1% — client format
   ssCutEnabled: true,
   ssCutYear: 2033,
   ssCola: 2.5,
@@ -68,6 +71,7 @@ const PCT_FIELDS = [
   'intlPct',
   'expectedReturn',
   'expectedInflation',
+  'fxDriftAnnualRate',
   'savingsRate',
 ] as const;
 
