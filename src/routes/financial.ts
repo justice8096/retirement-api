@@ -5,36 +5,40 @@ import { requireAuth } from '../middleware/auth.js';
 import { encryptField, decryptField } from '../middleware/encryption.js';
 
 // Validates client-side values (percentages as whole numbers, balances in dollars).
+// Uses z.coerce.number() because Prisma returns Decimal fields as strings and
+// encrypted String fields as strings — the client round-trips these as-is.
 // Unknown fields (e.g. userId, updatedAt) are silently stripped by Zod defaults.
+const num = z.coerce.number();
+
 const financialSchema = z.object({
-  portfolioBalance: z.number().min(0).max(100_000_000).optional(),
+  portfolioBalance: num.min(0).max(100_000_000).optional(),
   fxDriftEnabled: z.boolean().optional(),
-  fxDriftAnnualRate: z.number().min(-10).max(20).optional(), // client sends %, e.g. 1 = 1%/yr
+  fxDriftAnnualRate: num.min(-10).max(20).optional(), // client sends %, e.g. 1 = 1%/yr
   ssCutEnabled: z.boolean().optional(),
-  ssCutYear: z.number().int().min(2025).max(2050).optional(),
-  ssCola: z.number().min(0).max(10).optional(),
+  ssCutYear: num.int().min(2025).max(2050).optional(),
+  ssCola: num.min(0).max(10).optional(),
 
   // Asset Allocation (sent as whole-number percentages, e.g. 60 = 60%)
-  equityPct: z.number().min(0).max(100).optional(),
-  bondPct: z.number().min(0).max(100).optional(),
-  cashPct: z.number().min(0).max(100).optional(),
-  intlPct: z.number().min(0).max(100).optional(),
+  equityPct: num.min(0).max(100).optional(),
+  bondPct: num.min(0).max(100).optional(),
+  cashPct: num.min(0).max(100).optional(),
+  intlPct: num.min(0).max(100).optional(),
 
   // Return Assumptions (sent as whole-number percentages, e.g. 7 = 7%)
-  expectedReturn: z.number().min(0).max(30).optional(),
-  expectedInflation: z.number().min(0).max(20).optional(),
+  expectedReturn: num.min(0).max(30).optional(),
+  expectedInflation: num.min(0).max(20).optional(),
 
   // FIRE Settings
   retirementPath: z.enum(['traditional', 'fire', 'semi-retire', 'coast-fire', 'barista-fire']).optional(),
-  fireTargetAge: z.number().int().min(25).max(90).nullable().optional(),
-  annualSavings: z.number().min(0).max(10_000_000).nullable().optional(),
-  savingsRate: z.number().min(0).max(100).nullable().optional(),
+  fireTargetAge: num.int().min(25).max(90).nullable().optional(),
+  annualSavings: num.min(0).max(10_000_000).nullable().optional(),
+  savingsRate: num.min(0).max(100).nullable().optional(),
 
   // Multi-Account Balances
-  traditionalBalance: z.number().min(0).max(100_000_000).nullable().optional(),
-  rothBalance: z.number().min(0).max(100_000_000).nullable().optional(),
-  taxableBalance: z.number().min(0).max(100_000_000).nullable().optional(),
-  hsaBalance: z.number().min(0).max(100_000_000).nullable().optional(),
+  traditionalBalance: num.min(0).max(100_000_000).nullable().optional(),
+  rothBalance: num.min(0).max(100_000_000).nullable().optional(),
+  taxableBalance: num.min(0).max(100_000_000).nullable().optional(),
+  hsaBalance: num.min(0).max(100_000_000).nullable().optional(),
 });
 
 // Defaults sent to client when no DB record exists (client-side format).
@@ -75,19 +79,38 @@ const PCT_FIELDS = [
   'savingsRate',
 ] as const;
 
+/** All numeric fields — ensures Prisma Decimals and encrypted Strings become JS numbers. */
+const NUMERIC_FIELDS = new Set<string>([
+  ...ENCRYPTED_FIELDS,
+  ...PCT_FIELDS,
+  'ssCola', 'ssCutYear', 'fireTargetAge', 'annualSavings',
+]);
+
 /** Decrypt sensitive fields and convert DB decimals to client percentages. */
 function decryptSettings(settings: Record<string, unknown>) {
   const out = { ...settings };
+
+  // Decrypt encrypted balance fields
   for (const f of ENCRYPTED_FIELDS) {
     if (out[f] !== undefined && out[f] !== null) {
       out[f] = decryptField(out[f]);
     }
   }
-  for (const f of PCT_FIELDS) {
+
+  // Convert all numeric fields from Prisma Decimal/String → JS number
+  for (const f of NUMERIC_FIELDS) {
     if (out[f] !== undefined && out[f] !== null) {
-      out[f] = Number(out[f]) * 100;
+      out[f] = Number(out[f]);
     }
   }
+
+  // Convert DB decimal fractions → client whole-number percentages
+  for (const f of PCT_FIELDS) {
+    if (out[f] !== undefined && out[f] !== null) {
+      out[f] = (out[f] as number) * 100;
+    }
+  }
+
   return out;
 }
 
