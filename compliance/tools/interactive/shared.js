@@ -54,6 +54,7 @@ function el(tag, attrs, children) {
   for (const k of Object.keys(attrs)) {
     const v = attrs[k];
     if (k === 'className') e.className = v;
+    else if (k === 'htmlFor') e.htmlFor = v;
     else if (k === 'textContent') e.textContent = v;
     else if (k.startsWith('on')) e.addEventListener(k.slice(2).toLowerCase(), v);
     else e.setAttribute(k, v);
@@ -102,7 +103,8 @@ function updateToggle(wrapper, value) {
 }
 
 function createSelect(label, options, value, onChange) {
-  const select = el('select', { className: 'field-select' });
+  var selectId = 'field-' + label.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
+  const select = el('select', { className: 'field-select', id: selectId });
   for (const opt of options) {
     const option = el('option', { value: opt.value, textContent: opt.label });
     if (opt.value === value) option.selected = true;
@@ -110,28 +112,30 @@ function createSelect(label, options, value, onChange) {
   }
   select.addEventListener('change', function() { onChange(select.value); });
   const row = el('div', { className: 'field-row' });
-  row.appendChild(el('label', { className: 'field-label' }, [label]));
+  row.appendChild(el('label', { className: 'field-label', htmlFor: selectId }, [label]));
   row.appendChild(select);
   return row;
 }
 
 function createTextInput(label, value, onChange, placeholder) {
+  var inputId = 'field-' + label.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
   const input = el('input', {
-    type: 'text', className: 'field-input', value: value || '', placeholder: placeholder || ''
+    type: 'text', className: 'field-input', id: inputId, value: value || '', placeholder: placeholder || ''
   });
   input.addEventListener('input', function() { onChange(input.value); });
   const row = el('div', { className: 'field-row' });
-  row.appendChild(el('label', { className: 'field-label' }, [label]));
+  row.appendChild(el('label', { className: 'field-label', htmlFor: inputId }, [label]));
   row.appendChild(input);
   return row;
 }
 
 function createTextArea(label, value, onChange, placeholder) {
-  const ta = el('textarea', { className: 'field-textarea', placeholder: placeholder || '' });
+  var taId = 'field-' + label.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
+  const ta = el('textarea', { className: 'field-textarea', id: taId, placeholder: placeholder || '' });
   ta.value = value || '';
   ta.addEventListener('input', function() { onChange(ta.value); });
   const row = el('div', { className: 'field-row' });
-  row.appendChild(el('label', { className: 'field-label' }, [label]));
+  row.appendChild(el('label', { className: 'field-label', htmlFor: taId }, [label]));
   row.appendChild(ta);
   return row;
 }
@@ -146,8 +150,8 @@ var SHARED_CSS = [
   'body { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; background: #0B1426; color: #F0EBE0; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 24px; }',
   'h1 { font-size: 1.8em; margin-bottom: 8px; color: #E8B96A; font-weight: 300; letter-spacing: 1px; }',
   'h2 { font-size: 1.2em; margin: 24px 0 12px; color: #9AACBA; font-weight: 400; border-bottom: 1px solid #1E2D3D; padding-bottom: 6px; }',
-  'h3 { font-size: 1em; margin: 16px 0 8px; color: #6B7B8D; }',
-  '.subtitle { color: #6B7B8D; font-size: 0.9em; margin-bottom: 24px; }',
+  'h3 { font-size: 1em; margin: 16px 0 8px; color: #9AACBA; }',
+  '.subtitle { color: #C8D6E4; font-size: 0.9em; margin-bottom: 24px; }',
   '.section { margin-bottom: 32px; }',
   '.toolbar { display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }',
   '.btn { padding: 8px 20px; border: 1px solid #3A4A5A; border-radius: 4px; background: #1E2D3D; color: #F0EBE0; cursor: pointer; font-size: 0.85em; transition: all 0.15s; }',
@@ -159,14 +163,14 @@ var SHARED_CSS = [
   '.toggle-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; border: 1px solid #1E2D3D; border-radius: 4px; margin-bottom: 6px; background: #0D1830; }',
   '.toggle-label { flex: 1; font-size: 0.9em; padding-right: 16px; }',
   '.toggle-group { display: flex; gap: 4px; }',
-  '.toggle-btn { padding: 4px 16px; border: 1px solid #3A4A5A; border-radius: 3px; background: transparent; color: #6B7B8D; cursor: pointer; font-size: 0.8em; }',
+  '.toggle-btn { padding: 4px 16px; border: 1px solid #3A4A5A; border-radius: 3px; background: transparent; color: #9AACBA; cursor: pointer; font-size: 0.8em; }',
   '.toggle-btn.active.yes { background: #c0392b; border-color: #c0392b; color: white; }',
   '.toggle-btn.active.no { background: #2A7B7B; border-color: #2A7B7B; color: white; }',
   '.field-row { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }',
   '.field-label { min-width: 200px; font-size: 0.85em; color: #9AACBA; }',
   '.field-input, .field-select, .field-textarea { flex: 1; padding: 6px 10px; background: #0D1830; border: 1px solid #3A4A5A; border-radius: 3px; color: #F0EBE0; font-size: 0.85em; font-family: inherit; }',
   '.field-textarea { min-height: 60px; resize: vertical; }',
-  '.field-input:focus, .field-select:focus, .field-textarea:focus { border-color: #D4943A; outline: none; }',
+  '.field-input:focus, .field-select:focus, .field-textarea:focus { border-color: #D4943A; outline: 2px solid #D4943A; outline-offset: 2px; }',
   '.badge { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 0.7em; margin: 2px; }',
   '.badge.enacted { background: #D4943A33; color: #E8B96A; border: 1px solid #D4943A55; }',
   '.badge.active-sector { background: #2A7B7B33; color: #4DBFBF; border: 1px solid #2A7B7B55; }',

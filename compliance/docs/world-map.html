@@ -30,7 +30,8 @@
 </head>
 <body>
 <h1>LLM & AI software development regulations — world map</h1>
-<div id="map-container">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<section id="main-content"><div id="map-container">
   <div id="tooltip"></div>
 </div>
 <div class="legend">
@@ -203,6 +204,8 @@ const catLabels = {
 const w = 900, h = 520;
 const container = document.getElementById('map-container');
 const svg = d3.select(container).append('svg').attr('viewBox', `0 0 ${w} ${h}`).attr('preserveAspectRatio', 'xMidYMid meet');
+svg.append('title').text('AI Regulations World Map');
+svg.append('desc').text('Interactive map showing AI regulation status by country.');
 const projection = d3.geoNaturalEarth1().scale(160).translate([w/2, h/2 + 16]);
 const pathGen = d3.geoPath().projection(projection);
 const tooltip = document.getElementById('tooltip');
@@ -240,3 +243,5 @@ d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(w
 </script>
 </body>
 </html>
+
+

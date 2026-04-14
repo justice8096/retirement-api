@@ -71,6 +71,7 @@ model User {
   contributions    Contribution[]
   badges           UserBadge[]
   featureUnlocks   UserFeatureUnlock[]
+  brokerageFees    UserBrokerageFees?
 
   @@map("users")
 }
@@ -451,4 +452,36 @@ model UserFeatureUnlock {
   @@unique([userId, featureSet])
   @@index([userId])
   @@map("user_feature_unlocks")
+}
+
+// --- Brokerage & Transfer Fees ---
+
+model UserBrokerageFees {
+  userId               String   @id @map("user_id")
+
+  // Stock brokerage fees
+  brokerageFeePct      Decimal  @default(0.005) @map("brokerage_fee_pct")      // e.g. 0.005 = 0.5%
+  brokerageFeeFlat     Decimal  @default(0)     @map("brokerage_fee_flat")     // flat per-trade fee (USD)
+  brokerageAnnualFee   Decimal  @default(0)     @map("brokerage_annual_fee")   // annual custody/account fee
+  brokerageExpenseRatio Decimal @default(0.002) @map("brokerage_expense_ratio") // fund expense ratio
+
+  // Wire / ACH transfer fees
+  wireTransferFeeUsd   Decimal  @default(25)    @map("wire_transfer_fee_usd")  // outgoing wire fee
+  wireTransferFeeLocal Decimal  @default(0)     @map("wire_transfer_fee_local")// receiving bank fee in local currency
+  achTransferFee       Decimal  @default(0)     @map("ach_transfer_fee")       // domestic ACH fee
+
+  // Currency exchange fees
+  fxSpreadPct          Decimal  @default(0.01)  @map("fx_spread_pct")          // bank/broker FX spread
+  fxFixedFee           Decimal  @default(0)     @map("fx_fixed_fee")           // flat FX conversion fee (USD)
+  fxProvider           String   @default("bank") @map("fx_provider")           // bank | wise | ofx | xe | other
+
+  // Preferred currency (derived from selected city)
+  localCurrency        String   @default("USD") @map("local_currency")
+  manualExchangeRate   Decimal? @map("manual_exchange_rate")                   // user override for FX rate
+
+  updatedAt            DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("user_brokerage_fees")
 }

@@ -33,6 +33,7 @@ import healthRoutes from './routes/health.js';
 import releaseRoutes from './routes/releases.js';
 import contributionRoutes, { adminContributionRoutes } from './routes/contributions.js';
 import badgeRoutes from './routes/badges.js';
+import feesRoutes from './routes/fees.js';
 
 const app = Fastify({
   logger: true,
@@ -44,13 +45,13 @@ const app = Fastify({
 // ─── Security Plugins ─────────────────────────────────────────────────────
 
 // Support multiple frontend origins via CORS_ORIGIN (comma-separated)
-const corsOrigins = (process.env.CORS_ORIGIN || process.env.APP_URL || 'http://localhost:5173')
+const corsOrigins = (process.env.CORS_ORIGIN || process.env.APP_URL || '')
   .split(',')
   .map((o) => o.trim())
   .filter(Boolean);
 if (corsOrigins.includes('*')) {
   console.warn('[security] CORS_ORIGIN=* is not allowed with credentials: true, using default');
-  corsOrigins.splice(0, corsOrigins.length, 'http://localhost:5173');
+  corsOrigins.splice(0, corsOrigins.length);
 }
 await app.register(cors, {
   origin: corsOrigins.length === 1 ? corsOrigins[0] : corsOrigins,
@@ -71,6 +72,15 @@ await app.register(rateLimit, {
   ...(redisClient ? { redis: redisClient } : {}),
 });
 await app.register(cookie);
+
+// --- Content Language ---
+app.addHook('onSend', (request, reply, payload, done) => {
+  const contentType = reply.getHeader('content-type');
+  if (typeof contentType === 'string' && contentType.includes('text/html')) {
+    reply.header('Content-Language', 'en');
+  }
+  done(null, payload);
+});
 
 // ─── Request Timing ──────────────────────────────────────────────────────
 
@@ -195,6 +205,7 @@ await app.register(webhookRoutes, { prefix: '/api/webhooks' });
 await app.register(releaseRoutes, { prefix: '/api/releases' });
 await app.register(contributionRoutes, { prefix: '/api/contributions' });
 await app.register(badgeRoutes, { prefix: '/api/badges' });
+await app.register(feesRoutes, { prefix: '/api/me/fees' });
 
 // ─── Start ────────────────────────────────────────────────────────────────
 
@@ -257,3 +268,6 @@ async function shutdown(signal: string): Promise<void> {
 
 process.on('SIGTERM', () => shutdown('SIGTERM'));
 process.on('SIGINT', () => shutdown('SIGINT'));
+
+
+

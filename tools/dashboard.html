@@ -11,8 +11,8 @@
   --bg-card: #162040;
   --bg-hover: #1A2850;
   --text-primary: #E8ECF4;
-  --text-secondary: #8B9DC3;
-  --text-muted: #5A6F94;
+  --text-secondary: #C8D6E4;
+  --text-muted: #8A9BAD;
   --amber: #D4943A;
   --amber-light: #E8B86D;
   --teal: #2A7B7B;
@@ -143,9 +143,13 @@ canvas { width: 100% !important; height: 300px !important; }
 @media (max-width: 900px) {
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
 }
+
+.skip-link { position: absolute; top: -40px; left: 0; background: #D4943A; color: #060E1A; padding: 8px 16px; text-decoration: none; z-index: 100; font-weight: 600; }
+.skip-link:focus { top: 0; }
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <div class="header no-print">
   <div>
@@ -180,7 +184,7 @@ canvas { width: 100% !important; height: 300px !important; }
   <div class="tab" data-panel="manage">Manage Locations</div>
 </div>
 
-<div class="content">
+<div class="content" id="main-content">
 
 <div id="overview" class="panel active">
   <div class="controls"><label>Project to Year:</label><select id="overviewProjYear"></select></div>
@@ -5521,3 +5525,7 @@ loadSavedScenarios();
 </script>
 </body>
 </html>
+
+
+
+
