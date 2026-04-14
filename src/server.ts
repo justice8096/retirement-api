@@ -33,6 +33,7 @@ import healthRoutes from './routes/health.js';
 import releaseRoutes from './routes/releases.js';
 import contributionRoutes, { adminContributionRoutes } from './routes/contributions.js';
 import badgeRoutes from './routes/badges.js';
+import feesRoutes from './routes/fees.js';
 
 const app = Fastify({
   logger: true,
@@ -204,6 +205,7 @@ await app.register(webhookRoutes, { prefix: '/api/webhooks' });
 await app.register(releaseRoutes, { prefix: '/api/releases' });
 await app.register(contributionRoutes, { prefix: '/api/contributions' });
 await app.register(badgeRoutes, { prefix: '/api/badges' });
+await app.register(feesRoutes, { prefix: '/api/me/fees' });
 
 // ─── Start ────────────────────────────────────────────────────────────────
 
