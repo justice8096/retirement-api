@@ -557,5 +557,171 @@
         "eligibilityAge": 55
       }
     ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 59,
+      "typical": 220,
+      "max": 440
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 73,
+        "senior": 37,
+        "notes": "RapiPass rechargeable card for Metro and MetroBus. Expanding system."
+      },
+      "singleRide": 0.51,
+      "coverage": "Metro lines and MetroBus in Panama City. Bus networks in other cities.",
+      "seniorDiscount": "Pensionado/jubilado RapiPass for free metro and bus rides."
+    },
+    "rideShare": {
+      "baseFare": 3.67,
+      "perKm": 1.1,
+      "typicalCrossTownTrip": {
+        "min": 6,
+        "typical": 10,
+        "max": 22
+      },
+      "availability": "Uber and DiDi available in Panama City. Yellow taxis use zones. InDriver for negotiated fares.",
+      "notes": "Ride-share widely used in City Costa Del Este. Negotiate taxi fares before riding if no meter."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 73,
+        "initialRegistration": {
+          "min": 147,
+          "typical": 293,
+          "max": 587
+        },
+        "notes": "Vehicle registration through local transit authority in City Costa Del Este."
+      },
+      "insurance": {
+        "monthlyMin": 59,
+        "monthlyTypical": 95,
+        "monthlyMax": 176,
+        "notes": "Liability insurance mandatory. International driving permit accepted for first 90 days."
+      },
+      "fuel": {
+        "pricePerLiter": 1.39,
+        "monthlyEstimate": {
+          "min": 88,
+          "typical": 147,
+          "max": 264
+        },
+        "notes": "Fuel prices in USD. Government-subsidized in some cases."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 73,
+          "typical": 147,
+          "max": 293
+        },
+        "hourlyStreet": 1.1,
+        "notes": "Street parking available in City Costa Del Este. Malls and supermarkets usually have free parking."
+      },
+      "tolls": {
+        "monthlyEstimate": 29,
+        "notes": "Toll roads on major highways between cities."
+      },
+      "seniorDiscounts": "Pensionado 15% discount on auto insurance premiums at some providers."
+    },
+    "walkability": "Moderate. Walkable in some urban areas. Hot climate limits walking distance.",
+    "cycling": {
+      "bikeShareMonthly": 7,
+      "infrastructure": "Bicycle infrastructure varies in City Costa Del Este. Urban areas gradually improving cycling lanes.",
+      "notes": "Heat and terrain may limit cycling as primary transport."
+    },
+    "electricVehicle": {
+      "purchasePrice": {
+        "min": 41067,
+        "typical": 58667,
+        "max": 85067
+      },
+      "purchaseNotes": "Growing EV market in Panama City. BYD, Hyundai, Kia dealers. Law 295 incentives. Import costs may apply.",
+      "federalIncentive": 0,
+      "stateIncentive": 0,
+      "incentiveNotes": "Law 295 (2022): EVs exempt from import duties and ITBMS (7% sales tax). Reduced annual vehicle tax.",
+      "chargingHome": {
+        "installCost": {
+          "min": 587,
+          "typical": 1173,
+          "max": 2200
+        },
+        "monthlyElectricity": {
+          "min": 29,
+          "typical": 51,
+          "max": 81
+        },
+        "notes": "Home charging feasible in houses and some apartments in City Costa Del Este."
+      },
+      "chargingPublic": {
+        "perKwh": {
+          "min": 0.2,
+          "typical": 0.35,
+          "max": 0.5
+        },
+        "notes": "Public charging network growing in Panama. Check availability in City Costa Del Este."
+      },
+      "insurance": {
+        "monthly": {
+          "min": 88,
+          "typical": 125,
+          "max": 191
+        },
+        "notes": "EV insurance through major local providers."
+      },
+      "maintenance": {
+        "annual": {
+          "min": 440,
+          "typical": 660,
+          "max": 1027
+        },
+        "notes": "EV service availability growing. Authorized dealers in major cities."
+      },
+      "registration": {
+        "annual": {
+          "min": 0,
+          "typical": 37,
+          "max": 73
+        },
+        "notes": "Reduced or exempt registration for EVs."
+      },
+      "batteryWarranty": "Manufacturer standard warranty. Service access best in major cities.",
+      "depreciationNotes": "EV resale market developing in Panama. Larger cities have better resale prospects.",
+      "totalMonthlyOwnership": {
+        "min": 161,
+        "typical": 271,
+        "max": 440
+      },
+      "totalMonthlyNotes": "Includes: charging, insurance, maintenance (monthly avg), registration. Excludes: purchase/loan payment, depreciation.",
+      "sources": [
+        {
+          "title": "Panama EV Incentives",
+          "url": "https://www.elmetrodepanama.com/"
+        }
+      ]
+    },
+    "sources": [
+      {
+        "title": "Metro de Panamá",
+        "url": "https://www.elmetrodepanama.com/"
+      },
+      {
+        "title": "MiBus Panama",
+        "url": "https://www.mibus.com.pa/"
+      }
+    ],
+    "monthlyEstimate": {
+      "carFree": {
+        "min": 29,
+        "typical": 73,
+        "max": 147
+      },
+      "withCar": {
+        "min": 220,
+        "typical": 367,
+        "max": 660
+      }
+    }
   }
 }

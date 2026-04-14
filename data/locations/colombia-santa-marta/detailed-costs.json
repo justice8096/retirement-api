@@ -553,5 +553,171 @@
         "eligibilityAge": 57
       }
     ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 29,
+      "typical": 110,
+      "max": 220
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 37,
+        "senior": 18,
+        "notes": "Rechargeable transit cards in major cities. Integrated systems in Bogota and Medellin."
+      },
+      "singleRide": 0.26,
+      "coverage": "TransMilenio in Bogota. Metro in Medellin. Bus networks in major cities.",
+      "seniorDiscount": "Senior discounts on public transit in most cities. Seniors 62+ eligible."
+    },
+    "rideShare": {
+      "baseFare": 1.83,
+      "perKm": 0.55,
+      "typicalCrossTownTrip": {
+        "min": 3,
+        "typical": 5,
+        "max": 11
+      },
+      "availability": "Uber, DiDi, InDriver widely available. Very affordable.",
+      "notes": "Ride-share widely used in Santa Marta. Negotiate taxi fares before riding if no meter."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 37,
+        "initialRegistration": {
+          "min": 73,
+          "typical": 147,
+          "max": 293
+        },
+        "notes": "Vehicle registration through local transit authority in Santa Marta."
+      },
+      "insurance": {
+        "monthlyMin": 29,
+        "monthlyTypical": 48,
+        "monthlyMax": 88,
+        "notes": "Liability insurance mandatory. International driving permit accepted for first 90 days."
+      },
+      "fuel": {
+        "pricePerLiter": 0.7,
+        "monthlyEstimate": {
+          "min": 44,
+          "typical": 73,
+          "max": 132
+        },
+        "notes": "Fuel prices vary by region. Government may regulate prices."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 37,
+          "typical": 73,
+          "max": 147
+        },
+        "hourlyStreet": 0.55,
+        "notes": "Street parking available in Santa Marta. Malls and supermarkets usually have free parking."
+      },
+      "tolls": {
+        "monthlyEstimate": 15,
+        "notes": "Toll roads on major highways between cities."
+      },
+      "seniorDiscounts": "No specific senior car ownership discounts. SOAT mandatory insurance."
+    },
+    "walkability": "Good in city centers. Medellin famous for walkability.",
+    "cycling": {
+      "bikeShareMonthly": 4,
+      "infrastructure": "Bicycle infrastructure varies in Santa Marta. Urban areas gradually improving cycling lanes.",
+      "notes": "Heat and terrain may limit cycling as primary transport."
+    },
+    "electricVehicle": {
+      "purchasePrice": {
+        "min": 20533,
+        "typical": 29333,
+        "max": 42533
+      },
+      "purchaseNotes": "Growing EV market. Government incentives for electric vehicles. BYD and Chinese brands popular. Import costs may apply.",
+      "federalIncentive": 0,
+      "stateIncentive": 0,
+      "incentiveNotes": "Law 1964 of 2019: tax incentives for EVs including reduced VAT and import duties.",
+      "chargingHome": {
+        "installCost": {
+          "min": 293,
+          "typical": 587,
+          "max": 1100
+        },
+        "monthlyElectricity": {
+          "min": 15,
+          "typical": 26,
+          "max": 40
+        },
+        "notes": "Home charging feasible in houses and some apartments in Santa Marta."
+      },
+      "chargingPublic": {
+        "perKwh": {
+          "min": 0.2,
+          "typical": 0.35,
+          "max": 0.5
+        },
+        "notes": "Public charging network growing in Colombia. Check availability in Santa Marta."
+      },
+      "insurance": {
+        "monthly": {
+          "min": 44,
+          "typical": 62,
+          "max": 95
+        },
+        "notes": "EV insurance through major local providers."
+      },
+      "maintenance": {
+        "annual": {
+          "min": 220,
+          "typical": 330,
+          "max": 513
+        },
+        "notes": "EV service availability growing. Authorized dealers in major cities."
+      },
+      "registration": {
+        "annual": {
+          "min": 0,
+          "typical": 18,
+          "max": 37
+        },
+        "notes": "Standard registration fees apply."
+      },
+      "batteryWarranty": "Manufacturer standard warranty. Service access best in major cities.",
+      "depreciationNotes": "EV resale market developing in Colombia. Larger cities have better resale prospects.",
+      "totalMonthlyOwnership": {
+        "min": 81,
+        "typical": 136,
+        "max": 220
+      },
+      "totalMonthlyNotes": "Includes: charging, insurance, maintenance (monthly avg), registration. Excludes: purchase/loan payment, depreciation.",
+      "sources": [
+        {
+          "title": "Colombia EV Incentives",
+          "url": "https://www.transmilenio.gov.co/"
+        }
+      ]
+    },
+    "sources": [
+      {
+        "title": "TransMilenio Bogota",
+        "url": "https://www.transmilenio.gov.co/"
+      },
+      {
+        "title": "Metro de Medellín",
+        "url": "https://www.metrodemedellin.gov.co/"
+      }
+    ],
+    "monthlyEstimate": {
+      "carFree": {
+        "min": 15,
+        "typical": 37,
+        "max": 73
+      },
+      "withCar": {
+        "min": 110,
+        "typical": 183,
+        "max": 330
+      }
+    }
   }
 }

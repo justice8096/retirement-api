@@ -4,3 +4,7 @@ dist/
 *.db-shm
 *.db-wal
 .claude/
+
+# Local dev tooling with personal data
+check-tier.mjs
+tools/seed-dev-user.sh

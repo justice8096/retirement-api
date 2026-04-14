@@ -23,6 +23,19 @@ const TIER_LIMITS: Record<string, number> = {
 const DEFAULT_LIMIT = 100; // unauthenticated (auth resolves after rate-limit in dev)
 
 /**
+ * Endpoints exempt from rate limiting.
+ * These are critical bootstrap paths — if billing/status is rate-limited,
+ * the frontend can't resolve the user's tier and falls back to "free",
+ * locking the user out of features they've paid for.
+ */
+const EXEMPT_PATHS = new Set([
+  '/api/health',
+  '/api/billing/status',
+  '/api/webhooks/clerk',
+  '/api/webhooks/stripe',
+]);
+
+/**
  * Build a Redis store for @fastify/rate-limit if REDIS_URL is set.
  * Falls back to the built-in in-memory store otherwise.
  *
@@ -90,6 +103,10 @@ const rateLimitConfig = {
     return DEFAULT_LIMIT;
   },
   timeWindow: '1 minute',
+  allowList: (request: FastifyRequest) => {
+    // Never rate-limit critical bootstrap endpoints
+    return EXEMPT_PATHS.has(request.url.split('?')[0]!);
+  },
   keyGenerator: (request: FastifyRequest) => {
     // Use userId for authenticated users (more accurate than IP)
     try {

@@ -84,6 +84,31 @@ export async function registerClerk(app: FastifyInstance): Promise<void> {
 // ─── Auth hook: require signed-in user ────────────────────────────────────
 
 export async function requireAuth(request: FastifyRequest, reply: FastifyReply): Promise<void> {
+  // ─── Dev bypass: skip auth in development when no Authorization header ──
+  if (process.env.NODE_ENV === 'development' && !request.headers.authorization) {
+    try {
+      // Find or create a dev user for local frontend testing
+      let devUser = await prisma.user.findFirst({ where: { email: 'dev@localhost' } });
+      if (!devUser) {
+        devUser = await prisma.user.create({
+          data: {
+            authProviderId: 'dev_local_bypass',
+            email: 'dev@localhost',
+            displayName: 'Dev User',
+            tier: 'admin',
+          },
+        });
+        request.log.info('Created dev bypass user (dev@localhost, admin tier)');
+      }
+      request.user = devUser;
+      request.userId = devUser.id;
+      request.authProviderId = devUser.authProviderId;
+      return;
+    } catch (err) {
+      request.log.warn({ err: (err as Error).message }, 'Dev bypass failed — falling through to Clerk');
+    }
+  }
+
   if (!clerkEnabled) {
     reply.code(503).send({ error: 'Authentication not configured (local mode)' });
     return;

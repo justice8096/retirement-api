@@ -1,0 +1,275 @@
+{
+  "id": "us-new-york-city",
+  "name": "New York City, New York",
+  "country": "United States",
+  "region": "New York",
+  "cities": [
+    "Manhattan",
+    "Brooklyn",
+    "Queens",
+    "Bronx",
+    "Staten Island"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Citizen",
+    "incomeRequirement": null,
+    "notes": "US citizen, no visa required."
+  },
+  "climate": {
+    "winterLowF": 26,
+    "summerHighF": 85,
+    "rainyDaysPerYear": 122,
+    "meetsWarmWinterReq": false
+  },
+  "monthlyCosts": {
+    "rent": {
+      "min": 2800,
+      "max": 4500,
+      "typical": 3500,
+      "type": "2-bedroom apartment",
+      "annualInflation": 0.04,
+      "notes": "NYC rent stabilization may apply. Broker fees common (1 month rent). Most 2BR apartments in Brooklyn/Queens; Manhattan significantly higher.",
+      "gigInternetTypical": 3600,
+      "gigInternetCoverage": 85,
+      "gigInternetProviders": "Verizon Fios, Spectrum, Optimum",
+      "gigInternetNotes": "Fios available in most of NYC with gig service. Some older buildings limited to Spectrum cable. Coverage varies by building."
+    },
+    "groceries": {
+      "min": 1200,
+      "max": 1800,
+      "typical": 1500,
+      "annualInflation": 0.035,
+      "notes": "NYC grocery prices 20-30% above national average. Trader Joe's, Whole Foods, local bodegas and supermarkets. Delivery via FreshDirect, Instacart common."
+    },
+    "utilities": {
+      "min": 250,
+      "max": 420,
+      "typical": 330,
+      "annualInflation": 0.035,
+      "breakdown": {
+        "electricity": {
+          "typical": 140,
+          "notes": "Con Edison. Higher summer A/C costs. NYC electricity rates among highest in US."
+        },
+        "gas": {
+          "typical": 70,
+          "notes": "National Grid or Con Edison gas. Heating Oct-Apr. Many buildings include heat in rent."
+        },
+        "water": {
+          "typical": 45,
+          "notes": "NYC Water Board. Often included in rent for apartments. Billed to building if not."
+        },
+        "sewage": {
+          "typical": 40,
+          "notes": "NYC DEP. Billed with water, 159% of water charge."
+        },
+        "trash": {
+          "typical": 35,
+          "notes": "NYC DSNY provides curbside pickup. Some buildings charge via maintenance fees."
+        }
+      },
+      "taxes": "NYC utility tax applies. Con Edison bills include various surcharges.",
+      "notes": "Electricity, gas, water, sewage, trash. Many apartment buildings include heat and hot water in rent."
+    },
+    "healthcare": {
+      "min": 600,
+      "max": 950,
+      "typical": 750,
+      "notes": "Medicare Part B ($174.70/mo) + Medigap Plan G (~$250/mo x2 people due to NYC premiums) + Part D (~$45/mo x2) + dental/vision plans. NYC Medigap premiums among highest in nation.",
+      "annualInflation": 0.055
+    },
+    "insurance": {
+      "min": 30,
+      "max": 60,
+      "typical": 45,
+      "type": "renter's insurance",
+      "annualInflation": 0.03
+    },
+    "petCare": {
+      "min": 150,
+      "max": 300,
+      "typical": 210,
+      "annualInflation": 0.04,
+      "notes": "NYC vet costs among highest in US. ASPCA, Banfield, and numerous private vets. Emergency vets: Animal Medical Center (24hr)."
+    },
+    "petDaycare": {
+      "min": 400,
+      "max": 600,
+      "typical": 480,
+      "annualInflation": 0.035,
+      "notes": "Dog daycare 2 days/week, large breed rate (~$55-60/day). NYC premium pricing. Dog walking services $18-25 per 30-min walk."
+    },
+    "petGrooming": {
+      "min": 100,
+      "max": 200,
+      "typical": 140,
+      "annualInflation": 0.03,
+      "notes": "Professional grooming monthly. NYC grooming prices premium. Mobile groomers available."
+    },
+    "transportation": {
+      "min": 150,
+      "max": 450,
+      "typical": 250,
+      "notes": "MTA subway/bus unlimited MetroCard $33/week or $132/mo. Many retirees car-free. If keeping car: insurance $250-400/mo, parking $300-600/mo, gas/tolls.",
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "min": 500,
+      "max": 800,
+      "typical": 620,
+      "annualInflation": 0.025,
+      "notes": "Incl cable+1Gig internet ($80), Netflix ($18), Amazon Prime ($15), Apple TV+ ($13), dining out (lunch for 2 2x/week w/ tax+tip ~$120/wk). Museums, Broadway, cultural events add up."
+    },
+    "clothing": {
+      "min": 120,
+      "max": 300,
+      "typical": 200,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "min": 60,
+      "max": 140,
+      "typical": 90,
+      "annualInflation": 0.02
+    },
+    "subscriptions": {
+      "min": 40,
+      "max": 100,
+      "typical": 65,
+      "annualInflation": 0.03,
+      "notes": "Streaming, news (NYT, WSJ), apps"
+    },
+    "phoneCell": {
+      "min": 50,
+      "max": 80,
+      "typical": 62,
+      "annualInflation": 0.02,
+      "notes": "T-Mobile 55+ Essentials. 2 phones, unlimited data. All taxes included."
+    },
+    "miscellaneous": {
+      "min": 150,
+      "max": 350,
+      "typical": 225,
+      "annualInflation": 0.025,
+      "notes": "Laundry services, building tips (holiday, super, doorman), NYC-specific fees and surcharges."
+    },
+    "buffer": {
+      "min": 800,
+      "max": 800,
+      "typical": 800,
+      "annualInflation": 0.025,
+      "notes": "Monthly safety buffer for unexpected expenses"
+    },
+    "medicalOOP": {
+      "min": 350,
+      "max": 750,
+      "typical": 500,
+      "annualInflation": 0.055,
+      "notes": "Specialist visits, labs, procedures after Medicare. NYC specialist rates among highest in US. World-class facilities: NYU Langone, Mount Sinai, NewYork-Presbyterian."
+    },
+    "medicine": {
+      "min": 75,
+      "typical": 95,
+      "max": 950,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household. EPIC program for NY seniors can reduce costs."
+    },
+    "taxes": {
+      "min": 0,
+      "typical": 0,
+      "max": 0,
+      "annualInflation": 0.02
+    }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true,
+      "brackets": [
+        { "min": 0, "max": 23850, "rate": 0.1 },
+        { "min": 23850, "max": 96950, "rate": 0.12 },
+        { "min": 96950, "max": 206700, "rate": 0.22 },
+        { "min": 206700, "max": 394600, "rate": 0.24 },
+        { "min": 394600, "max": 501050, "rate": 0.32 },
+        { "min": 501050, "max": 751600, "rate": 0.35 },
+        { "min": 751600, "max": null, "rate": 0.37 }
+      ],
+      "standardDeduction": 30000
+    },
+    "stateIncomeTax": {
+      "rate": 0.0685,
+      "type": "top-marginal",
+      "brackets": [
+        { "min": 0, "max": 8500, "rate": 0.04 },
+        { "min": 8500, "max": 11700, "rate": 0.045 },
+        { "min": 11700, "max": 13900, "rate": 0.0525 },
+        { "min": 13900, "max": 80650, "rate": 0.055 },
+        { "min": 80650, "max": 215400, "rate": 0.06 },
+        { "min": 215400, "max": 1077550, "rate": 0.0685 },
+        { "min": 1077550, "max": null, "rate": 0.109 }
+      ],
+      "deduction": 16050,
+      "exemptions": "NY exempts Social Security from state income tax. Additional $20K pension exclusion for 59.5+. NYC city tax 3.078-3.876% additional."
+    },
+    "cityIncomeTax": {
+      "rate": 0.03876,
+      "type": "top-marginal",
+      "brackets": [
+        { "min": 0, "max": 12000, "rate": 0.03078 },
+        { "min": 12000, "max": 25000, "rate": 0.03762 },
+        { "min": 25000, "max": 50000, "rate": 0.03819 },
+        { "min": 50000, "max": null, "rate": 0.03876 }
+      ],
+      "notes": "NYC residents pay city income tax on top of NYS income tax."
+    },
+    "salesTax": {
+      "rate": 0.08875,
+      "notes": "NYC 8.875% (4% state + 4.5% city + 0.375% MTA surcharge). Clothing/shoes under $110 exempt."
+    },
+    "propertyTax": {
+      "rate": 0,
+      "notes": "Renters: no direct property tax. NYC property tax rates high but borne by landlord."
+    },
+    "socialCharges": null,
+    "vatRate": 0,
+    "estVehicleTax": 0,
+    "ssExempt": true,
+    "notes": "NYC has triple taxation: federal + NYS + NYC city income tax. SS exempt from NYS/NYC tax. STAR/SCHE property tax relief for senior homeowners."
+  },
+  "healthcare": {
+    "system": "Medicare (at 65) + private supplement",
+    "qualityRating": 10,
+    "waitTimes": "low",
+    "dentalIncluded": false,
+    "prescriptionCoverage": "Part D plan",
+    "notes": "World-class healthcare: NYU Langone, Mount Sinai, NewYork-Presbyterian, Memorial Sloan Kettering. EPIC program helps NY seniors with drug costs. Excellent specialist access."
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps+ widely available (Verizon Fios, Spectrum)",
+    "dogFriendly": 7,
+    "expatCommunity": 0,
+    "englishPrevalence": 10,
+    "safetyRating": 7,
+    "notes": "Central Park, Prospect Park, numerous dog runs. Unparalleled cultural scene: museums, Broadway, restaurants. Extremely diverse. Walkable city — car optional."
+  },
+  "pros": [
+    "No visa needed",
+    "English-speaking",
+    "World-class healthcare (NYU Langone, Mount Sinai, MSK)",
+    "SS tax exempt in NY",
+    "Best public transit in US — car not needed",
+    "Unmatched cultural resources (museums, Broadway, dining)",
+    "Extremely walkable",
+    "EPIC program for senior prescription assistance"
+  ],
+  "cons": [
+    "Highest cost of living in US",
+    "Triple taxation (federal + state + city income tax)",
+    "Cold winters",
+    "Apartment living — limited space",
+    "Noise and density",
+    "If keeping a car: insurance and parking extremely expensive",
+    "Healthcare premiums higher than national average"
+  ]
+}

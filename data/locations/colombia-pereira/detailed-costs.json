@@ -553,5 +553,171 @@
         "eligibilityAge": 57
       }
     ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 27,
+      "typical": 100,
+      "max": 200
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 33,
+        "senior": 17,
+        "notes": "Rechargeable transit cards in major cities. Integrated systems in Bogota and Medellin."
+      },
+      "singleRide": 0.23,
+      "coverage": "TransMilenio in Bogota. Metro in Medellin. Bus networks in major cities.",
+      "seniorDiscount": "Senior discounts on public transit in most cities. Seniors 62+ eligible."
+    },
+    "rideShare": {
+      "baseFare": 1.67,
+      "perKm": 0.5,
+      "typicalCrossTownTrip": {
+        "min": 3,
+        "typical": 5,
+        "max": 10
+      },
+      "availability": "Uber, DiDi, InDriver widely available. Very affordable.",
+      "notes": "Ride-share widely used in Pereira. Negotiate taxi fares before riding if no meter."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 33,
+        "initialRegistration": {
+          "min": 67,
+          "typical": 133,
+          "max": 267
+        },
+        "notes": "Vehicle registration through local transit authority in Pereira."
+      },
+      "insurance": {
+        "monthlyMin": 27,
+        "monthlyTypical": 43,
+        "monthlyMax": 80,
+        "notes": "Liability insurance mandatory. International driving permit accepted for first 90 days."
+      },
+      "fuel": {
+        "pricePerLiter": 0.63,
+        "monthlyEstimate": {
+          "min": 40,
+          "typical": 67,
+          "max": 120
+        },
+        "notes": "Fuel prices vary by region. Government may regulate prices."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 33,
+          "typical": 67,
+          "max": 133
+        },
+        "hourlyStreet": 0.5,
+        "notes": "Street parking available in Pereira. Malls and supermarkets usually have free parking."
+      },
+      "tolls": {
+        "monthlyEstimate": 13,
+        "notes": "Toll roads on major highways between cities."
+      },
+      "seniorDiscounts": "No specific senior car ownership discounts. SOAT mandatory insurance."
+    },
+    "walkability": "Good in city centers. Medellin famous for walkability.",
+    "cycling": {
+      "bikeShareMonthly": 3,
+      "infrastructure": "Bicycle infrastructure varies in Pereira. Urban areas gradually improving cycling lanes.",
+      "notes": "Heat and terrain may limit cycling as primary transport."
+    },
+    "electricVehicle": {
+      "purchasePrice": {
+        "min": 18667,
+        "typical": 26667,
+        "max": 38667
+      },
+      "purchaseNotes": "Growing EV market. Government incentives for electric vehicles. BYD and Chinese brands popular. Import costs may apply.",
+      "federalIncentive": 0,
+      "stateIncentive": 0,
+      "incentiveNotes": "Law 1964 of 2019: tax incentives for EVs including reduced VAT and import duties.",
+      "chargingHome": {
+        "installCost": {
+          "min": 267,
+          "typical": 533,
+          "max": 1000
+        },
+        "monthlyElectricity": {
+          "min": 13,
+          "typical": 23,
+          "max": 37
+        },
+        "notes": "Home charging feasible in houses and some apartments in Pereira."
+      },
+      "chargingPublic": {
+        "perKwh": {
+          "min": 0.2,
+          "typical": 0.35,
+          "max": 0.5
+        },
+        "notes": "Public charging network growing in Colombia. Check availability in Pereira."
+      },
+      "insurance": {
+        "monthly": {
+          "min": 40,
+          "typical": 57,
+          "max": 87
+        },
+        "notes": "EV insurance through major local providers."
+      },
+      "maintenance": {
+        "annual": {
+          "min": 200,
+          "typical": 300,
+          "max": 467
+        },
+        "notes": "EV service availability growing. Authorized dealers in major cities."
+      },
+      "registration": {
+        "annual": {
+          "min": 0,
+          "typical": 17,
+          "max": 33
+        },
+        "notes": "Standard registration fees apply."
+      },
+      "batteryWarranty": "Manufacturer standard warranty. Service access best in major cities.",
+      "depreciationNotes": "EV resale market developing in Colombia. Larger cities have better resale prospects.",
+      "totalMonthlyOwnership": {
+        "min": 73,
+        "typical": 123,
+        "max": 200
+      },
+      "totalMonthlyNotes": "Includes: charging, insurance, maintenance (monthly avg), registration. Excludes: purchase/loan payment, depreciation.",
+      "sources": [
+        {
+          "title": "Colombia EV Incentives",
+          "url": "https://www.transmilenio.gov.co/"
+        }
+      ]
+    },
+    "sources": [
+      {
+        "title": "TransMilenio Bogota",
+        "url": "https://www.transmilenio.gov.co/"
+      },
+      {
+        "title": "Metro de Medellín",
+        "url": "https://www.metrodemedellin.gov.co/"
+      }
+    ],
+    "monthlyEstimate": {
+      "carFree": {
+        "min": 13,
+        "typical": 33,
+        "max": 67
+      },
+      "withCar": {
+        "min": 100,
+        "typical": 167,
+        "max": 300
+      }
+    }
   }
 }
