@@ -557,5 +557,171 @@
         "eligibilityAge": 55
       }
     ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 53,
+      "typical": 200,
+      "max": 400
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 67,
+        "senior": 33,
+        "notes": "RapiPass rechargeable card for Metro and MetroBus. Expanding system."
+      },
+      "singleRide": 0.47,
+      "coverage": "Metro lines and MetroBus in Panama City. Bus networks in other cities.",
+      "seniorDiscount": "Pensionado/jubilado RapiPass for free metro and bus rides."
+    },
+    "rideShare": {
+      "baseFare": 3.33,
+      "perKm": 1,
+      "typicalCrossTownTrip": {
+        "min": 5,
+        "typical": 9,
+        "max": 20
+      },
+      "availability": "Uber and DiDi available in Panama City. Yellow taxis use zones. InDriver for negotiated fares.",
+      "notes": "Ride-share widely used in City Bella Vista. Negotiate taxi fares before riding if no meter."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 67,
+        "initialRegistration": {
+          "min": 133,
+          "typical": 267,
+          "max": 533
+        },
+        "notes": "Vehicle registration through local transit authority in City Bella Vista."
+      },
+      "insurance": {
+        "monthlyMin": 53,
+        "monthlyTypical": 87,
+        "monthlyMax": 160,
+        "notes": "Liability insurance mandatory. International driving permit accepted for first 90 days."
+      },
+      "fuel": {
+        "pricePerLiter": 1.27,
+        "monthlyEstimate": {
+          "min": 80,
+          "typical": 133,
+          "max": 240
+        },
+        "notes": "Fuel prices in USD. Government-subsidized in some cases."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 67,
+          "typical": 133,
+          "max": 267
+        },
+        "hourlyStreet": 1,
+        "notes": "Street parking available in City Bella Vista. Malls and supermarkets usually have free parking."
+      },
+      "tolls": {
+        "monthlyEstimate": 27,
+        "notes": "Toll roads on major highways between cities."
+      },
+      "seniorDiscounts": "Pensionado 15% discount on auto insurance premiums at some providers."
+    },
+    "walkability": "Moderate. Walkable in some urban areas. Hot climate limits walking distance.",
+    "cycling": {
+      "bikeShareMonthly": 7,
+      "infrastructure": "Bicycle infrastructure varies in City Bella Vista. Urban areas gradually improving cycling lanes.",
+      "notes": "Heat and terrain may limit cycling as primary transport."
+    },
+    "electricVehicle": {
+      "purchasePrice": {
+        "min": 37333,
+        "typical": 53333,
+        "max": 77333
+      },
+      "purchaseNotes": "Growing EV market in Panama City. BYD, Hyundai, Kia dealers. Law 295 incentives. Import costs may apply.",
+      "federalIncentive": 0,
+      "stateIncentive": 0,
+      "incentiveNotes": "Law 295 (2022): EVs exempt from import duties and ITBMS (7% sales tax). Reduced annual vehicle tax.",
+      "chargingHome": {
+        "installCost": {
+          "min": 533,
+          "typical": 1067,
+          "max": 2000
+        },
+        "monthlyElectricity": {
+          "min": 27,
+          "typical": 47,
+          "max": 73
+        },
+        "notes": "Home charging feasible in houses and some apartments in City Bella Vista."
+      },
+      "chargingPublic": {
+        "perKwh": {
+          "min": 0.2,
+          "typical": 0.35,
+          "max": 0.5
+        },
+        "notes": "Public charging network growing in Panama. Check availability in City Bella Vista."
+      },
+      "insurance": {
+        "monthly": {
+          "min": 80,
+          "typical": 113,
+          "max": 173
+        },
+        "notes": "EV insurance through major local providers."
+      },
+      "maintenance": {
+        "annual": {
+          "min": 400,
+          "typical": 600,
+          "max": 933
+        },
+        "notes": "EV service availability growing. Authorized dealers in major cities."
+      },
+      "registration": {
+        "annual": {
+          "min": 0,
+          "typical": 33,
+          "max": 67
+        },
+        "notes": "Reduced or exempt registration for EVs."
+      },
+      "batteryWarranty": "Manufacturer standard warranty. Service access best in major cities.",
+      "depreciationNotes": "EV resale market developing in Panama. Larger cities have better resale prospects.",
+      "totalMonthlyOwnership": {
+        "min": 147,
+        "typical": 247,
+        "max": 400
+      },
+      "totalMonthlyNotes": "Includes: charging, insurance, maintenance (monthly avg), registration. Excludes: purchase/loan payment, depreciation.",
+      "sources": [
+        {
+          "title": "Panama EV Incentives",
+          "url": "https://www.elmetrodepanama.com/"
+        }
+      ]
+    },
+    "sources": [
+      {
+        "title": "Metro de Panamá",
+        "url": "https://www.elmetrodepanama.com/"
+      },
+      {
+        "title": "MiBus Panama",
+        "url": "https://www.mibus.com.pa/"
+      }
+    ],
+    "monthlyEstimate": {
+      "carFree": {
+        "min": 27,
+        "typical": 67,
+        "max": 133
+      },
+      "withCar": {
+        "min": 200,
+        "typical": 333,
+        "max": 600
+      }
+    }
   }
 }

@@ -1,0 +1,1401 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 73,
+      "typical": 91,
+      "max": 925
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic/Wegovy) [P1]",
+        "monthlyCost": 25,
+        "withoutInsurance": 900,
+        "coverageNote": "Medicare Part D covers for diabetes (tier 3). $25 copay typical. Without coverage ~$900/mo. IRA negotiated price TBD. New York EPIC program may provide additional assistance."
+      },
+      {
+        "name": "Levothyroxine (Synthroid) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 15,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Atorvastatin 20mg [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Montelukast (Singulair) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 15,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Hydrochlorothiazide (HCTZ) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 8,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Olmesartan/Medoxomil (Benicar) [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 30,
+        "coverageNote": "Medicare Part D generic tier 1-2; $4-15 copay"
+      },
+      {
+        "name": "Albuterol inhaler [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 35,
+        "coverageNote": "Medicare Part D tier 2; $10-25 copay. IRA cap applies."
+      },
+      {
+        "name": "Metformin 500mg [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Allopurinol (gout) [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Topiramate (Topamax) [P2]",
+        "monthlyCost": 10,
+        "withoutInsurance": 25,
+        "coverageNote": "Medicare Part D generic tier 1-2; $4-15 copay"
+      },
+      {
+        "name": "Metoprolol (Lopressor) [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Atorvastatin 20mg [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      }
+    ],
+    "pharmacyAccess": "Excellent. Duane Reade, Walgreens, CVS, Rite Aid, and CostPlus pharmacies widely available throughout Manhattan, Brooklyn, Queens. Mail-order options through Medicare Part D plans (OptumRx, Express Scripts, Caremark). Many Duane Reade locations offer senior discounts.",
+    "prescriptionSystem": "Medicare Part D prescription drug plan. Choose standalone PDP or get coverage through Medicare Advantage. Annual out-of-pocket cap $2,000 under Inflation Reduction Act. New York EPIC program provides additional prescription assistance for eligible seniors.",
+    "insuranceCoverage": "Medicare Part D covers most prescriptions with tiered copays. Generic drugs $0-15/month, preferred brands $30-50/month, specialty drugs 25-33% coinsurance up to $2,000 annual cap. New York residents 60+ may qualify for EPIC program.",
+    "sources": [
+      {
+        "title": "Medicare Part D Costs - CMS.gov",
+        "url": "https://www.cms.gov/medicare/costs-getting-started"
+      },
+      {
+        "title": "New York EPIC Program",
+        "url": "https://www.health.ny.gov/health_care/epic/"
+      },
+      {
+        "title": "Inflation Reduction Act Drug Provisions - KFF",
+        "url": "https://www.kff.org/medicare/issue-brief/how-will-the-prescription-drug-provisions-in-the-inflation-reduction-act-affect-medicare-beneficiaries/"
+      },
+      {
+        "title": "GoodRx Drug Pricing",
+        "url": "https://www.goodrx.com/"
+      }
+    ]
+  },
+  "vision": {
+    "annualExamCost": {
+      "withInsurance": 25,
+      "withoutInsurance": 225,
+      "notes": "Original Medicare does NOT cover routine vision exams. Must have separate vision plan or Medicare Advantage with vision. NYC exam costs 10-15% higher than national average."
+    },
+    "eyeglasses": {
+      "basicFrameAndLens": {
+        "min": 110,
+        "typical": 235,
+        "max": 460
+      },
+      "progressiveLens": {
+        "min": 230,
+        "typical": 400,
+        "max": 690
+      },
+      "contactLensesMonthly": {
+        "min": 35,
+        "typical": 60,
+        "max": 90
+      }
+    },
+    "insuranceCoverage": "Need separate vision plan or Medicare Advantage with vision. Standalone vision plans (VSP, EyeMed) run $18-30/month and cover annual exam + $120-220 frame/lens allowance.",
+    "specialistWaitTime": "2-4 weeks for routine eye exams in Manhattan. Shorter waits at retail optometry (LensCrafters, Warby Parker). Ophthalmologist referrals 3-6 weeks. Peak hours Aug-Sept can extend waits.",
+    "seniorConsiderations": "Medicare covers cataract surgery at NYC's top medical centers (NYU Langone, Columbia, Memorial Sloan Kettering). Glaucoma screening covered for high-risk beneficiaries. Diabetic retinopathy screening covered. One pair of eyeglasses or contacts after cataract surgery.",
+    "sources": [
+      {
+        "title": "Medicare Vision Coverage - Medicare.gov",
+        "url": "https://www.medicare.gov/coverage/eye-exams"
+      },
+      {
+        "title": "VSP Individual Vision Plans",
+        "url": "https://www.vspdirect.com/"
+      },
+      {
+        "title": "EyeMed Vision Plans",
+        "url": "https://www.eyemed.com/"
+      },
+      {
+        "title": "Warby Parker NYC",
+        "url": "https://www.warbyparker.com/"
+      }
+    ]
+  },
+  "dental": {
+    "annualCleaningCost": {
+      "withInsurance": 30,
+      "withoutInsurance": 180,
+      "notes": "Original Medicare does NOT cover routine dental. Need separate dental plan or Medicare Advantage with dental. NYC costs 20-25% higher than national average."
+    },
+    "commonProcedures": [
+      {
+        "name": "Filling (composite)",
+        "withInsurance": 100,
+        "withoutInsurance": 300
+      },
+      {
+        "name": "Crown (porcelain)",
+        "withInsurance": 500,
+        "withoutInsurance": 1500
+      },
+      {
+        "name": "Root Canal (molar)",
+        "withInsurance": 450,
+        "withoutInsurance": 1400
+      },
+      {
+        "name": "Extraction (simple)",
+        "withInsurance": 80,
+        "withoutInsurance": 300
+      },
+      {
+        "name": "Implant (single)",
+        "withInsurance": 2000,
+        "withoutInsurance": 5500
+      },
+      {
+        "name": "Dentures (complete set)",
+        "withInsurance": 800,
+        "withoutInsurance": 2500
+      }
+    ],
+    "insuranceCoverage": "Need separate dental plan ($25-60/month) or Medicare Advantage with dental. Standalone plans (Delta Dental, Cigna) typically cover 100% preventive, 50-80% basic, 50% major procedures. Annual maximums $1,000-2,000.",
+    "dentistAvailability": "Excellent in NYC. Abundant dental practices across all boroughs. Short wait times for routine care (1 week). Specialists (periodontists, prosthodontists) available but may have 2-3 week waits. Many dentists in Upper East Side, Midtown, and Brooklyn serve senior patients.",
+    "sources": [
+      {
+        "title": "Medicare Dental Coverage - Medicare.gov",
+        "url": "https://www.medicare.gov/coverage/dental-services"
+      },
+      {
+        "title": "Delta Dental Individual Plans",
+        "url": "https://www.deltadental.com/"
+      },
+      {
+        "title": "NYC Department of Health Dental Resources",
+        "url": "https://www1.nyc.gov/site/doh/services/dental-services.page"
+      }
+    ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 650,
+      "typical": 850,
+      "max": 1100
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 550,
+        "seniorDiscounts": "Many restaurants offer 10-15% senior discounts. Fine dining and casual establishments throughout NYC. AARP members get discounts at select chains.",
+        "notes": "Lunch for 2 at moderate NYC restaurant ~$50 + 8.875% tax + 20% tip = ~$62/meal, 2x/week (~8.7/mo) = ~$550/mo. Dinner significantly more expensive. Many neighborhood restaurants in all boroughs."
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 85,
+        "seniorDiscounts": "Some providers offer senior plans. Verizon Fios senior discounts available.",
+        "notes": "Verizon Fios 1 Gig $85-95/mo. Optimum (Altice) $75-85/mo. ConEdison fiber availability varies by location."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 18,
+        "seniorDiscounts": "T-Mobile 55+ plans include Netflix.",
+        "notes": "$17.99/mo. 1080p, 2 screens, full library."
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 15,
+        "seniorDiscounts": "Medicaid recipients qualify for Prime at $6.99/mo.",
+        "notes": "$14.99/mo includes Prime Video, free shipping, Prime Reading. Fast delivery in NYC."
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 13,
+        "seniorDiscounts": "No senior discount. Annual plan $99/yr ($8.25/mo).",
+        "notes": "$12.99/mo. Original content library."
+      },
+      {
+        "name": "Broadway/Theater Tickets",
+        "monthlyCost": 100,
+        "seniorDiscounts": "TKTS booth offers discounts. Orchestra/mezzanine seats available at various price points.",
+        "notes": "Broadway shows average $100-150/ticket. TKTS discounts 25-50% at Times Square. Some theatres offer senior matinee discounts. NYC theater world-class."
+      },
+      {
+        "name": "Museum Memberships & Admission",
+        "monthlyCost": 60,
+        "seniorDiscounts": "MoMA, Met Museum, NY Public Library offer senior memberships. IDNYC card provides free/discounted museum entry."
+        },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 35,
+        "seniorDiscounts": "SilverSneakers free gym membership through many Medicare Advantage plans. NYC Recreation Centers offer senior programs."
+      },
+      {
+        "name": "Parks/Outdoors",
+        "monthlyCost": 5,
+        "seniorDiscounts": "America the Beautiful Senior Pass $20/year (lifetime $80) for national parks. NYC parks are free."
+      },
+      {
+        "name": "Books/Library",
+        "monthlyCost": 8,
+        "seniorDiscounts": "NYC Public Library system free. Senior book clubs, digital resources, and programming."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 40,
+        "seniorDiscounts": "Independent NYC coffee shops abundant. Some offer loyalty discounts. Starbucks senior discount in select locations."
+      }
+    ],
+    "sources": [
+      {
+        "title": "NYC Theater Broadway",
+        "url": "https://www.broadway.com/"
+      },
+      {
+        "title": "TKTS Discount Theater Tickets",
+        "url": "https://www.tktsonline.com/"
+      },
+      {
+        "title": "Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/"
+      },
+      {
+        "title": "MoMA New York",
+        "url": "https://www.moma.org/"
+      },
+      {
+        "title": "NYC Public Library",
+        "url": "https://www.nypl.org/"
+      },
+      {
+        "title": "AARP Member Discounts",
+        "url": "https://www.aarp.org/membership/benefits/discounts/"
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 130,
+      "typical": 250,
+      "max": 900
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 132,
+        "senior": 70,
+        "notes": "MTA MetroCard Unlimited 7-Day $33, Unlimited 30-Day $132. Seniors 65+ get 50% discount. OMNY (one-tap payment) available on all MTA services."
+      },
+      "singleRide": 2.75,
+      "coverage": "MTA subway and bus network covers Manhattan, Brooklyn, Queens, Bronx, Staten Island. Subway operates 24/7 with frequent service. Buses serve every neighborhood. Access-A-Ride for seniors with mobility challenges.",
+      "seniorDiscount": "Seniors 65+ get 50% discount on all MTA services with reduced-fare MetroCard. Must bring proof of age to customer center. OMNY payment offers same discounts."
+    },
+    "rideShare": {
+      "baseFare": 3.0,
+      "perKm": 2.0,
+      "typicalCrossTownTrip": {
+        "min": 15,
+        "typical": 25,
+        "max": 50
+      },
+      "availability": "Excellent throughout NYC. Uber and Lyft available 24/7. Surge pricing common during peak hours. NYC congestion pricing may increase costs.",
+      "notes": "Uber/Lyft prices surge during rush hours and rainy weather. Accessibility-enabled Uber options available. GoGoGrandparent service useful for seniors who prefer phone-based ordering. E-bike options like Citi Bike available."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 95,
+        "initialRegistration": {
+          "min": 65,
+          "typical": 95,
+          "max": 135
+        },
+        "notes": "New York DMV registration fees. Vehicle registration $95-150/yr depending on vehicle class. NYC residents pay higher rates. Additional congestion pricing for driving in Manhattan below 60th St ($15/day)."
+      },
+      "insurance": {
+        "monthlyMin": 200,
+        "monthlyTypical": 300,
+        "monthlyMax": 450,
+        "notes": "NYC car insurance rates among highest in nation. Dense traffic, accidents, and theft drive premiums. Senior safe driver discounts available (5-10%)."
+      },
+      "fuel": {
+        "pricePerLiter": 1.05,
+        "monthlyEstimate": {
+          "min": 100,
+          "typical": 160,
+          "max": 240
+        },
+        "notes": "~$3.95/gallon average in NYC. NY gas tax $0.164/gallon. Most seniors in NYC avoid car ownership due to cost."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 300,
+          "typical": 450,
+          "max": 600
+        },
+        "hourlyStreet": 4.0,
+        "notes": "Residential permits required. Monthly parking in garages expensive ($300-600+). Street parking highly competitive in Manhattan. Apartment buildings rarely include dedicated parking."
+      },
+      "tolls": {
+        "monthlyEstimate": 80,
+        "notes": "NYC & area tolls high: FDR Drive tolls, East River bridges ($17-20), Staten Island Ferry/bridge ($19 peak), New Jersey crossings ($18-19). Congestion pricing adds $15/day in downtown Manhattan. E-ZPass discounted for off-peak hours."
+      },
+      "seniorDiscounts": "NYC Safe Driver discount available through insurance (5-10%). Some insurers offer usage-based discounts. Vehicle property tax relief limited."
+    },
+    "walkability": "Excellent throughout NYC. Manhattan highly walkable. Brooklyn, Queens neighborhoods increasingly walkable. Subway extends walkability significantly. Most seniors in Manhattan don't own cars.",
+    "cycling": {
+      "bikeShareMonthly": 15,
+      "infrastructure": "Citi Bike extensive throughout Manhattan, Brooklyn, Queens. 1,000+ stations. Protected bike lanes expanding rapidly. Most neighborhoods have dedicated cycling infrastructure.",
+      "notes": "Citi Bike single trip $3.50, day pass $15, annual $180. Ebike options available ($2.50 extra). Expanding to all boroughs."
+    },
+    "sources": [
+      {
+        "title": "MTA Fares and Passes",
+        "url": "https://new.mta.info/fares-and-passes"
+      },
+      {
+        "title": "NYC Congestion Pricing",
+        "url": "https://new.mta.info/congestion-pricing"
+      },
+      {
+        "title": "NYC DMV Registration",
+        "url": "https://dmv.ny.gov/licenses-permits/vehicle-registration"
+      },
+      {
+        "title": "Citi Bike NYC",
+        "url": "https://citibikenyc.com/"
+      },
+      {
+        "title": "Access-A-Ride NYC",
+        "url": "https://new.mta.info/accessibility/access-ride"
+      }
+    ],
+    "electricVehicle": {
+      "purchasePrice": {
+        "min": 28000,
+        "typical": 35000,
+        "max": 52000
+      },
+      "purchaseNotes": "Tesla Model 3 ~$35K, Model Y ~$45K, Hyundai Ioniq 5 ~$42K, Chevy Equinox EV ~$28K. Federal tax credit up to $7,500 (income limits apply). EV rebate incentives available in NY.",
+      "federalIncentive": 7500,
+      "stateIncentive": 2500,
+      "incentiveNotes": "Federal EV tax credit up to $7,500 under IRA (income < $150K single / $300K joint). NY State offers EV rebate up to $2,500. Must be new vehicle, MSRP limits apply. Used EV credit up to $4,000.",
+      "chargingHome": {
+        "installCost": {
+          "min": 1500,
+          "typical": 2500,
+          "max": 4500
+        },
+        "monthlyElectricity": {
+          "min": 40,
+          "typical": 65,
+          "max": 100
+        },
+        "notes": "Level 2 (240V) home charger installation expensive in NYC apartments. Electrical panel upgrades often required ($1,500-3,000). ConEdison rates ~$0.16-0.20/kWh. Many apartment dwellers cannot install home chargers."
+      },
+      "chargingPublic": {
+        "perKwh": {
+          "min": 0.35,
+          "typical": 0.50,
+          "max": 0.75
+        },
+        "notes": "Tesla Supercharger ~$0.45-0.60/kWh. EVgo/Electrify America ~$0.50-0.75/kWh. ChargePoint varies. Many public chargers in Manhattan, Brooklyn. Street-parking challenges for Level 2 charging."
+      },
+      "insurance": {
+        "monthly": {
+          "min": 200,
+          "typical": 300,
+          "max": 400
+        },
+        "notes": "EV insurance in NYC 30-40% higher than comparable ICE vehicle due to repair costs, theft risk. Shop Liberty Mutual, Progressive, Tesla Insurance."
+      },
+      "maintenance": {
+        "annual": {
+          "min": 400,
+          "typical": 600,
+          "max": 900
+        },
+        "notes": "No oil changes, fewer brake jobs (regen braking). Tire rotation every 7,500 mi. Cabin air filter annually. Brake fluid every 2-3 yrs. 12V battery every 4-5 yrs (~$100). NYC salt/humidity accelerates corrosion."
+      },
+      "registration": {
+        "annual": {
+          "min": 95,
+          "typical": 200,
+          "max": 300
+        },
+        "notes": "NY charging station network expanding. EV registration fees similar to gas vehicles in NY (~$95-150/yr)."
+      },
+      "batteryWarranty": "8 years / 100,000 miles (federal minimum). Most manufacturers cover 70-80% capacity retention.",
+      "depreciationNotes": "EVs depreciate 40-50% in first 3 years, though Tesla holds value better. Used EV market improving in NYC. Budget ~$3,000-5,000/yr depreciation on $35K vehicle.",
+      "totalMonthlyOwnership": {
+        "min": 300,
+        "typical": 480,
+        "max": 700
+      },
+      "totalMonthlyNotes": "Includes: charging ($65), insurance ($300), maintenance ($50/mo avg), registration ($17/mo). Excludes: purchase/loan payment, depreciation. Car ownership generally not recommended in NYC.",
+      "sources": [
+        {
+          "title": "Federal EV Tax Credit - IRS",
+          "url": "https://www.irs.gov/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after"
+        },
+        {
+          "title": "New York EV Rebate Program",
+          "url": "https://www.dec.ny.gov/energy-homes/electric-vehicles/electric-vehicle-rebate"
+        },
+        {
+          "title": "ConEdison EV Charging",
+          "url": "https://www.coned.com/en/sustainability/electric-vehicles"
+        },
+        {
+          "title": "EV Charging Costs - DOE",
+          "url": "https://afdc.energy.gov/fuels/electricity-charging-home"
+        },
+        {
+          "title": "EV Maintenance Costs - AAA",
+          "url": "https://www.aaa.com/autorepair/articles/ev-maintenance"
+        }
+      ]
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 65,
+    "discounts": [
+      {
+        "name": "Medicare",
+        "description": "Federal health insurance at 65. Part A (hospital) premium-free for most. Part B (medical) ~$185/month. Part D (drugs) $10-50/month.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "AARP Membership",
+        "description": "Annual membership $16. Discounts on insurance, dining, travel, retail, and entertainment. Available at age 50+.",
+        "eligibilityAge": 50
+      },
+      {
+        "name": "IDNYC Card",
+        "description": "Free NYC identification for residents 65+. Provides discounts at museums, restaurants, theaters, retail. Free or reduced-cost services across NYC.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "MTA Reduced Fare",
+        "description": "50% discount on subway and bus fares for riders 65+. Unlimited monthly pass $70 (vs $132). Must have valid ID. Available on MetroCard and OMNY.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "New York EPIC Program",
+        "description": "Free prescription assistance for eligible seniors 60+. Income-based. Covers many medications at no cost.",
+        "eligibilityAge": 60
+      },
+      {
+        "name": "SCRIE (Rent Freeze Program)",
+        "description": "New York renters 62+ can freeze rent if spending >1/3 of income. Property tax credits available. Income limits apply.",
+        "eligibilityAge": 62
+      },
+      {
+        "name": "America the Beautiful Senior Pass",
+        "description": "Lifetime pass to all national parks and federal recreation areas for $80 (or $20/year).",
+        "eligibilityAge": 62
+      },
+      {
+        "name": "SilverSneakers Fitness",
+        "description": "Free gym membership through participating Medicare Advantage and Medigap plans. Access to 17,000+ locations including NYC clubs.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "NYC Senior Centers & Programs",
+        "description": "Department for the Aging runs 200+ senior centers offering free/low-cost programs, meals, health screenings, cultural activities.",
+        "eligibilityAge": 60
+      }
+    ]
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 55,
+      "typical": 70,
+      "max": 95
+    },
+    "plans": [
+      {
+        "name": "T-Mobile 55+ Essentials",
+        "type": "US Domestic",
+        "lines": 2,
+        "dataPerLine": "Unlimited (50GB priority)",
+        "baseCost": 55,
+        "taxesAndFees": 9,
+        "monthlyTotal": 64,
+        "notes": "2 lines unlimited talk/text/data. NYC wireless tax ~9.5% + federal USF. 5G included. Excellent coverage throughout NYC."
+      },
+      {
+        "name": "Verizon 55+ Plus",
+        "type": "US Domestic",
+        "lines": 2,
+        "dataPerLine": "Unlimited",
+        "baseCost": 60,
+        "taxesAndFees": 9,
+        "monthlyTotal": 69,
+        "notes": "2 lines unlimited. Verizon 5G extensive in NYC. Higher reliability in dense urban areas."
+      }
+    ],
+    "sources": [
+      {
+        "title": "T-Mobile 55+ Plans",
+        "url": "https://www.t-mobile.com/cell-phone-plans/unlimited-55-plus"
+      },
+      {
+        "title": "Verizon 55+ Plans",
+        "url": "https://www.verizon.com/plans/unlimited-senior/"
+      },
+      {
+        "title": "NYC Wireless Tax Rates",
+        "url": "https://taxfoundation.org/data/all/state/wireless-taxes-2024/"
+      }
+    ]
+  },
+  "housing": {
+    "propertyType": "2-bedroom apartment",
+    "monthlyBudget": {
+      "min": 3500,
+      "max": 5500,
+      "typical": 4200
+    },
+    "breakdown": {
+      "baseRent": 4100,
+      "rentersInsurance": 40,
+      "localTaxesFees": 0,
+      "total": 4140,
+      "notes": "Water and sewage included in most NYC apartment leases. Trash/recycling included. Heat often included in winter months (Oct-May)."
+    },
+    "taxNotes": "New York has no rental tax. Property tax (landlord responsibility) not reflected in rent pricing. Renter's insurance recommended but not legally required.",
+    "leaseTerms": "12-month standard lease. Security deposit max 1 month rent ($4,200). First month + security deposit + broker fee (~$1,400) required upfront. Pet deposits ~$500-1,000.",
+    "marketNotes": "NYC is one of the most expensive rental markets in the US. 2-bedroom apartments vary by neighborhood ($2,500-6,000+). Manhattan (especially UES, Midtown) most expensive. Brooklyn/Queens more affordable. Expect competition, especially in desirable neighborhoods.",
+    "sources": [
+      {
+        "name": "Zillow NYC Rental Market",
+        "url": "https://www.zillow.com/rental-manager/market-trends/new-york-new-york/"
+      },
+      {
+        "name": "StreetEasy",
+        "url": "https://streeteasy.com/"
+      },
+      {
+        "name": "NYC Tenants Rights",
+        "url": "https://www1.nyc.gov/site/buildings/tenant/tenants-rights.page"
+      }
+    ],
+    "housingSites": {
+      "rentals": [
+        {
+          "name": "StreetEasy",
+          "url": "https://streeteasy.com/",
+          "type": "rental"
+        },
+        {
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homes/for_rent/New-York-NY/",
+          "type": "rental"
+        },
+        {
+          "name": "Apartments.com",
+          "url": "https://www.apartments.com/new-york-ny/",
+          "type": "rental"
+        },
+        {
+          "name": "NYC Housing Connect",
+          "url": "https://www1.nyc.gov/site/nycha/",
+          "type": "public-housing"
+        }
+      ]
+    }
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Trader Joe's",
+        "type": "specialty-grocery",
+        "website": "https://www.traderjoes.com/",
+        "notes": "Affordable specialty items, strong following. Multiple locations in Manhattan, Brooklyn, Queens.",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Trader Joe's Store Tour",
+            "url": "https://www.youtube.com/watch?v=wJ2UJCdVXHY"
+          }
+        ]
+      },
+      {
+        "name": "Whole Foods Market",
+        "type": "organic-grocery",
+        "website": "https://www.wholefoodsmarket.com/",
+        "notes": "Premium organic produce and prepared foods. Multiple NYC locations. Prime member discounts.",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Whole Foods NYC",
+            "url": "https://www.youtube.com/results?search_query=whole+foods+nyc"
+          }
+        ]
+      },
+      {
+        "name": "Fairway Market",
+        "type": "specialty-grocery",
+        "website": "https://www.fairwaymarket.com/",
+        "notes": "NYC institution since 1933. Excellent produce, prepared foods, deli. Locations in Manhattan, Westchester.",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Fairway Market NYC",
+            "url": "https://www.youtube.com/results?search_query=fairway+market+nyc"
+          }
+        ]
+      },
+      {
+        "name": "Key Food / Food Emporium",
+        "type": "supermarket",
+        "website": "https://www.keyfood.com/",
+        "notes": "Local NYC chain. Competitive pricing. Locations throughout Manhattan, Brooklyn, Queens.",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "Food Emporium NYC",
+            "url": "https://www.youtube.com/results?search_query=food+emporium+nyc"
+          }
+        ]
+      },
+      {
+        "name": "H Mart / 99 Ranch",
+        "type": "ethnic-grocery",
+        "website": "https://www.hmart.com/",
+        "notes": "Asian groceries, fresh produce, specialty items. Multiple NYC locations. Excellent for international cooking.",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "H Mart NYC",
+            "url": "https://www.youtube.com/results?search_query=h+mart+new+york"
+          }
+        ]
+      },
+      {
+        "name": "NYC Greenmarkets/Farmers Markets",
+        "type": "farmers-market",
+        "website": "https://www.grownyc.org/greenmarket/",
+        "notes": "Union Square, Barney Greengrass, and seasonal markets throughout NYC. Fresh seasonal produce, lower prices.",
+        "videos": [
+          {
+            "platform": "youtube",
+            "title": "NYC Union Square Greenmarket",
+            "url": "https://www.youtube.com/results?search_query=union+square+greenmarket+nyc"
+          }
+        ]
+      }
+    ]
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 70,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Greenmarket or CSA box. NYC farmers markets offer good prices."
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 50,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Bananas, berries, apples, citrus — higher NYC prices."
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 25,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": "Pre-bagged salads more expensive in NYC."
+          },
+          {
+            "name": "Sweet Potatoes / Potatoes",
+            "monthlyCost": 20,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Cheaper at outer-borough markets."
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 15,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Seasonal variation significant in NYC."
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 12,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Seasonal availability affects price."
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 60,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "NYC prices 15-20% higher than suburbs. Whole Foods more expensive than Trader Joe's or Key Food."
+          },
+          {
+            "name": "Ground Turkey / Beef",
+            "monthlyCost": 55,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean options important for health-conscious NYC diets."
+          },
+          {
+            "name": "Fish (salmon/tilapia)",
+            "monthlyCost": 50,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Omega-3 rich. Fairway has excellent fish selection."
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 18,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": "Free-range eggs 20-30% more in NYC."
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Butcher shops in Italian neighborhoods (Greenwich Village, Arthur Ave in Bronx) have good selection."
+          },
+          {
+            "name": "Beans / Lentils",
+            "monthlyCost": 10,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Dried beans cheaper; canned more convenient."
+          }
+        ]
+      },
+      {
+        "id": "grains",
+        "name": "Grains & Starches",
+        "items": [
+          {
+            "name": "Rice (brown/white)",
+            "monthlyCost": 12,
+            "quantity": 5,
+            "unit": "lbs/month",
+            "forWhom": "shared",
+            "notes": "H Mart and Asian markets have cheapest rice."
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 20,
+            "quantity": 2,
+            "unit": "loaves/week",
+            "forWhom": "adults",
+            "notes": "NYC artisan bakeries expensive; store brands at Key Food cheaper."
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 10,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Italian delis and specialty markets in Greenwich Village, Italian Harlem."
+          },
+          {
+            "name": "Oats / Cereal",
+            "monthlyCost": 12,
+            "quantity": 1,
+            "unit": "container/week",
+            "forWhom": "adults",
+            "notes": "Trader Joe's competitive on cereal prices."
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk / Plant Milk",
+            "monthlyCost": 20,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": "Oat/almond milk popular in NYC. 10-15% premium over national average."
+          },
+          {
+            "name": "Cheese",
+            "monthlyCost": 28,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": "Specialty cheese shops in Greenwich Village, UES expensive. Key Food cheaper."
+          },
+          {
+            "name": "Yogurt / Kefir",
+            "monthlyCost": 18,
+            "quantity": 1,
+            "unit": "quart/week",
+            "forWhom": "shared",
+            "notes": "Probiotics popular in health-conscious NYC. Greek yogurt pricier."
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 12,
+            "quantity": 1,
+            "unit": "unit/month",
+            "forWhom": "adults",
+            "notes": "Extra virgin olive oil premium in NYC specialty shops."
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Olive Oil / Cooking Oils",
+            "monthlyCost": 18,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "adults",
+            "notes": "Extra virgin olive oil specialty shops (Eataly) expensive; mainstream brands affordable."
+          },
+          {
+            "name": "Spices & Seasonings",
+            "monthlyCost": 12,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": "Ethnic markets (Chinatown, Little Italy, Jackson Heights) cheaper for spices."
+          },
+          {
+            "name": "Canned Goods (tomatoes, beans)",
+            "monthlyCost": 15,
+            "quantity": 6,
+            "unit": "cans/month",
+            "forWhom": "adults",
+            "notes": "Bulk purchases at Costco (outer boroughs) save money."
+          },
+          {
+            "name": "Condiments & Sauces",
+            "monthlyCost": 12,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": "NYC has world-class international condiments."
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 35,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": "Specialty coffee roasters (Blue Bottle, Stumptown) expensive; grocery store brands affordable."
+          },
+          {
+            "name": "Tea",
+            "monthlyCost": 10,
+            "quantity": 1,
+            "unit": "box/month",
+            "forWhom": "adults",
+            "notes": "Excellent tea selection at specialty shops in Chinatown."
+          },
+          {
+            "name": "Wine / Beer",
+            "monthlyCost": 50,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "NYC has expensive wine/beer market. Trader Joe's competitive. Costco membership saves on wine."
+          },
+          {
+            "name": "Sparkling Water / Juice",
+            "monthlyCost": 15,
+            "quantity": 1,
+            "unit": "case/week",
+            "forWhom": "adults",
+            "notes": "Sparkling water pricier in NYC due to packaging/delivery costs."
+          }
+        ]
+      },
+      {
+        "id": "snacks",
+        "name": "Snacks & Treats",
+        "items": [
+          {
+            "name": "Nuts & Trail Mix",
+            "monthlyCost": 20,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": "Premium nuts at specialty shops. Bulk purchases cheaper."
+          },
+          {
+            "name": "Crackers / Chips",
+            "monthlyCost": 12,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": "Store brands at Key Food cheaper than premium brands."
+          },
+          {
+            "name": "Dark Chocolate",
+            "monthlyCost": 10,
+            "quantity": 4,
+            "unit": "bars/month",
+            "forWhom": "adults",
+            "notes": "Artisanal chocolatiers in NYC but grocery store options available."
+          }
+        ]
+      },
+      {
+        "id": "frozen",
+        "name": "Frozen Foods",
+        "items": [
+          {
+            "name": "Frozen Vegetables",
+            "monthlyCost": 15,
+            "quantity": 4,
+            "unit": "bags/month",
+            "forWhom": "shared",
+            "notes": "Trader Joe's frozen vegetables good quality and price."
+          },
+          {
+            "name": "Frozen Fruit (smoothies)",
+            "monthlyCost": 12,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": "Costco bulk purchases save money on frozen fruit."
+          },
+          {
+            "name": "Frozen Meals (convenience)",
+            "monthlyCost": 20,
+            "quantity": 4,
+            "unit": "meals/month",
+            "forWhom": "adults",
+            "notes": "Trader Joe's prepared meals good value. Whole Foods pricier."
+          }
+        ]
+      },
+      {
+        "id": "supplements",
+        "name": "Pet Supplements & Health",
+        "items": [
+          {
+            "name": "Joint Supplement (glucosamine)",
+            "monthlyCost": 35,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "NYC vet clinics pricier; online orders cheaper."
+          },
+          {
+            "name": "Fish Oil (omega-3)",
+            "monthlyCost": 18,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "NYC specialty pet stores expensive; Chewy.com ships quickly."
+          },
+          {
+            "name": "Multivitamin / Mineral Mix",
+            "monthlyCost": 25,
+            "quantity": 1,
+            "unit": "container/month",
+            "forWhom": "dog",
+            "notes": "Holistic vet shops in Park Slope, UES have specialty supplements."
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 20,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "dog",
+            "notes": "NYC specialty pet stores (Unleashed) premium pricing."
+          }
+        ]
+      }
+    ],
+    "monthlyTotal": 880
+  },
+  "healthcare": {
+    "system": "Medicare + Medigap supplement",
+    "coverageSummary": "Medicare Part A (free) + Part B ($174.70/mo pp) + Medigap Plan G (~$240/mo pp) + Part D (~$50/mo pp). IRA out-of-pocket cap $2,000/yr starting 2025. NYC Medigap premiums 20-30% higher than national average.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD (macular degeneration)"
+      ],
+      "healthcareProviders": {
+        "primaryCare": "NYU Langone, Mount Sinai, or NewYork-Presbyterian",
+        "specialist": "Ophthalmology at Memorial Sloan Kettering (AMD) or Columbia Ophthalmology"
+      },
+      "costs": [
+        {
+          "item": "Medicare Part B premium",
+          "monthlyCost": 175,
+          "notes": "Standard 2025 premium per person"
+        },
+        {
+          "item": "Medigap Plan G premium",
+          "monthlyCost": 240,
+          "notes": "Higher due to AMD + multiple conditions. NYC age-rated. 20-30% premium over national average."
+        },
+        {
+          "item": "Part D premium",
+          "monthlyCost": 50,
+          "notes": "Tier 3 plan to cover GLP-1. NYC Part D plans competitive."
+        },
+        {
+          "item": "Anti-VEGF injections (Eylea/Lucentis)",
+          "monthlyCost": 90,
+          "notes": "Medicare covers 80%, Medigap covers 20% coinsurance. ~6-8 injections/yr at $45-60 copay each. Specialty pharmacies in NYC."
+        },
+        {
+          "item": "Ophthalmologist specialist visits",
+          "monthlyCost": 30,
+          "notes": "OCT scans every 4-8 weeks. Medicare + Medigap covers most. NYC specialists have 3-4 week waits."
+        },
+        {
+          "item": "Endocrinologist (thyroid monitoring)",
+          "monthlyCost": 12,
+          "notes": "Quarterly bloodwork/visits. Low copay with Medigap. NYC medical centers excellent for thyroid care."
+        },
+        {
+          "item": "Pulmonologist (asthma check-ups)",
+          "monthlyCost": 10,
+          "notes": "Annual visit + as-needed. Mild asthma, infrequent. NYU Langone has excellent pulmonology."
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Gout",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Migraines"
+      ],
+      "healthcareProviders": {
+        "primaryCare": "Mount Sinai, NYU Langone, or NewYork-Presbyterian",
+        "specialist": "Endocrinology for diabetes management"
+      },
+      "costs": [
+        {
+          "item": "Medicare Part B premium",
+          "monthlyCost": 175,
+          "notes": "Standard 2025 premium per person"
+        },
+        {
+          "item": "Medigap Plan G premium",
+          "monthlyCost": 220,
+          "notes": "Slightly lower — no AMD, but diabetes management. NYC age-rated."
+        },
+        {
+          "item": "Part D premium",
+          "monthlyCost": 45,
+          "notes": "All generics — lower tier plan sufficient. EPIC program may provide additional help."
+        },
+        {
+          "item": "Endocrinologist (diabetes mgmt)",
+          "monthlyCost": 18,
+          "notes": "Quarterly A1C, bloodwork. Covered well by Medicare. NYC endocrinologists (Mt. Sinai Diabetes) excellent."
+        },
+        {
+          "item": "Diabetes supplies (strips, lancets)",
+          "monthlyCost": 30,
+          "notes": "Medicare Part B covers glucose monitors. Some copays. NYC pharmacies have good supply availability."
+        },
+        {
+          "item": "Rheumatologist (gout monitoring)",
+          "monthlyCost": 10,
+          "notes": "Semi-annual visits. Uric acid monitoring. Hospital rheumatology clinics in NYC have shorter waits."
+        },
+        {
+          "item": "Neurologist (migraine follow-up)",
+          "monthlyCost": 10,
+          "notes": "Annual-semi-annual visits for topiramate management. NYC neurologists specialize in headache disorders."
+        }
+      ]
+    },
+    "shared": [
+      {
+        "item": "Dental insurance (2 adults)",
+        "monthlyCost": 80,
+        "notes": "Separate dental plan ~$40/person. NYC dental insurance premiums 15-20% higher. Medicare does not cover dental."
+      },
+      {
+        "item": "Vision insurance (2 adults)",
+        "monthlyCost": 30,
+        "notes": "Basic vision plan. NYC premiums 10-15% higher. AMD specialist visits covered by Medicare Part B."
+      },
+      {
+        "item": "Annual physicals & preventive care",
+        "monthlyCost": 0,
+        "notes": "Covered 100% by Medicare — no copay for preventive. NYC medical centers (NYU, Mount Sinai, Columbia) excellent."
+      }
+    ],
+    "monthlyTotals": {
+      "person1": 607,
+      "person2": 508,
+      "shared": 110,
+      "household": 1225
+    },
+    "notes": "NYC healthcare costs 20-30% higher than national average. Top medical centers provide world-class care. EPIC program provides drug assistance. Medigap Plan G essential in NYC.",
+    "phaseTransition": null
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Black Hair Care",
+      "priceRange": {
+        "cut": "50-90",
+        "color": "120-200",
+        "fullService": "180-350"
+      },
+      "notes": "Harlem, Brooklyn (Bed-Stuy, Crown Heights), Jackson Heights have excellent Black-owned salons. Prices 20-30% higher than suburbs but reflect NYC expertise.",
+      "providers": [
+        {
+          "name": "Amixi Salon (Harlem)",
+          "type": "Full-service salon",
+          "address": "Harlem, Manhattan, NY",
+          "distanceMi": 0,
+          "rating": 4.9,
+          "notes": "Award-winning natural hair specialist. Locs, color, silk press. Black-owned.",
+          "website": "https://www.amixisalon.com/"
+        },
+        {
+          "name": "Madame CJ Walker Legacy Salon (Harlem)",
+          "type": "Full-service salon",
+          "address": "Harlem, Manhattan, NY",
+          "distanceMi": 0,
+          "rating": 4.8,
+          "notes": "Historic salon honoring CJ Walker legacy. Natural hair, protective styles, color services.",
+          "website": ""
+        },
+        {
+          "name": "Salon Sonya (Brooklyn)",
+          "type": "Boutique salon",
+          "address": "Brooklyn, NY",
+          "distanceMi": 3,
+          "rating": 4.9,
+          "notes": "Specializes in natural hair textures, braids, twists, silk press. Black-owned. Premium pricing reflects expertise.",
+          "website": ""
+        }
+      ]
+    },
+    "whiteHairCare": {
+      "label": "White/Caucasian Hair Care",
+      "priceRange": {
+        "cut": "50-100",
+        "color": "120-200",
+        "highlights": "150-300"
+      },
+      "notes": "NYC has world-class salons throughout Manhattan and upscale Brooklyn neighborhoods (Park Slope, Williamsburg). Upper East Side salons premium pricing. Many high-end salons in Midtown.",
+      "providers": [
+        {
+          "name": "Salon AKS (Upper East Side)",
+          "type": "Upscale salon",
+          "address": "Manhattan, NY",
+          "distanceMi": 0,
+          "rating": 4.8,
+          "notes": "High-end salon with color specialists, balayage, highlights. Experienced with mature clients.",
+          "website": "https://www.salonaks.com/"
+        },
+        {
+          "name": "Kérastase Authorized Salon (Midtown)",
+          "type": "Luxury salon",
+          "address": "Manhattan, NY",
+          "distanceMi": 0,
+          "rating": 4.7,
+          "notes": "Premium French haircare. Personalized color, treatments. Senior-friendly atmosphere.",
+          "website": ""
+        },
+        {
+          "name": "Brooklyn Salon Collective (Park Slope)",
+          "type": "Boutique salon",
+          "address": "Brooklyn, NY",
+          "distanceMi": 3,
+          "rating": 4.6,
+          "notes": "Trendy salon with color specialists. Relaxed Brooklyn vibe. Good for natural color blending.",
+          "website": ""
+        }
+      ]
+    },
+    "mensBigTall": {
+      "label": "Men's Big & Tall Clothing",
+      "priceRange": {
+        "shirts": "45-100",
+        "pants": "60-90",
+        "suits": "250-600"
+      },
+      "notes": "DXL and Nordstrom have locations in NYC. Many upscale men's shops in Midtown and SoHo offer extended sizes. Online options (Amazon, King Size) ship quickly.",
+      "providers": [
+        {
+          "name": "DXL Big + Tall (Midtown Manhattan)",
+          "type": "Specialty retail",
+          "address": "Manhattan, NY",
+          "distanceMi": 0,
+          "rating": 4.5,
+          "notes": "Dedicated big & tall retailer. Sizes up to 8XL and 72 waist. Brands: Polo, Nautica, Harbor Bay.",
+          "website": "https://www.dxl.com/"
+        },
+        {
+          "name": "Nordstrom Men (Midtown)",
+          "type": "Department store",
+          "address": "Manhattan, NY",
+          "distanceMi": 0,
+          "rating": 4.7,
+          "notes": "Extended sizes in-store. Good selection of dress shirts, suits in larger sizes. Expert tailoring.",
+          "website": "https://www.nordstrom.com/"
+        },
+        {
+          "name": "Men's Wearhouse (Multiple NYC locations)",
+          "type": "Department store",
+          "address": "Manhattan, Brooklyn, NY",
+          "distanceMi": 0,
+          "rating": 4.3,
+          "notes": "Extended sizes available. Suit alterations included. Competitive pricing.",
+          "website": "https://www.menswearhouse.com/"
+        }
+      ]
+    },
+    "womensClothing": {
+      "label": "Women's Regular Clothing",
+      "priceRange": {
+        "casual": "40-90",
+        "dresses": "70-180",
+        "professional": "90-250"
+      },
+      "notes": "Excellent shopping throughout NYC. SoHo, Upper East Side, Madison Ave upscale. Midtown has large department stores. Brooklyn neighborhoods (Park Slope, Williamsburg) trendy boutiques. Wide range from budget to luxury.",
+      "providers": [
+        {
+          "name": "Nordstrom (Midtown / Brookfield Place)",
+          "type": "Department store",
+          "address": "Manhattan, NY",
+          "distanceMi": 0,
+          "rating": 4.7,
+          "notes": "Full range of women's sizes (0-24+). Strong regular-size selection. Expert alterations department."
+        },
+        {
+          "name": "Bloomingdale's (Midtown / SoHo)",
+          "type": "Department store",
+          "address": "Manhattan, NY",
+          "distanceMi": 0,
+          "rating": 4.5,
+          "notes": "Luxury and contemporary brands. Personal shopping services. Wide size range."
+        },
+        {
+          "name": "Target / H&M (Multiple NYC locations)",
+          "type": "Budget retail",
+          "address": "Manhattan, Brooklyn, NY",
+          "distanceMi": 0,
+          "rating": 4.2,
+          "notes": "Affordable, fast fashion. Multiple sizes. Trendy options."
+        }
+      ]
+    },
+    "shoes": {
+      "label": "Shoes",
+      "priceRange": {
+        "casual": "60-120",
+        "dress": "100-200",
+        "athletic": "80-160",
+        "wideWidth": "70-150"
+      },
+      "notes": "Good selection for wide widths at DSW, Nordstrom throughout NYC. SoHo and Madison Ave have upscale shoe boutiques. Multiple locations for convenient access.",
+      "providers": [
+        {
+          "name": "DSW (Multiple NYC locations)",
+          "type": "Shoe warehouse",
+          "address": "Manhattan, Brooklyn, NY",
+          "distanceMi": 0,
+          "rating": 4.4,
+          "notes": "Wide width options. Men's up to 16. Women's wide and extra-wide. Good clearance section."
+        },
+        {
+          "name": "Nordstrom Shoes (Midtown / UES)",
+          "type": "Department store",
+          "address": "Manhattan, NY",
+          "distanceMi": 0,
+          "rating": 4.6,
+          "notes": "Premium brands, excellent fit services. Wide width availability. Expert staff."
+        },
+        {
+          "name": "Payless / Rack locations",
+          "type": "Discount retail",
+          "address": "Manhattan, Brooklyn, Queens, NY",
+          "distanceMi": 0,
+          "rating": 4.0,
+          "notes": "Budget-friendly options. Multiple sizes. Discount pricing."
+        }
+      ]
+    }
+  }
+}

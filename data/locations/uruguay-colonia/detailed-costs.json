@@ -547,5 +547,167 @@
         "eligibilityAge": 65
       }
     ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 32,
+      "typical": 120,
+      "max": 240
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 40,
+        "senior": 20,
+        "notes": "STM rechargeable card system in Montevideo. 1-hour transfer window."
+      },
+      "singleRide": 0.28,
+      "coverage": "Bus network in Montevideo (STM card). Intercity buses connect cities.",
+      "seniorDiscount": "Reduced fares for seniors on public transit. STM card with senior discount."
+    },
+    "rideShare": {
+      "baseFare": 2,
+      "perKm": 0.6,
+      "typicalCrossTownTrip": {
+        "min": 3,
+        "typical": 6,
+        "max": 12
+      },
+      "availability": "Uber and Cabify available in Montevideo. Taxis affordable with meters.",
+      "notes": "Ride-share widely used in Colonia. Negotiate taxi fares before riding if no meter."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 40,
+        "initialRegistration": {
+          "min": 80,
+          "typical": 160,
+          "max": 320
+        },
+        "notes": "Vehicle registration through local transit authority in Colonia."
+      },
+      "insurance": {
+        "monthlyMin": 32,
+        "monthlyTypical": 52,
+        "monthlyMax": 96,
+        "notes": "Liability insurance mandatory. International driving permit accepted for first 90 days."
+      },
+      "fuel": {
+        "pricePerLiter": 0.76,
+        "monthlyEstimate": {
+          "min": 48,
+          "typical": 80,
+          "max": 144
+        },
+        "notes": "Fuel prices vary by region. Government may regulate prices."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 40,
+          "typical": 80,
+          "max": 160
+        },
+        "hourlyStreet": 0.6,
+        "notes": "Street parking available in Colonia. Malls and supermarkets usually have free parking."
+      },
+      "tolls": {
+        "monthlyEstimate": 16,
+        "notes": "Toll roads on major highways between cities."
+      },
+      "seniorDiscounts": "No specific senior car discounts. Patente (vehicle tax) varies by department."
+    },
+    "walkability": "Good in Montevideo and Punta del Este. Car needed elsewhere.",
+    "cycling": {
+      "bikeShareMonthly": 4,
+      "infrastructure": "Bicycle infrastructure varies in Colonia. Urban areas gradually improving cycling lanes.",
+      "notes": "Heat and terrain may limit cycling as primary transport."
+    },
+    "electricVehicle": {
+      "purchasePrice": {
+        "min": 22400,
+        "typical": 32000,
+        "max": 46400
+      },
+      "purchaseNotes": "Small but growing EV market. UTE (state utility) expanding charging network. Import costs may apply.",
+      "federalIncentive": 0,
+      "stateIncentive": 0,
+      "incentiveNotes": "Reduced import duties on EVs. IMESI tax exemption for electric vehicles.",
+      "chargingHome": {
+        "installCost": {
+          "min": 320,
+          "typical": 640,
+          "max": 1200
+        },
+        "monthlyElectricity": {
+          "min": 16,
+          "typical": 28,
+          "max": 44
+        },
+        "notes": "Home charging feasible in houses and some apartments in Colonia."
+      },
+      "chargingPublic": {
+        "perKwh": {
+          "min": 0.2,
+          "typical": 0.35,
+          "max": 0.5
+        },
+        "notes": "Public charging network growing in Uruguay. Check availability in Colonia."
+      },
+      "insurance": {
+        "monthly": {
+          "min": 48,
+          "typical": 68,
+          "max": 104
+        },
+        "notes": "EV insurance through major local providers."
+      },
+      "maintenance": {
+        "annual": {
+          "min": 240,
+          "typical": 360,
+          "max": 560
+        },
+        "notes": "EV service availability growing. Authorized dealers in major cities."
+      },
+      "registration": {
+        "annual": {
+          "min": 0,
+          "typical": 20,
+          "max": 40
+        },
+        "notes": "Reduced or exempt registration for EVs."
+      },
+      "batteryWarranty": "Manufacturer standard warranty. Service access best in major cities.",
+      "depreciationNotes": "EV resale market developing in Uruguay. Larger cities have better resale prospects.",
+      "totalMonthlyOwnership": {
+        "min": 88,
+        "typical": 148,
+        "max": 240
+      },
+      "totalMonthlyNotes": "Includes: charging, insurance, maintenance (monthly avg), registration. Excludes: purchase/loan payment, depreciation.",
+      "sources": [
+        {
+          "title": "Uruguay EV Incentives",
+          "url": "https://www.montevideo.gub.uy/stm"
+        }
+      ]
+    },
+    "sources": [
+      {
+        "title": "STM Montevideo",
+        "url": "https://www.montevideo.gub.uy/stm"
+      }
+    ],
+    "monthlyEstimate": {
+      "carFree": {
+        "min": 16,
+        "typical": 40,
+        "max": 80
+      },
+      "withCar": {
+        "min": 120,
+        "typical": 200,
+        "max": 360
+      }
+    }
   }
 }
