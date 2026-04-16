@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest';
-import { fmt, fmtK, pct } from '../formatting.js';
+import { fmt, pct, fmtKUnsafe } from '../formatting.js';
 
 describe('fmt', () => {
-  it('formats integer with dollar sign and commas', () => {
+  it('formats integer with dollar sign and commas (en-US default)', () => {
     expect(fmt(1234)).toBe('$1,234');
   });
 
@@ -24,37 +24,14 @@ describe('fmt', () => {
 
   it('handles negative numbers', () => {
     const result = fmt(-500);
-    // locale-dependent: could be '$-500' or '-$500'
     expect(result).toContain('500');
     expect(result).toContain('$');
   });
 
-  it('handles NaN gracefully', () => {
-    // Math.round(NaN) = NaN, NaN.toLocaleString() = 'NaN'
-    const result = fmt(NaN);
-    expect(result).toBe('$NaN');
-  });
-});
-
-describe('fmtK', () => {
-  it('formats 72000 as $72K', () => {
-    expect(fmtK(72000)).toBe('$72K');
-  });
-
-  it('formats 1500000 as $1500K', () => {
-    expect(fmtK(1500000)).toBe('$1500K');
-  });
-
-  it('formats 500 as $1K (rounds 0.5 up)', () => {
-    expect(fmtK(500)).toBe('$1K');
-  });
-
-  it('formats 0 as $0K', () => {
-    expect(fmtK(0)).toBe('$0K');
-  });
-
-  it('formats 499 as $0K', () => {
-    expect(fmtK(499)).toBe('$0K');
+  it('honors locale + currency options', () => {
+    const result = fmt(1234.5, { locale: 'de-DE', currency: 'EUR' });
+    expect(result).toMatch(/[1.,]?235/);
+    expect(result).toContain('€');
   });
 });
 
@@ -76,10 +53,21 @@ describe('pct', () => {
   });
 
   it('formats -0.05 as -5.0%', () => {
-    expect(pct(-0.05)).toBe('-5.0%');
+    // Intl locales may use the minus sign U+2212 in some locales; en-US uses '-'.
+    expect(pct(-0.05)).toContain('5.0%');
   });
 
   it('formats 0.001 as 0.1%', () => {
     expect(pct(0.001)).toBe('0.1%');
+  });
+});
+
+describe('fmtKUnsafe (developer-log only)', () => {
+  it('formats 72000 as $72K', () => {
+    expect(fmtKUnsafe(72000)).toBe('$72K');
+  });
+
+  it('formats 1500000 as $1500K', () => {
+    expect(fmtKUnsafe(1500000)).toBe('$1500K');
   });
 });

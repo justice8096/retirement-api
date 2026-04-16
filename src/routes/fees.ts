@@ -2,7 +2,16 @@ import { z } from 'zod';
 import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
 import { requireAuth } from '../middleware/auth.js';
+import { toValidationErrorPayload } from '../lib/validation.js';
 
+/**
+ * Brokerage / transfer / FX fee persistence.
+ *
+ * Rate encoding (Dyscalculia audit F-001):
+ *   - `*Pct` / `brokerageExpenseRatio` / `fxSpreadPct` are whole-number
+ *     percentages on the wire (0.5 = 0.5%, 1.2 = 1.2%). Stored as decimal
+ *     fractions (0.005, 0.012). Conversion happens in `toClient()` below.
+ */
 const num = z.coerce.number();
 
 const feesSchema = z.object({
@@ -42,7 +51,7 @@ const NUMERIC_FIELDS = new Set<string>([
 ]);
 
 const DEFAULTS = {
-  brokerageFeePct: 0.5,       // 0.5% — client format
+  brokerageFeePct: 0.5,       // 0.5% ï¿½ client format
   brokerageFeeFlat: 0,
   brokerageAnnualFee: 0,
   brokerageExpenseRatio: 0.2, // 0.2%
@@ -80,7 +89,7 @@ function toClient(record: Record<string, unknown>) {
 export default async function feesRoutes(app: FastifyInstance): Promise<void> {
   app.addHook('preHandler', requireAuth);
 
-  // GET /api/me/fees — brokerage, transfer, and FX fee settings
+  // GET /api/me/fees ï¿½ brokerage, transfer, and FX fee settings
   app.get('/', async (request, reply) => {
     const record = await prisma.userBrokerageFees.findUnique({
       where: { userId: request.userId },
@@ -95,11 +104,11 @@ export default async function feesRoutes(app: FastifyInstance): Promise<void> {
     return toClient(record as unknown as Record<string, unknown>);
   });
 
-  // PUT /api/me/fees — update fee settings
+  // PUT /api/me/fees ï¿½ update fee settings
   app.put('/', async (request, reply) => {
     const parsed = feesSchema.safeParse(request.body);
     if (!parsed.success) {
-      return reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
+      return reply.code(400).send(toValidationErrorPayload(parsed.error));
     }
 
     const data: Record<string, unknown> = { ...parsed.data };
