@@ -48,6 +48,16 @@ const financialSchema = z.object({
   rothBalance: num.min(0).max(100_000_000).nullable().optional(),
   taxableBalance: num.min(0).max(100_000_000).nullable().optional(),
   hsaBalance: num.min(0).max(100_000_000).nullable().optional(),
+
+  // Per-Account Load % and Fees % (whole-number percent on wire, e.g. 0.5 = 0.5%)
+  traditionalLoadPct: num.min(0).max(10).optional(),
+  rothLoadPct: num.min(0).max(10).optional(),
+  taxableLoadPct: num.min(0).max(10).optional(),
+  hsaLoadPct: num.min(0).max(10).optional(),
+  traditionalFeesPct: num.min(0).max(10).optional(),
+  rothFeesPct: num.min(0).max(10).optional(),
+  taxableFeesPct: num.min(0).max(10).optional(),
+  hsaFeesPct: num.min(0).max(10).optional(),
 });
 
 // Defaults sent to client when no DB record exists (client-side format).
@@ -86,6 +96,14 @@ const PCT_FIELDS = [
   'expectedInflation',
   'fxDriftAnnualRate',
   'savingsRate',
+  'traditionalLoadPct',
+  'rothLoadPct',
+  'taxableLoadPct',
+  'hsaLoadPct',
+  'traditionalFeesPct',
+  'rothFeesPct',
+  'taxableFeesPct',
+  'hsaFeesPct',
 ] as const;
 
 /** All numeric fields — ensures Prisma Decimals and encrypted Strings become JS numbers. */
@@ -141,6 +159,14 @@ function unitsMeta(locale: string) {
     expectedInflation: { encoding: 'percent', meaning: '2.5 = 2.5% per year' },
     fxDriftAnnualRate: { encoding: 'percent', meaning: '1 = 1% per year' },
     savingsRate: { encoding: 'percent', meaning: '15 = 15% of income' },
+    traditionalLoadPct: { encoding: 'percent', meaning: '0.5 = 0.5% annual drag' },
+    rothLoadPct: { encoding: 'percent', meaning: '0.5 = 0.5% annual drag' },
+    taxableLoadPct: { encoding: 'percent', meaning: '0.5 = 0.5% annual drag' },
+    hsaLoadPct: { encoding: 'percent', meaning: '0.5 = 0.5% annual drag' },
+    traditionalFeesPct: { encoding: 'percent', meaning: '0.2 = 0.2% expense ratio' },
+    rothFeesPct: { encoding: 'percent', meaning: '0.2 = 0.2% expense ratio' },
+    taxableFeesPct: { encoding: 'percent', meaning: '0.2 = 0.2% expense ratio' },
+    hsaFeesPct: { encoding: 'percent', meaning: '0.2 = 0.2% expense ratio' },
   };
 }
 

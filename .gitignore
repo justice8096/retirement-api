@@ -4,6 +4,7 @@ dist/
 *.db-shm
 *.db-wal
 .claude/
+api.log
 
 # Local dev tooling with personal data
 check-tier.mjs
