@@ -177,23 +177,52 @@
       "notes": "Monthly prescription medication costs for household. EPIC program for NY seniors can reduce costs."
     },
     "taxes": {
-      "min": 0,
-      "typical": 0,
-      "max": 0,
-      "annualInflation": 0.02
+      "typical": 681,
+      "min": 613,
+      "max": 749,
+      "annualInflation": 0.02,
+      "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
     }
   },
   "taxes": {
     "federalIncomeTax": {
       "applies": true,
       "brackets": [
-        { "min": 0, "max": 23850, "rate": 0.1 },
-        { "min": 23850, "max": 96950, "rate": 0.12 },
-        { "min": 96950, "max": 206700, "rate": 0.22 },
-        { "min": 206700, "max": 394600, "rate": 0.24 },
-        { "min": 394600, "max": 501050, "rate": 0.32 },
-        { "min": 501050, "max": 751600, "rate": 0.35 },
-        { "min": 751600, "max": null, "rate": 0.37 }
+        {
+          "min": 0,
+          "max": 23850,
+          "rate": 0.1
+        },
+        {
+          "min": 23850,
+          "max": 96950,
+          "rate": 0.12
+        },
+        {
+          "min": 96950,
+          "max": 206700,
+          "rate": 0.22
+        },
+        {
+          "min": 206700,
+          "max": 394600,
+          "rate": 0.24
+        },
+        {
+          "min": 394600,
+          "max": 501050,
+          "rate": 0.32
+        },
+        {
+          "min": 501050,
+          "max": 751600,
+          "rate": 0.35
+        },
+        {
+          "min": 751600,
+          "max": null,
+          "rate": 0.37
+        }
       ],
       "standardDeduction": 30000
     },
@@ -201,13 +230,41 @@
       "rate": 0.0685,
       "type": "top-marginal",
       "brackets": [
-        { "min": 0, "max": 8500, "rate": 0.04 },
-        { "min": 8500, "max": 11700, "rate": 0.045 },
-        { "min": 11700, "max": 13900, "rate": 0.0525 },
-        { "min": 13900, "max": 80650, "rate": 0.055 },
-        { "min": 80650, "max": 215400, "rate": 0.06 },
-        { "min": 215400, "max": 1077550, "rate": 0.0685 },
-        { "min": 1077550, "max": null, "rate": 0.109 }
+        {
+          "min": 0,
+          "max": 8500,
+          "rate": 0.04
+        },
+        {
+          "min": 8500,
+          "max": 11700,
+          "rate": 0.045
+        },
+        {
+          "min": 11700,
+          "max": 13900,
+          "rate": 0.0525
+        },
+        {
+          "min": 13900,
+          "max": 80650,
+          "rate": 0.055
+        },
+        {
+          "min": 80650,
+          "max": 215400,
+          "rate": 0.06
+        },
+        {
+          "min": 215400,
+          "max": 1077550,
+          "rate": 0.0685
+        },
+        {
+          "min": 1077550,
+          "max": null,
+          "rate": 0.109
+        }
       ],
       "deduction": 16050,
       "exemptions": "NY exempts Social Security from state income tax. Additional $20K pension exclusion for 59.5+. NYC city tax 3.078-3.876% additional."
@@ -216,10 +273,26 @@
       "rate": 0.03876,
       "type": "top-marginal",
       "brackets": [
-        { "min": 0, "max": 12000, "rate": 0.03078 },
-        { "min": 12000, "max": 25000, "rate": 0.03762 },
-        { "min": 25000, "max": 50000, "rate": 0.03819 },
-        { "min": 50000, "max": null, "rate": 0.03876 }
+        {
+          "min": 0,
+          "max": 12000,
+          "rate": 0.03078
+        },
+        {
+          "min": 12000,
+          "max": 25000,
+          "rate": 0.03762
+        },
+        {
+          "min": 25000,
+          "max": 50000,
+          "rate": 0.03819
+        },
+        {
+          "min": 50000,
+          "max": null,
+          "rate": 0.03876
+        }
       ],
       "notes": "NYC residents pay city income tax on top of NYS income tax."
     },

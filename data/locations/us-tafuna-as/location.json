@@ -1,0 +1,172 @@
+{
+  "id": "us-tafuna-as",
+  "name": "Tafuna, American Samoa",
+  "country": "United States",
+  "region": "American Samoa",
+  "cities": [
+    "Tafuna",
+    "Nuuuli"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "N/A (domestic)",
+    "notes": "US nationals (American Samoans) and US citizens — no visa required. American Samoa is an unincorporated US territory."
+  },
+  "climate": {
+    "winterLowF": 74,
+    "summerHighF": 88,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 230
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 850,
+      "min": 600,
+      "max": 1200,
+      "annualInflation": 0.03,
+      "notes": "Largest residential village; closer to Pago Pago International Airport."
+    },
+    "groceries": {
+      "typical": 700,
+      "min": 540,
+      "max": 920,
+      "annualInflation": 0.04
+    },
+    "utilities": {
+      "typical": 320,
+      "min": 220,
+      "max": 480,
+      "annualInflation": 0.04
+    },
+    "healthcare": {
+      "typical": 400,
+      "min": 290,
+      "max": 580,
+      "annualInflation": 0.05
+    },
+    "insurance": {
+      "typical": 260,
+      "min": 190,
+      "max": 370,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 95,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 130,
+      "min": 90,
+      "max": 200,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 45,
+      "min": 30,
+      "max": 75,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 240,
+      "min": 160,
+      "max": 370,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 180,
+      "min": 120,
+      "max": 280,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 130,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 55,
+      "min": 35,
+      "max": 90,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 95,
+      "min": 60,
+      "max": 135,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 80,
+      "min": 60,
+      "max": 100,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 300,
+      "min": 270,
+      "max": 330,
+      "annualInflation": 0.02,
+      "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
+    },
+    "miscellaneous": {
+      "typical": 140,
+      "min": 90,
+      "max": 230,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "typical": 180,
+      "min": 125,
+      "max": 340,
+      "annualInflation": 0.045,
+      "notes": "Same LBJ pharmacy access as Pago Pago; mail-order common."
+    },
+    "buffer": {
+      "typical": 130,
+      "min": 65,
+      "max": 230,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "typical": 520,
+      "min": 310,
+      "max": 820,
+      "annualInflation": 0.055
+    }
+  },
+  "healthcare": {
+    "system": "LBJ Tropical Medical Center (public, sole hospital)",
+    "qualityRating": 3,
+    "dentalIncluded": false,
+    "waitTimes": "Long; medevac to Honolulu common",
+    "prescriptionCoverage": "Medicare Part D or private"
+  },
+  "lifestyle": {
+    "internetSpeed": "Up to 100Mbps (ASTCA, BlueSky)",
+    "dogFriendly": 5,
+    "expatCommunity": 3,
+    "englishPrevalence": 9,
+    "safetyRating": 7
+  },
+  "pros": [
+    "Near the airport — easiest access for travel",
+    "Largest residential concentration — services nearby",
+    "Warm tropical climate",
+    "Lower rent than Pago Pago"
+  ],
+  "cons": [
+    "Healthcare limited — sole hospital shared with Pago Pago",
+    "Cyclone exposure",
+    "Few direct flights",
+    "Import-driven prices"
+  ],
+  "taxes": {
+    "notes": "American Samoa has its own tax code; residents file with ASG Tax Office, not IRS.",
+    "vatRate": 0,
+    "socialChargesRate": 0
+  }
+}

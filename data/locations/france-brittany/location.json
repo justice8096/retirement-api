@@ -180,10 +180,11 @@
       "notes": "Monthly prescription medication costs for household"
     },
     "taxes": {
-      "min": 0,
-      "typical": 0,
-      "max": 0,
-      "annualInflation": 0.02
+      "typical": 720,
+      "min": 648,
+      "max": 792,
+      "annualInflation": 0.02,
+      "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
     }
   },
   "taxes": {

@@ -1,0 +1,176 @@
+{
+  "id": "us-hagatna-gu",
+  "name": "Hagåtña, Guam",
+  "country": "United States",
+  "region": "Guam",
+  "cities": [
+    "Hagåtña",
+    "Agana"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "N/A (domestic)",
+    "notes": "US citizen — no visa required. Guam is an unincorporated US territory."
+  },
+  "climate": {
+    "winterLowF": 76,
+    "summerHighF": 87,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 200
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 1800,
+      "min": 1300,
+      "max": 2500,
+      "annualInflation": 0.035,
+      "notes": "Military demand supports rents near bases (Andersen AFB, Naval Base Guam)."
+    },
+    "groceries": {
+      "typical": 800,
+      "min": 620,
+      "max": 1050,
+      "annualInflation": 0.04,
+      "notes": "Pay-Less, Cost-U-Less; most dry goods shipped from CA/HI."
+    },
+    "utilities": {
+      "typical": 380,
+      "min": 280,
+      "max": 560,
+      "annualInflation": 0.04,
+      "notes": "GPA electricity rates high; typhoon-hardened infrastructure."
+    },
+    "healthcare": {
+      "typical": 480,
+      "min": 360,
+      "max": 680,
+      "annualInflation": 0.05
+    },
+    "insurance": {
+      "typical": 340,
+      "min": 240,
+      "max": 480,
+      "annualInflation": 0.04,
+      "notes": "Typhoon coverage raises premiums."
+    },
+    "petCare": {
+      "typical": 80,
+      "min": 50,
+      "max": 130,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 200,
+      "min": 140,
+      "max": 300,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 60,
+      "min": 40,
+      "max": 95,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 340,
+      "min": 220,
+      "max": 500,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 280,
+      "min": 180,
+      "max": 420,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 100,
+      "min": 65,
+      "max": 160,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 80,
+      "min": 50,
+      "max": 130,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 110,
+      "min": 75,
+      "max": 150,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 70,
+      "min": 55,
+      "max": 90,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 380,
+      "min": 342,
+      "max": 418,
+      "annualInflation": 0.02,
+      "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
+    },
+    "miscellaneous": {
+      "typical": 170,
+      "min": 110,
+      "max": 270,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "typical": 160,
+      "min": 110,
+      "max": 300,
+      "annualInflation": 0.045,
+      "notes": "Meds shipped from mainland; occasional backorder delays."
+    },
+    "buffer": {
+      "typical": 150,
+      "min": 75,
+      "max": 260,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "typical": 460,
+      "min": 270,
+      "max": 740,
+      "annualInflation": 0.055,
+      "notes": "Specialist medevac to Hawaii or Philippines common."
+    }
+  },
+  "healthcare": {
+    "system": "Medicare + private; Guam Memorial Hospital + U.S. Naval Hospital Guam",
+    "qualityRating": 5,
+    "dentalIncluded": false,
+    "waitTimes": "Moderate to long for specialists",
+    "prescriptionCoverage": "Medicare Part D or private"
+  },
+  "lifestyle": {
+    "internetSpeed": "Up to 1Gbps (GTA, IT&E)",
+    "dogFriendly": 6,
+    "expatCommunity": 6,
+    "englishPrevalence": 9,
+    "safetyRating": 7
+  },
+  "pros": [
+    "US territory — USD, Medicare, US legal system",
+    "Warm tropical climate year-round",
+    "Strategic Asia-Pacific location (4h to Tokyo, 5h to Manila)",
+    "Large military-linked community"
+  ],
+  "cons": [
+    "Typhoon risk (peak Aug–Dec)",
+    "Long flights to US mainland (12h+)",
+    "Healthcare specialists limited",
+    "Import-driven prices on most goods"
+  ],
+  "taxes": {
+    "notes": "Guam mirrors the federal tax code; residents file with Department of Revenue and Taxation.",
+    "vatRate": 0,
+    "socialChargesRate": 0
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "id": "us-tinian-mp",
+  "name": "Tinian, Northern Mariana Islands",
+  "country": "United States",
+  "region": "Northern Mariana Islands",
+  "cities": [
+    "San Jose",
+    "Tinian"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "N/A (domestic)",
+    "notes": "US citizen — no visa required. CNMI is a commonwealth in political union with the US."
+  },
+  "climate": {
+    "winterLowF": 75,
+    "summerHighF": 88,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 175
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 750,
+      "min": 500,
+      "max": 1100,
+      "annualInflation": 0.03,
+      "notes": "Very small rental market; mostly single-family or long-term deals."
+    },
+    "groceries": {
+      "typical": 650,
+      "min": 500,
+      "max": 860,
+      "annualInflation": 0.04,
+      "notes": "Goods shipped via Saipan — extra leg adds cost."
+    },
+    "utilities": {
+      "typical": 400,
+      "min": 280,
+      "max": 580,
+      "annualInflation": 0.045
+    },
+    "healthcare": {
+      "typical": 440,
+      "min": 320,
+      "max": 620,
+      "annualInflation": 0.05
+    },
+    "insurance": {
+      "typical": 280,
+      "min": 200,
+      "max": 400,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 75,
+      "min": 45,
+      "max": 120,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 230,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 260,
+      "min": 170,
+      "max": 400,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 180,
+      "min": 110,
+      "max": 280,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 85,
+      "min": 55,
+      "max": 140,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 95,
+      "min": 60,
+      "max": 135,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 75,
+      "min": 55,
+      "max": 95,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 380,
+      "min": 342,
+      "max": 418,
+      "annualInflation": 0.02,
+      "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
+    },
+    "miscellaneous": {
+      "typical": 140,
+      "min": 90,
+      "max": 230,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "typical": 180,
+      "min": 120,
+      "max": 340,
+      "annualInflation": 0.045,
+      "notes": "Single health center clinic; most Rx filled via mainland mail-order."
+    },
+    "buffer": {
+      "typical": 130,
+      "min": 65,
+      "max": 230,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "typical": 540,
+      "min": 320,
+      "max": 860,
+      "annualInflation": 0.055,
+      "notes": "Serious care requires travel to Saipan or Guam (boat/flight)."
+    }
+  },
+  "healthcare": {
+    "system": "Tinian Health Center + referral to Saipan/Guam for inpatient care",
+    "qualityRating": 3,
+    "dentalIncluded": false,
+    "waitTimes": "Limited on-island — most specialists off-island",
+    "prescriptionCoverage": "Medicare Part D or private"
+  },
+  "lifestyle": {
+    "internetSpeed": "Up to 100Mbps (IT&E); fiber limited",
+    "dogFriendly": 7,
+    "expatCommunity": 2,
+    "englishPrevalence": 7,
+    "safetyRating": 8
+  },
+  "pros": [
+    "Very low rent by US standards",
+    "Quiet, low-density island life",
+    "Warm tropical climate",
+    "Low crime"
+  ],
+  "cons": [
+    "Healthcare is minimal — serious care requires travel",
+    "Small rental market; housing options limited",
+    "Limited retail and dining",
+    "Typhoon exposure"
+  ],
+  "taxes": {
+    "notes": "CNMI mirrors federal tax code; residents file with CNMI Division of Revenue and Taxation.",
+    "vatRate": 0,
+    "socialChargesRate": 0
+  }
+}

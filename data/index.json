@@ -1,8 +1,8 @@
 {
   "meta": {
-    "description": "Retirement planning location index \u00e2\u20ac\u201d lightweight summary for dashboard boot",
-    "lastUpdated": "2026-03-23",
-    "totalLocations": 137,
+    "description": "Retirement planning location index â€” lightweight summary for dashboard boot",
+    "lastUpdated": "2026-04-17",
+    "totalLocations": 148,
     "dataVersion": 2,
     "note": "Full location data loaded on demand from data/locations/{id}/"
   },
@@ -37,12 +37,12 @@
   "locations": [
     {
       "id": "colombia-bogota",
-      "name": "Bogot\u00c3\u00a1 (Chapinero, Usaqu\u00c3\u00a9n), Colombia",
+      "name": "BogotÃ¡ (Chapinero, UsaquÃ©n), Colombia",
       "country": "Colombia",
       "region": "South America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2650,
+      "monthlyCostUSD": 2690,
       "climate": {
         "winterLowF": 45,
         "summerHighF": 65,
@@ -67,7 +67,7 @@
       "region": "South America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2830,
+      "monthlyCostUSD": 2870,
       "climate": {
         "winterLowF": 75,
         "summerHighF": 92,
@@ -87,12 +87,12 @@
     },
     {
       "id": "colombia-medellin",
-      "name": "Medell\u00c3\u00adn (El Poblado, Laureles), Colombia",
+      "name": "MedellÃ­n (El Poblado, Laureles), Colombia",
       "country": "Colombia",
       "region": "South America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2790,
+      "monthlyCostUSD": 2830,
       "climate": {
         "winterLowF": 60,
         "summerHighF": 80,
@@ -117,7 +117,7 @@
       "region": "South America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2160,
+      "monthlyCostUSD": 2200,
       "climate": {
         "winterLowF": 58,
         "summerHighF": 78,
@@ -142,7 +142,7 @@
       "region": "South America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2360,
+      "monthlyCostUSD": 2400,
       "climate": {
         "winterLowF": 73,
         "summerHighF": 92,
@@ -167,7 +167,7 @@
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2970,
+      "monthlyCostUSD": 3013,
       "climate": {
         "winterLowF": 62,
         "summerHighF": 85,
@@ -192,7 +192,7 @@
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2930,
+      "monthlyCostUSD": 2973,
       "climate": {
         "winterLowF": 62,
         "summerHighF": 82,
@@ -212,12 +212,12 @@
     },
     {
       "id": "costa-rica-central-valley",
-      "name": "Central Valley (San Jos\u00c3\u00a9, Escaz\u00c3\u00ba, Santa Ana), Costa Rica",
+      "name": "Central Valley (San JosÃ©, EscazÃº, Santa Ana), Costa Rica",
       "country": "Costa Rica",
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 3660,
+      "monthlyCostUSD": 3703,
       "climate": {
         "winterLowF": 60,
         "summerHighF": 80,
@@ -242,7 +242,7 @@
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2760,
+      "monthlyCostUSD": 2803,
       "climate": {
         "winterLowF": 62,
         "summerHighF": 82,
@@ -267,7 +267,7 @@
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 3560,
+      "monthlyCostUSD": 3603,
       "climate": {
         "winterLowF": 68,
         "summerHighF": 95,
@@ -292,7 +292,7 @@
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2840,
+      "monthlyCostUSD": 2883,
       "climate": {
         "winterLowF": 70,
         "summerHighF": 88,
@@ -317,7 +317,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3261,
+      "monthlyCostUSD": 3788,
       "climate": {
         "winterLowF": 44,
         "summerHighF": 88,
@@ -342,7 +342,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 2912,
+      "monthlyCostUSD": 3463,
       "climate": {
         "winterLowF": 37,
         "summerHighF": 86,
@@ -367,7 +367,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 2955,
+      "monthlyCostUSD": 3503,
       "climate": {
         "winterLowF": 42,
         "summerHighF": 90,
@@ -392,7 +392,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 2804,
+      "monthlyCostUSD": 3363,
       "climate": {
         "winterLowF": 28,
         "summerHighF": 84,
@@ -417,7 +417,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3048,
+      "monthlyCostUSD": 3172,
       "climate": {
         "winterLowF": 50,
         "summerHighF": 95,
@@ -442,7 +442,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3446,
+      "monthlyCostUSD": 3542,
       "climate": {
         "winterLowF": 50,
         "summerHighF": 95,
@@ -467,7 +467,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3215,
+      "monthlyCostUSD": 3327,
       "climate": {
         "winterLowF": 50,
         "summerHighF": 93,
@@ -492,7 +492,7 @@
       "region": "South America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2090,
+      "monthlyCostUSD": 2127,
       "climate": {
         "winterLowF": 48,
         "summerHighF": 70,
@@ -517,7 +517,7 @@
       "region": "South America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2390,
+      "monthlyCostUSD": 2427,
       "climate": {
         "winterLowF": 50,
         "summerHighF": 70,
@@ -542,7 +542,7 @@
       "region": "South America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2580,
+      "monthlyCostUSD": 2617,
       "climate": {
         "winterLowF": 48,
         "summerHighF": 68,
@@ -567,7 +567,7 @@
       "region": "South America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2340,
+      "monthlyCostUSD": 2377,
       "climate": {
         "winterLowF": 68,
         "summerHighF": 85,
@@ -592,7 +592,7 @@
       "region": "South America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2030,
+      "monthlyCostUSD": 2067,
       "climate": {
         "winterLowF": 55,
         "summerHighF": 78,
@@ -617,7 +617,7 @@
       "region": "Brittany",
       "currency": "EUR",
       "exchangeRate": 1.05,
-      "monthlyCostUSD": 4996,
+      "monthlyCostUSD": 5366,
       "climate": {
         "winterLowF": 38,
         "summerHighF": 72,
@@ -642,7 +642,7 @@
       "region": "Western Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3270,
+      "monthlyCostUSD": 3796,
       "climate": {
         "winterLowF": 34,
         "summerHighF": 82,
@@ -667,7 +667,7 @@
       "region": "Western Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3173,
+      "monthlyCostUSD": 3706,
       "climate": {
         "winterLowF": 35,
         "summerHighF": 85,
@@ -692,7 +692,7 @@
       "region": "Western Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3410,
+      "monthlyCostUSD": 3926,
       "climate": {
         "winterLowF": 37,
         "summerHighF": 90,
@@ -717,7 +717,7 @@
       "region": "Auvergne-Rhone-Alpes",
       "currency": "EUR",
       "exchangeRate": 1.05,
-      "monthlyCostUSD": 5543,
+      "monthlyCostUSD": 5875,
       "climate": {
         "winterLowF": 30,
         "summerHighF": 82,
@@ -742,7 +742,7 @@
       "region": "Occitanie",
       "currency": "EUR",
       "exchangeRate": 1.05,
-      "monthlyCostUSD": 5157,
+      "monthlyCostUSD": 5516,
       "climate": {
         "winterLowF": 36,
         "summerHighF": 88,
@@ -762,12 +762,12 @@
     },
     {
       "id": "france-nice",
-      "name": "Nice / C\u00c3\u00b4te d'Azur, France",
+      "name": "Nice / CÃ´te d'Azur, France",
       "country": "France",
       "region": "Western Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 4582,
+      "monthlyCostUSD": 5016,
       "climate": {
         "winterLowF": 43,
         "summerHighF": 86,
@@ -792,7 +792,7 @@
       "region": "Western Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 5399,
+      "monthlyCostUSD": 5776,
       "climate": {
         "winterLowF": 35,
         "summerHighF": 79,
@@ -817,7 +817,7 @@
       "region": "Western Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3528,
+      "monthlyCostUSD": 4036,
       "climate": {
         "winterLowF": 41,
         "summerHighF": 86,
@@ -842,7 +842,7 @@
       "region": "Occitanie",
       "currency": "EUR",
       "exchangeRate": 0.92,
-      "monthlyCostUSD": 5055,
+      "monthlyCostUSD": 5421,
       "climate": {
         "winterLowF": 34,
         "summerHighF": 86,
@@ -867,7 +867,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3323,
+      "monthlyCostUSD": 3547,
       "climate": {
         "winterLowF": 44,
         "summerHighF": 95,
@@ -892,7 +892,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 2887,
+      "monthlyCostUSD": 3142,
       "climate": {
         "winterLowF": 43,
         "summerHighF": 88,
@@ -917,7 +917,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 2962,
+      "monthlyCostUSD": 3212,
       "climate": {
         "winterLowF": 48,
         "summerHighF": 90,
@@ -942,7 +942,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 2774,
+      "monthlyCostUSD": 3037,
       "climate": {
         "winterLowF": 42,
         "summerHighF": 92,
@@ -967,7 +967,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 2892,
+      "monthlyCostUSD": 3147,
       "climate": {
         "winterLowF": 50,
         "summerHighF": 93,
@@ -992,7 +992,7 @@
       "region": "Western Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 4303,
+      "monthlyCostUSD": 4762,
       "climate": {
         "winterLowF": 38,
         "summerHighF": 66,
@@ -1017,7 +1017,7 @@
       "region": "Western Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 4314,
+      "monthlyCostUSD": 4772,
       "climate": {
         "winterLowF": 38,
         "summerHighF": 64,
@@ -1042,7 +1042,7 @@
       "region": "Western Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3954,
+      "monthlyCostUSD": 4437,
       "climate": {
         "winterLowF": 37,
         "summerHighF": 65,
@@ -1067,7 +1067,7 @@
       "region": "Munster",
       "currency": "EUR",
       "exchangeRate": 1.05,
-      "monthlyCostUSD": 5540,
+      "monthlyCostUSD": 6537,
       "climate": {
         "winterLowF": 35,
         "summerHighF": 68,
@@ -1092,7 +1092,7 @@
       "region": "Western Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3884,
+      "monthlyCostUSD": 4372,
       "climate": {
         "winterLowF": 37,
         "summerHighF": 67,
@@ -1117,7 +1117,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 2871,
+      "monthlyCostUSD": 3121,
       "climate": {
         "winterLowF": 35,
         "summerHighF": 86,
@@ -1142,7 +1142,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3892,
+      "monthlyCostUSD": 4071,
       "climate": {
         "winterLowF": 32,
         "summerHighF": 84,
@@ -1167,7 +1167,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 2909,
+      "monthlyCostUSD": 3156,
       "climate": {
         "winterLowF": 41,
         "summerHighF": 90,
@@ -1192,7 +1192,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3059,
+      "monthlyCostUSD": 3296,
       "climate": {
         "winterLowF": 44,
         "summerHighF": 90,
@@ -1217,7 +1217,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 2774,
+      "monthlyCostUSD": 3031,
       "climate": {
         "winterLowF": 46,
         "summerHighF": 93,
@@ -1242,7 +1242,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3726,
+      "monthlyCostUSD": 3916,
       "climate": {
         "winterLowF": 35,
         "summerHighF": 90,
@@ -1267,7 +1267,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3110,
+      "monthlyCostUSD": 3554,
       "climate": {
         "winterLowF": 50,
         "summerHighF": 90,
@@ -1292,7 +1292,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3771,
+      "monthlyCostUSD": 4169,
       "climate": {
         "winterLowF": 50,
         "summerHighF": 92,
@@ -1317,7 +1317,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3642,
+      "monthlyCostUSD": 4049,
       "climate": {
         "winterLowF": 50,
         "summerHighF": 92,
@@ -1342,7 +1342,7 @@
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2930,
+      "monthlyCostUSD": 2971,
       "climate": {
         "winterLowF": 50,
         "summerHighF": 80,
@@ -1362,12 +1362,12 @@
     },
     {
       "id": "mexico-mazatlan",
-      "name": "Mazatl\u00c3\u00a1n, Mexico",
+      "name": "MazatlÃ¡n, Mexico",
       "country": "Mexico",
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2770,
+      "monthlyCostUSD": 2811,
       "climate": {
         "winterLowF": 58,
         "summerHighF": 93,
@@ -1387,12 +1387,12 @@
     },
     {
       "id": "mexico-merida",
-      "name": "M\u00c3\u00a9rida, Mexico",
+      "name": "MÃ©rida, Mexico",
       "country": "Mexico",
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2780,
+      "monthlyCostUSD": 2821,
       "climate": {
         "winterLowF": 62,
         "summerHighF": 98,
@@ -1417,7 +1417,7 @@
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2480,
+      "monthlyCostUSD": 2521,
       "climate": {
         "winterLowF": 48,
         "summerHighF": 85,
@@ -1442,7 +1442,7 @@
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 3210,
+      "monthlyCostUSD": 3251,
       "climate": {
         "winterLowF": 68,
         "summerHighF": 92,
@@ -1467,7 +1467,7 @@
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 3370,
+      "monthlyCostUSD": 3411,
       "climate": {
         "winterLowF": 62,
         "summerHighF": 93,
@@ -1487,12 +1487,12 @@
     },
     {
       "id": "mexico-queretaro",
-      "name": "Quer\u00c3\u00a9taro, Mexico",
+      "name": "QuerÃ©taro, Mexico",
       "country": "Mexico",
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2920,
+      "monthlyCostUSD": 2961,
       "climate": {
         "winterLowF": 42,
         "summerHighF": 86,
@@ -1517,7 +1517,7 @@
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 3290,
+      "monthlyCostUSD": 3331,
       "climate": {
         "winterLowF": 42,
         "summerHighF": 85,
@@ -1542,7 +1542,7 @@
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 3479,
+      "monthlyCostUSD": 3524,
       "climate": {
         "winterLowF": 73,
         "summerHighF": 88,
@@ -1587,12 +1587,12 @@
     },
     {
       "id": "panama-chitre",
-      "name": "Chitr\u00c3\u00a9, Panama",
+      "name": "ChitrÃ©, Panama",
       "country": "Panama",
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2989,
+      "monthlyCostUSD": 3034,
       "climate": {
         "winterLowF": 70,
         "summerHighF": 95,
@@ -1637,12 +1637,12 @@
     },
     {
       "id": "panama-city-bella-vista",
-      "name": "Panama City \u00e2\u20ac\u201d Bella Vista, Panama",
+      "name": "Panama City â€” Bella Vista, Panama",
       "country": "Panama",
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4509,
+      "monthlyCostUSD": 4554,
       "climate": {
         "winterLowF": 75,
         "summerHighF": 90,
@@ -1662,12 +1662,12 @@
     },
     {
       "id": "panama-city-casco-viejo",
-      "name": "Panama City \u00e2\u20ac\u201d Casco Viejo, Panama",
+      "name": "Panama City â€” Casco Viejo, Panama",
       "country": "Panama",
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4499,
+      "monthlyCostUSD": 4544,
       "climate": {
         "winterLowF": 75,
         "summerHighF": 90,
@@ -1687,12 +1687,12 @@
     },
     {
       "id": "panama-city-costa-del-este",
-      "name": "Panama City \u00e2\u20ac\u201d Costa del Este, Panama",
+      "name": "Panama City â€” Costa del Este, Panama",
       "country": "Panama",
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4759,
+      "monthlyCostUSD": 4804,
       "climate": {
         "winterLowF": 75,
         "summerHighF": 90,
@@ -1712,12 +1712,12 @@
     },
     {
       "id": "panama-city-el-cangrejo",
-      "name": "Panama City \u00e2\u20ac\u201d El Cangrejo, Panama",
+      "name": "Panama City â€” El Cangrejo, Panama",
       "country": "Panama",
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4189,
+      "monthlyCostUSD": 4234,
       "climate": {
         "winterLowF": 75,
         "summerHighF": 90,
@@ -1737,12 +1737,12 @@
     },
     {
       "id": "panama-city-punta-pacifica",
-      "name": "Panama City \u00e2\u20ac\u201d Punta Pacifica, Panama",
+      "name": "Panama City â€” Punta Pacifica, Panama",
       "country": "Panama",
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4979,
+      "monthlyCostUSD": 5024,
       "climate": {
         "winterLowF": 75,
         "summerHighF": 90,
@@ -1767,7 +1767,7 @@
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 3749,
+      "monthlyCostUSD": 3794,
       "climate": {
         "winterLowF": 72,
         "summerHighF": 92,
@@ -1792,7 +1792,7 @@
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 3199,
+      "monthlyCostUSD": 3244,
       "climate": {
         "winterLowF": 72,
         "summerHighF": 95,
@@ -1812,12 +1812,12 @@
     },
     {
       "id": "panama-el-valle",
-      "name": "El Valle de Ant\u00c3\u00b3n, Panama",
+      "name": "El Valle de AntÃ³n, Panama",
       "country": "Panama",
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 3209,
+      "monthlyCostUSD": 3254,
       "climate": {
         "winterLowF": 60,
         "summerHighF": 82,
@@ -1837,12 +1837,12 @@
     },
     {
       "id": "panama-pedasi",
-      "name": "Pedas\u00c3\u00ad, Panama",
+      "name": "PedasÃ­, Panama",
       "country": "Panama",
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2979,
+      "monthlyCostUSD": 3024,
       "climate": {
         "winterLowF": 70,
         "summerHighF": 93,
@@ -1867,7 +1867,7 @@
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2789,
+      "monthlyCostUSD": 2834,
       "climate": {
         "winterLowF": 72,
         "summerHighF": 90,
@@ -1887,12 +1887,12 @@
     },
     {
       "id": "panama-volcan",
-      "name": "Volc\u00c3\u00a1n, Panama",
+      "name": "VolcÃ¡n, Panama",
       "country": "Panama",
       "region": "Central America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2999,
+      "monthlyCostUSD": 3044,
       "climate": {
         "winterLowF": 52,
         "summerHighF": 78,
@@ -1917,7 +1917,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3362,
+      "monthlyCostUSD": 3762,
       "climate": {
         "winterLowF": 50,
         "summerHighF": 90,
@@ -1942,7 +1942,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 4395,
+      "monthlyCostUSD": 4722,
       "climate": {
         "winterLowF": 47,
         "summerHighF": 82,
@@ -1967,7 +1967,7 @@
       "region": "Lisboa / Algarve",
       "currency": "EUR",
       "exchangeRate": 1.05,
-      "monthlyCostUSD": 5061,
+      "monthlyCostUSD": 5307,
       "climate": {
         "winterLowF": 46,
         "summerHighF": 85,
@@ -1992,7 +1992,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3282,
+      "monthlyCostUSD": 3687,
       "climate": {
         "winterLowF": 41,
         "summerHighF": 79,
@@ -2017,7 +2017,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3083,
+      "monthlyCostUSD": 3502,
       "climate": {
         "winterLowF": 44,
         "summerHighF": 82,
@@ -2042,7 +2042,7 @@
       "region": "Valencia",
       "currency": "EUR",
       "exchangeRate": 1.05,
-      "monthlyCostUSD": 4720,
+      "monthlyCostUSD": 5230,
       "climate": {
         "winterLowF": 45,
         "summerHighF": 90,
@@ -2067,7 +2067,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 4471,
+      "monthlyCostUSD": 5027,
       "climate": {
         "winterLowF": 41,
         "summerHighF": 87,
@@ -2092,7 +2092,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3369,
+      "monthlyCostUSD": 4002,
       "climate": {
         "winterLowF": 59,
         "summerHighF": 84,
@@ -2117,7 +2117,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3949,
+      "monthlyCostUSD": 4542,
       "climate": {
         "winterLowF": 48,
         "summerHighF": 92,
@@ -2142,7 +2142,7 @@
       "region": "Southern Europe",
       "currency": "EUR",
       "exchangeRate": 0.93,
-      "monthlyCostUSD": 3326,
+      "monthlyCostUSD": 3962,
       "climate": {
         "winterLowF": 43,
         "summerHighF": 90,
@@ -2167,7 +2167,7 @@
       "region": "South America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 2800,
+      "monthlyCostUSD": 2847,
       "climate": {
         "winterLowF": 40,
         "summerHighF": 82,
@@ -2192,7 +2192,7 @@
       "region": "South America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 3220,
+      "monthlyCostUSD": 3267,
       "climate": {
         "winterLowF": 42,
         "summerHighF": 82,
@@ -2217,7 +2217,7 @@
       "region": "South America",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 3820,
+      "monthlyCostUSD": 3867,
       "climate": {
         "winterLowF": 40,
         "summerHighF": 80,
@@ -2242,7 +2242,7 @@
       "region": "US Southwest",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4611,
+      "monthlyCostUSD": 5134,
       "climate": {
         "winterLowF": 25,
         "summerHighF": 94,
@@ -2267,7 +2267,7 @@
       "region": "US Northeast",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 3921,
+      "monthlyCostUSD": 4292,
       "climate": {
         "winterLowF": 18,
         "summerHighF": 83,
@@ -2292,7 +2292,7 @@
       "region": "US Southeast",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 5021,
+      "monthlyCostUSD": 5549,
       "climate": {
         "winterLowF": 28,
         "summerHighF": 85,
@@ -2317,7 +2317,7 @@
       "region": "Georgia",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 7578,
+      "monthlyCostUSD": 8150,
       "climate": {
         "winterLowF": 33,
         "summerHighF": 89,
@@ -2342,7 +2342,7 @@
       "region": "Texas",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 8011,
+      "monthlyCostUSD": 8391,
       "climate": {
         "winterLowF": 38,
         "summerHighF": 97,
@@ -2367,7 +2367,7 @@
       "region": "US Mid-Atlantic",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 5251,
+      "monthlyCostUSD": 5779,
       "climate": {
         "winterLowF": 26,
         "summerHighF": 88,
@@ -2392,7 +2392,7 @@
       "region": "US Southeast",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4421,
+      "monthlyCostUSD": 4934,
       "climate": {
         "winterLowF": 34,
         "summerHighF": 93,
@@ -2417,7 +2417,7 @@
       "region": "New Jersey",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4445,
+      "monthlyCostUSD": 5283,
       "climate": {
         "winterLowF": 24,
         "summerHighF": 87,
@@ -2442,7 +2442,7 @@
       "region": "New Jersey",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 7861,
+      "monthlyCostUSD": 8399,
       "climate": {
         "winterLowF": 24,
         "summerHighF": 87,
@@ -2461,7 +2461,8 @@
       "hasDetailedCosts": null
     },
     {
-      "id": "us-chesapeake-va"
+      "id": "us-chesapeake-va",
+      "monthlyCostUSD": 6650
     },
     {
       "id": "us-chicago-il",
@@ -2470,7 +2471,7 @@
       "region": "US Midwest",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 5831,
+      "monthlyCostUSD": 6378,
       "climate": {
         "winterLowF": 16,
         "summerHighF": 84,
@@ -2495,7 +2496,7 @@
       "region": "US Midwest",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4451,
+      "monthlyCostUSD": 4910,
       "climate": {
         "winterLowF": 20,
         "summerHighF": 82,
@@ -2520,7 +2521,7 @@
       "region": "US South Central",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 5981,
+      "monthlyCostUSD": 6353,
       "climate": {
         "winterLowF": 35,
         "summerHighF": 97,
@@ -2545,7 +2546,7 @@
       "region": "US Mountain West",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 6191,
+      "monthlyCostUSD": 6716,
       "climate": {
         "winterLowF": 17,
         "summerHighF": 90,
@@ -2570,7 +2571,7 @@
       "region": "Florida",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 7739,
+      "monthlyCostUSD": 8119,
       "climate": {
         "winterLowF": 55,
         "summerHighF": 92,
@@ -2595,7 +2596,7 @@
       "region": "US Southeast",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 6071,
+      "monthlyCostUSD": 6440,
       "climate": {
         "winterLowF": 58,
         "summerHighF": 91,
@@ -2620,7 +2621,7 @@
       "region": "US Midwest",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4271,
+      "monthlyCostUSD": 4751,
       "climate": {
         "winterLowF": 18,
         "summerHighF": 84,
@@ -2645,7 +2646,7 @@
       "region": "US South Central",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 5261,
+      "monthlyCostUSD": 5633,
       "climate": {
         "winterLowF": 34,
         "summerHighF": 97,
@@ -2670,7 +2671,7 @@
       "region": "US Midwest",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4091,
+      "monthlyCostUSD": 4514,
       "climate": {
         "winterLowF": -3,
         "summerHighF": 82,
@@ -2695,7 +2696,7 @@
       "region": "US South Central",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4381,
+      "monthlyCostUSD": 4753,
       "climate": {
         "winterLowF": 36,
         "summerHighF": 97,
@@ -2720,7 +2721,7 @@
       "region": "US Midwest",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4081,
+      "monthlyCostUSD": 4600,
       "climate": {
         "winterLowF": 14,
         "summerHighF": 82,
@@ -2745,7 +2746,7 @@
       "region": "US South Central",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4331,
+      "monthlyCostUSD": 4844,
       "climate": {
         "winterLowF": 32,
         "summerHighF": 93,
@@ -2770,7 +2771,7 @@
       "region": "US Midwest",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4111,
+      "monthlyCostUSD": 4570,
       "climate": {
         "winterLowF": 20,
         "summerHighF": 82,
@@ -2795,7 +2796,7 @@
       "region": "US Mid-Atlantic",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4221,
+      "monthlyCostUSD": 4751,
       "climate": {
         "winterLowF": 26,
         "summerHighF": 87,
@@ -2820,7 +2821,7 @@
       "region": "US Southeast",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 6791,
+      "monthlyCostUSD": 7160,
       "climate": {
         "winterLowF": 60,
         "summerHighF": 92,
@@ -2845,7 +2846,7 @@
       "region": "US Midwest",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4881,
+      "monthlyCostUSD": 5427,
       "climate": {
         "winterLowF": 14,
         "summerHighF": 82,
@@ -2870,7 +2871,7 @@
       "region": "US Midwest",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 5601,
+      "monthlyCostUSD": 6183,
       "climate": {
         "winterLowF": 4,
         "summerHighF": 83,
@@ -2895,7 +2896,7 @@
       "region": "US Southeast",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 5791,
+      "monthlyCostUSD": 6162,
       "climate": {
         "winterLowF": 30,
         "summerHighF": 91,
@@ -2920,7 +2921,7 @@
       "region": "US Mid-Atlantic",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4871,
+      "monthlyCostUSD": 5401,
       "climate": {
         "winterLowF": 32,
         "summerHighF": 88,
@@ -2945,7 +2946,7 @@
       "region": "US Midwest",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 5011,
+      "monthlyCostUSD": 5530,
       "climate": {
         "winterLowF": 16,
         "summerHighF": 83,
@@ -2970,7 +2971,7 @@
       "region": "US Southeast",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4871,
+      "monthlyCostUSD": 5240,
       "climate": {
         "winterLowF": 50,
         "summerHighF": 92,
@@ -2995,7 +2996,7 @@
       "region": "Pennsylvania",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 7494,
+      "monthlyCostUSD": 7874,
       "climate": {
         "winterLowF": 25,
         "summerHighF": 88,
@@ -3020,7 +3021,7 @@
       "region": "US Northeast",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 5021,
+      "monthlyCostUSD": 5392,
       "climate": {
         "winterLowF": 22,
         "summerHighF": 84,
@@ -3045,7 +3046,7 @@
       "region": "US Midwest",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4141,
+      "monthlyCostUSD": 4660,
       "climate": {
         "winterLowF": 16,
         "summerHighF": 82,
@@ -3070,7 +3071,7 @@
       "region": "US Mid-Atlantic",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4471,
+      "monthlyCostUSD": 5001,
       "climate": {
         "winterLowF": 32,
         "summerHighF": 88,
@@ -3095,7 +3096,7 @@
       "region": "US Southeast",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4001,
+      "monthlyCostUSD": 4370,
       "climate": {
         "winterLowF": 38,
         "summerHighF": 93,
@@ -3120,7 +3121,7 @@
       "region": "North Carolina",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 7333,
+      "monthlyCostUSD": 7871,
       "climate": {
         "winterLowF": 30,
         "summerHighF": 90,
@@ -3145,7 +3146,7 @@
       "region": "Virginia",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 7123,
+      "monthlyCostUSD": 7661,
       "climate": {
         "winterLowF": 28,
         "summerHighF": 90,
@@ -3170,7 +3171,7 @@
       "region": "US Midwest",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4941,
+      "monthlyCostUSD": 5523,
       "climate": {
         "winterLowF": 4,
         "summerHighF": 84,
@@ -3195,7 +3196,7 @@
       "region": "US South Central",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4811,
+      "monthlyCostUSD": 5183,
       "climate": {
         "winterLowF": 38,
         "summerHighF": 96,
@@ -3220,7 +3221,7 @@
       "region": "Georgia",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 6844,
+      "monthlyCostUSD": 7416,
       "climate": {
         "winterLowF": 38,
         "summerHighF": 92,
@@ -3245,7 +3246,7 @@
       "region": "US Northeast",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4071,
+      "monthlyCostUSD": 4643,
       "climate": {
         "winterLowF": 5,
         "summerHighF": 80,
@@ -3270,7 +3271,7 @@
       "region": "US Southeast",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 5141,
+      "monthlyCostUSD": 5510,
       "climate": {
         "winterLowF": 45,
         "summerHighF": 91,
@@ -3295,7 +3296,7 @@
       "region": "US Southeast",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 5721,
+      "monthlyCostUSD": 6090,
       "climate": {
         "winterLowF": 54,
         "summerHighF": 91,
@@ -3320,7 +3321,7 @@
       "region": "South Carolina",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 7174,
+      "monthlyCostUSD": 7729,
       "climate": {
         "winterLowF": 35,
         "summerHighF": 92,
@@ -3345,7 +3346,7 @@
       "region": "US Southeast",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 5631,
+      "monthlyCostUSD": 6000,
       "climate": {
         "winterLowF": 52,
         "summerHighF": 92,
@@ -3370,7 +3371,7 @@
       "region": "Virginia",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 9058,
+      "monthlyCostUSD": 9596,
       "climate": {
         "winterLowF": 24,
         "summerHighF": 90,
@@ -3395,7 +3396,7 @@
       "region": "US Mid-Atlantic",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 5241,
+      "monthlyCostUSD": 5771,
       "climate": {
         "winterLowF": 33,
         "summerHighF": 87,
@@ -3420,7 +3421,7 @@
       "region": "US Northeast",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4111,
+      "monthlyCostUSD": 4482,
       "climate": {
         "winterLowF": 18,
         "summerHighF": 84,
@@ -3445,7 +3446,7 @@
       "region": "US Southeast",
       "currency": "USD",
       "exchangeRate": 1,
-      "monthlyCostUSD": 4951,
+      "monthlyCostUSD": 5320,
       "climate": {
         "winterLowF": 42,
         "summerHighF": 92,
@@ -3458,6 +3459,256 @@
         "safety": 7,
         "internetSpeed": "1Gbps available",
         "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-san-juan-pr",
+      "name": "San Juan, Puerto Rico",
+      "country": "United States",
+      "region": "Puerto Rico",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5505,
+      "climate": {
+        "winterLowF": 72,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 6,
+        "safety": 6,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 7
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-ponce-pr",
+      "name": "Ponce, Puerto Rico",
+      "country": "United States",
+      "region": "Puerto Rico",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4465,
+      "climate": {
+        "winterLowF": 70,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 6,
+        "expatCommunity": 3,
+        "safety": 6,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 5
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-charlotte-amalie-vi",
+      "name": "Charlotte Amalie, US Virgin Islands",
+      "country": "United States",
+      "region": "US Virgin Islands",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 7975,
+      "climate": {
+        "winterLowF": 74,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 5,
+        "dogFriendly": 6,
+        "expatCommunity": 5,
+        "safety": 5,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-christiansted-vi",
+      "name": "Christiansted, US Virgin Islands",
+      "country": "United States",
+      "region": "US Virgin Islands",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 6930,
+      "climate": {
+        "winterLowF": 73,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 4,
+        "dogFriendly": 7,
+        "expatCommunity": 5,
+        "safety": 5,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-hagatna-gu",
+      "name": "Hagåtña, Guam",
+      "country": "United States",
+      "region": "Guam",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 6440,
+      "climate": {
+        "winterLowF": 76,
+        "summerHighF": 87,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 5,
+        "dogFriendly": 6,
+        "expatCommunity": 6,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 9
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-dededo-gu",
+      "name": "Dededo, Guam",
+      "country": "United States",
+      "region": "Guam",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5895,
+      "climate": {
+        "winterLowF": 76,
+        "summerHighF": 87,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 5,
+        "dogFriendly": 7,
+        "expatCommunity": 5,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 9
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-saipan-mp",
+      "name": "Saipan, Northern Mariana Islands",
+      "country": "United States",
+      "region": "Northern Mariana Islands",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5430,
+      "climate": {
+        "winterLowF": 75,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 4,
+        "dogFriendly": 6,
+        "expatCommunity": 5,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 8
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-tinian-mp",
+      "name": "Tinian, Northern Mariana Islands",
+      "country": "United States",
+      "region": "Northern Mariana Islands",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4920,
+      "climate": {
+        "winterLowF": 75,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 3,
+        "dogFriendly": 7,
+        "expatCommunity": 2,
+        "safety": 8,
+        "internetSpeed": "Up to 100Mbps",
+        "englishPrevalence": 7
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-pago-pago-as",
+      "name": "Pago Pago, American Samoa",
+      "country": "United States",
+      "region": "American Samoa",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5180,
+      "climate": {
+        "winterLowF": 74,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 3,
+        "dogFriendly": 5,
+        "expatCommunity": 3,
+        "safety": 7,
+        "internetSpeed": "Up to 100Mbps",
+        "englishPrevalence": 9
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-tafuna-as",
+      "name": "Tafuna, American Samoa",
+      "country": "United States",
+      "region": "American Samoa",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4765,
+      "climate": {
+        "winterLowF": 74,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 3,
+        "dogFriendly": 5,
+        "expatCommunity": 3,
+        "safety": 7,
+        "internetSpeed": "Up to 100Mbps",
+        "englishPrevalence": 9
       },
       "inclusionScore": null,
       "neighborhoodCount": 0,
