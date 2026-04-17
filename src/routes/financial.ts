@@ -3,11 +3,20 @@ import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
 import { requireAuth } from '../middleware/auth.js';
 import { encryptField, decryptField } from '../middleware/encryption.js';
+import { toValidationErrorPayload } from '../lib/validation.js';
+import { defaultCurrencyFor } from '../lib/locale.js';
 
-// Validates client-side values (percentages as whole numbers, balances in dollars).
-// Uses z.coerce.number() because Prisma returns Decimal fields as strings and
-// encrypted String fields as strings — the client round-trips these as-is.
-// Unknown fields (e.g. userId, updatedAt) are silently stripped by Zod defaults.
+/**
+ * Financial settings persistence (portfolio, allocation, return, FIRE).
+ *
+ * Rate encoding (Dyscalculia audit F-001):
+ *   - All `*Pct` / `expectedReturn` / `expectedInflation` / `fxDriftAnnualRate`
+ *     fields are **whole-number percentages on the wire** (60 = 60%, 7 = 7%).
+ *     Internally they are converted to decimal fractions (0.60) for DB storage.
+ *   - `withdrawalRate` (withdrawal.ts) uses decimal fractions. The schism is
+ *     documented here and at the top of withdrawal.ts. See the
+ *     `_units` envelope for machine-readable meta.
+ */
 const num = z.coerce.number();
 
 const financialSchema = z.object({
@@ -39,6 +48,16 @@ const financialSchema = z.object({
   rothBalance: num.min(0).max(100_000_000).nullable().optional(),
   taxableBalance: num.min(0).max(100_000_000).nullable().optional(),
   hsaBalance: num.min(0).max(100_000_000).nullable().optional(),
+
+  // Per-Account Load % and Fees % (whole-number percent on wire, e.g. 0.5 = 0.5%)
+  traditionalLoadPct: num.min(0).max(10).optional(),
+  rothLoadPct: num.min(0).max(10).optional(),
+  taxableLoadPct: num.min(0).max(10).optional(),
+  hsaLoadPct: num.min(0).max(10).optional(),
+  traditionalFeesPct: num.min(0).max(10).optional(),
+  rothFeesPct: num.min(0).max(10).optional(),
+  taxableFeesPct: num.min(0).max(10).optional(),
+  hsaFeesPct: num.min(0).max(10).optional(),
 });
 
 // Defaults sent to client when no DB record exists (client-side format).
@@ -77,6 +96,14 @@ const PCT_FIELDS = [
   'expectedInflation',
   'fxDriftAnnualRate',
   'savingsRate',
+  'traditionalLoadPct',
+  'rothLoadPct',
+  'taxableLoadPct',
+  'hsaLoadPct',
+  'traditionalFeesPct',
+  'rothFeesPct',
+  'taxableFeesPct',
+  'hsaFeesPct',
 ] as const;
 
 /** All numeric fields — ensures Prisma Decimals and encrypted Strings become JS numbers. */
@@ -114,29 +141,65 @@ function decryptSettings(settings: Record<string, unknown>) {
   return out;
 }
 
+/** Build the `_units` metadata block for a response. */
+function unitsMeta(locale: string) {
+  const currency = defaultCurrencyFor(locale);
+  return {
+    portfolioBalance: { encoding: 'amount', currency, periodicity: 'total' },
+    traditionalBalance: { encoding: 'amount', currency, periodicity: 'total' },
+    rothBalance: { encoding: 'amount', currency, periodicity: 'total' },
+    taxableBalance: { encoding: 'amount', currency, periodicity: 'total' },
+    hsaBalance: { encoding: 'amount', currency, periodicity: 'total' },
+    annualSavings: { encoding: 'amount', currency, periodicity: 'year' },
+    equityPct: { encoding: 'percent', meaning: '60 = 60%' },
+    bondPct: { encoding: 'percent', meaning: '30 = 30%' },
+    cashPct: { encoding: 'percent', meaning: '10 = 10%' },
+    intlPct: { encoding: 'percent', meaning: '20 = 20%' },
+    expectedReturn: { encoding: 'percent', meaning: '7 = 7% per year' },
+    expectedInflation: { encoding: 'percent', meaning: '2.5 = 2.5% per year' },
+    fxDriftAnnualRate: { encoding: 'percent', meaning: '1 = 1% per year' },
+    savingsRate: { encoding: 'percent', meaning: '15 = 15% of income' },
+    traditionalLoadPct: { encoding: 'percent', meaning: '0.5 = 0.5% annual drag' },
+    rothLoadPct: { encoding: 'percent', meaning: '0.5 = 0.5% annual drag' },
+    taxableLoadPct: { encoding: 'percent', meaning: '0.5 = 0.5% annual drag' },
+    hsaLoadPct: { encoding: 'percent', meaning: '0.5 = 0.5% annual drag' },
+    traditionalFeesPct: { encoding: 'percent', meaning: '0.2 = 0.2% expense ratio' },
+    rothFeesPct: { encoding: 'percent', meaning: '0.2 = 0.2% expense ratio' },
+    taxableFeesPct: { encoding: 'percent', meaning: '0.2 = 0.2% expense ratio' },
+    hsaFeesPct: { encoding: 'percent', meaning: '0.2 = 0.2% expense ratio' },
+  };
+}
+
 export default async function financialRoutes(app: FastifyInstance): Promise<void> {
   app.addHook('preHandler', requireAuth);
 
-  // GET /api/me/financial — portfolio, FX drift, SS cut settings
+  /**
+   * GET /api/me/financial
+   * @summary Portfolio, allocation, return, FIRE, and FX settings.
+   * @returns Settings + `_units` metadata documenting that `*Pct` fields are
+   *          whole-number percentages on the wire (Dyscalculia audit F-002).
+   */
   app.get('/', async (request, reply) => {
     const settings = await prisma.userFinancialSettings.findUnique({
       where: { userId: request.userId },
     });
 
-    if (!settings) {
-      reply.header('Cache-Control', 'private, no-store');
-      return { userId: request.userId, ...DEFAULTS, updatedAt: new Date() };
-    }
-
     reply.header('Cache-Control', 'private, no-store');
-    return decryptSettings(settings);
+    const base = settings
+      ? decryptSettings(settings)
+      : { userId: request.userId, ...DEFAULTS, updatedAt: new Date() };
+    return { ...base, _units: unitsMeta(request.locale ?? 'en-US') };
   });
 
-  // PUT /api/me/financial — update financial parameters
+  /**
+   * PUT /api/me/financial
+   * @summary Update financial parameters.
+   * @errors 400 — plain-language validation envelope (field + fieldLabel + message).
+   */
   app.put('/', async (request, reply) => {
     const parsed = financialSchema.safeParse(request.body);
     if (!parsed.success) {
-      return reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
+      return reply.code(400).send(toValidationErrorPayload(parsed.error));
     }
 
     // Encrypt balance fields before writing
@@ -159,6 +222,6 @@ export default async function financialRoutes(app: FastifyInstance): Promise<voi
       create: { userId: request.userId, ...data },
     });
 
-    return decryptSettings(settings);
+    return { ...decryptSettings(settings), _units: unitsMeta(request.locale ?? 'en-US') };
   });
 }

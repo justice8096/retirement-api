@@ -1,0 +1,177 @@
+{
+  "id": "us-saipan-mp",
+  "name": "Saipan, Northern Mariana Islands",
+  "country": "United States",
+  "region": "Northern Mariana Islands",
+  "cities": [
+    "Saipan",
+    "Garapan",
+    "Susupe"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "N/A (domestic)",
+    "notes": "US citizen — no visa required. CNMI is a commonwealth in political union with the US."
+  },
+  "climate": {
+    "winterLowF": 75,
+    "summerHighF": 88,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 180
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 1100,
+      "min": 750,
+      "max": 1600,
+      "annualInflation": 0.03,
+      "notes": "Rental stock skews older; newer condos in Garapan at premium."
+    },
+    "groceries": {
+      "typical": 700,
+      "min": 540,
+      "max": 920,
+      "annualInflation": 0.04,
+      "notes": "Joeten, Payless; most goods shipped from Guam or mainland."
+    },
+    "utilities": {
+      "typical": 420,
+      "min": 300,
+      "max": 620,
+      "annualInflation": 0.045,
+      "notes": "CUC electricity very expensive; diesel-generated."
+    },
+    "healthcare": {
+      "typical": 460,
+      "min": 340,
+      "max": 650,
+      "annualInflation": 0.05
+    },
+    "insurance": {
+      "typical": 300,
+      "min": 210,
+      "max": 430,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 70,
+      "min": 45,
+      "max": 110,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 160,
+      "min": 110,
+      "max": 240,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 280,
+      "min": 180,
+      "max": 420,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 220,
+      "min": 140,
+      "max": 340,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 90,
+      "min": 55,
+      "max": 140,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 65,
+      "min": 40,
+      "max": 105,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 65,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 75,
+      "min": 55,
+      "max": 95,
+      "annualInflation": 0.02,
+      "notes": "IT&E, Docomo Pacific; data plans pricier than mainland."
+    },
+    "taxes": {
+      "typical": 380,
+      "min": 342,
+      "max": 418,
+      "annualInflation": 0.02,
+      "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
+    },
+    "miscellaneous": {
+      "typical": 150,
+      "min": 95,
+      "max": 240,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "typical": 170,
+      "min": 115,
+      "max": 320,
+      "annualInflation": 0.045,
+      "notes": "Limited pharmacies; mainland mail-order common for chronic meds."
+    },
+    "buffer": {
+      "typical": 140,
+      "min": 70,
+      "max": 240,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "typical": 500,
+      "min": 300,
+      "max": 800,
+      "annualInflation": 0.055,
+      "notes": "Specialist travel to Guam, Hawaii, or Philippines frequent."
+    }
+  },
+  "healthcare": {
+    "system": "Medicare + private; Commonwealth Healthcare Corporation (single public hospital)",
+    "qualityRating": 4,
+    "dentalIncluded": false,
+    "waitTimes": "Long for specialists; medevac common",
+    "prescriptionCoverage": "Medicare Part D or private"
+  },
+  "lifestyle": {
+    "internetSpeed": "Up to 1Gbps (IT&E fiber)",
+    "dogFriendly": 6,
+    "expatCommunity": 5,
+    "englishPrevalence": 8,
+    "safetyRating": 7
+  },
+  "pros": [
+    "US jurisdiction — USD, Medicare, US legal system",
+    "Warm tropical climate year-round",
+    "Lower rent than Guam",
+    "Dive and beach lifestyle"
+  ],
+  "cons": [
+    "Typhoon risk (Super Typhoon Yutu, 2018)",
+    "Healthcare capacity very limited",
+    "Electricity among the most expensive in the US",
+    "Long travel to US mainland (14h+ via Guam or Tokyo)"
+  ],
+  "taxes": {
+    "notes": "CNMI mirrors federal tax code; residents file with CNMI Division of Revenue and Taxation.",
+    "vatRate": 0,
+    "socialChargesRate": 0
+  }
+}

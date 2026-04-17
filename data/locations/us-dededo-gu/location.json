@@ -1,0 +1,172 @@
+{
+  "id": "us-dededo-gu",
+  "name": "Dededo, Guam",
+  "country": "United States",
+  "region": "Guam",
+  "cities": [
+    "Dededo",
+    "Yigo"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "N/A (domestic)",
+    "notes": "US citizen — no visa required. Guam is an unincorporated US territory."
+  },
+  "climate": {
+    "winterLowF": 76,
+    "summerHighF": 87,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 200
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 1500,
+      "min": 1100,
+      "max": 2100,
+      "annualInflation": 0.035,
+      "notes": "Largest village by population; more single-family housing than Hagåtña."
+    },
+    "groceries": {
+      "typical": 750,
+      "min": 580,
+      "max": 980,
+      "annualInflation": 0.04
+    },
+    "utilities": {
+      "typical": 360,
+      "min": 260,
+      "max": 520,
+      "annualInflation": 0.04
+    },
+    "healthcare": {
+      "typical": 460,
+      "min": 340,
+      "max": 650,
+      "annualInflation": 0.05
+    },
+    "insurance": {
+      "typical": 320,
+      "min": 230,
+      "max": 460,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 75,
+      "min": 45,
+      "max": 120,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 180,
+      "min": 130,
+      "max": 280,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 55,
+      "min": 35,
+      "max": 85,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 320,
+      "min": 210,
+      "max": 480,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 260,
+      "min": 170,
+      "max": 400,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 95,
+      "min": 60,
+      "max": 150,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 75,
+      "min": 45,
+      "max": 120,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 105,
+      "min": 70,
+      "max": 145,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 70,
+      "min": 55,
+      "max": 90,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 380,
+      "min": 342,
+      "max": 418,
+      "annualInflation": 0.02,
+      "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
+    },
+    "miscellaneous": {
+      "typical": 160,
+      "min": 105,
+      "max": 260,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "typical": 150,
+      "min": 100,
+      "max": 290,
+      "annualInflation": 0.045,
+      "notes": "Same mainland-import supply chain as Hagåtña; Kmart/Navy Exchange pharmacies available."
+    },
+    "buffer": {
+      "typical": 140,
+      "min": 70,
+      "max": 250,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "typical": 440,
+      "min": 260,
+      "max": 720,
+      "annualInflation": 0.055
+    }
+  },
+  "healthcare": {
+    "system": "Medicare + private; access to Guam Memorial Hospital (short drive)",
+    "qualityRating": 5,
+    "dentalIncluded": false,
+    "waitTimes": "Moderate to long for specialists",
+    "prescriptionCoverage": "Medicare Part D or private"
+  },
+  "lifestyle": {
+    "internetSpeed": "Up to 1Gbps (GTA, IT&E)",
+    "dogFriendly": 7,
+    "expatCommunity": 5,
+    "englishPrevalence": 9,
+    "safetyRating": 7
+  },
+  "pros": [
+    "Largest village — most retail and services concentrated here",
+    "Cheaper rent than Hagåtña",
+    "Close to Andersen AFB amenities",
+    "Warm tropical climate year-round"
+  ],
+  "cons": [
+    "Typhoon exposure (northern Guam)",
+    "Traffic on Marine Corps Drive during peak hours",
+    "Healthcare specialists limited",
+    "Long travel to mainland US"
+  ],
+  "taxes": {
+    "notes": "Guam mirrors the federal tax code; residents file with Department of Revenue and Taxation.",
+    "vatRate": 0,
+    "socialChargesRate": 0
+  }
+}

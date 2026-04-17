@@ -1,0 +1,170 @@
+{
+  "id": "us-ponce-pr",
+  "name": "Ponce, Puerto Rico",
+  "country": "United States",
+  "region": "Puerto Rico",
+  "cities": [
+    "Ponce"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "N/A (domestic)",
+    "notes": "US citizen — no visa required. Puerto Rico is a US territory."
+  },
+  "climate": {
+    "winterLowF": 70,
+    "summerHighF": 90,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 160
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 900,
+      "min": 650,
+      "max": 1300,
+      "annualInflation": 0.03
+    },
+    "groceries": {
+      "typical": 550,
+      "min": 420,
+      "max": 700,
+      "annualInflation": 0.035
+    },
+    "utilities": {
+      "typical": 240,
+      "min": 170,
+      "max": 350,
+      "annualInflation": 0.04
+    },
+    "healthcare": {
+      "typical": 400,
+      "min": 300,
+      "max": 570,
+      "annualInflation": 0.05
+    },
+    "insurance": {
+      "typical": 240,
+      "min": 170,
+      "max": 340,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 95,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 150,
+      "min": 100,
+      "max": 220,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 45,
+      "min": 30,
+      "max": 70,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 260,
+      "min": 170,
+      "max": 380,
+      "annualInflation": 0.03
+    },
+    "entertainment": {
+      "typical": 220,
+      "min": 140,
+      "max": 340,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 80,
+      "min": 50,
+      "max": 130,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 95,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 65,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 60,
+      "min": 45,
+      "max": 75,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 420,
+      "min": 378,
+      "max": 462,
+      "annualInflation": 0.02,
+      "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
+    },
+    "miscellaneous": {
+      "typical": 130,
+      "min": 85,
+      "max": 210,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "typical": 110,
+      "min": 78,
+      "max": 220,
+      "annualInflation": 0.045,
+      "notes": "Medicare Part D available; fewer pharmacy options than San Juan."
+    },
+    "buffer": {
+      "typical": 100,
+      "min": 50,
+      "max": 200,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "typical": 340,
+      "min": 200,
+      "max": 580,
+      "annualInflation": 0.055
+    }
+  },
+  "healthcare": {
+    "system": "Medicare (with PR adjustments) + private",
+    "qualityRating": 6,
+    "dentalIncluded": false,
+    "waitTimes": "Moderate; specialists may require travel to San Juan",
+    "prescriptionCoverage": "Medicare Part D or private plan"
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps available (Liberty, Claro)",
+    "dogFriendly": 6,
+    "expatCommunity": 3,
+    "englishPrevalence": 5,
+    "safetyRating": 6
+  },
+  "pros": [
+    "Significantly cheaper than San Juan",
+    "Drier south-coast climate",
+    "Historic colonial architecture",
+    "Less traffic, slower pace"
+  ],
+  "cons": [
+    "Limited specialist healthcare — travel to San Juan common",
+    "Fewer flight options (IATA: PSE, limited)",
+    "Spanish strongly preferred in daily life",
+    "Earthquake activity (2020 sequence)"
+  ],
+  "taxes": {
+    "notes": "PR residents pay PR income tax, not federal, on PR-source income.",
+    "vatRate": 0.115,
+    "socialChargesRate": 0
+  }
+}

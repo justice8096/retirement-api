@@ -1,0 +1,177 @@
+{
+  "id": "us-charlotte-amalie-vi",
+  "name": "Charlotte Amalie, US Virgin Islands",
+  "country": "United States",
+  "region": "US Virgin Islands",
+  "cities": [
+    "Charlotte Amalie",
+    "St. Thomas"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "N/A (domestic)",
+    "notes": "US citizen — no visa required. USVI is an unincorporated US territory."
+  },
+  "climate": {
+    "winterLowF": 74,
+    "summerHighF": 88,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 155
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 2600,
+      "min": 1900,
+      "max": 3600,
+      "annualInflation": 0.04,
+      "notes": "Limited housing stock drives prices; hurricane-hardened units at a premium."
+    },
+    "groceries": {
+      "typical": 950,
+      "min": 750,
+      "max": 1200,
+      "annualInflation": 0.04,
+      "notes": "Nearly all food imported; Pueblo/Cost-U-Less dominant."
+    },
+    "utilities": {
+      "typical": 520,
+      "min": 380,
+      "max": 720,
+      "annualInflation": 0.045,
+      "notes": "WAPA rates among the highest in the US; heavy A/C use."
+    },
+    "healthcare": {
+      "typical": 520,
+      "min": 400,
+      "max": 720,
+      "annualInflation": 0.05
+    },
+    "insurance": {
+      "typical": 420,
+      "min": 300,
+      "max": 580,
+      "annualInflation": 0.045,
+      "notes": "Hurricane/windstorm coverage significantly elevated."
+    },
+    "petCare": {
+      "typical": 90,
+      "min": 55,
+      "max": 140,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 220,
+      "min": 160,
+      "max": 320,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 70,
+      "min": 45,
+      "max": 110,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 380,
+      "min": 240,
+      "max": 560,
+      "annualInflation": 0.03,
+      "notes": "Car essential; imported vehicles and parts cost more."
+    },
+    "entertainment": {
+      "typical": 340,
+      "min": 220,
+      "max": 500,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 120,
+      "min": 75,
+      "max": 200,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 90,
+      "min": 55,
+      "max": 140,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 120,
+      "min": 80,
+      "max": 160,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 75,
+      "min": 60,
+      "max": 95,
+      "annualInflation": 0.02
+    },
+    "taxes": {
+      "typical": 380,
+      "min": 342,
+      "max": 418,
+      "annualInflation": 0.02,
+      "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
+    },
+    "miscellaneous": {
+      "typical": 200,
+      "min": 130,
+      "max": 320,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "typical": 180,
+      "min": 120,
+      "max": 340,
+      "annualInflation": 0.045,
+      "notes": "Imported meds; pharmacy delays common post-storm."
+    },
+    "buffer": {
+      "typical": 180,
+      "min": 80,
+      "max": 300,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "typical": 520,
+      "min": 300,
+      "max": 850,
+      "annualInflation": 0.055,
+      "notes": "Specialist travel to Puerto Rico or mainland common."
+    }
+  },
+  "healthcare": {
+    "system": "Medicare + private; Schneider Regional Medical Center is main hospital",
+    "qualityRating": 5,
+    "dentalIncluded": false,
+    "waitTimes": "Moderate to long; specialists limited",
+    "prescriptionCoverage": "Medicare Part D or private"
+  },
+  "lifestyle": {
+    "internetSpeed": "Up to 1Gbps (Viya)",
+    "dogFriendly": 6,
+    "expatCommunity": 5,
+    "englishPrevalence": 10,
+    "safetyRating": 5
+  },
+  "pros": [
+    "US territory — USD, Medicare, familiar legal system",
+    "Warm tropical climate year-round",
+    "English is primary language",
+    "Direct flights to US mainland"
+  ],
+  "cons": [
+    "High cost of living (imports)",
+    "Hurricane risk and recovery lag",
+    "Electricity among the most expensive in the US",
+    "Limited medical specialists — off-island travel common"
+  ],
+  "taxes": {
+    "notes": "USVI residents file a mirror-code return with Bureau of Internal Revenue instead of IRS.",
+    "vatRate": 0,
+    "socialChargesRate": 0
+  }
+}

@@ -556,5 +556,171 @@
         "eligibilityAge": 65
       }
     ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 21,
+      "typical": 80,
+      "max": 160
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 27,
+        "senior": 13,
+        "notes": "Integrated transit cards in Quito. Cuenca tranvia uses contactless payment."
+      },
+      "singleRide": 0.19,
+      "coverage": "Trolebus and Ecovia in Quito. Tranvia in Cuenca. Bus networks elsewhere.",
+      "seniorDiscount": "Seniors 65+ ride free or half-fare on most public transit by law. Reduced domestic flights."
+    },
+    "rideShare": {
+      "baseFare": 1.33,
+      "perKm": 0.4,
+      "typicalCrossTownTrip": {
+        "min": 2,
+        "typical": 4,
+        "max": 8
+      },
+      "availability": "InDriver popular. Uber in Quito/Guayaquil. Taxis very affordable with meters.",
+      "notes": "Ride-share widely used in Cotacachi. Negotiate taxi fares before riding if no meter."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 27,
+        "initialRegistration": {
+          "min": 53,
+          "typical": 107,
+          "max": 213
+        },
+        "notes": "Vehicle registration through local transit authority in Cotacachi."
+      },
+      "insurance": {
+        "monthlyMin": 21,
+        "monthlyTypical": 35,
+        "monthlyMax": 64,
+        "notes": "Liability insurance mandatory. International driving permit accepted for first 90 days."
+      },
+      "fuel": {
+        "pricePerLiter": 0.51,
+        "monthlyEstimate": {
+          "min": 32,
+          "typical": 53,
+          "max": 96
+        },
+        "notes": "Fuel prices in USD. Government-subsidized in some cases."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 27,
+          "typical": 53,
+          "max": 107
+        },
+        "hourlyStreet": 0.4,
+        "notes": "Street parking available in Cotacachi. Malls and supermarkets usually have free parking."
+      },
+      "tolls": {
+        "monthlyEstimate": 11,
+        "notes": "Toll roads on major highways between cities."
+      },
+      "seniorDiscounts": "Seniors 65+ get 50% discount on vehicle registration. Reduced tolls."
+    },
+    "walkability": "Good in city centers. Cuenca very walkable. Altitude in highlands affects comfort.",
+    "cycling": {
+      "bikeShareMonthly": 3,
+      "infrastructure": "Bicycle infrastructure varies in Cotacachi. Urban areas gradually improving cycling lanes.",
+      "notes": "Heat and terrain may limit cycling as primary transport."
+    },
+    "electricVehicle": {
+      "purchasePrice": {
+        "min": 14933,
+        "typical": 21333,
+        "max": 30933
+      },
+      "purchaseNotes": "Small but growing EV market. Limited charging infrastructure outside Quito. Import costs may apply.",
+      "federalIncentive": 0,
+      "stateIncentive": 0,
+      "incentiveNotes": "Reduced import duties on EVs. Government promoting electric transportation.",
+      "chargingHome": {
+        "installCost": {
+          "min": 213,
+          "typical": 427,
+          "max": 800
+        },
+        "monthlyElectricity": {
+          "min": 11,
+          "typical": 19,
+          "max": 29
+        },
+        "notes": "Home charging feasible in houses and some apartments in Cotacachi."
+      },
+      "chargingPublic": {
+        "perKwh": {
+          "min": 0.2,
+          "typical": 0.35,
+          "max": 0.5
+        },
+        "notes": "Public charging network growing in Ecuador. Check availability in Cotacachi."
+      },
+      "insurance": {
+        "monthly": {
+          "min": 32,
+          "typical": 45,
+          "max": 69
+        },
+        "notes": "EV insurance through major local providers."
+      },
+      "maintenance": {
+        "annual": {
+          "min": 160,
+          "typical": 240,
+          "max": 373
+        },
+        "notes": "EV service availability growing. Authorized dealers in major cities."
+      },
+      "registration": {
+        "annual": {
+          "min": 0,
+          "typical": 13,
+          "max": 27
+        },
+        "notes": "Standard registration fees apply."
+      },
+      "batteryWarranty": "Manufacturer standard warranty. Service access best in major cities.",
+      "depreciationNotes": "EV resale market developing in Ecuador. Larger cities have better resale prospects.",
+      "totalMonthlyOwnership": {
+        "min": 59,
+        "typical": 99,
+        "max": 160
+      },
+      "totalMonthlyNotes": "Includes: charging, insurance, maintenance (monthly avg), registration. Excludes: purchase/loan payment, depreciation.",
+      "sources": [
+        {
+          "title": "Ecuador EV Incentives",
+          "url": "https://www.metrodequito.gob.ec/"
+        }
+      ]
+    },
+    "sources": [
+      {
+        "title": "Metro de Quito",
+        "url": "https://www.metrodequito.gob.ec/"
+      },
+      {
+        "title": "Tranvía de Cuenca",
+        "url": "https://tranvia.cuenca.gob.ec/"
+      }
+    ],
+    "monthlyEstimate": {
+      "carFree": {
+        "min": 11,
+        "typical": 27,
+        "max": 53
+      },
+      "withCar": {
+        "min": 80,
+        "typical": 133,
+        "max": 240
+      }
+    }
   }
 }

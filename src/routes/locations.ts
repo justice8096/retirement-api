@@ -128,10 +128,20 @@ export default async function locationRoutes(app: FastifyInstance): Promise<void
         prisma.adminLocation.count({ where }),
       ]);
 
-      // When fields=full, return locationData as the data items (dashboard expects location objects)
+      // When fields=full, return locationData merged with denormalized columns.
+      // locationData (JSONB) is the raw location object; the denormalized columns
+      // (id, monthlyCostTotal, updatedAt, etc.) must be overlaid so clients get
+      // them regardless of whether locationData carries them.
       const data = q.fields === 'full'
         ? locations.map((loc: Record<string, unknown>) => ({
             ...(loc.locationData as object),
+            id: loc.id,
+            name: loc.name,
+            country: loc.country,
+            region: loc.region,
+            currency: loc.currency,
+            monthlyCostTotal: loc.monthlyCostTotal,
+            updatedAt: loc.updatedAt,
             _version: loc.version,
           }))
         : locations;
@@ -217,7 +227,17 @@ export default async function locationRoutes(app: FastifyInstance): Promise<void
         where: { id: idParsed.data },
       });
       if (!loc) return reply.code(404).send({ error: 'Location not found' });
-      return { ...(loc.locationData as object), _version: loc.version };
+      return {
+        ...(loc.locationData as object),
+        id: loc.id,
+        name: loc.name,
+        country: loc.country,
+        region: loc.region,
+        currency: loc.currency,
+        monthlyCostTotal: loc.monthlyCostTotal,
+        updatedAt: loc.updatedAt,
+        _version: loc.version,
+      };
     } catch (err) {
       request.log.error({ err: (err as Error).message, id }, 'Failed to query location');
       return reply.code(500).send({ error: 'Failed to query location' });

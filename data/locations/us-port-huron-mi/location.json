@@ -104,10 +104,11 @@
       "annualInflation": 0.02
     },
     "taxes": {
-      "typical": 0,
-      "min": 0,
-      "max": 0,
-      "annualInflation": 0
+      "typical": 529,
+      "min": 476,
+      "max": 582,
+      "annualInflation": 0.02,
+      "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
     },
     "miscellaneous": {
       "typical": 150,

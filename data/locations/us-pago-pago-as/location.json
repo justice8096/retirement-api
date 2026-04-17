@@ -1,0 +1,178 @@
+{
+  "id": "us-pago-pago-as",
+  "name": "Pago Pago, American Samoa",
+  "country": "United States",
+  "region": "American Samoa",
+  "cities": [
+    "Pago Pago",
+    "Fagatogo",
+    "Utulei"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "N/A (domestic)",
+    "notes": "US nationals (American Samoans) and US citizens — no visa required. American Samoa is an unincorporated US territory."
+  },
+  "climate": {
+    "winterLowF": 74,
+    "summerHighF": 88,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 250
+  },
+  "monthlyCosts": {
+    "rent": {
+      "typical": 1000,
+      "min": 700,
+      "max": 1400,
+      "annualInflation": 0.03,
+      "notes": "Limited formal rental market; many live in family/village housing."
+    },
+    "groceries": {
+      "typical": 750,
+      "min": 580,
+      "max": 980,
+      "annualInflation": 0.04,
+      "notes": "Cost-U-Less, KS Mart; nearly all dry goods imported."
+    },
+    "utilities": {
+      "typical": 340,
+      "min": 240,
+      "max": 500,
+      "annualInflation": 0.04,
+      "notes": "ASPA electricity; diesel-based generation."
+    },
+    "healthcare": {
+      "typical": 420,
+      "min": 300,
+      "max": 600,
+      "annualInflation": 0.05
+    },
+    "insurance": {
+      "typical": 280,
+      "min": 200,
+      "max": 400,
+      "annualInflation": 0.04
+    },
+    "petCare": {
+      "typical": 65,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "petDaycare": {
+      "typical": 140,
+      "min": 95,
+      "max": 210,
+      "annualInflation": 0.03
+    },
+    "petGrooming": {
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "typical": 260,
+      "min": 170,
+      "max": 400,
+      "annualInflation": 0.03,
+      "notes": "Aiga bus system cheap; most expats keep a vehicle."
+    },
+    "entertainment": {
+      "typical": 200,
+      "min": 130,
+      "max": 310,
+      "annualInflation": 0.03
+    },
+    "clothing": {
+      "typical": 85,
+      "min": 55,
+      "max": 140,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.03
+    },
+    "subscriptions": {
+      "typical": 100,
+      "min": 65,
+      "max": 140,
+      "annualInflation": 0.05
+    },
+    "phoneCell": {
+      "typical": 80,
+      "min": 60,
+      "max": 100,
+      "annualInflation": 0.02,
+      "notes": "ASTCA, BlueSky; data costs higher than mainland."
+    },
+    "taxes": {
+      "typical": 300,
+      "min": 270,
+      "max": 330,
+      "annualInflation": 0.02,
+      "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
+    },
+    "miscellaneous": {
+      "typical": 160,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03
+    },
+    "medicine": {
+      "typical": 190,
+      "min": 130,
+      "max": 360,
+      "annualInflation": 0.045,
+      "notes": "LBJ Tropical Medical Center pharmacy; chronic meds often mail-order from Hawaii/mainland."
+    },
+    "buffer": {
+      "typical": 140,
+      "min": 70,
+      "max": 240,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "typical": 560,
+      "min": 340,
+      "max": 880,
+      "annualInflation": 0.055,
+      "notes": "Specialist care routinely requires travel to Honolulu (5.5h flight)."
+    }
+  },
+  "healthcare": {
+    "system": "LBJ Tropical Medical Center (public, sole hospital); Medicaid/Medicare partially applicable",
+    "qualityRating": 3,
+    "dentalIncluded": false,
+    "waitTimes": "Long; medevac to Honolulu common for complex cases",
+    "prescriptionCoverage": "Medicare Part D or private"
+  },
+  "lifestyle": {
+    "internetSpeed": "Up to 100Mbps (ASTCA, BlueSky); fiber growing",
+    "dogFriendly": 5,
+    "expatCommunity": 3,
+    "englishPrevalence": 9,
+    "safetyRating": 7
+  },
+  "pros": [
+    "US territory — USD, US legal framework",
+    "Warm tropical climate year-round",
+    "Strong cultural traditions and community",
+    "Low property crime"
+  ],
+  "cons": [
+    "Very remote — few flights, long travel to mainland",
+    "Healthcare limited — medevac common",
+    "High import costs on most goods",
+    "Cyclone season (Nov–Apr)"
+  ],
+  "taxes": {
+    "notes": "American Samoa has its own tax code (mirrored with modifications); residents file with ASG Tax Office, not IRS.",
+    "vatRate": 0,
+    "socialChargesRate": 0
+  }
+}

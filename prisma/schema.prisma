@@ -167,6 +167,17 @@ model UserFinancialSettings {
   taxableBalance     String? @map("taxable_balance")     // Encrypted
   hsaBalance         String? @map("hsa_balance")         // Encrypted
 
+  // ─── Per-Account Load % and Fees % (recurring annual drags) ────────
+  // Stored as decimal fractions (0.005 = 0.5%). Client sends whole-% (0.5 = 0.5%).
+  traditionalLoadPct Decimal @default(0) @map("traditional_load_pct")
+  rothLoadPct        Decimal @default(0) @map("roth_load_pct")
+  taxableLoadPct     Decimal @default(0) @map("taxable_load_pct")
+  hsaLoadPct         Decimal @default(0) @map("hsa_load_pct")
+  traditionalFeesPct Decimal @default(0) @map("traditional_fees_pct")
+  rothFeesPct        Decimal @default(0) @map("roth_fees_pct")
+  taxableFeesPct     Decimal @default(0) @map("taxable_fees_pct")
+  hsaFeesPct         Decimal @default(0) @map("hsa_fees_pct")
+
   updatedAt        DateTime @updatedAt @map("updated_at")
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)

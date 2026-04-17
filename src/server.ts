@@ -10,6 +10,9 @@ import { registerClerk } from './middleware/auth.js';
 import { rateLimitConfig, buildRedisStore } from './middleware/rate-limit.js';
 import { initSentry, captureException } from './lib/sentry.js';
 import { validateEncryptionConfig } from './middleware/encryption.js';
+import { toValidationErrorPayload } from './lib/validation.js';
+import { pickLocale } from './lib/locale.js';
+import { registerSwagger } from './lib/swagger.js';
 
 // Initialize Sentry before anything else
 await initSentry();
@@ -34,6 +37,7 @@ import releaseRoutes from './routes/releases.js';
 import contributionRoutes, { adminContributionRoutes } from './routes/contributions.js';
 import badgeRoutes from './routes/badges.js';
 import feesRoutes from './routes/fees.js';
+import glossaryRoutes from './routes/glossary.js';
 
 const app = Fastify({
   logger: true,
@@ -73,11 +77,19 @@ await app.register(rateLimit, {
 });
 await app.register(cookie);
 
-// --- Content Language ---
+// ─── Content Language (Dyslexia audit F-008) ─────────────────────────────
+// Honor `Accept-Language` where possible instead of hard-coding `en`.
+// Exposes the resolved locale on `request.locale` so route handlers can
+// pass it to Intl.NumberFormat for locale-aware formatting (Dyscalculia F-007).
+app.addHook('onRequest', (request, _reply, done) => {
+  const header = request.headers['accept-language'];
+  request.locale = pickLocale(Array.isArray(header) ? header[0] : header);
+  done();
+});
+
 app.addHook('onSend', (request, reply, payload, done) => {
-  const contentType = reply.getHeader('content-type');
-  if (typeof contentType === 'string' && contentType.includes('text/html')) {
-    reply.header('Content-Language', 'en');
+  if (request.locale) {
+    reply.header('Content-Language', request.locale);
   }
   done(null, payload);
 });
@@ -109,15 +121,27 @@ await registerClerk(app);
 // ─── Global Error Handler ─────────────────────────────────────────────────
 
 app.setErrorHandler((error: FastifyError, request: FastifyRequest, reply: FastifyReply) => {
-  // Suppress noisy error logging for expected errors
+  // Suppress noisy error logging for expected errors. Log the full, developer-
+  // oriented error server-side (Dyslexia F-010 — separate log from user-bound
+  // text); the client sees a distinct plain-language envelope below.
   const isExpected = error.statusCode && error.statusCode < 500;
   if (!isExpected) {
-    request.log.error(error);
+    request.log.error({
+      err: error,
+      method: request.method,
+      url: request.url,
+      code: (error as unknown as { code?: string }).code,
+    }, 'unhandled error');
   }
 
   // ── Zod / Fastify validation errors ──────────────────────────
+  // Dyslexia F-002/F-007 + Dyscalculia F-008: transform raw Zod issues into
+  // a stable `{ field, fieldLabel, message, code }` envelope. Full Zod
+  // internals stay in the server log (above), not in the client response.
   if (error.validation) {
-    return reply.code(400).send({ error: 'Validation error', details: error.validation });
+    return reply
+      .code(400)
+      .send(toValidationErrorPayload(error.validation as unknown as import('zod').ZodIssue[]));
   }
 
   // ── Body limit exceeded (413 Payload Too Large) ──────────────
@@ -206,6 +230,13 @@ await app.register(releaseRoutes, { prefix: '/api/releases' });
 await app.register(contributionRoutes, { prefix: '/api/contributions' });
 await app.register(badgeRoutes, { prefix: '/api/badges' });
 await app.register(feesRoutes, { prefix: '/api/me/fees' });
+await app.register(glossaryRoutes, { prefix: '/api/glossary' });
+
+// ─── OpenAPI / Swagger (Dyslexia audit F-001) ─────────────────────────────
+// Registers @fastify/swagger + swagger-ui when available; falls back to a
+// static /api/openapi.json document otherwise. Never fatal — a missing UI
+// must not prevent the API from coming up.
+await registerSwagger(app);
 
 // ─── Start ────────────────────────────────────────────────────────────────
 
