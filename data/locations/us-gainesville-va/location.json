@@ -1,0 +1,221 @@
+{
+  "id": "us-gainesville-va",
+  "name": "Gainesville VA, USA",
+  "country": "United States",
+  "region": "Virginia",
+  "cities": ["Gainesville", "Haymarket", "Bristow"],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Citizen",
+    "incomeRequirement": null,
+    "notes": "US citizen, no visa required."
+  },
+  "climate": {
+    "winterLowF": 23,
+    "summerHighF": 89,
+    "rainyDaysPerYear": 108,
+    "meetsWarmWinterReq": false
+  },
+  "monthlyCosts": {
+    "rent": {
+      "min": 1950,
+      "max": 2700,
+      "typical": 2300,
+      "type": "2-bedroom townhome / SFH",
+      "annualInflation": 0.035,
+      "notes": "Prince William County, newer subdivisions (Heritage Hunt, Virginia Oaks). Cheaper than Fairfax but longer commute east."
+    },
+    "groceries": {
+      "min": 1250,
+      "max": 1650,
+      "typical": 1450,
+      "annualInflation": 0.03,
+      "notes": "Wegmans, Harris Teeter, Giant. Roughly 10% below Fairfax-area pricing."
+    },
+    "utilities": {
+      "min": 250,
+      "max": 410,
+      "typical": 320,
+      "annualInflation": 0.03,
+      "notes": "NOVEC electric + Washington Gas + PWC Service Authority water/sewer + trash."
+    },
+    "healthcare": {
+      "min": 550,
+      "max": 850,
+      "typical": 650,
+      "annualInflation": 0.055,
+      "notes": "Same Medicare Part B + Medigap baseline as Fairfax. Novant UVA Health in Haymarket; Inova in Manassas."
+    },
+    "healthcarePreMedicare": {
+      "min": 1800,
+      "max": 2800,
+      "typical": 2250,
+      "annualInflation": 0.06,
+      "notes": "ACA silver plan benchmark for 2-adult household, both 55-64, before subsidies. PWC marketplace 2025 — slightly cheaper than Fairfax due to competition."
+    },
+    "insurance": {
+      "min": 30,
+      "max": 50,
+      "typical": 40,
+      "type": "renter's insurance",
+      "annualInflation": 0.03
+    },
+    "petCare": {
+      "min": 120,
+      "max": 220,
+      "typical": 160,
+      "annualInflation": 0.04,
+      "notes": "Suburban vet pricing, slightly below Fairfax."
+    },
+    "transportation": {
+      "min": 320,
+      "max": 600,
+      "typical": 450,
+      "annualInflation": 0.03,
+      "notes": "Car-dependent. I-66 HOV/toll lanes to DC. VRE Manassas line at Broad Run adds commuter option. Higher fuel use than Fairfax."
+    },
+    "entertainment": {
+      "min": 380,
+      "max": 580,
+      "typical": 460,
+      "annualInflation": 0.025,
+      "notes": "Verizon Fios 1Gig, streaming bundle, dining out (fewer restaurants than Fairfax)."
+    },
+    "clothing": {
+      "min": 90,
+      "max": 220,
+      "typical": 140,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "min": 40,
+      "max": 95,
+      "typical": 60,
+      "annualInflation": 0.02
+    },
+    "subscriptions": {
+      "min": 30,
+      "max": 80,
+      "typical": 55,
+      "annualInflation": 0.03
+    },
+    "phoneCell": {
+      "min": 50,
+      "max": 80,
+      "typical": 62,
+      "annualInflation": 0.02,
+      "notes": "T-Mobile 55+ Essentials. Same plan as Fairfax."
+    },
+    "miscellaneous": {
+      "min": 100,
+      "max": 220,
+      "typical": 150,
+      "annualInflation": 0.025,
+      "notes": "HOA dues common in Gainesville subdivisions, EZ-Pass tolls, PWC vehicle decal."
+    },
+    "buffer": {
+      "min": 700,
+      "max": 700,
+      "typical": 700,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 325,
+      "max": 700,
+      "typical": 475,
+      "annualInflation": 0.055,
+      "notes": "Same retiree profile as Fairfax base; specialist availability slightly lower, may travel to Fairfax/DC."
+    },
+    "medicine": {
+      "min": 73,
+      "typical": 91,
+      "max": 925,
+      "annualInflation": 0.045
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0.02,
+      "notes": "Income tax computed from VA brackets; stored value 0 by convention."
+    }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true,
+      "brackets": [
+        { "min": 0,      "max": 23850,  "rate": 0.10 },
+        { "min": 23850,  "max": 96950,  "rate": 0.12 },
+        { "min": 96950,  "max": 206700, "rate": 0.22 },
+        { "min": 206700, "max": 394600, "rate": 0.24 },
+        { "min": 394600, "max": 501050, "rate": 0.32 },
+        { "min": 501050, "max": 751600, "rate": 0.35 },
+        { "min": 751600, "max": null,   "rate": 0.37 }
+      ],
+      "standardDeduction": 30000
+    },
+    "stateIncomeTax": {
+      "rate": 0.0575,
+      "type": "top-marginal",
+      "brackets": [
+        { "min": 0,     "max": 3000,  "rate": 0.02 },
+        { "min": 3000,  "max": 5000,  "rate": 0.03 },
+        { "min": 5000,  "max": 17000, "rate": 0.05 },
+        { "min": 17000, "max": null,  "rate": 0.0575 }
+      ],
+      "deduction": 24000,
+      "exemptions": "Age 65+ deduction $12K/person. SS fully exempt from VA tax."
+    },
+    "salesTax": {
+      "rate": 0.06,
+      "notes": "Prince William County 6% (4.3% state + 0.7% regional + 1% NOVA transit)"
+    },
+    "propertyTax": {
+      "rate": 0,
+      "notes": "Renters: no direct property tax. PWC vehicle personal property ~$3.70/$100 assessed — slightly below Fairfax."
+    },
+    "socialCharges": null,
+    "vatRate": 0,
+    "estVehicleTax": 1100,
+    "ssExempt": true,
+    "notes": "Same VA tax treatment as Fairfax. Lower PWC property tax rate offsets newer-car assessments."
+  },
+  "healthcare": {
+    "system": "Medicare (at 65) + private supplement",
+    "qualityRating": 7,
+    "waitTimes": "moderate",
+    "dentalIncluded": false,
+    "prescriptionCoverage": "Part D plan",
+    "notes": "Novant UVA Health System Prince William (Haymarket), Sentara Northern Virginia Medical Center. Inova Fair Oaks/Fairfax ~25 min for specialty care.",
+    "acaMarketplace": {
+      "benchmarkSilverMonthly2Adult": 2250,
+      "benchmarkSilverMonthlySingle": 1125,
+      "notes": "Anthem, CareFirst, Kaiser Permanente in Prince William. Slightly lower sticker than Fairfax.",
+      "premiumCapPctOfIncome": 0.085
+    }
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps widely available (Verizon Fios, Comcast/Xfinity)",
+    "dogFriendly": 8,
+    "expatCommunity": 0,
+    "englishPrevalence": 10,
+    "safetyRating": 8,
+    "notes": "Bull Run Mountains, Manassas Battlefield nearby. Quieter than inner-NOVA; suburban family feel."
+  },
+  "pros": [
+    "~20% cheaper rent than Fairfax",
+    "Same VA tax treatment (SS exempt, retiree deductions)",
+    "Lower PWC property tax rate",
+    "Quieter suburban environment",
+    "VRE commuter rail to DC available",
+    "Access to Bull Run Mountains and wineries"
+  ],
+  "cons": [
+    "Longer commute to DC / inner NOVA",
+    "Car-dependent, I-66 traffic during rush",
+    "Fewer restaurants and cultural amenities than Fairfax",
+    "Cold winters (23°F lows)",
+    "Specialty healthcare may require drive to Fairfax/DC"
+  ]
+}

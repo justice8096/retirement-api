@@ -79,6 +79,13 @@
       "notes": "Medicare Part B ($174.70/mo) + Medigap Plan G (~$200/mo x2 people) + Part D (~$45/mo x2) + dental/vision plans. Higher premiums reflect macular degeneration specialist coverage and frequent monitoring needs.",
       "annualInflation": 0.055
     },
+    "healthcarePreMedicare": {
+      "min": 1800,
+      "max": 2800,
+      "typical": 2300,
+      "notes": "ACA silver plan benchmark for 2-adult household, both 55-64, before subsidies. Marketplace pricing Fairfax County 2025. Subsidies reduce this dramatically at lower MAGI.",
+      "annualInflation": 0.06
+    },
     "insurance": {
       "min": 35,
       "max": 55,
@@ -273,7 +280,13 @@
     "waitTimes": "low-moderate",
     "dentalIncluded": false,
     "prescriptionCoverage": "Part D plan",
-    "notes": "Inova Fairfax Medical Center (Level I trauma), Virginia Hospital Center, access to Johns Hopkins/Georgetown specialists. Excellent healthcare infrastructure."
+    "notes": "Inova Fairfax Medical Center (Level I trauma), Virginia Hospital Center, access to Johns Hopkins/Georgetown specialists. Excellent healthcare infrastructure.",
+    "acaMarketplace": {
+      "benchmarkSilverMonthly2Adult": 2300,
+      "benchmarkSilverMonthlySingle": 1150,
+      "notes": "Anthem HealthKeepers, CareFirst BlueCross BlueShield, Kaiser Permanente active in Fairfax marketplace. Silver benchmark for 2 adults age 60.",
+      "premiumCapPctOfIncome": 0.085
+    }
   },
   "lifestyle": {
     "internetSpeed": "1Gbps+ widely available (Verizon Fios, Cox)",
