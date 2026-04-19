@@ -7,7 +7,7 @@ models both via `premiumCapPctOfIncome: 0 | 0.085`.
 
 ## Context
 The ACA marketplace has two possible subsidy regimes in the modelling window:
-- **Cliff** — pre-2021, returning for 2026: sliding 2.07–9.83% contribution
+- **Cliff** — pre-2021 rules, current for 2026 per Rev Proc 2025-25: sliding 2.10–9.96% contribution
   rate up to 400% FPL; hard cliff with no subsidy above 400%.
 - **Enhanced (ARPA/IRA)** — 2021–2025: flat 8.5% MAGI cap, no cliff.
 

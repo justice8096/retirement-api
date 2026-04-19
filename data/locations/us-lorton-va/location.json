@@ -3,54 +3,196 @@
   "name": "Lorton VA, USA",
   "country": "United States",
   "region": "Virginia",
-  "cities": ["Lorton", "Fort Belvoir"],
+  "cities": [
+    "Lorton",
+    "Fort Belvoir"
+  ],
   "currency": "USD",
   "exchangeRate": 1,
-  "visa": { "type": "Citizen", "incomeRequirement": null, "notes": "US citizen, no visa required." },
-  "climate": { "winterLowF": 25, "summerHighF": 89, "rainyDaysPerYear": 110, "meetsWarmWinterReq": false },
+  "visa": {
+    "type": "Citizen",
+    "incomeRequirement": null,
+    "notes": "US citizen, no visa required."
+  },
+  "climate": {
+    "winterLowF": 25,
+    "summerHighF": 89,
+    "rainyDaysPerYear": 110,
+    "meetsWarmWinterReq": false
+  },
   "monthlyCosts": {
-    "rent": { "min": 1900, "max": 2650, "typical": 2200, "type": "2-bedroom newer townhome/SFH", "annualInflation": 0.035, "notes": "Newer townhome developments (Laurel Hill, Lorton Station). Southern Fairfax County." },
-    "groceries": { "min": 1300, "max": 1700, "typical": 1490, "annualInflation": 0.03, "notes": "Wegmans, Giant, Harris Teeter. Similar to Fairfax pricing." },
-    "utilities": { "min": 260, "max": 420, "typical": 330, "annualInflation": 0.03 },
-    "healthcare": { "min": 550, "max": 850, "typical": 650, "notes": "Fairfax County Medicare baseline. Inova Mt Vernon 10 min, Inova Fairfax 20 min.", "annualInflation": 0.055 },
-    "insurance": { "min": 35, "max": 55, "typical": 45, "type": "renter's insurance", "annualInflation": 0.03 },
-    "petCare": { "min": 120, "max": 220, "typical": 170, "annualInflation": 0.04 },
-    "petDaycare": { "min": 310, "max": 490, "typical": 395, "annualInflation": 0.035 },
-    "petGrooming": { "min": 85, "max": 155, "typical": 115, "annualInflation": 0.03 },
-    "transportation": { "min": 300, "max": 550, "typical": 420, "annualInflation": 0.03, "notes": "Lorton VRE (Virginia Railway Express) station (Fredericksburg line) to DC. Interstate 95 + Fairfax County Pkwy access. Longer DC commute than Fairfax City." },
-    "entertainment": { "min": 400, "max": 590, "typical": 480, "annualInflation": 0.025, "notes": "Workhouse Arts Center (former prison), Occoquan Regional Park. Cable+1Gig." },
-    "clothing": { "min": 95, "max": 230, "typical": 150, "annualInflation": 0.02 },
-    "personalCare": { "min": 42, "max": 100, "typical": 65, "annualInflation": 0.02 },
-    "subscriptions": { "min": 30, "max": 80, "typical": 55, "annualInflation": 0.03 },
-    "phoneCell": { "min": 50, "max": 80, "typical": 62, "annualInflation": 0.02 },
-    "miscellaneous": { "min": 110, "max": 230, "typical": 160, "annualInflation": 0.025, "notes": "HOA (homeowners association) common in Laurel Hill subdivisions. Interstate 95 Express Lanes tolls." },
-    "buffer": { "min": 700, "max": 700, "typical": 700, "annualInflation": 0.025 },
-    "medicalOOP": { "min": 325, "max": 700, "typical": 475, "annualInflation": 0.055, "notes": "Same retiree profile. Specialists at Inova Fairfax + Johns Hopkins." },
-    "medicine": { "min": 73, "typical": 91, "max": 925, "annualInflation": 0.045 },
-    "taxes": { "typical": 0, "min": 0, "max": 0, "annualInflation": 0.02, "notes": "Income tax computed from VA brackets." },
-    "healthcarePreMedicare": { "min": 1800, "max": 2800, "typical": 2300, "annualInflation": 0.06, "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Fairfax County, VA). Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number." }
+    "rent": {
+      "min": 1900,
+      "max": 2650,
+      "typical": 2200,
+      "type": "2-bedroom newer townhome/SFH",
+      "annualInflation": 0.035,
+      "notes": "Newer townhome developments (Laurel Hill, Lorton Station). Southern Fairfax County."
+    },
+    "groceries": {
+      "min": 1300,
+      "max": 1700,
+      "typical": 1490,
+      "annualInflation": 0.03,
+      "notes": "Wegmans, Giant, Harris Teeter. Similar to Fairfax pricing."
+    },
+    "utilities": {
+      "min": 260,
+      "max": 420,
+      "typical": 330,
+      "annualInflation": 0.03
+    },
+    "healthcare": {
+      "min": 550,
+      "max": 850,
+      "typical": 650,
+      "notes": "Fairfax County Medicare baseline. Inova Mt Vernon 10 min, Inova Fairfax 20 min.",
+      "annualInflation": 0.055
+    },
+    "insurance": {
+      "min": 35,
+      "max": 55,
+      "typical": 45,
+      "type": "renter's insurance",
+      "annualInflation": 0.03
+    },
+    "petCare": {
+      "min": 120,
+      "max": 220,
+      "typical": 170,
+      "annualInflation": 0.04
+    },
+    "petDaycare": {
+      "min": 310,
+      "max": 490,
+      "typical": 395,
+      "annualInflation": 0.035
+    },
+    "petGrooming": {
+      "min": 85,
+      "max": 155,
+      "typical": 115,
+      "annualInflation": 0.03
+    },
+    "transportation": {
+      "min": 300,
+      "max": 550,
+      "typical": 420,
+      "annualInflation": 0.03,
+      "notes": "Lorton VRE (Virginia Railway Express) station (Fredericksburg line) to DC. Interstate 95 + Fairfax County Pkwy access. Longer DC commute than Fairfax City."
+    },
+    "entertainment": {
+      "min": 400,
+      "max": 590,
+      "typical": 480,
+      "annualInflation": 0.025,
+      "notes": "Workhouse Arts Center (former prison), Occoquan Regional Park. Cable+1Gig."
+    },
+    "clothing": {
+      "min": 95,
+      "max": 230,
+      "typical": 150,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "min": 42,
+      "max": 100,
+      "typical": 65,
+      "annualInflation": 0.02
+    },
+    "subscriptions": {
+      "min": 30,
+      "max": 80,
+      "typical": 55,
+      "annualInflation": 0.03
+    },
+    "phoneCell": {
+      "min": 50,
+      "max": 80,
+      "typical": 62,
+      "annualInflation": 0.02
+    },
+    "miscellaneous": {
+      "min": 110,
+      "max": 230,
+      "typical": 160,
+      "annualInflation": 0.025,
+      "notes": "HOA (homeowners association) common in Laurel Hill subdivisions. Interstate 95 Express Lanes tolls."
+    },
+    "buffer": {
+      "min": 700,
+      "max": 700,
+      "typical": 700,
+      "annualInflation": 0.025
+    },
+    "medicalOOP": {
+      "min": 325,
+      "max": 700,
+      "typical": 475,
+      "annualInflation": 0.055,
+      "notes": "Same retiree profile. Specialists at Inova Fairfax + Johns Hopkins."
+    },
+    "medicine": {
+      "min": 73,
+      "typical": 91,
+      "max": 925,
+      "annualInflation": 0.045
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0.02,
+      "notes": "Income tax computed from VA brackets."
+    },
+    "healthcarePreMedicare": {
+      "min": 1800,
+      "max": 2800,
+      "typical": 2300,
+      "annualInflation": 0.06,
+      "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Fairfax County, VA). Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+    }
   },
   "taxes": {
     "federalIncomeTax": {
-      "applies": true,
-      "brackets": [
-        { "min": 0, "max": 23850, "rate": 0.10 }, { "min": 23850, "max": 96950, "rate": 0.12 },
-        { "min": 96950, "max": 206700, "rate": 0.22 }, { "min": 206700, "max": 394600, "rate": 0.24 },
-        { "min": 394600, "max": 501050, "rate": 0.32 }, { "min": 501050, "max": 751600, "rate": 0.35 },
-        { "min": 751600, "max": null, "rate": 0.37 }
-      ],
-      "standardDeduction": 30000
+      "applies": true
     },
     "stateIncomeTax": {
-      "rate": 0.0575, "type": "top-marginal",
+      "rate": 0.0575,
+      "type": "top-marginal",
       "brackets": [
-        { "min": 0, "max": 3000, "rate": 0.02 }, { "min": 3000, "max": 5000, "rate": 0.03 },
-        { "min": 5000, "max": 17000, "rate": 0.05 }, { "min": 17000, "max": null, "rate": 0.0575 }
+        {
+          "min": 0,
+          "max": 3000,
+          "rate": 0.02
+        },
+        {
+          "min": 3000,
+          "max": 5000,
+          "rate": 0.03
+        },
+        {
+          "min": 5000,
+          "max": 17000,
+          "rate": 0.05
+        },
+        {
+          "min": 17000,
+          "max": null,
+          "rate": 0.0575
+        }
       ],
-      "deduction": 24000, "exemptions": "Age 65+ deduction $12K/person. SS fully exempt from VA tax."
+      "deduction": 24000,
+      "exemptions": "Age 65+ deduction $12K/person. SS fully exempt from VA tax."
     },
-    "salesTax": { "rate": 0.06, "notes": "Fairfax County 6%" },
-    "propertyTax": { "rate": 0, "notes": "Renters: no direct property tax. Fairfax County vehicle tax ~$4.57/$100." },
+    "salesTax": {
+      "rate": 0.06,
+      "notes": "Fairfax County 6%"
+    },
+    "propertyTax": {
+      "rate": 0,
+      "notes": "Renters: no direct property tax. Fairfax County vehicle tax ~$4.57/$100."
+    },
     "socialCharges": null,
     "vatRate": 0,
     "estVehicleTax": 1200,
@@ -59,18 +201,27 @@
   },
   "healthcare": {
     "system": "Medicare (at 65) + private supplement",
-    "qualityRating": 8, "waitTimes": "low-moderate", "dentalIncluded": false, "prescriptionCoverage": "Part D plan",
+    "qualityRating": 8,
+    "waitTimes": "low-moderate",
+    "dentalIncluded": false,
+    "prescriptionCoverage": "Part D plan",
     "notes": "Inova Mount Vernon Hospital 10 min (community hospital), Inova Fairfax 20 min for specialty.",
     "acaMarketplace": {
-      "benchmarkSilverMonthly2Adult": 2300, "benchmarkSilverMonthlySingle": 1150,
-      "premiumCapPctOfIncome": 0.085, "rateArea": "Fairfax County",
+      "benchmarkSilverMonthly2Adult": 2300,
+      "benchmarkSilverMonthlySingle": 1150,
+      "premiumCapPctOfIncome": 0.085,
+      "rateArea": "Fairfax County",
       "notes": "Northern Virginia (NOVA) marketplace same as Fairfax.",
-      "estimationLevel": "county", "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+      "estimationLevel": "county",
+      "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
   "lifestyle": {
     "internetSpeed": "1Gbps widely available (Verizon Fios, Cox, Xfinity)",
-    "dogFriendly": 9, "expatCommunity": 3, "englishPrevalence": 10, "safetyRating": 8,
+    "dogFriendly": 9,
+    "expatCommunity": 3,
+    "englishPrevalence": 10,
+    "safetyRating": 8,
     "notes": "Occoquan River access, Workhouse Arts Center, Laurel Hill Golf Club. Quieter than inner Northern Virginia; suburban family feel."
   },
   "pros": [

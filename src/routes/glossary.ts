@@ -180,7 +180,7 @@ const GLOSSARY: GlossaryEntry[] = [
     plain:
       'The minimum amount the IRS makes you withdraw each year from certain retirement accounts once you reach a set age.',
     example:
-      'A 75-year-old with a $500,000 IRA must withdraw about $20,325 that year (using the 2024 table).',
+      'A 75-year-old with a $500,000 IRA must withdraw about $20,325 that year (using the current Uniform Lifetime Table, post-SECURE 2.0).',
     technical:
       'Previous year-end balance ÷ IRS uniform lifetime table divisor for current age.',
     seeAlso: ['roth_conversion'],
@@ -312,9 +312,9 @@ const GLOSSARY: GlossaryEntry[] = [
     plain:
       'A yearly income amount set by the US government, used as a benchmark for many income-based programs.',
     example:
-      'For 2024, the poverty line in the lower 48 states is about $15,060 for one person and $20,440 for two.',
+      'For 2026, the poverty line in the lower 48 states is about $15,960 for one person and $21,560 for two.',
     technical:
-      'HHS Poverty Guidelines, published annually in the Federal Register. Separate tables for the 48 contiguous states + DC, Alaska, and Hawaii. Household-size adjustment is $5,380 per additional person (2024).',
+      'HHS Poverty Guidelines, published annually in the Federal Register. Separate tables for the 48 contiguous states + DC, Alaska, and Hawaii. Household-size adjustment is $5,600 per additional person (2026).',
     seeAlso: ['magi', 'aca', 'subsidy_cliff'],
   },
   {
@@ -324,7 +324,7 @@ const GLOSSARY: GlossaryEntry[] = [
     plain:
       'An income boundary where health-insurance help stops completely. Earning one dollar more than the cutoff can mean losing thousands in help.',
     example:
-      'In 2026, a couple earning $81,761 gets no ACA help, while the same couple earning $81,759 may get thousands in premium tax credits.',
+      'In 2026, a couple earning $86,241 gets no ACA help, while the same couple earning $86,239 may get thousands in premium tax credits.',
     technical:
       'Under pre-ARPA rules, ACA premium tax credits phase out fully at 400% of FPL. The enhanced rules from the 2021 American Rescue Plan removed the cliff and capped premiums at 8.5% of MAGI; those enhanced rules expired Dec 31 2025.',
     seeAlso: ['aca', 'fpl', 'applicable_percentage'],
@@ -338,7 +338,7 @@ const GLOSSARY: GlossaryEntry[] = [
     example:
       'At 250% of the poverty line under cliff rules, your cap is about 6.5% of income. A $70,000 earner would pay about $4,550 per year; ACA help covers any premium above that.',
     technical:
-      'Under cliff (pre-ARPA) rules the sliding scale runs 2.07% (at 100% FPL) up to 9.83% (at 400% FPL). Under enhanced (ARPA/IRA 2021–2025) rules the scale is 0% (≤150% FPL) up to 8.5% flat above 400% FPL.',
+      'Under cliff rules (current for 2026 per Rev Proc 2025-25) the sliding scale runs 2.10% (at 100% FPL) up to 9.96% (at 400% FPL). Under enhanced rules (ARPA/IRA 2021–2025, expired) the scale was 0% (≤150% FPL) up to 8.5% flat above 400% FPL.',
     seeAlso: ['aca', 'subsidy_cliff', 'magi'],
   },
 ];
