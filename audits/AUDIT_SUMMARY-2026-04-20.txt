@@ -1,0 +1,143 @@
+POST-REMEDIATION AUDIT SUMMARY
+==============================
+Date:    2026-04-20
+Branch:  fix/audit-remediation-all  (PR #11)
+Parent:  cleanup/seed-data-integrity-path @ 4982128
+Project: retirement-api v0.1.0 (Fastify 5 + Prisma 6 + PostgreSQL + TypeScript ESM)
+Supersedes: audits/AUDIT_SUMMARY.txt (2026-04-19)
+
+Context: Full remediation cycle closing HIGH, MEDIUM, and LOW findings from
+the 2026-04-19 audit round plus the LLM-compliance governance roadmap.
+
+1. SAST/DAST Scan:          PASS       - 4 open findings (1 CRITICAL risk-accepted,
+                                          0 HIGH, 0 MEDIUM, 1 LOW, 2 INFO).
+                                          Delta: 18 -> 4 open (-14). Every HIGH + MEDIUM
+                                          closed. Only residuals: C-01 Clerk test keys
+                                          on disk (user risk-accepted) and L-NEW-03
+                                          Zod path info-disclosure (accepted low).
+
+2. Supply Chain Audit:      PASS       - npm audit: 0 vulnerabilities (was 1 CRITICAL
+                                          + 4 HIGH at 2026-04-19).
+                                          SLSA L0 -> L1 (CycloneDX SBOM shipping in CI,
+                                          `continue-on-error` dropped on typecheck/build/
+                                          audit, `--audit-level=high` enforced).
+                                          1 of 19 direct deps exact-pinned (stripe 20.4.1).
+                                          Still missing: Renovate/Dependabot, Docker digest
+                                          pin (guidance comment added).
+
+3. CWE Mapping:             PASS       - 2 open CWEs (CWE-798 risk-accepted, CWE-209
+                                          accepted low). 13 CWEs CLOSED this cycle.
+                                          OWASP A05 Security Misconfiguration cluster
+                                          fully cleared. No CRITICAL hits in any framework.
+
+4. LLM Compliance:          80/100     - GOOD band (70-89); up from 66 (DEVELOPING).
+                                          Biggest gains: D2 Training Data Disclosure
+                                          (38 -> 62, +24 via METHODOLOGY.md), D1
+                                          Transparency (62 -> 80, +18 via OpenAPI +
+                                          `_units` + `_labels` + ADRs), D7 Incident
+                                          Response (80 -> 93, +13 via SECURITY.md IR
+                                          runbook + OPS.md).
+                                          Roadmap to MATURE (90+): Renovate, Docker digest,
+                                          EU AI Act self-classification, multilingual
+                                          glossary, Redis pub/sub, tabletop cadence.
+
+5. Dyscalculia Compliance:  95/100 A   - +11 from 84/100 (A-). All 8 prior findings
+                                          CLOSED (F-201 HIGH + 4 MEDIUM + 3 LOW).
+                                          1 residual LOW (L-301: groceries JSONB is
+                                          intentionally free-form; by-design).
+
+6. Dyslexia Compliance:     94/100 A   - +18 from 76/100 (B). All 3 MEDIUM (F-006/F-007/
+                                          F-011) and 2 LOW (F-012/F-013) closed.
+                                          1 residual LOW (F-014 new: Accept-Version: 2
+                                          needs a plain-language How-To in OpenAPI info
+                                          description; ~10 min fix).
+
+7. Contribution Analysis:   10/90      - Justice/Claude for this remediation cycle.
+                                          Grade for delta: A- (comprehensive closure,
+                                          no regressions, build green; held back from A
+                                          only by the 67-file single-PR reviewability
+                                          concern).
+                                          Cumulative blended: ~25/75 Justice/Claude,
+                                          Grade B+. Recorded as bimodal: feature cycles
+                                          ~38/62, remediation cycles ~10/90.
+
+Overall: PASS
+-------------
+No critical or high findings in application code. SLSA L1 achieved. Every
+cognitive-accessibility dimension scored A or higher. Governance posture
+moved from foundational to production-ready.
+
+Remediation Highlights (this cycle):
+
+  Security
+    - Redis password placeholder (H-03)
+    - invalidateUserCache() + assertNoDevBypassUserInProd() (H-05 + M-NEW-01)
+    - .strict() on fees + financial schemas (M-02)
+    - JSONB depth (32) + key (10k) caps (L-02)
+    - Admin reindex mutex (L-03)
+    - ContributionType typed union (L-04)
+    - Preferences 16 KB cap (L-05)
+    - Export take-caps (L-06)
+    - Release :id Zod validator (L-NEW-01)
+    - ensureStripeCustomer optimistic-concurrency (L-NEW-02)
+
+  Dyscalculia
+    - Accept-Version: 2 header infra + X-API-Version response (F-202)
+    - acaMarketplace _units via route decoration (F-203)
+    - household _units + _labels (F-204)
+    - scenarios monte_carlo_v1 anchor synthesis (F-205)
+    - max<=3x typical seed ratio test (F-206)
+    - OpenAPI GlossaryResponse schema (F-207)
+    - acaApplicable: false on non-US locations (F-208)
+
+  Dyslexia
+    - Module-level JSDoc on 10 route files (F-006)
+    - 16 raw-Zod leaks migrated to toValidationErrorPayload (F-007)
+    - validateBody() helper exported (F-011)
+    - 82 Mid-Atlantic abbreviation expansions via expand-abbreviations.mjs (F-012)
+    - _labels sibling + getLabelsFor() (F-013)
+
+  WCAG
+    - 85 contrast fixes + skip-nav + lang="en" on 26 HTML files via wcag-fix-html.mjs
+    - _a11y summary on GET /api/locations/:id
+
+  Governance
+    - SECURITY.md with disclosure SLA + 6-phase IR runbook
+    - docs/METHODOLOGY.md (seed-data provenance + projection assumptions)
+    - docs/OPS.md (Clerk rotation, gitleaks, Redis metric)
+    - docs/adr/ 0001 (runtime stack), 0002 (ACA regime), 0003 (API versioning)
+    - CHANGELOG.md
+    - CycloneDX SBOM in CI
+    - Stripe exact-pinned to 20.4.1
+    - Dockerfile digest-pin guidance comment
+
+Recommended next-sprint items (in priority order):
+  1. Add Renovate/Dependabot with weekly npm schedule                   ~10 min
+  2. Rotate Clerk sk_test_ key + adopt secrets manager (C-01 closure)   ~20 min
+  3. Pin Dockerfile base image by digest (follow OPS.md procedure)      ~15 min
+  4. Close F-014 — add Accept-Version: 2 walkthrough to OpenAPI desc    ~10 min
+  5. Instrument Redis error-rate metric per OPS.md (closes I-NEW-01)    ~1 hr
+  6. Add unit tests for ensureStripeCustomer + validateBody + sanitize  ~2 hrs
+  7. EU AI Act self-classification document                             ~3 hrs
+  8. Multilingual glossary variant                                      ~1 day
+
+Outputs written (this cycle):
+  audits/sast-dast-scan-2026-04-20.md           (~230 lines)
+  audits/supply-chain-audit-2026-04-20.md       (~285 lines)
+  audits/cwe-mapping-2026-04-20.md              (~200 lines)
+  audits/llm-compliance-report-2026-04-20.md    (~230 lines)
+  audits/Dyscalculia-Compliance-Audit-retirement-api-2026-04-20.md (~200 lines)
+  audits/Dyslexia-Compliance-Audit-retirement-api-2026-04-20.md    (~280 lines)
+  audits/contribution-analysis-2026-04-20.md    (~170 lines)
+  audits/AUDIT_SUMMARY-2026-04-20.txt           (this file)
+
+Prior audits retained for diff:
+  audits/AUDIT_SUMMARY.txt                       (2026-04-19)
+  audits/sast-dast-scan.md
+  audits/supply-chain-audit.md
+  audits/cwe-mapping.md
+  audits/llm-compliance-report.md
+  audits/contribution-analysis.md
+  audits/Dyscalculia-Compliance-Audit-retirement-api-2026-04-19.md
+  audits/Dyslexia-Compliance-Audit-retirement-api-2026-04-19.md
+  audits/WCAG-AA-API-Audit-2026-04-10.md
