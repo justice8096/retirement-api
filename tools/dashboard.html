@@ -12,7 +12,7 @@
   --bg-hover: #1A2850;
   --text-primary: #E8ECF4;
   --text-secondary: #C8D6E4;
-  --text-muted: #8A9BAD;
+  --text-muted: #D8DCE4;
   --amber: #D4943A;
   --amber-light: #E8B86D;
   --teal: #2A7B7B;
@@ -146,9 +146,34 @@ canvas { width: 100% !important; height: 300px !important; }
 
 .skip-link { position: absolute; top: -40px; left: 0; background: #D4943A; color: #060E1A; padding: 8px 16px; text-decoration: none; z-index: 100; font-weight: 600; }
 .skip-link:focus { top: 0; }
+
+/* WCAG 2.4.1 — skip-to-content (added by tools/wcag-fix-html.mjs). */
+.skip-nav {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-nav:focus {
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  background: #0B1426;
+  color: #E8ECF4;
+  border: 2px solid #4DBFBF;
+  z-index: 10000;
+  text-decoration: underline;
+}
+
 </style>
 </head>
 <body>
+<a class="skip-nav" href="#main">Skip to content</a>
+
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <div class="header no-print">
@@ -1260,7 +1285,7 @@ function drawBarChart(canvasId, labels, datasets, opts) {
   const yMax = Math.ceil(maxVal / yStep) * yStep;
 
   ctx.clearRect(0, 0, W, H);
-  ctx.strokeStyle = '#1E3055'; ctx.lineWidth = 1; ctx.fillStyle = '#8B9DC3'; ctx.font = '11px Segoe UI';
+  ctx.strokeStyle = '#1E3055'; ctx.lineWidth = 1; ctx.fillStyle = '#C9D6E8'; ctx.font = '11px Segoe UI';
   for (var i = 0; i <= 5; i++) {
     var y = pad.top + chartH - (i / 5) * chartH;
     ctx.beginPath(); ctx.moveTo(pad.left, y); ctx.lineTo(W - pad.right, y); ctx.stroke();
@@ -1288,7 +1313,7 @@ function drawBarChart(canvasId, labels, datasets, opts) {
     });
   });
 
-  ctx.fillStyle = '#8B9DC3'; ctx.font = '11px Segoe UI'; ctx.textAlign = 'center';
+  ctx.fillStyle = '#C9D6E8'; ctx.font = '11px Segoe UI'; ctx.textAlign = 'center';
   labels.forEach(function(lbl, idx) {
     var x = pad.left + idx * barGroupW + barGroupW / 2;
     var parts = lbl.split('\n');
@@ -1308,7 +1333,7 @@ function drawLineChart(canvasId, labels, datasets, opts) {
   var yMax = opts.yMax !== undefined ? opts.yMax : Math.max.apply(null, allVals) * 1.1;
 
   ctx.clearRect(0, 0, W, H);
-  ctx.strokeStyle = '#1E3055'; ctx.lineWidth = 1; ctx.fillStyle = '#8B9DC3'; ctx.font = '11px Segoe UI';
+  ctx.strokeStyle = '#1E3055'; ctx.lineWidth = 1; ctx.fillStyle = '#C9D6E8'; ctx.font = '11px Segoe UI';
   for (var i = 0; i <= 5; i++) {
     var y = pad.top + chartH - (i / 5) * chartH;
     var val = yMin + (i / 5) * (yMax - yMin);
@@ -1333,7 +1358,7 @@ function drawLineChart(canvasId, labels, datasets, opts) {
     }
   });
 
-  ctx.fillStyle = '#8B9DC3'; ctx.font = '11px Segoe UI'; ctx.textAlign = 'center';
+  ctx.fillStyle = '#C9D6E8'; ctx.font = '11px Segoe UI'; ctx.textAlign = 'center';
   var step = Math.max(1, Math.floor(labels.length / 8));
   labels.forEach(function(lbl, idx) {
     if (idx % step === 0 || idx === labels.length - 1) {
@@ -1348,7 +1373,7 @@ function drawLineChart(canvasId, labels, datasets, opts) {
     ctx.strokeStyle = ds.color || COLORS[si]; ctx.lineWidth = 2;
     if (ds.dashed) ctx.setLineDash([4, 4]); else ctx.setLineDash([]);
     ctx.beginPath(); ctx.moveTo(lx, 10); ctx.lineTo(lx + 20, 10); ctx.stroke(); ctx.setLineDash([]);
-    ctx.fillStyle = '#8B9DC3'; ctx.textAlign = 'left'; ctx.fillText(ds.label, lx + 24, 14);
+    ctx.fillStyle = '#C9D6E8'; ctx.textAlign = 'left'; ctx.fillText(ds.label, lx + 24, 14);
     lx += ctx.measureText(ds.label).width + 44;
   });
 }
@@ -1369,7 +1394,7 @@ function drawPieChart(canvasId, labels, values, colors) {
     ctx.beginPath(); ctx.moveTo(cx, cy); ctx.arc(cx, cy, r, angle, angle + slice); ctx.closePath(); ctx.fill();
     if (slice > 0.15) {
       var mid = angle + slice / 2;
-      ctx.fillStyle = '#8B9DC3'; ctx.font = '11px Segoe UI';
+      ctx.fillStyle = '#C9D6E8'; ctx.font = '11px Segoe UI';
       ctx.textAlign = Math.cos(mid) > 0 ? 'left' : 'right';
       ctx.fillText(Math.round(val / total * 100) + '%', cx + Math.cos(mid) * (r + 10), cy + Math.sin(mid) * (r + 10));
     }
@@ -1407,7 +1432,7 @@ function drawHistogram(canvasId, data, bins, opts) {
     ctx.fillRect(x, pad.top + chartH - bh, bw, bh);
   });
 
-  ctx.fillStyle = '#8B9DC3'; ctx.font = '11px Segoe UI'; ctx.textAlign = 'center';
+  ctx.fillStyle = '#C9D6E8'; ctx.font = '11px Segoe UI'; ctx.textAlign = 'center';
   for (var i = 0; i <= 4; i++) {
     ctx.fillText(fmtK(mn + (i / 4) * (mx - mn)), pad.left + (i / 4) * chartW, H - 8);
   }
