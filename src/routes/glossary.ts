@@ -281,6 +281,66 @@ const GLOSSARY: GlossaryEntry[] = [
       'baseSpending × (1 − declineRate)^yearsIntoRetirement.',
     seeAlso: ['blanchett_smile'],
   },
+  {
+    key: 'aca',
+    term: 'ACA',
+    aliases: ['Affordable Care Act', 'Obamacare', 'marketplace', 'exchange'],
+    plain:
+      'A US law that lets you buy health insurance on a government marketplace and may lower the price based on your income.',
+    example:
+      'A couple retiring at 62 with modest income can buy an ACA plan and pay much less than the sticker price.',
+    technical:
+      'Patient Protection and Affordable Care Act of 2010. Creates federal and state insurance exchanges and income-tested premium tax credits governed by IRC §36B.',
+    seeAlso: ['magi', 'fpl', 'subsidy_cliff', 'applicable_percentage'],
+  },
+  {
+    key: 'magi',
+    term: 'MAGI',
+    aliases: ['Modified Adjusted Gross Income', 'ACA income'],
+    plain:
+      'The measure of yearly income the government uses to decide how much health-insurance help you qualify for.',
+    example:
+      'If your Adjusted Gross Income is $70,000 and you got $20,000 in Social Security, your MAGI for ACA is about $90,000.',
+    technical:
+      'For ACA purposes: AGI + any tax-exempt interest + non-taxable Social Security benefits + excluded foreign income. Defined in IRC §36B(d)(2)(B).',
+    seeAlso: ['aca', 'fpl', 'subsidy_cliff'],
+  },
+  {
+    key: 'fpl',
+    term: 'Federal Poverty Level',
+    aliases: ['FPL', 'poverty line', 'poverty threshold'],
+    plain:
+      'A yearly income amount set by the US government, used as a benchmark for many income-based programs.',
+    example:
+      'For 2024, the poverty line in the lower 48 states is about $15,060 for one person and $20,440 for two.',
+    technical:
+      'HHS Poverty Guidelines, published annually in the Federal Register. Separate tables for the 48 contiguous states + DC, Alaska, and Hawaii. Household-size adjustment is $5,380 per additional person (2024).',
+    seeAlso: ['magi', 'aca', 'subsidy_cliff'],
+  },
+  {
+    key: 'subsidy_cliff',
+    term: 'Subsidy Cliff',
+    aliases: ['ACA cliff', '400% FPL cliff', 'income cutoff'],
+    plain:
+      'An income boundary where health-insurance help stops completely. Earning one dollar more than the cutoff can mean losing thousands in help.',
+    example:
+      'In 2026, a couple earning $81,761 gets no ACA help, while the same couple earning $81,759 may get thousands in premium tax credits.',
+    technical:
+      'Under pre-ARPA rules, ACA premium tax credits phase out fully at 400% of FPL. The enhanced rules from the 2021 American Rescue Plan removed the cliff and capped premiums at 8.5% of MAGI; those enhanced rules expired Dec 31 2025.',
+    seeAlso: ['aca', 'fpl', 'applicable_percentage'],
+  },
+  {
+    key: 'applicable_percentage',
+    term: 'Applicable Percentage',
+    aliases: ['premium cap', 'expected contribution'],
+    plain:
+      'The share of your income you are expected to pay for health insurance before ACA help kicks in.',
+    example:
+      'At 250% of the poverty line under cliff rules, your cap is about 6.5% of income. A $70,000 earner would pay about $4,550 per year; ACA help covers any premium above that.',
+    technical:
+      'Under cliff (pre-ARPA) rules the sliding scale runs 2.07% (at 100% FPL) up to 9.83% (at 400% FPL). Under enhanced (ARPA/IRA 2021–2025) rules the scale is 0% (≤150% FPL) up to 8.5% flat above 400% FPL.',
+    seeAlso: ['aca', 'subsidy_cliff', 'magi'],
+  },
 ];
 
 export default async function glossaryRoutes(app: FastifyInstance): Promise<void> {
