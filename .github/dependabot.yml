@@ -33,6 +33,11 @@ updates:
       sentry:
         patterns:
           - "@sentry/*"
+      # Dev tooling groups patch + minor bumps only. Major bumps (e.g.
+      # typescript 5 → 6, vitest 3 → 4) arrive as individual per-package
+      # PRs so each can be evaluated on its own — previous bundled PRs
+      # (closed #23) were blocked when one package's major introduced
+      # breaking changes the others didn't share.
       dev-tooling:
         dependency-type: development
         patterns:
@@ -40,6 +45,9 @@ updates:
           - "tsx"
           - "vitest"
           - "@types/*"
+        update-types:
+          - "minor"
+          - "patch"
 
   # GitHub Actions — pin SHAs, update tags weekly.
   - package-ecosystem: github-actions
