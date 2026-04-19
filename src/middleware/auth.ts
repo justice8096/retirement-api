@@ -85,7 +85,13 @@ export async function registerClerk(app: FastifyInstance): Promise<void> {
 
 export async function requireAuth(request: FastifyRequest, reply: FastifyReply): Promise<void> {
   // ─── Dev bypass: skip auth in development when no Authorization header ──
-  if (process.env.NODE_ENV === 'development' && !request.headers.authorization) {
+  // Requires BOTH NODE_ENV=development AND DEV_AUTH_BYPASS=1 — guards against a
+  // misconfigured prod deploy (NODE_ENV unset/development) silently granting admin.
+  if (
+    process.env.NODE_ENV === 'development' &&
+    process.env.DEV_AUTH_BYPASS === '1' &&
+    !request.headers.authorization
+  ) {
     try {
       // Find or create a dev user for local frontend testing
       let devUser = await prisma.user.findFirst({ where: { email: 'dev@localhost' } });

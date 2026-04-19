@@ -1,53 +1,63 @@
-POST-REMEDIATION RE-AUDIT SUMMARY
-====================================
-Date: 2026-04-02
-Commit: 93a719f (post-fix)
-Branch: expand-household-model
-Project: retirement-api (Fastify 5 + Prisma 6 + TypeScript API)
+POST-COMMIT AUDIT SUMMARY
+==========================
+Date: 2026-04-19
+Commit: 80e2e91
+Branch: cleanup/seed-data-integrity-path
+Project: retirement-api v0.1.0 (Fastify 5 + Prisma 6 + PostgreSQL + TypeScript ESM)
+Previous Audit: 2026-04-16
 
-Phase 1 (Initial Audit):
-  1. SAST/DAST Scan:        25 findings (2 critical, 5 high, 7 medium, 6 low, 5 info)
-  2. Supply Chain Audit:     SLSA L1 (partial), 0/16 deps pinned, no SBOM
-  3. CWE Mapping:           17 CWEs mapped to 8 frameworks
-  4. LLM Compliance:        55/100 -- Needs Improvement
-  5. Contribution Analysis:  46% Human / 54% AI -- Quality Grade B+
+Phase 1 (Security Scanning):
+  1. SAST/DAST Scan:        CONDITIONAL PASS -- 18 open findings
+                            (1 CRITICAL, 4 HIGH, 3 MEDIUM, 7 LOW, 3 INFO)
+                            Delta vs 2026-04-16: +5 new (2 supply-chain HIGH, 1 MEDIUM dev-bypass,
+                            2 LOW race-conditions). 1 fixed (N-01 Preferences PATCH).
+  2. Supply Chain Audit:     FAIL -- SLSA L1, 5 open advisories
+                            (1 CRITICAL @clerk/shared, 1 HIGH fastify, 3 HIGH vite dev-only).
+                            All have upstream fixes. `npm audit fix` closes them.
+  3. CWE Mapping:           15 distinct CWEs open, mapped to 8 frameworks
+                            (5 new: CWE-1287, CWE-436/863, CWE-489, CWE-362, CWE-180/284 via Vite).
+                            1 resolved: CWE-703.
 
-Phase 2 (Re-Audit After Fixes):
-  1. SAST/DAST Re-Scan:     9 remaining (1 critical, 2 high, 1 medium, 5 low) -- 11 FIXED, 1 NEW
-  2. Supply Chain Re-Audit:  FAIL -- 5 HIGH npm advisories (Clerk SSRF, Prisma/Effect)
-  3. CWE Mapping:           11 CWEs remaining -- 8 RESOLVED (47% reduction)
-  4. LLM Compliance:        62/100 -- Adequate (+7 points)
-  5. Contribution Analysis:  39% Human / 61% AI -- Quality Grade A- (up from B+)
+Phase 2 (Compliance & Attribution):
+  4. LLM Compliance:        66/100 -- DEVELOPING (up from 62, +4 points)
+                            Gains: Transparency (+8), Sensitive Data Handling (+6),
+                            Incident Response (+6). Loss: Supply Chain (-3, new CVEs).
+  5. Contribution Analysis:  38% Human / 62% AI -- Quality Grade A- (hold)
+                            Steady trend; dev-bypass finding shows where AI-authored
+                            convenience code needed more human review.
 
-Overall: CONDITIONAL PASS (improved from FAIL)
-Key Improvements:
-  - 11/20 SAST/DAST findings fixed (55% fix rate)
-  - 8/17 CWEs resolved (47% reduction)
-  - Encryption enforced at startup in production (no silent plaintext degradation)
-  - Stripe webhook secret validated at runtime (no more non-null assertion)
-  - Path traversal in dev file server fixed
-  - Hardcoded DB password removed from version-controlled script
-  - Admin routes now validate path parameters with Zod
-  - Webhook idempotency race condition fixed (insert-first pattern)
-  - CORS wildcard rejected when credentials: true
-  - Health endpoint details restricted to admin only
-  - crypto.randomUUID() replaces Math.random() for request IDs
+Overall: CONDITIONAL PASS (improved from 2026-04-16 on composite score)
+Action Required: YES -- high-confidence 1-command fix available
 
-Supply Chain URGENT:
-  - GHSA-gjxx-92w9-8v8f: Clerk SSRF -- may leak secret keys (fix available)
-  - GHSA-38f7-945m-qr2g: Effect AsyncLocalStorage contamination (fix available)
-  - Action: run `npm audit fix`
+Immediate Actions (1-command remediation):
+  - Run `npm audit fix` -- closes 1 CRITICAL + 4 HIGH (fastify, @clerk/shared, vite x3)
 
-Remaining Action Items:
-  - 1 critical (Clerk key on disk -- not in git, rotation deferred)
-  - 2 high (H-03 Redis default password in .env.example, H-05 user cache race)
-  - 1 new medium (N-01 preferences PATCH returns 200 on error)
-  - 5 low (JSONB depth limits, reindex mutex, badge typing, preferences keys, export timeout)
-  - Supply chain: 5 HIGH advisories, deps unpinned, no SBOM, no provenance
+Near-Term Actions (single-commit fixes):
+  - Add DEV_AUTH_BYPASS=1 secondary guard in src/middleware/auth.ts (M-NEW-01)
+  - Export invalidateUserCache(authProviderId) from auth.ts (H-05)
+  - Replace Redis 'changeme' password in .env.example (H-03)
+  - Add .strict() to feesSchema and financialSchema (M-02)
+  - Add UUID/ID Zod validator to /api/releases/:id/checkout (L-NEW-01)
+
+Deferred / Risk-Accepted:
+  - C-01 Clerk test key on disk (user risk-accepted; not in git)
+  - L-02, L-03, L-06 low-severity resource-consumption items
+
+New Capability Since 2026-04-16:
+  - OpenAPI/Swagger registration (src/lib/swagger.ts)
+  - _units metadata on financial/withdrawal/fees responses
+  - Content-Language header from Accept-Language
+  - Glossary endpoint (/api/glossary) with plain + technical definitions
+  - Dyslexia/dyscalculia accessibility sub-schemas in preferences
+  - ACA cliff-regime modeling + Mid-Atlantic + US-territory location seed data
+  - /api/me/fees route (brokerage, transfer, FX fees)
+  - Per-account load % and fees % on FinancialSettings
+  - Rate-limit middleware test suite
+  - Seed-data integrity test suite
 
 Reports:
-  - audits/sast-dast-scan.md          (re-audit with remediation status)
-  - audits/supply-chain-audit.md      (re-audit with vulnerability findings)
-  - audits/cwe-mapping.md             (re-audit with delta)
-  - audits/llm-compliance-report.md   (re-audit with before/after)
-  - audits/contribution-analysis.md   (re-audit with delta)
+  - D:\retirement-api\audits\sast-dast-scan.md
+  - D:\retirement-api\audits\supply-chain-audit.md
+  - D:\retirement-api\audits\cwe-mapping.md
+  - D:\retirement-api\audits\llm-compliance-report.md
+  - D:\retirement-api\audits\contribution-analysis.md

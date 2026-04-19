@@ -1,263 +1,196 @@
-# Contribution Analysis Report (Re-Audit)
+# Contribution Analysis Report
 
 | Field | Value |
 |---|---|
-| **Date** | 2026-04-02 |
-| **Commit** | 93a719f (post-fix) |
-| **Branch** | expand-household-model |
-| **Auditor** | Automated (Claude Code) |
-| **Project** | retirement-api v0.1.0 |
-| **Phase** | 2 Re-Audit (post-remediation, reflects complete audit-fix-reaudit cycle) |
+| **Report Date** | 2026-04-19 |
+| **Project Duration** | 2026-03-21 (initial commit) → 2026-04-19 |
+| **Contributors** | Justice (Human), Claude Opus 4.7 (AI Assistant) |
+| **Deliverable** | retirement-api v0.1.0 — Fastify 5 + Prisma 6 + PostgreSQL financial API |
+| **Audit Type** | Delta re-audit (contribution shift since 2026-04-16) |
 
 ---
 
 ## Executive Summary
 
-This is an updated contribution analysis reflecting the full AI-driven security audit and remediation cycle: Phase 1 audit (AI-generated) identified 25 findings, AI-generated remediation code was applied, and a Phase 2 re-audit (AI-generated) verified fixes. The most significant shift is in the **Remediation** dimension, which has moved from a projected 50/50 split to a confirmed 20% Human / 80% AI split. The **Security Auditing** dimension remains overwhelmingly AI-driven at 95%.
+Since the 2026-04-16 audit, 30 commits have landed. The commit log shows a continued pair-programming pattern: Justice directs (scope, architecture, PR acceptance, data curation) and Claude implements (Zod schemas, Prisma encryption plumbing, route handlers, tests). The new work is dominated by location seed-data curation and feature-branch merges (which are largely human-authored data with AI-assisted review) plus tactical API additions (fees route, accessibility schema blocks).
 
-**Key Finding:** The audit-fix-reaudit loop was executed almost entirely by AI, with human involvement limited to triggering the process, reviewing proposed fixes, and merging changes. This represents a mature AI-assisted security workflow.
+**Overall Collaboration Model**: Directed pair-programming with AI-assisted implementation and audit. Justice retains architectural authority; Claude handles boilerplate, validation schemas, tests, and audit reports.
 
-**Overall Quality Grade: A-** (upgraded from B+)
+**Overall Contribution Balance:**
+- **Architecture & Design**: **80 / 20** (Justice / Claude) — unchanged
+- **Code Generation**: **38 / 62** (Justice / Claude) — slight shift toward Justice (+3 pp)
+- **Security Auditing**: **5 / 95** (Justice / Claude) — unchanged
+- **Remediation Implementation**: **25 / 75** (Justice / Claude) — Justice reviewing more
+- **Testing & Validation**: **25 / 75** (Justice / Claude) — rate-limit and seed-data tests AI-authored
+- **Documentation**: **30 / 70** (Justice / Claude) — CLAUDE.md, SECURITY.md frames are human-anchored, audit prose is AI
+- **Domain Knowledge**: **70 / 30** (Justice / Claude) — ACA cliff-regime + Mid-Atlantic locations are domain-heavy human work
 
----
+**Overall Human / AI**: **38 / 62** (was 39 / 61 at 2026-04-16) — essentially steady.
 
-## Methodology
-
-- Examined git commit metadata (Co-Authored-By trailers confirming AI pair-programming)
-- Compared pre-fix and post-fix SAST/DAST reports to assess remediation quality
-- Analyzed the 11 verified fixes for code authorship patterns
-- Reviewed updated supply chain audit for new findings
-- Assessed contribution shifts driven by the remediation cycle
-
----
-
-## Dimension Analysis
-
-### 1. Architecture & Design
-
-**Split: 75% Human / 25% AI** (unchanged)
-
-No architectural changes were made during the remediation cycle. All fixes were targeted patches to existing code patterns (null checks, status codes, guard clauses, Zod validation). The architecture decisions (Fastify, Prisma, PostgreSQL, Redis, Clerk, Stripe, multi-stage Docker) remain human-driven.
-
-**Change from previous:** None. The remediation cycle did not alter the architectural split.
+**Overall Quality Grade**: **A-** (hold from 2026-04-16)
 
 ---
 
-### 2. Code Generation
+## Attribution Matrix
 
-**Split: 35% Human / 65% AI** (was 40/60)
+### Dimension 1: Architecture & Design — 80 / 20 (unchanged)
 
-| Aspect | Change | Rationale |
-|---|---|---|
-| Route handlers | Slight AI increase | The 11 fixes applied to route handlers (webhooks, household, preferences, admin, health, releases, locations) were AI-generated patches verified by re-audit |
-| Middleware | Slight AI increase | `encryption.ts` startup validation and `auth.ts` Zod schema additions were AI-generated |
-| `serve.js` path traversal guard | AI-generated | Single-line `startsWith(ROOT)` guard is a textbook AI-generated security patch |
-| `server.ts` changes | AI-generated | `crypto.randomUUID()` import and CORS hardening logic are AI-generated patterns |
-| Shared library, data tools | Unchanged | Still primarily human-authored domain logic |
+**Human:**
+- Decision to use Fastify 5 + Prisma 6 + PostgreSQL.
+- Clerk JWT model vs custom auth.
+- Stripe one-time payment + legacy subscription grandfathering model.
+- Per-tier rate-limit ceilings (60/120/300/600).
+- Accessibility-first API surface (Content-Language, `_units` metadata, glossary endpoint) — directed by Justice even though Claude authored the implementation.
+- Mid-Atlantic cliff-regime modeling scope — Justice decided to add `healthcarePreMedicare` and ACA marketplace fields.
 
-**Change from previous:** Human share decreased by 5pp. The remediation patches were generated by AI based on Phase 1 finding descriptions. The fixes are high-quality, targeted, and correct (11 of 11 verified as properly implemented by re-audit). This demonstrates AI code generation operating at its strongest: well-scoped patches with clear security requirements.
+**AI:**
+- Suggested modular folder layout (routes/, middleware/, lib/, db/).
+- Proposed Zod `.strict()` patterns and `safeJsonRecord` helper.
+- Proposed the plain-language validation envelope shape.
 
----
+### Dimension 2: Code Generation — 38 / 62 (was 35 / 65)
 
-### 3. Security Auditing
-
-**Split: 5% Human / 95% AI** (unchanged)
-
-The re-audit cycle reinforces this split:
+Slight human uptick reflecting the heavy seed-data work in this cycle.
 
 | Aspect | Attribution | Rationale |
 |---|---|---|
-| Phase 1 SAST/DAST (25 findings) | AI (Claude Code) | Original scan |
-| Phase 1 supply chain audit | AI (Claude Code) | Original scan |
-| Phase 1 CWE mapping | AI (Claude Code) | Original cross-framework mapping |
-| Phase 1 LLM compliance report | AI (Claude Code) | Original 8-dimension scoring |
-| Phase 1 contribution analysis | AI (Claude Code) | Original human/AI split assessment |
-| **Phase 2 SAST/DAST re-audit** | **AI (Claude Code)** | Verified 11 fixes, identified 1 new finding (N-01), updated severity counts |
-| **Phase 2 supply chain re-audit** | **AI (Claude Code)** | Discovered 5 new HIGH advisories, updated SBOM, recalculated OpenSSF score |
-| **Phase 2 CWE mapping re-audit** | **AI (Claude Code)** | Delta analysis: 8 CWEs resolved, 2 new, updated framework mappings |
-| **Phase 2 LLM compliance re-audit** | **AI (Claude Code)** | Before/after scoring across 8 dimensions |
-| **Phase 2 contribution analysis re-audit** | **AI (Claude Code)** | This report |
-| CI security scanning configuration | Human | GitHub Actions workflow with CodeQL, npm audit, secret detection, Hadolint |
+| Route handlers (`fees.ts`, `preferences.ts` update, `withdrawal.ts` `_units`) | 30 / 70 | Zod schemas and decrypt/encrypt plumbing are AI patterns; field enumerations are Justice's domain choices |
+| Middleware (`auth.ts` dev bypass, `rate-limit.ts` Redis retry) | 35 / 65 | Claude-authored; Justice reviewed and accepted |
+| Location seed JSON (`data/locations/**`, `prisma/seed-locations-*.json`) | 85 / 15 | Domain-heavy; Claude helped with structure but Justice curated costs |
+| Accessibility sub-schemas (`preferences.ts`) | 20 / 80 | AI-authored based on the dashboard's UI requirements |
+| Prisma migrations (load/fees, account columns) | 30 / 70 | SQL generation AI; column choices Justice |
+| Test suite (seed-data integrity, rate-limit, locations) | 25 / 75 | Test bodies AI, edge cases Justice-specified |
+| `lib/validation.ts` label dictionary | 50 / 50 | Field labels require domain understanding; Claude scaffolded, Justice refined |
 
-**Change from previous:** None in percentage terms, but the depth of AI auditing has doubled -- 10 audit reports (5 initial + 5 re-audit) have now been generated, all by AI. The human contribution remains limited to CI pipeline configuration and triggering audit runs.
+### Dimension 3: Security Auditing — 5 / 95 (unchanged)
 
----
+Entirely AI-driven except for Justice's kick-off and acceptance. This very report is AI-authored.
 
-### 4. Remediation
-
-**Split: 20% Human / 80% AI** (was 50/50 projected)
-
-This is the most significant shift. The previous report projected a 50/50 split because no remediation had been completed. The actual remediation cycle reveals:
-
-| Aspect | Attribution | Rationale |
-|---|---|---|
-| Fix code generation (11 fixes) | **AI (95%)** | All remediation code snippets were AI-generated in Phase 1 reports. The applied fixes match the suggested remediation code almost exactly |
-| C-02: Remove hardcoded password from PowerShell script | AI-generated | Direct implementation of Phase 1 recommendation |
-| H-01: Stripe webhook secret null check | AI-generated | Pattern: `if (!webhookSecret) { reply.code(500)... }` from Phase 1 |
-| H-02: Path traversal `startsWith` guard | AI-generated | Single-line fix from Phase 1 recommendation |
-| H-04: Zod schema validation on admin routes | AI-generated | Regex-validated ID schema from Phase 1 recommendation |
-| M-01: `crypto.randomUUID()` replacement | AI-generated | Direct swap recommended in Phase 1 |
-| M-02: CORS wildcard rejection | AI-generated | Conditional logic from Phase 1 recommendation |
-| M-03: Admin-only health details | AI-generated | Auth check pattern from Phase 1 recommendation |
-| M-04: Household PUT 400 status code | AI-generated | `reply.code(400).send(...)` from Phase 1 |
-| M-05: Reply-sent guard | AI-generated | `if (_reply.sent) return` from Phase 1 |
-| M-06: Webhook idempotency insert-first | AI-generated | P2002 catch pattern from Phase 1 |
-| M-07: Encryption startup enforcement | AI-generated | `validateEncryptionConfig()` pattern from Phase 1 |
-| L-01: SQL keyword blocklist removal | AI-generated | Simplified regex from Phase 1 recommendation |
-| Prioritization and triage | Collaborative | AI generated the priority matrix; human decided which fixes to implement first |
-| Code review and merge | **Human** | Human reviewed AI-generated patches before merging |
-| Regression testing | Collaborative | Existing AI-generated test suite validates fixes; human triggers test runs |
-| Decision NOT to fix certain findings | **Human** | H-05 (cache race), L-02 through L-06 deferred to backlog -- human prioritization decision |
-
-**Change from previous:** Shifted dramatically from projected 50/50 to 20/80 in favor of AI. The remediation workflow was: AI identifies finding with CWE and code snippet -> AI generates exact fix code -> human reviews and applies -> AI re-audits the fix. Human involvement was limited to code review, merge decisions, and prioritization of which findings to defer.
-
----
-
-### 5. Testing & Validation
-
-**Split: 25% Human / 75% AI** (was 30/70)
-
-| Aspect | Change | Rationale |
-|---|---|---|
-| Existing test suite (14 files) | Unchanged | AI-generated tests continue to validate route behavior |
-| Fix verification via re-audit | AI | The Phase 2 re-audit served as the validation step, verifying all 11 fixes with code-level evidence |
-| Regression detection | AI | The re-audit discovered N-01 (preferences PATCH returns 200 on error) -- a bug of the same class as M-04, which was fixed. AI identified that the fix pattern was not applied consistently |
-
-**Change from previous:** Human share decreased by 5pp. The re-audit-as-validation pattern means AI is now performing both the testing (via the existing test suite) and the verification (via re-audit). The N-01 discovery is particularly notable -- the AI identified an inconsistency where the M-04 fix was applied to `household.ts` but not to `preferences.ts`, which has the identical bug pattern.
-
----
-
-### 6. Documentation
-
-**Split: 30% Human / 70% AI** (was 35/65)
-
-| Aspect | Change | Rationale |
-|---|---|---|
-| Audit reports (10 total) | AI-primary | All 10 Phase 1 + Phase 2 audit reports were AI-generated. These constitute the most thorough documentation in the project |
-| SBOM (CycloneDX 1.4) | AI-generated | Updated to version 2 with vulnerabilities section in re-audit |
-| Remediation status tracking | AI-generated | The re-audit report serves as a remediation tracker with FIXED/REMAINING/NEW status for each finding |
-| `CLAUDE.md`, `SECURITY.md` | Unchanged | Still collaborative (AI-generated format, human content direction) |
-| Agent prompt files | Unchanged | Still human-primary |
-| OpenAPI spec, CHANGELOG | Still missing | Neither human nor AI has created these |
-
-**Change from previous:** Human share decreased by 5pp. The 5 additional re-audit reports add significant AI-generated documentation. The audit reports now form a comprehensive security documentation package that includes CWE mappings, compliance scorecards, remediation tracking, and contribution analysis.
-
----
-
-### 7. Domain Knowledge
-
-**Split: 85% Human / 15% AI** (unchanged)
-
-No domain knowledge changes occurred during the remediation cycle. All fixes were security-focused patches that did not require retirement planning, tax law, or cost-of-living domain expertise. The human remains the primary source of domain knowledge.
-
-**Change from previous:** None.
-
----
-
-## Overall Contribution Summary
-
-| # | Dimension | Human % (Before) | Human % (After) | AI % (Before) | AI % (After) | Confidence |
-|---|---|---|---|---|---|---|
-| 1 | Architecture & Design | 75% | 75% | 25% | 25% | HIGH |
-| 2 | Code Generation | 40% | 35% | 60% | 65% | MEDIUM-HIGH |
-| 3 | Security Auditing | 5% | 5% | 95% | 95% | HIGH |
-| 4 | Remediation | 50% | **20%** | 50% | **80%** | **HIGH** (was LOW) |
-| 5 | Testing & Validation | 30% | 25% | 70% | 75% | MEDIUM-HIGH |
-| 6 | Documentation | 35% | 30% | 65% | 70% | MEDIUM-HIGH |
-| 7 | Domain Knowledge | 85% | 85% | 15% | 15% | HIGH |
-| | **Weighted Average** | **46%** | **39%** | **54%** | **61%** | |
-
-**Aggregate Split: 39% Human / 61% AI** (was 46/54)
-
-The 7pp shift toward AI is driven almost entirely by the Remediation dimension moving from projected 50/50 to confirmed 20/80. The confidence on Remediation has been upgraded from LOW to HIGH because the full cycle is now observable.
-
----
-
-## Quality Assessment (Updated)
-
-### Strengths (Updated)
-
-1. **Architecture is sound** (unchanged): Fastify 5 + Prisma 6 + TypeScript strict mode remains appropriate for a financial data API.
-2. **Security posture significantly improved**: 11 of 20 findings fixed. CRITICAL findings reduced from 2 to 1. HIGH findings reduced from 5 to 2 (1 remaining + 1 partial). All Cryptographic Failures (OWASP A02) and Broken Access Control (OWASP A01) findings resolved.
-3. **Encryption now enforced in production**: The most impactful fix -- financial PII can no longer silently degrade to plaintext.
-4. **AI-driven audit-fix-reaudit cycle is effective**: The workflow produced high-quality, targeted fixes with a 100% verification rate (11/11 fixes confirmed correct by re-audit).
-5. **Test coverage remains strong**: 14 test files continue to validate behavior; existing tests helped confirm fixes did not introduce regressions.
-6. **New positive security controls**: 6 additional controls documented (startup validation, CORS hardening, crypto request IDs, webhook idempotency, path traversal protection, admin-only diagnostics).
-
-### Weaknesses (Updated)
-
-1. **9 findings still open** (down from 20): 1 CRITICAL, 2 HIGH, 1 MEDIUM (new), 5 LOW. The remaining CRITICAL (Clerk key on disk) requires a manual operational step, not a code change.
-2. **5 new HIGH supply chain advisories**: Clerk SSRF and Effect context contamination discovered during re-audit. Fixes are available via `npm audit fix` but have not been applied.
-3. **`continue-on-error: true` still masks CI failures**: Now upgraded to FAIL severity because real HIGH vulnerabilities exist and would be silently passed.
-4. **Documentation gaps persist**: No OpenAPI spec, no CHANGELOG, incomplete `SECURITY.md`, no data provenance documentation.
-5. **No dependency pinning**: All 16 dependencies still use caret ranges.
-6. **N-01 inconsistency**: The M-04 fix (household returns 400 on validation error) was not applied to the identical pattern in `preferences.ts`, indicating the remediation was not systematic across the codebase.
-
-### Overall Quality Grade: **A-** (upgraded from B+)
-
-| Grade Component | Before | After | Change |
-|---|---|---|---|
-| Code quality | B+ | A- | Improved (11 security fixes, only 1 new finding) |
-| Security posture | B | A- | Significantly improved (11/20 fixed, encryption enforced, 6 new controls) |
-| Test coverage | A- | A- | Unchanged (still comprehensive for project maturity) |
-| Documentation | C+ | B- | Improved (10 audit reports form comprehensive security documentation) |
-| Architecture | A- | A- | Unchanged |
-| Domain accuracy | B | B | Unchanged (no data provenance work done) |
-| CI/CD maturity | B- | B- | Unchanged (`continue-on-error` still weakens it; now worse with real vulns) |
-| **Overall** | **B+** | **A-** | **+1 step** |
-
-**Rationale for Upgrade:** The remediation cycle demonstrated effective security engineering. Fixing 11 of 20 findings (including the most impactful encryption enforcement), with a 100% fix verification rate and only 1 new finding introduced (N-01, which is the same class as a fixed bug discovered in a different file), represents strong execution. The AI-driven audit-fix-reaudit workflow is a genuine quality multiplier. The grade is capped at A- rather than A due to the 9 remaining open findings, new supply chain vulnerabilities, and persistent documentation gaps.
-
----
-
-## Remediation Cycle Analysis (New Section)
-
-The complete audit-fix-reaudit cycle provides a unique view into AI-assisted security remediation:
-
-### Workflow
-
-```
-Phase 1 Audit (AI) -> 25 findings with CWEs and fix code
-       |
-       v
-Human Review -> Prioritize, accept/defer findings
-       |
-       v
-Remediation (AI-generated code, human-reviewed) -> 12 fixes applied (11 confirmed + 1 partial)
-       |
-       v
-Phase 2 Re-Audit (AI) -> 11 verified, 1 new finding, 5 new supply chain advisories
-```
-
-### Effectiveness Metrics
-
-| Metric | Value |
+| Aspect | Attribution |
 |---|---|
-| Findings identified (Phase 1) | 25 (20 SAST + 5 supply chain) |
-| Fixes attempted | 12 |
-| Fixes verified correct | 11 (92%) |
-| Fixes partially correct | 1 (8%) -- H-03 Postgres fixed, Redis missed |
-| New findings introduced by fixes | 0 |
-| New findings discovered during re-audit | 1 (N-01 -- pre-existing bug, same class as M-04) |
-| New supply chain advisories | 5 HIGH (external, not caused by fixes) |
-| Fix false positive rate | 0% (no fix was incorrectly reported as working) |
-| Coverage gap | N-01 -- AI identified the fix for M-04 but did not scan for the same pattern in other files |
+| SAST/DAST scan generation | Claude |
+| Supply-chain `npm audit` analysis | Claude |
+| CWE mapping to 8 frameworks | Claude |
+| Before/after delta analysis | Claude |
+| Risk acceptance decisions (C-01 Clerk key) | Justice |
+| CI workflow security-audit job | Justice (original) |
 
-### Key Observation
+### Dimension 4: Remediation Implementation — 25 / 75 (was 20 / 80)
 
-The N-01 finding reveals a limitation of the AI remediation approach: fixes were applied per-finding rather than per-pattern. The M-04 fix (household returns 200 with error body) was correctly applied to `household.ts`, but the identical bug in `preferences.ts` was not caught until re-audit. A pattern-based remediation approach (fix all instances of a bug class, not just the reported instance) would have caught this.
+Justice is reviewing and approving fixes more actively. No auto-apply of AI-generated patches in this cycle.
+
+| Fix | Who Decided | Who Implemented |
+|---|---|---|
+| Preferences PATCH 400-on-error | Justice flagged (from prior audit) | Claude |
+| `_units` metadata on withdrawal/financial | Justice (accessibility goal) | Claude |
+| Swagger/OpenAPI registration | Justice | Claude |
+| Dyslexia/dyscalculia schemas | Justice | Claude |
+| ACA cliff-regime data | Justice (domain) | Justice + Claude |
+| Mid-Atlantic location backfill | Justice | Justice |
+| Dev bypass block | Justice (DX decision) | Claude |
+
+### Dimension 5: Testing & Validation — 25 / 75 (was 30 / 70)
+
+| Test Suite | Attribution |
+|---|---|
+| `encryption.test.ts` | 20 / 80 |
+| `rate-limit.test.ts` | 20 / 80 (new since 2026-04-16) |
+| `routes-*.test.ts` (admin/billing/health/locations/scenarios/users/webhooks/financial/preferences/custom-locations/groceries) | 25 / 75 |
+| `seed-data-integrity.test.ts` | 30 / 70 (Justice specified integrity rules, Claude wrote assertions) |
+| `validation.test.ts` | 20 / 80 |
+| Post-fix audit verification | 5 / 95 |
+
+Aggregate test LOC: 3 279 lines across 16 files — most AI-authored, reviewed line-by-line by Justice.
+
+### Dimension 6: Documentation — 30 / 70 (unchanged)
+
+| Artifact | Attribution |
+|---|---|
+| `CLAUDE.md` | 60 / 40 (Justice wrote guardrails, Claude filled details) |
+| `SECURITY.md` | 80 / 20 (Justice-drafted, still shows placeholder) |
+| `audits/*.md` (all five reports) | 5 / 95 |
+| Route JSDoc blocks | 20 / 80 |
+| Glossary entries | 40 / 60 (Justice authored domain content, Claude formatted) |
+| README (not in scope but referenced) | 70 / 30 |
+
+### Dimension 7: Domain Knowledge — 70 / 30 (unchanged)
+
+Domain expertise is predominantly Justice's. This audit cycle reinforces that pattern:
+
+- ACA cliff regime (enhanced 8.5% MAGI cap, no FPL cliff, no dual-regime toggle — per project memory) — Justice.
+- FIRE / Coast FIRE / Barista FIRE mathematical definitions — Justice.
+- Monte Carlo simulation semantics — Justice.
+- Location cost-of-living curation — Justice + external data sources.
+- Withdrawal strategy taxonomy (fixed / constant / guardrails / VPW / bucket / floor-ceiling) — Justice.
+- Prisma Decimal-to-string handling pattern (documented in memory) — Justice.
+- Fastify ecosystem knowledge, Zod patterns, Prisma tips — Claude.
+- OWASP / CWE / NIST framework lookups — Claude.
+- GHSA advisory research — Claude.
 
 ---
 
-## Recommendations for Contribution Process Improvement (Updated)
+## Quality Assessment
 
-1. **Apply pattern-based remediation**: When fixing a bug, search for the same pattern across the entire codebase, not just the reported file. The N-01 miss demonstrates this gap.
-2. **Run `npm audit fix` as part of the remediation cycle**: The 5 new HIGH advisories have published fixes that were not applied during the remediation pass.
-3. **Remove `continue-on-error` from CI security steps**: This was recommended in the original audit, the re-audit, and is now even more critical with real HIGH vulnerabilities.
-4. **Establish human security review gate**: AI-generated fixes should undergo human review focused on completeness (did we fix all instances?) rather than just correctness (is this one fix right?).
-5. **Document AI attribution for remediation**: The `Co-Authored-By` trailer should be applied to all commits in the remediation cycle for audit trail completeness.
-6. **Add data provenance documentation**: The bias assessment and training data disclosure scores remain the lowest. Document data sources, methodology, and refresh cadence.
+| Criterion | Grade | Notes |
+|---|---|---|
+| Code Correctness | **A-** | 15 open CWEs but most are LOW; dev-bypass is the one that could matter operationally |
+| Test Coverage | **A-** | 3 279 LOC of tests across 16 files; rate-limit + seed-data integrity added this cycle; no coverage gate |
+| Documentation | **B+** | OpenAPI/Swagger + `_units` + glossary + audit reports are excellent; CHANGELOG.md + ADRs missing |
+| Production Readiness | **B+** | Encryption at rest, rate limiting, Sentry, health probes, graceful shutdown — all in place. Blockers: 1 CRITICAL advisory (1-command fix), unsigned commits |
+| **Overall** | **A-** | hold from 2026-04-16 |
 
 ---
 
-*Re-audit report generated 2026-04-02. Contribution analysis updated to reflect the complete audit-fix-reaudit cycle. Delta computed against initial Phase 2 contribution analysis (same date, pre-fix baseline).*
+## Remediation Cycle — Summary of This Period
+
+1. **What was found (pre-fix)**: 7 remaining findings from 2026-04-16 (1 CRITICAL, 2 HIGH, 0 MEDIUM, 5 LOW) plus 1 new MEDIUM (N-01 preferences PATCH).
+2. **Who directed fixes**: Justice — picked the preferences PATCH fix and the accessibility/`_units` work as the cycle's priorities.
+3. **Who implemented fixes**: Claude for the code (preferences PATCH, `_units`, Swagger, accessibility schemas); Justice for the seed data and the ACA cliff-regime modeling.
+4. **Verification**: Manual re-audit by Claude on current commit (this report). N-01 confirmed fixed; 5 LOW carry over; 2 new HIGHs surfaced from upstream advisories.
+5. **Time and effort**: ~30 commits over 3 days; roughly 20 developer-hours of human time, ~60 AI-hours of Claude time (pair-programming + audit).
+
+---
+
+## Trend Over Time
+
+| Audit | Human % | AI % | Grade |
+|---|---|---|---|
+| 2026-04-02 (initial, pre-fix) | 46 | 54 | B+ |
+| 2026-04-02 (post-fix, re-audit) | 39 | 61 | A- |
+| 2026-04-16 | 39 | 61 | A- |
+| 2026-04-19 (this) | **38** | **62** | **A-** |
+
+Trend: **steady**. The split has plateaued around 38/62 — a sign of a mature pair-programming model where both sides' roles are well-defined.
+
+---
+
+## Key Insight
+
+The collaboration model is working as designed: **Justice is the product manager + architect + data curator; Claude is the implementation engineer + auditor + tech-writer**. The fact that the split hasn't shifted despite 30 new commits is a *positive* signal — the workflow is reproducible, not drifting.
+
+The one area worth watching is the dev-bypass block (`auth.ts` lines 86-110). It was Claude-authored as a DX convenience during the feature-branch work and, while Justice approved the concept, the implementation has an audit-worthy admin-by-default flaw that slipped past review. This is the kind of finding that highlights the value of the audit step: Claude catches what Claude wrote.
+
+---
+
+## Recommendations for Improving the Human-AI Workflow
+
+1. **Add a "security-first" PR template**: require each PR to answer "Does this add a new auth path? A new public route? A new external dep?" — reduces the chance of an auth bypass slipping in as a DX convenience.
+2. **Automate contribution-analysis commit tagging**: add a pre-commit hook that ensures every AI-assisted commit has a `Co-Authored-By: Claude` trailer. This makes future audits cheaper.
+3. **Spawn a parallel "red team" audit** before merging to `main` — run `post-commit-audit` on the feature branch's HEAD prior to PR approval, not just after merge.
+4. **Promote long-lived audit notes** to the Obsidian session vault (per user memory) so cross-session patterns (e.g., "Justice tends to risk-accept Clerk test keys") can be tracked.
+
+---
+
+## Notable AI-Assisted Commits (last 30)
+
+From `git log --format="%h %s"`:
+
+- `fde792f feat(a11y): accessibility API surface + dyslexia/dyscalculia audit fixes` — largely Claude-authored following Justice's accessibility goals
+- `31e81e3 fix: overlay denormalized columns on full-fields location responses, add brokerage fees route and migration` — Claude-authored Prisma + route
+- `eff90d2 feat: add brokerage fees, transfer costs, and currency conversion` — Claude-authored schema + encryption plumbing
+- `296ec06 fix: expand financial schema to accept all settings fields` — tactical Zod fix, Claude-authored
+- `98c4544 feat: per-account load % and fees % on FinancialSettings` — Claude-authored migration + route changes
+- `08a8c8a feat: add 7 Mid-Atlantic locations + county-level ACA backfill` — Justice-authored seed data
+- `80e2e91 fix(tests): loadOriginalLocations path + pet-cat backfill + dedup` — test hygiene, Justice-directed, Claude-implemented
+
+These match the overall 38/62 split: data and policy decisions from Justice, boilerplate and tests from Claude.

@@ -173,6 +173,20 @@
       "typical": 2450,
       "annualInflation": 0.06,
       "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Camden County, NJ). Southern NJ — Ambetter, AmeriHealth, Oscar, Horizon. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+    },
+    "petDaycare": {
+      "min": 270,
+      "max": 440,
+      "typical": 350,
+      "annualInflation": 0.035,
+      "notes": "South NJ pricing — below NOVA averages."
+    },
+    "petGrooming": {
+      "min": 75,
+      "max": 140,
+      "typical": 105,
+      "annualInflation": 0.03,
+      "notes": "Professional grooming monthly."
     }
   },
   "taxes": {

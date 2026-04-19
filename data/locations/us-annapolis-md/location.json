@@ -143,6 +143,20 @@
       "max": 0,
       "annualInflation": 0.02,
       "notes": "Income tax computed from MD + Anne Arundel County brackets; stored value 0 by convention."
+    },
+    "petDaycare": {
+      "min": 310,
+      "max": 490,
+      "typical": 395,
+      "annualInflation": 0.035,
+      "notes": "Doggy daycare 2 days/week. Similar to Fairfax-area pricing."
+    },
+    "petGrooming": {
+      "min": 85,
+      "max": 160,
+      "typical": 120,
+      "annualInflation": 0.03,
+      "notes": "Professional grooming monthly."
     }
   },
   "taxes": {

@@ -143,6 +143,20 @@
       "max": 0,
       "annualInflation": 0.02,
       "notes": "Income tax computed from VA brackets; stored value 0 by convention."
+    },
+    "petDaycare": {
+      "min": 305,
+      "max": 475,
+      "typical": 385,
+      "annualInflation": 0.035,
+      "notes": "Doggy daycare 2 days/week. PWC area, slightly below Fairfax."
+    },
+    "petGrooming": {
+      "min": 80,
+      "max": 150,
+      "typical": 115,
+      "annualInflation": 0.03,
+      "notes": "Professional grooming monthly."
     }
   },
   "taxes": {
