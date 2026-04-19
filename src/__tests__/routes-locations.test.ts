@@ -158,12 +158,22 @@ describe('GET /api/locations/:id', () => {
   });
 
   it('returns full location data with version', async () => {
+    // The route pulls `name` / `country` / `region` / `currency` /
+    // `monthlyCostTotal` / `updatedAt` from the top-level Prisma row
+    // (denormalized search columns), and merges `locationData` underneath.
+    // Test fixture must supply both.
     (prisma.adminLocation.findUnique as ReturnType<typeof vi.fn>).mockResolvedValue({
       id: 'fairfax-va',
       version: 3,
+      name: 'Fairfax, VA',
+      country: 'United States',
+      region: 'Virginia',
+      currency: 'USD',
+      monthlyCostTotal: 4500,
+      updatedAt: new Date('2026-01-15'),
       locationData: {
         name: 'Fairfax, VA',
-        country: 'USA',
+        country: 'United States',
         monthlyCosts: { rent: { typical: 2200 } },
       },
     });
