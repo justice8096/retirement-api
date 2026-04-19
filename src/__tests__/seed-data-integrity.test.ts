@@ -260,6 +260,64 @@ describe('Healthcare data', () => {
   }
 });
 
+// ─── ACA pre-Medicare fields ────────────────────────────────────────────────
+// Added when we backfilled county-level ACA pricing across all US locations.
+// Reads data/locations/*/location.json directly (not via loadOriginalLocations
+// which has a stale relative-path bug that returns []). Validates every US
+// location has healthcarePreMedicare + healthcare.acaMarketplace with a
+// sensible shape.
+
+function loadCanonicalUsLocations(): LocationData[] {
+  const dataDir = resolve(__dirname, '../../data/locations');
+  if (!existsSync(dataDir)) return [];
+  const out: LocationData[] = [];
+  for (const dir of readdirSync(dataDir)) {
+    if (!dir.startsWith('us-')) continue;
+    const locPath = join(dataDir, dir, 'location.json');
+    if (existsSync(locPath)) {
+      out.push(JSON.parse(readFileSync(locPath, 'utf-8')));
+    }
+  }
+  return out;
+}
+
+describe('ACA pre-Medicare data (US locations)', () => {
+  const usLocations = loadCanonicalUsLocations();
+
+  for (const loc of usLocations) {
+    describe(loc.name || loc.id, () => {
+      it('has monthlyCosts.healthcarePreMedicare with typical > 0', () => {
+        const entry = loc.monthlyCosts['healthcarePreMedicare'];
+        expect(entry).toBeDefined();
+        expect(typeof entry?.typical).toBe('number');
+        expect(entry!.typical!).toBeGreaterThan(0);
+      });
+
+      it('has healthcare.acaMarketplace block', () => {
+        const aca = (loc.healthcare as Record<string, unknown>)['acaMarketplace'];
+        expect(aca).toBeDefined();
+        expect(typeof aca).toBe('object');
+      });
+
+      it('acaMarketplace has benchmark silver monthly (2-adult) > 0', () => {
+        const aca = (loc.healthcare as { acaMarketplace?: { benchmarkSilverMonthly2Adult?: number } }).acaMarketplace;
+        expect(typeof aca?.benchmarkSilverMonthly2Adult).toBe('number');
+        expect(aca!.benchmarkSilverMonthly2Adult!).toBeGreaterThan(0);
+      });
+
+      it('acaMarketplace has estimationLevel (county or state)', () => {
+        const aca = (loc.healthcare as { acaMarketplace?: { estimationLevel?: string } }).acaMarketplace;
+        expect(['county', 'state']).toContain(aca?.estimationLevel);
+      });
+
+      it('acaMarketplace premiumCapPctOfIncome is 0 (territory) or 0.085 (enhanced cap)', () => {
+        const aca = (loc.healthcare as { acaMarketplace?: { premiumCapPctOfIncome?: number } }).acaMarketplace;
+        expect([0, 0.085]).toContain(aca?.premiumCapPctOfIncome);
+      });
+    });
+  }
+});
+
 describe('Lifestyle data', () => {
   for (const loc of allLocations) {
     describe(loc.name || loc.id, () => {
