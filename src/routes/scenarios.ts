@@ -54,10 +54,47 @@ const scenarioSchema = z.object({
 
 const MAX_SCENARIOS = 50;
 
+/** Synthesize missing plain-language anchors + natural-frequency phrasing on
+ *  a stored monte_carlo_v1 row so GET consumers can always rely on them
+ *  (Dyscalculia F-205). */
+function decorateMonteCarlo(data: Record<string, unknown>): Record<string, unknown> {
+  const out = { ...data };
+  const sr = out.successRate as { value?: number; naturalFrequency?: string } | undefined;
+  if (sr && typeof sr.value === 'number' && !sr.naturalFrequency) {
+    const outOf10 = Math.round(Math.max(0, Math.min(1, sr.value)) * 10);
+    out.successRate = { ...sr, naturalFrequency: `${outOf10} out of 10 simulated futures` };
+  }
+  const pcts = out.percentiles as Record<string, { value?: number; anchor?: string }> | undefined;
+  if (pcts) {
+    const decorated: Record<string, unknown> = {};
+    for (const [k, v] of Object.entries(pcts)) {
+      if (v && typeof v.value === 'number' && !v.anchor) {
+        decorated[k] = { ...v, anchor: anchorForAmount(v.value) };
+      } else {
+        decorated[k] = v;
+      }
+    }
+    out.percentiles = decorated;
+  }
+  return out;
+}
+
+function anchorForAmount(amount: number): string {
+  const abs = Math.abs(amount);
+  if (amount <= 0) return 'portfolio ran out of money';
+  if (abs < 100_000) return 'less than a year of a typical middle-income salary';
+  if (abs < 1_000_000) return 'around a typical starter-home price in many US markets';
+  if (abs < 3_000_000) return 'enough to cover decades of modest retirement spending';
+  return 'well above the median net worth at US retirement age';
+}
+
 export default async function scenarioRoutes(app: FastifyInstance): Promise<void> {
   app.addHook('preHandler', requireAuth);
 
-  /** GET /api/me/scenarios — list all saved scenarios. */
+  /** GET /api/me/scenarios — list all saved scenarios.
+   *  Dyscalculia F-205 — for monte_carlo_v1 rows, synthesize missing
+   *  `anchor` / `naturalFrequency` fields so clients can rely on their
+   *  presence without defensive checks. */
   app.get('/', async (request, reply) => {
     const scenarios = await prisma.userScenario.findMany({
       where: { userId: request.userId },
@@ -65,7 +102,20 @@ export default async function scenarioRoutes(app: FastifyInstance): Promise<void
     });
 
     reply.header('Cache-Control', 'private, no-store');
-    return scenarios;
+    return scenarios.map(s => {
+      const data = s.scenarioData as Record<string, unknown> | null;
+      if (data && data.kind === 'monte_carlo_v1') {
+        return {
+          ...s,
+          scenarioData: decorateMonteCarlo(data),
+          _units: {
+            'percentiles.*.value': { encoding: 'amount', currency: 'USD', periodicity: 'total' },
+            'successRate': { encoding: 'fraction', meaning: '0.85 = 85% of simulated futures' },
+          },
+        };
+      }
+      return s;
+    });
   });
 
   /**

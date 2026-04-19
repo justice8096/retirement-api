@@ -7,6 +7,8 @@
 <script src="./shared.js"></script>
 </head>
 <body>
+<a class="skip-nav" href="#main">Skip to content</a>
+
 <script>
 (function() {
   injectCSS();
@@ -185,7 +187,7 @@
     for (var i = 0; i < state.decisions.length; i++) {
       (function(idx) {
         var d = state.decisions[idx];
-        var group = el('div', { style: 'margin-bottom: 20px; padding: 16px; border: 1px solid #3A4A5A; border-radius: 4px; background: #0D1830;' });
+        var group = el('div', { style: 'margin-bottom: 20px; padding: 16px; border: 1px solid #8A9BAD; border-radius: 4px; background: #0D1830;' });
         var header = el('div', { style: 'display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;' });
         header.appendChild(el('h3', { style: 'color: #E8B96A;' }, ['Decision ' + (idx + 1)]));
         if (state.decisions.length > 1) {
@@ -226,7 +228,7 @@
         var c = state.significance[cDef.id];
         var group = el('div', { style: 'margin-bottom: 16px; padding: 12px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830;' });
         group.appendChild(el('h3', {}, [cDef.label]));
-        group.appendChild(el('p', { style: 'font-size: 0.8em; color: #6B7B8D; margin-bottom: 8px;' }, [cDef.description]));
+        group.appendChild(el('p', { style: 'font-size: 0.8em; color: #9FC8FF; margin-bottom: 8px;' }, [cDef.description]));
         group.appendChild(createToggle('Applies to your system?', c.applies, function(v) { c.applies = v; wizard.saveNow(); }));
         group.appendChild(createTextArea('Justification', c.justification, function(v) { c.justification = v; }, 'Explain why this does or does not apply'));
         section.appendChild(group);
@@ -265,7 +267,7 @@
         var m = state.explainability.methods[mDef.id];
         var group = el('div', { style: 'margin-bottom: 12px; padding: 10px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830;' });
         group.appendChild(el('h3', {}, [mDef.label]));
-        group.appendChild(el('p', { style: 'font-size: 0.8em; color: #6B7B8D; margin-bottom: 8px;' }, [mDef.description]));
+        group.appendChild(el('p', { style: 'font-size: 0.8em; color: #9FC8FF; margin-bottom: 8px;' }, [mDef.description]));
         group.appendChild(createToggle('Used?', m.used, function(v) { m.used = v; wizard.saveNow(); }));
         group.appendChild(createTextInput('Implementation details', m.implementation, function(v) { m.implementation = v; }, 'How is this method implemented?'));
         section.appendChild(group);

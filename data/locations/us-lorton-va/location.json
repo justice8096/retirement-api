@@ -17,13 +17,13 @@
     "petCare": { "min": 120, "max": 220, "typical": 170, "annualInflation": 0.04 },
     "petDaycare": { "min": 310, "max": 490, "typical": 395, "annualInflation": 0.035 },
     "petGrooming": { "min": 85, "max": 155, "typical": 115, "annualInflation": 0.03 },
-    "transportation": { "min": 300, "max": 550, "typical": 420, "annualInflation": 0.03, "notes": "Lorton VRE station (Fredericksburg line) to DC. I-95 + Fairfax County Pkwy access. Longer DC commute than Fairfax City." },
+    "transportation": { "min": 300, "max": 550, "typical": 420, "annualInflation": 0.03, "notes": "Lorton VRE (Virginia Railway Express) station (Fredericksburg line) to DC. Interstate 95 + Fairfax County Pkwy access. Longer DC commute than Fairfax City." },
     "entertainment": { "min": 400, "max": 590, "typical": 480, "annualInflation": 0.025, "notes": "Workhouse Arts Center (former prison), Occoquan Regional Park. Cable+1Gig." },
     "clothing": { "min": 95, "max": 230, "typical": 150, "annualInflation": 0.02 },
     "personalCare": { "min": 42, "max": 100, "typical": 65, "annualInflation": 0.02 },
     "subscriptions": { "min": 30, "max": 80, "typical": 55, "annualInflation": 0.03 },
     "phoneCell": { "min": 50, "max": 80, "typical": 62, "annualInflation": 0.02 },
-    "miscellaneous": { "min": 110, "max": 230, "typical": 160, "annualInflation": 0.025, "notes": "HOA common in Laurel Hill subdivisions. I-95 Express Lanes tolls." },
+    "miscellaneous": { "min": 110, "max": 230, "typical": 160, "annualInflation": 0.025, "notes": "HOA (homeowners association) common in Laurel Hill subdivisions. Interstate 95 Express Lanes tolls." },
     "buffer": { "min": 700, "max": 700, "typical": 700, "annualInflation": 0.025 },
     "medicalOOP": { "min": 325, "max": 700, "typical": 475, "annualInflation": 0.055, "notes": "Same retiree profile. Specialists at Inova Fairfax + Johns Hopkins." },
     "medicine": { "min": 73, "typical": 91, "max": 925, "annualInflation": 0.045 },
@@ -64,27 +64,27 @@
     "acaMarketplace": {
       "benchmarkSilverMonthly2Adult": 2300, "benchmarkSilverMonthlySingle": 1150,
       "premiumCapPctOfIncome": 0.085, "rateArea": "Fairfax County",
-      "notes": "NOVA marketplace same as Fairfax.",
+      "notes": "Northern Virginia (NOVA) marketplace same as Fairfax.",
       "estimationLevel": "county", "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
   "lifestyle": {
     "internetSpeed": "1Gbps widely available (Verizon Fios, Cox, Xfinity)",
     "dogFriendly": 9, "expatCommunity": 3, "englishPrevalence": 10, "safetyRating": 8,
-    "notes": "Occoquan River access, Workhouse Arts Center, Laurel Hill Golf Club. Quieter than inner NOVA; suburban family feel."
+    "notes": "Occoquan River access, Workhouse Arts Center, Laurel Hill Golf Club. Quieter than inner Northern Virginia; suburban family feel."
   },
   "pros": [
     "~23% cheaper rent than Fairfax City",
-    "Same Fairfax County tax benefits (SS exempt, 65+ deduction)",
+    "Same Fairfax County tax benefits (Social Security exempt, 65+ deduction)",
     "Newer housing stock than Annandale",
-    "VRE commuter rail to DC available",
+    "VRE (Virginia Railway Express) commuter rail to DC available",
     "Waterfront + golf + arts amenities",
     "Quieter suburban environment"
   ],
   "cons": [
-    "Longer DC commute (I-95 or VRE)",
+    "Longer DC commute (Interstate 95 or VRE)",
     "Fewer dining/shopping options than Fairfax City",
-    "Some neighborhoods have heavy HOAs",
+    "Some neighborhoods have heavy HOAs (homeowners associations)",
     "Limited public transit beyond VRE"
   ]
 }

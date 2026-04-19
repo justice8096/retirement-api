@@ -5,18 +5,36 @@
  * data. Approved contributions earn badges and unlock features at thresholds:
  *   5 approved → Basic features
  *   15 approved → Premium features
+ *
+ * Surfaces:
+ *   - GET `/mine` — user's own contributions.
+ *   - POST `/` — submit a contribution (rate-limited to 10/day/user).
+ *   - GET `/admin/contributions` (separate router) — list pending.
+ *   - PATCH `/admin/contributions/:id` — approve or reject; on approve,
+ *     `processApproval` is called with a typed `ContributionType` (SAST L-04).
+ *
+ * Side-effects: writes to Contribution, UserBadge, UserFeatureUnlock.
  */
 import { z } from 'zod';
 import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
 import { requireAuth, requireAdmin } from '../middleware/auth.js';
 import { safeJsonRecord } from '../middleware/sanitize.js';
+import { toValidationErrorPayload } from '../lib/validation.js';
 
 const BASIC_THRESHOLD = 5;
 const PREMIUM_THRESHOLD = 15;
 
+/** SAST L-04 — contribution types are a closed set; narrow the key type so
+ *  `processApproval` rejects anything outside this union at compile time. */
+export type ContributionType =
+  | 'cost_correction'
+  | 'new_location'
+  | 'review_rating'
+  | 'supplemental_data';
+
 // Badge keys mapped to contribution types
-const TYPE_BADGES: Record<string, string> = {
+const TYPE_BADGES: Record<ContributionType, string> = {
   cost_correction: 'cost_corrector',
   new_location: 'data_pioneer',
   review_rating: 'reviewer',
@@ -105,7 +123,7 @@ export default async function contributionRoutes(app: FastifyInstance): Promise<
   app.post('/', async (request, reply) => {
     const parsed = createContributionSchema.safeParse(request.body);
     if (!parsed.success) {
-      return reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
+      return reply.code(400).send(toValidationErrorPayload(parsed.error));
     }
 
     // Rate limit: 10 contributions per day per user
@@ -177,7 +195,7 @@ export async function adminContributionRoutes(app: FastifyInstance): Promise<voi
     const { id } = request.params as { id: string };
     const parsed = reviewContributionSchema.safeParse(request.body);
     if (!parsed.success) {
-      return reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
+      return reply.code(400).send(toValidationErrorPayload(parsed.error));
     }
 
     const contribution = await prisma.contribution.findUnique({ where: { id } });
@@ -201,7 +219,7 @@ export async function adminContributionRoutes(app: FastifyInstance): Promise<voi
 
     // If approved, check for badge awards and feature unlocks
     if (parsed.data.status === 'approved') {
-      await processApproval(contribution.userId, contribution.type);
+      await processApproval(contribution.userId, contribution.type as ContributionType);
     }
 
     return updated;
@@ -211,7 +229,7 @@ export async function adminContributionRoutes(app: FastifyInstance): Promise<voi
 /**
  * After approving a contribution, award badges and unlock features if thresholds are met.
  */
-async function processApproval(userId: string, contributionType: string): Promise<void> {
+async function processApproval(userId: string, contributionType: ContributionType): Promise<void> {
   // Award type-specific badge (first of this type)
   const badgeKey = TYPE_BADGES[contributionType];
   if (badgeKey) {

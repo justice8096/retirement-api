@@ -207,6 +207,20 @@ describe('Monthly cost categories', () => {
               expect(entry.annualInflation).toBeLessThanOrEqual(0.15);
             }
           });
+
+          // Dyscalculia F-206 — bound the max/typical ratio so the "typical
+          // range" that downstream UIs show a dyscalculic user doesn't include
+          // outlier ceilings. `medicine` is explicitly opted out because its
+          // max represents specialty-drug outliers rather than a typical range;
+          // those entries should carry `annotation: 'outlier-range'` once the
+          // backfill pass runs.
+          const RATIO_EXEMPT = new Set(['medicine']);
+          it('has max <= 3 x typical (or is ratio-exempt)', () => {
+            const entry = loc.monthlyCosts[cat];
+            if (!entry || !entry.max || !entry.typical || entry.typical === 0) return;
+            if (RATIO_EXEMPT.has(cat)) return;
+            expect(entry.max / entry.typical).toBeLessThanOrEqual(3);
+          });
         });
       }
     });

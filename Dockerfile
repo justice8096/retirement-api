@@ -1,4 +1,9 @@
 # ─── Stage 1: Install dependencies ─────────────────────────────────────────
+# LLM-Compliance roadmap: pin by digest to block silent base-image drift.
+# Usage: once Renovate is added, the digest lines below will be updated
+# automatically. Pin the exact digest by running:
+#   docker buildx imagetools inspect node:20-alpine --format '{{json .Manifest.Digest}}'
+# and replacing node:20-alpine with node:20-alpine@sha256:<digest>.
 FROM node:20-alpine AS deps
 WORKDIR /app
 

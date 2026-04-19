@@ -35,7 +35,7 @@ const feesSchema = z.object({
   // Currency
   localCurrency: z.string().min(1).max(10).optional(),
   manualExchangeRate: num.min(0).max(100000).nullable().optional(),
-});
+}).strict();  // SAST M-02: reject unknown keys
 
 /** Percentage fields stored as decimal fractions in DB but sent as whole numbers to client. */
 const PCT_FIELDS = [
@@ -66,8 +66,10 @@ const DEFAULTS = {
   manualExchangeRate: null,
 };
 
-/** Convert DB record to client format. */
-function toClient(record: Record<string, unknown>) {
+/** Convert DB record to client format.
+ *  Dyscalculia F-202 — v2 clients get decimal fractions; v1 clients get
+ *  whole-number percentages (existing behaviour, no breaking change). */
+function toClient(record: Record<string, unknown>, apiVersion: 1 | 2 = 1) {
   const out = { ...record };
 
   // Convert all numeric fields from Prisma Decimal -> JS number
@@ -77,10 +79,12 @@ function toClient(record: Record<string, unknown>) {
     }
   }
 
-  // Convert DB decimal fractions -> client whole-number percentages
-  for (const f of PCT_FIELDS) {
-    if (out[f] !== undefined && out[f] !== null) {
-      out[f] = (out[f] as number) * 100;
+  // v1: DB decimal fractions -> whole-number percentages. v2: pass through.
+  if (apiVersion === 1) {
+    for (const f of PCT_FIELDS) {
+      if (out[f] !== undefined && out[f] !== null) {
+        out[f] = (out[f] as number) * 100;
+      }
     }
   }
 
@@ -93,19 +97,22 @@ function toClient(record: Record<string, unknown>) {
  * `financial.ts:145-171` so every money-shaped route carries its own unit
  * semantics instead of relying on field-name conventions.
  */
-function unitsMeta(record: Record<string, unknown>, locale: string) {
+function unitsMeta(record: Record<string, unknown>, locale: string, apiVersion: 1 | 2 = 1) {
   const usd = defaultCurrencyFor('en-US');
   const requestCurrency = defaultCurrencyFor(locale);
   const local = (record.localCurrency as string) || requestCurrency;
+  const pct = apiVersion === 2
+    ? (meaning: string) => ({ encoding: 'fraction' as const, meaning })
+    : (meaning: string) => ({ encoding: 'percent' as const, meaning });
   return {
-    brokerageFeePct:         { encoding: 'percent', meaning: '0.5 = 0.5% per trade' },
+    brokerageFeePct:         pct(apiVersion === 2 ? '0.005 = 0.5% per trade' : '0.5 = 0.5% per trade'),
     brokerageFeeFlat:        { encoding: 'amount', currency: usd, periodicity: 'per-trade' },
     brokerageAnnualFee:      { encoding: 'amount', currency: usd, periodicity: 'year' },
-    brokerageExpenseRatio:   { encoding: 'percent', meaning: '0.2 = 0.2% annual expense ratio' },
+    brokerageExpenseRatio:   pct(apiVersion === 2 ? '0.002 = 0.2% annual expense ratio' : '0.2 = 0.2% annual expense ratio'),
     wireTransferFeeUsd:      { encoding: 'amount', currency: usd, periodicity: 'per-transfer' },
     wireTransferFeeLocal:    { encoding: 'amount', currency: local, periodicity: 'per-transfer' },
     achTransferFee:          { encoding: 'amount', currency: usd, periodicity: 'per-transfer' },
-    fxSpreadPct:             { encoding: 'percent', meaning: '1 = 1% spread on FX conversion' },
+    fxSpreadPct:             pct(apiVersion === 2 ? '0.01 = 1% spread on FX conversion' : '1 = 1% spread on FX conversion'),
     fxFixedFee:              { encoding: 'amount', currency: local, periodicity: 'per-transfer' },
     manualExchangeRate:      { encoding: 'rate', meaning: `1 USD = N ${local} (set to null for live rate)` },
     localCurrency:           { encoding: 'currency-code', meaning: 'ISO 4217 code for the user\'s local currency' },
@@ -122,10 +129,12 @@ export default async function feesRoutes(app: FastifyInstance): Promise<void> {
     });
 
     reply.header('Cache-Control', 'private, no-store');
+    const version = request.apiVersion ?? 1;
+    reply.header('X-API-Version', String(version));
     const base = record
-      ? toClient(record as unknown as Record<string, unknown>)
+      ? toClient(record as unknown as Record<string, unknown>, version)
       : { userId: request.userId, ...DEFAULTS, updatedAt: new Date() };
-    return { ...base, _units: unitsMeta(base, request.locale ?? 'en-US') };
+    return { ...base, _units: unitsMeta(base, request.locale ?? 'en-US', version) };
   });
 
   // PUT /api/me/fees � update fee settings
@@ -136,11 +145,16 @@ export default async function feesRoutes(app: FastifyInstance): Promise<void> {
     }
 
     const data: Record<string, unknown> = { ...parsed.data };
+    const version = request.apiVersion ?? 1;
+    reply.header('X-API-Version', String(version));
 
-    // Convert client percentages (0.5) to DB decimals (0.005)
-    for (const f of PCT_FIELDS) {
-      if (data[f] !== undefined && data[f] !== null) {
-        data[f] = Number(data[f]) / 100;
+    // v1 clients send whole-number percentages; convert to DB fractions.
+    // v2 clients already send fractions; pass through.
+    if (version === 1) {
+      for (const f of PCT_FIELDS) {
+        if (data[f] !== undefined && data[f] !== null) {
+          data[f] = Number(data[f]) / 100;
+        }
       }
     }
 
@@ -150,7 +164,7 @@ export default async function feesRoutes(app: FastifyInstance): Promise<void> {
       create: { userId: request.userId, ...data },
     });
 
-    const base = toClient(record as unknown as Record<string, unknown>);
-    return { ...base, _units: unitsMeta(base, request.locale ?? 'en-US') };
+    const base = toClient(record as unknown as Record<string, unknown>, version);
+    return { ...base, _units: unitsMeta(base, request.locale ?? 'en-US', version) };
   });
 }

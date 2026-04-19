@@ -17,15 +17,15 @@
     "petCare": { "min": 120, "max": 215, "typical": 160, "annualInflation": 0.04 },
     "petDaycare": { "min": 295, "max": 465, "typical": 375, "annualInflation": 0.035 },
     "petGrooming": { "min": 80, "max": 150, "typical": 115, "annualInflation": 0.03 },
-    "transportation": { "min": 270, "max": 500, "typical": 380, "annualInflation": 0.03, "notes": "Light RailLink from Glen Burnie to downtown Baltimore (~30 min). BWI Airport 5 min. I-97 to Annapolis, I-295 to DC. MARC Penn Line at BWI Rail Station." },
+    "transportation": { "min": 270, "max": 500, "typical": 380, "annualInflation": 0.03, "notes": "Light RailLink from Glen Burnie to downtown Baltimore (~30 min). BWI (Baltimore-Washington International) Airport 5 min. Interstate 97 to Annapolis, Interstate 295 to DC. MARC (Maryland Area Regional Commuter) Penn Line at BWI (Baltimore-Washington International) Rail Station." },
     "entertainment": { "min": 390, "max": 580, "typical": 475, "annualInflation": 0.025, "notes": "Glen Burnie Town Center, Arundel Mills (10 min), Marley Creek trails. Cable+1Gig typical (Comcast)." },
     "clothing": { "min": 90, "max": 220, "typical": 145, "annualInflation": 0.02 },
     "personalCare": { "min": 40, "max": 100, "typical": 65, "annualInflation": 0.02 },
     "subscriptions": { "min": 30, "max": 80, "typical": 55, "annualInflation": 0.03 },
     "phoneCell": { "min": 50, "max": 80, "typical": 62, "annualInflation": 0.02 },
-    "miscellaneous": { "min": 100, "max": 215, "typical": 150, "annualInflation": 0.025, "notes": "HOA in some developments. I-95 + ICC tolls. Fewer HOA communities than newer MD suburbs." },
+    "miscellaneous": { "min": 100, "max": 215, "typical": 150, "annualInflation": 0.025, "notes": "HOA (homeowners association) in some developments. Interstate 95 + ICC (Intercounty Connector toll road) tolls. Fewer HOA (homeowners association) communities than newer MD suburbs." },
     "buffer": { "min": 700, "max": 700, "typical": 700, "annualInflation": 0.025 },
-    "medicalOOP": { "min": 325, "max": 700, "typical": 475, "annualInflation": 0.055, "notes": "Same retiree profile. Excellent specialist access: UM BWMC in town, Johns Hopkins 20 min, UM Medical Center (Baltimore) 15 min." },
+    "medicalOOP": { "min": 325, "max": 700, "typical": 475, "annualInflation": 0.055, "notes": "Same retiree profile. Excellent specialist access: UM BWMC (University of Maryland Baltimore Washington Medical Center) in town, Johns Hopkins 20 min, UM Medical Center (Baltimore) 15 min." },
     "medicine": { "min": 73, "typical": 91, "max": 925, "annualInflation": 0.045 },
     "taxes": { "typical": 0, "min": 0, "max": 0, "annualInflation": 0.02, "notes": "Income tax computed from MD + Anne Arundel County brackets." },
     "healthcarePreMedicare": { "min": 1700, "max": 2650, "typical": 2150, "annualInflation": 0.06, "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Anne Arundel County, MD). Maryland Health Connection: CareFirst, Kaiser, UnitedHealthcare. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number." }
@@ -62,7 +62,7 @@
     "vatRate": 0,
     "estVehicleTax": 0,
     "ssExempt": true,
-    "notes": "MD tax benefits (SS exempt, pension exclusion, no vehicle tax). Anne Arundel piggyback 2.81% — saves ~0.4% MAGI vs Baltimore-area counties."
+    "notes": "MD tax benefits (Social Security exempt, pension exclusion, no vehicle tax). Anne Arundel piggyback 2.81% — saves ~0.4% MAGI vs Baltimore-area counties."
   },
   "healthcare": {
     "system": "Medicare (at 65) + private supplement",
@@ -78,21 +78,21 @@
   "lifestyle": {
     "internetSpeed": "1Gbps widely available (Comcast/Xfinity)",
     "dogFriendly": 8, "expatCommunity": 4, "englishPrevalence": 10, "safetyRating": 7,
-    "notes": "BWI Airport 5 min — travel convenience. Light Rail to Baltimore downtown. Older established working-class to middle-class suburb. Diverse demographics. Quiet residential pockets between commercial corridors."
+    "notes": "BWI (Baltimore-Washington International) Airport 5 min — travel convenience. Light Rail to Baltimore downtown. Older established working-class to middle-class suburb. Diverse demographics. Quiet residential pockets between commercial corridors."
   },
   "pros": [
     "Cheapest viable MD retirement area near Baltimore/Annapolis metros",
     "Anne Arundel County piggyback 2.81% — saves ~$300–420/yr tax vs 3.20% counties",
     "UM Baltimore Washington Medical Center IN TOWN — major regional hospital",
-    "BWI Airport 5 min — outstanding travel convenience",
+    "BWI (Baltimore-Washington International) Airport 5 min — outstanding travel convenience",
     "Light RailLink to Baltimore downtown (~30 min)",
-    "MD tax benefits: SS exempt, pension exclusion, no vehicle tax",
+    "MD tax benefits: Social Security exempt, pension exclusion, no vehicle tax",
     "No bay-bridge premium (unlike Annapolis)"
   ],
   "cons": [
     "Working-class suburb — less charm than Annapolis or Catonsville",
     "Car-dependent outside Light Rail corridor",
-    "I-97 + Route 2 traffic during commute hours",
+    "Interstate 97 + Route 2 traffic during commute hours",
     "Airport noise near BWI flight paths",
     "~45 mi from Fairfax — longer drive than Bowie or Annapolis",
     "Limited walkable downtown core"

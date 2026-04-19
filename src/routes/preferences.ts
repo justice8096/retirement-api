@@ -15,7 +15,12 @@ import type { InputJsonValue } from '@prisma/client/runtime/library.js';
  *
  * The JSONB stays flexible so future sub-sections can be added without a
  * migration. Known sub-schemas are validated per-shape when present. Unknown
- * top-level keys are preserved untouched.
+ * top-level keys are preserved untouched. Patch body is capped at 16 KB
+ * (SAST L-05) and passes through `safeJsonRecord` (SAST L-02 depth/key caps).
+ *
+ * Surfaces:
+ *   - GET `/me/preferences` — full blob.
+ *   - PATCH `/me/preferences` — shallow merge with validation of known shapes.
  */
 
 /** Dyslexia accommodation shape — mirrors `DyslexiaSettings` in the dashboard. */
@@ -82,6 +87,17 @@ export default async function preferencesRoutes(app: FastifyInstance): Promise<v
    *          when present (Dyslexia F-009, Dyscalculia F-011).
    */
   app.patch('/', async (request, reply) => {
+    // SAST L-05 — bound the patch body size before the sanitize/schema pass.
+    // The global 1 MB `bodyLimit` is the outer backstop; this is the per-route
+    // ceiling for a preferences blob (16 KB is generous for known shapes).
+    const raw = JSON.stringify(request.body ?? {});
+    if (raw.length > 16_384) {
+      return reply.code(413).send({
+        error: 'Preferences patch too large',
+        maxBytes: 16_384,
+      });
+    }
+
     // First pass through the sanitize helper to strip prototype-pollution keys.
     const safe = safeJsonRecord.safeParse(request.body);
     if (!safe.success) {

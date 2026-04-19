@@ -1,8 +1,21 @@
+/**
+ * Authenticated user routes — profile, account delete, GDPR export.
+ *
+ * Surfaces:
+ *   - GET `/me` — profile + tier.
+ *   - PUT `/me` — update displayName / email.
+ *   - DELETE `/me` — GDPR right-to-erasure (cascades via Prisma).
+ *   - GET `/me/export` — GDPR right-to-portability. Decrypts sensitive fields
+ *     for human-readable JSON output. Relation loads capped (SAST L-06).
+ *
+ * Side-effects: writes to User; cascades to Household, Financial, etc.
+ */
 import { z } from 'zod';
 import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
 import { requireAuth } from '../middleware/auth.js';
 import { decryptField } from '../middleware/encryption.js';
+import { toValidationErrorPayload } from '../lib/validation.js';
 
 const updateSchema = z.object({
   displayName: z.string().min(1).max(100).optional(),
@@ -36,7 +49,7 @@ export default async function userRoutes(app: FastifyInstance): Promise<void> {
   app.put('/', async (request, reply) => {
     const parsed = updateSchema.safeParse(request.body);
     if (!parsed.success) {
-      return reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
+      return reply.code(400).send(toValidationErrorPayload(parsed.error));
     }
 
     const user = await prisma.user.update({
@@ -65,6 +78,12 @@ export default async function userRoutes(app: FastifyInstance): Promise<void> {
   });
 
   // GET /api/me/export — full data export (GDPR right to portability)
+  // SAST L-06 — hard caps on relation loads so a user at their 50 scenarios /
+  // 20 custom-locations limit can't force an unbounded join. Totals are
+  // returned so clients can paginate subsequent requests if needed.
+  const EXPORT_TAKE_SCENARIOS = 200;
+  const EXPORT_TAKE_CUSTOM_LOCATIONS = 100;
+  const EXPORT_TAKE_LOCATION_OVERRIDES = 500;
   app.get('/export', async (request, reply) => {
     const user = await prisma.user.findUnique({
       where: { id: request.userId },
@@ -77,9 +96,9 @@ export default async function userRoutes(app: FastifyInstance): Promise<void> {
         },
         financialSettings: true,
         preferences: true,
-        customLocations: true,
-        locationOverrides: true,
-        scenarios: true,
+        customLocations: { take: EXPORT_TAKE_CUSTOM_LOCATIONS, orderBy: { updatedAt: 'desc' } },
+        locationOverrides: { take: EXPORT_TAKE_LOCATION_OVERRIDES, orderBy: { updatedAt: 'desc' } },
+        scenarios: { take: EXPORT_TAKE_SCENARIOS, orderBy: { updatedAt: 'desc' } },
         groceryData: true,
       },
     });

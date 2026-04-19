@@ -7,6 +7,8 @@
 <script src="./shared.js"></script>
 </head>
 <body>
+<a class="skip-nav" href="#main">Skip to content</a>
+
 <script>
 (function() {
   injectCSS();
@@ -413,10 +415,10 @@
           card.appendChild(el('p', { style: 'color: #e74c3c; font-size: 0.85em; margin-top: 4px;' }, ['No mitigation measures defined']));
         }
         if (mit.residualRisk) {
-          card.appendChild(el('p', { style: 'color: #6B7B8D; font-size: 0.8em; margin-top: 2px;' }, ['Residual risk: ' + mit.residualRisk]));
+          card.appendChild(el('p', { style: 'color: #9FC8FF; font-size: 0.8em; margin-top: 2px;' }, ['Residual risk: ' + mit.residualRisk]));
         }
         if (mit.monitoring) {
-          card.appendChild(el('p', { style: 'color: #6B7B8D; font-size: 0.8em; margin-top: 2px;' }, ['Monitoring: ' + mit.monitoring]));
+          card.appendChild(el('p', { style: 'color: #9FC8FF; font-size: 0.8em; margin-top: 2px;' }, ['Monitoring: ' + mit.monitoring]));
         }
         section.appendChild(card);
       }

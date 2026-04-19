@@ -1,7 +1,20 @@
+/**
+ * Public location routes — no auth required.
+ *
+ * Surfaces:
+ *   - GET `/` — paginated, filterable catalogue (country / region / cost-range).
+ *   - GET `/:id` — full location blob with `_units` injected into `acaMarketplace`
+ *     (Dyscalculia F-203) and `acaApplicable: false` on non-US rows (F-208).
+ *   - GET `/:id/:dataType` — supplements (neighborhoods, services, inclusion…).
+ *   - POST `/batch-supplements` — N+1 elimination for list views.
+ *
+ * Side-effects: read-only. Heavy queries are memoised via `cached()`.
+ */
 import { z } from 'zod';
 import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
 import { cached } from '../lib/cache.js';
+import { toValidationErrorPayload } from '../lib/validation.js';
 
 interface LocationData {
   name: string;
@@ -64,10 +77,7 @@ export default async function locationRoutes(app: FastifyInstance): Promise<void
   app.get('/', async (request, reply) => {
     const parsed = listQuerySchema.safeParse(request.query);
     if (!parsed.success) {
-      return reply.code(400).send({
-        error: 'Invalid query parameters',
-        details: parsed.error.issues.map((i) => ({ path: i.path.join('.'), message: i.message })),
-      });
+      return reply.code(400).send(toValidationErrorPayload(parsed.error));
     }
     const q = parsed.data;
 
@@ -227,8 +237,42 @@ export default async function locationRoutes(app: FastifyInstance): Promise<void
         where: { id: idParsed.data },
       });
       if (!loc) return reply.code(404).send({ error: 'Location not found' });
+      const data = loc.locationData as Record<string, unknown>;
+
+      // Dyscalculia F-203 — inject _units into acaMarketplace so downstream UIs
+      // know premiumCapPctOfIncome is a decimal fraction (0.085 = 8.5%).
+      const healthcare = data.healthcare as Record<string, unknown> | undefined;
+      const aca = healthcare?.acaMarketplace as Record<string, unknown> | undefined;
+      if (aca) {
+        aca._units = {
+          benchmarkSilverMonthly2Adult: { encoding: 'amount', currency: 'USD', periodicity: 'month' },
+          benchmarkSilverMonthlySingle: { encoding: 'amount', currency: 'USD', periodicity: 'month' },
+          premiumCapPctOfIncome: {
+            encoding: 'fraction',
+            meaning: '0.085 = 8.5% of MAGI',
+            regime: 'aca_enhanced_post_2021',
+          },
+        };
+      }
+
+      // Dyscalculia F-208 — flag non-US locations explicitly so consumers
+      // don't have to infer from field absence.
+      if (healthcare && loc.country !== 'United States' && !aca) {
+        healthcare.acaApplicable = false;
+      }
+
+      // WCAG best-practice — natural-language summary that downstream
+      // screen-reader UIs can announce without re-synthesizing from fields.
+      const costText = loc.monthlyCostTotal
+        ? `About ${loc.currency} ${Math.round(loc.monthlyCostTotal).toLocaleString()} per month in typical costs.`
+        : 'Monthly cost total not yet available.';
+      const a11y = {
+        description: `${loc.name} in ${loc.region ?? loc.country}. ${costText}`,
+        ariaLabel: `${loc.name}, ${loc.country}`,
+      };
+
       return {
-        ...(loc.locationData as object),
+        ...data,
         id: loc.id,
         name: loc.name,
         country: loc.country,
@@ -237,6 +281,7 @@ export default async function locationRoutes(app: FastifyInstance): Promise<void
         monthlyCostTotal: loc.monthlyCostTotal,
         updatedAt: loc.updatedAt,
         _version: loc.version,
+        _a11y: a11y,
       };
     } catch (err) {
       request.log.error({ err: (err as Error).message, id }, 'Failed to query location');
@@ -276,10 +321,7 @@ export default async function locationRoutes(app: FastifyInstance): Promise<void
   app.post('/batch-supplements', async (request, reply) => {
     const parsed = batchSupplementSchema.safeParse(request.body);
     if (!parsed.success) {
-      return reply.code(400).send({
-        error: 'Validation failed',
-        details: parsed.error.issues.map((i) => ({ path: i.path.join('.'), message: i.message })),
-      });
+      return reply.code(400).send(toValidationErrorPayload(parsed.error));
     }
 
     const { locationIds, dataType } = parsed.data;

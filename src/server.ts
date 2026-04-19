@@ -6,7 +6,7 @@ import cors from '@fastify/cors';
 import helmet from '@fastify/helmet';
 import rateLimit from '@fastify/rate-limit';
 import cookie from '@fastify/cookie';
-import { registerClerk } from './middleware/auth.js';
+import { registerClerk, assertNoDevBypassUserInProd } from './middleware/auth.js';
 import { rateLimitConfig, buildRedisStore } from './middleware/rate-limit.js';
 import { initSentry, captureException } from './lib/sentry.js';
 import { validateEncryptionConfig } from './middleware/encryption.js';
@@ -19,6 +19,9 @@ await initSentry();
 
 // Validate encryption config on startup (warns in production if key missing)
 validateEncryptionConfig();
+
+// SAST M-NEW-01 — refuse to boot if a dev-bypass user exists in a prod DB.
+await assertNoDevBypassUserInProd();
 
 import locationRoutes from './routes/locations.js';
 import userRoutes from './routes/users.js';
@@ -84,6 +87,13 @@ await app.register(cookie);
 app.addHook('onRequest', (request, _reply, done) => {
   const header = request.headers['accept-language'];
   request.locale = pickLocale(Array.isArray(header) ? header[0] : header);
+
+  // Dyscalculia F-202 — surface API-version negotiation on every request.
+  // Default = 1 (whole-number percents on wire). Clients opt in to 2 with
+  // `Accept-Version: 2` to receive decimal fractions on all percentage fields.
+  const versionHeader = request.headers['accept-version'];
+  const rawVersion = Array.isArray(versionHeader) ? versionHeader[0] : versionHeader;
+  request.apiVersion = rawVersion === '2' ? 2 : 1;
   done();
 });
 
