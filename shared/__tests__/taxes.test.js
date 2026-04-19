@@ -1,5 +1,11 @@
 import { describe, it, expect, test } from 'vitest';
-import { calcBracketTax, calcTaxesForLocation } from '../taxes.js';
+import {
+  calcBracketTax,
+  calcTaxesForLocation,
+  obbbaSeniorDeduction,
+  FED_STD_DEDUCTION_2026,
+  FED_BRACKETS_2026_MFJ,
+} from '../taxes.js';
 
 describe('calcBracketTax', () => {
   const fedBrackets = [
@@ -93,11 +99,11 @@ describe('calcTaxesForLocation', () => {
     expect(result.federal).toBeCloseTo(expectedFed, 2);
   });
 
-  it('uses default $30,000 standard deduction when not specified', () => {
+  it('uses 2026 MFJ default standard deduction ($32,200) when not specified', () => {
     const loc = { taxes: {} };
     const result = calcTaxesForLocation(loc, 0, 50000, 0);
-    // AGI = 50000 - 30000 = 20000
-    const expectedFed = 20000 * 0.10;
+    // AGI = 50000 - 32200 = 17800 (2026 MFJ std deduction per Rev Proc 2025-32)
+    const expectedFed = 17800 * 0.10;
     expect(result.federal).toBeCloseTo(expectedFed, 2);
   });
 
@@ -106,10 +112,12 @@ describe('calcTaxesForLocation', () => {
     expect(result.federal).toBe(0);
   });
 
-  it('calculates correct total and effective rate', () => {
+  it('calculates correct total and effective rate (2026 MFJ brackets)', () => {
     const result = calcTaxesForLocation(baseLoc, 0, 80000, 0);
+    // baseLoc has standardDeduction: 30000 (explicit override).
     // AGI = 80000 - 30000 = 50000
-    const expectedFed = 23850 * 0.10 + (50000 - 23850) * 0.12;
+    // 2026 MFJ brackets: 10% on first $24,800; 12% above.
+    const expectedFed = 24800 * 0.10 + (50000 - 24800) * 0.12;
     expect(result.federal).toBeCloseTo(expectedFed, 2);
     expect(result.total).toBeCloseTo(expectedFed, 2);
     expect(result.totalIncome).toBe(80000);
@@ -281,5 +289,68 @@ describe('calcTaxesForLocation', () => {
         expect(d).toHaveProperty('note');
       });
     });
+  });
+});
+
+describe('2026 federal constants', () => {
+  it('exposes 2026 MFJ standard deduction per Rev Proc 2025-32', () => {
+    expect(FED_STD_DEDUCTION_2026.mfj).toBe(32200);
+    expect(FED_STD_DEDUCTION_2026.single).toBe(16100);
+    expect(FED_STD_DEDUCTION_2026.hoh).toBe(24150);
+  });
+
+  it('exposes 2026 MFJ bracket cutoffs per Rev Proc 2025-32', () => {
+    expect(FED_BRACKETS_2026_MFJ[1].min).toBe(24800);   // 10/12 boundary
+    expect(FED_BRACKETS_2026_MFJ[2].min).toBe(100800);  // 12/22
+    expect(FED_BRACKETS_2026_MFJ[3].min).toBe(211400);  // 22/24
+    expect(FED_BRACKETS_2026_MFJ[4].min).toBe(403550);  // 24/32
+  });
+});
+
+describe('obbbaSeniorDeduction', () => {
+  // OBBBA § 13301 — $6,000/yr for age 65+, tax years 2025-2028.
+  // Phase-out: MFJ $150k–$250k; Single/HoH $75k–$175k.
+
+  it('returns 0 for under-65', () => {
+    expect(obbbaSeniorDeduction('mfj', 64, 100000)).toBe(0);
+    expect(obbbaSeniorDeduction('mfj', undefined, 100000)).toBe(0);
+  });
+
+  it('returns the full $6,000 below the MFJ phase-out start', () => {
+    expect(obbbaSeniorDeduction('mfj', 65, 150000)).toBe(6000);
+    expect(obbbaSeniorDeduction('mfj', 70, 100000)).toBe(6000);
+  });
+
+  it('returns 0 at or above the MFJ phase-out end', () => {
+    expect(obbbaSeniorDeduction('mfj', 65, 250000)).toBe(0);
+    expect(obbbaSeniorDeduction('mfj', 70, 300000)).toBe(0);
+  });
+
+  it('phases linearly across the MFJ $150k-$250k band', () => {
+    // Half-way: $200k MAGI → $3,000 remaining.
+    expect(obbbaSeniorDeduction('mfj', 65, 200000)).toBe(3000);
+  });
+
+  it('uses the single/HoH band when filing status is single', () => {
+    expect(obbbaSeniorDeduction('single', 65, 75000)).toBe(6000);
+    expect(obbbaSeniorDeduction('single', 65, 125000)).toBe(3000);
+    expect(obbbaSeniorDeduction('single', 65, 175000)).toBe(0);
+  });
+
+  it('is applied via calcTaxesForLocation when primaryAge >= 65', () => {
+    const loc = { taxes: { federalIncomeTax: { standardDeduction: 30000 } } };
+    // Both spouses 65+; MAGI 80k (below phase-out); $12k extra deduction.
+    const with65 = calcTaxesForLocation(loc, 0, 80000, 0, {
+      filingStatus: 'mfj', primaryAge: 70, spouseAge: 68,
+    });
+    const without = calcTaxesForLocation(loc, 0, 80000, 0, {
+      filingStatus: 'mfj', primaryAge: 60, spouseAge: 58,
+    });
+    expect(with65.federal).toBeLessThan(without.federal);
+    // Exact amount check: 2 × $6,000 = $12,000 additional deduction.
+    // Income ($80k) - std deduction ($30k) = $50k AGI, which sits in the
+    // 12% bracket. Reducing AGI by $12k keeps it in the 12% bracket, so
+    // the savings are $12,000 × 12% = $1,440.
+    expect(without.federal - with65.federal).toBeCloseTo(1440, 2);
   });
 });

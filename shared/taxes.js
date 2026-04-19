@@ -9,26 +9,119 @@ export function calcBracketTax(income, brackets) {
   return tax;
 }
 
-export function calcTaxesForLocation(loc, ssIncome, iraIncome, investIncome) {
+// ─── 2026 tax constants (US) ────────────────────────────────────────────
+//
+// Sources:
+//   - Federal income tax brackets + standard deduction:
+//     IRS Rev Proc 2025-32 (2026 inflation adjustments).
+//   - OBBBA senior bonus deduction:
+//     One Big Beautiful Bill Act § 13301 ($6,000/yr for age 65+, tax years
+//     2025–2028). Phases out between MAGI $75k–$175k (single) /
+//     $150k–$250k (MFJ).
+//
+// Filing-status-specific brackets. The location seed data may override
+// these via `taxes.federalIncomeTax.brackets`, so callers that want
+// strict 2026 behaviour should NOT pass a `brackets` override.
+export var FED_STD_DEDUCTION_2026 = {
+  mfj: 32200,
+  single: 16100,
+  hoh: 24150,
+};
+
+export var FED_BRACKETS_2026_MFJ = [
+  { min: 0,       max: 24800,  rate: 0.10 },
+  { min: 24800,   max: 100800, rate: 0.12 },
+  { min: 100800,  max: 211400, rate: 0.22 },
+  { min: 211400,  max: 403550, rate: 0.24 },
+  { min: 403550,  max: 512450, rate: 0.32 },
+  { min: 512450,  max: 768700, rate: 0.35 },
+  { min: 768700,  max: null,   rate: 0.37 },
+];
+
+export var FED_BRACKETS_2026_SINGLE = [
+  { min: 0,       max: 12400,  rate: 0.10 },
+  { min: 12400,   max: 50400,  rate: 0.12 },
+  { min: 50400,   max: 105700, rate: 0.22 },
+  { min: 105700,  max: 201775, rate: 0.24 },
+  { min: 201775,  max: 256225, rate: 0.32 },
+  { min: 256225,  max: 640600, rate: 0.35 },
+  { min: 640600,  max: null,   rate: 0.37 },
+];
+
+// OBBBA senior bonus deduction — age 65+, stackable with standard deduction.
+// Phase-out: $200/1,000 excess MAGI over threshold, until zeroed.
+export var OBBBA_SENIOR_DEDUCTION_AMOUNT = 6000;
+export var OBBBA_SENIOR_PHASEOUT = {
+  mfj:    { start: 150000, end: 250000 },
+  single: { start:  75000, end: 175000 },
+  hoh:    { start:  75000, end: 175000 },
+};
+
+/** Phased-out amount of the OBBBA senior bonus deduction at a given MAGI. */
+export function obbbaSeniorDeduction(filingStatus, age, magi, perAdult) {
+  // `perAdult` = true when both MFJ spouses are 65+. Applied once per
+  // qualifying adult. Caller is responsible for counting adults.
+  if (age === undefined || age < 65) return 0;
+  var band = OBBBA_SENIOR_PHASEOUT[filingStatus] || OBBBA_SENIOR_PHASEOUT.single;
+  if (magi <= band.start) return OBBBA_SENIOR_DEDUCTION_AMOUNT;
+  if (magi >= band.end)   return 0;
+  var phaseRange = band.end - band.start;
+  var excess = magi - band.start;
+  var keep = Math.max(0, 1 - excess / phaseRange);
+  return Math.round(OBBBA_SENIOR_DEDUCTION_AMOUNT * keep);
+}
+
+export function calcTaxesForLocation(loc, ssIncome, iraIncome, investIncome, opts) {
   var taxes = loc.taxes;
   if (!taxes) return null;
+  var filingStatus = (opts && opts.filingStatus) || 'mfj';
+  var primaryAge = opts && opts.primaryAge;
+  var spouseAge = opts && opts.spouseAge;
   var totalIncome = ssIncome + iraIncome + investIncome;
   var result = { federal: 0, state: 0, socialCharges: 0, salesVat: 0, vehicleTax: 0, total: 0, details: [] };
 
   // Federal income tax (US citizens everywhere)
-  // 85% of SS is taxable at federal level for most retirees
+  // NOTE: 85% SS-taxable is a simplifying default. The real tiered rule
+  // (0% / 50% / 85% at the $25k/$32k provisional-income thresholds) lives
+  // in HealthcareService.computeMagi in the dashboard; this file is used
+  // for location-comparison cost-of-living math where the heuristic is
+  // acceptable. See docs/METHODOLOGY.md §2.
   var ssTaxable = ssIncome * 0.85;
   var federalTaxableIncome = ssTaxable + iraIncome + investIncome;
-  var fedDeduction = (taxes.federalIncomeTax && taxes.federalIncomeTax.standardDeduction) || 30000;
+  var fedDeduction = (taxes.federalIncomeTax && taxes.federalIncomeTax.standardDeduction)
+    || FED_STD_DEDUCTION_2026[filingStatus]
+    || FED_STD_DEDUCTION_2026.mfj;
+
+  // OBBBA senior bonus deduction (2025–2028). Applied once per qualifying
+  // adult aged 65+, subject to MAGI phase-out. Uses federalTaxableIncome
+  // as the MAGI approximation — exact OBBBA MAGI definition includes
+  // foreign-income add-backs which this model doesn't carry.
+  var seniorDeduction = 0;
+  if (primaryAge && primaryAge >= 65) {
+    seniorDeduction += obbbaSeniorDeduction(filingStatus, primaryAge, federalTaxableIncome);
+  }
+  if (filingStatus === 'mfj' && spouseAge && spouseAge >= 65) {
+    seniorDeduction += obbbaSeniorDeduction(filingStatus, spouseAge, federalTaxableIncome);
+  }
+  fedDeduction += seniorDeduction;
+
   var fedAGI = Math.max(0, federalTaxableIncome - fedDeduction);
-  var fedBrackets = [
-    { min: 0, max: 23850, rate: 0.10 }, { min: 23850, max: 96950, rate: 0.12 },
-    { min: 96950, max: 206700, rate: 0.22 }, { min: 206700, max: 394600, rate: 0.24 },
-  ];
+  var fedBrackets;
+  if (taxes.federalIncomeTax && taxes.federalIncomeTax.brackets) {
+    // Seed-data override — for locations that want to simulate a different
+    // tax system entirely (territorial, no federal, etc.).
+    fedBrackets = taxes.federalIncomeTax.brackets;
+  } else {
+    fedBrackets = filingStatus === 'single' ? FED_BRACKETS_2026_SINGLE : FED_BRACKETS_2026_MFJ;
+  }
   result.federal = calcBracketTax(fedAGI, fedBrackets);
+  var deductionNote = 'AGI $' + Math.round(fedAGI).toLocaleString() + ' after $' + fedDeduction.toLocaleString() + ' standard deduction';
+  if (seniorDeduction > 0) {
+    deductionNote += ' (includes $' + seniorDeduction.toLocaleString() + ' OBBBA senior bonus)';
+  }
   result.details.push({
     label: 'US Federal Income Tax', amount: result.federal,
-    note: 'AGI $' + Math.round(fedAGI).toLocaleString() + ' after $' + fedDeduction.toLocaleString() + ' standard deduction',
+    note: deductionNote,
   });
 
   // State/country income tax
