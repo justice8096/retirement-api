@@ -54,6 +54,35 @@ describe('Health routes', () => {
     await app.register(healthRoutes, { prefix: '/api' });
   });
 
+  /**
+   * Helper: mark the next request as admin. The health route only exposes
+   * `encryption`, `auth`, `stripe`, and `memory` details to admin users
+   * (prevent info disclosure). Tests that want those branches need the
+   * decorated `request.user.tier = 'admin'`.
+   */
+  function injectAsAdmin(url: string) {
+    return app.inject({
+      method: 'GET',
+      url,
+      // Fastify's `.inject()` supports `server` + `cookies` + `headers`;
+      // we pipe the admin tier through a request header that the hook
+      // below converts into `request.user`.
+      headers: { 'x-test-tier': 'admin' },
+    });
+  }
+
+  // Register the hook once — idempotent: onRequest runs per-request and
+  // honors the test's `x-test-tier` header to fake the admin gate.
+  beforeEach(() => {
+    app.addHook('onRequest', (req, _reply, done) => {
+      const tier = req.headers['x-test-tier'];
+      if (tier) {
+        (req as unknown as { user: { tier: string } }).user = { tier: String(tier) };
+      }
+      done();
+    });
+  });
+
   afterEach(async () => {
     await app.close();
     vi.restoreAllMocks();
@@ -96,12 +125,15 @@ describe('Health routes', () => {
       expect(body.memory).toBeUndefined();
     });
 
-    it('reports encryption warning when authenticated and key not set', async () => {
+    it('reports encryption warning when admin and key not set', async () => {
+      // Encryption / auth / stripe / memory details are admin-only (info
+      // disclosure hardening). Mark the request as admin via the test
+      // helper.
       prisma.$queryRaw.mockResolvedValue([{ result: 1 }]);
-      (getAuth as ReturnType<typeof vi.fn>).mockReturnValue({ userId: 'user_123' });
+      (getAuth as ReturnType<typeof vi.fn>).mockReturnValue({ userId: 'user_admin' });
       delete process.env.ENCRYPTION_MASTER_KEY;
 
-      const res = await app.inject({ method: 'GET', url: '/api/health' });
+      const res = await injectAsAdmin('/api/health');
       const body = JSON.parse(res.payload);
       expect(body.checks.encryption.status).toBe('warning');
     });
@@ -115,11 +147,12 @@ describe('Health routes', () => {
       expect(body.checks.redis.status).toBe('info');
     });
 
-    it('includes memory stats for authenticated users', async () => {
+    it('includes memory stats for admin users', async () => {
+      // Memory stats are admin-only (info disclosure hardening).
       prisma.$queryRaw.mockResolvedValue([{ result: 1 }]);
-      (getAuth as ReturnType<typeof vi.fn>).mockReturnValue({ userId: 'user_123' });
+      (getAuth as ReturnType<typeof vi.fn>).mockReturnValue({ userId: 'user_admin' });
 
-      const res = await app.inject({ method: 'GET', url: '/api/health' });
+      const res = await injectAsAdmin('/api/health');
       const body = JSON.parse(res.payload);
       expect(body.memory).toBeDefined();
       expect(body.memory.rss).toMatch(/MB$/);

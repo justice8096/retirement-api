@@ -179,10 +179,15 @@ describe('Webhook routes', () => {
     });
   });
 
-  // ─── customer.subscription.updated ───────────────────────────────
+  // ─── customer.subscription.updated (legacy — no-op for grandfathered) ──
+  //
+  // The billing model moved from subscriptions to one-time feature unlocks.
+  // The legacy subscription.* events are now **acknowledged but never
+  // change user tiers** — grandfathered users retain access regardless of
+  // their subscription lifecycle. The handler just logs and returns 200.
 
-  describe('customer.subscription.updated', () => {
-    it('updates tier when subscription is active', async () => {
+  describe('customer.subscription.updated (legacy no-op)', () => {
+    it('acknowledges active subscription without touching tiers', async () => {
       const event = makeEvent('customer.subscription.updated', {
         customer: 'cus_abc',
         status: 'active',
@@ -190,19 +195,14 @@ describe('Webhook routes', () => {
       });
 
       mockStripe.webhooks.constructEvent.mockReturnValue(event);
-      prisma.user.findFirst.mockResolvedValue({ id: 'user-1' });
-      prisma.user.update.mockResolvedValue({});
 
       const res = await postWebhook();
 
       expect(res.statusCode).toBe(200);
-      expect(prisma.user.update).toHaveBeenCalledWith({
-        where: { id: 'user-1' },
-        data: { tier: 'premium' },
-      });
+      expect(prisma.user.update).not.toHaveBeenCalled();
     });
 
-    it('downgrades to free when subscription is not active', async () => {
+    it('acknowledges past_due subscription without downgrading', async () => {
       const event = makeEvent('customer.subscription.updated', {
         customer: 'cus_abc',
         status: 'past_due',
@@ -210,47 +210,23 @@ describe('Webhook routes', () => {
       });
 
       mockStripe.webhooks.constructEvent.mockReturnValue(event);
-      prisma.user.findFirst.mockResolvedValue({ id: 'user-1' });
-      prisma.user.update.mockResolvedValue({});
 
       const res = await postWebhook();
 
       expect(res.statusCode).toBe(200);
-      expect(prisma.user.update).toHaveBeenCalledWith({
-        where: { id: 'user-1' },
-        data: { tier: 'free' },
-      });
+      expect(prisma.user.update).not.toHaveBeenCalled();
     });
   });
 
-  // ─── customer.subscription.deleted ───────────────────────────────
+  // ─── customer.subscription.deleted (legacy — no-op for grandfathered) ──
 
-  describe('customer.subscription.deleted', () => {
-    it('reverts user to free tier on cancellation', async () => {
+  describe('customer.subscription.deleted (legacy no-op)', () => {
+    it('acknowledges cancellation without reverting tier', async () => {
       const event = makeEvent('customer.subscription.deleted', {
         customer: 'cus_abc',
       });
 
       mockStripe.webhooks.constructEvent.mockReturnValue(event);
-      prisma.user.findFirst.mockResolvedValue({ id: 'user-1' });
-      prisma.user.update.mockResolvedValue({});
-
-      const res = await postWebhook();
-
-      expect(res.statusCode).toBe(200);
-      expect(prisma.user.update).toHaveBeenCalledWith({
-        where: { id: 'user-1' },
-        data: { tier: 'free' },
-      });
-    });
-
-    it('handles user not found gracefully', async () => {
-      const event = makeEvent('customer.subscription.deleted', {
-        customer: 'cus_gone',
-      });
-
-      mockStripe.webhooks.constructEvent.mockReturnValue(event);
-      prisma.user.findFirst.mockResolvedValue(null);
 
       const res = await postWebhook();
 
@@ -286,7 +262,11 @@ describe('Webhook routes', () => {
       });
 
       mockStripe.webhooks.constructEvent.mockReturnValue(event);
-      prisma.processedEvent.findUnique.mockResolvedValue({ eventId: event.id });
+      // Idempotency uses insert-first with unique-constraint catch: when
+      // the event already exists, `processedEvent.create` throws P2002.
+      prisma.processedEvent.create.mockRejectedValue(
+        Object.assign(new Error('duplicate'), { code: 'P2002' }),
+      );
 
       const res = await postWebhook();
 
@@ -302,7 +282,6 @@ describe('Webhook routes', () => {
       });
 
       mockStripe.webhooks.constructEvent.mockReturnValue(event);
-      prisma.processedEvent.findUnique.mockResolvedValue(null);
       prisma.processedEvent.create.mockResolvedValue({});
 
       const res = await postWebhook();
