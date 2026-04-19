@@ -36,11 +36,30 @@ jobs:
 
       - name: TypeScript type check
         run: npm run typecheck
-        continue-on-error: true
 
       - name: Build
         run: npm run build
-        continue-on-error: true
+
+  sbom:
+    # CycloneDX SBOM published as a CI artefact on every push.
+    # LLM-Compliance roadmap Dimension 4 (Supply Chain) — path to SLSA L1.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Generate CycloneDX SBOM
+        run: npm sbom --sbom-format cyclonedx --sbom-type application > sbom.json
+      - name: Upload SBOM
+        uses: actions/upload-artifact@v4
+        with:
+          name: sbom-cyclonedx
+          path: sbom.json
+          retention-days: 90
 
   security-audit:
     runs-on: ubuntu-latest
@@ -57,8 +76,7 @@ jobs:
         run: npm ci
 
       - name: Dependency vulnerability scan
-        run: npm audit --audit-level=critical
-        continue-on-error: true
+        run: npm audit --audit-level=high
 
       - name: Check for hardcoded secrets
         run: |

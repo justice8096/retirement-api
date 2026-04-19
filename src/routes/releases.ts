@@ -3,12 +3,20 @@
  *
  * Releases represent versioned data updates. Users pay once per release
  * to access updated location data.
+ *
+ * Surfaces:
+ *   - GET `/` — public list, with a `purchased` flag for authenticated users.
+ *   - GET `/current` — latest published version.
+ *   - POST `/:id/checkout` — Stripe one-time checkout (UUID/ID param validated,
+ *     SAST L-NEW-01). Uses the shared `ensureStripeCustomer` helper so parallel
+ *     requests don't create orphaned Stripe customers (SAST L-NEW-02).
  */
 import { z } from 'zod';
 import Stripe from 'stripe';
 import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
 import { requireAuth } from '../middleware/auth.js';
+import { ensureStripeCustomer } from '../lib/stripe-customer.js';
 
 const stripe = process.env.STRIPE_SECRET_KEY
   ? new Stripe(process.env.STRIPE_SECRET_KEY)
@@ -71,7 +79,14 @@ export default async function releaseRoutes(app: FastifyInstance): Promise<void>
       return reply.code(503).send({ error: 'Stripe not configured' });
     }
 
-    const { id } = request.params as { id: string };
+    // SAST L-NEW-01 — validate `:id` is a CUID/UUID-shape string before hitting Prisma.
+    // Prevents 2 KB junk-id payloads from reaching the DB layer.
+    const paramsSchema = z.object({ id: z.string().min(8).max(64).regex(/^[a-zA-Z0-9_-]+$/) }).strict();
+    const parsedParams = paramsSchema.safeParse(request.params);
+    if (!parsedParams.success) {
+      return reply.code(400).send({ error: 'Invalid release id' });
+    }
+    const { id } = parsedParams.data;
 
     const release = await prisma.dataRelease.findUnique({ where: { id } });
     if (!release || !release.publishedAt) {
@@ -103,19 +118,8 @@ export default async function releaseRoutes(app: FastifyInstance): Promise<void>
       return reply.code(500).send({ error: 'Release has no Stripe price configured' });
     }
 
-    // Ensure user has a Stripe customer ID
-    let customerId = request.user.stripeCustomerId;
-    if (!customerId) {
-      const customer = await stripe.customers.create({
-        email: request.user.email,
-        metadata: { userId: request.userId },
-      });
-      customerId = customer.id;
-      await prisma.user.update({
-        where: { id: request.userId },
-        data: { stripeCustomerId: customerId },
-      });
-    }
+    // Ensure user has a Stripe customer ID (SAST L-NEW-02: optimistic-concurrency helper)
+    const customerId = await ensureStripeCustomer(stripe, request.user);
 
     const appUrl = process.env.APP_URL || 'http://localhost:5173';
 

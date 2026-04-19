@@ -1,3 +1,14 @@
+/**
+ * Health / readiness / operational cleanup routes.
+ *
+ * Public:
+ *   - GET `/health` — liveness (always 200 if the process answers).
+ *   - GET `/health/ready` — readiness; checks DB + encryption key presence.
+ *     Returns 503 when the prod encryption key is missing (positive control).
+ *
+ * Admin-only:
+ *   - POST `/health/cleanup` — purge ProcessedEvent rows older than N days.
+ */
 import { z } from 'zod';
 import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
@@ -5,6 +16,7 @@ import { cleanupProcessedEvents } from './webhooks.js';
 import { requireAdmin, requireAuth, clerkEnabled } from '../middleware/auth.js';
 import { getAuth } from '@clerk/fastify';
 import { isEncryptionEnabled } from '../middleware/encryption.js';
+import { toValidationErrorPayload } from '../lib/validation.js';
 
 const cleanupSchema = z.object({
   olderThanDays: z.number().int().min(1).max(365).default(7),
@@ -131,7 +143,7 @@ export default async function healthRoutes(app: FastifyInstance): Promise<void> 
   app.post('/health/cleanup', { preHandler: requireAdmin }, async (request, reply) => {
     const parsed = cleanupSchema.safeParse(request.body ?? {});
     if (!parsed.success) {
-      return reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
+      return reply.code(400).send(toValidationErrorPayload(parsed.error));
     }
 
     const { olderThanDays } = parsed.data;

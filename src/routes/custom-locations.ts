@@ -1,8 +1,20 @@
+/**
+ * Custom location routes (basic+ tier).
+ *
+ * A user may maintain up to `MAX_CUSTOM_LOCATIONS` private locations that
+ * augment the public AdminLocation catalogue. They are JSONB blobs with the
+ * same shape; sanitized via `safeJsonRecord` to block prototype-pollution keys.
+ *
+ * Side-effects:
+ *   - Writes to UserCustomLocation.
+ *   - Per-user cap enforced on POST via count query (409 when exceeded).
+ */
 import { z } from 'zod';
 import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
 import { requireAuth, requireTier } from '../middleware/auth.js';
 import { safeJsonRecord } from '../middleware/sanitize.js';
+import { toValidationErrorPayload } from '../lib/validation.js';
 import type { InputJsonValue } from '@prisma/client/runtime/library.js';
 
 const customLocationSchema = z.object({
@@ -36,7 +48,7 @@ export default async function customLocationRoutes(app: FastifyInstance): Promis
   app.post('/', { preHandler: requireTier('basic') }, async (request, reply) => {
     const parsed = customLocationSchema.safeParse(request.body);
     if (!parsed.success) {
-      return reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
+      return reply.code(400).send(toValidationErrorPayload(parsed.error));
     }
 
     const count = await prisma.userCustomLocation.count({ where: { userId: request.userId } });
@@ -58,7 +70,7 @@ export default async function customLocationRoutes(app: FastifyInstance): Promis
   app.put('/:id', async (request, reply) => {
     const parsed = customLocationSchema.safeParse(request.body);
     if (!parsed.success) {
-      return reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
+      return reply.code(400).send(toValidationErrorPayload(parsed.error));
     }
 
     const { id } = request.params as { id: string };
@@ -105,7 +117,7 @@ export default async function customLocationRoutes(app: FastifyInstance): Promis
   app.put('/overrides', async (request, reply) => {
     const parsed = overrideSchema.safeParse(request.body);
     if (!parsed.success) {
-      return reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
+      return reply.code(400).send(toValidationErrorPayload(parsed.error));
     }
 
     // Look up current version of base location

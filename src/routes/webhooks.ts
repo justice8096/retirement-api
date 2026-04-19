@@ -11,6 +11,7 @@
 import Stripe from 'stripe';
 import type { FastifyInstance, FastifyBaseLogger } from 'fastify';
 import prisma from '../db/prisma.js';
+import { invalidateUserCache } from '../middleware/auth.js';
 
 const stripe = process.env.STRIPE_SECRET_KEY
   ? new Stripe(process.env.STRIPE_SECRET_KEY)
@@ -174,6 +175,11 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session, log: Fa
         });
       }
 
+      // SAST H-05 — drop cached user entry so the new unlock is visible to
+      // the next authenticated request (not waiting for the 10s TTL).
+      const buyer = await prisma.user.findUnique({ where: { id: userId }, select: { authProviderId: true } });
+      if (buyer?.authProviderId) invalidateUserCache(buyer.authProviderId);
+
       log.info({ userId, featureSet }, 'Feature unlock recorded');
     } catch (err) {
       log.error({ err: (err as Error).message, userId, featureSet }, 'Failed to record feature unlock');
@@ -213,6 +219,9 @@ async function handleLegacyCheckout(session: Stripe.Checkout.Session, log: Fasti
       where: { id: user.id },
       data: { tier },
     });
+    // SAST H-05 — invalidate any cached tier so rate-limit buckets and guard
+    // checks pick up the new tier on the next request.
+    invalidateUserCache(user.authProviderId);
     log.info({ userId: user.id, tier }, 'Legacy: user tier updated after checkout');
   } else {
     log.warn({ customerId }, 'No user found for Stripe customer');

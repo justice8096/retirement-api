@@ -107,6 +107,22 @@ function registerFallbackOpenApi(app: FastifyInstance): void {
                 description: 'Return a single term instead of the full list.',
               },
             ],
+            // Dyscalculia F-207 — response body schema so integrators know
+            // the `{ key, term, plain, example, technical, seeAlso }` shape
+            // without reading glossary.ts.
+            responses: {
+              '200': {
+                description: 'List of glossary terms (or a single term when ?key= is set).',
+                content: {
+                  'application/json': {
+                    schema: { $ref: '#/components/schemas/GlossaryResponse' },
+                  },
+                },
+              },
+              '404': {
+                description: 'No matching term for the requested `key`.',
+              },
+            },
           },
         },
         '/api/locations': {
@@ -147,6 +163,38 @@ function registerFallbackOpenApi(app: FastifyInstance): void {
         },
         '/api/billing/status': {
           get: { summary: 'Feature unlocks and tier', tags: ['billing'] },
+        },
+      },
+      components: {
+        schemas: {
+          // Dyscalculia F-207 — glossary response body schema.
+          GlossaryEntry: {
+            type: 'object',
+            required: ['key', 'term', 'plain'],
+            properties: {
+              key: { type: 'string', description: 'Machine-readable identifier, e.g. "safe_withdrawal_rate".' },
+              term: { type: 'string', description: 'Human-readable display term, e.g. "Safe withdrawal rate".' },
+              plain: { type: 'string', description: 'Plain-language (grade-8) definition.' },
+              example: { type: 'string', description: 'Concrete example to anchor the term.' },
+              technical: { type: 'string', description: 'Formal / technical definition for engineers and analysts.' },
+              seeAlso: {
+                type: 'array',
+                items: { type: 'string' },
+                description: 'Related glossary keys.',
+              },
+              aliases: {
+                type: 'array',
+                items: { type: 'string' },
+                description: 'Common synonyms / acronyms.',
+              },
+            },
+          },
+          GlossaryResponse: {
+            oneOf: [
+              { type: 'array', items: { $ref: '#/components/schemas/GlossaryEntry' } },
+              { $ref: '#/components/schemas/GlossaryEntry' },
+            ],
+          },
         },
       },
     };

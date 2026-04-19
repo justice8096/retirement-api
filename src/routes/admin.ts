@@ -1,8 +1,23 @@
+/**
+ * Admin routes — all behind `requireAdmin`.
+ *
+ * Surfaces:
+ *   - POST/PUT/DELETE `/locations` — CRUD for the canonical AdminLocation table.
+ *   - POST `/locations/reindex` — rebuild denormalized search columns.
+ *     Single-process mutex so two admins can't double-write (SAST L-03).
+ *   - POST/PUT `/releases` — publish versioned data releases.
+ *   - Supplement upsert + delete endpoints for per-location rich data.
+ *
+ * Side-effects:
+ *   - Writes to AdminLocation, AdminLocationSupplement, DataRelease.
+ *   - Validation errors are routed through `toValidationErrorPayload` (Dyslexia F-007).
+ */
 import { z } from 'zod';
 import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
 import { requireAdmin } from '../middleware/auth.js';
 import { safeJsonRecord } from '../middleware/sanitize.js';
+import { toValidationErrorPayload } from '../lib/validation.js';
 import type { InputJsonValue } from '@prisma/client/runtime/library.js';
 
 const locationSchema = z.object({
@@ -68,7 +83,7 @@ export default async function adminRoutes(app: FastifyInstance): Promise<void> {
   app.post('/locations', async (request, reply) => {
     const parsed = locationSchema.safeParse(request.body);
     if (!parsed.success) {
-      return reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
+      return reply.code(400).send(toValidationErrorPayload(parsed.error));
     }
 
     const existing = await prisma.adminLocation.findUnique({ where: { id: parsed.data.id } });
@@ -108,7 +123,7 @@ export default async function adminRoutes(app: FastifyInstance): Promise<void> {
   app.put('/locations/:id', async (request, reply) => {
     const parsed = updateLocationSchema.safeParse(request.body);
     if (!parsed.success) {
-      return reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
+      return reply.code(400).send(toValidationErrorPayload(parsed.error));
     }
 
     const { id } = request.params as { id: string };
@@ -196,7 +211,7 @@ export default async function adminRoutes(app: FastifyInstance): Promise<void> {
   app.post('/releases', async (request, reply) => {
     const parsed = createReleaseSchema.safeParse(request.body);
     if (!parsed.success) {
-      return reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
+      return reply.code(400).send(toValidationErrorPayload(parsed.error));
     }
 
     const existing = await prisma.dataRelease.findUnique({ where: { version: parsed.data.version } });
@@ -222,7 +237,7 @@ export default async function adminRoutes(app: FastifyInstance): Promise<void> {
     const { id } = request.params as { id: string };
     const parsed = updateReleaseSchema.safeParse(request.body);
     if (!parsed.success) {
-      return reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
+      return reply.code(400).send(toValidationErrorPayload(parsed.error));
     }
 
     const existing = await prisma.dataRelease.findUnique({ where: { id } });
@@ -244,23 +259,35 @@ export default async function adminRoutes(app: FastifyInstance): Promise<void> {
     return release;
   });
 
+  // SAST L-03 — single-process mutex so two admins can't trigger overlapping
+  // reindex runs and double-write every row.
+  let reindexRunning = false;
+
   // POST /api/admin/locations/reindex — rebuild denormalized search columns for all locations
   // Useful after data migration or bulk import
   app.post('/locations/reindex', async (_request, reply) => {
-    const all = await prisma.adminLocation.findMany({
-      select: { id: true, locationData: true },
-    });
-
-    let updated = 0;
-    for (const loc of all) {
-      const searchFields = extractSearchFields(loc.locationData as Record<string, unknown>);
-      await prisma.adminLocation.update({
-        where: { id: loc.id },
-        data: searchFields,
-      });
-      updated++;
+    if (reindexRunning) {
+      return reply.code(409).send({ error: 'Reindex already in progress' });
     }
+    reindexRunning = true;
+    try {
+      const all = await prisma.adminLocation.findMany({
+        select: { id: true, locationData: true },
+      });
 
-    return reply.send({ message: `Reindexed ${updated} locations` });
+      let updated = 0;
+      for (const loc of all) {
+        const searchFields = extractSearchFields(loc.locationData as Record<string, unknown>);
+        await prisma.adminLocation.update({
+          where: { id: loc.id },
+          data: searchFields,
+        });
+        updated++;
+      }
+
+      return reply.send({ message: `Reindexed ${updated} locations` });
+    } finally {
+      reindexRunning = false;
+    }
   });
 }

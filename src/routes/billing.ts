@@ -15,6 +15,8 @@ import Stripe from 'stripe';
 import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
 import { requireAuth } from '../middleware/auth.js';
+import { toValidationErrorPayload } from '../lib/validation.js';
+import { ensureStripeCustomer } from '../lib/stripe-customer.js';
 
 const stripe = process.env.STRIPE_SECRET_KEY
   ? new Stripe(process.env.STRIPE_SECRET_KEY)
@@ -79,7 +81,7 @@ export default async function billingRoutes(app: FastifyInstance): Promise<void>
   app.post('/checkout-feature', async (request, reply) => {
     const parsed = featureCheckoutSchema.safeParse(request.body);
     if (!parsed.success) {
-      return reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
+      return reply.code(400).send(toValidationErrorPayload(parsed.error));
     }
 
     const { featureSet } = parsed.data;
@@ -96,19 +98,8 @@ export default async function billingRoutes(app: FastifyInstance): Promise<void>
       return reply.code(409).send({ error: `${featureSet} features already unlocked` });
     }
 
-    // Ensure user has a Stripe customer ID
-    let customerId = request.user.stripeCustomerId;
-    if (!customerId) {
-      const customer = await stripe.customers.create({
-        email: request.user.email,
-        metadata: { userId: request.userId },
-      });
-      customerId = customer.id;
-      await prisma.user.update({
-        where: { id: request.userId },
-        data: { stripeCustomerId: customerId },
-      });
-    }
+    // Ensure user has a Stripe customer ID (SAST L-NEW-02: optimistic-concurrency helper)
+    const customerId = await ensureStripeCustomer(stripe, request.user);
 
     const appUrl = process.env.APP_URL || 'http://localhost:5173';
 

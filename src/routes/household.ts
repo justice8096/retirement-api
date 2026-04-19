@@ -1,8 +1,23 @@
+/**
+ * Household profile routes — members, pets, target retirement income.
+ *
+ * Surfaces:
+ *   - GET `/me/household` — returns the profile with decrypted sensitive
+ *     fields, `_units` metadata (Dyscalculia F-204) and `_labels` sibling
+ *     (Dyslexia F-013) so UIs don't duplicate the field-label map.
+ *   - PUT `/me/household` — upsert with encryption on `targetAnnualIncome`
+ *     and each member's `ssPia` via the shared `encryptField` envelope.
+ *
+ * Dependent types — adult / child — are stored separately so age transitions
+ * (20→21, 65→Medicare) can be modelled downstream.
+ */
 import { z } from 'zod';
 import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
 import { requireAuth } from '../middleware/auth.js';
 import { encryptField, decryptField } from '../middleware/encryption.js';
+import { toValidationErrorPayload, getLabelsFor } from '../lib/validation.js';
+import { defaultCurrencyFor } from '../lib/locale.js';
 
 const memberSchema = z.object({
   id: z.string().uuid().optional(),
@@ -95,14 +110,27 @@ export default async function householdRoutes(app: FastifyInstance): Promise<voi
     if (!household) return reply.code(404).send({ error: 'No household profile yet' });
 
     reply.header('Cache-Control', 'private, no-store');
-    return decryptHousehold(household);
+    const decrypted = decryptHousehold(household);
+
+    // Dyscalculia F-204 / Dyslexia F-013 — ship _units + _labels so consumers
+    // know targetAnnualIncome is yearly in the user's currency and ssPia is
+    // a monthly USD amount, without hard-coding the convention downstream.
+    const currency = defaultCurrencyFor(request.locale ?? 'en-US');
+    return {
+      ...decrypted,
+      _units: {
+        targetAnnualIncome: { encoding: 'amount', currency, periodicity: 'year' },
+        'members[].ssPia': { encoding: 'amount', currency: 'USD', periodicity: 'month' },
+      },
+      _labels: getLabelsFor(['targetAnnualIncome', 'members', 'pets']),
+    };
   });
 
   // PUT /api/me/household — create or replace household
   app.put('/', async (request, _reply) => {
     const parsed = householdSchema.safeParse(request.body);
     if (!parsed.success) {
-      return _reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
+      return _reply.code(400).send(toValidationErrorPayload(parsed.error));
     }
 
     const { members, pets, ...profileData } = parsed.data;

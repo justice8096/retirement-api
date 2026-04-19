@@ -7,6 +7,8 @@
 <script src="./shared.js"></script>
 </head>
 <body>
+<a class="skip-nav" href="#main">Skip to content</a>
+
 <script>
 (function() {
   injectCSS();
@@ -14,7 +16,7 @@
   var extraStyle = document.createElement('style');
   extraStyle.textContent = [
     '.model-btn { width: 100%; text-align: left; padding: 16px; margin-bottom: 8px; border: 2px solid #1E2D3D; border-radius: 6px; background: #0D1830; cursor: pointer; transition: all 0.15s; }',
-    '.model-btn:hover { border-color: #3A4A5A; }',
+    '.model-btn:hover { border-color: #8A9BAD; }',
     '.model-btn.selected { border-color: #D4943A; background: #1E2D3D; }',
     '.mech-detail { margin-left: 16px; margin-bottom: 12px; padding: 8px 12px; border-left: 2px solid #2A7B7B; background: #0D1830; }',
     '.bias-score-box { padding: 12px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830; margin-bottom: 12px; }',
@@ -337,7 +339,7 @@
       modelBox.appendChild(el('p', { style: 'color: #9AACBA; font-size: 0.85em; margin-top: 6px;' }, [modelDesc]));
     }
     if (state.modelJustification) {
-      modelBox.appendChild(el('p', { style: 'color: #6B7B8D; font-size: 0.8em; margin-top: 6px; font-style: italic;' }, ['Justification: ' + state.modelJustification]));
+      modelBox.appendChild(el('p', { style: 'color: #9FC8FF; font-size: 0.8em; margin-top: 6px; font-style: italic;' }, ['Justification: ' + state.modelJustification]));
     }
     section.appendChild(modelBox);
 
@@ -422,7 +424,7 @@
     biasHeader.appendChild(el('span', { style: 'color: #9AACBA;' }, ['Automation Bias Prevention Score']));
     biasHeader.appendChild(el('span', { className: biasClass, style: 'font-size: 1.2em;' }, [biasPercent + '% (' + biasLevel + ')']));
     biasBox.appendChild(biasHeader);
-    biasBox.appendChild(el('p', { style: 'color: #6B7B8D; font-size: 0.8em; margin-top: 6px;' }, [biasCount + ' of ' + biasTotal + ' standard measures enabled']));
+    biasBox.appendChild(el('p', { style: 'color: #9FC8FF; font-size: 0.8em; margin-top: 6px;' }, [biasCount + ' of ' + biasTotal + ' standard measures enabled']));
 
     for (var i = 0; i < biasMeasures.length; i++) {
       if (state.automationBias.measures[biasMeasures[i].id] === true) {

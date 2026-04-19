@@ -17,13 +17,13 @@
     "petCare": { "min": 125, "max": 225, "typical": 165, "annualInflation": 0.04 },
     "petDaycare": { "min": 300, "max": 475, "typical": 385, "annualInflation": 0.035 },
     "petGrooming": { "min": 85, "max": 155, "typical": 115, "annualInflation": 0.03 },
-    "transportation": { "min": 280, "max": 520, "typical": 395, "annualInflation": 0.03, "notes": "MARC Penn Line at Bowie State to DC (~40 min). US Route 50 to Annapolis/DC. Capital Beltway access. Car-dependent outside rail corridor." },
+    "transportation": { "min": 280, "max": 520, "typical": 395, "annualInflation": 0.03, "notes": "MARC (Maryland Area Regional Commuter) Penn Line at Bowie State to DC (~40 min). US Route 50 to Annapolis/DC. Capital Beltway access. Car-dependent outside rail corridor." },
     "entertainment": { "min": 410, "max": 600, "typical": 495, "annualInflation": 0.025, "notes": "Allen Pond Park, Bowie Town Center, NASA Goddard Visitor Center nearby. Cable+1Gig typical." },
     "clothing": { "min": 95, "max": 230, "typical": 150, "annualInflation": 0.02 },
     "personalCare": { "min": 45, "max": 105, "typical": 68, "annualInflation": 0.02 },
     "subscriptions": { "min": 30, "max": 80, "typical": 55, "annualInflation": 0.03 },
     "phoneCell": { "min": 50, "max": 80, "typical": 62, "annualInflation": 0.02 },
-    "miscellaneous": { "min": 110, "max": 230, "typical": 160, "annualInflation": 0.025, "notes": "HOA common in Bowie subdivisions. ICC/Route 200 and Bay Bridge tolls. PG County taxes relatively high." },
+    "miscellaneous": { "min": 110, "max": 230, "typical": 160, "annualInflation": 0.025, "notes": "HOA (homeowners association) common in Bowie subdivisions. ICC (Intercounty Connector toll road)/Route 200 and Bay Bridge tolls. Prince George's County (PG County) taxes relatively high." },
     "buffer": { "min": 750, "max": 750, "typical": 750, "annualInflation": 0.025 },
     "medicalOOP": { "min": 325, "max": 700, "typical": 475, "annualInflation": 0.055, "notes": "Same retiree profile. Specialists at Johns Hopkins (Baltimore, ~30 mi) or Univ of MD Medical Center (DC/Baltimore)." },
     "medicine": { "min": 73, "typical": 91, "max": 925, "annualInflation": 0.045 },
@@ -62,7 +62,7 @@
     "vatRate": 0,
     "estVehicleTax": 0,
     "ssExempt": true,
-    "notes": "MD tax benefits (SS exempt, pension exclusion, no vehicle tax) offset by PG County piggyback — highest county rate in MD (3.20%)."
+    "notes": "MD tax benefits (Social Security exempt, pension exclusion, no vehicle tax) offset by Prince George's County (PG County) piggyback — highest county rate in MD (3.20%)."
   },
   "healthcare": {
     "system": "Medicare (at 65) + private supplement",
@@ -71,7 +71,7 @@
     "acaMarketplace": {
       "benchmarkSilverMonthly2Adult": 2200, "benchmarkSilverMonthlySingle": 1100,
       "premiumCapPctOfIncome": 0.085, "rateArea": "Prince George's County",
-      "notes": "Maryland Health Connection: CareFirst BlueCross, Kaiser Permanente, UnitedHealthcare. PG County rating area — similar to Anne Arundel.",
+      "notes": "Maryland Health Connection: CareFirst BlueCross, Kaiser Permanente, UnitedHealthcare. Prince George's County (PG County) rating area — similar to Anne Arundel.",
       "estimationLevel": "county", "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
@@ -82,8 +82,8 @@
   },
   "pros": [
     "~20% cheaper rent than Fairfax",
-    "Maryland tax benefits: SS exempt, pension exclusion, no vehicle personal property tax",
-    "MARC Penn Line commuter rail to DC (~40 min)",
+    "Maryland tax benefits: Social Security exempt, pension exclusion, no vehicle personal property tax",
+    "MARC (Maryland Area Regional Commuter) Penn Line commuter rail to DC (~40 min)",
     "Between DC and Annapolis — central to regional amenities",
     "Johns Hopkins + Univ of MD specialist access within 30 min",
     "Planned community with established schools + parks"
@@ -92,7 +92,7 @@
     "Highest county piggyback rate in MD (3.20%) — combined state+county up to 8.95%",
     "Car-dependent outside MARC corridor",
     "Bay Bridge / Route 50 summer traffic",
-    "PG County has higher crime perception than Anne Arundel",
+    "Prince George's County (PG County) has higher crime perception than Anne Arundel",
     "Limited walkable downtown compared to Annapolis"
   ]
 }

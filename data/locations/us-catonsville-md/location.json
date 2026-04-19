@@ -9,7 +9,7 @@
   "visa": { "type": "Citizen", "incomeRequirement": null, "notes": "US citizen, no visa required." },
   "climate": { "winterLowF": 25, "summerHighF": 88, "rainyDaysPerYear": 114, "meetsWarmWinterReq": false },
   "monthlyCosts": {
-    "rent": { "min": 1750, "max": 2450, "typical": 2050, "type": "2-bedroom older SFH / townhome", "annualInflation": 0.035, "notes": "Baltimore County — mature tree-lined neighborhoods along Frederick Road corridor, historic Oella (mill village) to south. UMBC + Catonsville Community College keep area vibrant." },
+    "rent": { "min": 1750, "max": 2450, "typical": 2050, "type": "2-bedroom older SFH / townhome", "annualInflation": 0.035, "notes": "Baltimore County — mature tree-lined neighborhoods along Frederick Road corridor, historic Oella (mill village) to south. UMBC (University of Maryland, Baltimore County) + Catonsville Community College keep area vibrant." },
     "groceries": { "min": 1270, "max": 1670, "typical": 1445, "annualInflation": 0.03, "notes": "Wegmans, Giant, Harris Teeter, Trader Joe's, H Mart (Korean). Strong grocery variety for the price point." },
     "utilities": { "min": 255, "max": 415, "typical": 330, "annualInflation": 0.03, "notes": "BGE electric + Washington Gas + Baltimore County DPW water/sewer." },
     "healthcare": { "min": 540, "max": 830, "typical": 640, "notes": "Medicare baseline. UM St. Agnes Hospital 5 min, Johns Hopkins campus 15 min, UM Medical Center (Baltimore) 15 min. Exceptional specialist density.", "annualInflation": 0.055 },
@@ -17,13 +17,13 @@
     "petCare": { "min": 125, "max": 225, "typical": 165, "annualInflation": 0.04 },
     "petDaycare": { "min": 300, "max": 475, "typical": 385, "annualInflation": 0.035 },
     "petGrooming": { "min": 85, "max": 155, "typical": 115, "annualInflation": 0.03 },
-    "transportation": { "min": 275, "max": 510, "typical": 390, "annualInflation": 0.03, "notes": "MTA bus to Baltimore. Light Rail 15 min (via car). I-95/I-695 access. BWI 20 min. No direct MARC station; Penn Line at Baltimore Penn Station 15 min." },
-    "entertainment": { "min": 415, "max": 605, "typical": 500, "annualInflation": 0.025, "notes": "Walkable Frederick Road commercial strip, Patapsco Valley State Park trails, UMBC events + Fine Arts shows, Catonsville Arts District. Cable+1Gig typical." },
+    "transportation": { "min": 275, "max": 510, "typical": 390, "annualInflation": 0.03, "notes": "MTA (Maryland Transit Administration) bus to Baltimore. Light Rail 15 min (via car). Interstate 95/Interstate 695 access. BWI (Baltimore-Washington International airport) 20 min. No direct MARC station; Penn Line at Baltimore Penn Station 15 min." },
+    "entertainment": { "min": 415, "max": 605, "typical": 500, "annualInflation": 0.025, "notes": "Walkable Frederick Road commercial strip, Patapsco Valley State Park trails, UMBC (University of Maryland, Baltimore County) events + Fine Arts shows, Catonsville Arts District. Cable+1Gig typical." },
     "clothing": { "min": 95, "max": 230, "typical": 150, "annualInflation": 0.02 },
     "personalCare": { "min": 45, "max": 105, "typical": 68, "annualInflation": 0.02 },
     "subscriptions": { "min": 30, "max": 80, "typical": 55, "annualInflation": 0.03 },
     "phoneCell": { "min": 50, "max": 80, "typical": 62, "annualInflation": 0.02 },
-    "miscellaneous": { "min": 110, "max": 225, "typical": 160, "annualInflation": 0.025, "notes": "Fewer HOAs than newer MD suburbs. I-95 + ICC tolls. Baltimore County piggyback 3.20%." },
+    "miscellaneous": { "min": 110, "max": 225, "typical": 160, "annualInflation": 0.025, "notes": "Fewer HOAs (homeowners associations) than newer MD suburbs. Interstate 95 + ICC (Intercounty Connector toll road) tolls. Baltimore County piggyback 3.20%." },
     "buffer": { "min": 750, "max": 750, "typical": 750, "annualInflation": 0.025 },
     "medicalOOP": { "min": 325, "max": 700, "typical": 475, "annualInflation": 0.055, "notes": "Same retiree profile. World-class specialist access: UM St. Agnes in town, Johns Hopkins + UM Medical Center 15 min. One of the best healthcare locations for complex retirees." },
     "medicine": { "min": 73, "typical": 91, "max": 925, "annualInflation": 0.045 },
@@ -62,7 +62,7 @@
     "vatRate": 0,
     "estVehicleTax": 0,
     "ssExempt": true,
-    "notes": "MD tax benefits (SS exempt, pension exclusion, no vehicle tax). Baltimore County piggyback 3.20%."
+    "notes": "MD tax benefits (Social Security exempt, pension exclusion, no vehicle tax). Baltimore County piggyback 3.20%."
   },
   "healthcare": {
     "system": "Medicare (at 65) + private supplement",
@@ -78,15 +78,15 @@
   "lifestyle": {
     "internetSpeed": "1Gbps widely available (Comcast/Xfinity)",
     "dogFriendly": 9, "expatCommunity": 4, "englishPrevalence": 10, "safetyRating": 8,
-    "notes": "Walkable Frederick Road commercial district with local restaurants, breweries, and the historic Catonsville Lumber. Patapsco Valley State Park trails literally in town. UMBC campus cultural events. Strong schools and mature tree-lined neighborhoods. Historic Oella mill village walkable from downtown."
+    "notes": "Walkable Frederick Road commercial district with local restaurants, breweries, and the historic Catonsville Lumber. Patapsco Valley State Park trails literally in town. UMBC (University of Maryland, Baltimore County) campus cultural events. Strong schools and mature tree-lined neighborhoods. Historic Oella mill village walkable from downtown."
   },
   "pros": [
     "~$2,500/mo cheaper than Fairfax while keeping walkable-town character",
-    "MD tax benefits: SS exempt, pension exclusion, no vehicle property tax",
+    "MD tax benefits: Social Security exempt, pension exclusion, no vehicle property tax",
     "World-class healthcare (St. Agnes in town, Johns Hopkins + UM 15 min)",
     "Walkable Frederick Road commercial strip — real pedestrian life",
     "Patapsco Valley State Park trails in town",
-    "UMBC campus = cultural events, continuing education, Fine Arts",
+    "UMBC (University of Maryland, Baltimore County) campus = cultural events, continuing education, Fine Arts",
     "Mature tree-lined neighborhoods, less strip-mall feel than outer MD suburbs",
     "Diverse community"
   ],

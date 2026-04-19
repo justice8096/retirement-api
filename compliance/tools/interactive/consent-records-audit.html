@@ -7,6 +7,8 @@
 <script src="./shared.js"></script>
 </head>
 <body>
+<a class="skip-nav" href="#main">Skip to content</a>
+
 <script>
 (function() {
   injectCSS();
@@ -16,7 +18,7 @@
     '.schema-card { background: #0D1830; border: 1px solid #1E2D3D; border-radius: 4px; padding: 12px 16px; margin-bottom: 8px; }',
     '.schema-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }',
     '.schema-name { font-size: 0.95em; color: #E8B96A; font-weight: 600; }',
-    '.schema-desc { font-size: 0.8em; color: #6B7B8D; margin-bottom: 6px; }',
+    '.schema-desc { font-size: 0.8em; color: #9FC8FF; margin-bottom: 6px; }',
     '.badge-row { display: flex; flex-wrap: wrap; gap: 4px; margin: 6px 0; }',
     '.severity { font-size: 0.75em; font-weight: 600; padding: 2px 8px; border-radius: 3px; display: inline-block; margin-top: 4px; }',
     '.severity.critical { background: #c0392b33; color: #e74c3c; border: 1px solid #c0392b55; }',
@@ -26,16 +28,16 @@
     '.activity-title { font-size: 0.95em; color: #E8B96A; }',
     '.remove-btn { padding: 4px 10px; border: 1px solid #c0392b55; border-radius: 3px; background: #c0392b22; color: #e74c3c; cursor: pointer; font-size: 0.75em; }',
     '.remove-btn:hover { background: #c0392b44; }',
-    '.add-btn { padding: 8px 16px; border: 1px dashed #3A4A5A; border-radius: 4px; background: transparent; color: #9AACBA; cursor: pointer; font-size: 0.85em; width: 100%; margin-top: 8px; }',
+    '.add-btn { padding: 8px 16px; border: 1px dashed #8A9BAD; border-radius: 4px; background: transparent; color: #9AACBA; cursor: pointer; font-size: 0.85em; width: 100%; margin-top: 8px; }',
     '.add-btn:hover { border-color: #D4943A; color: #E8B96A; }',
-    '.score-bar { height: 8px; border-radius: 4px; background: #3A4A5A; margin: 8px 0; overflow: hidden; }',
+    '.score-bar { height: 8px; border-radius: 4px; background: #8A9BAD; margin: 8px 0; overflow: hidden; }',
     '.score-fill { height: 100%; border-radius: 4px; transition: width 0.3s; }',
     '.score-container { margin: 16px 0; }',
     '.score-label { display: flex; justify-content: space-between; font-size: 0.85em; margin-bottom: 4px; }',
     '.stat-row { display: flex; gap: 16px; flex-wrap: wrap; margin: 12px 0; }',
     '.summary-stat { display: inline-block; padding: 10px 18px; margin: 4px; border-radius: 4px; background: #1E2D3D; text-align: center; min-width: 120px; }',
     '.summary-stat-value { font-size: 1.4em; font-weight: 600; display: block; }',
-    '.summary-stat-label { font-size: 0.75em; color: #6B7B8D; }',
+    '.summary-stat-label { font-size: 0.75em; color: #9FC8FF; }',
     '.summary-card { background: #0D1830; border: 1px solid #1E2D3D; border-radius: 4px; padding: 14px; margin-bottom: 10px; }',
     '.summary-card-title { font-size: 0.95em; color: #E8B96A; margin-bottom: 8px; }',
     '.compliance-rating { padding: 16px; border-radius: 6px; text-align: center; margin: 16px 0; }',
@@ -52,13 +54,13 @@
     '.jurisdiction-status.warn { color: #E8B96A; }',
     '.jurisdiction-status.fail { color: #e74c3c; }',
     '.remediation-item { padding: 8px 12px; border-left: 3px solid #c0392b; background: #c0392b11; margin-bottom: 6px; border-radius: 0 4px 4px 0; font-size: 0.85em; }',
-    '.children-ref { font-size: 0.8em; color: #6B7B8D; padding: 8px 12px; background: #1E2D3D44; border-left: 2px solid #3A4A5A; margin: 8px 0; }',
+    '.children-ref { font-size: 0.8em; color: #9FC8FF; padding: 8px 12px; background: #1E2D3D44; border-left: 2px solid #8A9BAD; margin: 8px 0; }',
     '.method-toggles { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }',
-    '.method-toggle { padding: 4px 14px; border: 1px solid #3A4A5A; border-radius: 3px; background: transparent; color: #6B7B8D; cursor: pointer; font-size: 0.8em; }',
+    '.method-toggle { padding: 4px 14px; border: 1px solid #8A9BAD; border-radius: 3px; background: transparent; color: #9FC8FF; cursor: pointer; font-size: 0.8em; }',
     '.method-toggle.active { background: #2A7B7B; border-color: #2A7B7B; color: white; }',
     '.lifecycle-card { background: #0D1830; border: 1px solid #1E2D3D; border-radius: 4px; padding: 12px 16px; margin-bottom: 8px; }',
     '.lifecycle-name { font-size: 0.9em; color: #E8B96A; margin-bottom: 6px; }',
-    '.lifecycle-desc { font-size: 0.8em; color: #6B7B8D; margin-bottom: 8px; }',
+    '.lifecycle-desc { font-size: 0.8em; color: #9FC8FF; margin-bottom: 8px; }',
     '.inline-warning { font-size: 0.8em; color: #E8B96A; padding: 4px 8px; background: #D4943A15; border-radius: 3px; margin-top: 4px; display: block; }',
     '.inline-critical { font-size: 0.8em; color: #e74c3c; padding: 4px 8px; background: #c0392b15; border-radius: 3px; margin-top: 4px; display: block; }'
   ].join('\n');
@@ -327,7 +329,7 @@
 
       // Required by badges
       var badgeRow = el('div', { className: 'badge-row' });
-      badgeRow.appendChild(el('span', { style: 'font-size:0.8em;color:#6B7B8D;margin-right:4px;' }, ['Required by:']));
+      badgeRow.appendChild(el('span', { style: 'font-size:0.8em;color:#9FC8FF;margin-right:4px;' }, ['Required by:']));
       field.requiredBy.split(', ').forEach(function(j) {
         badgeRow.appendChild(el('span', { className: 'badge enacted' }, [j]));
       });

@@ -70,7 +70,7 @@ a:hover { color: #E8B96A; }
 }
 .stat { text-align: left; }
 .stat-num { font-size: 2.4em; font-weight: 200; color: #E8B96A; line-height: 1; }
-.stat-label { font-size: 0.75em; color: #6B7B8D; letter-spacing: 1px; text-transform: uppercase; margin-top: 4px; }
+.stat-label { font-size: 0.75em; color: #9FC8FF; letter-spacing: 1px; text-transform: uppercase; margin-top: 4px; }
 .hero-actions {
   display: flex;
   gap: 14px;
@@ -94,7 +94,7 @@ a:hover { color: #E8B96A; }
 }
 .btn-primary:hover { background: #E8B96A; color: #060E1A; }
 .btn-outline {
-  border-color: #3A4A5A;
+  border-color: #8A9BAD;
   color: #9AACBA;
   background: transparent;
 }
@@ -156,7 +156,7 @@ nav .links a:hover { color: #E8B96A; }
   align-items: center;
   gap: 7px;
   font-size: 0.75em;
-  color: #6B7B8D;
+  color: #9FC8FF;
 }
 .legend-dot {
   width: 10px;
@@ -179,7 +179,7 @@ nav .links a:hover { color: #E8B96A; }
   padding: 18px 20px;
   transition: border-color 0.15s;
 }
-.tmpl-card:hover { border-color: #3A4A5A; }
+.tmpl-card:hover { border-color: #8A9BAD; }
 .tmpl-num {
   font-size: 0.7em;
   color: #D4943A;
@@ -194,7 +194,7 @@ nav .links a:hover { color: #E8B96A; }
 }
 .tmpl-desc {
   font-size: 0.78em;
-  color: #6B7B8D;
+  color: #9FC8FF;
   line-height: 1.5;
 }
 .tmpl-tags {
@@ -246,7 +246,7 @@ nav .links a:hover { color: #E8B96A; }
 .tool-icon.security { background: #1E2D3D; color: #9AACBA; }
 .tool-name { font-size: 1em; color: #D8D2C4; font-weight: 500; margin-bottom: 6px; }
 .tool-template { font-size: 0.72em; color: #D4943A; margin-bottom: 8px; }
-.tool-desc { font-size: 0.82em; color: #6B7B8D; line-height: 1.5; }
+.tool-desc { font-size: 0.82em; color: #9FC8FF; line-height: 1.5; }
 
 /* ── Workflow ── */
 .workflow {
@@ -273,7 +273,7 @@ nav .links a:hover { color: #E8B96A; }
   margin-bottom: 8px;
 }
 .wf-title { font-size: 0.9em; color: #E8B96A; font-weight: 500; margin-bottom: 6px; }
-.wf-desc { font-size: 0.78em; color: #6B7B8D; line-height: 1.5; }
+.wf-desc { font-size: 0.78em; color: #9FC8FF; line-height: 1.5; }
 
 /* ── Deadlines ── */
 .deadline-table {
@@ -288,7 +288,7 @@ nav .links a:hover { color: #E8B96A; }
   font-size: 0.85em;
 }
 .deadline-table th {
-  color: #6B7B8D;
+  color: #9FC8FF;
   font-weight: 500;
   font-size: 0.72em;
   letter-spacing: 1px;
@@ -341,7 +341,7 @@ nav .links a:hover { color: #E8B96A; }
   text-align: center;
   transition: border-color 0.15s;
 }
-.juris-chip:hover { border-color: #3A4A5A; }
+.juris-chip:hover { border-color: #8A9BAD; }
 .juris-status {
   display: block;
   font-size: 0.65em;
@@ -360,7 +360,7 @@ footer {
   border-top: 1px solid #131F2E;
   text-align: center;
 }
-footer p { margin: 0 auto; font-size: 0.78em; color: #3A4A5A; }
+footer p { margin: 0 auto; font-size: 0.78em; color: #8A9BAD; }
 footer a { color: #9FC8FF; }
 
 /* ── Responsive ── */
@@ -378,9 +378,34 @@ footer a { color: #9FC8FF; }
 /* --- Skip Link --- */
 .skip-link { position: absolute; top: -40px; left: 0; background: #D4943A; color: #060E1A; padding: 8px 16px; text-decoration: none; z-index: 100; font-weight: 600; }
 .skip-link:focus { top: 0; }
+
+/* WCAG 2.4.1 — skip-to-content (added by tools/wcag-fix-html.mjs). */
+.skip-nav {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-nav:focus {
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  background: #0B1426;
+  color: #E8ECF4;
+  border: 2px solid #4DBFBF;
+  z-index: 10000;
+  text-decoration: underline;
+}
+
 </style>
 </head>
 <body>
+<a class="skip-nav" href="#main">Skip to content</a>
+
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -794,21 +819,21 @@ footer a { color: #9FC8FF; }
   <div class="container">
     <h2>Quick Start</h2>
     <div style="background:#0D1830; border:1px solid #1E2D3D; border-radius:8px; padding:28px 32px; margin-top:8px;">
-      <pre style="color:#9AACBA; font-size:0.88em; line-height:1.8; font-family:'Cascadia Code','Fira Code',monospace; overflow-x:auto;"><code><span style="color:#6B7B8D"># Clone the repository</span>
+      <pre style="color:#9AACBA; font-size:0.88em; line-height:1.8; font-family:'Cascadia Code','Fira Code',monospace; overflow-x:auto;"><code><span style="color:#9FC8FF"># Clone the repository</span>
 <span style="color:#4DBFBF">git clone</span> https://github.com/justice8096/LLMComplianceSkill.git
 <span style="color:#4DBFBF">cd</span> LLMComplianceSkill
 
-<span style="color:#6B7B8D"># 1. Edit your project config</span>
+<span style="color:#9FC8FF"># 1. Edit your project config</span>
 <span style="color:#4DBFBF">cp</span> tools/compliance-config.json tools/my-config.json
-<span style="color:#6B7B8D"># Edit my-config.json with your project details</span>
+<span style="color:#9FC8FF"># Edit my-config.json with your project details</span>
 
-<span style="color:#6B7B8D"># 2. Open interactive tools in your browser</span>
-<span style="color:#6B7B8D"># (load my-config.json into each tool, save results)</span>
+<span style="color:#9FC8FF"># 2. Open interactive tools in your browser</span>
+<span style="color:#9FC8FF"># (load my-config.json into each tool, save results)</span>
 
-<span style="color:#6B7B8D"># 3. Run autofill</span>
+<span style="color:#9FC8FF"># 3. Run autofill</span>
 <span style="color:#4DBFBF">node</span> tools/autofill.js
 
-<span style="color:#6B7B8D"># 4. Collected evidence is in output/</span>
+<span style="color:#9FC8FF"># 4. Collected evidence is in output/</span>
 <span style="color:#4DBFBF">ls</span> output/</code></pre>
     </article>
   </div>
@@ -819,7 +844,7 @@ footer a { color: #9FC8FF; }
   <div class="container">
     <div style="background:#c0392b11; border:1px solid #c0392b33; border-radius:6px; padding:18px 24px;">
       <p style="color:#e74c3c; font-size:0.82em; font-weight:500; margin-bottom:6px;">Important Disclaimer</p>
-      <p style="color:#8A9BAD; font-size:0.8em;">This toolkit supports compliance evidence gathering. It is not legal advice. Always have completed templates reviewed by qualified legal counsel. Regulations may have changed since the last research update (March 2026).</p>
+      <p style="color:#D8DCE4; font-size:0.8em;">This toolkit supports compliance evidence gathering. It is not legal advice. Always have completed templates reviewed by qualified legal counsel. Regulations may have changed since the last research update (March 2026).</p>
     </article>
   </div>
 </section>

@@ -26,9 +26,34 @@
   .tt-detail { font-size: 11px; color: #aaa; margin-top: 4px; line-height: 1.4; }
   .tt-via { font-size: 10px; color: #bbb; margin-top: 4px; font-style: italic; }
   .note { font-size: 11px; color: #999; margin-top: 8px; line-height: 1.5; }
+
+/* WCAG 2.4.1 — skip-to-content (added by tools/wcag-fix-html.mjs). */
+.skip-nav {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-nav:focus {
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  background: #0B1426;
+  color: #E8ECF4;
+  border: 2px solid #4DBFBF;
+  z-index: 10000;
+  text-decoration: underline;
+}
+
 </style>
 </head>
 <body>
+<a class="skip-nav" href="#main">Skip to content</a>
+
 <h1>LLM & AI software development regulations — world map</h1>
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <section id="main-content"><div id="map-container">

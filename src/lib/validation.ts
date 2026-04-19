@@ -1,4 +1,5 @@
-import type { ZodError, ZodIssue } from 'zod';
+import type { ZodError, ZodIssue, ZodSchema } from 'zod';
+import type { FastifyReply, FastifyRequest } from 'fastify';
 
 /**
  * Transform a Zod error into a user-friendly validation envelope.
@@ -42,6 +43,26 @@ const FIELD_LABELS: Record<string, string> = {
   savingsRate: 'Share of income saved',
   targetAnnualIncome: 'Target yearly retirement income',
   targetRetirementAge: 'Target retirement age',
+  // Dyslexia F-013 — Social Security + per-account labels
+  ssCola: 'Social Security cost-of-living adjustment',
+  ssCutYear: 'Year Social Security benefits are cut',
+  ssCutEnabled: 'Apply Social Security cut scenario',
+  ssExempt: 'Exempt Social Security from state tax',
+  traditionalBalance: 'Traditional account balance',
+  rothBalance: 'Roth account balance',
+  taxableBalance: 'Taxable account balance',
+  hsaBalance: 'HSA account balance',
+  traditionalLoadPct: 'Traditional account sales load',
+  rothLoadPct: 'Roth account sales load',
+  taxableLoadPct: 'Taxable account sales load',
+  hsaLoadPct: 'HSA account sales load',
+  traditionalFeesPct: 'Traditional account yearly fees',
+  rothFeesPct: 'Roth account yearly fees',
+  taxableFeesPct: 'Taxable account yearly fees',
+  hsaFeesPct: 'HSA account yearly fees',
+  retirementPath: 'Retirement path',
+  fireTargetAge: 'FIRE target age',
+  annualSavings: 'Yearly savings amount',
 
   // fees.ts
   brokerageFeePct: 'Advisor or brokerage fee',
@@ -169,4 +190,44 @@ export function toValidationErrorPayload(
   });
 
   return { error: 'Validation failed', details };
+}
+
+/**
+ * Return the `{ fieldName: label }` map for the given field names.
+ * Used by GET handlers to ship a `_labels` sibling alongside success responses
+ * so frontends don't need to duplicate the mapping (Dyslexia F-013).
+ */
+export function getLabelsFor(fields: readonly string[]): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const f of fields) {
+    if (FIELD_LABELS[f]) out[f] = FIELD_LABELS[f];
+    else out[f] = titleCaseFromCamel(f);
+  }
+  return out;
+}
+
+/**
+ * Parse `request.body` through a Zod schema. On failure, send a 400 with the
+ * plain-language envelope and return `null`. On success, return the parsed
+ * data so callers can narrow types.
+ *
+ * Dashboard Dyslexia F-007 / F-011 — eliminates the 16 `details: parsed.error.issues`
+ * call sites that bypassed `toValidationErrorPayload`.
+ *
+ * Usage:
+ *   const data = validateBody(schema, request, reply);
+ *   if (!data) return;           // reply already sent
+ *   // use `data`
+ */
+export function validateBody<T>(
+  schema: ZodSchema<T>,
+  request: FastifyRequest,
+  reply: FastifyReply,
+): T | null {
+  const parsed = schema.safeParse(request.body);
+  if (!parsed.success) {
+    reply.code(400).send(toValidationErrorPayload(parsed.error));
+    return null;
+  }
+  return parsed.data;
 }

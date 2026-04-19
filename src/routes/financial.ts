@@ -3,7 +3,7 @@ import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
 import { requireAuth } from '../middleware/auth.js';
 import { encryptField, decryptField } from '../middleware/encryption.js';
-import { toValidationErrorPayload } from '../lib/validation.js';
+import { toValidationErrorPayload, getLabelsFor } from '../lib/validation.js';
 import { defaultCurrencyFor } from '../lib/locale.js';
 
 /**
@@ -58,7 +58,7 @@ const financialSchema = z.object({
   rothFeesPct: num.min(0).max(10).optional(),
   taxableFeesPct: num.min(0).max(10).optional(),
   hsaFeesPct: num.min(0).max(10).optional(),
-});
+}).strict();  // SAST M-02: reject unknown keys
 
 // Defaults sent to client when no DB record exists (client-side format).
 const DEFAULTS = {
@@ -113,8 +113,11 @@ const NUMERIC_FIELDS = new Set<string>([
   'ssCola', 'ssCutYear', 'fireTargetAge', 'annualSavings',
 ]);
 
-/** Decrypt sensitive fields and convert DB decimals to client percentages. */
-function decryptSettings(settings: Record<string, unknown>) {
+/** Decrypt sensitive fields and convert DB decimals to client percentages.
+ *  Dyscalculia F-202 — when `apiVersion === 2` the percent → whole-number
+ *  conversion is skipped, so clients get decimal fractions matching DB and
+ *  the shared `pct()` helper in `shared/formatting.js`. */
+function decryptSettings(settings: Record<string, unknown>, apiVersion: 1 | 2 = 1) {
   const out = { ...settings };
 
   // Decrypt encrypted balance fields
@@ -131,19 +134,38 @@ function decryptSettings(settings: Record<string, unknown>) {
     }
   }
 
-  // Convert DB decimal fractions → client whole-number percentages
-  for (const f of PCT_FIELDS) {
-    if (out[f] !== undefined && out[f] !== null) {
-      out[f] = (out[f] as number) * 100;
+  // v1 wire: DB decimal fractions → whole-number percentages. v2: leave as-is.
+  if (apiVersion === 1) {
+    for (const f of PCT_FIELDS) {
+      if (out[f] !== undefined && out[f] !== null) {
+        out[f] = (out[f] as number) * 100;
+      }
     }
   }
 
   return out;
 }
 
-/** Build the `_units` metadata block for a response. */
-function unitsMeta(locale: string) {
+/** Fields that carry a client-readable label. Dyslexia F-013. */
+const LABELED_FIELDS = [
+  'portfolioBalance', 'traditionalBalance', 'rothBalance', 'taxableBalance', 'hsaBalance',
+  'equityPct', 'bondPct', 'cashPct', 'intlPct',
+  'expectedReturn', 'expectedInflation', 'fxDriftAnnualRate', 'fxDriftEnabled',
+  'ssCola', 'ssCutYear', 'ssCutEnabled',
+  'retirementPath', 'fireTargetAge', 'annualSavings', 'savingsRate',
+  'traditionalLoadPct', 'rothLoadPct', 'taxableLoadPct', 'hsaLoadPct',
+  'traditionalFeesPct', 'rothFeesPct', 'taxableFeesPct', 'hsaFeesPct',
+] as const;
+
+/** Build the `_units` metadata block for a response.
+ *  Dyscalculia F-202 — v2 clients receive `encoding: 'fraction'` with a
+ *  different `meaning` text so the schism is described accurately. */
+function unitsMeta(locale: string, apiVersion: 1 | 2 = 1) {
   const currency = defaultCurrencyFor(locale);
+  const pct = apiVersion === 2
+    ? (meaning: string) => ({ encoding: 'fraction' as const, meaning })
+    : (meaning: string) => ({ encoding: 'percent' as const, meaning });
+  const ex = (whole: string, frac: string) => (apiVersion === 2 ? frac : whole);
   return {
     portfolioBalance: { encoding: 'amount', currency, periodicity: 'total' },
     traditionalBalance: { encoding: 'amount', currency, periodicity: 'total' },
@@ -151,22 +173,22 @@ function unitsMeta(locale: string) {
     taxableBalance: { encoding: 'amount', currency, periodicity: 'total' },
     hsaBalance: { encoding: 'amount', currency, periodicity: 'total' },
     annualSavings: { encoding: 'amount', currency, periodicity: 'year' },
-    equityPct: { encoding: 'percent', meaning: '60 = 60%' },
-    bondPct: { encoding: 'percent', meaning: '30 = 30%' },
-    cashPct: { encoding: 'percent', meaning: '10 = 10%' },
-    intlPct: { encoding: 'percent', meaning: '20 = 20%' },
-    expectedReturn: { encoding: 'percent', meaning: '7 = 7% per year' },
-    expectedInflation: { encoding: 'percent', meaning: '2.5 = 2.5% per year' },
-    fxDriftAnnualRate: { encoding: 'percent', meaning: '1 = 1% per year' },
-    savingsRate: { encoding: 'percent', meaning: '15 = 15% of income' },
-    traditionalLoadPct: { encoding: 'percent', meaning: '0.5 = 0.5% annual drag' },
-    rothLoadPct: { encoding: 'percent', meaning: '0.5 = 0.5% annual drag' },
-    taxableLoadPct: { encoding: 'percent', meaning: '0.5 = 0.5% annual drag' },
-    hsaLoadPct: { encoding: 'percent', meaning: '0.5 = 0.5% annual drag' },
-    traditionalFeesPct: { encoding: 'percent', meaning: '0.2 = 0.2% expense ratio' },
-    rothFeesPct: { encoding: 'percent', meaning: '0.2 = 0.2% expense ratio' },
-    taxableFeesPct: { encoding: 'percent', meaning: '0.2 = 0.2% expense ratio' },
-    hsaFeesPct: { encoding: 'percent', meaning: '0.2 = 0.2% expense ratio' },
+    equityPct: pct(ex('60 = 60%', '0.6 = 60%')),
+    bondPct: pct(ex('30 = 30%', '0.3 = 30%')),
+    cashPct: pct(ex('10 = 10%', '0.1 = 10%')),
+    intlPct: pct(ex('20 = 20%', '0.2 = 20%')),
+    expectedReturn: pct(ex('7 = 7% per year', '0.07 = 7% per year')),
+    expectedInflation: pct(ex('2.5 = 2.5% per year', '0.025 = 2.5% per year')),
+    fxDriftAnnualRate: pct(ex('1 = 1% per year', '0.01 = 1% per year')),
+    savingsRate: pct(ex('15 = 15% of income', '0.15 = 15% of income')),
+    traditionalLoadPct: pct(ex('0.5 = 0.5% annual drag', '0.005 = 0.5% annual drag')),
+    rothLoadPct: pct(ex('0.5 = 0.5% annual drag', '0.005 = 0.5% annual drag')),
+    taxableLoadPct: pct(ex('0.5 = 0.5% annual drag', '0.005 = 0.5% annual drag')),
+    hsaLoadPct: pct(ex('0.5 = 0.5% annual drag', '0.005 = 0.5% annual drag')),
+    traditionalFeesPct: pct(ex('0.2 = 0.2% expense ratio', '0.002 = 0.2% expense ratio')),
+    rothFeesPct: pct(ex('0.2 = 0.2% expense ratio', '0.002 = 0.2% expense ratio')),
+    taxableFeesPct: pct(ex('0.2 = 0.2% expense ratio', '0.002 = 0.2% expense ratio')),
+    hsaFeesPct: pct(ex('0.2 = 0.2% expense ratio', '0.002 = 0.2% expense ratio')),
   };
 }
 
@@ -185,10 +207,16 @@ export default async function financialRoutes(app: FastifyInstance): Promise<voi
     });
 
     reply.header('Cache-Control', 'private, no-store');
+    const version = request.apiVersion ?? 1;
+    reply.header('X-API-Version', String(version));
     const base = settings
-      ? decryptSettings(settings)
+      ? decryptSettings(settings, version)
       : { userId: request.userId, ...DEFAULTS, updatedAt: new Date() };
-    return { ...base, _units: unitsMeta(request.locale ?? 'en-US') };
+    return {
+      ...base,
+      _units: unitsMeta(request.locale ?? 'en-US', version),
+      _labels: getLabelsFor(LABELED_FIELDS),
+    };
   });
 
   /**
@@ -201,6 +229,8 @@ export default async function financialRoutes(app: FastifyInstance): Promise<voi
     if (!parsed.success) {
       return reply.code(400).send(toValidationErrorPayload(parsed.error));
     }
+    const version = request.apiVersion ?? 1;
+    reply.header('X-API-Version', String(version));
 
     // Encrypt balance fields before writing
     const data: Record<string, unknown> = { ...parsed.data };
@@ -209,10 +239,13 @@ export default async function financialRoutes(app: FastifyInstance): Promise<voi
         data[f] = encryptField(data[f] as number);
       }
     }
-    // Convert client percentages (60) to DB decimals (0.60)
-    for (const f of PCT_FIELDS) {
-      if (data[f] !== undefined && data[f] !== null) {
-        data[f] = Number(data[f]) / 100;
+    // v1 client sends whole-number percentages (60) — convert to DB decimal (0.60).
+    // v2 client sends fractions already — pass through.
+    if (version === 1) {
+      for (const f of PCT_FIELDS) {
+        if (data[f] !== undefined && data[f] !== null) {
+          data[f] = Number(data[f]) / 100;
+        }
       }
     }
 
@@ -222,6 +255,10 @@ export default async function financialRoutes(app: FastifyInstance): Promise<voi
       create: { userId: request.userId, ...data },
     });
 
-    return { ...decryptSettings(settings), _units: unitsMeta(request.locale ?? 'en-US') };
+    return {
+      ...decryptSettings(settings, version),
+      _units: unitsMeta(request.locale ?? 'en-US', version),
+      _labels: getLabelsFor(LABELED_FIELDS),
+    };
   });
 }

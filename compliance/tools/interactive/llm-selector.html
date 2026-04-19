@@ -7,6 +7,8 @@
 <script src="./shared.js"></script>
 </head>
 <body>
+<a class="skip-nav" href="#main">Skip to content</a>
+
 <script>
 (function() {
   injectCSS();
@@ -14,7 +16,7 @@
   var extraStyle = document.createElement('style');
   extraStyle.textContent = [
     '.model-card { padding: 12px; margin-bottom: 8px; border: 2px solid #1E2D3D; border-radius: 6px; background: #0D1830; cursor: pointer; transition: all 0.15s; }',
-    '.model-card:hover { border-color: #3A4A5A; }',
+    '.model-card:hover { border-color: #8A9BAD; }',
     '.model-card.selected { border-color: #D4943A; background: #1E2D3D; }',
     '.model-meta { font-size: 0.85em; color: #9AACBA; margin-top: 4px; }',
     '.model-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }',
@@ -32,9 +34,9 @@
     '.compliance-flag.warning { border-color: #e74c3c; }',
     '.compliance-flag.info { border-color: #2A7B7B; }',
     '.search-input { width: 100%; padding: 10px 12px; border: 1px solid #1E2D3D; border-radius: 4px; background: #0D1830; color: #F0EBE0; font-size: 0.95em; margin-bottom: 12px; }',
-    '.search-input::placeholder { color: #6B7B8D; }',
+    '.search-input::placeholder { color: #9FC8FF; }',
     '.model-cards-container { max-height: 500px; overflow-y: auto; padding-right: 4px; }',
-    '.custom-model-form { padding: 16px; border: 1px dashed #3A4A5A; border-radius: 6px; background: #0D1830; margin-top: 12px; }',
+    '.custom-model-form { padding: 16px; border: 1px dashed #8A9BAD; border-radius: 6px; background: #0D1830; margin-top: 12px; }',
     '.deploy-block { padding: 12px; border: 1px solid #1E2D3D; border-radius: 6px; background: #0D1830; margin-bottom: 10px; }',
     '.deploy-block-title { font-size: 0.95em; font-weight: 600; color: #E8B96A; margin-bottom: 8px; }',
     '.risk-row { display: flex; justify-content: space-between; padding: 4px 0; font-size: 0.85em; }',
@@ -340,7 +342,7 @@
     container.appendChild(el('div', { style: 'margin-top: 8px;' }));
     container.appendChild(createAlert('warning', 'The following LLM-specific templates will NOT apply:'));
     for (var i = 0; i < llmTemplates.length; i++) {
-      var row = el('div', { style: 'padding: 4px 0 4px 12px; font-size: 0.85em; color: #6B7B8D;' }, ['\u2717 ' + llmTemplates[i]]);
+      var row = el('div', { style: 'padding: 4px 0 4px 12px; font-size: 0.85em; color: #9FC8FF;' }, ['\u2717 ' + llmTemplates[i]]);
       container.appendChild(row);
     }
   }
@@ -360,7 +362,7 @@
     var countEl = el('div', { style: 'font-size: 0.9em; color: #E8B96A; margin-bottom: 12px;' }, [getSelectedCount() + ' model(s) selected']);
 
     var cardsContainer = el('div', { className: 'model-cards-container' });
-    var loadingEl = el('div', { style: 'color: #6B7B8D; padding: 20px; text-align: center;' }, ['Loading model registry...']);
+    var loadingEl = el('div', { style: 'color: #9FC8FF; padding: 20px; text-align: center;' }, ['Loading model registry...']);
     cardsContainer.appendChild(loadingEl);
 
     // Search input
@@ -401,7 +403,7 @@
 
     // Source filter bar
     var sourceBar = el('div', { className: 'filter-bar' });
-    sourceBar.appendChild(el('span', { style: 'font-size: 0.8em; color: #6B7B8D; padding: 6px 0;' }, ['Source:']));
+    sourceBar.appendChild(el('span', { style: 'font-size: 0.8em; color: #9FC8FF; padding: 6px 0;' }, ['Source:']));
     var sourceFilters = ['', 'HuggingFace', 'Ollama', 'API'];
     var sourceButtons = [];
     for (var i = 0; i < sourceFilters.length; i++) {
@@ -425,7 +427,7 @@
 
     // Country filter bar
     var countryBar = el('div', { className: 'filter-bar' });
-    countryBar.appendChild(el('span', { style: 'font-size: 0.8em; color: #6B7B8D; padding: 6px 0;' }, ['Country:']));
+    countryBar.appendChild(el('span', { style: 'font-size: 0.8em; color: #9FC8FF; padding: 6px 0;' }, ['Country:']));
     var countryFilters = ['', 'US', 'France', 'China', 'Canada', 'UK', 'Other'];
     var countryButtons = [];
     for (var i = 0; i < countryFilters.length; i++) {
@@ -771,7 +773,7 @@
 
     // Auto-fill preview
     section.appendChild(el('h3', {}, ['Auto-fill Preview']));
-    section.appendChild(el('p', { style: 'font-size: 0.85em; color: #6B7B8D; margin-bottom: 8px;' }, ['These fields will be pre-populated in the evidence toolkit from your selections:']));
+    section.appendChild(el('p', { style: 'font-size: 0.85em; color: #9FC8FF; margin-bottom: 8px;' }, ['These fields will be pre-populated in the evidence toolkit from your selections:']));
 
     var autofillData = buildAutofillData(allModels);
     for (var i = 0; i < autofillData.length; i++) {
@@ -1021,7 +1023,7 @@
       // Compliance notes for this model
       var notes = getModelComplianceNotes(model, dep);
       if (notes.length > 0) {
-        mCard.appendChild(el('div', { style: 'margin-top: 8px; font-size: 0.8em; color: #6B7B8D;' }, ['Compliance notes:']));
+        mCard.appendChild(el('div', { style: 'margin-top: 8px; font-size: 0.8em; color: #9FC8FF;' }, ['Compliance notes:']));
         for (var j = 0; j < notes.length; j++) {
           mCard.appendChild(el('div', { style: 'padding: 2px 0 2px 12px; font-size: 0.8em; color: #E8B96A;' }, ['\u26A0 ' + notes[j]]));
         }
@@ -1032,7 +1034,7 @@
 
     // Auto-fill fields
     section.appendChild(el('h3', {}, ['Auto-fill Fields']));
-    section.appendChild(el('p', { style: 'font-size: 0.85em; color: #6B7B8D; margin-bottom: 8px;' }, ['These values will be written to your compliance config when you click "Apply to Config":']));
+    section.appendChild(el('p', { style: 'font-size: 0.85em; color: #9FC8FF; margin-bottom: 8px;' }, ['These values will be written to your compliance config when you click "Apply to Config":']));
     var autofillData = buildAutofillData(allModels);
     for (var i = 0; i < autofillData.length; i++) {
       var row = el('div', { className: 'autofill-row' });

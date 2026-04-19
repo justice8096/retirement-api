@@ -17,18 +17,18 @@
     "petCare": { "min": 130, "max": 235, "typical": 175, "annualInflation": 0.04 },
     "petDaycare": { "min": 320, "max": 500, "typical": 400, "annualInflation": 0.035 },
     "petGrooming": { "min": 85, "max": 160, "typical": 120, "annualInflation": 0.03 },
-    "transportation": { "min": 240, "max": 480, "typical": 360, "annualInflation": 0.03, "notes": "Dunn Loring Metro (Orange) 10 min. I-495 + I-395 access. Better Metro proximity than Fairfax City." },
+    "transportation": { "min": 240, "max": 480, "typical": 360, "annualInflation": 0.03, "notes": "Dunn Loring Metro (Orange line) 10 min. Interstate 495 + Interstate 395 access. Better Metro proximity than Fairfax City." },
     "entertainment": { "min": 420, "max": 620, "typical": 510, "annualInflation": 0.025, "notes": "Korean BBQ district (Little Seoul), diverse dining. Cable+1Gig included." },
     "clothing": { "min": 100, "max": 240, "typical": 155, "annualInflation": 0.02 },
     "personalCare": { "min": 45, "max": 105, "typical": 68, "annualInflation": 0.02 },
     "subscriptions": { "min": 30, "max": 80, "typical": 55, "annualInflation": 0.03 },
     "phoneCell": { "min": 50, "max": 80, "typical": 62, "annualInflation": 0.02 },
-    "miscellaneous": { "min": 115, "max": 240, "typical": 165, "annualInflation": 0.025, "notes": "HOA, EZ-Pass, Fairfax County vehicle tax." },
+    "miscellaneous": { "min": 115, "max": 240, "typical": 165, "annualInflation": 0.025, "notes": "HOA (homeowners association) dues, EZ-Pass tolls, Fairfax County vehicle tax." },
     "buffer": { "min": 800, "max": 800, "typical": 800, "annualInflation": 0.025 },
     "medicalOOP": { "min": 325, "max": 700, "typical": 475, "annualInflation": 0.055, "notes": "Same retiree profile (macular degeneration, specialists at Inova/Johns Hopkins)." },
     "medicine": { "min": 73, "typical": 91, "max": 925, "annualInflation": 0.045 },
     "taxes": { "typical": 0, "min": 0, "max": 0, "annualInflation": 0.02, "notes": "Income tax computed from VA brackets; stored value 0 by convention." },
-    "healthcarePreMedicare": { "min": 1800, "max": 2800, "typical": 2300, "annualInflation": 0.06, "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Fairfax County, VA). NOVA marketplace: Anthem HealthKeepers, CareFirst, Kaiser. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number." }
+    "healthcarePreMedicare": { "min": 1800, "max": 2800, "typical": 2300, "annualInflation": 0.06, "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Fairfax County, VA). Northern Virginia (NOVA) marketplace: Anthem HealthKeepers, CareFirst, Kaiser. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number." }
   },
   "taxes": {
     "federalIncomeTax": {
@@ -49,7 +49,7 @@
       ],
       "deduction": 24000, "exemptions": "Age 65+ deduction $12K/person. SS fully exempt from VA tax."
     },
-    "salesTax": { "rate": 0.06, "notes": "Fairfax County 6% (4.3% state + 0.7% regional + 1% NOVA transit)" },
+    "salesTax": { "rate": 0.06, "notes": "Fairfax County 6% (4.3% state + 0.7% regional + 1% Northern Virginia (NOVA) transit)" },
     "propertyTax": { "rate": 0, "notes": "Renters: no direct property tax. Fairfax County vehicle personal property ~$4.57/$100 assessed." },
     "socialCharges": null,
     "vatRate": 0,
@@ -64,7 +64,7 @@
     "acaMarketplace": {
       "benchmarkSilverMonthly2Adult": 2300, "benchmarkSilverMonthlySingle": 1150,
       "premiumCapPctOfIncome": 0.085, "rateArea": "Fairfax County",
-      "notes": "NOVA marketplace: Anthem HealthKeepers, CareFirst, Kaiser. Metro pricing.",
+      "notes": "Northern Virginia (NOVA) marketplace: Anthem HealthKeepers, CareFirst, Kaiser. Metro pricing.",
       "estimationLevel": "county", "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
@@ -75,16 +75,16 @@
   },
   "pros": [
     "~25% cheaper rent than Fairfax City",
-    "Same Fairfax County tax treatment (SS exempt, retiree deductions)",
-    "Best grocery deal in NOVA via Korean/Latino supermarkets",
+    "Same Fairfax County tax treatment (Social Security exempt, retiree deductions)",
+    "Best grocery deal in Northern Virginia (NOVA) via Korean/Latino supermarkets",
     "Closer to DC than Fairfax City (Dunn Loring Metro)",
     "Diverse dining and commercial scene",
     "Same world-class healthcare (Inova)"
   ],
   "cons": [
     "Older housing stock — may need more maintenance",
-    "I-495 traffic",
-    "Fewer single-family homes than outer NOVA suburbs",
-    "Still NOVA-premium vs national average"
+    "Interstate 495 traffic",
+    "Fewer single-family homes than outer Northern Virginia suburbs",
+    "Still Northern Virginia-premium vs national average"
   ]
 }

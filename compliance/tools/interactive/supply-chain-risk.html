@@ -7,6 +7,8 @@
 <script src="./shared.js"></script>
 </head>
 <body>
+<a class="skip-nav" href="#main">Skip to content</a>
+
 <script>
 (function() {
   injectCSS();
@@ -46,7 +48,7 @@
     '.subsection { margin-left: 8px; padding-left: 12px; border-left: 2px solid #2A7B7B44; margin-bottom: 16px; }',
     '.due-diligence-row { padding: 10px 12px; border: 1px solid #1E2D3D; border-radius: 4px; margin-bottom: 6px; background: #0D1830; }',
     '.flag-detail { margin-left: 16px; margin-bottom: 8px; padding: 8px 12px; border-left: 2px solid #D4943A; background: #0D1830; }',
-    '.na-notice { padding: 16px; text-align: center; color: #6B7B8D; font-style: italic; border: 1px dashed #3A4A5A; border-radius: 4px; margin: 12px 0; }'
+    '.na-notice { padding: 16px; text-align: center; color: #9FC8FF; font-style: italic; border: 1px dashed #8A9BAD; border-radius: 4px; margin: 12px 0; }'
   ].join('\n');
   document.head.appendChild(extraStyle);
 
@@ -942,7 +944,7 @@
       el('span', { className: 'dash-count', style: 'color: #E8B96A;' }, [String(threats.length)])
     ]));
 
-    var levelColors = { Critical: '#e74c3c', High: '#f39c12', Medium: '#E8B96A', Low: '#4DBFBF', Unscored: '#6B7B8D' };
+    var levelColors = { Critical: '#e74c3c', High: '#f39c12', Medium: '#E8B96A', Low: '#4DBFBF', Unscored: '#9FC8FF' };
     var levelKeys = ['Critical', 'High', 'Medium', 'Low', 'Unscored'];
     for (var li = 0; li < levelKeys.length; li++) {
       if (byLevel[levelKeys[li]] > 0) {
@@ -964,7 +966,7 @@
       ]));
     }
     if (threats.length === 0) {
-      catCard.appendChild(el('div', { style: 'color: #6B7B8D; font-style: italic;' }, ['No threats marked as applicable yet.']));
+      catCard.appendChild(el('div', { style: 'color: #9FC8FF; font-style: italic;' }, ['No threats marked as applicable yet.']));
     }
     section.appendChild(catCard);
 

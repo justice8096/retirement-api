@@ -68,6 +68,39 @@ function setCachedUser(authProviderId: string, user: User): void {
   }
 }
 
+/**
+ * Invalidate the in-memory user cache for a specific authProviderId.
+ * Call from tier-change paths (webhooks, admin endpoints) so that elevated
+ * or downgraded permissions take effect within the next request instead of
+ * waiting for the 10-second TTL.
+ *
+ * SAST H-05 (2026-04-19). For multi-replica deployments, also publish the
+ * authProviderId on a Redis channel and have each replica subscribe.
+ */
+export function invalidateUserCache(authProviderId: string): void {
+  userCache.delete(authProviderId);
+}
+
+/**
+ * Startup safety check. Refuses to boot when running with `NODE_ENV=production`
+ * but the dev-bypass user still exists in the DB — this indicates a staging /
+ * prod deploy that was previously a dev environment. Prevents the silent-admin
+ * scenario that M-NEW-01 flags.
+ */
+export async function assertNoDevBypassUserInProd(): Promise<void> {
+  if (process.env.NODE_ENV !== 'production') return;
+  const devUser = await prisma.user.findFirst({
+    where: { OR: [{ authProviderId: 'dev_local_bypass' }, { email: 'dev@localhost' }] },
+    select: { id: true },
+  });
+  if (devUser) {
+    throw new Error(
+      'Refusing to start in production — a dev-bypass user (dev@localhost / dev_local_bypass) exists in the DB. ' +
+        'Delete it before launching.',
+    );
+  }
+}
+
 // ─── Clerk plugin registration ────────────────────────────────────────────
 
 export let clerkEnabled = false;

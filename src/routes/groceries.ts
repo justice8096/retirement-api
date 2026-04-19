@@ -1,8 +1,15 @@
+/**
+ * User grocery customizations — per-user overrides + shopping lists.
+ *
+ * Stored as JSONB so the shape can evolve without migration. Sanitized via
+ * `safeJsonRecord` (prototype-pollution + depth/key caps from SAST L-02).
+ */
 import { z } from 'zod';
 import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
 import { requireAuth } from '../middleware/auth.js';
 import { safeJsonRecord } from '../middleware/sanitize.js';
+import { toValidationErrorPayload } from '../lib/validation.js';
 import type { InputJsonValue } from '@prisma/client/runtime/library.js';
 
 const grocerySchema = z.object({
@@ -27,7 +34,7 @@ export default async function groceryRoutes(app: FastifyInstance): Promise<void>
   app.put('/', async (request, reply) => {
     const parsed = grocerySchema.safeParse(request.body);
     if (!parsed.success) {
-      return reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
+      return reply.code(400).send(toValidationErrorPayload(parsed.error));
     }
 
     // Cast optional fields to InputJsonValue
