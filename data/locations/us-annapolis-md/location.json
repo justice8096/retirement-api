@@ -3,7 +3,12 @@
   "name": "Annapolis MD, USA",
   "country": "United States",
   "region": "Maryland",
-  "cities": ["Annapolis", "Arnold", "Severna Park", "Edgewater"],
+  "cities": [
+    "Annapolis",
+    "Arnold",
+    "Severna Park",
+    "Edgewater"
+  ],
   "currency": "USD",
   "exchangeRate": 1,
   "visa": {
@@ -48,11 +53,11 @@
       "notes": "Medicare + Medigap baseline. Luminis Health Anne Arundel Medical Center; Johns Hopkins / Univ of MD specialists within 30 min."
     },
     "healthcarePreMedicare": {
-      "min": 1700,
-      "max": 2650,
+      "min": 1763,
+      "max": 2537,
       "typical": 2150,
       "annualInflation": 0.06,
-      "notes": "Maryland Health Connection silver plan benchmark for 2-adult household, both 55-64, before subsidies. MD marketplace typically cheaper than VA due to broader insurer participation."
+      "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Anne Arundel County, MD). MD Health Connection: CareFirst, Kaiser, UnitedHealthcare. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     },
     "insurance": {
       "min": 35,
@@ -144,13 +149,41 @@
     "federalIncomeTax": {
       "applies": true,
       "brackets": [
-        { "min": 0,      "max": 23850,  "rate": 0.10 },
-        { "min": 23850,  "max": 96950,  "rate": 0.12 },
-        { "min": 96950,  "max": 206700, "rate": 0.22 },
-        { "min": 206700, "max": 394600, "rate": 0.24 },
-        { "min": 394600, "max": 501050, "rate": 0.32 },
-        { "min": 501050, "max": 751600, "rate": 0.35 },
-        { "min": 751600, "max": null,   "rate": 0.37 }
+        {
+          "min": 0,
+          "max": 23850,
+          "rate": 0.1
+        },
+        {
+          "min": 23850,
+          "max": 96950,
+          "rate": 0.12
+        },
+        {
+          "min": 96950,
+          "max": 206700,
+          "rate": 0.22
+        },
+        {
+          "min": 206700,
+          "max": 394600,
+          "rate": 0.24
+        },
+        {
+          "min": 394600,
+          "max": 501050,
+          "rate": 0.32
+        },
+        {
+          "min": 501050,
+          "max": 751600,
+          "rate": 0.35
+        },
+        {
+          "min": 751600,
+          "max": null,
+          "rate": 0.37
+        }
       ],
       "standardDeduction": 30000
     },
@@ -158,14 +191,46 @@
       "rate": 0.078,
       "type": "combined-state-plus-county",
       "brackets": [
-        { "min": 0,      "max": 1000,   "rate": 0.0481 },
-        { "min": 1000,   "max": 2000,   "rate": 0.0581 },
-        { "min": 2000,   "max": 3000,   "rate": 0.0681 },
-        { "min": 3000,   "max": 100000, "rate": 0.0756 },
-        { "min": 100000, "max": 125000, "rate": 0.0781 },
-        { "min": 125000, "max": 150000, "rate": 0.0806 },
-        { "min": 150000, "max": 250000, "rate": 0.0831 },
-        { "min": 250000, "max": null,   "rate": 0.0856 }
+        {
+          "min": 0,
+          "max": 1000,
+          "rate": 0.0481
+        },
+        {
+          "min": 1000,
+          "max": 2000,
+          "rate": 0.0581
+        },
+        {
+          "min": 2000,
+          "max": 3000,
+          "rate": 0.0681
+        },
+        {
+          "min": 3000,
+          "max": 100000,
+          "rate": 0.0756
+        },
+        {
+          "min": 100000,
+          "max": 125000,
+          "rate": 0.0781
+        },
+        {
+          "min": 125000,
+          "max": 150000,
+          "rate": 0.0806
+        },
+        {
+          "min": 150000,
+          "max": 250000,
+          "rate": 0.0831
+        },
+        {
+          "min": 250000,
+          "max": null,
+          "rate": 0.0856
+        }
       ],
       "deduction": 5150,
       "exemptions": "MD pension exclusion up to ~$39K for retirees 65+; SS fully exempt. Rates above are combined state + Anne Arundel County piggyback (2.81%)."
@@ -194,8 +259,11 @@
     "acaMarketplace": {
       "benchmarkSilverMonthly2Adult": 2150,
       "benchmarkSilverMonthlySingle": 1075,
-      "notes": "Maryland Health Connection: CareFirst BlueCross, Kaiser Permanente, UnitedHealthcare. MD marketplace generally more competitive than VA.",
-      "premiumCapPctOfIncome": 0.085
+      "premiumCapPctOfIncome": 0.085,
+      "rateArea": "Anne Arundel County",
+      "notes": "MD Health Connection: CareFirst, Kaiser, UnitedHealthcare.",
+      "estimationLevel": "county",
+      "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
   "lifestyle": {

@@ -154,6 +154,13 @@
       "typical": 350,
       "max": 600,
       "annualInflation": 0.055
+    },
+    "healthcarePreMedicare": {
+      "min": 1845,
+      "max": 2655,
+      "typical": 2250,
+      "annualInflation": 0.06,
+      "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Chesapeake City, VA). Hampton Roads — Sentara dominant, Optima Health available. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
   "taxes": {
@@ -246,7 +253,16 @@
     "waitTimes": "Short to moderate",
     "dentalIncluded": false,
     "prescriptionCoverage": "Via insurance plan",
-    "notes": "Chesapeake Regional Medical Center (310 beds, Level III trauma). Sentara hospitals in Norfolk/Virginia Beach within 20 minutes. Naval Medical Center Portsmouth nearby for eligible veterans."
+    "notes": "Chesapeake Regional Medical Center (310 beds, Level III trauma). Sentara hospitals in Norfolk/Virginia Beach within 20 minutes. Naval Medical Center Portsmouth nearby for eligible veterans.",
+    "acaMarketplace": {
+      "benchmarkSilverMonthly2Adult": 2250,
+      "benchmarkSilverMonthlySingle": 1125,
+      "premiumCapPctOfIncome": 0.085,
+      "rateArea": "Chesapeake City",
+      "notes": "Hampton Roads — Sentara dominant, Optima Health available.",
+      "estimationLevel": "county",
+      "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+    }
   },
   "lifestyle": {
     "internetSpeed": "1Gbps available (Cox, Verizon Fios)",

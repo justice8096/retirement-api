@@ -141,6 +141,13 @@
       "max": 800,
       "annualInflation": 0.055,
       "notes": "Specialist travel to Guam, Hawaii, or Philippines frequent."
+    },
+    "healthcarePreMedicare": {
+      "min": 1886,
+      "max": 2714,
+      "typical": 2300,
+      "annualInflation": 0.06,
+      "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Saipan, MP). Northern Marianas — limited private coverage. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
   "healthcare": {
@@ -148,7 +155,16 @@
     "qualityRating": 4,
     "dentalIncluded": false,
     "waitTimes": "Long for specialists; medevac common",
-    "prescriptionCoverage": "Medicare Part D or private"
+    "prescriptionCoverage": "Medicare Part D or private",
+    "acaMarketplace": {
+      "benchmarkSilverMonthly2Adult": 2300,
+      "benchmarkSilverMonthlySingle": 1150,
+      "premiumCapPctOfIncome": 0,
+      "rateArea": "Saipan",
+      "notes": "Northern Marianas — limited private coverage.",
+      "estimationLevel": "county",
+      "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+    }
   },
   "lifestyle": {
     "internetSpeed": "Up to 1Gbps (IT&E fiber)",

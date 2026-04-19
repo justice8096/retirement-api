@@ -136,6 +136,13 @@
       "min": 310,
       "max": 820,
       "annualInflation": 0.055
+    },
+    "healthcarePreMedicare": {
+      "min": 1640,
+      "max": 2360,
+      "typical": 2000,
+      "annualInflation": 0.06,
+      "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (American Samoa, AS). LBJ Tropical Medical Center coverage. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
   "healthcare": {
@@ -143,7 +150,16 @@
     "qualityRating": 3,
     "dentalIncluded": false,
     "waitTimes": "Long; medevac to Honolulu common",
-    "prescriptionCoverage": "Medicare Part D or private"
+    "prescriptionCoverage": "Medicare Part D or private",
+    "acaMarketplace": {
+      "benchmarkSilverMonthly2Adult": 2000,
+      "benchmarkSilverMonthlySingle": 1000,
+      "premiumCapPctOfIncome": 0,
+      "rateArea": "American Samoa",
+      "notes": "LBJ Tropical Medical Center coverage.",
+      "estimationLevel": "county",
+      "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+    }
   },
   "lifestyle": {
     "internetSpeed": "Up to 100Mbps (ASTCA, BlueSky)",

@@ -1,0 +1,90 @@
+{
+  "id": "us-manassas-va",
+  "name": "Manassas VA, USA",
+  "country": "United States",
+  "region": "Virginia",
+  "cities": ["Manassas", "Manassas Park"],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": { "type": "Citizen", "incomeRequirement": null, "notes": "US citizen, no visa required." },
+  "climate": { "winterLowF": 23, "summerHighF": 89, "rainyDaysPerYear": 108, "meetsWarmWinterReq": false },
+  "monthlyCosts": {
+    "rent": { "min": 1700, "max": 2400, "typical": 1950, "type": "2-bedroom townhome/older SFH", "annualInflation": 0.035, "notes": "Independent city + Prince William County surround. Historic downtown. ~32% cheaper than Fairfax." },
+    "groceries": { "min": 1250, "max": 1650, "typical": 1430, "annualInflation": 0.03, "notes": "Giant, Wegmans, Harris Teeter. ~10% below Fairfax averages." },
+    "utilities": { "min": 240, "max": 400, "typical": 315, "annualInflation": 0.03, "notes": "NOVEC electric + Washington Gas + City of Manassas water/sewer." },
+    "healthcare": { "min": 540, "max": 830, "typical": 640, "notes": "Medicare baseline. Novant UVA Health System Prince William (Haymarket) 10 min, Sentara Northern Virginia Medical Center in Manassas.", "annualInflation": 0.055 },
+    "insurance": { "min": 30, "max": 50, "typical": 40, "type": "renter's insurance", "annualInflation": 0.03 },
+    "petCare": { "min": 110, "max": 205, "typical": 155, "annualInflation": 0.04 },
+    "petDaycare": { "min": 290, "max": 460, "typical": 370, "annualInflation": 0.035 },
+    "petGrooming": { "min": 80, "max": 145, "typical": 110, "annualInflation": 0.03 },
+    "transportation": { "min": 320, "max": 580, "typical": 450, "annualInflation": 0.03, "notes": "VRE Manassas line to DC (~60 min). I-66 to DC ~1hr in traffic. Higher fuel use than inner NOVA." },
+    "entertainment": { "min": 370, "max": 560, "typical": 450, "annualInflation": 0.025, "notes": "Manassas National Battlefield Park, historic downtown. Cable+1Gig typical." },
+    "clothing": { "min": 90, "max": 215, "typical": 140, "annualInflation": 0.02 },
+    "personalCare": { "min": 40, "max": 95, "typical": 60, "annualInflation": 0.02 },
+    "subscriptions": { "min": 30, "max": 80, "typical": 55, "annualInflation": 0.03 },
+    "phoneCell": { "min": 50, "max": 80, "typical": 62, "annualInflation": 0.02 },
+    "miscellaneous": { "min": 100, "max": 215, "typical": 150, "annualInflation": 0.025, "notes": "HOA in subdivisions, I-66 Express Lanes tolls, PWC vehicle decal." },
+    "buffer": { "min": 700, "max": 700, "typical": 700, "annualInflation": 0.025 },
+    "medicalOOP": { "min": 325, "max": 700, "typical": 475, "annualInflation": 0.055, "notes": "Same retiree profile. Specialty care may require trip to Fairfax/DC." },
+    "medicine": { "min": 73, "typical": 91, "max": 925, "annualInflation": 0.045 },
+    "taxes": { "typical": 0, "min": 0, "max": 0, "annualInflation": 0.02, "notes": "Income tax computed from VA brackets." },
+    "healthcarePreMedicare": { "min": 1800, "max": 2800, "typical": 2250, "annualInflation": 0.06, "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Prince William County, VA). PWC marketplace — slightly cheaper than Fairfax. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number." }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true,
+      "brackets": [
+        { "min": 0, "max": 23850, "rate": 0.10 }, { "min": 23850, "max": 96950, "rate": 0.12 },
+        { "min": 96950, "max": 206700, "rate": 0.22 }, { "min": 206700, "max": 394600, "rate": 0.24 },
+        { "min": 394600, "max": 501050, "rate": 0.32 }, { "min": 501050, "max": 751600, "rate": 0.35 },
+        { "min": 751600, "max": null, "rate": 0.37 }
+      ],
+      "standardDeduction": 30000
+    },
+    "stateIncomeTax": {
+      "rate": 0.0575, "type": "top-marginal",
+      "brackets": [
+        { "min": 0, "max": 3000, "rate": 0.02 }, { "min": 3000, "max": 5000, "rate": 0.03 },
+        { "min": 5000, "max": 17000, "rate": 0.05 }, { "min": 17000, "max": null, "rate": 0.0575 }
+      ],
+      "deduction": 24000, "exemptions": "Age 65+ deduction $12K/person. SS fully exempt from VA tax."
+    },
+    "salesTax": { "rate": 0.06, "notes": "Prince William County / City of Manassas 6% (4.3% state + 0.7% regional + 1% NOVA transit)" },
+    "propertyTax": { "rate": 0, "notes": "Renters: no direct property tax. PWC vehicle personal property ~$3.70/$100 assessed — slightly below Fairfax." },
+    "socialCharges": null,
+    "vatRate": 0,
+    "estVehicleTax": 1100,
+    "ssExempt": true,
+    "notes": "VA tax treatment same as Fairfax; lower PWC property tax rate."
+  },
+  "healthcare": {
+    "system": "Medicare (at 65) + private supplement",
+    "qualityRating": 7, "waitTimes": "moderate", "dentalIncluded": false, "prescriptionCoverage": "Part D plan",
+    "notes": "Novant UVA Health Prince William (Haymarket) + Sentara NOVA Medical Center. Inova Fair Oaks ~25 min for specialty.",
+    "acaMarketplace": {
+      "benchmarkSilverMonthly2Adult": 2250, "benchmarkSilverMonthlySingle": 1125,
+      "premiumCapPctOfIncome": 0.085, "rateArea": "Prince William County",
+      "notes": "PWC marketplace — similar to Fairfax with slightly more competition.",
+      "estimationLevel": "county", "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+    }
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps widely available (Verizon Fios, Comcast)",
+    "dogFriendly": 8, "expatCommunity": 4, "englishPrevalence": 9, "safetyRating": 7,
+    "notes": "Manassas National Battlefield Park, historic Old Town Manassas, Bull Run Mountains. Strong Latino community. Quieter suburban/small-city feel."
+  },
+  "pros": [
+    "~32% cheaper rent than Fairfax — biggest price drop within 30 miles",
+    "Same VA tax treatment (SS exempt, 65+ deduction)",
+    "Lower PWC vehicle tax rate",
+    "VRE Manassas line to DC",
+    "Historic Old Town Manassas walkable downtown",
+    "Novant UVA Health + Sentara hospitals in town"
+  ],
+  "cons": [
+    "Longest commute to Fairfax/DC (~45–60 min)",
+    "Fewer dining/cultural options than inner NOVA",
+    "Specialty healthcare may require Fairfax/DC trip",
+    "I-66 + VRE traffic/crowding at peak"
+  ]
+}

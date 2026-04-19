@@ -134,6 +134,13 @@
       "min": 200,
       "max": 580,
       "annualInflation": 0.055
+    },
+    "healthcarePreMedicare": {
+      "min": 1312,
+      "max": 1888,
+      "typical": 1600,
+      "annualInflation": 0.06,
+      "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Ponce, PR). Mi Salud (PR state-run). Lower costs than mainland. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
   "healthcare": {
@@ -141,7 +148,16 @@
     "qualityRating": 6,
     "dentalIncluded": false,
     "waitTimes": "Moderate; specialists may require travel to San Juan",
-    "prescriptionCoverage": "Medicare Part D or private plan"
+    "prescriptionCoverage": "Medicare Part D or private plan",
+    "acaMarketplace": {
+      "benchmarkSilverMonthly2Adult": 1600,
+      "benchmarkSilverMonthlySingle": 800,
+      "premiumCapPctOfIncome": 0,
+      "rateArea": "Ponce",
+      "notes": "Mi Salud (PR state-run). Lower costs than mainland.",
+      "estimationLevel": "county",
+      "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+    }
   },
   "lifestyle": {
     "internetSpeed": "1Gbps available (Liberty, Claro)",

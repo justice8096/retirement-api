@@ -176,6 +176,13 @@
       "max": 418,
       "annualInflation": 0.02,
       "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
+    },
+    "healthcarePreMedicare": {
+      "min": 1886,
+      "max": 2714,
+      "typical": 2300,
+      "annualInflation": 0.06,
+      "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Philadelphia County, PA). Pennie — Philadelphia metro most competitive in PA. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
   "taxes": {
@@ -252,7 +259,16 @@
     "qualityRating": 9,
     "waitTimes": "low-moderate",
     "dentalIncluded": false,
-    "prescriptionCoverage": "Part D plan"
+    "prescriptionCoverage": "Part D plan",
+    "acaMarketplace": {
+      "benchmarkSilverMonthly2Adult": 2300,
+      "benchmarkSilverMonthlySingle": 1150,
+      "premiumCapPctOfIncome": 0.085,
+      "rateArea": "Philadelphia County",
+      "notes": "Pennie — Philadelphia metro most competitive in PA.",
+      "estimationLevel": "county",
+      "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+    }
   },
   "lifestyle": {
     "internetSpeed": "1Gbps+ available (Verizon Fios/Comcast)",

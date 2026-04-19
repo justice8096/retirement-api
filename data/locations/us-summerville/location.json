@@ -181,6 +181,13 @@
       "max": 611,
       "annualInflation": 0.02,
       "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
+    },
+    "healthcarePreMedicare": {
+      "min": 2091,
+      "max": 3009,
+      "typical": 2550,
+      "annualInflation": 0.06,
+      "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Dorchester County, SC). Charleston metro SC — BlueCross BlueShield SC dominant. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
   "taxes": {
@@ -268,7 +275,16 @@
     "waitTimes": "moderate",
     "dentalIncluded": false,
     "prescriptionCoverage": "Part D plan",
-    "notes": "Summerville Medical Center (Roper St. Francis). MUSC (Medical University of SC) 30 min in Charleston — nationally ranked teaching hospital. Trident Medical Center in North Charleston."
+    "notes": "Summerville Medical Center (Roper St. Francis). MUSC (Medical University of SC) 30 min in Charleston — nationally ranked teaching hospital. Trident Medical Center in North Charleston.",
+    "acaMarketplace": {
+      "benchmarkSilverMonthly2Adult": 2550,
+      "benchmarkSilverMonthlySingle": 1275,
+      "premiumCapPctOfIncome": 0.085,
+      "rateArea": "Dorchester County",
+      "notes": "Charleston metro SC — BlueCross BlueShield SC dominant.",
+      "estimationLevel": "county",
+      "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+    }
   },
   "lifestyle": {
     "internetSpeed": "1Gbps available (Comcast/Home Telecom Fiber)",
