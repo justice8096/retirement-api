@@ -80,11 +80,11 @@
       "annualInflation": 0.055
     },
     "healthcarePreMedicare": {
-      "min": 1800,
-      "max": 2800,
+      "min": 1886,
+      "max": 2714,
       "typical": 2300,
-      "notes": "ACA silver plan benchmark for 2-adult household, both 55-64, before subsidies. Marketplace pricing Fairfax County 2025. Subsidies reduce this dramatically at lower MAGI.",
-      "annualInflation": 0.06
+      "annualInflation": 0.06,
+      "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Fairfax County, VA). NOVA marketplace: Anthem HealthKeepers, CareFirst, Kaiser. Metro pricing. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     },
     "insurance": {
       "min": 35,
@@ -284,8 +284,11 @@
     "acaMarketplace": {
       "benchmarkSilverMonthly2Adult": 2300,
       "benchmarkSilverMonthlySingle": 1150,
-      "notes": "Anthem HealthKeepers, CareFirst BlueCross BlueShield, Kaiser Permanente active in Fairfax marketplace. Silver benchmark for 2 adults age 60.",
-      "premiumCapPctOfIncome": 0.085
+      "premiumCapPctOfIncome": 0.085,
+      "rateArea": "Fairfax County",
+      "notes": "NOVA marketplace: Anthem HealthKeepers, CareFirst, Kaiser. Metro pricing.",
+      "estimationLevel": "county",
+      "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
   "lifestyle": {

@@ -134,6 +134,13 @@
       "typical": 350,
       "max": 600,
       "annualInflation": 0.055
+    },
+    "healthcarePreMedicare": {
+      "min": 2050,
+      "max": 2950,
+      "typical": 2500,
+      "annualInflation": 0.06,
+      "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Lycoming County, PA). Rural North-Central PA — limited competition. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
   "healthcare": {
@@ -141,7 +148,16 @@
     "qualityRating": 6,
     "dentalIncluded": false,
     "waitTimes": "Short to moderate",
-    "prescriptionCoverage": "Via insurance plan"
+    "prescriptionCoverage": "Via insurance plan",
+    "acaMarketplace": {
+      "benchmarkSilverMonthly2Adult": 2500,
+      "benchmarkSilverMonthlySingle": 1250,
+      "premiumCapPctOfIncome": 0.085,
+      "rateArea": "Lycoming County",
+      "notes": "Rural North-Central PA — limited competition.",
+      "estimationLevel": "county",
+      "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+    }
   },
   "lifestyle": {
     "internetSpeed": "1Gbps available",

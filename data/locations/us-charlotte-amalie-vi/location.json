@@ -141,6 +141,13 @@
       "max": 850,
       "annualInflation": 0.055,
       "notes": "Specialist travel to Puerto Rico or mainland common."
+    },
+    "healthcarePreMedicare": {
+      "min": 1968,
+      "max": 2832,
+      "typical": 2400,
+      "annualInflation": 0.06,
+      "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (St Thomas, VI). USVI BCBS — no federal ACA marketplace, no subsidies. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
   "healthcare": {
@@ -148,7 +155,16 @@
     "qualityRating": 5,
     "dentalIncluded": false,
     "waitTimes": "Moderate to long; specialists limited",
-    "prescriptionCoverage": "Medicare Part D or private"
+    "prescriptionCoverage": "Medicare Part D or private",
+    "acaMarketplace": {
+      "benchmarkSilverMonthly2Adult": 2400,
+      "benchmarkSilverMonthlySingle": 1200,
+      "premiumCapPctOfIncome": 0,
+      "rateArea": "St Thomas",
+      "notes": "USVI BCBS — no federal ACA marketplace, no subsidies.",
+      "estimationLevel": "county",
+      "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+    }
   },
   "lifestyle": {
     "internetSpeed": "Up to 1Gbps (Viya)",

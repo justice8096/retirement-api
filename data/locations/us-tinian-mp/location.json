@@ -138,6 +138,13 @@
       "max": 860,
       "annualInflation": 0.055,
       "notes": "Serious care requires travel to Saipan or Guam (boat/flight)."
+    },
+    "healthcarePreMedicare": {
+      "min": 1886,
+      "max": 2714,
+      "typical": 2300,
+      "annualInflation": 0.06,
+      "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Tinian, MP). Remote NMI — limited medical infrastructure. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
   "healthcare": {
@@ -145,7 +152,16 @@
     "qualityRating": 3,
     "dentalIncluded": false,
     "waitTimes": "Limited on-island — most specialists off-island",
-    "prescriptionCoverage": "Medicare Part D or private"
+    "prescriptionCoverage": "Medicare Part D or private",
+    "acaMarketplace": {
+      "benchmarkSilverMonthly2Adult": 2300,
+      "benchmarkSilverMonthlySingle": 1150,
+      "premiumCapPctOfIncome": 0,
+      "rateArea": "Tinian",
+      "notes": "Remote NMI — limited medical infrastructure.",
+      "estimationLevel": "county",
+      "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+    }
   },
   "lifestyle": {
     "internetSpeed": "Up to 100Mbps (IT&E); fiber limited",

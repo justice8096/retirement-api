@@ -1,0 +1,98 @@
+{
+  "id": "us-bowie-md",
+  "name": "Bowie MD, USA",
+  "country": "United States",
+  "region": "Maryland",
+  "cities": ["Bowie", "Belair", "Mitchellville"],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": { "type": "Citizen", "incomeRequirement": null, "notes": "US citizen, no visa required." },
+  "climate": { "winterLowF": 26, "summerHighF": 88, "rainyDaysPerYear": 113, "meetsWarmWinterReq": false },
+  "monthlyCosts": {
+    "rent": { "min": 1850, "max": 2600, "typical": 2150, "type": "2-bedroom SFH / townhome", "annualInflation": 0.035, "notes": "Prince George's County — Belair, Mitchellville, Saddlebrook subdivisions. Mid-priced MD suburb; cheaper than Annapolis, more than Baltimore." },
+    "groceries": { "min": 1280, "max": 1680, "typical": 1460, "annualInflation": 0.03, "notes": "Wegmans, Giant, Safeway, Harris Teeter. Similar to Annapolis pricing." },
+    "utilities": { "min": 260, "max": 420, "typical": 335, "annualInflation": 0.03, "notes": "BGE or Pepco electric + Washington Gas + WSSC or City water/sewer." },
+    "healthcare": { "min": 540, "max": 830, "typical": 640, "notes": "Medicare baseline. Doctors Community Medical Center (Luminis Health), UM Bowie Health Center. Johns Hopkins ~30 mi north.", "annualInflation": 0.055 },
+    "insurance": { "min": 35, "max": 55, "typical": 45, "type": "renter's insurance", "annualInflation": 0.03 },
+    "petCare": { "min": 125, "max": 225, "typical": 165, "annualInflation": 0.04 },
+    "petDaycare": { "min": 300, "max": 475, "typical": 385, "annualInflation": 0.035 },
+    "petGrooming": { "min": 85, "max": 155, "typical": 115, "annualInflation": 0.03 },
+    "transportation": { "min": 280, "max": 520, "typical": 395, "annualInflation": 0.03, "notes": "MARC Penn Line at Bowie State to DC (~40 min). US Route 50 to Annapolis/DC. Capital Beltway access. Car-dependent outside rail corridor." },
+    "entertainment": { "min": 410, "max": 600, "typical": 495, "annualInflation": 0.025, "notes": "Allen Pond Park, Bowie Town Center, NASA Goddard Visitor Center nearby. Cable+1Gig typical." },
+    "clothing": { "min": 95, "max": 230, "typical": 150, "annualInflation": 0.02 },
+    "personalCare": { "min": 45, "max": 105, "typical": 68, "annualInflation": 0.02 },
+    "subscriptions": { "min": 30, "max": 80, "typical": 55, "annualInflation": 0.03 },
+    "phoneCell": { "min": 50, "max": 80, "typical": 62, "annualInflation": 0.02 },
+    "miscellaneous": { "min": 110, "max": 230, "typical": 160, "annualInflation": 0.025, "notes": "HOA common in Bowie subdivisions. ICC/Route 200 and Bay Bridge tolls. PG County taxes relatively high." },
+    "buffer": { "min": 750, "max": 750, "typical": 750, "annualInflation": 0.025 },
+    "medicalOOP": { "min": 325, "max": 700, "typical": 475, "annualInflation": 0.055, "notes": "Same retiree profile. Specialists at Johns Hopkins (Baltimore, ~30 mi) or Univ of MD Medical Center (DC/Baltimore)." },
+    "medicine": { "min": 73, "typical": 91, "max": 925, "annualInflation": 0.045 },
+    "taxes": { "typical": 0, "min": 0, "max": 0, "annualInflation": 0.02, "notes": "Income tax computed from MD + Prince George's County brackets." },
+    "healthcarePreMedicare": { "min": 1750, "max": 2700, "typical": 2200, "annualInflation": 0.06, "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Prince George's County, MD). Maryland Health Connection: CareFirst, Kaiser, UnitedHealthcare. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number." }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true,
+      "brackets": [
+        { "min": 0, "max": 23850, "rate": 0.10 }, { "min": 23850, "max": 96950, "rate": 0.12 },
+        { "min": 96950, "max": 206700, "rate": 0.22 }, { "min": 206700, "max": 394600, "rate": 0.24 },
+        { "min": 394600, "max": 501050, "rate": 0.32 }, { "min": 501050, "max": 751600, "rate": 0.35 },
+        { "min": 751600, "max": null, "rate": 0.37 }
+      ],
+      "standardDeduction": 30000
+    },
+    "stateIncomeTax": {
+      "rate": 0.0795, "type": "combined-state-plus-county",
+      "brackets": [
+        { "min": 0, "max": 1000, "rate": 0.0520 },
+        { "min": 1000, "max": 2000, "rate": 0.0620 },
+        { "min": 2000, "max": 3000, "rate": 0.0720 },
+        { "min": 3000, "max": 100000, "rate": 0.0795 },
+        { "min": 100000, "max": 125000, "rate": 0.0820 },
+        { "min": 125000, "max": 150000, "rate": 0.0845 },
+        { "min": 150000, "max": 250000, "rate": 0.0870 },
+        { "min": 250000, "max": null, "rate": 0.0895 }
+      ],
+      "deduction": 5150,
+      "exemptions": "MD pension exclusion up to ~$39K for retirees 65+; SS fully exempt. Rates are combined MD state + Prince George's County piggyback (3.20% — highest county rate in MD)."
+    },
+    "salesTax": { "rate": 0.06, "notes": "Maryland statewide 6%; no local add-ons." },
+    "propertyTax": { "rate": 0, "notes": "Renters: no direct property tax. Maryland has no vehicle personal property tax — significant savings vs VA." },
+    "socialCharges": null,
+    "vatRate": 0,
+    "estVehicleTax": 0,
+    "ssExempt": true,
+    "notes": "MD tax benefits (SS exempt, pension exclusion, no vehicle tax) offset by PG County piggyback — highest county rate in MD (3.20%)."
+  },
+  "healthcare": {
+    "system": "Medicare (at 65) + private supplement",
+    "qualityRating": 8, "waitTimes": "low-moderate", "dentalIncluded": false, "prescriptionCoverage": "Part D plan",
+    "notes": "Luminis Health Doctors Community Medical Center, UM Bowie Health Center, Prince George's Hospital Center. Access to Johns Hopkins (Baltimore, ~30 mi) and Univ of MD Medical Center.",
+    "acaMarketplace": {
+      "benchmarkSilverMonthly2Adult": 2200, "benchmarkSilverMonthlySingle": 1100,
+      "premiumCapPctOfIncome": 0.085, "rateArea": "Prince George's County",
+      "notes": "Maryland Health Connection: CareFirst BlueCross, Kaiser Permanente, UnitedHealthcare. PG County rating area — similar to Anne Arundel.",
+      "estimationLevel": "county", "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+    }
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps widely available (Comcast/Xfinity, Verizon Fios partial)",
+    "dogFriendly": 8, "expatCommunity": 2, "englishPrevalence": 10, "safetyRating": 7,
+    "notes": "Allen Pond Park, Bowie Baysox minor league baseball, NASA Goddard Visitor Center. Planned community (William Levitt 1960s). Good schools reputation. Strong historic African-American community."
+  },
+  "pros": [
+    "~20% cheaper rent than Fairfax",
+    "Maryland tax benefits: SS exempt, pension exclusion, no vehicle personal property tax",
+    "MARC Penn Line commuter rail to DC (~40 min)",
+    "Between DC and Annapolis — central to regional amenities",
+    "Johns Hopkins + Univ of MD specialist access within 30 min",
+    "Planned community with established schools + parks"
+  ],
+  "cons": [
+    "Highest county piggyback rate in MD (3.20%) — combined state+county up to 8.95%",
+    "Car-dependent outside MARC corridor",
+    "Bay Bridge / Route 50 summer traffic",
+    "PG County has higher crime perception than Anne Arundel",
+    "Limited walkable downtown compared to Annapolis"
+  ]
+}

@@ -137,6 +137,13 @@
       "typical": 350,
       "max": 600,
       "annualInflation": 0.055
+    },
+    "healthcarePreMedicare": {
+      "min": 1927,
+      "max": 2773,
+      "typical": 2350,
+      "annualInflation": 0.06,
+      "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Oakland County, MI). Metro Detroit — BCBSM + Priority Health + Molina. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
   "healthcare": {
@@ -144,7 +151,16 @@
     "qualityRating": 8,
     "dentalIncluded": false,
     "waitTimes": "Short to moderate",
-    "prescriptionCoverage": "Via insurance plan"
+    "prescriptionCoverage": "Via insurance plan",
+    "acaMarketplace": {
+      "benchmarkSilverMonthly2Adult": 2350,
+      "benchmarkSilverMonthlySingle": 1175,
+      "premiumCapPctOfIncome": 0.085,
+      "rateArea": "Oakland County",
+      "notes": "Metro Detroit — BCBSM + Priority Health + Molina.",
+      "estimationLevel": "county",
+      "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+    }
   },
   "lifestyle": {
     "internetSpeed": "1Gbps available",

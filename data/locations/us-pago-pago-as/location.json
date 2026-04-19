@@ -142,6 +142,13 @@
       "max": 880,
       "annualInflation": 0.055,
       "notes": "Specialist care routinely requires travel to Honolulu (5.5h flight)."
+    },
+    "healthcarePreMedicare": {
+      "min": 1640,
+      "max": 2360,
+      "typical": 2000,
+      "annualInflation": 0.06,
+      "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (American Samoa, AS). LBJ Tropical Medical Center. Very limited private coverage. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
   "healthcare": {
@@ -149,7 +156,16 @@
     "qualityRating": 3,
     "dentalIncluded": false,
     "waitTimes": "Long; medevac to Honolulu common for complex cases",
-    "prescriptionCoverage": "Medicare Part D or private"
+    "prescriptionCoverage": "Medicare Part D or private",
+    "acaMarketplace": {
+      "benchmarkSilverMonthly2Adult": 2000,
+      "benchmarkSilverMonthlySingle": 1000,
+      "premiumCapPctOfIncome": 0,
+      "rateArea": "American Samoa",
+      "notes": "LBJ Tropical Medical Center. Very limited private coverage.",
+      "estimationLevel": "county",
+      "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+    }
   },
   "lifestyle": {
     "internetSpeed": "Up to 100Mbps (ASTCA, BlueSky); fiber growing",

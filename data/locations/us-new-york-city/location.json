@@ -182,6 +182,13 @@
       "max": 749,
       "annualInflation": 0.02,
       "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
+    },
+    "healthcarePreMedicare": {
+      "min": 1722,
+      "max": 2478,
+      "typical": 2100,
+      "annualInflation": 0.06,
+      "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (NYC metro, NY). NY State of Health — Essential Plan covers low/mid income separately. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
   "taxes": {
@@ -316,7 +323,16 @@
     "waitTimes": "low",
     "dentalIncluded": false,
     "prescriptionCoverage": "Part D plan",
-    "notes": "World-class healthcare: NYU Langone, Mount Sinai, NewYork-Presbyterian, Memorial Sloan Kettering. EPIC program helps NY seniors with drug costs. Excellent specialist access."
+    "notes": "World-class healthcare: NYU Langone, Mount Sinai, NewYork-Presbyterian, Memorial Sloan Kettering. EPIC program helps NY seniors with drug costs. Excellent specialist access.",
+    "acaMarketplace": {
+      "benchmarkSilverMonthly2Adult": 2100,
+      "benchmarkSilverMonthlySingle": 1050,
+      "premiumCapPctOfIncome": 0.085,
+      "rateArea": "NYC metro",
+      "notes": "NY State of Health — Essential Plan covers low/mid income separately.",
+      "estimationLevel": "county",
+      "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+    }
   },
   "lifestyle": {
     "internetSpeed": "1Gbps+ widely available (Verizon Fios, Spectrum)",

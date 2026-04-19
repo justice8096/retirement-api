@@ -134,6 +134,13 @@
       "typical": 350,
       "max": 600,
       "annualInflation": 0.055
+    },
+    "healthcarePreMedicare": {
+      "min": 1845,
+      "max": 2655,
+      "typical": 2250,
+      "annualInflation": 0.06,
+      "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Hennepin County, MN). MNsure — Twin Cities most competitive in MN. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
   "healthcare": {
@@ -141,7 +148,16 @@
     "qualityRating": 9,
     "dentalIncluded": false,
     "waitTimes": "Short to moderate",
-    "prescriptionCoverage": "Via insurance plan"
+    "prescriptionCoverage": "Via insurance plan",
+    "acaMarketplace": {
+      "benchmarkSilverMonthly2Adult": 2250,
+      "benchmarkSilverMonthlySingle": 1125,
+      "premiumCapPctOfIncome": 0.085,
+      "rateArea": "Hennepin County",
+      "notes": "MNsure — Twin Cities most competitive in MN.",
+      "estimationLevel": "county",
+      "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+    }
   },
   "lifestyle": {
     "internetSpeed": "1Gbps available",

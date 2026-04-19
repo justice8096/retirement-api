@@ -134,6 +134,13 @@
       "typical": 350,
       "max": 600,
       "annualInflation": 0.055
+    },
+    "healthcarePreMedicare": {
+      "min": 1886,
+      "max": 2714,
+      "typical": 2300,
+      "annualInflation": 0.06,
+      "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Hays County, TX). Austin-San Antonio corridor. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
   "healthcare": {
@@ -141,7 +148,16 @@
     "qualityRating": 7,
     "dentalIncluded": false,
     "waitTimes": "Short to moderate",
-    "prescriptionCoverage": "Via insurance plan"
+    "prescriptionCoverage": "Via insurance plan",
+    "acaMarketplace": {
+      "benchmarkSilverMonthly2Adult": 2300,
+      "benchmarkSilverMonthlySingle": 1150,
+      "premiumCapPctOfIncome": 0.085,
+      "rateArea": "Hays County",
+      "notes": "Austin-San Antonio corridor.",
+      "estimationLevel": "county",
+      "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+    }
   },
   "lifestyle": {
     "internetSpeed": "1Gbps available",

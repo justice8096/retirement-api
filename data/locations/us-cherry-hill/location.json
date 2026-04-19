@@ -180,6 +180,13 @@
       "max": 592,
       "annualInflation": 0.02,
       "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
+    },
+    "healthcarePreMedicare": {
+      "min": 2009,
+      "max": 2891,
+      "typical": 2450,
+      "annualInflation": 0.06,
+      "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Camden County, NJ). Southern NJ — same rating area as Camden. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
   "taxes": {
@@ -275,7 +282,16 @@
     "qualityRating": 9,
     "waitTimes": "low-moderate",
     "dentalIncluded": false,
-    "prescriptionCoverage": "Part D plan"
+    "prescriptionCoverage": "Part D plan",
+    "acaMarketplace": {
+      "benchmarkSilverMonthly2Adult": 2450,
+      "benchmarkSilverMonthlySingle": 1225,
+      "premiumCapPctOfIncome": 0.085,
+      "rateArea": "Camden County",
+      "notes": "Southern NJ — same rating area as Camden.",
+      "estimationLevel": "county",
+      "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+    }
   },
   "lifestyle": {
     "internetSpeed": "1Gbps+ available (Verizon Fios/Comcast)",
