@@ -3,6 +3,7 @@ import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
 import { requireAuth } from '../middleware/auth.js';
 import { toValidationErrorPayload } from '../lib/validation.js';
+import { defaultCurrencyFor } from '../lib/locale.js';
 
 /**
  * Brokerage / transfer / FX fee persistence.
@@ -86,6 +87,31 @@ function toClient(record: Record<string, unknown>) {
   return out;
 }
 
+/**
+ * Build the `_units` metadata block for a fees response. Closes Dyscalculia
+ * audit F-201 (2026-04-19) — mirrors the unitsMeta() pattern in
+ * `financial.ts:145-171` so every money-shaped route carries its own unit
+ * semantics instead of relying on field-name conventions.
+ */
+function unitsMeta(record: Record<string, unknown>, locale: string) {
+  const usd = defaultCurrencyFor('en-US');
+  const requestCurrency = defaultCurrencyFor(locale);
+  const local = (record.localCurrency as string) || requestCurrency;
+  return {
+    brokerageFeePct:         { encoding: 'percent', meaning: '0.5 = 0.5% per trade' },
+    brokerageFeeFlat:        { encoding: 'amount', currency: usd, periodicity: 'per-trade' },
+    brokerageAnnualFee:      { encoding: 'amount', currency: usd, periodicity: 'year' },
+    brokerageExpenseRatio:   { encoding: 'percent', meaning: '0.2 = 0.2% annual expense ratio' },
+    wireTransferFeeUsd:      { encoding: 'amount', currency: usd, periodicity: 'per-transfer' },
+    wireTransferFeeLocal:    { encoding: 'amount', currency: local, periodicity: 'per-transfer' },
+    achTransferFee:          { encoding: 'amount', currency: usd, periodicity: 'per-transfer' },
+    fxSpreadPct:             { encoding: 'percent', meaning: '1 = 1% spread on FX conversion' },
+    fxFixedFee:              { encoding: 'amount', currency: local, periodicity: 'per-transfer' },
+    manualExchangeRate:      { encoding: 'rate', meaning: `1 USD = N ${local} (set to null for live rate)` },
+    localCurrency:           { encoding: 'currency-code', meaning: 'ISO 4217 code for the user\'s local currency' },
+  };
+}
+
 export default async function feesRoutes(app: FastifyInstance): Promise<void> {
   app.addHook('preHandler', requireAuth);
 
@@ -95,13 +121,11 @@ export default async function feesRoutes(app: FastifyInstance): Promise<void> {
       where: { userId: request.userId },
     });
 
-    if (!record) {
-      reply.header('Cache-Control', 'private, no-store');
-      return { userId: request.userId, ...DEFAULTS, updatedAt: new Date() };
-    }
-
     reply.header('Cache-Control', 'private, no-store');
-    return toClient(record as unknown as Record<string, unknown>);
+    const base = record
+      ? toClient(record as unknown as Record<string, unknown>)
+      : { userId: request.userId, ...DEFAULTS, updatedAt: new Date() };
+    return { ...base, _units: unitsMeta(base, request.locale ?? 'en-US') };
   });
 
   // PUT /api/me/fees � update fee settings
@@ -126,6 +150,7 @@ export default async function feesRoutes(app: FastifyInstance): Promise<void> {
       create: { userId: request.userId, ...data },
     });
 
-    return toClient(record as unknown as Record<string, unknown>);
+    const base = toClient(record as unknown as Record<string, unknown>);
+    return { ...base, _units: unitsMeta(base, request.locale ?? 'en-US') };
   });
 }
