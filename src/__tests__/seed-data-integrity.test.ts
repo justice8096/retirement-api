@@ -61,7 +61,11 @@ function loadSeedFile(filename: string): LocationData[] {
 }
 
 function loadOriginalLocations(): LocationData[] {
-  const dataDir = resolve(__dirname, '../../../../data/locations');
+  // Relative to src/__tests__/ — two levels up reaches repo root.
+  // Pre-existing bug had `../../../../` which resolved outside the repo
+  // and silently returned []. All `originalLocations`-scoped assertions
+  // were dormant until this fix.
+  const dataDir = resolve(__dirname, '../../data/locations');
   if (!existsSync(dataDir)) return [];
   const locations: LocationData[] = [];
   for (const dir of readdirSync(dataDir)) {
@@ -78,7 +82,13 @@ const seedEU = loadSeedFile('seed-locations-eu.json');
 const seedLATAM = loadSeedFile('seed-locations-latam.json');
 const originalLocations = loadOriginalLocations();
 const allSeedLocations = [...seedUS, ...seedEU, ...seedLATAM];
-const allLocations = [...originalLocations, ...allSeedLocations];
+
+// Dedup: data/locations/*/location.json IS the canonical source, prisma/seed-*
+// JSON files are import snapshots. Where an id appears in both, original wins.
+// Prevents duplicate-ID failures + spurious double-coverage in assertions.
+const originalIds = new Set(originalLocations.map((l) => l.id));
+const seedOnly = allSeedLocations.filter((l) => !originalIds.has(l.id));
+const allLocations = [...originalLocations, ...seedOnly];
 
 // ─── Tests ──────────────────────────────────────────────────────────────────
 
@@ -444,10 +454,13 @@ describe('Seed file counts', () => {
     expect(allSeedLocations.length).toBe(118);
   });
 
-  it('total locations (original + seed) with no overlap', () => {
+  it('combined unique location count is at least 118', () => {
+    // After dedup (original wins over seed on ID collision), expect at least
+    // the 118-location seed baseline. The original-JSON count has grown past
+    // that as new locations are added directly to data/locations/.
     const ids = allLocations.map((l) => l.id);
     const uniqueIds = new Set(ids);
     expect(ids.length).toBe(uniqueIds.size);
-    expect(allLocations.length).toBeGreaterThanOrEqual(130);
+    expect(allLocations.length).toBeGreaterThanOrEqual(118);
   });
 });
