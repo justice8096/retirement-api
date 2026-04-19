@@ -123,7 +123,7 @@ Every claim was verified against files on disk. Net composite score **66 → 80 
 - Redis `.env.example` placeholder replaced with `<GENERATE_STRONG_PASSWORD>` (H-03).
 
 **Gaps (to reach MATURE 92+):**
-- C-01 Clerk test keys on disk — risk-accepted (dev workflow), not a code issue.
+- C-01 **CLOSED 2026-04-20** — Clerk `sk_test_…` rotated per `docs/OPS.md` §1; old key revoked in Clerk dashboard. Adopting a secrets manager so the new key isn't on disk either remains an ops follow-up.
 - No field-level encryption for `groceryData` JSONB blob (currently at-rest via Postgres TDE only).
 
 ### Dimension 7: Incident Response — 93/100 (was 80)

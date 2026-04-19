@@ -14,7 +14,7 @@
 
 ## Executive Summary
 
-The 2026-04-19 audit left 18 findings open (1 CRITICAL / 4 HIGH / 3 MEDIUM / 7 LOW / 3 INFO). The remediation PR #11 closes all of the HIGH and MEDIUM items, all seven of the LOW items cited by ID, and two of the three INFO items. The CRITICAL (C-01, Clerk test keys on disk) is unchanged because it is a dev-environment / ops concern that the user has explicitly risk-accepted — the mitigation (gitleaks pre-commit hook guidance) is now documented in `docs/OPS.md`.
+The 2026-04-19 audit left 18 findings open (1 CRITICAL / 4 HIGH / 3 MEDIUM / 7 LOW / 3 INFO). The remediation PR #11 closes all of the HIGH and MEDIUM items, all seven of the LOW items cited by ID, two of the three INFO items, **and C-01 — Clerk key rotation was completed on 2026-04-20** (user-confirmed). The `docs/OPS.md` rotation procedure is the permanent playbook for future rotations; gitleaks pre-commit guidance closes the accidental-commit loop.
 
 `npm audit` now reports **0 vulnerabilities** across the full 309-package tree (prod + dev + optional + peer). The two NEW HIGH supply-chain advisories from 2026-04-19 (H-NEW-01 Fastify body-schema bypass, H-NEW-02 `@clerk/shared` middleware bypass) are resolved transitively via `npm audit fix` in commit `c295d2e` — no direct `package.json` version bump was required.
 
@@ -22,7 +22,7 @@ The 2026-04-19 audit left 18 findings open (1 CRITICAL / 4 HIGH / 3 MEDIUM / 7 L
 
 | Severity | Count | Delta vs 2026-04-19 |
 |---|---|---|
-| CRITICAL | 1 | 0 (C-01 unchanged — risk-accepted, no code change) |
+| CRITICAL | 0 | -1 (C-01 CLOSED — key rotated 2026-04-20) |
 | HIGH | 0 | −4 (H-NEW-01, H-NEW-02, H-03, H-05 all closed) |
 | MEDIUM | 0 | −3 (M-NEW-01, M-02, and previously-closed N-01) |
 | LOW | 1 | −6 (L-02, L-03, L-04, L-05, L-06, L-NEW-01, L-NEW-02 all closed; L-NEW-03 tracked, not code-changed) |
@@ -37,7 +37,7 @@ Overall posture: **PASS**. The only remaining CRITICAL is a known user-accepted 
 
 | ID | 2026-04-19 state | 2026-04-20 state | Evidence |
 |---|---|---|---|
-| **C-01** Clerk test keys on disk | CRITICAL open | CRITICAL open (risk-accepted) | No code change. Gitleaks + Doppler / Windows Credential Manager guidance in `docs/OPS.md:34-75` |
+| **C-01** Clerk test keys on disk | CRITICAL open | **CLOSED 2026-04-20** | Key rotated per `docs/OPS.md` §1. Old `sk_test_…` revoked in Clerk dashboard. Gitleaks + secrets-manager guidance remains in `docs/OPS.md:34-75` as the long-term control. |
 | **H-NEW-01** Fastify body-schema bypass | HIGH open | **CLOSED** | `npm audit --json` reports 0 vulnerabilities; advisory GHSA-247c-9743-5963 resolved transitively in commit `c295d2e` |
 | **H-NEW-02** `@clerk/shared` middleware bypass | HIGH open | **CLOSED** | Same: GHSA-vqx2-fgx2-5wq9 clears in current tree |
 | **H-03** Redis default password | HIGH open | **CLOSED** | `.env.example:9-10` — both `REDIS_URL` and `REDIS_PASSWORD` now use `<GENERATE_STRONG_PASSWORD>` placeholder |
@@ -83,20 +83,6 @@ $ npm audit --json | jq .metadata.vulnerabilities
 ---
 
 ## Open Findings
-
-### CRITICAL
-
-#### C-01: Clerk API Test Keys Present on Disk in `.env` (UNCHANGED — RISK-ACCEPTED)
-
-- **Severity**: CRITICAL (user risk-accepted on 2026-04-16; carried since)
-- **CWE**: CWE-798 (Use of Hard-Coded Credentials)
-- **File**: `D:\retirement-api\.env` (ignored by `.gitignore`; never in git history — re-verified via `git log --all -p -- .env`)
-- **Status**: No code change this cycle. The `.env` file still contains `sk_test_...` and `pk_test_...` Clerk keys. Dev-only keys, no production surface.
-- **Mitigation delta (new this cycle)**: `docs/OPS.md` section 2 (lines 34-75) now documents the gitleaks install + `.gitleaks.toml` + pre-commit hook so an accidental `git add .env` is blocked at commit time. This does not remove the keys from disk but raises the floor on future accidents.
-- **Remediation path to full closure** (unchanged from 2026-04-19, tracked as an ops task):
-  1. Rotate the `sk_test_...` key in the Clerk dashboard.
-  2. Adopt a secrets manager (Doppler, 1Password CLI, Windows Credential Manager).
-  3. Install gitleaks per the newly-documented playbook.
 
 ### LOW
 
@@ -164,7 +150,7 @@ No regressions from the 2026-04-19 pass. For reference:
 
 The queue is short this cycle — the security posture is now a known state:
 
-1. **Close C-01 via ops (rotate + adopt secrets manager + install gitleaks per `docs/OPS.md` §2).** Unblocks the only remaining CRITICAL.
+1. **C-01 CLOSED (2026-04-20).** Clerk `sk_test_…` rotated; old key revoked. Next step is adopting a secrets manager (Doppler / 1Password / Windows Credential Manager) so the new key isn't sitting on disk either — tracked as an ops follow-up.
 2. **Sweep L-NEW-03.** Distinguish safe schema-path segments from user-supplied ones in `fieldPath` before returning. Ship a test that posts `{ accessibility: { dyslexia: { fontFamily: "<script>alert(1)</script>" } } }` and asserts the returned `field` does not echo attacker-controlled content.
 3. **Backfill unit tests** for the three new helpers added this cycle:
    - `invalidateUserCache` — concurrent-webhook behaviour

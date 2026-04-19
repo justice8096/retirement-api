@@ -9,7 +9,7 @@
 | **Previous CWEs (2026-04-19)** | 15 open |
 | **Resolved This Cycle** | 13 |
 | **New CWEs This Cycle** | 0 |
-| **Currently Open CWEs** | 2 (CWE-798 user risk-accepted, CWE-209 accepted low) |
+| **Currently Open CWEs** | 1 (CWE-209 accepted low) |
 
 ---
 
@@ -42,7 +42,7 @@
 
 | CWE | Finding | Status | Rationale |
 |---|---|---|---|
-| CWE-798 | C-01 hardcoded Clerk test keys in `.env` on disk | **OPEN — user risk-accepted** | Not in git; not a code CWE; operator has accepted residual risk until production launch |
+| CWE-798 | C-01 hardcoded Clerk test keys in `.env` on disk | **CLOSED 2026-04-20** | Key rotated per `docs/OPS.md` §1. Old `sk_test_…` revoked in Clerk dashboard. |
 | CWE-209 | L-NEW-03 Zod path leak in validation error payload | **OPEN — accepted low** | Informational; fieldPath leak only in authenticated error responses |
 
 ### Newly Introduced
@@ -52,19 +52,6 @@ None. No new CWEs were introduced during `fix/audit-remediation-all`.
 ---
 
 ## 1. Per-CWE Detail (Open Items Only)
-
-### CWE-798 — Use of Hard-Coded Credentials (OPEN, risk-accepted)
-
-- **Finding**: C-01 (Clerk test keys in `.env` on disk, not in git)
-- **Severity**: CRITICAL — risk-accepted by operator
-- **Frameworks**:
-  - OWASP Top 10 2021: **A02:2021 Cryptographic Failures**, **A07:2021 Identification and Authentication Failures**
-  - OWASP LLM Top 10 2025: **LLM06 Sensitive Information Disclosure**
-  - NIST SP 800-53: **IA-5** (Authenticator Management), **SC-28** (Protection of Information at Rest)
-  - EU AI Act Art. 25: Risk management of credential compromise
-  - ISO 27001: **A.9.2.4** (Management of secret authentication)
-  - SOC 2: **CC6.1** (Logical access security)
-  - MITRE ATT&CK: **T1552.001** (Unsecured Credentials: Files)
 
 ### CWE-209 — Information Exposure Through Error Message (OPEN, accepted low)
 
@@ -83,7 +70,7 @@ None. No new CWEs were introduced during `fix/audit-remediation-all`.
 
 | CWE | OWASP Top 10 2021 | OWASP LLM Top 10 2025 | NIST SP 800-53 | EU AI Act | ISO 27001 | SOC 2 | MITRE ATT&CK | MITRE ATLAS |
 |---|---|---|---|---|---|---|---|---|
-| CWE-798 | A02, A07 | LLM06 | IA-5, SC-28 | Art. 25 | A.9.2.4 | CC6.1 | T1552.001 | — |
+| CWE-798 | A02, A07 | LLM06 | IA-5, SC-28 | Art. 25 | A.9.2.4 | CC6.1 | T1552.001 | CLOSED 2026-04-20 (key rotated) |
 | CWE-209 | A09 | — | AU-2, SC-30 | Art. 13 | A.12.4 | CC7.2 | T1213 | — |
 
 ---
@@ -93,17 +80,17 @@ None. No new CWEs were introduced during `fix/audit-remediation-all`.
 | OWASP Category | Open CWEs | Open Findings | Delta vs 2026-04-19 |
 |---|---|---|---|
 | A01 Broken Access Control | — | — | was 6 CWEs → now 0 |
-| A02 Cryptographic Failures | CWE-798 | C-01 | unchanged (risk-accepted) |
+| A02 Cryptographic Failures | — | — | CLOSED — was CWE-798 / C-01 (key rotated 2026-04-20) |
 | A03 Injection | — | — | was 3 CWEs → now 0 |
 | A04 Insecure Design | — | — | was 3 CWEs → now 0 |
 | A05 Security Misconfiguration | — | — | was 3 CWEs → now 0 |
 | A06 Vulnerable Components | — | — | was 3 advisories → `npm audit` = 0 |
-| A07 Auth Failures | CWE-798 | C-01 | was 2 CWEs → now 1 (risk-accepted) |
+| A07 Auth Failures | — | — | CLOSED — was 2 CWEs; CWE-798 C-01 rotated 2026-04-20 |
 | A08 Software & Data Integrity | — | — | was 1 CWE → now 0 |
 | A09 Logging Failures | CWE-209 | L-NEW-03 | unchanged (accepted low) |
 | A10 SSRF | — | — | no findings |
 
-**No critical hits in any OWASP category.** CWE-798 residual is explicitly risk-accepted by the operator; CWE-209 is an accepted-low informational leak.
+**No critical hits in any OWASP category.** CWE-798 was closed 2026-04-20 via key rotation; CWE-209 remains as an accepted-low informational leak.
 
 ---
 
@@ -111,7 +98,7 @@ None. No new CWEs were introduced during `fix/audit-remediation-all`.
 
 Still N/A for inference (this is a data API). Residual mappings:
 
-- **LLM06 Sensitive Info Disclosure** — CWE-798 (risk-accepted)
+- **LLM06 Sensitive Info Disclosure** — no open CWEs (CWE-798 closed 2026-04-20)
 - All other LLM categories — closed or N/A
 
 ---

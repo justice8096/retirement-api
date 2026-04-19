@@ -9,12 +9,12 @@ Supersedes: audits/AUDIT_SUMMARY.txt (2026-04-19)
 Context: Full remediation cycle closing HIGH, MEDIUM, and LOW findings from
 the 2026-04-19 audit round plus the LLM-compliance governance roadmap.
 
-1. SAST/DAST Scan:          PASS       - 4 open findings (1 CRITICAL risk-accepted,
-                                          0 HIGH, 0 MEDIUM, 1 LOW, 2 INFO).
-                                          Delta: 18 -> 4 open (-14). Every HIGH + MEDIUM
-                                          closed. Only residuals: C-01 Clerk test keys
-                                          on disk (user risk-accepted) and L-NEW-03
-                                          Zod path info-disclosure (accepted low).
+1. SAST/DAST Scan:          PASS       - 3 open findings (0 CRITICAL, 0 HIGH, 0 MEDIUM,
+                                          1 LOW, 2 INFO).
+                                          Delta: 18 -> 3 open (-15). Every HIGH + MEDIUM
+                                          closed. C-01 Clerk key rotated 2026-04-20 —
+                                          only residual is L-NEW-03 Zod path info-
+                                          disclosure (accepted low).
 
 2. Supply Chain Audit:      PASS       - npm audit: 0 vulnerabilities (was 1 CRITICAL
                                           + 4 HIGH at 2026-04-19).
@@ -25,10 +25,11 @@ the 2026-04-19 audit round plus the LLM-compliance governance roadmap.
                                           Still missing: Renovate/Dependabot, Docker digest
                                           pin (guidance comment added).
 
-3. CWE Mapping:             PASS       - 2 open CWEs (CWE-798 risk-accepted, CWE-209
-                                          accepted low). 13 CWEs CLOSED this cycle.
-                                          OWASP A05 Security Misconfiguration cluster
-                                          fully cleared. No CRITICAL hits in any framework.
+3. CWE Mapping:             PASS       - 1 open CWE (CWE-209 accepted low).
+                                          14 CWEs CLOSED this cycle (including CWE-798
+                                          via Clerk key rotation 2026-04-20).
+                                          OWASP A02 + A05 + A07 clusters fully cleared.
+                                          No CRITICAL hits in any framework.
 
 4. LLM Compliance:          80/100     - GOOD band (70-89); up from 66 (DEVELOPING).
                                           Biggest gains: D2 Training Data Disclosure
@@ -112,14 +113,15 @@ Remediation Highlights (this cycle):
     - Dockerfile digest-pin guidance comment
 
 Recommended next-sprint items (in priority order):
-  1. Add Renovate/Dependabot with weekly npm schedule                   ~10 min
-  2. Rotate Clerk sk_test_ key + adopt secrets manager (C-01 closure)   ~20 min
-  3. Pin Dockerfile base image by digest (follow OPS.md procedure)      ~15 min
-  4. Close F-014 — add Accept-Version: 2 walkthrough to OpenAPI desc    ~10 min
-  5. Instrument Redis error-rate metric per OPS.md (closes I-NEW-01)    ~1 hr
-  6. Add unit tests for ensureStripeCustomer + validateBody + sanitize  ~2 hrs
-  7. EU AI Act self-classification document                             ~3 hrs
-  8. Multilingual glossary variant                                      ~1 day
+  1. Adopt a secrets manager for the new Clerk key (Doppler / 1Password /
+     Windows Credential Manager) — keeps the rotated key off disk          ~30 min
+  2. Add Renovate/Dependabot with weekly npm schedule                      ~10 min
+  3. Pin Dockerfile base image by digest (follow OPS.md procedure)         ~15 min
+  4. Close F-014 — add Accept-Version: 2 walkthrough to OpenAPI desc       ~10 min
+  5. Instrument Redis error-rate metric per OPS.md (closes I-NEW-01)       ~1 hr
+  6. Add unit tests for ensureStripeCustomer + validateBody + sanitize     ~2 hrs
+  7. EU AI Act self-classification document                                ~3 hrs
+  8. Multilingual glossary variant                                         ~1 day
 
 Outputs written (this cycle):
   audits/sast-dast-scan-2026-04-20.md           (~230 lines)
