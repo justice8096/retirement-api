@@ -1,0 +1,62 @@
+# Dependabot — automated dependency update PRs.
+# https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+version: 2
+updates:
+  # Production + dev npm dependencies.
+  # Grouped updates keep the PR volume manageable; security advisories still
+  # open individual PRs via automated-security-fixes (configured in repo settings).
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "09:00"
+      timezone: America/New_York
+    open-pull-requests-limit: 5
+    reviewers:
+      - justice8096
+    commit-message:
+      prefix: chore(deps)
+      include: scope
+    groups:
+      fastify:
+        patterns:
+          - "fastify"
+          - "@fastify/*"
+      prisma:
+        patterns:
+          - "prisma"
+          - "@prisma/*"
+      clerk:
+        patterns:
+          - "@clerk/*"
+      sentry:
+        patterns:
+          - "@sentry/*"
+      dev-tooling:
+        dependency-type: development
+        patterns:
+          - "typescript"
+          - "tsx"
+          - "vitest"
+          - "@types/*"
+
+  # GitHub Actions — pin SHAs, update tags weekly.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    reviewers:
+      - justice8096
+    commit-message:
+      prefix: chore(ci)
+
+  # Dockerfile base-image updates.
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: weekly
+    reviewers:
+      - justice8096
+    commit-message:
+      prefix: chore(docker)

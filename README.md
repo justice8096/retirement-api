@@ -247,8 +247,18 @@ OWASP LLM Top 10 2025, ISO 27001) is audited and scored:
 
 ## License
 
-Not yet assigned. Treat the code as proprietary until the maintainer selects
-and commits a LICENSE file.
+**All Rights Reserved.** This repository is publicly readable but is not
+open source. Running, modifying, redistributing, or hosting this software
+requires prior written authorization from the copyright holder. See
+[`LICENSE`](LICENSE) for full terms.
+
+Individual UI components may, from time to time, be extracted into
+separate repositories under **[Creative Commons Zero (CC0 1.0
+Universal)](https://creativecommons.org/publicdomain/zero/1.0/)**. Those
+extracts are governed by their own LICENSE files and are freely reusable;
+the parent repository you are reading now is not.
+
+For licensing enquiries: `justice8096@gmail.com`.
 
 ---
 
