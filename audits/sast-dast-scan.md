@@ -1,335 +1,270 @@
-# SAST/DAST Security Scan Report (Re-Audit)
+# SAST/DAST Security Scan Report
 
 | Field | Value |
 |---|---|
-| **Date** | 2026-04-02 |
-| **Commit** | 93a719f (post-fix) |
-| **Branch** | expand-household-model |
-| **Scanner** | Manual static analysis (SAST) + dynamic pattern matching |
-| **Target** | retirement-api (Fastify 5 + Prisma 6 + TypeScript) |
-| **Previous Scan** | 2026-04-02 (pre-fix, same commit baseline) |
+| **Date** | 2026-04-19 |
+| **Commit** | 80e2e91 |
+| **Branch** | cleanup/seed-data-integrity-path |
+| **Scanner** | Manual static analysis (SAST) + dynamic pattern matching + `npm audit` |
+| **Target** | retirement-api (Fastify 5 + Prisma 6 + TypeScript ESM) |
+| **Previous Scan** | 2026-04-16 |
+| **Audit Type** | Post-commit re-audit (tracks deltas since 2026-04-16) |
 
 ---
 
-## Remediation Status
+## Executive Summary
 
-| ID | Severity | Finding | Status | Notes |
-|---|---|---|---|---|
-| C-01 | CRITICAL | Clerk API keys in `.env` | **REMAINING** | Keys still present on disk (not in git) |
-| C-02 | CRITICAL | Hardcoded DB password in `setup-backup-schedule.ps1` | **FIXED** | Password removed from script |
-| H-01 | HIGH | `STRIPE_WEBHOOK_SECRET` non-null assertion | **FIXED** | Proper null check + 500 response |
-| H-02 | HIGH | Path traversal in `serve.js` | **FIXED** | `startsWith(ROOT)` guard added |
-| H-03 | HIGH | Default passwords in `.env.example` / `backup-db.sh` | **PARTIALLY FIXED** | Postgres fixed; Redis still uses `changeme` |
-| H-04 | HIGH | Admin route param validation (PUT/DELETE) | **FIXED** | Zod schema validation added to both |
-| H-05 | HIGH | User cache race condition | **REMAINING** | No cache invalidation on tier change |
-| M-01 | MEDIUM | `Math.random()` for request IDs | **FIXED** | Uses `crypto.randomUUID()` |
-| M-02 | MEDIUM | CORS origin validation | **FIXED** | Wildcard `*` rejected when `credentials: true` |
-| M-03 | MEDIUM | Health endpoint info disclosure | **FIXED** | Restricted to admin users only |
-| M-04 | MEDIUM | Household PUT returns 200 on error | **FIXED** | Now returns `reply.code(400)` |
-| M-05 | MEDIUM | Releases auth flow guard | **FIXED** | Added `if (_reply.sent) return` check |
-| M-06 | MEDIUM | Webhook idempotency race | **FIXED** | Insert-first with P2002 catch |
-| M-07 | MEDIUM | Encryption silent degradation | **FIXED** | Throws on startup in production; health check added |
-| L-01 | LOW | SQL injection regex blocks legitimate input | **FIXED** | SQL keyword blocklist removed |
-| L-02 | LOW | No input size limit on JSONB | **REMAINING** | No depth/key limits in `stripDangerousKeys` |
-| L-03 | LOW | Admin reindex no rate limit | **REMAINING** | No mutex or batching added |
-| L-04 | LOW | Contribution type badge mapping | **REMAINING** | `processApproval` still uses untyped `string` |
-| L-05 | LOW | Preferences shallow merge | **REMAINING** | No allowlist for preference keys |
-| L-06 | LOW | Export endpoint timeout | **REMAINING** | Still loads all relations in one query |
+Since the 2026-04-16 audit, the codebase has grown by ~30 commits spanning ACA cliff-regime modeling, Mid-Atlantic and US-territory location seed data, the new `/api/me/fees` route, per-account load/fees columns, accessibility API surface work, and rate-limit middleware tests. No pre-existing CRITICAL or HIGH findings from 2026-04-16 that remain open have regressed, but **three new HIGH supply-chain advisories surfaced** (Fastify body-schema bypass, Clerk auth bypass, Vite transitive dev-only advisories) which did not exist at the last audit date.
 
-### Summary
+### Severity Counts (Open Findings, this audit)
 
-| | Fixed | Partially Fixed | Remaining | New |
-|---|---|---|---|---|
-| CRITICAL (2) | 1 | 0 | 1 | 0 |
-| HIGH (5) | 3 | 1 | 1 | 0 |
-| MEDIUM (7) | 6 | 0 | 0 | 1 |
-| LOW (6) | 1 | 0 | 5 | 0 |
-| **Total (20)** | **11** | **1** | **7** | **1** |
+| Severity | Count | Delta vs 2026-04-16 |
+|---|---|---|
+| CRITICAL | 1 | 0 (same C-01 Clerk key on disk) |
+| HIGH | 4 | +2 (Fastify body-schema, Clerk SDK advisory; H-05 unchanged; H-03 partial unchanged) |
+| MEDIUM | 3 | +1 (dev bypass user auto-creation) |
+| LOW | 7 | +1 (new fees route has no input rejection pattern) |
+| INFO | 3 | +1 |
+| **Total Open** | **18** | **+5** |
+
+Overall posture: **CONDITIONAL PASS**. The one CRITICAL is known and accepted (Clerk test key on disk, not in git). The two new HIGH supply-chain items have upstream fixes available via `npm audit fix`.
 
 ---
 
-## Updated Severity Counts (Open Findings)
+## CRITICAL Findings
 
-| Severity | Count |
-|---|---|
-| CRITICAL | 1 |
-| HIGH | 2 (1 remaining + 1 partially fixed) |
-| MEDIUM | 1 (new) |
-| LOW | 5 |
-| **Total Open** | **9** |
+### C-01: Clerk API Test Keys Present on Disk in `.env` (UNCHANGED)
 
----
-
-## REMAINING Findings
-
-### C-01: Clerk API Keys Still Present in `.env` on Disk (REMAINING)
-
-- **Severity**: CRITICAL
+- **Severity**: CRITICAL (risk-accepted by user)
 - **CWE**: CWE-798 (Use of Hard-Coded Credentials)
-- **File**: `D:\retirement-api\.env` lines 12-13
-- **Code**:
-  ```
-  CLERK_SECRET_KEY=sk_test_VwOreFJ20Q1diuy2QWMesKPJEqnz9HdNpwP4lTSKUK
-  CLERK_PUBLISHABLE_KEY=pk_test_bWludC1zbmFrZS0yMi5jbGVyay5hY2NvdW50cy5kZXYk
-  ```
-- **Status**: The `.env` file is in `.gitignore` and was never committed to git (verified via `git log --all -p -- .env`). However, the real Clerk test secret key is still present on disk. If the development machine is compromised, shared, or backed up without exclusions, the key leaks.
-- **What Changed**: Nothing. The original finding recommended rotating the key and adopting a secrets manager. This has not been done.
+- **File**: `D:\retirement-api\.env` (not committed — in `.gitignore`)
+- **Status**: Same as 2026-04-16 audit. The `.env` file still contains `sk_test_...` and `pk_test_...` Clerk test keys. Not present in git history (verified `git log --all -p -- .env`).
 - **Remediation** (unchanged):
-  1. Rotate the exposed `sk_test_...` key in the Clerk dashboard immediately.
+  1. Rotate the exposed `sk_test_...` key in the Clerk dashboard.
   2. Adopt a secrets manager (Doppler, 1Password CLI, Windows Credential Manager).
-  3. Add a pre-commit hook (gitleaks, trufflehog) to prevent accidental commits.
+  3. Add a pre-commit hook (gitleaks, trufflehog).
 
-### H-03: Default Redis Password in `.env.example` (PARTIALLY FIXED)
+---
+
+## HIGH Findings
+
+### H-NEW-01: Fastify 5.3.2–5.8.4 Body Schema Validation Bypass (NEW)
+
+- **Severity**: HIGH (CVSS 7.5)
+- **CWE**: CWE-1287 (Improper Validation of Specified Type of Input)
+- **Advisory**: GHSA-247c-9743-5963
+- **File**: `package-lock.json` — `fastify` ^5.0.0 resolved to a vulnerable minor
+- **Code**: direct dependency `"fastify": "^5.0.0"` in `package.json`
+- **Impact**: Leading-space `Content-Type` header can bypass body schema validation, letting malformed JSON reach handlers. Given this API has strict Zod schemas at every route (`safeParse`), the downstream impact is limited — but prototype-pollution and type-coercion regressions become possible for any route that trusts Fastify's pre-validation.
+- **Remediation**: `npm audit fix` — patched version is available. Pin `fastify` to `~5.8.5` or later once installed.
+
+### H-NEW-02: `@clerk/shared` Middleware Route Protection Bypass (NEW)
+
+- **Severity**: CRITICAL per advisory, filed as HIGH here given the keys are test-mode (CVSS 9.1)
+- **CWE**: CWE-436, CWE-863
+- **Advisory**: GHSA-vqx2-fgx2-5wq9 (range `>=4.0.0 <4.8.1`)
+- **File**: `package-lock.json` — transitive via `@clerk/fastify`
+- **Impact**: In vulnerable versions, middleware-based route protection can be bypassed when certain headers/paths are crafted. This API uses `requireAuth` (a `preHandler`), not Clerk middleware directly, which partially mitigates. However, `clerkPlugin` is registered globally and the JWT validation path flows through `@clerk/shared`.
+- **Remediation**: `npm audit fix` (upstream fix available). Verify `@clerk/shared` ≥ 4.8.1 after upgrade.
+
+### H-03: Default Redis Password in `.env.example` (PARTIALLY FIXED — unchanged since 2026-04-16)
 
 - **Severity**: HIGH
 - **CWE**: CWE-1393 (Use of Default Credentials)
 - **File**: `D:\retirement-api\.env.example` lines 8-9
-- **Code**:
+- **Current Content**:
   ```
   REDIS_URL=redis://:changeme@localhost:6379
   REDIS_PASSWORD=changeme
   ```
-- **What Changed**: The Postgres password was fixed — line 5 now uses `<GENERATE_STRONG_PASSWORD>` placeholder. The `backup-db.sh` script now uses `${PGPASSWORD:?PGPASSWORD environment variable must be set}` on lines 49, 52, and 70, correctly failing if unset. However, the Redis password in `.env.example` is still `changeme`.
-- **Impact**: Developers copying `.env.example` will have a trivially guessable Redis password. While Redis is optional (falls back to in-memory), if enabled with this default password, rate limiting state and cached data could be accessed by an attacker on the local network.
-- **Remediation**: Replace Redis default passwords with placeholders:
+- **Status**: No change since 2026-04-16. Postgres line was fixed to use a placeholder, but Redis lines still ship `changeme` as default.
+- **Remediation**:
   ```
   REDIS_URL=redis://:<GENERATE_STRONG_PASSWORD>@localhost:6379
   REDIS_PASSWORD=<GENERATE_STRONG_PASSWORD>
   ```
 
-### H-05: User Cache Race Condition — Stale Tier After Upgrade (REMAINING)
+### H-05: User Cache Race Condition — Stale Tier After Upgrade (UNCHANGED)
 
 - **Severity**: HIGH
-- **CWE**: CWE-367 (Time-of-Check Time-of-Use Race Condition)
-- **File**: `D:\retirement-api\src\middleware\auth.ts` lines 21-22
+- **CWE**: CWE-367 (TOCTOU Race Condition)
+- **File**: `D:\retirement-api\src\middleware\auth.ts` lines 50-69
+- **Code**: 10s in-memory `userCache`, no invalidation on tier change.
+- **Status**: Unchanged since 2026-04-16. No `invalidateUserCache()` export or webhook hook added.
+- **Impact**: In a multi-replica deployment, a downgraded user retains elevated tier for up to 10s per replica. Combined with rate-limit config in `rate-limit.ts` that reads `request.user?.tier`, a downgraded admin could still hit the 600 req/min admin limit briefly.
+- **Remediation**:
+  1. Export `invalidateUserCache(authProviderId)` from `auth.ts` and invoke from webhook tier-change paths.
+  2. For multi-replica deployments, use Redis pub/sub for cache invalidation.
+
+---
+
+## MEDIUM Findings
+
+### M-NEW-01: Dev Bypass Auto-Creates Admin User (NEW)
+
+- **Severity**: MEDIUM
+- **CWE**: CWE-489 (Active Debug Code), CWE-250 (Execution with Unnecessary Privileges)
+- **File**: `D:\retirement-api\src\middleware\auth.ts` lines 86-110
 - **Code**:
   ```typescript
-  const USER_CACHE_TTL_MS = 10_000;
-  const userCache = new Map<string, { user: User; expiresAt: number }>();
+  if (process.env.NODE_ENV === 'development' && !request.headers.authorization) {
+    let devUser = await prisma.user.findFirst({ where: { email: 'dev@localhost' } });
+    if (!devUser) {
+      devUser = await prisma.user.create({
+        data: { authProviderId: 'dev_local_bypass', email: 'dev@localhost',
+                displayName: 'Dev User', tier: 'admin' },
+      });
+    }
+    request.user = devUser;
+    request.userId = devUser.id;
+    ...
+  }
   ```
-- **What Changed**: Nothing. The 10-second per-process cache is unchanged. No invalidation on webhook tier changes, no Redis-backed coordination for multi-replica deployments.
-- **Impact**: A 10-second window exists where a downgraded user retains elevated permissions per replica. In multi-replica deployments, no coordination between caches.
-- **Remediation** (unchanged):
-  1. Export a `invalidateUserCache(authProviderId)` function and call it from the webhook handler after tier changes.
-  2. For multi-replica deployments, use Redis pub/sub for cache invalidation.
-  3. Alternatively, reduce TTL to 2-3 seconds for sensitive operations.
+- **Impact**: If `NODE_ENV` is ever misconfigured (left as `development` in staging, a container misread, a Docker ENV override missing), every unauthenticated request is treated as an admin. Creates full-admin users silently. The branch does a safe fall-through to Clerk on DB errors but the success path yields `tier: 'admin'`.
+- **Remediation**:
+  1. Add a secondary guard — require an explicit `DEV_AUTH_BYPASS=1` env var in addition to `NODE_ENV=development`.
+  2. Log a WARN-level message on every dev-bypass hit (not just on user creation).
+  3. On application startup, refuse to boot if `NODE_ENV=production` *and* the `dev_local_bypass` user already exists in the DB.
 
-### L-02: No Input Size Limit on JSONB Fields (REMAINING)
+### N-01: Preferences PATCH Still Returns 200 on Validation Error (CARRIED OVER, UNCHANGED)
+
+- **Severity**: MEDIUM
+- **CWE**: CWE-703 (Improper Check or Handling of Exceptional Conditions)
+- **File**: `D:\retirement-api\src\routes\preferences.ts` — the PATCH handler now *does* send a 400 via `toValidationErrorPayload` on line 88-89 and line 93-94. Re-verification shows this is actually **FIXED** since the previous audit (two `reply.code(400)` branches present).
+- **Status**: **FIXED** on re-read. Downgrade to INFO and remove from action items.
+
+### M-02: Fees Route Accepts Any Numeric Field Without `.strict()` (NEW)
+
+- **Severity**: MEDIUM
+- **CWE**: CWE-20 (Improper Input Validation)
+- **File**: `D:\retirement-api\src\routes\fees.ts` line 17-37
+- **Code**: `feesSchema = z.object({ ... })` — no `.strict()` call; unknown keys silently pass through.
+- **Impact**: Clients can inject arbitrary properties into the body. Since only the allowlisted `NUMERIC_FIELDS` are converted, extra fields are dropped by Prisma (no matching column) — but the pattern is inconsistent with `financialSchema` which also lacks `.strict()` here (financial PUT also doesn't use `.strict()`). A future migration adding a column could accidentally expose it.
+- **Remediation**: Add `.strict()` to `feesSchema` and `financialSchema`. Add a test that posts `{ foo: 'bar' }` and expects a 400.
+
+---
+
+## LOW Findings
+
+### L-02: No Input Size Limit on JSONB (UNCHANGED)
 
 - **Severity**: LOW
 - **CWE**: CWE-400 (Uncontrolled Resource Consumption)
 - **File**: `D:\retirement-api\src\middleware\sanitize.ts` lines 15-26
-- **What Changed**: Nothing. `stripDangerousKeys` still recursively processes objects with no depth or key-count limits. A 1MB deeply nested JSON payload could cause high CPU usage during recursive stripping.
-- **Remediation** (unchanged): Add depth and key-count limits to `stripDangerousKeys`.
+- **Status**: Unchanged. `stripDangerousKeys` has no depth or key-count cap. Body limit of 1 MB in `server.ts` is the only backstop.
+- **Remediation**: Add a 32-level depth cap and 10 000-key cap.
 
-### L-03: Admin Reindex Endpoint Has No Rate Limiting or Progress Guard (REMAINING)
-
-- **Severity**: LOW
-- **CWE**: CWE-400 (Uncontrolled Resource Consumption)
-- **File**: `D:\retirement-api\src\routes\admin.ts` lines 248-264
-- **What Changed**: Nothing. Sequential updates with no mutex, batching, or concurrent-call guard.
-- **Remediation** (unchanged): Add a mutex/flag to prevent concurrent reindexing, and batch updates with `$transaction`.
-
-### L-04: Contribution Type Badge Mapping Uses Unvalidated String Key (REMAINING)
+### L-03: Admin Reindex Endpoint Has No Mutex (UNCHANGED)
 
 - **Severity**: LOW
-- **CWE**: CWE-20 (Improper Input Validation)
+- **CWE**: CWE-400
+- **File**: `D:\retirement-api\src\routes\admin.ts` lines 249-265
+- **Status**: Unchanged — sequential per-row updates, no batching, no concurrent-call guard.
+
+### L-04: `processApproval` Uses Untyped String Key (UNCHANGED)
+
+- **Severity**: LOW
+- **CWE**: CWE-20
 - **File**: `D:\retirement-api\src\routes\contributions.ts` line 214
-- **What Changed**: Nothing. `processApproval` parameter is still `contributionType: string` rather than the enum type.
-- **Remediation** (unchanged): Type the parameter as `ContributionType` (from the Zod enum) instead of `string`.
+- **Status**: Unchanged — still `contributionType: string`.
 
-### L-05: Preferences PATCH Performs Shallow Merge Without Key Validation (REMAINING)
-
-- **Severity**: LOW
-- **CWE**: CWE-915 (Improperly Controlled Modification of Dynamically-Determined Object Attributes)
-- **File**: `D:\retirement-api\src\routes\preferences.ts` line 34
-- **What Changed**: Nothing. Preferences blob accepts any keys after `safeJsonRecord` strips dangerous ones. No schema validation of actual preference keys/values.
-- **Remediation** (unchanged): Define an allowlist of valid preference keys with their expected types.
-
-### L-06: Export Endpoint May Timeout on Large User Data (REMAINING)
+### L-05: Preferences Shallow Merge Without Key Allowlist (UNCHANGED)
 
 - **Severity**: LOW
-- **CWE**: CWE-400 (Uncontrolled Resource Consumption)
-- **File**: `D:\retirement-api\src\routes\users.ts` lines 69-85
-- **What Changed**: Nothing. Full `include` of all related records in a single query with no pagination or streaming.
-- **Remediation** (unchanged): Consider streaming the response or setting a query timeout.
+- **CWE**: CWE-915
+- **File**: `D:\retirement-api\src\routes\preferences.ts` — **partially mitigated** by the new `accessibilityPrefsSchema` block (lines 50-55) validating known sub-keys. However, `preferencesPatchSchema` still uses `.passthrough()`, so unknown top-level keys are preserved.
+- **Remediation**: Progress made. Consider final step of closing off `.passthrough()` behind a size cap.
+
+### L-06: Export Endpoint Unbounded Relation Load (UNCHANGED)
+
+- **Severity**: LOW
+- **CWE**: CWE-400
+- **File**: `D:\retirement-api\src\routes\users.ts` lines 68-112
+- **Status**: Unchanged — single query loads all household members, pets, scenarios, custom locations, overrides, grocery data in one `include`. No pagination, no cursor. Fine for normal users (20-scenario cap, 20-custom-location cap) but large if a user fills every cap simultaneously.
+
+### L-NEW-01: `/api/releases/:id/checkout` Does Not Validate `id` Format (NEW)
+
+- **Severity**: LOW
+- **CWE**: CWE-20
+- **File**: `D:\retirement-api\src\routes\releases.ts` line 69-78
+- **Impact**: `const { id } = request.params as { id: string };` then `prisma.dataRelease.findUnique({ where: { id } })`. Prisma parameterizes, so no SQL injection, but any string is accepted. A malicious client can send a 2 KB junk id.
+- **Remediation**: Add a UUID-shape Zod validator on the param.
+
+### L-NEW-02: Release Checkout Re-Uses Stripe Customer Created in Parallel (NEW, race-condition edge case)
+
+- **Severity**: LOW
+- **CWE**: CWE-362 (Concurrent Execution using Shared Resource with Improper Synchronization)
+- **File**: `D:\retirement-api\src\routes\releases.ts` lines 107-118 and `D:\retirement-api\src\routes\billing.ts` lines 100-111
+- **Impact**: If a user hits `/checkout-feature` and `/releases/:id/checkout` in parallel with no existing `stripeCustomerId`, both create separate Stripe customers and the second `user.update` overwrites the first. The earlier Stripe customer becomes orphaned (not fatal, but duplicate billing records).
+- **Remediation**: Extract Stripe customer creation to a shared helper that uses `prisma.user.update({ where: { id, stripeCustomerId: null } })` with an optimistic-concurrency guard and falls back to reading the row on constraint failure.
+
+### L-NEW-03: Validation Error Serializes Zod `issue.path` That May Include User-Supplied Data (NEW)
+
+- **Severity**: LOW / INFO
+- **CWE**: CWE-209 (Information Exposure through Error Message)
+- **File**: `D:\retirement-api\src\lib\validation.ts` lines 82-86
+- **Impact**: `fieldPath(issue)` concatenates all path segments, some of which may be array indices or dynamic keys (e.g. nested preference blobs). The resulting `field` returned to the client is `"accessibility.dyslexia.fontFamily"` etc. — information about schema structure. Low impact, but the stack trace no longer leaks (good).
 
 ---
 
-## NEW Findings
+## INFO Findings
 
-### N-01: Preferences PATCH Returns 200 with Error Body Instead of 400
+### I-NEW-01: Rate-Limit Redis Build Retries 3× Then Silently Uses In-Memory (UNCHANGED)
 
-- **Severity**: MEDIUM
-- **CWE**: CWE-394 (Unexpected Status Code or Return Value)
-- **File**: `D:\retirement-api\src\routes\preferences.ts` lines 26-28
-- **Code**:
-  ```typescript
-  const parsed = preferencesSchema.safeParse(request.body);
-  if (!parsed.success) {
-    return { error: 'Validation failed', details: parsed.error.issues };
-  }
-  ```
-- **Impact**: Same pattern as the original M-04 finding in `household.ts` (which was fixed). When preferences validation fails, the route returns an error object with HTTP 200 instead of 400. Clients checking status codes will not detect the validation failure and may assume the update succeeded. This is the exact same class of bug that was fixed in M-04 but was missed in this route.
-- **Remediation**:
-  ```typescript
-  if (!parsed.success) {
-    return _reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
-  }
-  ```
+- **Severity**: INFO
+- **File**: `src/middleware/rate-limit.ts` lines 47-86
+- **Observation**: Documented fallback behavior. Operationally correct; just calling out that a partially-working Redis cluster (PING works, then degrades) will flip per-replica caches out of sync silently. Metric alarm on the connection-error rate is recommended.
+
+### I-NEW-02: Health Endpoint Returns `503` When Prod Encryption Is Disabled (UNCHANGED)
+
+- **Severity**: INFO (this is correct behavior, positive control)
+- **File**: `src/routes/health.ts` lines 71-74
+- **Observation**: Positive control. Keeps the app "unhealthy" (and load-balancer pull-out-worthy) until the encryption key is configured.
+
+### I-NEW-03: No OpenAPI/Swagger Spec Served Statically (PARTIAL — `src/lib/swagger.ts` exists)
+
+- **Severity**: INFO
+- **File**: `src/lib/swagger.ts`
+- **Observation**: `registerSwagger(app)` is called in `server.ts`. The implementation should be double-checked to confirm the UI and JSON spec are served correctly in non-production environments.
 
 ---
 
-## Verified Fixes (Detail)
+## FIXED / CLOSED Since 2026-04-16
 
-### C-02: Hardcoded DB Password in `setup-backup-schedule.ps1` — FIXED
-
-The PowerShell script at `tools/setup-backup-schedule.ps1` line 22 now reads:
-```powershell
--Argument "-l -c 'bash D:/retirement-api/tools/backup-db.sh >> D:/backups/retirement-db/backup.log 2>&1'" `
-```
-The `export PGPASSWORD=postgres` segment has been removed. The backup script itself now enforces `PGPASSWORD` via `${PGPASSWORD:?...}` (fail-if-unset syntax) on lines 49, 52, and 70, which is the correct approach.
-
-### H-01: STRIPE_WEBHOOK_SECRET — FIXED
-
-`src/routes/webhooks.ts` lines 38-42 now properly validates:
-```typescript
-const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
-if (!webhookSecret) {
-  request.log.error('STRIPE_WEBHOOK_SECRET not configured');
-  return reply.code(500).send({ error: 'Webhook verification not configured' });
-}
-```
-The non-null assertion (`!`) has been removed. The `constructEvent` call on line 49 now uses the validated `webhookSecret` variable.
-
-### H-02: Path Traversal in `serve.js` — FIXED
-
-`tools/serve.js` line 18 now includes the path traversal check:
-```javascript
-if (!filePath.startsWith(ROOT)) { res.writeHead(403); res.end('Forbidden'); return; }
-```
-This prevents `..`-based traversal out of the ROOT directory.
-
-### H-04: Admin Route Parameter Validation — FIXED
-
-Both PUT (`src/routes/admin.ts` lines 114-116) and DELETE (lines 152-154) now validate the `:id` parameter:
-```typescript
-const idSchema = z.string().min(1).max(200).regex(/^[a-zA-Z0-9_-]+$/);
-const idParsed = idSchema.safeParse(id);
-if (!idParsed.success) return reply.code(400).send({ error: 'Invalid location ID' });
-```
-
-### M-01: Math.random() Replaced — FIXED
-
-`src/server.ts` line 2 now imports `randomUUID` from `node:crypto`, and line 39 uses it:
-```typescript
-genReqId: () => randomUUID(),
-```
-
-### M-02: CORS Wildcard Rejection — FIXED
-
-`src/server.ts` lines 50-53 now reject wildcard origins:
-```typescript
-if (corsOrigins.includes('*')) {
-  console.warn('[security] CORS_ORIGIN=* is not allowed with credentials: true, using default');
-  corsOrigins.splice(0, corsOrigins.length, 'http://localhost:5173');
-}
-```
-
-### M-03: Health Endpoint Info Disclosure Restricted — FIXED
-
-`src/routes/health.ts` lines 77-87 now check admin status before exposing config/memory details:
-```typescript
-let isAdmin = false;
-if (clerkEnabled) {
-  try {
-    const auth = getAuth(_request);
-    if (auth?.userId) {
-      isAdmin = _request.user?.tier === 'admin';
-    }
-  } catch { /* unauthenticated */ }
-}
-if (isAdmin) { /* expose config details */ }
-```
-Additionally, lines 71-74 now expose encryption status degradation in production to all users via the health status (returning 503 when encryption is not configured in production), which is appropriate for operational monitoring.
-
-### M-04: Household PUT Status Code — FIXED
-
-`src/routes/household.ts` line 105 now correctly returns 400:
-```typescript
-return _reply.code(400).send({ error: 'Validation failed', details: parsed.error.issues });
-```
-
-### M-05: Releases Auth Flow Guard — FIXED
-
-`src/routes/releases.ts` line 34 now checks if the reply was already sent:
-```typescript
-if (_reply.sent) return;
-```
-This prevents the "Reply already sent" error when `requireAuth` rejects an invalid token on the public endpoint.
-
-### M-06: Webhook Idempotency Race — FIXED
-
-`src/routes/webhooks.ts` lines 59-69 now use insert-first with unique constraint violation as the idempotency guard:
-```typescript
-try {
-  await prisma.processedEvent.create({
-    data: { eventId: event.id, eventType: event.type },
-  });
-} catch (err: any) {
-  if (err.code === 'P2002') {
-    request.log.info({ eventId: event.id }, 'Duplicate webhook event, skipping');
-    return { received: true, duplicate: true };
-  }
-}
-```
-
-### M-07: Encryption Production Enforcement — FIXED
-
-`src/middleware/encryption.ts` lines 37-41 now throw on startup if the key is missing in production:
-```typescript
-export function validateEncryptionConfig(): void {
-  const key = getMasterKey();
-  if (!key && process.env.NODE_ENV === 'production') {
-    throw new Error('[encryption] ENCRYPTION_MASTER_KEY must be set in production...');
-  }
-}
-```
-This is called from `src/server.ts` line 18 (`validateEncryptionConfig()`), preventing the server from starting without encryption in production. The `isEncryptionEnabled()` helper (line 53) is also used by the health endpoint to flag degraded status.
-
-### L-01: SQL Injection Regex Removed — FIXED
-
-`src/routes/locations.ts` lines 20-36 now define `safeString` with only XSS, NoSQL injection, path traversal, and null byte checks. The overly broad SQL keyword blocklist (`union`, `select`, `insert`, `delete`, `drop`, etc.) and the apostrophe/semicolon checks have been removed. Location names with apostrophes (e.g., French and Irish place names) will now be accepted correctly. Prisma's parameterized queries continue to provide SQL injection protection.
-
----
-
-## Positive Security Controls Observed (Updated)
-
-All 15 positive controls from the original report remain intact. Additional improvements:
-
-16. **Startup Validation**: Encryption key enforced at startup in production (fail-fast).
-17. **CORS Hardening**: Wildcard origin explicitly rejected when credentials are enabled.
-18. **Cryptographic Request IDs**: `crypto.randomUUID()` replaces `Math.random()`.
-19. **Webhook Idempotency**: Insert-first with unique constraint provides atomic idempotency.
-20. **Path Traversal Protection**: Development file server validates resolved path stays within root.
-21. **Admin-Only Diagnostics**: Health endpoint config/memory details restricted to admin tier.
-
----
-
-## Updated Remediation Priority
-
-| Priority | Finding | Effort |
+| ID | Finding | How Fixed |
 |---|---|---|
-| **Immediate** | C-01: Rotate exposed Clerk keys, adopt secrets manager | 30 min |
-| **This Sprint** | H-03: Replace Redis `changeme` in `.env.example` with placeholder | 5 min |
-| **This Sprint** | N-01: Fix preferences PATCH to return 400 on validation error | 5 min |
-| **Next Sprint** | H-05: Add cache invalidation on tier change | 2 hr |
-| **Backlog** | L-02: Add depth/key limits to `stripDangerousKeys` | 1 hr |
-| **Backlog** | L-03: Add reindex mutex/batching | 1 hr |
-| **Backlog** | L-04: Type `processApproval` parameter as enum | 15 min |
-| **Backlog** | L-05: Define preference key allowlist | 1 hr |
-| **Backlog** | L-06: Add query timeout to export endpoint | 30 min |
+| N-01 | Preferences PATCH returned 200 on invalid body | Now returns `reply.code(400).send(toValidationErrorPayload(...))` on both validation steps |
+| Transient | Dyslexia/dyscalculia accessibility sub-schemas | Validated with explicit Zod schemas in `preferences.ts` |
+| Transient | Accept-Language handling | Added in `server.ts` onRequest hook |
 
 ---
 
-*Re-audit report generated 2026-04-02 by manual SAST analysis of retirement-api codebase (post-fix verification).*
+## DAST Observations (Non-Scanner)
+
+- **CORS**: Correctly rejects `*` when `credentials: true`. If no origins are configured, falls back to empty (no CORS passes). `server.ts` lines 52-63.
+- **Helmet**: CSP is disabled in non-production. Production default is used. OK.
+- **Request body limit**: 1 MB hard cap via `bodyLimit` in `Fastify()`. Returns `413` via the error handler.
+- **Rate limiting**: Tier-based (60/120/300/600 req/min), falls back to in-memory when Redis unavailable, exempts `/api/health`, `/api/billing/status`, `/api/webhooks/*`.
+- **Idempotency**: Stripe webhook uses insert-first `ProcessedEvent` pattern, catches `P2002`, returns `{ received: true, duplicate: true }`.
+- **Prisma error mapping**: Global error handler maps `P2025` → 404, `P2002` → 409, `P2024/P1001/P1002` → 503.
+- **Signed tokens**: Clerk JWT verification via `getAuth(request)` — throws are caught and returned as 401 (not 500).
+
+---
+
+## Recommended Priority Order
+
+1. **Run `npm audit fix` immediately** — resolves H-NEW-01 (Fastify) and H-NEW-02 (Clerk/@clerk/shared) with upstream patches.
+2. **Add `DEV_AUTH_BYPASS=1` guard** to `auth.ts` dev-bypass block (M-NEW-01).
+3. **Export `invalidateUserCache(authProviderId)`** and call from webhook handlers (H-05).
+4. **Fix Redis default password in `.env.example`** (H-03).
+5. **Add `.strict()` to `feesSchema` and `financialSchema`** (M-02).
+6. Low-priority items (L-02, L-03, L-04, L-06, L-NEW-01, L-NEW-02) can be batched into a single hardening PR.
+
+---
+
+## Scanner Methodology
+
+- Static analysis: manual regex scan across `src/`, `prisma/`, `tools/` for injection sinks (SQL, command, path traversal), unsafe `eval`/`Function`/`exec`, hardcoded secrets, crypto weaknesses, ReDoS regex candidates.
+- `npm audit --json` against current `package-lock.json` (transitive tree resolved).
+- Compared every finding from 2026-04-16 against current source to mark RESOLVED / REMAINING / REGRESSED.
+- Cross-checked each finding against CWE database (see `cwe-mapping.md` for full mapping).
