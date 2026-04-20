@@ -66,6 +66,11 @@ await app.register(cors, {
 });
 await app.register(helmet, {
   contentSecurityPolicy: process.env.NODE_ENV === 'production' ? undefined : false,
+  // Default `same-origin` blocks the SPA at a different origin (e.g. localhost:4200)
+  // from reading JSON responses even when CORS permits them. `same-site` keeps CORP
+  // strict enough to prevent cross-site resource inclusion while allowing the
+  // paired dashboard and marketing-site origins to consume the API.
+  crossOriginResourcePolicy: { policy: 'same-site' },
 });
 // Build Redis store for distributed rate limiting (falls back to in-memory)
 let redisClient: { quit: () => Promise<void> } | undefined;
