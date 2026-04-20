@@ -4,7 +4,7 @@ import prisma from '../db/prisma.js';
 import { requireAuth } from '../middleware/auth.js';
 import { safeJsonRecord } from '../middleware/sanitize.js';
 import { toValidationErrorPayload } from '../lib/validation.js';
-import type { InputJsonValue } from '@prisma/client/runtime/library.js';
+import type { InputJsonValue } from '@prisma/client/runtime/client';
 
 /**
  * User preferences (JSONB blob with a reserved `accessibility` sub-schema).

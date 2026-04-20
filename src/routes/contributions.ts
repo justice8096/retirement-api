@@ -144,7 +144,7 @@ export default async function contributionRoutes(app: FastifyInstance): Promise<
         type: parsed.data.type,
         locationId: parsed.data.locationId,
         title: parsed.data.title,
-        data: parsed.data.data as unknown as import('@prisma/client').Prisma.InputJsonValue,
+        data: parsed.data.data as unknown as import('@prisma/client/runtime/client').InputJsonValue,
       },
     });
 

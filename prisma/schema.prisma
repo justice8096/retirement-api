@@ -2,9 +2,13 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// Prisma 7: `url` moved to prisma.config.ts. The datasource block keeps
+// only the provider so the schema-validator + generator know how to
+// shape SQL. Connection credentials live in prisma.config.ts (for
+// migrations / introspection) and in src/db/prisma.ts (for the runtime
+// driver adapter).
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
 }
 
 // ─── Identity ───────────────────────────────────────────────────────────────

@@ -1,17 +1,18 @@
+// Prisma 7 moved the runtime connection off the schema `datasource { url }`
+// block and onto an explicit driver adapter passed to PrismaClient. For
+// PostgreSQL we use @prisma/adapter-pg. Connection-pool tuning still
+// lives on the DATABASE_URL (?connection_limit=N) — the adapter reads
+// it through the same env var.
 import { PrismaClient } from '@prisma/client';
+import { PrismaPg } from '@prisma/adapter-pg';
 
-const prisma = new PrismaClient({
-  log: process.env.NODE_ENV === 'development' ? ['warn', 'error'] : ['error'],
-  datasources: {
-    db: {
-      // Append connection pool params if not already in DATABASE_URL
-      url: process.env.DATABASE_URL,
-    },
-  },
+const adapter = new PrismaPg({
+  connectionString: process.env.DATABASE_URL,
 });
 
-// Graceful connection handling for production
-// Prisma manages its own connection pool (default: num_physical_cpus * 2 + 1)
-// Override with ?connection_limit=N in DATABASE_URL if needed
+const prisma = new PrismaClient({
+  adapter,
+  log: process.env.NODE_ENV === 'development' ? ['warn', 'error'] : ['error'],
+});
 
 export default prisma;

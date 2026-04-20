@@ -15,7 +15,7 @@ import prisma from '../db/prisma.js';
 import { requireAuth, requireTier } from '../middleware/auth.js';
 import { safeJsonRecord } from '../middleware/sanitize.js';
 import { toValidationErrorPayload } from '../lib/validation.js';
-import type { InputJsonValue } from '@prisma/client/runtime/library.js';
+import type { InputJsonValue } from '@prisma/client/runtime/client';
 
 const customLocationSchema = z.object({
   locationData: safeJsonRecord,
