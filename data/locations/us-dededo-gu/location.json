@@ -2,7 +2,7 @@
   "id": "us-dededo-gu",
   "name": "Dededo, Guam",
   "country": "United States",
-  "region": "Guam",
+  "region": "US Territories",
   "cities": [
     "Dededo",
     "Yigo"
@@ -184,5 +184,6 @@
     "notes": "Guam mirrors the federal tax code; residents file with Department of Revenue and Taxation.",
     "vatRate": 0,
     "socialChargesRate": 0
-  }
+  },
+  "subregion": "Guam"
 }

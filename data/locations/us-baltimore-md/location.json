@@ -2,7 +2,7 @@
   "id": "us-baltimore-md",
   "name": "Baltimore, MD",
   "country": "United States",
-  "region": "Maryland",
+  "region": "US Mid-Atlantic",
   "cities": [
     "Baltimore"
   ],
@@ -180,5 +180,6 @@
     "notes": "Federal + MD state income tax (2-5.75%) + county income tax",
     "vatRate": 0,
     "socialChargesRate": 0
-  }
+  },
+  "subregion": "Maryland"
 }

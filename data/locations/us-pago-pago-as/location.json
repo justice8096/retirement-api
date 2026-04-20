@@ -2,7 +2,7 @@
   "id": "us-pago-pago-as",
   "name": "Pago Pago, American Samoa",
   "country": "United States",
-  "region": "American Samoa",
+  "region": "US Territories",
   "cities": [
     "Pago Pago",
     "Fagatogo",
@@ -190,5 +190,6 @@
     "notes": "American Samoa has its own tax code (mirrored with modifications); residents file with ASG Tax Office, not IRS.",
     "vatRate": 0,
     "socialChargesRate": 0
-  }
+  },
+  "subregion": "American Samoa"
 }
