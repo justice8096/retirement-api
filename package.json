@@ -11,6 +11,7 @@
     "test:watch": "vitest",
     "test:shared": "cd shared && npx vitest run",
     "typecheck": "tsc --noEmit",
+    "postinstall": "prisma generate --schema=prisma/schema.prisma",
     "db:migrate": "prisma migrate dev",
     "db:migrate:deploy": "prisma migrate deploy",
     "db:seed": "tsx prisma/seed.ts",
