@@ -63,6 +63,12 @@ if (corsOrigins.includes('*')) {
 await app.register(cors, {
   origin: corsOrigins.length === 1 ? corsOrigins[0] : corsOrigins,
   credentials: true,
+  // @fastify/cors v11 shrank the default allowed methods to `GET,HEAD,POST`,
+  // breaking mutation endpoints (`PUT /me/household`, `PATCH /me/preferences`,
+  // `DELETE /me/scenarios/:id`). Restore the full set explicitly so the
+  // preflight advertises every verb the API actually exposes.
+  methods: ['GET', 'HEAD', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Accept-Version', 'Accept-Language'],
 });
 await app.register(helmet, {
   contentSecurityPolicy: process.env.NODE_ENV === 'production' ? undefined : false,
