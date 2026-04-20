@@ -2,7 +2,7 @@
   "id": "france-brittany",
   "name": "Brittany, France",
   "country": "France",
-  "region": "Brittany",
+  "region": "Western Europe",
   "cities": [
     "Vannes",
     "Quimper",
@@ -273,5 +273,6 @@
     "pessimistic": 1.02,
     "mid": 0.93,
     "note": "EUR per 1 USD. Based on 2016-2026 historical range. Optimistic = strong EUR (good for USD→EUR), Pessimistic = weak EUR."
-  }
+  },
+  "subregion": "Brittany"
 }

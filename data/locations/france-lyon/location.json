@@ -2,7 +2,7 @@
   "id": "france-lyon",
   "name": "Lyon, France",
   "country": "France",
-  "region": "Auvergne-Rhone-Alpes",
+  "region": "Western Europe",
   "cities": [
     "Lyon"
   ],
@@ -253,5 +253,6 @@
     "pessimistic": 1.02,
     "mid": 0.93,
     "note": "EUR per 1 USD. Based on 2016-2026 historical range. Optimistic = strong EUR (good for USD→EUR), Pessimistic = weak EUR."
-  }
+  },
+  "subregion": "Auvergne-Rhône-Alpes"
 }

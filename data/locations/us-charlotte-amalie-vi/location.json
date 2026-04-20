@@ -2,7 +2,7 @@
   "id": "us-charlotte-amalie-vi",
   "name": "Charlotte Amalie, US Virgin Islands",
   "country": "United States",
-  "region": "US Virgin Islands",
+  "region": "US Territories",
   "cities": [
     "Charlotte Amalie",
     "St. Thomas"
@@ -189,5 +189,6 @@
     "notes": "USVI residents file a mirror-code return with Bureau of Internal Revenue instead of IRS.",
     "vatRate": 0,
     "socialChargesRate": 0
-  }
+  },
+  "subregion": "US Virgin Islands"
 }

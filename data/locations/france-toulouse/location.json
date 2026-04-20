@@ -2,7 +2,7 @@
   "id": "france-toulouse",
   "name": "Toulouse, France",
   "country": "France",
-  "region": "Occitanie",
+  "region": "Western Europe",
   "cities": [
     "Toulouse"
   ],
@@ -263,5 +263,6 @@
     "pessimistic": 1.02,
     "mid": 0.93,
     "note": "EUR per 1 USD. Based on 2016-2026 historical range. Optimistic = strong EUR (good for USD→EUR), Pessimistic = weak EUR."
-  }
+  },
+  "subregion": "Occitanie"
 }

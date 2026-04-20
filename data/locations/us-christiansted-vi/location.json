@@ -2,7 +2,7 @@
   "id": "us-christiansted-vi",
   "name": "Christiansted, US Virgin Islands",
   "country": "United States",
-  "region": "US Virgin Islands",
+  "region": "US Territories",
   "cities": [
     "Christiansted",
     "St. Croix"
@@ -185,5 +185,6 @@
     "notes": "USVI residents file a mirror-code return with Bureau of Internal Revenue.",
     "vatRate": 0,
     "socialChargesRate": 0
-  }
+  },
+  "subregion": "US Virgin Islands"
 }

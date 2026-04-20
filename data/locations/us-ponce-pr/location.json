@@ -2,7 +2,7 @@
   "id": "us-ponce-pr",
   "name": "Ponce, Puerto Rico",
   "country": "United States",
-  "region": "Puerto Rico",
+  "region": "US Territories",
   "cities": [
     "Ponce"
   ],
@@ -182,5 +182,6 @@
     "notes": "PR residents pay PR income tax, not federal, on PR-source income.",
     "vatRate": 0.115,
     "socialChargesRate": 0
-  }
+  },
+  "subregion": "Puerto Rico"
 }

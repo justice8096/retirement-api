@@ -2,7 +2,7 @@
   "id": "us-saipan-mp",
   "name": "Saipan, Northern Mariana Islands",
   "country": "United States",
-  "region": "Northern Mariana Islands",
+  "region": "US Territories",
   "cities": [
     "Saipan",
     "Garapan",
@@ -189,5 +189,6 @@
     "notes": "CNMI mirrors federal tax code; residents file with CNMI Division of Revenue and Taxation.",
     "vatRate": 0,
     "socialChargesRate": 0
-  }
+  },
+  "subregion": "Northern Mariana Islands"
 }

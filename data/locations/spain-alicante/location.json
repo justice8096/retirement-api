@@ -2,7 +2,7 @@
   "id": "spain-alicante",
   "name": "Alicante / Costa Blanca, Spain",
   "country": "Spain",
-  "region": "Valencia",
+  "region": "Southern Europe",
   "cities": [
     "Alicante",
     "Benidorm",
@@ -260,5 +260,6 @@
     "pessimistic": 1.02,
     "mid": 0.93,
     "note": "EUR per 1 USD. Based on 2016-2026 historical range. Optimistic = strong EUR (good for USD→EUR), Pessimistic = weak EUR."
-  }
+  },
+  "subregion": "Valencia"
 }

@@ -2,7 +2,7 @@
   "id": "us-san-juan-pr",
   "name": "San Juan, Puerto Rico",
   "country": "United States",
-  "region": "Puerto Rico",
+  "region": "US Territories",
   "cities": [
     "San Juan",
     "Carolina",
@@ -188,5 +188,6 @@
     "notes": "PR residents pay PR income tax, not federal, on PR-source income. Complex rules; consult specialist.",
     "vatRate": 0.115,
     "socialChargesRate": 0
-  }
+  },
+  "subregion": "Puerto Rico"
 }
