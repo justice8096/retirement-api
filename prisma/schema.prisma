@@ -321,6 +321,7 @@ model AdminLocation {
   name         String   @default("") // Extracted from locationData.name
   country      String   @default("") // Extracted from locationData.country
   region       String   @default("") // Extracted from locationData.region
+  subregion    String?  // Extracted from locationData.subregion (state/province/department)
   currency     String   @default("USD")
   monthlyCostTotal Int  @default(0) @map("monthly_cost_total") // Sum of all typical costs (USD)
 
@@ -329,6 +330,7 @@ model AdminLocation {
 
   @@index([country])
   @@index([region])
+  @@index([subregion])
   @@index([currency])
   @@index([monthlyCostTotal])
   @@index([name])

@@ -59,6 +59,7 @@ function extractSearchFields(locationData: Record<string, unknown>) {
   const name = typeof locationData.name === 'string' ? locationData.name : '';
   const country = typeof locationData.country === 'string' ? locationData.country : '';
   const region = typeof locationData.region === 'string' ? locationData.region : '';
+  const subregion = typeof locationData.subregion === 'string' ? locationData.subregion : null;
   const currency = typeof locationData.currency === 'string' ? locationData.currency : 'USD';
 
   // Sum all monthlyCosts.*.typical values for cost-range filtering
@@ -73,7 +74,7 @@ function extractSearchFields(locationData: Record<string, unknown>) {
     }
   }
 
-  return { name, country, region, currency, monthlyCostTotal: Math.round(monthlyCostTotal) };
+  return { name, country, region, subregion, currency, monthlyCostTotal: Math.round(monthlyCostTotal) };
 }
 
 export default async function adminRoutes(app: FastifyInstance): Promise<void> {

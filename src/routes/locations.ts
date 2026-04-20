@@ -110,6 +110,7 @@ export default async function locationRoutes(app: FastifyInstance): Promise<void
           name: true,
           country: true,
           region: true,
+          subregion: true,
           currency: true,
           monthlyCostTotal: true,
           updatedAt: true,
@@ -121,6 +122,7 @@ export default async function locationRoutes(app: FastifyInstance): Promise<void
           name: true,
           country: true,
           region: true,
+          subregion: true,
           currency: true,
           monthlyCostTotal: true,
           updatedAt: true,
@@ -149,6 +151,7 @@ export default async function locationRoutes(app: FastifyInstance): Promise<void
             name: loc.name,
             country: loc.country,
             region: loc.region,
+            subregion: loc.subregion,
             currency: loc.currency,
             monthlyCostTotal: loc.monthlyCostTotal,
             updatedAt: loc.updatedAt,
@@ -178,7 +181,7 @@ export default async function locationRoutes(app: FastifyInstance): Promise<void
     try {
       return await cached('locations:all', () =>
         prisma.adminLocation.findMany({
-          select: { id: true, name: true, country: true, region: true, currency: true, monthlyCostTotal: true },
+          select: { id: true, name: true, country: true, region: true, subregion: true, currency: true, monthlyCostTotal: true },
           orderBy: { name: 'asc' },
         }),
       );
@@ -277,6 +280,7 @@ export default async function locationRoutes(app: FastifyInstance): Promise<void
         name: loc.name,
         country: loc.country,
         region: loc.region,
+        subregion: loc.subregion,
         currency: loc.currency,
         monthlyCostTotal: loc.monthlyCostTotal,
         updatedAt: loc.updatedAt,
