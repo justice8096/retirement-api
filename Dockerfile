@@ -16,6 +16,10 @@ WORKDIR /app
 
 COPY --from=deps /app/node_modules ./node_modules
 COPY prisma ./prisma
+# Prisma 7 loads its CLI config (including the datasource URL for
+# `prisma generate` / `prisma migrate`) from prisma.config.ts at repo
+# root — copy it into the build stage so the generate step can find it.
+COPY prisma.config.ts tsconfig.json package.json ./
 
 RUN npx prisma generate --schema=prisma/schema.prisma
 
