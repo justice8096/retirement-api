@@ -4,14 +4,14 @@
 # automatically. Pin the exact digest by running:
 #   docker buildx imagetools inspect node:20-alpine --format '{{json .Manifest.Digest}}'
 # and replacing node:20-alpine with node:20-alpine@sha256:<digest>.
-FROM node:20-alpine AS deps
+FROM node:25-alpine AS deps
 WORKDIR /app
 
 COPY package.json package-lock.json ./
 RUN npm ci
 
 # ─── Stage 2: Generate Prisma client ──────────────────────────────────────
-FROM node:20-alpine AS prisma
+FROM node:25-alpine AS prisma
 WORKDIR /app
 
 COPY --from=deps /app/node_modules ./node_modules
@@ -20,7 +20,7 @@ COPY prisma ./prisma
 RUN npx prisma generate --schema=prisma/schema.prisma
 
 # ─── Stage 3: TypeScript build ────────────────────────────────────────────
-FROM node:20-alpine AS builder
+FROM node:25-alpine AS builder
 WORKDIR /app
 
 COPY --from=deps /app/node_modules ./node_modules
@@ -32,7 +32,7 @@ COPY tsconfig.json ./
 RUN npx tsc
 
 # ─── Stage 4: Production image ────────────────────────────────────────────
-FROM node:20-alpine AS runner
+FROM node:25-alpine AS runner
 WORKDIR /app
 
 # Non-root user for security
