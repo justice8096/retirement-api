@@ -1,17 +1,17 @@
 # ─── Stage 1: Install dependencies ─────────────────────────────────────────
-# LLM-Compliance roadmap: pin by digest to block silent base-image drift.
-# Usage: once Renovate is added, the digest lines below will be updated
-# automatically. Pin the exact digest by running:
-#   docker buildx imagetools inspect node:20-alpine --format '{{json .Manifest.Digest}}'
-# and replacing node:20-alpine with node:20-alpine@sha256:<digest>.
-FROM node:25-alpine AS deps
+# Base image is digest-pinned to block silent drift. Dependabot's `docker`
+# ecosystem monitor will open a PR when a new digest ships for the same tag.
+# To refresh manually:
+#   docker buildx imagetools inspect node:25-alpine --format '{{json .Manifest.Digest}}'
+# and replace the sha256 below with the new value across all four FROM lines.
+FROM node:25-alpine@sha256:bdf2cca6fe3dabd014ea60163eca3f0f7015fbd5c7ee1b0e9ccb4ced6eb02ef4 AS deps
 WORKDIR /app
 
 COPY package.json package-lock.json ./
 RUN npm ci
 
 # ─── Stage 2: Generate Prisma client ──────────────────────────────────────
-FROM node:25-alpine AS prisma
+FROM node:25-alpine@sha256:bdf2cca6fe3dabd014ea60163eca3f0f7015fbd5c7ee1b0e9ccb4ced6eb02ef4 AS prisma
 WORKDIR /app
 
 COPY --from=deps /app/node_modules ./node_modules
@@ -20,7 +20,7 @@ COPY prisma ./prisma
 RUN npx prisma generate --schema=prisma/schema.prisma
 
 # ─── Stage 3: TypeScript build ────────────────────────────────────────────
-FROM node:25-alpine AS builder
+FROM node:25-alpine@sha256:bdf2cca6fe3dabd014ea60163eca3f0f7015fbd5c7ee1b0e9ccb4ced6eb02ef4 AS builder
 WORKDIR /app
 
 COPY --from=deps /app/node_modules ./node_modules
@@ -32,7 +32,7 @@ COPY tsconfig.json ./
 RUN npx tsc
 
 # ─── Stage 4: Production image ────────────────────────────────────────────
-FROM node:25-alpine AS runner
+FROM node:25-alpine@sha256:bdf2cca6fe3dabd014ea60163eca3f0f7015fbd5c7ee1b0e9ccb4ced6eb02ef4 AS runner
 WORKDIR /app
 
 # Non-root user for security
