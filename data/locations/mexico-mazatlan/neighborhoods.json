@@ -1,0 +1,141 @@
+{
+  "city": "Mazatlan",
+  "neighborhoods": [
+    {
+      "id": "centro-historico",
+      "name": "Centro Historico",
+      "description": "Revitalized 19th-century port center with cathedral, Angela Peralta theater, and a vibrant arts scene",
+      "character": "Revitalized historic, arts scene, culinary culture",
+      "housing": {
+        "avgRentOneBedroomUSD": 874,
+        "avgRentTwoBedroomUSD": 1136,
+        "buyPricePerSqmUSD": 2255,
+        "predominantType": "Renovated colonial buildings and apartments"
+      },
+      "walkabilityScore": 86,
+      "transitScore": 88,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Mazatlán. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Mazatlán",
+          "url": "https://www.numbeo.com/cost-of-living/in/Mazatl%C3%A1n"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    },
+    {
+      "id": "zona-dorada-golden-zone",
+      "name": "Zona Dorada (Golden Zone)",
+      "description": "Tourist beach strip with hotels, restaurants, and beachfront condominiums",
+      "character": "Beach tourist zone, condo lifestyle, resort amenities",
+      "housing": {
+        "avgRentOneBedroomUSD": 638,
+        "avgRentTwoBedroomUSD": 830,
+        "buyPricePerSqmUSD": 1450,
+        "predominantType": "Beachfront condos, apartments, and resort properties"
+      },
+      "walkabilityScore": 60,
+      "transitScore": 58,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Mazatlán's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Mazatlán",
+          "url": "https://www.numbeo.com/cost-of-living/in/Mazatl%C3%A1n"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    },
+    {
+      "id": "playas-del-sur",
+      "name": "Playas del Sur",
+      "description": "Southern beach neighborhoods with newer development, lower costs, and local beach culture",
+      "character": "Emerging beach area, affordable, local character",
+      "housing": {
+        "avgRentOneBedroomUSD": 437,
+        "avgRentTwoBedroomUSD": 568,
+        "buyPricePerSqmUSD": 886,
+        "predominantType": "New construction condos and modest houses"
+      },
+      "walkabilityScore": 54,
+      "transitScore": 31,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Mazatlán",
+          "url": "https://www.numbeo.com/cost-of-living/in/Mazatl%C3%A1n"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    },
+    {
+      "id": "marina-mazatlan-el-cid",
+      "name": "Marina Mazatlan / El Cid",
+      "description": "Marina and golf resort area with established expat community, sports facilities, and ocean access",
+      "character": "Marina resort, golf and sports, expat social",
+      "housing": {
+        "avgRentOneBedroomUSD": 739,
+        "avgRentTwoBedroomUSD": 961,
+        "buyPricePerSqmUSD": 1853,
+        "predominantType": "Marina condos, golf community houses, and resort apartments"
+      },
+      "walkabilityScore": 78,
+      "transitScore": 70,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Mazatlán",
+          "url": "https://www.numbeo.com/cost-of-living/in/Mazatl%C3%A1n"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    }
+  ]
+}

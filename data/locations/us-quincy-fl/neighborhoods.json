@@ -1,0 +1,141 @@
+{
+  "city": "Quincy",
+  "neighborhoods": [
+    {
+      "id": "downtown-quincy",
+      "name": "Downtown Quincy",
+      "description": "Small historic county seat with Coca-Cola millionaire heritage, courthouse square, and Main Street shops",
+      "character": "Small-town historic, Coca-Cola heritage, Main Street",
+      "housing": {
+        "avgRentOneBedroomUSD": 1612,
+        "avgRentTwoBedroomUSD": 2176,
+        "buyPricePerSqmUSD": 4410,
+        "predominantType": "Historic houses, small apartments, and older homes"
+      },
+      "walkabilityScore": 91,
+      "transitScore": 89,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Quincy. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Quincy",
+          "url": "https://www.numbeo.com/cost-of-living/in/Quincy"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "havana",
+      "name": "Havana",
+      "description": "Artsy small town north of Quincy known for antique shops, art galleries, and weekend tourism",
+      "character": "Artsy antique town, galleries, weekend tourism",
+      "housing": {
+        "avgRentOneBedroomUSD": 1178,
+        "avgRentTwoBedroomUSD": 1590,
+        "buyPricePerSqmUSD": 2835,
+        "predominantType": "Renovated cottages, historic houses, and small homes"
+      },
+      "walkabilityScore": 53,
+      "transitScore": 54,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Quincy's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Quincy",
+          "url": "https://www.numbeo.com/cost-of-living/in/Quincy"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "gretna-midway",
+      "name": "Gretna / Midway",
+      "description": "Small Gadsden County communities with very affordable housing and rural character",
+      "character": "Small rural, very affordable, agricultural",
+      "housing": {
+        "avgRentOneBedroomUSD": 806,
+        "avgRentTwoBedroomUSD": 1088,
+        "buyPricePerSqmUSD": 1733,
+        "predominantType": "Modest houses and rural properties"
+      },
+      "walkabilityScore": 41,
+      "transitScore": 47,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Quincy",
+          "url": "https://www.numbeo.com/cost-of-living/in/Quincy"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "north-quincy-lake-talquin-area",
+      "name": "North Quincy / Lake Talquin Area",
+      "description": "Lakefront area with fishing, hunting, and nature recreation near Lake Talquin",
+      "character": "Lakefront, fishing and hunting, nature recreation",
+      "housing": {
+        "avgRentOneBedroomUSD": 1364,
+        "avgRentTwoBedroomUSD": 1841,
+        "buyPricePerSqmUSD": 3622,
+        "predominantType": "Lake houses, rural homes, and modest properties"
+      },
+      "walkabilityScore": 63,
+      "transitScore": 53,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Quincy",
+          "url": "https://www.numbeo.com/cost-of-living/in/Quincy"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "city": "Valencia",
+  "neighborhoods": [
+    {
+      "id": "ciutat-vella-old-town",
+      "name": "Ciutat Vella (Old Town)",
+      "description": "Historic center with the Silk Exchange (UNESCO), Central Market, and the Cathedral of the Holy Grail",
+      "character": "Historic UNESCO, market culture, architectural gems",
+      "housing": {
+        "avgRentOneBedroomEUR": 1444,
+        "avgRentTwoBedroomEUR": 1950,
+        "buyPricePerSqmEUR": 4340,
+        "predominantType": "Apartments in renovated historic buildings"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 89,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Valencia. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Valencia",
+          "url": "https://www.numbeo.com/cost-of-living/in/Valencia"
+        },
+        {
+          "title": "Idealista",
+          "url": "https://www.idealista.com/"
+        },
+        {
+          "title": "Fotocasa",
+          "url": "https://www.fotocasa.es/"
+        }
+      ]
+    },
+    {
+      "id": "ruzafa",
+      "name": "Ruzafa",
+      "description": "Trendy multicultural neighborhood with vintage shops, craft cocktail bars, and the best brunch scene",
+      "character": "Trendy multicultural, foodie, gentrifying",
+      "housing": {
+        "avgRentOneBedroomEUR": 1055,
+        "avgRentTwoBedroomEUR": 1425,
+        "buyPricePerSqmEUR": 2790,
+        "predominantType": "Apartments in traditional and renovated buildings"
+      },
+      "walkabilityScore": 59,
+      "transitScore": 51,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Valencia's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Valencia",
+          "url": "https://www.numbeo.com/cost-of-living/in/Valencia"
+        },
+        {
+          "title": "Idealista",
+          "url": "https://www.idealista.com/"
+        },
+        {
+          "title": "Fotocasa",
+          "url": "https://www.fotocasa.es/"
+        }
+      ]
+    },
+    {
+      "id": "benimaclet",
+      "name": "Benimaclet",
+      "description": "Former village with university influence, street art, community gardens, and affordable housing",
+      "character": "University village, community gardens, affordable",
+      "housing": {
+        "avgRentOneBedroomEUR": 722,
+        "avgRentTwoBedroomEUR": 975,
+        "buyPricePerSqmEUR": 1705,
+        "predominantType": "Apartments and village houses"
+      },
+      "walkabilityScore": 41,
+      "transitScore": 43,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Valencia",
+          "url": "https://www.numbeo.com/cost-of-living/in/Valencia"
+        },
+        {
+          "title": "Idealista",
+          "url": "https://www.idealista.com/"
+        },
+        {
+          "title": "Fotocasa",
+          "url": "https://www.fotocasa.es/"
+        }
+      ]
+    },
+    {
+      "id": "el-cabanyal-malvarrosa",
+      "name": "El Cabanyal / Malvarrosa",
+      "description": "Beachfront neighborhoods with colorful tile facades, revitalizing waterfront, and growing expat community",
+      "character": "Beach, colorful tiles, revitalizing waterfront",
+      "housing": {
+        "avgRentOneBedroomEUR": 1222,
+        "avgRentTwoBedroomEUR": 1650,
+        "buyPricePerSqmEUR": 3565,
+        "predominantType": "Beachfront apartments and renovated tile houses"
+      },
+      "walkabilityScore": 75,
+      "transitScore": 65,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Valencia",
+          "url": "https://www.numbeo.com/cost-of-living/in/Valencia"
+        },
+        {
+          "title": "Idealista",
+          "url": "https://www.idealista.com/"
+        },
+        {
+          "title": "Fotocasa",
+          "url": "https://www.fotocasa.es/"
+        }
+      ]
+    }
+  ]
+}

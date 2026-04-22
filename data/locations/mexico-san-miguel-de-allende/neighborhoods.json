@@ -1,0 +1,141 @@
+{
+  "city": "San Miguel de Allende",
+  "neighborhoods": [
+    {
+      "id": "centro-historico",
+      "name": "Centro Historico",
+      "description": "Iconic UNESCO colonial center with the pink Parroquia church, art galleries, and cobblestone streets",
+      "character": "UNESCO iconic, art galleries, colonial gem",
+      "housing": {
+        "avgRentOneBedroomUSD": 1114,
+        "avgRentTwoBedroomUSD": 1448,
+        "buyPricePerSqmUSD": 2936,
+        "predominantType": "Restored colonial houses and boutique apartments"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 80,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of San Miguel de Allende. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living San Miguel de Allende",
+          "url": "https://www.numbeo.com/cost-of-living/in/San-Miguel-de-Allende"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    },
+    {
+      "id": "san-antonio-los-frailes",
+      "name": "San Antonio / Los Frailes",
+      "description": "Residential areas south of center with newer developments and hot springs access",
+      "character": "Residential, hot springs nearby, newer developments",
+      "housing": {
+        "avgRentOneBedroomUSD": 814,
+        "avgRentTwoBedroomUSD": 1058,
+        "buyPricePerSqmUSD": 1887,
+        "predominantType": "Modern houses and residential developments"
+      },
+      "walkabilityScore": 59,
+      "transitScore": 54,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to San Miguel de Allende's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living San Miguel de Allende",
+          "url": "https://www.numbeo.com/cost-of-living/in/San-Miguel-de-Allende"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    },
+    {
+      "id": "atotonilco-dolores-hidalgo-area",
+      "name": "Atotonilco / Dolores Hidalgo Area",
+      "description": "Nearby towns with historic churches, ceramic traditions, and significantly lower costs",
+      "character": "Historic towns, affordable, ceramic heritage",
+      "housing": {
+        "avgRentOneBedroomUSD": 557,
+        "avgRentTwoBedroomUSD": 724,
+        "buyPricePerSqmUSD": 1153,
+        "predominantType": "Traditional houses and rural properties"
+      },
+      "walkabilityScore": 42,
+      "transitScore": 48,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living San Miguel de Allende",
+          "url": "https://www.numbeo.com/cost-of-living/in/San-Miguel-de-Allende"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    },
+    {
+      "id": "la-lejona-balcones",
+      "name": "La Lejona / Balcones",
+      "description": "Hillside neighborhoods with colonial-style homes, rooftop terraces, and Parroquia views",
+      "character": "Hillside colonial, rooftop views, established expat",
+      "housing": {
+        "avgRentOneBedroomUSD": 943,
+        "avgRentTwoBedroomUSD": 1226,
+        "buyPricePerSqmUSD": 2412,
+        "predominantType": "Colonial-style houses and boutique residences"
+      },
+      "walkabilityScore": 65,
+      "transitScore": 51,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living San Miguel de Allende",
+          "url": "https://www.numbeo.com/cost-of-living/in/San-Miguel-de-Allende"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    }
+  ]
+}

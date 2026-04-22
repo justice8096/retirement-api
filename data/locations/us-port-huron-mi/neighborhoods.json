@@ -1,0 +1,141 @@
+{
+  "city": "Port Huron",
+  "neighborhoods": [
+    {
+      "id": "downtown-port-huron",
+      "name": "Downtown Port Huron",
+      "description": "Historic Blue Water Bridge border city with riverwalk, maritime heritage, and Thomas Edison boyhood home",
+      "character": "Border city, riverwalk, maritime heritage",
+      "housing": {
+        "avgRentOneBedroomUSD": 1706,
+        "avgRentTwoBedroomUSD": 2303,
+        "buyPricePerSqmUSD": 4718,
+        "predominantType": "Victorian houses, apartments, and older homes"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 75,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Port Huron. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Port Huron",
+          "url": "https://www.numbeo.com/cost-of-living/in/Port-Huron"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "fort-gratiot-kimball",
+      "name": "Fort Gratiot / Kimball",
+      "description": "Northern townships with shopping, lakefront parks, and more suburban character",
+      "character": "Northern suburban, lakefront, shopping",
+      "housing": {
+        "avgRentOneBedroomUSD": 1246,
+        "avgRentTwoBedroomUSD": 1683,
+        "buyPricePerSqmUSD": 3033,
+        "predominantType": "Single-family homes and ranch houses"
+      },
+      "walkabilityScore": 68,
+      "transitScore": 52,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Port Huron's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Port Huron",
+          "url": "https://www.numbeo.com/cost-of-living/in/Port-Huron"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "marysville",
+      "name": "Marysville",
+      "description": "Small city on the St. Clair River with affordable housing and community character",
+      "character": "Small river city, affordable, community",
+      "housing": {
+        "avgRentOneBedroomUSD": 853,
+        "avgRentTwoBedroomUSD": 1151,
+        "buyPricePerSqmUSD": 1854,
+        "predominantType": "Modest houses and affordable single-family homes"
+      },
+      "walkabilityScore": 57,
+      "transitScore": 37,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Port Huron",
+          "url": "https://www.numbeo.com/cost-of-living/in/Port-Huron"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "st-clair-marine-city",
+      "name": "St. Clair / Marine City",
+      "description": "River communities south of Port Huron with boating culture, festivals, and family amenities",
+      "character": "River communities, boating, festivals",
+      "housing": {
+        "avgRentOneBedroomUSD": 1443,
+        "avgRentTwoBedroomUSD": 1948,
+        "buyPricePerSqmUSD": 3875,
+        "predominantType": "River houses, traditional homes, and waterfront properties"
+      },
+      "walkabilityScore": 77,
+      "transitScore": 62,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Port Huron",
+          "url": "https://www.numbeo.com/cost-of-living/in/Port-Huron"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

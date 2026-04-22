@@ -1,0 +1,141 @@
+{
+  "city": "Gozo",
+  "neighborhoods": [
+    {
+      "id": "victoria-rabat",
+      "name": "Victoria (Rabat)",
+      "description": "Gozo's capital with the Citadella fortress, daily market, and the island's main commercial center",
+      "character": "Citadel town, compact, main services hub",
+      "housing": {
+        "avgRentOneBedroomEUR": 1304,
+        "avgRentTwoBedroomEUR": 1760,
+        "buyPricePerSqmEUR": 3920,
+        "predominantType": "Apartments and traditional Gozitan townhouses"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 87,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Victoria. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Victoria",
+          "url": "https://www.numbeo.com/cost-of-living/in/Victoria"
+        },
+        {
+          "title": "Malta Park",
+          "url": "https://www.maltapark.com/"
+        },
+        {
+          "title": "Frank Salt Real Estate",
+          "url": "https://www.franksalt.com.mt/"
+        }
+      ]
+    },
+    {
+      "id": "marsalforn",
+      "name": "Marsalforn",
+      "description": "Main seaside resort with waterfront restaurants, salt pans, and a popular diving scene",
+      "character": "Seaside resort, diving hub, relaxed waterfront",
+      "housing": {
+        "avgRentOneBedroomEUR": 953,
+        "avgRentTwoBedroomEUR": 1286,
+        "buyPricePerSqmEUR": 2520,
+        "predominantType": "Apartments and holiday properties near the waterfront"
+      },
+      "walkabilityScore": 58,
+      "transitScore": 50,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Victoria's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Victoria",
+          "url": "https://www.numbeo.com/cost-of-living/in/Victoria"
+        },
+        {
+          "title": "Malta Park",
+          "url": "https://www.maltapark.com/"
+        },
+        {
+          "title": "Frank Salt Real Estate",
+          "url": "https://www.franksalt.com.mt/"
+        }
+      ]
+    },
+    {
+      "id": "xaghra-nadur",
+      "name": "Xaghra / Nadur",
+      "description": "Hilltop villages with megalithic temples, lower costs, and traditional village festa culture",
+      "character": "Village hilltop, megalithic heritage, festas",
+      "housing": {
+        "avgRentOneBedroomEUR": 652,
+        "avgRentTwoBedroomEUR": 880,
+        "buyPricePerSqmEUR": 1540,
+        "predominantType": "Traditional farmhouses and village houses"
+      },
+      "walkabilityScore": 43,
+      "transitScore": 49,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Victoria",
+          "url": "https://www.numbeo.com/cost-of-living/in/Victoria"
+        },
+        {
+          "title": "Malta Park",
+          "url": "https://www.maltapark.com/"
+        },
+        {
+          "title": "Frank Salt Real Estate",
+          "url": "https://www.franksalt.com.mt/"
+        }
+      ]
+    },
+    {
+      "id": "xlendi-sannat",
+      "name": "Xlendi / Sannat",
+      "description": "Small bay resort and clifftop village popular with expats seeking quiet Gozitan life",
+      "character": "Bay resort, clifftop views, quiet expat life",
+      "housing": {
+        "avgRentOneBedroomEUR": 1103,
+        "avgRentTwoBedroomEUR": 1489,
+        "buyPricePerSqmEUR": 3220,
+        "predominantType": "Apartments, converted farmhouses, and bay-view properties"
+      },
+      "walkabilityScore": 75,
+      "transitScore": 56,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Victoria",
+          "url": "https://www.numbeo.com/cost-of-living/in/Victoria"
+        },
+        {
+          "title": "Malta Park",
+          "url": "https://www.maltapark.com/"
+        },
+        {
+          "title": "Frank Salt Real Estate",
+          "url": "https://www.franksalt.com.mt/"
+        }
+      ]
+    }
+  ]
+}

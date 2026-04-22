@@ -1,0 +1,141 @@
+{
+  "city": "Oakland County",
+  "neighborhoods": [
+    {
+      "id": "pontiac-downtown",
+      "name": "Pontiac / Downtown",
+      "description": "Former auto city experiencing revival with arts district, ethnic restaurants, and Phoenix Center",
+      "character": "Auto city revival, arts district, diverse dining",
+      "housing": {
+        "avgRentOneBedroomUSD": 2220,
+        "avgRentTwoBedroomUSD": 2998,
+        "buyPricePerSqmUSD": 6412,
+        "predominantType": "Lofts, apartments, and renovated commercial buildings"
+      },
+      "walkabilityScore": 85,
+      "transitScore": 75,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Pontiac. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Pontiac",
+          "url": "https://www.numbeo.com/cost-of-living/in/Pontiac"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "royal-oak-ferndale",
+      "name": "Royal Oak / Ferndale",
+      "description": "Walkable inner suburbs with vibrant downtown strips, craft breweries, and progressive communities",
+      "character": "Walkable downtown, craft beer, progressive",
+      "housing": {
+        "avgRentOneBedroomUSD": 1623,
+        "avgRentTwoBedroomUSD": 2191,
+        "buyPricePerSqmUSD": 4122,
+        "predominantType": "Craftsman houses, bungalows, and condos"
+      },
+      "walkabilityScore": 53,
+      "transitScore": 59,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Pontiac's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Pontiac",
+          "url": "https://www.numbeo.com/cost-of-living/in/Pontiac"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "waterford-white-lake",
+      "name": "Waterford / White Lake",
+      "description": "Lake communities with affordable housing, recreational lakes, and suburban amenities",
+      "character": "Lake communities, affordable, recreational",
+      "housing": {
+        "avgRentOneBedroomUSD": 1110,
+        "avgRentTwoBedroomUSD": 1499,
+        "buyPricePerSqmUSD": 2519,
+        "predominantType": "Lake houses, ranch homes, and modest properties"
+      },
+      "walkabilityScore": 55,
+      "transitScore": 34,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Pontiac",
+          "url": "https://www.numbeo.com/cost-of-living/in/Pontiac"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "troy-rochester-hills",
+      "name": "Troy / Rochester Hills",
+      "description": "Northern suburbs with top-rated schools, Somerset Collection, and family-oriented communities",
+      "character": "Top schools, Somerset shopping, family-oriented",
+      "housing": {
+        "avgRentOneBedroomUSD": 1879,
+        "avgRentTwoBedroomUSD": 2536,
+        "buyPricePerSqmUSD": 5267,
+        "predominantType": "Colonial houses and newer single-family homes"
+      },
+      "walkabilityScore": 69,
+      "transitScore": 66,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Pontiac",
+          "url": "https://www.numbeo.com/cost-of-living/in/Pontiac"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

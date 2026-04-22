@@ -1,0 +1,141 @@
+{
+  "city": "Salinas",
+  "neighborhoods": [
+    {
+      "id": "salinas-malecon",
+      "name": "Salinas Malecon",
+      "description": "Beachfront boulevard with high-rise condos, restaurants, and Ecuador's most popular Pacific resort beach",
+      "character": "Beach resort, malecon walkable, seasonal crowds",
+      "housing": {
+        "avgRentOneBedroomUSD": 771,
+        "avgRentTwoBedroomUSD": 1002,
+        "buyPricePerSqmUSD": 1964,
+        "predominantType": "High-rise beachfront condos and apartments"
+      },
+      "walkabilityScore": 90,
+      "transitScore": 79,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Salinas. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Salinas",
+          "url": "https://www.numbeo.com/cost-of-living/in/Salinas"
+        },
+        {
+          "title": "Plusvalia",
+          "url": "https://www.plusvalia.com/"
+        },
+        {
+          "title": "OLX Ecuador",
+          "url": "https://www.olx.com.ec/"
+        }
+      ]
+    },
+    {
+      "id": "chipipe",
+      "name": "Chipipe",
+      "description": "Quieter southern beach area with calmer waters, yacht club, and more residential atmosphere",
+      "character": "Quiet beach residential, yacht club, family-friendly",
+      "housing": {
+        "avgRentOneBedroomUSD": 563,
+        "avgRentTwoBedroomUSD": 732,
+        "buyPricePerSqmUSD": 1263,
+        "predominantType": "Houses, low-rise condos, and beachside apartments"
+      },
+      "walkabilityScore": 65,
+      "transitScore": 51,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Salinas's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Salinas",
+          "url": "https://www.numbeo.com/cost-of-living/in/Salinas"
+        },
+        {
+          "title": "Plusvalia",
+          "url": "https://www.plusvalia.com/"
+        },
+        {
+          "title": "OLX Ecuador",
+          "url": "https://www.olx.com.ec/"
+        }
+      ]
+    },
+    {
+      "id": "santa-elena",
+      "name": "Santa Elena",
+      "description": "Inland provincial capital with lower costs, local markets, and bus connections",
+      "character": "Inland town, affordable, local services",
+      "housing": {
+        "avgRentOneBedroomUSD": 385,
+        "avgRentTwoBedroomUSD": 501,
+        "buyPricePerSqmUSD": 772,
+        "predominantType": "Basic houses and apartments"
+      },
+      "walkabilityScore": 57,
+      "transitScore": 32,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Salinas",
+          "url": "https://www.numbeo.com/cost-of-living/in/Salinas"
+        },
+        {
+          "title": "Plusvalia",
+          "url": "https://www.plusvalia.com/"
+        },
+        {
+          "title": "OLX Ecuador",
+          "url": "https://www.olx.com.ec/"
+        }
+      ]
+    },
+    {
+      "id": "ballenita-punta-blanca",
+      "name": "Ballenita / Punta Blanca",
+      "description": "Coastal communities between Salinas and Montanita with growing expat populations and ocean views",
+      "character": "Coastal expat, ocean views, community oriented",
+      "housing": {
+        "avgRentOneBedroomUSD": 652,
+        "avgRentTwoBedroomUSD": 848,
+        "buyPricePerSqmUSD": 1613,
+        "predominantType": "Modern houses, condos, and oceanview developments"
+      },
+      "walkabilityScore": 79,
+      "transitScore": 52,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Salinas",
+          "url": "https://www.numbeo.com/cost-of-living/in/Salinas"
+        },
+        {
+          "title": "Plusvalia",
+          "url": "https://www.plusvalia.com/"
+        },
+        {
+          "title": "OLX Ecuador",
+          "url": "https://www.olx.com.ec/"
+        }
+      ]
+    }
+  ]
+}

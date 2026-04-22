@@ -1,0 +1,141 @@
+{
+  "city": "Lorain",
+  "neighborhoods": [
+    {
+      "id": "downtown-lorain",
+      "name": "Downtown Lorain",
+      "description": "Lakefront steel town center undergoing revitalization with ethnic festivals and waterfront development",
+      "character": "Lakefront industrial, revitalizing, diverse festivals",
+      "housing": {
+        "avgRentOneBedroomUSD": 1706,
+        "avgRentTwoBedroomUSD": 2303,
+        "buyPricePerSqmUSD": 4718,
+        "predominantType": "Older houses, apartments, and commercial-residential"
+      },
+      "walkabilityScore": 85,
+      "transitScore": 86,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Lorain. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lorain",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lorain"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "avon-avon-lake",
+      "name": "Avon / Avon Lake",
+      "description": "Neighboring lakefront suburbs with better amenities, parks, and established residential areas",
+      "character": "Lakefront suburban, better amenities, established",
+      "housing": {
+        "avgRentOneBedroomUSD": 1246,
+        "avgRentTwoBedroomUSD": 1683,
+        "buyPricePerSqmUSD": 3033,
+        "predominantType": "Single-family homes and lakefront properties"
+      },
+      "walkabilityScore": 63,
+      "transitScore": 50,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Lorain's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lorain",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lorain"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "south-lorain",
+      "name": "South Lorain",
+      "description": "Southern neighborhoods with diverse community, affordable housing, and local character",
+      "character": "Diverse, affordable, local character",
+      "housing": {
+        "avgRentOneBedroomUSD": 853,
+        "avgRentTwoBedroomUSD": 1151,
+        "buyPricePerSqmUSD": 1854,
+        "predominantType": "Modest houses and affordable apartments"
+      },
+      "walkabilityScore": 60,
+      "transitScore": 31,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lorain",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lorain"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "sheffield-sheffield-lake",
+      "name": "Sheffield / Sheffield Lake",
+      "description": "Western lakefront communities with family amenities, parks, and moderate housing costs",
+      "character": "Lakefront community, parks, family-oriented",
+      "housing": {
+        "avgRentOneBedroomUSD": 1443,
+        "avgRentTwoBedroomUSD": 1948,
+        "buyPricePerSqmUSD": 3875,
+        "predominantType": "Single-family homes and modest lake-area houses"
+      },
+      "walkabilityScore": 61,
+      "transitScore": 51,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lorain",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lorain"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

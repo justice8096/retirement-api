@@ -1,0 +1,141 @@
+{
+  "city": "Chania / Crete",
+  "neighborhoods": [
+    {
+      "id": "old-venetian-harbor-chania",
+      "name": "Old Venetian Harbor (Chania)",
+      "description": "Stunning Venetian harbor with lighthouse, converted arsenali, and one of Greece's most atmospheric old towns",
+      "character": "Venetian harbor, atmospheric, walkable old town",
+      "housing": {
+        "avgRentOneBedroomEUR": 1209,
+        "avgRentTwoBedroomEUR": 1632,
+        "buyPricePerSqmEUR": 3640,
+        "predominantType": "Apartments in Venetian and Ottoman-era buildings"
+      },
+      "walkabilityScore": 90,
+      "transitScore": 72,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Chania. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Chania",
+          "url": "https://www.numbeo.com/cost-of-living/in/Chania"
+        },
+        {
+          "title": "Spitogatos",
+          "url": "https://www.spitogatos.gr/"
+        },
+        {
+          "title": "XE.gr",
+          "url": "https://www.xe.gr/"
+        }
+      ]
+    },
+    {
+      "id": "akrotiri",
+      "name": "Akrotiri",
+      "description": "Peninsula east of Chania with beaches, monasteries, and a mix of residential and tourist development",
+      "character": "Peninsula residential, beaches, monasteries, quiet",
+      "housing": {
+        "avgRentOneBedroomEUR": 884,
+        "avgRentTwoBedroomEUR": 1193,
+        "buyPricePerSqmEUR": 2340,
+        "predominantType": "Houses, villas, and modern apartments"
+      },
+      "walkabilityScore": 54,
+      "transitScore": 57,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Chania's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Chania",
+          "url": "https://www.numbeo.com/cost-of-living/in/Chania"
+        },
+        {
+          "title": "Spitogatos",
+          "url": "https://www.spitogatos.gr/"
+        },
+        {
+          "title": "XE.gr",
+          "url": "https://www.xe.gr/"
+        }
+      ]
+    },
+    {
+      "id": "souda",
+      "name": "Souda",
+      "description": "Port town east of Chania with naval base, lower costs, and ferry connections to Piraeus",
+      "character": "Port town, affordable, practical transit hub",
+      "housing": {
+        "avgRentOneBedroomEUR": 605,
+        "avgRentTwoBedroomEUR": 816,
+        "buyPricePerSqmEUR": 1430,
+        "predominantType": "Apartments and modest houses"
+      },
+      "walkabilityScore": 49,
+      "transitScore": 42,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Chania",
+          "url": "https://www.numbeo.com/cost-of-living/in/Chania"
+        },
+        {
+          "title": "Spitogatos",
+          "url": "https://www.spitogatos.gr/"
+        },
+        {
+          "title": "XE.gr",
+          "url": "https://www.xe.gr/"
+        }
+      ]
+    },
+    {
+      "id": "apokoronas-almyrida-vamos",
+      "name": "Apokoronas (Almyrida/Vamos)",
+      "description": "Coastal and hillside villages east of Chania popular with British and Northern European expats",
+      "character": "Village coast, expat community, traditional Cretan",
+      "housing": {
+        "avgRentOneBedroomEUR": 1023,
+        "avgRentTwoBedroomEUR": 1381,
+        "buyPricePerSqmEUR": 2990,
+        "predominantType": "Restored stone houses, villas, and new-build apartments"
+      },
+      "walkabilityScore": 74,
+      "transitScore": 68,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Chania",
+          "url": "https://www.numbeo.com/cost-of-living/in/Chania"
+        },
+        {
+          "title": "Spitogatos",
+          "url": "https://www.spitogatos.gr/"
+        },
+        {
+          "title": "XE.gr",
+          "url": "https://www.xe.gr/"
+        }
+      ]
+    }
+  ]
+}

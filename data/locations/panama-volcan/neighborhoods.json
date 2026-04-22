@@ -1,0 +1,141 @@
+{
+  "city": "Volcan",
+  "neighborhoods": [
+    {
+      "id": "volcan-centro",
+      "name": "Volcan Centro",
+      "description": "Highland town on the slopes of Baru volcano with cool climate, orchid farms, and agricultural markets",
+      "character": "Highland town, volcano slopes, cool climate, agriculture",
+      "housing": {
+        "avgRentOneBedroomUSD": 771,
+        "avgRentTwoBedroomUSD": 1002,
+        "buyPricePerSqmUSD": 1964,
+        "predominantType": "Houses and small apartments near the town center"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 76,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Volcán. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Volcán",
+          "url": "https://www.numbeo.com/cost-of-living/in/Volc%C3%A1n"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "paso-ancho",
+      "name": "Paso Ancho",
+      "description": "Uphill residential area above Volcan with mountain views and strawberry farms",
+      "character": "Uphill residential, strawberry farms, mountain views",
+      "housing": {
+        "avgRentOneBedroomUSD": 563,
+        "avgRentTwoBedroomUSD": 732,
+        "buyPricePerSqmUSD": 1263,
+        "predominantType": "Houses and mountain properties"
+      },
+      "walkabilityScore": 57,
+      "transitScore": 46,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Volcán's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Volcán",
+          "url": "https://www.numbeo.com/cost-of-living/in/Volc%C3%A1n"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "cerra-punta",
+      "name": "Cerra Punta",
+      "description": "Highest settlement in Panama with vegetable farms, cool mist, and very affordable living",
+      "character": "Highest town, vegetable farming, misty and cool",
+      "housing": {
+        "avgRentOneBedroomUSD": 385,
+        "avgRentTwoBedroomUSD": 501,
+        "buyPricePerSqmUSD": 772,
+        "predominantType": "Farm houses and basic dwellings"
+      },
+      "walkabilityScore": 50,
+      "transitScore": 31,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Volcán",
+          "url": "https://www.numbeo.com/cost-of-living/in/Volc%C3%A1n"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "nueva-suiza-highland-communities",
+      "name": "Nueva Suiza / Highland Communities",
+      "description": "Areas named by Swiss settlers with coffee farms and an established highland expat community",
+      "character": "Swiss-named, coffee farms, highland expat community",
+      "housing": {
+        "avgRentOneBedroomUSD": 652,
+        "avgRentTwoBedroomUSD": 848,
+        "buyPricePerSqmUSD": 1613,
+        "predominantType": "Custom houses, coffee farm properties, and gated homes"
+      },
+      "walkabilityScore": 68,
+      "transitScore": 60,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Volcán",
+          "url": "https://www.numbeo.com/cost-of-living/in/Volc%C3%A1n"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    }
+  ]
+}

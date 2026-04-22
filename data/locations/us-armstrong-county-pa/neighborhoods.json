@@ -1,0 +1,141 @@
+{
+  "city": "Kittanning (Armstrong County)",
+  "neighborhoods": [
+    {
+      "id": "kittanning-downtown",
+      "name": "Kittanning Downtown",
+      "description": "County seat on the Allegheny River with historic buildings, courthouse, and community park",
+      "character": "Small-town riverside, county seat, community park",
+      "housing": {
+        "avgRentOneBedroomUSD": 1612,
+        "avgRentTwoBedroomUSD": 2176,
+        "buyPricePerSqmUSD": 4410,
+        "predominantType": "Victorian houses, row homes, and older apartments"
+      },
+      "walkabilityScore": 88,
+      "transitScore": 74,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Kittanning. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Kittanning",
+          "url": "https://www.numbeo.com/cost-of-living/in/Kittanning"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "ford-city",
+      "name": "Ford City",
+      "description": "Former glass-making town along the Allegheny with affordable housing and community character",
+      "character": "Former industrial, affordable, river community",
+      "housing": {
+        "avgRentOneBedroomUSD": 1178,
+        "avgRentTwoBedroomUSD": 1590,
+        "buyPricePerSqmUSD": 2835,
+        "predominantType": "Row houses and modest single-family homes"
+      },
+      "walkabilityScore": 55,
+      "transitScore": 52,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Kittanning's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Kittanning",
+          "url": "https://www.numbeo.com/cost-of-living/in/Kittanning"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "rural-armstrong-county",
+      "name": "Rural Armstrong County",
+      "description": "Surrounding rural areas with very affordable properties, farms, and natural beauty",
+      "character": "Rural, very affordable, farms and forests",
+      "housing": {
+        "avgRentOneBedroomUSD": 806,
+        "avgRentTwoBedroomUSD": 1088,
+        "buyPricePerSqmUSD": 1733,
+        "predominantType": "Farmhouses, rural homes, and mobile homes"
+      },
+      "walkabilityScore": 51,
+      "transitScore": 35,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Kittanning",
+          "url": "https://www.numbeo.com/cost-of-living/in/Kittanning"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "freeport-leechburg",
+      "name": "Freeport / Leechburg",
+      "description": "Small towns with slightly better amenities, school access, and river recreation",
+      "character": "Small-town, better amenities, river access",
+      "housing": {
+        "avgRentOneBedroomUSD": 1364,
+        "avgRentTwoBedroomUSD": 1841,
+        "buyPricePerSqmUSD": 3622,
+        "predominantType": "Single-family houses and modest homes"
+      },
+      "walkabilityScore": 66,
+      "transitScore": 51,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Kittanning",
+          "url": "https://www.numbeo.com/cost-of-living/in/Kittanning"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

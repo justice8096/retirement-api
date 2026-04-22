@@ -1,0 +1,141 @@
+{
+  "city": "Cotacachi",
+  "neighborhoods": [
+    {
+      "id": "cotacachi-centro",
+      "name": "Cotacachi Centro",
+      "description": "Small indigenous-mestizo town known for leather goods, with a central park and surrounding volcanoes",
+      "character": "Small Andean town, leather craft culture, indigenous markets",
+      "housing": {
+        "avgRentOneBedroomUSD": 702,
+        "avgRentTwoBedroomUSD": 913,
+        "buyPricePerSqmUSD": 1770,
+        "predominantType": "Colonial houses and small apartments near the park"
+      },
+      "walkabilityScore": 85,
+      "transitScore": 71,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Cotacachi. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cotacachi",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cotacachi"
+        },
+        {
+          "title": "Plusvalia",
+          "url": "https://www.plusvalia.com/"
+        },
+        {
+          "title": "OLX Ecuador",
+          "url": "https://www.olx.com.ec/"
+        }
+      ]
+    },
+    {
+      "id": "la-quinta-area",
+      "name": "La Quinta Area",
+      "description": "Rural area between Cotacachi and Lake Cuicocha with farming communities and mountain views",
+      "character": "Rural Andean, farming, volcano and lake views",
+      "housing": {
+        "avgRentOneBedroomUSD": 513,
+        "avgRentTwoBedroomUSD": 667,
+        "buyPricePerSqmUSD": 1138,
+        "predominantType": "Houses on agricultural land and rural properties"
+      },
+      "walkabilityScore": 58,
+      "transitScore": 59,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Cotacachi's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cotacachi",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cotacachi"
+        },
+        {
+          "title": "Plusvalia",
+          "url": "https://www.plusvalia.com/"
+        },
+        {
+          "title": "OLX Ecuador",
+          "url": "https://www.olx.com.ec/"
+        }
+      ]
+    },
+    {
+      "id": "quiroga",
+      "name": "Quiroga",
+      "description": "Adjacent village with a weekly indigenous market and very affordable housing",
+      "character": "Indigenous village, very affordable, traditional market",
+      "housing": {
+        "avgRentOneBedroomUSD": 351,
+        "avgRentTwoBedroomUSD": 456,
+        "buyPricePerSqmUSD": 695,
+        "predominantType": "Basic houses and rural homes"
+      },
+      "walkabilityScore": 42,
+      "transitScore": 36,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cotacachi",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cotacachi"
+        },
+        {
+          "title": "Plusvalia",
+          "url": "https://www.plusvalia.com/"
+        },
+        {
+          "title": "OLX Ecuador",
+          "url": "https://www.olx.com.ec/"
+        }
+      ]
+    },
+    {
+      "id": "los-portales-upper-cotacachi",
+      "name": "Los Portales / Upper Cotacachi",
+      "description": "Hillside area above town where many North American expats have settled with organized community activities",
+      "character": "Expat hillside, community groups, mountain views",
+      "housing": {
+        "avgRentOneBedroomUSD": 594,
+        "avgRentTwoBedroomUSD": 772,
+        "buyPricePerSqmUSD": 1454,
+        "predominantType": "Custom-built houses and small developments"
+      },
+      "walkabilityScore": 73,
+      "transitScore": 59,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cotacachi",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cotacachi"
+        },
+        {
+          "title": "Plusvalia",
+          "url": "https://www.plusvalia.com/"
+        },
+        {
+          "title": "OLX Ecuador",
+          "url": "https://www.olx.com.ec/"
+        }
+      ]
+    }
+  ]
+}

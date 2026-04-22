@@ -1,0 +1,141 @@
+{
+  "city": "Florence / Tuscany",
+  "neighborhoods": [
+    {
+      "id": "centro-storico-florence",
+      "name": "Centro Storico (Florence)",
+      "description": "Renaissance heart of Florence with the Duomo, Uffizi, Ponte Vecchio, and incomparable artistic heritage",
+      "character": "Renaissance, art capital, walkable and monumental",
+      "housing": {
+        "avgRentOneBedroomEUR": 1681,
+        "avgRentTwoBedroomEUR": 2269,
+        "buyPricePerSqmEUR": 5040,
+        "predominantType": "Apartments in Renaissance and medieval palazzi"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 90,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Lucca. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lucca",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lucca"
+        },
+        {
+          "title": "Immobiliare.it",
+          "url": "https://www.immobiliare.it/"
+        },
+        {
+          "title": "Casa.it",
+          "url": "https://www.casa.it/"
+        }
+      ]
+    },
+    {
+      "id": "fiesole",
+      "name": "Fiesole",
+      "description": "Hilltop Etruscan town above Florence with Roman theater, monastery, and panoramic views of the city",
+      "character": "Hilltop, Etruscan heritage, panoramic views",
+      "housing": {
+        "avgRentOneBedroomEUR": 1228,
+        "avgRentTwoBedroomEUR": 1658,
+        "buyPricePerSqmEUR": 3240,
+        "predominantType": "Villas, farmhouse conversions, and elegant apartments"
+      },
+      "walkabilityScore": 51,
+      "transitScore": 45,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Lucca's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lucca",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lucca"
+        },
+        {
+          "title": "Immobiliare.it",
+          "url": "https://www.immobiliare.it/"
+        },
+        {
+          "title": "Casa.it",
+          "url": "https://www.casa.it/"
+        }
+      ]
+    },
+    {
+      "id": "prato-pistoia",
+      "name": "Prato / Pistoia",
+      "description": "Cities northwest of Florence with their own artistic heritage, lower costs, and fast train connections",
+      "character": "Art cities, affordable, train-connected to Florence",
+      "housing": {
+        "avgRentOneBedroomEUR": 840,
+        "avgRentTwoBedroomEUR": 1135,
+        "buyPricePerSqmEUR": 1980,
+        "predominantType": "Apartments and houses at lower Florence-area prices"
+      },
+      "walkabilityScore": 44,
+      "transitScore": 30,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lucca",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lucca"
+        },
+        {
+          "title": "Immobiliare.it",
+          "url": "https://www.immobiliare.it/"
+        },
+        {
+          "title": "Casa.it",
+          "url": "https://www.casa.it/"
+        }
+      ]
+    },
+    {
+      "id": "chianti-greve-radda",
+      "name": "Chianti (Greve / Radda)",
+      "description": "Rolling hill country between Florence and Siena with vineyards, olive groves, and international residents",
+      "character": "Wine country, rolling hills, international lifestyle",
+      "housing": {
+        "avgRentOneBedroomEUR": 1422,
+        "avgRentTwoBedroomEUR": 1920,
+        "buyPricePerSqmEUR": 4140,
+        "predominantType": "Renovated farmhouses, villas, and converted estates"
+      },
+      "walkabilityScore": 71,
+      "transitScore": 62,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lucca",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lucca"
+        },
+        {
+          "title": "Immobiliare.it",
+          "url": "https://www.immobiliare.it/"
+        },
+        {
+          "title": "Casa.it",
+          "url": "https://www.casa.it/"
+        }
+      ]
+    }
+  ]
+}

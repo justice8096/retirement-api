@@ -1,0 +1,141 @@
+{
+  "city": "Split",
+  "neighborhoods": [
+    {
+      "id": "diocletian-palace-grad",
+      "name": "Diocletian Palace / Grad",
+      "description": "Ancient Roman palace complex that forms the living heart of the city with shops, restaurants, and residences",
+      "character": "Ancient Roman living city, UNESCO heritage, vibrant",
+      "housing": {
+        "avgRentOneBedroomEUR": 1256,
+        "avgRentTwoBedroomEUR": 1695,
+        "buyPricePerSqmEUR": 3780,
+        "predominantType": "Apartments within and around the palace complex"
+      },
+      "walkabilityScore": 89,
+      "transitScore": 77,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Split. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Split",
+          "url": "https://www.numbeo.com/cost-of-living/in/Split"
+        },
+        {
+          "title": "Njuskalo",
+          "url": "https://www.njuskalo.hr/"
+        },
+        {
+          "title": "Index Oglasi",
+          "url": "https://www.index.hr/oglasi/"
+        }
+      ]
+    },
+    {
+      "id": "kastela",
+      "name": "Kastela",
+      "description": "String of seven coastal settlements west of Split with castle heritage and a slower pace of life",
+      "character": "Coastal suburban, historic castles, family-oriented",
+      "housing": {
+        "avgRentOneBedroomEUR": 918,
+        "avgRentTwoBedroomEUR": 1239,
+        "buyPricePerSqmEUR": 2430,
+        "predominantType": "Houses, apartments, and renovated stone properties"
+      },
+      "walkabilityScore": 70,
+      "transitScore": 51,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Split's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Split",
+          "url": "https://www.numbeo.com/cost-of-living/in/Split"
+        },
+        {
+          "title": "Njuskalo",
+          "url": "https://www.njuskalo.hr/"
+        },
+        {
+          "title": "Index Oglasi",
+          "url": "https://www.index.hr/oglasi/"
+        }
+      ]
+    },
+    {
+      "id": "solin",
+      "name": "Solin",
+      "description": "Ancient Salona archaeological site area with affordable housing and good transit to Split center",
+      "character": "Historic suburban, affordable, good bus connections",
+      "housing": {
+        "avgRentOneBedroomEUR": 628,
+        "avgRentTwoBedroomEUR": 848,
+        "buyPricePerSqmEUR": 1485,
+        "predominantType": "Modern apartment blocks and family houses"
+      },
+      "walkabilityScore": 40,
+      "transitScore": 46,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Split",
+          "url": "https://www.numbeo.com/cost-of-living/in/Split"
+        },
+        {
+          "title": "Njuskalo",
+          "url": "https://www.njuskalo.hr/"
+        },
+        {
+          "title": "Index Oglasi",
+          "url": "https://www.index.hr/oglasi/"
+        }
+      ]
+    },
+    {
+      "id": "bacvice-firule",
+      "name": "Bacvice / Firule",
+      "description": "Beach neighborhoods south of the center with the famous Bacvice sandy beach and cafe culture",
+      "character": "Beach urban, cafe culture, lively promenade",
+      "housing": {
+        "avgRentOneBedroomEUR": 1063,
+        "avgRentTwoBedroomEUR": 1435,
+        "buyPricePerSqmEUR": 3105,
+        "predominantType": "Apartments in newer buildings and renovated villas"
+      },
+      "walkabilityScore": 76,
+      "transitScore": 60,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Split",
+          "url": "https://www.numbeo.com/cost-of-living/in/Split"
+        },
+        {
+          "title": "Njuskalo",
+          "url": "https://www.njuskalo.hr/"
+        },
+        {
+          "title": "Index Oglasi",
+          "url": "https://www.index.hr/oglasi/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "city": "Fort Lauderdale",
+  "neighborhoods": [
+    {
+      "id": "las-olas-downtown",
+      "name": "Las Olas / Downtown",
+      "description": "Las Olas Boulevard with boutiques, galleries, and the Riverwalk arts and entertainment district",
+      "character": "Boulevard lifestyle, arts district, waterfront",
+      "housing": {
+        "avgRentOneBedroomUSD": 2876,
+        "avgRentTwoBedroomUSD": 3882,
+        "buyPricePerSqmUSD": 8568,
+        "predominantType": "Condos, apartments, and waterfront residences"
+      },
+      "walkabilityScore": 88,
+      "transitScore": 81,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Fort Lauderdale. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Fort Lauderdale",
+          "url": "https://www.numbeo.com/cost-of-living/in/Fort-Lauderdale"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "wilton-manors",
+      "name": "Wilton Manors",
+      "description": "Inclusive small city with Wilton Drive shopping, strong community identity, and walkable center",
+      "character": "Inclusive, walkable, strong community identity",
+      "housing": {
+        "avgRentOneBedroomUSD": 2101,
+        "avgRentTwoBedroomUSD": 2837,
+        "buyPricePerSqmUSD": 5508,
+        "predominantType": "Single-family homes, duplexes, and small condos"
+      },
+      "walkabilityScore": 66,
+      "transitScore": 46,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Fort Lauderdale's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Fort Lauderdale",
+          "url": "https://www.numbeo.com/cost-of-living/in/Fort-Lauderdale"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "sunrise-tamarac",
+      "name": "Sunrise / Tamarac",
+      "description": "Western suburbs with Sawgrass Mills outlet mall, affordable housing, and diverse communities",
+      "character": "Western suburban, affordable, shopping access",
+      "housing": {
+        "avgRentOneBedroomUSD": 1438,
+        "avgRentTwoBedroomUSD": 1941,
+        "buyPricePerSqmUSD": 3366,
+        "predominantType": "Condos, townhomes, and single-family homes"
+      },
+      "walkabilityScore": 60,
+      "transitScore": 36,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Fort Lauderdale",
+          "url": "https://www.numbeo.com/cost-of-living/in/Fort-Lauderdale"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "coral-springs-parkland",
+      "name": "Coral Springs / Parkland",
+      "description": "Northern suburbs with top-rated schools, parks, and family-oriented master-planned communities",
+      "character": "Top schools, parks, master-planned family",
+      "housing": {
+        "avgRentOneBedroomUSD": 2433,
+        "avgRentTwoBedroomUSD": 3285,
+        "buyPricePerSqmUSD": 7038,
+        "predominantType": "Single-family homes in established communities"
+      },
+      "walkabilityScore": 61,
+      "transitScore": 62,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Fort Lauderdale",
+          "url": "https://www.numbeo.com/cost-of-living/in/Fort-Lauderdale"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

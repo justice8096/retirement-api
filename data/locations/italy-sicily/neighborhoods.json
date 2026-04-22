@@ -1,0 +1,141 @@
+{
+  "city": "Palermo / Sicily",
+  "neighborhoods": [
+    {
+      "id": "centro-storico-palermo",
+      "name": "Centro Storico (Palermo)",
+      "description": "Chaotic, fascinating historic center with Arab-Norman UNESCO sites, street food markets, and baroque churches",
+      "character": "Arab-Norman UNESCO, market culture, street food capital",
+      "housing": {
+        "avgRentOneBedroomEUR": 1096,
+        "avgRentTwoBedroomEUR": 1479,
+        "buyPricePerSqmEUR": 3304,
+        "predominantType": "Apartments in baroque palazzi and restored buildings"
+      },
+      "walkabilityScore": 85,
+      "transitScore": 70,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Palermo. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Palermo",
+          "url": "https://www.numbeo.com/cost-of-living/in/Palermo"
+        },
+        {
+          "title": "Immobiliare.it",
+          "url": "https://www.immobiliare.it/"
+        },
+        {
+          "title": "Casa.it",
+          "url": "https://www.casa.it/"
+        }
+      ]
+    },
+    {
+      "id": "mondello",
+      "name": "Mondello",
+      "description": "Beach neighborhood north of Palermo with Art Nouveau villas, sandy beach, and seafood restaurants",
+      "character": "Beach residential, Art Nouveau, seafood culture",
+      "housing": {
+        "avgRentOneBedroomEUR": 801,
+        "avgRentTwoBedroomEUR": 1081,
+        "buyPricePerSqmEUR": 2124,
+        "predominantType": "Apartments, Art Nouveau villas, and beach houses"
+      },
+      "walkabilityScore": 53,
+      "transitScore": 44,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Palermo's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Palermo",
+          "url": "https://www.numbeo.com/cost-of-living/in/Palermo"
+        },
+        {
+          "title": "Immobiliare.it",
+          "url": "https://www.immobiliare.it/"
+        },
+        {
+          "title": "Casa.it",
+          "url": "https://www.casa.it/"
+        }
+      ]
+    },
+    {
+      "id": "cefalu-castelbuono",
+      "name": "Cefalu / Castelbuono",
+      "description": "Coastal and mountain towns east of Palermo with lower costs and rich Norman heritage",
+      "character": "Norman coastal/mountain, affordable, heritage",
+      "housing": {
+        "avgRentOneBedroomEUR": 548,
+        "avgRentTwoBedroomEUR": 740,
+        "buyPricePerSqmEUR": 1298,
+        "predominantType": "Stone houses, apartments, and village properties"
+      },
+      "walkabilityScore": 55,
+      "transitScore": 39,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Palermo",
+          "url": "https://www.numbeo.com/cost-of-living/in/Palermo"
+        },
+        {
+          "title": "Immobiliare.it",
+          "url": "https://www.immobiliare.it/"
+        },
+        {
+          "title": "Casa.it",
+          "url": "https://www.casa.it/"
+        }
+      ]
+    },
+    {
+      "id": "taormina-area",
+      "name": "Taormina Area",
+      "description": "Famous hilltop resort town on the east coast with ancient Greek theater and international glamour",
+      "character": "Glamorous hilltop, ancient Greek theater, international",
+      "housing": {
+        "avgRentOneBedroomEUR": 927,
+        "avgRentTwoBedroomEUR": 1252,
+        "buyPricePerSqmEUR": 2714,
+        "predominantType": "Elegant apartments, villas, and historic properties"
+      },
+      "walkabilityScore": 78,
+      "transitScore": 59,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Palermo",
+          "url": "https://www.numbeo.com/cost-of-living/in/Palermo"
+        },
+        {
+          "title": "Immobiliare.it",
+          "url": "https://www.immobiliare.it/"
+        },
+        {
+          "title": "Casa.it",
+          "url": "https://www.casa.it/"
+        }
+      ]
+    }
+  ]
+}

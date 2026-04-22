@@ -1,0 +1,141 @@
+{
+  "city": "Auch / Gascony",
+  "neighborhoods": [
+    {
+      "id": "auch-centre",
+      "name": "Auch Centre",
+      "description": "Historic hilltop capital of Gascony with its grand stairway, cathedral, and old town overlooking the Gers river",
+      "character": "Historic hilltop, provincial capital, Gascon culture",
+      "housing": {
+        "avgRentOneBedroomEUR": 1256,
+        "avgRentTwoBedroomEUR": 1695,
+        "buyPricePerSqmEUR": 3780,
+        "predominantType": "Apartments in historic buildings and townhouses"
+      },
+      "walkabilityScore": 94,
+      "transitScore": 77,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Auch. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Auch",
+          "url": "https://www.numbeo.com/cost-of-living/in/Auch"
+        },
+        {
+          "title": "SeLoger",
+          "url": "https://www.seloger.com/"
+        },
+        {
+          "title": "Bien'ici",
+          "url": "https://www.bienici.com/"
+        }
+      ]
+    },
+    {
+      "id": "l-isle-jourdain",
+      "name": "L'Isle-Jourdain",
+      "description": "Market town between Auch and Toulouse with easy access to both, lake recreation, and modern amenities",
+      "character": "Market town, convenient location, lake recreation",
+      "housing": {
+        "avgRentOneBedroomEUR": 918,
+        "avgRentTwoBedroomEUR": 1239,
+        "buyPricePerSqmEUR": 2430,
+        "predominantType": "Modern houses, apartments, and rural properties"
+      },
+      "walkabilityScore": 52,
+      "transitScore": 44,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Auch's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Auch",
+          "url": "https://www.numbeo.com/cost-of-living/in/Auch"
+        },
+        {
+          "title": "SeLoger",
+          "url": "https://www.seloger.com/"
+        },
+        {
+          "title": "Bien'ici",
+          "url": "https://www.bienici.com/"
+        }
+      ]
+    },
+    {
+      "id": "condom",
+      "name": "Condom",
+      "description": "Small town on the Baise river with Armagnac heritage, affordable stone houses, and pilgrim trail culture",
+      "character": "Small riverside, Armagnac country, Camino de Santiago",
+      "housing": {
+        "avgRentOneBedroomEUR": 628,
+        "avgRentTwoBedroomEUR": 848,
+        "buyPricePerSqmEUR": 1485,
+        "predominantType": "Stone houses and affordable apartments"
+      },
+      "walkabilityScore": 46,
+      "transitScore": 46,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Auch",
+          "url": "https://www.numbeo.com/cost-of-living/in/Auch"
+        },
+        {
+          "title": "SeLoger",
+          "url": "https://www.seloger.com/"
+        },
+        {
+          "title": "Bien'ici",
+          "url": "https://www.bienici.com/"
+        }
+      ]
+    },
+    {
+      "id": "lectoure",
+      "name": "Lectoure",
+      "description": "Beautiful hilltop bastide town with growing British expat community, thermal spa, and artisan shops",
+      "character": "Hilltop bastide, spa town, artistic expat community",
+      "housing": {
+        "avgRentOneBedroomEUR": 1063,
+        "avgRentTwoBedroomEUR": 1435,
+        "buyPricePerSqmEUR": 3105,
+        "predominantType": "Renovated stone houses and bastide apartments"
+      },
+      "walkabilityScore": 77,
+      "transitScore": 66,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Auch",
+          "url": "https://www.numbeo.com/cost-of-living/in/Auch"
+        },
+        {
+          "title": "SeLoger",
+          "url": "https://www.seloger.com/"
+        },
+        {
+          "title": "Bien'ici",
+          "url": "https://www.bienici.com/"
+        }
+      ]
+    }
+  ]
+}
