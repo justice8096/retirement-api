@@ -15,6 +15,7 @@ import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
 import { cached } from '../lib/cache.js';
 import { toValidationErrorPayload } from '../lib/validation.js';
+import { taxSourcesFor } from '../../shared/country-tax-sources.js';
 
 interface LocationData {
   name: string;
@@ -145,18 +146,32 @@ export default async function locationRoutes(app: FastifyInstance): Promise<void
       // (id, monthlyCostTotal, updatedAt, etc.) must be overlaid so clients get
       // them regardless of whether locationData carries them.
       const data = q.fields === 'full'
-        ? locations.map((loc: Record<string, unknown>) => ({
-            ...(loc.locationData as object),
-            id: loc.id,
-            name: loc.name,
-            country: loc.country,
-            region: loc.region,
-            subregion: loc.subregion,
-            currency: loc.currency,
-            monthlyCostTotal: loc.monthlyCostTotal,
-            updatedAt: loc.updatedAt,
-            _version: loc.version,
-          }))
+        ? locations.map((loc: Record<string, unknown>) => {
+            const merged: Record<string, unknown> = {
+              ...(loc.locationData as Record<string, unknown>),
+              id: loc.id,
+              name: loc.name,
+              country: loc.country,
+              region: loc.region,
+              subregion: loc.subregion,
+              currency: loc.currency,
+              monthlyCostTotal: loc.monthlyCostTotal,
+              updatedAt: loc.updatedAt,
+              _version: loc.version,
+            };
+            // Todos #11 — inject country-level tax citations so the Taxes
+            // screen tooltip can render on every card without a per-:id
+            // round-trip. Mirrors the injection in the /:id handler.
+            const sources = taxSourcesFor(loc.country as string);
+            if (sources) {
+              const taxes = (merged.taxes as Record<string, unknown> | undefined) ?? {};
+              if (!Array.isArray(taxes.sources) || taxes.sources.length === 0) {
+                taxes.sources = sources;
+              }
+              merged.taxes = taxes;
+            }
+            return merged;
+          })
         : locations;
 
       return {
@@ -262,6 +277,20 @@ export default async function locationRoutes(app: FastifyInstance): Promise<void
       // don't have to infer from field absence.
       if (healthcare && loc.country !== 'United States' && !aca) {
         healthcare.acaApplicable = false;
+      }
+
+      // Todos #11 — inject country-level tax citations onto the taxes
+      // payload. Sources aren't stored per-location seed; they're derived
+      // from `loc.country` at read time via shared/country-tax-sources.
+      const sources = taxSourcesFor(loc.country);
+      if (sources) {
+        const taxes = (data.taxes as Record<string, unknown> | undefined) ?? {};
+        // Preserve anything the seed already carried (e.g. if a location
+        // later ships per-location sources that override the country set).
+        if (!Array.isArray(taxes.sources) || taxes.sources.length === 0) {
+          taxes.sources = sources;
+        }
+        data.taxes = taxes;
       }
 
       // WCAG best-practice — natural-language summary that downstream
