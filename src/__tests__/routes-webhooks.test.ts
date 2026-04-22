@@ -18,8 +18,11 @@ const mockStripe = vi.hoisted(() => ({
   subscriptions: { retrieve: vi.fn() },
 }));
 
+// Under vitest 4, `new Stripe(...)` invokes the mock implementation as a
+// constructor. Arrow functions aren't constructors, so use a regular
+// function whose explicit return value becomes the constructed instance.
 vi.mock('stripe', () => ({
-  default: vi.fn(() => mockStripe),
+  default: vi.fn(function Stripe() { return mockStripe; }),
 }));
 
 vi.mock('../db/prisma.js', () => ({
@@ -50,6 +53,10 @@ describe('Webhook routes', () => {
   let app: FastifyInstance;
 
   beforeEach(async () => {
+    // vitest 4: call history on module mocks no longer cleared by
+    // restoreAllMocks in afterEach. Clear explicitly to prevent bleed
+    // between tests.
+    vi.clearAllMocks();
     app = Fastify({ logger: false });
     await app.register(webhookRoutes, { prefix: '/api/webhooks' });
   });

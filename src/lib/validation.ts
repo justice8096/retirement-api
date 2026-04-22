@@ -120,9 +120,13 @@ function labelFor(field: string): string {
 function plainMessage(issue: ZodIssue, label: string): string {
   const raw = issue.message || '';
 
+  // zod 4 issue-code renames vs zod 3:
+  //   'invalid_enum_value' -> 'invalid_value' (with .values instead of .options)
+  //   'invalid_string'     -> 'invalid_format'
+  //   $ZodIssueInvalidType lost `.received`; use `.input` instead.
   switch (issue.code) {
     case 'invalid_type':
-      return `${label} expects a ${issue.expected}. You sent ${issue.received}.`;
+      return `${label} expects a ${issue.expected}. You sent ${typeof issue.input}.`;
     case 'too_small': {
       const min = (issue as { minimum?: number | bigint }).minimum;
       if (typeof min === 'number' || typeof min === 'bigint') {
@@ -137,14 +141,14 @@ function plainMessage(issue: ZodIssue, label: string): string {
       }
       return raw || `${label} is above the allowed maximum.`;
     }
-    case 'invalid_enum_value': {
-      const opts = (issue as { options?: readonly unknown[] }).options;
-      if (Array.isArray(opts) && opts.length) {
-        return `${label} must be one of: ${opts.join(', ')}.`;
+    case 'invalid_value': {
+      const values = (issue as { values?: readonly unknown[] }).values;
+      if (Array.isArray(values) && values.length) {
+        return `${label} must be one of: ${values.join(', ')}.`;
       }
       return raw;
     }
-    case 'invalid_string':
+    case 'invalid_format':
       return raw || `${label} has an invalid format.`;
     case 'unrecognized_keys':
       return `Unexpected field(s) in the request body.`;
