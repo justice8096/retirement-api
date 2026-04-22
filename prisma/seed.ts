@@ -6,11 +6,15 @@
  *   tsx prisma/seed.ts                         # seed from default path
  *   DATA_DIR=./data tsx prisma/seed.ts         # seed from custom path
  */
+import 'dotenv/config';
 import { PrismaClient } from '@prisma/client';
+import { PrismaPg } from '@prisma/adapter-pg';
 import fs from 'fs';
 import path from 'path';
 
-const prisma = new PrismaClient();
+// Prisma 7 requires the driver adapter pattern (see src/db/prisma.ts).
+const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL });
+const prisma = new PrismaClient({ adapter });
 
 // Default: read from the original project's data directory
 const DATA_DIR = process.env.DATA_DIR || path.resolve('../../data');
