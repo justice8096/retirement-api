@@ -147,7 +147,7 @@ export default async function locationRoutes(app: FastifyInstance): Promise<void
       // them regardless of whether locationData carries them.
       const data = q.fields === 'full'
         ? locations.map((loc: Record<string, unknown>) => {
-            const merged = {
+            const merged: Record<string, unknown> = {
               ...(loc.locationData as Record<string, unknown>),
               id: loc.id,
               name: loc.name,
