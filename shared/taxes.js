@@ -11,7 +11,10 @@ export function calcBracketTax(income, brackets) {
 
 // ─── 2026 tax constants (US) ────────────────────────────────────────────
 //
-// Sources:
+// Sources: see structured arrays (FED_BRACKETS_2026_SOURCES,
+// FED_STD_DEDUCTION_2026_SOURCES, OBBBA_SENIOR_SOURCES) below — these
+// are what the dashboard surfaces through <app-source-tooltip>. The
+// free-text summary:
 //   - Federal income tax brackets + standard deduction:
 //     IRS Rev Proc 2025-32 (2026 inflation adjustments).
 //   - OBBBA senior bonus deduction:
@@ -22,6 +25,43 @@ export function calcBracketTax(income, brackets) {
 // Filing-status-specific brackets. The location seed data may override
 // these via `taxes.federalIncomeTax.brackets`, so callers that want
 // strict 2026 behaviour should NOT pass a `brackets` override.
+
+/** Citations for the 2026 federal bracket tables (MFJ + Single). */
+export var FED_BRACKETS_2026_SOURCES = [
+  {
+    title: 'IRS Rev. Proc. 2025-32 (2026 inflation adjustments)',
+    url: 'https://www.irs.gov/pub/irs-drop/rp-25-32.pdf',
+    accessed: '2026-04-20',
+  },
+  {
+    title: 'IRC § 1 — Tax imposed (statutory bracket structure)',
+    url: 'https://www.law.cornell.edu/uscode/text/26/1',
+    accessed: '2026-04-20',
+  },
+];
+
+/** Citations for the 2026 standard deduction (MFJ / Single / HoH). */
+export var FED_STD_DEDUCTION_2026_SOURCES = [
+  {
+    title: 'IRS Rev. Proc. 2025-32 § 3.17 (2026 standard deduction)',
+    url: 'https://www.irs.gov/pub/irs-drop/rp-25-32.pdf',
+    accessed: '2026-04-20',
+  },
+];
+
+/** Citations for the OBBBA senior bonus deduction ($6,000, age 65+, 2025–2028). */
+export var OBBBA_SENIOR_SOURCES = [
+  {
+    title: 'One Big Beautiful Bill Act § 13301 — Senior bonus deduction',
+    url: 'https://www.congress.gov/bill/119th-congress/house-bill/1/text',
+    accessed: '2026-04-20',
+  },
+  {
+    title: 'IRS summary: Additional senior deduction (IRC § 151(d)(5))',
+    url: 'https://www.irs.gov/newsroom/additional-deduction-for-taxpayers-aged-65-and-older',
+    accessed: '2026-04-20',
+  },
+];
 export var FED_STD_DEDUCTION_2026 = {
   mfj: 32200,
   single: 16100,

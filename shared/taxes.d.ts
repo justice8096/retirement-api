@@ -1,3 +1,9 @@
+export interface Source {
+  title: string;
+  url: string;
+  accessed?: string;
+}
+
 export interface TaxBracket {
   min: number;
   max: number | null;
@@ -59,6 +65,10 @@ export interface LocationWithTaxes {
   taxes: TaxConfig;
   [key: string]: unknown;
 }
+
+export const FED_BRACKETS_2026_SOURCES: Source[];
+export const FED_STD_DEDUCTION_2026_SOURCES: Source[];
+export const OBBBA_SENIOR_SOURCES: Source[];
 
 export function calcBracketTax(income: number, brackets: TaxBracket[]): number;
 
