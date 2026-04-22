@@ -32,6 +32,9 @@ describe('Financial routes', () => {
   let app: FastifyInstance;
 
   beforeEach(async () => {
+    // vitest 4: call history on module mocks no longer cleared by
+    // restoreAllMocks in afterEach. Clear explicitly to prevent bleed.
+    vi.clearAllMocks();
     app = Fastify({ logger: false });
     await app.register(financialRoutes, { prefix: '/api/me/financial' });
   });

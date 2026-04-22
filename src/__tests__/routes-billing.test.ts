@@ -22,8 +22,12 @@ const mockStripe = vi.hoisted(() => ({
   billingPortal: { sessions: { create: vi.fn() } },
 }));
 
+// Under vitest 4, `new Stripe(...)` invokes the mock implementation as a
+// constructor. Arrow functions aren't constructors (vitest 3 tolerated
+// this; 4 does not), so use a regular function whose explicit return
+// value becomes the constructed instance.
 vi.mock('stripe', () => ({
-  default: vi.fn(() => mockStripe),
+  default: vi.fn(function Stripe() { return mockStripe; }),
 }));
 
 vi.mock('../db/prisma.js', () => ({
