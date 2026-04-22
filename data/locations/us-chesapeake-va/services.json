@@ -261,6 +261,54 @@
         }
       ],
       "distanceMi": 1.2
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Wegmans",
+      "notes": "Mid-Atlantic mainstream supermarket chain.",
+      "sources": [
+        {
+          "title": "Wegmans",
+          "url": "https://www.wegmans.com/",
+          "accessed": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Aldi",
+      "notes": "Hard-discount supermarket chain — nationwide.",
+      "sources": [
+        {
+          "title": "Aldi",
+          "url": "https://www.aldi.us/",
+          "accessed": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "categoryId": "electronics",
+      "name": "Best Buy",
+      "notes": "Largest US consumer-electronics chain.",
+      "sources": [
+        {
+          "title": "Best Buy",
+          "url": "https://www.bestbuy.com/",
+          "accessed": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "categoryId": "hardware",
+      "name": "The Home Depot",
+      "notes": "Largest US home-improvement chain.",
+      "sources": [
+        {
+          "title": "The Home Depot",
+          "url": "https://www.homedepot.com/",
+          "accessed": "2026-04-22"
+        }
+      ]
     }
   ],
   "attractions": [
@@ -331,7 +379,7 @@
           "url": "https://www.cityofchesapeake.net/government/city-departments/parks-recreation-tourism/parks/great-bridge-battlefield.htm"
         }
       ],
-      "distanceMi": 5.0,
+      "distanceMi": 5,
       "estimatedCostUSD": 0
     },
     {

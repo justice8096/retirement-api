@@ -196,6 +196,42 @@
           "url": "https://www.arcr.cr/"
         }
       ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "PriceSmart",
+      "notes": "Membership warehouse club (similar to Costco). Bulk + low unit prices.",
+      "sources": [
+        {
+          "title": "PriceSmart",
+          "url": "https://www.pricesmart.com/site/cr/en/",
+          "accessed": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "categoryId": "electronics",
+      "name": "Monge",
+      "notes": "Electronics, appliances, furniture chain.",
+      "sources": [
+        {
+          "title": "Monge",
+          "url": "https://www.monge.cr/",
+          "accessed": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "categoryId": "hardware",
+      "name": "EPA",
+      "notes": "Home-improvement megastore.",
+      "sources": [
+        {
+          "title": "EPA",
+          "url": "https://www.epa.co.cr/",
+          "accessed": "2026-04-22"
+        }
+      ]
     }
   ],
   "attractions": [
