@@ -63,7 +63,9 @@ const preferencesPatchSchema = z.object({
   accessibility: accessibilityPrefsSchema.optional(),
   // All other top-level keys go through safeJsonRecord for safety without
   // losing flexibility (extends earlier contract).
-}).passthrough();
+  // zod 4: `.passthrough()` removed; use `.catchall(z.unknown())` for the
+  // same "allow unknown keys" behaviour.
+}).catchall(z.unknown());
 
 export default async function preferencesRoutes(app: FastifyInstance): Promise<void> {
   app.addHook('preHandler', requireAuth);

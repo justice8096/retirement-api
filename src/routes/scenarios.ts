@@ -43,7 +43,9 @@ const monteCarloV1Schema = z.object({
   }).strict(),
   runs: z.number().int().positive().optional(),
   years: z.number().int().positive().optional(),
-}).passthrough();
+  // zod 4: `.passthrough()` removed; `.catchall(z.unknown())` is the
+  // equivalent "allow unknown keys" behaviour.
+}).catchall(z.unknown());
 
 const scenarioDataSchema = z.union([monteCarloV1Schema, safeJsonRecord]);
 

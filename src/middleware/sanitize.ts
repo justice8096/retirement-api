@@ -47,8 +47,11 @@ function stripDangerousKeys(obj: unknown, depth = 0, counter = { n: 0 }): unknow
 /**
  * Zod schema for safe JSON record storage.
  * Accepts any object but strips prototype-polluting keys.
- * Use in place of z.record(z.unknown()) for JSONB fields.
+ * Use in place of z.record(z.string(), z.unknown()) for JSONB fields.
+ *
+ * zod 4 requires an explicit key schema for z.record; v3's single-arg
+ * form (z.record(valueSchema)) is removed.
  */
-export const safeJsonRecord = z.record(z.unknown()).transform((val) => {
+export const safeJsonRecord = z.record(z.string(), z.unknown()).transform((val) => {
   return stripDangerousKeys(val) as Record<string, unknown>;
 });

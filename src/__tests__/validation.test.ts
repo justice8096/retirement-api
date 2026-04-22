@@ -53,7 +53,8 @@ const petSchema = z.object({
 
 const scenarioSchema = z.object({
   name: z.string().min(1).max(200),
-  scenarioData: z.record(z.unknown()),
+  // zod 4 requires explicit key schema for z.record.
+  scenarioData: z.record(z.string(), z.unknown()),
 }).strict();
 
 // ─── Weight tier derivation (replicated from household.ts) ───────────────
