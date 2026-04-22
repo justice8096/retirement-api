@@ -1,0 +1,141 @@
+{
+  "city": "Rovinj / Istria",
+  "neighborhoods": [
+    {
+      "id": "rovinj-old-town",
+      "name": "Rovinj Old Town",
+      "description": "Venetian-style hilltop old town on a peninsula with cobblestone streets, art galleries, and fishing harbor",
+      "character": "Venetian historic, artistic, compact and walkable",
+      "housing": {
+        "avgRentOneBedroomEUR": 1209,
+        "avgRentTwoBedroomEUR": 1632,
+        "buyPricePerSqmEUR": 3640,
+        "predominantType": "Stone apartments in medieval and Venetian buildings"
+      },
+      "walkabilityScore": 85,
+      "transitScore": 88,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Rovinj. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Rovinj",
+          "url": "https://www.numbeo.com/cost-of-living/in/Rovinj"
+        },
+        {
+          "title": "Njuskalo",
+          "url": "https://www.njuskalo.hr/"
+        },
+        {
+          "title": "Index Oglasi",
+          "url": "https://www.index.hr/oglasi/"
+        }
+      ]
+    },
+    {
+      "id": "porec",
+      "name": "Porec",
+      "description": "Coastal town with UNESCO basilica, good infrastructure, and a mix of tourism and residential life",
+      "character": "Coastal residential, good infrastructure, seasonal tourism",
+      "housing": {
+        "avgRentOneBedroomEUR": 884,
+        "avgRentTwoBedroomEUR": 1193,
+        "buyPricePerSqmEUR": 2340,
+        "predominantType": "Modern apartments, houses, and vacation properties"
+      },
+      "walkabilityScore": 54,
+      "transitScore": 54,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Rovinj's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Rovinj",
+          "url": "https://www.numbeo.com/cost-of-living/in/Rovinj"
+        },
+        {
+          "title": "Njuskalo",
+          "url": "https://www.njuskalo.hr/"
+        },
+        {
+          "title": "Index Oglasi",
+          "url": "https://www.index.hr/oglasi/"
+        }
+      ]
+    },
+    {
+      "id": "pazin",
+      "name": "Pazin",
+      "description": "Inland Istrian capital with medieval castle, lower costs, and access to hilltop villages",
+      "character": "Inland small town, affordable, cultural heritage",
+      "housing": {
+        "avgRentOneBedroomEUR": 605,
+        "avgRentTwoBedroomEUR": 816,
+        "buyPricePerSqmEUR": 1430,
+        "predominantType": "Older houses, apartments, and stone village properties"
+      },
+      "walkabilityScore": 51,
+      "transitScore": 45,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Rovinj",
+          "url": "https://www.numbeo.com/cost-of-living/in/Rovinj"
+        },
+        {
+          "title": "Njuskalo",
+          "url": "https://www.njuskalo.hr/"
+        },
+        {
+          "title": "Index Oglasi",
+          "url": "https://www.index.hr/oglasi/"
+        }
+      ]
+    },
+    {
+      "id": "umag-novigrad",
+      "name": "Umag / Novigrad",
+      "description": "Northern coastal towns near the Slovenian border with international feel and tennis/sports tourism",
+      "character": "Coastal, international, sports and wine culture",
+      "housing": {
+        "avgRentOneBedroomEUR": 1023,
+        "avgRentTwoBedroomEUR": 1381,
+        "buyPricePerSqmEUR": 2990,
+        "predominantType": "Modern apartments, villas, and holiday properties"
+      },
+      "walkabilityScore": 61,
+      "transitScore": 66,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Rovinj",
+          "url": "https://www.numbeo.com/cost-of-living/in/Rovinj"
+        },
+        {
+          "title": "Njuskalo",
+          "url": "https://www.njuskalo.hr/"
+        },
+        {
+          "title": "Index Oglasi",
+          "url": "https://www.index.hr/oglasi/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "city": "Cleveland",
+  "neighborhoods": [
+    {
+      "id": "downtown-ohio-city",
+      "name": "Downtown / Ohio City",
+      "description": "Revitalized downtown with Rock Hall, West Side Market, and a growing craft brewery scene",
+      "character": "Revitalized, Rock Hall, West Side Market",
+      "housing": {
+        "avgRentOneBedroomUSD": 1940,
+        "avgRentTwoBedroomUSD": 2618,
+        "buyPricePerSqmUSD": 5488,
+        "predominantType": "Warehouse lofts, condos, and renovated buildings"
+      },
+      "walkabilityScore": 88,
+      "transitScore": 83,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Cleveland. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cleveland",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cleveland"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "lakewood",
+      "name": "Lakewood",
+      "description": "Dense inner-ring suburb with walkable downtown, independent shops, and Lake Erie access",
+      "character": "Walkable inner suburb, independent shops, lake access",
+      "housing": {
+        "avgRentOneBedroomUSD": 1417,
+        "avgRentTwoBedroomUSD": 1913,
+        "buyPricePerSqmUSD": 3528,
+        "predominantType": "Colonial homes, doubles, and older apartments"
+      },
+      "walkabilityScore": 55,
+      "transitScore": 60,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Cleveland's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cleveland",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cleveland"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "parma",
+      "name": "Parma",
+      "description": "Southern suburb with strong Eastern European heritage, affordable housing, and community events",
+      "character": "Eastern European heritage, affordable, community",
+      "housing": {
+        "avgRentOneBedroomUSD": 970,
+        "avgRentTwoBedroomUSD": 1309,
+        "buyPricePerSqmUSD": 2156,
+        "predominantType": "Cape Cods, ranch houses, and bungalows"
+      },
+      "walkabilityScore": 58,
+      "transitScore": 48,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cleveland",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cleveland"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "shaker-heights",
+      "name": "Shaker Heights",
+      "description": "Historic garden suburb with excellent schools, Shaker Square, and rapid transit to downtown",
+      "character": "Garden suburb, excellent schools, rapid transit",
+      "housing": {
+        "avgRentOneBedroomUSD": 1641,
+        "avgRentTwoBedroomUSD": 2216,
+        "buyPricePerSqmUSD": 4508,
+        "predominantType": "Tudor homes, Colonials, and estate properties"
+      },
+      "walkabilityScore": 64,
+      "transitScore": 53,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cleveland",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cleveland"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

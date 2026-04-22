@@ -1,0 +1,141 @@
+{
+  "city": "David",
+  "neighborhoods": [
+    {
+      "id": "david-centro",
+      "name": "David Centro",
+      "description": "Second-largest city in Panama with major shopping, medical facilities, and the main hub for Chiriqui province",
+      "character": "Provincial capital, shopping and medical hub, practical",
+      "housing": {
+        "avgRentOneBedroomUSD": 840,
+        "avgRentTwoBedroomUSD": 1092,
+        "buyPricePerSqmUSD": 2159,
+        "predominantType": "Houses and apartments near the commercial center"
+      },
+      "walkabilityScore": 88,
+      "transitScore": 72,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of David. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living David",
+          "url": "https://www.numbeo.com/cost-of-living/in/David"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "dolega",
+      "name": "Dolega",
+      "description": "Small town north of David with cooler elevation, farming community, and quiet residential life",
+      "character": "Small town, farming, cooler elevation, peaceful",
+      "housing": {
+        "avgRentOneBedroomUSD": 614,
+        "avgRentTwoBedroomUSD": 798,
+        "buyPricePerSqmUSD": 1388,
+        "predominantType": "Houses and rural properties"
+      },
+      "walkabilityScore": 58,
+      "transitScore": 45,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to David's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living David",
+          "url": "https://www.numbeo.com/cost-of-living/in/David"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "david-sur",
+      "name": "David Sur",
+      "description": "Southern residential areas with newer affordable developments and local markets",
+      "character": "Affordable residential, new construction, local markets",
+      "housing": {
+        "avgRentOneBedroomUSD": 420,
+        "avgRentTwoBedroomUSD": 546,
+        "buyPricePerSqmUSD": 848,
+        "predominantType": "New construction houses and affordable apartments"
+      },
+      "walkabilityScore": 42,
+      "transitScore": 33,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living David",
+          "url": "https://www.numbeo.com/cost-of-living/in/David"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "san-juan-vista-alegre",
+      "name": "San Juan / Vista Alegre",
+      "description": "Northern residential areas popular with expats who use David as a base for shopping and medical care",
+      "character": "Residential, expat-friendly base, mountain access",
+      "housing": {
+        "avgRentOneBedroomUSD": 711,
+        "avgRentTwoBedroomUSD": 924,
+        "buyPricePerSqmUSD": 1773,
+        "predominantType": "Modern houses and small gated developments"
+      },
+      "walkabilityScore": 64,
+      "transitScore": 70,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living David",
+          "url": "https://www.numbeo.com/cost-of-living/in/David"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    }
+  ]
+}

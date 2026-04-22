@@ -1,0 +1,141 @@
+{
+  "city": "Athens",
+  "neighborhoods": [
+    {
+      "id": "plaka-monastiraki",
+      "name": "Plaka / Monastiraki",
+      "description": "Historic neighborhoods at the foot of the Acropolis with neoclassical buildings, tavernas, and ancient ruins",
+      "character": "Ancient historic, tourist-heavy, walkable and vibrant",
+      "housing": {
+        "avgRentOneBedroomEUR": 1492,
+        "avgRentTwoBedroomEUR": 2015,
+        "buyPricePerSqmEUR": 4480,
+        "predominantType": "Apartments in neoclassical and older buildings"
+      },
+      "walkabilityScore": 94,
+      "transitScore": 82,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Athens. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Athens",
+          "url": "https://www.numbeo.com/cost-of-living/in/Athens"
+        },
+        {
+          "title": "Spitogatos",
+          "url": "https://www.spitogatos.gr/"
+        },
+        {
+          "title": "XE.gr",
+          "url": "https://www.xe.gr/"
+        }
+      ]
+    },
+    {
+      "id": "kifisia",
+      "name": "Kifisia",
+      "description": "Affluent northern suburb with tree-lined streets, boutiques, and a cooler microclimate",
+      "character": "Upscale leafy suburban, boutiques, cooler climate",
+      "housing": {
+        "avgRentOneBedroomEUR": 1091,
+        "avgRentTwoBedroomEUR": 1472,
+        "buyPricePerSqmEUR": 2880,
+        "predominantType": "Villas, neoclassical houses, and modern apartments"
+      },
+      "walkabilityScore": 65,
+      "transitScore": 48,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Athens's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Athens",
+          "url": "https://www.numbeo.com/cost-of-living/in/Athens"
+        },
+        {
+          "title": "Spitogatos",
+          "url": "https://www.spitogatos.gr/"
+        },
+        {
+          "title": "XE.gr",
+          "url": "https://www.xe.gr/"
+        }
+      ]
+    },
+    {
+      "id": "kypseli",
+      "name": "Kypseli",
+      "description": "Diverse central neighborhood being revitalized with new cafes, community gardens, and affordable housing",
+      "character": "Diverse urban, revitalizing, multicultural",
+      "housing": {
+        "avgRentOneBedroomEUR": 746,
+        "avgRentTwoBedroomEUR": 1007,
+        "buyPricePerSqmEUR": 1760,
+        "predominantType": "Apartments in modernist and older apartment blocks"
+      },
+      "walkabilityScore": 41,
+      "transitScore": 31,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Athens",
+          "url": "https://www.numbeo.com/cost-of-living/in/Athens"
+        },
+        {
+          "title": "Spitogatos",
+          "url": "https://www.spitogatos.gr/"
+        },
+        {
+          "title": "XE.gr",
+          "url": "https://www.xe.gr/"
+        }
+      ]
+    },
+    {
+      "id": "kolonaki",
+      "name": "Kolonaki",
+      "description": "Elegant central neighborhood on Lycabettus Hill slopes with galleries, designer shops, and embassies",
+      "character": "Elegant urban, gallery district, diplomatic quarter",
+      "housing": {
+        "avgRentOneBedroomEUR": 1263,
+        "avgRentTwoBedroomEUR": 1705,
+        "buyPricePerSqmEUR": 3680,
+        "predominantType": "Apartments in elegant mid-rise buildings"
+      },
+      "walkabilityScore": 63,
+      "transitScore": 52,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Athens",
+          "url": "https://www.numbeo.com/cost-of-living/in/Athens"
+        },
+        {
+          "title": "Spitogatos",
+          "url": "https://www.spitogatos.gr/"
+        },
+        {
+          "title": "XE.gr",
+          "url": "https://www.xe.gr/"
+        }
+      ]
+    }
+  ]
+}

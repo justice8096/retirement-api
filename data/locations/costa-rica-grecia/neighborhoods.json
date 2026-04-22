@@ -1,0 +1,141 @@
+{
+  "city": "Grecia",
+  "neighborhoods": [
+    {
+      "id": "grecia-centro",
+      "name": "Grecia Centro",
+      "description": "Known as the cleanest city in Latin America, centered on a unique red metal church and lively central market",
+      "character": "Small-town walkable, immaculate, strong Tico culture",
+      "housing": {
+        "avgRentOneBedroomUSD": 840,
+        "avgRentTwoBedroomUSD": 1092,
+        "buyPricePerSqmUSD": 2159,
+        "predominantType": "Houses and apartments near the central park"
+      },
+      "walkabilityScore": 94,
+      "transitScore": 87,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Grecia. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Grecia",
+          "url": "https://www.numbeo.com/cost-of-living/in/Grecia"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    },
+    {
+      "id": "san-isidro-de-grecia",
+      "name": "San Isidro de Grecia",
+      "description": "Adjacent community with rural character, coffee farms, and slightly cooler elevation",
+      "character": "Rural residential, coffee country, peaceful",
+      "housing": {
+        "avgRentOneBedroomUSD": 614,
+        "avgRentTwoBedroomUSD": 798,
+        "buyPricePerSqmUSD": 1388,
+        "predominantType": "Houses on agricultural lots and modest homes"
+      },
+      "walkabilityScore": 54,
+      "transitScore": 53,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Grecia's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Grecia",
+          "url": "https://www.numbeo.com/cost-of-living/in/Grecia"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    },
+    {
+      "id": "sarchi",
+      "name": "Sarchi",
+      "description": "Famous artisan town nearby known for painted ox carts, with affordable housing and traditional craft culture",
+      "character": "Artisan village, affordable, cultural heritage",
+      "housing": {
+        "avgRentOneBedroomUSD": 420,
+        "avgRentTwoBedroomUSD": 546,
+        "buyPricePerSqmUSD": 848,
+        "predominantType": "Traditional houses and small apartments"
+      },
+      "walkabilityScore": 42,
+      "transitScore": 30,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Grecia",
+          "url": "https://www.numbeo.com/cost-of-living/in/Grecia"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    },
+    {
+      "id": "la-garita-dulce-nombre",
+      "name": "La Garita / Dulce Nombre",
+      "description": "Residential area between Grecia and Alajuela with growing expat presence and easy airport access",
+      "character": "Semi-rural, convenient airport access, expat-friendly",
+      "housing": {
+        "avgRentOneBedroomUSD": 711,
+        "avgRentTwoBedroomUSD": 924,
+        "buyPricePerSqmUSD": 1773,
+        "predominantType": "Modern houses and small gated communities"
+      },
+      "walkabilityScore": 60,
+      "transitScore": 52,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Grecia",
+          "url": "https://www.numbeo.com/cost-of-living/in/Grecia"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "city": "Lecce / Puglia",
+  "neighborhoods": [
+    {
+      "id": "lecce-centro-storico",
+      "name": "Lecce Centro Storico",
+      "description": "Baroque masterpiece city with ornate limestone churches, Roman amphitheater, and vibrant passeggiata culture",
+      "character": "Baroque, cultural, walkable historic, passeggiata",
+      "housing": {
+        "avgRentOneBedroomEUR": 1162,
+        "avgRentTwoBedroomEUR": 1569,
+        "buyPricePerSqmEUR": 3500,
+        "predominantType": "Apartments in baroque palazzi and renovated buildings"
+      },
+      "walkabilityScore": 88,
+      "transitScore": 70,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Lecce. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lecce",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lecce"
+        },
+        {
+          "title": "Immobiliare.it",
+          "url": "https://www.immobiliare.it/"
+        },
+        {
+          "title": "Casa.it",
+          "url": "https://www.casa.it/"
+        }
+      ]
+    },
+    {
+      "id": "san-cataldo-torre-chianca",
+      "name": "San Cataldo / Torre Chianca",
+      "description": "Coastal areas east of Lecce with Adriatic beaches and summer beach club culture",
+      "character": "Beach suburban, summer social, Adriatic coast",
+      "housing": {
+        "avgRentOneBedroomEUR": 849,
+        "avgRentTwoBedroomEUR": 1147,
+        "buyPricePerSqmEUR": 2250,
+        "predominantType": "Holiday apartments, houses, and coastal properties"
+      },
+      "walkabilityScore": 67,
+      "transitScore": 41,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Lecce's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lecce",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lecce"
+        },
+        {
+          "title": "Immobiliare.it",
+          "url": "https://www.immobiliare.it/"
+        },
+        {
+          "title": "Casa.it",
+          "url": "https://www.casa.it/"
+        }
+      ]
+    },
+    {
+      "id": "maglie-otranto-area",
+      "name": "Maglie / Otranto Area",
+      "description": "Southern Salento towns with lower costs, dramatic coastline, and traditional Pugliese life",
+      "character": "Southern Salento, affordable, dramatic coast",
+      "housing": {
+        "avgRentOneBedroomEUR": 581,
+        "avgRentTwoBedroomEUR": 784,
+        "buyPricePerSqmEUR": 1375,
+        "predominantType": "Stone houses, trulli conversions, and apartments"
+      },
+      "walkabilityScore": 58,
+      "transitScore": 48,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lecce",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lecce"
+        },
+        {
+          "title": "Immobiliare.it",
+          "url": "https://www.immobiliare.it/"
+        },
+        {
+          "title": "Casa.it",
+          "url": "https://www.casa.it/"
+        }
+      ]
+    },
+    {
+      "id": "ostuni-alberobello",
+      "name": "Ostuni / Alberobello",
+      "description": "Famous white city and trulli village attracting international buyers with unique architecture",
+      "character": "White city, trulli architecture, international buyers",
+      "housing": {
+        "avgRentOneBedroomEUR": 983,
+        "avgRentTwoBedroomEUR": 1328,
+        "buyPricePerSqmEUR": 2875,
+        "predominantType": "Trulli, masseria conversions, and white-washed apartments"
+      },
+      "walkabilityScore": 67,
+      "transitScore": 58,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lecce",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lecce"
+        },
+        {
+          "title": "Immobiliare.it",
+          "url": "https://www.immobiliare.it/"
+        },
+        {
+          "title": "Casa.it",
+          "url": "https://www.casa.it/"
+        }
+      ]
+    }
+  ]
+}

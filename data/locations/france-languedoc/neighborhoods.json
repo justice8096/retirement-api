@@ -1,0 +1,141 @@
+{
+  "city": "Carcassonne / Languedoc",
+  "neighborhoods": [
+    {
+      "id": "bastide-saint-louis-carcassonne",
+      "name": "Bastide Saint-Louis (Carcassonne)",
+      "description": "The lower town grid of Carcassonne with tree-lined squares, markets, and shops below the medieval citadel",
+      "character": "Historic grid town, market culture, citadel views",
+      "housing": {
+        "avgRentOneBedroomEUR": 1398,
+        "avgRentTwoBedroomEUR": 1887,
+        "buyPricePerSqmEUR": 4200,
+        "predominantType": "Apartments in 18th-century townhouses and newer buildings"
+      },
+      "walkabilityScore": 92,
+      "transitScore": 80,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Montpellier. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Montpellier",
+          "url": "https://www.numbeo.com/cost-of-living/in/Montpellier"
+        },
+        {
+          "title": "SeLoger",
+          "url": "https://www.seloger.com/"
+        },
+        {
+          "title": "Bien'ici",
+          "url": "https://www.bienici.com/"
+        }
+      ]
+    },
+    {
+      "id": "narbonne",
+      "name": "Narbonne",
+      "description": "Roman-founded coastal city with a vibrant covered market, canal heritage, and beach access",
+      "character": "Roman heritage, coastal market town, Mediterranean",
+      "housing": {
+        "avgRentOneBedroomEUR": 1021,
+        "avgRentTwoBedroomEUR": 1379,
+        "buyPricePerSqmEUR": 2700,
+        "predominantType": "Apartments, townhouses, and Mediterranean-style villas"
+      },
+      "walkabilityScore": 64,
+      "transitScore": 55,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Montpellier's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Montpellier",
+          "url": "https://www.numbeo.com/cost-of-living/in/Montpellier"
+        },
+        {
+          "title": "SeLoger",
+          "url": "https://www.seloger.com/"
+        },
+        {
+          "title": "Bien'ici",
+          "url": "https://www.bienici.com/"
+        }
+      ]
+    },
+    {
+      "id": "limoux",
+      "name": "Limoux",
+      "description": "Small town south of Carcassonne famous for sparkling wine and carnival, with affordable housing",
+      "character": "Small wine town, carnival traditions, affordable",
+      "housing": {
+        "avgRentOneBedroomEUR": 699,
+        "avgRentTwoBedroomEUR": 943,
+        "buyPricePerSqmEUR": 1650,
+        "predominantType": "Stone houses and affordable apartments"
+      },
+      "walkabilityScore": 49,
+      "transitScore": 35,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Montpellier",
+          "url": "https://www.numbeo.com/cost-of-living/in/Montpellier"
+        },
+        {
+          "title": "SeLoger",
+          "url": "https://www.seloger.com/"
+        },
+        {
+          "title": "Bien'ici",
+          "url": "https://www.bienici.com/"
+        }
+      ]
+    },
+    {
+      "id": "beziers-canal-du-midi-area",
+      "name": "Beziers / Canal du Midi Area",
+      "description": "Revitalizing city on the Canal du Midi with affordable property, growing expat scene, and wine culture",
+      "character": "Revitalizing, canal lifestyle, wine culture",
+      "housing": {
+        "avgRentOneBedroomEUR": 1183,
+        "avgRentTwoBedroomEUR": 1596,
+        "buyPricePerSqmEUR": 3450,
+        "predominantType": "Renovated apartments, townhouses, and canal-side properties"
+      },
+      "walkabilityScore": 77,
+      "transitScore": 67,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Montpellier",
+          "url": "https://www.numbeo.com/cost-of-living/in/Montpellier"
+        },
+        {
+          "title": "SeLoger",
+          "url": "https://www.seloger.com/"
+        },
+        {
+          "title": "Bien'ici",
+          "url": "https://www.bienici.com/"
+        }
+      ]
+    }
+  ]
+}

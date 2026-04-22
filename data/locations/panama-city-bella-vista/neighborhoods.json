@@ -1,0 +1,141 @@
+{
+  "city": "Panama City - Bella Vista",
+  "neighborhoods": [
+    {
+      "id": "bella-vista-centro",
+      "name": "Bella Vista Centro",
+      "description": "Dense mixed-use area with restaurants, nightlife on Calle Uruguay, and high-rise residential towers",
+      "character": "Dense urban, nightlife, restaurant district",
+      "housing": {
+        "avgRentOneBedroomUSD": 1355,
+        "avgRentTwoBedroomUSD": 1761,
+        "buyPricePerSqmUSD": 3616,
+        "predominantType": "High-rise condos and mid-rise apartments"
+      },
+      "walkabilityScore": 87,
+      "transitScore": 78,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Panama City. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "san-francisco",
+      "name": "San Francisco",
+      "description": "Adjacent neighborhood with parks, supermarkets, and a more residential atmosphere",
+      "character": "Urban residential, parks, practical amenities",
+      "housing": {
+        "avgRentOneBedroomUSD": 990,
+        "avgRentTwoBedroomUSD": 1287,
+        "buyPricePerSqmUSD": 2325,
+        "predominantType": "Mid-rise and high-rise apartments"
+      },
+      "walkabilityScore": 59,
+      "transitScore": 45,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Panama City's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "parque-lefevre",
+      "name": "Parque Lefevre",
+      "description": "Eastern residential area with lower costs, local markets, and Metro access",
+      "character": "Working-class residential, Metro access, affordable",
+      "housing": {
+        "avgRentOneBedroomUSD": 677,
+        "avgRentTwoBedroomUSD": 880,
+        "buyPricePerSqmUSD": 1421,
+        "predominantType": "Apartments and modest houses"
+      },
+      "walkabilityScore": 51,
+      "transitScore": 38,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "calle-uruguay-via-argentina",
+      "name": "Calle Uruguay / Via Argentina",
+      "description": "Restaurant rows and commercial streets popular with expats for dining and social life",
+      "character": "Restaurant row, expat social, cosmopolitan",
+      "housing": {
+        "avgRentOneBedroomUSD": 1146,
+        "avgRentTwoBedroomUSD": 1490,
+        "buyPricePerSqmUSD": 2970,
+        "predominantType": "High-rise condos and modern apartments"
+      },
+      "walkabilityScore": 80,
+      "transitScore": 59,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "city": "Zagreb",
+  "neighborhoods": [
+    {
+      "id": "gornji-grad-upper-town",
+      "name": "Gornji Grad (Upper Town)",
+      "description": "Medieval hilltop core with St. Mark Church, government buildings, and cobblestone streets",
+      "character": "Historic hilltop, government quarter, cultural hub",
+      "housing": {
+        "avgRentOneBedroomEUR": 1162,
+        "avgRentTwoBedroomEUR": 1569,
+        "buyPricePerSqmEUR": 3500,
+        "predominantType": "Renovated apartments in historic buildings"
+      },
+      "walkabilityScore": 94,
+      "transitScore": 72,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Zagreb. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Zagreb",
+          "url": "https://www.numbeo.com/cost-of-living/in/Zagreb"
+        },
+        {
+          "title": "Njuskalo",
+          "url": "https://www.njuskalo.hr/"
+        },
+        {
+          "title": "Index Oglasi",
+          "url": "https://www.index.hr/oglasi/"
+        }
+      ]
+    },
+    {
+      "id": "maksimir",
+      "name": "Maksimir",
+      "description": "Eastern residential area near the large Maksimir Park and zoo with green spaces and family homes",
+      "character": "Green residential, park-adjacent, family-friendly",
+      "housing": {
+        "avgRentOneBedroomEUR": 849,
+        "avgRentTwoBedroomEUR": 1147,
+        "buyPricePerSqmEUR": 2250,
+        "predominantType": "Houses, older apartments, and newer developments"
+      },
+      "walkabilityScore": 65,
+      "transitScore": 51,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Zagreb's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Zagreb",
+          "url": "https://www.numbeo.com/cost-of-living/in/Zagreb"
+        },
+        {
+          "title": "Njuskalo",
+          "url": "https://www.njuskalo.hr/"
+        },
+        {
+          "title": "Index Oglasi",
+          "url": "https://www.index.hr/oglasi/"
+        }
+      ]
+    },
+    {
+      "id": "novi-zagreb-new-zagreb",
+      "name": "Novi Zagreb (New Zagreb)",
+      "description": "Southern district across the Sava river with socialist-era housing and modern shopping centers",
+      "character": "Modern suburban, affordable, improving infrastructure",
+      "housing": {
+        "avgRentOneBedroomEUR": 581,
+        "avgRentTwoBedroomEUR": 784,
+        "buyPricePerSqmEUR": 1375,
+        "predominantType": "Socialist-era apartment blocks and new-build condos"
+      },
+      "walkabilityScore": 48,
+      "transitScore": 43,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Zagreb",
+          "url": "https://www.numbeo.com/cost-of-living/in/Zagreb"
+        },
+        {
+          "title": "Njuskalo",
+          "url": "https://www.njuskalo.hr/"
+        },
+        {
+          "title": "Index Oglasi",
+          "url": "https://www.index.hr/oglasi/"
+        }
+      ]
+    },
+    {
+      "id": "donji-grad-lower-town",
+      "name": "Donji Grad (Lower Town)",
+      "description": "Grand 19th-century planned district with green squares, Art Nouveau buildings, and the main train station",
+      "character": "Elegant urban, cultural institutions, cafe culture",
+      "housing": {
+        "avgRentOneBedroomEUR": 983,
+        "avgRentTwoBedroomEUR": 1328,
+        "buyPricePerSqmEUR": 2875,
+        "predominantType": "Apartments in Austro-Hungarian and Art Nouveau buildings"
+      },
+      "walkabilityScore": 60,
+      "transitScore": 69,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Zagreb",
+          "url": "https://www.numbeo.com/cost-of-living/in/Zagreb"
+        },
+        {
+          "title": "Njuskalo",
+          "url": "https://www.njuskalo.hr/"
+        },
+        {
+          "title": "Index Oglasi",
+          "url": "https://www.index.hr/oglasi/"
+        }
+      ]
+    }
+  ]
+}

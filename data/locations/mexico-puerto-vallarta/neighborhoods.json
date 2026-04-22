@@ -1,0 +1,141 @@
+{
+  "city": "Puerto Vallarta",
+  "neighborhoods": [
+    {
+      "id": "centro-malecon",
+      "name": "Centro / Malecon",
+      "description": "Classic Mexican beach town center with the famous malecon boardwalk, cathedral, and vibrant art scene",
+      "character": "Malecon beach town, art scene, traditional charm",
+      "housing": {
+        "avgRentOneBedroomUSD": 1114,
+        "avgRentTwoBedroomUSD": 1448,
+        "buyPricePerSqmUSD": 2936,
+        "predominantType": "Condos and apartments near the malecon"
+      },
+      "walkabilityScore": 89,
+      "transitScore": 83,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Puerto Vallarta. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Puerto Vallarta",
+          "url": "https://www.numbeo.com/cost-of-living/in/Puerto-Vallarta"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    },
+    {
+      "id": "marina-vallarta",
+      "name": "Marina Vallarta",
+      "description": "Planned marina community with golf course, shops, and protected harbor",
+      "character": "Marina resort, golf, planned community, secure",
+      "housing": {
+        "avgRentOneBedroomUSD": 814,
+        "avgRentTwoBedroomUSD": 1058,
+        "buyPricePerSqmUSD": 1887,
+        "predominantType": "Marina condos, townhouses, and golf villas"
+      },
+      "walkabilityScore": 64,
+      "transitScore": 47,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Puerto Vallarta's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Puerto Vallarta",
+          "url": "https://www.numbeo.com/cost-of-living/in/Puerto-Vallarta"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    },
+    {
+      "id": "pitillal-ixtapa",
+      "name": "Pitillal / Ixtapa",
+      "description": "Inland neighborhoods with authentic Mexican life, local markets, and significantly lower costs",
+      "character": "Local Mexican, affordable, markets, authentic",
+      "housing": {
+        "avgRentOneBedroomUSD": 557,
+        "avgRentTwoBedroomUSD": 724,
+        "buyPricePerSqmUSD": 1153,
+        "predominantType": "Houses and apartments at local Mexican prices"
+      },
+      "walkabilityScore": 41,
+      "transitScore": 43,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Puerto Vallarta",
+          "url": "https://www.numbeo.com/cost-of-living/in/Puerto-Vallarta"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    },
+    {
+      "id": "zona-romantica-south-shore",
+      "name": "Zona Romantica / South Shore",
+      "description": "Vibrant, walkable area south of the river with the largest expat community, LGBTQ-friendly, and restaurants",
+      "character": "Vibrant expat hub, LGBTQ-friendly, dining capital",
+      "housing": {
+        "avgRentOneBedroomUSD": 943,
+        "avgRentTwoBedroomUSD": 1226,
+        "buyPricePerSqmUSD": 2412,
+        "predominantType": "Condos and apartments in mid-rise buildings"
+      },
+      "walkabilityScore": 76,
+      "transitScore": 55,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Puerto Vallarta",
+          "url": "https://www.numbeo.com/cost-of-living/in/Puerto-Vallarta"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    }
+  ]
+}

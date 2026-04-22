@@ -1,0 +1,141 @@
+{
+  "city": "Malaga / Costa del Sol",
+  "neighborhoods": [
+    {
+      "id": "malaga-centro-historico",
+      "name": "Malaga Centro Historico",
+      "description": "Revitalized city center with Picasso Museum, Roman theater, Moorish Alcazaba, and pedestrian Larios Street",
+      "character": "Revitalized cultural, Picasso, Moorish heritage",
+      "housing": {
+        "avgRentOneBedroomEUR": 1869,
+        "avgRentTwoBedroomEUR": 2524,
+        "buyPricePerSqmEUR": 5600,
+        "predominantType": "Apartments in renovated historic and modern buildings"
+      },
+      "walkabilityScore": 87,
+      "transitScore": 86,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Málaga. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Málaga",
+          "url": "https://www.numbeo.com/cost-of-living/in/M%C3%A1laga"
+        },
+        {
+          "title": "Idealista",
+          "url": "https://www.idealista.com/"
+        },
+        {
+          "title": "Fotocasa",
+          "url": "https://www.fotocasa.es/"
+        }
+      ]
+    },
+    {
+      "id": "torremolinos-benalmadena",
+      "name": "Torremolinos / Benalmadena",
+      "description": "Western coastal towns with extensive beaches, marina, and established tourism infrastructure",
+      "character": "Beach resort, marina, established tourism",
+      "housing": {
+        "avgRentOneBedroomEUR": 1366,
+        "avgRentTwoBedroomEUR": 1844,
+        "buyPricePerSqmEUR": 3600,
+        "predominantType": "Apartments, beach condos, and urbanization properties"
+      },
+      "walkabilityScore": 68,
+      "transitScore": 51,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Málaga's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Málaga",
+          "url": "https://www.numbeo.com/cost-of-living/in/M%C3%A1laga"
+        },
+        {
+          "title": "Idealista",
+          "url": "https://www.idealista.com/"
+        },
+        {
+          "title": "Fotocasa",
+          "url": "https://www.fotocasa.es/"
+        }
+      ]
+    },
+    {
+      "id": "fuengirola",
+      "name": "Fuengirola",
+      "description": "Large expat town with one of the longest promenades in Spain and established international community",
+      "character": "Expat town, long promenade, international services",
+      "housing": {
+        "avgRentOneBedroomEUR": 935,
+        "avgRentTwoBedroomEUR": 1262,
+        "buyPricePerSqmEUR": 2200,
+        "predominantType": "Apartments and urbanization properties"
+      },
+      "walkabilityScore": 46,
+      "transitScore": 41,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Málaga",
+          "url": "https://www.numbeo.com/cost-of-living/in/M%C3%A1laga"
+        },
+        {
+          "title": "Idealista",
+          "url": "https://www.idealista.com/"
+        },
+        {
+          "title": "Fotocasa",
+          "url": "https://www.fotocasa.es/"
+        }
+      ]
+    },
+    {
+      "id": "marbella-nueva-andalucia",
+      "name": "Marbella / Nueva Andalucia",
+      "description": "Luxury resort area with Puerto Banus marina, golf courses, and celebrity associations",
+      "character": "Luxury resort, Puerto Banus, golf and glamour",
+      "housing": {
+        "avgRentOneBedroomEUR": 1582,
+        "avgRentTwoBedroomEUR": 2135,
+        "buyPricePerSqmEUR": 4600,
+        "predominantType": "Luxury villas, modern apartments, and resort properties"
+      },
+      "walkabilityScore": 60,
+      "transitScore": 63,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Málaga",
+          "url": "https://www.numbeo.com/cost-of-living/in/M%C3%A1laga"
+        },
+        {
+          "title": "Idealista",
+          "url": "https://www.idealista.com/"
+        },
+        {
+          "title": "Fotocasa",
+          "url": "https://www.fotocasa.es/"
+        }
+      ]
+    }
+  ]
+}

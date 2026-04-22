@@ -1,0 +1,141 @@
+{
+  "city": "Lake Como / Lake Region",
+  "neighborhoods": [
+    {
+      "id": "como-centro",
+      "name": "Como Centro",
+      "description": "Elegant lakeside city with a grand Gothic cathedral, silk heritage, and stunning lakefront promenade",
+      "character": "Elegant lakeside, silk heritage, cathedral city",
+      "housing": {
+        "avgRentOneBedroomEUR": 1775,
+        "avgRentTwoBedroomEUR": 2396,
+        "buyPricePerSqmEUR": 5320,
+        "predominantType": "Apartments in liberty-style and historic buildings"
+      },
+      "walkabilityScore": 86,
+      "transitScore": 89,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Stresa. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Stresa",
+          "url": "https://www.numbeo.com/cost-of-living/in/Stresa"
+        },
+        {
+          "title": "Immobiliare.it",
+          "url": "https://www.immobiliare.it/"
+        },
+        {
+          "title": "Casa.it",
+          "url": "https://www.casa.it/"
+        }
+      ]
+    },
+    {
+      "id": "lecco",
+      "name": "Lecco",
+      "description": "Eastern lake city in a more dramatic mountain setting with Manzoni literary heritage and outdoor culture",
+      "character": "Mountain lakeside, literary heritage, outdoor recreation",
+      "housing": {
+        "avgRentOneBedroomEUR": 1297,
+        "avgRentTwoBedroomEUR": 1751,
+        "buyPricePerSqmEUR": 3420,
+        "predominantType": "Apartments and houses with lake and mountain views"
+      },
+      "walkabilityScore": 57,
+      "transitScore": 59,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Stresa's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Stresa",
+          "url": "https://www.numbeo.com/cost-of-living/in/Stresa"
+        },
+        {
+          "title": "Immobiliare.it",
+          "url": "https://www.immobiliare.it/"
+        },
+        {
+          "title": "Casa.it",
+          "url": "https://www.casa.it/"
+        }
+      ]
+    },
+    {
+      "id": "erba-cantu",
+      "name": "Erba / Cantu",
+      "description": "Inland towns south of the lake with lower costs, furniture industry heritage, and train connections",
+      "character": "Inland towns, affordable, industrial heritage, trains",
+      "housing": {
+        "avgRentOneBedroomEUR": 887,
+        "avgRentTwoBedroomEUR": 1198,
+        "buyPricePerSqmEUR": 2090,
+        "predominantType": "Apartments and houses at lower lake-area prices"
+      },
+      "walkabilityScore": 54,
+      "transitScore": 33,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Stresa",
+          "url": "https://www.numbeo.com/cost-of-living/in/Stresa"
+        },
+        {
+          "title": "Immobiliare.it",
+          "url": "https://www.immobiliare.it/"
+        },
+        {
+          "title": "Casa.it",
+          "url": "https://www.casa.it/"
+        }
+      ]
+    },
+    {
+      "id": "bellagio-menaggio",
+      "name": "Bellagio / Menaggio",
+      "description": "Classic lakeside villages on the central fork with international residents, villas, and celebrity associations",
+      "character": "Iconic lakeside, international elite, villa culture",
+      "housing": {
+        "avgRentOneBedroomEUR": 1502,
+        "avgRentTwoBedroomEUR": 2027,
+        "buyPricePerSqmEUR": 4370,
+        "predominantType": "Apartments in villas, lakeside houses, and historic properties"
+      },
+      "walkabilityScore": 79,
+      "transitScore": 58,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Stresa",
+          "url": "https://www.numbeo.com/cost-of-living/in/Stresa"
+        },
+        {
+          "title": "Immobiliare.it",
+          "url": "https://www.immobiliare.it/"
+        },
+        {
+          "title": "Casa.it",
+          "url": "https://www.casa.it/"
+        }
+      ]
+    }
+  ]
+}

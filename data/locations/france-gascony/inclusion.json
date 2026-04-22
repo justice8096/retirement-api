@@ -1,0 +1,116 @@
+{
+  "country": "France",
+  "region": "Gascony",
+  "overallInclusionScore": 6,
+  "lastUpdated": "2026-03-24",
+  "categories": {
+    "racial": {
+      "score": 6,
+      "summary": "France has strong anti-discrimination laws enforced by the Defenseur des droits, but documented challenges persist with racial profiling and housing discrimination. Gascony reflects broader French patterns — legal protections are robust but social attitudes vary, particularly outside major cities. ECRI reports have flagged France for ethnic profiling by police.",
+      "legalProtections": "EU Race Equality Directive 2000/43/EC, French Law 2008-496 prohibiting discrimination, Defenseur des droits enforcement body, French Constitution equality provisions",
+      "positiveFactors": [
+        "Strong legal framework with active enforcement body (Defenseur des droits)",
+        "EU-level anti-discrimination directives provide additional protections",
+        "France collects discrimination complaint data for accountability"
+      ],
+      "riskFactors": [
+        "Police racial profiling documented by ECRI in 2022 and 2025 reports",
+        "Housing discrimination in rental market — testing shows significant callback gaps",
+        "France does not collect ethnic census data, making systemic issues harder to track"
+      ],
+      "sources": [
+        {
+          "title": "ECRI Report on France (6th cycle)",
+          "url": "https://www.coe.int/en/web/european-commission-against-racism-and-intolerance/france",
+          "type": "official"
+        },
+        {
+          "title": "Defenseur des droits Annual Report",
+          "url": "https://www.defenseurdesdroits.fr/en",
+          "type": "official"
+        }
+      ]
+    },
+    "religious": {
+      "score": 6,
+      "summary": "France's strict laicite (secularism) policy can feel restrictive to visibly religious individuals. Laws banning conspicuous religious symbols in schools and face coverings affect daily life. Gascony is historically Catholic but largely secular today. Antisemitic and anti-Muslim incidents are tracked nationally.",
+      "legalProtections": "1905 Separation of Church and State law, religious discrimination prohibited under Penal Code Article 225-1, EU Framework Decision on racism and xenophobia",
+      "positiveFactors": [
+        "Freedom of worship fully protected under law",
+        "Government tracks and publishes religious hate crime statistics",
+        "DILCRAH coordinates anti-hate efforts across agencies"
+      ],
+      "riskFactors": [
+        "Laicite restrictions on religious symbols in public institutions",
+        "Rising antisemitic incidents reported by SPCJ",
+        "Anti-Muslim sentiment in political discourse, particularly around elections"
+      ],
+      "sources": [
+        {
+          "title": "US State Department — International Religious Freedom Report: France",
+          "url": "https://www.state.gov/reports/2023-report-on-international-religious-freedom/france/",
+          "type": "official"
+        },
+        {
+          "title": "DILCRAH National Plan Against Racism",
+          "url": "https://www.dilcrah.gouv.fr/",
+          "type": "official"
+        }
+      ]
+    },
+    "countryOfOrigin": {
+      "score": 6,
+      "summary": "Americans and Western European expats are generally well-received in Gascony. France has a long immigration history with 10% foreign-born population. However, non-EU nationals face significant bureaucracy for residence permits and administrative processes are conducted exclusively in French.",
+      "legalProtections": "EU anti-discrimination directives, French labor code protections, long-stay visa holder rights under CESEDA immigration code",
+      "positiveFactors": [
+        "Positive attitudes toward American culture and tourism",
+        "Long tradition of immigration — 10% of population is foreign-born",
+        "Strong consular support from US Embassy and regional consulates"
+      ],
+      "riskFactors": [
+        "Administrative bureaucracy for non-EU nationals is significant and French-only",
+        "Political rhetoric around immigration has intensified across party lines",
+        "Prefecture appointment system for residence permits is notoriously backlogged"
+      ],
+      "sources": [
+        {
+          "title": "OECD International Migration Outlook — France",
+          "url": "https://www.oecd.org/en/publications/international-migration-outlook_1999124x.html",
+          "type": "research"
+        },
+        {
+          "title": "France Visas Official Portal",
+          "url": "https://france-visas.gouv.fr/en/web/france-visas/",
+          "type": "official"
+        }
+      ]
+    },
+    "language": {
+      "score": 5,
+      "summary": "French language ability is strongly expected in daily life in Gascony. Non-French speakers regularly encounter impatience or exclusion outside tourist areas. France ranks moderate on the EF English Proficiency Index. Learning conversational French is essentially required for meaningful integration.",
+      "legalProtections": "French is the sole official language (Article 2 of Constitution). Toubon Law (1994) mandates French in government, advertising, and workplace. No obligation to provide services in other languages.",
+      "positiveFactors": [
+        "Alliance Francaise and free OFII integration courses available",
+        "Younger generation has significantly better English skills",
+        "Tourist and university areas accommodate English speakers"
+      ],
+      "riskFactors": [
+        "Strong cultural expectation to speak French — seen as a matter of respect",
+        "All government services, healthcare, and legal proceedings in French only",
+        "Social isolation risk for non-French speakers in daily life"
+      ],
+      "sources": [
+        {
+          "title": "Toubon Law (1994) — French Language Protection",
+          "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000349929",
+          "type": "official"
+        },
+        {
+          "title": "EF English Proficiency Index — France",
+          "url": "https://www.ef.com/wwen/epi/regions/europe/france/",
+          "type": "index"
+        }
+      ]
+    }
+  }
+}

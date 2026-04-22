@@ -1,0 +1,141 @@
+{
+  "city": "Wexford",
+  "neighborhoods": [
+    {
+      "id": "wexford-town-centre",
+      "name": "Wexford Town Centre",
+      "description": "Medieval port town with narrow Viking-founded streets, the National Opera House, and bustling quayside",
+      "character": "Medieval port, opera culture, compact walkable",
+      "housing": {
+        "avgRentOneBedroomEUR": 1586,
+        "avgRentTwoBedroomEUR": 2141,
+        "buyPricePerSqmEUR": 4760,
+        "predominantType": "Townhouse apartments and renovated historic buildings"
+      },
+      "walkabilityScore": 90,
+      "transitScore": 82,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Wexford. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Wexford",
+          "url": "https://www.numbeo.com/cost-of-living/in/Wexford"
+        },
+        {
+          "title": "Daft.ie",
+          "url": "https://www.daft.ie/"
+        },
+        {
+          "title": "MyHome.ie",
+          "url": "https://www.myhome.ie/"
+        }
+      ]
+    },
+    {
+      "id": "rosslare-rosslare-harbour",
+      "name": "Rosslare / Rosslare Harbour",
+      "description": "Coastal area with blue flag beaches, ferry port to Wales and France, and holiday homes",
+      "character": "Coastal, ferry port, beach lifestyle",
+      "housing": {
+        "avgRentOneBedroomEUR": 1159,
+        "avgRentTwoBedroomEUR": 1565,
+        "buyPricePerSqmEUR": 3060,
+        "predominantType": "Holiday homes, bungalows, and coastal apartments"
+      },
+      "walkabilityScore": 56,
+      "transitScore": 46,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Wexford's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Wexford",
+          "url": "https://www.numbeo.com/cost-of-living/in/Wexford"
+        },
+        {
+          "title": "Daft.ie",
+          "url": "https://www.daft.ie/"
+        },
+        {
+          "title": "MyHome.ie",
+          "url": "https://www.myhome.ie/"
+        }
+      ]
+    },
+    {
+      "id": "enniscorthy",
+      "name": "Enniscorthy",
+      "description": "Inland market town on the River Slaney with Norman castle, affordable housing, and 1798 heritage",
+      "character": "Market town, riverside, historical, affordable",
+      "housing": {
+        "avgRentOneBedroomEUR": 793,
+        "avgRentTwoBedroomEUR": 1071,
+        "buyPricePerSqmEUR": 1870,
+        "predominantType": "Town houses and affordable apartments"
+      },
+      "walkabilityScore": 47,
+      "transitScore": 39,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Wexford",
+          "url": "https://www.numbeo.com/cost-of-living/in/Wexford"
+        },
+        {
+          "title": "Daft.ie",
+          "url": "https://www.daft.ie/"
+        },
+        {
+          "title": "MyHome.ie",
+          "url": "https://www.myhome.ie/"
+        }
+      ]
+    },
+    {
+      "id": "gorey",
+      "name": "Gorey",
+      "description": "Thriving north Wexford town with excellent amenities, new housing estates, and Courtown beach nearby",
+      "character": "Growing town, excellent amenities, beach access",
+      "housing": {
+        "avgRentOneBedroomEUR": 1342,
+        "avgRentTwoBedroomEUR": 1812,
+        "buyPricePerSqmEUR": 3910,
+        "predominantType": "Modern estate houses and newer apartments"
+      },
+      "walkabilityScore": 76,
+      "transitScore": 67,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Wexford",
+          "url": "https://www.numbeo.com/cost-of-living/in/Wexford"
+        },
+        {
+          "title": "Daft.ie",
+          "url": "https://www.daft.ie/"
+        },
+        {
+          "title": "MyHome.ie",
+          "url": "https://www.myhome.ie/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "city": "Paphos",
+  "neighborhoods": [
+    {
+      "id": "kato-paphos",
+      "name": "Kato Paphos",
+      "description": "Lower town area near the harbor with UNESCO archaeological park, tavernas, and tourist services",
+      "character": "Historic coastal, archaeological sites, walkable",
+      "housing": {
+        "avgRentOneBedroomEUR": 1351,
+        "avgRentTwoBedroomEUR": 1823,
+        "buyPricePerSqmEUR": 4060,
+        "predominantType": "Apartments near the harbor and tourist area"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 77,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Paphos. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Paphos",
+          "url": "https://www.numbeo.com/cost-of-living/in/Paphos"
+        },
+        {
+          "title": "Bazaraki",
+          "url": "https://www.bazaraki.com/"
+        },
+        {
+          "title": "Cyprus Property",
+          "url": "https://www.cyprusproperties.com/"
+        }
+      ]
+    },
+    {
+      "id": "chloraka",
+      "name": "Chloraka",
+      "description": "Coastal village north of Paphos popular with British expats, with supermarkets and beach access",
+      "character": "Expat suburban, British community, easy beach access",
+      "housing": {
+        "avgRentOneBedroomEUR": 987,
+        "avgRentTwoBedroomEUR": 1333,
+        "buyPricePerSqmEUR": 2610,
+        "predominantType": "Villas, townhouses, and apartment complexes"
+      },
+      "walkabilityScore": 65,
+      "transitScore": 52,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Paphos's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Paphos",
+          "url": "https://www.numbeo.com/cost-of-living/in/Paphos"
+        },
+        {
+          "title": "Bazaraki",
+          "url": "https://www.bazaraki.com/"
+        },
+        {
+          "title": "Cyprus Property",
+          "url": "https://www.cyprusproperties.com/"
+        }
+      ]
+    },
+    {
+      "id": "pano-paphos-upper-town",
+      "name": "Pano Paphos (Upper Town)",
+      "description": "Inland upper town with the municipal market, local shops, and more affordable housing",
+      "character": "Local town center, affordable, Cypriot character",
+      "housing": {
+        "avgRentOneBedroomEUR": 675,
+        "avgRentTwoBedroomEUR": 912,
+        "buyPricePerSqmEUR": 1595,
+        "predominantType": "Older apartments and traditional houses"
+      },
+      "walkabilityScore": 57,
+      "transitScore": 46,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Paphos",
+          "url": "https://www.numbeo.com/cost-of-living/in/Paphos"
+        },
+        {
+          "title": "Bazaraki",
+          "url": "https://www.bazaraki.com/"
+        },
+        {
+          "title": "Cyprus Property",
+          "url": "https://www.cyprusproperties.com/"
+        }
+      ]
+    },
+    {
+      "id": "universal-kings-avenue-area",
+      "name": "Universal / Kings Avenue area",
+      "description": "Modern commercial district near the mall with new developments and international amenities",
+      "character": "Modern commercial, international services, convenient",
+      "housing": {
+        "avgRentOneBedroomEUR": 1143,
+        "avgRentTwoBedroomEUR": 1543,
+        "buyPricePerSqmEUR": 3335,
+        "predominantType": "New-build apartments and modern residential complexes"
+      },
+      "walkabilityScore": 61,
+      "transitScore": 68,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Paphos",
+          "url": "https://www.numbeo.com/cost-of-living/in/Paphos"
+        },
+        {
+          "title": "Bazaraki",
+          "url": "https://www.bazaraki.com/"
+        },
+        {
+          "title": "Cyprus Property",
+          "url": "https://www.cyprusproperties.com/"
+        }
+      ]
+    }
+  ]
+}

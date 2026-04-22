@@ -1,0 +1,141 @@
+{
+  "city": "Cuenca",
+  "neighborhoods": [
+    {
+      "id": "el-centro-historico",
+      "name": "El Centro Historico",
+      "description": "UNESCO World Heritage colonial center with blue-domed cathedral, flower markets, and cobblestone streets",
+      "character": "Colonial UNESCO, cultural, walkable and beautiful",
+      "housing": {
+        "avgRentOneBedroomUSD": 805,
+        "avgRentTwoBedroomUSD": 1046,
+        "buyPricePerSqmUSD": 2061,
+        "predominantType": "Restored colonial apartments and converted historic houses"
+      },
+      "walkabilityScore": 93,
+      "transitScore": 78,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Cuenca. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cuenca",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cuenca"
+        },
+        {
+          "title": "Plusvalia",
+          "url": "https://www.plusvalia.com/"
+        },
+        {
+          "title": "OLX Ecuador",
+          "url": "https://www.olx.com.ec/"
+        }
+      ]
+    },
+    {
+      "id": "misicata-sayausi",
+      "name": "Misicata / Sayausi",
+      "description": "Western residential area along the river with newer housing developments and mountain views",
+      "character": "Residential suburban, river access, growing area",
+      "housing": {
+        "avgRentOneBedroomUSD": 588,
+        "avgRentTwoBedroomUSD": 764,
+        "buyPricePerSqmUSD": 1325,
+        "predominantType": "Modern houses, apartments, and gated communities"
+      },
+      "walkabilityScore": 65,
+      "transitScore": 40,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Cuenca's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cuenca",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cuenca"
+        },
+        {
+          "title": "Plusvalia",
+          "url": "https://www.plusvalia.com/"
+        },
+        {
+          "title": "OLX Ecuador",
+          "url": "https://www.olx.com.ec/"
+        }
+      ]
+    },
+    {
+      "id": "totoracocha",
+      "name": "Totoracocha",
+      "description": "Eastern working-class neighborhood with local markets and affordable apartments",
+      "character": "Working-class residential, local markets, affordable",
+      "housing": {
+        "avgRentOneBedroomUSD": 402,
+        "avgRentTwoBedroomUSD": 523,
+        "buyPricePerSqmUSD": 810,
+        "predominantType": "Basic apartments and modest houses"
+      },
+      "walkabilityScore": 47,
+      "transitScore": 46,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cuenca",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cuenca"
+        },
+        {
+          "title": "Plusvalia",
+          "url": "https://www.plusvalia.com/"
+        },
+        {
+          "title": "OLX Ecuador",
+          "url": "https://www.olx.com.ec/"
+        }
+      ]
+    },
+    {
+      "id": "el-vergel-gringolandia",
+      "name": "El Vergel / Gringolandia",
+      "description": "Area along Yanuncay river nicknamed by locals for the large expat concentration, with cafes and restaurants",
+      "character": "Expat enclave, river walks, international dining",
+      "housing": {
+        "avgRentOneBedroomUSD": 681,
+        "avgRentTwoBedroomUSD": 885,
+        "buyPricePerSqmUSD": 1693,
+        "predominantType": "Modern apartments, condos, and renovated houses"
+      },
+      "walkabilityScore": 66,
+      "transitScore": 68,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cuenca",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cuenca"
+        },
+        {
+          "title": "Plusvalia",
+          "url": "https://www.plusvalia.com/"
+        },
+        {
+          "title": "OLX Ecuador",
+          "url": "https://www.olx.com.ec/"
+        }
+      ]
+    }
+  ]
+}

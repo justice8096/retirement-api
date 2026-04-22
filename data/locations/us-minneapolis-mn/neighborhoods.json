@@ -1,0 +1,141 @@
+{
+  "city": "Minneapolis",
+  "neighborhoods": [
+    {
+      "id": "north-loop-mill-district",
+      "name": "North Loop / Mill District",
+      "description": "Converted flour mill district with restaurants, art galleries, and the riverfront Gold Medal Park",
+      "character": "Mill district, flour heritage, riverfront dining",
+      "housing": {
+        "avgRentOneBedroomUSD": 2688,
+        "avgRentTwoBedroomUSD": 3629,
+        "buyPricePerSqmUSD": 7952,
+        "predominantType": "Converted mill lofts, condos, and modern apartments"
+      },
+      "walkabilityScore": 89,
+      "transitScore": 86,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Minneapolis. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Minneapolis",
+          "url": "https://www.numbeo.com/cost-of-living/in/Minneapolis"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "edina-st-louis-park",
+      "name": "Edina / St. Louis Park",
+      "description": "First-ring suburbs with shopping, dining, and established tree-lined residential neighborhoods",
+      "character": "First-ring suburban, shopping, established",
+      "housing": {
+        "avgRentOneBedroomUSD": 1965,
+        "avgRentTwoBedroomUSD": 2652,
+        "buyPricePerSqmUSD": 5112,
+        "predominantType": "Ramblers, split-levels, and updated homes"
+      },
+      "walkabilityScore": 64,
+      "transitScore": 48,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Minneapolis's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Minneapolis",
+          "url": "https://www.numbeo.com/cost-of-living/in/Minneapolis"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "brooklyn-park-brooklyn-center",
+      "name": "Brooklyn Park / Brooklyn Center",
+      "description": "Northern suburbs with diverse communities, affordable housing, and improving transit",
+      "character": "Diverse northern, affordable, transit improving",
+      "housing": {
+        "avgRentOneBedroomUSD": 1344,
+        "avgRentTwoBedroomUSD": 1815,
+        "buyPricePerSqmUSD": 3124,
+        "predominantType": "Ramblers, modest houses, and apartments"
+      },
+      "walkabilityScore": 42,
+      "transitScore": 32,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Minneapolis",
+          "url": "https://www.numbeo.com/cost-of-living/in/Minneapolis"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "eden-prairie-minnetonka",
+      "name": "Eden Prairie / Minnetonka",
+      "description": "Western suburbs with top schools, lake recreation, and extensive trail systems",
+      "character": "Lake recreation, top schools, trails",
+      "housing": {
+        "avgRentOneBedroomUSD": 2275,
+        "avgRentTwoBedroomUSD": 3071,
+        "buyPricePerSqmUSD": 6532,
+        "predominantType": "Single-family homes near lakes and parks"
+      },
+      "walkabilityScore": 61,
+      "transitScore": 61,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Minneapolis",
+          "url": "https://www.numbeo.com/cost-of-living/in/Minneapolis"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

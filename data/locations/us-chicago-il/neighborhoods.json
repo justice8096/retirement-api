@@ -1,0 +1,141 @@
+{
+  "city": "Chicago",
+  "neighborhoods": [
+    {
+      "id": "lincoln-park-lakeview",
+      "name": "Lincoln Park / Lakeview",
+      "description": "North Side lakefront neighborhoods with the zoo, DePaul University, and vibrant dining scene",
+      "character": "Lakefront, zoo, university area, vibrant dining",
+      "housing": {
+        "avgRentOneBedroomUSD": 2782,
+        "avgRentTwoBedroomUSD": 3756,
+        "buyPricePerSqmUSD": 8260,
+        "predominantType": "Brownstones, condos, and vintage apartment buildings"
+      },
+      "walkabilityScore": 91,
+      "transitScore": 85,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Chicago. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Chicago",
+          "url": "https://www.numbeo.com/cost-of-living/in/Chicago"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "evanston",
+      "name": "Evanston",
+      "description": "Lakefront suburb with Northwestern University, diverse community, and excellent public transit",
+      "character": "University lakefront, diverse, excellent transit",
+      "housing": {
+        "avgRentOneBedroomUSD": 2033,
+        "avgRentTwoBedroomUSD": 2745,
+        "buyPricePerSqmUSD": 5310,
+        "predominantType": "Victorian houses, condos, and apartments"
+      },
+      "walkabilityScore": 55,
+      "transitScore": 51,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Chicago's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Chicago",
+          "url": "https://www.numbeo.com/cost-of-living/in/Chicago"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "berwyn-cicero",
+      "name": "Berwyn / Cicero",
+      "description": "Western suburbs with bungalow belt housing, diverse communities, and Blue Line access",
+      "character": "Bungalow belt, diverse, L-train connected",
+      "housing": {
+        "avgRentOneBedroomUSD": 1391,
+        "avgRentTwoBedroomUSD": 1878,
+        "buyPricePerSqmUSD": 3245,
+        "predominantType": "Classic Chicago bungalows and modest houses"
+      },
+      "walkabilityScore": 44,
+      "transitScore": 47,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Chicago",
+          "url": "https://www.numbeo.com/cost-of-living/in/Chicago"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "oak-park",
+      "name": "Oak Park",
+      "description": "Historic suburb with Frank Lloyd Wright architecture, excellent schools, and diverse community",
+      "character": "Frank Lloyd Wright, excellent schools, diverse",
+      "housing": {
+        "avgRentOneBedroomUSD": 2354,
+        "avgRentTwoBedroomUSD": 3178,
+        "buyPricePerSqmUSD": 6785,
+        "predominantType": "Prairie-style homes, Victorians, and newer condos"
+      },
+      "walkabilityScore": 61,
+      "transitScore": 68,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Chicago",
+          "url": "https://www.numbeo.com/cost-of-living/in/Chicago"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

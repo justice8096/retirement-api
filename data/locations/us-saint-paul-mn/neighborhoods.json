@@ -1,0 +1,141 @@
+{
+  "city": "Saint Paul",
+  "neighborhoods": [
+    {
+      "id": "downtown-lowertown",
+      "name": "Downtown / Lowertown",
+      "description": "Historic state capital with Lowertown artist lofts, Mears Park, and the renovated Union Depot",
+      "character": "State capital, artist lofts, historic depot",
+      "housing": {
+        "avgRentOneBedroomUSD": 2220,
+        "avgRentTwoBedroomUSD": 2998,
+        "buyPricePerSqmUSD": 6412,
+        "predominantType": "Converted warehouse lofts and modern apartments"
+      },
+      "walkabilityScore": 89,
+      "transitScore": 85,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Saint Paul. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Saint Paul",
+          "url": "https://www.numbeo.com/cost-of-living/in/Saint-Paul"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "highland-park",
+      "name": "Highland Park",
+      "description": "South-of-the-river neighborhood with Highland Village shopping, Ford site redevelopment, and river access",
+      "character": "Highland Village, Ford site redevelopment, river",
+      "housing": {
+        "avgRentOneBedroomUSD": 1623,
+        "avgRentTwoBedroomUSD": 2191,
+        "buyPricePerSqmUSD": 4122,
+        "predominantType": "Colonial houses, bungalows, and newer condos"
+      },
+      "walkabilityScore": 61,
+      "transitScore": 49,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Saint Paul's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Saint Paul",
+          "url": "https://www.numbeo.com/cost-of-living/in/Saint-Paul"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "east-side-payne-phalen",
+      "name": "East Side / Payne-Phalen",
+      "description": "Diverse eastern neighborhoods with Phalen Lake, Hmong markets, and affordable housing",
+      "character": "Diverse, Phalen Lake, ethnic markets, affordable",
+      "housing": {
+        "avgRentOneBedroomUSD": 1110,
+        "avgRentTwoBedroomUSD": 1499,
+        "buyPricePerSqmUSD": 2519,
+        "predominantType": "Bungalows, modest houses, and affordable apartments"
+      },
+      "walkabilityScore": 46,
+      "transitScore": 34,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Saint Paul",
+          "url": "https://www.numbeo.com/cost-of-living/in/Saint-Paul"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "roseville-maplewood",
+      "name": "Roseville / Maplewood",
+      "description": "Northern suburbs with Rosedale Center, family parks, and established residential areas",
+      "character": "Northern suburban, Rosedale, family parks",
+      "housing": {
+        "avgRentOneBedroomUSD": 1879,
+        "avgRentTwoBedroomUSD": 2536,
+        "buyPricePerSqmUSD": 5267,
+        "predominantType": "Ramblers, split-levels, and single-family homes"
+      },
+      "walkabilityScore": 62,
+      "transitScore": 67,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Saint Paul",
+          "url": "https://www.numbeo.com/cost-of-living/in/Saint-Paul"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "city": "El Valle de Anton",
+  "neighborhoods": [
+    {
+      "id": "el-valle-centro",
+      "name": "El Valle Centro",
+      "description": "Mountain town inside a volcanic crater with a famous Sunday market, hot springs, and cool climate",
+      "character": "Crater town, Sunday market, hot springs, cool climate",
+      "housing": {
+        "avgRentOneBedroomUSD": 874,
+        "avgRentTwoBedroomUSD": 1136,
+        "buyPricePerSqmUSD": 2255,
+        "predominantType": "Houses and cabins near the town center"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 86,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of El Valle de Antón. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living El Valle de Antón",
+          "url": "https://www.numbeo.com/cost-of-living/in/El-Valle-de-Ant%C3%B3n"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "la-mesa-las-mozas",
+      "name": "La Mesa / Las Mozas",
+      "description": "Hillside areas above the valley with mountain views and slightly cooler temperatures",
+      "character": "Mountain hillside, cooler, panoramic views",
+      "housing": {
+        "avgRentOneBedroomUSD": 638,
+        "avgRentTwoBedroomUSD": 830,
+        "buyPricePerSqmUSD": 1450,
+        "predominantType": "Mountain houses, cabins, and eco-homes"
+      },
+      "walkabilityScore": 63,
+      "transitScore": 46,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to El Valle de Antón's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living El Valle de Antón",
+          "url": "https://www.numbeo.com/cost-of-living/in/El-Valle-de-Ant%C3%B3n"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "anton-san-juan-de-dios",
+      "name": "Anton (San Juan de Dios)",
+      "description": "Lowland town at the base of the mountains with more affordable living and highway access",
+      "character": "Lowland town, affordable, highway-connected",
+      "housing": {
+        "avgRentOneBedroomUSD": 437,
+        "avgRentTwoBedroomUSD": 568,
+        "buyPricePerSqmUSD": 886,
+        "predominantType": "Basic houses and modest apartments"
+      },
+      "walkabilityScore": 60,
+      "transitScore": 39,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living El Valle de Antón",
+          "url": "https://www.numbeo.com/cost-of-living/in/El-Valle-de-Ant%C3%B3n"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "crater-edge-communities",
+      "name": "Crater Edge Communities",
+      "description": "Scenic areas along the crater rim with established expat community and organized activities",
+      "character": "Crater rim, expat community, nature immersion",
+      "housing": {
+        "avgRentOneBedroomUSD": 739,
+        "avgRentTwoBedroomUSD": 961,
+        "buyPricePerSqmUSD": 1853,
+        "predominantType": "Custom houses, eco-retreats, and mountain properties"
+      },
+      "walkabilityScore": 73,
+      "transitScore": 69,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living El Valle de Antón",
+          "url": "https://www.numbeo.com/cost-of-living/in/El-Valle-de-Ant%C3%B3n"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    }
+  ]
+}

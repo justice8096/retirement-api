@@ -1,0 +1,141 @@
+{
+  "city": "Fort Wayne",
+  "neighborhoods": [
+    {
+      "id": "downtown-fort-wayne",
+      "name": "Downtown Fort Wayne",
+      "description": "Revitalized downtown with Parkview Field, The Landing historic district, and three-river confluence",
+      "character": "Revitalized, three rivers, ballpark district",
+      "housing": {
+        "avgRentOneBedroomUSD": 1799,
+        "avgRentTwoBedroomUSD": 2429,
+        "buyPricePerSqmUSD": 5026,
+        "predominantType": "Loft apartments, condos, and renovated buildings"
+      },
+      "walkabilityScore": 85,
+      "transitScore": 72,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Fort Wayne. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Fort Wayne",
+          "url": "https://www.numbeo.com/cost-of-living/in/Fort-Wayne"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "aboite-southwest",
+      "name": "Aboite / Southwest",
+      "description": "Growing southwestern area with newer development, Jefferson Pointe shopping, and family amenities",
+      "character": "Growing suburban, newer development, family-friendly",
+      "housing": {
+        "avgRentOneBedroomUSD": 1315,
+        "avgRentTwoBedroomUSD": 1775,
+        "buyPricePerSqmUSD": 3231,
+        "predominantType": "Newer single-family homes and apartments"
+      },
+      "walkabilityScore": 62,
+      "transitScore": 41,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Fort Wayne's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Fort Wayne",
+          "url": "https://www.numbeo.com/cost-of-living/in/Fort-Wayne"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "south-side-waynedale",
+      "name": "South Side / Waynedale",
+      "description": "Southern neighborhoods with working-class character, affordable housing, and local parks",
+      "character": "Working-class, affordable, local parks",
+      "housing": {
+        "avgRentOneBedroomUSD": 900,
+        "avgRentTwoBedroomUSD": 1214,
+        "buyPricePerSqmUSD": 1975,
+        "predominantType": "Older houses, ranch homes, and affordable apartments"
+      },
+      "walkabilityScore": 40,
+      "transitScore": 32,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Fort Wayne",
+          "url": "https://www.numbeo.com/cost-of-living/in/Fort-Wayne"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "new-haven-leo-cedarville",
+      "name": "New Haven / Leo-Cedarville",
+      "description": "Eastern and northeastern communities with rural character, good schools, and lower costs",
+      "character": "Semi-rural, good schools, community-oriented",
+      "housing": {
+        "avgRentOneBedroomUSD": 1522,
+        "avgRentTwoBedroomUSD": 2055,
+        "buyPricePerSqmUSD": 4129,
+        "predominantType": "Single-family homes and newer developments"
+      },
+      "walkabilityScore": 78,
+      "transitScore": 66,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Fort Wayne",
+          "url": "https://www.numbeo.com/cost-of-living/in/Fort-Wayne"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

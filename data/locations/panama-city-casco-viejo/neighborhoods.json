@@ -1,0 +1,141 @@
+{
+  "city": "Panama City - Casco Viejo",
+  "neighborhoods": [
+    {
+      "id": "casco-viejo-san-felipe",
+      "name": "Casco Viejo (San Felipe)",
+      "description": "UNESCO colonial quarter on a peninsula with restored colonial buildings, rooftop bars, and canal views",
+      "character": "UNESCO colonial, gentrified, rooftop culture",
+      "housing": {
+        "avgRentOneBedroomUSD": 1355,
+        "avgRentTwoBedroomUSD": 1761,
+        "buyPricePerSqmUSD": 3616,
+        "predominantType": "Restored colonial apartments and boutique residences"
+      },
+      "walkabilityScore": 89,
+      "transitScore": 84,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Panama City. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "el-chorrillo",
+      "name": "El Chorrillo",
+      "description": "Adjacent working-class neighborhood with lower costs and proximity to Casco attractions",
+      "character": "Working-class, affordable, adjacent to Casco",
+      "housing": {
+        "avgRentOneBedroomUSD": 990,
+        "avgRentTwoBedroomUSD": 1287,
+        "buyPricePerSqmUSD": 2325,
+        "predominantType": "Basic apartments and older houses"
+      },
+      "walkabilityScore": 64,
+      "transitScore": 58,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Panama City's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "santa-ana",
+      "name": "Santa Ana",
+      "description": "Historic commercial district between Casco and downtown with markets and affordable options",
+      "character": "Historic commercial, affordable, improving",
+      "housing": {
+        "avgRentOneBedroomUSD": 677,
+        "avgRentTwoBedroomUSD": 880,
+        "buyPricePerSqmUSD": 1421,
+        "predominantType": "Older apartments and commercial-residential buildings"
+      },
+      "walkabilityScore": 51,
+      "transitScore": 46,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "restored-casco-viejo",
+      "name": "Restored Casco Viejo",
+      "description": "The fully restored blocks of Casco with art galleries, wine bars, and international residents",
+      "character": "Restored colonial, artistic, international residents",
+      "housing": {
+        "avgRentOneBedroomUSD": 1146,
+        "avgRentTwoBedroomUSD": 1490,
+        "buyPricePerSqmUSD": 2970,
+        "predominantType": "Luxury restored colonial apartments and penthouses"
+      },
+      "walkabilityScore": 66,
+      "transitScore": 68,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    }
+  ]
+}

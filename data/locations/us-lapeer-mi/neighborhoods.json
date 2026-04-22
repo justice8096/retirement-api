@@ -1,0 +1,141 @@
+{
+  "city": "Lapeer",
+  "neighborhoods": [
+    {
+      "id": "downtown-lapeer",
+      "name": "Downtown Lapeer",
+      "description": "Small county seat with courthouse square, local shops, and community events",
+      "character": "Small-town county seat, courthouse square, local",
+      "housing": {
+        "avgRentOneBedroomUSD": 1659,
+        "avgRentTwoBedroomUSD": 2239,
+        "buyPricePerSqmUSD": 4564,
+        "predominantType": "Victorian houses, small apartments, and older homes"
+      },
+      "walkabilityScore": 88,
+      "transitScore": 75,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Lapeer. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lapeer",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lapeer"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "metamora-hadley",
+      "name": "Metamora / Hadley",
+      "description": "Rural townships with horse country character, hunt clubs, and scenic countryside",
+      "character": "Horse country, rural scenic, hunt club",
+      "housing": {
+        "avgRentOneBedroomUSD": 1212,
+        "avgRentTwoBedroomUSD": 1636,
+        "buyPricePerSqmUSD": 2934,
+        "predominantType": "Farm houses, country homes, and equestrian properties"
+      },
+      "walkabilityScore": 56,
+      "transitScore": 50,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Lapeer's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lapeer",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lapeer"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "imlay-city-dryden",
+      "name": "Imlay City / Dryden",
+      "description": "Smaller surrounding communities with very affordable housing and agricultural character",
+      "character": "Small agricultural towns, very affordable",
+      "housing": {
+        "avgRentOneBedroomUSD": 829,
+        "avgRentTwoBedroomUSD": 1120,
+        "buyPricePerSqmUSD": 1793,
+        "predominantType": "Modest houses and rural properties"
+      },
+      "walkabilityScore": 56,
+      "transitScore": 43,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lapeer",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lapeer"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "goodrich-ortonville",
+      "name": "Goodrich / Ortonville",
+      "description": "Southern township communities with lake access, good schools, and family amenities",
+      "character": "Lake access, good schools, family community",
+      "housing": {
+        "avgRentOneBedroomUSD": 1404,
+        "avgRentTwoBedroomUSD": 1895,
+        "buyPricePerSqmUSD": 3749,
+        "predominantType": "Single-family homes and lake properties"
+      },
+      "walkabilityScore": 76,
+      "transitScore": 51,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lapeer",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lapeer"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

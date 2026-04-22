@@ -1,0 +1,141 @@
+{
+  "city": "Killeen",
+  "neighborhoods": [
+    {
+      "id": "downtown-killeen",
+      "name": "Downtown Killeen",
+      "description": "Military-influenced city center near Fort Cavazos (formerly Hood) with commercial services",
+      "character": "Military city, practical, diverse population",
+      "housing": {
+        "avgRentOneBedroomUSD": 1846,
+        "avgRentTwoBedroomUSD": 2492,
+        "buyPricePerSqmUSD": 5180,
+        "predominantType": "Apartments, duplexes, and commercial-residential"
+      },
+      "walkabilityScore": 93,
+      "transitScore": 89,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Killeen. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Killeen",
+          "url": "https://www.numbeo.com/cost-of-living/in/Killeen"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "harker-heights",
+      "name": "Harker Heights",
+      "description": "Adjacent city with newer development, shopping, and a more suburban residential feel",
+      "character": "Newer suburban, shopping, residential",
+      "housing": {
+        "avgRentOneBedroomUSD": 1349,
+        "avgRentTwoBedroomUSD": 1821,
+        "buyPricePerSqmUSD": 3330,
+        "predominantType": "Newer single-family homes and apartments"
+      },
+      "walkabilityScore": 51,
+      "transitScore": 41,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Killeen's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Killeen",
+          "url": "https://www.numbeo.com/cost-of-living/in/Killeen"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "copperas-cove",
+      "name": "Copperas Cove",
+      "description": "Western community with very affordable housing, military families, and small-town atmosphere",
+      "character": "Very affordable, military families, small-town",
+      "housing": {
+        "avgRentOneBedroomUSD": 923,
+        "avgRentTwoBedroomUSD": 1246,
+        "buyPricePerSqmUSD": 2035,
+        "predominantType": "Ranch houses and affordable single-family homes"
+      },
+      "walkabilityScore": 53,
+      "transitScore": 35,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Killeen",
+          "url": "https://www.numbeo.com/cost-of-living/in/Killeen"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "temple-belton",
+      "name": "Temple / Belton",
+      "description": "Eastern communities with medical center, Belton Lake, and family-oriented living",
+      "character": "Medical center, lake recreation, family-oriented",
+      "housing": {
+        "avgRentOneBedroomUSD": 1562,
+        "avgRentTwoBedroomUSD": 2109,
+        "buyPricePerSqmUSD": 4255,
+        "predominantType": "Single-family homes and newer developments"
+      },
+      "walkabilityScore": 73,
+      "transitScore": 50,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Killeen",
+          "url": "https://www.numbeo.com/cost-of-living/in/Killeen"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

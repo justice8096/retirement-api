@@ -1,0 +1,141 @@
+{
+  "city": "Porto",
+  "neighborhoods": [
+    {
+      "id": "ribeira-centro-historico",
+      "name": "Ribeira / Centro Historico",
+      "description": "UNESCO riverside district with colorful buildings, port wine lodges across the river, and iconic Dom Luis bridge",
+      "character": "UNESCO riverside, port wine, iconic bridges",
+      "housing": {
+        "avgRentOneBedroomEUR": 1398,
+        "avgRentTwoBedroomEUR": 1887,
+        "buyPricePerSqmEUR": 4200,
+        "predominantType": "Apartments in renovated historic buildings"
+      },
+      "walkabilityScore": 92,
+      "transitScore": 71,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Porto. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Porto",
+          "url": "https://www.numbeo.com/cost-of-living/in/Porto"
+        },
+        {
+          "title": "Idealista Portugal",
+          "url": "https://www.idealista.pt/"
+        },
+        {
+          "title": "Imovirtual",
+          "url": "https://www.imovirtual.com/"
+        }
+      ]
+    },
+    {
+      "id": "foz-do-douro",
+      "name": "Foz do Douro",
+      "description": "Upscale coastal neighborhood at the mouth of the Douro river with beaches, parks, and ocean views",
+      "character": "Upscale coastal, river mouth, ocean views",
+      "housing": {
+        "avgRentOneBedroomEUR": 1021,
+        "avgRentTwoBedroomEUR": 1379,
+        "buyPricePerSqmEUR": 2700,
+        "predominantType": "Apartments and houses in elegant coastal area"
+      },
+      "walkabilityScore": 56,
+      "transitScore": 45,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Porto's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Porto",
+          "url": "https://www.numbeo.com/cost-of-living/in/Porto"
+        },
+        {
+          "title": "Idealista Portugal",
+          "url": "https://www.idealista.pt/"
+        },
+        {
+          "title": "Imovirtual",
+          "url": "https://www.imovirtual.com/"
+        }
+      ]
+    },
+    {
+      "id": "vila-nova-de-gaia",
+      "name": "Vila Nova de Gaia",
+      "description": "South bank city home to port wine cellars with lower rents and improving Metro connections",
+      "character": "Port wine cellars, affordable, Metro-connected",
+      "housing": {
+        "avgRentOneBedroomEUR": 699,
+        "avgRentTwoBedroomEUR": 943,
+        "buyPricePerSqmEUR": 1650,
+        "predominantType": "Apartments and houses at lower Porto prices"
+      },
+      "walkabilityScore": 51,
+      "transitScore": 31,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Porto",
+          "url": "https://www.numbeo.com/cost-of-living/in/Porto"
+        },
+        {
+          "title": "Idealista Portugal",
+          "url": "https://www.idealista.pt/"
+        },
+        {
+          "title": "Imovirtual",
+          "url": "https://www.imovirtual.com/"
+        }
+      ]
+    },
+    {
+      "id": "boavista-cedofeita",
+      "name": "Boavista / Cedofeita",
+      "description": "Modern and bohemian neighborhoods around the Casa da Musica with international restaurants and galleries",
+      "character": "Modern-bohemian, cultural, international dining",
+      "housing": {
+        "avgRentOneBedroomEUR": 1183,
+        "avgRentTwoBedroomEUR": 1596,
+        "buyPricePerSqmEUR": 3450,
+        "predominantType": "Apartments in renovated and modern buildings"
+      },
+      "walkabilityScore": 63,
+      "transitScore": 57,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Porto",
+          "url": "https://www.numbeo.com/cost-of-living/in/Porto"
+        },
+        {
+          "title": "Idealista Portugal",
+          "url": "https://www.idealista.pt/"
+        },
+        {
+          "title": "Imovirtual",
+          "url": "https://www.imovirtual.com/"
+        }
+      ]
+    }
+  ]
+}

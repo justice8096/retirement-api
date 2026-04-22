@@ -1,0 +1,141 @@
+{
+  "city": "Toulon",
+  "neighborhoods": [
+    {
+      "id": "vieux-toulon",
+      "name": "Vieux Toulon",
+      "description": "Revitalized old town with provencal market, Cours Lafayette, and pedestrian streets near the naval harbor",
+      "character": "Provencal market town, naval heritage, revitalizing",
+      "housing": {
+        "avgRentOneBedroomEUR": 1492,
+        "avgRentTwoBedroomEUR": 2015,
+        "buyPricePerSqmEUR": 4480,
+        "predominantType": "Apartments in provencal buildings and renovated townhouses"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 81,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Toulon. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Toulon",
+          "url": "https://www.numbeo.com/cost-of-living/in/Toulon"
+        },
+        {
+          "title": "SeLoger",
+          "url": "https://www.seloger.com/"
+        },
+        {
+          "title": "Bien'ici",
+          "url": "https://www.bienici.com/"
+        }
+      ]
+    },
+    {
+      "id": "le-mourillon",
+      "name": "Le Mourillon",
+      "description": "Charming beach neighborhood east of center with village atmosphere, beaches, and botanical garden",
+      "character": "Beach village, family-friendly, excellent beaches",
+      "housing": {
+        "avgRentOneBedroomEUR": 1091,
+        "avgRentTwoBedroomEUR": 1472,
+        "buyPricePerSqmEUR": 2880,
+        "predominantType": "Apartments and villas near the beaches"
+      },
+      "walkabilityScore": 54,
+      "transitScore": 48,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Toulon's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Toulon",
+          "url": "https://www.numbeo.com/cost-of-living/in/Toulon"
+        },
+        {
+          "title": "SeLoger",
+          "url": "https://www.seloger.com/"
+        },
+        {
+          "title": "Bien'ici",
+          "url": "https://www.bienici.com/"
+        }
+      ]
+    },
+    {
+      "id": "la-seyne-sur-mer",
+      "name": "La Seyne-sur-Mer",
+      "description": "Former shipyard town across the harbor with lower costs and improving waterfront development",
+      "character": "Working-class revitalizing, waterfront development, affordable",
+      "housing": {
+        "avgRentOneBedroomEUR": 746,
+        "avgRentTwoBedroomEUR": 1007,
+        "buyPricePerSqmEUR": 1760,
+        "predominantType": "Apartments and modest houses"
+      },
+      "walkabilityScore": 44,
+      "transitScore": 44,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Toulon",
+          "url": "https://www.numbeo.com/cost-of-living/in/Toulon"
+        },
+        {
+          "title": "SeLoger",
+          "url": "https://www.seloger.com/"
+        },
+        {
+          "title": "Bien'ici",
+          "url": "https://www.bienici.com/"
+        }
+      ]
+    },
+    {
+      "id": "sanary-sur-mer-bandol",
+      "name": "Sanary-sur-Mer / Bandol",
+      "description": "Picturesque fishing villages west of Toulon with provencal charm and international residents",
+      "character": "Provencal fishing villages, scenic, international",
+      "housing": {
+        "avgRentOneBedroomEUR": 1263,
+        "avgRentTwoBedroomEUR": 1705,
+        "buyPricePerSqmEUR": 3680,
+        "predominantType": "Provencal villas, apartments, and waterfront properties"
+      },
+      "walkabilityScore": 66,
+      "transitScore": 67,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Toulon",
+          "url": "https://www.numbeo.com/cost-of-living/in/Toulon"
+        },
+        {
+          "title": "SeLoger",
+          "url": "https://www.seloger.com/"
+        },
+        {
+          "title": "Bien'ici",
+          "url": "https://www.bienici.com/"
+        }
+      ]
+    }
+  ]
+}

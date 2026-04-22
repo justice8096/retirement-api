@@ -1,0 +1,141 @@
+{
+  "city": "Skowhegan",
+  "neighborhoods": [
+    {
+      "id": "downtown-skowhegan",
+      "name": "Downtown Skowhegan",
+      "description": "Historic mill town center on the Kennebec River with renovated Main Street and community arts",
+      "character": "Mill town reviving, river, community arts",
+      "housing": {
+        "avgRentOneBedroomUSD": 1612,
+        "avgRentTwoBedroomUSD": 2176,
+        "buyPricePerSqmUSD": 4410,
+        "predominantType": "Victorian houses, apartments, and older homes"
+      },
+      "walkabilityScore": 93,
+      "transitScore": 84,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Skowhegan. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Skowhegan",
+          "url": "https://www.numbeo.com/cost-of-living/in/Skowhegan"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "norridgewock",
+      "name": "Norridgewock",
+      "description": "Adjacent rural town with Kennebec River access, farmland, and small-town community",
+      "character": "Rural river town, farms, small community",
+      "housing": {
+        "avgRentOneBedroomUSD": 1178,
+        "avgRentTwoBedroomUSD": 1590,
+        "buyPricePerSqmUSD": 2835,
+        "predominantType": "Farm houses, rural homes, and modest properties"
+      },
+      "walkabilityScore": 61,
+      "transitScore": 58,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Skowhegan's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Skowhegan",
+          "url": "https://www.numbeo.com/cost-of-living/in/Skowhegan"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "madison-anson",
+      "name": "Madison / Anson",
+      "description": "Northern mill towns with very affordable housing, outdoor recreation, and paper mill heritage",
+      "character": "Mill towns, very affordable, outdoor recreation",
+      "housing": {
+        "avgRentOneBedroomUSD": 806,
+        "avgRentTwoBedroomUSD": 1088,
+        "buyPricePerSqmUSD": 1733,
+        "predominantType": "Modest houses, mobile homes, and affordable properties"
+      },
+      "walkabilityScore": 47,
+      "transitScore": 43,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Skowhegan",
+          "url": "https://www.numbeo.com/cost-of-living/in/Skowhegan"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "fairfield-oakland",
+      "name": "Fairfield / Oakland",
+      "description": "Southern communities near Waterville with better services, Colby College influence, and lake access",
+      "character": "Near Waterville, college influence, lake access",
+      "housing": {
+        "avgRentOneBedroomUSD": 1364,
+        "avgRentTwoBedroomUSD": 1841,
+        "buyPricePerSqmUSD": 3622,
+        "predominantType": "Single-family homes and lake properties"
+      },
+      "walkabilityScore": 63,
+      "transitScore": 50,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Skowhegan",
+          "url": "https://www.numbeo.com/cost-of-living/in/Skowhegan"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

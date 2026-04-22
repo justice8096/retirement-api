@@ -1,0 +1,141 @@
+{
+  "city": "Limerick",
+  "neighborhoods": [
+    {
+      "id": "limerick-city-centre",
+      "name": "Limerick City Centre",
+      "description": "Compact center with King John's Castle, the Georgian quarter, and the revitalized Milk Market district",
+      "character": "Historic compact, revitalizing, castle and river",
+      "housing": {
+        "avgRentOneBedroomEUR": 1633,
+        "avgRentTwoBedroomEUR": 2204,
+        "buyPricePerSqmEUR": 4900,
+        "predominantType": "Georgian townhouse apartments and city-center flats"
+      },
+      "walkabilityScore": 87,
+      "transitScore": 76,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Limerick. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Limerick",
+          "url": "https://www.numbeo.com/cost-of-living/in/Limerick"
+        },
+        {
+          "title": "Daft.ie",
+          "url": "https://www.daft.ie/"
+        },
+        {
+          "title": "MyHome.ie",
+          "url": "https://www.myhome.ie/"
+        }
+      ]
+    },
+    {
+      "id": "castletroy-university-area",
+      "name": "Castletroy / University Area",
+      "description": "Eastern suburb near University of Limerick with modern development and the Plassey technology park",
+      "character": "University suburban, modern, tech employment area",
+      "housing": {
+        "avgRentOneBedroomEUR": 1193,
+        "avgRentTwoBedroomEUR": 1611,
+        "buyPricePerSqmEUR": 3150,
+        "predominantType": "Modern estate houses and student-area apartments"
+      },
+      "walkabilityScore": 64,
+      "transitScore": 41,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Limerick's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Limerick",
+          "url": "https://www.numbeo.com/cost-of-living/in/Limerick"
+        },
+        {
+          "title": "Daft.ie",
+          "url": "https://www.daft.ie/"
+        },
+        {
+          "title": "MyHome.ie",
+          "url": "https://www.myhome.ie/"
+        }
+      ]
+    },
+    {
+      "id": "moyross-southill",
+      "name": "Moyross / Southill",
+      "description": "Regenerating northern and southern estates with improving infrastructure and affordable housing",
+      "character": "Regenerating, affordable, community development",
+      "housing": {
+        "avgRentOneBedroomEUR": 816,
+        "avgRentTwoBedroomEUR": 1102,
+        "buyPricePerSqmEUR": 1925,
+        "predominantType": "Social and private housing, newer regeneration builds"
+      },
+      "walkabilityScore": 53,
+      "transitScore": 43,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Limerick",
+          "url": "https://www.numbeo.com/cost-of-living/in/Limerick"
+        },
+        {
+          "title": "Daft.ie",
+          "url": "https://www.daft.ie/"
+        },
+        {
+          "title": "MyHome.ie",
+          "url": "https://www.myhome.ie/"
+        }
+      ]
+    },
+    {
+      "id": "adare",
+      "name": "Adare",
+      "description": "Picture-perfect thatched village 15 minutes from the city, repeatedly voted Ireland's prettiest village",
+      "character": "Thatched village, picturesque, heritage tourism",
+      "housing": {
+        "avgRentOneBedroomEUR": 1382,
+        "avgRentTwoBedroomEUR": 1865,
+        "buyPricePerSqmEUR": 4025,
+        "predominantType": "Village houses and rural properties"
+      },
+      "walkabilityScore": 62,
+      "transitScore": 64,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Limerick",
+          "url": "https://www.numbeo.com/cost-of-living/in/Limerick"
+        },
+        {
+          "title": "Daft.ie",
+          "url": "https://www.daft.ie/"
+        },
+        {
+          "title": "MyHome.ie",
+          "url": "https://www.myhome.ie/"
+        }
+      ]
+    }
+  ]
+}

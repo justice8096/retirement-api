@@ -1,0 +1,141 @@
+{
+  "city": "Quito",
+  "neighborhoods": [
+    {
+      "id": "centro-historico",
+      "name": "Centro Historico",
+      "description": "Massive UNESCO colonial center with ornate churches, presidential palace, and dramatic Andean setting",
+      "character": "Grand colonial UNESCO, cultural, improving walkability",
+      "housing": {
+        "avgRentOneBedroomUSD": 874,
+        "avgRentTwoBedroomUSD": 1136,
+        "buyPricePerSqmUSD": 2255,
+        "predominantType": "Restored colonial apartments and historic conversions"
+      },
+      "walkabilityScore": 93,
+      "transitScore": 75,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Quito. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Quito",
+          "url": "https://www.numbeo.com/cost-of-living/in/Quito"
+        },
+        {
+          "title": "Plusvalia",
+          "url": "https://www.plusvalia.com/"
+        },
+        {
+          "title": "OLX Ecuador",
+          "url": "https://www.olx.com.ec/"
+        }
+      ]
+    },
+    {
+      "id": "cumbaya",
+      "name": "Cumbaya",
+      "description": "Eastern valley suburb with warmer climate, shopping malls, and university campuses",
+      "character": "Modern suburban, warmer valley, university area",
+      "housing": {
+        "avgRentOneBedroomUSD": 638,
+        "avgRentTwoBedroomUSD": 830,
+        "buyPricePerSqmUSD": 1450,
+        "predominantType": "Modern houses, condos, and gated communities"
+      },
+      "walkabilityScore": 65,
+      "transitScore": 59,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Quito's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Quito",
+          "url": "https://www.numbeo.com/cost-of-living/in/Quito"
+        },
+        {
+          "title": "Plusvalia",
+          "url": "https://www.plusvalia.com/"
+        },
+        {
+          "title": "OLX Ecuador",
+          "url": "https://www.olx.com.ec/"
+        }
+      ]
+    },
+    {
+      "id": "quitumbe-sur-de-quito",
+      "name": "Quitumbe / Sur de Quito",
+      "description": "Southern bus terminal area with affordable housing and improving infrastructure",
+      "character": "Southern urban, affordable, transit-connected",
+      "housing": {
+        "avgRentOneBedroomUSD": 437,
+        "avgRentTwoBedroomUSD": 568,
+        "buyPricePerSqmUSD": 886,
+        "predominantType": "Apartment blocks and modest houses"
+      },
+      "walkabilityScore": 59,
+      "transitScore": 37,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Quito",
+          "url": "https://www.numbeo.com/cost-of-living/in/Quito"
+        },
+        {
+          "title": "Plusvalia",
+          "url": "https://www.plusvalia.com/"
+        },
+        {
+          "title": "OLX Ecuador",
+          "url": "https://www.olx.com.ec/"
+        }
+      ]
+    },
+    {
+      "id": "la-floresta-gonzalez-suarez",
+      "name": "La Floresta / Gonzalez Suarez",
+      "description": "Bohemian and upscale neighborhoods with craft breweries, art spaces, and international restaurants",
+      "character": "Bohemian-upscale, cultural, international dining",
+      "housing": {
+        "avgRentOneBedroomUSD": 739,
+        "avgRentTwoBedroomUSD": 961,
+        "buyPricePerSqmUSD": 1853,
+        "predominantType": "Art Deco apartments, modern condos, and renovated houses"
+      },
+      "walkabilityScore": 69,
+      "transitScore": 70,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Quito",
+          "url": "https://www.numbeo.com/cost-of-living/in/Quito"
+        },
+        {
+          "title": "Plusvalia",
+          "url": "https://www.plusvalia.com/"
+        },
+        {
+          "title": "OLX Ecuador",
+          "url": "https://www.olx.com.ec/"
+        }
+      ]
+    }
+  ]
+}

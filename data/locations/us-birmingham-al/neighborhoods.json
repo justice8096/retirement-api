@@ -1,0 +1,141 @@
+{
+  "city": "Birmingham",
+  "neighborhoods": [
+    {
+      "id": "southside-five-points-south",
+      "name": "Southside / Five Points South",
+      "description": "Walkable entertainment district near UAB with restaurants, bars, and the landmark Storyteller fountain",
+      "character": "Walkable entertainment, UAB adjacent, dining scene",
+      "housing": {
+        "avgRentOneBedroomUSD": 1893,
+        "avgRentTwoBedroomUSD": 2555,
+        "buyPricePerSqmUSD": 5334,
+        "predominantType": "Apartments, converted warehouses, and condos"
+      },
+      "walkabilityScore": 85,
+      "transitScore": 75,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Birmingham. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Birmingham",
+          "url": "https://www.numbeo.com/cost-of-living/in/Birmingham"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "homewood-mountain-brook",
+      "name": "Homewood / Mountain Brook",
+      "description": "Over-the-mountain suburbs with excellent schools, tree-lined streets, and vibrant local shopping",
+      "character": "Affluent over-the-mountain, excellent schools, local shops",
+      "housing": {
+        "avgRentOneBedroomUSD": 1383,
+        "avgRentTwoBedroomUSD": 1867,
+        "buyPricePerSqmUSD": 3429,
+        "predominantType": "Tudor houses, bungalows, and traditional homes"
+      },
+      "walkabilityScore": 53,
+      "transitScore": 40,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Birmingham's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Birmingham",
+          "url": "https://www.numbeo.com/cost-of-living/in/Birmingham"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "trussville-irondale",
+      "name": "Trussville / Irondale",
+      "description": "Eastern suburbs with affordable housing, good schools, and the Irondale Cafe (Whistle Stop)",
+      "character": "Affordable suburban, good schools, literary heritage",
+      "housing": {
+        "avgRentOneBedroomUSD": 946,
+        "avgRentTwoBedroomUSD": 1278,
+        "buyPricePerSqmUSD": 2096,
+        "predominantType": "Ranch houses and newer subdivisions"
+      },
+      "walkabilityScore": 50,
+      "transitScore": 37,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Birmingham",
+          "url": "https://www.numbeo.com/cost-of-living/in/Birmingham"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "vestavia-hills-hoover",
+      "name": "Vestavia Hills / Hoover",
+      "description": "Southern suburbs with top-rated schools, Riverchase Galleria, and family-oriented communities",
+      "character": "Top schools, Galleria shopping, family-oriented",
+      "housing": {
+        "avgRentOneBedroomUSD": 1602,
+        "avgRentTwoBedroomUSD": 2162,
+        "buyPricePerSqmUSD": 4382,
+        "predominantType": "Single-family homes in established neighborhoods"
+      },
+      "walkabilityScore": 77,
+      "transitScore": 69,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Birmingham",
+          "url": "https://www.numbeo.com/cost-of-living/in/Birmingham"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}
