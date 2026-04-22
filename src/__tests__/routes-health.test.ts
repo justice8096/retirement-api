@@ -23,11 +23,11 @@ vi.mock('../db/prisma.js', () => ({
   },
 }));
 
-// Mock Stripe
+// Mock Stripe — regular function so `new Stripe(...)` works under vitest 4.
 vi.mock('stripe', () => ({
-  default: vi.fn(() => ({
-    webhooks: { constructEvent: vi.fn() },
-  })),
+  default: vi.fn(function Stripe() {
+    return { webhooks: { constructEvent: vi.fn() } };
+  }),
 }));
 
 // Mock auth middleware
