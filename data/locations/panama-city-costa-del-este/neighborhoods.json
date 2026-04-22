@@ -1,0 +1,141 @@
+{
+  "city": "Panama City - Costa del Este",
+  "neighborhoods": [
+    {
+      "id": "costa-del-este-centro",
+      "name": "Costa del Este Centro",
+      "description": "Modern planned district with wide avenues, corporate offices, international schools, and shopping malls",
+      "character": "Modern planned, corporate, international schools",
+      "housing": {
+        "avgRentOneBedroomUSD": 1491,
+        "avgRentTwoBedroomUSD": 1938,
+        "buyPricePerSqmUSD": 4005,
+        "predominantType": "Modern high-rise condos and luxury apartments"
+      },
+      "walkabilityScore": 86,
+      "transitScore": 80,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Panama City. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "santa-maria-golf-country-club",
+      "name": "Santa Maria Golf & Country Club",
+      "description": "Gated golf community within Costa del Este with Jack Nicklaus course and luxury residences",
+      "character": "Luxury gated golf, Jack Nicklaus course, exclusive",
+      "housing": {
+        "avgRentOneBedroomUSD": 1090,
+        "avgRentTwoBedroomUSD": 1417,
+        "buyPricePerSqmUSD": 2575,
+        "predominantType": "Luxury houses, golf villas, and premium condos"
+      },
+      "walkabilityScore": 52,
+      "transitScore": 51,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Panama City's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "juan-diaz",
+      "name": "Juan Diaz",
+      "description": "Working-class area south with commercial development, Metro access, and much lower costs",
+      "character": "Working-class, Metro-connected, emerging commercial",
+      "housing": {
+        "avgRentOneBedroomUSD": 746,
+        "avgRentTwoBedroomUSD": 969,
+        "buyPricePerSqmUSD": 1574,
+        "predominantType": "Affordable apartments and basic houses"
+      },
+      "walkabilityScore": 57,
+      "transitScore": 39,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "panama-pacifico",
+      "name": "Panama Pacifico",
+      "description": "Former US military base converted into modern community with international schools and tax incentives",
+      "character": "Former military base, tax zone, modern international",
+      "housing": {
+        "avgRentOneBedroomUSD": 1262,
+        "avgRentTwoBedroomUSD": 1640,
+        "buyPricePerSqmUSD": 3290,
+        "predominantType": "Modern houses, apartments, and planned community homes"
+      },
+      "walkabilityScore": 74,
+      "transitScore": 56,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "city": "Grand Forks",
+  "neighborhoods": [
+    {
+      "id": "downtown-grand-forks",
+      "name": "Downtown Grand Forks",
+      "description": "Rebuilt downtown after the 1997 flood with new infrastructure, university influence, and Town Square",
+      "character": "Rebuilt downtown, university, flood-resilient",
+      "housing": {
+        "avgRentOneBedroomUSD": 1659,
+        "avgRentTwoBedroomUSD": 2239,
+        "buyPricePerSqmUSD": 4564,
+        "predominantType": "New apartments, condos, and commercial-residential"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 87,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Grand Forks. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Grand Forks",
+          "url": "https://www.numbeo.com/cost-of-living/in/Grand-Forks"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "south-grand-forks",
+      "name": "South Grand Forks",
+      "description": "Growing residential area with Columbia Mall, newer schools, and family amenities",
+      "character": "Growing suburban, shopping, family amenities",
+      "housing": {
+        "avgRentOneBedroomUSD": 1212,
+        "avgRentTwoBedroomUSD": 1636,
+        "buyPricePerSqmUSD": 2934,
+        "predominantType": "Newer single-family homes and apartments"
+      },
+      "walkabilityScore": 65,
+      "transitScore": 57,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Grand Forks's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Grand Forks",
+          "url": "https://www.numbeo.com/cost-of-living/in/Grand-Forks"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "east-grand-forks-mn",
+      "name": "East Grand Forks (MN)",
+      "description": "Minnesota-side sister city with lower property taxes and small-town atmosphere",
+      "character": "Cross-river, lower taxes, small-town",
+      "housing": {
+        "avgRentOneBedroomUSD": 829,
+        "avgRentTwoBedroomUSD": 1120,
+        "buyPricePerSqmUSD": 1793,
+        "predominantType": "Modest houses and affordable apartments"
+      },
+      "walkabilityScore": 41,
+      "transitScore": 43,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Grand Forks",
+          "url": "https://www.numbeo.com/cost-of-living/in/Grand-Forks"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "north-und-area",
+      "name": "North / UND Area",
+      "description": "Neighborhoods near University of North Dakota with academic influence and community parks",
+      "character": "University area, parks, academic community",
+      "housing": {
+        "avgRentOneBedroomUSD": 1404,
+        "avgRentTwoBedroomUSD": 1895,
+        "buyPricePerSqmUSD": 3749,
+        "predominantType": "Houses and apartments near campus"
+      },
+      "walkabilityScore": 71,
+      "transitScore": 56,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Grand Forks",
+          "url": "https://www.numbeo.com/cost-of-living/in/Grand-Forks"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

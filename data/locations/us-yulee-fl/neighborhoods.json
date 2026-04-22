@@ -1,0 +1,141 @@
+{
+  "city": "Yulee (Nassau County)",
+  "neighborhoods": [
+    {
+      "id": "yulee-center-us-17-corridor",
+      "name": "Yulee Center / US-17 Corridor",
+      "description": "Growing unincorporated community on the US-17 corridor with new commercial development and services",
+      "character": "Growing corridor, new commercial, practical",
+      "housing": {
+        "avgRentOneBedroomUSD": 2220,
+        "avgRentTwoBedroomUSD": 2998,
+        "buyPricePerSqmUSD": 6412,
+        "predominantType": "Newer houses, apartments, and planned developments"
+      },
+      "walkabilityScore": 92,
+      "transitScore": 71,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Yulee. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Yulee",
+          "url": "https://www.numbeo.com/cost-of-living/in/Yulee"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "fernandina-beach-amelia-island",
+      "name": "Fernandina Beach / Amelia Island",
+      "description": "Historic Victorian seaport on Amelia Island with Centre Street shops, beach, and Ritz-Carlton resort",
+      "character": "Victorian seaport, island beach, resort",
+      "housing": {
+        "avgRentOneBedroomUSD": 1623,
+        "avgRentTwoBedroomUSD": 2191,
+        "buyPricePerSqmUSD": 4122,
+        "predominantType": "Historic homes, beach condos, and island properties"
+      },
+      "walkabilityScore": 64,
+      "transitScore": 43,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Yulee's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Yulee",
+          "url": "https://www.numbeo.com/cost-of-living/in/Yulee"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "callahan-hilliard",
+      "name": "Callahan / Hilliard",
+      "description": "Western Nassau County communities with very affordable housing and rural character",
+      "character": "Rural, very affordable, agricultural",
+      "housing": {
+        "avgRentOneBedroomUSD": 1110,
+        "avgRentTwoBedroomUSD": 1499,
+        "buyPricePerSqmUSD": 2519,
+        "predominantType": "Modest houses, mobile homes, and rural properties"
+      },
+      "walkabilityScore": 51,
+      "transitScore": 33,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Yulee",
+          "url": "https://www.numbeo.com/cost-of-living/in/Yulee"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "wildlight-east-nassau",
+      "name": "Wildlight / East Nassau",
+      "description": "New master-planned community by Rayonier with trails, schools, and modern amenities",
+      "character": "Master-planned, new community, modern amenities",
+      "housing": {
+        "avgRentOneBedroomUSD": 1879,
+        "avgRentTwoBedroomUSD": 2536,
+        "buyPricePerSqmUSD": 5267,
+        "predominantType": "Newer single-family homes in planned community"
+      },
+      "walkabilityScore": 66,
+      "transitScore": 65,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Yulee",
+          "url": "https://www.numbeo.com/cost-of-living/in/Yulee"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

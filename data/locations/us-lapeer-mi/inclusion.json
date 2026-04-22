@@ -1,0 +1,106 @@
+{
+  "country": "United States",
+  "region": "US Midwest",
+  "overallInclusionScore": 7.5,
+  "lastUpdated": "2026-03-24",
+  "categories": {
+    "racial": {
+      "score": 6,
+      "summary": "Lapeer has moderate racial diversity with federal civil rights protections providing baseline guarantees. The area reflects broader Midwestern/national patterns — generally tolerant urban cores with less diversity in surrounding communities. Some documented disparities in policing and housing access.",
+      "legalProtections": "Federal Civil Rights Act of 1964, Fair Housing Act of 1968, Equal Employment Opportunity Commission (EEOC) enforcement, state civil rights statutes",
+      "positiveFactors": [
+        "Strong federal anti-discrimination framework with active enforcement",
+        "Federal protections provide consistent baseline nationwide",
+        "Active civil rights organizations (NAACP, ACLU) with local chapters"
+      ],
+      "riskFactors": [
+        "Racial disparities in housing, wealth, and policing documented nationally",
+        "Hate crime incidents reported annually to FBI UCR (likely underreported)"
+      ],
+      "sources": [
+        {
+          "title": "FBI Uniform Crime Report — Hate Crime Statistics",
+          "url": "https://ucr.fbi.gov/hate-crime",
+          "type": "official"
+        },
+        {
+          "title": "US Commission on Civil Rights",
+          "url": "https://www.usccr.gov/",
+          "type": "official"
+        }
+      ]
+    },
+    "religious": {
+      "score": 8,
+      "summary": "Religious freedom is strongly protected by the First Amendment in Lapeer. The US has extraordinary religious diversity, with houses of worship for virtually every major faith tradition available in metro areas. Social attitudes toward non-Christian faiths vary by community, but legal protections are robust and well-enforced.",
+      "legalProtections": "First Amendment to the US Constitution, Religious Freedom Restoration Act (1993), Civil Rights Act Title VII (employment), state-level religious freedom statutes",
+      "positiveFactors": [
+        "First Amendment provides among the strongest religious freedom protections globally",
+        "Diverse religious communities with houses of worship for all major faiths in metro areas",
+        "Federal hate crime laws include religious motivation as an aggravating factor"
+      ],
+      "riskFactors": [
+        "Antisemitic and anti-Muslim incidents have increased nationally per FBI data",
+        "Rural/suburban areas may have limited non-Christian worship options"
+      ],
+      "sources": [
+        {
+          "title": "US State Department — International Religious Freedom Report",
+          "url": "https://www.state.gov/reports/2023-report-on-international-religious-freedom/",
+          "type": "official"
+        },
+        {
+          "title": "FBI Hate Crime Statistics — Anti-Religious",
+          "url": "https://ucr.fbi.gov/hate-crime",
+          "type": "official"
+        }
+      ]
+    },
+    "countryOfOrigin": {
+      "score": 7,
+      "summary": "As a US citizen relocating domestically, there are no legal barriers to settling in Lapeer. The area is generally welcoming to newcomers, with established communities of domestic transplants and international immigrants. Newcomer integration depends largely on local community character.",
+      "legalProtections": "Federal anti-discrimination protections, no internal migration restrictions for US citizens, state civil rights acts",
+      "positiveFactors": [
+        "No immigration barriers for domestic relocation — full rights as US citizen",
+        "Established communities of transplants and newcomers",
+        "Federal protections against national-origin discrimination in housing and employment"
+      ],
+      "riskFactors": [
+        "Some communities can be insular toward newcomers regardless of origin",
+        "Political rhetoric around immigration policy is nationally polarizing"
+      ],
+      "sources": [
+        {
+          "title": "US Census Bureau — Migration Flows",
+          "url": "https://www.census.gov/topics/population/migration.html",
+          "type": "official"
+        },
+        {
+          "title": "Migration Policy Institute — State Immigration Data",
+          "url": "https://www.migrationpolicy.org/programs/data-hub",
+          "type": "research"
+        }
+      ]
+    },
+    "language": {
+      "score": 9,
+      "summary": "English is the dominant language in Lapeer, and all government services, healthcare, and daily life operate in English. For English-speaking retirees, there is effectively zero language barrier. Multilingual services are increasingly available in diverse metro areas.",
+      "legalProtections": "Federal Executive Order 13166 requires meaningful access to government services for limited-English speakers. No federal official-English law, though some states have adopted English as official language.",
+      "positiveFactors": [
+        "English is the primary language — no language barrier for English speakers",
+        "All government services, healthcare, and legal proceedings available in English",
+        "Rich media, cultural, and social landscape fully accessible in English"
+      ],
+      "riskFactors": [
+        "No meaningful language risks for English-speaking retirees"
+      ],
+      "sources": [
+        {
+          "title": "US Census Bureau — Language Spoken at Home",
+          "url": "https://data.census.gov/table/S1601",
+          "type": "official"
+        }
+      ]
+    }
+  }
+}

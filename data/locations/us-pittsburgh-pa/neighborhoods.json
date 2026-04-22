@@ -1,0 +1,141 @@
+{
+  "city": "Pittsburgh",
+  "neighborhoods": [
+    {
+      "id": "lawrenceville-strip-district",
+      "name": "Lawrenceville / Strip District",
+      "description": "Revitalized east neighborhoods with craft breweries, galleries, and the famous Strip District market",
+      "character": "Revitalized, breweries, Strip District market",
+      "housing": {
+        "avgRentOneBedroomUSD": 2314,
+        "avgRentTwoBedroomUSD": 3124,
+        "buyPricePerSqmUSD": 6720,
+        "predominantType": "Renovated row houses, lofts, and modern apartments"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 87,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Pittsburgh. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Pittsburgh",
+          "url": "https://www.numbeo.com/cost-of-living/in/Pittsburgh"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "mount-lebanon",
+      "name": "Mount Lebanon",
+      "description": "Upscale southern suburb with excellent schools, walkable Uptown district, and T-line transit",
+      "character": "Upscale, excellent schools, T-line connected",
+      "housing": {
+        "avgRentOneBedroomUSD": 1691,
+        "avgRentTwoBedroomUSD": 2283,
+        "buyPricePerSqmUSD": 4320,
+        "predominantType": "Colonial houses, Cape Cods, and established homes"
+      },
+      "walkabilityScore": 60,
+      "transitScore": 48,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Pittsburgh's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Pittsburgh",
+          "url": "https://www.numbeo.com/cost-of-living/in/Pittsburgh"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "mckeesport-monroeville",
+      "name": "McKeesport / Monroeville",
+      "description": "Eastern communities with very affordable housing, Mon Valley heritage, and improving transit",
+      "character": "Mon Valley, very affordable, improving transit",
+      "housing": {
+        "avgRentOneBedroomUSD": 1157,
+        "avgRentTwoBedroomUSD": 1562,
+        "buyPricePerSqmUSD": 2640,
+        "predominantType": "Older houses, row homes, and affordable apartments"
+      },
+      "walkabilityScore": 42,
+      "transitScore": 37,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Pittsburgh",
+          "url": "https://www.numbeo.com/cost-of-living/in/Pittsburgh"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "cranberry-township-wexford",
+      "name": "Cranberry Township / Wexford",
+      "description": "Northern suburbs with excellent schools, Cranberry Township parks, and growing commercial",
+      "character": "Northern growth, excellent schools, parks",
+      "housing": {
+        "avgRentOneBedroomUSD": 1958,
+        "avgRentTwoBedroomUSD": 2643,
+        "buyPricePerSqmUSD": 5520,
+        "predominantType": "Newer single-family homes and planned communities"
+      },
+      "walkabilityScore": 60,
+      "transitScore": 57,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Pittsburgh",
+          "url": "https://www.numbeo.com/cost-of-living/in/Pittsburgh"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

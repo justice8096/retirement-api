@@ -1,0 +1,141 @@
+{
+  "city": "Portsmouth",
+  "neighborhoods": [
+    {
+      "id": "olde-towne-portsmouth",
+      "name": "Olde Towne Portsmouth",
+      "description": "Historic waterfront district with 18th-century architecture, ferry to Norfolk, and children's museum",
+      "character": "Historic waterfront, ferry access, colonial architecture",
+      "housing": {
+        "avgRentOneBedroomUSD": 1940,
+        "avgRentTwoBedroomUSD": 2618,
+        "buyPricePerSqmUSD": 5488,
+        "predominantType": "Colonial and Victorian houses, apartments, and condos"
+      },
+      "walkabilityScore": 87,
+      "transitScore": 76,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Portsmouth. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Portsmouth",
+          "url": "https://www.numbeo.com/cost-of-living/in/Portsmouth"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "churchland",
+      "name": "Churchland",
+      "description": "Western area with established neighborhoods, shopping, and proximity to Suffolk and Chesapeake",
+      "character": "Established western, shopping, crossroads location",
+      "housing": {
+        "avgRentOneBedroomUSD": 1417,
+        "avgRentTwoBedroomUSD": 1913,
+        "buyPricePerSqmUSD": 3528,
+        "predominantType": "Ranch houses, colonials, and newer homes"
+      },
+      "walkabilityScore": 50,
+      "transitScore": 50,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Portsmouth's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Portsmouth",
+          "url": "https://www.numbeo.com/cost-of-living/in/Portsmouth"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "hodges-ferry-deep-creek",
+      "name": "Hodges Ferry / Deep Creek",
+      "description": "Southern communities with affordable housing, Great Dismal Swamp access, and growing development",
+      "character": "Southern affordable, swamp access, growing",
+      "housing": {
+        "avgRentOneBedroomUSD": 970,
+        "avgRentTwoBedroomUSD": 1309,
+        "buyPricePerSqmUSD": 2156,
+        "predominantType": "Modest houses and affordable single-family homes"
+      },
+      "walkabilityScore": 44,
+      "transitScore": 39,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Portsmouth",
+          "url": "https://www.numbeo.com/cost-of-living/in/Portsmouth"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "western-branch-chesapeake",
+      "name": "Western Branch (Chesapeake)",
+      "description": "Adjacent Chesapeake area with excellent schools, parks, and family-oriented community",
+      "character": "Adjacent city, excellent schools, family-oriented",
+      "housing": {
+        "avgRentOneBedroomUSD": 1641,
+        "avgRentTwoBedroomUSD": 2216,
+        "buyPricePerSqmUSD": 4508,
+        "predominantType": "Single-family homes in established neighborhoods"
+      },
+      "walkabilityScore": 61,
+      "transitScore": 70,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Portsmouth",
+          "url": "https://www.numbeo.com/cost-of-living/in/Portsmouth"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

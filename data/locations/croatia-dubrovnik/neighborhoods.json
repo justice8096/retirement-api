@@ -1,0 +1,141 @@
+{
+  "city": "Dubrovnik",
+  "neighborhoods": [
+    {
+      "id": "stari-grad-old-town",
+      "name": "Stari Grad (Old Town)",
+      "description": "UNESCO-listed walled city with marble streets, baroque churches, and dramatic Adriatic views",
+      "character": "Historic walled, car-free, tourist-heavy in summer",
+      "housing": {
+        "avgRentOneBedroomEUR": 1444,
+        "avgRentTwoBedroomEUR": 1950,
+        "buyPricePerSqmEUR": 4340,
+        "predominantType": "Restored stone apartments within medieval walls"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 90,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Dubrovnik. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Dubrovnik",
+          "url": "https://www.numbeo.com/cost-of-living/in/Dubrovnik"
+        },
+        {
+          "title": "Njuskalo",
+          "url": "https://www.njuskalo.hr/"
+        },
+        {
+          "title": "Index Oglasi",
+          "url": "https://www.index.hr/oglasi/"
+        }
+      ]
+    },
+    {
+      "id": "lapad",
+      "name": "Lapad",
+      "description": "Peninsula neighborhood west of old town with beaches, promenades, and a more residential feel",
+      "character": "Beach residential, walkable promenade, family-friendly",
+      "housing": {
+        "avgRentOneBedroomEUR": 1055,
+        "avgRentTwoBedroomEUR": 1425,
+        "buyPricePerSqmEUR": 2790,
+        "predominantType": "Apartments, small houses, and hotel conversions"
+      },
+      "walkabilityScore": 57,
+      "transitScore": 42,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Dubrovnik's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Dubrovnik",
+          "url": "https://www.numbeo.com/cost-of-living/in/Dubrovnik"
+        },
+        {
+          "title": "Njuskalo",
+          "url": "https://www.njuskalo.hr/"
+        },
+        {
+          "title": "Index Oglasi",
+          "url": "https://www.index.hr/oglasi/"
+        }
+      ]
+    },
+    {
+      "id": "gruz",
+      "name": "Gruz",
+      "description": "Port area with the main harbor, market, and more affordable housing options",
+      "character": "Working port area, local market hub, practical",
+      "housing": {
+        "avgRentOneBedroomEUR": 722,
+        "avgRentTwoBedroomEUR": 975,
+        "buyPricePerSqmEUR": 1705,
+        "predominantType": "Apartments in socialist-era and newer buildings"
+      },
+      "walkabilityScore": 47,
+      "transitScore": 40,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Dubrovnik",
+          "url": "https://www.numbeo.com/cost-of-living/in/Dubrovnik"
+        },
+        {
+          "title": "Njuskalo",
+          "url": "https://www.njuskalo.hr/"
+        },
+        {
+          "title": "Index Oglasi",
+          "url": "https://www.index.hr/oglasi/"
+        }
+      ]
+    },
+    {
+      "id": "ploce",
+      "name": "Ploce",
+      "description": "Eastern area near the old town with luxury hotels, Banje Beach, and stunning fortification views",
+      "character": "Upscale, scenic, close to old town attractions",
+      "housing": {
+        "avgRentOneBedroomEUR": 1222,
+        "avgRentTwoBedroomEUR": 1650,
+        "buyPricePerSqmEUR": 3565,
+        "predominantType": "Luxury apartments and renovated stone houses"
+      },
+      "walkabilityScore": 80,
+      "transitScore": 53,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Dubrovnik",
+          "url": "https://www.numbeo.com/cost-of-living/in/Dubrovnik"
+        },
+        {
+          "title": "Njuskalo",
+          "url": "https://www.njuskalo.hr/"
+        },
+        {
+          "title": "Index Oglasi",
+          "url": "https://www.index.hr/oglasi/"
+        }
+      ]
+    }
+  ]
+}

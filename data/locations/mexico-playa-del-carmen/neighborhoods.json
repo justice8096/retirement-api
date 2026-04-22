@@ -1,0 +1,141 @@
+{
+  "city": "Playa del Carmen",
+  "neighborhoods": [
+    {
+      "id": "centro-quinta-avenida",
+      "name": "Centro / Quinta Avenida",
+      "description": "Pedestrian 5th Avenue with international restaurants, shops, and Caribbean beach access",
+      "character": "Beach resort, pedestrian avenue, international",
+      "housing": {
+        "avgRentOneBedroomUSD": 1045,
+        "avgRentTwoBedroomUSD": 1359,
+        "buyPricePerSqmUSD": 2741,
+        "predominantType": "Condos, apartments, and mixed-use buildings"
+      },
+      "walkabilityScore": 93,
+      "transitScore": 86,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Playa del Carmen. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Playa del Carmen",
+          "url": "https://www.numbeo.com/cost-of-living/in/Playa-del-Carmen"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    },
+    {
+      "id": "playacar",
+      "name": "Playacar",
+      "description": "Gated resort community south of town with golf course, ruins, and beachfront properties",
+      "character": "Gated resort, golf, beachfront, secure",
+      "housing": {
+        "avgRentOneBedroomUSD": 764,
+        "avgRentTwoBedroomUSD": 993,
+        "buyPricePerSqmUSD": 1762,
+        "predominantType": "Condos, townhouses, and resort villas"
+      },
+      "walkabilityScore": 62,
+      "transitScore": 56,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Playa del Carmen's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Playa del Carmen",
+          "url": "https://www.numbeo.com/cost-of-living/in/Playa-del-Carmen"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    },
+    {
+      "id": "playa-del-carmen-norte-colosio",
+      "name": "Playa del Carmen Norte / Colosio",
+      "description": "Northern neighborhoods developing rapidly with more local character and lower costs",
+      "character": "Developing local, affordable, improving services",
+      "housing": {
+        "avgRentOneBedroomUSD": 523,
+        "avgRentTwoBedroomUSD": 679,
+        "buyPricePerSqmUSD": 1077,
+        "predominantType": "New construction condos and modest apartments"
+      },
+      "walkabilityScore": 55,
+      "transitScore": 34,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Playa del Carmen",
+          "url": "https://www.numbeo.com/cost-of-living/in/Playa-del-Carmen"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    },
+    {
+      "id": "riviera-maya-puerto-aventuras-akumal",
+      "name": "Riviera Maya (Puerto Aventuras / Akumal)",
+      "description": "Coastal communities south of Playa with marina, snorkeling, and established expat communities",
+      "character": "Coastal communities, marina, snorkeling, expat social",
+      "housing": {
+        "avgRentOneBedroomUSD": 884,
+        "avgRentTwoBedroomUSD": 1150,
+        "buyPricePerSqmUSD": 2252,
+        "predominantType": "Resort condos, beachfront houses, and marina properties"
+      },
+      "walkabilityScore": 74,
+      "transitScore": 51,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Playa del Carmen",
+          "url": "https://www.numbeo.com/cost-of-living/in/Playa-del-Carmen"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    }
+  ]
+}

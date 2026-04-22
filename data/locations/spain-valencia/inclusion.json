@@ -1,0 +1,115 @@
+{
+  "country": "Spain",
+  "region": "Valencia",
+  "overallInclusionScore": 7,
+  "lastUpdated": "2026-03-24",
+  "categories": {
+    "racial": {
+      "score": 7,
+      "summary": "Spain is generally welcoming to foreigners, with large established expat communities in coastal and urban areas near Valencia. Legal anti-discrimination protections are strong under both Spanish and EU law. However, discrimination against Roma and sub-Saharan African immigrants is documented by ECRI and Spanish ombudsman reports.",
+      "legalProtections": "Spanish Constitution Article 14 (equality), EU Race Equality Directive 2000/43/EC, Integral Law against Racism (proposed), Council for the Elimination of Racial/Ethnic Discrimination",
+      "positiveFactors": [
+        "Large diverse expat communities normalize foreign presence in coastal areas",
+        "Strong EU and national anti-discrimination legal framework",
+        "Economic incentive to welcome foreign retirees who contribute to local economy"
+      ],
+      "riskFactors": [
+        "Documented discrimination against Roma population per ECRI reports",
+        "Housing discrimination can affect non-Western immigrants",
+        "Rural areas may be less accustomed to racial diversity"
+      ],
+      "sources": [
+        {
+          "title": "ECRI Report on Spain",
+          "url": "https://www.coe.int/en/web/european-commission-against-racism-and-intolerance/spain",
+          "type": "official"
+        },
+        {
+          "title": "Spanish Ombudsman (Defensor del Pueblo)",
+          "url": "https://www.defensordelpueblo.es/",
+          "type": "official"
+        }
+      ]
+    },
+    "religious": {
+      "score": 8,
+      "summary": "Spain guarantees religious freedom constitutionally and maintains formal cooperation agreements with Catholic, Protestant, Jewish, and Islamic communities. Valencia is historically Catholic but increasingly secular. Non-Christian worship facilities are available in major cities and expat areas. Religious discrimination is rare for Western retirees.",
+      "legalProtections": "Spanish Constitution Articles 14 and 16 (religious freedom), Organic Law 7/1980 on Religious Freedom, cooperation agreements with multiple faiths, EU anti-discrimination directives",
+      "positiveFactors": [
+        "Constitutional religious freedom with formal multi-faith cooperation agreements",
+        "No restrictions on religious symbols or dress in public life",
+        "Diverse worship options available in major cities and expat areas"
+      ],
+      "riskFactors": [
+        "Very rural areas may lack non-Catholic worship facilities",
+        "Cultural Catholicism still strong in social norms and public holidays"
+      ],
+      "sources": [
+        {
+          "title": "US State Department — Religious Freedom Report: Spain",
+          "url": "https://www.state.gov/reports/2023-report-on-international-religious-freedom/spain/",
+          "type": "official"
+        },
+        {
+          "title": "Fundacion Pluralismo y Convivencia",
+          "url": "https://www.pluralismoyconvivencia.es/",
+          "type": "official"
+        }
+      ]
+    },
+    "countryOfOrigin": {
+      "score": 7,
+      "summary": "Spain has a well-established infrastructure for foreign residents, particularly retirees. Valencia benefits from significant expat communities from the UK, Northern Europe, and North America. The Non-Lucrative Visa and Golden Visa programs demonstrate institutional welcome. Bureaucratic processes can be slow but are navigable.",
+      "legalProtections": "EU anti-discrimination directives, Spanish Foreigners Law (Ley de Extranjeria), Non-Lucrative Visa provisions, NIE registration system",
+      "positiveFactors": [
+        "Established visa programs specifically welcoming retirees and investors",
+        "Large existing expat communities with support networks",
+        "Economic incentive structure favors welcoming foreign residents"
+      ],
+      "riskFactors": [
+        "Spanish bureaucracy can be slow and sometimes requires Spanish-language documents",
+        "Two-tier perception between Western and non-Western immigrants persists",
+        "Housing market pressure in popular expat areas can create local resentment"
+      ],
+      "sources": [
+        {
+          "title": "Spanish Ministry of Inclusion — Foreign Residents Data",
+          "url": "https://extranjeros.inclusion.gob.es/",
+          "type": "official"
+        },
+        {
+          "title": "OECD International Migration Outlook — Spain",
+          "url": "https://www.oecd.org/en/publications/international-migration-outlook_1999124x.html",
+          "type": "research"
+        }
+      ]
+    },
+    "language": {
+      "score": 5,
+      "summary": "Spanish (Castilian) is the primary language in Valencia, and English proficiency outside tourist areas and younger demographics is limited. Spain ranks moderate on the EF English Proficiency Index. Expat communities provide English-language social networks, but daily tasks — healthcare, banking, government — typically require Spanish or a translator.",
+      "legalProtections": "Spanish Constitution Article 3 establishes Castilian as official language. Regional languages (Catalan, Basque, Galician) have co-official status in their territories. No obligation to provide government services in English.",
+      "positiveFactors": [
+        "Expat communities provide English-language social support",
+        "Tourist infrastructure accommodates English in popular areas",
+        "Spanish language courses widely available and affordable"
+      ],
+      "riskFactors": [
+        "Healthcare and emergency services primarily in Spanish",
+        "Government bureaucracy and legal documents require Spanish",
+        "Social integration difficult without conversational Spanish"
+      ],
+      "sources": [
+        {
+          "title": "EF English Proficiency Index — Spain",
+          "url": "https://www.ef.com/wwen/epi/regions/europe/spain/",
+          "type": "index"
+        },
+        {
+          "title": "Instituto Cervantes",
+          "url": "https://www.cervantes.es/",
+          "type": "official"
+        }
+      ]
+    }
+  }
+}

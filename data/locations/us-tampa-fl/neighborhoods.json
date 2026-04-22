@@ -1,0 +1,141 @@
+{
+  "city": "Tampa",
+  "neighborhoods": [
+    {
+      "id": "ybor-city-channelside",
+      "name": "Ybor City / Channelside",
+      "description": "Historic cigar district with Latin heritage, 7th Avenue nightlife, and the waterfront Channelside development",
+      "character": "Historic cigar district, Latin heritage, nightlife",
+      "housing": {
+        "avgRentOneBedroomUSD": 2595,
+        "avgRentTwoBedroomUSD": 3503,
+        "buyPricePerSqmUSD": 7644,
+        "predominantType": "Converted cigar factory lofts, condos, and apartments"
+      },
+      "walkabilityScore": 86,
+      "transitScore": 77,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Tampa. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Tampa",
+          "url": "https://www.numbeo.com/cost-of-living/in/Tampa"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "south-tampa-hyde-park",
+      "name": "South Tampa / Hyde Park",
+      "description": "Affluent area with Hyde Park Village, Bayshore Boulevard, and the longest continuous sidewalk in the world",
+      "character": "Affluent, Bayshore Boulevard, village shopping",
+      "housing": {
+        "avgRentOneBedroomUSD": 1896,
+        "avgRentTwoBedroomUSD": 2560,
+        "buyPricePerSqmUSD": 4914,
+        "predominantType": "Bungalows, Mediterranean-style houses, and condos"
+      },
+      "walkabilityScore": 52,
+      "transitScore": 44,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Tampa's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Tampa",
+          "url": "https://www.numbeo.com/cost-of-living/in/Tampa"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "temple-terrace-riverview",
+      "name": "Temple Terrace / Riverview",
+      "description": "Eastern and southern communities with USF proximity, affordable housing, and growing development",
+      "character": "USF area, affordable, growing development",
+      "housing": {
+        "avgRentOneBedroomUSD": 1297,
+        "avgRentTwoBedroomUSD": 1751,
+        "buyPricePerSqmUSD": 3003,
+        "predominantType": "Ranch houses, newer homes, and apartment complexes"
+      },
+      "walkabilityScore": 49,
+      "transitScore": 42,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Tampa",
+          "url": "https://www.numbeo.com/cost-of-living/in/Tampa"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "westchase-carrollwood",
+      "name": "Westchase / Carrollwood",
+      "description": "Northwestern communities with excellent schools, community pools, and family amenities",
+      "character": "Northwestern, excellent schools, community pools",
+      "housing": {
+        "avgRentOneBedroomUSD": 2196,
+        "avgRentTwoBedroomUSD": 2964,
+        "buyPricePerSqmUSD": 6279,
+        "predominantType": "Single-family homes in master-planned communities"
+      },
+      "walkabilityScore": 76,
+      "transitScore": 62,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Tampa",
+          "url": "https://www.numbeo.com/cost-of-living/in/Tampa"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

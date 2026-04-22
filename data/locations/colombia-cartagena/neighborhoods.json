@@ -1,0 +1,141 @@
+{
+  "city": "Cartagena",
+  "neighborhoods": [
+    {
+      "id": "ciudad-amurallada-walled-city",
+      "name": "Ciudad Amurallada (Walled City)",
+      "description": "UNESCO World Heritage walled center with colorful colonial architecture, plazas, and rooftop bars",
+      "character": "Historic, tourist-heavy, vibrant colonial charm",
+      "housing": {
+        "avgRentOneBedroomUSD": 943,
+        "avgRentTwoBedroomUSD": 1225,
+        "buyPricePerSqmUSD": 2450,
+        "predominantType": "Restored colonial mansions and boutique apartment conversions"
+      },
+      "walkabilityScore": 89,
+      "transitScore": 71,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Cartagena. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cartagena",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cartagena"
+        },
+        {
+          "title": "Finca Raiz",
+          "url": "https://www.fincaraiz.com.co/"
+        },
+        {
+          "title": "Metrocuadrado",
+          "url": "https://www.metrocuadrado.com/"
+        }
+      ]
+    },
+    {
+      "id": "manga",
+      "name": "Manga",
+      "description": "Residential island neighborhood connected by bridge with tree-lined streets and Republican-era mansions",
+      "character": "Quiet island residential, historic character, family-friendly",
+      "housing": {
+        "avgRentOneBedroomUSD": 689,
+        "avgRentTwoBedroomUSD": 895,
+        "buyPricePerSqmUSD": 1575,
+        "predominantType": "Restored mansions, modern condos, and townhouses"
+      },
+      "walkabilityScore": 61,
+      "transitScore": 41,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Cartagena's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cartagena",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cartagena"
+        },
+        {
+          "title": "Finca Raiz",
+          "url": "https://www.fincaraiz.com.co/"
+        },
+        {
+          "title": "Metrocuadrado",
+          "url": "https://www.metrocuadrado.com/"
+        }
+      ]
+    },
+    {
+      "id": "ternera-turbaco",
+      "name": "Ternera / Turbaco",
+      "description": "Growing outer area with new residential developments and lower costs of living",
+      "character": "Suburban expanding, family-oriented, emerging services",
+      "housing": {
+        "avgRentOneBedroomUSD": 471,
+        "avgRentTwoBedroomUSD": 613,
+        "buyPricePerSqmUSD": 963,
+        "predominantType": "New construction apartments and affordable housing developments"
+      },
+      "walkabilityScore": 49,
+      "transitScore": 45,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cartagena",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cartagena"
+        },
+        {
+          "title": "Finca Raiz",
+          "url": "https://www.fincaraiz.com.co/"
+        },
+        {
+          "title": "Metrocuadrado",
+          "url": "https://www.metrocuadrado.com/"
+        }
+      ]
+    },
+    {
+      "id": "bocagrande",
+      "name": "Bocagrande",
+      "description": "Modern beachfront peninsula with high-rise hotels, condos, and a cosmopolitan atmosphere",
+      "character": "Beach resort, high-rise, tourist and expat hub",
+      "housing": {
+        "avgRentOneBedroomUSD": 798,
+        "avgRentTwoBedroomUSD": 1037,
+        "buyPricePerSqmUSD": 2012,
+        "predominantType": "High-rise condominiums and luxury apartment towers"
+      },
+      "walkabilityScore": 77,
+      "transitScore": 65,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cartagena",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cartagena"
+        },
+        {
+          "title": "Finca Raiz",
+          "url": "https://www.fincaraiz.com.co/"
+        },
+        {
+          "title": "Metrocuadrado",
+          "url": "https://www.metrocuadrado.com/"
+        }
+      ]
+    }
+  ]
+}

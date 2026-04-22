@@ -1,0 +1,141 @@
+{
+  "city": "Fort Worth",
+  "neighborhoods": [
+    {
+      "id": "sundance-square-downtown",
+      "name": "Sundance Square / Downtown",
+      "description": "Pedestrian-friendly downtown with Sundance Square plaza, museums, and Western heritage entertainment",
+      "character": "Western heritage, pedestrian downtown, cultural",
+      "housing": {
+        "avgRentOneBedroomUSD": 2408,
+        "avgRentTwoBedroomUSD": 3250,
+        "buyPricePerSqmUSD": 7028,
+        "predominantType": "Loft apartments, condos, and renovated buildings"
+      },
+      "walkabilityScore": 93,
+      "transitScore": 75,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Fort Worth. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Fort Worth",
+          "url": "https://www.numbeo.com/cost-of-living/in/Fort-Worth"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "southlake-keller",
+      "name": "Southlake / Keller",
+      "description": "Affluent northern suburbs with Southlake Town Square, excellent schools, and upscale shopping",
+      "character": "Affluent, excellent schools, upscale shopping",
+      "housing": {
+        "avgRentOneBedroomUSD": 1759,
+        "avgRentTwoBedroomUSD": 2375,
+        "buyPricePerSqmUSD": 4518,
+        "predominantType": "Large single-family homes in upscale neighborhoods"
+      },
+      "walkabilityScore": 60,
+      "transitScore": 43,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Fort Worth's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Fort Worth",
+          "url": "https://www.numbeo.com/cost-of-living/in/Fort-Worth"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "benbrook-white-settlement",
+      "name": "Benbrook / White Settlement",
+      "description": "Western suburbs with lakeside recreation, affordable housing, and community character",
+      "character": "Lakeside suburban, affordable, community",
+      "housing": {
+        "avgRentOneBedroomUSD": 1204,
+        "avgRentTwoBedroomUSD": 1625,
+        "buyPricePerSqmUSD": 2761,
+        "predominantType": "Ranch houses, modest homes, and apartments"
+      },
+      "walkabilityScore": 59,
+      "transitScore": 41,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Fort Worth",
+          "url": "https://www.numbeo.com/cost-of-living/in/Fort-Worth"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "burleson-crowley",
+      "name": "Burleson / Crowley",
+      "description": "Southern suburbs with family-oriented communities, good schools, and growing amenities",
+      "character": "Family-oriented, growing, good schools",
+      "housing": {
+        "avgRentOneBedroomUSD": 2037,
+        "avgRentTwoBedroomUSD": 2750,
+        "buyPricePerSqmUSD": 5773,
+        "predominantType": "Newer subdivisions and single-family homes"
+      },
+      "walkabilityScore": 76,
+      "transitScore": 53,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Fort Worth",
+          "url": "https://www.numbeo.com/cost-of-living/in/Fort-Worth"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "city": "Corfu",
+  "neighborhoods": [
+    {
+      "id": "corfu-old-town-kerkyra",
+      "name": "Corfu Old Town (Kerkyra)",
+      "description": "UNESCO Venetian-style old town with narrow kantouni alleys, Liston arcade, and twin fortresses",
+      "character": "Venetian UNESCO, compact walkable, cultural events",
+      "housing": {
+        "avgRentOneBedroomEUR": 1162,
+        "avgRentTwoBedroomEUR": 1569,
+        "buyPricePerSqmEUR": 3500,
+        "predominantType": "Apartments in Venetian and British-era buildings"
+      },
+      "walkabilityScore": 92,
+      "transitScore": 79,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Corfu Town. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Corfu Town",
+          "url": "https://www.numbeo.com/cost-of-living/in/Corfu-Town"
+        },
+        {
+          "title": "Spitogatos",
+          "url": "https://www.spitogatos.gr/"
+        },
+        {
+          "title": "XE.gr",
+          "url": "https://www.xe.gr/"
+        }
+      ]
+    },
+    {
+      "id": "gouvia-kontokali",
+      "name": "Gouvia / Kontokali",
+      "description": "Coastal villages north of town with marinas, beaches, and residential development",
+      "character": "Coastal residential, marina access, beach lifestyle",
+      "housing": {
+        "avgRentOneBedroomEUR": 849,
+        "avgRentTwoBedroomEUR": 1147,
+        "buyPricePerSqmEUR": 2250,
+        "predominantType": "Villas, apartments, and holiday properties"
+      },
+      "walkabilityScore": 62,
+      "transitScore": 42,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Corfu Town's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Corfu Town",
+          "url": "https://www.numbeo.com/cost-of-living/in/Corfu-Town"
+        },
+        {
+          "title": "Spitogatos",
+          "url": "https://www.spitogatos.gr/"
+        },
+        {
+          "title": "XE.gr",
+          "url": "https://www.xe.gr/"
+        }
+      ]
+    },
+    {
+      "id": "potamos-kanoni",
+      "name": "Potamos / Kanoni",
+      "description": "Residential areas south of town with airport proximity and lower costs",
+      "character": "Residential, affordable, convenient location",
+      "housing": {
+        "avgRentOneBedroomEUR": 581,
+        "avgRentTwoBedroomEUR": 784,
+        "buyPricePerSqmEUR": 1375,
+        "predominantType": "Apartments and modest houses"
+      },
+      "walkabilityScore": 48,
+      "transitScore": 35,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Corfu Town",
+          "url": "https://www.numbeo.com/cost-of-living/in/Corfu-Town"
+        },
+        {
+          "title": "Spitogatos",
+          "url": "https://www.spitogatos.gr/"
+        },
+        {
+          "title": "XE.gr",
+          "url": "https://www.xe.gr/"
+        }
+      ]
+    },
+    {
+      "id": "northeast-coast-kassiopi-barbati",
+      "name": "Northeast Coast (Kassiopi/Barbati)",
+      "description": "Scenic northeast coastline with established British expat community, clear waters, and mountain backdrops",
+      "character": "Scenic coast, British expat enclave, nature-oriented",
+      "housing": {
+        "avgRentOneBedroomEUR": 983,
+        "avgRentTwoBedroomEUR": 1328,
+        "buyPricePerSqmEUR": 2875,
+        "predominantType": "Villas, restored stone houses, and coastal properties"
+      },
+      "walkabilityScore": 65,
+      "transitScore": 66,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Corfu Town",
+          "url": "https://www.numbeo.com/cost-of-living/in/Corfu-Town"
+        },
+        {
+          "title": "Spitogatos",
+          "url": "https://www.spitogatos.gr/"
+        },
+        {
+          "title": "XE.gr",
+          "url": "https://www.xe.gr/"
+        }
+      ]
+    }
+  ]
+}

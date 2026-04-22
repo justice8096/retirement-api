@@ -1,0 +1,141 @@
+{
+  "city": "Nuevo Arenal / La Fortuna",
+  "neighborhoods": [
+    {
+      "id": "la-fortuna-centro",
+      "name": "La Fortuna Centro",
+      "description": "Small bustling town center at the base of Arenal Volcano with tourism services, restaurants, and shops",
+      "character": "Small-town walkable, tourism hub, volcano views",
+      "housing": {
+        "avgRentOneBedroomUSD": 943,
+        "avgRentTwoBedroomUSD": 1225,
+        "buyPricePerSqmUSD": 2450,
+        "predominantType": "Small houses, apartments above shops, and guesthouses"
+      },
+      "walkabilityScore": 93,
+      "transitScore": 80,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Nuevo Arenal. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Nuevo Arenal",
+          "url": "https://www.numbeo.com/cost-of-living/in/Nuevo-Arenal"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    },
+    {
+      "id": "el-castillo",
+      "name": "El Castillo",
+      "description": "Quiet community on the south side of Lake Arenal with nature reserves and eco-lodges",
+      "character": "Rural, eco-oriented, nature immersion",
+      "housing": {
+        "avgRentOneBedroomUSD": 689,
+        "avgRentTwoBedroomUSD": 895,
+        "buyPricePerSqmUSD": 1575,
+        "predominantType": "Houses on large lots, eco-homes, and cabins"
+      },
+      "walkabilityScore": 61,
+      "transitScore": 44,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Nuevo Arenal's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Nuevo Arenal",
+          "url": "https://www.numbeo.com/cost-of-living/in/Nuevo-Arenal"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    },
+    {
+      "id": "nuevo-arenal",
+      "name": "Nuevo Arenal",
+      "description": "Lakeside town on the western shore of Lake Arenal with a small expat community and affordable living",
+      "character": "Small lakeside town, quiet, affordable",
+      "housing": {
+        "avgRentOneBedroomUSD": 471,
+        "avgRentTwoBedroomUSD": 613,
+        "buyPricePerSqmUSD": 963,
+        "predominantType": "Modest houses and small apartments"
+      },
+      "walkabilityScore": 56,
+      "transitScore": 49,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Nuevo Arenal",
+          "url": "https://www.numbeo.com/cost-of-living/in/Nuevo-Arenal"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    },
+    {
+      "id": "arenal-lake-communities",
+      "name": "Arenal Lake Communities",
+      "description": "Scattered expat communities along the north shore of Lake Arenal with organized social activities",
+      "character": "Rural expat enclave, lake views, community-oriented",
+      "housing": {
+        "avgRentOneBedroomUSD": 798,
+        "avgRentTwoBedroomUSD": 1037,
+        "buyPricePerSqmUSD": 2012,
+        "predominantType": "Custom-built houses and small developments"
+      },
+      "walkabilityScore": 71,
+      "transitScore": 64,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Nuevo Arenal",
+          "url": "https://www.numbeo.com/cost-of-living/in/Nuevo-Arenal"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    }
+  ]
+}

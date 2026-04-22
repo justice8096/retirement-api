@@ -1,0 +1,141 @@
+{
+  "city": "Atenas",
+  "neighborhoods": [
+    {
+      "id": "atenas-centro",
+      "name": "Atenas Centro",
+      "description": "Small town center famous for having one of the best climates in the world, with a central park and local market",
+      "character": "Small-town walkable, pleasant climate, traditional Tico culture",
+      "housing": {
+        "avgRentOneBedroomUSD": 909,
+        "avgRentTwoBedroomUSD": 1181,
+        "buyPricePerSqmUSD": 2353,
+        "predominantType": "Houses and small apartments near the central park"
+      },
+      "walkabilityScore": 89,
+      "transitScore": 87,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Atenas. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Atenas",
+          "url": "https://www.numbeo.com/cost-of-living/in/Atenas"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    },
+    {
+      "id": "santa-eulalia",
+      "name": "Santa Eulalia",
+      "description": "Rural residential area above Atenas with valley views and cooler temperatures",
+      "character": "Rural hillside, panoramic views, quiet",
+      "housing": {
+        "avgRentOneBedroomUSD": 664,
+        "avgRentTwoBedroomUSD": 863,
+        "buyPricePerSqmUSD": 1513,
+        "predominantType": "Houses on large lots with gardens"
+      },
+      "walkabilityScore": 53,
+      "transitScore": 54,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Atenas's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Atenas",
+          "url": "https://www.numbeo.com/cost-of-living/in/Atenas"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    },
+    {
+      "id": "barrio-jesus",
+      "name": "Barrio Jesus",
+      "description": "Adjacent community with lower costs and easy access to Atenas services",
+      "character": "Small-town affordable, agricultural, family-oriented",
+      "housing": {
+        "avgRentOneBedroomUSD": 454,
+        "avgRentTwoBedroomUSD": 591,
+        "buyPricePerSqmUSD": 925,
+        "predominantType": "Tico-style houses and basic apartments"
+      },
+      "walkabilityScore": 57,
+      "transitScore": 35,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Atenas",
+          "url": "https://www.numbeo.com/cost-of-living/in/Atenas"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    },
+    {
+      "id": "roca-verde-los-angeles",
+      "name": "Roca Verde / Los Angeles",
+      "description": "Hillside areas above town popular with North American retirees, with established expat organizations",
+      "character": "Expat hillside community, organized social groups, scenic",
+      "housing": {
+        "avgRentOneBedroomUSD": 769,
+        "avgRentTwoBedroomUSD": 1000,
+        "buyPricePerSqmUSD": 1933,
+        "predominantType": "Modern houses in gated communities and custom-built homes"
+      },
+      "walkabilityScore": 69,
+      "transitScore": 55,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Atenas",
+          "url": "https://www.numbeo.com/cost-of-living/in/Atenas"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    }
+  ]
+}

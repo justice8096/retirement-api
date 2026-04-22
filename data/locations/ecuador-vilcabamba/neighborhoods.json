@@ -1,0 +1,141 @@
+{
+  "city": "Vilcabamba",
+  "neighborhoods": [
+    {
+      "id": "vilcabamba-centro",
+      "name": "Vilcabamba Centro",
+      "description": "Tiny Andean town in the Valley of Longevity with a central park, organic restaurants, and holistic health focus",
+      "character": "Tiny wellness village, organic lifestyle, spiritual",
+      "housing": {
+        "avgRentOneBedroomUSD": 685,
+        "avgRentTwoBedroomUSD": 891,
+        "buyPricePerSqmUSD": 1721,
+        "predominantType": "Small houses and apartments near the central park"
+      },
+      "walkabilityScore": 91,
+      "transitScore": 76,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Vilcabamba. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Vilcabamba",
+          "url": "https://www.numbeo.com/cost-of-living/in/Vilcabamba"
+        },
+        {
+          "title": "Plusvalia",
+          "url": "https://www.plusvalia.com/"
+        },
+        {
+          "title": "OLX Ecuador",
+          "url": "https://www.olx.com.ec/"
+        }
+      ]
+    },
+    {
+      "id": "yamburara",
+      "name": "Yamburara",
+      "description": "Valley area east of town with farms, horse ranches, and mountain river access",
+      "character": "Valley rural, farming, river access, peaceful",
+      "housing": {
+        "avgRentOneBedroomUSD": 501,
+        "avgRentTwoBedroomUSD": 651,
+        "buyPricePerSqmUSD": 1106,
+        "predominantType": "Farm houses, cabins, and rural properties"
+      },
+      "walkabilityScore": 57,
+      "transitScore": 47,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Vilcabamba's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Vilcabamba",
+          "url": "https://www.numbeo.com/cost-of-living/in/Vilcabamba"
+        },
+        {
+          "title": "Plusvalia",
+          "url": "https://www.plusvalia.com/"
+        },
+        {
+          "title": "OLX Ecuador",
+          "url": "https://www.olx.com.ec/"
+        }
+      ]
+    },
+    {
+      "id": "malacatos",
+      "name": "Malacatos",
+      "description": "Adjacent valley town 20 minutes south with similar climate, local sugar cane production, and lower costs",
+      "character": "Small valley town, affordable, agricultural",
+      "housing": {
+        "avgRentOneBedroomUSD": 343,
+        "avgRentTwoBedroomUSD": 445,
+        "buyPricePerSqmUSD": 676,
+        "predominantType": "Basic houses and rural properties"
+      },
+      "walkabilityScore": 51,
+      "transitScore": 42,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Vilcabamba",
+          "url": "https://www.numbeo.com/cost-of-living/in/Vilcabamba"
+        },
+        {
+          "title": "Plusvalia",
+          "url": "https://www.plusvalia.com/"
+        },
+        {
+          "title": "OLX Ecuador",
+          "url": "https://www.olx.com.ec/"
+        }
+      ]
+    },
+    {
+      "id": "hacienda-zone-upper-vilcabamba",
+      "name": "Hacienda Zone / Upper Vilcabamba",
+      "description": "Hillside area above town where expats have built homes with panoramic valley views",
+      "character": "Expat hillside, valley views, alternative lifestyle",
+      "housing": {
+        "avgRentOneBedroomUSD": 580,
+        "avgRentTwoBedroomUSD": 754,
+        "buyPricePerSqmUSD": 1413,
+        "predominantType": "Custom eco-homes, hacienda-style houses, and retreats"
+      },
+      "walkabilityScore": 63,
+      "transitScore": 54,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Vilcabamba",
+          "url": "https://www.numbeo.com/cost-of-living/in/Vilcabamba"
+        },
+        {
+          "title": "Plusvalia",
+          "url": "https://www.plusvalia.com/"
+        },
+        {
+          "title": "OLX Ecuador",
+          "url": "https://www.olx.com.ec/"
+        }
+      ]
+    }
+  ]
+}

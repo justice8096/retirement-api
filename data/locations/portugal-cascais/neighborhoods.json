@@ -1,0 +1,141 @@
+{
+  "city": "Cascais",
+  "neighborhoods": [
+    {
+      "id": "cascais-centro",
+      "name": "Cascais Centro",
+      "description": "Former royal fishing village with elegant center, marina, and direct train connection to Lisbon",
+      "character": "Elegant coastal, royal heritage, Lisbon train-connected",
+      "housing": {
+        "avgRentOneBedroomEUR": 2152,
+        "avgRentTwoBedroomEUR": 2905,
+        "buyPricePerSqmEUR": 6440,
+        "predominantType": "Apartments in elegant buildings and converted properties"
+      },
+      "walkabilityScore": 90,
+      "transitScore": 90,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Cascais. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cascais",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cascais"
+        },
+        {
+          "title": "Idealista Portugal",
+          "url": "https://www.idealista.pt/"
+        },
+        {
+          "title": "Imovirtual",
+          "url": "https://www.imovirtual.com/"
+        }
+      ]
+    },
+    {
+      "id": "estoril",
+      "name": "Estoril",
+      "description": "Adjacent town with famous casino, beach, and Formula 1 heritage",
+      "character": "Casino coast, beach, motorsport heritage",
+      "housing": {
+        "avgRentOneBedroomEUR": 1572,
+        "avgRentTwoBedroomEUR": 2123,
+        "buyPricePerSqmEUR": 4140,
+        "predominantType": "Villas, apartments, and resort-style properties"
+      },
+      "walkabilityScore": 62,
+      "transitScore": 48,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Cascais's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cascais",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cascais"
+        },
+        {
+          "title": "Idealista Portugal",
+          "url": "https://www.idealista.pt/"
+        },
+        {
+          "title": "Imovirtual",
+          "url": "https://www.imovirtual.com/"
+        }
+      ]
+    },
+    {
+      "id": "sintra",
+      "name": "Sintra",
+      "description": "UNESCO romantic hill town with fairy-tale palaces and lower costs than Cascais",
+      "character": "UNESCO romantic, palaces, cooler hill climate",
+      "housing": {
+        "avgRentOneBedroomEUR": 1076,
+        "avgRentTwoBedroomEUR": 1452,
+        "buyPricePerSqmEUR": 2530,
+        "predominantType": "Apartments, quintas, and hillside properties"
+      },
+      "walkabilityScore": 57,
+      "transitScore": 33,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cascais",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cascais"
+        },
+        {
+          "title": "Idealista Portugal",
+          "url": "https://www.idealista.pt/"
+        },
+        {
+          "title": "Imovirtual",
+          "url": "https://www.imovirtual.com/"
+        }
+      ]
+    },
+    {
+      "id": "carcavelos-sao-joao-do-estoril",
+      "name": "Carcavelos / Sao Joao do Estoril",
+      "description": "Beach communities between Lisbon and Cascais with surf culture and international schools",
+      "character": "Beach surf, international schools, commuter-friendly",
+      "housing": {
+        "avgRentOneBedroomEUR": 1821,
+        "avgRentTwoBedroomEUR": 2458,
+        "buyPricePerSqmEUR": 5290,
+        "predominantType": "Modern apartments and beachside condos"
+      },
+      "walkabilityScore": 78,
+      "transitScore": 67,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cascais",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cascais"
+        },
+        {
+          "title": "Idealista Portugal",
+          "url": "https://www.idealista.pt/"
+        },
+        {
+          "title": "Imovirtual",
+          "url": "https://www.imovirtual.com/"
+        }
+      ]
+    }
+  ]
+}

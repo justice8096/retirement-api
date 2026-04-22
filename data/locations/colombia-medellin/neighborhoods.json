@@ -1,0 +1,141 @@
+{
+  "city": "Medellin",
+  "neighborhoods": [
+    {
+      "id": "el-centro-la-alpujarra",
+      "name": "El Centro / La Alpujarra",
+      "description": "Downtown core with government buildings, Botero Plaza, and the bustling commercial district",
+      "character": "Dense urban, commercial, transit hub with Metro access",
+      "housing": {
+        "avgRentOneBedroomUSD": 976,
+        "avgRentTwoBedroomUSD": 1269,
+        "buyPricePerSqmUSD": 2547,
+        "predominantType": "Commercial apartments, older mid-rise buildings"
+      },
+      "walkabilityScore": 86,
+      "transitScore": 72,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Medellín. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Medellín",
+          "url": "https://www.numbeo.com/cost-of-living/in/Medell%C3%ADn"
+        },
+        {
+          "title": "Finca Raiz",
+          "url": "https://www.fincaraiz.com.co/"
+        },
+        {
+          "title": "Metrocuadrado",
+          "url": "https://www.metrocuadrado.com/"
+        }
+      ]
+    },
+    {
+      "id": "envigado",
+      "name": "Envigado",
+      "description": "Southern municipality with small-town charm, excellent walkability, and a thriving local food scene",
+      "character": "Walkable town-within-a-city, safe, local feel",
+      "housing": {
+        "avgRentOneBedroomUSD": 713,
+        "avgRentTwoBedroomUSD": 927,
+        "buyPricePerSqmUSD": 1637,
+        "predominantType": "Mid-rise apartments and traditional houses"
+      },
+      "walkabilityScore": 67,
+      "transitScore": 40,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Medellín's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Medellín",
+          "url": "https://www.numbeo.com/cost-of-living/in/Medell%C3%ADn"
+        },
+        {
+          "title": "Finca Raiz",
+          "url": "https://www.fincaraiz.com.co/"
+        },
+        {
+          "title": "Metrocuadrado",
+          "url": "https://www.metrocuadrado.com/"
+        }
+      ]
+    },
+    {
+      "id": "belen",
+      "name": "Belen",
+      "description": "Large residential zone west of El Poblado with parks, local markets, and family-friendly atmosphere",
+      "character": "Residential middle-class, parks, local character",
+      "housing": {
+        "avgRentOneBedroomUSD": 488,
+        "avgRentTwoBedroomUSD": 635,
+        "buyPricePerSqmUSD": 1000,
+        "predominantType": "Mid-rise apartments and traditional houses"
+      },
+      "walkabilityScore": 55,
+      "transitScore": 31,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Medellín",
+          "url": "https://www.numbeo.com/cost-of-living/in/Medell%C3%ADn"
+        },
+        {
+          "title": "Finca Raiz",
+          "url": "https://www.fincaraiz.com.co/"
+        },
+        {
+          "title": "Metrocuadrado",
+          "url": "https://www.metrocuadrado.com/"
+        }
+      ]
+    },
+    {
+      "id": "el-poblado",
+      "name": "El Poblado",
+      "description": "Upscale hillside neighborhood that is the primary expat hub, with international restaurants and modern amenities",
+      "character": "Upscale, leafy, expat-heavy, international dining",
+      "housing": {
+        "avgRentOneBedroomUSD": 826,
+        "avgRentTwoBedroomUSD": 1074,
+        "buyPricePerSqmUSD": 2092,
+        "predominantType": "Modern high-rise condos, gated communities, luxury apartments"
+      },
+      "walkabilityScore": 77,
+      "transitScore": 68,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Medellín",
+          "url": "https://www.numbeo.com/cost-of-living/in/Medell%C3%ADn"
+        },
+        {
+          "title": "Finca Raiz",
+          "url": "https://www.fincaraiz.com.co/"
+        },
+        {
+          "title": "Metrocuadrado",
+          "url": "https://www.metrocuadrado.com/"
+        }
+      ]
+    }
+  ]
+}

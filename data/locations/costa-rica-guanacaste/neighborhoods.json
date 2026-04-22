@@ -1,0 +1,141 @@
+{
+  "city": "Tamarindo / Guanacaste",
+  "neighborhoods": [
+    {
+      "id": "tamarindo-centro",
+      "name": "Tamarindo Centro",
+      "description": "Surf town center with beach bars, restaurants, yoga studios, and a relaxed Pacific coast lifestyle",
+      "character": "Beach town walkable, surf culture, cosmopolitan",
+      "housing": {
+        "avgRentOneBedroomUSD": 1183,
+        "avgRentTwoBedroomUSD": 1538,
+        "buyPricePerSqmUSD": 3130,
+        "predominantType": "Beach condos, apartments, and mixed-use buildings"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 78,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Tamarindo. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Tamarindo",
+          "url": "https://www.numbeo.com/cost-of-living/in/Tamarindo"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    },
+    {
+      "id": "playa-langosta",
+      "name": "Playa Langosta",
+      "description": "Quieter beach area south of Tamarindo with upscale homes and a more residential atmosphere",
+      "character": "Upscale beach residential, quiet, nature-oriented",
+      "housing": {
+        "avgRentOneBedroomUSD": 865,
+        "avgRentTwoBedroomUSD": 1124,
+        "buyPricePerSqmUSD": 2012,
+        "predominantType": "Beachfront villas, luxury condos, and gated homes"
+      },
+      "walkabilityScore": 67,
+      "transitScore": 42,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Tamarindo's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Tamarindo",
+          "url": "https://www.numbeo.com/cost-of-living/in/Tamarindo"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    },
+    {
+      "id": "villarreal",
+      "name": "Villarreal",
+      "description": "Inland Tico village minutes from Tamarindo with significantly lower costs and authentic local culture",
+      "character": "Tico village, affordable, authentic local life",
+      "housing": {
+        "avgRentOneBedroomUSD": 592,
+        "avgRentTwoBedroomUSD": 769,
+        "buyPricePerSqmUSD": 1230,
+        "predominantType": "Modest houses and basic apartments"
+      },
+      "walkabilityScore": 58,
+      "transitScore": 47,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Tamarindo",
+          "url": "https://www.numbeo.com/cost-of-living/in/Tamarindo"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    },
+    {
+      "id": "playas-del-coco",
+      "name": "Playas del Coco",
+      "description": "Beach town popular with North American retirees, with fishing, diving, and an established expat community",
+      "character": "Expat beach town, fishing village vibe, social",
+      "housing": {
+        "avgRentOneBedroomUSD": 1001,
+        "avgRentTwoBedroomUSD": 1301,
+        "buyPricePerSqmUSD": 2571,
+        "predominantType": "Condos, townhouses, and beach houses"
+      },
+      "walkabilityScore": 80,
+      "transitScore": 68,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Tamarindo",
+          "url": "https://www.numbeo.com/cost-of-living/in/Tamarindo"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    }
+  ]
+}

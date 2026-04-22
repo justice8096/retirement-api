@@ -1,0 +1,141 @@
+{
+  "city": "Lake Chapala / Ajijic",
+  "neighborhoods": [
+    {
+      "id": "ajijic-centro",
+      "name": "Ajijic Centro",
+      "description": "Cobblestone village center with art galleries, restaurants, and Mexico's largest foreign resident community",
+      "character": "Artistic village, huge expat community, walkable",
+      "housing": {
+        "avgRentOneBedroomUSD": 943,
+        "avgRentTwoBedroomUSD": 1225,
+        "buyPricePerSqmUSD": 2450,
+        "predominantType": "Colonial houses, apartments, and converted properties"
+      },
+      "walkabilityScore": 89,
+      "transitScore": 86,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Ajijic. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Ajijic",
+          "url": "https://www.numbeo.com/cost-of-living/in/Ajijic"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    },
+    {
+      "id": "chapala-town",
+      "name": "Chapala Town",
+      "description": "Larger lakeside town with more Mexican character, municipal services, and the lakefront malecon",
+      "character": "Mexican lakeside town, malecon, local services",
+      "housing": {
+        "avgRentOneBedroomUSD": 689,
+        "avgRentTwoBedroomUSD": 895,
+        "buyPricePerSqmUSD": 1575,
+        "predominantType": "Houses and apartments at lower Ajijic prices"
+      },
+      "walkabilityScore": 51,
+      "transitScore": 48,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Ajijic's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Ajijic",
+          "url": "https://www.numbeo.com/cost-of-living/in/Ajijic"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    },
+    {
+      "id": "jocotepec",
+      "name": "Jocotepec",
+      "description": "Western lake town with indigenous heritage, lower costs, and growing expat interest",
+      "character": "Western lakeside, affordable, indigenous character",
+      "housing": {
+        "avgRentOneBedroomUSD": 471,
+        "avgRentTwoBedroomUSD": 613,
+        "buyPricePerSqmUSD": 963,
+        "predominantType": "Modest houses and basic apartments"
+      },
+      "walkabilityScore": 58,
+      "transitScore": 42,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Ajijic",
+          "url": "https://www.numbeo.com/cost-of-living/in/Ajijic"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    },
+    {
+      "id": "la-floresta-upper-ajijic",
+      "name": "La Floresta / Upper Ajijic",
+      "description": "Hillside area above Ajijic center with panoramic lake views and established expat community",
+      "character": "Hillside expat, lake views, gated communities",
+      "housing": {
+        "avgRentOneBedroomUSD": 798,
+        "avgRentTwoBedroomUSD": 1037,
+        "buyPricePerSqmUSD": 2012,
+        "predominantType": "Modern houses, gated communities, and custom homes"
+      },
+      "walkabilityScore": 64,
+      "transitScore": 58,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Ajijic",
+          "url": "https://www.numbeo.com/cost-of-living/in/Ajijic"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "city": "Las Palmas / Canary Islands",
+  "neighborhoods": [
+    {
+      "id": "vegueta-las-palmas",
+      "name": "Vegueta (Las Palmas)",
+      "description": "Historic colonial quarter where Columbus stopped en route to America, with cathedral and Casa de Colon",
+      "character": "Colonial historic, Columbus heritage, cultural quarter",
+      "housing": {
+        "avgRentOneBedroomEUR": 1444,
+        "avgRentTwoBedroomEUR": 1950,
+        "buyPricePerSqmEUR": 4340,
+        "predominantType": "Apartments in colonial and Canarian buildings"
+      },
+      "walkabilityScore": 93,
+      "transitScore": 79,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Tenerife. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Tenerife",
+          "url": "https://www.numbeo.com/cost-of-living/in/Tenerife"
+        },
+        {
+          "title": "Idealista",
+          "url": "https://www.idealista.com/"
+        },
+        {
+          "title": "Fotocasa",
+          "url": "https://www.fotocasa.es/"
+        }
+      ]
+    },
+    {
+      "id": "maspalomas-playa-del-ingles",
+      "name": "Maspalomas / Playa del Ingles",
+      "description": "Southern Gran Canaria resort area with iconic sand dunes, year-round sunshine, and European retirees",
+      "character": "Resort, year-round sun, European retirees",
+      "housing": {
+        "avgRentOneBedroomEUR": 1055,
+        "avgRentTwoBedroomEUR": 1425,
+        "buyPricePerSqmEUR": 2790,
+        "predominantType": "Resort apartments, bungalows, and holiday complexes"
+      },
+      "walkabilityScore": 50,
+      "transitScore": 43,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Tenerife's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Tenerife",
+          "url": "https://www.numbeo.com/cost-of-living/in/Tenerife"
+        },
+        {
+          "title": "Idealista",
+          "url": "https://www.idealista.com/"
+        },
+        {
+          "title": "Fotocasa",
+          "url": "https://www.fotocasa.es/"
+        }
+      ]
+    },
+    {
+      "id": "las-palmas-escaleritas-miller-bajo",
+      "name": "Las Palmas - Escaleritas / Miller Bajo",
+      "description": "Central residential neighborhoods with local life and lower costs than the beach areas",
+      "character": "Central residential, affordable, local character",
+      "housing": {
+        "avgRentOneBedroomEUR": 722,
+        "avgRentTwoBedroomEUR": 975,
+        "buyPricePerSqmEUR": 1705,
+        "predominantType": "Apartments in residential buildings"
+      },
+      "walkabilityScore": 43,
+      "transitScore": 49,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Tenerife",
+          "url": "https://www.numbeo.com/cost-of-living/in/Tenerife"
+        },
+        {
+          "title": "Idealista",
+          "url": "https://www.idealista.com/"
+        },
+        {
+          "title": "Fotocasa",
+          "url": "https://www.fotocasa.es/"
+        }
+      ]
+    },
+    {
+      "id": "las-canteras-las-palmas",
+      "name": "Las Canteras (Las Palmas)",
+      "description": "Urban beach with one of the best city beaches in Europe, surf culture, and international residents",
+      "character": "Urban beach, surf culture, international residents",
+      "housing": {
+        "avgRentOneBedroomEUR": 1222,
+        "avgRentTwoBedroomEUR": 1650,
+        "buyPricePerSqmEUR": 3565,
+        "predominantType": "Beachfront apartments and modern condos"
+      },
+      "walkabilityScore": 72,
+      "transitScore": 67,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Tenerife",
+          "url": "https://www.numbeo.com/cost-of-living/in/Tenerife"
+        },
+        {
+          "title": "Idealista",
+          "url": "https://www.idealista.com/"
+        },
+        {
+          "title": "Fotocasa",
+          "url": "https://www.fotocasa.es/"
+        }
+      ]
+    }
+  ]
+}

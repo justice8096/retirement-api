@@ -1,0 +1,141 @@
+{
+  "city": "San Marcos",
+  "neighborhoods": [
+    {
+      "id": "downtown-square",
+      "name": "Downtown / Square",
+      "description": "College town center with Texas State University, San Marcos River, and vibrant square entertainment",
+      "character": "College town, river recreation, lively square",
+      "housing": {
+        "avgRentOneBedroomUSD": 2127,
+        "avgRentTwoBedroomUSD": 2871,
+        "buyPricePerSqmUSD": 6104,
+        "predominantType": "Apartments, student housing, and older homes"
+      },
+      "walkabilityScore": 93,
+      "transitScore": 88,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of San Marcos. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living San Marcos",
+          "url": "https://www.numbeo.com/cost-of-living/in/San-Marcos"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "kyle-buda",
+      "name": "Kyle / Buda",
+      "description": "Southern communities between San Marcos and Austin with rapid growth and family amenities",
+      "character": "Rapid growth, Austin-adjacent, family amenities",
+      "housing": {
+        "avgRentOneBedroomUSD": 1554,
+        "avgRentTwoBedroomUSD": 2098,
+        "buyPricePerSqmUSD": 3924,
+        "predominantType": "Newer single-family homes and master-planned communities"
+      },
+      "walkabilityScore": 68,
+      "transitScore": 50,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to San Marcos's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living San Marcos",
+          "url": "https://www.numbeo.com/cost-of-living/in/San-Marcos"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "lockhart-luling",
+      "name": "Lockhart / Luling",
+      "description": "Eastern communities with BBQ capital heritage (Lockhart), very affordable housing, and small-town charm",
+      "character": "BBQ capital, very affordable, small-town",
+      "housing": {
+        "avgRentOneBedroomUSD": 1063,
+        "avgRentTwoBedroomUSD": 1436,
+        "buyPricePerSqmUSD": 2398,
+        "predominantType": "Older houses, ranch homes, and modest properties"
+      },
+      "walkabilityScore": 43,
+      "transitScore": 40,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living San Marcos",
+          "url": "https://www.numbeo.com/cost-of-living/in/San-Marcos"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "new-braunfels-gruene",
+      "name": "New Braunfels / Gruene",
+      "description": "German heritage town with Schlitterbahn waterpark, Gruene Hall, and Guadalupe River tubing",
+      "character": "German heritage, waterpark, river tubing",
+      "housing": {
+        "avgRentOneBedroomUSD": 1800,
+        "avgRentTwoBedroomUSD": 2429,
+        "buyPricePerSqmUSD": 5014,
+        "predominantType": "Single-family homes and Hill Country properties"
+      },
+      "walkabilityScore": 78,
+      "transitScore": 53,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living San Marcos",
+          "url": "https://www.numbeo.com/cost-of-living/in/San-Marcos"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "city": "Denver",
+  "neighborhoods": [
+    {
+      "id": "lodo-rino",
+      "name": "LoDo / RiNo",
+      "description": "Lower downtown and River North Art District with craft breweries, galleries, and Union Station",
+      "character": "Art district, craft beer, Union Station hub",
+      "housing": {
+        "avgRentOneBedroomUSD": 3063,
+        "avgRentTwoBedroomUSD": 4135,
+        "buyPricePerSqmUSD": 9184,
+        "predominantType": "Converted warehouses, lofts, and modern condos"
+      },
+      "walkabilityScore": 94,
+      "transitScore": 72,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Denver. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Denver",
+          "url": "https://www.numbeo.com/cost-of-living/in/Denver"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "highlands-sloans-lake",
+      "name": "Highlands / Sloans Lake",
+      "description": "Trendy northwest neighborhoods with mountain views, restaurants, and the popular Sloans Lake park",
+      "character": "Trendy, mountain views, lake recreation",
+      "housing": {
+        "avgRentOneBedroomUSD": 2238,
+        "avgRentTwoBedroomUSD": 3022,
+        "buyPricePerSqmUSD": 5904,
+        "predominantType": "Victorian houses, bungalows, and modern townhomes"
+      },
+      "walkabilityScore": 55,
+      "transitScore": 51,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Denver's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Denver",
+          "url": "https://www.numbeo.com/cost-of-living/in/Denver"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "aurora-thornton",
+      "name": "Aurora / Thornton",
+      "description": "Eastern and northern suburbs with diverse communities, lower costs, and improving transit",
+      "character": "Diverse suburban, affordable, improving transit",
+      "housing": {
+        "avgRentOneBedroomUSD": 1531,
+        "avgRentTwoBedroomUSD": 2067,
+        "buyPricePerSqmUSD": 3608,
+        "predominantType": "Ranch houses, townhomes, and apartment complexes"
+      },
+      "walkabilityScore": 59,
+      "transitScore": 42,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Denver",
+          "url": "https://www.numbeo.com/cost-of-living/in/Denver"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "littleton-highlands-ranch",
+      "name": "Littleton / Highlands Ranch",
+      "description": "Southern suburbs with excellent schools, open space trails, and mountain access",
+      "character": "Excellent schools, trail systems, mountain access",
+      "housing": {
+        "avgRentOneBedroomUSD": 2592,
+        "avgRentTwoBedroomUSD": 3499,
+        "buyPricePerSqmUSD": 7544,
+        "predominantType": "Single-family homes in established and newer communities"
+      },
+      "walkabilityScore": 68,
+      "transitScore": 67,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Denver",
+          "url": "https://www.numbeo.com/cost-of-living/in/Denver"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

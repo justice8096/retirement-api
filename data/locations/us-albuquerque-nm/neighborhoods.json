@@ -1,0 +1,141 @@
+{
+  "city": "Albuquerque",
+  "neighborhoods": [
+    {
+      "id": "old-town-downtown",
+      "name": "Old Town / Downtown",
+      "description": "Historic Spanish colonial plaza with adobe buildings, museums, and the vibrant Route 66 corridor",
+      "character": "Historic adobe, Route 66, cultural museums",
+      "housing": {
+        "avgRentOneBedroomUSD": 2033,
+        "avgRentTwoBedroomUSD": 2745,
+        "buyPricePerSqmUSD": 5796,
+        "predominantType": "Adobe houses, lofts, and converted historic buildings"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 87,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Albuquerque. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Albuquerque",
+          "url": "https://www.numbeo.com/cost-of-living/in/Albuquerque"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "nob-hill-university",
+      "name": "Nob Hill / University",
+      "description": "Walkable district along Route 66 with UNM campus, independent shops, and craft breweries",
+      "character": "Walkable university, Route 66 shops, craft beer",
+      "housing": {
+        "avgRentOneBedroomUSD": 1486,
+        "avgRentTwoBedroomUSD": 2006,
+        "buyPricePerSqmUSD": 3726,
+        "predominantType": "Bungalows, ranch houses, and small apartments"
+      },
+      "walkabilityScore": 52,
+      "transitScore": 58,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Albuquerque's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Albuquerque",
+          "url": "https://www.numbeo.com/cost-of-living/in/Albuquerque"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "southwest-mesa-rio-rancho",
+      "name": "Southwest Mesa / Rio Rancho",
+      "description": "Western suburbs with newer development, desert views, and significantly lower housing costs",
+      "character": "Desert suburban, affordable, newer development",
+      "housing": {
+        "avgRentOneBedroomUSD": 1017,
+        "avgRentTwoBedroomUSD": 1372,
+        "buyPricePerSqmUSD": 2277,
+        "predominantType": "Newer tract homes and affordable apartments"
+      },
+      "walkabilityScore": 49,
+      "transitScore": 34,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Albuquerque",
+          "url": "https://www.numbeo.com/cost-of-living/in/Albuquerque"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "northeast-heights-sandia-foothills",
+      "name": "Northeast Heights / Sandia Foothills",
+      "description": "Upscale eastern area against the Sandia Mountains with hiking access, good schools, and mountain views",
+      "character": "Mountain foothills, hiking access, family-oriented",
+      "housing": {
+        "avgRentOneBedroomUSD": 1720,
+        "avgRentTwoBedroomUSD": 2323,
+        "buyPricePerSqmUSD": 4761,
+        "predominantType": "Ranch houses, custom adobes, and mountain-view homes"
+      },
+      "walkabilityScore": 76,
+      "transitScore": 59,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Albuquerque",
+          "url": "https://www.numbeo.com/cost-of-living/in/Albuquerque"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

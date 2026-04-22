@@ -1,0 +1,141 @@
+{
+  "city": "Panama City - Punta Pacifica",
+  "neighborhoods": [
+    {
+      "id": "punta-pacifica",
+      "name": "Punta Pacifica",
+      "description": "Ultra-modern peninsula with gleaming skyscrapers, Trump Ocean Club, and Johns Hopkins-affiliated hospital",
+      "character": "Ultra-modern, luxury skyscrapers, medical hub",
+      "housing": {
+        "avgRentOneBedroomUSD": 1560,
+        "avgRentTwoBedroomUSD": 2028,
+        "buyPricePerSqmUSD": 4200,
+        "predominantType": "Luxury high-rise condos with ocean views"
+      },
+      "walkabilityScore": 92,
+      "transitScore": 70,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Panama City. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "punta-paitilla",
+      "name": "Punta Paitilla",
+      "description": "Adjacent waterfront area with established high-rises, ocean views, and Cinta Costera park access",
+      "character": "Established waterfront, park access, ocean views",
+      "housing": {
+        "avgRentOneBedroomUSD": 1140,
+        "avgRentTwoBedroomUSD": 1482,
+        "buyPricePerSqmUSD": 2700,
+        "predominantType": "High-rise condos and apartments"
+      },
+      "walkabilityScore": 60,
+      "transitScore": 44,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Panama City's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "rio-abajo",
+      "name": "Rio Abajo",
+      "description": "Inland neighborhood north of Punta Pacifica with local character and lower rents",
+      "character": "Local residential, affordable, practical location",
+      "housing": {
+        "avgRentOneBedroomUSD": 780,
+        "avgRentTwoBedroomUSD": 1014,
+        "buyPricePerSqmUSD": 1650,
+        "predominantType": "Modest apartments and older buildings"
+      },
+      "walkabilityScore": 57,
+      "transitScore": 33,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "cinta-costera-balboa-avenue",
+      "name": "Cinta Costera / Balboa Avenue",
+      "description": "Waterfront park boulevard connecting Casco Viejo to Punta Pacifica with upscale living",
+      "character": "Waterfront boulevard, upscale, connected",
+      "housing": {
+        "avgRentOneBedroomUSD": 1320,
+        "avgRentTwoBedroomUSD": 1716,
+        "buyPricePerSqmUSD": 3450,
+        "predominantType": "Modern high-rise condos along the waterfront"
+      },
+      "walkabilityScore": 63,
+      "transitScore": 64,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    }
+  ]
+}

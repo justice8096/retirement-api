@@ -1,0 +1,141 @@
+{
+  "city": "Puerto Viejo de Talamanca",
+  "neighborhoods": [
+    {
+      "id": "puerto-viejo-centro",
+      "name": "Puerto Viejo Centro",
+      "description": "Caribbean reggae-infused town center with surf shops, Rasta bars, and a multicultural beach scene",
+      "character": "Bohemian beach town, Caribbean culture, bike-friendly",
+      "housing": {
+        "avgRentOneBedroomUSD": 874,
+        "avgRentTwoBedroomUSD": 1136,
+        "buyPricePerSqmUSD": 2255,
+        "predominantType": "Small houses, cabins, and apartments above shops"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 76,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Puerto Viejo de Talamanca. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Puerto Viejo de Talamanca",
+          "url": "https://www.numbeo.com/cost-of-living/in/Puerto-Viejo-de-Talamanca"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    },
+    {
+      "id": "playa-cocles",
+      "name": "Playa Cocles",
+      "description": "Stretch of beach south of town with jungle-backed properties and surf breaks",
+      "character": "Beach-jungle, surf culture, nature immersion",
+      "housing": {
+        "avgRentOneBedroomUSD": 638,
+        "avgRentTwoBedroomUSD": 830,
+        "buyPricePerSqmUSD": 1450,
+        "predominantType": "Beach houses, eco-cabins, and boutique properties"
+      },
+      "walkabilityScore": 54,
+      "transitScore": 47,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Puerto Viejo de Talamanca's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Puerto Viejo de Talamanca",
+          "url": "https://www.numbeo.com/cost-of-living/in/Puerto-Viejo-de-Talamanca"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    },
+    {
+      "id": "bribri",
+      "name": "Bribri",
+      "description": "Indigenous community inland with very affordable living and access to Bribri culture",
+      "character": "Rural indigenous, very affordable, cultural heritage",
+      "housing": {
+        "avgRentOneBedroomUSD": 437,
+        "avgRentTwoBedroomUSD": 568,
+        "buyPricePerSqmUSD": 886,
+        "predominantType": "Basic houses and rural properties"
+      },
+      "walkabilityScore": 56,
+      "transitScore": 32,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Puerto Viejo de Talamanca",
+          "url": "https://www.numbeo.com/cost-of-living/in/Puerto-Viejo-de-Talamanca"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    },
+    {
+      "id": "playa-chiquita",
+      "name": "Playa Chiquita",
+      "description": "Upscale stretch between Cocles and Manzanillo with international restaurants and eco-lodges",
+      "character": "Upscale Caribbean, eco-tourism, international",
+      "housing": {
+        "avgRentOneBedroomUSD": 739,
+        "avgRentTwoBedroomUSD": 961,
+        "buyPricePerSqmUSD": 1853,
+        "predominantType": "Tropical houses, eco-lodges, and custom-built homes"
+      },
+      "walkabilityScore": 75,
+      "transitScore": 69,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Puerto Viejo de Talamanca",
+          "url": "https://www.numbeo.com/cost-of-living/in/Puerto-Viejo-de-Talamanca"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    }
+  ]
+}

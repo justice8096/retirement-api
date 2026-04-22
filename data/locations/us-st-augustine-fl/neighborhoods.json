@@ -1,0 +1,141 @@
+{
+  "city": "St. Augustine",
+  "neighborhoods": [
+    {
+      "id": "historic-district",
+      "name": "Historic District",
+      "description": "America's oldest city with Spanish colonial architecture, Flagler College, and St. George Street pedestrian zone",
+      "character": "Oldest city, Spanish colonial, pedestrian zone",
+      "housing": {
+        "avgRentOneBedroomUSD": 2314,
+        "avgRentTwoBedroomUSD": 3124,
+        "buyPricePerSqmUSD": 6720,
+        "predominantType": "Historic houses, condos, and renovated colonial buildings"
+      },
+      "walkabilityScore": 90,
+      "transitScore": 74,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of St. Augustine. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living St. Augustine",
+          "url": "https://www.numbeo.com/cost-of-living/in/St.-Augustine"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "ponte-vedra-beach",
+      "name": "Ponte Vedra Beach",
+      "description": "Upscale beach community with TPC Sawgrass, luxury resorts, and A-rated schools",
+      "character": "Upscale beach, TPC golf, luxury resorts",
+      "housing": {
+        "avgRentOneBedroomUSD": 1691,
+        "avgRentTwoBedroomUSD": 2283,
+        "buyPricePerSqmUSD": 4320,
+        "predominantType": "Luxury homes, beach condos, and golf community properties"
+      },
+      "walkabilityScore": 62,
+      "transitScore": 59,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to St. Augustine's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living St. Augustine",
+          "url": "https://www.numbeo.com/cost-of-living/in/St.-Augustine"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "hastings-elkton",
+      "name": "Hastings / Elkton",
+      "description": "Inland farming communities with very affordable housing and agricultural character",
+      "character": "Inland farming, very affordable, rural",
+      "housing": {
+        "avgRentOneBedroomUSD": 1157,
+        "avgRentTwoBedroomUSD": 1562,
+        "buyPricePerSqmUSD": 2640,
+        "predominantType": "Modest houses, mobile homes, and farm properties"
+      },
+      "walkabilityScore": 51,
+      "transitScore": 41,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living St. Augustine",
+          "url": "https://www.numbeo.com/cost-of-living/in/St.-Augustine"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "world-golf-village-palencia",
+      "name": "World Golf Village / Palencia",
+      "description": "Master-planned communities with golf, A-rated schools, and family-oriented amenities",
+      "character": "Master-planned golf, A-rated schools, family",
+      "housing": {
+        "avgRentOneBedroomUSD": 1958,
+        "avgRentTwoBedroomUSD": 2643,
+        "buyPricePerSqmUSD": 5520,
+        "predominantType": "Single-family homes in planned golf communities"
+      },
+      "walkabilityScore": 63,
+      "transitScore": 66,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living St. Augustine",
+          "url": "https://www.numbeo.com/cost-of-living/in/St.-Augustine"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

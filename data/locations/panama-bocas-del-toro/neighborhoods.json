@@ -1,0 +1,141 @@
+{
+  "city": "Bocas del Toro",
+  "neighborhoods": [
+    {
+      "id": "bocas-town-isla-colon",
+      "name": "Bocas Town (Isla Colon)",
+      "description": "Caribbean island town with colorful wooden buildings, dive shops, and a laid-back tropical atmosphere",
+      "character": "Caribbean island town, colorful, dive culture",
+      "housing": {
+        "avgRentOneBedroomUSD": 943,
+        "avgRentTwoBedroomUSD": 1225,
+        "buyPricePerSqmUSD": 2450,
+        "predominantType": "Wooden Caribbean houses and small apartments"
+      },
+      "walkabilityScore": 85,
+      "transitScore": 73,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Bocas del Toro. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Bocas del Toro",
+          "url": "https://www.numbeo.com/cost-of-living/in/Bocas-del-Toro"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "big-creek-playa-bluff",
+      "name": "Big Creek / Playa Bluff",
+      "description": "Eastern end of Isla Colon with surfing beaches and more secluded properties",
+      "character": "Beach secluded, surfing, nature immersion",
+      "housing": {
+        "avgRentOneBedroomUSD": 689,
+        "avgRentTwoBedroomUSD": 895,
+        "buyPricePerSqmUSD": 1575,
+        "predominantType": "Beach houses, eco-homes, and rustic properties"
+      },
+      "walkabilityScore": 54,
+      "transitScore": 41,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Bocas del Toro's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Bocas del Toro",
+          "url": "https://www.numbeo.com/cost-of-living/in/Bocas-del-Toro"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "almirante",
+      "name": "Almirante",
+      "description": "Mainland port town with ferry connections and significantly lower costs than the islands",
+      "character": "Mainland port, affordable, transit hub",
+      "housing": {
+        "avgRentOneBedroomUSD": 471,
+        "avgRentTwoBedroomUSD": 613,
+        "buyPricePerSqmUSD": 963,
+        "predominantType": "Basic houses and modest apartments"
+      },
+      "walkabilityScore": 60,
+      "transitScore": 45,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Bocas del Toro",
+          "url": "https://www.numbeo.com/cost-of-living/in/Bocas-del-Toro"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    },
+    {
+      "id": "isla-bastimentos-red-frog-beach",
+      "name": "Isla Bastimentos / Red Frog Beach",
+      "description": "Island community with eco-resorts, red frog sanctuary, and international residents",
+      "character": "Island eco-resort, nature, international community",
+      "housing": {
+        "avgRentOneBedroomUSD": 798,
+        "avgRentTwoBedroomUSD": 1037,
+        "buyPricePerSqmUSD": 2012,
+        "predominantType": "Eco-homes, beach houses, and island resort properties"
+      },
+      "walkabilityScore": 78,
+      "transitScore": 62,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Bocas del Toro",
+          "url": "https://www.numbeo.com/cost-of-living/in/Bocas-del-Toro"
+        },
+        {
+          "title": "Encuentra24 Panama",
+          "url": "https://www.encuentra24.com/panama/"
+        },
+        {
+          "title": "Compreoalquile",
+          "url": "https://www.compreoalquile.com/"
+        }
+      ]
+    }
+  ]
+}
