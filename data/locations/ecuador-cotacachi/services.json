@@ -196,6 +196,42 @@
           "url": "https://www.gringotree.com/"
         }
       ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "TÍA",
+      "notes": "Long-running discount chain; budget-focused basics.",
+      "sources": [
+        {
+          "title": "TÍA",
+          "url": "https://www.tia.com.ec/",
+          "accessed": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "categoryId": "electronics",
+      "name": "La Ganga",
+      "notes": "Electronics + appliances chain.",
+      "sources": [
+        {
+          "title": "La Ganga",
+          "url": "https://www.laganga.com/",
+          "accessed": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "categoryId": "hardware",
+      "name": "Kywi",
+      "notes": "Hardware and home-improvement chain.",
+      "sources": [
+        {
+          "title": "Kywi",
+          "url": "https://www.kywi.com.ec/",
+          "accessed": "2026-04-22"
+        }
+      ]
     }
   ],
   "attractions": [

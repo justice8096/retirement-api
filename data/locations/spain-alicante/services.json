@@ -183,6 +183,54 @@
           "url": "https://www.pagesjaunes.fr/"
         }
       ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Mercadona",
+      "notes": "Largest supermarket chain in Spain, mid-market pricing.",
+      "sources": [
+        {
+          "title": "Mercadona",
+          "url": "https://www.mercadona.es/",
+          "accessed": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Lidl",
+      "notes": "German discount grocer — widespread.",
+      "sources": [
+        {
+          "title": "Lidl",
+          "url": "https://www.lidl.es/",
+          "accessed": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "categoryId": "electronics",
+      "name": "MediaMarkt",
+      "notes": "Largest electronics chain in Spain.",
+      "sources": [
+        {
+          "title": "MediaMarkt",
+          "url": "https://www.mediamarkt.es/",
+          "accessed": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "categoryId": "hardware",
+      "name": "Leroy Merlin",
+      "notes": "Major home-improvement chain.",
+      "sources": [
+        {
+          "title": "Leroy Merlin",
+          "url": "https://www.leroymerlin.es/",
+          "accessed": "2026-04-22"
+        }
+      ]
     }
   ],
   "attractions": [

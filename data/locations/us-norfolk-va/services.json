@@ -39,7 +39,7 @@
           "url": "https://www.med.navy.mil/Portsmouth/"
         }
       ],
-      "distanceMi": 5.0
+      "distanceMi": 5
     },
     {
       "categoryId": "pharmacy",
@@ -130,7 +130,7 @@
           "url": "https://www.navyfederal.org/"
         }
       ],
-      "distanceMi": 4.0
+      "distanceMi": 4
     },
     {
       "categoryId": "vet",
@@ -208,7 +208,7 @@
           "url": "https://www.norfolkairport.com/"
         }
       ],
-      "distanceMi": 5.0
+      "distanceMi": 5
     },
     {
       "categoryId": "library",
@@ -247,7 +247,7 @@
           "url": "https://www.norfolk.gov/facilities"
         }
       ],
-      "distanceMi": 5.0
+      "distanceMi": 5
     },
     {
       "categoryId": "dog-park",
@@ -326,6 +326,54 @@
         }
       ],
       "distanceMi": 0.7
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Wegmans",
+      "notes": "Mid-Atlantic mainstream supermarket chain.",
+      "sources": [
+        {
+          "title": "Wegmans",
+          "url": "https://www.wegmans.com/",
+          "accessed": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Aldi",
+      "notes": "Hard-discount supermarket chain — nationwide.",
+      "sources": [
+        {
+          "title": "Aldi",
+          "url": "https://www.aldi.us/",
+          "accessed": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "categoryId": "electronics",
+      "name": "Best Buy",
+      "notes": "Largest US consumer-electronics chain.",
+      "sources": [
+        {
+          "title": "Best Buy",
+          "url": "https://www.bestbuy.com/",
+          "accessed": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "categoryId": "hardware",
+      "name": "The Home Depot",
+      "notes": "Largest US home-improvement chain.",
+      "sources": [
+        {
+          "title": "The Home Depot",
+          "url": "https://www.homedepot.com/",
+          "accessed": "2026-04-22"
+        }
+      ]
     }
   ]
 }

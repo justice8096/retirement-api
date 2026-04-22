@@ -13,7 +13,7 @@
           "url": "https://www.aha.org/"
         }
       ],
-      "distanceMi": 5.0
+      "distanceMi": 5
     },
     {
       "categoryId": "pharmacy",
@@ -183,6 +183,54 @@
         }
       ],
       "distanceMi": 3.7
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Kroger family of stores",
+      "notes": "Largest US supermarket operator; regional banners (Ralphs, Fred Meyer, King Soopers, Smith's, Fry's, etc.).",
+      "sources": [
+        {
+          "title": "Kroger family of stores",
+          "url": "https://www.kroger.com/",
+          "accessed": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Aldi",
+      "notes": "Hard-discount supermarket chain — nationwide.",
+      "sources": [
+        {
+          "title": "Aldi",
+          "url": "https://www.aldi.us/",
+          "accessed": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "categoryId": "electronics",
+      "name": "Best Buy",
+      "notes": "Largest US consumer-electronics chain.",
+      "sources": [
+        {
+          "title": "Best Buy",
+          "url": "https://www.bestbuy.com/",
+          "accessed": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "categoryId": "hardware",
+      "name": "The Home Depot",
+      "notes": "Largest US home-improvement chain.",
+      "sources": [
+        {
+          "title": "The Home Depot",
+          "url": "https://www.homedepot.com/",
+          "accessed": "2026-04-22"
+        }
+      ]
     }
   ],
   "attractions": [
