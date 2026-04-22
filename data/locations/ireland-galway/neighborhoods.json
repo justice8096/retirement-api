@@ -1,0 +1,141 @@
+{
+  "city": "Galway",
+  "neighborhoods": [
+    {
+      "id": "galway-city-centre-latin-quarter",
+      "name": "Galway City Centre / Latin Quarter",
+      "description": "Bohemian city center with buskers, colorful shopfronts on Quay Street, and a vibrant arts festival scene",
+      "character": "Bohemian, artistic, musical, walkable and lively",
+      "housing": {
+        "avgRentOneBedroomEUR": 1869,
+        "avgRentTwoBedroomEUR": 2524,
+        "buyPricePerSqmEUR": 5600,
+        "predominantType": "Apartments in Georgian and renovated buildings"
+      },
+      "walkabilityScore": 94,
+      "transitScore": 89,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Galway. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Galway",
+          "url": "https://www.numbeo.com/cost-of-living/in/Galway"
+        },
+        {
+          "title": "Daft.ie",
+          "url": "https://www.daft.ie/"
+        },
+        {
+          "title": "MyHome.ie",
+          "url": "https://www.myhome.ie/"
+        }
+      ]
+    },
+    {
+      "id": "salthill",
+      "name": "Salthill",
+      "description": "Seaside neighborhood with the famous promenade, Blackrock diving tower, and Atlantic views",
+      "character": "Seaside promenade, Atlantic views, recreational",
+      "housing": {
+        "avgRentOneBedroomEUR": 1366,
+        "avgRentTwoBedroomEUR": 1844,
+        "buyPricePerSqmEUR": 3600,
+        "predominantType": "Houses, apartments, and seafront properties"
+      },
+      "walkabilityScore": 54,
+      "transitScore": 50,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Galway's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Galway",
+          "url": "https://www.numbeo.com/cost-of-living/in/Galway"
+        },
+        {
+          "title": "Daft.ie",
+          "url": "https://www.daft.ie/"
+        },
+        {
+          "title": "MyHome.ie",
+          "url": "https://www.myhome.ie/"
+        }
+      ]
+    },
+    {
+      "id": "tuam-road-area",
+      "name": "Tuam Road Area",
+      "description": "Northern commuter area with newer developments and lower housing costs than the city center",
+      "character": "Commuter residential, affordable, improving services",
+      "housing": {
+        "avgRentOneBedroomEUR": 935,
+        "avgRentTwoBedroomEUR": 1262,
+        "buyPricePerSqmEUR": 2200,
+        "predominantType": "Modern estate houses and apartments"
+      },
+      "walkabilityScore": 51,
+      "transitScore": 35,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Galway",
+          "url": "https://www.numbeo.com/cost-of-living/in/Galway"
+        },
+        {
+          "title": "Daft.ie",
+          "url": "https://www.daft.ie/"
+        },
+        {
+          "title": "MyHome.ie",
+          "url": "https://www.myhome.ie/"
+        }
+      ]
+    },
+    {
+      "id": "oranmore",
+      "name": "Oranmore",
+      "description": "East Galway commuter village with a medieval castle, bay views, and family-oriented community",
+      "character": "Village commuter, bay views, family community",
+      "housing": {
+        "avgRentOneBedroomEUR": 1582,
+        "avgRentTwoBedroomEUR": 2135,
+        "buyPricePerSqmEUR": 4600,
+        "predominantType": "Modern estate houses and coastal properties"
+      },
+      "walkabilityScore": 69,
+      "transitScore": 54,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Galway",
+          "url": "https://www.numbeo.com/cost-of-living/in/Galway"
+        },
+        {
+          "title": "Daft.ie",
+          "url": "https://www.daft.ie/"
+        },
+        {
+          "title": "MyHome.ie",
+          "url": "https://www.myhome.ie/"
+        }
+      ]
+    }
+  ]
+}

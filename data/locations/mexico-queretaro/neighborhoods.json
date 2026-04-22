@@ -1,0 +1,141 @@
+{
+  "city": "Queretaro",
+  "neighborhoods": [
+    {
+      "id": "centro-historico",
+      "name": "Centro Historico",
+      "description": "UNESCO Baroque colonial center with grand aqueduct, plazas, and one of Mexico's best-preserved historic districts",
+      "character": "UNESCO Baroque, grand aqueduct, cultural hub",
+      "housing": {
+        "avgRentOneBedroomUSD": 943,
+        "avgRentTwoBedroomUSD": 1225,
+        "buyPricePerSqmUSD": 2450,
+        "predominantType": "Restored colonial apartments and converted mansions"
+      },
+      "walkabilityScore": 85,
+      "transitScore": 78,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Querétaro. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Querétaro",
+          "url": "https://www.numbeo.com/cost-of-living/in/Quer%C3%A9taro"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    },
+    {
+      "id": "juriquilla",
+      "name": "Juriquilla",
+      "description": "Modern northern suburb with university campus, golf courses, and newer developments",
+      "character": "Modern suburban, university, golf, family-oriented",
+      "housing": {
+        "avgRentOneBedroomUSD": 689,
+        "avgRentTwoBedroomUSD": 895,
+        "buyPricePerSqmUSD": 1575,
+        "predominantType": "Modern houses, gated communities, and apartments"
+      },
+      "walkabilityScore": 52,
+      "transitScore": 60,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Querétaro's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Querétaro",
+          "url": "https://www.numbeo.com/cost-of-living/in/Quer%C3%A9taro"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    },
+    {
+      "id": "el-marques-corregidora",
+      "name": "El Marques / Corregidora",
+      "description": "Southern municipalities with industrial parks, new housing, and affordable options",
+      "character": "Emerging suburban, affordable, industrial growth",
+      "housing": {
+        "avgRentOneBedroomUSD": 471,
+        "avgRentTwoBedroomUSD": 613,
+        "buyPricePerSqmUSD": 963,
+        "predominantType": "New construction houses and apartment complexes"
+      },
+      "walkabilityScore": 54,
+      "transitScore": 39,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Querétaro",
+          "url": "https://www.numbeo.com/cost-of-living/in/Quer%C3%A9taro"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    },
+    {
+      "id": "jurica-hacienda-el-campanario",
+      "name": "Jurica / Hacienda el Campanario",
+      "description": "Upscale northern neighborhoods with hacienda-style living and international school access",
+      "character": "Upscale hacienda style, international schools, quiet",
+      "housing": {
+        "avgRentOneBedroomUSD": 798,
+        "avgRentTwoBedroomUSD": 1037,
+        "buyPricePerSqmUSD": 2012,
+        "predominantType": "Hacienda-style houses and luxury developments"
+      },
+      "walkabilityScore": 67,
+      "transitScore": 50,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Querétaro",
+          "url": "https://www.numbeo.com/cost-of-living/in/Quer%C3%A9taro"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    }
+  ]
+}

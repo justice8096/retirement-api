@@ -1,0 +1,141 @@
+{
+  "city": "Nashville",
+  "neighborhoods": [
+    {
+      "id": "east-nashville-germantown",
+      "name": "East Nashville / Germantown",
+      "description": "Hip neighborhoods across the river with craft cocktails, murals, and Nashville's creative class",
+      "character": "Hip creative, murals, craft cocktails",
+      "housing": {
+        "avgRentOneBedroomUSD": 2782,
+        "avgRentTwoBedroomUSD": 3756,
+        "buyPricePerSqmUSD": 8260,
+        "predominantType": "Renovated bungalows, modern townhomes, and apartments"
+      },
+      "walkabilityScore": 87,
+      "transitScore": 90,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Nashville. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Nashville",
+          "url": "https://www.numbeo.com/cost-of-living/in/Nashville"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "green-hills-belle-meade",
+      "name": "Green Hills / Belle Meade",
+      "description": "Affluent southern neighborhoods with The Mall at Green Hills, tree-lined streets, and country music estates",
+      "character": "Affluent, The Mall, country music estates",
+      "housing": {
+        "avgRentOneBedroomUSD": 2033,
+        "avgRentTwoBedroomUSD": 2745,
+        "buyPricePerSqmUSD": 5310,
+        "predominantType": "Estate homes, traditional houses, and luxury condos"
+      },
+      "walkabilityScore": 58,
+      "transitScore": 43,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Nashville's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Nashville",
+          "url": "https://www.numbeo.com/cost-of-living/in/Nashville"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "antioch-hermitage",
+      "name": "Antioch / Hermitage",
+      "description": "Southeastern communities with diverse populations, affordable housing, and improving amenities",
+      "character": "Diverse, affordable, improving amenities",
+      "housing": {
+        "avgRentOneBedroomUSD": 1391,
+        "avgRentTwoBedroomUSD": 1878,
+        "buyPricePerSqmUSD": 3245,
+        "predominantType": "Ranch houses, townhomes, and apartment complexes"
+      },
+      "walkabilityScore": 56,
+      "transitScore": 36,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Nashville",
+          "url": "https://www.numbeo.com/cost-of-living/in/Nashville"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "franklin-brentwood",
+      "name": "Franklin / Brentwood",
+      "description": "Williamson County suburbs with top schools, historic downtown Franklin, and Civil War heritage",
+      "character": "Top schools, historic Franklin, Civil War heritage",
+      "housing": {
+        "avgRentOneBedroomUSD": 2354,
+        "avgRentTwoBedroomUSD": 3178,
+        "buyPricePerSqmUSD": 6785,
+        "predominantType": "Single-family homes in established and newer communities"
+      },
+      "walkabilityScore": 77,
+      "transitScore": 58,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Nashville",
+          "url": "https://www.numbeo.com/cost-of-living/in/Nashville"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

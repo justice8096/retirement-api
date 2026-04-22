@@ -1,0 +1,141 @@
+{
+  "city": "Colonia del Sacramento",
+  "neighborhoods": [
+    {
+      "id": "barrio-historico",
+      "name": "Barrio Historico",
+      "description": "UNESCO Portuguese colonial quarter with cobblestone streets, lighthouse, and Rio de la Plata sunsets",
+      "character": "UNESCO colonial, cobblestone, river sunsets",
+      "housing": {
+        "avgRentOneBedroomUSD": 874,
+        "avgRentTwoBedroomUSD": 1136,
+        "buyPricePerSqmUSD": 2255,
+        "predominantType": "Restored colonial houses and small apartments"
+      },
+      "walkabilityScore": 93,
+      "transitScore": 90,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Colonia del Sacramento. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Colonia del Sacramento",
+          "url": "https://www.numbeo.com/cost-of-living/in/Colonia-del-Sacramento"
+        },
+        {
+          "title": "Gallito.com.uy",
+          "url": "https://www.gallito.com.uy/"
+        },
+        {
+          "title": "Infocasas Uruguay",
+          "url": "https://www.infocasas.com.uy/"
+        }
+      ]
+    },
+    {
+      "id": "colonia-centro",
+      "name": "Colonia Centro",
+      "description": "Modern town center with shops, restaurants, and ferry terminal with service to Buenos Aires",
+      "character": "Town center, ferry to BA, practical services",
+      "housing": {
+        "avgRentOneBedroomUSD": 638,
+        "avgRentTwoBedroomUSD": 830,
+        "buyPricePerSqmUSD": 1450,
+        "predominantType": "Houses and apartments near commercial center"
+      },
+      "walkabilityScore": 54,
+      "transitScore": 57,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Colonia del Sacramento's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Colonia del Sacramento",
+          "url": "https://www.numbeo.com/cost-of-living/in/Colonia-del-Sacramento"
+        },
+        {
+          "title": "Gallito.com.uy",
+          "url": "https://www.gallito.com.uy/"
+        },
+        {
+          "title": "Infocasas Uruguay",
+          "url": "https://www.infocasas.com.uy/"
+        }
+      ]
+    },
+    {
+      "id": "juan-lacaze",
+      "name": "Juan Lacaze",
+      "description": "Former textile town west of Colonia with very affordable housing and improving amenities",
+      "character": "Former industrial, very affordable, improving",
+      "housing": {
+        "avgRentOneBedroomUSD": 437,
+        "avgRentTwoBedroomUSD": 568,
+        "buyPricePerSqmUSD": 886,
+        "predominantType": "Basic houses and affordable apartments"
+      },
+      "walkabilityScore": 59,
+      "transitScore": 30,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Colonia del Sacramento",
+          "url": "https://www.numbeo.com/cost-of-living/in/Colonia-del-Sacramento"
+        },
+        {
+          "title": "Gallito.com.uy",
+          "url": "https://www.gallito.com.uy/"
+        },
+        {
+          "title": "Infocasas Uruguay",
+          "url": "https://www.infocasas.com.uy/"
+        }
+      ]
+    },
+    {
+      "id": "carmelo",
+      "name": "Carmelo",
+      "description": "Wine country town northwest of Colonia with boutique wineries and growing expat interest",
+      "character": "Wine country, boutique tourism, emerging expat",
+      "housing": {
+        "avgRentOneBedroomUSD": 739,
+        "avgRentTwoBedroomUSD": 961,
+        "buyPricePerSqmUSD": 1853,
+        "predominantType": "Houses, quintas, and wine country properties"
+      },
+      "walkabilityScore": 77,
+      "transitScore": 70,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Colonia del Sacramento",
+          "url": "https://www.numbeo.com/cost-of-living/in/Colonia-del-Sacramento"
+        },
+        {
+          "title": "Gallito.com.uy",
+          "url": "https://www.gallito.com.uy/"
+        },
+        {
+          "title": "Infocasas Uruguay",
+          "url": "https://www.infocasas.com.uy/"
+        }
+      ]
+    }
+  ]
+}

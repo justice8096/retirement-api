@@ -1,0 +1,141 @@
+{
+  "city": "St. Petersburg",
+  "neighborhoods": [
+    {
+      "id": "downtown-grand-central",
+      "name": "Downtown / Grand Central",
+      "description": "Walkable arts district with Dali Museum, murals, craft breweries, and waterfront parks",
+      "character": "Arts district, Dali Museum, murals, waterfront",
+      "housing": {
+        "avgRentOneBedroomUSD": 2688,
+        "avgRentTwoBedroomUSD": 3629,
+        "buyPricePerSqmUSD": 7952,
+        "predominantType": "Condos, apartments, and renovated bungalows"
+      },
+      "walkabilityScore": 85,
+      "transitScore": 89,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of St. Petersburg. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living St. Petersburg",
+          "url": "https://www.numbeo.com/cost-of-living/in/St.-Petersburg"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "gulfport",
+      "name": "Gulfport",
+      "description": "Quirky waterfront village within St. Pete with art walks, Stetson Law School, and artist community",
+      "character": "Quirky waterfront village, art walks, artist community",
+      "housing": {
+        "avgRentOneBedroomUSD": 1965,
+        "avgRentTwoBedroomUSD": 2652,
+        "buyPricePerSqmUSD": 5112,
+        "predominantType": "Bungalows, cottages, and small waterfront homes"
+      },
+      "walkabilityScore": 50,
+      "transitScore": 51,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to St. Petersburg's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living St. Petersburg",
+          "url": "https://www.numbeo.com/cost-of-living/in/St.-Petersburg"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "pinellas-park-kenneth-city",
+      "name": "Pinellas Park / Kenneth City",
+      "description": "Central Pinellas communities with affordable housing, diverse communities, and good location",
+      "character": "Central affordable, diverse, good location",
+      "housing": {
+        "avgRentOneBedroomUSD": 1344,
+        "avgRentTwoBedroomUSD": 1815,
+        "buyPricePerSqmUSD": 3124,
+        "predominantType": "Ranch houses, mobile homes, and modest apartments"
+      },
+      "walkabilityScore": 47,
+      "transitScore": 36,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living St. Petersburg",
+          "url": "https://www.numbeo.com/cost-of-living/in/St.-Petersburg"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "shore-acres-snell-isle",
+      "name": "Shore Acres / Snell Isle",
+      "description": "Waterfront neighborhoods with canal access, parks, and family-oriented community",
+      "character": "Waterfront canals, parks, family-oriented",
+      "housing": {
+        "avgRentOneBedroomUSD": 2275,
+        "avgRentTwoBedroomUSD": 3071,
+        "buyPricePerSqmUSD": 6532,
+        "predominantType": "Waterfront homes, ranch houses, and canal properties"
+      },
+      "walkabilityScore": 76,
+      "transitScore": 51,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living St. Petersburg",
+          "url": "https://www.numbeo.com/cost-of-living/in/St.-Petersburg"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

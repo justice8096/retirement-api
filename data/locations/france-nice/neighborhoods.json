@@ -1,0 +1,141 @@
+{
+  "city": "Nice",
+  "neighborhoods": [
+    {
+      "id": "vieux-nice-old-town",
+      "name": "Vieux Nice (Old Town)",
+      "description": "Baroque old quarter with the famous Cours Saleya flower market, narrow streets, and vibrant Mediterranean life",
+      "character": "Baroque historic, market culture, Mediterranean vibrant",
+      "housing": {
+        "avgRentOneBedroomEUR": 2246,
+        "avgRentTwoBedroomEUR": 3033,
+        "buyPricePerSqmEUR": 6720,
+        "predominantType": "Apartments in colorful 17th-18th century buildings"
+      },
+      "walkabilityScore": 92,
+      "transitScore": 76,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Nice. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Nice",
+          "url": "https://www.numbeo.com/cost-of-living/in/Nice"
+        },
+        {
+          "title": "SeLoger",
+          "url": "https://www.seloger.com/"
+        },
+        {
+          "title": "Bien'ici",
+          "url": "https://www.bienici.com/"
+        }
+      ]
+    },
+    {
+      "id": "cimiez",
+      "name": "Cimiez",
+      "description": "Elegant hillside quarter with Roman ruins, Matisse Museum, belle epoque hotels, and panoramic views",
+      "character": "Elegant hillside, museums, belle epoque grandeur",
+      "housing": {
+        "avgRentOneBedroomEUR": 1642,
+        "avgRentTwoBedroomEUR": 2216,
+        "buyPricePerSqmEUR": 4320,
+        "predominantType": "Spacious apartments in belle epoque buildings and villas"
+      },
+      "walkabilityScore": 55,
+      "transitScore": 44,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Nice's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Nice",
+          "url": "https://www.numbeo.com/cost-of-living/in/Nice"
+        },
+        {
+          "title": "SeLoger",
+          "url": "https://www.seloger.com/"
+        },
+        {
+          "title": "Bien'ici",
+          "url": "https://www.bienici.com/"
+        }
+      ]
+    },
+    {
+      "id": "saint-roch-pasteur",
+      "name": "Saint-Roch / Pasteur",
+      "description": "Residential areas north of the center with lower rents and good tram connections",
+      "character": "Residential urban, improving, tram-connected",
+      "housing": {
+        "avgRentOneBedroomEUR": 1123,
+        "avgRentTwoBedroomEUR": 1516,
+        "buyPricePerSqmEUR": 2640,
+        "predominantType": "Apartments in modern and renovated buildings"
+      },
+      "walkabilityScore": 55,
+      "transitScore": 42,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Nice",
+          "url": "https://www.numbeo.com/cost-of-living/in/Nice"
+        },
+        {
+          "title": "SeLoger",
+          "url": "https://www.seloger.com/"
+        },
+        {
+          "title": "Bien'ici",
+          "url": "https://www.bienici.com/"
+        }
+      ]
+    },
+    {
+      "id": "promenade-des-anglais-carre-d-or",
+      "name": "Promenade des Anglais / Carre d'Or",
+      "description": "Iconic seafront promenade area with luxury hotels, international residents, and Mediterranean glamour",
+      "character": "Seafront luxury, cosmopolitan, international",
+      "housing": {
+        "avgRentOneBedroomEUR": 1901,
+        "avgRentTwoBedroomEUR": 2566,
+        "buyPricePerSqmEUR": 5520,
+        "predominantType": "Luxury apartments and belle epoque residences"
+      },
+      "walkabilityScore": 66,
+      "transitScore": 53,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Nice",
+          "url": "https://www.numbeo.com/cost-of-living/in/Nice"
+        },
+        {
+          "title": "SeLoger",
+          "url": "https://www.seloger.com/"
+        },
+        {
+          "title": "Bien'ici",
+          "url": "https://www.bienici.com/"
+        }
+      ]
+    }
+  ]
+}

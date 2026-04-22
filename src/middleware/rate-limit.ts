@@ -1,12 +1,13 @@
 /**
  * Per-tier rate limiting configuration.
  *
- * Tiers:
+ * Tiers (ordered — every authenticated tier must be ≥ unauth so signing in
+ * never *reduces* a user's quota):
  *   - unauthenticated: 100 req/min (public endpoints)
- *   - free:            60 req/min
- *   - basic:          120 req/min
- *   - premium:        300 req/min
- *   - admin:          600 req/min
+ *   - free:            150 req/min
+ *   - basic:           300 req/min
+ *   - premium:         600 req/min
+ *   - admin:          1200 req/min
  *
  * In production, configure REDIS_URL for distributed rate limiting.
  * Without Redis, uses in-memory store (resets on restart, per-process only).
@@ -14,10 +15,10 @@
 import type { FastifyRequest } from 'fastify';
 
 const TIER_LIMITS: Record<string, number> = {
-  free: 60,
-  basic: 120,
-  premium: 300,
-  admin: 600,
+  free: 150,
+  basic: 300,
+  premium: 600,
+  admin: 1200,
 };
 
 const DEFAULT_LIMIT = 100; // unauthenticated (auth resolves after rate-limit in dev)

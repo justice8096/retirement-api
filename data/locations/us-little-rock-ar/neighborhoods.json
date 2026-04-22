@@ -1,0 +1,141 @@
+{
+  "city": "Little Rock",
+  "neighborhoods": [
+    {
+      "id": "downtown-river-market",
+      "name": "Downtown / River Market",
+      "description": "Revitalized riverfront with farmers market, Clinton Presidential Library, and growing restaurant scene",
+      "character": "Riverfront revitalized, Clinton Library, market",
+      "housing": {
+        "avgRentOneBedroomUSD": 1846,
+        "avgRentTwoBedroomUSD": 2492,
+        "buyPricePerSqmUSD": 5180,
+        "predominantType": "Loft apartments, condos, and converted buildings"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 70,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Little Rock. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Little Rock",
+          "url": "https://www.numbeo.com/cost-of-living/in/Little-Rock"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "west-little-rock-chenal",
+      "name": "West Little Rock / Chenal",
+      "description": "Affluent western area with Chenal Valley development, shopping, and country club living",
+      "character": "Affluent western, golf and shopping, newer",
+      "housing": {
+        "avgRentOneBedroomUSD": 1349,
+        "avgRentTwoBedroomUSD": 1821,
+        "buyPricePerSqmUSD": 3330,
+        "predominantType": "Newer single-family homes and country club properties"
+      },
+      "walkabilityScore": 59,
+      "transitScore": 48,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Little Rock's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Little Rock",
+          "url": "https://www.numbeo.com/cost-of-living/in/Little-Rock"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "north-little-rock-jacksonville",
+      "name": "North Little Rock / Jacksonville",
+      "description": "North side communities with military base influence, affordable housing, and river access",
+      "character": "Military-influenced, affordable, river access",
+      "housing": {
+        "avgRentOneBedroomUSD": 923,
+        "avgRentTwoBedroomUSD": 1246,
+        "buyPricePerSqmUSD": 2035,
+        "predominantType": "Ranch houses, affordable homes, and apartments"
+      },
+      "walkabilityScore": 56,
+      "transitScore": 42,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Little Rock",
+          "url": "https://www.numbeo.com/cost-of-living/in/Little-Rock"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "hillcrest-the-heights",
+      "name": "Hillcrest / The Heights",
+      "description": "Historic neighborhoods with walkable dining, boutique shopping, and strong community identity",
+      "character": "Historic walkable, dining scene, community identity",
+      "housing": {
+        "avgRentOneBedroomUSD": 1562,
+        "avgRentTwoBedroomUSD": 2109,
+        "buyPricePerSqmUSD": 4255,
+        "predominantType": "Craftsman bungalows, historic homes, and renovated houses"
+      },
+      "walkabilityScore": 78,
+      "transitScore": 68,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Little Rock",
+          "url": "https://www.numbeo.com/cost-of-living/in/Little-Rock"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

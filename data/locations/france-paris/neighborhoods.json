@@ -1,0 +1,141 @@
+{
+  "city": "Paris",
+  "neighborhoods": [
+    {
+      "id": "le-marais-3e-4e",
+      "name": "Le Marais (3e/4e)",
+      "description": "Historic quarter with medieval streets, Place des Vosges, Jewish heritage, and a thriving gallery scene",
+      "character": "Historic chic, walkable, cultural and gastronomic",
+      "housing": {
+        "avgRentOneBedroomEUR": 2340,
+        "avgRentTwoBedroomEUR": 3159,
+        "buyPricePerSqmEUR": 7000,
+        "predominantType": "Apartments in 17th-18th century Haussmann and pre-Haussmann buildings"
+      },
+      "walkabilityScore": 90,
+      "transitScore": 85,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Paris. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Paris",
+          "url": "https://www.numbeo.com/cost-of-living/in/Paris"
+        },
+        {
+          "title": "SeLoger",
+          "url": "https://www.seloger.com/"
+        },
+        {
+          "title": "Bien'ici",
+          "url": "https://www.bienici.com/"
+        }
+      ]
+    },
+    {
+      "id": "boulogne-billancourt",
+      "name": "Boulogne-Billancourt",
+      "description": "Upscale western suburb with parks, museums, and good Metro access to central Paris",
+      "character": "Upscale suburban, parks, excellent Metro access",
+      "housing": {
+        "avgRentOneBedroomEUR": 1710,
+        "avgRentTwoBedroomEUR": 2309,
+        "buyPricePerSqmEUR": 4500,
+        "predominantType": "Modern apartments and Art Deco buildings"
+      },
+      "walkabilityScore": 51,
+      "transitScore": 58,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Paris's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Paris",
+          "url": "https://www.numbeo.com/cost-of-living/in/Paris"
+        },
+        {
+          "title": "SeLoger",
+          "url": "https://www.seloger.com/"
+        },
+        {
+          "title": "Bien'ici",
+          "url": "https://www.bienici.com/"
+        }
+      ]
+    },
+    {
+      "id": "montreuil",
+      "name": "Montreuil",
+      "description": "Eastern suburb with artistic community, flea markets, and lower rents with Metro Line 9 access",
+      "character": "Artistic suburban, affordable, gentrifying",
+      "housing": {
+        "avgRentOneBedroomEUR": 1170,
+        "avgRentTwoBedroomEUR": 1580,
+        "buyPricePerSqmEUR": 2750,
+        "predominantType": "Apartments in older buildings and new developments"
+      },
+      "walkabilityScore": 56,
+      "transitScore": 41,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Paris",
+          "url": "https://www.numbeo.com/cost-of-living/in/Paris"
+        },
+        {
+          "title": "SeLoger",
+          "url": "https://www.seloger.com/"
+        },
+        {
+          "title": "Bien'ici",
+          "url": "https://www.bienici.com/"
+        }
+      ]
+    },
+    {
+      "id": "saint-germain-des-pres-6e",
+      "name": "Saint-Germain-des-Pres (6e)",
+      "description": "Left Bank literary quarter with famous cafes, bookshops, and a long history of international residents",
+      "character": "Literary, cafe culture, cosmopolitan Left Bank",
+      "housing": {
+        "avgRentOneBedroomEUR": 1980,
+        "avgRentTwoBedroomEUR": 2673,
+        "buyPricePerSqmEUR": 5750,
+        "predominantType": "Elegant Haussmann apartments and historic buildings"
+      },
+      "walkabilityScore": 72,
+      "transitScore": 62,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Paris",
+          "url": "https://www.numbeo.com/cost-of-living/in/Paris"
+        },
+        {
+          "title": "SeLoger",
+          "url": "https://www.seloger.com/"
+        },
+        {
+          "title": "Bien'ici",
+          "url": "https://www.bienici.com/"
+        }
+      ]
+    }
+  ]
+}

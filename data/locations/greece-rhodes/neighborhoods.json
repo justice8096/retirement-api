@@ -1,0 +1,141 @@
+{
+  "city": "Rhodes",
+  "neighborhoods": [
+    {
+      "id": "rhodes-medieval-old-town",
+      "name": "Rhodes Medieval Old Town",
+      "description": "Largest inhabited medieval town in Europe with Knights' Quarter, Ottoman mosques, and labyrinthine streets",
+      "character": "Medieval UNESCO, living museum, tourist hub",
+      "housing": {
+        "avgRentOneBedroomEUR": 1162,
+        "avgRentTwoBedroomEUR": 1569,
+        "buyPricePerSqmEUR": 3500,
+        "predominantType": "Apartments in medieval and Ottoman-era buildings"
+      },
+      "walkabilityScore": 85,
+      "transitScore": 86,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Rhodes Town. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Rhodes Town",
+          "url": "https://www.numbeo.com/cost-of-living/in/Rhodes-Town"
+        },
+        {
+          "title": "Spitogatos",
+          "url": "https://www.spitogatos.gr/"
+        },
+        {
+          "title": "XE.gr",
+          "url": "https://www.xe.gr/"
+        }
+      ]
+    },
+    {
+      "id": "ixia-ialyssos",
+      "name": "Ixia / Ialyssos",
+      "description": "Western coastal area with modern hotels, residential neighborhoods, and sunset views over Turkey",
+      "character": "Coastal suburban, modern amenities, sunset views",
+      "housing": {
+        "avgRentOneBedroomEUR": 849,
+        "avgRentTwoBedroomEUR": 1147,
+        "buyPricePerSqmEUR": 2250,
+        "predominantType": "Modern apartments, houses, and resort-style properties"
+      },
+      "walkabilityScore": 65,
+      "transitScore": 49,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Rhodes Town's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Rhodes Town",
+          "url": "https://www.numbeo.com/cost-of-living/in/Rhodes-Town"
+        },
+        {
+          "title": "Spitogatos",
+          "url": "https://www.spitogatos.gr/"
+        },
+        {
+          "title": "XE.gr",
+          "url": "https://www.xe.gr/"
+        }
+      ]
+    },
+    {
+      "id": "afantou",
+      "name": "Afantou",
+      "description": "Inland village with agricultural character, golf course, and significantly lower costs",
+      "character": "Inland village, affordable, agricultural, golf",
+      "housing": {
+        "avgRentOneBedroomEUR": 581,
+        "avgRentTwoBedroomEUR": 784,
+        "buyPricePerSqmEUR": 1375,
+        "predominantType": "Village houses and basic apartments"
+      },
+      "walkabilityScore": 42,
+      "transitScore": 34,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Rhodes Town",
+          "url": "https://www.numbeo.com/cost-of-living/in/Rhodes-Town"
+        },
+        {
+          "title": "Spitogatos",
+          "url": "https://www.spitogatos.gr/"
+        },
+        {
+          "title": "XE.gr",
+          "url": "https://www.xe.gr/"
+        }
+      ]
+    },
+    {
+      "id": "lindos-area",
+      "name": "Lindos Area",
+      "description": "Famous white-washed village below an ancient acropolis, popular with international residents and artists",
+      "character": "Iconic white village, artistic, international",
+      "housing": {
+        "avgRentOneBedroomEUR": 983,
+        "avgRentTwoBedroomEUR": 1328,
+        "buyPricePerSqmEUR": 2875,
+        "predominantType": "Restored captain houses and white-washed apartments"
+      },
+      "walkabilityScore": 79,
+      "transitScore": 55,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Rhodes Town",
+          "url": "https://www.numbeo.com/cost-of-living/in/Rhodes-Town"
+        },
+        {
+          "title": "Spitogatos",
+          "url": "https://www.spitogatos.gr/"
+        },
+        {
+          "title": "XE.gr",
+          "url": "https://www.xe.gr/"
+        }
+      ]
+    }
+  ]
+}

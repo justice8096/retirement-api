@@ -1,0 +1,141 @@
+{
+  "city": "Santa Marta",
+  "neighborhoods": [
+    {
+      "id": "centro-historico",
+      "name": "Centro Historico",
+      "description": "Colonial historic center near the waterfront with Parque de los Novios, cathedral, and Gold Museum",
+      "character": "Colonial waterfront, cultural, compact and walkable",
+      "housing": {
+        "avgRentOneBedroomUSD": 771,
+        "avgRentTwoBedroomUSD": 1002,
+        "buyPricePerSqmUSD": 1964,
+        "predominantType": "Renovated colonial buildings and older apartments"
+      },
+      "walkabilityScore": 88,
+      "transitScore": 73,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Santa Marta. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Santa Marta",
+          "url": "https://www.numbeo.com/cost-of-living/in/Santa-Marta"
+        },
+        {
+          "title": "Finca Raiz",
+          "url": "https://www.fincaraiz.com.co/"
+        },
+        {
+          "title": "Metrocuadrado",
+          "url": "https://www.metrocuadrado.com/"
+        }
+      ]
+    },
+    {
+      "id": "bello-horizonte",
+      "name": "Bello Horizonte",
+      "description": "Residential hillside neighborhood with ocean views, shopping centers, and newer development",
+      "character": "Hillside residential, ocean views, growing amenities",
+      "housing": {
+        "avgRentOneBedroomUSD": 563,
+        "avgRentTwoBedroomUSD": 732,
+        "buyPricePerSqmUSD": 1263,
+        "predominantType": "Modern apartments and houses"
+      },
+      "walkabilityScore": 55,
+      "transitScore": 42,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Santa Marta's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Santa Marta",
+          "url": "https://www.numbeo.com/cost-of-living/in/Santa-Marta"
+        },
+        {
+          "title": "Finca Raiz",
+          "url": "https://www.fincaraiz.com.co/"
+        },
+        {
+          "title": "Metrocuadrado",
+          "url": "https://www.metrocuadrado.com/"
+        }
+      ]
+    },
+    {
+      "id": "mamatoco",
+      "name": "Mamatoco",
+      "description": "Eastern neighborhood near the Sierra Nevada foothills with affordable housing and local markets",
+      "character": "Affordable residential, gateway to mountains, local feel",
+      "housing": {
+        "avgRentOneBedroomUSD": 385,
+        "avgRentTwoBedroomUSD": 501,
+        "buyPricePerSqmUSD": 772,
+        "predominantType": "Modest houses and low-rise apartments"
+      },
+      "walkabilityScore": 53,
+      "transitScore": 37,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Santa Marta",
+          "url": "https://www.numbeo.com/cost-of-living/in/Santa-Marta"
+        },
+        {
+          "title": "Finca Raiz",
+          "url": "https://www.fincaraiz.com.co/"
+        },
+        {
+          "title": "Metrocuadrado",
+          "url": "https://www.metrocuadrado.com/"
+        }
+      ]
+    },
+    {
+      "id": "el-rodadero",
+      "name": "El Rodadero",
+      "description": "Beach resort area south of the center popular with tourists and expats, with restaurants and nightlife",
+      "character": "Beach resort, tourist-friendly, dining and nightlife",
+      "housing": {
+        "avgRentOneBedroomUSD": 652,
+        "avgRentTwoBedroomUSD": 848,
+        "buyPricePerSqmUSD": 1613,
+        "predominantType": "Beachfront condos, hotel-apartments, and townhouses"
+      },
+      "walkabilityScore": 74,
+      "transitScore": 66,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Santa Marta",
+          "url": "https://www.numbeo.com/cost-of-living/in/Santa-Marta"
+        },
+        {
+          "title": "Finca Raiz",
+          "url": "https://www.fincaraiz.com.co/"
+        },
+        {
+          "title": "Metrocuadrado",
+          "url": "https://www.metrocuadrado.com/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "city": "Kalamata / Peloponnese",
+  "neighborhoods": [
+    {
+      "id": "kalamata-center",
+      "name": "Kalamata Center",
+      "description": "Capital of Messenia with a lively waterfront, historic castle, weekly market, and famous olive oil production",
+      "character": "Waterfront city center, olive capital, market culture",
+      "housing": {
+        "avgRentOneBedroomEUR": 1096,
+        "avgRentTwoBedroomEUR": 1479,
+        "buyPricePerSqmEUR": 3304,
+        "predominantType": "Apartments in city center buildings"
+      },
+      "walkabilityScore": 91,
+      "transitScore": 74,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Nafplio. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Nafplio",
+          "url": "https://www.numbeo.com/cost-of-living/in/Nafplio"
+        },
+        {
+          "title": "Spitogatos",
+          "url": "https://www.spitogatos.gr/"
+        },
+        {
+          "title": "XE.gr",
+          "url": "https://www.xe.gr/"
+        }
+      ]
+    },
+    {
+      "id": "kardamyli",
+      "name": "Kardamyli",
+      "description": "Coastal stone village in the Mani peninsula, made famous by Patrick Leigh Fermor, with hiking and sea access",
+      "character": "Stone village, literary heritage, hiking and sea",
+      "housing": {
+        "avgRentOneBedroomEUR": 801,
+        "avgRentTwoBedroomEUR": 1081,
+        "buyPricePerSqmEUR": 2124,
+        "predominantType": "Stone houses and village apartments"
+      },
+      "walkabilityScore": 69,
+      "transitScore": 45,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Nafplio's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Nafplio",
+          "url": "https://www.numbeo.com/cost-of-living/in/Nafplio"
+        },
+        {
+          "title": "Spitogatos",
+          "url": "https://www.spitogatos.gr/"
+        },
+        {
+          "title": "XE.gr",
+          "url": "https://www.xe.gr/"
+        }
+      ]
+    },
+    {
+      "id": "messini",
+      "name": "Messini",
+      "description": "Inland agricultural town near ancient Messene with affordable living and local produce markets",
+      "character": "Agricultural town, ancient ruins, affordable",
+      "housing": {
+        "avgRentOneBedroomEUR": 548,
+        "avgRentTwoBedroomEUR": 740,
+        "buyPricePerSqmEUR": 1298,
+        "predominantType": "Houses and basic apartments"
+      },
+      "walkabilityScore": 51,
+      "transitScore": 43,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Nafplio",
+          "url": "https://www.numbeo.com/cost-of-living/in/Nafplio"
+        },
+        {
+          "title": "Spitogatos",
+          "url": "https://www.spitogatos.gr/"
+        },
+        {
+          "title": "XE.gr",
+          "url": "https://www.xe.gr/"
+        }
+      ]
+    },
+    {
+      "id": "stoupa",
+      "name": "Stoupa",
+      "description": "Beach village with established British and international community, tavernas, and two sandy beaches",
+      "character": "Beach village, expat social hub, relaxed lifestyle",
+      "housing": {
+        "avgRentOneBedroomEUR": 927,
+        "avgRentTwoBedroomEUR": 1252,
+        "buyPricePerSqmEUR": 2714,
+        "predominantType": "Houses, apartments, and small villas"
+      },
+      "walkabilityScore": 68,
+      "transitScore": 63,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Nafplio",
+          "url": "https://www.numbeo.com/cost-of-living/in/Nafplio"
+        },
+        {
+          "title": "Spitogatos",
+          "url": "https://www.spitogatos.gr/"
+        },
+        {
+          "title": "XE.gr",
+          "url": "https://www.xe.gr/"
+        }
+      ]
+    }
+  ]
+}

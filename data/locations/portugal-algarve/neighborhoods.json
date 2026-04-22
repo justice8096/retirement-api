@@ -1,0 +1,141 @@
+{
+  "city": "Algarve",
+  "neighborhoods": [
+    {
+      "id": "faro-centro",
+      "name": "Faro Centro",
+      "description": "Regional capital with an old town inside medieval walls, marina, and international airport",
+      "character": "Regional capital, walled old town, university city",
+      "housing": {
+        "avgRentOneBedroomEUR": 1398,
+        "avgRentTwoBedroomEUR": 1887,
+        "buyPricePerSqmEUR": 4200,
+        "predominantType": "Apartments in old town and modern buildings"
+      },
+      "walkabilityScore": 87,
+      "transitScore": 70,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Faro. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Faro",
+          "url": "https://www.numbeo.com/cost-of-living/in/Faro"
+        },
+        {
+          "title": "Idealista Portugal",
+          "url": "https://www.idealista.pt/"
+        },
+        {
+          "title": "Imovirtual",
+          "url": "https://www.imovirtual.com/"
+        }
+      ]
+    },
+    {
+      "id": "lagos",
+      "name": "Lagos",
+      "description": "Historic port town on the western Algarve with dramatic cliffs, old town, and marina",
+      "character": "Historic port, dramatic cliffs, marina lifestyle",
+      "housing": {
+        "avgRentOneBedroomEUR": 1021,
+        "avgRentTwoBedroomEUR": 1379,
+        "buyPricePerSqmEUR": 2700,
+        "predominantType": "Apartments, townhouses, and villa conversions"
+      },
+      "walkabilityScore": 61,
+      "transitScore": 51,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Faro's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Faro",
+          "url": "https://www.numbeo.com/cost-of-living/in/Faro"
+        },
+        {
+          "title": "Idealista Portugal",
+          "url": "https://www.idealista.pt/"
+        },
+        {
+          "title": "Imovirtual",
+          "url": "https://www.imovirtual.com/"
+        }
+      ]
+    },
+    {
+      "id": "silves",
+      "name": "Silves",
+      "description": "Inland former Moorish capital with hilltop castle, orange groves, and lower costs than the coast",
+      "character": "Moorish heritage, inland affordable, orange groves",
+      "housing": {
+        "avgRentOneBedroomEUR": 699,
+        "avgRentTwoBedroomEUR": 943,
+        "buyPricePerSqmEUR": 1650,
+        "predominantType": "Traditional houses and affordable apartments"
+      },
+      "walkabilityScore": 47,
+      "transitScore": 32,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Faro",
+          "url": "https://www.numbeo.com/cost-of-living/in/Faro"
+        },
+        {
+          "title": "Idealista Portugal",
+          "url": "https://www.idealista.pt/"
+        },
+        {
+          "title": "Imovirtual",
+          "url": "https://www.imovirtual.com/"
+        }
+      ]
+    },
+    {
+      "id": "albufeira-vilamoura",
+      "name": "Albufeira / Vilamoura",
+      "description": "Major resort area and luxury marina with the largest expat community in the Algarve",
+      "character": "Resort marina, large expat community, golf and beach",
+      "housing": {
+        "avgRentOneBedroomEUR": 1183,
+        "avgRentTwoBedroomEUR": 1596,
+        "buyPricePerSqmEUR": 3450,
+        "predominantType": "Modern condos, villas, and marina apartments"
+      },
+      "walkabilityScore": 71,
+      "transitScore": 53,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Faro",
+          "url": "https://www.numbeo.com/cost-of-living/in/Faro"
+        },
+        {
+          "title": "Idealista Portugal",
+          "url": "https://www.idealista.pt/"
+        },
+        {
+          "title": "Imovirtual",
+          "url": "https://www.imovirtual.com/"
+        }
+      ]
+    }
+  ]
+}

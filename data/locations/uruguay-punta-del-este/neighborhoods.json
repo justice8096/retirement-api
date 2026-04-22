@@ -1,0 +1,141 @@
+{
+  "city": "Punta del Este",
+  "neighborhoods": [
+    {
+      "id": "peninsula",
+      "name": "Peninsula",
+      "description": "Iconic peninsula tip with the Casapueblo artist village, yacht harbor, and the famous Hand sculpture",
+      "character": "Peninsula resort, iconic landmarks, yacht harbor",
+      "housing": {
+        "avgRentOneBedroomUSD": 1286,
+        "avgRentTwoBedroomUSD": 1671,
+        "buyPricePerSqmUSD": 3422,
+        "predominantType": "Apartments and houses on the peninsula"
+      },
+      "walkabilityScore": 90,
+      "transitScore": 82,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Punta del Este. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Punta del Este",
+          "url": "https://www.numbeo.com/cost-of-living/in/Punta-del-Este"
+        },
+        {
+          "title": "Gallito.com.uy",
+          "url": "https://www.gallito.com.uy/"
+        },
+        {
+          "title": "Infocasas Uruguay",
+          "url": "https://www.infocasas.com.uy/"
+        }
+      ]
+    },
+    {
+      "id": "la-barra",
+      "name": "La Barra",
+      "description": "Bohemian-chic beach community across the undulating bridge with art galleries and surf culture",
+      "character": "Bohemian-chic, art galleries, surf bridge",
+      "housing": {
+        "avgRentOneBedroomUSD": 940,
+        "avgRentTwoBedroomUSD": 1221,
+        "buyPricePerSqmUSD": 2200,
+        "predominantType": "Beach houses, boutique properties, and apartments"
+      },
+      "walkabilityScore": 61,
+      "transitScore": 42,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Punta del Este's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Punta del Este",
+          "url": "https://www.numbeo.com/cost-of-living/in/Punta-del-Este"
+        },
+        {
+          "title": "Gallito.com.uy",
+          "url": "https://www.gallito.com.uy/"
+        },
+        {
+          "title": "Infocasas Uruguay",
+          "url": "https://www.infocasas.com.uy/"
+        }
+      ]
+    },
+    {
+      "id": "maldonado",
+      "name": "Maldonado",
+      "description": "Adjacent city serving as the commercial center with year-round population and lower costs",
+      "character": "Commercial center, year-round city, affordable",
+      "housing": {
+        "avgRentOneBedroomUSD": 643,
+        "avgRentTwoBedroomUSD": 836,
+        "buyPricePerSqmUSD": 1344,
+        "predominantType": "Apartments and houses at lower resort prices"
+      },
+      "walkabilityScore": 57,
+      "transitScore": 48,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Punta del Este",
+          "url": "https://www.numbeo.com/cost-of-living/in/Punta-del-Este"
+        },
+        {
+          "title": "Gallito.com.uy",
+          "url": "https://www.gallito.com.uy/"
+        },
+        {
+          "title": "Infocasas Uruguay",
+          "url": "https://www.infocasas.com.uy/"
+        }
+      ]
+    },
+    {
+      "id": "jose-ignacio",
+      "name": "Jose Ignacio",
+      "description": "Exclusive fishing-village-turned-luxury-destination with celebrities, estancias, and pristine beaches",
+      "character": "Exclusive village, celebrity destination, pristine",
+      "housing": {
+        "avgRentOneBedroomUSD": 1088,
+        "avgRentTwoBedroomUSD": 1414,
+        "buyPricePerSqmUSD": 2811,
+        "predominantType": "Luxury beach houses, estancia properties, and boutique homes"
+      },
+      "walkabilityScore": 74,
+      "transitScore": 64,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Punta del Este",
+          "url": "https://www.numbeo.com/cost-of-living/in/Punta-del-Este"
+        },
+        {
+          "title": "Gallito.com.uy",
+          "url": "https://www.gallito.com.uy/"
+        },
+        {
+          "title": "Infocasas Uruguay",
+          "url": "https://www.infocasas.com.uy/"
+        }
+      ]
+    }
+  ]
+}

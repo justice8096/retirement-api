@@ -1,0 +1,141 @@
+{
+  "city": "Pereira",
+  "neighborhoods": [
+    {
+      "id": "centro",
+      "name": "Centro",
+      "description": "Compact downtown with Bolivar Plaza, commercial streets, and the Egoya viaduct connecting to Dosquebradas",
+      "character": "Traditional downtown, commercial, walkable core",
+      "housing": {
+        "avgRentOneBedroomUSD": 702,
+        "avgRentTwoBedroomUSD": 913,
+        "buyPricePerSqmUSD": 1770,
+        "predominantType": "Older apartments and commercial-residential buildings"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 77,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of Pereira. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Pereira",
+          "url": "https://www.numbeo.com/cost-of-living/in/Pereira"
+        },
+        {
+          "title": "Finca Raiz",
+          "url": "https://www.fincaraiz.com.co/"
+        },
+        {
+          "title": "Metrocuadrado",
+          "url": "https://www.metrocuadrado.com/"
+        }
+      ]
+    },
+    {
+      "id": "cerritos",
+      "name": "Cerritos",
+      "description": "Upscale residential area with country clubs, gated communities, and views of the coffee-growing countryside",
+      "character": "Semi-rural upscale, country clubs, quiet living",
+      "housing": {
+        "avgRentOneBedroomUSD": 513,
+        "avgRentTwoBedroomUSD": 667,
+        "buyPricePerSqmUSD": 1138,
+        "predominantType": "Gated community houses and modern villas"
+      },
+      "walkabilityScore": 68,
+      "transitScore": 49,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Pereira's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Pereira",
+          "url": "https://www.numbeo.com/cost-of-living/in/Pereira"
+        },
+        {
+          "title": "Finca Raiz",
+          "url": "https://www.fincaraiz.com.co/"
+        },
+        {
+          "title": "Metrocuadrado",
+          "url": "https://www.metrocuadrado.com/"
+        }
+      ]
+    },
+    {
+      "id": "cuba",
+      "name": "Cuba",
+      "description": "Western working-class district with affordable housing, local markets, and improving transit connections",
+      "character": "Working-class residential, affordable, community-oriented",
+      "housing": {
+        "avgRentOneBedroomUSD": 351,
+        "avgRentTwoBedroomUSD": 456,
+        "buyPricePerSqmUSD": 695,
+        "predominantType": "Social housing blocks and modest houses"
+      },
+      "walkabilityScore": 46,
+      "transitScore": 30,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Pereira",
+          "url": "https://www.numbeo.com/cost-of-living/in/Pereira"
+        },
+        {
+          "title": "Finca Raiz",
+          "url": "https://www.fincaraiz.com.co/"
+        },
+        {
+          "title": "Metrocuadrado",
+          "url": "https://www.metrocuadrado.com/"
+        }
+      ]
+    },
+    {
+      "id": "pinares-de-san-martin",
+      "name": "Pinares de San Martin",
+      "description": "Modern upscale residential area near Circunvalar avenue with shopping malls and restaurants",
+      "character": "Modern residential, shopping access, upper-middle-class",
+      "housing": {
+        "avgRentOneBedroomUSD": 594,
+        "avgRentTwoBedroomUSD": 772,
+        "buyPricePerSqmUSD": 1454,
+        "predominantType": "Modern apartment towers and townhouse complexes"
+      },
+      "walkabilityScore": 69,
+      "transitScore": 65,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Pereira",
+          "url": "https://www.numbeo.com/cost-of-living/in/Pereira"
+        },
+        {
+          "title": "Finca Raiz",
+          "url": "https://www.fincaraiz.com.co/"
+        },
+        {
+          "title": "Metrocuadrado",
+          "url": "https://www.metrocuadrado.com/"
+        }
+      ]
+    }
+  ]
+}

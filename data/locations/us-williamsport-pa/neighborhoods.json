@@ -1,0 +1,141 @@
+{
+  "city": "Williamsport",
+  "neighborhoods": [
+    {
+      "id": "downtown-millionaires-row",
+      "name": "Downtown / Millionaires Row",
+      "description": "Historic lumber baron district with Victorian mansions, Community Arts Center, and Little League museum",
+      "character": "Victorian lumber baron, Little League heritage, arts",
+      "housing": {
+        "avgRentOneBedroomUSD": 1706,
+        "avgRentTwoBedroomUSD": 2303,
+        "buyPricePerSqmUSD": 4718,
+        "predominantType": "Victorian houses, apartments, and historic conversions"
+      },
+      "walkabilityScore": 94,
+      "transitScore": 71,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Williamsport. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Williamsport",
+          "url": "https://www.numbeo.com/cost-of-living/in/Williamsport"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "south-williamsport",
+      "name": "South Williamsport",
+      "description": "Southern borough across the river with Little League World Series complex and residential neighborhoods",
+      "character": "Little League World Series, residential, community",
+      "housing": {
+        "avgRentOneBedroomUSD": 1246,
+        "avgRentTwoBedroomUSD": 1683,
+        "buyPricePerSqmUSD": 3033,
+        "predominantType": "Single-family homes and modest houses"
+      },
+      "walkabilityScore": 50,
+      "transitScore": 56,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Williamsport's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Williamsport",
+          "url": "https://www.numbeo.com/cost-of-living/in/Williamsport"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "jersey-shore-lock-haven",
+      "name": "Jersey Shore / Lock Haven",
+      "description": "Surrounding communities with very affordable housing, Susquehanna River access, and rural character",
+      "character": "River communities, very affordable, rural",
+      "housing": {
+        "avgRentOneBedroomUSD": 853,
+        "avgRentTwoBedroomUSD": 1151,
+        "buyPricePerSqmUSD": 1854,
+        "predominantType": "Modest houses, older homes, and affordable properties"
+      },
+      "walkabilityScore": 41,
+      "transitScore": 33,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Williamsport",
+          "url": "https://www.numbeo.com/cost-of-living/in/Williamsport"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "montoursville-muncy",
+      "name": "Montoursville / Muncy",
+      "description": "Eastern communities with good schools, community parks, and family-oriented small-town living",
+      "character": "Small-town, good schools, family-oriented",
+      "housing": {
+        "avgRentOneBedroomUSD": 1443,
+        "avgRentTwoBedroomUSD": 1948,
+        "buyPricePerSqmUSD": 3875,
+        "predominantType": "Single-family homes and established neighborhoods"
+      },
+      "walkabilityScore": 74,
+      "transitScore": 56,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Williamsport",
+          "url": "https://www.numbeo.com/cost-of-living/in/Williamsport"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ]
+}

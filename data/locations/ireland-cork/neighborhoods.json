@@ -1,0 +1,141 @@
+{
+  "city": "Cork",
+  "neighborhoods": [
+    {
+      "id": "cork-city-centre",
+      "name": "Cork City Centre",
+      "description": "Island city center built on the River Lee with the English Market, Patrick Street, and a vibrant pub scene",
+      "character": "Island city, market culture, vibrant pub scene",
+      "housing": {
+        "avgRentOneBedroomEUR": 1869,
+        "avgRentTwoBedroomEUR": 2524,
+        "buyPricePerSqmEUR": 5600,
+        "predominantType": "Georgian townhouse apartments and modern city-center flats"
+      },
+      "walkabilityScore": 90,
+      "transitScore": 71,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Cork. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cork",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cork"
+        },
+        {
+          "title": "Daft.ie",
+          "url": "https://www.daft.ie/"
+        },
+        {
+          "title": "MyHome.ie",
+          "url": "https://www.myhome.ie/"
+        }
+      ]
+    },
+    {
+      "id": "douglas",
+      "name": "Douglas",
+      "description": "Southern suburb with excellent shopping, parks, and the River Lee walking paths",
+      "character": "Suburban residential, shopping access, green spaces",
+      "housing": {
+        "avgRentOneBedroomEUR": 1366,
+        "avgRentTwoBedroomEUR": 1844,
+        "buyPricePerSqmEUR": 3600,
+        "predominantType": "Houses, apartments, and modern estates"
+      },
+      "walkabilityScore": 60,
+      "transitScore": 43,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Cork's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cork",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cork"
+        },
+        {
+          "title": "Daft.ie",
+          "url": "https://www.daft.ie/"
+        },
+        {
+          "title": "MyHome.ie",
+          "url": "https://www.myhome.ie/"
+        }
+      ]
+    },
+    {
+      "id": "ballincollig",
+      "name": "Ballincollig",
+      "description": "Western commuter town with regional park, military heritage, and lower housing costs",
+      "character": "Commuter town, regional park, affordable",
+      "housing": {
+        "avgRentOneBedroomEUR": 935,
+        "avgRentTwoBedroomEUR": 1262,
+        "buyPricePerSqmEUR": 2200,
+        "predominantType": "Estate houses, apartments, and newer developments"
+      },
+      "walkabilityScore": 40,
+      "transitScore": 37,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cork",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cork"
+        },
+        {
+          "title": "Daft.ie",
+          "url": "https://www.daft.ie/"
+        },
+        {
+          "title": "MyHome.ie",
+          "url": "https://www.myhome.ie/"
+        }
+      ]
+    },
+    {
+      "id": "carrigaline",
+      "name": "Carrigaline",
+      "description": "Southern seaside commuter town with good schools, community facilities, and harbor access",
+      "character": "Family-friendly suburban, seaside, community-oriented",
+      "housing": {
+        "avgRentOneBedroomEUR": 1582,
+        "avgRentTwoBedroomEUR": 2135,
+        "buyPricePerSqmEUR": 4600,
+        "predominantType": "Estate houses and modern family homes"
+      },
+      "walkabilityScore": 71,
+      "transitScore": 70,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Cork",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cork"
+        },
+        {
+          "title": "Daft.ie",
+          "url": "https://www.daft.ie/"
+        },
+        {
+          "title": "MyHome.ie",
+          "url": "https://www.myhome.ie/"
+        }
+      ]
+    }
+  ]
+}

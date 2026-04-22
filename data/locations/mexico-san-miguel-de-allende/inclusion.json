@@ -1,0 +1,114 @@
+{
+  "country": "Mexico",
+  "region": "San Miguel de Allende",
+  "overallInclusionScore": 6.5,
+  "lastUpdated": "2026-03-24",
+  "categories": {
+    "racial": {
+      "score": 7,
+      "summary": "Mexico is a multiracial society with a complex racial hierarchy (colorism). San Miguel de Allende reflects a culture that is generally welcoming to foreigners, particularly American retirees. Light-skinned foreigners may receive preferential treatment (reflecting internal colorism), while indigenous and Afro-Mexican communities face documented discrimination. For most American retirees, racial acceptance is not a significant concern.",
+      "legalProtections": "Mexican Constitution Article 1 (non-discrimination), Federal Law to Prevent and Eliminate Discrimination (2003), CONAPRED (National Council to Prevent Discrimination), anti-discrimination amendments 2011",
+      "positiveFactors": [
+        "Mexican culture is genuinely curious and welcoming toward foreigners",
+        "CONAPRED provides federal anti-discrimination enforcement",
+        "Long tradition of receiving American retirees with positive attitudes"
+      ],
+      "riskFactors": [
+        "Colorism is deeply embedded — lighter skin correlates with social privilege",
+        "Indigenous communities face documented systemic discrimination",
+        "American retirees may benefit from racial privilege without realizing it"
+      ],
+      "sources": [
+        {
+          "title": "CONAPRED — National Council to Prevent Discrimination",
+          "url": "https://www.conapred.org.mx/",
+          "type": "official"
+        },
+        {
+          "title": "UN OHCHR — Mexico Country Report",
+          "url": "https://www.ohchr.org/en/countries/mexico",
+          "type": "official"
+        }
+      ]
+    },
+    "religious": {
+      "score": 7,
+      "summary": "Mexico guarantees religious freedom constitutionally with strong secularism provisions (laicidad). San Miguel de Allende is predominantly Catholic but increasingly diverse. Evangelical/Protestant communities are growing rapidly. Non-Christian faiths are uncommon outside Mexico City but face no legal restrictions. Religious tolerance is generally high in daily life.",
+      "legalProtections": "Mexican Constitution Articles 24 and 130 (religious freedom and church-state separation), Law of Religious Associations and Public Worship, CONAPRED",
+      "positiveFactors": [
+        "Strong constitutional secularism with genuine religious freedom",
+        "Growing religious diversity across the country",
+        "Mexican society is generally tolerant of different personal beliefs"
+      ],
+      "riskFactors": [
+        "Catholic cultural dominance in social customs and public holidays",
+        "Non-Christian worship facilities very limited outside major cities"
+      ],
+      "sources": [
+        {
+          "title": "US State Department — Religious Freedom Report: Mexico",
+          "url": "https://www.state.gov/reports/2023-report-on-international-religious-freedom/mexico/",
+          "type": "official"
+        },
+        {
+          "title": "Mexican Secretariat of Governance — Religious Affairs",
+          "url": "https://www.gob.mx/segob",
+          "type": "official"
+        }
+      ]
+    },
+    "countryOfOrigin": {
+      "score": 7,
+      "summary": "Mexico has a long tradition of welcoming American retirees, with an estimated 1.5 million Americans living in Mexico. San Miguel de Allende benefits from established expat infrastructure. The Temporary and Permanent Resident visa programs are accessible. Mexican attitudes toward Americans are complex — generally positive on a personal level despite political tensions at the national level.",
+      "legalProtections": "Mexican Immigration Law, Temporary Resident visa (4 years), Permanent Resident visa, INAMI immigration authority, bilateral agreements with US",
+      "positiveFactors": [
+        "Estimated 1.5 million Americans already living in Mexico — well-established expat infrastructure",
+        "Accessible visa programs for retirees with proof of income",
+        "Personal-level warmth toward Americans despite political complexity"
+      ],
+      "riskFactors": [
+        "US-Mexico political tensions occasionally create awkward social moments",
+        "Security concerns vary significantly by region"
+      ],
+      "sources": [
+        {
+          "title": "Mexican INAMI — Immigration Authority",
+          "url": "https://www.gob.mx/inm",
+          "type": "official"
+        },
+        {
+          "title": "US Embassy Mexico — Citizen Services",
+          "url": "https://mx.usembassy.gov/",
+          "type": "official"
+        }
+      ]
+    },
+    "language": {
+      "score": 4,
+      "summary": "Spanish is overwhelmingly dominant in San Miguel de Allende, and English proficiency is very limited outside major tourist areas and luxury service sectors. Mexico ranks \"very low\" on the EF English Proficiency Index. Expat communities provide English-language social networks, but daily life — healthcare, banking, government, shopping — requires Spanish or a translator.",
+      "legalProtections": "Spanish is the de facto national language. 68 indigenous languages have official recognition. No obligation to provide government services in English.",
+      "positiveFactors": [
+        "Expat communities in popular areas provide English-language support",
+        "Tourist-oriented businesses often have English-speaking staff",
+        "Spanish language courses widely available and affordable"
+      ],
+      "riskFactors": [
+        "Healthcare and emergency services primarily in Spanish",
+        "Government bureaucracy, contracts, and legal documents in Spanish only",
+        "Social isolation is a significant risk for non-Spanish speakers outside expat bubbles"
+      ],
+      "sources": [
+        {
+          "title": "EF English Proficiency Index — Mexico",
+          "url": "https://www.ef.com/wwen/epi/regions/latin-america/mexico/",
+          "type": "index"
+        },
+        {
+          "title": "Instituto Nacional de Lenguas Indigenas",
+          "url": "https://www.inali.gob.mx/",
+          "type": "official"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "city": "San Jose / Central Valley",
+  "neighborhoods": [
+    {
+      "id": "escazu-centro",
+      "name": "Escazu Centro",
+      "description": "Upscale suburb of San Jose with modern shopping malls, international restaurants, and excellent medical facilities",
+      "character": "Modern suburban, upscale, best medical access in CR",
+      "housing": {
+        "avgRentOneBedroomUSD": 1217,
+        "avgRentTwoBedroomUSD": 1582,
+        "buyPricePerSqmUSD": 3228,
+        "predominantType": "Modern condos, gated townhouse communities, luxury apartments"
+      },
+      "walkabilityScore": 93,
+      "transitScore": 82,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "The historic and commercial heart of San José. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living San José",
+          "url": "https://www.numbeo.com/cost-of-living/in/San-Jos%C3%A9"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    },
+    {
+      "id": "santa-ana",
+      "name": "Santa Ana",
+      "description": "Growing western suburb with a mix of Tico and expat communities, good schools, and newer developments",
+      "character": "Suburban residential, family-friendly, growing commercial",
+      "housing": {
+        "avgRentOneBedroomUSD": 889,
+        "avgRentTwoBedroomUSD": 1156,
+        "buyPricePerSqmUSD": 2075,
+        "predominantType": "Modern houses, townhomes, and condo complexes"
+      },
+      "walkabilityScore": 53,
+      "transitScore": 57,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to San José's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living San José",
+          "url": "https://www.numbeo.com/cost-of-living/in/San-Jos%C3%A9"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    },
+    {
+      "id": "heredia",
+      "name": "Heredia",
+      "description": "University city north of San Jose with colonial center, lower costs, and vibrant student energy",
+      "character": "University town, affordable urban, young and cultural",
+      "housing": {
+        "avgRentOneBedroomUSD": 608,
+        "avgRentTwoBedroomUSD": 791,
+        "buyPricePerSqmUSD": 1268,
+        "predominantType": "Apartments, student housing, and older homes"
+      },
+      "walkabilityScore": 48,
+      "transitScore": 48,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living San José",
+          "url": "https://www.numbeo.com/cost-of-living/in/San-Jos%C3%A9"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    },
+    {
+      "id": "san-rafael-de-escazu",
+      "name": "San Rafael de Escazu",
+      "description": "Hillside area above Escazu known for luxury living, embassy residences, and panoramic valley views",
+      "character": "Luxury hillside, embassy area, exclusive expat enclave",
+      "housing": {
+        "avgRentOneBedroomUSD": 1030,
+        "avgRentTwoBedroomUSD": 1338,
+        "buyPricePerSqmUSD": 2652,
+        "predominantType": "Luxury homes, gated estates, and high-end condos"
+      },
+      "walkabilityScore": 63,
+      "transitScore": 50,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living San José",
+          "url": "https://www.numbeo.com/cost-of-living/in/San-Jos%C3%A9"
+        },
+        {
+          "title": "Encuentra24 Costa Rica",
+          "url": "https://www.encuentra24.com/costa-rica/"
+        },
+        {
+          "title": "Point2 Homes Costa Rica",
+          "url": "https://www.point2homes.com/CR/"
+        }
+      ]
+    }
+  ]
+}

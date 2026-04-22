@@ -1,0 +1,141 @@
+{
+  "city": "Sliema",
+  "neighborhoods": [
+    {
+      "id": "sliema-seafront",
+      "name": "Sliema Seafront",
+      "description": "Modern waterfront promenade with shopping, dining, and ferries to Valletta across the harbor",
+      "character": "Modern waterfront, shopping and dining hub, cosmopolitan",
+      "housing": {
+        "avgRentOneBedroomEUR": 1775,
+        "avgRentTwoBedroomEUR": 2396,
+        "buyPricePerSqmEUR": 5320,
+        "predominantType": "Modern apartments and converted townhouses"
+      },
+      "walkabilityScore": 90,
+      "transitScore": 72,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Sliema. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Sliema",
+          "url": "https://www.numbeo.com/cost-of-living/in/Sliema"
+        },
+        {
+          "title": "Malta Park",
+          "url": "https://www.maltapark.com/"
+        },
+        {
+          "title": "Frank Salt Real Estate",
+          "url": "https://www.franksalt.com.mt/"
+        }
+      ]
+    },
+    {
+      "id": "san-gwann-swieqi",
+      "name": "San Gwann / Swieqi",
+      "description": "Central residential towns with good access to Sliema, Paceville, and Mater Dei Hospital",
+      "character": "Central residential, convenient, quieter than Sliema",
+      "housing": {
+        "avgRentOneBedroomEUR": 1297,
+        "avgRentTwoBedroomEUR": 1751,
+        "buyPricePerSqmEUR": 3420,
+        "predominantType": "Apartments and maisonettes in residential blocks"
+      },
+      "walkabilityScore": 68,
+      "transitScore": 52,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Sliema's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Sliema",
+          "url": "https://www.numbeo.com/cost-of-living/in/Sliema"
+        },
+        {
+          "title": "Malta Park",
+          "url": "https://www.maltapark.com/"
+        },
+        {
+          "title": "Frank Salt Real Estate",
+          "url": "https://www.franksalt.com.mt/"
+        }
+      ]
+    },
+    {
+      "id": "birkirkara",
+      "name": "Birkirkara",
+      "description": "One of Malta's largest towns with historic railway heritage, local markets, and lower rents",
+      "character": "Large town, affordable, railway heritage, local markets",
+      "housing": {
+        "avgRentOneBedroomEUR": 887,
+        "avgRentTwoBedroomEUR": 1198,
+        "buyPricePerSqmEUR": 2090,
+        "predominantType": "Traditional townhouses and older apartments"
+      },
+      "walkabilityScore": 46,
+      "transitScore": 38,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Sliema",
+          "url": "https://www.numbeo.com/cost-of-living/in/Sliema"
+        },
+        {
+          "title": "Malta Park",
+          "url": "https://www.maltapark.com/"
+        },
+        {
+          "title": "Frank Salt Real Estate",
+          "url": "https://www.franksalt.com.mt/"
+        }
+      ]
+    },
+    {
+      "id": "st-julian-s-paceville",
+      "name": "St. Julian's / Paceville",
+      "description": "Nightlife and entertainment district with high-rise development, marina, and international atmosphere",
+      "character": "Entertainment district, high-rise, international",
+      "housing": {
+        "avgRentOneBedroomEUR": 1502,
+        "avgRentTwoBedroomEUR": 2027,
+        "buyPricePerSqmEUR": 4370,
+        "predominantType": "Modern high-rise apartments and luxury developments"
+      },
+      "walkabilityScore": 78,
+      "transitScore": 61,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Sliema",
+          "url": "https://www.numbeo.com/cost-of-living/in/Sliema"
+        },
+        {
+          "title": "Malta Park",
+          "url": "https://www.maltapark.com/"
+        },
+        {
+          "title": "Frank Salt Real Estate",
+          "url": "https://www.franksalt.com.mt/"
+        }
+      ]
+    }
+  ]
+}

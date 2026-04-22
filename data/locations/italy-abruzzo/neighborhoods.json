@@ -1,0 +1,141 @@
+{
+  "city": "Pescara / Abruzzo",
+  "neighborhoods": [
+    {
+      "id": "pescara-centro",
+      "name": "Pescara Centro",
+      "description": "Adriatic coastal city center with long sandy beach, pedestrian Corso Umberto, and seafood restaurants",
+      "character": "Coastal city, beach culture, pedestrian shopping",
+      "housing": {
+        "avgRentOneBedroomEUR": 1115,
+        "avgRentTwoBedroomEUR": 1506,
+        "buyPricePerSqmEUR": 3360,
+        "predominantType": "Apartments in coastal and city-center buildings"
+      },
+      "walkabilityScore": 95,
+      "transitScore": 83,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Pescara. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Pescara",
+          "url": "https://www.numbeo.com/cost-of-living/in/Pescara"
+        },
+        {
+          "title": "Immobiliare.it",
+          "url": "https://www.immobiliare.it/"
+        },
+        {
+          "title": "Casa.it",
+          "url": "https://www.casa.it/"
+        }
+      ]
+    },
+    {
+      "id": "chieti",
+      "name": "Chieti",
+      "description": "Historic hilltop university town with panoramic views from the mountains to the sea",
+      "character": "Hilltop university town, panoramic views, cultural",
+      "housing": {
+        "avgRentOneBedroomEUR": 815,
+        "avgRentTwoBedroomEUR": 1100,
+        "buyPricePerSqmEUR": 2160,
+        "predominantType": "Apartments and houses in historic and modern buildings"
+      },
+      "walkabilityScore": 51,
+      "transitScore": 51,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Pescara's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Pescara",
+          "url": "https://www.numbeo.com/cost-of-living/in/Pescara"
+        },
+        {
+          "title": "Immobiliare.it",
+          "url": "https://www.immobiliare.it/"
+        },
+        {
+          "title": "Casa.it",
+          "url": "https://www.casa.it/"
+        }
+      ]
+    },
+    {
+      "id": "sulmona",
+      "name": "Sulmona",
+      "description": "Mountain town famous for confetti (sugar-coated almonds) with medieval center and affordable property",
+      "character": "Medieval mountain town, affordable, confetti capital",
+      "housing": {
+        "avgRentOneBedroomEUR": 558,
+        "avgRentTwoBedroomEUR": 753,
+        "buyPricePerSqmEUR": 1320,
+        "predominantType": "Stone houses and affordable apartments"
+      },
+      "walkabilityScore": 52,
+      "transitScore": 43,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Pescara",
+          "url": "https://www.numbeo.com/cost-of-living/in/Pescara"
+        },
+        {
+          "title": "Immobiliare.it",
+          "url": "https://www.immobiliare.it/"
+        },
+        {
+          "title": "Casa.it",
+          "url": "https://www.casa.it/"
+        }
+      ]
+    },
+    {
+      "id": "penne-santo-stefano-di-sessanio",
+      "name": "Penne / Santo Stefano di Sessanio",
+      "description": "Hilltop villages in the Gran Sasso foothills attracting remote workers and lifestyle-seekers",
+      "character": "Hilltop village, emerging destination, mountain lifestyle",
+      "housing": {
+        "avgRentOneBedroomEUR": 944,
+        "avgRentTwoBedroomEUR": 1274,
+        "buyPricePerSqmEUR": 2760,
+        "predominantType": "Restored stone houses and village apartments"
+      },
+      "walkabilityScore": 80,
+      "transitScore": 56,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Pescara",
+          "url": "https://www.numbeo.com/cost-of-living/in/Pescara"
+        },
+        {
+          "title": "Immobiliare.it",
+          "url": "https://www.immobiliare.it/"
+        },
+        {
+          "title": "Casa.it",
+          "url": "https://www.casa.it/"
+        }
+      ]
+    }
+  ]
+}

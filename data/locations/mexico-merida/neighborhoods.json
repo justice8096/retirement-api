@@ -1,0 +1,141 @@
+{
+  "city": "Merida",
+  "neighborhoods": [
+    {
+      "id": "centro-historico",
+      "name": "Centro Historico",
+      "description": "Grand colonial center with cathedral, Paseo Montejo mansions, and a vibrant Mayan-Spanish cultural fusion",
+      "character": "Grand colonial, Paseo Montejo, cultural fusion",
+      "housing": {
+        "avgRentOneBedroomUSD": 874,
+        "avgRentTwoBedroomUSD": 1136,
+        "buyPricePerSqmUSD": 2255,
+        "predominantType": "Restored colonial mansions and apartments"
+      },
+      "walkabilityScore": 86,
+      "transitScore": 88,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "The historic and commercial heart of Mérida. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Mérida",
+          "url": "https://www.numbeo.com/cost-of-living/in/M%C3%A9rida"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    },
+    {
+      "id": "garcia-gineres-itzimna",
+      "name": "Garcia Gineres / Itzimna",
+      "description": "Established residential neighborhoods with tree-lined streets, parks, and medical facilities",
+      "character": "Established residential, medical access, tree-lined",
+      "housing": {
+        "avgRentOneBedroomUSD": 638,
+        "avgRentTwoBedroomUSD": 830,
+        "buyPricePerSqmUSD": 1450,
+        "predominantType": "Houses and apartments in established neighborhoods"
+      },
+      "walkabilityScore": 68,
+      "transitScore": 53,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Mérida's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Mérida",
+          "url": "https://www.numbeo.com/cost-of-living/in/M%C3%A9rida"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    },
+    {
+      "id": "merida-sur-caucel",
+      "name": "Merida Sur / Caucel",
+      "description": "Southern and western growth areas with new affordable housing developments",
+      "character": "Emerging suburban, affordable new construction",
+      "housing": {
+        "avgRentOneBedroomUSD": 437,
+        "avgRentTwoBedroomUSD": 568,
+        "buyPricePerSqmUSD": 886,
+        "predominantType": "New construction houses and apartment developments"
+      },
+      "walkabilityScore": 42,
+      "transitScore": 41,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "low"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Mérida",
+          "url": "https://www.numbeo.com/cost-of-living/in/M%C3%A9rida"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    },
+    {
+      "id": "santiago-santa-ana",
+      "name": "Santiago / Santa Ana",
+      "description": "Hip revitalized barrios north of the center with boutique hotels, restaurants, and expat-owned businesses",
+      "character": "Revitalized hip, boutique culture, expat businesses",
+      "housing": {
+        "avgRentOneBedroomUSD": 739,
+        "avgRentTwoBedroomUSD": 961,
+        "buyPricePerSqmUSD": 1853,
+        "predominantType": "Restored colonial houses and boutique apartments"
+      },
+      "walkabilityScore": 69,
+      "transitScore": 68,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Mérida",
+          "url": "https://www.numbeo.com/cost-of-living/in/M%C3%A9rida"
+        },
+        {
+          "title": "Inmuebles24",
+          "url": "https://www.inmuebles24.com/"
+        },
+        {
+          "title": "Vivanuncios",
+          "url": "https://www.vivanuncios.com.mx/"
+        }
+      ]
+    }
+  ]
+}

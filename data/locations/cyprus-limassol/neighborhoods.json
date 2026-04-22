@@ -1,0 +1,141 @@
+{
+  "city": "Limassol",
+  "neighborhoods": [
+    {
+      "id": "old-town-castle-area",
+      "name": "Old Town / Castle Area",
+      "description": "Historic center around the medieval castle with narrow streets, craft shops, and the old port",
+      "character": "Historic compact, gentrifying, cultural events",
+      "housing": {
+        "avgRentOneBedroomEUR": 1492,
+        "avgRentTwoBedroomEUR": 2015,
+        "buyPricePerSqmEUR": 4480,
+        "predominantType": "Renovated apartments in stone and colonial buildings"
+      },
+      "walkabilityScore": 90,
+      "transitScore": 71,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Limassol. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Limassol",
+          "url": "https://www.numbeo.com/cost-of-living/in/Limassol"
+        },
+        {
+          "title": "Bazaraki",
+          "url": "https://www.bazaraki.com/"
+        },
+        {
+          "title": "Cyprus Property",
+          "url": "https://www.cyprusproperties.com/"
+        }
+      ]
+    },
+    {
+      "id": "germasogeia",
+      "name": "Germasogeia",
+      "description": "Tourist area east of center with the hotel strip, Dasoudi Beach, and residential neighborhoods behind",
+      "character": "Beach suburban, tourist infrastructure, green spaces",
+      "housing": {
+        "avgRentOneBedroomEUR": 1091,
+        "avgRentTwoBedroomEUR": 1472,
+        "buyPricePerSqmEUR": 2880,
+        "predominantType": "Apartments, villas, and resort-style complexes"
+      },
+      "walkabilityScore": 58,
+      "transitScore": 53,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Limassol's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Limassol",
+          "url": "https://www.numbeo.com/cost-of-living/in/Limassol"
+        },
+        {
+          "title": "Bazaraki",
+          "url": "https://www.bazaraki.com/"
+        },
+        {
+          "title": "Cyprus Property",
+          "url": "https://www.cyprusproperties.com/"
+        }
+      ]
+    },
+    {
+      "id": "mesa-geitonia",
+      "name": "Mesa Geitonia",
+      "description": "Central residential area with local character, traditional shops, and lower rents than the coast",
+      "character": "Central residential, affordable, local character",
+      "housing": {
+        "avgRentOneBedroomEUR": 746,
+        "avgRentTwoBedroomEUR": 1007,
+        "buyPricePerSqmEUR": 1760,
+        "predominantType": "Older apartments and modest houses"
+      },
+      "walkabilityScore": 59,
+      "transitScore": 47,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "minimal",
+        "englishPrevalence": "moderate"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Limassol",
+          "url": "https://www.numbeo.com/cost-of-living/in/Limassol"
+        },
+        {
+          "title": "Bazaraki",
+          "url": "https://www.bazaraki.com/"
+        },
+        {
+          "title": "Cyprus Property",
+          "url": "https://www.cyprusproperties.com/"
+        }
+      ]
+    },
+    {
+      "id": "limassol-marina-molos",
+      "name": "Limassol Marina / Molos",
+      "description": "Modern marina development and waterfront promenade with luxury residences and international dining",
+      "character": "Luxury waterfront, modern, cosmopolitan lifestyle",
+      "housing": {
+        "avgRentOneBedroomEUR": 1263,
+        "avgRentTwoBedroomEUR": 1705,
+        "buyPricePerSqmEUR": 3680,
+        "predominantType": "Luxury marina apartments and modern tower residences"
+      },
+      "walkabilityScore": 64,
+      "transitScore": 69,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Area with established international community and expat-oriented services. English is more commonly spoken here than in other neighborhoods.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Limassol",
+          "url": "https://www.numbeo.com/cost-of-living/in/Limassol"
+        },
+        {
+          "title": "Bazaraki",
+          "url": "https://www.bazaraki.com/"
+        },
+        {
+          "title": "Cyprus Property",
+          "url": "https://www.cyprusproperties.com/"
+        }
+      ]
+    }
+  ]
+}
