@@ -1,6 +1,7 @@
 export { calcBracketTax, calcTaxesForLocation, FED_BRACKETS_2026_SOURCES, FED_STD_DEDUCTION_2026_SOURCES, OBBBA_SENIOR_SOURCES } from './taxes';
 export type { TaxBracket, TaxConfig, TaxResult, TaxDetail, SocialCharges, LocationWithTaxes, Source } from './taxes';
 export { COUNTRY_TAX_SOURCES, taxSourcesFor } from './country-tax-sources';
+export { CATEGORY_COST_SOURCES, costSourcesFor } from './category-cost-sources';
 
 export { calcSSBenefit, calcSpousalBenefit } from './socialSecurity';
 

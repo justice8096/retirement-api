@@ -16,6 +16,35 @@ import prisma from '../db/prisma.js';
 import { cached } from '../lib/cache.js';
 import { toValidationErrorPayload } from '../lib/validation.js';
 import { taxSourcesFor } from '../../shared/country-tax-sources.js';
+import { costSourcesFor } from '../../shared/category-cost-sources.js';
+
+/** Shape a location data object in place with both country-level tax
+ *  citations and per-category cost citations. See Todos #11.
+ *  The injection is additive: if seed data already provided sources
+ *  at a given point, those are preserved. */
+function injectSources(data: Record<string, unknown>, country: string | null | undefined): void {
+  // Tax sources (country-keyed).
+  const taxSources = taxSourcesFor(country ?? '');
+  if (taxSources) {
+    const taxes = (data.taxes as Record<string, unknown> | undefined) ?? {};
+    if (!Array.isArray(taxes.sources) || taxes.sources.length === 0) {
+      taxes.sources = taxSources;
+    }
+    data.taxes = taxes;
+  }
+  // Per-category cost sources.
+  const monthlyCosts = data.monthlyCosts as Record<string, Record<string, unknown>> | undefined;
+  if (monthlyCosts) {
+    for (const key of Object.keys(monthlyCosts)) {
+      const range = monthlyCosts[key];
+      if (!range || typeof range !== 'object') continue;
+      const catSources = costSourcesFor(key);
+      if (catSources && (!Array.isArray(range.sources) || range.sources.length === 0)) {
+        range.sources = catSources;
+      }
+    }
+  }
+}
 
 interface LocationData {
   name: string;
@@ -159,17 +188,10 @@ export default async function locationRoutes(app: FastifyInstance): Promise<void
               updatedAt: loc.updatedAt,
               _version: loc.version,
             };
-            // Todos #11 — inject country-level tax citations so the Taxes
-            // screen tooltip can render on every card without a per-:id
-            // round-trip. Mirrors the injection in the /:id handler.
-            const sources = taxSourcesFor(loc.country as string);
-            if (sources) {
-              const taxes = (merged.taxes as Record<string, unknown> | undefined) ?? {};
-              if (!Array.isArray(taxes.sources) || taxes.sources.length === 0) {
-                taxes.sources = sources;
-              }
-              merged.taxes = taxes;
-            }
+            // Todos #11 — inject country-level tax + per-category cost
+            // citations so dashboard tooltips render without a per-:id
+            // round-trip. Additive: seed sources are preserved.
+            injectSources(merged, loc.country as string);
             return merged;
           })
         : locations;
@@ -279,19 +301,9 @@ export default async function locationRoutes(app: FastifyInstance): Promise<void
         healthcare.acaApplicable = false;
       }
 
-      // Todos #11 — inject country-level tax citations onto the taxes
-      // payload. Sources aren't stored per-location seed; they're derived
-      // from `loc.country` at read time via shared/country-tax-sources.
-      const sources = taxSourcesFor(loc.country);
-      if (sources) {
-        const taxes = (data.taxes as Record<string, unknown> | undefined) ?? {};
-        // Preserve anything the seed already carried (e.g. if a location
-        // later ships per-location sources that override the country set).
-        if (!Array.isArray(taxes.sources) || taxes.sources.length === 0) {
-          taxes.sources = sources;
-        }
-        data.taxes = taxes;
-      }
+      // Todos #11 — inject country-level tax + per-category cost citations.
+      // Additive: seed sources are preserved.
+      injectSources(data, loc.country);
 
       // WCAG best-practice — natural-language summary that downstream
       // screen-reader UIs can announce without re-synthesizing from fields.
