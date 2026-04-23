@@ -4,7 +4,11 @@
       "name": "Municipio de Panamá",
       "url": "https://www.mupa.gob.pa/",
       "type": "government",
-      "scope": "city"
+      "scope": "city",
+      "linkStatus": "redirect",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23",
+      "linkFinalUrl": "https://mupa.gob.pa/"
     }
   ]
 }

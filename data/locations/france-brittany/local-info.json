@@ -23,18 +23,27 @@
     {
       "name": "Rennes Metropole",
       "url": "https://metropole.rennes.fr/",
-      "type": "government"
+      "type": "government",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23"
     },
     {
       "name": "Brittany Tourism",
       "url": "https://www.brittanytourism.com/",
-      "type": "tourism"
+      "type": "tourism",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23"
     },
     {
       "name": "Région Bretagne",
       "url": "https://www.bretagne.bzh/",
       "type": "government",
-      "scope": "region"
+      "scope": "region",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23"
     }
   ],
   "youtubeChannels": [

@@ -4,7 +4,11 @@
       "name": "Ajuntament de Barcelona",
       "url": "https://www.barcelona.cat/",
       "type": "government",
-      "scope": "city"
+      "scope": "city",
+      "linkStatus": "redirect",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23",
+      "linkFinalUrl": "https://www.barcelona.cat/ca"
     }
   ]
 }

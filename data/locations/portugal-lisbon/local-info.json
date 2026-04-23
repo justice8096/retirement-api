@@ -23,12 +23,18 @@
     {
       "name": "Camara Municipal de Lisboa",
       "url": "https://www.lisboa.pt/",
-      "type": "government"
+      "type": "government",
+      "linkStatus": "other",
+      "linkHttpStatus": null,
+      "linkCheckedAt": "2026-04-23"
     },
     {
       "name": "Visit Lisboa",
       "url": "https://www.visitlisboa.com/",
-      "type": "tourism"
+      "type": "tourism",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23"
     }
   ],
   "youtubeChannels": [

@@ -27,12 +27,19 @@
     {
       "name": "City of Savannah",
       "url": "https://www.savannahga.gov/",
-      "type": "government"
+      "type": "government",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23"
     },
     {
       "name": "Visit Savannah",
       "url": "https://www.visitsavannah.com/",
-      "type": "tourism"
+      "type": "tourism",
+      "linkStatus": "redirect",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23",
+      "linkFinalUrl": "https://visitsavannah.com/"
     }
   ],
   "youtubeChannels": [
