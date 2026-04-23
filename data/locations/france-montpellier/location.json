@@ -244,9 +244,15 @@
     "Near beaches"
   ],
   "cons": [
-    "Hot summers (88F)",
-    "Occasional flooding",
-    "Crowded in summer"
+    {
+      "text": "Hot summers (88F)"
+    },
+    {
+      "text": "Occasional flooding"
+    },
+    {
+      "text": "Crowded in summer"
+    }
   ],
   "exchangeRates": {
     "optimistic": 0.85,

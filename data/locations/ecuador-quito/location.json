@@ -160,9 +160,15 @@
     "Uses USD with no exchange rate risk"
   ],
   "cons": [
-    "High altitude (9,350 ft) causes adjustment issues",
-    "Cool and rainy climate",
-    "Security concerns in some neighborhoods"
+    {
+      "text": "High altitude (9,350 ft) causes adjustment issues"
+    },
+    {
+      "text": "Cool and rainy climate"
+    },
+    {
+      "text": "Security concerns in some neighborhoods"
+    }
   ],
   "taxes": {
     "notes": "Ecuador uses USD. Progressive income tax 0-37% on worldwide income for residents.",

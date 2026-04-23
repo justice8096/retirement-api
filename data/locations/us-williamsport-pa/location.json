@@ -172,9 +172,15 @@
     "Scenic Susquehanna River setting"
   ],
   "cons": [
-    "Cold winters",
-    "Limited job market and metro amenities",
-    "PA state income tax plus local taxes"
+    {
+      "text": "Cold winters"
+    },
+    {
+      "text": "Limited job market and metro amenities"
+    },
+    {
+      "text": "PA state income tax plus local taxes"
+    }
   ],
   "taxes": {
     "notes": "Federal + PA flat state income tax (3.07%) + local earned income tax",

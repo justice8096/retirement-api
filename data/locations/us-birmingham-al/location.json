@@ -172,9 +172,15 @@
     "UAB Hospital â€” excellent medical center"
   ],
   "cons": [
-    "Hot, humid summers",
-    "Car-dependent with limited transit",
-    "Higher crime rates in some areas"
+    {
+      "text": "Hot, humid summers"
+    },
+    {
+      "text": "Car-dependent with limited transit"
+    },
+    {
+      "text": "Higher crime rates in some areas"
+    }
   ],
   "taxes": {
     "notes": "Federal + AL state income tax (2-5%); SS benefits exempt",

@@ -172,9 +172,15 @@
     "Revitalized neighborhoods and food scene"
   ],
   "cons": [
-    "Cold, gray winters",
-    "Hilly terrain can be challenging",
-    "PA state income tax (3.07%) plus local taxes"
+    {
+      "text": "Cold, gray winters"
+    },
+    {
+      "text": "Hilly terrain can be challenging"
+    },
+    {
+      "text": "PA state income tax (3.07%) plus local taxes"
+    }
   ],
   "taxes": {
     "notes": "Federal + PA flat state income tax (3.07%) + local earned income tax",

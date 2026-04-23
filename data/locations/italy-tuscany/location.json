@@ -167,9 +167,15 @@
     "Excellent food and wine at every price point"
   ],
   "cons": [
-    "Higher cost of living than southern Italy",
-    "Tourist congestion in popular areas",
-    "Car needed for rural living"
+    {
+      "text": "Higher cost of living than southern Italy"
+    },
+    {
+      "text": "Tourist congestion in popular areas"
+    },
+    {
+      "text": "Car needed for rural living"
+    }
   ],
   "taxes": {
     "notes": "Italian progressive income tax 23%-43%. 7% flat tax not available in most Tuscan towns (population over 20K).",

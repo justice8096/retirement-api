@@ -172,9 +172,15 @@
     "Inner Harbor and cultural attractions"
   ],
   "cons": [
-    "Higher crime rates",
-    "Cold winters",
-    "MD state income tax (2-5.75%) plus county tax"
+    {
+      "text": "Higher crime rates"
+    },
+    {
+      "text": "Cold winters"
+    },
+    {
+      "text": "MD state income tax (2-5.75%) plus county tax"
+    }
   ],
   "taxes": {
     "notes": "Federal + MD state income tax (2-5.75%) + county income tax",

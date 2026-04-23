@@ -175,9 +175,15 @@
     "Diverse communities with good dining"
   ],
   "cons": [
-    "Cold winters",
-    "Car-dependent suburbs",
-    "MI state income tax (4.25%) plus some city taxes"
+    {
+      "text": "Cold winters"
+    },
+    {
+      "text": "Car-dependent suburbs"
+    },
+    {
+      "text": "MI state income tax (4.25%) plus some city taxes"
+    }
   ],
   "taxes": {
     "notes": "Federal + MI flat state income tax (4.25%); some cities add local tax; SS partially exempt",

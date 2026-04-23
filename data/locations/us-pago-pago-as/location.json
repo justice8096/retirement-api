@@ -181,10 +181,18 @@
     "Low property crime"
   ],
   "cons": [
-    "Very remote — few flights, long travel to mainland",
-    "Healthcare limited — medevac common",
-    "High import costs on most goods",
-    "Cyclone season (Nov–Apr)"
+    {
+      "text": "Very remote — few flights, long travel to mainland"
+    },
+    {
+      "text": "Healthcare limited — medevac common"
+    },
+    {
+      "text": "High import costs on most goods"
+    },
+    {
+      "text": "Cyclone season (Nov–Apr)"
+    }
   ],
   "taxes": {
     "notes": "American Samoa has its own tax code (mirrored with modifications); residents file with ASG Tax Office, not IRS.",

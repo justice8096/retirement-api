@@ -172,9 +172,15 @@
     "Access to Hampton Roads metro amenities"
   ],
   "cons": [
-    "Higher crime rates",
-    "Flood-prone areas",
-    "Limited local job market"
+    {
+      "text": "Higher crime rates"
+    },
+    {
+      "text": "Flood-prone areas"
+    },
+    {
+      "text": "Limited local job market"
+    }
   ],
   "taxes": {
     "notes": "Federal + VA state income tax (2-5.75%); SS partially exempt for age 65+",

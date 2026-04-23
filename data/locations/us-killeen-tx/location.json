@@ -172,9 +172,15 @@
     "Near Fort Cavazos military base"
   ],
   "cons": [
-    "Extreme summer heat",
-    "Military-dependent economy",
-    "Limited cultural amenities"
+    {
+      "text": "Extreme summer heat"
+    },
+    {
+      "text": "Military-dependent economy"
+    },
+    {
+      "text": "Limited cultural amenities"
+    }
   ],
   "taxes": {
     "notes": "Federal only â€” no TX state income tax (high property taxes)",

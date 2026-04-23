@@ -172,9 +172,15 @@
     "Extensive parks and bike trail network"
   ],
   "cons": [
-    "Extremely cold, long winters",
-    "High state income tax (5.35-9.85%)",
-    "SS benefits partially taxed by state"
+    {
+      "text": "Extremely cold, long winters"
+    },
+    {
+      "text": "High state income tax (5.35-9.85%)"
+    },
+    {
+      "text": "SS benefits partially taxed by state"
+    }
   ],
   "taxes": {
     "notes": "Federal + MN state income tax (5.35-9.85%); SS partially taxed",

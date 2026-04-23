@@ -172,9 +172,15 @@
     "Close to Cleveland metro amenities"
   ],
   "cons": [
-    "Cold, gray winters with lake-effect snow",
-    "Economic decline and population loss",
-    "Limited local amenities"
+    {
+      "text": "Cold, gray winters with lake-effect snow"
+    },
+    {
+      "text": "Economic decline and population loss"
+    },
+    {
+      "text": "Limited local amenities"
+    }
   ],
   "taxes": {
     "notes": "Federal + OH state income tax (0-3.75%) + city income tax (~2.5%)",

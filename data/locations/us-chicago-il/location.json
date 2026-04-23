@@ -172,9 +172,15 @@
     "Beautiful lakefront and parks"
   ],
   "cons": [
-    "Harsh, long winters",
-    "High state and local taxes",
-    "Higher crime in some neighborhoods"
+    {
+      "text": "Harsh, long winters"
+    },
+    {
+      "text": "High state and local taxes"
+    },
+    {
+      "text": "Higher crime in some neighborhoods"
+    }
   ],
   "taxes": {
     "notes": "Federal + IL flat state income tax (4.95%)",

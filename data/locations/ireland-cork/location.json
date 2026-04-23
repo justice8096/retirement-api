@@ -167,9 +167,15 @@
     "Good airport with European connections"
   ],
   "cons": [
-    "Rainy climate (185+ days/year)",
-    "Housing market very competitive",
-    "Public transit limited compared to Dublin"
+    {
+      "text": "Rainy climate (185+ days/year)"
+    },
+    {
+      "text": "Housing market very competitive"
+    },
+    {
+      "text": "Public transit limited compared to Dublin"
+    }
   ],
   "taxes": {
     "notes": "Irish progressive income tax 20%/40%. USC 0.5-8%. US-Ireland tax treaty.",

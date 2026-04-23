@@ -172,9 +172,15 @@
     "Strong brewery and food culture"
   ],
   "cons": [
-    "Very cold, snowy winters",
-    "WI state income tax (3.54-7.65%)",
-    "Some neighborhoods have higher crime"
+    {
+      "text": "Very cold, snowy winters"
+    },
+    {
+      "text": "WI state income tax (3.54-7.65%)"
+    },
+    {
+      "text": "Some neighborhoods have higher crime"
+    }
   ],
   "taxes": {
     "notes": "Federal + WI state income tax (3.54-7.65%); SS benefits exempt",
