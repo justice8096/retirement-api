@@ -34,18 +34,27 @@
     {
       "name": "City of Richmond",
       "url": "https://www.rva.gov/",
-      "type": "government"
+      "type": "government",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23"
     },
     {
       "name": "Visit Richmond VA",
       "url": "https://www.visitrichmondva.com/",
-      "type": "tourism"
+      "type": "tourism",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23"
     },
     {
       "name": "City of Richmond, VA",
       "url": "https://rva.gov/",
       "type": "government",
-      "scope": "city"
+      "scope": "city",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23"
     }
   ],
   "youtubeChannels": [

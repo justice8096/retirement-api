@@ -19,12 +19,19 @@
     {
       "name": "Cherry Hill Township",
       "url": "https://www.cherryhillnj.com/",
-      "type": "government"
+      "type": "government",
+      "linkStatus": "other",
+      "linkHttpStatus": null,
+      "linkCheckedAt": "2026-04-23"
     },
     {
       "name": "Visit South Jersey",
       "url": "https://www.visitsouthjersey.com/",
-      "type": "tourism"
+      "type": "tourism",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23",
+      "linkFinalUrl": "https://visitsouthjersey.com/"
     }
   ],
   "youtubeChannels": [

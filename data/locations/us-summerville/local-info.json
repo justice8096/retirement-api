@@ -19,12 +19,18 @@
     {
       "name": "Town of Summerville",
       "url": "https://www.summervillesc.gov/",
-      "type": "government"
+      "type": "government",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23"
     },
     {
       "name": "Visit Summerville SC",
       "url": "https://www.visitsummerville.com/",
-      "type": "tourism"
+      "type": "tourism",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23"
     }
   ],
   "youtubeChannels": [

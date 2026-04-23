@@ -27,12 +27,19 @@
     {
       "name": "Ville de Lyon",
       "url": "https://www.lyon.fr/",
-      "type": "government"
+      "type": "government",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23"
     },
     {
       "name": "ONLYLYON Tourism",
       "url": "https://en.lyon-france.com/",
-      "type": "tourism"
+      "type": "tourism",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23",
+      "linkFinalUrl": "https://en.visiterlyon.com/"
     }
   ],
   "youtubeChannels": [

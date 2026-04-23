@@ -23,12 +23,20 @@
     {
       "name": "Mairie de Toulouse",
       "url": "https://www.toulouse.fr/",
-      "type": "government"
+      "type": "government",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23",
+      "linkFinalUrl": "https://metropole.toulouse.fr/"
     },
     {
       "name": "Toulouse Tourism",
       "url": "https://www.toulouse-tourisme.com/en",
-      "type": "tourism"
+      "type": "tourism",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23",
+      "linkFinalUrl": "https://www.toulouse-tourisme.com/en/"
     }
   ],
   "youtubeChannels": [

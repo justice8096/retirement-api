@@ -286,13 +286,13 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
+      "name": "Masjid Umm Barakah",
       "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Richmond, Virginia",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Richmond%2C%20Virginia",
+          "title": "OpenStreetMap — Masjid Umm Barakah",
+          "url": "https://www.openstreetmap.org/node/4255740447",
           "accessed": "2026-04-23"
         }
       ]
@@ -351,13 +351,13 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "Alexander's Barbeque",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Richmond, Virginia",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Richmond%2C%20Virginia",
+          "title": "OpenStreetMap — Alexander's Barbeque",
+          "url": "https://www.openstreetmap.org/node/703584334",
           "accessed": "2026-04-23"
         }
       ]
@@ -403,13 +403,13 @@
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
+      "name": "Hyderabad Biryani House",
       "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Richmond, Virginia",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Richmond%2C%20Virginia",
+          "title": "OpenStreetMap — Hyderabad Biryani House",
+          "url": "https://www.openstreetmap.org/node/2697234686",
           "accessed": "2026-04-23"
         }
       ]

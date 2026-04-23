@@ -6,27 +6,42 @@
     {
       "name": "City of Chesapeake Official Website",
       "url": "https://www.cityofchesapeake.net/",
-      "description": "Official city government site with services, departments, parks, events, and public notices"
+      "description": "Official city government site with services, departments, parks, events, and public notices",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23"
     },
     {
       "name": "Chesapeake Parks, Recreation & Tourism",
       "url": "https://www.cityofchesapeake.net/government/city-departments/parks-recreation-tourism/",
-      "description": "City parks, recreation programs, trails, events, and tourism information"
+      "description": "City parks, recreation programs, trails, events, and tourism information",
+      "linkStatus": "client-error",
+      "linkHttpStatus": 404,
+      "linkCheckedAt": "2026-04-23"
     },
     {
       "name": "Hampton Roads Planning District Commission",
       "url": "https://www.hrpdcva.gov/",
-      "description": "Regional planning organization for Hampton Roads — transportation, environment, housing data"
+      "description": "Regional planning organization for Hampton Roads — transportation, environment, housing data",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23"
     },
     {
       "name": "Chesapeake Public Library",
       "url": "https://www.chesapeakepl.lib.va.us/",
-      "description": "Public library system with multiple branches, digital resources, events, and senior programs"
+      "description": "Public library system with multiple branches, digital resources, events, and senior programs",
+      "linkStatus": "dns",
+      "linkHttpStatus": null,
+      "linkCheckedAt": "2026-04-23"
     },
     {
       "name": "Hampton Roads Transit (HRT)",
       "url": "https://gohrt.com/",
-      "description": "Public transit authority serving Chesapeake, Norfolk, Virginia Beach, and the region"
+      "description": "Public transit authority serving Chesapeake, Norfolk, Virginia Beach, and the region",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23"
     }
   ],
   "webcams": [

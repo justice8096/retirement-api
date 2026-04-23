@@ -26,12 +26,18 @@
     {
       "name": "City of Atlanta",
       "url": "https://www.atlantaga.gov/",
-      "type": "government"
+      "type": "government",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23"
     },
     {
       "name": "Discover Atlanta",
       "url": "https://discoveratlanta.com/",
-      "type": "tourism"
+      "type": "tourism",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23"
     }
   ],
   "youtubeChannels": [

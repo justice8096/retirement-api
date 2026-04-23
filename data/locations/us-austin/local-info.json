@@ -30,12 +30,19 @@
     {
       "name": "City of Austin",
       "url": "https://www.austintexas.gov/",
-      "type": "government"
+      "type": "government",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23"
     },
     {
       "name": "Visit Austin",
       "url": "https://www.visitaustin.org/",
-      "type": "tourism"
+      "type": "tourism",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23",
+      "linkFinalUrl": "https://www.austintexas.org/"
     }
   ],
   "youtubeChannels": [
