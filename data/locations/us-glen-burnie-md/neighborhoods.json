@@ -1,0 +1,147 @@
+{
+  "city": "Glen Burnie",
+  "neighborhoods": [
+    {
+      "id": "inner-harbor-federal-hill",
+      "name": "Inner Harbor / Federal Hill",
+      "description": "Revitalized waterfront with National Aquarium, historic ships, and rowhome neighborhoods on the hill",
+      "character": "Waterfront revitalized, aquarium, historic rowhomes",
+      "housing": {
+        "avgRentOneBedroomUSD": 2408,
+        "avgRentTwoBedroomUSD": 3250,
+        "buyPricePerSqmUSD": 7028,
+        "predominantType": "Rowhomes, condos, and waterfront apartments"
+      },
+      "walkabilityScore": 87,
+      "transitScore": 80,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Glen Burnie. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Glen Burnie",
+          "url": "https://www.numbeo.com/cost-of-living/in/Glen Burnie"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "towson",
+      "name": "Towson",
+      "description": "Northern suburb with university, Towson Town Center, and established residential neighborhoods",
+      "character": "University suburban, shopping, established residential",
+      "housing": {
+        "avgRentOneBedroomUSD": 1759,
+        "avgRentTwoBedroomUSD": 2375,
+        "buyPricePerSqmUSD": 4518,
+        "predominantType": "Single-family homes, apartments, and garden condos"
+      },
+      "walkabilityScore": 68,
+      "transitScore": 42,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Glen Burnie's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Glen Burnie",
+          "url": "https://www.numbeo.com/cost-of-living/in/Glen Burnie"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "dundalk-essex",
+      "name": "Dundalk / Essex",
+      "description": "Eastern working-class communities with waterfront access and significantly lower housing costs",
+      "character": "Working-class waterfront, affordable, community",
+      "housing": {
+        "avgRentOneBedroomUSD": 1204,
+        "avgRentTwoBedroomUSD": 1625,
+        "buyPricePerSqmUSD": 2761,
+        "predominantType": "Row houses, modest single-family homes, and apartments"
+      },
+      "walkabilityScore": 40,
+      "transitScore": 37,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Glen Burnie",
+          "url": "https://www.numbeo.com/cost-of-living/in/Glen Burnie"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "columbia-ellicott-city",
+      "name": "Columbia / Ellicott City",
+      "description": "Howard County planned communities with top schools, diverse population, and extensive amenities",
+      "character": "Planned community, top schools, diverse",
+      "housing": {
+        "avgRentOneBedroomUSD": 2037,
+        "avgRentTwoBedroomUSD": 2750,
+        "buyPricePerSqmUSD": 5773,
+        "predominantType": "Single-family homes, townhomes, and condos"
+      },
+      "walkabilityScore": 76,
+      "transitScore": 66,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Glen Burnie",
+          "url": "https://www.numbeo.com/cost-of-living/in/Glen Burnie"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ],
+  "_seedOrigin": {
+    "kind": "starter-template",
+    "from": "us-baltimore-md",
+    "generatedAt": "2026-04-23",
+    "note": "Template-derived content — prices and names adapted from the template city. Needs per-location review."
+  }
+}

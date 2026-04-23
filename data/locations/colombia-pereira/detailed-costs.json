@@ -719,5 +719,145 @@
         "max": 300
       }
     }
+  },
+  "visionDental": {
+    "monthlyBudget": {
+      "min": 40,
+      "typical": 70,
+      "max": 120
+    },
+    "vision": {
+      "eyeExam": {
+        "withInsurance": 0,
+        "withoutInsurance": 34,
+        "notes": "Visita oculistica ~30 EUR. SSN (public health) covers ophthalmologist with GP referral. Private ~30-50 EUR."
+      },
+      "glasses": {
+        "basic": 90,
+        "progressive": 200,
+        "contacts12mo": 170,
+        "notes": "Basic frames+lenses ~80 EUR at chains like GrandVision, Salmoiraghi. Progressive ~180 EUR. Not covered by SSN."
+      },
+      "insurance": {
+        "monthlyPremium": 0,
+        "coverage": "SSN covers ophthalmology referrals; glasses/contacts not covered",
+        "notes": "No standalone vision insurance common. Private health (Unisalute, Generali) may include vision benefits."
+      }
+    },
+    "dental": {
+      "cleaning": {
+        "withInsurance": 10,
+        "withoutInsurance": 57,
+        "notes": "Pulizia dentale ~50 EUR. Very limited public dental for adults."
+      },
+      "filling": {
+        "withInsurance": 34,
+        "withoutInsurance": 80,
+        "notes": "Otturazione composita ~70 EUR. Private dental is standard; public waitlists are long."
+      },
+      "crown": {
+        "withInsurance": 285,
+        "withoutInsurance": 455,
+        "notes": "Corona in ceramica ~400 EUR. Dental funds (fondi sanitari) through employers reduce costs."
+      },
+      "insurance": {
+        "monthlyPremium": 17,
+        "coverage": "Private dental plan or fondo sanitario, discounted cleanings and treatments",
+        "notes": "Dental-only plans ~15 EUR/mo (DentaVox, Unisalute Dental). Free cleanings, 30-50% off treatments. Fondi sanitari via CCNL employment contracts common."
+      }
+    },
+    "annualEstimate": {
+      "withInsurance": {
+        "premiums": 204,
+        "outOfPocket": 160,
+        "total": 364,
+        "monthlyEquiv": 30
+      },
+      "withoutInsurance": {
+        "outOfPocket": 400,
+        "monthlyEquiv": 33
+      }
+    },
+    "_seedOrigin": {
+      "kind": "starter-template",
+      "from": "italy-puglia",
+      "generatedAt": "2026-04-23",
+      "note": "Template-derived section — prices are EUR-denominated from Puglia, Italy. Needs per-location currency + cost-of-living adaptation."
+    }
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 300,
+      "typical": 375,
+      "max": 469
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 250,
+        "seniorDiscounts": "Pranzo (lunch) menus available €10-15 at trattorie. Coperto (cover charge) €1-3.",
+        "notes": "Lunch for 2 at trattoria ~€28 + coperto, 2x/week = ~€220/mo = ~$250/mo in Puglia, Italy."
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 34,
+        "seniorDiscounts": "No specific senior discounts.",
+        "notes": "TIM/Vodafone/Fastweb fiber 1 Gig €25-35/mo. ~$28-40/mo."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 14,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€12.99/mo in Italy. ~$14/mo."
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 6,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€4.99/mo (€49.90/yr). Includes Prime Video. ~$6/mo."
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 8,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "€6.99/mo. ~$8/mo."
+      },
+      {
+        "name": "NFL RedZone",
+        "monthlyCost": 15,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "DAZN NFL Game Pass €19.99/mo during season. Annualized ~€13/mo (~$15)."
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 28,
+        "seniorDiscounts": "Palestre comunali (municipal gyms) offer senior rates.",
+        "notes": "Virgin Active/McFit €25-40/mo, municipal gyms €15-25/mo. ~$22-34/mo."
+      },
+      {
+        "name": "Parks/Outdoors",
+        "monthlyCost": 0,
+        "seniorDiscounts": "EU citizens 65+ get free/reduced museum entry. Parks free.",
+        "notes": "Free parks, piazzas, coastal walks, hiking."
+      },
+      {
+        "name": "Books/Media",
+        "monthlyCost": 8,
+        "seniorDiscounts": "Biblioteche comunali free.",
+        "notes": "Public libraries free. Budget for newspapers, books."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 12,
+        "seniorDiscounts": "No specific discounts. Espresso at the bar is very cheap.",
+        "notes": "Espresso €1-1.50 at the bar, cappuccino €1.50-2.00. Budget for 2 visits/week. ~$12/mo."
+      }
+    ],
+    "_seedOrigin": {
+      "kind": "starter-template",
+      "from": "italy-puglia",
+      "generatedAt": "2026-04-23",
+      "note": "Template-derived section — prices are EUR-denominated from Puglia, Italy. Needs per-location currency + cost-of-living adaptation."
+    }
   }
 }
