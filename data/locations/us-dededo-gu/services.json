@@ -303,52 +303,52 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "Ruby Tuesday",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Dededo, Guam",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Dededo%2C%20Guam",
+          "title": "OpenStreetMap — Ruby Tuesday",
+          "url": "https://www.openstreetmap.org/node/361386388",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
+      "name": "キャラベル",
       "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Dededo, Guam",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Dededo%2C%20Guam",
+          "title": "OpenStreetMap — キャラベル",
+          "url": "https://www.openstreetmap.org/node/2130547379",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
+      "name": "Tacos Sinaloa",
       "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Dededo, Guam",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Dededo%2C%20Guam",
+          "title": "OpenStreetMap — Tacos Sinaloa",
+          "url": "https://www.openstreetmap.org/node/4549349720",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
+      "name": "Bamboo Vietnamese Resto",
       "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Dededo, Guam",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Dededo%2C%20Guam",
+          "title": "OpenStreetMap — Bamboo Vietnamese Resto",
+          "url": "https://www.openstreetmap.org/node/824345979",
           "accessed": "2026-04-23"
         }
       ]

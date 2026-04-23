@@ -287,26 +287,24 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "name": "Mezquita de Omar",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Atenas, Costa Rica",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Atenas%2C%20Costa%20Rica",
+          "title": "OpenStreetMap — Mezquita de Omar",
+          "url": "https://www.openstreetmap.org/way/1000972460",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "name": "Centro Israelita Sionista de Costa Rica",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Atenas, Costa Rica",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Atenas%2C%20Costa%20Rica",
+          "title": "OpenStreetMap — Centro Israelita Sionista de Costa Rica",
+          "url": "https://www.openstreetmap.org/way/273774614",
           "accessed": "2026-04-23"
         }
       ]
@@ -352,65 +350,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Los Cipreses",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Atenas, Costa Rica",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Atenas%2C%20Costa%20Rica",
+          "title": "OpenStreetMap — Los Cipreses",
+          "url": "https://www.openstreetmap.org/node/282765910",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Valle Azul",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Atenas, Costa Rica",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Atenas%2C%20Costa%20Rica",
+          "title": "OpenStreetMap — Valle Azul",
+          "url": "https://www.openstreetmap.org/node/430768293",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Jalapeño Central",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Atenas, Costa Rica",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Atenas%2C%20Costa%20Rica",
+          "title": "OpenStreetMap — Jalapeño Central",
+          "url": "https://www.openstreetmap.org/node/1817874898",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Saigon Asian Fussion Restaurant",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Atenas, Costa Rica",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Atenas%2C%20Costa%20Rica",
+          "title": "OpenStreetMap — Saigon Asian Fussion Restaurant",
+          "url": "https://www.openstreetmap.org/node/1761228316",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Taste of India506",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Atenas, Costa Rica",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Atenas%2C%20Costa%20Rica",
+          "title": "OpenStreetMap — Taste of India506",
+          "url": "https://www.openstreetmap.org/node/5796416100",
           "accessed": "2026-04-23"
         }
       ]

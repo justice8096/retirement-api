@@ -251,13 +251,13 @@
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
+      "name": "Congregation B'nai Or STX",
       "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Christiansted, US Virgin Islands",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Christiansted%2C%20US%20Virgin%20Islands",
+          "title": "OpenStreetMap — Congregation B'nai Or STX",
+          "url": "https://www.openstreetmap.org/way/526319390",
           "accessed": "2026-04-23"
         }
       ]
@@ -303,13 +303,13 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "Pickled Greek",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Christiansted, US Virgin Islands",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Christiansted%2C%20US%20Virgin%20Islands",
+          "title": "OpenStreetMap — Pickled Greek",
+          "url": "https://www.openstreetmap.org/node/2554377875",
           "accessed": "2026-04-23"
         }
       ]

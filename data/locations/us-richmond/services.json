@@ -286,26 +286,26 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
+      "name": "Masjid Umm Barakah",
       "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Richmond, Virginia",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Richmond%2C%20Virginia",
+          "title": "OpenStreetMap — Masjid Umm Barakah",
+          "url": "https://www.openstreetmap.org/node/4255740447",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
+      "name": "Congregation Beth Ahabah",
       "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Richmond, Virginia",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Richmond%2C%20Virginia",
+          "title": "OpenStreetMap — Congregation Beth Ahabah",
+          "url": "https://www.openstreetmap.org/way/236141922",
           "accessed": "2026-04-23"
         }
       ]
@@ -351,65 +351,65 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "Alexander's Barbeque",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Richmond, Virginia",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Richmond%2C%20Virginia",
+          "title": "OpenStreetMap — Alexander's Barbeque",
+          "url": "https://www.openstreetmap.org/node/703584334",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
+      "name": "Rosa's Pizza & Italian Eatery",
       "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Richmond, Virginia",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Richmond%2C%20Virginia",
+          "title": "OpenStreetMap — Rosa's Pizza & Italian Eatery",
+          "url": "https://www.openstreetmap.org/node/2334954994",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
+      "name": "Rico's Mexican Restaurant",
       "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Richmond, Virginia",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Richmond%2C%20Virginia",
+          "title": "OpenStreetMap — Rico's Mexican Restaurant",
+          "url": "https://www.openstreetmap.org/node/2458493505",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
+      "name": "Native Plate",
       "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Richmond, Virginia",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Richmond%2C%20Virginia",
+          "title": "OpenStreetMap — Native Plate",
+          "url": "https://www.openstreetmap.org/node/846282060",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
+      "name": "Hyderabad Biryani House",
       "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Richmond, Virginia",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Richmond%2C%20Virginia",
+          "title": "OpenStreetMap — Hyderabad Biryani House",
+          "url": "https://www.openstreetmap.org/node/2697234686",
           "accessed": "2026-04-23"
         }
       ]

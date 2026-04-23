@@ -251,13 +251,13 @@
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
+      "name": "Beít-Tefílah",
       "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Ponce, Puerto Rico",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Ponce%2C%20Puerto%20Rico",
+          "title": "OpenStreetMap — Beít-Tefílah",
+          "url": "https://www.openstreetmap.org/node/12152738847",
           "accessed": "2026-04-23"
         }
       ]
@@ -303,52 +303,52 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "Casa Perichi",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Ponce, Puerto Rico",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Ponce%2C%20Puerto%20Rico",
+          "title": "OpenStreetMap — Casa Perichi",
+          "url": "https://www.openstreetmap.org/node/367769219",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
+      "name": "Le Stazione",
       "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Ponce, Puerto Rico",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Ponce%2C%20Puerto%20Rico",
+          "title": "OpenStreetMap — Le Stazione",
+          "url": "https://www.openstreetmap.org/node/9706035277",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
+      "name": "Tequilla's Mexican Grill & Bar",
       "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Ponce, Puerto Rico",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Ponce%2C%20Puerto%20Rico",
+          "title": "OpenStreetMap — Tequilla's Mexican Grill & Bar",
+          "url": "https://www.openstreetmap.org/node/6593692237",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
+      "name": "P.F. Chang's",
       "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Ponce, Puerto Rico",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Ponce%2C%20Puerto%20Rico",
+          "title": "OpenStreetMap — P.F. Chang's",
+          "url": "https://www.openstreetmap.org/way/530860385",
           "accessed": "2026-04-23"
         }
       ]

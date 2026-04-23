@@ -352,65 +352,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Posada Ingapirca",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Cuenca, Ecuador",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Cuenca%2C%20Ecuador",
+          "title": "OpenStreetMap — Posada Ingapirca",
+          "url": "https://www.openstreetmap.org/node/493928873",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "I LOVE PIZZA",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Cuenca, Ecuador",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Cuenca%2C%20Ecuador",
+          "title": "OpenStreetMap — I LOVE PIZZA",
+          "url": "https://www.openstreetmap.org/node/4120006694",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "La Enfrijolada",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Cuenca, Ecuador",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Cuenca%2C%20Ecuador",
+          "title": "OpenStreetMap — La Enfrijolada",
+          "url": "https://www.openstreetmap.org/node/2565700039",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Chifa Hillman",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Cuenca, Ecuador",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Cuenca%2C%20Ecuador",
+          "title": "OpenStreetMap — Chifa Hillman",
+          "url": "https://www.openstreetmap.org/node/4666505591",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Taj Mahal Indian Resto",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Cuenca, Ecuador",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Cuenca%2C%20Ecuador",
+          "title": "OpenStreetMap — Taj Mahal Indian Resto",
+          "url": "https://www.openstreetmap.org/node/4394593789",
           "accessed": "2026-04-23"
         }
       ]

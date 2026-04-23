@@ -352,65 +352,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "East Village",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Cork, Ireland",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Cork%2C%20Ireland",
+          "title": "OpenStreetMap — East Village",
+          "url": "https://www.openstreetmap.org/node/291153577",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Marcello's",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Cork, Ireland",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Cork%2C%20Ireland",
+          "title": "OpenStreetMap — Marcello's",
+          "url": "https://www.openstreetmap.org/node/291175342",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Cafe Mexicana",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Cork, Ireland",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Cork%2C%20Ireland",
+          "title": "OpenStreetMap — Cafe Mexicana",
+          "url": "https://www.openstreetmap.org/node/291555618",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Ramen",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Cork, Ireland",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Cork%2C%20Ireland",
+          "title": "OpenStreetMap — Ramen",
+          "url": "https://www.openstreetmap.org/node/322758669",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Coriander",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Cork, Ireland",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Cork%2C%20Ireland",
+          "title": "OpenStreetMap — Coriander",
+          "url": "https://www.openstreetmap.org/node/291153582",
           "accessed": "2026-04-23"
         }
       ]

@@ -299,13 +299,12 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "name": "Mezquita de Guadalajara",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Lake Chapala / Ajijic, Mexico",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Lake%20Chapala%20%2F%20Ajijic%2C%20Mexico",
+          "title": "OpenStreetMap — Mezquita de Guadalajara",
+          "url": "https://www.openstreetmap.org/node/4443217378",
           "accessed": "2026-04-23"
         }
       ]
@@ -364,65 +363,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Tango",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Lake Chapala / Ajijic, Mexico",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Lake%20Chapala%20%2F%20Ajijic%2C%20Mexico",
+          "title": "OpenStreetMap — Tango",
+          "url": "https://www.openstreetmap.org/node/1601816103",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "iFratelli",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Lake Chapala / Ajijic, Mexico",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Lake%20Chapala%20%2F%20Ajijic%2C%20Mexico",
+          "title": "OpenStreetMap — iFratelli",
+          "url": "https://www.openstreetmap.org/node/2287615913",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Tomas",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Lake Chapala / Ajijic, Mexico",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Lake%20Chapala%20%2F%20Ajijic%2C%20Mexico",
+          "title": "OpenStreetMap — Tomas",
+          "url": "https://www.openstreetmap.org/node/1619627805",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Yam Yam",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Lake Chapala / Ajijic, Mexico",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Lake%20Chapala%20%2F%20Ajijic%2C%20Mexico",
+          "title": "OpenStreetMap — Yam Yam",
+          "url": "https://www.openstreetmap.org/node/4128509906",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Delhi 6",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Lake Chapala / Ajijic, Mexico",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Lake%20Chapala%20%2F%20Ajijic%2C%20Mexico",
+          "title": "OpenStreetMap — Delhi 6",
+          "url": "https://www.openstreetmap.org/node/8394764717",
           "accessed": "2026-04-23"
         }
       ]

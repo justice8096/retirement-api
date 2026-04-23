@@ -303,26 +303,26 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "Kinpachi Restaurant",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Tinian, Northern Mariana Islands",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Tinian%2C%20Northern%20Mariana%20Islands",
+          "title": "OpenStreetMap — Kinpachi Restaurant",
+          "url": "https://www.openstreetmap.org/node/1306225955",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
+      "name": "Monster Pizza",
       "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Tinian, Northern Mariana Islands",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Tinian%2C%20Northern%20Mariana%20Islands",
+          "title": "OpenStreetMap — Monster Pizza",
+          "url": "https://www.openstreetmap.org/node/5257755058",
           "accessed": "2026-04-23"
         }
       ]
@@ -342,13 +342,13 @@
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
+      "name": "SURA",
       "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Tinian, Northern Mariana Islands",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Tinian%2C%20Northern%20Mariana%20Islands",
+          "title": "OpenStreetMap — SURA",
+          "url": "https://www.openstreetmap.org/node/5537357223",
           "accessed": "2026-04-23"
         }
       ]

@@ -286,26 +286,26 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
+      "name": "Islamic Center of Ambridge",
       "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Pittsburgh, PA",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Pittsburgh%2C%20PA",
+          "title": "OpenStreetMap — Islamic Center of Ambridge",
+          "url": "https://www.openstreetmap.org/node/2441939212",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
+      "name": "Beth Shalom Congregation Synagogue",
       "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Pittsburgh, PA",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Pittsburgh%2C%20PA",
+          "title": "OpenStreetMap — Beth Shalom Congregation Synagogue",
+          "url": "https://www.openstreetmap.org/node/357374908",
           "accessed": "2026-04-23"
         }
       ]
@@ -351,65 +351,65 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "Tram's Kitchen",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Pittsburgh, PA",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Pittsburgh%2C%20PA",
+          "title": "OpenStreetMap — Tram's Kitchen",
+          "url": "https://www.openstreetmap.org/node/361975506",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
+      "name": "Pino's Italian Kitchen",
       "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Pittsburgh, PA",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Pittsburgh%2C%20PA",
+          "title": "OpenStreetMap — Pino's Italian Kitchen",
+          "url": "https://www.openstreetmap.org/node/1371543274",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
+      "name": "Mad Mex",
       "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Pittsburgh, PA",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Pittsburgh%2C%20PA",
+          "title": "OpenStreetMap — Mad Mex",
+          "url": "https://www.openstreetmap.org/node/1371543264",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
+      "name": "Tram's Kitchen",
       "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Pittsburgh, PA",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Pittsburgh%2C%20PA",
+          "title": "OpenStreetMap — Tram's Kitchen",
+          "url": "https://www.openstreetmap.org/node/361975506",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
+      "name": "Tamarind - Flavor of India",
       "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Pittsburgh, PA",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Pittsburgh%2C%20PA",
+          "title": "OpenStreetMap — Tamarind - Flavor of India",
+          "url": "https://www.openstreetmap.org/node/2435552330",
           "accessed": "2026-04-23"
         }
       ]

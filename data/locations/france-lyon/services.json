@@ -299,26 +299,24 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "name": "A.U.M.I \"Nour\"",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Lyon, France",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Lyon%2C%20France",
+          "title": "OpenStreetMap — A.U.M.I \"Nour\"",
+          "url": "https://www.openstreetmap.org/node/965055668",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "name": "Beth Habad Lyon 3",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Lyon, France",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Lyon%2C%20France",
+          "title": "OpenStreetMap — Beth Habad Lyon 3",
+          "url": "https://www.openstreetmap.org/node/778026161",
           "accessed": "2026-04-23"
         }
       ]
@@ -364,65 +362,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "L'Esprit Bistrot",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Lyon, France",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Lyon%2C%20France",
+          "title": "OpenStreetMap — L'Esprit Bistrot",
+          "url": "https://www.openstreetmap.org/node/25733700",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Volfoni",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Lyon, France",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Lyon%2C%20France",
+          "title": "OpenStreetMap — Volfoni",
+          "url": "https://www.openstreetmap.org/node/83454888",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Two Amigos",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Lyon, France",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Lyon%2C%20France",
+          "title": "OpenStreetMap — Two Amigos",
+          "url": "https://www.openstreetmap.org/node/1978337023",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Ramen Masa",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Lyon, France",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Lyon%2C%20France",
+          "title": "OpenStreetMap — Ramen Masa",
+          "url": "https://www.openstreetmap.org/node/249718453",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Le Penjab",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Lyon, France",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Lyon%2C%20France",
+          "title": "OpenStreetMap — Le Penjab",
+          "url": "https://www.openstreetmap.org/node/252333271",
           "accessed": "2026-04-23"
         }
       ]

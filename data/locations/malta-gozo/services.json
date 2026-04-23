@@ -299,13 +299,12 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "name": "Il-Moskea Mariam Al-Batool",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Gozo, Malta",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Gozo%2C%20Malta",
+          "title": "OpenStreetMap — Il-Moskea Mariam Al-Batool",
+          "url": "https://www.openstreetmap.org/way/138344467",
           "accessed": "2026-04-23"
         }
       ]
@@ -364,65 +363,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Stazzjon",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Gozo, Malta",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Gozo%2C%20Malta",
+          "title": "OpenStreetMap — Stazzjon",
+          "url": "https://www.openstreetmap.org/node/150598677",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "La Pulena",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Gozo, Malta",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Gozo%2C%20Malta",
+          "title": "OpenStreetMap — La Pulena",
+          "url": "https://www.openstreetmap.org/node/322061358",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Tex-Mex",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Gozo, Malta",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Gozo%2C%20Malta",
+          "title": "OpenStreetMap — Tex-Mex",
+          "url": "https://www.openstreetmap.org/node/2082513520",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Flora Asian Cuisine",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Gozo, Malta",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Gozo%2C%20Malta",
+          "title": "OpenStreetMap — Flora Asian Cuisine",
+          "url": "https://www.openstreetmap.org/node/803172326",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Kohinoor",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Gozo, Malta",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Gozo%2C%20Malta",
+          "title": "OpenStreetMap — Kohinoor",
+          "url": "https://www.openstreetmap.org/node/322061552",
           "accessed": "2026-04-23"
         }
       ]

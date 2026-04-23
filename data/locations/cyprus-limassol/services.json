@@ -299,13 +299,12 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "name": "Kebir - Mosque",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Limassol, Cyprus",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Limassol%2C%20Cyprus",
+          "title": "OpenStreetMap — Kebir - Mosque",
+          "url": "https://www.openstreetmap.org/node/577265602",
           "accessed": "2026-04-23"
         }
       ]
@@ -364,65 +363,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Petra tou Romiou",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Limassol, Cyprus",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Limassol%2C%20Cyprus",
+          "title": "OpenStreetMap — Petra tou Romiou",
+          "url": "https://www.openstreetmap.org/node/247485738",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Il Sapore",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Limassol, Cyprus",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Limassol%2C%20Cyprus",
+          "title": "OpenStreetMap — Il Sapore",
+          "url": "https://www.openstreetmap.org/node/314155454",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Rio Bravo",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Limassol, Cyprus",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Limassol%2C%20Cyprus",
+          "title": "OpenStreetMap — Rio Bravo",
+          "url": "https://www.openstreetmap.org/node/311961868",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "The Noodle House",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Limassol, Cyprus",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Limassol%2C%20Cyprus",
+          "title": "OpenStreetMap — The Noodle House",
+          "url": "https://www.openstreetmap.org/node/761364449",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Rajs Tandoori",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Limassol, Cyprus",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Limassol%2C%20Cyprus",
+          "title": "OpenStreetMap — Rajs Tandoori",
+          "url": "https://www.openstreetmap.org/node/313383901",
           "accessed": "2026-04-23"
         }
       ]

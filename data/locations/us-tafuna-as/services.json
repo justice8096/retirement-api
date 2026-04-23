@@ -303,13 +303,13 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "Sweetie's",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Tafuna, American Samoa",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Tafuna%2C%20American%20Samoa",
+          "title": "OpenStreetMap — Sweetie's",
+          "url": "https://www.openstreetmap.org/node/1235134005",
           "accessed": "2026-04-23"
         }
       ]

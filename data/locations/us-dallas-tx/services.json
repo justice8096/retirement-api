@@ -286,26 +286,26 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
+      "name": "Dallas Masjid of al-Islam",
       "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Dallas, TX",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Dallas%2C%20TX",
+          "title": "OpenStreetMap — Dallas Masjid of al-Islam",
+          "url": "https://www.openstreetmap.org/node/356855681",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
+      "name": "United Synagogue of America",
       "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Dallas, TX",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Dallas%2C%20TX",
+          "title": "OpenStreetMap — United Synagogue of America",
+          "url": "https://www.openstreetmap.org/node/356821592",
           "accessed": "2026-04-23"
         }
       ]
@@ -351,65 +351,65 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "IHOP",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Dallas, TX",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Dallas%2C%20TX",
+          "title": "OpenStreetMap — IHOP",
+          "url": "https://www.openstreetmap.org/node/539994654",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
+      "name": "Antonio Ristorante",
       "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Dallas, TX",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Dallas%2C%20TX",
+          "title": "OpenStreetMap — Antonio Ristorante",
+          "url": "https://www.openstreetmap.org/node/1795173854",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
+      "name": "Los Molcajetes",
       "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Dallas, TX",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Dallas%2C%20TX",
+          "title": "OpenStreetMap — Los Molcajetes",
+          "url": "https://www.openstreetmap.org/node/570272186",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
+      "name": "Bangkok City Restaurant",
       "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Dallas, TX",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Dallas%2C%20TX",
+          "title": "OpenStreetMap — Bangkok City Restaurant",
+          "url": "https://www.openstreetmap.org/node/566519836",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
+      "name": "Spice 'N' Rice",
       "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Dallas, TX",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Dallas%2C%20TX",
+          "title": "OpenStreetMap — Spice 'N' Rice",
+          "url": "https://www.openstreetmap.org/node/2810318534",
           "accessed": "2026-04-23"
         }
       ]

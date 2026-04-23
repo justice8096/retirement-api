@@ -300,13 +300,12 @@
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "name": "Sinagoga",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Guanacaste (Tamarindo, Nosara, Liberia), Costa Rica",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Guanacaste%20(Tamarindo%2C%20Nosara%2C%20Liberia)%2C%20Costa%20Rica",
+          "title": "OpenStreetMap — Sinagoga",
+          "url": "https://www.openstreetmap.org/way/380870261",
           "accessed": "2026-04-23"
         }
       ]
@@ -352,65 +351,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Toro Blanco",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Guanacaste (Tamarindo, Nosara, Liberia), Costa Rica",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Guanacaste%20(Tamarindo%2C%20Nosara%2C%20Liberia)%2C%20Costa%20Rica",
+          "title": "OpenStreetMap — Toro Blanco",
+          "url": "https://www.openstreetmap.org/node/1000514967",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Faisanella",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Guanacaste (Tamarindo, Nosara, Liberia), Costa Rica",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Guanacaste%20(Tamarindo%2C%20Nosara%2C%20Liberia)%2C%20Costa%20Rica",
+          "title": "OpenStreetMap — Faisanella",
+          "url": "https://www.openstreetmap.org/node/3916874431",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Little Lucha",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Guanacaste (Tamarindo, Nosara, Liberia), Costa Rica",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Guanacaste%20(Tamarindo%2C%20Nosara%2C%20Liberia)%2C%20Costa%20Rica",
+          "title": "OpenStreetMap — Little Lucha",
+          "url": "https://www.openstreetmap.org/node/9507991488",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Bamboo",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Guanacaste (Tamarindo, Nosara, Liberia), Costa Rica",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Guanacaste%20(Tamarindo%2C%20Nosara%2C%20Liberia)%2C%20Costa%20Rica",
+          "title": "OpenStreetMap — Bamboo",
+          "url": "https://www.openstreetmap.org/node/9347259702",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Pizzeria",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Guanacaste (Tamarindo, Nosara, Liberia), Costa Rica",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Guanacaste%20(Tamarindo%2C%20Nosara%2C%20Liberia)%2C%20Costa%20Rica",
+          "title": "OpenStreetMap — Pizzeria",
+          "url": "https://www.openstreetmap.org/way/391261214",
           "accessed": "2026-04-23"
         }
       ]

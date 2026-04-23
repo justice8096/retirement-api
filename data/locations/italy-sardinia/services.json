@@ -352,65 +352,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Evò",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Sardinia, Italy",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Sardinia%2C%20Italy",
+          "title": "OpenStreetMap — Evò",
+          "url": "https://www.openstreetmap.org/node/314060576",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Pomosardagna SRL",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Sardinia, Italy",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Sardinia%2C%20Italy",
+          "title": "OpenStreetMap — Pomosardagna SRL",
+          "url": "https://www.openstreetmap.org/node/1388391553",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Taqueria Mexicana El Burrito",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Sardinia, Italy",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Sardinia%2C%20Italy",
+          "title": "OpenStreetMap — Taqueria Mexicana El Burrito",
+          "url": "https://www.openstreetmap.org/node/4036184660",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Mi Asian",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Sardinia, Italy",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Sardinia%2C%20Italy",
+          "title": "OpenStreetMap — Mi Asian",
+          "url": "https://www.openstreetmap.org/node/4028060108",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Tandoori",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Sardinia, Italy",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Sardinia%2C%20Italy",
+          "title": "OpenStreetMap — Tandoori",
+          "url": "https://www.openstreetmap.org/node/2503803711",
           "accessed": "2026-04-23"
         }
       ]

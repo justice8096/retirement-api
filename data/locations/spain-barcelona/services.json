@@ -287,26 +287,24 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "name": "Mesquita Shah Jalal Jame",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Barcelona, Spain",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Barcelona%2C%20Spain",
+          "title": "OpenStreetMap — Mesquita Shah Jalal Jame",
+          "url": "https://www.openstreetmap.org/node/194586875",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "name": "Comunitat Israelita de Catalunya",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Barcelona, Spain",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Barcelona%2C%20Spain",
+          "title": "OpenStreetMap — Comunitat Israelita de Catalunya",
+          "url": "https://www.openstreetmap.org/node/11595211101",
           "accessed": "2026-04-23"
         }
       ]
@@ -352,65 +350,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Pans & Company",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Barcelona, Spain",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Barcelona%2C%20Spain",
+          "title": "OpenStreetMap — Pans & Company",
+          "url": "https://www.openstreetmap.org/node/151218534",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Pizza Marzano",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Barcelona, Spain",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Barcelona%2C%20Spain",
+          "title": "OpenStreetMap — Pizza Marzano",
+          "url": "https://www.openstreetmap.org/node/420329408",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Sabes una Cosa",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Barcelona, Spain",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Barcelona%2C%20Spain",
+          "title": "OpenStreetMap — Sabes una Cosa",
+          "url": "https://www.openstreetmap.org/node/588003295",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "La Vietnamita",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Barcelona, Spain",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Barcelona%2C%20Spain",
+          "title": "OpenStreetMap — La Vietnamita",
+          "url": "https://www.openstreetmap.org/node/949553814",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Hummus & company",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Barcelona, Spain",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Barcelona%2C%20Spain",
+          "title": "OpenStreetMap — Hummus & company",
+          "url": "https://www.openstreetmap.org/node/672090792",
           "accessed": "2026-04-23"
         }
       ]
