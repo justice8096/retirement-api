@@ -263,10 +263,18 @@
     "Beautiful coastline"
   ],
   "cons": [
-    "Cool/rainy winters (38F lows)",
-    "Limited English",
-    "Complex tax situation with US",
-    "Distance from US"
+    {
+      "text": "Cool/rainy winters (38F lows)"
+    },
+    {
+      "text": "Limited English"
+    },
+    {
+      "text": "Complex tax situation with US"
+    },
+    {
+      "text": "Distance from US"
+    }
   ],
   "exchangeRates": {
     "optimistic": 0.85,

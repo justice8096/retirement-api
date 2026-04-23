@@ -172,9 +172,15 @@
     "Low crime and safe community"
   ],
   "cons": [
-    "Extremely cold, long winters",
-    "Very remote with limited services",
-    "Higher heating costs"
+    {
+      "text": "Extremely cold, long winters"
+    },
+    {
+      "text": "Very remote with limited services"
+    },
+    {
+      "text": "Higher heating costs"
+    }
   ],
   "taxes": {
     "notes": "Federal + ME state income tax (5.8-7.15%); SS exempt",

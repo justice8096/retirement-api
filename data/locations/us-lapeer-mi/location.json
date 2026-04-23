@@ -172,9 +172,15 @@
     "Low crime for the area"
   ],
   "cons": [
-    "Very cold winters",
-    "Very limited amenities and dining",
-    "Car required â€” no public transit"
+    {
+      "text": "Very cold winters"
+    },
+    {
+      "text": "Very limited amenities and dining"
+    },
+    {
+      "text": "Car required â€” no public transit"
+    }
   ],
   "taxes": {
     "notes": "Federal + MI flat state income tax (4.25%); SS partially exempt",

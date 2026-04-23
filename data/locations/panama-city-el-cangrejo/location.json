@@ -160,9 +160,15 @@
     "Walkable neighborhood with metro access"
   ],
   "cons": [
-    "Hot and humid climate",
-    "Some areas feel congested",
-    "Noise from busy streets"
+    {
+      "text": "Hot and humid climate"
+    },
+    {
+      "text": "Some areas feel congested"
+    },
+    {
+      "text": "Noise from busy streets"
+    }
   ],
   "taxes": {
     "notes": "No tax on foreign-source income.",

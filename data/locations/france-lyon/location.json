@@ -243,10 +243,35 @@
     "Central Europe location"
   ],
   "cons": [
-    "Cold winters (30F)",
-    "Higher rents",
-    "Air quality concerns",
-    "Crowded"
+    {
+      "text": "Cold winters (30F)"
+    },
+    {
+      "text": "Higher rents",
+      "sources": [
+        {
+          "title": "morningcroissant.com",
+          "url": "https://www.morningcroissant.com/blog/furnished-rental-in-lyon-your-complete-guide-for-2025-26",
+          "accessed": "2026-04-23"
+        },
+        {
+          "title": "jarniascyril.com",
+          "url": "https://www.jarniascyril.com/international-real-estate/invest-in-french-real-estate/investing-real-estate-lyon-market-neighborhoods-strategies/",
+          "accessed": "2026-04-23"
+        },
+        {
+          "title": "adrianleeds.com",
+          "url": "https://adrianleeds.com/subscribe-to-our-publications/french-property-insider/fpi-archives/french-rent-reference-index/",
+          "accessed": "2026-04-23"
+        }
+      ]
+    },
+    {
+      "text": "Air quality concerns"
+    },
+    {
+      "text": "Crowded"
+    }
   ],
   "exchangeRates": {
     "optimistic": 0.85,

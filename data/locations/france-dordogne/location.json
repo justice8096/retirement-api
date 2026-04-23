@@ -167,9 +167,15 @@
     "Very affordable housing with large properties available"
   ],
   "cons": [
-    "Cold and damp winters",
-    "Car absolutely essential",
-    "Very limited public transit"
+    {
+      "text": "Cold and damp winters"
+    },
+    {
+      "text": "Car absolutely essential"
+    },
+    {
+      "text": "Very limited public transit"
+    }
   ],
   "taxes": {
     "notes": "French progressive income tax 11%-45%. Social charges ~9.1% on foreign income.",

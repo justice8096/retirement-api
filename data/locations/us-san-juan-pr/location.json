@@ -179,10 +179,18 @@
     "Direct flights to US East Coast"
   ],
   "cons": [
-    "Hurricane risk (Sep–Nov)",
-    "Electricity grid fragile — outages common",
-    "Higher import-driven grocery prices",
-    "Traffic congestion in metro area"
+    {
+      "text": "Hurricane risk (Sep–Nov)"
+    },
+    {
+      "text": "Electricity grid fragile — outages common"
+    },
+    {
+      "text": "Higher import-driven grocery prices"
+    },
+    {
+      "text": "Traffic congestion in metro area"
+    }
   ],
   "taxes": {
     "notes": "PR residents pay PR income tax, not federal, on PR-source income. Complex rules; consult specialist.",

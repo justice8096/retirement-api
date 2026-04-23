@@ -259,11 +259,21 @@
     "Walkable historic downtown"
   ],
   "cons": [
-    "Higher combined state+county income tax than VA",
-    "Bay Bridge tolls + summer traffic on Route 50",
-    "Coastal flood insurance premium in low-lying areas",
-    "No Metro; longer commute to DC than Fairfax",
-    "Humid summers, nor'easter exposure"
+    {
+      "text": "Higher combined state+county income tax than VA"
+    },
+    {
+      "text": "Bay Bridge tolls + summer traffic on Route 50"
+    },
+    {
+      "text": "Coastal flood insurance premium in low-lying areas"
+    },
+    {
+      "text": "No Metro; longer commute to DC than Fairfax"
+    },
+    {
+      "text": "Humid summers, nor'easter exposure"
+    }
   ],
   "subregion": "Maryland"
 }

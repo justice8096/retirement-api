@@ -172,9 +172,15 @@
     "Small-town quiet living near Tallahassee"
   ],
   "cons": [
-    "Very limited amenities and services",
-    "Rural with no public transit",
-    "Limited healthcare options nearby"
+    {
+      "text": "Very limited amenities and services"
+    },
+    {
+      "text": "Rural with no public transit"
+    },
+    {
+      "text": "Limited healthcare options nearby"
+    }
   ],
   "taxes": {
     "notes": "Federal only â€” no FL state income tax",

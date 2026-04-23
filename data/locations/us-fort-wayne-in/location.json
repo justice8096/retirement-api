@@ -172,9 +172,15 @@
     "Friendly Midwest community feel"
   ],
   "cons": [
-    "Cold winters",
-    "Limited public transit",
-    "IN flat state income tax (3.05%) plus county tax"
+    {
+      "text": "Cold winters"
+    },
+    {
+      "text": "Limited public transit"
+    },
+    {
+      "text": "IN flat state income tax (3.05%) plus county tax"
+    }
   ],
   "taxes": {
     "notes": "Federal + IN flat state income tax (3.05%) + county income tax; SS exempt",

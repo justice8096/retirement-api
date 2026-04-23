@@ -172,9 +172,15 @@
     "Mild winters compared to northern cities"
   ],
   "cons": [
-    "Higher crime rates",
-    "Hot, humid summers",
-    "Limited public transportation"
+    {
+      "text": "Higher crime rates"
+    },
+    {
+      "text": "Hot, humid summers"
+    },
+    {
+      "text": "Limited public transportation"
+    }
   ],
   "taxes": {
     "notes": "Federal + AR state income tax (2-4.4%); SS exempt up to $6,000",

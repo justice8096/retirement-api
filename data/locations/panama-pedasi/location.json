@@ -160,9 +160,15 @@
     "Very affordable with low crime"
   ],
   "cons": [
-    "Very small town with minimal services",
-    "Far from quality healthcare",
-    "Limited shopping and dining options"
+    {
+      "text": "Very small town with minimal services"
+    },
+    {
+      "text": "Far from quality healthcare"
+    },
+    {
+      "text": "Limited shopping and dining options"
+    }
   ],
   "taxes": {
     "notes": "No tax on foreign-source income.",
