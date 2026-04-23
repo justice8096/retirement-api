@@ -1,0 +1,147 @@
+{
+  "city": "Lorton",
+  "neighborhoods": [
+    {
+      "id": "oceanfront-resort-area",
+      "name": "Oceanfront / Resort Area",
+      "description": "Famous boardwalk with Atlantic oceanfront, restaurants, entertainment venues, and King Neptune statue",
+      "character": "Oceanfront boardwalk, resort, beach culture",
+      "housing": {
+        "avgRentOneBedroomUSD": 2408,
+        "avgRentTwoBedroomUSD": 3250,
+        "buyPricePerSqmUSD": 7028,
+        "predominantType": "Condos, apartments, and beachfront properties"
+      },
+      "walkabilityScore": 94,
+      "transitScore": 70,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Lorton. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lorton",
+          "url": "https://www.numbeo.com/cost-of-living/in/Virginia-Beach"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "great-neck-shore-drive",
+      "name": "Great Neck / Shore Drive",
+      "description": "Chesapeake Bay side with calmer waters, First Landing State Park, and established neighborhoods",
+      "character": "Bay side, state park, established residential",
+      "housing": {
+        "avgRentOneBedroomUSD": 1759,
+        "avgRentTwoBedroomUSD": 2375,
+        "buyPricePerSqmUSD": 4518,
+        "predominantType": "Single-family homes and bay-area properties"
+      },
+      "walkabilityScore": 56,
+      "transitScore": 47,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Lorton's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lorton",
+          "url": "https://www.numbeo.com/cost-of-living/in/Virginia-Beach"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "kempsville-indian-river",
+      "name": "Kempsville / Indian River",
+      "description": "Central residential areas with affordable housing, community parks, and good school access",
+      "character": "Central residential, affordable, parks and schools",
+      "housing": {
+        "avgRentOneBedroomUSD": 1204,
+        "avgRentTwoBedroomUSD": 1625,
+        "buyPricePerSqmUSD": 2761,
+        "predominantType": "Ranch houses, split-levels, and townhomes"
+      },
+      "walkabilityScore": 56,
+      "transitScore": 33,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lorton",
+          "url": "https://www.numbeo.com/cost-of-living/in/Virginia-Beach"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "princess-anne-nimmo",
+      "name": "Princess Anne / Nimmo",
+      "description": "Southern agricultural heritage area with newer development, equestrian farms, and family estates",
+      "character": "Agricultural heritage, equestrian, newer development",
+      "housing": {
+        "avgRentOneBedroomUSD": 2037,
+        "avgRentTwoBedroomUSD": 2750,
+        "buyPricePerSqmUSD": 5773,
+        "predominantType": "Newer homes, farm properties, and planned communities"
+      },
+      "walkabilityScore": 70,
+      "transitScore": 52,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Lorton",
+          "url": "https://www.numbeo.com/cost-of-living/in/Virginia-Beach"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ],
+  "_seedOrigin": {
+    "kind": "starter-template",
+    "from": "us-virginia-beach-va",
+    "generatedAt": "2026-04-23",
+    "note": "Template-derived content — prices and names adapted from the template city. Needs per-location review."
+  }
+}

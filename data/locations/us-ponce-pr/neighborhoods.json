@@ -1,0 +1,147 @@
+{
+  "city": "Ponce",
+  "neighborhoods": [
+    {
+      "id": "brickell-downtown",
+      "name": "Brickell / Downtown",
+      "description": "Financial district with gleaming towers, Brickell City Centre, and the vibrant urban Latin energy",
+      "character": "Financial towers, Latin energy, urban vibrant",
+      "housing": {
+        "avgRentOneBedroomUSD": 3250,
+        "avgRentTwoBedroomUSD": 4388,
+        "buyPricePerSqmUSD": 9800,
+        "predominantType": "High-rise luxury condos and modern apartments"
+      },
+      "walkabilityScore": 91,
+      "transitScore": 73,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The historic and commercial heart of Ponce. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Ponce",
+          "url": "https://www.numbeo.com/cost-of-living/in/Ponce"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "coral-gables",
+      "name": "Coral Gables",
+      "description": "Planned Mediterranean-themed city with Miracle Mile, Venetian Pool, and University of Ponce",
+      "character": "Mediterranean planned, Miracle Mile, university",
+      "housing": {
+        "avgRentOneBedroomUSD": 2375,
+        "avgRentTwoBedroomUSD": 3206,
+        "buyPricePerSqmUSD": 6300,
+        "predominantType": "Mediterranean-style houses, condos, and historic properties"
+      },
+      "walkabilityScore": 59,
+      "transitScore": 52,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Ponce's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Ponce",
+          "url": "https://www.numbeo.com/cost-of-living/in/Ponce"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "hialeah-doral",
+      "name": "Hialeah / Doral",
+      "description": "Western communities with strong Cuban heritage, affordable housing, and commercial growth",
+      "character": "Cuban heritage, affordable, commercial growth",
+      "housing": {
+        "avgRentOneBedroomUSD": 1625,
+        "avgRentTwoBedroomUSD": 2194,
+        "buyPricePerSqmUSD": 3850,
+        "predominantType": "Single-family homes, townhomes, and apartments"
+      },
+      "walkabilityScore": 41,
+      "transitScore": 44,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Ponce",
+          "url": "https://www.numbeo.com/cost-of-living/in/Ponce"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "coconut-grove",
+      "name": "Coconut Grove",
+      "description": "Historic bayfront village with banyan trees, CocoWalk shopping, and a bohemian-meets-affluent character",
+      "character": "Bayfront village, banyan trees, bohemian-affluent",
+      "housing": {
+        "avgRentOneBedroomUSD": 2750,
+        "avgRentTwoBedroomUSD": 3713,
+        "buyPricePerSqmUSD": 8050,
+        "predominantType": "Historic houses, modern condos, and waterfront properties"
+      },
+      "walkabilityScore": 77,
+      "transitScore": 56,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Ponce",
+          "url": "https://www.numbeo.com/cost-of-living/in/Ponce"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    }
+  ],
+  "_seedOrigin": {
+    "kind": "starter-template",
+    "from": "us-miami-fl",
+    "generatedAt": "2026-04-23",
+    "note": "Template-derived content — prices and names adapted from the template city. Needs per-location review."
+  }
+}

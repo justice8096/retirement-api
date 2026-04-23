@@ -1,0 +1,1045 @@
+{
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 73,
+      "typical": 91,
+      "max": 925
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic/Wegovy) [P1]",
+        "monthlyCost": 25,
+        "withoutInsurance": 900,
+        "coverageNote": "Medicare Part D covers for diabetes (tier 3). $25 copay typical. Without coverage ~$900/mo. IRA negotiated price TBD."
+      },
+      {
+        "name": "Levothyroxine (Synthroid) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 15,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Atorvastatin 20mg [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Montelukast (Singulair) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 15,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Hydrochlorothiazide (HCTZ) [P1]",
+        "monthlyCost": 4,
+        "withoutInsurance": 8,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Olmesartan/Medoxomil (Benicar) [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 30,
+        "coverageNote": "Medicare Part D generic tier 1-2; $4-15 copay"
+      },
+      {
+        "name": "Albuterol inhaler [P1]",
+        "monthlyCost": 10,
+        "withoutInsurance": 35,
+        "coverageNote": "Medicare Part D tier 2; $10-25 copay. IRA cap applies."
+      },
+      {
+        "name": "Metformin 500mg [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Allopurinol (gout) [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Topiramate (Topamax) [P2]",
+        "monthlyCost": 10,
+        "withoutInsurance": 25,
+        "coverageNote": "Medicare Part D generic tier 1-2; $4-15 copay"
+      },
+      {
+        "name": "Metoprolol (Lopressor) [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      },
+      {
+        "name": "Atorvastatin 20mg [P2]",
+        "monthlyCost": 4,
+        "withoutInsurance": 10,
+        "coverageNote": "Medicare Part D generic tier 1; $0-10 copay"
+      }
+    ],
+    "pharmacyAccess": "CVS, Walgreens, Walmart, Kroger pharmacies widely available. $4 generic programs at Walmart/Kroger. Mail-order via OptumRx, Express Scripts, or Mark Cuban Cost Plus Drugs.",
+    "notes": "US prices shown with Medicare Part D coverage. Without insurance, use GoodRx or Cost Plus Drugs for significant savings on generics. IRA Inflation Reduction Act caps insulin at $35/mo and out-of-pocket at $2,000/yr starting 2025."
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 50,
+      "typical": 60,
+      "max": 75
+    },
+    "plans": [
+      {
+        "name": "T-Mobile 55+ Essentials",
+        "type": "US Domestic",
+        "lines": 2,
+        "dataPerLine": "Unlimited (50GB priority)",
+        "baseCost": 55,
+        "taxesAndFees": 5,
+        "monthlyTotal": 60,
+        "notes": "2 lines unlimited talk/text/data. MD wireless tax ~9% + federal USF. 5G included."
+      }
+    ],
+    "sources": [
+      {
+        "title": "T-Mobile 55+ Plans",
+        "url": "https://www.t-mobile.com/cell-phone-plans/unlimited-55-plus"
+      }
+    ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 422,
+      "typical": 528,
+      "max": 660
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 355,
+        "seniorDiscounts": "Many restaurants offer 10-15% senior discounts. AARP members get discounts at Denny's, Outback, and others.",
+        "notes": "Lunch for 2 at moderate restaurant ~$35 + tax + 20% tip = ~$44/meal, 2x/week (~8.7/mo) = ~$355/mo in Bowie, MD."
+      },
+      {
+        "name": "Cable + 1 Gig Internet",
+        "monthlyCost": 75,
+        "seniorDiscounts": "Some providers offer senior plans. Check for 5-year price lock promotions.",
+        "notes": "Gig internet $60-80/mo depending on provider and market. Includes basic cable or streaming bundle."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 18,
+        "seniorDiscounts": "T-Mobile 55+ plans include Netflix.",
+        "notes": "$17.99/mo. 1080p, 2 screens, full library."
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 15,
+        "seniorDiscounts": "Medicaid recipients qualify for Prime at $6.99/mo.",
+        "notes": "$14.99/mo includes Prime Video, free shipping, Prime Reading."
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 10,
+        "seniorDiscounts": "No senior discount. Annual plan $99/yr ($8.25/mo).",
+        "notes": "$9.99/mo. Original content library."
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 30,
+        "seniorDiscounts": "SilverSneakers free gym membership through many Medicare Advantage plans.",
+        "notes": "Planet Fitness $10-25/mo, YMCA $30-50/mo. SilverSneakers covers many gyms free."
+      },
+      {
+        "name": "Parks/Outdoors",
+        "monthlyCost": 0,
+        "seniorDiscounts": "America the Beautiful Senior Pass $20/year (lifetime $80) for national parks.",
+        "notes": "Free parks, trails, and public outdoor spaces."
+      },
+      {
+        "name": "Books/Library",
+        "monthlyCost": 5,
+        "seniorDiscounts": "Public libraries free. Many offer senior book clubs and digital lending.",
+        "notes": "Libraries free. Kindle Unlimited $11.99/mo optional. Budget for occasional book purchases."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 20,
+        "seniorDiscounts": "AARP discounts at Dunkin'. Some cafes offer senior coffee pricing.",
+        "notes": "Coffee ~$4-6/cup. Budget for 1-2 cafe visits/week."
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 69,
+      "typical": 138,
+      "max": 460
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 104,
+        "senior": 52,
+        "notes": "Bowie transit pass. Seniors 65+ qualify for half-fare on local transit with valid ID or Medicare card."
+      },
+      "singleRide": 2.3,
+      "coverage": "Public bus system covers urban core. Limited suburban coverage typically requires a car for errands.",
+      "seniorDiscount": "Seniors 65+ qualify for half-fare on local transit with valid ID or Medicare card."
+    },
+    "rideShare": {
+      "baseFare": 2.88,
+      "perKm": 1.38,
+      "typicalCrossTownTrip": {
+        "min": 17,
+        "typical": 23,
+        "max": 29
+      },
+      "availability": "Uber and Lyft widely available in urban areas."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 50,
+        "initialRegistration": {
+          "min": 40,
+          "typical": 55,
+          "max": 80
+        },
+        "notes": "Annual state registration and inspection."
+      },
+      "insurance": {
+        "monthlyMin": 115,
+        "monthlyTypical": 150,
+        "monthlyMax": 173,
+        "notes": "Full coverage auto insurance. Senior safe-driver discounts available (5-15%)."
+      },
+      "fuel": {
+        "pricePerLiter": 0.95,
+        "monthlyEstimate": {
+          "min": 92,
+          "typical": 138,
+          "max": 207
+        },
+        "notes": "Regular unleaded ~$3.50-3.80/gallon."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 92,
+          "typical": 138,
+          "max": 230
+        },
+        "hourlyStreet": 2.3,
+        "notes": "Free parking common in suburban areas. Downtown garages higher."
+      },
+      "tolls": {
+        "monthlyEstimate": 23,
+        "notes": "Estimated monthly toll/highway costs for Bowie area."
+      },
+      "seniorDiscounts": "Seniors 65+ qualify for half-fare on local transit with valid ID or Medicare card."
+    },
+    "walkability": "Moderate walkability in urban core, car-dependent suburbs.",
+    "monthlyEstimate": {
+      "carFree": {
+        "min": 69,
+        "typical": 138,
+        "max": 207,
+        "notes": "Transit pass + occasional ride-share. Good for urban core living."
+      },
+      "withCar": {
+        "min": 322,
+        "typical": 460,
+        "max": 633,
+        "notes": "Includes insurance, fuel, parking, maintenance. Higher urban parking and insurance costs."
+      }
+    },
+    "electricVehicle": {
+      "purchasePrice": {
+        "min": 28000,
+        "typical": 35000,
+        "max": 52000
+      },
+      "purchaseNotes": "Tesla Model 3 ~$35K, Hyundai Ioniq 5 ~$42K, Chevy Equinox EV ~$28K. Federal tax credit up to $7,500 (income limits apply).",
+      "federalIncentive": 7500,
+      "stateIncentive": 0,
+      "incentiveNotes": "Federal EV tax credit up to $7,500 under IRA (income < $150K single / $300K joint). Used EV credit up to $4,000.",
+      "chargingHome": {
+        "installCost": {
+          "min": 500,
+          "typical": 1200,
+          "max": 2500
+        },
+        "monthlyElectricity": {
+          "min": 30,
+          "typical": 50,
+          "max": 80
+        },
+        "notes": "Level 2 (240V) home charger. ~1,000 mi/month = ~300 kWh."
+      },
+      "chargingPublic": {
+        "perKwh": {
+          "min": 0.3,
+          "typical": 0.43,
+          "max": 0.6
+        },
+        "notes": "Tesla Supercharger ~$0.40-0.50/kWh. Electrify America ~$0.43/kWh."
+      },
+      "insurance": {
+        "monthly": {
+          "min": 140,
+          "typical": 180,
+          "max": 250
+        },
+        "notes": "EV insurance 15-25% higher than comparable ICE vehicle."
+      },
+      "maintenance": {
+        "annual": {
+          "min": 400,
+          "typical": 600,
+          "max": 900
+        },
+        "notes": "No oil changes, fewer brake jobs (regen braking). Tires wear faster on heavier EVs."
+      },
+      "registration": {
+        "annual": {
+          "min": 100,
+          "typical": 200,
+          "max": 300
+        },
+        "notes": "Many states add EV-specific fees ($100-275/yr) to replace lost gas tax revenue."
+      },
+      "batteryWarranty": "8 years / 100,000 miles (federal minimum). Most manufacturers cover 70-80% capacity retention.",
+      "depreciationNotes": "EVs depreciate 40-50% in first 3 years. Budget ~$3,000-5,000/yr depreciation on $35K vehicle.",
+      "totalMonthlyOwnership": {
+        "min": 288,
+        "typical": 437,
+        "max": 633
+      },
+      "totalMonthlyNotes": "Includes: charging ($50), insurance ($180), maintenance ($50/mo avg), registration ($17/mo). Excludes purchase/loan payment.",
+      "sources": [
+        {
+          "title": "Federal EV Tax Credit - IRS",
+          "url": "https://www.irs.gov/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after"
+        },
+        {
+          "title": "EV Maintenance Costs - AAA",
+          "url": "https://www.aaa.com/autorepair/articles/ev-maintenance"
+        }
+      ]
+    }
+  },
+  "visionDental": {
+    "monthlyBudget": {
+      "min": 80,
+      "typical": 120,
+      "max": 180
+    },
+    "vision": {
+      "eyeExam": {
+        "withInsurance": 20,
+        "withoutInsurance": 75,
+        "notes": "Standard comprehensive eye exam. Most VSP/EyeMed plans cover 1 exam/year with $10-20 copay."
+      },
+      "glasses": {
+        "basic": 100,
+        "progressive": 250,
+        "contacts12mo": 200,
+        "notes": "Frames + single-vision lenses ~$100 with insurance allowance. Progressive lenses add $100-150. Contacts 12-month supply varies by brand."
+      },
+      "insurance": {
+        "monthlyPremium": 15,
+        "coverage": "VSP or EyeMed plan, 1 exam + $150 frame allowance/year",
+        "notes": "Employer-style standalone vision plan. Covers 1 exam/year, $150 frame allowance, contacts allowance in lieu of frames."
+      }
+    },
+    "dental": {
+      "cleaning": {
+        "withInsurance": 25,
+        "withoutInsurance": 100,
+        "notes": "Preventive cleaning 2x/year. Most plans cover 100% preventive."
+      },
+      "filling": {
+        "withInsurance": 50,
+        "withoutInsurance": 200,
+        "notes": "Composite (tooth-colored) filling. Insurance typically covers 80% of basic procedures."
+      },
+      "crown": {
+        "withInsurance": 400,
+        "withoutInsurance": 1200,
+        "notes": "Porcelain-fused-to-metal crown. Insurance typically covers 50% of major procedures."
+      },
+      "insurance": {
+        "monthlyPremium": 35,
+        "coverage": "Delta Dental or equivalent, 2 cleanings/year, 80% basic, 50% major",
+        "notes": "DHMO or PPO plan. Annual max $1,000-$1,500. Waiting periods may apply for major work."
+      }
+    },
+    "annualEstimate": {
+      "withInsurance": {
+        "premiums": 600,
+        "outOfPocket": 200,
+        "total": 800,
+        "monthlyEquiv": 67
+      },
+      "withoutInsurance": {
+        "outOfPocket": 500,
+        "monthlyEquiv": 42
+      }
+    }
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 22,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Farmers market or CSA box"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 14,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Bananas, berries, apples, citrus"
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Sweet Potatoes / Potatoes",
+            "monthlyCost": 5,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet staple"
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 4,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet vegetables"
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 4,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Digestive health, home-cooked diet"
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 18,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Primary protein for both adults & dog"
+          },
+          {
+            "name": "Ground Turkey / Beef",
+            "monthlyCost": 16,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean ground for dog food base"
+          },
+          {
+            "name": "Fish (salmon/tilapia)",
+            "monthlyCost": 14,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Omega-3 rich"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 5,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": "Eggs also for dog diet"
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 4,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Essential for balanced home-cooked dog diet"
+          },
+          {
+            "name": "Beans / Lentils",
+            "monthlyCost": 3,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk / Plant Milk",
+            "monthlyCost": 5,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Cheese",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Yogurt / Kefir",
+            "monthlyCost": 5,
+            "quantity": 1,
+            "unit": "quart/week",
+            "forWhom": "shared",
+            "notes": "Probiotics for dog digestion too"
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 4,
+            "quantity": 1,
+            "unit": "unit/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Olive Oil / Cooking Oils",
+            "monthlyCost": 5,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Spices & Seasonings",
+            "monthlyCost": 4,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Canned Goods (tomatoes, beans)",
+            "monthlyCost": 4,
+            "quantity": 6,
+            "unit": "cans/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Condiments & Sauces",
+            "monthlyCost": 4,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Rice (brown/white)",
+            "monthlyCost": 4,
+            "quantity": 5,
+            "unit": "lbs/month",
+            "forWhom": "shared",
+            "notes": "Dog diet carb source"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 5,
+            "quantity": 2,
+            "unit": "loaves/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 3,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Oats / Cereal",
+            "monthlyCost": 4,
+            "quantity": 1,
+            "unit": "container/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 9,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Tea",
+            "monthlyCost": 3,
+            "quantity": 1,
+            "unit": "box/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Wine / Beer",
+            "monthlyCost": 14,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Optional"
+          },
+          {
+            "name": "Sparkling Water / Juice",
+            "monthlyCost": 4,
+            "quantity": 1,
+            "unit": "case/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pet",
+        "name": "Pet Supplements & Health",
+        "items": [
+          {
+            "name": "Joint Supplement (glucosamine)",
+            "monthlyCost": 11,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Essential for Bernese — hip/joint health"
+          },
+          {
+            "name": "Fish Oil (omega-3)",
+            "monthlyCost": 5,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Coat & skin health"
+          },
+          {
+            "name": "Multivitamin / Mineral Mix",
+            "monthlyCost": 7,
+            "quantity": 1,
+            "unit": "container/month",
+            "forWhom": "dog",
+            "notes": "Balance home-cooked diet"
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 5,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "dog",
+            "notes": "Training & dental chews"
+          }
+        ]
+      }
+    ],
+    "monthlyTotal": 256
+  },
+  "housing": {
+    "propertyType": "2-bedroom single-family house",
+    "monthlyBudget": {
+      "min": 1360,
+      "max": 1840,
+      "typical": 1600
+    },
+    "breakdown": {
+      "baseRent": 1570,
+      "rentersInsurance": 30,
+      "localTaxesFees": 0,
+      "total": 1630,
+      "notes": "Water, sewage, and trash are separate utility bills — see utilities breakdown."
+    },
+    "taxNotes": "US Mid-Atlantic does not impose rental tax. Property tax is the landlord's responsibility but factored into rent. Renter's insurance recommended but not legally required.",
+    "leaseTerms": "12-month standard lease. Security deposit max 1-2 months rent ($2,400). Pet deposit common ($300-500).",
+    "marketNotes": "US Mid-Atlantic rental market. 2BR houses available through Zillow, Apartments.com, and local listings.",
+    "sources": [
+      {
+        "name": "Zillow US Mid-Atlantic Rentals",
+        "url": "https://www.zillow.com/us-mid-atlantic/rentals/"
+      },
+      {
+        "name": "Apartments.com",
+        "url": "https://www.apartments.com/"
+      }
+    ],
+    "housingSites": {
+      "rentals": [
+        {
+          "name": "Zillow",
+          "url": "https://www.zillow.com/us-mid-atlantic/rentals/",
+          "type": "rental"
+        },
+        {
+          "name": "Apartments.com",
+          "url": "https://www.apartments.com/",
+          "type": "rental"
+        },
+        {
+          "name": "Realtor.com",
+          "url": "https://www.realtor.com/",
+          "type": "purchase"
+        }
+      ]
+    }
+  },
+  "groceryStores": {
+    "stores": [
+      {
+        "name": "Wegmans",
+        "type": "supermarket",
+        "website": "https://www.wegmans.com/",
+        "notes": "Premium grocery with excellent prepared foods"
+      },
+      {
+        "name": "ShopRite",
+        "type": "supermarket",
+        "website": "https://www.shoprite.com/",
+        "notes": "Co-op chain with strong weekly sales and couponing"
+      },
+      {
+        "name": "Giant",
+        "type": "supermarket",
+        "website": "https://giantfood.com/",
+        "notes": "Regional chain with good produce selection"
+      },
+      {
+        "name": "Aldi",
+        "type": "discount-grocery",
+        "website": "https://www.aldi.us/",
+        "notes": "Budget-friendly, high quality store brands"
+      },
+      {
+        "name": "Trader Joe's",
+        "type": "specialty-grocery",
+        "website": "https://www.traderjoes.com/",
+        "notes": "Affordable specialty items, strong following"
+      },
+      {
+        "name": "Bowie Farmers Market",
+        "type": "farmers-market",
+        "website": "",
+        "notes": "Local farmers market, seasonal produce, often Saturday mornings."
+      }
+    ]
+  },
+  "healthcare": {
+    "system": "Medicare + Medigap supplement",
+    "coverageSummary": "Medicare Part A (free) + Part B ($174.70/mo pp) + Medigap Plan G (~$200-220/mo pp) + Part D (~$45/mo pp). IRA out-of-pocket cap $2,000/yr starting 2025.",
+    "person1": {
+      "label": "Person 1",
+      "conditions": [
+        "Hypothyroidism",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Asthma",
+        "Obesity (GLP-1)",
+        "Wet AMD (macular degeneration)"
+      ],
+      "costs": [
+        {
+          "item": "Medicare Part B premium",
+          "monthlyCost": 175,
+          "notes": "Standard 2025 premium per person"
+        },
+        {
+          "item": "Medigap Plan G premium",
+          "monthlyCost": 210,
+          "notes": "US Mid-Atlantic age-rated premium. Higher due to AMD + multiple conditions."
+        },
+        {
+          "item": "Part D premium",
+          "monthlyCost": 45,
+          "notes": "Tier 3 plan to cover GLP-1"
+        },
+        {
+          "item": "Anti-VEGF injections (Eylea/Lucentis)",
+          "monthlyCost": 80,
+          "notes": "Medicare covers 80%, Medigap covers 20% coinsurance. ~6-8 injections/yr."
+        },
+        {
+          "item": "Ophthalmologist specialist visits",
+          "monthlyCost": 25,
+          "notes": "OCT scans every 4-8 weeks. Medicare + Medigap covers most."
+        },
+        {
+          "item": "Endocrinologist (thyroid monitoring)",
+          "monthlyCost": 10,
+          "notes": "Quarterly bloodwork/visits. Low copay with Medigap."
+        },
+        {
+          "item": "Pulmonologist (asthma check-ups)",
+          "monthlyCost": 8,
+          "notes": "Annual visit + as-needed. Mild asthma, infrequent."
+        }
+      ]
+    },
+    "person2": {
+      "label": "Person 2",
+      "conditions": [
+        "Type 2 Diabetes",
+        "Gout",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Migraines"
+      ],
+      "costs": [
+        {
+          "item": "Medicare Part B premium",
+          "monthlyCost": 175,
+          "notes": "Standard 2025 premium per person"
+        },
+        {
+          "item": "Medigap Plan G premium",
+          "monthlyCost": 200,
+          "notes": "US Mid-Atlantic age-rated premium. Diabetes management but no AMD."
+        },
+        {
+          "item": "Part D premium",
+          "monthlyCost": 40,
+          "notes": "All generics — lower tier plan sufficient"
+        },
+        {
+          "item": "Endocrinologist (diabetes mgmt)",
+          "monthlyCost": 15,
+          "notes": "Quarterly A1C, bloodwork. Covered well by Medicare."
+        },
+        {
+          "item": "Diabetes supplies (strips, lancets)",
+          "monthlyCost": 25,
+          "notes": "Medicare Part B covers glucose monitors. Some copays."
+        },
+        {
+          "item": "Rheumatologist (gout monitoring)",
+          "monthlyCost": 8,
+          "notes": "Semi-annual visits. Uric acid monitoring."
+        },
+        {
+          "item": "Neurologist (migraine follow-up)",
+          "monthlyCost": 8,
+          "notes": "Annual-semi-annual visits for topiramate management."
+        }
+      ]
+    },
+    "shared": [
+      {
+        "item": "Dental insurance (2 adults)",
+        "monthlyCost": 70,
+        "notes": "Separate dental plan ~$35/person. Medicare does not cover dental."
+      },
+      {
+        "item": "Vision insurance (2 adults)",
+        "monthlyCost": 25,
+        "notes": "Basic vision plan. AMD specialist visits covered by Medicare Part B."
+      },
+      {
+        "item": "Annual physicals & preventive care",
+        "monthlyCost": 0,
+        "notes": "Covered 100% by Medicare — no copay for preventive."
+      }
+    ],
+    "monthlyTotals": {
+      "person1": 553,
+      "person2": 471,
+      "shared": 95,
+      "household": 1119
+    },
+    "notes": null,
+    "phaseTransition": null
+  },
+  "personalCare": {
+    "blackHairCare": {
+      "label": "Black Hair Care",
+      "priceRange": {
+        "cut": "26-49",
+        "color": "64-113",
+        "fullService": "90-188"
+      },
+      "notes": "Bowie area salons with experience in natural hair, locs, braids, and protective styles.",
+      "providers": [
+        {
+          "name": "Supercuts (Bowie)",
+          "type": "chain-salon",
+          "address": "Bowie area",
+          "notes": "Walk-ins and appointments available."
+        },
+        {
+          "name": "Floyd's 99 Barbershop (Bowie)",
+          "type": "barbershop",
+          "address": "Bowie area",
+          "notes": "Walk-ins and appointments available."
+        }
+      ]
+    },
+    "whiteHairCare": {
+      "label": "White/Caucasian Hair Care",
+      "priceRange": {
+        "cut": "23-41",
+        "color": "60-113",
+        "highlights": "90-150"
+      },
+      "notes": "Standard salon and barbershop options throughout Bowie.",
+      "providers": [
+        {
+          "name": "Supercuts (Bowie)",
+          "type": "chain-salon",
+          "address": "Bowie area",
+          "notes": "Walk-ins and appointments available."
+        },
+        {
+          "name": "Floyd's 99 Barbershop (Bowie)",
+          "type": "barbershop",
+          "address": "Bowie area",
+          "notes": "Walk-ins and appointments available."
+        },
+        {
+          "name": "Great Clips (Bowie)",
+          "type": "chain-salon",
+          "address": "Bowie area",
+          "notes": "Walk-ins and appointments available."
+        }
+      ]
+    },
+    "mensBigTall": {
+      "label": "Men's Big & Tall Clothing",
+      "priceRange": {
+        "shirts": "30-80",
+        "pants": "40-70",
+        "suits": "150-400"
+      },
+      "notes": "DXL is the primary brick-and-mortar option. Online retailers (Amazon, King Size) ship to Bowie.",
+      "providers": [
+        {
+          "name": "DXL Big + Tall",
+          "type": "specialty-retail",
+          "address": "Nearest Bowie area",
+          "notes": "Sizes up to 8XL and 72 waist.",
+          "website": "https://www.dxl.com/"
+        }
+      ]
+    },
+    "womensClothing": {
+      "label": "Women's Regular Clothing",
+      "priceRange": {
+        "casual": "25-60",
+        "dresses": "50-120",
+        "professional": "60-150"
+      },
+      "notes": "Range from budget (Target, Old Navy) to mid-range (LOFT, Banana Republic) available in Bowie area.",
+      "providers": []
+    },
+    "shoes": {
+      "label": "Shoes",
+      "priceRange": {
+        "casual": "40-90",
+        "dress": "70-150",
+        "athletic": "60-130",
+        "wideWidth": "50-120"
+      },
+      "notes": "DSW and shoe departments at major retailers available in Bowie area. Wide width options at DSW and online.",
+      "providers": []
+    },
+    "gym": {
+      "monthlyRange": "23-38",
+      "notes": "Planet Fitness ($10-25/mo), LA Fitness, YMCA, and SilverSneakers (free with many Medicare Advantage plans) available in Bowie area."
+    }
+  },
+  "seniorDiscounts": {
+    "minimumAge": 65,
+    "discounts": [
+      {
+        "name": "Medicare",
+        "description": "Federal health insurance at 65. Part A (hospital) premium-free for most. Part B (medical) ~$175/month. Part D (drugs) $10-50/month.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "AARP Membership",
+        "description": "Annual membership $16. Discounts on insurance, dining, travel, retail, and entertainment. Available at age 50+.",
+        "eligibilityAge": 50
+      },
+      {
+        "name": "US Mid-Atlantic Social Security Tax",
+        "description": "Virginia fully exempts Social Security benefits from state income tax. $12,000 age deduction at 65+.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "WMATA/VRE Senior Transit Fare",
+        "description": "Reduced fare for riders 65+. Most transit systems offer half-fare or free rides for seniors with ID.",
+        "eligibilityAge": 65
+      },
+      {
+        "name": "State Park Senior Pass",
+        "description": "Virginia State Parks parking pass ($30/yr).",
+        "eligibilityAge": 62
+      },
+      {
+        "name": "America the Beautiful Senior Pass",
+        "description": "Lifetime pass to all national parks and federal recreation areas for $80 (or $20/year).",
+        "eligibilityAge": 62
+      },
+      {
+        "name": "SilverSneakers Fitness",
+        "description": "Free gym membership through participating Medicare Advantage and Medigap plans. Access to 17,000+ locations nationwide.",
+        "eligibilityAge": 65
+      }
+    ]
+  },
+  "_seedOrigin": {
+    "kind": "starter-template",
+    "from": "us-baltimore-md",
+    "generatedAt": "2026-04-23",
+    "note": "Template-derived content — prices and names adapted from the template city. Needs per-location review."
+  }
+}
