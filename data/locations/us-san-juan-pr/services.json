@@ -303,13 +303,13 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Chili's",
+      "name": "Top-rated Puerto Rican cuisine (search)",
       "distanceMi": 30,
-      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
+      "notes": "Highest-rated authentic Puerto Rican restaurants (mofongo, lechón, arroz con gandules) within ~30 mi. OSM's first hit was a chain already covered by another category, so we fall back to a search.",
       "sources": [
         {
-          "title": "OpenStreetMap — Chili's",
-          "url": "https://www.openstreetmap.org/node/660739551",
+          "title": "Google Maps — top rated Puerto Rican restaurants near San Juan, PR",
+          "url": "https://www.google.com/maps/search/top%20rated%20puerto%20rican%20restaurants%20near%20San%20Juan%2C%20PR",
           "accessed": "2026-04-23"
         }
       ]
