@@ -23,12 +23,19 @@
     {
       "name": "City of Raleigh",
       "url": "https://www.raleighnc.gov/",
-      "type": "government"
+      "type": "government",
+      "linkStatus": "redirect",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23",
+      "linkFinalUrl": "https://raleighnc.gov/"
     },
     {
       "name": "Visit Raleigh",
       "url": "https://www.visitraleigh.com/",
-      "type": "tourism"
+      "type": "tourism",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23"
     }
   ],
   "youtubeChannels": [

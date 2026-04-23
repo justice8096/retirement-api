@@ -26,12 +26,27 @@
     {
       "name": "Visit Boquete (Tourism Panama)",
       "url": "https://www.tourismpanama.com/places-to-visit/boquete/",
-      "type": "tourism"
+      "type": "tourism",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23"
     },
     {
       "name": "Visit Boquete",
       "url": "https://www.visitboquete.com/",
-      "type": "tourism"
+      "type": "tourism",
+      "linkStatus": "ok",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23"
+    },
+    {
+      "name": "Gobierno de Chiriquí",
+      "url": "https://www.chiriqui.gob.pa/",
+      "type": "government",
+      "scope": "province",
+      "linkStatus": "dns",
+      "linkHttpStatus": null,
+      "linkCheckedAt": "2026-04-23"
     }
   ],
   "youtubeChannels": [
