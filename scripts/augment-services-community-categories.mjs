@@ -147,26 +147,37 @@ function gmapsSearch(query, location) {
   return `https://www.google.com/maps/search/${q}`;
 }
 
-/**
- * Build directory-link entries for a given location. `locLabel` is the
- * human-readable city/region used in the search query.
- */
-function directoryEntries(locLabel) {
+/** 30 miles ≈ 48.28 km → round to 48 km for cleaner display. */
+const DISTANCE_KM = 48;
+const DISTANCE_MI = 30;
+
+/** Write the correct distance field based on the services file's unit. */
+function distanceField(distanceUnit) {
+  return distanceUnit === 'km'
+    ? { distanceKm: DISTANCE_KM }
+    : { distanceMi: DISTANCE_MI };
+}
+
+/** Build directory-link entries for a given location. `locLabel` is the
+ *  human-readable city/region used in the search query. */
+function directoryEntries(locLabel, distanceUnit) {
+  const dist = distanceField(distanceUnit);
+  const radiusLabel = distanceUnit === 'km' ? `~${DISTANCE_KM} km` : `~${DISTANCE_MI} mi`;
   return [
-    { categoryId: 'religious_mosque',         name: 'Local mosques (search)',             query: 'mosque',                   notes: 'Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.' },
-    { categoryId: 'religious_synagogue',      name: 'Local synagogues / Hebrew temples (search)', query: 'synagogue',       notes: 'Search Google Maps for synagogues / Hebrew temples within ~30 mi.' },
-    { categoryId: 'grocery_halal',            name: 'Halal groceries (search)',           query: 'halal grocery',            notes: 'Search Google Maps for halal butchers / halal grocery stores within ~30 mi.' },
-    { categoryId: 'grocery_kosher',           name: 'Kosher groceries (search)',          query: 'kosher grocery',           notes: 'Search Google Maps for kosher grocery stores within ~30 mi.' },
-    { categoryId: 'hair_care_african',        name: 'Black / African hair care (search)', query: 'black hair salon',         notes: 'Search Google Maps for African / Black hair salons and natural-hair specialists within ~30 mi.' },
-    { categoryId: 'restaurant_local',         name: 'Top-rated local cuisine (search)',   query: 'top rated local restaurants', notes: 'Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).' },
-    { categoryId: 'restaurant_italian',       name: 'Italian restaurants (search)',       query: 'italian restaurant',       notes: 'Italian / pizza restaurants within ~30 mi.' },
-    { categoryId: 'restaurant_mexican',       name: 'Mexican restaurants (search)',       query: 'mexican restaurant',       notes: 'Mexican / Tex-Mex restaurants within ~30 mi.' },
-    { categoryId: 'restaurant_thai_or_asian', name: 'Thai / other Asian restaurants (search)', query: 'thai restaurant',    notes: 'Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.' },
-    { categoryId: 'restaurant_indian',        name: 'Indian restaurants (search)',        query: 'indian restaurant',        notes: 'Indian / South Asian restaurants within ~30 mi.' },
+    { categoryId: 'religious_mosque',         name: 'Local mosques (search)',             query: 'mosque',                   notes: `Search Google Maps for mosques within ${radiusLabel} of the city centre. Replace with a specific mosque once identified.` },
+    { categoryId: 'religious_synagogue',      name: 'Local synagogues / Hebrew temples (search)', query: 'synagogue',       notes: `Search Google Maps for synagogues / Hebrew temples within ${radiusLabel}.` },
+    { categoryId: 'grocery_halal',            name: 'Halal groceries (search)',           query: 'halal grocery',            notes: `Search Google Maps for halal butchers / halal grocery stores within ${radiusLabel}.` },
+    { categoryId: 'grocery_kosher',           name: 'Kosher groceries (search)',          query: 'kosher grocery',           notes: `Search Google Maps for kosher grocery stores within ${radiusLabel}.` },
+    { categoryId: 'hair_care_african',        name: 'Black / African hair care (search)', query: 'black hair salon',         notes: `Search Google Maps for African / Black hair salons and natural-hair specialists within ${radiusLabel}.` },
+    { categoryId: 'restaurant_local',         name: 'Top-rated local cuisine (search)',   query: 'top rated local restaurants', notes: `Highest-rated local-cuisine restaurants within ${radiusLabel} (Google Maps rating-sorted).` },
+    { categoryId: 'restaurant_italian',       name: 'Italian restaurants (search)',       query: 'italian restaurant',       notes: `Italian / pizza restaurants within ${radiusLabel}.` },
+    { categoryId: 'restaurant_mexican',       name: 'Mexican restaurants (search)',       query: 'mexican restaurant',       notes: `Mexican / Tex-Mex restaurants within ${radiusLabel}.` },
+    { categoryId: 'restaurant_thai_or_asian', name: 'Thai / other Asian restaurants (search)', query: 'thai restaurant',    notes: `Thai, Vietnamese, Korean, or pan-Asian restaurants within ${radiusLabel}.` },
+    { categoryId: 'restaurant_indian',        name: 'Indian restaurants (search)',        query: 'indian restaurant',        notes: `Indian / South Asian restaurants within ${radiusLabel}.` },
   ].map(e => ({
     categoryId: e.categoryId,
     name: e.name,
-    distanceMi: 30,
+    ...dist,
     notes: e.notes,
     sources: [
       { title: `Google Maps — ${e.query} near ${locLabel}`, url: gmapsSearch(e.query, locLabel), accessed: ACCESSED },
@@ -175,7 +186,7 @@ function directoryEntries(locLabel) {
 }
 
 /** Build clothing entries from the per-country map. */
-function clothingEntries(slug, countryLabel) {
+function clothingEntries(slug, countryLabel, distanceUnit) {
   const set = CLOTHING[slug];
   if (!set) return [];
   const chains = [
@@ -184,10 +195,11 @@ function clothingEntries(slug, countryLabel) {
     { kind: 'childrens', categoryId: 'clothing_childrens', prefix: 'Children\'s clothing' },
     { kind: 'bigtall',   categoryId: 'clothing_bigtall',   prefix: 'Big & Tall clothing' },
   ];
+  const dist = distanceField(distanceUnit);
   return chains.map(c => ({
     categoryId: c.categoryId,
     name: set[c.kind].name,
-    distanceMi: 30,
+    ...dist,
     notes: `${c.prefix} — ${countryLabel} chain / directory.`,
     sources: [
       { title: set[c.kind].name, url: set[c.kind].url, accessed: ACCESSED },
@@ -195,8 +207,42 @@ function clothingEntries(slug, countryLabel) {
   }));
 }
 
+/** categoryIds this script owns — used by the retrofit pass to fix
+ *  existing rows whose distance field doesn't match the file's unit. */
+const OWNED_CATEGORIES = new Set([
+  'clothing_womens', 'clothing_mens', 'clothing_childrens', 'clothing_bigtall',
+  'religious_mosque', 'religious_synagogue',
+  'grocery_halal', 'grocery_kosher',
+  'hair_care_african',
+  'restaurant_local', 'restaurant_italian', 'restaurant_mexican',
+  'restaurant_thai_or_asian', 'restaurant_indian',
+]);
+
+/** Retrofit: for entries this script owns, ensure they use the correct
+ *  distance field for the file's unit. Converts a miles-number to km
+ *  (×1.609, rounded) when needed and vice-versa. Returns true if the
+ *  service entry was changed. */
+function retrofitDistance(svc, distanceUnit) {
+  if (!svc || !OWNED_CATEGORIES.has(svc.categoryId)) return false;
+  if (distanceUnit === 'km') {
+    if (typeof svc.distanceMi === 'number' && typeof svc.distanceKm !== 'number') {
+      svc.distanceKm = Math.round(svc.distanceMi * 1.60934);
+      delete svc.distanceMi;
+      return true;
+    }
+  } else {
+    if (typeof svc.distanceKm === 'number' && typeof svc.distanceMi !== 'number') {
+      svc.distanceMi = Math.round(svc.distanceKm / 1.60934);
+      delete svc.distanceKm;
+      return true;
+    }
+  }
+  return false;
+}
+
 let augmented = 0;
 let skipped = 0;
+let retrofitted = 0;
 
 for (const dir of readdirSync(DATA_DIR, { withFileTypes: true })) {
   if (!dir.isDirectory()) continue;
@@ -206,6 +252,7 @@ for (const dir of readdirSync(DATA_DIR, { withFileTypes: true })) {
   const slug = slugForDir(dir.name);
   const data = JSON.parse(readFileSync(servicesPath, 'utf-8'));
   const services = Array.isArray(data.services) ? data.services : [];
+  const distanceUnit = data.distanceUnit === 'km' ? 'km' : 'mi';
 
   // Prefer `location.json` name for the directory-search label. Fall back
   // to the dir name.
@@ -224,12 +271,20 @@ for (const dir of readdirSync(DATA_DIR, { withFileTypes: true })) {
     } catch { return 'local'; }
   })();
 
-  const toAdd = [
-    ...clothingEntries(slug, countryLabel),
-    ...directoryEntries(locLabel),
-  ];
-
+  // 1) Retrofit any owned entries that violate the file's unit contract.
   let touched = false;
+  for (const svc of services) {
+    if (retrofitDistance(svc, distanceUnit)) {
+      touched = true;
+      retrofitted++;
+    }
+  }
+
+  // 2) Append any still-missing owned categories.
+  const toAdd = [
+    ...clothingEntries(slug, countryLabel, distanceUnit),
+    ...directoryEntries(locLabel, distanceUnit),
+  ];
   for (const e of toAdd) {
     const exists = services.some(s => s && s.categoryId === e.categoryId);
     if (exists) continue;
@@ -246,5 +301,6 @@ for (const dir of readdirSync(DATA_DIR, { withFileTypes: true })) {
   }
 }
 
-console.log(`augmented: ${augmented}`);
-console.log(`skipped:   ${skipped}`);
+console.log(`augmented:   ${augmented}`);
+console.log(`skipped:     ${skipped}`);
+console.log(`retrofitted: ${retrofitted} existing entries converted between mi/km`);
