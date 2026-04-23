@@ -286,26 +286,26 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
+      "name": "Islamic Center of Central Brevard",
       "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Palm Bay, FL",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Palm%20Bay%2C%20FL",
+          "title": "OpenStreetMap — Islamic Center of Central Brevard",
+          "url": "https://www.openstreetmap.org/node/358749637",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
+      "name": "Temple Beth Sholom",
       "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Palm Bay, FL",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Palm%20Bay%2C%20FL",
+          "title": "OpenStreetMap — Temple Beth Sholom",
+          "url": "https://www.openstreetmap.org/node/358750866",
           "accessed": "2026-04-23"
         }
       ]
@@ -351,65 +351,65 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "Siam Orchid Japanese Restaraunt",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Palm Bay, FL",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Palm%20Bay%2C%20FL",
+          "title": "OpenStreetMap — Siam Orchid Japanese Restaraunt",
+          "url": "https://www.openstreetmap.org/node/477126718",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
+      "name": "Amici's",
       "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Palm Bay, FL",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Palm%20Bay%2C%20FL",
+          "title": "OpenStreetMap — Amici's",
+          "url": "https://www.openstreetmap.org/node/2506719393",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
+      "name": "Chili's",
       "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Palm Bay, FL",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Palm%20Bay%2C%20FL",
+          "title": "OpenStreetMap — Chili's",
+          "url": "https://www.openstreetmap.org/node/810674822",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
+      "name": "Banzai",
       "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Palm Bay, FL",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Palm%20Bay%2C%20FL",
+          "title": "OpenStreetMap — Banzai",
+          "url": "https://www.openstreetmap.org/node/2506726432",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
+      "name": "Bombay Curry",
       "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Palm Bay, FL",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Palm%20Bay%2C%20FL",
+          "title": "OpenStreetMap — Bombay Curry",
+          "url": "https://www.openstreetmap.org/node/5273685459",
           "accessed": "2026-04-23"
         }
       ]

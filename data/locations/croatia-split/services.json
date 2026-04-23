@@ -287,26 +287,24 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "name": "Mesdžid",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Split, Croatia",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Split%2C%20Croatia",
+          "title": "OpenStreetMap — Mesdžid",
+          "url": "https://www.openstreetmap.org/node/2608330280",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "name": "Splitska sinagoga",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Split, Croatia",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Split%2C%20Croatia",
+          "title": "OpenStreetMap — Splitska sinagoga",
+          "url": "https://www.openstreetmap.org/node/12075375310",
           "accessed": "2026-04-23"
         }
       ]
@@ -352,65 +350,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Konoba Panorama",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Split, Croatia",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Split%2C%20Croatia",
+          "title": "OpenStreetMap — Konoba Panorama",
+          "url": "https://www.openstreetmap.org/node/296673196",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Konoba Fratelli",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Split, Croatia",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Split%2C%20Croatia",
+          "title": "OpenStreetMap — Konoba Fratelli",
+          "url": "https://www.openstreetmap.org/node/1234535224",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Bistro Toć",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Split, Croatia",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Split%2C%20Croatia",
+          "title": "OpenStreetMap — Bistro Toć",
+          "url": "https://www.openstreetmap.org/node/2960698743",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Silk - Asian Fusion",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Split, Croatia",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Split%2C%20Croatia",
+          "title": "OpenStreetMap — Silk - Asian Fusion",
+          "url": "https://www.openstreetmap.org/node/1483365973",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Rooh",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Split, Croatia",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Split%2C%20Croatia",
+          "title": "OpenStreetMap — Rooh",
+          "url": "https://www.openstreetmap.org/node/949508513",
           "accessed": "2026-04-23"
         }
       ]

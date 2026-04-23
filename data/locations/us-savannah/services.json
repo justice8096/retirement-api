@@ -273,26 +273,26 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
+      "name": "Masjid Jihad",
       "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Savannah, Georgia",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Savannah%2C%20Georgia",
+          "title": "OpenStreetMap — Masjid Jihad",
+          "url": "https://www.openstreetmap.org/way/950223712",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
+      "name": "B'nai B'rith Jacob Synagogue",
       "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Savannah, Georgia",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Savannah%2C%20Georgia",
+          "title": "OpenStreetMap — B'nai B'rith Jacob Synagogue",
+          "url": "https://www.openstreetmap.org/node/411405536",
           "accessed": "2026-04-23"
         }
       ]
@@ -338,52 +338,52 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "Despositos",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Savannah, Georgia",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Savannah%2C%20Georgia",
+          "title": "OpenStreetMap — Despositos",
+          "url": "https://www.openstreetmap.org/node/411000929",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
+      "name": "Roma Pizza",
       "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Savannah, Georgia",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Savannah%2C%20Georgia",
+          "title": "OpenStreetMap — Roma Pizza",
+          "url": "https://www.openstreetmap.org/node/2575445526",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
+      "name": "Agave Bar & Grill",
       "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Savannah, Georgia",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Savannah%2C%20Georgia",
+          "title": "OpenStreetMap — Agave Bar & Grill",
+          "url": "https://www.openstreetmap.org/node/974193936",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
+      "name": "Boomy's",
       "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Savannah, Georgia",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Savannah%2C%20Georgia",
+          "title": "OpenStreetMap — Boomy's",
+          "url": "https://www.openstreetmap.org/node/3372910037",
           "accessed": "2026-04-23"
         }
       ]

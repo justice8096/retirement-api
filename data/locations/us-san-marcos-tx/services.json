@@ -286,13 +286,13 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
+      "name": "Masjid Ibrahim",
       "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near San Marcos, TX",
-          "url": "https://www.google.com/maps/search/mosque%20near%20San%20Marcos%2C%20TX",
+          "title": "OpenStreetMap — Masjid Ibrahim",
+          "url": "https://www.openstreetmap.org/way/584726498",
           "accessed": "2026-04-23"
         }
       ]
@@ -351,65 +351,65 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "Black's Barbecue",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near San Marcos, TX",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20San%20Marcos%2C%20TX",
+          "title": "OpenStreetMap — Black's Barbecue",
+          "url": "https://www.openstreetmap.org/node/385604139",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
+      "name": "Vespaio",
       "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near San Marcos, TX",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20San%20Marcos%2C%20TX",
+          "title": "OpenStreetMap — Vespaio",
+          "url": "https://www.openstreetmap.org/node/919340319",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
+      "name": "Maudies Hacienda",
       "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near San Marcos, TX",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20San%20Marcos%2C%20TX",
+          "title": "OpenStreetMap — Maudies Hacienda",
+          "url": "https://www.openstreetmap.org/node/564123070",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
+      "name": "Madam Mam's",
       "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near San Marcos, TX",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20San%20Marcos%2C%20TX",
+          "title": "OpenStreetMap — Madam Mam's",
+          "url": "https://www.openstreetmap.org/node/564145569",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
+      "name": "WhipIn",
       "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near San Marcos, TX",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20San%20Marcos%2C%20TX",
+          "title": "OpenStreetMap — WhipIn",
+          "url": "https://www.openstreetmap.org/node/882493049",
           "accessed": "2026-04-23"
         }
       ]

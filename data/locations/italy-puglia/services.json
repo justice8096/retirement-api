@@ -300,13 +300,12 @@
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "name": "Sinagoga Museo Sant'Anna",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Puglia, Italy",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Puglia%2C%20Italy",
+          "title": "OpenStreetMap — Sinagoga Museo Sant'Anna",
+          "url": "https://www.openstreetmap.org/way/407825264",
           "accessed": "2026-04-23"
         }
       ]
@@ -352,65 +351,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Il Porticciolo",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Puglia, Italy",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Puglia%2C%20Italy",
+          "title": "OpenStreetMap — Il Porticciolo",
+          "url": "https://www.openstreetmap.org/node/281766594",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Il Vicolo",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Puglia, Italy",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Puglia%2C%20Italy",
+          "title": "OpenStreetMap — Il Vicolo",
+          "url": "https://www.openstreetmap.org/node/305906673",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "La parrilla de Juan",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Puglia, Italy",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Puglia%2C%20Italy",
+          "title": "OpenStreetMap — La parrilla de Juan",
+          "url": "https://www.openstreetmap.org/node/399105455",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Ramen a mano - Ristorante millegusti",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Puglia, Italy",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Puglia%2C%20Italy",
+          "title": "OpenStreetMap — Ramen a mano - Ristorante millegusti",
+          "url": "https://www.openstreetmap.org/node/3873518330",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Laxmi",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Puglia, Italy",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Puglia%2C%20Italy",
+          "title": "OpenStreetMap — Laxmi",
+          "url": "https://www.openstreetmap.org/node/11935442961",
           "accessed": "2026-04-23"
         }
       ]

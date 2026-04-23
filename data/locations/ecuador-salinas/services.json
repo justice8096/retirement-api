@@ -352,39 +352,36 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "La Lojanita",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Salinas, Ecuador",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Salinas%2C%20Ecuador",
+          "title": "OpenStreetMap — La Lojanita",
+          "url": "https://www.openstreetmap.org/node/347483457",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Las empanadas de Paco",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Salinas, Ecuador",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Salinas%2C%20Ecuador",
+          "title": "OpenStreetMap — Las empanadas de Paco",
+          "url": "https://www.openstreetmap.org/node/932352376",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Luccy's International",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Salinas, Ecuador",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Salinas%2C%20Ecuador",
+          "title": "OpenStreetMap — Luccy's International",
+          "url": "https://www.openstreetmap.org/node/3763998249",
           "accessed": "2026-04-23"
         }
       ]

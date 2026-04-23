@@ -42,21 +42,13 @@
     {
       "name": "Visit Panama",
       "url": "https://www.visitpanama.com/",
-      "type": "tourism",
-      "linkStatus": "ok",
-      "linkHttpStatus": 200,
-      "linkCheckedAt": "2026-04-23",
-      "linkFinalUrl": "https://www.tourismpanama.com/"
+      "type": "tourism"
     },
     {
       "name": "Municipio de Panamá",
       "url": "https://www.mupa.gob.pa/",
       "type": "government",
-      "scope": "city",
-      "linkStatus": "ok",
-      "linkHttpStatus": 200,
-      "linkCheckedAt": "2026-04-23",
-      "linkFinalUrl": "https://mupa.gob.pa/"
+      "scope": "city"
     }
   ],
   "youtubeChannels": [

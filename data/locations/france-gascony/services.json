@@ -299,13 +299,12 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "name": "Mosquée de la Paix",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Gascony, France",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Gascony%2C%20France",
+          "title": "OpenStreetMap — Mosquée de la Paix",
+          "url": "https://www.openstreetmap.org/way/65474715",
           "accessed": "2026-04-23"
         }
       ]
@@ -364,26 +363,24 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Péniche",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Gascony, France",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Gascony%2C%20France",
+          "title": "OpenStreetMap — Péniche",
+          "url": "https://www.openstreetmap.org/node/393324968",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "En Cas",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Gascony, France",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Gascony%2C%20France",
+          "title": "OpenStreetMap — En Cas",
+          "url": "https://www.openstreetmap.org/node/1880783771",
           "accessed": "2026-04-23"
         }
       ]
@@ -403,13 +400,12 @@
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "La Baie d'Halong",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Gascony, France",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Gascony%2C%20France",
+          "title": "OpenStreetMap — La Baie d'Halong",
+          "url": "https://www.openstreetmap.org/node/4118754699",
           "accessed": "2026-04-23"
         }
       ]

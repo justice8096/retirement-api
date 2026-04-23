@@ -364,65 +364,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Le Pha",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Dordogne, France",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Dordogne%2C%20France",
+          "title": "OpenStreetMap — Le Pha",
+          "url": "https://www.openstreetmap.org/node/324340257",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Mentalo",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Dordogne, France",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Dordogne%2C%20France",
+          "title": "OpenStreetMap — Mentalo",
+          "url": "https://www.openstreetmap.org/node/3787196869",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "OhLaLa burgers",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Dordogne, France",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Dordogne%2C%20France",
+          "title": "OpenStreetMap — OhLaLa burgers",
+          "url": "https://www.openstreetmap.org/node/11262413437",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Le Pha",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Dordogne, France",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Dordogne%2C%20France",
+          "title": "OpenStreetMap — Le Pha",
+          "url": "https://www.openstreetmap.org/node/324340257",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Le Bombay",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Dordogne, France",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Dordogne%2C%20France",
+          "title": "OpenStreetMap — Le Bombay",
+          "url": "https://www.openstreetmap.org/node/3860704249",
           "accessed": "2026-04-23"
         }
       ]

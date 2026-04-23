@@ -351,52 +351,52 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "Treno Pizzeria & Taproom",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Killeen, TX",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Killeen%2C%20TX",
+          "title": "OpenStreetMap — Treno Pizzeria & Taproom",
+          "url": "https://www.openstreetmap.org/node/356817602",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
+      "name": "La Riv",
       "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Killeen, TX",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Killeen%2C%20TX",
+          "title": "OpenStreetMap — La Riv",
+          "url": "https://www.openstreetmap.org/node/6057826128",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
+      "name": "El Mexicano Grill and Bar",
       "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Killeen, TX",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Killeen%2C%20TX",
+          "title": "OpenStreetMap — El Mexicano Grill and Bar",
+          "url": "https://www.openstreetmap.org/node/2228914251",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
+      "name": "Kano Cafe",
       "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Killeen, TX",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Killeen%2C%20TX",
+          "title": "OpenStreetMap — Kano Cafe",
+          "url": "https://www.openstreetmap.org/node/1479375360",
           "accessed": "2026-04-23"
         }
       ]

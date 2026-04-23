@@ -287,13 +287,12 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "name": "Templo Mezquita",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Volcán, Panama",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Volc%C3%A1n%2C%20Panama",
+          "title": "OpenStreetMap — Templo Mezquita",
+          "url": "https://www.openstreetmap.org/node/3494147627",
           "accessed": "2026-04-23"
         }
       ]
@@ -352,52 +351,48 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Pirates Bar & Grill",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Volcán, Panama",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Volc%C3%A1n%2C%20Panama",
+          "title": "OpenStreetMap — Pirates Bar & Grill",
+          "url": "https://www.openstreetmap.org/node/353292885",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Il Pianista",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Volcán, Panama",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Volc%C3%A1n%2C%20Panama",
+          "title": "OpenStreetMap — Il Pianista",
+          "url": "https://www.openstreetmap.org/node/1837869344",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Antojitos Mexicanos",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Volcán, Panama",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Volc%C3%A1n%2C%20Panama",
+          "title": "OpenStreetMap — Antojitos Mexicanos",
+          "url": "https://www.openstreetmap.org/node/2396551820",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Xiuling",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Volcán, Panama",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Volc%C3%A1n%2C%20Panama",
+          "title": "OpenStreetMap — Xiuling",
+          "url": "https://www.openstreetmap.org/node/5908476385",
           "accessed": "2026-04-23"
         }
       ]

@@ -299,13 +299,13 @@
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
+      "name": "Congregation Beth Israel",
       "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Skowhegan, ME",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Skowhegan%2C%20ME",
+          "title": "OpenStreetMap — Congregation Beth Israel",
+          "url": "https://www.openstreetmap.org/way/359905665",
           "accessed": "2026-04-23"
         }
       ]
@@ -351,52 +351,52 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "Heritage House",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Skowhegan, ME",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Skowhegan%2C%20ME",
+          "title": "OpenStreetMap — Heritage House",
+          "url": "https://www.openstreetmap.org/node/2274547120",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
+      "name": "Olive Garden",
       "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Skowhegan, ME",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Skowhegan%2C%20ME",
+          "title": "OpenStreetMap — Olive Garden",
+          "url": "https://www.openstreetmap.org/way/371292006",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
+      "name": "Buen Apetito",
       "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Skowhegan, ME",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Skowhegan%2C%20ME",
+          "title": "OpenStreetMap — Buen Apetito",
+          "url": "https://www.openstreetmap.org/node/3678142018",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
+      "name": "Pad Thai Too",
       "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Skowhegan, ME",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Skowhegan%2C%20ME",
+          "title": "OpenStreetMap — Pad Thai Too",
+          "url": "https://www.openstreetmap.org/node/7935017683",
           "accessed": "2026-04-23"
         }
       ]

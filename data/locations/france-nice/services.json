@@ -312,13 +312,12 @@
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "name": "Grande Synagogue de Cannes",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Nice / Côte d'Azur, France",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Nice%20%2F%20C%C3%B4te%20d'Azur%2C%20France",
+          "title": "OpenStreetMap — Grande Synagogue de Cannes",
+          "url": "https://www.openstreetmap.org/way/65126549",
           "accessed": "2026-04-23"
         }
       ]
@@ -364,13 +363,12 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Asian Bowls",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Nice / Côte d'Azur, France",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Nice%20%2F%20C%C3%B4te%20d'Azur%2C%20France",
+          "title": "OpenStreetMap — Asian Bowls",
+          "url": "https://www.openstreetmap.org/node/251434096",
           "accessed": "2026-04-23"
         }
       ]
@@ -403,26 +401,24 @@
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Asian Bowls",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Nice / Côte d'Azur, France",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Nice%20%2F%20C%C3%B4te%20d'Azur%2C%20France",
+          "title": "OpenStreetMap — Asian Bowls",
+          "url": "https://www.openstreetmap.org/node/251434096",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Shalimar",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Nice / Côte d'Azur, France",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Nice%20%2F%20C%C3%B4te%20d'Azur%2C%20France",
+          "title": "OpenStreetMap — Shalimar",
+          "url": "https://www.openstreetmap.org/node/373343492",
           "accessed": "2026-04-23"
         }
       ]

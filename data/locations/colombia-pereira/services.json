@@ -352,65 +352,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "La Paloma",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Pereira / Coffee Axis, Colombia",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Pereira%20%2F%20Coffee%20Axis%2C%20Colombia",
+          "title": "OpenStreetMap — La Paloma",
+          "url": "https://www.openstreetmap.org/node/347813701",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "La Nueva Italiana",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Pereira / Coffee Axis, Colombia",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Pereira%20%2F%20Coffee%20Axis%2C%20Colombia",
+          "title": "OpenStreetMap — La Nueva Italiana",
+          "url": "https://www.openstreetmap.org/node/611732495",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Yerbabuena - Coffee & Food",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Pereira / Coffee Axis, Colombia",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Pereira%20%2F%20Coffee%20Axis%2C%20Colombia",
+          "title": "OpenStreetMap — Yerbabuena - Coffee & Food",
+          "url": "https://www.openstreetmap.org/node/4759112573",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Meraki",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Pereira / Coffee Axis, Colombia",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Pereira%20%2F%20Coffee%20Axis%2C%20Colombia",
+          "title": "OpenStreetMap — Meraki",
+          "url": "https://www.openstreetmap.org/node/4401745493",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Meraki",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Pereira / Coffee Axis, Colombia",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Pereira%20%2F%20Coffee%20Axis%2C%20Colombia",
+          "title": "OpenStreetMap — Meraki",
+          "url": "https://www.openstreetmap.org/node/4401745493",
           "accessed": "2026-04-23"
         }
       ]
