@@ -299,13 +299,12 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "name": "Atlılar Mosque",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Larnaca, Cyprus",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Larnaca%2C%20Cyprus",
+          "title": "OpenStreetMap — Atlılar Mosque",
+          "url": "https://www.openstreetmap.org/node/1958641326",
           "accessed": "2026-04-23"
         }
       ]
@@ -364,65 +363,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Lambros Souvlakia",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Larnaca, Cyprus",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Larnaca%2C%20Cyprus",
+          "title": "OpenStreetMap — Lambros Souvlakia",
+          "url": "https://www.openstreetmap.org/node/232528070",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Promessa",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Larnaca, Cyprus",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Larnaca%2C%20Cyprus",
+          "title": "OpenStreetMap — Promessa",
+          "url": "https://www.openstreetmap.org/node/948919406",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Tequila Garden",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Larnaca, Cyprus",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Larnaca%2C%20Cyprus",
+          "title": "OpenStreetMap — Tequila Garden",
+          "url": "https://www.openstreetmap.org/node/900756412",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Chiang Mai",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Larnaca, Cyprus",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Larnaca%2C%20Cyprus",
+          "title": "OpenStreetMap — Chiang Mai",
+          "url": "https://www.openstreetmap.org/node/2100647950",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Hurry Curry",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Larnaca, Cyprus",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Larnaca%2C%20Cyprus",
+          "title": "OpenStreetMap — Hurry Curry",
+          "url": "https://www.openstreetmap.org/node/929861732",
           "accessed": "2026-04-23"
         }
       ]

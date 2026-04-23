@@ -238,26 +238,26 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
+      "name": "Long Island Muslim Society of East Meadow",
       "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near New York City, New York",
-          "url": "https://www.google.com/maps/search/mosque%20near%20New%20York%20City%2C%20New%20York",
+          "title": "OpenStreetMap — Long Island Muslim Society of East Meadow",
+          "url": "https://www.openstreetmap.org/node/357613340",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
+      "name": "Plainview Jewish Center",
       "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near New York City, New York",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20New%20York%20City%2C%20New%20York",
+          "title": "OpenStreetMap — Plainview Jewish Center",
+          "url": "https://www.openstreetmap.org/node/357574647",
           "accessed": "2026-04-23"
         }
       ]
@@ -303,65 +303,65 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "The Brass Rail",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near New York City, New York",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20New%20York%20City%2C%20New%20York",
+          "title": "OpenStreetMap — The Brass Rail",
+          "url": "https://www.openstreetmap.org/node/296568074",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
+      "name": "Angelina's",
       "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near New York City, New York",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20New%20York%20City%2C%20New%20York",
+          "title": "OpenStreetMap — Angelina's",
+          "url": "https://www.openstreetmap.org/node/411504676",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
+      "name": "Pedro's",
       "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near New York City, New York",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20New%20York%20City%2C%20New%20York",
+          "title": "OpenStreetMap — Pedro's",
+          "url": "https://www.openstreetmap.org/node/380044344",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
+      "name": "Sam Sunny",
       "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near New York City, New York",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20New%20York%20City%2C%20New%20York",
+          "title": "OpenStreetMap — Sam Sunny",
+          "url": "https://www.openstreetmap.org/node/357620442",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
+      "name": "Kesari",
       "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near New York City, New York",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20New%20York%20City%2C%20New%20York",
+          "title": "OpenStreetMap — Kesari",
+          "url": "https://www.openstreetmap.org/node/1825848790",
           "accessed": "2026-04-23"
         }
       ]

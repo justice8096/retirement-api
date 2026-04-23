@@ -286,13 +286,13 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
+      "name": "Williamsport Islamic Centre",
       "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Williamsport, PA",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Williamsport%2C%20PA",
+          "title": "OpenStreetMap — Williamsport Islamic Centre",
+          "url": "https://www.openstreetmap.org/node/7103491149",
           "accessed": "2026-04-23"
         }
       ]
@@ -351,52 +351,52 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "Arrowhead Restaurant",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Williamsport, PA",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Williamsport%2C%20PA",
+          "title": "OpenStreetMap — Arrowhead Restaurant",
+          "url": "https://www.openstreetmap.org/node/32217065",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
+      "name": "La Prima Vera",
       "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Williamsport, PA",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Williamsport%2C%20PA",
+          "title": "OpenStreetMap — La Prima Vera",
+          "url": "https://www.openstreetmap.org/node/1083613601",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
+      "name": "Amigos Pizzeria & Mexican Restaurant",
       "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Williamsport, PA",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Williamsport%2C%20PA",
+          "title": "OpenStreetMap — Amigos Pizzeria & Mexican Restaurant",
+          "url": "https://www.openstreetmap.org/node/12564263336",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
+      "name": "Joythai Cuisine",
       "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Williamsport, PA",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Williamsport%2C%20PA",
+          "title": "OpenStreetMap — Joythai Cuisine",
+          "url": "https://www.openstreetmap.org/node/11314974183",
           "accessed": "2026-04-23"
         }
       ]

@@ -286,13 +286,13 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
+      "name": "Sarnia Muslim Association",
       "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Port Huron, MI",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Port%20Huron%2C%20MI",
+          "title": "OpenStreetMap — Sarnia Muslim Association",
+          "url": "https://www.openstreetmap.org/way/605740007",
           "accessed": "2026-04-23"
         }
       ]
@@ -351,65 +351,65 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "Mancino's Pizza & Grinders",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Port Huron, MI",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Port%20Huron%2C%20MI",
+          "title": "OpenStreetMap — Mancino's Pizza & Grinders",
+          "url": "https://www.openstreetmap.org/node/830625735",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
+      "name": "Chap's",
       "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Port Huron, MI",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Port%20Huron%2C%20MI",
+          "title": "OpenStreetMap — Chap's",
+          "url": "https://www.openstreetmap.org/node/5255048605",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
+      "name": "Red Pepper",
       "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Port Huron, MI",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Port%20Huron%2C%20MI",
+          "title": "OpenStreetMap — Red Pepper",
+          "url": "https://www.openstreetmap.org/node/7045331059",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
+      "name": "Selina's Thai",
       "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Port Huron, MI",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Port%20Huron%2C%20MI",
+          "title": "OpenStreetMap — Selina's Thai",
+          "url": "https://www.openstreetmap.org/node/6691486955",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
+      "name": "Warraich Bar & Grill",
       "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Port Huron, MI",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Port%20Huron%2C%20MI",
+          "title": "OpenStreetMap — Warraich Bar & Grill",
+          "url": "https://www.openstreetmap.org/node/6689536091",
           "accessed": "2026-04-23"
         }
       ]

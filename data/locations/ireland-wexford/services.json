@@ -352,26 +352,24 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Royal Garden",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Wexford, Ireland",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Wexford%2C%20Ireland",
+          "title": "OpenStreetMap — Royal Garden",
+          "url": "https://www.openstreetmap.org/node/313250337",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "La Fontana",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Wexford, Ireland",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Wexford%2C%20Ireland",
+          "title": "OpenStreetMap — La Fontana",
+          "url": "https://www.openstreetmap.org/node/435213393",
           "accessed": "2026-04-23"
         }
       ]
@@ -391,26 +389,24 @@
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Pa Pa Thai",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Wexford, Ireland",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Wexford%2C%20Ireland",
+          "title": "OpenStreetMap — Pa Pa Thai",
+          "url": "https://www.openstreetmap.org/node/884332354",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Wild Spice",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Wexford, Ireland",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Wexford%2C%20Ireland",
+          "title": "OpenStreetMap — Wild Spice",
+          "url": "https://www.openstreetmap.org/node/455615773",
           "accessed": "2026-04-23"
         }
       ]

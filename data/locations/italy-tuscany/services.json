@@ -287,26 +287,24 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "name": "Moschea Al Redwan",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Tuscany, Italy",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Tuscany%2C%20Italy",
+          "title": "OpenStreetMap — Moschea Al Redwan",
+          "url": "https://www.openstreetmap.org/way/988827288",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "name": "Sinagoga di Firenze",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Tuscany, Italy",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Tuscany%2C%20Italy",
+          "title": "OpenStreetMap — Sinagoga di Firenze",
+          "url": "https://www.openstreetmap.org/node/7959956070",
           "accessed": "2026-04-23"
         }
       ]
@@ -352,65 +350,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Oreste Campagna",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Tuscany, Italy",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Tuscany%2C%20Italy",
+          "title": "OpenStreetMap — Oreste Campagna",
+          "url": "https://www.openstreetmap.org/node/114905303",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Loggia del Grano",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Tuscany, Italy",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Tuscany%2C%20Italy",
+          "title": "OpenStreetMap — Loggia del Grano",
+          "url": "https://www.openstreetmap.org/node/281861832",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Papito's",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Tuscany, Italy",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Tuscany%2C%20Italy",
+          "title": "OpenStreetMap — Papito's",
+          "url": "https://www.openstreetmap.org/node/6167868542",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Thai",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Tuscany, Italy",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Tuscany%2C%20Italy",
+          "title": "OpenStreetMap — Thai",
+          "url": "https://www.openstreetmap.org/node/946016536",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "India",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Tuscany, Italy",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Tuscany%2C%20Italy",
+          "title": "OpenStreetMap — India",
+          "url": "https://www.openstreetmap.org/node/5560324322",
           "accessed": "2026-04-23"
         }
       ]

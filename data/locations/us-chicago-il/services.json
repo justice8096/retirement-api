@@ -286,26 +286,26 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
+      "name": "Mosque of Umar",
       "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Chicago, IL",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Chicago%2C%20IL",
+          "title": "OpenStreetMap — Mosque of Umar",
+          "url": "https://www.openstreetmap.org/node/354245734",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
+      "name": "Temple Judea Mizpah",
       "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Chicago, IL",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Chicago%2C%20IL",
+          "title": "OpenStreetMap — Temple Judea Mizpah",
+          "url": "https://www.openstreetmap.org/node/286084737",
           "accessed": "2026-04-23"
         }
       ]
@@ -351,65 +351,65 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "Bubba Gump Shrimp Company",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Chicago, IL",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Chicago%2C%20IL",
+          "title": "OpenStreetMap — Bubba Gump Shrimp Company",
+          "url": "https://www.openstreetmap.org/node/306741002",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
+      "name": "Pompei Pizza & Pasta",
       "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Chicago, IL",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Chicago%2C%20IL",
+          "title": "OpenStreetMap — Pompei Pizza & Pasta",
+          "url": "https://www.openstreetmap.org/node/307816996",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
+      "name": "La Amistad",
       "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Chicago, IL",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Chicago%2C%20IL",
+          "title": "OpenStreetMap — La Amistad",
+          "url": "https://www.openstreetmap.org/node/346235240",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
+      "name": "Koi",
       "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Chicago, IL",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Chicago%2C%20IL",
+          "title": "OpenStreetMap — Koi",
+          "url": "https://www.openstreetmap.org/node/534071716",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
+      "name": "Ghareeb Nawaz",
       "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Chicago, IL",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Chicago%2C%20IL",
+          "title": "OpenStreetMap — Ghareeb Nawaz",
+          "url": "https://www.openstreetmap.org/node/533979379",
           "accessed": "2026-04-23"
         }
       ]

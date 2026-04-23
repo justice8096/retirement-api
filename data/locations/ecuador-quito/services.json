@@ -287,26 +287,24 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "name": "Mezquita Khaled Ibn Al Waleed",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Quito, Ecuador",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Quito%2C%20Ecuador",
+          "title": "OpenStreetMap — Mezquita Khaled Ibn Al Waleed",
+          "url": "https://www.openstreetmap.org/node/4557147096",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "name": "Comunidad Judía del Ecuador",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Quito, Ecuador",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Quito%2C%20Ecuador",
+          "title": "OpenStreetMap — Comunidad Judía del Ecuador",
+          "url": "https://www.openstreetmap.org/node/12557671260",
           "accessed": "2026-04-23"
         }
       ]
@@ -352,65 +350,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "HUT",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Quito, Ecuador",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Quito%2C%20Ecuador",
+          "title": "OpenStreetMap — HUT",
+          "url": "https://www.openstreetmap.org/node/265509271",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Di Serggio",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Quito, Ecuador",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Quito%2C%20Ecuador",
+          "title": "OpenStreetMap — Di Serggio",
+          "url": "https://www.openstreetmap.org/node/368134160",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Taquería La Michoacana",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Quito, Ecuador",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Quito%2C%20Ecuador",
+          "title": "OpenStreetMap — Taquería La Michoacana",
+          "url": "https://www.openstreetmap.org/node/2806223755",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Banh Mi & Cerveceria Santa Rosa",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Quito, Ecuador",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Quito%2C%20Ecuador",
+          "title": "OpenStreetMap — Banh Mi & Cerveceria Santa Rosa",
+          "url": "https://www.openstreetmap.org/node/4080922519",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Sher-e-punjab",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Quito, Ecuador",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Quito%2C%20Ecuador",
+          "title": "OpenStreetMap — Sher-e-punjab",
+          "url": "https://www.openstreetmap.org/way/406127682",
           "accessed": "2026-04-23"
         }
       ]

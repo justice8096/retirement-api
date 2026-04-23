@@ -287,26 +287,24 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "name": "Estambul",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Bogotá (Chapinero, Usaquén), Colombia",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Bogot%C3%A1%20(Chapinero%2C%20Usaqu%C3%A9n)%2C%20Colombia",
+          "title": "OpenStreetMap — Estambul",
+          "url": "https://www.openstreetmap.org/node/1107579741",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "name": "Adath Israel",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Bogotá (Chapinero, Usaquén), Colombia",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Bogot%C3%A1%20(Chapinero%2C%20Usaqu%C3%A9n)%2C%20Colombia",
+          "title": "OpenStreetMap — Adath Israel",
+          "url": "https://www.openstreetmap.org/way/95474005",
           "accessed": "2026-04-23"
         }
       ]
@@ -352,65 +350,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Casa de Piedra",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Bogotá (Chapinero, Usaquén), Colombia",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Bogot%C3%A1%20(Chapinero%2C%20Usaqu%C3%A9n)%2C%20Colombia",
+          "title": "OpenStreetMap — Casa de Piedra",
+          "url": "https://www.openstreetmap.org/node/253846055",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "San Marcos",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Bogotá (Chapinero, Usaquén), Colombia",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Bogot%C3%A1%20(Chapinero%2C%20Usaqu%C3%A9n)%2C%20Colombia",
+          "title": "OpenStreetMap — San Marcos",
+          "url": "https://www.openstreetmap.org/node/726803997",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Renata",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Bogotá (Chapinero, Usaquén), Colombia",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Bogot%C3%A1%20(Chapinero%2C%20Usaqu%C3%A9n)%2C%20Colombia",
+          "title": "OpenStreetMap — Renata",
+          "url": "https://www.openstreetmap.org/node/852230653",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Coctel del Mar",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Bogotá (Chapinero, Usaquén), Colombia",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Bogot%C3%A1%20(Chapinero%2C%20Usaqu%C3%A9n)%2C%20Colombia",
+          "title": "OpenStreetMap — Coctel del Mar",
+          "url": "https://www.openstreetmap.org/node/494767054",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Tah Majal",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Bogotá (Chapinero, Usaquén), Colombia",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Bogot%C3%A1%20(Chapinero%2C%20Usaqu%C3%A9n)%2C%20Colombia",
+          "title": "OpenStreetMap — Tah Majal",
+          "url": "https://www.openstreetmap.org/node/4175156771",
           "accessed": "2026-04-23"
         }
       ]

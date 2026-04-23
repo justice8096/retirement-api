@@ -287,13 +287,12 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "name": "Mezquita",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Puerto Viejo, Costa Rica",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Puerto%20Viejo%2C%20Costa%20Rica",
+          "title": "OpenStreetMap — Mezquita",
+          "url": "https://www.openstreetmap.org/way/580228854",
           "accessed": "2026-04-23"
         }
       ]
@@ -352,65 +351,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "El Sendero",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Puerto Viejo, Costa Rica",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Puerto%20Viejo%2C%20Costa%20Rica",
+          "title": "OpenStreetMap — El Sendero",
+          "url": "https://www.openstreetmap.org/node/440803297",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Pecora nera",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Puerto Viejo, Costa Rica",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Puerto%20Viejo%2C%20Costa%20Rica",
+          "title": "OpenStreetMap — Pecora nera",
+          "url": "https://www.openstreetmap.org/node/6363826085",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Coco's Bar & Restaurante",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Puerto Viejo, Costa Rica",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Puerto%20Viejo%2C%20Costa%20Rica",
+          "title": "OpenStreetMap — Coco's Bar & Restaurante",
+          "url": "https://www.openstreetmap.org/way/394724524",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Chile Rojo",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Puerto Viejo, Costa Rica",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Puerto%20Viejo%2C%20Costa%20Rica",
+          "title": "OpenStreetMap — Chile Rojo",
+          "url": "https://www.openstreetmap.org/way/331603796",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Zaika Indian Cuisine Bar & Grill",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Puerto Viejo, Costa Rica",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Puerto%20Viejo%2C%20Costa%20Rica",
+          "title": "OpenStreetMap — Zaika Indian Cuisine Bar & Grill",
+          "url": "https://www.openstreetmap.org/node/8561037520",
           "accessed": "2026-04-23"
         }
       ]

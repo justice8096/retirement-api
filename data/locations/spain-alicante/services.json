@@ -286,13 +286,12 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "name": "Mezquita de Torrevieja",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Alicante / Costa Blanca, Spain",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Alicante%20%2F%20Costa%20Blanca%2C%20Spain",
+          "title": "OpenStreetMap — Mezquita de Torrevieja",
+          "url": "https://www.openstreetmap.org/node/4846969608",
           "accessed": "2026-04-23"
         }
       ]
@@ -351,65 +350,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Valencia Once",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Alicante / Costa Blanca, Spain",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Alicante%20%2F%20Costa%20Blanca%2C%20Spain",
+          "title": "OpenStreetMap — Valencia Once",
+          "url": "https://www.openstreetmap.org/node/245422340",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "La Tagliatella",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Alicante / Costa Blanca, Spain",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Alicante%20%2F%20Costa%20Blanca%2C%20Spain",
+          "title": "OpenStreetMap — La Tagliatella",
+          "url": "https://www.openstreetmap.org/node/280577600",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Texicano Internacional",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Alicante / Costa Blanca, Spain",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Alicante%20%2F%20Costa%20Blanca%2C%20Spain",
+          "title": "OpenStreetMap — Texicano Internacional",
+          "url": "https://www.openstreetmap.org/node/1669168171",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Restaurante Tailandés Sabatika",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Alicante / Costa Blanca, Spain",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Alicante%20%2F%20Costa%20Blanca%2C%20Spain",
+          "title": "OpenStreetMap — Restaurante Tailandés Sabatika",
+          "url": "https://www.openstreetmap.org/node/300088166",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Restaurante Curry Leaf",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Alicante / Costa Blanca, Spain",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Alicante%20%2F%20Costa%20Blanca%2C%20Spain",
+          "title": "OpenStreetMap — Restaurante Curry Leaf",
+          "url": "https://www.openstreetmap.org/node/1005426165",
           "accessed": "2026-04-23"
         }
       ]

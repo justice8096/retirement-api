@@ -287,26 +287,24 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "name": "Zagrebačka džamija",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Zagreb, Croatia",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Zagreb%2C%20Croatia",
+          "title": "OpenStreetMap — Zagrebačka džamija",
+          "url": "https://www.openstreetmap.org/way/477588594",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "name": "Sinagoga Židovske općine Zagreb",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Zagreb, Croatia",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Zagreb%2C%20Croatia",
+          "title": "OpenStreetMap — Sinagoga Židovske općine Zagreb",
+          "url": "https://www.openstreetmap.org/node/13304434100",
           "accessed": "2026-04-23"
         }
       ]
@@ -352,65 +350,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Pizzeria DG",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Zagreb, Croatia",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Zagreb%2C%20Croatia",
+          "title": "OpenStreetMap — Pizzeria DG",
+          "url": "https://www.openstreetmap.org/node/321502912",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Pizzeria Viva",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Zagreb, Croatia",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Zagreb%2C%20Croatia",
+          "title": "OpenStreetMap — Pizzeria Viva",
+          "url": "https://www.openstreetmap.org/node/338798437",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Bistro Ziher",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Zagreb, Croatia",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Zagreb%2C%20Croatia",
+          "title": "OpenStreetMap — Bistro Ziher",
+          "url": "https://www.openstreetmap.org/node/4683476890",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Izakaya",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Zagreb, Croatia",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Zagreb%2C%20Croatia",
+          "title": "OpenStreetMap — Izakaya",
+          "url": "https://www.openstreetmap.org/node/4472781126",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Royal India",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Zagreb, Croatia",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Zagreb%2C%20Croatia",
+          "title": "OpenStreetMap — Royal India",
+          "url": "https://www.openstreetmap.org/node/1272993961",
           "accessed": "2026-04-23"
         }
       ]
