@@ -300,13 +300,12 @@
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "name": "Bet Yaacob",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Punta del Este, Uruguay",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Punta%20del%20Este%2C%20Uruguay",
+          "title": "OpenStreetMap — Bet Yaacob",
+          "url": "https://www.openstreetmap.org/node/4543402658",
           "accessed": "2026-04-23"
         }
       ]
@@ -352,26 +351,24 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Il Mondo della Pizza",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Punta del Este, Uruguay",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Punta%20del%20Este%2C%20Uruguay",
+          "title": "OpenStreetMap — Il Mondo della Pizza",
+          "url": "https://www.openstreetmap.org/node/1169398251",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "The Box Pizza - Gastronomía",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Punta del Este, Uruguay",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Punta%20del%20Este%2C%20Uruguay",
+          "title": "OpenStreetMap — The Box Pizza - Gastronomía",
+          "url": "https://www.openstreetmap.org/node/9663186090",
           "accessed": "2026-04-23"
         }
       ]

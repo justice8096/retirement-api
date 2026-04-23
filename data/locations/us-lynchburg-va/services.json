@@ -286,26 +286,26 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
+      "name": "Greater Lynchburg Islamic Association",
       "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Lynchburg, VA",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Lynchburg%2C%20VA",
+          "title": "OpenStreetMap — Greater Lynchburg Islamic Association",
+          "url": "https://www.openstreetmap.org/node/8338950863",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
+      "name": "Agudath Sholom Synagogue",
       "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Lynchburg, VA",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Lynchburg%2C%20VA",
+          "title": "OpenStreetMap — Agudath Sholom Synagogue",
+          "url": "https://www.openstreetmap.org/way/1079606200",
           "accessed": "2026-04-23"
         }
       ]
@@ -351,65 +351,65 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "La Carreta",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Lynchburg, VA",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Lynchburg%2C%20VA",
+          "title": "OpenStreetMap — La Carreta",
+          "url": "https://www.openstreetmap.org/node/463761517",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
+      "name": "Lori's",
       "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Lynchburg, VA",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Lynchburg%2C%20VA",
+          "title": "OpenStreetMap — Lori's",
+          "url": "https://www.openstreetmap.org/node/463761578",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
+      "name": "La Carreta",
       "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Lynchburg, VA",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Lynchburg%2C%20VA",
+          "title": "OpenStreetMap — La Carreta",
+          "url": "https://www.openstreetmap.org/node/463761517",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
+      "name": "Ty Thai Cuisine",
       "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Lynchburg, VA",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Lynchburg%2C%20VA",
+          "title": "OpenStreetMap — Ty Thai Cuisine",
+          "url": "https://www.openstreetmap.org/node/2470182030",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
+      "name": "Milan Indian Cuisine",
       "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Lynchburg, VA",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Lynchburg%2C%20VA",
+          "title": "OpenStreetMap — Milan Indian Cuisine",
+          "url": "https://www.openstreetmap.org/node/2428711618",
           "accessed": "2026-04-23"
         }
       ]

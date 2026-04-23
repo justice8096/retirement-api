@@ -286,26 +286,26 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
+      "name": "Islamic Center of New Mexico",
       "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Albuquerque, NM",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Albuquerque%2C%20NM",
+          "title": "OpenStreetMap — Islamic Center of New Mexico",
+          "url": "https://www.openstreetmap.org/way/399315607",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
+      "name": "Congregation Albert",
       "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Albuquerque, NM",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Albuquerque%2C%20NM",
+          "title": "OpenStreetMap — Congregation Albert",
+          "url": "https://www.openstreetmap.org/node/357622790",
           "accessed": "2026-04-23"
         }
       ]
@@ -351,65 +351,65 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "Flying Star",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Albuquerque, NM",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Albuquerque%2C%20NM",
+          "title": "OpenStreetMap — Flying Star",
+          "url": "https://www.openstreetmap.org/node/207072862",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
+      "name": "M'Tucci's Bar Roma",
       "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Albuquerque, NM",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Albuquerque%2C%20NM",
+          "title": "OpenStreetMap — M'Tucci's Bar Roma",
+          "url": "https://www.openstreetmap.org/node/601599339",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
+      "name": "Casa de Benevites",
       "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Albuquerque, NM",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Albuquerque%2C%20NM",
+          "title": "OpenStreetMap — Casa de Benevites",
+          "url": "https://www.openstreetmap.org/node/1248859717",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
+      "name": "Thai Tip",
       "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Albuquerque, NM",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Albuquerque%2C%20NM",
+          "title": "OpenStreetMap — Thai Tip",
+          "url": "https://www.openstreetmap.org/node/600451406",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
+      "name": "Taj Mahal",
       "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Albuquerque, NM",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Albuquerque%2C%20NM",
+          "title": "OpenStreetMap — Taj Mahal",
+          "url": "https://www.openstreetmap.org/node/1857053518",
           "accessed": "2026-04-23"
         }
       ]

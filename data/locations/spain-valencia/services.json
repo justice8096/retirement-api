@@ -287,13 +287,12 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "name": "Mezquita la Paz",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Valencia, Spain",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Valencia%2C%20Spain",
+          "title": "OpenStreetMap — Mezquita la Paz",
+          "url": "https://www.openstreetmap.org/node/4010905269",
           "accessed": "2026-04-23"
         }
       ]
@@ -352,65 +351,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "La Masía del Vino",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Valencia, Spain",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Valencia%2C%20Spain",
+          "title": "OpenStreetMap — La Masía del Vino",
+          "url": "https://www.openstreetmap.org/node/31023742",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Dhaba",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Valencia, Spain",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Valencia%2C%20Spain",
+          "title": "OpenStreetMap — Dhaba",
+          "url": "https://www.openstreetmap.org/node/203671779",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Las Adelitas",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Valencia, Spain",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Valencia%2C%20Spain",
+          "title": "OpenStreetMap — Las Adelitas",
+          "url": "https://www.openstreetmap.org/node/5609351421",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Asia",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Valencia, Spain",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Valencia%2C%20Spain",
+          "title": "OpenStreetMap — Asia",
+          "url": "https://www.openstreetmap.org/node/859620363",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Sher Khan",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Valencia, Spain",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Valencia%2C%20Spain",
+          "title": "OpenStreetMap — Sher Khan",
+          "url": "https://www.openstreetmap.org/node/1050456284",
           "accessed": "2026-04-23"
         }
       ]

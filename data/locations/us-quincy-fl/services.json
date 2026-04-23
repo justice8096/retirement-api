@@ -299,13 +299,13 @@
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
+      "name": "Temple Israel",
       "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Quincy, FL",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Quincy%2C%20FL",
+          "title": "OpenStreetMap — Temple Israel",
+          "url": "https://www.openstreetmap.org/way/559111463",
           "accessed": "2026-04-23"
         }
       ]
@@ -351,65 +351,65 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "Coach's Pizza",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Quincy, FL",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Quincy%2C%20FL",
+          "title": "OpenStreetMap — Coach's Pizza",
+          "url": "https://www.openstreetmap.org/node/577477307",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
+      "name": "Little Italy",
       "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Quincy, FL",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Quincy%2C%20FL",
+          "title": "OpenStreetMap — Little Italy",
+          "url": "https://www.openstreetmap.org/node/3226073901",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
+      "name": "Las Brazas",
       "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Quincy, FL",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Quincy%2C%20FL",
+          "title": "OpenStreetMap — Las Brazas",
+          "url": "https://www.openstreetmap.org/node/959973430",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
+      "name": "Volcano Hot Pot",
       "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Quincy, FL",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Quincy%2C%20FL",
+          "title": "OpenStreetMap — Volcano Hot Pot",
+          "url": "https://www.openstreetmap.org/node/1828125456",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
+      "name": "Persis Grill",
       "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Quincy, FL",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Quincy%2C%20FL",
+          "title": "OpenStreetMap — Persis Grill",
+          "url": "https://www.openstreetmap.org/node/2622804591",
           "accessed": "2026-04-23"
         }
       ]

@@ -251,13 +251,13 @@
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
+      "name": "Saint Thomas Synagogue",
       "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Charlotte Amalie, US Virgin Islands",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Charlotte%20Amalie%2C%20US%20Virgin%20Islands",
+          "title": "OpenStreetMap — Saint Thomas Synagogue",
+          "url": "https://www.openstreetmap.org/way/215454486",
           "accessed": "2026-04-23"
         }
       ]
@@ -303,26 +303,26 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "Mafolie Restaurant",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Charlotte Amalie, US Virgin Islands",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Charlotte%20Amalie%2C%20US%20Virgin%20Islands",
+          "title": "OpenStreetMap — Mafolie Restaurant",
+          "url": "https://www.openstreetmap.org/node/452276565",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
+      "name": "East End Cafe",
       "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Charlotte Amalie, US Virgin Islands",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Charlotte%20Amalie%2C%20US%20Virgin%20Islands",
+          "title": "OpenStreetMap — East End Cafe",
+          "url": "https://www.openstreetmap.org/node/453040038",
           "accessed": "2026-04-23"
         }
       ]
@@ -342,13 +342,13 @@
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
+      "name": "Rhumb Lines",
       "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Charlotte Amalie, US Virgin Islands",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Charlotte%20Amalie%2C%20US%20Virgin%20Islands",
+          "title": "OpenStreetMap — Rhumb Lines",
+          "url": "https://www.openstreetmap.org/node/4548721587",
           "accessed": "2026-04-23"
         }
       ]

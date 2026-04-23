@@ -287,26 +287,24 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "name": "Medžlis islamske zajednice Pula",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Istria, Croatia",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Istria%2C%20Croatia",
+          "title": "OpenStreetMap — Medžlis islamske zajednice Pula",
+          "url": "https://www.openstreetmap.org/node/3633153384",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "name": "Židovska sinagoga",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Istria, Croatia",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Istria%2C%20Croatia",
+          "title": "OpenStreetMap — Židovska sinagoga",
+          "url": "https://www.openstreetmap.org/way/279408096",
           "accessed": "2026-04-23"
         }
       ]
@@ -352,13 +350,12 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Basilico",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Istria, Croatia",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Istria%2C%20Croatia",
+          "title": "OpenStreetMap — Basilico",
+          "url": "https://www.openstreetmap.org/node/37051079",
           "accessed": "2026-04-23"
         }
       ]
@@ -378,39 +375,36 @@
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "La Concha",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Istria, Croatia",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Istria%2C%20Croatia",
+          "title": "OpenStreetMap — La Concha",
+          "url": "https://www.openstreetmap.org/node/3070040538",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Grote",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Istria, Croatia",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Istria%2C%20Croatia",
+          "title": "OpenStreetMap — Grote",
+          "url": "https://www.openstreetmap.org/node/4266707089",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Trattoria Lili",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Istria, Croatia",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Istria%2C%20Croatia",
+          "title": "OpenStreetMap — Trattoria Lili",
+          "url": "https://www.openstreetmap.org/node/4621974742",
           "accessed": "2026-04-23"
         }
       ]

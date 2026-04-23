@@ -238,26 +238,26 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
+      "name": "Muhammed Mosque",
       "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Lorton VA, USA",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Lorton%20VA%2C%20USA",
+          "title": "OpenStreetMap — Muhammed Mosque",
+          "url": "https://www.openstreetmap.org/node/358962220",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
+      "name": "Congregation Beth Emeth Synagogue",
       "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "notes": "Synagogue / Hebrew Temple within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Lorton VA, USA",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Lorton%20VA%2C%20USA",
+          "title": "OpenStreetMap — Congregation Beth Emeth Synagogue",
+          "url": "https://www.openstreetmap.org/node/356580640",
           "accessed": "2026-04-23"
         }
       ]
@@ -303,65 +303,65 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
+      "name": "Cafe Rio",
       "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Lorton VA, USA",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Lorton%20VA%2C%20USA",
+          "title": "OpenStreetMap — Cafe Rio",
+          "url": "https://www.openstreetmap.org/node/258062907",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
+      "name": "Santucci's Deli",
       "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Lorton VA, USA",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Lorton%20VA%2C%20USA",
+          "title": "OpenStreetMap — Santucci's Deli",
+          "url": "https://www.openstreetmap.org/node/450122830",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
+      "name": "Cafe Rio",
       "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Lorton VA, USA",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Lorton%20VA%2C%20USA",
+          "title": "OpenStreetMap — Cafe Rio",
+          "url": "https://www.openstreetmap.org/node/258062907",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
+      "name": "Thai at Silver Spring",
       "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Lorton VA, USA",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Lorton%20VA%2C%20USA",
+          "title": "OpenStreetMap — Thai at Silver Spring",
+          "url": "https://www.openstreetmap.org/node/459790883",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
+      "name": "Bombay Bistro",
       "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Lorton VA, USA",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Lorton%20VA%2C%20USA",
+          "title": "OpenStreetMap — Bombay Bistro",
+          "url": "https://www.openstreetmap.org/node/268777767",
           "accessed": "2026-04-23"
         }
       ]

@@ -352,65 +352,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "J&C Delicias",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Medellín (El Poblado, Laureles), Colombia",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Medell%C3%ADn%20(El%20Poblado%2C%20Laureles)%2C%20Colombia",
+          "title": "OpenStreetMap — J&C Delicias",
+          "url": "https://www.openstreetmap.org/node/465162168",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Café Zorba",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Medellín (El Poblado, Laureles), Colombia",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Medell%C3%ADn%20(El%20Poblado%2C%20Laureles)%2C%20Colombia",
+          "title": "OpenStreetMap — Café Zorba",
+          "url": "https://www.openstreetmap.org/node/2089497823",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "El Rejo / Comida Mexicana",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Medellín (El Poblado, Laureles), Colombia",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Medell%C3%ADn%20(El%20Poblado%2C%20Laureles)%2C%20Colombia",
+          "title": "OpenStreetMap — El Rejo / Comida Mexicana",
+          "url": "https://www.openstreetmap.org/node/3828692136",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Flor de Loto",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Medellín (El Poblado, Laureles), Colombia",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Medell%C3%ADn%20(El%20Poblado%2C%20Laureles)%2C%20Colombia",
+          "title": "OpenStreetMap — Flor de Loto",
+          "url": "https://www.openstreetmap.org/node/3216522674",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Naan",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Medellín (El Poblado, Laureles), Colombia",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Medell%C3%ADn%20(El%20Poblado%2C%20Laureles)%2C%20Colombia",
+          "title": "OpenStreetMap — Naan",
+          "url": "https://www.openstreetmap.org/node/4551680290",
           "accessed": "2026-04-23"
         }
       ]

@@ -287,13 +287,12 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
-      "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "name": "Islamic Cultural Centre Of Ennis",
+      "notes": "Mosque within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Limerick, Ireland",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Limerick%2C%20Ireland",
+          "title": "OpenStreetMap — Islamic Cultural Centre Of Ennis",
+          "url": "https://www.openstreetmap.org/node/11915764696",
           "accessed": "2026-04-23"
         }
       ]
@@ -352,65 +351,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Jasmine Palace",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Limerick, Ireland",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Limerick%2C%20Ireland",
+          "title": "OpenStreetMap — Jasmine Palace",
+          "url": "https://www.openstreetmap.org/node/250634269",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Tuscany Bistro",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Limerick, Ireland",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Limerick%2C%20Ireland",
+          "title": "OpenStreetMap — Tuscany Bistro",
+          "url": "https://www.openstreetmap.org/node/331958093",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Boojum",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Limerick, Ireland",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Limerick%2C%20Ireland",
+          "title": "OpenStreetMap — Boojum",
+          "url": "https://www.openstreetmap.org/way/455950323",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Fusion",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Limerick, Ireland",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Limerick%2C%20Ireland",
+          "title": "OpenStreetMap — Fusion",
+          "url": "https://www.openstreetmap.org/node/490025805",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Poppadom",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Limerick, Ireland",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Limerick%2C%20Ireland",
+          "title": "OpenStreetMap — Poppadom",
+          "url": "https://www.openstreetmap.org/node/603134591",
           "accessed": "2026-04-23"
         }
       ]

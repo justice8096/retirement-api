@@ -352,13 +352,12 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Rincón del faro",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Pedasí, Panama",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Pedas%C3%AD%2C%20Panama",
+          "title": "OpenStreetMap — Rincón del faro",
+          "url": "https://www.openstreetmap.org/node/1665807107",
           "accessed": "2026-04-23"
         }
       ]
@@ -378,13 +377,12 @@
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Tortugas",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Pedasí, Panama",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Pedas%C3%AD%2C%20Panama",
+          "title": "OpenStreetMap — Tortugas",
+          "url": "https://www.openstreetmap.org/node/5346553195",
           "accessed": "2026-04-23"
         }
       ]

@@ -364,13 +364,12 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Lety's",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Mazatlán, Mexico",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Mazatl%C3%A1n%2C%20Mexico",
+          "title": "OpenStreetMap — Lety's",
+          "url": "https://www.openstreetmap.org/node/371718684",
           "accessed": "2026-04-23"
         }
       ]
@@ -390,13 +389,12 @@
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Panchos",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Mazatlán, Mexico",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Mazatl%C3%A1n%2C%20Mexico",
+          "title": "OpenStreetMap — Panchos",
+          "url": "https://www.openstreetmap.org/node/2180733986",
           "accessed": "2026-04-23"
         }
       ]

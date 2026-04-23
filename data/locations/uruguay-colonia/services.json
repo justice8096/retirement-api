@@ -352,39 +352,36 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Restaurant La Esquinita",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Colonia del Sacramento, Uruguay",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Colonia%20del%20Sacramento%2C%20Uruguay",
+          "title": "OpenStreetMap — Restaurant La Esquinita",
+          "url": "https://www.openstreetmap.org/node/1716651656",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Punta Piedra",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Colonia del Sacramento, Uruguay",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Colonia%20del%20Sacramento%2C%20Uruguay",
+          "title": "OpenStreetMap — Punta Piedra",
+          "url": "https://www.openstreetmap.org/node/2983902850",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Santa Fe Trail",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Colonia del Sacramento, Uruguay",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Colonia%20del%20Sacramento%2C%20Uruguay",
+          "title": "OpenStreetMap — Santa Fe Trail",
+          "url": "https://www.openstreetmap.org/way/1002484517",
           "accessed": "2026-04-23"
         }
       ]

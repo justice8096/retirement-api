@@ -352,65 +352,60 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Top-rated local cuisine (search)",
-      "distanceMi": 30,
-      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "name": "Cabo San Juan del Guia Cape",
+      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — top rated local restaurants near Santa Marta, Colombia",
-          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Santa%20Marta%2C%20Colombia",
+          "title": "OpenStreetMap — Cabo San Juan del Guia Cape",
+          "url": "https://www.openstreetmap.org/node/334313943",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_italian",
-      "name": "Italian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "name": "Salvator's Pizza & Pasta",
+      "notes": "Italian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — italian restaurant near Santa Marta, Colombia",
-          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Santa%20Marta%2C%20Colombia",
+          "title": "OpenStreetMap — Salvator's Pizza & Pasta",
+          "url": "https://www.openstreetmap.org/node/1464686832",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "name": "Ikaro",
+      "notes": "Mexican restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Santa Marta, Colombia",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Santa%20Marta%2C%20Colombia",
+          "title": "OpenStreetMap — Ikaro",
+          "url": "https://www.openstreetmap.org/node/4587063989",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_thai_or_asian",
-      "name": "Thai / other Asian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "name": "Lazy Cat",
+      "notes": "Thai / Asian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — thai restaurant near Santa Marta, Colombia",
-          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Santa%20Marta%2C%20Colombia",
+          "title": "OpenStreetMap — Lazy Cat",
+          "url": "https://www.openstreetmap.org/node/4184121805",
           "accessed": "2026-04-23"
         }
       ]
     },
     {
       "categoryId": "restaurant_indian",
-      "name": "Indian restaurants (search)",
-      "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "name": "Chillies Don de Sam",
+      "notes": "Indian restaurant within 30 mi. Sourced from OpenStreetMap.",
       "sources": [
         {
-          "title": "Google Maps — indian restaurant near Santa Marta, Colombia",
-          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Santa%20Marta%2C%20Colombia",
+          "title": "OpenStreetMap — Chillies Don de Sam",
+          "url": "https://www.openstreetmap.org/node/4408899590",
           "accessed": "2026-04-23"
         }
       ]
