@@ -196,6 +196,54 @@
           "url": "https://www.pagesjaunes.fr/annuaire/lyon-69/toilettage-animaux"
         }
       ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Carrefour",
+      "notes": "Mainstream hypermarket chain, countrywide.",
+      "sources": [
+        {
+          "title": "Carrefour",
+          "url": "https://www.carrefour.fr/",
+          "accessed": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery",
+      "name": "Lidl",
+      "notes": "German discount grocer — widespread in France.",
+      "sources": [
+        {
+          "title": "Lidl",
+          "url": "https://www.lidl.fr/",
+          "accessed": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "categoryId": "electronics",
+      "name": "Fnac Darty",
+      "notes": "Combined electronics + appliances + books chain.",
+      "sources": [
+        {
+          "title": "Fnac Darty",
+          "url": "https://www.fnac.com/",
+          "accessed": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "categoryId": "hardware",
+      "name": "Leroy Merlin",
+      "notes": "Major home-improvement chain.",
+      "sources": [
+        {
+          "title": "Leroy Merlin",
+          "url": "https://www.leroymerlin.fr/",
+          "accessed": "2026-04-22"
+        }
+      ]
     }
   ],
   "attractions": [
