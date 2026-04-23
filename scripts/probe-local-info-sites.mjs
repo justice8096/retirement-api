@@ -49,11 +49,13 @@ async function probeUrl(url) {
     clearTimeout(to);
     const finalUrl = res.url;
     const st = res.status;
+    const wasRedirected = res.redirected || (finalUrl && finalUrl !== url);
     let linkStatus;
-    if (st >= 200 && st < 300) linkStatus = 'ok';
-    else if (st >= 300 && st < 400) linkStatus = 'redirect';
-    else if (st >= 400 && st < 500) linkStatus = 'client-error';
+    if (st >= 400 && st < 500) linkStatus = 'client-error';
     else if (st >= 500) linkStatus = 'server-error';
+    else if (st >= 300 && st < 400) linkStatus = 'redirect';
+    else if (wasRedirected && st >= 200 && st < 300) linkStatus = 'redirect';
+    else if (st >= 200 && st < 300) linkStatus = 'ok';
     else linkStatus = 'other';
     return { linkStatus, linkHttpStatus: st, linkFinalUrl: finalUrl };
   } catch (err) {
