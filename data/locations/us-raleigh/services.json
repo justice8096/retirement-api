@@ -325,13 +325,13 @@
     },
     {
       "categoryId": "restaurant_local",
-      "name": "Torero's Mexican Restaurant",
+      "name": "Top-rated Southern / Carolina BBQ (search)",
       "distanceMi": 30,
-      "notes": "Top-rated local restaurant within 30 mi. Sourced from OpenStreetMap.",
+      "notes": "Highest-rated authentic Southern / Eastern-Carolina BBQ restaurants within ~30 mi. OSM's first hit was already covered by another cuisine category, so we fall back to a search.",
       "sources": [
         {
-          "title": "OpenStreetMap — Torero's Mexican Restaurant",
-          "url": "https://www.openstreetmap.org/node/299507889",
+          "title": "Google Maps — top rated southern BBQ restaurants near Raleigh, NC",
+          "url": "https://www.google.com/maps/search/top%20rated%20southern%20bbq%20restaurants%20near%20Raleigh%2C%20NC",
           "accessed": "2026-04-23"
         }
       ]
