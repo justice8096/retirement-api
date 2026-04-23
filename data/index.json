@@ -2261,6 +2261,56 @@
       "hasDetailedCosts": null
     },
     {
+      "id": "us-annandale-va",
+      "name": "Annandale VA, USA",
+      "country": "United States",
+      "region": "US Mid-Atlantic",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 0,
+      "climate": {
+        "winterLowF": 24,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 7,
+        "expatCommunity": 7,
+        "safety": 8,
+        "internetSpeed": "1Gbps widely available (Verizon Fios, Cox)",
+        "englishPrevalence": 9
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-annapolis-md",
+      "name": "Annapolis MD, USA",
+      "country": "United States",
+      "region": "US Mid-Atlantic",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 0,
+      "climate": {
+        "winterLowF": 27,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 8,
+        "expatCommunity": 0,
+        "safety": 8,
+        "internetSpeed": "1Gbps widely available (Comcast/Xfinity, Verizon Fios partial)",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
       "id": "us-armstrong-county-pa",
       "name": "Armstrong County, PA",
       "country": "United States",
@@ -2411,6 +2461,31 @@
       "hasDetailedCosts": null
     },
     {
+      "id": "us-bowie-md",
+      "name": "Bowie MD, USA",
+      "country": "United States",
+      "region": "US Mid-Atlantic",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 0,
+      "climate": {
+        "winterLowF": 26,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 8,
+        "expatCommunity": 2,
+        "safety": 7,
+        "internetSpeed": "1Gbps widely available (Comcast/Xfinity, Verizon Fios partial)",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
       "id": "us-camden-nj",
       "name": "Camden, New Jersey",
       "country": "United States",
@@ -2430,6 +2505,56 @@
         "safety": 4,
         "internetSpeed": "1Gbps available (Comcast Xfinity)",
         "englishPrevalence": 8
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-catonsville-md",
+      "name": "Catonsville MD, USA",
+      "country": "United States",
+      "region": "US Mid-Atlantic",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 0,
+      "climate": {
+        "winterLowF": 25,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 9,
+        "expatCommunity": 4,
+        "safety": 8,
+        "internetSpeed": "1Gbps widely available (Comcast/Xfinity)",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-charlotte-amalie-vi",
+      "name": "Charlotte Amalie, US Virgin Islands",
+      "country": "United States",
+      "region": "US Virgin Islands",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 7975,
+      "climate": {
+        "winterLowF": 74,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 5,
+        "dogFriendly": 6,
+        "expatCommunity": 5,
+        "safety": 5,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
       },
       "inclusionScore": null,
       "neighborhoodCount": 0,
@@ -2490,6 +2615,31 @@
       "hasDetailedCosts": null
     },
     {
+      "id": "us-christiansted-vi",
+      "name": "Christiansted, US Virgin Islands",
+      "country": "United States",
+      "region": "US Virgin Islands",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 6930,
+      "climate": {
+        "winterLowF": 73,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 4,
+        "dogFriendly": 7,
+        "expatCommunity": 5,
+        "safety": 5,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
       "id": "us-cleveland-oh",
       "name": "Cleveland, OH",
       "country": "United States",
@@ -2540,6 +2690,31 @@
       "hasDetailedCosts": null
     },
     {
+      "id": "us-dededo-gu",
+      "name": "Dededo, Guam",
+      "country": "United States",
+      "region": "Guam",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5895,
+      "climate": {
+        "winterLowF": 76,
+        "summerHighF": 87,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 5,
+        "dogFriendly": 7,
+        "expatCommunity": 5,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 9
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
       "id": "us-denver-co",
       "name": "Denver, CO",
       "country": "United States",
@@ -2558,6 +2733,31 @@
         "expatCommunity": 1,
         "safety": 7,
         "internetSpeed": "1Gbps available",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-elkridge-md",
+      "name": "Elkridge MD, USA",
+      "country": "United States",
+      "region": "US Mid-Atlantic",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 0,
+      "climate": {
+        "winterLowF": 25,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 8,
+        "expatCommunity": 3,
+        "safety": 9,
+        "internetSpeed": "1Gbps widely available (Comcast/Xfinity, Verizon Fios)",
         "englishPrevalence": 10
       },
       "inclusionScore": null,
@@ -2665,6 +2865,56 @@
       "hasDetailedCosts": null
     },
     {
+      "id": "us-gainesville-va",
+      "name": "Gainesville VA, USA",
+      "country": "United States",
+      "region": "US Mid-Atlantic",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 0,
+      "climate": {
+        "winterLowF": 23,
+        "summerHighF": 89,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 8,
+        "expatCommunity": 0,
+        "safety": 8,
+        "internetSpeed": "1Gbps widely available (Verizon Fios, Comcast/Xfinity)",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-glen-burnie-md",
+      "name": "Glen Burnie MD, USA",
+      "country": "United States",
+      "region": "US Mid-Atlantic",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 0,
+      "climate": {
+        "winterLowF": 26,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 9,
+        "dogFriendly": 8,
+        "expatCommunity": 4,
+        "safety": 7,
+        "internetSpeed": "1Gbps widely available (Comcast/Xfinity)",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
       "id": "us-grand-forks-nd",
       "name": "Grand Forks, ND",
       "country": "United States",
@@ -2684,6 +2934,31 @@
         "safety": 8,
         "internetSpeed": "1Gbps available",
         "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-hagatna-gu",
+      "name": "Hagåtña, Guam",
+      "country": "United States",
+      "region": "Guam",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 6440,
+      "climate": {
+        "winterLowF": 76,
+        "summerHighF": 87,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 5,
+        "dogFriendly": 6,
+        "expatCommunity": 6,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 9
       },
       "inclusionScore": null,
       "neighborhoodCount": 0,
@@ -2790,6 +3065,31 @@
       "hasDetailedCosts": null
     },
     {
+      "id": "us-lorton-va",
+      "name": "Lorton VA, USA",
+      "country": "United States",
+      "region": "US Mid-Atlantic",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 0,
+      "climate": {
+        "winterLowF": 25,
+        "summerHighF": 89,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 9,
+        "expatCommunity": 3,
+        "safety": 8,
+        "internetSpeed": "1Gbps widely available (Verizon Fios, Cox, Xfinity)",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
       "id": "us-lynchburg-va",
       "name": "Lynchburg, VA",
       "country": "United States",
@@ -2809,6 +3109,31 @@
         "safety": 6,
         "internetSpeed": "1Gbps available",
         "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-manassas-va",
+      "name": "Manassas VA, USA",
+      "country": "United States",
+      "region": "US Mid-Atlantic",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 0,
+      "climate": {
+        "winterLowF": 23,
+        "summerHighF": 89,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 8,
+        "expatCommunity": 4,
+        "safety": 7,
+        "internetSpeed": "1Gbps widely available (Verizon Fios, Comcast)",
+        "englishPrevalence": 9
       },
       "inclusionScore": null,
       "neighborhoodCount": 0,
@@ -2915,6 +3240,31 @@
       "hasDetailedCosts": null
     },
     {
+      "id": "us-new-york-city",
+      "name": "New York City, New York",
+      "country": "United States",
+      "region": "US Northeast",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 0,
+      "climate": {
+        "winterLowF": 26,
+        "summerHighF": 85,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 10,
+        "dogFriendly": 7,
+        "expatCommunity": 0,
+        "safety": 7,
+        "internetSpeed": "1Gbps+ widely available (Verizon Fios, Spectrum)",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
       "id": "us-norfolk-va",
       "name": "Norfolk, VA",
       "country": "United States",
@@ -2959,6 +3309,31 @@
         "safety": 7,
         "internetSpeed": "1Gbps available",
         "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-pago-pago-as",
+      "name": "Pago Pago, American Samoa",
+      "country": "United States",
+      "region": "American Samoa",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5180,
+      "climate": {
+        "winterLowF": 74,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 3,
+        "dogFriendly": 5,
+        "expatCommunity": 3,
+        "safety": 7,
+        "internetSpeed": "Up to 100Mbps",
+        "englishPrevalence": 9
       },
       "inclusionScore": null,
       "neighborhoodCount": 0,
@@ -3034,6 +3409,31 @@
         "safety": 6,
         "internetSpeed": "1Gbps available",
         "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-ponce-pr",
+      "name": "Ponce, Puerto Rico",
+      "country": "United States",
+      "region": "Puerto Rico",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4465,
+      "climate": {
+        "winterLowF": 70,
+        "summerHighF": 90,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 6,
+        "expatCommunity": 3,
+        "safety": 6,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 5
       },
       "inclusionScore": null,
       "neighborhoodCount": 0,
@@ -3190,6 +3590,56 @@
       "hasDetailedCosts": null
     },
     {
+      "id": "us-saipan-mp",
+      "name": "Saipan, Northern Mariana Islands",
+      "country": "United States",
+      "region": "Northern Mariana Islands",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5430,
+      "climate": {
+        "winterLowF": 75,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 4,
+        "dogFriendly": 6,
+        "expatCommunity": 5,
+        "safety": 7,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 8
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-san-juan-pr",
+      "name": "San Juan, Puerto Rico",
+      "country": "United States",
+      "region": "Puerto Rico",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 5505,
+      "climate": {
+        "winterLowF": 72,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 7,
+        "dogFriendly": 7,
+        "expatCommunity": 6,
+        "safety": 6,
+        "internetSpeed": "1Gbps available",
+        "englishPrevalence": 7
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
       "id": "us-san-marcos-tx",
       "name": "San Marcos, TX",
       "country": "United States",
@@ -3340,6 +3790,31 @@
       "hasDetailedCosts": null
     },
     {
+      "id": "us-tafuna-as",
+      "name": "Tafuna, American Samoa",
+      "country": "United States",
+      "region": "American Samoa",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4765,
+      "climate": {
+        "winterLowF": 74,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 3,
+        "dogFriendly": 5,
+        "expatCommunity": 3,
+        "safety": 7,
+        "internetSpeed": "Up to 100Mbps",
+        "englishPrevalence": 9
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
       "id": "us-tampa-fl",
       "name": "Tampa, FL",
       "country": "United States",
@@ -3359,6 +3834,31 @@
         "safety": 6,
         "internetSpeed": "1Gbps available",
         "englishPrevalence": 10
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "us-tinian-mp",
+      "name": "Tinian, Northern Mariana Islands",
+      "country": "United States",
+      "region": "Northern Mariana Islands",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4920,
+      "climate": {
+        "winterLowF": 75,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 3,
+        "dogFriendly": 7,
+        "expatCommunity": 2,
+        "safety": 8,
+        "internetSpeed": "Up to 100Mbps",
+        "englishPrevalence": 7
       },
       "inclusionScore": null,
       "neighborhoodCount": 0,
@@ -3459,256 +3959,6 @@
         "safety": 7,
         "internetSpeed": "1Gbps available",
         "englishPrevalence": 10
-      },
-      "inclusionScore": null,
-      "neighborhoodCount": 0,
-      "hasDetailedCosts": null
-    },
-    {
-      "id": "us-san-juan-pr",
-      "name": "San Juan, Puerto Rico",
-      "country": "United States",
-      "region": "Puerto Rico",
-      "currency": "USD",
-      "exchangeRate": 1,
-      "monthlyCostUSD": 5505,
-      "climate": {
-        "winterLowF": 72,
-        "summerHighF": 88,
-        "meetsWarmWinterReq": true
-      },
-      "scores": {
-        "healthcare": 7,
-        "dogFriendly": 7,
-        "expatCommunity": 6,
-        "safety": 6,
-        "internetSpeed": "1Gbps available",
-        "englishPrevalence": 7
-      },
-      "inclusionScore": null,
-      "neighborhoodCount": 0,
-      "hasDetailedCosts": null
-    },
-    {
-      "id": "us-ponce-pr",
-      "name": "Ponce, Puerto Rico",
-      "country": "United States",
-      "region": "Puerto Rico",
-      "currency": "USD",
-      "exchangeRate": 1,
-      "monthlyCostUSD": 4465,
-      "climate": {
-        "winterLowF": 70,
-        "summerHighF": 90,
-        "meetsWarmWinterReq": true
-      },
-      "scores": {
-        "healthcare": 6,
-        "dogFriendly": 6,
-        "expatCommunity": 3,
-        "safety": 6,
-        "internetSpeed": "1Gbps available",
-        "englishPrevalence": 5
-      },
-      "inclusionScore": null,
-      "neighborhoodCount": 0,
-      "hasDetailedCosts": null
-    },
-    {
-      "id": "us-charlotte-amalie-vi",
-      "name": "Charlotte Amalie, US Virgin Islands",
-      "country": "United States",
-      "region": "US Virgin Islands",
-      "currency": "USD",
-      "exchangeRate": 1,
-      "monthlyCostUSD": 7975,
-      "climate": {
-        "winterLowF": 74,
-        "summerHighF": 88,
-        "meetsWarmWinterReq": true
-      },
-      "scores": {
-        "healthcare": 5,
-        "dogFriendly": 6,
-        "expatCommunity": 5,
-        "safety": 5,
-        "internetSpeed": "1Gbps available",
-        "englishPrevalence": 10
-      },
-      "inclusionScore": null,
-      "neighborhoodCount": 0,
-      "hasDetailedCosts": null
-    },
-    {
-      "id": "us-christiansted-vi",
-      "name": "Christiansted, US Virgin Islands",
-      "country": "United States",
-      "region": "US Virgin Islands",
-      "currency": "USD",
-      "exchangeRate": 1,
-      "monthlyCostUSD": 6930,
-      "climate": {
-        "winterLowF": 73,
-        "summerHighF": 88,
-        "meetsWarmWinterReq": true
-      },
-      "scores": {
-        "healthcare": 4,
-        "dogFriendly": 7,
-        "expatCommunity": 5,
-        "safety": 5,
-        "internetSpeed": "1Gbps available",
-        "englishPrevalence": 10
-      },
-      "inclusionScore": null,
-      "neighborhoodCount": 0,
-      "hasDetailedCosts": null
-    },
-    {
-      "id": "us-hagatna-gu",
-      "name": "Hagåtña, Guam",
-      "country": "United States",
-      "region": "Guam",
-      "currency": "USD",
-      "exchangeRate": 1,
-      "monthlyCostUSD": 6440,
-      "climate": {
-        "winterLowF": 76,
-        "summerHighF": 87,
-        "meetsWarmWinterReq": true
-      },
-      "scores": {
-        "healthcare": 5,
-        "dogFriendly": 6,
-        "expatCommunity": 6,
-        "safety": 7,
-        "internetSpeed": "1Gbps available",
-        "englishPrevalence": 9
-      },
-      "inclusionScore": null,
-      "neighborhoodCount": 0,
-      "hasDetailedCosts": null
-    },
-    {
-      "id": "us-dededo-gu",
-      "name": "Dededo, Guam",
-      "country": "United States",
-      "region": "Guam",
-      "currency": "USD",
-      "exchangeRate": 1,
-      "monthlyCostUSD": 5895,
-      "climate": {
-        "winterLowF": 76,
-        "summerHighF": 87,
-        "meetsWarmWinterReq": true
-      },
-      "scores": {
-        "healthcare": 5,
-        "dogFriendly": 7,
-        "expatCommunity": 5,
-        "safety": 7,
-        "internetSpeed": "1Gbps available",
-        "englishPrevalence": 9
-      },
-      "inclusionScore": null,
-      "neighborhoodCount": 0,
-      "hasDetailedCosts": null
-    },
-    {
-      "id": "us-saipan-mp",
-      "name": "Saipan, Northern Mariana Islands",
-      "country": "United States",
-      "region": "Northern Mariana Islands",
-      "currency": "USD",
-      "exchangeRate": 1,
-      "monthlyCostUSD": 5430,
-      "climate": {
-        "winterLowF": 75,
-        "summerHighF": 88,
-        "meetsWarmWinterReq": true
-      },
-      "scores": {
-        "healthcare": 4,
-        "dogFriendly": 6,
-        "expatCommunity": 5,
-        "safety": 7,
-        "internetSpeed": "1Gbps available",
-        "englishPrevalence": 8
-      },
-      "inclusionScore": null,
-      "neighborhoodCount": 0,
-      "hasDetailedCosts": null
-    },
-    {
-      "id": "us-tinian-mp",
-      "name": "Tinian, Northern Mariana Islands",
-      "country": "United States",
-      "region": "Northern Mariana Islands",
-      "currency": "USD",
-      "exchangeRate": 1,
-      "monthlyCostUSD": 4920,
-      "climate": {
-        "winterLowF": 75,
-        "summerHighF": 88,
-        "meetsWarmWinterReq": true
-      },
-      "scores": {
-        "healthcare": 3,
-        "dogFriendly": 7,
-        "expatCommunity": 2,
-        "safety": 8,
-        "internetSpeed": "Up to 100Mbps",
-        "englishPrevalence": 7
-      },
-      "inclusionScore": null,
-      "neighborhoodCount": 0,
-      "hasDetailedCosts": null
-    },
-    {
-      "id": "us-pago-pago-as",
-      "name": "Pago Pago, American Samoa",
-      "country": "United States",
-      "region": "American Samoa",
-      "currency": "USD",
-      "exchangeRate": 1,
-      "monthlyCostUSD": 5180,
-      "climate": {
-        "winterLowF": 74,
-        "summerHighF": 88,
-        "meetsWarmWinterReq": true
-      },
-      "scores": {
-        "healthcare": 3,
-        "dogFriendly": 5,
-        "expatCommunity": 3,
-        "safety": 7,
-        "internetSpeed": "Up to 100Mbps",
-        "englishPrevalence": 9
-      },
-      "inclusionScore": null,
-      "neighborhoodCount": 0,
-      "hasDetailedCosts": null
-    },
-    {
-      "id": "us-tafuna-as",
-      "name": "Tafuna, American Samoa",
-      "country": "United States",
-      "region": "American Samoa",
-      "currency": "USD",
-      "exchangeRate": 1,
-      "monthlyCostUSD": 4765,
-      "climate": {
-        "winterLowF": 74,
-        "summerHighF": 88,
-        "meetsWarmWinterReq": true
-      },
-      "scores": {
-        "healthcare": 3,
-        "dogFriendly": 5,
-        "expatCommunity": 3,
-        "safety": 7,
-        "internetSpeed": "Up to 100Mbps",
-        "englishPrevalence": 9
       },
       "inclusionScore": null,
       "neighborhoodCount": 0,
