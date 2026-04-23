@@ -6,13 +6,14 @@ Probed **189** URLs across **158** locations.
 
 | Status | Count |
 |---|---|
-| `ok` | 152 |
+| `ok` | 107 |
+| `redirect` | 47 |
 | `client-error` | 7 |
-| `timeout` | 2 |
+| `timeout` | 1 |
 | `dns` | 19 |
-| `other` | 9 |
+| `other` | 8 |
 
-## Problem links (37)
+## Problem links (35)
 
 | Location | Site | URL | Status | HTTP |
 |---|---|---|---|---|
@@ -22,7 +23,6 @@ Probed **189** URLs across **158** locations.
 | `costa-rica-guanacaste` | Gobierno de Costa Rica — Guanacaste | https://guanacaste.go.cr/ | `dns` | — |
 | `costa-rica-puerto-viejo` | Municipalidad de Talamanca | https://www.talamanca.go.cr/ | `dns` | — |
 | `cyprus-limassol` | Lemesos (Limassol) Municipality | https://www.limassolmunicipal.com.cy/ | `other` | — |
-| `cyprus-paphos` | Pafos Municipality | https://www.pafos.org.cy/ | `timeout` | — |
 | `greece-athens` | City of Athens | https://www.cityofathens.gr/ | `client-error` | 403 |
 | `greece-rhodes` | Municipality of Rhodes | https://www.rhodes.gr/ | `client-error` | 404 |
 | `italy-abruzzo` | Regione Abruzzo | https://www.regione.abruzzo.it/ | `other` | — |
@@ -43,7 +43,6 @@ Probed **189** URLs across **158** locations.
 | `panama-volcan` | Gobierno de Chiriquí | https://www.chiriqui.gob.pa/ | `dns` | — |
 | `portugal-lisbon` | Camara Municipal de Lisboa | https://www.lisboa.pt/ | `other` | — |
 | `portugal-silver-coast` | CCDR Centro (Silver Coast region) | https://www.ccdrc.pt/ | `timeout` | — |
-| `spain-costa-del-sol` | Junta de Andalucía | https://www.juntadeandalucia.es/ | `other` | — |
 | `us-catonsville-md` | Baltimore County, MD | https://www.baltimorecountymd.gov/ | `client-error` | 403 |
 | `us-cherry-hill` | Cherry Hill Township | https://www.cherryhillnj.com/ | `other` | — |
 | `us-chesapeake-va` | Chesapeake Parks, Recreation & Tourism | https://www.cityofchesapeake.net/government/city-departments/parks-recreation-tourism/ | `client-error` | 404 |
@@ -55,7 +54,7 @@ Probed **189** URLs across **158** locations.
 | `us-virginia-beach-va` | City of Virginia Beach | https://www.virginiabeach.gov/ | `other` | — |
 
 
-## Redirects (46)
+## Redirects (47)
 
 Consider updating the seed URL to avoid the redirect.
 
@@ -73,6 +72,7 @@ Consider updating the seed URL to avoid the redirect.
 | `ireland-waterford` | https://www.waterfordcouncil.ie/ | https://waterfordcouncil.ie/ |
 | `ireland-waterford` | https://www.visitwaterford.com/ | https://visitwaterford.com/ |
 | `malta-gozo` | https://mgoz.gov.mt/ | https://gozo.gov.mt/ |
+| `mexico-merida` | https://www.merida.gob.mx/ | https://validate.perfdrive.com/?ssa=da94819e-2c1f-489a-8cfc-0047da2c6e12&ssb=63252213301&ssc=https%3A%2F%2Fwww.merida.gob.mx%2F&ssi=6c397185-cirv-4369-a55a-666cd58c862d&ssk=botmanager_support@radware.com&ssm=31328425703574036104536488322657&ssn=98682c8cac59a87c91aeec063ed9ca9492aa042c65ba-9015-46da-9861a8&sso=bfbf5f9c-528051d31ecd8694644e974e2cafae0e1a16e3a08a1e4f43&ssp=22835034681776903620177697921366536&ssq=12934773566317974759435663746096163729049&ssr=OTYuMjQxLjEzMS4xMjA=&sst=retirement-api-link-probe/1.0&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDAwNDJjNjViYS05MDE1LTQ2ZGEtOWY5Yy01MjgwNTFkMzFlY2QxLTE3NzY5MzU2NjM2MjQwLTAwMzUzNGRiNjU0NTc5NDczMTcxMCIsInJkIjoibWVyaWRhLmdvYi5teCIsInV6bXgiOiI3ZjkwMDAzMjMxYjJkYi1jZTRjLTRjNjEtYWNmMC00OGI0OWY2YzU2YWMxLTE3NzY5MzU2NjM2MjQwLWYxYTMwN2I2ZjRhOGZkOTAxMCJ9 |
 | `mexico-san-miguel-de-allende` | https://sanmigueldeallende.gob.mx/ | https://www.sanmigueldeallende.gob.mx/ |
 | `panama-city` | https://www.visitpanama.com/ | https://www.tourismpanama.com/ |
 | `panama-city` | https://www.mupa.gob.pa/ | https://mupa.gob.pa/ |

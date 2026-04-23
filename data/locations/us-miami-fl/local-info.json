@@ -4,7 +4,11 @@
       "name": "City of Miami",
       "url": "https://www.miami.gov/",
       "type": "government",
-      "scope": "city"
+      "scope": "city",
+      "linkStatus": "redirect",
+      "linkHttpStatus": 200,
+      "linkCheckedAt": "2026-04-23",
+      "linkFinalUrl": "https://www.miami.gov/Home"
     }
   ]
 }

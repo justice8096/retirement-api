@@ -4,7 +4,10 @@
       "name": "Baltimore County, MD",
       "url": "https://www.baltimorecountymd.gov/",
       "type": "government",
-      "scope": "county"
+      "scope": "county",
+      "linkStatus": "client-error",
+      "linkHttpStatus": 403,
+      "linkCheckedAt": "2026-04-23"
     }
   ]
 }
