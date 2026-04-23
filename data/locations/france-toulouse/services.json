@@ -257,6 +257,188 @@
           "accessed": "2026-04-22"
         }
       ]
+    },
+    {
+      "categoryId": "clothing_womens",
+      "name": "Zara",
+      "distanceMi": 30,
+      "notes": "Women's clothing — France chain / directory.",
+      "sources": [
+        {
+          "title": "Zara",
+          "url": "https://www.zara.com/fr/",
+          "accessed": "2026-04-23"
+        }
+      ]
+    },
+    {
+      "categoryId": "clothing_mens",
+      "name": "Celio",
+      "distanceMi": 30,
+      "notes": "Men's clothing — France chain / directory.",
+      "sources": [
+        {
+          "title": "Celio",
+          "url": "https://www.celio.com/",
+          "accessed": "2026-04-23"
+        }
+      ]
+    },
+    {
+      "categoryId": "clothing_childrens",
+      "name": "Petit Bateau",
+      "distanceMi": 30,
+      "notes": "Children's clothing — France chain / directory.",
+      "sources": [
+        {
+          "title": "Petit Bateau",
+          "url": "https://www.petit-bateau.com/",
+          "accessed": "2026-04-23"
+        }
+      ]
+    },
+    {
+      "categoryId": "clothing_bigtall",
+      "name": "Size Factory",
+      "distanceMi": 30,
+      "notes": "Big & Tall clothing — France chain / directory.",
+      "sources": [
+        {
+          "title": "Size Factory",
+          "url": "https://www.sizefactory.com/",
+          "accessed": "2026-04-23"
+        }
+      ]
+    },
+    {
+      "categoryId": "religious_mosque",
+      "name": "Local mosques (search)",
+      "distanceMi": 30,
+      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "sources": [
+        {
+          "title": "Google Maps — mosque near Toulouse, France",
+          "url": "https://www.google.com/maps/search/mosque%20near%20Toulouse%2C%20France",
+          "accessed": "2026-04-23"
+        }
+      ]
+    },
+    {
+      "categoryId": "religious_synagogue",
+      "name": "Local synagogues / Hebrew temples (search)",
+      "distanceMi": 30,
+      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "sources": [
+        {
+          "title": "Google Maps — synagogue near Toulouse, France",
+          "url": "https://www.google.com/maps/search/synagogue%20near%20Toulouse%2C%20France",
+          "accessed": "2026-04-23"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery_halal",
+      "name": "Halal groceries (search)",
+      "distanceMi": 30,
+      "notes": "Search Google Maps for halal butchers / halal grocery stores within ~30 mi.",
+      "sources": [
+        {
+          "title": "Google Maps — halal grocery near Toulouse, France",
+          "url": "https://www.google.com/maps/search/halal%20grocery%20near%20Toulouse%2C%20France",
+          "accessed": "2026-04-23"
+        }
+      ]
+    },
+    {
+      "categoryId": "grocery_kosher",
+      "name": "Kosher groceries (search)",
+      "distanceMi": 30,
+      "notes": "Search Google Maps for kosher grocery stores within ~30 mi.",
+      "sources": [
+        {
+          "title": "Google Maps — kosher grocery near Toulouse, France",
+          "url": "https://www.google.com/maps/search/kosher%20grocery%20near%20Toulouse%2C%20France",
+          "accessed": "2026-04-23"
+        }
+      ]
+    },
+    {
+      "categoryId": "hair_care_african",
+      "name": "Black / African hair care (search)",
+      "distanceMi": 30,
+      "notes": "Search Google Maps for African / Black hair salons and natural-hair specialists within ~30 mi.",
+      "sources": [
+        {
+          "title": "Google Maps — black hair salon near Toulouse, France",
+          "url": "https://www.google.com/maps/search/black%20hair%20salon%20near%20Toulouse%2C%20France",
+          "accessed": "2026-04-23"
+        }
+      ]
+    },
+    {
+      "categoryId": "restaurant_local",
+      "name": "Top-rated local cuisine (search)",
+      "distanceMi": 30,
+      "notes": "Highest-rated local-cuisine restaurants within ~30 mi (Google Maps rating-sorted).",
+      "sources": [
+        {
+          "title": "Google Maps — top rated local restaurants near Toulouse, France",
+          "url": "https://www.google.com/maps/search/top%20rated%20local%20restaurants%20near%20Toulouse%2C%20France",
+          "accessed": "2026-04-23"
+        }
+      ]
+    },
+    {
+      "categoryId": "restaurant_italian",
+      "name": "Italian restaurants (search)",
+      "distanceMi": 30,
+      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "sources": [
+        {
+          "title": "Google Maps — italian restaurant near Toulouse, France",
+          "url": "https://www.google.com/maps/search/italian%20restaurant%20near%20Toulouse%2C%20France",
+          "accessed": "2026-04-23"
+        }
+      ]
+    },
+    {
+      "categoryId": "restaurant_mexican",
+      "name": "Mexican restaurants (search)",
+      "distanceMi": 30,
+      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "sources": [
+        {
+          "title": "Google Maps — mexican restaurant near Toulouse, France",
+          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Toulouse%2C%20France",
+          "accessed": "2026-04-23"
+        }
+      ]
+    },
+    {
+      "categoryId": "restaurant_thai_or_asian",
+      "name": "Thai / other Asian restaurants (search)",
+      "distanceMi": 30,
+      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "sources": [
+        {
+          "title": "Google Maps — thai restaurant near Toulouse, France",
+          "url": "https://www.google.com/maps/search/thai%20restaurant%20near%20Toulouse%2C%20France",
+          "accessed": "2026-04-23"
+        }
+      ]
+    },
+    {
+      "categoryId": "restaurant_indian",
+      "name": "Indian restaurants (search)",
+      "distanceMi": 30,
+      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "sources": [
+        {
+          "title": "Google Maps — indian restaurant near Toulouse, France",
+          "url": "https://www.google.com/maps/search/indian%20restaurant%20near%20Toulouse%2C%20France",
+          "accessed": "2026-04-23"
+        }
+      ]
     }
   ],
   "attractions": [
