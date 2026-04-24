@@ -16,6 +16,17 @@
  * For broad regions, also tries each entry in location.json's `cities[]`
  * using the same template set.
  *
+ * Relevance filter: a candidate is only accepted if its title or
+ * description mentions the city or country. Generic viral channels
+ * (ReelShort, Rick Steves' Europe, etc.) outscore locals on subscriber
+ * count alone; requiring a text match keeps them out.
+ *
+ * Error handling:
+ *   - 403 with reason=quotaExceeded → exit 0 (clean stop, re-run tomorrow)
+ *   - 403 with any other reason (invalid key, disabled API, no billing) →
+ *     exit 2 so the caller knows to fix config
+ *   - non-403 errors → logged, script continues to next query template
+ *
  * Usage: YOUTUBE_API_KEY=<key> node scripts/curate-youtube-fallback-queries.mjs [--dry-run]
  */
 import { readFileSync, writeFileSync, existsSync, readdirSync } from 'fs';
@@ -42,12 +53,26 @@ function shortCity(locName) {
   return stripDiacritics(locName.split(/[,(]/)[0].trim());
 }
 
+/** Parse a YouTube API error response and throw with the reason attached so
+ *  the caller can distinguish quota exhaustion from auth/config failures. */
+async function throwApiError(prefix, res) {
+  let reason = null;
+  try {
+    const body = await res.json();
+    reason = body?.error?.errors?.[0]?.reason ?? null;
+  } catch { /* body parse failures fall through to plain status */ }
+  const err = new Error(`${prefix} ${res.status}${reason ? ' ' + reason : ''}`);
+  err.reason = reason;
+  err.status = res.status;
+  throw err;
+}
+
 async function searchChannels(query) {
   const params = new URLSearchParams({
     part: 'snippet', type: 'channel', q: query, maxResults: '10', key: API_KEY,
   });
   const res = await fetch(`${SEARCH_URL}?${params}`);
-  if (!res.ok) throw new Error(`search.list ${res.status}`);
+  if (!res.ok) await throwApiError('search.list', res);
   const json = await res.json();
   return json.items || [];
 }
@@ -58,9 +83,23 @@ async function getChannelDetails(ids) {
     part: 'snippet,statistics', id: ids.join(','), key: API_KEY,
   });
   const res = await fetch(`${CHANNELS_URL}?${params}`);
-  if (!res.ok) throw new Error(`channels.list ${res.status}`);
+  if (!res.ok) await throwApiError('channels.list', res);
   const json = await res.json();
   return json.items || [];
+}
+
+/** A candidate is relevant to the target location if its title or description
+ *  mentions the city or country. Prevents the picker from locking in generic
+ *  viral channels just because they outscore local channels on subscriber
+ *  count, which then requires a follow-up relevance audit to clean up. */
+function isRelevantToLocation(candidate, city, country) {
+  if (!candidate) return false;
+  const blob = `${candidate.title || ''} ${candidate.description || ''}`.toLowerCase();
+  const cityLc = city.toLowerCase();
+  const countryLc = (country || '').toLowerCase();
+  if (cityLc && blob.includes(cityLc)) return true;
+  if (countryLc && blob.includes(countryLc)) return true;
+  return false;
 }
 
 function pickBest(candidates, cityName) {
@@ -149,16 +188,31 @@ for (const w of work) {
     for (const q of queryTemplatesFor(city, w.country)) {
       try {
         const candidate = await pickForQuery(q, city);
-        if (candidate && candidate.score > -40) {
+        // Require city/country text match before accepting. The score-only
+        // check (score > -40) used to pass generic viral channels with
+        // enough subscribers to outweigh the zombie penalty, which then
+        // required a relevance audit to clean up post-hoc. Filtering here
+        // avoids writing bad data in the first place.
+        if (candidate && candidate.score > -40 && isRelevantToLocation(candidate, city, w.country)) {
           best = candidate;
           matchedQuery = `"${q}"`;
           break outer;
         }
       } catch (err) {
-        if (String(err.message).includes('403')) {
-          console.error('Quota likely exhausted — stopping.');
+        // Only treat 403 as graceful stop when it's actually quotaExceeded.
+        // Other 403 reasons (invalid key, disabled API, billing-not-enabled)
+        // should fail loudly so the caller can diagnose — silent success
+        // would leave partial, inconsistent updates without signal.
+        if (err.status === 403 && err.reason === 'quotaExceeded') {
+          console.error('Quota exhausted — stopping cleanly.');
           process.exit(0);
         }
+        if (err.status === 403) {
+          console.error(`Authorization error (${err.reason ?? 'no reason'}): ${err.message}`);
+          process.exit(2);
+        }
+        // Non-403 errors: log and keep going to the next query template.
+        console.error(`${w.id} / "${q}": ${err.message}`);
       }
     }
   }
