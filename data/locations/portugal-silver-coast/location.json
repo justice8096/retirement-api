@@ -198,9 +198,76 @@
     }
   ],
   "taxes": {
-    "notes": "NHR ended Jan 2024. IFICI replacement excludes pensions. Standard progressive rates 14.5%-48%.",
-    "vatRate": 23,
-    "socialChargesRate": 0
+    "federalIncomeTax": {
+      "applies": true,
+      "foreignTaxCredit": true
+    },
+    "stateIncomeTax": {
+      "rate": 0.48,
+      "type": "progressive",
+      "label": "Portuguese Income Tax (IRS)",
+      "brackets": [
+        {
+          "min": 0,
+          "max": 8704,
+          "rate": 0.125
+        },
+        {
+          "min": 8704,
+          "max": 13133,
+          "rate": 0.16
+        },
+        {
+          "min": 13133,
+          "max": 18612,
+          "rate": 0.215
+        },
+        {
+          "min": 18612,
+          "max": 24090,
+          "rate": 0.244
+        },
+        {
+          "min": 24090,
+          "max": 30672,
+          "rate": 0.314
+        },
+        {
+          "min": 30672,
+          "max": 44959,
+          "rate": 0.349
+        },
+        {
+          "min": 44959,
+          "max": 48586,
+          "rate": 0.431
+        },
+        {
+          "min": 48586,
+          "max": 90393,
+          "rate": 0.446
+        },
+        {
+          "min": 90393,
+          "max": null,
+          "rate": 0.48
+        }
+      ],
+      "deduction": 4432,
+      "exemptions": "NHR ended Jan 2024 (IFICI replacement excludes pensions). Foreign pensions/retirement income taxed at standard progressive rates 12.5-48%. US-Portugal treaty provides foreign tax credit."
+    },
+    "salesTax": {
+      "rate": 0
+    },
+    "propertyTax": {
+      "rate": 0
+    },
+    "socialCharges": null,
+    "vatRate": 0.23,
+    "estVehicleTax": 0,
+    "ssExempt": false,
+    "ssTaxedInCountry": true,
+    "notes": "NHR ended Jan 2024. IFICI replacement excludes pensions. Standard progressive rates 14.5%-48%."
   },
   "subregion": "Centro"
 }
