@@ -1,63 +1,61 @@
-POST-COMMIT AUDIT SUMMARY
-==========================
-Date: 2026-04-19
-Commit: 80e2e91
-Branch: cleanup/seed-data-integrity-path
-Project: retirement-api v0.1.0 (Fastify 5 + Prisma 6 + PostgreSQL + TypeScript ESM)
-Previous Audit: 2026-04-16
+POST-COMMIT AUDIT SUMMARY — retirement-api
+==========================================
+Date:           2026-04-24
+Commit:         4a70922
+Branch:         master
+Project:        retirement-api v0.1.0 (Fastify 5 + Prisma 7 + PostgreSQL + TypeScript ESM)
+Previous Audit: 2026-04-19 (CONDITIONAL PASS, 18 findings — see git history)
+
+Recent merges in this batch:
+  #64 Portugal IRS brackets for all 5 regions (data only)
+  #65 YouTube channel curation +31 locations (data + scripts)
+  #66 YouTube fallback queries + relevance audit + script hardening
 
 Phase 1 (Security Scanning):
-  1. SAST/DAST Scan:        CONDITIONAL PASS -- 18 open findings
-                            (1 CRITICAL, 4 HIGH, 3 MEDIUM, 7 LOW, 3 INFO)
-                            Delta vs 2026-04-16: +5 new (2 supply-chain HIGH, 1 MEDIUM dev-bypass,
-                            2 LOW race-conditions). 1 fixed (N-01 Preferences PATCH).
-  2. Supply Chain Audit:     FAIL -- SLSA L1, 5 open advisories
-                            (1 CRITICAL @clerk/shared, 1 HIGH fastify, 3 HIGH vite dev-only).
-                            All have upstream fixes. `npm audit fix` closes them.
-  3. CWE Mapping:           15 distinct CWEs open, mapped to 8 frameworks
-                            (5 new: CWE-1287, CWE-436/863, CWE-489, CWE-362, CWE-180/284 via Vite).
-                            1 resolved: CWE-703.
+  1. SAST/DAST Scan:        PASS — 0 critical / 0 high / 0 medium / 3 low / 2 info
+                            Delta vs 2026-04-19: -1 CRITICAL (Clerk key risk-accepted resolved upstream),
+                            -4 HIGH, -3 MEDIUM, -4 LOW. All recent fixes per the audit-remediation
+                            and dependency-bump cycles since 2026-04-19. New 3 LOW items are all
+                            developer-script scope (not on served API surface):
+                              CWE-22  apply-youtube-curation.mjs / apply-youtube-auto.mjs
+                                     — unchecked argv path concatenation
+                              CWE-532 curate-youtube-via-api.mjs
+                                     — raw error body to stderr can echo API key
+                              CWE-754 add-crime-sources-to-cons.mjs
+                                     — silent catch on HEAD probe failures
 
-Phase 2 (Compliance & Attribution):
-  4. LLM Compliance:        66/100 -- DEVELOPING (up from 62, +4 points)
-                            Gains: Transparency (+8), Sensitive Data Handling (+6),
-                            Incident Response (+6). Loss: Supply Chain (-3, new CVEs).
-  5. Contribution Analysis:  38% Human / 62% AI -- Quality Grade A- (hold)
-                            Steady trend; dev-bypass finding shows where AI-authored
-                            convenience code needed more human review.
+  2. Supply Chain Audit:    PASS — SLSA Level 2 (up from L1)
+                            Build provenance attestation via Sigstore on every master push.
+                            CycloneDX SBOM generated per push (lockfile v3, 378/378 integrity hashes).
+                            All direct deps pinned/caret-ranged. Every GitHub Action SHA-pinned.
+                            Dockerfile base-image digest-pinned. Zero advisories open today
+                            (down from 5 advisories on 2026-04-19; npm audit clean).
 
-Overall: CONDITIONAL PASS (improved from 2026-04-16 on composite score)
-Action Required: YES -- high-confidence 1-command fix available
+  3. CWE Mapping:           3 active CWEs (CWE-22, CWE-532, CWE-754), all developer-script scope.
+                            Mapped to OWASP Top 10 2021, OWASP LLM Top 10 2025, NIST SP 800-53,
+                            EU AI Act Art. 25, ISO 27001, SOC 2, MITRE ATT&CK, MITRE ATLAS.
+                            Down from 15 distinct CWEs on 2026-04-19.
 
-Immediate Actions (1-command remediation):
-  - Run `npm audit fix` -- closes 1 CRITICAL + 4 HIGH (fastify, @clerk/shared, vite x3)
+Severity profile:
+  CRITICAL: 0   (was 1)
+  HIGH:     0   (was 4)
+  MEDIUM:   0   (was 3)
+  LOW:      3   (was 7) — all in dev scripts
+  INFO:     2   (positive controls carried from 2026-04-20)
 
-Near-Term Actions (single-commit fixes):
-  - Add DEV_AUTH_BYPASS=1 secondary guard in src/middleware/auth.ts (M-NEW-01)
-  - Export invalidateUserCache(authProviderId) from auth.ts (H-05)
-  - Replace Redis 'changeme' password in .env.example (H-03)
-  - Add .strict() to feesSchema and financialSchema (M-02)
-  - Add UUID/ID Zod validator to /api/releases/:id/checkout (L-NEW-01)
-
-Deferred / Risk-Accepted:
-  - C-01 Clerk test key on disk (user risk-accepted; not in git)
-  - L-02, L-03, L-06 low-severity resource-consumption items
-
-New Capability Since 2026-04-16:
-  - OpenAPI/Swagger registration (src/lib/swagger.ts)
-  - _units metadata on financial/withdrawal/fees responses
-  - Content-Language header from Accept-Language
-  - Glossary endpoint (/api/glossary) with plain + technical definitions
-  - Dyslexia/dyscalculia accessibility sub-schemas in preferences
-  - ACA cliff-regime modeling + Mid-Atlantic + US-territory location seed data
-  - /api/me/fees route (brokerage, transfer, FX fees)
-  - Per-account load % and fees % on FinancialSettings
-  - Rate-limit middleware test suite
-  - Seed-data integrity test suite
+Top 3 recommendations:
+  1. Copy `throwApiError` helper from curate-youtube-fallback-queries.mjs into
+     curate-youtube-via-api.mjs — stops raw response bodies (which echo the API key
+     in some failure modes) from hitting stderr.
+  2. Add a safeIdSchema-style regex check on `locId` argv at the top of
+     apply-youtube-curation.mjs and apply-youtube-auto.mjs before `path.join('data/locations', locId, …)`.
+  3. Add `license`, `repository`, `author` fields to package.json so the CI-generated
+     CycloneDX SBOM carries full provenance.
 
 Reports:
-  - D:\retirement-api\audits\sast-dast-scan.md
-  - D:\retirement-api\audits\supply-chain-audit.md
-  - D:\retirement-api\audits\cwe-mapping.md
-  - D:\retirement-api\audits\llm-compliance-report.md
-  - D:\retirement-api\audits\contribution-analysis.md
+  audits/sast-dast-scan-2026-04-24.md       (144 lines)
+  audits/supply-chain-audit-2026-04-24.md   (204 lines)
+  audits/cwe-mapping-2026-04-24.md          (146 lines)
+
+Overall:         PASS (was CONDITIONAL PASS — major regression fix vs 2026-04-19)
+Action Required: NO — recommendations are optional hardening; nothing reaches the served API surface.
