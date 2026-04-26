@@ -63,6 +63,11 @@ COPY --chown=api:nodejs shared ./shared
 COPY --chown=api:nodejs --from=builder /app/dist ./dist
 COPY --chown=api:nodejs package.json ./
 COPY --chown=api:nodejs prisma ./prisma
+# Prisma 7's CLI (`prisma migrate deploy`) reads its datasource URL from
+# prisma.config.ts and refuses to run without it. The migrate compose
+# service uses this image, so the config has to be in the runtime layer
+# even though the runtime PrismaClient itself goes via driver adapter.
+COPY --chown=api:nodejs prisma.config.ts ./
 
 ENV NODE_ENV=production
 ENV PORT=3000
