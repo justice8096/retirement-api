@@ -21,6 +21,12 @@
  *   - `topRate` is a fraction 0..1; for progressive systems it's the
  *     highest bracket; for systems with category-based multipliers
  *     (Spain) it's the national worst case (no regional bonification).
+ *   - `directFamilyEffectiveRate` is the rate the SPOUSE pays after any
+ *     spouse-specific reduction. Only populated for `'partial'` countries
+ *     where the spouse rate differs from `topRate`. For `'full'` countries
+ *     it's implicitly 0 (kernel returns 0 directly); for `'none'` countries
+ *     it's implicitly equal to `topRate`. Phase 3b uses this for the MC
+ *     spouse-death scenario kernel hit.
  *   - `exemptionLocal` is the threshold below which no tax owed in the
  *     country's primary local currency. For per-recipient lifetime
  *     allowances (Ireland CAT, Italy), it's the per-recipient figure;
@@ -96,6 +102,7 @@
 /** @typedef {{
  *   spouseExemption?: 'full' | 'partial' | 'none',
  *   topRate?: number,
+ *   directFamilyEffectiveRate?: number,
  *   exemptionLocal?: number,
  *   basis?: 'estate' | 'inheritance',
  *   scopeWhenResident?: 'worldwide' | 'local-only',
@@ -183,6 +190,7 @@ export var COUNTRY_INHERITANCE_TAX = {
     // (Asturias, Catalonia) apply substantial rates. See notes.
     spouseExemption: 'partial',
     topRate: 0.34, // National worst case before AC bonification or relationship multipliers
+    directFamilyEffectiveRate: 0.34, // Conservative — equals topRate; assumes worst-case AC. Sub-national layer (Phase 4) would refine per-AC.
     // exemptionLocal intentionally undefined — varies wildly by
     // autonomous community; see notes for AC-level guidance.
     basis: 'inheritance',
@@ -206,6 +214,7 @@ export var COUNTRY_INHERITANCE_TAX = {
   'Italy': {
     spouseExemption: 'partial', // 4% above €1M per recipient; effectively-zero for most family transfers
     topRate: 0.08, // Non-relatives, no allowance
+    directFamilyEffectiveRate: 0.04, // Spouse / children rate above the €1M per-recipient allowance
     exemptionLocal: 1000000, // EUR — per-recipient allowance for spouse / children / parents
     basis: 'inheritance',
     scopeWhenResident: 'worldwide',
@@ -250,6 +259,7 @@ export var COUNTRY_INHERITANCE_TAX = {
   'Greece': {
     spouseExemption: 'partial', // Spouse exempt to ~€400K then taxed in Category A bracket (1-10%)
     topRate: 0.40, // Category C — distant relatives / non-relatives
+    directFamilyEffectiveRate: 0.10, // Conservative midpoint of Category A (1-10% range) above the €150K spouse allowance
     exemptionLocal: 150000, // EUR — Category A (direct family) per-recipient allowance
     basis: 'inheritance',
     scopeWhenResident: 'worldwide',
@@ -319,6 +329,7 @@ export var COUNTRY_INHERITANCE_TAX = {
   'Malta': {
     spouseExemption: 'partial', // movables: full; real-estate inheritance: 5% stamp duty
     topRate: 0.05, // Stamp duty on inherited immovable property
+    directFamilyEffectiveRate: 0.05, // Direct family pays the same 5% on inherited real estate; reductions exist for primary residence transfers but not modeled here
     basis: 'inheritance',
     scopeWhenResident: 'local-only', // Stamp duty only applies to Malta-situated real estate
     notes:
@@ -421,6 +432,7 @@ export var COUNTRY_INHERITANCE_TAX = {
   'Ecuador': {
     spouseExemption: 'partial', // Direct family qualifies for 50% reduction in tax owed
     topRate: 0.35,
+    directFamilyEffectiveRate: 0.175, // 50% reduction of topRate for direct family
     exemptionLocal: 76000, // USD — Ecuador is dollarized, so this is in USD (2024 baseline)
     basis: 'inheritance',
     scopeWhenResident: 'worldwide',
