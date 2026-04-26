@@ -73,7 +73,11 @@ ENV NODE_ENV=production
 ENV PORT=3000
 EXPOSE 3000
 
+# Use 127.0.0.1 explicitly: node:25-alpine's /etc/hosts maps `localhost` to
+# ::1, but Fastify binds IPv4 only (0.0.0.0:3000). wget against `localhost`
+# tries IPv6 first and reports connection refused, marking the container
+# unhealthy even when the server is responding fine.
 HEALTHCHECK --interval=30s --timeout=3s --start-period=10s --retries=3 \
-  CMD wget -q --spider http://localhost:3000/api/health/ready || exit 1
+  CMD wget -q --spider http://127.0.0.1:3000/api/health/ready || exit 1
 
 CMD ["node", "dist/server.js"]
