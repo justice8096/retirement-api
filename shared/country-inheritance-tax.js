@@ -25,6 +25,51 @@
  *   - Per-relationship rate tables (spouse / kids / siblings / non-rel)
  *   - Wealth taxes (different concept; see French IFI)
  *   - Treaty-based double-taxation relief
+ *
+ * ─── TODO (Phase 2 — sub-national variation) ────────────────────────────
+ *
+ * The country-keyed shape of this map flattens jurisdictions where
+ * sub-national variation is large enough to mislead users. Two of the
+ * 16 covered countries have meaningful state/regional differences:
+ *
+ *   1. UNITED STATES — Federal estate tax is captured here, but 12
+ *      states levy their own state estate tax (MA, NY, OR, WA, MN, IL,
+ *      MD, CT, RI, VT, ME, HI) with thresholds far below the federal
+ *      ~$13.99M (e.g. MA $2M, OR $1M). Additionally 6 states have
+ *      separate INHERITANCE tax paid by recipients (PA, NJ, KY, IA,
+ *      MD, NE) with rates depending on relationship to the deceased.
+ *      MD has both. The current US entry's `notes` calls these out
+ *      qualitatively; for actionable modeling, Phase 2 should layer
+ *      a per-US-state map keyed on the location's `subregion` (which
+ *      is already populated for US locations after FU-001 region
+ *      taxonomy normalization, 2026-04-20).
+ *
+ *   2. SPAIN — All 17 autonomous communities can adjust rates and
+ *      allowances against the national framework, with effective
+ *      rates ranging from near-zero (Madrid, Andalucía, Murcia via
+ *      99% bonification on direct-family transfers) to substantial
+ *      (Asturias, Catalonia at near-full national progressive rates).
+ *      The "Spain" entry's `notes` warns about this; Phase 2 should
+ *      layer a per-autonomous-community map. Each Spanish location
+ *      in the seed data should carry a `subregion` identifying its
+ *      autonomous community for the lookup to work.
+ *
+ * Other countries in this map are unitary for inheritance-tax purposes
+ * (Italy's regional variation is property-tax, not inheritance) or
+ * have no inheritance tax to vary (Cyprus, Panama, Costa Rica, etc.).
+ *
+ * Suggested Phase 2 shape (future work — not yet implemented):
+ *
+ *   shared/country-inheritance-tax-by-state.js — per-(country, subregion)
+ *   overrides. The injection layer would prefer a state-level entry when
+ *   one exists, falling back to the country-level entry otherwise.
+ *   Lookup signature: `inheritanceTaxFor(country, subregion?)` — backwards
+ *   compatible with the current single-arg form.
+ *
+ * Sub-national variation OUTSIDE this list (Switzerland cantonal,
+ * Australia state-level) is irrelevant only because those countries
+ * aren't yet in the location set; if added, they'll need the same
+ * treatment.
  */
 
 /** @typedef {{title: string, url: string, accessed?: string}} Source */
