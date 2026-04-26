@@ -90,7 +90,7 @@ const ACCESSED = '2026-04-26';
 export var COUNTRY_INHERITANCE_TAX = {
   'United States': {
     notes:
-      'Federal estate tax: top rate 40%, applied to estates above the unified credit exemption (~$13.99M per individual / ~$27M per couple in 2026). Unlimited marital deduction — surviving US-citizen spouse inherits federally tax-free. Note: federal exemption is currently scheduled to sunset back to ~$7M (inflation-adjusted) on 2026-01-01 absent legislation. 12 states have separate state estate tax (e.g. MA, NY, OR, WA, MN, IL, MD); thresholds and rates vary widely. 6 states have inheritance tax paid by recipients (PA, NJ, KY, IA, MD, NE) with rates depending on relationship. The Estate screen in this app already models federal estate tax; the spouse-death MC scenario does not yet.',
+      'Federal estate tax: top rate 40%, applied to estates above the unified credit exemption. The TCJA-era exemption (~$13.99M per individual / ~$27M per couple in 2025) was scheduled to sunset to ~$7M (inflation-adjusted) on 2026-01-01; the post-sunset value depends on whether intervening legislation extended TCJA. Consult the IRS source below for the currently-effective threshold rather than relying on a figure here. Unlimited marital deduction — surviving US-citizen spouse inherits federally tax-free. 12 states have separate state estate tax (e.g. MA, NY, OR, WA, MN, IL, MD); thresholds and rates vary widely. 6 states have inheritance tax paid by recipients (PA, NJ, KY, IA, MD, NE) with rates depending on relationship. The Estate screen in this app already models federal estate tax; the spouse-death MC scenario does not yet.',
     sources: [
       {
         title: 'IRS — Estate Tax (Form 706 + Pub 559)',
