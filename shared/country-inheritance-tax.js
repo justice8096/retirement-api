@@ -272,7 +272,13 @@ export var COUNTRY_INHERITANCE_TAX = {
   'Croatia': {
     spouseExemption: 'full',
     topRate: 0.04,
-    exemptionLocal: 50000, // HRK — for non-direct-family; direct family exempt regardless of amount
+    // EUR — Croatia adopted the euro on 2023-01-01 at the fixed rate
+    // 7.5345 HRK = 1 EUR, converting the historical HRK 50,000 threshold
+    // to ~€6,635. The threshold only applies to non-direct-family
+    // transfers; spouse / parents / children are exempt regardless of
+    // amount. Croatia location data uses currency: 'EUR' post-adoption,
+    // so this number is interpreted as euros by consumers.
+    exemptionLocal: 6635,
     basis: 'inheritance',
     scopeWhenResident: 'worldwide',
     notes:
