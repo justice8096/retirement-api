@@ -35,7 +35,11 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY --from=prisma /app/node_modules/.prisma ./node_modules/.prisma
 COPY shared ./shared
 COPY src ./src
-COPY tsconfig.json ./
+# package.json is required so tsc sees `"type": "module"` and treats source
+# files as ES modules (top-level await in server.ts otherwise errors with
+# TS1309 because tsc defaults to CommonJS classification when no package.json
+# is reachable).
+COPY tsconfig.json package.json ./
 
 RUN npx tsc
 
