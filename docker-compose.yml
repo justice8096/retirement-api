@@ -1,8 +1,17 @@
 version: '3.8'
 
+# Compose stack for the rogue homelab deploy.
+# Expects the dashboard repo cloned as a sibling at `../retirement-dashboard-angular`
+# (see Phase 3.2 of dashboard PR #76 / Dashboard-Infrastructure.md).
+
+networks:
+  internal:
+    driver: bridge
+
 services:
   postgres:
     image: postgres:16-alpine
+    networks: [internal]
     environment:
       POSTGRES_DB: ${POSTGRES_DB:-retirement_saas}
       POSTGRES_USER: ${POSTGRES_USER:-retirement}
@@ -18,6 +27,7 @@ services:
 
   redis:
     image: redis:7-alpine
+    networks: [internal]
     command: redis-server --requirepass ${REDIS_PASSWORD:?REDIS_PASSWORD is required}
     healthcheck:
       test: ['CMD', 'redis-cli', '-a', '${REDIS_PASSWORD}', 'ping']
@@ -30,6 +40,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    networks: [internal]
     ports:
       - '${API_PORT:-3000}:3000'
     deploy:
@@ -51,7 +62,10 @@ services:
       STRIPE_PRICE_PREMIUM: ${STRIPE_PRICE_PREMIUM:-}
       ENCRYPTION_MASTER_KEY: ${ENCRYPTION_MASTER_KEY:?ENCRYPTION_MASTER_KEY is required}
       APP_URL: ${APP_URL:-http://localhost:8080}
-      CORS_ORIGIN: ${CORS_ORIGIN:-http://localhost:5173}
+      # CORS isn't actually exercised on the deploy path because nginx
+      # proxies /api/* same-origin. Default kept for direct-to-api callers
+      # (e.g. local Angular dev server) — bump to the deploy host via .env.
+      CORS_ORIGIN: ${CORS_ORIGIN:-http://localhost:8080}
       SENTRY_DSN: ${SENTRY_DSN:-}
     depends_on:
       postgres:
@@ -65,6 +79,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    networks: [internal]
     command: npx prisma migrate deploy --schema=prisma/schema.prisma
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER:-retirement}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-retirement_saas}
@@ -72,6 +87,33 @@ services:
       postgres:
         condition: service_healthy
     restart: 'no'
+
+  # Angular SPA + nginx reverse-proxy fronting the api.
+  # Build context is a sibling clone — repo layout on the deploy host
+  # must place retirement-api/ and retirement-dashboard-angular/ in the
+  # same parent directory.
+  dashboard:
+    build:
+      context: ../retirement-dashboard-angular
+      dockerfile: Dockerfile
+    networks: [internal]
+    ports:
+      - '${DASHBOARD_PORT:-8080}:8080'
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          cpus: '0.5'
+    healthcheck:
+      test: ['CMD', 'wget', '-q', '--spider', 'http://localhost:8080/healthz']
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+    depends_on:
+      api:
+        condition: service_started
+    restart: unless-stopped
 
 volumes:
   pgdata:
