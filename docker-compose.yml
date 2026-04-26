@@ -118,5 +118,33 @@ services:
         condition: service_started
     restart: unless-stopped
 
+  # Tailscale Funnel sidecar — terminates HTTPS at Tailscale's edge and
+  # proxies cleartext to the dashboard container on the internal network.
+  # Userspace networking (no /dev/net/tun, no NET_ADMIN) keeps the cap
+  # surface minimal. State lives in a named volume so the MagicDNS
+  # hostname survives `docker compose down`.
+  #
+  # Auth via reusable, pre-approved auth key tagged tag:funnel-dashboard
+  # (generate at https://login.tailscale.com/admin/settings/keys).
+  # The tag must have nodeAttrs:["funnel"] in the tailnet ACL.
+  tailscale-dashboard:
+    image: tailscale/tailscale:stable
+    hostname: retirement-dashboard
+    environment:
+      TS_AUTHKEY: ${TS_AUTHKEY_FUNNEL_DASHBOARD:?TS_AUTHKEY_FUNNEL_DASHBOARD is required}
+      TS_HOSTNAME: retirement-dashboard
+      TS_USERSPACE: 'true'
+      TS_STATE_DIR: /var/lib/tailscale
+      TS_SERVE_CONFIG: /config/serve.json
+    volumes:
+      - tailscale-dashboard-state:/var/lib/tailscale
+      - ./tools/tailscale/serve.json:/config/serve.json:ro
+    networks: [internal]
+    depends_on:
+      dashboard:
+        condition: service_started
+    restart: unless-stopped
+
 volumes:
   pgdata:
+  tailscale-dashboard-state:
