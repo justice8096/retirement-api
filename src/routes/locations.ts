@@ -17,21 +17,39 @@ import { cached } from '../lib/cache.js';
 import { toValidationErrorPayload } from '../lib/validation.js';
 import { taxSourcesFor } from '../../shared/country-tax-sources.js';
 import { costSourcesFor } from '../../shared/category-cost-sources.js';
+import { inheritanceTaxFor } from '../../shared/country-inheritance-tax.js';
 
-/** Shape a location data object in place with both country-level tax
- *  citations and per-category cost citations. See Todos #11.
- *  The injection is additive: if seed data already provided sources
- *  at a given point, those are preserved. */
+/** Shape a location data object in place with country-level tax citations,
+ *  country-level inheritance-tax info, and per-category cost citations.
+ *  See Todos #11 + the foreign-inheritance-tax data layer task (Phase 1).
+ *  The injection is additive: if seed data already provided sources or
+ *  inheritance info at a given point, those are preserved. */
 function injectSources(data: Record<string, unknown>, country: string | null | undefined): void {
-  // Tax sources (country-keyed).
   const taxSources = taxSourcesFor(country ?? '');
-  if (taxSources) {
+  const inheritance = inheritanceTaxFor(country ?? '');
+
+  // Only touch data.taxes if we actually have something to inject. Creating
+  // an empty {} for unsupported countries flips downstream tax-availability
+  // checks (e.g. calcTaxesForLocation's `if (!loc.taxes) return null` reads
+  // missing taxes as "tax data unavailable") and would silently corrupt
+  // outputs for admin-added locations without tax data. Codex P2 catch on
+  // PR #70.
+  if (taxSources || inheritance) {
     const taxes = (data.taxes as Record<string, unknown> | undefined) ?? {};
-    if (!Array.isArray(taxes.sources) || taxes.sources.length === 0) {
+
+    if (taxSources && (!Array.isArray(taxes.sources) || taxes.sources.length === 0)) {
       taxes.sources = taxSources;
     }
+
+    // Inheritance / estate tax info (country-keyed). Phase 1 populates
+    // notes + sources only; structured fields land in Phase 2.
+    if (inheritance && taxes.inheritance == null) {
+      taxes.inheritance = inheritance;
+    }
+
     data.taxes = taxes;
   }
+
   // Per-category cost sources.
   const monthlyCosts = data.monthlyCosts as Record<string, Record<string, unknown>> | undefined;
   if (monthlyCosts) {
