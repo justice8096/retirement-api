@@ -8,7 +8,11 @@ FROM node:25-alpine@sha256:bdf2cca6fe3dabd014ea60163eca3f0f7015fbd5c7ee1b0e9ccb4
 WORKDIR /app
 
 COPY package.json package-lock.json ./
-RUN npm ci
+# `--ignore-scripts` is required: package.json has a `postinstall` that runs
+# `prisma generate --schema=prisma/schema.prisma`, but the prisma/ directory
+# is not copied into this stage. Stage 2 handles `prisma generate` explicitly
+# after copying the schema, so skipping postinstall here is safe.
+RUN npm ci --ignore-scripts
 
 # ─── Stage 2: Generate Prisma client ──────────────────────────────────────
 FROM node:25-alpine@sha256:bdf2cca6fe3dabd014ea60163eca3f0f7015fbd5c7ee1b0e9ccb4ced6eb02ef4 AS prisma
@@ -61,6 +65,6 @@ ENV PORT=3000
 EXPOSE 3000
 
 HEALTHCHECK --interval=30s --timeout=3s --start-period=10s --retries=3 \
-  CMD wget --no-verbose --tries=1 --spider http://localhost:3000/api/health/ready || exit 1
+  CMD wget -q --spider http://localhost:3000/api/health/ready || exit 1
 
 CMD ["node", "dist/server.js"]
