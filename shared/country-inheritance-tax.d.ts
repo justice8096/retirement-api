@@ -14,6 +14,16 @@ export interface InheritanceTaxInfo {
   spouseExemption?: 'full' | 'partial' | 'none';
   /** Top marginal rate, as a fraction 0..1. */
   topRate?: number;
+  /**
+   * Effective rate for direct-family heirs (spouse / children / parents)
+   * AFTER any spouse-specific or relationship-specific reduction. Only
+   * meaningful for `spouseExemption: 'partial'` countries where the
+   * spouse pays a different rate than the topRate (which is for distant
+   * relatives / non-relatives). For `'full'` countries this is implicitly
+   * 0; for `'none'` countries it equals `topRate`. Phase 3b uses this in
+   * the MC spouse-death scenario kernel hit.
+   */
+  directFamilyEffectiveRate?: number;
   /** Threshold below which no tax owed, in local currency. */
   exemptionLocal?: number;
   /** 'estate' (taxed at the estate, US/UK pattern) vs 'inheritance'
