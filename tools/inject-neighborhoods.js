@@ -996,7 +996,7 @@ const CITY_NEIGHBORHOODS = {
     city: 'Ponce',
     center: { name: 'Las Delicias', desc: 'Historic Plaza Las Delicias core with the iconic red-and-black Parque de Bombas firehouse, the cathedral, and walkable surrounding streets full of museums', character: 'Historic plaza walkable core', type: 'Historic homes and small commercial-residential' },
     suburb: { name: 'La Rambla', desc: 'Hillside residential neighborhood above the city with harbor views, the Cruceta del Vigía landmark, and cooler breezes', character: 'Hillside residential, harbor views', type: 'Single-family homes on hillside lots' },
-    affordable: { name: 'Jardines Del Caribe', desc: 'Residential urbanización — needs verification of character, price level, and walkability', character: 'Residential urbanización (placeholder — verify)', type: 'Single-family homes / townhomes (placeholder)' },
+    affordable: { name: 'Jardines Del Caribe', desc: 'Walkable residential area near Plaza del Caribe (the largest mall in the region) with easy access to supermarkets, dining, and retail; ~3 miles from La Guancha recreational area; less dense than the Historic Zone but rated well for everyday residential walking', character: 'Suburban residential, mall-adjacent, convenient', type: 'Single-family homes and townhomes in residential urbanizaciones' },
     family: { name: 'El Tuque', desc: 'Coastal area south of the city with Playa El Tuque beach access and growing residential development', character: 'Coastal residential, beach access', type: 'Single-family homes and beach condos' },
   },
   'us-charlotte-amalie-vi': {
@@ -1005,24 +1005,23 @@ const CITY_NEIGHBORHOODS = {
     // (script slot count is 4). Descriptions below are placeholders that
     // should be verified before authoritative use.
     city: 'Charlotte Amalie',
-    center: { name: 'Charlotte Amalie East', desc: 'Eastern part of the historic harbor capital — needs verification of character and current housing mix', character: 'Capital, harbor (placeholder — verify)', type: 'Mixed historic and contemporary (placeholder)' },
+    center: { name: 'Charlotte Amalie East', desc: 'Cruise-tourism and commercial district centered on the West Indian Company (WICO) dock and Havensight Mall (first USVI shopping center, 60+ shops); dense with duty-free retail, restaurants, the Skyride to Paradise Point, and upscale lodging at Frenchman\'s Reef; walkable around the dock area, with safari taxis ~15 min to downtown', character: 'Cruise commercial, tourist-dense, walkable retail core', type: 'Hotels, condo-resorts, timeshares, and upscale lodging' },
     suburb: { name: 'Frenchtown', desc: 'Small French-Caribbean enclave west of the harbor with traditional French Huguenot heritage, restaurants, and a tight-knit community', character: 'Historic French-Caribbean enclave, walkable', type: 'Historic homes and small apartments' },
-    affordable: { name: 'Hospital Ground', desc: 'Neighborhood near the Roy Lester Schneider Hospital — needs verification of character and housing prices', character: 'Hospital-adjacent (placeholder — verify)', type: 'Modest single-family and apartments (placeholder)' },
-    family: { name: 'Agnes Fancy', desc: 'Hillside residential area inland from the harbor — needs verification of character and family amenities', character: 'Hillside residential (placeholder — verify)', type: 'Single-family hillside homes (placeholder)' },
+    affordable: { name: 'Hospital Ground', desc: 'Historic civic-medical district with the VI Department of Health offices, the Lutheran Cemetery, and the Franklin D. Roosevelt Veterans Memorial Park; subject of ongoing revitalization efforts', character: 'Historic civic-medical, revitalizing', type: 'Mixed historic homes, government-adjacent buildings, and modest residential' },
+    family: { name: 'Estate Agnes Fancy', desc: 'Residential area on Mafolie Hill above Charlotte Amalie with panoramic views of the harbor and West End, mixed housing from single-family masonry homes and bungalows to gated condos (Harbour House); cistern water and tropical landscaping are typical', character: 'Hillside residential, view-property, mixed housing', type: 'Masonry single-family homes, bungalows, and gated condos with decks' },
   },
   'us-christiansted-vi': {
-    // User-provided names 2026-04-27; full character + price descriptions
-    // pending tier-2 research. Six names provided (Richmond, Fredensal,
-    // Mt Welcome, Downtown, Contentment, Altona); the script has 4 slots,
-    // so Contentment + Altona are deferred. Slot assignments below are
-    // best-guesses — easy to rearrange once descriptions are in.
-    // Descriptions are placeholders that should be verified before
-    // authoritative use.
+    // User-provided names 2026-04-27; descriptions filled in from
+    // user-provided research. Original six names (Richmond, Fredensal,
+    // Mt Welcome, Downtown, Contentment, Altona) plus Fredensal swapped
+    // out for Estate Herman Hill / Royal Manor when Fredensal had no
+    // documented data — Fredensal/Contentment/Altona deferred for a
+    // future pass.
     city: 'Christiansted',
     center: { name: 'Downtown Christiansted', desc: 'Danish colonial historic district along the harbor with Fort Christiansvaern, King Street shops, and the boardwalk', character: 'Danish colonial historic, walkable', type: 'Restored colonial townhouses and apartments' },
-    suburb: { name: 'Mt Welcome', desc: 'Hillside residential area — needs verification of character and current housing mix', character: 'Hillside residential (placeholder — verify)', type: 'Single-family hillside homes (placeholder)' },
-    affordable: { name: 'Richmond', desc: 'Estate Richmond area — needs verification of character, price level, and walkability', character: 'Estate area (placeholder — verify)', type: 'Modest single-family (placeholder)' },
-    family: { name: 'Fredensal', desc: 'Fredensal area — needs verification of character and family amenities', character: 'Residential (placeholder — verify)', type: 'Single-family homes (placeholder)' },
+    suburb: { name: 'Mt Welcome', desc: 'Residential area west of downtown Christiansted (Walk Score ~50, "somewhat walkable" by St. Croix standards) with the Schooner Bay condo community as a notable walkable cluster; ~10 minute walk to downtown and beaches, with Gallows Bay\'s bakery / restaurants / post office / Seaside Market and Altona Lagoon\'s beach + outdoor gym / playground a short walk away', character: 'Established residential, condo-community walkable, beach-adjacent', type: 'Condos (notably Schooner Bay), single-family homes, and small multi-family' },
+    affordable: { name: 'Estate Richmond', desc: 'Historic mixed residential-commercial area near downtown Christiansted (ZIP 00820) on the grounds of an 18th-century sugar plantation (formerly Nicolay Tuite holdings); home to the Richmond Post Office and a mix of historic and renovated homes; close to downtown hotels (King Christian, Caravelle, Company House) and the Christiansted National Historic Site, with some local noise from amenity proximity', character: 'Historic plantation grounds, residential-commercial mix, downtown-adjacent', type: 'Historic and renovated single-family homes, small multi-family, and mixed-use commercial' },
+    family: { name: 'Estate Herman Hill / Royal Manor', desc: 'Family neighborhood a few minutes north of downtown Christiansted, prized for its calm character and paved streets suitable for children; established residential with single-family homes', character: 'Family residential, quiet, paved streets', type: 'Single-family homes on established residential streets' },
   },
 
   // US Pacific territories — confidence: medium-low. Specific neighborhood
