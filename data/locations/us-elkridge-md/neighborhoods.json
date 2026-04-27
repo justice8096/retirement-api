@@ -2,18 +2,18 @@
   "city": "Elkridge",
   "neighborhoods": [
     {
-      "id": "inner-harbor-federal-hill",
-      "name": "Inner Harbor / Federal Hill",
-      "description": "Revitalized waterfront with National Aquarium, historic ships, and rowhome neighborhoods on the hill",
-      "character": "Waterfront revitalized, aquarium, historic rowhomes",
+      "id": "elkridge-furnace-avenue",
+      "name": "Elkridge / Furnace Avenue",
+      "description": "Historic Patapsco River area centered on the old B&O Railroad route with Belmont Manor and the Patapsco Heritage Greenway",
+      "character": "Historic riverside, railroad heritage",
       "housing": {
-        "avgRentOneBedroomUSD": 2408,
-        "avgRentTwoBedroomUSD": 3250,
-        "buyPricePerSqmUSD": 7028,
-        "predominantType": "Rowhomes, condos, and waterfront apartments"
+        "avgRentOneBedroomUSD": 3016,
+        "avgRentTwoBedroomUSD": 4072,
+        "buyPricePerSqmUSD": 9030,
+        "predominantType": "Older single-family homes and historic structures"
       },
-      "walkabilityScore": 87,
-      "transitScore": 80,
+      "walkabilityScore": 86,
+      "transitScore": 87,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
@@ -36,18 +36,18 @@
       ]
     },
     {
-      "id": "towson",
-      "name": "Towson",
-      "description": "Northern suburb with university, Towson Town Center, and established residential neighborhoods",
-      "character": "University suburban, shopping, established residential",
+      "id": "howard-square-belmont",
+      "name": "Howard Square / Belmont",
+      "description": "Newer Howard County subdivisions with well-rated schools and proximity to BWI and the I-95 / Route 100 employment corridor",
+      "character": "Newer suburban, top schools, commuter-friendly",
       "housing": {
-        "avgRentOneBedroomUSD": 1759,
-        "avgRentTwoBedroomUSD": 2375,
-        "buyPricePerSqmUSD": 4518,
-        "predominantType": "Single-family homes, apartments, and garden condos"
+        "avgRentOneBedroomUSD": 2204,
+        "avgRentTwoBedroomUSD": 2975,
+        "buyPricePerSqmUSD": 5805,
+        "predominantType": "Newer single-family homes and townhomes"
       },
-      "walkabilityScore": 68,
-      "transitScore": 42,
+      "walkabilityScore": 57,
+      "transitScore": 45,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
@@ -70,18 +70,18 @@
       ]
     },
     {
-      "id": "dundalk-essex",
-      "name": "Dundalk / Essex",
-      "description": "Eastern working-class communities with waterfront access and significantly lower housing costs",
-      "character": "Working-class waterfront, affordable, community",
+      "id": "elkridge-crossing-us-1-corridor",
+      "name": "Elkridge Crossing / US-1 corridor",
+      "description": "Townhome and apartment developments along the US-1 commercial corridor with grocery-anchored retail",
+      "character": "Townhome corridor, attainable, retail-served",
       "housing": {
-        "avgRentOneBedroomUSD": 1204,
-        "avgRentTwoBedroomUSD": 1625,
-        "buyPricePerSqmUSD": 2761,
-        "predominantType": "Row houses, modest single-family homes, and apartments"
+        "avgRentOneBedroomUSD": 1508,
+        "avgRentTwoBedroomUSD": 2036,
+        "buyPricePerSqmUSD": 3548,
+        "predominantType": "Townhomes, mid-rise condos, and apartment complexes"
       },
-      "walkabilityScore": 40,
-      "transitScore": 37,
+      "walkabilityScore": 41,
+      "transitScore": 46,
       "safetyRating": "moderate",
       "expats": {
         "communitySize": "not-applicable",
@@ -104,18 +104,18 @@
       ]
     },
     {
-      "id": "columbia-ellicott-city",
-      "name": "Columbia / Ellicott City",
-      "description": "Howard County planned communities with top schools, diverse population, and extensive amenities",
-      "character": "Planned community, top schools, diverse",
+      "id": "rockburn-hilltop",
+      "name": "Rockburn / Hilltop",
+      "description": "Established single-family neighborhoods adjacent to Rockburn Branch Park with extensive trails and athletic fields",
+      "character": "Established residential, parks, family",
       "housing": {
-        "avgRentOneBedroomUSD": 2037,
-        "avgRentTwoBedroomUSD": 2750,
-        "buyPricePerSqmUSD": 5773,
-        "predominantType": "Single-family homes, townhomes, and condos"
+        "avgRentOneBedroomUSD": 2552,
+        "avgRentTwoBedroomUSD": 3445,
+        "buyPricePerSqmUSD": 7417,
+        "predominantType": "Single-family homes from the 1980s-2000s"
       },
-      "walkabilityScore": 76,
-      "transitScore": 66,
+      "walkabilityScore": 69,
+      "transitScore": 59,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
@@ -137,11 +137,5 @@
         }
       ]
     }
-  ],
-  "_seedOrigin": {
-    "kind": "starter-template",
-    "from": "us-baltimore-md",
-    "generatedAt": "2026-04-23",
-    "note": "Template-derived content — prices and names adapted from the template city. Needs per-location review."
-  }
+  ]
 }

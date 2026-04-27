@@ -1,169 +1,139 @@
 {
-  "city": "Northern Virginia / Richmond area",
+  "city": "Fairfax",
   "neighborhoods": [
     {
-      "id": "va-arlington-clarendon",
-      "name": "Clarendon / Courthouse (Arlington)",
-      "description": "Walkable urban village along the Metro Orange/Silver line corridor with restaurants, shops, and a mix of high-rises and townhomes",
-      "character": "Urban walkable, transit-oriented, dining and nightlife, young professional shifting to mixed-age",
+      "id": "city-of-fairfax-old-town",
+      "name": "City of Fairfax / Old Town",
+      "description": "Walkable historic core around the Fairfax County government complex with Main Street restaurants and the Old Town Hall arts venue",
+      "character": "Historic small-city core, walkable, civic",
       "housing": {
-        "avgRentOneBedroomUSD": 2100,
-        "avgRentTwoBedroomUSD": 2800,
-        "buyPricePerSqmUSD": 6500,
-        "predominantType": "High-rise condos, mid-rise apartments, and nearby townhomes"
-      },
-      "walkabilityScore": 90,
-      "transitScore": 82,
-      "safetyRating": "high",
-      "expats": {
-        "communitySize": "not-applicable",
-        "englishPrevalence": "high"
-      },
-      "character_notes": "One of NoVA's most walkable areas. Metro access to DC. Whole Foods, farmers markets, extensive dining. Aging in place possible with transit access.",
-      "sources": [
-        {
-          "title": "Numbeo Cost of Living Arlington VA",
-          "url": "https://www.numbeo.com/cost-of-living/in/Arlington-VA"
-        },
-        {
-          "title": "Walk Score - Clarendon Arlington",
-          "url": "https://www.walkscore.com/score/clarendon-blvd-arlington-va"
-        },
-        {
-          "title": "Zillow - Arlington VA",
-          "url": "https://www.zillow.com/arlington-va/"
-        }
-      ]
-    },
-    {
-      "id": "va-alexandria-old-town",
-      "name": "Old Town Alexandria",
-      "description": "Historic waterfront district along the Potomac with cobblestone streets, King Street shops, and colonial architecture",
-      "character": "Historic walkable, waterfront, charming small-town-in-city feel",
-      "housing": {
-        "avgRentOneBedroomUSD": 1900,
-        "avgRentTwoBedroomUSD": 2600,
-        "buyPricePerSqmUSD": 5800,
-        "predominantType": "Historic row houses, condos, and waterfront apartments"
+        "avgRentOneBedroomUSD": 3250,
+        "avgRentTwoBedroomUSD": 4388,
+        "buyPricePerSqmUSD": 9800,
+        "predominantType": "Townhomes, mid-rise apartments, and historic homes"
       },
       "walkabilityScore": 88,
-      "transitScore": 72,
+      "transitScore": 75,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
         "englishPrevalence": "high"
       },
-      "character_notes": "King Street Mile is the main artery. Metro and water taxi access. Saturday farmers market. Dog-friendly with waterfront parks.",
+      "character_notes": "The historic and commercial heart of Fairfax. Most walkable area with best access to cultural attractions, restaurants, and public services.",
       "sources": [
         {
-          "title": "Numbeo Cost of Living Alexandria VA",
-          "url": "https://www.numbeo.com/cost-of-living/in/Alexandria-VA"
+          "title": "Numbeo Cost of Living Fairfax",
+          "url": "https://www.numbeo.com/cost-of-living/in/Fairfax"
         },
         {
-          "title": "Walk Score - Old Town Alexandria",
-          "url": "https://www.walkscore.com/score/king-st-alexandria-va"
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
         },
         {
-          "title": "Visit Alexandria",
-          "url": "https://www.visitalexandriava.com/"
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
         }
       ]
     },
     {
-      "id": "va-reston-town-center",
-      "name": "Reston Town Center",
-      "description": "Planned community with a walkable town center, lakes, extensive trail system, and new Metro Silver Line access",
-      "character": "Suburban planned, town center walkable core, nature trails, tech corridor",
+      "id": "fairfax-station-burke",
+      "name": "Fairfax Station / Burke",
+      "description": "Established residential area around Lake Accotink Park with Burke Centre VRE station and large-lot single-family homes",
+      "character": "Established suburban, lake park, VRE access",
       "housing": {
-        "avgRentOneBedroomUSD": 1800,
-        "avgRentTwoBedroomUSD": 2400,
-        "buyPricePerSqmUSD": 4200,
-        "predominantType": "Condos and apartments near town center, townhomes and houses further out"
+        "avgRentOneBedroomUSD": 2375,
+        "avgRentTwoBedroomUSD": 3206,
+        "buyPricePerSqmUSD": 6300,
+        "predominantType": "Single-family homes on wooded half-acre lots"
+      },
+      "walkabilityScore": 57,
+      "transitScore": 40,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Fairfax's center and services.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Fairfax",
+          "url": "https://www.numbeo.com/cost-of-living/in/Fairfax"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "mantua-pickett-s-reserve",
+      "name": "Mantua / Pickett's Reserve",
+      "description": "Older mid-century split-levels and ramblers with mature trees and more accessible price points than newer Fairfax County developments",
+      "character": "Mid-century established, mature trees, attainable",
+      "housing": {
+        "avgRentOneBedroomUSD": 1625,
+        "avgRentTwoBedroomUSD": 2194,
+        "buyPricePerSqmUSD": 3850,
+        "predominantType": "Split-levels, ramblers, and modest townhomes"
+      },
+      "walkabilityScore": 51,
+      "transitScore": 35,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Fairfax",
+          "url": "https://www.numbeo.com/cost-of-living/in/Fairfax"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "vienna-oakton",
+      "name": "Vienna / Oakton",
+      "description": "Top-rated school zone with Vienna Metro station, walkable Vienna town center, and Wolf Trap National Park nearby",
+      "character": "Top-rated schools, Metro access, family-friendly",
+      "housing": {
+        "avgRentOneBedroomUSD": 2750,
+        "avgRentTwoBedroomUSD": 3713,
+        "buyPricePerSqmUSD": 8050,
+        "predominantType": "Single-family homes, townhomes, and Metro-adjacent condos"
       },
       "walkabilityScore": 70,
-      "transitScore": 55,
+      "transitScore": 67,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
         "englishPrevalence": "high"
       },
-      "character_notes": "Town center is walkable but outlying areas need a car. 55 miles of trails. Lake Anne and Lake Thoreau. Silver Line Metro opened 2022.",
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
       "sources": [
         {
-          "title": "Zillow - Reston VA",
-          "url": "https://www.zillow.com/reston-va/"
+          "title": "Numbeo Cost of Living Fairfax",
+          "url": "https://www.numbeo.com/cost-of-living/in/Fairfax"
         },
         {
-          "title": "Reston Association",
-          "url": "https://www.reston.org/"
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
         },
         {
-          "title": "Walk Score - Reston Town Center",
-          "url": "https://www.walkscore.com/score/reston-town-center-reston-va"
-        }
-      ]
-    },
-    {
-      "id": "va-richmond-fan",
-      "name": "The Fan District (Richmond)",
-      "description": "Tree-lined Victorian row house neighborhood radiating west from downtown Richmond, with Monument Avenue and local shops",
-      "character": "Urban residential, historic architecture, walkable, artsy, college-adjacent",
-      "housing": {
-        "avgRentOneBedroomUSD": 1200,
-        "avgRentTwoBedroomUSD": 1600,
-        "buyPricePerSqmUSD": 2800,
-        "predominantType": "Victorian row houses (many divided into apartments) and some condos"
-      },
-      "walkabilityScore": 82,
-      "transitScore": 45,
-      "safetyRating": "moderate-high",
-      "expats": {
-        "communitySize": "not-applicable",
-        "englishPrevalence": "high"
-      },
-      "character_notes": "Much more affordable than NoVA. Near VCU campus. Carytown shopping district adjacent. Excellent restaurant scene. 2 hours from DC.",
-      "sources": [
-        {
-          "title": "Numbeo Cost of Living Richmond VA",
-          "url": "https://www.numbeo.com/cost-of-living/in/Richmond-VA"
-        },
-        {
-          "title": "Zillow - Richmond Fan District",
-          "url": "https://www.zillow.com/richmond-va/the-fan/"
-        },
-        {
-          "title": "Visit Richmond",
-          "url": "https://www.visitrichmondva.com/"
-        }
-      ]
-    },
-    {
-      "id": "va-fredericksburg",
-      "name": "Fredericksburg Historic District",
-      "description": "Small historic city between DC and Richmond with a walkable downtown, Civil War history, and growing dining scene",
-      "character": "Small-city historic, affordable, growing, halfway between DC and Richmond",
-      "housing": {
-        "avgRentOneBedroomUSD": 1300,
-        "avgRentTwoBedroomUSD": 1700,
-        "buyPricePerSqmUSD": 2600,
-        "predominantType": "Historic homes, townhomes, and newer suburban developments nearby"
-      },
-      "walkabilityScore": 72,
-      "transitScore": 35,
-      "safetyRating": "moderate-high",
-      "expats": {
-        "communitySize": "not-applicable",
-        "englishPrevalence": "high"
-      },
-      "character_notes": "VRE commuter rail to DC. Growing craft brewery scene. Mary Washington University. More affordable than NoVA with historic charm.",
-      "sources": [
-        {
-          "title": "Zillow - Fredericksburg VA",
-          "url": "https://www.zillow.com/fredericksburg-va/"
-        },
-        {
-          "title": "Visit Fredericksburg",
-          "url": "https://www.visitfred.com/"
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
         }
       ]
     }
