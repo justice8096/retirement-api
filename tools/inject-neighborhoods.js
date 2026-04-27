@@ -878,6 +878,225 @@ const CITY_NEIGHBORHOODS = {
     affordable: { name: 'Callahan / Hilliard', desc: 'Western Nassau County communities with very affordable housing and rural character', character: 'Rural, very affordable, agricultural', type: 'Modest houses, mobile homes, and rural properties' },
     family: { name: 'Wildlight / East Nassau', desc: 'New master-planned community by Rayonier with trails, schools, and modern amenities', character: 'Master-planned, new community, modern amenities', type: 'Newer single-family homes in planned community' },
   },
+
+  // ────────────────────────────────────────────────────────────────
+  // 2026-04-27 audit pass — 22 locations whose neighborhoods.json had been
+  // populated as `_seedOrigin: starter-template` copies from unrelated
+  // template cities (e.g., Manassas inherited Virginia Beach's Oceanfront
+  // / Kempsville). Replaced here with location-appropriate entries; the
+  // inject script regenerates with correct rent prices from each
+  // location.json's monthlyCosts.rent.typical.
+  // ────────────────────────────────────────────────────────────────
+
+  // Northern VA (DC commuter belt)
+  'us-virginia': {
+    city: 'Fairfax',
+    center: { name: 'City of Fairfax / Old Town', desc: 'Walkable historic core around the Fairfax County government complex with Main Street restaurants and the Old Town Hall arts venue', character: 'Historic small-city core, walkable, civic', type: 'Townhomes, mid-rise apartments, and historic homes' },
+    suburb: { name: 'Fairfax Station / Burke', desc: 'Established residential area around Lake Accotink Park with Burke Centre VRE station and large-lot single-family homes', character: 'Established suburban, lake park, VRE access', type: 'Single-family homes on wooded half-acre lots' },
+    affordable: { name: 'Mantua / Pickett\'s Reserve', desc: 'Older mid-century split-levels and ramblers with mature trees and more accessible price points than newer Fairfax County developments', character: 'Mid-century established, mature trees, attainable', type: 'Split-levels, ramblers, and modest townhomes' },
+    family: { name: 'Vienna / Oakton', desc: 'Top-rated school zone with Vienna Metro station, walkable Vienna town center, and Wolf Trap National Park nearby', character: 'Top-rated schools, Metro access, family-friendly', type: 'Single-family homes, townhomes, and Metro-adjacent condos' },
+  },
+  'us-annandale-va': {
+    city: 'Annandale',
+    center: { name: 'Annandale / Little River Turnpike', desc: 'Korean restaurant district along Little River Turnpike with mixed commercial-residential, regional Korean groceries, and bus access to the Beltway', character: 'Korean enclave, mixed-use commercial corridor', type: 'Older garden apartments, townhomes, and small commercial-residential mix' },
+    suburb: { name: 'Lake Barcroft', desc: 'Covenant-governed lakeside community with private lake club, beaches, and large-lot mid-century homes', character: 'Lakeside private community, mid-century, established', type: 'Mid-century single-family on wooded lots' },
+    affordable: { name: 'Bailey\'s Crossroads / Mason District', desc: 'Apartment-heavy transit corridor along Columbia Pike and Leesburg Pike with very diverse population and walkable strip retail', character: 'Apartment corridor, very diverse, transit-served', type: 'Garden apartment complexes and condo towers' },
+    family: { name: 'Wakefield / Sleepy Hollow', desc: 'Established single-family neighborhoods near Wakefield Park and Inova Fairfax Hospital, popular with medical professionals', character: 'Established residential, parks, hospital-adjacent', type: 'Single-family homes from the 1950s-1970s' },
+  },
+  'us-gainesville-va': {
+    city: 'Gainesville',
+    center: { name: 'Heritage Hunt', desc: 'Gated 55+ active-adult community with golf course, clubhouse, indoor and outdoor pools, and full activity calendar', character: '55+ active-adult, golf, gated', type: 'Single-family homes and villas in age-restricted community' },
+    suburb: { name: 'Virginia Oaks / Lake Manassas', desc: 'Golf-course community on Lake Manassas with single-family homes and access to private golf and tennis amenities', character: 'Lakeside golf community, established', type: 'Single-family homes on golf course lots' },
+    affordable: { name: 'Bristow / Linton Hall corridor', desc: 'Newer townhome and starter-home subdivisions along the Linton Hall Road corridor with grocery-anchored retail', character: 'Newer suburban, townhomes, growing corridor', type: 'Townhomes, smaller single-family homes' },
+    family: { name: 'Dominion Valley / Piedmont', desc: 'Master-planned communities (Haymarket-adjacent) with golf clubs, family pools, and top-rated Prince William County schools', character: 'Master-planned, golf, family amenities', type: 'Single-family in master-planned communities' },
+  },
+  'us-lorton-va': {
+    city: 'Lorton',
+    center: { name: 'Lorton Station', desc: 'Town-center development around the Lorton VRE commuter rail station with grocery-anchored retail and townhomes', character: 'VRE town-center, walkable mixed-use', type: 'Townhomes and mid-rise apartments around the station' },
+    suburb: { name: 'Laurel Hill / Workhouse Arts Center', desc: 'Newer single-family homes built on the former Lorton Reformatory grounds with the Workhouse Arts Center as the cultural anchor', character: 'Newer homes on historic grounds, arts center', type: 'Newer single-family homes and townhomes' },
+    affordable: { name: 'Gunston / Mason Neck', desc: 'More rural southeastern Fairfax County with larger lots, Mason Neck State Park access, and lower price points', character: 'Semi-rural, parks, larger lots', type: 'Older single-family on larger lots' },
+    family: { name: 'Pohick / South Run', desc: 'Established neighborhoods near Pohick Bay Regional Park and South Run Rec Center with mature trees and active community pools', character: 'Established residential, parks and rec', type: 'Single-family homes from the 1980s-90s' },
+  },
+  'us-manassas-va': {
+    city: 'Manassas',
+    center: { name: 'Old Town Manassas', desc: 'Walkable historic downtown around the Manassas VRE station with antique shops, restaurants, and the Manassas Museum', character: 'Historic walkable downtown, VRE access', type: 'Historic homes, townhomes, and lofts in converted commercial buildings' },
+    suburb: { name: 'Bristow', desc: 'Newer subdivisions and townhome developments south of Old Town with Wegmans-anchored retail and good Prince William County schools', character: 'Newer suburban, family-oriented, retail-rich', type: 'Newer single-family homes and townhomes' },
+    affordable: { name: 'Manassas Park', desc: 'Adjacent independent city with more affordable housing, Manassas Park VRE station, and dense townhome subdivisions', character: 'Affordable, transit-served, dense suburban', type: 'Townhomes and condos with some single-family' },
+    family: { name: 'Sudley / Bull Run border', desc: 'Established neighborhoods on the northern edge near Manassas National Battlefield Park and Bull Run Regional Park', character: 'Established residential, battlefield-adjacent', type: 'Single-family homes from the 1980s-2000s' },
+  },
+
+  // Maryland (DC and Baltimore commuter belts)
+  'us-annapolis-md': {
+    city: 'Annapolis',
+    center: { name: 'Downtown / Historic District', desc: 'State capital with the Maryland State House, Naval Academy, and the City Dock waterfront with sailboat charters and Main Street shops', character: 'Historic capital, Naval Academy, walkable waterfront', type: 'Historic colonial homes, condos, and waterfront townhouses' },
+    suburb: { name: 'Eastport', desc: 'Across the Spa Creek bridge with marinas, working boatyards, neighborhood restaurants, and a small-town-in-the-city feel', character: 'Maritime village, walkable, marina-oriented', type: 'Bungalows, modern townhomes, and waterfront condos' },
+    affordable: { name: 'Parole', desc: 'Mid-county area west of downtown with the Westfield Annapolis mall, Riva Road retail, and apartment complexes along Solomons Island Road', character: 'Commercial corridor, apartments, attainable', type: 'Garden apartments, townhomes, and condo complexes' },
+    family: { name: 'West Annapolis / Murray Hill', desc: 'Established walkable residential neighborhoods west of downtown with sidewalks, mature trees, and walking distance to historic district', character: 'Walkable established, mature trees, family', type: 'Bungalows, colonials, and Cape Cods' },
+  },
+  'us-bowie-md': {
+    city: 'Bowie',
+    center: { name: 'Old Bowie', desc: 'Historic train town around the original B&O station with antique shops, the Bowie Heritage Park, and the small downtown stretch', character: 'Historic small-town, train heritage', type: 'Historic homes and small commercial-residential blocks' },
+    suburb: { name: 'Belair at Bowie', desc: 'Original Levitt-built planned community of mid-century homes laid out around shopping centers and parks, well-maintained today', character: 'Levittown-style postwar planned, established', type: 'Levitt-style ranches, Cape Cods, and split-levels' },
+    affordable: { name: 'Bowie East / Pointer Ridge', desc: 'Older split-levels and townhomes with more accessible price points than the rest of Prince George\'s County\'s Bowie sections', character: 'Mid-century, attainable, established', type: 'Split-levels, townhomes, and ramblers' },
+    family: { name: 'Mitchellville / Northridge', desc: 'Newer master-planned communities with golf-course homes, family pools, and well-rated schools (adjacent to Bowie proper)', character: 'Newer master-planned, golf, family', type: 'Newer single-family homes in master-planned subdivisions' },
+  },
+  'us-catonsville-md': {
+    city: 'Catonsville',
+    center: { name: 'Frederick Road historic district', desc: 'Walkable historic Main Street strip along Frederick Road with the Catonsville Community Library, restaurants, and music venues, adjacent to UMBC', character: 'Walkable historic main street, college-adjacent', type: 'Historic homes, modest townhomes, and small apartments' },
+    suburb: { name: 'Old Catonsville / Paradise', desc: 'Tree-lined residential streets with Victorian and early-1900s housing stock and mature landscaping', character: 'Historic residential, mature trees, established', type: 'Victorian homes, foursquares, and bungalows' },
+    affordable: { name: 'Catonsville Crossing / Rolling Road', desc: 'Apartment and townhome corridor along Rolling Road and Edmondson Avenue with bus access to downtown Baltimore', character: 'Apartment corridor, transit-served, attainable', type: 'Garden apartments and townhome subdivisions' },
+    family: { name: 'Oella', desc: 'Historic mill village along the Patapsco River with the Trolley Trail, Patapsco Valley State Park access, and converted mill loft housing', character: 'Historic mill village, parks, family', type: 'Mill workers\' cottages and converted-mill lofts' },
+  },
+  'us-elkridge-md': {
+    city: 'Elkridge',
+    center: { name: 'Elkridge / Furnace Avenue', desc: 'Historic Patapsco River area centered on the old B&O Railroad route with Belmont Manor and the Patapsco Heritage Greenway', character: 'Historic riverside, railroad heritage', type: 'Older single-family homes and historic structures' },
+    suburb: { name: 'Howard Square / Belmont', desc: 'Newer Howard County subdivisions with well-rated schools and proximity to BWI and the I-95 / Route 100 employment corridor', character: 'Newer suburban, top schools, commuter-friendly', type: 'Newer single-family homes and townhomes' },
+    affordable: { name: 'Elkridge Crossing / US-1 corridor', desc: 'Townhome and apartment developments along the US-1 commercial corridor with grocery-anchored retail', character: 'Townhome corridor, attainable, retail-served', type: 'Townhomes, mid-rise condos, and apartment complexes' },
+    family: { name: 'Rockburn / Hilltop', desc: 'Established single-family neighborhoods adjacent to Rockburn Branch Park with extensive trails and athletic fields', character: 'Established residential, parks, family', type: 'Single-family homes from the 1980s-2000s' },
+  },
+  'us-glen-burnie-md': {
+    city: 'Glen Burnie',
+    center: { name: 'Olde Town Glen Burnie', desc: 'Older commercial corridor along Crain Highway and Baltimore-Annapolis Boulevard with the Glen Burnie town center and historic Carrollton Manor', character: 'Older town-center commercial', type: 'Older townhomes and small commercial-residential' },
+    suburb: { name: 'Cromwell / Cromwell Station', desc: 'Light Rail station-adjacent residential with apartment complexes, townhomes, and easy commute to BWI and downtown Baltimore', character: 'Transit-served, suburban, commuter', type: 'Townhomes, apartment complexes, and modest single-family' },
+    affordable: { name: 'Furnace Branch', desc: 'Apartment and townhome neighborhoods west of Ritchie Highway with very affordable Anne Arundel County price points', character: 'Affordable apartment corridor', type: 'Garden apartments and older townhomes' },
+    family: { name: 'Marley / Marley Glen', desc: 'Established single-family split-level neighborhoods with mature trees, Marley Park, and family-oriented community', character: 'Established residential, parks, family', type: 'Mid-century split-levels and ramblers' },
+  },
+
+  // Other Eastern US
+  'us-camden-nj': {
+    city: 'Camden',
+    center: { name: 'Cooper-Grant / Downtown', desc: 'Rutgers-Camden, Cooper University Hospital, and the Camden waterfront across the Delaware from Philadelphia, with the Adventure Aquarium and BB&T Pavilion', character: 'University-medical-waterfront core', type: 'University apartments, condos, and historic row homes' },
+    suburb: { name: 'Parkside', desc: 'Forest Hill Park-adjacent neighborhood with historic detached homes, in-progress revitalization, and proximity to PATCO transit', character: 'Historic residential, revitalizing', type: 'Historic detached homes and twin houses' },
+    affordable: { name: 'Cramer Hill', desc: 'North Camden dense residential along the Delaware and Cooper rivers with very affordable housing and ongoing waterfront redevelopment', character: 'Dense residential, very affordable', type: 'Row homes, twins, and small detached homes' },
+    family: { name: 'Fairview / Yorkship Village', desc: 'Camden\'s southwest with the Yorkship Village historic planned community, more single-family housing, and quieter streets', character: 'Historic planned community, single-family', type: 'Yorkship-style homes and bungalows' },
+  },
+  'us-new-york-city': {
+    city: 'New York City',
+    center: { name: 'Midtown Manhattan', desc: 'Grand Central Terminal, Times Square, Bryant Park, and the densest commercial-residential mix in the country with all subway lines converging', character: 'Ultra-dense urban core, transit-saturated', type: 'High-rise condos, doorman rentals, and pre-war apartments' },
+    suburb: { name: 'Park Slope, Brooklyn', desc: 'Brownstone neighborhood adjacent to Prospect Park with family-oriented streets, food coops, and the F/G/Q/R subway lines', character: 'Family-friendly brownstone, Prospect Park access', type: 'Brownstones, pre-war co-ops, and converted townhouses' },
+    affordable: { name: 'Astoria, Queens', desc: 'Greek, Brazilian, and Bangladeshi enclaves with significantly lower rent than Manhattan, the N/W trains to Midtown, and Astoria Park along the East River', character: 'Diverse enclave, transit-served, attainable', type: 'Mid-rise rentals, walk-ups, and small co-ops' },
+    family: { name: 'Upper West Side, Manhattan', desc: 'Riverside Park, Central Park West, well-rated public schools, and classic doorman buildings on Broadway, West End, and Riverside', character: 'Family-oriented, parks-adjacent, established', type: 'Pre-war doorman co-ops and condos, brownstones' },
+  },
+
+  // US Caribbean territories
+  'us-san-juan-pr': {
+    city: 'San Juan',
+    center: { name: 'Old San Juan / Viejo San Juan', desc: 'UNESCO-listed historic district with cobbled streets, El Morro fortress, the cathedral, and vibrant cafes and galleries on Calle Fortaleza', character: 'Historic walkable colonial, tourist-rich', type: 'Restored colonial mansions and apartment conversions' },
+    suburb: { name: 'Condado', desc: 'Beachfront condo strip along Ashford Avenue with restaurants, hotels, and the Laguna del Condado, popular with mainland transplants and retirees', character: 'Beachfront condo strip, walkable', type: 'High-rise condos and beachfront apartments' },
+    affordable: { name: 'Santurce', desc: 'Interior arts district with La Placita de Santurce, the Museum of Art of Puerto Rico, and significantly lower rents than Condado', character: 'Arts and food district, attainable', type: 'Mid-rise apartments and walk-ups' },
+    family: { name: 'Miramar', desc: 'Quiet historic neighborhood between Old San Juan and Condado with restored 1920s-30s mansions, embassies, and a slower pace', character: 'Historic mansions, quiet, established', type: 'Restored mansions, condos, and small apartments' },
+  },
+  'us-ponce-pr': {
+    // User-provided names 2026-04-27. Five names: Las Delicias, La Rambla,
+    // Jardines Del Caribe, El Tuque, Glenview (read from "Grlenview"). The
+    // script has 4 slots — Glenview deferred. Slot assignments are best-
+    // guesses based on general knowledge of Ponce; descriptions for La
+    // Rambla and Las Delicias are reasonable, Jardines Del Caribe needs
+    // verification.
+    city: 'Ponce',
+    center: { name: 'Las Delicias', desc: 'Historic Plaza Las Delicias core with the iconic red-and-black Parque de Bombas firehouse, the cathedral, and walkable surrounding streets full of museums', character: 'Historic plaza walkable core', type: 'Historic homes and small commercial-residential' },
+    suburb: { name: 'La Rambla', desc: 'Hillside residential neighborhood above the city with harbor views, the Cruceta del Vigía landmark, and cooler breezes', character: 'Hillside residential, harbor views', type: 'Single-family homes on hillside lots' },
+    affordable: { name: 'Jardines Del Caribe', desc: 'Residential urbanización — needs verification of character, price level, and walkability', character: 'Residential urbanización (placeholder — verify)', type: 'Single-family homes / townhomes (placeholder)' },
+    family: { name: 'El Tuque', desc: 'Coastal area south of the city with Playa El Tuque beach access and growing residential development', character: 'Coastal residential, beach access', type: 'Single-family homes and beach condos' },
+  },
+  'us-charlotte-amalie-vi': {
+    // User-provided names 2026-04-27; full character + price descriptions
+    // pending tier-2 research. 5th candidate "Charlotte Amalie West" deferred
+    // (script slot count is 4). Descriptions below are placeholders that
+    // should be verified before authoritative use.
+    city: 'Charlotte Amalie',
+    center: { name: 'Charlotte Amalie East', desc: 'Eastern part of the historic harbor capital — needs verification of character and current housing mix', character: 'Capital, harbor (placeholder — verify)', type: 'Mixed historic and contemporary (placeholder)' },
+    suburb: { name: 'Frenchtown', desc: 'Small French-Caribbean enclave west of the harbor with traditional French Huguenot heritage, restaurants, and a tight-knit community', character: 'Historic French-Caribbean enclave, walkable', type: 'Historic homes and small apartments' },
+    affordable: { name: 'Hospital Ground', desc: 'Neighborhood near the Roy Lester Schneider Hospital — needs verification of character and housing prices', character: 'Hospital-adjacent (placeholder — verify)', type: 'Modest single-family and apartments (placeholder)' },
+    family: { name: 'Agnes Fancy', desc: 'Hillside residential area inland from the harbor — needs verification of character and family amenities', character: 'Hillside residential (placeholder — verify)', type: 'Single-family hillside homes (placeholder)' },
+  },
+  'us-christiansted-vi': {
+    // User-provided names 2026-04-27; full character + price descriptions
+    // pending tier-2 research. Six names provided (Richmond, Fredensal,
+    // Mt Welcome, Downtown, Contentment, Altona); the script has 4 slots,
+    // so Contentment + Altona are deferred. Slot assignments below are
+    // best-guesses — easy to rearrange once descriptions are in.
+    // Descriptions are placeholders that should be verified before
+    // authoritative use.
+    city: 'Christiansted',
+    center: { name: 'Downtown Christiansted', desc: 'Danish colonial historic district along the harbor with Fort Christiansvaern, King Street shops, and the boardwalk', character: 'Danish colonial historic, walkable', type: 'Restored colonial townhouses and apartments' },
+    suburb: { name: 'Mt Welcome', desc: 'Hillside residential area — needs verification of character and current housing mix', character: 'Hillside residential (placeholder — verify)', type: 'Single-family hillside homes (placeholder)' },
+    affordable: { name: 'Richmond', desc: 'Estate Richmond area — needs verification of character, price level, and walkability', character: 'Estate area (placeholder — verify)', type: 'Modest single-family (placeholder)' },
+    family: { name: 'Fredensal', desc: 'Fredensal area — needs verification of character and family amenities', character: 'Residential (placeholder — verify)', type: 'Single-family homes (placeholder)' },
+  },
+
+  // US Pacific territories — confidence: medium-low. Specific neighborhood
+  // names are real but characterizations rely on general territory knowledge
+  // rather than ground-truth research. Flag for verification before
+  // surfacing as authoritative.
+  'us-dededo-gu': {
+    // User-provided names 2026-04-27. Dededo proper is small, so these
+    // cover Dededo + surrounding Northern Guam villages: Macheche, Kaiserm
+    // (likely typo — verify spelling, possibly "Kaiser"), Upper Tumon,
+    // Harmon Village, Y Papao. Five names, 4 slots — Kaiserm deferred
+    // pending spelling confirmation. Descriptions are best-guesses based
+    // on general Northern Guam knowledge; verify before authoritative use.
+    city: 'Dededo',
+    center: { name: 'Harmon Village', desc: 'Northern Guam commercial corridor near the Micronesia Mall and Marine Corps Drive — needs verification of current character and housing mix', character: 'Commercial corridor (placeholder — verify)', type: 'Apartments and small commercial-residential (placeholder)' },
+    suburb: { name: 'Upper Tumon', desc: 'Established residential area north of the Tumon tourist strip — needs verification of housing prices and walkability', character: 'Established residential (placeholder — verify)', type: 'Single-family concrete homes (placeholder)' },
+    affordable: { name: 'Macheche', desc: 'Northern Guam residential village — needs verification of character and price level', character: 'Local village residential (placeholder — verify)', type: 'Concrete single-family homes (placeholder)' },
+    family: { name: 'Y Papao', desc: 'Northern Guam village area — needs verification of character and family amenities', character: 'Village residential (placeholder — verify)', type: 'Concrete single-family on village lots (placeholder)' },
+  },
+  'us-hagatna-gu': {
+    // User-provided names 2026-04-27: Mongmong, Agana Heights, Sinajana
+    // (3 names). Kept "Hagåtña proper" as the 4th (center) since it's the
+    // capital and matches the location id; replace if user prefers a
+    // different 4th. Slot assignments below are best-guesses; descriptions
+    // for non-Hagåtña-proper entries are placeholders pending verification.
+    city: 'Hagåtña',
+    center: { name: 'Hagåtña / Agana proper', desc: 'Capital of Guam with the legislature, governor\'s complex, Plaza de España, and the Dulce Nombre de Maria Cathedral-Basilica', character: 'Capital, government, historic', type: 'Older concrete homes and government-area apartments' },
+    suburb: { name: 'Agana Heights', desc: 'Hillside village above the capital — needs verification of housing prices and walkability', character: 'Hillside residential (placeholder — verify)', type: 'Single-family hillside homes (placeholder)' },
+    affordable: { name: 'Mongmong', desc: 'Central village south of Hagåtña — needs verification of character and price level', character: 'Local village residential (placeholder — verify)', type: 'Concrete single-family homes (placeholder)' },
+    family: { name: 'Sinajana', desc: 'Hillside village immediately south of Hagåtña — needs verification of character and family amenities', character: 'Established hillside residential (placeholder — verify)', type: 'Single-family hillside homes (placeholder)' },
+  },
+  'us-saipan-mp': {
+    city: 'Saipan',
+    center: { name: 'Garapan', desc: 'Main commercial and tourist district along Beach Road with hotels, restaurants, and proximity to American Memorial Park', character: 'Tourist commercial corridor', type: 'Hotels, condos, and apartments along Beach Road' },
+    suburb: { name: 'San Antonio / Susupe', desc: 'Central residential villages with established family neighborhoods and proximity to government services', character: 'Central residential, family', type: 'Single-family concrete homes' },
+    affordable: { name: 'As Lito / Koblerville', desc: 'Interior villages with more affordable prices, more local character, and limited tourist presence', character: 'Interior local, very affordable', type: 'Modest single-family homes' },
+    family: { name: 'Capitol Hill / Navy Hill', desc: 'Government area with administrative offices, established family housing, and cooler hillside elevation', character: 'Government hill, established family', type: 'Single-family homes on hillside lots' },
+  },
+  'us-tinian-mp': {
+    // User-provided names 2026-04-27: San Jose, Carolinas Heights,
+    // Marpo Valley, Northern Tinian, Western Tinian, Corolinas (6 names —
+    // "Corolinas" likely typo, possibly duplicate of "Carolinas Heights"
+    // or distinct "Carolinas" area; verify). 4 slots — Western Tinian and
+    // Corolinas deferred. Tinian is small (~3,000 residents), so the
+    // "neighborhoods" are really sub-areas of a single island town.
+    city: 'Tinian',
+    center: { name: 'San Jose', desc: 'Tinian\'s main town with the harbor, government offices, and most of the island\'s residents', character: 'Small-island town, relaxed', type: 'Modest single-family concrete homes' },
+    suburb: { name: 'Carolinas Heights', desc: 'Hillside residential area — needs verification of character and ocean-view housing mix', character: 'Hillside residential (placeholder — verify)', type: 'Single-family hillside homes (placeholder)' },
+    affordable: { name: 'Marpo Valley', desc: 'Central agricultural area with traditional ranching and quieter rural character — needs verification of price level', character: 'Agricultural, rural (placeholder — verify)', type: 'Single-family on agricultural lots (placeholder)' },
+    family: { name: 'Northern Tinian', desc: 'Northern end of the island with quieter, lower-density living — needs verification of specific neighborhoods and amenities', character: 'Northern rural (placeholder — verify)', type: 'Single-family homes on larger lots (placeholder)' },
+  },
+  'us-pago-pago-as': {
+    // User-provided names 2026-04-27: Fagatogo, Satala, Pago Pago,
+    // Trading Point (4 names, exact slot count). Slot assignments are
+    // best-guesses (Fagatogo as government center, Pago Pago as the
+    // residential harbor village, Satala/Trading Point as more coastal
+    // commercial). Descriptions are placeholders pending verification.
+    city: 'Pago Pago',
+    center: { name: 'Fagatogo', desc: 'Government and commercial center along the Pago Pago harbor with the legislature and the LBJ Tropical Medical Center — needs verification of housing prices and walkability', character: 'Government commercial, harbor (placeholder — verify)', type: 'Older concrete homes and government-adjacent apartments (placeholder)' },
+    suburb: { name: 'Pago Pago', desc: 'Pago Pago village along the harbor — needs verification of current character and housing mix', character: 'Established harbor village (placeholder — verify)', type: 'Single-family concrete and timber homes (placeholder)' },
+    affordable: { name: 'Satala', desc: 'Coastal village on Pago Pago harbor — needs verification of character and price level', character: 'Coastal village (placeholder — verify)', type: 'Modest concrete homes and traditional fale (placeholder)' },
+    family: { name: 'Trading Point', desc: 'Trading Point area — needs verification of character and family amenities (slot may need swap if not residential)', character: 'Coastal area (placeholder — verify)', type: 'Mixed coastal residential (placeholder)' },
+  },
+  'us-tafuna-as': {
+    // User-provided names 2026-04-27: Downtown, Malaeimi, Nu'uuli, Faleniu,
+    // Pava'ia'i, Vaitogi (6 names). 4 slots — Malaeimi and Faleniu deferred.
+    // Slot assignments are best-guesses; descriptions for non-Downtown
+    // entries are placeholders pending verification.
+    city: 'Tafuna',
+    center: { name: 'Downtown Tafuna', desc: 'Commercial and government services around the Pago Pago International Airport with most of the territory\'s commerce, schools, and the medical center', character: 'Commercial-administrative center', type: 'Single-family concrete homes and small apartments' },
+    suburb: { name: 'Nu\'uuli', desc: 'Adjacent residential village east of Tafuna — needs verification of housing prices and walkability', character: 'Established residential (placeholder — verify)', type: 'Single-family concrete homes (placeholder)' },
+    affordable: { name: 'Pava\'ia\'i', desc: 'Interior plain village — needs verification of character and price level', character: 'Interior traditional (placeholder — verify)', type: 'Traditional fale and modest concrete homes (placeholder)' },
+    family: { name: 'Vaitogi', desc: 'Coastal village south of Tafuna with the Turtle and Shark legend lookout — needs verification of family amenities and housing mix', character: 'Coastal village (placeholder — verify)', type: 'Traditional fale and single-family concrete (placeholder)' },
+  },
 };
 
 // ────────────────────────────────────────────────────────────────

@@ -2,18 +2,18 @@
   "city": "Glen Burnie",
   "neighborhoods": [
     {
-      "id": "inner-harbor-federal-hill",
-      "name": "Inner Harbor / Federal Hill",
-      "description": "Revitalized waterfront with National Aquarium, historic ships, and rowhome neighborhoods on the hill",
-      "character": "Waterfront revitalized, aquarium, historic rowhomes",
+      "id": "olde-town-glen-burnie",
+      "name": "Olde Town Glen Burnie",
+      "description": "Older commercial corridor along Crain Highway and Baltimore-Annapolis Boulevard with the Glen Burnie town center and historic Carrollton Manor",
+      "character": "Older town-center commercial",
       "housing": {
-        "avgRentOneBedroomUSD": 2408,
-        "avgRentTwoBedroomUSD": 3250,
-        "buyPricePerSqmUSD": 7028,
-        "predominantType": "Rowhomes, condos, and waterfront apartments"
+        "avgRentOneBedroomUSD": 2688,
+        "avgRentTwoBedroomUSD": 3629,
+        "buyPricePerSqmUSD": 7952,
+        "predominantType": "Older townhomes and small commercial-residential"
       },
       "walkabilityScore": 87,
-      "transitScore": 80,
+      "transitScore": 74,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
@@ -23,7 +23,7 @@
       "sources": [
         {
           "title": "Numbeo Cost of Living Glen Burnie",
-          "url": "https://www.numbeo.com/cost-of-living/in/Glen Burnie"
+          "url": "https://www.numbeo.com/cost-of-living/in/Glen-Burnie"
         },
         {
           "title": "Zillow",
@@ -36,18 +36,18 @@
       ]
     },
     {
-      "id": "towson",
-      "name": "Towson",
-      "description": "Northern suburb with university, Towson Town Center, and established residential neighborhoods",
-      "character": "University suburban, shopping, established residential",
+      "id": "cromwell-cromwell-station",
+      "name": "Cromwell / Cromwell Station",
+      "description": "Light Rail station-adjacent residential with apartment complexes, townhomes, and easy commute to BWI and downtown Baltimore",
+      "character": "Transit-served, suburban, commuter",
       "housing": {
-        "avgRentOneBedroomUSD": 1759,
-        "avgRentTwoBedroomUSD": 2375,
-        "buyPricePerSqmUSD": 4518,
-        "predominantType": "Single-family homes, apartments, and garden condos"
+        "avgRentOneBedroomUSD": 1965,
+        "avgRentTwoBedroomUSD": 2652,
+        "buyPricePerSqmUSD": 5112,
+        "predominantType": "Townhomes, apartment complexes, and modest single-family"
       },
-      "walkabilityScore": 68,
-      "transitScore": 42,
+      "walkabilityScore": 57,
+      "transitScore": 54,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
@@ -57,7 +57,7 @@
       "sources": [
         {
           "title": "Numbeo Cost of Living Glen Burnie",
-          "url": "https://www.numbeo.com/cost-of-living/in/Glen Burnie"
+          "url": "https://www.numbeo.com/cost-of-living/in/Glen-Burnie"
         },
         {
           "title": "Zillow",
@@ -70,18 +70,18 @@
       ]
     },
     {
-      "id": "dundalk-essex",
-      "name": "Dundalk / Essex",
-      "description": "Eastern working-class communities with waterfront access and significantly lower housing costs",
-      "character": "Working-class waterfront, affordable, community",
+      "id": "furnace-branch",
+      "name": "Furnace Branch",
+      "description": "Apartment and townhome neighborhoods west of Ritchie Highway with very affordable Anne Arundel County price points",
+      "character": "Affordable apartment corridor",
       "housing": {
-        "avgRentOneBedroomUSD": 1204,
-        "avgRentTwoBedroomUSD": 1625,
-        "buyPricePerSqmUSD": 2761,
-        "predominantType": "Row houses, modest single-family homes, and apartments"
+        "avgRentOneBedroomUSD": 1344,
+        "avgRentTwoBedroomUSD": 1815,
+        "buyPricePerSqmUSD": 3124,
+        "predominantType": "Garden apartments and older townhomes"
       },
-      "walkabilityScore": 40,
-      "transitScore": 37,
+      "walkabilityScore": 60,
+      "transitScore": 46,
       "safetyRating": "moderate",
       "expats": {
         "communitySize": "not-applicable",
@@ -91,7 +91,7 @@
       "sources": [
         {
           "title": "Numbeo Cost of Living Glen Burnie",
-          "url": "https://www.numbeo.com/cost-of-living/in/Glen Burnie"
+          "url": "https://www.numbeo.com/cost-of-living/in/Glen-Burnie"
         },
         {
           "title": "Zillow",
@@ -104,17 +104,17 @@
       ]
     },
     {
-      "id": "columbia-ellicott-city",
-      "name": "Columbia / Ellicott City",
-      "description": "Howard County planned communities with top schools, diverse population, and extensive amenities",
-      "character": "Planned community, top schools, diverse",
+      "id": "marley-marley-glen",
+      "name": "Marley / Marley Glen",
+      "description": "Established single-family split-level neighborhoods with mature trees, Marley Park, and family-oriented community",
+      "character": "Established residential, parks, family",
       "housing": {
-        "avgRentOneBedroomUSD": 2037,
-        "avgRentTwoBedroomUSD": 2750,
-        "buyPricePerSqmUSD": 5773,
-        "predominantType": "Single-family homes, townhomes, and condos"
+        "avgRentOneBedroomUSD": 2275,
+        "avgRentTwoBedroomUSD": 3071,
+        "buyPricePerSqmUSD": 6532,
+        "predominantType": "Mid-century split-levels and ramblers"
       },
-      "walkabilityScore": 76,
+      "walkabilityScore": 67,
       "transitScore": 66,
       "safetyRating": "high",
       "expats": {
@@ -125,7 +125,7 @@
       "sources": [
         {
           "title": "Numbeo Cost of Living Glen Burnie",
-          "url": "https://www.numbeo.com/cost-of-living/in/Glen Burnie"
+          "url": "https://www.numbeo.com/cost-of-living/in/Glen-Burnie"
         },
         {
           "title": "Zillow",
@@ -137,11 +137,5 @@
         }
       ]
     }
-  ],
-  "_seedOrigin": {
-    "kind": "starter-template",
-    "from": "us-baltimore-md",
-    "generatedAt": "2026-04-23",
-    "note": "Template-derived content — prices and names adapted from the template city. Needs per-location review."
-  }
+  ]
 }

@@ -2,18 +2,18 @@
   "city": "Catonsville",
   "neighborhoods": [
     {
-      "id": "inner-harbor-federal-hill",
-      "name": "Inner Harbor / Federal Hill",
-      "description": "Revitalized waterfront with National Aquarium, historic ships, and rowhome neighborhoods on the hill",
-      "character": "Waterfront revitalized, aquarium, historic rowhomes",
+      "id": "frederick-road-historic-district",
+      "name": "Frederick Road historic district",
+      "description": "Walkable historic Main Street strip along Frederick Road with the Catonsville Community Library, restaurants, and music venues, adjacent to UMBC",
+      "character": "Walkable historic main street, college-adjacent",
       "housing": {
-        "avgRentOneBedroomUSD": 2408,
-        "avgRentTwoBedroomUSD": 3250,
-        "buyPricePerSqmUSD": 7028,
-        "predominantType": "Rowhomes, condos, and waterfront apartments"
+        "avgRentOneBedroomUSD": 2829,
+        "avgRentTwoBedroomUSD": 3819,
+        "buyPricePerSqmUSD": 8414,
+        "predominantType": "Historic homes, modest townhomes, and small apartments"
       },
-      "walkabilityScore": 87,
-      "transitScore": 80,
+      "walkabilityScore": 88,
+      "transitScore": 81,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
@@ -36,18 +36,18 @@
       ]
     },
     {
-      "id": "towson",
-      "name": "Towson",
-      "description": "Northern suburb with university, Towson Town Center, and established residential neighborhoods",
-      "character": "University suburban, shopping, established residential",
+      "id": "old-catonsville-paradise",
+      "name": "Old Catonsville / Paradise",
+      "description": "Tree-lined residential streets with Victorian and early-1900s housing stock and mature landscaping",
+      "character": "Historic residential, mature trees, established",
       "housing": {
-        "avgRentOneBedroomUSD": 1759,
-        "avgRentTwoBedroomUSD": 2375,
-        "buyPricePerSqmUSD": 4518,
-        "predominantType": "Single-family homes, apartments, and garden condos"
+        "avgRentOneBedroomUSD": 2067,
+        "avgRentTwoBedroomUSD": 2791,
+        "buyPricePerSqmUSD": 5409,
+        "predominantType": "Victorian homes, foursquares, and bungalows"
       },
-      "walkabilityScore": 68,
-      "transitScore": 42,
+      "walkabilityScore": 58,
+      "transitScore": 60,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
@@ -70,18 +70,18 @@
       ]
     },
     {
-      "id": "dundalk-essex",
-      "name": "Dundalk / Essex",
-      "description": "Eastern working-class communities with waterfront access and significantly lower housing costs",
-      "character": "Working-class waterfront, affordable, community",
+      "id": "catonsville-crossing-rolling-road",
+      "name": "Catonsville Crossing / Rolling Road",
+      "description": "Apartment and townhome corridor along Rolling Road and Edmondson Avenue with bus access to downtown Baltimore",
+      "character": "Apartment corridor, transit-served, attainable",
       "housing": {
-        "avgRentOneBedroomUSD": 1204,
-        "avgRentTwoBedroomUSD": 1625,
-        "buyPricePerSqmUSD": 2761,
-        "predominantType": "Row houses, modest single-family homes, and apartments"
+        "avgRentOneBedroomUSD": 1414,
+        "avgRentTwoBedroomUSD": 1909,
+        "buyPricePerSqmUSD": 3306,
+        "predominantType": "Garden apartments and townhome subdivisions"
       },
-      "walkabilityScore": 40,
-      "transitScore": 37,
+      "walkabilityScore": 45,
+      "transitScore": 30,
       "safetyRating": "moderate",
       "expats": {
         "communitySize": "not-applicable",
@@ -104,18 +104,18 @@
       ]
     },
     {
-      "id": "columbia-ellicott-city",
-      "name": "Columbia / Ellicott City",
-      "description": "Howard County planned communities with top schools, diverse population, and extensive amenities",
-      "character": "Planned community, top schools, diverse",
+      "id": "oella",
+      "name": "Oella",
+      "description": "Historic mill village along the Patapsco River with the Trolley Trail, Patapsco Valley State Park access, and converted mill loft housing",
+      "character": "Historic mill village, parks, family",
       "housing": {
-        "avgRentOneBedroomUSD": 2037,
-        "avgRentTwoBedroomUSD": 2750,
-        "buyPricePerSqmUSD": 5773,
-        "predominantType": "Single-family homes, townhomes, and condos"
+        "avgRentOneBedroomUSD": 2394,
+        "avgRentTwoBedroomUSD": 3231,
+        "buyPricePerSqmUSD": 6911,
+        "predominantType": "Mill workers' cottages and converted-mill lofts"
       },
-      "walkabilityScore": 76,
-      "transitScore": 66,
+      "walkabilityScore": 64,
+      "transitScore": 58,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
@@ -137,11 +137,5 @@
         }
       ]
     }
-  ],
-  "_seedOrigin": {
-    "kind": "starter-template",
-    "from": "us-baltimore-md",
-    "generatedAt": "2026-04-23",
-    "note": "Template-derived content — prices and names adapted from the template city. Needs per-location review."
-  }
+  ]
 }

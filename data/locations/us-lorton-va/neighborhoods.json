@@ -2,18 +2,18 @@
   "city": "Lorton",
   "neighborhoods": [
     {
-      "id": "oceanfront-resort-area",
-      "name": "Oceanfront / Resort Area",
-      "description": "Famous boardwalk with Atlantic oceanfront, restaurants, entertainment venues, and King Neptune statue",
-      "character": "Oceanfront boardwalk, resort, beach culture",
+      "id": "lorton-station",
+      "name": "Lorton Station",
+      "description": "Town-center development around the Lorton VRE commuter rail station with grocery-anchored retail and townhomes",
+      "character": "VRE town-center, walkable mixed-use",
       "housing": {
-        "avgRentOneBedroomUSD": 2408,
-        "avgRentTwoBedroomUSD": 3250,
-        "buyPricePerSqmUSD": 7028,
-        "predominantType": "Condos, apartments, and beachfront properties"
+        "avgRentOneBedroomUSD": 2969,
+        "avgRentTwoBedroomUSD": 4008,
+        "buyPricePerSqmUSD": 8876,
+        "predominantType": "Townhomes and mid-rise apartments around the station"
       },
-      "walkabilityScore": 94,
-      "transitScore": 70,
+      "walkabilityScore": 89,
+      "transitScore": 85,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
@@ -23,7 +23,7 @@
       "sources": [
         {
           "title": "Numbeo Cost of Living Lorton",
-          "url": "https://www.numbeo.com/cost-of-living/in/Virginia-Beach"
+          "url": "https://www.numbeo.com/cost-of-living/in/Lorton"
         },
         {
           "title": "Zillow",
@@ -36,18 +36,18 @@
       ]
     },
     {
-      "id": "great-neck-shore-drive",
-      "name": "Great Neck / Shore Drive",
-      "description": "Chesapeake Bay side with calmer waters, First Landing State Park, and established neighborhoods",
-      "character": "Bay side, state park, established residential",
+      "id": "laurel-hill-workhouse-arts-center",
+      "name": "Laurel Hill / Workhouse Arts Center",
+      "description": "Newer single-family homes built on the former Lorton Reformatory grounds with the Workhouse Arts Center as the cultural anchor",
+      "character": "Newer homes on historic grounds, arts center",
       "housing": {
-        "avgRentOneBedroomUSD": 1759,
-        "avgRentTwoBedroomUSD": 2375,
-        "buyPricePerSqmUSD": 4518,
-        "predominantType": "Single-family homes and bay-area properties"
+        "avgRentOneBedroomUSD": 2170,
+        "avgRentTwoBedroomUSD": 2929,
+        "buyPricePerSqmUSD": 5706,
+        "predominantType": "Newer single-family homes and townhomes"
       },
-      "walkabilityScore": 56,
-      "transitScore": 47,
+      "walkabilityScore": 59,
+      "transitScore": 48,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
@@ -57,7 +57,7 @@
       "sources": [
         {
           "title": "Numbeo Cost of Living Lorton",
-          "url": "https://www.numbeo.com/cost-of-living/in/Virginia-Beach"
+          "url": "https://www.numbeo.com/cost-of-living/in/Lorton"
         },
         {
           "title": "Zillow",
@@ -70,18 +70,18 @@
       ]
     },
     {
-      "id": "kempsville-indian-river",
-      "name": "Kempsville / Indian River",
-      "description": "Central residential areas with affordable housing, community parks, and good school access",
-      "character": "Central residential, affordable, parks and schools",
+      "id": "gunston-mason-neck",
+      "name": "Gunston / Mason Neck",
+      "description": "More rural southeastern Fairfax County with larger lots, Mason Neck State Park access, and lower price points",
+      "character": "Semi-rural, parks, larger lots",
       "housing": {
-        "avgRentOneBedroomUSD": 1204,
-        "avgRentTwoBedroomUSD": 1625,
-        "buyPricePerSqmUSD": 2761,
-        "predominantType": "Ranch houses, split-levels, and townhomes"
+        "avgRentOneBedroomUSD": 1485,
+        "avgRentTwoBedroomUSD": 2004,
+        "buyPricePerSqmUSD": 3487,
+        "predominantType": "Older single-family on larger lots"
       },
-      "walkabilityScore": 56,
-      "transitScore": 33,
+      "walkabilityScore": 58,
+      "transitScore": 38,
       "safetyRating": "moderate",
       "expats": {
         "communitySize": "not-applicable",
@@ -91,7 +91,7 @@
       "sources": [
         {
           "title": "Numbeo Cost of Living Lorton",
-          "url": "https://www.numbeo.com/cost-of-living/in/Virginia-Beach"
+          "url": "https://www.numbeo.com/cost-of-living/in/Lorton"
         },
         {
           "title": "Zillow",
@@ -104,18 +104,18 @@
       ]
     },
     {
-      "id": "princess-anne-nimmo",
-      "name": "Princess Anne / Nimmo",
-      "description": "Southern agricultural heritage area with newer development, equestrian farms, and family estates",
-      "character": "Agricultural heritage, equestrian, newer development",
+      "id": "pohick-south-run",
+      "name": "Pohick / South Run",
+      "description": "Established neighborhoods near Pohick Bay Regional Park and South Run Rec Center with mature trees and active community pools",
+      "character": "Established residential, parks and rec",
       "housing": {
-        "avgRentOneBedroomUSD": 2037,
-        "avgRentTwoBedroomUSD": 2750,
-        "buyPricePerSqmUSD": 5773,
-        "predominantType": "Newer homes, farm properties, and planned communities"
+        "avgRentOneBedroomUSD": 2512,
+        "avgRentTwoBedroomUSD": 3392,
+        "buyPricePerSqmUSD": 7291,
+        "predominantType": "Single-family homes from the 1980s-90s"
       },
-      "walkabilityScore": 70,
-      "transitScore": 52,
+      "walkabilityScore": 64,
+      "transitScore": 69,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
@@ -125,7 +125,7 @@
       "sources": [
         {
           "title": "Numbeo Cost of Living Lorton",
-          "url": "https://www.numbeo.com/cost-of-living/in/Virginia-Beach"
+          "url": "https://www.numbeo.com/cost-of-living/in/Lorton"
         },
         {
           "title": "Zillow",
@@ -137,11 +137,5 @@
         }
       ]
     }
-  ],
-  "_seedOrigin": {
-    "kind": "starter-template",
-    "from": "us-virginia-beach-va",
-    "generatedAt": "2026-04-23",
-    "note": "Template-derived content — prices and names adapted from the template city. Needs per-location review."
-  }
+  ]
 }

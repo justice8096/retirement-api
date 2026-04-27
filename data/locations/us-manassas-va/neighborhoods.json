@@ -2,18 +2,18 @@
   "city": "Manassas",
   "neighborhoods": [
     {
-      "id": "oceanfront-resort-area",
-      "name": "Oceanfront / Resort Area",
-      "description": "Famous boardwalk with Atlantic oceanfront, restaurants, entertainment venues, and King Neptune statue",
-      "character": "Oceanfront boardwalk, resort, beach culture",
+      "id": "old-town-manassas",
+      "name": "Old Town Manassas",
+      "description": "Walkable historic downtown around the Manassas VRE station with antique shops, restaurants, and the Manassas Museum",
+      "character": "Historic walkable downtown, VRE access",
       "housing": {
-        "avgRentOneBedroomUSD": 2408,
-        "avgRentTwoBedroomUSD": 3250,
-        "buyPricePerSqmUSD": 7028,
-        "predominantType": "Condos, apartments, and beachfront properties"
+        "avgRentOneBedroomUSD": 2735,
+        "avgRentTwoBedroomUSD": 3693,
+        "buyPricePerSqmUSD": 8106,
+        "predominantType": "Historic homes, townhomes, and lofts in converted commercial buildings"
       },
-      "walkabilityScore": 94,
-      "transitScore": 70,
+      "walkabilityScore": 88,
+      "transitScore": 75,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
@@ -23,7 +23,7 @@
       "sources": [
         {
           "title": "Numbeo Cost of Living Manassas",
-          "url": "https://www.numbeo.com/cost-of-living/in/Virginia-Beach"
+          "url": "https://www.numbeo.com/cost-of-living/in/Manassas"
         },
         {
           "title": "Zillow",
@@ -36,18 +36,18 @@
       ]
     },
     {
-      "id": "great-neck-shore-drive",
-      "name": "Great Neck / Shore Drive",
-      "description": "Chesapeake Bay side with calmer waters, First Landing State Park, and established neighborhoods",
-      "character": "Bay side, state park, established residential",
+      "id": "bristow",
+      "name": "Bristow",
+      "description": "Newer subdivisions and townhome developments south of Old Town with Wegmans-anchored retail and good Prince William County schools",
+      "character": "Newer suburban, family-oriented, retail-rich",
       "housing": {
-        "avgRentOneBedroomUSD": 1759,
-        "avgRentTwoBedroomUSD": 2375,
-        "buyPricePerSqmUSD": 4518,
-        "predominantType": "Single-family homes and bay-area properties"
+        "avgRentOneBedroomUSD": 1999,
+        "avgRentTwoBedroomUSD": 2698,
+        "buyPricePerSqmUSD": 5211,
+        "predominantType": "Newer single-family homes and townhomes"
       },
-      "walkabilityScore": 56,
-      "transitScore": 47,
+      "walkabilityScore": 57,
+      "transitScore": 58,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
@@ -57,7 +57,7 @@
       "sources": [
         {
           "title": "Numbeo Cost of Living Manassas",
-          "url": "https://www.numbeo.com/cost-of-living/in/Virginia-Beach"
+          "url": "https://www.numbeo.com/cost-of-living/in/Manassas"
         },
         {
           "title": "Zillow",
@@ -70,18 +70,18 @@
       ]
     },
     {
-      "id": "kempsville-indian-river",
-      "name": "Kempsville / Indian River",
-      "description": "Central residential areas with affordable housing, community parks, and good school access",
-      "character": "Central residential, affordable, parks and schools",
+      "id": "manassas-park",
+      "name": "Manassas Park",
+      "description": "Adjacent independent city with more affordable housing, Manassas Park VRE station, and dense townhome subdivisions",
+      "character": "Affordable, transit-served, dense suburban",
       "housing": {
-        "avgRentOneBedroomUSD": 1204,
-        "avgRentTwoBedroomUSD": 1625,
-        "buyPricePerSqmUSD": 2761,
-        "predominantType": "Ranch houses, split-levels, and townhomes"
+        "avgRentOneBedroomUSD": 1368,
+        "avgRentTwoBedroomUSD": 1846,
+        "buyPricePerSqmUSD": 3185,
+        "predominantType": "Townhomes and condos with some single-family"
       },
       "walkabilityScore": 56,
-      "transitScore": 33,
+      "transitScore": 46,
       "safetyRating": "moderate",
       "expats": {
         "communitySize": "not-applicable",
@@ -91,7 +91,7 @@
       "sources": [
         {
           "title": "Numbeo Cost of Living Manassas",
-          "url": "https://www.numbeo.com/cost-of-living/in/Virginia-Beach"
+          "url": "https://www.numbeo.com/cost-of-living/in/Manassas"
         },
         {
           "title": "Zillow",
@@ -104,18 +104,18 @@
       ]
     },
     {
-      "id": "princess-anne-nimmo",
-      "name": "Princess Anne / Nimmo",
-      "description": "Southern agricultural heritage area with newer development, equestrian farms, and family estates",
-      "character": "Agricultural heritage, equestrian, newer development",
+      "id": "sudley-bull-run-border",
+      "name": "Sudley / Bull Run border",
+      "description": "Established neighborhoods on the northern edge near Manassas National Battlefield Park and Bull Run Regional Park",
+      "character": "Established residential, battlefield-adjacent",
       "housing": {
-        "avgRentOneBedroomUSD": 2037,
-        "avgRentTwoBedroomUSD": 2750,
-        "buyPricePerSqmUSD": 5773,
-        "predominantType": "Newer homes, farm properties, and planned communities"
+        "avgRentOneBedroomUSD": 2314,
+        "avgRentTwoBedroomUSD": 3124,
+        "buyPricePerSqmUSD": 6658,
+        "predominantType": "Single-family homes from the 1980s-2000s"
       },
-      "walkabilityScore": 70,
-      "transitScore": 52,
+      "walkabilityScore": 60,
+      "transitScore": 69,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
@@ -125,7 +125,7 @@
       "sources": [
         {
           "title": "Numbeo Cost of Living Manassas",
-          "url": "https://www.numbeo.com/cost-of-living/in/Virginia-Beach"
+          "url": "https://www.numbeo.com/cost-of-living/in/Manassas"
         },
         {
           "title": "Zillow",
@@ -137,11 +137,5 @@
         }
       ]
     }
-  ],
-  "_seedOrigin": {
-    "kind": "starter-template",
-    "from": "us-virginia-beach-va",
-    "generatedAt": "2026-04-23",
-    "note": "Template-derived content — prices and names adapted from the template city. Needs per-location review."
-  }
+  ]
 }
