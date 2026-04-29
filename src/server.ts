@@ -70,8 +70,46 @@ await app.register(cors, {
   methods: ['GET', 'HEAD', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Accept-Version', 'Accept-Language'],
 });
+// HSTS and CSP's `upgrade-insecure-requests` are both "tell the client to always
+// use HTTPS for this host" directives. They're correct on responses that traverse
+// HTTPS (Tailscale Funnel public path) and harmful on responses that traverse
+// HTTP (LAN-internal Uptime Kuma probe over `http://192.168.68.77:8090/...`):
+// HSTS-aware clients like axios cache the directive, then on the next probe try
+// to scheme-upgrade, the upgrade strips the non-default port (8090), and the
+// fallback hits default HTTP port 80 → ECONNREFUSED.
+//
+// Approach: disable Helmet's HSTS and the upgrade-insecure-requests CSP directive
+// globally, then add them back per-request via an onSend hook only when the
+// request actually arrived over HTTPS. Inverted from "strip after Helmet sets"
+// because @fastify/helmet's header-set timing makes a later `reply.removeHeader`
+// unreliable in practice.
+// `useDefaults: false` is required — without it, @fastify/helmet *merges* our
+// `directives` with its built-in defaults, which include
+// `upgrade-insecure-requests`, so the directive ends up on every response
+// regardless of what we list here. Setting useDefaults: false makes the
+// `directives` block authoritative; everything we want must be enumerated
+// explicitly. (Codex P1 catch on PR #84.)
+const PROD_CSP_WITHOUT_UPGRADE = {
+  useDefaults: false,
+  directives: {
+    defaultSrc: ["'self'"],
+    baseUri: ["'self'"],
+    fontSrc: ["'self'", 'https:', 'data:'],
+    formAction: ["'self'"],
+    frameAncestors: ["'self'"],
+    imgSrc: ["'self'", 'data:'],
+    objectSrc: ["'none'"],
+    scriptSrc: ["'self'"],
+    scriptSrcAttr: ["'none'"],
+    styleSrc: ["'self'", 'https:', "'unsafe-inline'"],
+    // upgrade-insecure-requests intentionally omitted — added back via the
+    // onSend hook below for HTTPS-arriving requests only.
+  },
+};
 await app.register(helmet, {
-  contentSecurityPolicy: process.env.NODE_ENV === 'production' ? undefined : false,
+  contentSecurityPolicy:
+    process.env.NODE_ENV === 'production' ? PROD_CSP_WITHOUT_UPGRADE : false,
+  hsts: false, // re-added below for HTTPS arrivals only
   // Default `same-origin` blocks the SPA at a different origin (e.g. localhost:4200)
   // from reading JSON responses even when CORS permits them. `same-site` keeps CORP
   // strict enough to prevent cross-site resource inclusion while allowing the
@@ -79,33 +117,23 @@ await app.register(helmet, {
   crossOriginResourcePolicy: { policy: 'same-site' },
 });
 
-// Helmet sets `Strict-Transport-Security` and includes `upgrade-insecure-requests`
-// in the CSP on every response. Both directives tell HTTP clients to "from now on,
-// always use HTTPS for this host". That's the right behaviour when the response is
-// actually traversing HTTPS (e.g. via the Tailscale Funnel). It's actively harmful
-// when the response travels over HTTP (e.g. LAN-internal Uptime Kuma probe to
-// `http://192.168.68.77:3000/api/health/ready`) — HSTS-aware HTTP clients (axios
-// included) cache the directive, then on the *next* request attempt to scheme-
-// upgrade to HTTPS. The upgrade strips the non-default port (8090) and falls back
-// to default HTTP port 80, where nothing is listening → ECONNREFUSED.
-//
-// Strip both directives when the request did NOT arrive over HTTPS. Detected via
-// the `X-Forwarded-Proto` header (set by reverse proxies that terminate TLS) or
-// Fastify's resolved `request.protocol`. The effect: HSTS is preserved on the
-// public Funnel path (sidecar sets X-Forwarded-Proto: https before the request
-// reaches the api) and dropped on direct LAN HTTP, which is exactly what we want.
-app.addHook('onSend', async (request, reply) => {
+// Add HSTS + upgrade-insecure-requests back when the request actually arrived
+// over HTTPS. `X-Forwarded-Proto` is set by Tailscale Funnel sidecar before
+// the request reaches the api on the public path; falls back to the connection's
+// own protocol for direct callers.
+app.addHook('onSend', async (request, reply, payload) => {
   const xfp = request.headers['x-forwarded-proto'];
   const proto = (Array.isArray(xfp) ? xfp[0] : xfp) ?? request.protocol;
-  if (proto === 'https') return;
-  reply.removeHeader('strict-transport-security');
-  const csp = reply.getHeader('content-security-policy');
-  if (typeof csp === 'string' && csp.includes('upgrade-insecure-requests')) {
-    const stripped = csp
-      .replace(/;\s*upgrade-insecure-requests\s*/gi, '')
-      .replace(/^\s*upgrade-insecure-requests\s*;?/i, '');
-    reply.header('content-security-policy', stripped);
+  if (proto !== 'https') return payload;
+  reply.header('strict-transport-security', 'max-age=31536000; includeSubDomains');
+  const existing = reply.getHeader('content-security-policy');
+  if (typeof existing === 'string' && !existing.includes('upgrade-insecure-requests')) {
+    reply.header(
+      'content-security-policy',
+      existing.endsWith(';') ? existing + ' upgrade-insecure-requests' : existing + '; upgrade-insecure-requests',
+    );
   }
+  return payload;
 });
 // Build Redis store for distributed rate limiting (falls back to in-memory)
 let redisClient: { quit: () => Promise<void> } | undefined;
