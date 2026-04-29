@@ -78,6 +78,35 @@ await app.register(helmet, {
   // paired dashboard and marketing-site origins to consume the API.
   crossOriginResourcePolicy: { policy: 'same-site' },
 });
+
+// Helmet sets `Strict-Transport-Security` and includes `upgrade-insecure-requests`
+// in the CSP on every response. Both directives tell HTTP clients to "from now on,
+// always use HTTPS for this host". That's the right behaviour when the response is
+// actually traversing HTTPS (e.g. via the Tailscale Funnel). It's actively harmful
+// when the response travels over HTTP (e.g. LAN-internal Uptime Kuma probe to
+// `http://192.168.68.77:3000/api/health/ready`) — HSTS-aware HTTP clients (axios
+// included) cache the directive, then on the *next* request attempt to scheme-
+// upgrade to HTTPS. The upgrade strips the non-default port (8090) and falls back
+// to default HTTP port 80, where nothing is listening → ECONNREFUSED.
+//
+// Strip both directives when the request did NOT arrive over HTTPS. Detected via
+// the `X-Forwarded-Proto` header (set by reverse proxies that terminate TLS) or
+// Fastify's resolved `request.protocol`. The effect: HSTS is preserved on the
+// public Funnel path (sidecar sets X-Forwarded-Proto: https before the request
+// reaches the api) and dropped on direct LAN HTTP, which is exactly what we want.
+app.addHook('onSend', async (request, reply) => {
+  const xfp = request.headers['x-forwarded-proto'];
+  const proto = (Array.isArray(xfp) ? xfp[0] : xfp) ?? request.protocol;
+  if (proto === 'https') return;
+  reply.removeHeader('strict-transport-security');
+  const csp = reply.getHeader('content-security-policy');
+  if (typeof csp === 'string' && csp.includes('upgrade-insecure-requests')) {
+    const stripped = csp
+      .replace(/;\s*upgrade-insecure-requests\s*/gi, '')
+      .replace(/^\s*upgrade-insecure-requests\s*;?/i, '');
+    reply.header('content-security-policy', stripped);
+  }
+});
 // Build Redis store for distributed rate limiting (falls back to in-memory)
 let redisClient: { quit: () => Promise<void> } | undefined;
 try {
