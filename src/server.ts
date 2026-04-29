@@ -83,7 +83,14 @@ await app.register(cors, {
 // request actually arrived over HTTPS. Inverted from "strip after Helmet sets"
 // because @fastify/helmet's header-set timing makes a later `reply.removeHeader`
 // unreliable in practice.
+// `useDefaults: false` is required — without it, @fastify/helmet *merges* our
+// `directives` with its built-in defaults, which include
+// `upgrade-insecure-requests`, so the directive ends up on every response
+// regardless of what we list here. Setting useDefaults: false makes the
+// `directives` block authoritative; everything we want must be enumerated
+// explicitly. (Codex P1 catch on PR #84.)
 const PROD_CSP_WITHOUT_UPGRADE = {
+  useDefaults: false,
   directives: {
     defaultSrc: ["'self'"],
     baseUri: ["'self'"],
