@@ -7,6 +7,7 @@ import helmet from '@fastify/helmet';
 import rateLimit from '@fastify/rate-limit';
 import cookie from '@fastify/cookie';
 import { registerClerk, assertNoDevBypassUserInProd } from './middleware/auth.js';
+import { isPublicApiPath } from './middleware/public-paths.js';
 import { rateLimitConfig, buildRedisStore } from './middleware/rate-limit.js';
 import { initSentry, captureException } from './lib/sentry.js';
 import { validateEncryptionConfig } from './middleware/encryption.js';
@@ -193,6 +194,33 @@ app.addHook('onResponse', (request, reply, done) => {
 });
 
 // ─── Auth (Clerk) ─────────────────────────────────────────────────────────
+
+// Suppress Clerk dev-instance handshake on public endpoints.
+//
+// `clerkPlugin` registers a global `preHandler` hook (via `fastify-plugin`,
+// so encapsulation does not isolate it). On dev Clerk instances, that hook
+// returns HTTP 307 → `https://<dev-instance>.clerk.accounts.dev/v1/client/
+// handshake?redirect_url=http://...` whenever the request looks like a
+// browser (HTML in `Accept`) and lacks a `__clerk_db_jwt` cookie. The
+// handshake's `redirect_url` is fixed at `http://`, so any HTTP client that
+// follows redirects (e.g. axios `maxRedirects: 10` in Uptime Kuma) ends up
+// trying to connect to port 80 of the host — manifesting as
+// `ECONNREFUSED <ip>:80` on monitors pointed at our health endpoints.
+//
+// The fix runs BEFORE the Clerk preHandler (Fastify lifecycle: onRequest →
+// preHandler) and rewrites `Accept` to `application/json` for known-public
+// paths. Clerk's `authenticateRequest` only triggers handshake when it sees
+// a browser `Accept`; with JSON it lets the request through without auth
+// state, and our public route handlers proceed normally.
+//
+// Production Clerk instances do not perform this handshake, so this guard
+// is defensive on dev keys and a no-op on prod keys.
+app.addHook('onRequest', (request, _reply, done) => {
+  if (isPublicApiPath(request.url)) {
+    request.headers.accept = 'application/json';
+  }
+  done();
+});
 
 await registerClerk(app);
 
