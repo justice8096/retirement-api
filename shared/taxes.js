@@ -9,6 +9,24 @@ export function calcBracketTax(income, brackets) {
   return tax;
 }
 
+/**
+ * Safe filing-status table lookup. Returns `table[filingStatus]` only when
+ * `filingStatus` is an own-property of the table; otherwise returns
+ * `table[fallbackKey]`. Guards against prototype keys like `'toString'`,
+ * `'__proto__'`, `'constructor'` — without an own-property check, those
+ * resolve to inherited Object methods, which are truthy and bypass the
+ * `|| fallback` shortcut, causing downstream `undefined`/NaN propagation.
+ *
+ * Used by every helper in this module that branches on filing status, to
+ * keep the documented "unknown status falls back to MFJ (or single, for
+ * OBBBA)" contract from breaking on prototype-key inputs.
+ */
+function pickByFilingStatus(table, filingStatus, fallbackKey) {
+  return Object.prototype.hasOwnProperty.call(table, filingStatus)
+    ? table[filingStatus]
+    : table[fallbackKey];
+}
+
 // ─── 2026 tax constants (US) ────────────────────────────────────────────
 //
 // Sources: see structured arrays (FED_BRACKETS_2026_SOURCES,
@@ -157,7 +175,7 @@ export var LTCG_BRACKETS_2026 = {
  */
 export function ltcgFederalTax(ltcgIncome, ordinaryTaxableIncome, filingStatus) {
   if (!(ltcgIncome > 0)) return 0;
-  var brackets = LTCG_BRACKETS_2026[filingStatus] || LTCG_BRACKETS_2026.mfj;
+  var brackets = pickByFilingStatus(LTCG_BRACKETS_2026, filingStatus, 'mfj');
   var O = Math.max(0, ordinaryTaxableIncome);
   var L = ltcgIncome;
   var combined = O + L;
@@ -215,7 +233,7 @@ export var NIIT_RATE = 0.038;
  */
 export function niit(netInvestmentIncome, magi, filingStatus) {
   if (!(netInvestmentIncome > 0)) return 0;
-  var threshold = NIIT_THRESHOLDS[filingStatus] || NIIT_THRESHOLDS.mfj;
+  var threshold = pickByFilingStatus(NIIT_THRESHOLDS, filingStatus, 'mfj');
   var excess = Math.max(0, magi - threshold);
   return Math.min(netInvestmentIncome, excess) * NIIT_RATE;
 }
@@ -245,7 +263,7 @@ export function niit(netInvestmentIncome, magi, filingStatus) {
  * the 0% bracket top — the next dollar of LTCG would be at 15% or 20%.
  */
 export function ltcgZeroBracketHeadroom(ordinaryTaxableIncome, filingStatus, alreadyPreferential) {
-  var brackets = LTCG_BRACKETS_2026[filingStatus] || LTCG_BRACKETS_2026.mfj;
+  var brackets = pickByFilingStatus(LTCG_BRACKETS_2026, filingStatus, 'mfj');
   var O = Math.max(0, ordinaryTaxableIncome);
   var P = Math.max(0, alreadyPreferential || 0);
   return Math.max(0, brackets.zeroTop - O - P);
@@ -270,7 +288,7 @@ export function ltcgZeroBracketHeadroom(ordinaryTaxableIncome, filingStatus, alr
  * amount, use `ltcgFederalTax(amount, ordinaryTaxableIncome + alreadyPreferential, fs)`.
  */
 export function ltcgHarvestingSummary(ordinaryTaxableIncome, filingStatus, alreadyPreferential) {
-  var brackets = LTCG_BRACKETS_2026[filingStatus] || LTCG_BRACKETS_2026.mfj;
+  var brackets = pickByFilingStatus(LTCG_BRACKETS_2026, filingStatus, 'mfj');
   var O = Math.max(0, ordinaryTaxableIncome);
   var P = Math.max(0, alreadyPreferential || 0);
   var stackBase = O + P;
@@ -284,7 +302,7 @@ export function ltcgHarvestingSummary(ordinaryTaxableIncome, filingStatus, alrea
   else if (stackBase < brackets.fifteenTop) marginal = 0.15;
   else                                      marginal = 0.20;
   return {
-    filingStatus: filingStatus in LTCG_BRACKETS_2026 ? filingStatus : 'mfj',
+    filingStatus: Object.prototype.hasOwnProperty.call(LTCG_BRACKETS_2026, filingStatus) ? filingStatus : 'mfj',
     zeroTop: brackets.zeroTop,
     fifteenTop: brackets.fifteenTop,
     alreadyPreferential: P,
@@ -299,7 +317,7 @@ export function obbbaSeniorDeduction(filingStatus, age, magi, perAdult) {
   // `perAdult` = true when both MFJ spouses are 65+. Applied once per
   // qualifying adult. Caller is responsible for counting adults.
   if (age === undefined || age < 65) return 0;
-  var band = OBBBA_SENIOR_PHASEOUT[filingStatus] || OBBBA_SENIOR_PHASEOUT.single;
+  var band = pickByFilingStatus(OBBBA_SENIOR_PHASEOUT, filingStatus, 'single');
   if (magi <= band.start) return OBBBA_SENIOR_DEDUCTION_AMOUNT;
   if (magi >= band.end)   return 0;
   var phaseRange = band.end - band.start;
@@ -353,8 +371,7 @@ export function calcTaxesForLocation(loc, ssIncome, iraIncome, investIncome, opt
   // for retirement planning cost-comparison math.
   var magi = ordinaryFederalTaxableIncome + ltcgPortion;
   var fedDeduction = (taxes.federalIncomeTax && taxes.federalIncomeTax.standardDeduction)
-    || FED_STD_DEDUCTION_2026[filingStatus]
-    || FED_STD_DEDUCTION_2026.mfj;
+    || pickByFilingStatus(FED_STD_DEDUCTION_2026, filingStatus, 'mfj');
 
   // OBBBA senior bonus deduction (2025–2028). Applied once per qualifying
   // adult aged 65+, subject to MAGI phase-out. Uses MAGI (which includes
@@ -425,7 +442,7 @@ export function calcTaxesForLocation(loc, ssIncome, iraIncome, investIncome, opt
     result.details.push({
       label: 'US Net Investment Income Tax (NIIT)',
       amount: niitTax,
-      note: '3.8% on lesser of net investment income ($' + Math.round(totalInvest).toLocaleString() + ') or MAGI excess over $' + (NIIT_THRESHOLDS[filingStatus] || NIIT_THRESHOLDS.mfj).toLocaleString(),
+      note: '3.8% on lesser of net investment income ($' + Math.round(totalInvest).toLocaleString() + ') or MAGI excess over $' + pickByFilingStatus(NIIT_THRESHOLDS, filingStatus, 'mfj').toLocaleString(),
     });
   }
 

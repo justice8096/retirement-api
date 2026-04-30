@@ -903,3 +903,81 @@ describe('ltcgHarvestingSummary (#27)', () => {
     expect(s.zeroTop).toBe(98900);
   });
 });
+
+describe('Codex P2: filing-status lookup hardened against prototype keys', () => {
+  // Without an own-property check, `table[filingStatus]` for keys like
+  // 'toString' / '__proto__' / 'constructor' resolves to inherited Object
+  // methods, which are truthy and bypass the `|| fallback` shortcut. That
+  // produces undefined bracket data and NaN downstream. The fix uses
+  // Object.prototype.hasOwnProperty.call so prototype keys correctly fall
+  // back to the documented default.
+
+  it.each(['toString', '__proto__', 'constructor', 'valueOf', 'hasOwnProperty'])(
+    'ltcgFederalTax falls back to MFJ on prototype key %s',
+    (key) => {
+      // Same MFJ-fallback behavior as the existing 'bogus' test:
+      // ordinary $120k > $98.9k → no 0% room. $30k LTCG all at 15% = $4,500.
+      expect(ltcgFederalTax(30000, 120000, key)).toBeCloseTo(4500, 2);
+    },
+  );
+
+  it.each(['toString', '__proto__', 'constructor'])(
+    'niit falls back to MFJ on prototype key %s',
+    (key) => {
+      // MFJ threshold $250k. MAGI $300k → excess $50k. NII $30k → $1,140.
+      expect(niit(30000, 300000, key)).toBeCloseTo(1140, 2);
+    },
+  );
+
+  it.each(['toString', '__proto__', 'constructor'])(
+    'ltcgZeroBracketHeadroom falls back to MFJ on prototype key %s',
+    (key) => {
+      // MFJ 0% top is $98,900. $40k ordinary → $58,900 headroom.
+      expect(ltcgZeroBracketHeadroom(40000, key)).toBe(58900);
+    },
+  );
+
+  it.each(['toString', '__proto__', 'constructor'])(
+    'ltcgHarvestingSummary falls back to MFJ on prototype key %s',
+    (key) => {
+      const s = ltcgHarvestingSummary(0, key);
+      expect(s.filingStatus).toBe('mfj');
+      expect(s.zeroTop).toBe(98900);
+      expect(s.fifteenTop).toBe(613700);
+      expect(s.zeroBracketHeadroom).toBe(98900);
+      // Critical: no NaN propagation. Pre-fix this would have been NaN.
+      expect(Number.isFinite(s.zeroBracketHeadroom)).toBe(true);
+      expect(Number.isFinite(s.fifteenBracketHeadroom)).toBe(true);
+    },
+  );
+
+  it('obbbaSeniorDeduction falls back to single on prototype key', () => {
+    // Single phaseout: start $75k. Below $75k → full $6,000 deduction.
+    expect(obbbaSeniorDeduction('toString', 70, 50000)).toBe(6000);
+    expect(obbbaSeniorDeduction('__proto__', 70, 50000)).toBe(6000);
+  });
+
+  it('calcTaxesForLocation falls back to MFJ standard deduction on prototype key', () => {
+    // MFJ default std deduction is $32,200. With ira $50k → AGI $17,800
+    // → 10% bracket → $1,780.
+    const loc = { taxes: {} };
+    const result = calcTaxesForLocation(loc, 0, 50000, 0, { filingStatus: 'toString' });
+    // Without the fix, result.federal would be NaN (deduction=undefined).
+    expect(Number.isFinite(result.federal)).toBe(true);
+    expect(result.federal).toBeCloseTo(1780, 2);
+  });
+
+  it('calcTaxesForLocation NIIT note text uses MFJ threshold on prototype key', () => {
+    // Without the fix, the .toLocaleString() call on the lookup result
+    // would either crash (toLocaleString on a function) or produce wrong
+    // text. With the fix, the note references "$250,000" (MFJ NIIT threshold).
+    const usFedOnly = { taxes: { federalIncomeTax: {} } };
+    const result = calcTaxesForLocation(usFedOnly, 0, 250000, 50000, {
+      filingStatus: 'toString',
+      investComposition: { ltcg: 50000 },
+    });
+    const niitDetail = result.details.find(d => d.label === 'US Net Investment Income Tax (NIIT)');
+    expect(niitDetail).toBeDefined();
+    expect(niitDetail.note).toContain('250,000');
+  });
+});
