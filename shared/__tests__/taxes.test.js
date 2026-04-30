@@ -480,3 +480,156 @@ describe('NIIT_THRESHOLDS / niit', () => {
     expect(niit(30000, 300000, 'bogus')).toBeCloseTo(1140, 2);
   });
 });
+
+describe('calcTaxesForLocation — investComposition routing (#33 item 2)', () => {
+  // Plain US-federal-only location for isolating the federal pipeline.
+  const usFedOnly = { taxes: { federalIncomeTax: {} } };
+
+  it('omitting investComposition matches pre-#33 behavior (back-compat)', () => {
+    // 50k IRA + 20k investIncome + no SS, MFJ, both under 65
+    const before = calcTaxesForLocation(usFedOnly, 0, 50000, 20000, {
+      filingStatus: 'mfj',
+    });
+    // Same household passing investComposition with the entire amount
+    // tagged as ordinary interest should produce the SAME federal tax.
+    const after = calcTaxesForLocation(usFedOnly, 0, 50000, 20000, {
+      filingStatus: 'mfj',
+      investComposition: { ordinaryInterest: 20000 },
+    });
+    expect(after.federal).toBeCloseTo(before.federal, 2);
+    expect(after.totalIncome).toBeCloseTo(before.totalIncome, 2);
+  });
+
+  it('all-LTCG composition routes through 0% bracket below threshold', () => {
+    // MFJ, 0% LTCG bracket top is $98,900. 50k IRA + 30k LTCG.
+    // Ordinary AGI = 50k − 32.2k = $17,800 (well under 98.9k).
+    // LTCG sits on top: ordinaryFedTax on $17,800 + LTCG taxed at 0% on
+    // the entire $30k (since $17,800 + $30,000 = $47,800 < $98,900).
+    const result = calcTaxesForLocation(usFedOnly, 0, 50000, 30000, {
+      filingStatus: 'mfj',
+      investComposition: { ltcg: 30000 },
+    });
+    const ordinaryAGI = 50000 - 32200; // $17,800
+    const expectedOrdFed = ordinaryAGI * 0.10; // entirely in 10% bracket
+    expect(result.federal).toBeCloseTo(expectedOrdFed, 2);
+    // Detail row for LTCG should NOT appear (LTCG tax = 0)
+    expect(result.details.some(d => d.label === 'US Federal LTCG / QDI Tax')).toBe(false);
+  });
+
+  it('split 0%/15% LTCG when ordinary AGI is below 0% top but stack exceeds it', () => {
+    // MFJ, IRA $90k. Ordinary AGI = 90k − 32.2k = $57,800.
+    // LTCG $80k stacks on top → combined $137,800. 0% top is $98,900.
+    // First $98.9k − $57.8k = $41,100 of LTCG at 0%.
+    // Remaining $80k − $41.1k = $38,900 at 15% = $5,835.
+    const result = calcTaxesForLocation(usFedOnly, 0, 90000, 80000, {
+      filingStatus: 'mfj',
+      investComposition: { ltcg: 80000 },
+    });
+    const ordinaryAGI = 90000 - 32200;
+    // Ordinary fed tax on $57,800: 24800*0.10 + (57800-24800)*0.12
+    const expectedOrdFed = 24800 * 0.10 + (ordinaryAGI - 24800) * 0.12;
+    const expectedLtcg = 38900 * 0.15;
+    expect(result.federal).toBeCloseTo(expectedOrdFed + expectedLtcg, 2);
+    expect(result.details.some(d => d.label === 'US Federal LTCG / QDI Tax')).toBe(true);
+  });
+
+  it('mixed composition: ordinary interest + STCG taxed as ordinary, LTCG/QDI preferential', () => {
+    // 40k IRA + 10k ordinary interest + 5k STCG + 8k QDI + 12k LTCG
+    // Ordinary base = 40k + 10k + 5k = $55k. AGI = 55k − 32.2k = $22.8k.
+    // Preferential = 8k + 12k = $20k.
+    // AGI $22.8k < 0% top $98.9k, AGI + preferential = $42.8k < $98.9k →
+    //   all $20k preferential at 0%.
+    const result = calcTaxesForLocation(usFedOnly, 0, 40000, 35000, {
+      filingStatus: 'mfj',
+      investComposition: { ordinaryInterest: 10000, stcg: 5000, qdi: 8000, ltcg: 12000 },
+    });
+    const expectedOrdFed = 22800 * 0.10;
+    expect(result.federal).toBeCloseTo(expectedOrdFed, 2); // LTCG = 0, NIIT = 0
+  });
+
+  it('NIIT applies above MAGI threshold', () => {
+    // MFJ NIIT threshold $250k. Construct: IRA $250k + LTCG $50k.
+    // MAGI ≈ ordinary federalTaxable ($250k) + LTCG ($50k) = $300k.
+    // Excess $50k. NII $50k. NIIT = min(50k, 50k) * 3.8% = $1,900.
+    const result = calcTaxesForLocation(usFedOnly, 0, 250000, 50000, {
+      filingStatus: 'mfj',
+      investComposition: { ltcg: 50000 },
+    });
+    expect(result.details.some(d => d.label === 'US Net Investment Income Tax (NIIT)')).toBe(true);
+    const niitDetail = result.details.find(d => d.label === 'US Net Investment Income Tax (NIIT)');
+    expect(niitDetail.amount).toBeCloseTo(1900, 2);
+  });
+
+  it('NIIT does NOT apply below MAGI threshold', () => {
+    // MAGI $150k MFJ < $250k → no NIIT, even with $50k investment income.
+    const result = calcTaxesForLocation(usFedOnly, 0, 100000, 50000, {
+      filingStatus: 'mfj',
+      investComposition: { ltcg: 50000 },
+    });
+    expect(result.details.some(d => d.label === 'US Net Investment Income Tax (NIIT)')).toBe(false);
+  });
+
+  it('seed-data fed-bracket override skips LTCG and NIIT (territorial systems etc.)', () => {
+    // Some locations encode their own federal regime. Don't double-tax
+    // by also applying LTCG/NIIT — those are US-federal-specific.
+    const territorial = {
+      taxes: {
+        federalIncomeTax: { brackets: [{ min: 0, max: null, rate: 0.0 }] },
+      },
+    };
+    const result = calcTaxesForLocation(territorial, 0, 100000, 200000, {
+      filingStatus: 'mfj',
+      investComposition: { ltcg: 200000 },
+    });
+    expect(result.federal).toBe(0);
+    expect(result.details.some(d => d.label === 'US Federal LTCG / QDI Tax')).toBe(false);
+    expect(result.details.some(d => d.label === 'US Net Investment Income Tax (NIIT)')).toBe(false);
+  });
+
+  it('investIncome param is ignored when composition is provided (composition is authoritative)', () => {
+    // Pass investIncome=99999 but composition with $30k → final totalInvest
+    // should be $30k. Use this to confirm the composition wins.
+    const r1 = calcTaxesForLocation(usFedOnly, 0, 50000, 99999, {
+      filingStatus: 'mfj',
+      investComposition: { ordinaryInterest: 30000 },
+    });
+    const r2 = calcTaxesForLocation(usFedOnly, 0, 50000, 30000, {
+      filingStatus: 'mfj',
+      investComposition: { ordinaryInterest: 30000 },
+    });
+    expect(r1.federal).toBeCloseTo(r2.federal, 2);
+    expect(r1.totalIncome).toBeCloseTo(r2.totalIncome, 2);
+  });
+
+  it('state pipeline uses composition total (not the bogus investIncome param)', () => {
+    const stateLoc = {
+      taxes: {
+        federalIncomeTax: {},
+        stateIncomeTax: {
+          label: 'Test State',
+          brackets: [{ min: 0, max: null, rate: 0.05 }],
+        },
+      },
+    };
+    // Pass investIncome=99999 but composition $20k LTCG. State bracket
+    // should tax against $20k (+ IRA + 85% SS), NOT $99,999.
+    const result = calcTaxesForLocation(stateLoc, 0, 30000, 99999, {
+      filingStatus: 'mfj',
+      investComposition: { ltcg: 20000 },
+    });
+    // State income = IRA $30k + LTCG $20k = $50k → state tax $2,500.
+    expect(result.state).toBeCloseTo(2500, 2);
+  });
+
+  it('NIIT detail row references the right threshold for the filing status', () => {
+    // Single threshold $200k. MAGI $250k single → excess $50k.
+    // NII $30k → NIIT = $1,140. Note should reference $200,000.
+    const result = calcTaxesForLocation(usFedOnly, 0, 220000, 30000, {
+      filingStatus: 'single',
+      investComposition: { ordinaryInterest: 30000 },
+    });
+    const niitDetail = result.details.find(d => d.label === 'US Net Investment Income Tax (NIIT)');
+    expect(niitDetail).toBeDefined();
+    expect(niitDetail.note).toContain('200,000');
+  });
+});
