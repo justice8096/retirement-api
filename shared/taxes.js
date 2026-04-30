@@ -296,6 +296,12 @@ export function calcTaxesForLocation(loc, ssIncome, iraIncome, investIncome, opt
   fedDeduction += seniorDeduction;
 
   var fedAGI = Math.max(0, ordinaryFederalTaxableIncome - fedDeduction);
+  // When the standard / itemized deduction exceeds ordinary income, the
+  // unused portion offsets LTCG/QDI before bracket math (IRS Schedule D
+  // Tax Worksheet, line 11). Without this, low-ordinary-income +
+  // large-LTCG households get overtaxed. (Codex P1 on PR #87.)
+  var unusedDeduction = Math.max(0, fedDeduction - ordinaryFederalTaxableIncome);
+  var preferentialTaxable = Math.max(0, ltcgPortion - unusedDeduction);
   var fedBrackets;
   if (taxes.federalIncomeTax && taxes.federalIncomeTax.brackets) {
     // Seed-data override — for locations that want to simulate a different
@@ -311,8 +317,8 @@ export function calcTaxesForLocation(loc, ssIncome, iraIncome, investIncome, opt
   // jurisdictions have their own capital-gains regime.
   var ltcgFedTax = 0;
   var niitTax = 0;
-  if (ic && ltcgPortion > 0 && !(taxes.federalIncomeTax && taxes.federalIncomeTax.brackets)) {
-    ltcgFedTax = ltcgFederalTax(ltcgPortion, fedAGI, filingStatus);
+  if (ic && preferentialTaxable > 0 && !(taxes.federalIncomeTax && taxes.federalIncomeTax.brackets)) {
+    ltcgFedTax = ltcgFederalTax(preferentialTaxable, fedAGI, filingStatus);
   }
   // NIIT 3.8% — applies to ALL net investment income (LTCG + QDI + ordinary
   // interest + STCG), gated on MAGI. Standalone surtax, statutory unindexed
@@ -331,10 +337,14 @@ export function calcTaxesForLocation(loc, ssIncome, iraIncome, investIncome, opt
     note: deductionNote,
   });
   if (ltcgFedTax > 0) {
+    var ltcgNote = '$' + Math.round(preferentialTaxable).toLocaleString() + ' at 0%/15%/20% (Rev Proc 2025-32, stacked on AGI)';
+    if (unusedDeduction > 0 && preferentialTaxable < ltcgPortion) {
+      ltcgNote += ' — $' + Math.round(unusedDeduction).toLocaleString() + ' unused deduction offset against LTCG';
+    }
     result.details.push({
       label: 'US Federal LTCG / QDI Tax',
       amount: ltcgFedTax,
-      note: '$' + Math.round(ltcgPortion).toLocaleString() + ' at 0%/15%/20% (Rev Proc 2025-32, stacked on AGI)',
+      note: ltcgNote,
     });
   }
   if (niitTax > 0) {
@@ -375,12 +385,22 @@ export function calcTaxesForLocation(loc, ssIncome, iraIncome, investIncome, opt
       result.details.push({ label: stLabel, amount: result.state, note: st.exemptions || '' });
     }
 
-    // Foreign tax credit
+    // Foreign tax credit (IRC § 901). Reduces total US federal liability
+    // by the lesser of (host country tax, US federal tax). Modeled as a
+    // separate negative detail row rather than mutating `details[0]` —
+    // when investComposition is provided, `details[0]` is the ordinary
+    // federal row only, with separate LTCG/NIIT rows after it. Mutating
+    // `details[0].amount = result.federal` (post-FTC total) would break
+    // reconciliation between the row breakdown and `result.federal`.
+    // (Codex P2 on PR #87.)
     if (taxes.federalIncomeTax && taxes.federalIncomeTax.foreignTaxCredit && result.state > 0) {
       var ftc = Math.min(result.state, result.federal);
       result.federal = Math.max(0, result.federal - ftc);
-      result.details[0].amount = result.federal;
-      result.details[0].note += ' (after $' + Math.round(ftc).toLocaleString() + ' foreign tax credit)';
+      result.details.push({
+        label: 'US Foreign Tax Credit',
+        amount: -ftc,
+        note: '$' + Math.round(ftc).toLocaleString() + ' offset against state/foreign income tax (IRC § 901)',
+      });
     }
   } else if (st && st.type === 'none') {
     result.details.push({ label: 'State Income Tax', amount: 0, note: st.exemptions || 'No state income tax' });

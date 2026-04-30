@@ -632,4 +632,151 @@ describe('calcTaxesForLocation — investComposition routing (#33 item 2)', () =
     expect(niitDetail).toBeDefined();
     expect(niitDetail.note).toContain('200,000');
   });
+
+  // ─── Regressions for Codex findings on PR #87 ────────────────────────
+
+  describe('Codex P1: unused deduction applied to LTCG portion', () => {
+    it('low-ordinary + large-LTCG: unused deduction offsets preferential before bracket math', () => {
+      // MFJ ordinary $20k. Std deduction $32.2k → unused $12.2k.
+      // LTCG $200k → preferentialTaxable = $200k − $12.2k = $187.8k.
+      // ordinaryFedTax on AGI=0 → 0. LTCG stacked on AGI=0:
+      //   inZero  = min(187.8k, 98.9k − 0) = 98.9k → 0%
+      //   inFifteen = 187.8k − 98.9k = 88.9k → 15% = $13,335
+      //   inTwenty = 0
+      // Total federal = $13,335.
+      const result = calcTaxesForLocation(usFedOnly, 0, 20000, 200000, {
+        filingStatus: 'mfj',
+        investComposition: { ltcg: 200000 },
+      });
+      expect(result.federal).toBeCloseTo(13335, 2);
+    });
+
+    it('regression: prior buggy behavior would have taxed full LTCG without deduction offset', () => {
+      // Same input as the test above. Without the fix:
+      //   ltcgFederalTax(200000, 0, mfj):
+      //     inZero  = 98.9k → 0%
+      //     inFifteen = 200k − 98.9k = 101.1k → 15% = $15,165
+      //   Total = $15,165 (overstated by $1,830 vs the correct $13,335).
+      // The current (post-fix) behavior must NOT be $15,165.
+      const result = calcTaxesForLocation(usFedOnly, 0, 20000, 200000, {
+        filingStatus: 'mfj',
+        investComposition: { ltcg: 200000 },
+      });
+      expect(result.federal).not.toBeCloseTo(15165, 2);
+    });
+
+    it('LTCG row note surfaces the unused-deduction offset when it applies', () => {
+      const result = calcTaxesForLocation(usFedOnly, 0, 20000, 200000, {
+        filingStatus: 'mfj',
+        investComposition: { ltcg: 200000 },
+      });
+      const ltcgDetail = result.details.find(d => d.label === 'US Federal LTCG / QDI Tax');
+      expect(ltcgDetail).toBeDefined();
+      expect(ltcgDetail.note).toContain('unused deduction offset');
+    });
+
+    it('no offset note when ordinary income fully absorbs the deduction', () => {
+      // Ordinary $80k > $32.2k deduction → no unused. Note should NOT
+      // mention "unused deduction offset".
+      const result = calcTaxesForLocation(usFedOnly, 0, 80000, 30000, {
+        filingStatus: 'mfj',
+        investComposition: { ltcg: 30000 },
+      });
+      const ltcgDetail = result.details.find(d => d.label === 'US Federal LTCG / QDI Tax');
+      // ltcgDetail may not exist if all LTCG fits in 0% bracket — but in
+      // this case ordinary AGI = 80−32.2 = $47.8k, plus $30k LTCG stacks
+      // to $77.8k, all under 0% top → LTCG tax = 0. So detail row is
+      // absent. Just confirm no offset note ever surfaced.
+      if (ltcgDetail) {
+        expect(ltcgDetail.note).not.toContain('unused deduction offset');
+      }
+    });
+
+    it('unused deduction can fully zero-out preferentialTaxable (no LTCG row at all)', () => {
+      // MFJ, std deduction $32.2k, ordinary $0, LTCG $5k.
+      // unused = $32.2k. preferentialTaxable = max(0, 5k − 32.2k) = 0.
+      // → no LTCG row, no LTCG tax.
+      const result = calcTaxesForLocation(usFedOnly, 0, 0, 5000, {
+        filingStatus: 'mfj',
+        investComposition: { ltcg: 5000 },
+      });
+      expect(result.federal).toBe(0);
+      expect(result.details.some(d => d.label === 'US Federal LTCG / QDI Tax')).toBe(false);
+    });
+  });
+
+  describe('Codex P2: foreign tax credit preserves federal detail breakdown', () => {
+    it('FTC adds a separate negative detail row instead of mutating details[0]', () => {
+      const loc = {
+        taxes: {
+          federalIncomeTax: { foreignTaxCredit: true },
+          stateIncomeTax: { brackets: [{ min: 0, max: null, rate: 0.30 }] },
+        },
+      };
+      const result = calcTaxesForLocation(loc, 0, 0, 80000, {
+        filingStatus: 'mfj',
+      });
+      expect(result.details.some(d => d.label === 'US Foreign Tax Credit')).toBe(true);
+      const ftcRow = result.details.find(d => d.label === 'US Foreign Tax Credit');
+      // Negative amount — it's a credit
+      expect(ftcRow.amount).toBeLessThan(0);
+    });
+
+    it('detail rows reconcile to result.federal when investComposition + FTC both present', () => {
+      // MFJ ordinary $50k IRA + $40k LTCG. Std deduction $32.2k.
+      // ordinaryFedTax: AGI=$17.8k → $1,780.
+      // preferentialTaxable: $40k (no unused deduction).
+      // ltcgFedTax: stacked on $17.8k → all $40k at 0% (since $57.8k < $98.9k) = $0.
+      // niitTax: MAGI $90k < $250k MFJ threshold → $0.
+      // Pre-FTC federal = $1,780.
+      // Foreign country charges 30% state-equivalent tax on (ssTaxable + ira + invest)
+      //   = $0 + $50k + $40k = $90k → $27k state.
+      // FTC = min($27k, $1,780) = $1,780.
+      // Post-FTC federal = $0.
+      const loc = {
+        taxes: {
+          federalIncomeTax: { foreignTaxCredit: true },
+          stateIncomeTax: { brackets: [{ min: 0, max: null, rate: 0.30 }] },
+        },
+      };
+      const result = calcTaxesForLocation(loc, 0, 50000, 40000, {
+        filingStatus: 'mfj',
+        investComposition: { ltcg: 40000 },
+      });
+      // Detail rows that reflect *federal* tax components (ordinary, LTCG,
+      // NIIT, FTC) — exclude state/social/vehicle.
+      const fedComponents = result.details.filter((d) =>
+        d.label === 'US Federal Income Tax' ||
+        d.label === 'US Federal LTCG / QDI Tax' ||
+        d.label === 'US Net Investment Income Tax (NIIT)' ||
+        d.label === 'US Foreign Tax Credit'
+      );
+      const sumOfRows = fedComponents.reduce((s, d) => s + d.amount, 0);
+      // Reconciliation: sum of federal rows must equal result.federal.
+      expect(sumOfRows).toBeCloseTo(result.federal, 2);
+    });
+
+    it('does NOT mutate details[0] amount or note when FTC fires', () => {
+      // The ordinary federal row (details[0] when no rows precede it)
+      // must keep its original ordinaryFedTax amount and AGI note. The
+      // FTC effect lives in the separate FTC row.
+      const loc = {
+        taxes: {
+          federalIncomeTax: { foreignTaxCredit: true },
+          stateIncomeTax: { brackets: [{ min: 0, max: null, rate: 0.30 }] },
+        },
+      };
+      const result = calcTaxesForLocation(loc, 0, 0, 80000, {
+        filingStatus: 'mfj',
+      });
+      const ordRow = result.details.find(d => d.label === 'US Federal Income Tax');
+      expect(ordRow).toBeDefined();
+      // Pre-FTC ordinary federal: AGI $80k − $32.2k = $47.8k.
+      // 24800 * 0.10 + (47800 − 24800) * 0.12 = 2480 + 2760 = $5,240.
+      expect(ordRow.amount).toBeCloseTo(5240, 2);
+      // Note must NOT have been mutated to include "after $... foreign
+      // tax credit" — that text is gone with the new approach.
+      expect(ordRow.note).not.toContain('foreign tax credit');
+    });
+  });
 });
