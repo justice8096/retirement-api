@@ -220,6 +220,80 @@ export function niit(netInvestmentIncome, magi, filingStatus) {
   return Math.min(netInvestmentIncome, excess) * NIIT_RATE;
 }
 
+// ─── LTCG harvesting advisor (#27) ─────────────────────────────────────
+//
+// Surfaces the "realize LTCG at 0%" optimization for early retirees in
+// the Roth-conversion / taxable-drawdown phase. The 2026 0% LTCG bracket
+// extends up to $98,900 MFJ / $49,450 single of taxable income — any
+// preferential income (LTCG + QDI) that fits below that ceiling is
+// federally tax-free. Households often leave $10–30k of headroom on the
+// table each year.
+
+/**
+ * Dollars of LTCG/QDI that could be realized this year at 0% federal tax,
+ * given the household's ordinary taxable income.
+ *
+ * `ordinaryTaxableIncome` = post-deduction ordinary income (the same
+ * figure the IRS bracket thresholds are stated against).
+ *
+ * `alreadyPreferential` = LTCG/QDI already realized this year. Defaults
+ * to 0 (caller is asking "how much could I still realize"). When set,
+ * the helper subtracts it from the headroom — already-realized
+ * preferential income stacks below new harvesting in the same bracket.
+ *
+ * Returns 0 (not negative) when ordinary income alone already exceeds
+ * the 0% bracket top — the next dollar of LTCG would be at 15% or 20%.
+ */
+export function ltcgZeroBracketHeadroom(ordinaryTaxableIncome, filingStatus, alreadyPreferential) {
+  var brackets = LTCG_BRACKETS_2026[filingStatus] || LTCG_BRACKETS_2026.mfj;
+  var O = Math.max(0, ordinaryTaxableIncome);
+  var P = Math.max(0, alreadyPreferential || 0);
+  return Math.max(0, brackets.zeroTop - O - P);
+}
+
+/**
+ * Structured snapshot for a UI harvesting advisor: how much room remains
+ * in each LTCG bracket, and what the marginal rate is on the next dollar.
+ *
+ * Returns:
+ *   {
+ *     filingStatus,                 echo-back of the input
+ *     zeroTop, fifteenTop,          bracket boundaries for context
+ *     alreadyPreferential,          echo-back
+ *     zeroBracketHeadroom,          $X realizable at 0%
+ *     fifteenBracketHeadroom,       $Y additional realizable at 15% before 20% kicks in
+ *     currentMarginalRate,          0, 0.15, or 0.20 — rate on the next $1 of LTCG
+ *   }
+ *
+ * The two headroom values are independent — they tell the caller what's
+ * left in each bracket. To compute the federal tax on a specific harvest
+ * amount, use `ltcgFederalTax(amount, ordinaryTaxableIncome + alreadyPreferential, fs)`.
+ */
+export function ltcgHarvestingSummary(ordinaryTaxableIncome, filingStatus, alreadyPreferential) {
+  var brackets = LTCG_BRACKETS_2026[filingStatus] || LTCG_BRACKETS_2026.mfj;
+  var O = Math.max(0, ordinaryTaxableIncome);
+  var P = Math.max(0, alreadyPreferential || 0);
+  var stackBase = O + P;
+  var zeroHead = Math.max(0, brackets.zeroTop - stackBase);
+  // Fifteen-bracket headroom is what's left between 0%-top (or current
+  // stack base, whichever is higher) and 15%-top.
+  var fifteenStart = Math.max(brackets.zeroTop, stackBase);
+  var fifteenHead = Math.max(0, brackets.fifteenTop - fifteenStart);
+  var marginal;
+  if (stackBase < brackets.zeroTop)         marginal = 0;
+  else if (stackBase < brackets.fifteenTop) marginal = 0.15;
+  else                                      marginal = 0.20;
+  return {
+    filingStatus: filingStatus in LTCG_BRACKETS_2026 ? filingStatus : 'mfj',
+    zeroTop: brackets.zeroTop,
+    fifteenTop: brackets.fifteenTop,
+    alreadyPreferential: P,
+    zeroBracketHeadroom: zeroHead,
+    fifteenBracketHeadroom: fifteenHead,
+    currentMarginalRate: marginal,
+  };
+}
+
 /** Phased-out amount of the OBBBA senior bonus deduction at a given MAGI. */
 export function obbbaSeniorDeduction(filingStatus, age, magi, perAdult) {
   // `perAdult` = true when both MFJ spouses are 65+. Applied once per

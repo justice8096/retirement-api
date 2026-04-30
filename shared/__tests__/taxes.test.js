@@ -9,6 +9,8 @@ import {
   NIIT_THRESHOLDS,
   NIIT_RATE,
   ltcgFederalTax,
+  ltcgZeroBracketHeadroom,
+  ltcgHarvestingSummary,
   niit,
 } from '../taxes.js';
 
@@ -778,5 +780,126 @@ describe('calcTaxesForLocation — investComposition routing (#33 item 2)', () =
       // tax credit" — that text is gone with the new approach.
       expect(ordRow.note).not.toContain('foreign tax credit');
     });
+  });
+});
+
+describe('ltcgZeroBracketHeadroom (#27)', () => {
+  it('returns full 0% bracket when no ordinary income (MFJ)', () => {
+    expect(ltcgZeroBracketHeadroom(0, 'mfj')).toBe(98900);
+  });
+
+  it('returns headroom = zeroTop − ordinary when below the cap', () => {
+    // MFJ: $98,900 − $40,000 = $58,900
+    expect(ltcgZeroBracketHeadroom(40000, 'mfj')).toBe(58900);
+  });
+
+  it('returns 0 when ordinary alone equals the 0% top', () => {
+    expect(ltcgZeroBracketHeadroom(98900, 'mfj')).toBe(0);
+  });
+
+  it('returns 0 (not negative) when ordinary exceeds the 0% top', () => {
+    expect(ltcgZeroBracketHeadroom(150000, 'mfj')).toBe(0);
+    expect(ltcgZeroBracketHeadroom(800000, 'mfj')).toBe(0);
+  });
+
+  it('subtracts already-realized preferential income from the headroom', () => {
+    // MFJ: $98,900 − $40,000 ordinary − $20,000 already-LTCG = $38,900 left
+    expect(ltcgZeroBracketHeadroom(40000, 'mfj', 20000)).toBe(38900);
+  });
+
+  it('caps at 0 when ordinary + already-preferential already fills the bracket', () => {
+    // $80k ordinary + $25k already = $105k > $98.9k → no room
+    expect(ltcgZeroBracketHeadroom(80000, 'mfj', 25000)).toBe(0);
+  });
+
+  it('respects single filing status (smaller 0% bracket)', () => {
+    // Single 0% top is $49,450. $30k ordinary → $19,450 headroom.
+    expect(ltcgZeroBracketHeadroom(30000, 'single')).toBe(19450);
+  });
+
+  it('treats negative ordinary income as 0 (carry-forward losses)', () => {
+    // Net operating loss can produce negative taxable ordinary income;
+    // for headroom we floor at 0 so the full bracket is available.
+    expect(ltcgZeroBracketHeadroom(-10000, 'mfj')).toBe(98900);
+  });
+
+  it('falls back to MFJ for unknown filing status', () => {
+    expect(ltcgZeroBracketHeadroom(40000, 'bogus')).toBe(58900);
+  });
+});
+
+describe('ltcgHarvestingSummary (#27)', () => {
+  it('returns full 0% headroom and 15% headroom when no income (MFJ)', () => {
+    const s = ltcgHarvestingSummary(0, 'mfj');
+    expect(s.filingStatus).toBe('mfj');
+    expect(s.zeroTop).toBe(98900);
+    expect(s.fifteenTop).toBe(613700);
+    expect(s.alreadyPreferential).toBe(0);
+    expect(s.zeroBracketHeadroom).toBe(98900);
+    // Fifteen-bracket headroom = $613,700 − $98,900 = $514,800
+    expect(s.fifteenBracketHeadroom).toBe(514800);
+    expect(s.currentMarginalRate).toBe(0);
+  });
+
+  it('shrinks both headrooms when ordinary income is in the 15% range', () => {
+    // MFJ ordinary $200k. Already past the 0% top, so 0% headroom = 0.
+    // 15% headroom = $613,700 − $200,000 = $413,700.
+    // Marginal rate on next $1: 15%.
+    const s = ltcgHarvestingSummary(200000, 'mfj');
+    expect(s.zeroBracketHeadroom).toBe(0);
+    expect(s.fifteenBracketHeadroom).toBe(413700);
+    expect(s.currentMarginalRate).toBe(0.15);
+  });
+
+  it('reports 20% marginal rate when stack base exceeds the 15% top', () => {
+    const s = ltcgHarvestingSummary(700000, 'mfj');
+    expect(s.zeroBracketHeadroom).toBe(0);
+    expect(s.fifteenBracketHeadroom).toBe(0);
+    expect(s.currentMarginalRate).toBe(0.20);
+  });
+
+  it('subtracts already-preferential from BOTH headrooms (preferential stacks below new harvest)', () => {
+    // MFJ ordinary $40k + already $30k LTCG = stack base $70k.
+    // 0% head = $98.9k − $70k = $28,900.
+    // 15% head = $613.7k − $98.9k = $514,800 (above 0% top, so unaffected
+    // by stack base since 70k < 98.9k).
+    const s = ltcgHarvestingSummary(40000, 'mfj', 30000);
+    expect(s.zeroBracketHeadroom).toBe(28900);
+    expect(s.fifteenBracketHeadroom).toBe(514800);
+    expect(s.currentMarginalRate).toBe(0); // still in 0% range
+  });
+
+  it('handles the boundary case where stack base sits exactly at zeroTop', () => {
+    // MFJ ordinary $98,900 → at the 0% top exactly. zeroBracketHeadroom = 0.
+    // Next dollar is at 15%. fifteenHead = $613,700 − $98,900 = $514,800.
+    const s = ltcgHarvestingSummary(98900, 'mfj');
+    expect(s.zeroBracketHeadroom).toBe(0);
+    expect(s.fifteenBracketHeadroom).toBe(514800);
+    // Strictly greater-than for marginal: at the boundary, next dollar is 15%.
+    expect(s.currentMarginalRate).toBe(0.15);
+  });
+
+  it('partial 15% bracket consumption: stack base above 0% top reduces 15% head', () => {
+    // MFJ ordinary $400k. Above 0% top ($98.9k). 15% head = $613.7k − $400k
+    // = $213,700.
+    const s = ltcgHarvestingSummary(400000, 'mfj');
+    expect(s.zeroBracketHeadroom).toBe(0);
+    expect(s.fifteenBracketHeadroom).toBe(213700);
+    expect(s.currentMarginalRate).toBe(0.15);
+  });
+
+  it('uses single filing-status thresholds correctly', () => {
+    const s = ltcgHarvestingSummary(30000, 'single');
+    expect(s.filingStatus).toBe('single');
+    expect(s.zeroTop).toBe(49450);
+    expect(s.fifteenTop).toBe(545500);
+    expect(s.zeroBracketHeadroom).toBe(19450); // 49450 − 30000
+    expect(s.fifteenBracketHeadroom).toBe(496050); // 545500 − 49450
+  });
+
+  it('falls back to MFJ on unknown filing status', () => {
+    const s = ltcgHarvestingSummary(0, 'bogus');
+    expect(s.filingStatus).toBe('mfj');
+    expect(s.zeroTop).toBe(98900);
   });
 });

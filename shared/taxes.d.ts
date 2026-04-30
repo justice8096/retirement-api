@@ -95,6 +95,38 @@ export function niit(
   filingStatus: FilingStatus,
 ): number;
 
+/**
+ * Dollars of LTCG/QDI realizable at 0% federal tax this year, given the
+ * household's ordinary taxable income and any preferential income
+ * already realized. Returns 0 when ordinary alone already exceeds the
+ * 0% bracket top.
+ */
+export function ltcgZeroBracketHeadroom(
+  ordinaryTaxableIncome: number,
+  filingStatus: FilingStatus,
+  alreadyPreferential?: number,
+): number;
+
+export interface LtcgHarvestingSummary {
+  filingStatus: FilingStatus;
+  zeroTop: number;
+  fifteenTop: number;
+  alreadyPreferential: number;
+  zeroBracketHeadroom: number;
+  fifteenBracketHeadroom: number;
+  currentMarginalRate: 0 | 0.15 | 0.20;
+}
+
+/**
+ * Structured snapshot for a UI harvesting advisor: how much room remains
+ * in each LTCG bracket and what the marginal rate is on the next $1.
+ */
+export function ltcgHarvestingSummary(
+  ordinaryTaxableIncome: number,
+  filingStatus: FilingStatus,
+  alreadyPreferential?: number,
+): LtcgHarvestingSummary;
+
 export function calcBracketTax(income: number, brackets: TaxBracket[]): number;
 
 /**
