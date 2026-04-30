@@ -69,6 +69,31 @@ export interface LocationWithTaxes {
 export const FED_BRACKETS_2026_SOURCES: Source[];
 export const FED_STD_DEDUCTION_2026_SOURCES: Source[];
 export const OBBBA_SENIOR_SOURCES: Source[];
+export const LTCG_BRACKETS_2026_SOURCES: Source[];
+export const NIIT_SOURCES: Source[];
+
+export type FilingStatus = 'single' | 'mfj' | 'mfs' | 'hoh';
+
+export interface LtcgBracket {
+  zeroTop: number;
+  fifteenTop: number;
+}
+
+export const LTCG_BRACKETS_2026: Record<FilingStatus, LtcgBracket>;
+export const NIIT_THRESHOLDS: Record<FilingStatus, number>;
+export const NIIT_RATE: number;
+
+export function ltcgFederalTax(
+  ltcgIncome: number,
+  ordinaryTaxableIncome: number,
+  filingStatus: FilingStatus,
+): number;
+
+export function niit(
+  netInvestmentIncome: number,
+  magi: number,
+  filingStatus: FilingStatus,
+): number;
 
 export function calcBracketTax(income: number, brackets: TaxBracket[]): number;
 
