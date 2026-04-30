@@ -14,6 +14,10 @@
  * `ECONNREFUSED <ip>:80` on monitors pointed at `/api/health/ready`.
  */
 
+// Swagger UI registers at `/docs` and the JSON at `/documentation/json`
+// (see src/lib/swagger.ts — `routePrefix: '/docs'` and @fastify/swagger's
+// default `/documentation/...` paths). Both live at the root, NOT under
+// `/api/`. The fallback OpenAPI route lives at `/api/openapi.json`.
 const PUBLIC_API_PATTERNS: readonly RegExp[] = [
   /^\/api\/health(\/|$|\?)/,
   /^\/api\/glossary(\/|$|\?)/,
@@ -23,7 +27,8 @@ const PUBLIC_API_PATTERNS: readonly RegExp[] = [
   /^\/api\/badges(\/|$|\?)/,
   /^\/api\/webhooks(\/|$|\?)/,
   /^\/api\/openapi\.json(\?|$)/,
-  /^\/api\/docs(\/|$|\?)/,
+  /^\/docs(\/|$|\?)/,
+  /^\/documentation(\/|$|\?)/,
 ];
 
 export function isPublicApiPath(url: string): boolean {
