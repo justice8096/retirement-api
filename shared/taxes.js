@@ -97,6 +97,129 @@ export var OBBBA_SENIOR_PHASEOUT = {
   hoh:    { start:  75000, end: 175000 },
 };
 
+// ─── 2026 Long-Term Capital Gains brackets ──────────────────────────────
+//
+// LTCG / qualified-dividend rates: 0% / 15% / 20%, with breakpoints set
+// by IRC § 1(h) and inflation-adjusted annually. 2026 values per IRS
+// Rev. Proc. 2025-32. NOT to be confused with the ordinary-income
+// brackets above — LTCG sits "on top" of ordinary income (see
+// `ltcgFederalTax` for the stacking logic).
+
+/** Citations for the 2026 LTCG / qualified-dividend bracket thresholds. */
+export var LTCG_BRACKETS_2026_SOURCES = [
+  {
+    title: 'IRS Rev. Proc. 2025-32 § 3.03 (2026 LTCG bracket thresholds)',
+    url: 'https://www.irs.gov/pub/irs-drop/rp-25-32.pdf',
+    accessed: '2026-04-30',
+  },
+  {
+    title: 'IRC § 1(h) — Maximum capital gains rate (statutory bracket structure)',
+    url: 'https://www.law.cornell.edu/uscode/text/26/1',
+    accessed: '2026-04-30',
+  },
+];
+
+/**
+ * Upper bounds (inclusive) of the 0% and 15% LTCG brackets, by filing
+ * status. Above the 15% upper bound, the rate is 20%. Income at or below
+ * the 0% upper bound is taxed at 0%.
+ *
+ * 2026 values from Rev. Proc. 2025-32:
+ *   - Single:  0% ≤ $49,450, 15% ≤ $545,500
+ *   - MFJ:     0% ≤ $98,900, 15% ≤ $613,700
+ *   - MFS:     0% ≤ $49,450, 15% ≤ $306,850
+ *   - HoH:     0% ≤ $66,200, 15% ≤ $579,600
+ */
+export var LTCG_BRACKETS_2026 = {
+  single: { zeroTop:  49450, fifteenTop: 545500 },
+  mfj:    { zeroTop:  98900, fifteenTop: 613700 },
+  mfs:    { zeroTop:  49450, fifteenTop: 306850 },
+  hoh:    { zeroTop:  66200, fifteenTop: 579600 },
+};
+
+/**
+ * Federal LTCG / qualified-dividend tax. LTCG sits on top of ordinary
+ * taxable income, so the rate that applies to each dollar of LTCG
+ * depends on where it falls in the *combined* (ordinary + LTCG) ladder.
+ *
+ * Worked example (MFJ, 2026): ordinary $80,000, LTCG $30,000.
+ *   Ordinary alone is below the $98,900 0% top — first $18,900 of LTCG
+ *   gets 0%; the remaining $11,100 falls in the 15% range. Tax =
+ *   $11,100 × 0.15 = $1,665.
+ *
+ * Returns 0 for non-positive LTCG. `ordinaryTaxableIncome` should be
+ * post-deduction (i.e. after standard / itemized deductions), since the
+ * IRS bracket thresholds are stated against taxable income.
+ *
+ * Does NOT include the 3.8% Net Investment Income Tax — call `niit()`
+ * separately and add. NIIT is MAGI-based, not taxable-income-based, so
+ * it has different inputs.
+ */
+export function ltcgFederalTax(ltcgIncome, ordinaryTaxableIncome, filingStatus) {
+  if (!(ltcgIncome > 0)) return 0;
+  var brackets = LTCG_BRACKETS_2026[filingStatus] || LTCG_BRACKETS_2026.mfj;
+  var O = Math.max(0, ordinaryTaxableIncome);
+  var L = ltcgIncome;
+  var combined = O + L;
+  // Dollars of LTCG that fall in each rate bucket (stacked on top of O).
+  // Both `inZero` and `inTwenty` need a min-with-L cap: when O already
+  // exceeds the corresponding bracket (zeroTop or fifteenTop), the raw
+  // arithmetic can return a value greater than L itself, double-counting.
+  var inZero = Math.max(0, Math.min(L, brackets.zeroTop - O));
+  var inTwenty = Math.max(0, Math.min(L, combined - brackets.fifteenTop));
+  var inFifteen = L - inZero - inTwenty;
+  return inFifteen * 0.15 + inTwenty * 0.20;
+}
+
+// ─── Net Investment Income Tax (NIIT, IRC § 1411) ────────────────────────
+//
+// 3.8% surtax on the lesser of (a) net investment income or (b) MAGI in
+// excess of a statutory threshold. Thresholds are NOT indexed for
+// inflation — they have been the same since 2013.
+
+/** Citations for the NIIT statutory threshold + rate. */
+export var NIIT_SOURCES = [
+  {
+    title: 'IRC § 1411 — Imposition of tax (Net Investment Income Tax)',
+    url: 'https://www.law.cornell.edu/uscode/text/26/1411',
+    accessed: '2026-04-30',
+  },
+  {
+    title: 'IRS Topic 559 — Net Investment Income Tax',
+    url: 'https://www.irs.gov/taxtopics/tc559',
+    accessed: '2026-04-30',
+  },
+];
+
+/** NIIT MAGI thresholds (statutory, unindexed since 2013). */
+export var NIIT_THRESHOLDS = {
+  single: 200000,
+  mfj:    250000,
+  mfs:    125000,
+  hoh:    200000,
+};
+
+/** NIIT rate — 3.8% on the lesser of net investment income or MAGI excess. */
+export var NIIT_RATE = 0.038;
+
+/**
+ * Net Investment Income Tax. 3.8% × min(netInvestmentIncome, MAGI − threshold).
+ * Returns 0 if MAGI is at or below the threshold for the filing status,
+ * or if net investment income is non-positive.
+ *
+ * `netInvestmentIncome` includes interest, dividends, LTCG/STCG, rental
+ * and royalty income (passive), and certain annuity income — but NOT
+ * wages, Social Security, qualified retirement-plan distributions, or
+ * tax-exempt municipal interest. Caller is responsible for the inclusion
+ * filter; this helper only does the surtax math.
+ */
+export function niit(netInvestmentIncome, magi, filingStatus) {
+  if (!(netInvestmentIncome > 0)) return 0;
+  var threshold = NIIT_THRESHOLDS[filingStatus] || NIIT_THRESHOLDS.mfj;
+  var excess = Math.max(0, magi - threshold);
+  return Math.min(netInvestmentIncome, excess) * NIIT_RATE;
+}
+
 /** Phased-out amount of the OBBBA senior bonus deduction at a given MAGI. */
 export function obbbaSeniorDeduction(filingStatus, age, magi, perAdult) {
   // `perAdult` = true when both MFJ spouses are 65+. Applied once per
