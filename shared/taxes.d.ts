@@ -97,9 +97,41 @@ export function niit(
 
 export function calcBracketTax(income: number, brackets: TaxBracket[]): number;
 
+/**
+ * Splits investment income into tax-treatment components. When provided
+ * to `calcTaxesForLocation` via `opts.investComposition`, this is
+ * AUTHORITATIVE — the `investIncome` positional argument is ignored and
+ * totals are derived from the components below.
+ */
+export interface InvestComposition {
+  /** Long-term capital gains. Routed through 0%/15%/20% LTCG brackets. */
+  ltcg?: number;
+  /** Qualified dividends. Same preferential treatment as LTCG. */
+  qdi?: number;
+  /** Bond/cash interest, non-qualified dividends. Ordinary brackets. */
+  ordinaryInterest?: number;
+  /** Short-term capital gains. Ordinary brackets. */
+  stcg?: number;
+}
+
+export interface CalcTaxesOptions {
+  filingStatus?: FilingStatus;
+  primaryAge?: number;
+  spouseAge?: number;
+  /**
+   * Optional income-composition split. When provided, ordinary interest
+   * + STCG join SS / IRA in the ordinary-bracket pipeline; LTCG + QDI
+   * are stacked on top via the LTCG ladder; and NIIT 3.8% applies to
+   * the lesser of total investment income or MAGI excess. When omitted,
+   * the entire `investIncome` is treated as ordinary (back-compat).
+   */
+  investComposition?: InvestComposition;
+}
+
 export function calcTaxesForLocation(
   loc: LocationWithTaxes,
   ssIncome: number,
   iraIncome: number,
   investIncome: number,
+  opts?: CalcTaxesOptions,
 ): TaxResult | null;

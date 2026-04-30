@@ -240,7 +240,28 @@ export function calcTaxesForLocation(loc, ssIncome, iraIncome, investIncome, opt
   var filingStatus = (opts && opts.filingStatus) || 'mfj';
   var primaryAge = opts && opts.primaryAge;
   var spouseAge = opts && opts.spouseAge;
-  var totalIncome = ssIncome + iraIncome + investIncome;
+
+  // Income-composition routing (#33 item 2): when `opts.investComposition`
+  // is provided, split investIncome into its tax-treatment components.
+  //   - `ltcg` + `qdi`            → preferential 0%/15%/20% LTCG ladder
+  //   - `ordinaryInterest` + `stcg` → ordinary brackets (same as iraIncome)
+  // When composition is provided it is AUTHORITATIVE — `investIncome` is
+  // ignored, and the totals are derived from the composition components.
+  // When composition is omitted, behavior matches the pre-#33 path:
+  // entire investIncome flows through ordinary brackets (back-compat).
+  var ic = opts && opts.investComposition;
+  var ltcgPortion = 0;          // ltcg + qdi → LTCG bracket ladder
+  var ordinaryInvest = 0;       // ordinaryInterest + stcg → ordinary brackets
+  var totalInvest;
+  if (ic) {
+    ltcgPortion    = (ic.ltcg || 0) + (ic.qdi || 0);
+    ordinaryInvest = (ic.ordinaryInterest || 0) + (ic.stcg || 0);
+    totalInvest    = ltcgPortion + ordinaryInvest;
+  } else {
+    ordinaryInvest = investIncome;
+    totalInvest    = investIncome;
+  }
+  var totalIncome = ssIncome + iraIncome + totalInvest;
   var result = { federal: 0, state: 0, socialCharges: 0, salesVat: 0, vehicleTax: 0, total: 0, details: [] };
 
   // Federal income tax (US citizens everywhere)
@@ -250,25 +271,37 @@ export function calcTaxesForLocation(loc, ssIncome, iraIncome, investIncome, opt
   // for location-comparison cost-of-living math where the heuristic is
   // acceptable. See docs/METHODOLOGY.md §2.
   var ssTaxable = ssIncome * 0.85;
-  var federalTaxableIncome = ssTaxable + iraIncome + investIncome;
+  // Ordinary-bracket base = SS taxable portion + IRA + ordinary investment.
+  // LTCG/QDI is excluded here — it's taxed separately on top of this.
+  var ordinaryFederalTaxableIncome = ssTaxable + iraIncome + ordinaryInvest;
+  // MAGI for OBBBA phase-out + NIIT threshold uses the FULL income (incl.
+  // LTCG/QDI). Without FEIE in this model, MAGI ≈ AGI here; close enough
+  // for retirement planning cost-comparison math.
+  var magi = ordinaryFederalTaxableIncome + ltcgPortion;
   var fedDeduction = (taxes.federalIncomeTax && taxes.federalIncomeTax.standardDeduction)
     || FED_STD_DEDUCTION_2026[filingStatus]
     || FED_STD_DEDUCTION_2026.mfj;
 
   // OBBBA senior bonus deduction (2025–2028). Applied once per qualifying
-  // adult aged 65+, subject to MAGI phase-out. Uses federalTaxableIncome
-  // as the MAGI approximation — exact OBBBA MAGI definition includes
-  // foreign-income add-backs which this model doesn't carry.
+  // adult aged 65+, subject to MAGI phase-out. Uses MAGI (which includes
+  // LTCG/QDI when composition is provided) — closer to the statutory
+  // definition than the prior pure-ordinary base.
   var seniorDeduction = 0;
   if (primaryAge && primaryAge >= 65) {
-    seniorDeduction += obbbaSeniorDeduction(filingStatus, primaryAge, federalTaxableIncome);
+    seniorDeduction += obbbaSeniorDeduction(filingStatus, primaryAge, magi);
   }
   if (filingStatus === 'mfj' && spouseAge && spouseAge >= 65) {
-    seniorDeduction += obbbaSeniorDeduction(filingStatus, spouseAge, federalTaxableIncome);
+    seniorDeduction += obbbaSeniorDeduction(filingStatus, spouseAge, magi);
   }
   fedDeduction += seniorDeduction;
 
-  var fedAGI = Math.max(0, federalTaxableIncome - fedDeduction);
+  var fedAGI = Math.max(0, ordinaryFederalTaxableIncome - fedDeduction);
+  // When the standard / itemized deduction exceeds ordinary income, the
+  // unused portion offsets LTCG/QDI before bracket math (IRS Schedule D
+  // Tax Worksheet, line 11). Without this, low-ordinary-income +
+  // large-LTCG households get overtaxed. (Codex P1 on PR #87.)
+  var unusedDeduction = Math.max(0, fedDeduction - ordinaryFederalTaxableIncome);
+  var preferentialTaxable = Math.max(0, ltcgPortion - unusedDeduction);
   var fedBrackets;
   if (taxes.federalIncomeTax && taxes.federalIncomeTax.brackets) {
     // Seed-data override — for locations that want to simulate a different
@@ -277,20 +310,62 @@ export function calcTaxesForLocation(loc, ssIncome, iraIncome, investIncome, opt
   } else {
     fedBrackets = filingStatus === 'single' ? FED_BRACKETS_2026_SINGLE : FED_BRACKETS_2026_MFJ;
   }
-  result.federal = calcBracketTax(fedAGI, fedBrackets);
+  var ordinaryFedTax = calcBracketTax(fedAGI, fedBrackets);
+  // LTCG/QDI portion (only when composition provided). Stacked on top of
+  // ordinary AGI per IRC § 1(h). When the seed data overrides the federal
+  // brackets entirely (territorial systems etc.), skip LTCG too — those
+  // jurisdictions have their own capital-gains regime.
+  var ltcgFedTax = 0;
+  var niitTax = 0;
+  if (ic && preferentialTaxable > 0 && !(taxes.federalIncomeTax && taxes.federalIncomeTax.brackets)) {
+    ltcgFedTax = ltcgFederalTax(preferentialTaxable, fedAGI, filingStatus);
+  }
+  // NIIT 3.8% — applies to ALL net investment income (LTCG + QDI + ordinary
+  // interest + STCG), gated on MAGI. Standalone surtax, statutory unindexed
+  // thresholds. Only applied when income composition is provided (caller
+  // opted into the richer model).
+  if (ic && totalInvest > 0 && !(taxes.federalIncomeTax && taxes.federalIncomeTax.brackets)) {
+    niitTax = niit(totalInvest, magi, filingStatus);
+  }
+  result.federal = ordinaryFedTax + ltcgFedTax + niitTax;
   var deductionNote = 'AGI $' + Math.round(fedAGI).toLocaleString() + ' after $' + fedDeduction.toLocaleString() + ' standard deduction';
   if (seniorDeduction > 0) {
     deductionNote += ' (includes $' + seniorDeduction.toLocaleString() + ' OBBBA senior bonus)';
   }
   result.details.push({
-    label: 'US Federal Income Tax', amount: result.federal,
+    label: 'US Federal Income Tax', amount: ordinaryFedTax,
     note: deductionNote,
   });
+  if (ltcgFedTax > 0) {
+    var ltcgNote = '$' + Math.round(preferentialTaxable).toLocaleString() + ' at 0%/15%/20% (Rev Proc 2025-32, stacked on AGI)';
+    if (unusedDeduction > 0 && preferentialTaxable < ltcgPortion) {
+      ltcgNote += ' — $' + Math.round(unusedDeduction).toLocaleString() + ' unused deduction offset against LTCG';
+    }
+    result.details.push({
+      label: 'US Federal LTCG / QDI Tax',
+      amount: ltcgFedTax,
+      note: ltcgNote,
+    });
+  }
+  if (niitTax > 0) {
+    result.details.push({
+      label: 'US Net Investment Income Tax (NIIT)',
+      amount: niitTax,
+      note: '3.8% on lesser of net investment income ($' + Math.round(totalInvest).toLocaleString() + ') or MAGI excess over $' + (NIIT_THRESHOLDS[filingStatus] || NIIT_THRESHOLDS.mfj).toLocaleString(),
+    });
+  }
 
   // State/country income tax
+  // State pipeline uses `totalInvest` rather than `investIncome` so that
+  // when income composition is provided (federal mode), the state base
+  // also reflects the composition's actual investment-income total.
+  // Most US states tax LTCG as ordinary at the state level — that's
+  // intentional here. The handful of states with preferential LTCG
+  // treatment (e.g. WA capital-gains-only tax, MA STCG surtax) encode
+  // those rules in their seed data.
   var st = taxes.stateIncomeTax;
   if (st && st.brackets && st.brackets.length > 0) {
-    var stateIncome = iraIncome + investIncome;
+    var stateIncome = iraIncome + totalInvest;
     if (!taxes.ssExempt && !taxes.ssTaxedInCountry) {
       stateIncome += ssTaxable;
     }
@@ -298,7 +373,7 @@ export function calcTaxesForLocation(loc, ssIncome, iraIncome, investIncome, opt
     var stateAGI = Math.max(0, stateIncome - stDeduction);
 
     if (taxes.retirementExempt) {
-      stateAGI = Math.max(0, investIncome - stDeduction);
+      stateAGI = Math.max(0, totalInvest - stDeduction);
       result.state = calcBracketTax(stateAGI, st.brackets);
       result.details.push({
         label: (st.label || 'State Income Tax'), amount: result.state,
@@ -310,12 +385,22 @@ export function calcTaxesForLocation(loc, ssIncome, iraIncome, investIncome, opt
       result.details.push({ label: stLabel, amount: result.state, note: st.exemptions || '' });
     }
 
-    // Foreign tax credit
+    // Foreign tax credit (IRC § 901). Reduces total US federal liability
+    // by the lesser of (host country tax, US federal tax). Modeled as a
+    // separate negative detail row rather than mutating `details[0]` —
+    // when investComposition is provided, `details[0]` is the ordinary
+    // federal row only, with separate LTCG/NIIT rows after it. Mutating
+    // `details[0].amount = result.federal` (post-FTC total) would break
+    // reconciliation between the row breakdown and `result.federal`.
+    // (Codex P2 on PR #87.)
     if (taxes.federalIncomeTax && taxes.federalIncomeTax.foreignTaxCredit && result.state > 0) {
       var ftc = Math.min(result.state, result.federal);
       result.federal = Math.max(0, result.federal - ftc);
-      result.details[0].amount = result.federal;
-      result.details[0].note += ' (after $' + Math.round(ftc).toLocaleString() + ' foreign tax credit)';
+      result.details.push({
+        label: 'US Foreign Tax Credit',
+        amount: -ftc,
+        note: '$' + Math.round(ftc).toLocaleString() + ' offset against state/foreign income tax (IRC § 901)',
+      });
     }
   } else if (st && st.type === 'none') {
     result.details.push({ label: 'State Income Tax', amount: 0, note: st.exemptions || 'No state income tax' });
@@ -323,9 +408,10 @@ export function calcTaxesForLocation(loc, ssIncome, iraIncome, investIncome, opt
     result.details.push({ label: st.label || 'Local Income Tax', amount: 0, note: st.exemptions || 'Territorial system: foreign income not taxed' });
   }
 
-  // Social charges (France CSM etc.)
+  // Social charges (France CSM etc.) — uses totalInvest for the same
+  // reason as the state pipeline above.
   if (taxes.socialCharges && taxes.socialCharges.rate > 0) {
-    var scBase = iraIncome + investIncome;
+    var scBase = iraIncome + totalInvest;
     var scThreshold = taxes.socialCharges.annualThreshold || 0;
     var scTaxable = Math.max(0, scBase - scThreshold);
     result.socialCharges = scTaxable * taxes.socialCharges.rate;
