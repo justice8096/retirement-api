@@ -2,164 +2,140 @@
   "city": "New York City",
   "neighborhoods": [
     {
-      "id": "philly-center-city",
-      "name": "Center City",
-      "description": "New York City's downtown core between the Delaware and Schuylkill rivers, with high-rise living, cultural venues, and major transit hubs",
-      "character": "Urban core, highly walkable, culturally dense, transit-rich",
+      "id": "midtown-manhattan",
+      "name": "Midtown Manhattan",
+      "description": "Grand Central Terminal, Times Square, Bryant Park, and the densest commercial-residential mix in the country with all subway lines converging",
+      "character": "Ultra-dense urban core, transit-saturated",
       "housing": {
-        "avgRentOneBedroomUSD": 1700,
-        "avgRentTwoBedroomUSD": 2400,
-        "buyPricePerSqmUSD": 4500,
-        "predominantType": "High-rise condos, luxury apartments, and converted loft spaces"
+        "avgRentOneBedroomUSD": 3250,
+        "avgRentTwoBedroomUSD": 4388,
+        "buyPricePerSqmUSD": 9800,
+        "predominantType": "High-rise condos, doorman rentals, and pre-war apartments"
       },
-      "walkabilityScore": 97,
+      "walkabilityScore": 88,
       "transitScore": 90,
-      "safetyRating": "moderate",
-      "expats": {
-        "communitySize": "small",
-        "englishPrevalence": "high"
-      },
-      "character_notes": "SEPTA bus, subway, and trolley all converge here. Reading Terminal Market for daily shopping. Broad Street is the cultural spine with theaters and concert halls.",
-      "sources": [
-        {
-          "title": "Numbeo Cost of Living New York City",
-          "url": "https://www.numbeo.com/cost-of-living/in/New York City"
-        },
-        {
-          "title": "Zillow - Center City New York City",
-          "url": "https://www.zillow.com/philadelphia-pa/center-city/"
-        },
-        {
-          "title": "Visit New York City",
-          "url": "https://www.visitphilly.com/"
-        }
-      ]
-    },
-    {
-      "id": "philly-rittenhouse-square",
-      "name": "Rittenhouse Square",
-      "description": "New York City's most prestigious residential neighborhood surrounding the elegant Rittenhouse Square park, with upscale dining and boutiques",
-      "character": "Upscale urban, park-centered, walkable, refined",
-      "housing": {
-        "avgRentOneBedroomUSD": 1900,
-        "avgRentTwoBedroomUSD": 2700,
-        "buyPricePerSqmUSD": 5500,
-        "predominantType": "Luxury condos, historic brownstones, and pre-war apartment buildings"
-      },
-      "walkabilityScore": 98,
-      "transitScore": 85,
       "safetyRating": "high",
       "expats": {
-        "communitySize": "small",
+        "communitySize": "not-applicable",
         "englishPrevalence": "high"
       },
-      "character_notes": "The square itself is a social gathering place year-round. Farmer's market on Saturdays. Among the highest property values in New York City. Fine dining concentration.",
+      "character_notes": "The historic and commercial heart of Manhattan. Most walkable area with best access to cultural attractions, restaurants, and public services.",
       "sources": [
         {
-          "title": "Zillow - Rittenhouse Square",
-          "url": "https://www.zillow.com/philadelphia-pa/rittenhouse-square/"
+          "title": "Numbeo Cost of Living Manhattan",
+          "url": "https://www.numbeo.com/cost-of-living/in/Manhattan"
         },
         {
-          "title": "Numbeo Cost of Living New York City",
-          "url": "https://www.numbeo.com/cost-of-living/in/New York City"
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
         }
       ]
     },
     {
-      "id": "philly-chestnut-hill",
-      "name": "Chestnut Hill",
-      "description": "Affluent neighborhood in northwest New York City with a walkable main street, independent shops, and a village-in-the-city atmosphere",
-      "character": "Village-like, leafy, affluent, strong community identity",
+      "id": "park-slope-brooklyn",
+      "name": "Park Slope, Brooklyn",
+      "description": "Brownstone neighborhood adjacent to Prospect Park with family-oriented streets, food coops, and the F/G/Q/R subway lines",
+      "character": "Family-friendly brownstone, Prospect Park access",
       "housing": {
-        "avgRentOneBedroomUSD": 1400,
-        "avgRentTwoBedroomUSD": 1900,
-        "buyPricePerSqmUSD": 3800,
-        "predominantType": "Large stone and stucco houses, some dating to the 1700s, plus newer townhouses"
+        "avgRentOneBedroomUSD": 2375,
+        "avgRentTwoBedroomUSD": 3206,
+        "buyPricePerSqmUSD": 6300,
+        "predominantType": "Brownstones, pre-war co-ops, and converted townhouses"
       },
-      "walkabilityScore": 72,
-      "transitScore": 60,
+      "walkabilityScore": 66,
+      "transitScore": 52,
       "safetyRating": "high",
       "expats": {
-        "communitySize": "minimal",
+        "communitySize": "not-applicable",
         "englishPrevalence": "high"
       },
-      "character_notes": "SEPTA regional rail and bus service to Center City. Germantown Avenue offers boutique shopping and dining. Wissahickon Valley Park is adjacent for hiking.",
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Manhattan's center and services.",
       "sources": [
         {
-          "title": "Zillow - Chestnut Hill New York City",
-          "url": "https://www.zillow.com/philadelphia-pa/chestnut-hill/"
+          "title": "Numbeo Cost of Living Manhattan",
+          "url": "https://www.numbeo.com/cost-of-living/in/Manhattan"
         },
         {
-          "title": "Chestnut Hill Business District",
-          "url": "https://www.chestnuthillpa.com/"
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
         }
       ]
     },
     {
-      "id": "philly-manayunk",
-      "name": "Manayunk",
-      "description": "Former mill town along the Schuylkill River and canal, now a vibrant neighborhood with Main Street restaurants, bars, and shops",
-      "character": "Hilly, lively Main Street, young-professional energy, river views",
+      "id": "astoria-queens",
+      "name": "Astoria, Queens",
+      "description": "Greek, Brazilian, and Bangladeshi enclaves with significantly lower rent than Manhattan, the N/W trains to Midtown, and Astoria Park along the East River",
+      "character": "Diverse enclave, transit-served, attainable",
       "housing": {
-        "avgRentOneBedroomUSD": 1300,
-        "avgRentTwoBedroomUSD": 1750,
-        "buyPricePerSqmUSD": 3000,
-        "predominantType": "Rowhouses on steep hills, converted mill buildings, and newer condos"
+        "avgRentOneBedroomUSD": 1625,
+        "avgRentTwoBedroomUSD": 2194,
+        "buyPricePerSqmUSD": 3850,
+        "predominantType": "Mid-rise rentals, walk-ups, and small co-ops"
       },
-      "walkabilityScore": 78,
-      "transitScore": 55,
+      "walkabilityScore": 46,
+      "transitScore": 30,
       "safetyRating": "moderate",
       "expats": {
-        "communitySize": "minimal",
+        "communitySize": "not-applicable",
         "englishPrevalence": "high"
       },
-      "character_notes": "Very steep streets -- consider mobility before choosing. Manayunk Towpath along the canal is great for walking and cycling. SEPTA Manayunk/Norristown line stops here.",
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
       "sources": [
         {
-          "title": "Zillow - Manayunk",
-          "url": "https://www.zillow.com/philadelphia-pa/manayunk/"
+          "title": "Numbeo Cost of Living Manhattan",
+          "url": "https://www.numbeo.com/cost-of-living/in/Manhattan"
         },
         {
-          "title": "Manayunk Development Corporation",
-          "url": "https://www.manayunk.com/"
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
         }
       ]
     },
     {
-      "id": "philly-old-city",
-      "name": "Old City",
-      "description": "New York City's oldest neighborhood near Independence Hall and the Liberty Bell, blending colonial history with galleries, restaurants, and loft living",
-      "character": "Historic, artsy, tourist-adjacent, cobblestone streets",
+      "id": "upper-west-side-manhattan",
+      "name": "Upper West Side, Manhattan",
+      "description": "Riverside Park, Central Park West, well-rated public schools, and classic doorman buildings on Broadway, West End, and Riverside",
+      "character": "Family-oriented, parks-adjacent, established",
       "housing": {
-        "avgRentOneBedroomUSD": 1600,
-        "avgRentTwoBedroomUSD": 2300,
-        "buyPricePerSqmUSD": 4200,
-        "predominantType": "Converted warehouse lofts, modern condos, and historic rowhouses"
+        "avgRentOneBedroomUSD": 2750,
+        "avgRentTwoBedroomUSD": 3713,
+        "buyPricePerSqmUSD": 8050,
+        "predominantType": "Pre-war doorman co-ops and condos, brownstones"
       },
-      "walkabilityScore": 95,
-      "transitScore": 80,
-      "safetyRating": "moderate",
+      "walkabilityScore": 77,
+      "transitScore": 52,
+      "safetyRating": "high",
       "expats": {
-        "communitySize": "minimal",
+        "communitySize": "not-applicable",
         "englishPrevalence": "high"
       },
-      "character_notes": "First Friday art walks draw crowds monthly. Elfreth's Alley is the oldest residential street in America. Close to I-95 and the Ben Franklin Bridge to New Jersey.",
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
       "sources": [
         {
-          "title": "Zillow - Old City New York City",
-          "url": "https://www.zillow.com/philadelphia-pa/old-city/"
+          "title": "Numbeo Cost of Living Manhattan",
+          "url": "https://www.numbeo.com/cost-of-living/in/Manhattan"
         },
         {
-          "title": "Old City District",
-          "url": "https://www.oldcitydistrict.org/"
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
         }
       ]
     }
-  ],
-  "_seedOrigin": {
-    "kind": "starter-template",
-    "from": "us-philadelphia",
-    "generatedAt": "2026-04-23",
-    "note": "Template-derived content — prices and names adapted from the template city. Needs per-location review."
-  }
+  ]
 }

@@ -5,6 +5,11 @@ import {
   obbbaSeniorDeduction,
   FED_STD_DEDUCTION_2026,
   FED_BRACKETS_2026_MFJ,
+  LTCG_BRACKETS_2026,
+  NIIT_THRESHOLDS,
+  NIIT_RATE,
+  ltcgFederalTax,
+  niit,
 } from '../taxes.js';
 
 describe('calcBracketTax', () => {
@@ -352,5 +357,126 @@ describe('obbbaSeniorDeduction', () => {
     // 12% bracket. Reducing AGI by $12k keeps it in the 12% bracket, so
     // the savings are $12,000 × 12% = $1,440.
     expect(without.federal - with65.federal).toBeCloseTo(1440, 2);
+  });
+});
+
+describe('LTCG_BRACKETS_2026', () => {
+  it('matches Rev Proc 2025-32 thresholds for all 4 filing statuses', () => {
+    expect(LTCG_BRACKETS_2026.single).toEqual({ zeroTop:  49450, fifteenTop: 545500 });
+    expect(LTCG_BRACKETS_2026.mfj   ).toEqual({ zeroTop:  98900, fifteenTop: 613700 });
+    expect(LTCG_BRACKETS_2026.mfs   ).toEqual({ zeroTop:  49450, fifteenTop: 306850 });
+    expect(LTCG_BRACKETS_2026.hoh   ).toEqual({ zeroTop:  66200, fifteenTop: 579600 });
+  });
+});
+
+describe('ltcgFederalTax', () => {
+  it('returns 0 for non-positive LTCG', () => {
+    expect(ltcgFederalTax(0, 80000, 'mfj')).toBe(0);
+    expect(ltcgFederalTax(-100, 80000, 'mfj')).toBe(0);
+  });
+
+  it('all 0% when ordinary + LTCG fits in the 0% bracket', () => {
+    // MFJ 0% top is $98,900. Ordinary $50k + LTCG $40k = $90k < $98.9k.
+    expect(ltcgFederalTax(40000, 50000, 'mfj')).toBe(0);
+  });
+
+  it('all 15% when ordinary already exceeds 0% top and combined fits 15% top', () => {
+    // MFJ: ordinary $120k > $98.9k → no 0% room. Combined $120k + $30k = $150k < $613.7k.
+    // All $30k of LTCG taxed at 15% = $4,500.
+    expect(ltcgFederalTax(30000, 120000, 'mfj')).toBeCloseTo(4500, 2);
+  });
+
+  it('split 0% / 15% when ordinary is below the 0% top but combined exceeds it', () => {
+    // MFJ: ordinary $80k. 0% top $98.9k → first $18.9k of LTCG at 0%.
+    // Remaining $11.1k at 15% = $1,665.
+    expect(ltcgFederalTax(30000, 80000, 'mfj')).toBeCloseTo(1665, 2);
+  });
+
+  it('all 20% when ordinary already exceeds the 15% top', () => {
+    // MFJ: ordinary $700k > $613.7k → all LTCG at 20%.
+    // $50k × 0.20 = $10,000.
+    expect(ltcgFederalTax(50000, 700000, 'mfj')).toBeCloseTo(10000, 2);
+  });
+
+  it('split 15% / 20% when ordinary is in the 15% range but combined exceeds 20% threshold', () => {
+    // MFJ: ordinary $500k (above 0% top $98.9k, below 15% top $613.7k).
+    // LTCG $200k stacks → combined $700k > $613.7k.
+    // Dollars at 15%: from $500k up to $613.7k = $113.7k.
+    // Dollars at 20%: $200k − $113.7k = $86.3k.
+    // Tax = 113700 * 0.15 + 86300 * 0.20 = 17055 + 17260 = $34,315.
+    expect(ltcgFederalTax(200000, 500000, 'mfj')).toBeCloseTo(34315, 2);
+  });
+
+  it('three-way split 0% / 15% / 20% when LTCG straddles all three brackets', () => {
+    // MFJ: ordinary $80k (below 0% top $98.9k). LTCG $700k stacks.
+    // 0% portion: $98.9k − $80k = $18.9k (taxed at 0%).
+    // 20% portion: combined $780k − $613.7k = $166.3k (taxed at 20%).
+    // 15% portion: $700k − $18.9k − $166.3k = $514.8k (taxed at 15%).
+    // Tax = 514800 * 0.15 + 166300 * 0.20 = 77220 + 33260 = $110,480.
+    expect(ltcgFederalTax(700000, 80000, 'mfj')).toBeCloseTo(110480, 2);
+  });
+
+  it('respects single filing status thresholds (lower than MFJ)', () => {
+    // Single 0% top is $49,450. Ordinary $40k → first $9.45k of LTCG at 0%.
+    // LTCG $20k → remaining $10.55k at 15% = $1,582.50.
+    expect(ltcgFederalTax(20000, 40000, 'single')).toBeCloseTo(1582.5, 2);
+  });
+
+  it('treats negative ordinary income as 0 for bracket purposes', () => {
+    // Carry-forward losses can produce negative taxable ordinary income;
+    // for LTCG bracket placement we floor at 0 so all LTCG sees the full
+    // 0% bracket headroom.
+    expect(ltcgFederalTax(50000, -10000, 'mfj')).toBe(0); // $50k < $98.9k zeroTop
+  });
+
+  it('falls back to MFJ when filing status is unknown', () => {
+    expect(ltcgFederalTax(30000, 120000, 'bogus')).toBeCloseTo(4500, 2);
+  });
+});
+
+describe('NIIT_THRESHOLDS / niit', () => {
+  it('matches statutory unindexed thresholds', () => {
+    expect(NIIT_THRESHOLDS).toEqual({
+      single: 200000,
+      mfj:    250000,
+      mfs:    125000,
+      hoh:    200000,
+    });
+    expect(NIIT_RATE).toBe(0.038);
+  });
+
+  it('returns 0 when MAGI is at or below threshold', () => {
+    expect(niit(50000, 250000, 'mfj')).toBe(0);
+    expect(niit(50000, 100000, 'mfj')).toBe(0);
+  });
+
+  it('returns 0 for non-positive net investment income', () => {
+    expect(niit(0,  300000, 'mfj')).toBe(0);
+    expect(niit(-1, 300000, 'mfj')).toBe(0);
+  });
+
+  it('taxes the lesser of net investment income or MAGI excess', () => {
+    // MFJ threshold $250k. MAGI $300k → excess $50k.
+    // Net investment income $30k < $50k → tax $30k × 3.8% = $1,140.
+    expect(niit(30000, 300000, 'mfj')).toBeCloseTo(1140, 2);
+
+    // Net investment income $80k > $50k excess → tax $50k × 3.8% = $1,900.
+    expect(niit(80000, 300000, 'mfj')).toBeCloseTo(1900, 2);
+  });
+
+  it('uses single threshold ($200k) for single filers', () => {
+    // MAGI $250k single → excess $50k. Net investment $30k → tax $1,140.
+    expect(niit(30000, 250000, 'single')).toBeCloseTo(1140, 2);
+    // MAGI $200k single → at threshold, no tax.
+    expect(niit(30000, 200000, 'single')).toBe(0);
+  });
+
+  it('uses MFS threshold ($125k)', () => {
+    // MFS half of MFJ. MAGI $200k MFS → excess $75k. Net investment $40k → tax $1,520.
+    expect(niit(40000, 200000, 'mfs')).toBeCloseTo(1520, 2);
+  });
+
+  it('falls back to MFJ when filing status is unknown', () => {
+    expect(niit(30000, 300000, 'bogus')).toBeCloseTo(1140, 2);
   });
 });

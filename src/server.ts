@@ -7,6 +7,7 @@ import helmet from '@fastify/helmet';
 import rateLimit from '@fastify/rate-limit';
 import cookie from '@fastify/cookie';
 import { registerClerk, assertNoDevBypassUserInProd } from './middleware/auth.js';
+import { isPublicApiPath } from './middleware/public-paths.js';
 import { rateLimitConfig, buildRedisStore } from './middleware/rate-limit.js';
 import { initSentry, captureException } from './lib/sentry.js';
 import { validateEncryptionConfig } from './middleware/encryption.js';
@@ -70,13 +71,70 @@ await app.register(cors, {
   methods: ['GET', 'HEAD', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Accept-Version', 'Accept-Language'],
 });
+// HSTS and CSP's `upgrade-insecure-requests` are both "tell the client to always
+// use HTTPS for this host" directives. They're correct on responses that traverse
+// HTTPS (Tailscale Funnel public path) and harmful on responses that traverse
+// HTTP (LAN-internal Uptime Kuma probe over `http://192.168.68.77:8090/...`):
+// HSTS-aware clients like axios cache the directive, then on the next probe try
+// to scheme-upgrade, the upgrade strips the non-default port (8090), and the
+// fallback hits default HTTP port 80 → ECONNREFUSED.
+//
+// Approach: disable Helmet's HSTS and the upgrade-insecure-requests CSP directive
+// globally, then add them back per-request via an onSend hook only when the
+// request actually arrived over HTTPS. Inverted from "strip after Helmet sets"
+// because @fastify/helmet's header-set timing makes a later `reply.removeHeader`
+// unreliable in practice.
+// `useDefaults: false` is required — without it, @fastify/helmet *merges* our
+// `directives` with its built-in defaults, which include
+// `upgrade-insecure-requests`, so the directive ends up on every response
+// regardless of what we list here. Setting useDefaults: false makes the
+// `directives` block authoritative; everything we want must be enumerated
+// explicitly. (Codex P1 catch on PR #84.)
+const PROD_CSP_WITHOUT_UPGRADE = {
+  useDefaults: false,
+  directives: {
+    defaultSrc: ["'self'"],
+    baseUri: ["'self'"],
+    fontSrc: ["'self'", 'https:', 'data:'],
+    formAction: ["'self'"],
+    frameAncestors: ["'self'"],
+    imgSrc: ["'self'", 'data:'],
+    objectSrc: ["'none'"],
+    scriptSrc: ["'self'"],
+    scriptSrcAttr: ["'none'"],
+    styleSrc: ["'self'", 'https:', "'unsafe-inline'"],
+    // upgrade-insecure-requests intentionally omitted — added back via the
+    // onSend hook below for HTTPS-arriving requests only.
+  },
+};
 await app.register(helmet, {
-  contentSecurityPolicy: process.env.NODE_ENV === 'production' ? undefined : false,
+  contentSecurityPolicy:
+    process.env.NODE_ENV === 'production' ? PROD_CSP_WITHOUT_UPGRADE : false,
+  hsts: false, // re-added below for HTTPS arrivals only
   // Default `same-origin` blocks the SPA at a different origin (e.g. localhost:4200)
   // from reading JSON responses even when CORS permits them. `same-site` keeps CORP
   // strict enough to prevent cross-site resource inclusion while allowing the
   // paired dashboard and marketing-site origins to consume the API.
   crossOriginResourcePolicy: { policy: 'same-site' },
+});
+
+// Add HSTS + upgrade-insecure-requests back when the request actually arrived
+// over HTTPS. `X-Forwarded-Proto` is set by Tailscale Funnel sidecar before
+// the request reaches the api on the public path; falls back to the connection's
+// own protocol for direct callers.
+app.addHook('onSend', async (request, reply, payload) => {
+  const xfp = request.headers['x-forwarded-proto'];
+  const proto = (Array.isArray(xfp) ? xfp[0] : xfp) ?? request.protocol;
+  if (proto !== 'https') return payload;
+  reply.header('strict-transport-security', 'max-age=31536000; includeSubDomains');
+  const existing = reply.getHeader('content-security-policy');
+  if (typeof existing === 'string' && !existing.includes('upgrade-insecure-requests')) {
+    reply.header(
+      'content-security-policy',
+      existing.endsWith(';') ? existing + ' upgrade-insecure-requests' : existing + '; upgrade-insecure-requests',
+    );
+  }
+  return payload;
 });
 // Build Redis store for distributed rate limiting (falls back to in-memory)
 let redisClient: { quit: () => Promise<void> } | undefined;
@@ -136,6 +194,33 @@ app.addHook('onResponse', (request, reply, done) => {
 });
 
 // ─── Auth (Clerk) ─────────────────────────────────────────────────────────
+
+// Suppress Clerk dev-instance handshake on public endpoints.
+//
+// `clerkPlugin` registers a global `preHandler` hook (via `fastify-plugin`,
+// so encapsulation does not isolate it). On dev Clerk instances, that hook
+// returns HTTP 307 → `https://<dev-instance>.clerk.accounts.dev/v1/client/
+// handshake?redirect_url=http://...` whenever the request looks like a
+// browser (HTML in `Accept`) and lacks a `__clerk_db_jwt` cookie. The
+// handshake's `redirect_url` is fixed at `http://`, so any HTTP client that
+// follows redirects (e.g. axios `maxRedirects: 10` in Uptime Kuma) ends up
+// trying to connect to port 80 of the host — manifesting as
+// `ECONNREFUSED <ip>:80` on monitors pointed at our health endpoints.
+//
+// The fix runs BEFORE the Clerk preHandler (Fastify lifecycle: onRequest →
+// preHandler) and rewrites `Accept` to `application/json` for known-public
+// paths. Clerk's `authenticateRequest` only triggers handshake when it sees
+// a browser `Accept`; with JSON it lets the request through without auth
+// state, and our public route handlers proceed normally.
+//
+// Production Clerk instances do not perform this handshake, so this guard
+// is defensive on dev keys and a no-op on prod keys.
+app.addHook('onRequest', (request, _reply, done) => {
+  if (isPublicApiPath(request.url)) {
+    request.headers.accept = 'application/json';
+  }
+  done();
+});
 
 await registerClerk(app);
 

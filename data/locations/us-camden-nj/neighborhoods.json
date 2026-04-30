@@ -2,164 +2,140 @@
   "city": "Camden",
   "neighborhoods": [
     {
-      "id": "philly-center-city",
-      "name": "Center City",
-      "description": "Camden's downtown core between the Delaware and Schuylkill rivers, with high-rise living, cultural venues, and major transit hubs",
-      "character": "Urban core, highly walkable, culturally dense, transit-rich",
+      "id": "cooper-grant-downtown",
+      "name": "Cooper-Grant / Downtown",
+      "description": "Rutgers-Camden, Cooper University Hospital, and the Camden waterfront across the Delaware from Philadelphia, with the Adventure Aquarium and BB&T Pavilion",
+      "character": "University-medical-waterfront core",
       "housing": {
-        "avgRentOneBedroomUSD": 1700,
-        "avgRentTwoBedroomUSD": 2400,
-        "buyPricePerSqmUSD": 4500,
-        "predominantType": "High-rise condos, luxury apartments, and converted loft spaces"
+        "avgRentOneBedroomUSD": 2033,
+        "avgRentTwoBedroomUSD": 2745,
+        "buyPricePerSqmUSD": 5796,
+        "predominantType": "University apartments, condos, and historic row homes"
       },
-      "walkabilityScore": 97,
-      "transitScore": 90,
-      "safetyRating": "moderate",
+      "walkabilityScore": 88,
+      "transitScore": 75,
+      "safetyRating": "high",
       "expats": {
-        "communitySize": "small",
+        "communitySize": "not-applicable",
         "englishPrevalence": "high"
       },
-      "character_notes": "SEPTA bus, subway, and trolley all converge here. Reading Terminal Market for daily shopping. Broad Street is the cultural spine with theaters and concert halls.",
+      "character_notes": "The historic and commercial heart of Camden. Most walkable area with best access to cultural attractions, restaurants, and public services.",
       "sources": [
         {
           "title": "Numbeo Cost of Living Camden",
           "url": "https://www.numbeo.com/cost-of-living/in/Camden"
         },
         {
-          "title": "Zillow - Center City Camden",
-          "url": "https://www.zillow.com/philadelphia-pa/center-city/"
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
         },
         {
-          "title": "Visit Camden",
-          "url": "https://www.visitphilly.com/"
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
         }
       ]
     },
     {
-      "id": "philly-rittenhouse-square",
-      "name": "Rittenhouse Square",
-      "description": "Camden's most prestigious residential neighborhood surrounding the elegant Rittenhouse Square park, with upscale dining and boutiques",
-      "character": "Upscale urban, park-centered, walkable, refined",
+      "id": "parkside",
+      "name": "Parkside",
+      "description": "Forest Hill Park-adjacent neighborhood with historic detached homes, in-progress revitalization, and proximity to PATCO transit",
+      "character": "Historic residential, revitalizing",
       "housing": {
-        "avgRentOneBedroomUSD": 1900,
-        "avgRentTwoBedroomUSD": 2700,
-        "buyPricePerSqmUSD": 5500,
-        "predominantType": "Luxury condos, historic brownstones, and pre-war apartment buildings"
+        "avgRentOneBedroomUSD": 1486,
+        "avgRentTwoBedroomUSD": 2006,
+        "buyPricePerSqmUSD": 3726,
+        "predominantType": "Historic detached homes and twin houses"
       },
-      "walkabilityScore": 98,
-      "transitScore": 85,
+      "walkabilityScore": 67,
+      "transitScore": 53,
       "safetyRating": "high",
       "expats": {
-        "communitySize": "small",
+        "communitySize": "not-applicable",
         "englishPrevalence": "high"
       },
-      "character_notes": "The square itself is a social gathering place year-round. Farmer's market on Saturdays. Among the highest property values in Camden. Fine dining concentration.",
+      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Camden's center and services.",
       "sources": [
-        {
-          "title": "Zillow - Rittenhouse Square",
-          "url": "https://www.zillow.com/philadelphia-pa/rittenhouse-square/"
-        },
         {
           "title": "Numbeo Cost of Living Camden",
           "url": "https://www.numbeo.com/cost-of-living/in/Camden"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
         }
       ]
     },
     {
-      "id": "philly-chestnut-hill",
-      "name": "Chestnut Hill",
-      "description": "Affluent neighborhood in northwest Camden with a walkable main street, independent shops, and a village-in-the-city atmosphere",
-      "character": "Village-like, leafy, affluent, strong community identity",
+      "id": "cramer-hill",
+      "name": "Cramer Hill",
+      "description": "North Camden dense residential along the Delaware and Cooper rivers with very affordable housing and ongoing waterfront redevelopment",
+      "character": "Dense residential, very affordable",
       "housing": {
-        "avgRentOneBedroomUSD": 1400,
-        "avgRentTwoBedroomUSD": 1900,
-        "buyPricePerSqmUSD": 3800,
-        "predominantType": "Large stone and stucco houses, some dating to the 1700s, plus newer townhouses"
+        "avgRentOneBedroomUSD": 1017,
+        "avgRentTwoBedroomUSD": 1372,
+        "buyPricePerSqmUSD": 2277,
+        "predominantType": "Row homes, twins, and small detached homes"
       },
-      "walkabilityScore": 72,
-      "transitScore": 60,
+      "walkabilityScore": 47,
+      "transitScore": 35,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living Camden",
+          "url": "https://www.numbeo.com/cost-of-living/in/Camden"
+        },
+        {
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
+        },
+        {
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
+        }
+      ]
+    },
+    {
+      "id": "fairview-yorkship-village",
+      "name": "Fairview / Yorkship Village",
+      "description": "Camden's southwest with the Yorkship Village historic planned community, more single-family housing, and quieter streets",
+      "character": "Historic planned community, single-family",
+      "housing": {
+        "avgRentOneBedroomUSD": 1720,
+        "avgRentTwoBedroomUSD": 2323,
+        "buyPricePerSqmUSD": 4761,
+        "predominantType": "Yorkship-style homes and bungalows"
+      },
+      "walkabilityScore": 61,
+      "transitScore": 69,
       "safetyRating": "high",
       "expats": {
-        "communitySize": "minimal",
+        "communitySize": "not-applicable",
         "englishPrevalence": "high"
       },
-      "character_notes": "SEPTA regional rail and bus service to Center City. Germantown Avenue offers boutique shopping and dining. Wissahickon Valley Park is adjacent for hiking.",
+      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
       "sources": [
         {
-          "title": "Zillow - Chestnut Hill Camden",
-          "url": "https://www.zillow.com/philadelphia-pa/chestnut-hill/"
+          "title": "Numbeo Cost of Living Camden",
+          "url": "https://www.numbeo.com/cost-of-living/in/Camden"
         },
         {
-          "title": "Chestnut Hill Business District",
-          "url": "https://www.chestnuthillpa.com/"
-        }
-      ]
-    },
-    {
-      "id": "philly-manayunk",
-      "name": "Manayunk",
-      "description": "Former mill town along the Schuylkill River and canal, now a vibrant neighborhood with Main Street restaurants, bars, and shops",
-      "character": "Hilly, lively Main Street, young-professional energy, river views",
-      "housing": {
-        "avgRentOneBedroomUSD": 1300,
-        "avgRentTwoBedroomUSD": 1750,
-        "buyPricePerSqmUSD": 3000,
-        "predominantType": "Rowhouses on steep hills, converted mill buildings, and newer condos"
-      },
-      "walkabilityScore": 78,
-      "transitScore": 55,
-      "safetyRating": "moderate",
-      "expats": {
-        "communitySize": "minimal",
-        "englishPrevalence": "high"
-      },
-      "character_notes": "Very steep streets -- consider mobility before choosing. Manayunk Towpath along the canal is great for walking and cycling. SEPTA Manayunk/Norristown line stops here.",
-      "sources": [
-        {
-          "title": "Zillow - Manayunk",
-          "url": "https://www.zillow.com/philadelphia-pa/manayunk/"
+          "title": "Zillow",
+          "url": "https://www.zillow.com/"
         },
         {
-          "title": "Manayunk Development Corporation",
-          "url": "https://www.manayunk.com/"
-        }
-      ]
-    },
-    {
-      "id": "philly-old-city",
-      "name": "Old City",
-      "description": "Camden's oldest neighborhood near Independence Hall and the Liberty Bell, blending colonial history with galleries, restaurants, and loft living",
-      "character": "Historic, artsy, tourist-adjacent, cobblestone streets",
-      "housing": {
-        "avgRentOneBedroomUSD": 1600,
-        "avgRentTwoBedroomUSD": 2300,
-        "buyPricePerSqmUSD": 4200,
-        "predominantType": "Converted warehouse lofts, modern condos, and historic rowhouses"
-      },
-      "walkabilityScore": 95,
-      "transitScore": 80,
-      "safetyRating": "moderate",
-      "expats": {
-        "communitySize": "minimal",
-        "englishPrevalence": "high"
-      },
-      "character_notes": "First Friday art walks draw crowds monthly. Elfreth's Alley is the oldest residential street in America. Close to I-95 and the Ben Franklin Bridge to New Jersey.",
-      "sources": [
-        {
-          "title": "Zillow - Old City Camden",
-          "url": "https://www.zillow.com/philadelphia-pa/old-city/"
-        },
-        {
-          "title": "Old City District",
-          "url": "https://www.oldcitydistrict.org/"
+          "title": "Realtor.com",
+          "url": "https://www.realtor.com/"
         }
       ]
     }
-  ],
-  "_seedOrigin": {
-    "kind": "starter-template",
-    "from": "us-philadelphia",
-    "generatedAt": "2026-04-23",
-    "note": "Template-derived content — prices and names adapted from the template city. Needs per-location review."
-  }
+  ]
 }

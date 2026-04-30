@@ -2,18 +2,18 @@
   "city": "Annapolis",
   "neighborhoods": [
     {
-      "id": "inner-harbor-federal-hill",
-      "name": "Inner Harbor / Federal Hill",
-      "description": "Revitalized waterfront with National Aquarium, historic ships, and rowhome neighborhoods on the hill",
-      "character": "Waterfront revitalized, aquarium, historic rowhomes",
+      "id": "downtown-historic-district",
+      "name": "Downtown / Historic District",
+      "description": "State capital with the Maryland State House, Naval Academy, and the City Dock waterfront with sailboat charters and Main Street shops",
+      "character": "Historic capital, Naval Academy, walkable waterfront",
       "housing": {
-        "avgRentOneBedroomUSD": 2408,
-        "avgRentTwoBedroomUSD": 3250,
-        "buyPricePerSqmUSD": 7028,
-        "predominantType": "Rowhomes, condos, and waterfront apartments"
+        "avgRentOneBedroomUSD": 3203,
+        "avgRentTwoBedroomUSD": 4324,
+        "buyPricePerSqmUSD": 9646,
+        "predominantType": "Historic colonial homes, condos, and waterfront townhouses"
       },
-      "walkabilityScore": 87,
-      "transitScore": 80,
+      "walkabilityScore": 94,
+      "transitScore": 74,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
@@ -36,18 +36,18 @@
       ]
     },
     {
-      "id": "towson",
-      "name": "Towson",
-      "description": "Northern suburb with university, Towson Town Center, and established residential neighborhoods",
-      "character": "University suburban, shopping, established residential",
+      "id": "eastport",
+      "name": "Eastport",
+      "description": "Across the Spa Creek bridge with marinas, working boatyards, neighborhood restaurants, and a small-town-in-the-city feel",
+      "character": "Maritime village, walkable, marina-oriented",
       "housing": {
-        "avgRentOneBedroomUSD": 1759,
-        "avgRentTwoBedroomUSD": 2375,
-        "buyPricePerSqmUSD": 4518,
-        "predominantType": "Single-family homes, apartments, and garden condos"
+        "avgRentOneBedroomUSD": 2341,
+        "avgRentTwoBedroomUSD": 3160,
+        "buyPricePerSqmUSD": 6201,
+        "predominantType": "Bungalows, modern townhomes, and waterfront condos"
       },
-      "walkabilityScore": 68,
-      "transitScore": 42,
+      "walkabilityScore": 56,
+      "transitScore": 52,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
@@ -70,18 +70,18 @@
       ]
     },
     {
-      "id": "dundalk-essex",
-      "name": "Dundalk / Essex",
-      "description": "Eastern working-class communities with waterfront access and significantly lower housing costs",
-      "character": "Working-class waterfront, affordable, community",
+      "id": "parole",
+      "name": "Parole",
+      "description": "Mid-county area west of downtown with the Westfield Annapolis mall, Riva Road retail, and apartment complexes along Solomons Island Road",
+      "character": "Commercial corridor, apartments, attainable",
       "housing": {
-        "avgRentOneBedroomUSD": 1204,
-        "avgRentTwoBedroomUSD": 1625,
-        "buyPricePerSqmUSD": 2761,
-        "predominantType": "Row houses, modest single-family homes, and apartments"
+        "avgRentOneBedroomUSD": 1602,
+        "avgRentTwoBedroomUSD": 2162,
+        "buyPricePerSqmUSD": 3790,
+        "predominantType": "Garden apartments, townhomes, and condo complexes"
       },
-      "walkabilityScore": 40,
-      "transitScore": 37,
+      "walkabilityScore": 43,
+      "transitScore": 45,
       "safetyRating": "moderate",
       "expats": {
         "communitySize": "not-applicable",
@@ -104,18 +104,18 @@
       ]
     },
     {
-      "id": "columbia-ellicott-city",
-      "name": "Columbia / Ellicott City",
-      "description": "Howard County planned communities with top schools, diverse population, and extensive amenities",
-      "character": "Planned community, top schools, diverse",
+      "id": "west-annapolis-murray-hill",
+      "name": "West Annapolis / Murray Hill",
+      "description": "Established walkable residential neighborhoods west of downtown with sidewalks, mature trees, and walking distance to historic district",
+      "character": "Walkable established, mature trees, family",
       "housing": {
-        "avgRentOneBedroomUSD": 2037,
-        "avgRentTwoBedroomUSD": 2750,
-        "buyPricePerSqmUSD": 5773,
-        "predominantType": "Single-family homes, townhomes, and condos"
+        "avgRentOneBedroomUSD": 2710,
+        "avgRentTwoBedroomUSD": 3659,
+        "buyPricePerSqmUSD": 7923,
+        "predominantType": "Bungalows, colonials, and Cape Cods"
       },
-      "walkabilityScore": 76,
-      "transitScore": 66,
+      "walkabilityScore": 77,
+      "transitScore": 70,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
@@ -137,11 +137,5 @@
         }
       ]
     }
-  ],
-  "_seedOrigin": {
-    "kind": "starter-template",
-    "from": "us-baltimore-md",
-    "generatedAt": "2026-04-23",
-    "note": "Template-derived content — prices and names adapted from the template city. Needs per-location review."
-  }
+  ]
 }

@@ -2,18 +2,18 @@
   "city": "Bowie",
   "neighborhoods": [
     {
-      "id": "inner-harbor-federal-hill",
-      "name": "Inner Harbor / Federal Hill",
-      "description": "Revitalized waterfront with National Aquarium, historic ships, and rowhome neighborhoods on the hill",
-      "character": "Waterfront revitalized, aquarium, historic rowhomes",
+      "id": "old-bowie",
+      "name": "Old Bowie",
+      "description": "Historic train town around the original B&O station with antique shops, the Bowie Heritage Park, and the small downtown stretch",
+      "character": "Historic small-town, train heritage",
       "housing": {
-        "avgRentOneBedroomUSD": 2408,
-        "avgRentTwoBedroomUSD": 3250,
-        "buyPricePerSqmUSD": 7028,
-        "predominantType": "Rowhomes, condos, and waterfront apartments"
+        "avgRentOneBedroomUSD": 2922,
+        "avgRentTwoBedroomUSD": 3945,
+        "buyPricePerSqmUSD": 8722,
+        "predominantType": "Historic homes and small commercial-residential blocks"
       },
-      "walkabilityScore": 87,
-      "transitScore": 80,
+      "walkabilityScore": 95,
+      "transitScore": 78,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
@@ -36,18 +36,18 @@
       ]
     },
     {
-      "id": "towson",
-      "name": "Towson",
-      "description": "Northern suburb with university, Towson Town Center, and established residential neighborhoods",
-      "character": "University suburban, shopping, established residential",
+      "id": "belair-at-bowie",
+      "name": "Belair at Bowie",
+      "description": "Original Levitt-built planned community of mid-century homes laid out around shopping centers and parks, well-maintained today",
+      "character": "Levittown-style postwar planned, established",
       "housing": {
-        "avgRentOneBedroomUSD": 1759,
-        "avgRentTwoBedroomUSD": 2375,
-        "buyPricePerSqmUSD": 4518,
-        "predominantType": "Single-family homes, apartments, and garden condos"
+        "avgRentOneBedroomUSD": 2136,
+        "avgRentTwoBedroomUSD": 2883,
+        "buyPricePerSqmUSD": 5607,
+        "predominantType": "Levitt-style ranches, Cape Cods, and split-levels"
       },
-      "walkabilityScore": 68,
-      "transitScore": 42,
+      "walkabilityScore": 57,
+      "transitScore": 53,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
@@ -70,18 +70,18 @@
       ]
     },
     {
-      "id": "dundalk-essex",
-      "name": "Dundalk / Essex",
-      "description": "Eastern working-class communities with waterfront access and significantly lower housing costs",
-      "character": "Working-class waterfront, affordable, community",
+      "id": "bowie-east-pointer-ridge",
+      "name": "Bowie East / Pointer Ridge",
+      "description": "Older split-levels and townhomes with more accessible price points than the rest of Prince George's County's Bowie sections",
+      "character": "Mid-century, attainable, established",
       "housing": {
-        "avgRentOneBedroomUSD": 1204,
-        "avgRentTwoBedroomUSD": 1625,
-        "buyPricePerSqmUSD": 2761,
-        "predominantType": "Row houses, modest single-family homes, and apartments"
+        "avgRentOneBedroomUSD": 1461,
+        "avgRentTwoBedroomUSD": 1973,
+        "buyPricePerSqmUSD": 3427,
+        "predominantType": "Split-levels, townhomes, and ramblers"
       },
-      "walkabilityScore": 40,
-      "transitScore": 37,
+      "walkabilityScore": 57,
+      "transitScore": 33,
       "safetyRating": "moderate",
       "expats": {
         "communitySize": "not-applicable",
@@ -104,18 +104,18 @@
       ]
     },
     {
-      "id": "columbia-ellicott-city",
-      "name": "Columbia / Ellicott City",
-      "description": "Howard County planned communities with top schools, diverse population, and extensive amenities",
-      "character": "Planned community, top schools, diverse",
+      "id": "mitchellville-northridge",
+      "name": "Mitchellville / Northridge",
+      "description": "Newer master-planned communities with golf-course homes, family pools, and well-rated schools (adjacent to Bowie proper)",
+      "character": "Newer master-planned, golf, family",
       "housing": {
-        "avgRentOneBedroomUSD": 2037,
-        "avgRentTwoBedroomUSD": 2750,
-        "buyPricePerSqmUSD": 5773,
-        "predominantType": "Single-family homes, townhomes, and condos"
+        "avgRentOneBedroomUSD": 2473,
+        "avgRentTwoBedroomUSD": 3338,
+        "buyPricePerSqmUSD": 7164,
+        "predominantType": "Newer single-family homes in master-planned subdivisions"
       },
-      "walkabilityScore": 76,
-      "transitScore": 66,
+      "walkabilityScore": 64,
+      "transitScore": 56,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
@@ -137,11 +137,5 @@
         }
       ]
     }
-  ],
-  "_seedOrigin": {
-    "kind": "starter-template",
-    "from": "us-baltimore-md",
-    "generatedAt": "2026-04-23",
-    "note": "Template-derived content — prices and names adapted from the template city. Needs per-location review."
-  }
+  ]
 }
