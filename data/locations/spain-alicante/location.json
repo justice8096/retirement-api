@@ -251,27 +251,29 @@
   ],
   "cons": [
     {
-      "text": "Higher visa income requirement (EUR 2400/mo)",
+      "text": "Higher visa income requirement: NLV ~€2,400/mo for principal applicant (4× IPREM, BOE-set annually)",
       "sources": [
         {
-          "title": "myspainvisa.com",
-          "url": "https://myspainvisa.com/non-lucrative-visa-spain/",
-          "accessed": "2026-04-23"
+          "title": "Ministerio de Asuntos Exteriores — Visado de Residencia No Lucrativa",
+          "url": "https://www.exteriores.gob.es/es/ServiciosAlCiudadano/InformacionParaExtranjeros/Paginas/RequisitosVisados.aspx",
+          "accessed": "2026-05-03"
         },
         {
-          "title": "madridbullfighting.com",
-          "url": "https://madridbullfighting.com/blog/do-americans-need-a-visa-for-spain/",
-          "accessed": "2026-04-23"
-        },
-        {
-          "title": "etias.com",
-          "url": "https://etias.com/etias-requirements/etias-for-american-citizens",
-          "accessed": "2026-04-23"
+          "title": "BOE — Ley de Presupuestos Generales del Estado (IPREM annual figure)",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-26739",
+          "accessed": "2026-05-03"
         }
       ]
     },
     {
-      "text": "Private insurance needed initially"
+      "text": "Private health insurance required during NLV (no copays / coverage limits) until SNS access via residency or Convenio Especial",
+      "sources": [
+        {
+          "title": "Real Decreto 240/2007 — Spain residency permit requirements (private insurance during NLV)",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-4184",
+          "accessed": "2026-05-03"
+        }
+      ]
     },
     {
       "text": "A2 Spanish required for permanent residency",
