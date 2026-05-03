@@ -163,9 +163,32 @@
     "safetyRating": 9
   },
   "pros": [
-    "Stunning medieval walled city on the Adriatic",
+    {
+      "text": "Stunning medieval walled city on the Adriatic (Old City of Dubrovnik UNESCO World Heritage, listed 1979)",
+      "sources": [
+        {
+          "title": "UNESCO World Heritage List — Old City of Dubrovnik (95)",
+          "url": "https://whc.unesco.org/en/list/95",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Excellent seafood and Mediterranean lifestyle",
-    "Croatia in EU and Schengen since 2023"
+    {
+      "text": "Croatia in EU since 2013, Schengen + eurozone since 2023-01-01 (free movement + euro replacing kuna)",
+      "sources": [
+        {
+          "title": "Council of the EU — Croatia joins Schengen and the eurozone (1 January 2023)",
+          "url": "https://www.consilium.europa.eu/en/press/press-releases/2022/12/08/schengen-area-council-decides-to-lift-internal-border-controls-with-croatia/",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "Hrvatska narodna banka — Euro changeover (kuna → euro 2023-01-01)",
+          "url": "https://www.hnb.hr/en/euro",
+          "accessed": "2026-05-03"
+        }
+      ]
+    }
   ],
   "cons": [
     {
