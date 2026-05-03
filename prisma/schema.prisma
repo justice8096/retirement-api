@@ -182,6 +182,13 @@ model UserFinancialSettings {
   taxableFeesPct     Decimal @default(0) @map("taxable_fees_pct")
   hsaFeesPct         Decimal @default(0) @map("hsa_fees_pct")
 
+  // ─── Rental Properties (Schedule E portfolio) ─────────────────────
+  // JSONB array of RentalProperty objects (Todo #36, persistence for #29).
+  // Shape validated by financial.ts Zod schema; this column is a pass-
+  // through. Default '[]' means existing rows get an empty portfolio
+  // (matches the session-only behavior shipped in PRs #118 and #120).
+  rentalProperties   Json     @default("[]") @map("rental_properties")
+
   updatedAt        DateTime @updatedAt @map("updated_at")
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)

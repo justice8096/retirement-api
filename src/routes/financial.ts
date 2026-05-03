@@ -19,6 +19,32 @@ import { defaultCurrencyFor } from '../lib/locale.js';
  */
 const num = z.coerce.number();
 
+/**
+ * RentalProperty shape (Todo #36, persistence for #29). Mirrors the
+ * `RentalProperty` interface in the dashboard's `src/app/lib/rental-income.ts`.
+ * Validated at the request boundary; persisted as JSONB on
+ * `user_financial_settings.rental_properties`.
+ *
+ * Bounds chosen to match the dashboard input ranges:
+ *   - depreciationStartYear can be negative (property placed in service
+ *     before sim window) — see PR #118 fix for Codex P1.
+ *   - sim-year fields are bounded to ±100 to catch fat-fingered input
+ *     while still allowing realistic horizons.
+ */
+const rentalPropertySchema = z.object({
+  id: z.string().min(1).max(100),
+  label: z.string().max(200),
+  monthlyGrossRent: num.min(0).max(1_000_000),
+  vacancyRatePct: num.min(0).max(100),
+  propertyTaxAnnual: num.min(0).max(1_000_000),
+  otherOpExAnnual: num.min(0).max(1_000_000),
+  mortgageInterestAnnual: num.min(0).max(10_000_000),
+  depreciableBasis: num.min(0).max(100_000_000),
+  depreciationStartYear: num.int().min(-50).max(100),
+  ownedFromYear: num.int().min(0).max(100),
+  ownedThroughYear: num.int().min(0).max(100).optional(),
+}).strict();
+
 const financialSchema = z.object({
   portfolioBalance: num.min(0).max(100_000_000).optional(),
   fxDriftEnabled: z.boolean().optional(),
@@ -58,6 +84,11 @@ const financialSchema = z.object({
   rothFeesPct: num.min(0).max(10).optional(),
   taxableFeesPct: num.min(0).max(10).optional(),
   hsaFeesPct: num.min(0).max(10).optional(),
+
+  // Rental property portfolio (Todo #36). Bounded array; passes through
+  // to the rental_properties JSONB column on user_financial_settings.
+  // Empty array on a PUT clears the user's portfolio.
+  rentalProperties: z.array(rentalPropertySchema).max(50).optional(),
 }).strict();  // SAST M-02: reject unknown keys
 
 // Defaults sent to client when no DB record exists (client-side format).
@@ -75,6 +106,7 @@ const DEFAULTS = {
   expectedReturn: 7,
   expectedInflation: 2.5,
   retirementPath: 'traditional',
+  rentalProperties: [],
 };
 
 /** Encrypted balance field names. */
