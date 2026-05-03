@@ -264,10 +264,46 @@
   },
   "pros": [
     "Significantly lower cost of living than surrounding NJ suburbs",
-    "PATCO light rail to Philadelphia available",
-    "NJ exempts SS from state tax",
-    "No sales tax on groceries or clothing",
-    "Cooper University Hospital — major Level 1 trauma center",
+    {
+      "text": "PATCO light rail to Philadelphia available",
+      "sources": [
+        {
+          "title": "PATCO Speedline — Camden NJ ↔ Center City Philadelphia rapid transit",
+          "url": "https://www.ridepatco.org/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "text": "NJ exempts SS from state tax",
+      "sources": [
+        {
+          "title": "NJ Division of Taxation — Social Security exempt; pension/retirement income exclusion",
+          "url": "https://www.nj.gov/treasury/taxation/njit6.shtml",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "text": "No sales tax on groceries or clothing",
+      "sources": [
+        {
+          "title": "NJ DOT — Sales tax exemptions (groceries / most clothing exempt)",
+          "url": "https://www.nj.gov/treasury/taxation/su.shtml",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "text": "Cooper University Hospital — major Level 1 trauma center",
+      "sources": [
+        {
+          "title": "Cooper University Health Care — Camden, NJ (Level 1 Trauma Center)",
+          "url": "https://www.cooperhealth.org/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Access to Philly cultural institutions and healthcare"
   ],
   "cons": [

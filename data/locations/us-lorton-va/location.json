@@ -226,9 +226,32 @@
   },
   "pros": [
     "~23% cheaper rent than Fairfax City",
-    "Same Fairfax County tax benefits (Social Security exempt, 65+ deduction)",
+    {
+      "text": "Same Fairfax County tax benefits (Social Security exempt, 65+ deduction)",
+      "sources": [
+        {
+          "title": "Virginia DOT — Social Security and Tier 1 Railroad Retirement subtractions",
+          "url": "https://www.tax.virginia.gov/subtractions",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "Virginia DOT — Age Deduction for taxpayers 65+",
+          "url": "https://www.tax.virginia.gov/deductions",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Newer housing stock than Annandale",
-    "VRE (Virginia Railway Express) commuter rail to DC available",
+    {
+      "text": "VRE (Virginia Railway Express) commuter rail to DC available",
+      "sources": [
+        {
+          "title": "Virginia Railway Express (VRE) — Manassas and Fredericksburg lines to Washington DC",
+          "url": "https://www.vre.org/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Waterfront + golf + arts amenities",
     "Quieter suburban environment"
   ],

@@ -168,7 +168,16 @@
   },
   "pros": [
     "Very low cost of living",
-    "Dry, sunny climate with 310 sunny days",
+    {
+      "text": "Dry, sunny climate (~278 days with measurable sunshine; ~310 days without measurable precipitation per NOAA NCEI)",
+      "sources": [
+        {
+          "title": "NOAA NCEI — Albuquerque NM climate normals (~278 days with measurable sunshine; ~310 days without measurable precipitation)",
+          "url": "https://www.weather.gov/abq/climate",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Rich Native American and Hispanic cultural heritage"
   ],
   "cons": [

@@ -167,7 +167,16 @@
     "safetyRating": 6
   },
   "pros": [
-    "Excellent healthcare (Mayo, Allina, Fairview systems)",
+    {
+      "text": "Excellent healthcare (Mayo, Allina, Fairview systems)",
+      "sources": [
+        {
+          "title": "Mayo Clinic — Rochester, MN (and Twin Cities campuses)",
+          "url": "https://www.mayoclinic.org/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Strong arts, music, and theater scene",
     "Extensive parks and bike trail network"
   ],
@@ -176,10 +185,24 @@
       "text": "Extremely cold, long winters"
     },
     {
-      "text": "High state income tax (5.35-9.85%)"
+      "text": "High state income tax (5.35-9.85%)",
+      "sources": [
+        {
+          "title": "MN Department of Revenue — Individual Income Tax brackets (5.35-9.85%)",
+          "url": "https://www.revenue.state.mn.us/individual-income-tax",
+          "accessed": "2026-05-03"
+        }
+      ]
     },
     {
-      "text": "SS benefits partially taxed by state"
+      "text": "SS benefits partially taxed by state",
+      "sources": [
+        {
+          "title": "MN DOR — Social Security Subtraction (partial; phase-out by AGI)",
+          "url": "https://www.revenue.state.mn.us/social-security-benefit-subtraction",
+          "accessed": "2026-05-03"
+        }
+      ]
     },
     {
       "text": "Safety & crime: see cited reports for current figures by city and country",

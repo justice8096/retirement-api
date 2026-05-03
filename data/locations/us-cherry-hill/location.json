@@ -263,11 +263,52 @@
     "safetyRating": 8
   },
   "pros": [
-    "Quiet suburb with access to Philly via PATCO",
-    "NJ exempts SS from state tax",
-    "No sales tax on groceries or clothing",
+    {
+      "text": "Quiet suburb with access to Philly via PATCO",
+      "sources": [
+        {
+          "title": "PATCO Speedline — Camden NJ ↔ Center City Philadelphia rapid transit",
+          "url": "https://www.ridepatco.org/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "text": "NJ exempts SS from state tax",
+      "sources": [
+        {
+          "title": "NJ Division of Taxation — Social Security exempt; pension/retirement income exclusion",
+          "url": "https://www.nj.gov/treasury/taxation/njit6.shtml",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "text": "No sales tax on groceries or clothing",
+      "sources": [
+        {
+          "title": "NJ DOT — Sales tax exemptions (groceries / most clothing exempt)",
+          "url": "https://www.nj.gov/treasury/taxation/su.shtml",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Good schools and suburban amenities",
-    "Access to Philly healthcare (Penn, Jefferson)",
+    {
+      "text": "Access to Philly healthcare (Penn, Jefferson)",
+      "sources": [
+        {
+          "title": "Penn Medicine — Hospital of the University of Pennsylvania",
+          "url": "https://www.pennmedicine.org/",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "Thomas Jefferson University Hospitals",
+          "url": "https://www.jeffersonhealth.org/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Lower crime than Philadelphia"
   ],
   "cons": [
@@ -275,7 +316,14 @@
       "text": "Cold winters (24F lows)"
     },
     {
-      "text": "Higher NJ state income tax rates"
+      "text": "Higher NJ state income tax rates (1.4-10.75% bracket)",
+      "sources": [
+        {
+          "title": "NJ Division of Taxation — Gross Income Tax brackets (1.4%-10.75%)",
+          "url": "https://www.nj.gov/treasury/taxation/taxtables.shtml",
+          "accessed": "2026-05-03"
+        }
+      ]
     },
     {
       "text": "Car-dependent"

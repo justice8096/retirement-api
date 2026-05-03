@@ -167,7 +167,16 @@
     "safetyRating": 6
   },
   "pros": [
-    "No state income tax",
+    {
+      "text": "No state income tax",
+      "sources": [
+        {
+          "title": "Florida Department of Revenue — No state personal income tax",
+          "url": "https://floridarevenue.com/taxes/taxesfees/Pages/personal_income.aspx",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Warm year-round climate",
     "Growing metro with good healthcare"
   ],
