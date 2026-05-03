@@ -156,7 +156,16 @@
     "safetyRating": 8
   },
   "pros": [
-    "One of the safest cities in Mexico",
+    {
+      "text": "One of the safest cities in Mexico (consistently top-3 in INEGI ENSU perception-of-safety surveys)",
+      "sources": [
+        {
+          "title": "INEGI — Encuesta Nacional de Seguridad Pública Urbana (ENSU)",
+          "url": "https://www.inegi.org.mx/programas/ensu/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Rich Mayan culture and excellent cuisine",
     "Affordable with good infrastructure"
   ],
