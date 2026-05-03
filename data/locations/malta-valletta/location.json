@@ -163,9 +163,27 @@
     "safetyRating": 9
   },
   "pros": [
-    "English is an official language",
+    {
+      "text": "English is an official language alongside Maltese (Constitution of Malta, Article 5)",
+      "sources": [
+        {
+          "title": "Constitution of Malta, Article 5 — Maltese and English are official languages",
+          "url": "https://legislation.mt/eli/const/eng/pdf",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Warm year-round Mediterranean climate",
-    "Stunning historic capital (UNESCO World Heritage)"
+    {
+      "text": "Stunning historic capital (City of Valletta UNESCO World Heritage, listed 1980)",
+      "sources": [
+        {
+          "title": "UNESCO World Heritage List — City of Valletta (131, listed 1980)",
+          "url": "https://whc.unesco.org/en/list/131",
+          "accessed": "2026-05-03"
+        }
+      ]
+    }
   ],
   "cons": [
     {

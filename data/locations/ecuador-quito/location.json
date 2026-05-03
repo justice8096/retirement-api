@@ -157,8 +157,26 @@
   },
   "pros": [
     "Capital city with best healthcare and services",
-    "UNESCO World Heritage historic center",
-    "Uses USD with no exchange rate risk"
+    {
+      "text": "UNESCO World Heritage historic center (City of Quito — among the first 12 sites listed in 1978, alongside Galápagos)",
+      "sources": [
+        {
+          "title": "UNESCO World Heritage List — City of Quito (2 — among the first 12 sites listed in 1978)",
+          "url": "https://whc.unesco.org/en/list/2",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "text": "Uses USD with no exchange rate risk (Ecuador adopted the US dollar in 2000 per Ley de Transformación Económica)",
+      "sources": [
+        {
+          "title": "Banco Central del Ecuador — USD adoption (since 2000-09-09 per Ley 2000-4)",
+          "url": "https://www.bce.fin.ec/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    }
   ],
   "cons": [
     {

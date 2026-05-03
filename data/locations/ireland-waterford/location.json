@@ -292,7 +292,16 @@
   "pros": [
     "English-speaking country — no language barrier",
     "Very safe (low crime rates)",
-    "Rich Viking heritage and cultural history (Waterford Crystal, Viking Triangle)",
+    {
+      "text": "Rich Viking heritage (Waterford founded by Vikings 914 AD — oldest city in Ireland) + Waterford Crystal + Viking Triangle museums",
+      "sources": [
+        {
+          "title": "Waterford Treasures — Viking Triangle (Waterford founded by Vikings, 914 AD)",
+          "url": "https://www.waterfordtreasures.com/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Affordable by Irish standards (much cheaper than Dublin)",
     "EU membership provides healthcare and travel access across Europe",
     "Mild climate — no extreme heat or cold",
@@ -315,7 +324,14 @@
       "text": "Long public healthcare waiting lists (HSE system)"
     },
     {
-      "text": "High tax rates (income tax 40% + USC 8% + PRSI 4%)"
+      "text": "High tax rates: top income tax band 40% + USC up to 8% (over €70K) + PRSI 4% (per Revenue.ie 2025 bands)",
+      "sources": [
+        {
+          "title": "Revenue.ie — Income tax bands (top rate 40%) + USC + PRSI",
+          "url": "https://www.revenue.ie/en/jobs-and-pensions/calculating-your-income-tax/index.aspx",
+          "accessed": "2026-05-03"
+        }
+      ]
     },
     {
       "text": "Car-dependent outside Waterford city center"
