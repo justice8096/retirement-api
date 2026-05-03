@@ -164,7 +164,16 @@
   },
   "pros": [
     "Upscale beach town with excellent quality of life",
-    "Train connection to Lisbon (35 min)",
+    {
+      "text": "Train connection to Lisbon (~35 min on the CP Linha de Cascais)",
+      "sources": [
+        {
+          "title": "CP — Linha de Cascais timetable (Lisboa Cais do Sodré ↔ Cascais)",
+          "url": "https://www.cp.pt/passageiros/en/train-times/lines/cascais-line",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Strong international community and English widely spoken"
   ],
   "cons": [
