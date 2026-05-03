@@ -164,7 +164,16 @@
   },
   "pros": [
     "Ireland's food capital with English Market and restaurant scene",
-    "Growing tech hub with Apple, EMC, and others",
+    {
+      "text": "Growing tech hub: Apple's European HQ in Cork since 1980 (~6,000 employees as of 2024); also Dell EMC, Pfizer, others",
+      "sources": [
+        {
+          "title": "Apple — Cork campus (European HQ since 1980, ~6,000 employees as of 2024)",
+          "url": "https://www.apple.com/ie/job-creation/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Good airport with European connections"
   ],
   "cons": [
