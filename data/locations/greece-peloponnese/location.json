@@ -164,7 +164,26 @@
   },
   "pros": [
     "Among the most affordable areas in the EU",
-    "Rich ancient history (Mycenae, Olympia, Epidaurus)",
+    {
+      "text": "Rich ancient history: Mycenae, Olympia, and Epidaurus are all UNESCO World Heritage sites",
+      "sources": [
+        {
+          "title": "UNESCO World Heritage List — Archaeological Sites of Mycenae and Tiryns (941)",
+          "url": "https://whc.unesco.org/en/list/941",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "UNESCO World Heritage List — Archaeological Site of Olympia (517)",
+          "url": "https://whc.unesco.org/en/list/517",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "UNESCO World Heritage List — Sanctuary of Asklepios at Epidaurus (491)",
+          "url": "https://whc.unesco.org/en/list/491",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Authentic Greek mainland experience without mass tourism"
   ],
   "cons": [
