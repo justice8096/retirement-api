@@ -164,7 +164,21 @@
   },
   "pros": [
     "Unmatched cultural offerings (museums, theater, cuisine)",
-    "World-class public transit (metro, RER, buses)",
+    {
+      "text": "World-class public transit: 16-line métro + RER + bus network operated under Île-de-France Mobilités (~1.5 billion annual métro riders)",
+      "sources": [
+        {
+          "title": "Île-de-France Mobilités — Paris regional transit network",
+          "url": "https://www.iledefrance-mobilites.fr/en/discover/transport-network",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "RATP — Métro de Paris (16 lines, ~225 km, ~1.5 billion annual riders)",
+          "url": "https://www.ratp.fr/en/metro",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "International city with huge expat community"
   ],
   "cons": [
