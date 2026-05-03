@@ -287,4 +287,116 @@ describe('Financial routes', () => {
       expect(res.statusCode).toBe(400);
     });
   });
+
+  describe('mortgage fields (Todo #28)', () => {
+    it('GET returns 0 defaults when no settings exist', async () => {
+      prisma.userFinancialSettings.findUnique.mockResolvedValue(null);
+
+      const res = await app.inject({ method: 'GET', url: '/api/me/financial' });
+      const body = JSON.parse(res.payload);
+
+      expect(res.statusCode).toBe(200);
+      expect(body.mortgageMonthlyPayment).toBe(0);
+      expect(body.mortgageEndYear).toBe(0);
+    });
+
+    it('GET coerces Decimal mortgageMonthlyPayment to number', async () => {
+      // Prisma's Decimal type round-trips as a String over JSON; the route's
+      // NUMERIC_FIELDS coercion must turn it back into a JS number.
+      prisma.userFinancialSettings.findUnique.mockResolvedValue({
+        userId: 'test-user-id',
+        portfolioBalance: 'ENC:500000',
+        mortgageMonthlyPayment: '2500.00',
+        mortgageEndYear: 12,
+      });
+
+      const res = await app.inject({ method: 'GET', url: '/api/me/financial' });
+      const body = JSON.parse(res.payload);
+
+      expect(res.statusCode).toBe(200);
+      expect(body.mortgageMonthlyPayment).toBe(2500);
+      expect(body.mortgageEndYear).toBe(12);
+    });
+
+    it('PUT persists valid mortgage fields', async () => {
+      prisma.userFinancialSettings.upsert.mockResolvedValue({
+        mortgageMonthlyPayment: '1850.50',
+        mortgageEndYear: 8,
+      });
+
+      const res = await app.inject({
+        method: 'PUT',
+        url: '/api/me/financial',
+        payload: { mortgageMonthlyPayment: 1850.5, mortgageEndYear: 8 },
+        headers: { 'content-type': 'application/json' },
+      });
+
+      expect(res.statusCode).toBe(200);
+      const call = prisma.userFinancialSettings.upsert.mock.calls[0][0];
+      // Mortgage is NOT in PCT_FIELDS, so no /100 conversion. Stored
+      // verbatim as a Decimal-string-ish value Prisma will normalize.
+      expect(call.update.mortgageMonthlyPayment).toBe(1850.5);
+      expect(call.update.mortgageEndYear).toBe(8);
+    });
+
+    it('PUT accepts zero values (clears mortgage)', async () => {
+      prisma.userFinancialSettings.upsert.mockResolvedValue({
+        mortgageMonthlyPayment: '0',
+        mortgageEndYear: 0,
+      });
+
+      const res = await app.inject({
+        method: 'PUT',
+        url: '/api/me/financial',
+        payload: { mortgageMonthlyPayment: 0, mortgageEndYear: 0 },
+        headers: { 'content-type': 'application/json' },
+      });
+
+      expect(res.statusCode).toBe(200);
+    });
+
+    it('PUT rejects negative mortgageMonthlyPayment', async () => {
+      const res = await app.inject({
+        method: 'PUT',
+        url: '/api/me/financial',
+        payload: { mortgageMonthlyPayment: -100 },
+        headers: { 'content-type': 'application/json' },
+      });
+
+      expect(res.statusCode).toBe(400);
+    });
+
+    it('PUT rejects mortgageMonthlyPayment > 100K', async () => {
+      const res = await app.inject({
+        method: 'PUT',
+        url: '/api/me/financial',
+        payload: { mortgageMonthlyPayment: 150_000 },
+        headers: { 'content-type': 'application/json' },
+      });
+
+      expect(res.statusCode).toBe(400);
+    });
+
+    it('PUT rejects non-integer mortgageEndYear', async () => {
+      const res = await app.inject({
+        method: 'PUT',
+        url: '/api/me/financial',
+        payload: { mortgageEndYear: 5.5 },
+        headers: { 'content-type': 'application/json' },
+      });
+
+      expect(res.statusCode).toBe(400);
+    });
+
+    it('PUT rejects mortgageEndYear > 100', async () => {
+      const res = await app.inject({
+        method: 'PUT',
+        url: '/api/me/financial',
+        payload: { mortgageEndYear: 150 },
+        headers: { 'content-type': 'application/json' },
+      });
+
+      expect(res.statusCode).toBe(400);
+    });
+  });
 });

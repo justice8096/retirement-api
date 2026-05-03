@@ -89,6 +89,13 @@ const financialSchema = z.object({
   // to the rental_properties JSONB column on user_financial_settings.
   // Empty array on a PUT clears the user's portfolio.
   rentalProperties: z.array(rentalPropertySchema).max(50).optional(),
+
+  // Primary-residence mortgage (Todo #28). Both 0 means no mortgage.
+  // Monthly payment is USD P+I (nominal — kernel does NOT inflate it).
+  // End year is exclusive sim-year cutoff (range matches RentalProperty
+  // year fields).
+  mortgageMonthlyPayment: num.min(0).max(100_000).optional(),
+  mortgageEndYear: num.int().min(0).max(100).optional(),
 }).strict();  // SAST M-02: reject unknown keys
 
 // Defaults sent to client when no DB record exists (client-side format).
@@ -107,6 +114,8 @@ const DEFAULTS = {
   expectedInflation: 2.5,
   retirementPath: 'traditional',
   rentalProperties: [],
+  mortgageMonthlyPayment: 0,
+  mortgageEndYear: 0,
 };
 
 /** Encrypted balance field names. */
@@ -143,6 +152,10 @@ const NUMERIC_FIELDS = new Set<string>([
   ...ENCRYPTED_FIELDS,
   ...PCT_FIELDS,
   'ssCola', 'ssCutYear', 'fireTargetAge', 'annualSavings',
+  // Mortgage fields (Todo #28). monthlyPayment is Decimal in DB, endYear
+  // is Int — both come back as String / number from Prisma but the
+  // dashboard expects JS numbers everywhere, so coerce on egress.
+  'mortgageMonthlyPayment', 'mortgageEndYear',
 ]);
 
 /** Decrypt sensitive fields and convert DB decimals to client percentages.
@@ -187,6 +200,7 @@ const LABELED_FIELDS = [
   'retirementPath', 'fireTargetAge', 'annualSavings', 'savingsRate',
   'traditionalLoadPct', 'rothLoadPct', 'taxableLoadPct', 'hsaLoadPct',
   'traditionalFeesPct', 'rothFeesPct', 'taxableFeesPct', 'hsaFeesPct',
+  'mortgageMonthlyPayment', 'mortgageEndYear',
 ] as const;
 
 /** Build the `_units` metadata block for a response.
@@ -221,6 +235,8 @@ function unitsMeta(locale: string, apiVersion: 1 | 2 = 1) {
     rothFeesPct: pct(ex('0.2 = 0.2% expense ratio', '0.002 = 0.2% expense ratio')),
     taxableFeesPct: pct(ex('0.2 = 0.2% expense ratio', '0.002 = 0.2% expense ratio')),
     hsaFeesPct: pct(ex('0.2 = 0.2% expense ratio', '0.002 = 0.2% expense ratio')),
+    mortgageMonthlyPayment: { encoding: 'amount', currency, periodicity: 'month' },
+    mortgageEndYear: { encoding: 'count', meaning: 'Sim-year (exclusive) when mortgage ends. 0 = no mortgage.' },
   };
 }
 
