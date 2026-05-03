@@ -246,7 +246,16 @@
   },
   "pros": [
     "4th largest city with lower costs than Paris/Lyon",
-    "Aerospace hub (Airbus HQ) with international community",
+    {
+      "text": "Aerospace hub: Airbus corporate HQ in Toulouse-Blagnac (final assembly for A320/A330/A350)",
+      "sources": [
+        {
+          "title": "Airbus — Toulouse-Blagnac corporate headquarters",
+          "url": "https://www.airbus.com/en/about-us/our-locations/france",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Warmer than Lyon/Paris",
     "Excellent transit (metro + tram)",
     "Pink city charm and vibrant food scene",
@@ -263,7 +272,19 @@
       "text": "Less English spoken than major tourist cities"
     },
     {
-      "text": "Complex French tax situation with US"
+      "text": "Complex French tax situation: US persons remain subject to US tax under the 1994 US-France treaty (saving clause); FBAR/FATCA reporting still required",
+      "sources": [
+        {
+          "title": "Convention fiscale franco-américaine du 31 août 1994 (with 2004/2009 protocols)",
+          "url": "https://www.impots.gouv.fr/sites/default/files/media/10_conventions/etats_unis/etats-unis_convention-avec-les-etats-unis_fd_3160.pdf",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "IRS — France Tax Treaty Documents",
+          "url": "https://www.irs.gov/businesses/international-businesses/france-tax-treaty-documents",
+          "accessed": "2026-05-03"
+        }
+      ]
     },
     {
       "text": "Safety & crime: see cited reports for current figures by city and country",
