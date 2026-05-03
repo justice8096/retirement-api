@@ -156,7 +156,21 @@
     "safetyRating": 8
   },
   "pros": [
-    "One of Mexico's safest and fastest-growing cities",
+    {
+      "text": "One of Mexico's safest and fastest-growing cities (INEGI ENSU; ~3-4% annual population growth vs national ~1%)",
+      "sources": [
+        {
+          "title": "INEGI — Encuesta Nacional de Seguridad Pública Urbana (ENSU)",
+          "url": "https://www.inegi.org.mx/programas/ensu/",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "INEGI — Querétaro population statistics (Censo de Población 2020)",
+          "url": "https://www.inegi.org.mx/app/areasgeograficas/?ag=22",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Modern infrastructure with colonial centro",
     "Growing tech/business hub with good jobs"
   ],
