@@ -167,7 +167,21 @@
     "safetyRating": 4
   },
   "pros": [
-    "Johns Hopkins â€” world-class healthcare",
+    {
+      "text": "Johns Hopkins — world-class healthcare",
+      "sources": [
+        {
+          "title": "Johns Hopkins Hospital — Baltimore, MD",
+          "url": "https://www.hopkinsmedicine.org/the_johns_hopkins_hospital/",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "US News & World Report — Best Hospitals Honor Roll (Johns Hopkins)",
+          "url": "https://health.usnews.com/best-hospitals/area/md/the-johns-hopkins-hospital-6320180",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Affordable for the DC-Baltimore corridor",
     "Inner Harbor and cultural attractions"
   ],
@@ -179,7 +193,14 @@
       "text": "Cold winters"
     },
     {
-      "text": "MD state income tax (2-5.75%) plus county tax"
+      "text": "MD state income tax (2-5.75%) plus county tax",
+      "sources": [
+        {
+          "title": "Comptroller of Maryland — Individual Income Tax brackets (2-5.75% state) + county",
+          "url": "https://www.marylandtaxes.gov/individual/income/tax-info/tax-rates.php",
+          "accessed": "2026-05-03"
+        }
+      ]
     },
     {
       "text": "Safety & crime: see cited reports for current figures by city and country",

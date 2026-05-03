@@ -168,7 +168,21 @@
   },
   "pros": [
     "Very affordable cost of living",
-    "Cleveland Clinic â€” world-class healthcare",
+    {
+      "text": "Cleveland Clinic — world-class healthcare",
+      "sources": [
+        {
+          "title": "Cleveland Clinic — main campus, Cleveland OH",
+          "url": "https://my.clevelandclinic.org/",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "US News & World Report — Best Hospitals Honor Roll (Cleveland Clinic)",
+          "url": "https://health.usnews.com/best-hospitals/area/oh/cleveland-clinic-6410670",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Lake Erie waterfront and cultural institutions"
   ],
   "cons": [

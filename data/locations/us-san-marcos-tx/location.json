@@ -167,7 +167,16 @@
     "safetyRating": 7
   },
   "pros": [
-    "No state income tax",
+    {
+      "text": "No state income tax",
+      "sources": [
+        {
+          "title": "Texas Comptroller of Public Accounts — No state income tax",
+          "url": "https://comptroller.texas.gov/taxes/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Hill Country beauty with San Marcos River",
     "Affordable college town between Austin and San Antonio"
   ],

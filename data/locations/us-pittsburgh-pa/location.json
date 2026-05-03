@@ -168,7 +168,16 @@
   },
   "pros": [
     "Very affordable for a major metro",
-    "World-class healthcare (UPMC)",
+    {
+      "text": "World-class healthcare (UPMC)",
+      "sources": [
+        {
+          "title": "UPMC (University of Pittsburgh Medical Center)",
+          "url": "https://www.upmc.com/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Revitalized neighborhoods and food scene"
   ],
   "cons": [
@@ -179,7 +188,14 @@
       "text": "Hilly terrain can be challenging"
     },
     {
-      "text": "PA state income tax (3.07%) plus local taxes"
+      "text": "PA state income tax (3.07%) plus local taxes",
+      "sources": [
+        {
+          "title": "Pennsylvania Department of Revenue — PIT flat 3.07%",
+          "url": "https://www.revenue.pa.gov/TaxTypes/PIT/Pages/default.aspx",
+          "accessed": "2026-05-03"
+        }
+      ]
     },
     {
       "text": "Safety & crime: see cited reports for current figures by city and country",

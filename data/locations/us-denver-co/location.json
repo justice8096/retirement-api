@@ -167,7 +167,16 @@
     "safetyRating": 7
   },
   "pros": [
-    "300+ days of sunshine",
+    {
+      "text": "300+ days of sunshine (~245 fully-sunny + ~60 partly-sunny per NOAA NWS Denver)",
+      "sources": [
+        {
+          "title": "NOAA NWS — Denver CO climate normals (~245 sunny days; ~300 days with at least some sunshine)",
+          "url": "https://www.weather.gov/bou/Denver",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Easy access to Rocky Mountain recreation",
     "Strong economy and cultural amenities"
   ],

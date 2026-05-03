@@ -167,8 +167,26 @@
     "safetyRating": 7
   },
   "pros": [
-    "No state income tax",
-    "Oldest city in US with rich history",
+    {
+      "text": "No state income tax",
+      "sources": [
+        {
+          "title": "Florida Department of Revenue — No state personal income tax",
+          "url": "https://floridarevenue.com/taxes/taxesfees/Pages/personal_income.aspx",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "text": "Oldest continuously occupied European settlement in the contiguous US (founded 1565)",
+      "sources": [
+        {
+          "title": "National Park Service — Castillo de San Marcos / St. Augustine founded 1565 (oldest continuously occupied European settlement in the contiguous US)",
+          "url": "https://www.nps.gov/casa/learn/historyculture/index.htm",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Beautiful beaches and walkable downtown"
   ],
   "cons": [

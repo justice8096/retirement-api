@@ -168,7 +168,16 @@
   },
   "pros": [
     "Affordable for a major metro area",
-    "Excellent healthcare system (Mayo Clinic nearby)",
+    {
+      "text": "Excellent healthcare system (Mayo Clinic nearby)",
+      "sources": [
+        {
+          "title": "Mayo Clinic — Rochester, MN (and Twin Cities campuses)",
+          "url": "https://www.mayoclinic.org/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Strong cultural scene and parks"
   ],
   "cons": [
@@ -176,7 +185,14 @@
       "text": "Extremely cold winters"
     },
     {
-      "text": "High state income tax (5.35-9.85%)"
+      "text": "High state income tax (5.35-9.85%)",
+      "sources": [
+        {
+          "title": "MN Department of Revenue — Individual Income Tax brackets (5.35-9.85%)",
+          "url": "https://www.revenue.state.mn.us/individual-income-tax",
+          "accessed": "2026-05-03"
+        }
+      ]
     },
     {
       "text": "Shorter outdoor season"

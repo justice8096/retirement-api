@@ -258,10 +258,37 @@
   },
   "pros": [
     "Very affordable cost of living",
-    "No sales tax on groceries",
-    "SS fully exempt from state tax",
+    {
+      "text": "No sales tax on groceries",
+      "sources": [
+        {
+          "title": "SC DOR — Unprepared food exempt from state sales tax (local option may apply)",
+          "url": "https://dor.sc.gov/tax/sales",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "text": "SS fully exempt from state tax",
+      "sources": [
+        {
+          "title": "SC Department of Revenue — Social Security exempt; retirement income deductions",
+          "url": "https://dor.sc.gov/tax/individual-income/retirement",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Close to Charleston (culture, beaches, dining)",
-    "MUSC — world-class healthcare 30 min away",
+    {
+      "text": "MUSC — world-class healthcare 30 min away",
+      "sources": [
+        {
+          "title": "Medical University of South Carolina (MUSC) Health",
+          "url": "https://muschealth.org/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Charming Southern small-town character",
     "Lower insurance/vehicle costs than Northeast",
     "Mild winters"
@@ -277,7 +304,14 @@
       "text": "Hurricane risk zone (coastal proximity)"
     },
     {
-      "text": "State income tax (6.5% top rate)"
+      "text": "State income tax (6.5% top rate, phasing down to 6.2%)",
+      "sources": [
+        {
+          "title": "SC DOR — Individual Income Tax (top bracket 6.2-6.5% during 2024-2026 phase-down)",
+          "url": "https://dor.sc.gov/tax/individual-income",
+          "accessed": "2026-05-03"
+        }
+      ]
     },
     {
       "text": "Limited nightlife in Summerville proper"

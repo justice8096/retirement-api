@@ -167,9 +167,27 @@
     "safetyRating": 7
   },
   "pros": [
-    "No state income tax",
+    {
+      "text": "No state income tax",
+      "sources": [
+        {
+          "title": "Florida Department of Revenue — No state personal income tax",
+          "url": "https://floridarevenue.com/taxes/taxesfees/Pages/personal_income.aspx",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Excellent waterfront and arts district",
-    "Sunshine City â€” 361 days of sun average"
+    {
+      "text": "Sunshine City — 361 days of sun average (Guinness 1967–1969 record holder, ongoing high-sun reputation)",
+      "sources": [
+        {
+          "title": "NOAA NCEI — St. Petersburg FL climate normals (Guinness record 1967-1969 for 768 consecutive sunny days; ~360+ days/yr historic claim)",
+          "url": "https://www.weather.gov/tbw/Climate",
+          "accessed": "2026-05-03"
+        }
+      ]
+    }
   ],
   "cons": [
     {

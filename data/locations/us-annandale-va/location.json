@@ -228,11 +228,34 @@
   },
   "pros": [
     "~25% cheaper rent than Fairfax City",
-    "Same Fairfax County tax treatment (Social Security exempt, retiree deductions)",
+    {
+      "text": "Same Fairfax County tax treatment (Social Security exempt, retiree deductions)",
+      "sources": [
+        {
+          "title": "Virginia DOT — Social Security and Tier 1 Railroad Retirement subtractions",
+          "url": "https://www.tax.virginia.gov/subtractions",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "Virginia DOT — Age Deduction for taxpayers 65+",
+          "url": "https://www.tax.virginia.gov/deductions",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Best grocery deal in Northern Virginia (NOVA) via Korean/Latino supermarkets",
     "Closer to DC than Fairfax City (Dunn Loring Metro)",
     "Diverse dining and commercial scene",
-    "Same world-class healthcare (Inova)"
+    {
+      "text": "Same world-class healthcare (Inova)",
+      "sources": [
+        {
+          "title": "Inova Health System — Northern Virginia",
+          "url": "https://www.inova.org/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    }
   ],
   "cons": [
     {
