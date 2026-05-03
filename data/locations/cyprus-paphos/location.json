@@ -165,7 +165,26 @@
   "pros": [
     "Massive British expat community, English widely spoken",
     "Warm year-round climate with 340 days of sunshine",
-    "Very favorable tax treatment for retirees (2.65% on pensions)"
+    {
+      "text": "Very favorable tax treatment for retirees: optional 5% flat tax on foreign pension income above €3,420/yr (or normal progressive brackets) + separate 2.65% GeSY health contribution",
+      "sources": [
+        {
+          "title": "Cyprus Tax Department — Income Tax Law (foreign pension special regime, Art. 13)",
+          "url": "https://www.mof.gov.cy/mof/tax/taxdep.nsf",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "PwC Cyprus — Pension income tax options for retirees",
+          "url": "https://taxsummaries.pwc.com/cyprus/individual/income-determination",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "Health Insurance Organisation Cyprus — GeSY contribution rates (2.65% pensioner rate)",
+          "url": "https://www.gesy.org.cy/en-gb/contributions",
+          "accessed": "2026-05-03"
+        }
+      ]
+    }
   ],
   "cons": [
     {
