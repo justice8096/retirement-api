@@ -301,7 +301,7 @@
       "categoryId": "religious_mosque",
       "name": "Local mosques (search)",
       "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "notes": "No mosque in San Miguel de Allende. Closest active mosque is the Centro Cultural Islámico in Querétaro (~50 mi southeast) or Mexico City.",
       "sources": [
         {
           "title": "Google Maps — mosque near San Miguel de Allende, Mexico",
@@ -312,14 +312,14 @@
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
+      "name": "Shalom San Miguel JC3 / Chabad of SMA",
       "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "notes": "Two Jewish institutions in San Miguel de Allende: JC3/CHESMA is inter/non-denominational (~1,000 expat Jews); Chabad of SMA est. 2018 (Hasidic). Verify denomination/sect (e.g. Sunni / Shia / Sufi for mosques; Orthodox / Conservative / Reform / Reconstructionist for synagogues) for personal religious requirements before relying on it.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near San Miguel de Allende, Mexico",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20San%20Miguel%20de%20Allende%2C%20Mexico",
-          "accessed": "2026-04-23"
+          "title": "Shalom San Miguel JC3 / Chabad of SMA — directory page",
+          "url": "https://shalomsanmiguel.org/",
+          "accessed": "2026-05-05"
         }
       ]
     },

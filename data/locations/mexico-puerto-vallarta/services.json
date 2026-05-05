@@ -301,7 +301,7 @@
       "categoryId": "religious_mosque",
       "name": "Local mosques (search)",
       "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "notes": "No dedicated mosque in Puerto Vallarta. Closest active mosques are in Guadalajara (~4 hr drive) or Mexico City.",
       "sources": [
         {
           "title": "Google Maps — mosque near Puerto Vallarta, Mexico",
@@ -312,14 +312,14 @@
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
+      "name": "Chabad of Puerto Vallarta",
       "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "notes": "Chabad-Lubavitch (Hasidic) center in Puerto Vallarta (Francisco Medina Asencio 1951). Rabbi Shneur Hecht. Mikvah on-site. Verify denomination/sect (e.g. Sunni / Shia / Sufi for mosques; Orthodox / Conservative / Reform / Reconstructionist for synagogues) for personal religious requirements before relying on it.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Puerto Vallarta, Mexico",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Puerto%20Vallarta%2C%20Mexico",
-          "accessed": "2026-04-23"
+          "title": "Chabad of Puerto Vallarta — directory page",
+          "url": "https://www.chabadvallarta.com/",
+          "accessed": "2026-05-05"
         }
       ]
     },

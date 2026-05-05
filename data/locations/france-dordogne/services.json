@@ -299,14 +299,14 @@
     },
     {
       "categoryId": "religious_mosque",
-      "name": "Local mosques (search)",
+      "name": "Mosquée de la Bienfaisance de Périgueux",
       "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "notes": "Main mosque in Périgueux (18 rue du Tennis). Other Dordogne mosques: Mosquée de Naillac + Mosquée de la Catte (Bergerac), Mosquée Turque (Terrasson). Verify denomination/sect (e.g. Sunni / Shia / Sufi for mosques; Orthodox / Conservative / Reform / Reconstructionist for synagogues) for personal religious requirements before relying on it.",
       "sources": [
         {
-          "title": "Google Maps — mosque near Dordogne, France",
-          "url": "https://www.google.com/maps/search/mosque%20near%20Dordogne%2C%20France",
-          "accessed": "2026-04-23"
+          "title": "Mosquée de la Bienfaisance de Périgueux — directory page",
+          "url": "https://www.trouvetamosquee.fr/mosquee-de-la-bienfaisance-perigueux-dordogne/",
+          "accessed": "2026-05-05"
         }
       ]
     },
@@ -314,7 +314,7 @@
       "categoryId": "religious_synagogue",
       "name": "Local synagogues / Hebrew temples (search)",
       "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "notes": "No synagogue in Dordogne. Closest is in Bordeaux (~75 mi west) or Limoges (~75 mi north). Mosque coverage is provided in this entry; for synagogues see Bordeaux.",
       "sources": [
         {
           "title": "Google Maps — synagogue near Dordogne, France",
