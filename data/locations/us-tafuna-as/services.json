@@ -318,7 +318,7 @@
       "categoryId": "restaurant_italian",
       "name": "Italian restaurants (search)",
       "distanceMi": 30,
-      "notes": "Italian / pizza restaurants within ~30 mi.",
+      "notes": "No dedicated Italian restaurant in Tafuna. Paradise Pizza in Pago Pago (~10 mi) is the only Italian option in AS.",
       "sources": [
         {
           "title": "Google Maps — italian restaurant near Tafuna, American Samoa",
@@ -329,14 +329,14 @@
     },
     {
       "categoryId": "restaurant_mexican",
-      "name": "Mexican restaurants (search)",
+      "name": "Evie's Cantina (Pago Pago, ~10 mi)",
       "distanceMi": 30,
-      "notes": "Mexican / Tex-Mex restaurants within ~30 mi.",
+      "notes": "Mexican restaurant in Pago Pago (~10 mi from Tafuna). Curated from Visit Pago Pago. Limited Mexican options in AS.",
       "sources": [
         {
-          "title": "Google Maps — mexican restaurant near Tafuna, American Samoa",
-          "url": "https://www.google.com/maps/search/mexican%20restaurant%20near%20Tafuna%2C%20American%20Samoa",
-          "accessed": "2026-04-23"
+          "title": "Evie's Cantina (Pago Pago, ~10 mi) — restaurant page",
+          "url": "https://visitpagopago.com/restaurants/",
+          "accessed": "2026-05-05"
         }
       ]
     },
@@ -344,7 +344,7 @@
       "categoryId": "restaurant_thai_or_asian",
       "name": "Thai / other Asian restaurants (search)",
       "distanceMi": 30,
-      "notes": "Thai, Vietnamese, Korean, or pan-Asian restaurants within ~30 mi.",
+      "notes": "Manuia Restaurant (Tafuna) offers Asian fusion — Chinese / Korean / Japanese. No dedicated Thai option in American Samoa.",
       "sources": [
         {
           "title": "Google Maps — thai restaurant near Tafuna, American Samoa",
@@ -357,7 +357,7 @@
       "categoryId": "restaurant_indian",
       "name": "Indian restaurants (search)",
       "distanceMi": 30,
-      "notes": "Indian / South Asian restaurants within ~30 mi.",
+      "notes": "No dedicated Indian restaurant in American Samoa. Closest is in Apia, Samoa (independent country, separate immigration).",
       "sources": [
         {
           "title": "Google Maps — indian restaurant near Tafuna, American Samoa",
