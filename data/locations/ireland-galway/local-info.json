@@ -12,10 +12,16 @@
   ],
   "webcams": [
     {
-      "name": "Galway webcams (search)",
-      "url": "https://www.windy.com/-Webcams/webcams?Galway%20webcam",
-      "description": "Live webcams near Galway — Windy directory, rating-sorted. Replace with a specific camera once a reliable feed is identified.",
-      "accessed": "2026-04-23"
+      "name": "Galway Cam (Live Galway)",
+      "url": "https://galwaycam.live/",
+      "description": "Live Galway city cam.",
+      "accessed": "2026-05-05"
+    },
+    {
+      "name": "Windy - Galway Webcams",
+      "url": "https://www.windy.com/-Webcams/Galway?webcams,1700,53.270,-9.054,12",
+      "description": "Windy Galway directory.",
+      "accessed": "2026-05-05"
     }
   ],
   "youtubeChannels": [
@@ -28,10 +34,22 @@
   ],
   "bloggers": [
     {
-      "name": "Galway expat blogs (search)",
-      "url": "https://www.google.com/search?q=Galway%20expat%20retirement%20blog",
-      "description": "Google search for English-language expat and retirement blogs about Galway. Replace with a specific blog once identified.",
-      "accessed": "2026-04-23"
+      "name": "Expats Blog — Galway, Ireland Portal",
+      "url": "https://www.expatsblog.com/portal/ireland/galway",
+      "description": "Galway-specific portal with American/British retiree interviews (e.g. Jay Jay Murphy, retired IT manager).",
+      "accessed": "2026-05-05"
+    },
+    {
+      "name": "Expat Exchange — Retire in Galway, Ireland",
+      "url": "https://www.expatexchange.com/gdc/7/56/5284/Ireland/Retire-Galway",
+      "description": "Galway-specific retirement Q&A reports from actual retirees living there.",
+      "accessed": "2026-05-05"
+    },
+    {
+      "name": "Expatra — Living in Ireland: Essential Expat Guide",
+      "url": "https://www.expatra.com/living-in-ireland/",
+      "description": "Long-form Ireland expat guide; Galway context (~75K pop, west-coast university town).",
+      "accessed": "2026-05-05"
     }
   ]
 }
