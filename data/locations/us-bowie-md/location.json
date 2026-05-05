@@ -248,10 +248,42 @@
   },
   "pros": [
     "~20% cheaper rent than Fairfax",
-    "Maryland tax benefits: Social Security exempt, pension exclusion, no vehicle personal property tax",
-    "MARC (Maryland Area Regional Commuter) Penn Line commuter rail to DC (~40 min)",
+    {
+      "text": "Maryland tax benefits: Social Security exempt, pension exclusion, no vehicle personal property tax",
+      "sources": [
+        {
+          "title": "Comptroller of Maryland — Pension Exclusion (Worksheet 13A) and SS exemption",
+          "url": "https://www.marylandtaxes.gov/individual/income/tax-info/pension-exclusion.php",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "text": "MARC (Maryland Area Regional Commuter) Penn Line commuter rail to DC (~40 min)",
+      "sources": [
+        {
+          "title": "Maryland Area Regional Commuter (MARC) Train — MTA Maryland Penn / Camden / Brunswick lines",
+          "url": "https://www.mta.maryland.gov/marc-train",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Between DC and Annapolis — central to regional amenities",
-    "Johns Hopkins + Univ of MD specialist access within 30 min",
+    {
+      "text": "Johns Hopkins + Univ of MD specialist access within 30 min",
+      "sources": [
+        {
+          "title": "Johns Hopkins Hospital — Baltimore, MD",
+          "url": "https://www.hopkinsmedicine.org/the_johns_hopkins_hospital/",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "University of Maryland Medical System",
+          "url": "https://www.umms.org/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Planned community with established schools + parks"
   ],
   "cons": [

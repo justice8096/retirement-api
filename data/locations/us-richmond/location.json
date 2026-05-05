@@ -256,7 +256,21 @@
   "pros": [
     "More affordable than NoVA",
     "Growing food/brewery scene",
-    "VA age deduction + SS tax exempt",
+    {
+      "text": "VA age deduction + SS tax exempt",
+      "sources": [
+        {
+          "title": "Virginia DOT — Social Security and Tier 1 Railroad Retirement subtractions",
+          "url": "https://www.tax.virginia.gov/subtractions",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "Virginia DOT — Age Deduction for taxpayers 65+",
+          "url": "https://www.tax.virginia.gov/deductions",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "State capital with good healthcare",
     "James River outdoor recreation",
     "Historic charm (Church Hill, Fan District)"

@@ -41,7 +41,8 @@
       "typical": 550,
       "min": 450,
       "max": 700,
-      "annualInflation": 0.05
+      "annualInflation": 0.05,
+      "notes": "Medicare Part B ($185/mo, 2025) + Medigap Plan G (~$170-230/mo per person) + Part D (~$35-50/mo). Florida Blue dominant ACA insurer; Ambetter, UnitedHealth, Cigna also active. Major Tampa Bay systems: Tampa General (USF Health teaching hospital), Moffitt Cancer Center (NCI-designated), BayCare, AdventHealth, HCA Florida. Bascom Palmer (Miami) accessible by referral for retinal disease; St. Pete has Eye Institute of West Florida and BayCare retinal subspecialists. Anti-VEGF Medicare Part B; GLP-1 Part D tier-dependent."
     },
     "insurance": {
       "typical": 350,
@@ -167,7 +168,16 @@
     "safetyRating": 6
   },
   "pros": [
-    "No state income tax",
+    {
+      "text": "No state income tax",
+      "sources": [
+        {
+          "title": "Florida Department of Revenue — No state personal income tax",
+          "url": "https://floridarevenue.com/taxes/taxesfees/Pages/personal_income.aspx",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Warm year-round climate",
     "Growing metro with good healthcare"
   ],

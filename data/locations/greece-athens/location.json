@@ -52,7 +52,8 @@
       "typical": 100,
       "min": 65,
       "max": 150,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "notes": "ESY (National Health System) universal coverage after residency permit. Private supplementary ~€80-180/mo. Anti-VEGF injections available in Athens (Hygeia, Metropolitan) and Thessaloniki; covered via ESY with prescription. GLP-1 covered for diabetes indication. Crisis-era underfunding means longer public waits — private picks up the gap. English availability moderate, better in private sector."
     },
     "insurance": {
       "typical": 115,
@@ -162,7 +163,16 @@
     "safetyRating": 7
   },
   "pros": [
-    "Rich ancient history at your doorstep",
+    {
+      "text": "Rich ancient history at your doorstep (Acropolis UNESCO World Heritage site, listed 1987)",
+      "sources": [
+        {
+          "title": "UNESCO World Heritage List — Acropolis, Athens (404)",
+          "url": "https://whc.unesco.org/en/list/404",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Very affordable dining and daily costs",
     "Good public transit (metro, buses, tram)"
   ],

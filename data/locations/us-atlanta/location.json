@@ -252,12 +252,48 @@
     "safetyRating": 7
   },
   "pros": [
-    "Major metro with world-class healthcare (Emory, CDC)",
-    "MARTA rail and bus transit system",
-    "Hartsfield-Jackson International Airport — busiest in the world",
+    {
+      "text": "Major metro with world-class healthcare (Emory, CDC)",
+      "sources": [
+        {
+          "title": "Emory Healthcare — Emory University Hospital, Atlanta",
+          "url": "https://www.emoryhealthcare.org/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "text": "MARTA rail and bus transit system",
+      "sources": [
+        {
+          "title": "Metropolitan Atlanta Rapid Transit Authority (MARTA) — Rail and bus operations",
+          "url": "https://www.itsmarta.com/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "text": "Hartsfield-Jackson International Airport — busiest in the world (ACI passenger rankings)",
+      "sources": [
+        {
+          "title": "Airports Council International — World Airport Traffic Rankings (Hartsfield-Jackson ATL: world’s busiest by passenger traffic, multiple years)",
+          "url": "https://aci.aero/data-centre/annual-traffic-data/passengers/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Diverse food scene and cultural attractions",
     "Mild winters (33F lows)",
-    "No state income tax on first $65K retirement income per person"
+    {
+      "text": "No state income tax on first $65K retirement income per person (GA Retirement Income Exclusion, O.C.G.A. § 48-7-27)",
+      "sources": [
+        {
+          "title": "Georgia DOR — Retirement Income Exclusion (O.C.G.A. § 48-7-27)",
+          "url": "https://dor.georgia.gov/individual-income-tax-retirement-income-exclusion",
+          "accessed": "2026-05-03"
+        }
+      ]
+    }
   ],
   "cons": [
     {
@@ -270,7 +306,14 @@
       "text": "Higher cost of living than rural Georgia"
     },
     {
-      "text": "Georgia state income tax (1-5.49%)"
+      "text": "Georgia state income tax (HB 1437/1015 transition to 5.39% flat in 2024 from prior 1–5.75% bracketed schedule)",
+      "sources": [
+        {
+          "title": "Georgia Department of Revenue — Individual Income Tax (HB 1437 / HB 1015 flat-rate transition)",
+          "url": "https://dor.georgia.gov/taxes/individual-taxes",
+          "accessed": "2026-05-03"
+        }
+      ]
     },
     {
       "text": "Some areas have higher crime rates"

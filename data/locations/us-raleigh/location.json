@@ -242,10 +242,33 @@
     "safetyRating": 8
   },
   "pros": [
-    "World-class healthcare (Duke University Hospital, UNC Hospitals)",
+    {
+      "text": "World-class healthcare (Duke University Hospital, UNC Hospitals)",
+      "sources": [
+        {
+          "title": "Duke University Hospital — Durham, NC",
+          "url": "https://www.dukehealth.org/hospitals/duke-university-hospital",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "UNC Health — UNC Medical Center, Chapel Hill",
+          "url": "https://www.uncmedicalcenter.org/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Research Triangle tech/biotech economy",
     "Google Fiber availability",
-    "No Social Security tax",
+    {
+      "text": "No Social Security tax",
+      "sources": [
+        {
+          "title": "NC Department of Revenue — Social Security not taxable; flat individual income tax rate",
+          "url": "https://www.ncdor.gov/taxes-forms/individual-income-tax",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Moderate cost of living for metro area",
     "Excellent universities (Duke, UNC, NC State)",
     "Mild climate with four seasons",
@@ -259,7 +282,14 @@
       "text": "Growing rapidly (traffic increasing)"
     },
     {
-      "text": "State income tax on retirement withdrawals (no exclusion beyond SS)"
+      "text": "State income tax on retirement withdrawals (no exclusion beyond SS)",
+      "sources": [
+        {
+          "title": "NC Department of Revenue — Social Security not taxable; flat individual income tax rate",
+          "url": "https://www.ncdor.gov/taxes-forms/individual-income-tax",
+          "accessed": "2026-05-03"
+        }
+      ]
     },
     {
       "text": "Tornado risk"

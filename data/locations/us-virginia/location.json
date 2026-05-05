@@ -264,8 +264,26 @@
   "pros": [
     "No visa needed",
     "English-speaking",
-    "World-class healthcare (Inova system)",
-    "SS tax exempt in VA",
+    {
+      "text": "World-class healthcare (Inova system)",
+      "sources": [
+        {
+          "title": "Inova Health System — Northern Virginia",
+          "url": "https://www.inova.org/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "text": "SS tax exempt in VA",
+      "sources": [
+        {
+          "title": "Virginia DOT — Social Security and Tier 1 Railroad Retirement subtractions",
+          "url": "https://www.tax.virginia.gov/subtractions",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Proximity to DC cultural resources (Smithsonian, etc.)",
     "Excellent internet infrastructure",
     "Highly diverse community",

@@ -52,7 +52,8 @@
       "typical": 110,
       "min": 75,
       "max": 160,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "notes": "SSN (Servizio Sanitario Nazionale) universal coverage after Elective Residence visa. Private supplementary ~€60-180/mo. Anti-VEGF injections available widely via SSN at hospital ophthalmology. GLP-1 covered for diabetes through SSN with prescription. Regional variation: Northern Italy has strongest public infrastructure; Southern regions thinner. English availability moderate in private sector."
     },
     "insurance": {
       "typical": 130,
@@ -162,7 +163,26 @@
     "safetyRating": 9
   },
   "pros": [
-    "Iconic rolling hills, vineyards, and Renaissance culture",
+    {
+      "text": "Iconic rolling hills, vineyards, and Renaissance culture (Tuscany hosts 5 UNESCO World Heritage sites: Florence, Siena, Pienza, San Gimignano, Val d'Orcia)",
+      "sources": [
+        {
+          "title": "UNESCO World Heritage List — Historic Centre of Florence (174)",
+          "url": "https://whc.unesco.org/en/list/174",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "UNESCO World Heritage List — Historic Centre of Siena (379)",
+          "url": "https://whc.unesco.org/en/list/379",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "UNESCO World Heritage List — Val d'Orcia (1026)",
+          "url": "https://whc.unesco.org/en/list/1026",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Strong expat community in smaller towns like Lucca",
     "Excellent food and wine at every price point"
   ],

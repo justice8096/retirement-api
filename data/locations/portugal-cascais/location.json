@@ -52,7 +52,8 @@
       "typical": 120,
       "min": 80,
       "max": 170,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "notes": "SNS public healthcare after NHR/D7 visa residency. Private insurance optional (~€80-120/person/mo with pre-existing conditions). Anti-VEGF injections available through SNS hospitals. Pre-existing condition loading on private plans. GLP-1 covered through SNS for diabetes."
     },
     "insurance": {
       "typical": 140,
@@ -163,7 +164,16 @@
   },
   "pros": [
     "Upscale beach town with excellent quality of life",
-    "Train connection to Lisbon (35 min)",
+    {
+      "text": "Train connection to Lisbon (~35 min on the CP Linha de Cascais)",
+      "sources": [
+        {
+          "title": "CP — Linha de Cascais timetable (Lisboa Cais do Sodré ↔ Cascais)",
+          "url": "https://www.cp.pt/passageiros/en/train-times/lines/cascais-line",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Strong international community and English widely spoken"
   ],
   "cons": [

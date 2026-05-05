@@ -253,7 +253,16 @@
     "UM Baltimore Washington Medical Center IN TOWN — major regional hospital",
     "BWI (Baltimore-Washington International) Airport 5 min — outstanding travel convenience",
     "Light RailLink to Baltimore downtown (~30 min)",
-    "MD tax benefits: Social Security exempt, pension exclusion, no vehicle tax",
+    {
+      "text": "MD tax benefits: Social Security exempt, pension exclusion, no vehicle tax",
+      "sources": [
+        {
+          "title": "Comptroller of Maryland — Pension Exclusion (Worksheet 13A) and SS exemption",
+          "url": "https://www.marylandtaxes.gov/individual/income/tax-info/pension-exclusion.php",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "No bay-bridge premium (unlike Annapolis)"
   ],
   "cons": [

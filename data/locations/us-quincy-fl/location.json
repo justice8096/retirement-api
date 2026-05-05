@@ -41,7 +41,8 @@
       "typical": 450,
       "min": 360,
       "max": 580,
-      "annualInflation": 0.05
+      "annualInflation": 0.05,
+      "notes": "Medicare Part B ($185/mo, 2025) + Medigap Plan G (~$160-220/mo per person) + Part D (~$35-50/mo). Florida Blue dominant ACA insurer. Northern FL systems: Mayo Clinic Jacksonville (US News Honor Roll, Mayo Department of Ophthalmology covers retinal disease), UF Health (Gainesville academic anchor), AdventHealth, HCA Florida. Quincy / Yulee / St. Augustine: smaller community hospitals locally; tertiary care via Mayo Jacksonville (~1 hr from Yulee/St. Augustine, ~2.5 hr from Quincy) or UF Health Gainesville. Anti-VEGF and GLP-1 widely available via Medicare."
     },
     "insurance": {
       "typical": 250,
@@ -167,7 +168,16 @@
     "safetyRating": 5
   },
   "pros": [
-    "No state income tax",
+    {
+      "text": "No state income tax",
+      "sources": [
+        {
+          "title": "Florida Department of Revenue — No state personal income tax",
+          "url": "https://floridarevenue.com/taxes/taxesfees/Pages/personal_income.aspx",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Extremely affordable",
     "Small-town quiet living near Tallahassee"
   ],

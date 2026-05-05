@@ -307,12 +307,49 @@
   "pros": [
     "No visa needed",
     "English-speaking",
-    "World-class healthcare (NYU Langone, Mount Sinai, MSK)",
-    "SS tax exempt in NY",
+    {
+      "text": "World-class healthcare (NYU Langone, Mount Sinai, MSK)",
+      "sources": [
+        {
+          "title": "NYU Langone Health",
+          "url": "https://nyulangone.org/",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "Mount Sinai Health System",
+          "url": "https://www.mountsinai.org/",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "Memorial Sloan Kettering Cancer Center",
+          "url": "https://www.mskcc.org/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "text": "SS tax exempt in NY",
+      "sources": [
+        {
+          "title": "NY State Department of Taxation and Finance — Social Security exempt; up to $20K pension/IRA exclusion (age 59½+)",
+          "url": "https://www.tax.ny.gov/pit/file/pension_and_annuity.htm",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Best public transit in US — car not needed",
     "Unmatched cultural resources (museums, Broadway, dining)",
     "Extremely walkable",
-    "EPIC program for senior prescription assistance"
+    {
+      "text": "EPIC program for senior prescription assistance",
+      "sources": [
+        {
+          "title": "NY State Office for the Aging — EPIC (Elderly Pharmaceutical Insurance Coverage)",
+          "url": "https://www.health.ny.gov/health_care/epic/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    }
   ],
   "cons": [
     {

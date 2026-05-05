@@ -52,7 +52,8 @@
       "typical": 85,
       "min": 55,
       "max": 130,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "notes": "HZZO (Croatian Health Insurance Fund) universal coverage after temporary residence permit. Private supplementary ~€70-130/mo for expat plans. Anti-VEGF injections available in Zagreb (KBC Zagreb) and Split; covered under HZZO with diagnosis. GLP-1 covered for diabetes indication via HZZO. English availability moderate in major hospitals; better in private sector."
     },
     "insurance": {
       "typical": 105,
@@ -162,7 +163,16 @@
     "safetyRating": 9
   },
   "pros": [
-    "Diocletian's Palace - living in a Roman monument",
+    {
+      "text": "Diocletian's Palace — living in a Roman monument (Historical Complex of Split UNESCO World Heritage, listed 1979)",
+      "sources": [
+        {
+          "title": "UNESCO World Heritage List — Historical Complex of Split with the Palace of Diocletian (97)",
+          "url": "https://whc.unesco.org/en/list/97",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Good ferry connections to islands",
     "More affordable than Dubrovnik with better daily infrastructure"
   ],

@@ -41,7 +41,8 @@
       "typical": 480,
       "min": 380,
       "max": 620,
-      "annualInflation": 0.05
+      "annualInflation": 0.05,
+      "notes": "Medicare Part B ($185/mo, 2025) + Medigap Plan G (~$130-170/mo per person) + Part D (~$30-50/mo). Dominant ACA insurers: Anthem BCBS, Medical Mutual of Ohio, CareSource. Major systems: Cleveland Clinic (US News Honor Roll, Cole Eye Institute is a national retinal-disease center), University Hospitals (UH Eye Institute), MetroHealth (Cuyahoga County safety-net). Anti-VEGF and GLP-1 widely available via Medicare. Among the strongest healthcare-cost values in the country — Cleveland Clinic + UH offer world-class care at Midwest pricing."
     },
     "insurance": {
       "typical": 260,
@@ -168,7 +169,21 @@
   },
   "pros": [
     "Very affordable cost of living",
-    "Cleveland Clinic â€” world-class healthcare",
+    {
+      "text": "Cleveland Clinic — world-class healthcare",
+      "sources": [
+        {
+          "title": "Cleveland Clinic — main campus, Cleveland OH",
+          "url": "https://my.clevelandclinic.org/",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "US News & World Report — Best Hospitals Honor Roll (Cleveland Clinic)",
+          "url": "https://health.usnews.com/best-hospitals/area/oh/cleveland-clinic-6410670",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Lake Erie waterfront and cultural institutions"
   ],
   "cons": [

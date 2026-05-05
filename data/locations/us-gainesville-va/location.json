@@ -232,10 +232,33 @@
   },
   "pros": [
     "~20% cheaper rent than Fairfax",
-    "Same VA tax treatment (SS exempt, retiree deductions)",
+    {
+      "text": "Same VA tax treatment (SS exempt, retiree deductions)",
+      "sources": [
+        {
+          "title": "Virginia DOT — Social Security and Tier 1 Railroad Retirement subtractions",
+          "url": "https://www.tax.virginia.gov/subtractions",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "Virginia DOT — Age Deduction for taxpayers 65+",
+          "url": "https://www.tax.virginia.gov/deductions",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Lower PWC property tax rate",
     "Quieter suburban environment",
-    "VRE commuter rail to DC available",
+    {
+      "text": "VRE commuter rail to DC available",
+      "sources": [
+        {
+          "title": "Virginia Railway Express (VRE) — Manassas and Fredericksburg lines to Washington DC",
+          "url": "https://www.vre.org/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Access to Bull Run Mountains and wineries"
   ],
   "cons": [

@@ -45,7 +45,8 @@
       "typical": 180,
       "min": 100,
       "max": 300,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "notes": "ASSE/FONASA universal coverage for residents (pensioner residency requires legal pension income proof). Private (Hospital Británico, Casa de Galicia, Asociación Española) ~$100-220/mo. Anti-VEGF injections available in Montevideo. GLP-1 partially covered through FONASA for diabetes. Strong public infrastructure; Montevideo is the medical hub."
     },
     "insurance": {
       "typical": 250,
@@ -155,7 +156,16 @@
     "safetyRating": 7
   },
   "pros": [
-    "Most stable democracy in South America",
+    {
+      "text": "Most stable democracy in South America (EIU Democracy Index — Uruguay consistently #1 in Latin America since the index began)",
+      "sources": [
+        {
+          "title": "EIU Democracy Index — Uruguay (consistently #1 in Latin America since the index began)",
+          "url": "https://www.eiu.com/n/campaigns/democracy-index/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "High quality of life with European feel",
     "Good healthcare system and infrastructure"
   ],

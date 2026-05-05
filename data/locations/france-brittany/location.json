@@ -256,7 +256,21 @@
     "safetyRating": 8
   },
   "pros": [
-    "Excellent healthcare (PUMA)",
+    {
+      "text": "Excellent healthcare via PUMA (Protection Universelle Maladie) — universal access for residents under Code SS Art. L160-1",
+      "sources": [
+        {
+          "title": "Code de la sécurité sociale — Article L160-1 (Protection Universelle Maladie)",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000031672250",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "service-public.fr — Protection Universelle Maladie (PUMA)",
+          "url": "https://www.service-public.fr/particuliers/vosdroits/F34307",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "No pet fees",
     "Dog-friendly culture",
     "Good transit",
@@ -270,7 +284,19 @@
       "text": "Limited English"
     },
     {
-      "text": "Complex tax situation with US"
+      "text": "Complex tax situation: US persons remain subject to US tax under the 1994 US-France treaty (saving clause); FBAR/FATCA reporting still required",
+      "sources": [
+        {
+          "title": "Convention fiscale franco-américaine du 31 août 1994 (with 2004/2009 protocols)",
+          "url": "https://www.impots.gouv.fr/sites/default/files/media/10_conventions/etats_unis/etats-unis_convention-avec-les-etats-unis_fd_3160.pdf",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "IRS — France Tax Treaty Documents",
+          "url": "https://www.irs.gov/businesses/international-businesses/france-tax-treaty-documents",
+          "accessed": "2026-05-03"
+        }
+      ]
     },
     {
       "text": "Distance from US"

@@ -52,7 +52,8 @@
       "typical": 165,
       "min": 115,
       "max": 230,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "notes": "Private insurance (VHI/Laya Healthcare) ~€220-280/person/mo for 2 adults with pre-existing conditions. Higher loading for macular degeneration, obesity, hypertension. GMS Medical Card may apply based on income. Anti-VEGF injections covered through public ophthalmology. DPS scheme caps drug costs at €80/mo."
     },
     "insurance": {
       "typical": 190,
@@ -163,7 +164,16 @@
   },
   "pros": [
     "Ireland's food capital with English Market and restaurant scene",
-    "Growing tech hub with Apple, EMC, and others",
+    {
+      "text": "Growing tech hub: Apple's European HQ in Cork since 1980 (~6,000 employees as of 2024); also Dell EMC, Pfizer, others",
+      "sources": [
+        {
+          "title": "Apple — Cork campus (European HQ since 1980, ~6,000 employees as of 2024)",
+          "url": "https://www.apple.com/ie/job-creation/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Good airport with European connections"
   ],
   "cons": [

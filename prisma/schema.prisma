@@ -189,6 +189,15 @@ model UserFinancialSettings {
   // (matches the session-only behavior shipped in PRs #118 and #120).
   rentalProperties   Json     @default("[]") @map("rental_properties")
 
+  // ─── Primary-residence mortgage (Todo #28) ────────────────────────
+  // P+I monthly payment (USD, NOT CPI-inflated — mortgage payments are
+  // nominal); both 0 means no mortgage configured. End year is the
+  // exclusive sim-year cutoff for natural payoff. Early payoff is
+  // modeled by the user as a oneTimeExpense LifeEvent + setting
+  // mortgageEndYear to the early-payoff year.
+  mortgageMonthlyPayment Decimal @default(0) @map("mortgage_monthly_payment")
+  mortgageEndYear        Int     @default(0) @map("mortgage_end_year")
+
   updatedAt        DateTime @updatedAt @map("updated_at")
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)

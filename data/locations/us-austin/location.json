@@ -241,7 +241,16 @@
     "notes": "Zilker Park, Lady Bird Lake, Barton Creek Greenbelt, Red Bud Isle (off-leash dog park). Live music capital. Tech hub culture. Keep Austin Weird. Very dog-friendly city."
   },
   "pros": [
-    "No state income tax",
+    {
+      "text": "No state income tax",
+      "sources": [
+        {
+          "title": "Texas Comptroller of Public Accounts — No state income tax",
+          "url": "https://comptroller.texas.gov/taxes/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "No sales tax on groceries",
     "Extremely dog-friendly (off-leash parks, dog-friendly patios)",
     "Warm climate (mild winters)",

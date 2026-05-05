@@ -45,7 +45,8 @@
       "typical": 160,
       "min": 80,
       "max": 260,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "notes": "CCSS (Caja) universal coverage after pensionado/rentista visa, ~7-11% of declared income (~$60-150/mo). Private (INS / international plans) ~$100-250/mo with pre-existing loadings. Anti-VEGF injections at CIMA and Hospital La Católica in San José. GLP-1 ~$300-400/mo private. Pensionado discount 10-25% on most medical services."
     },
     "insurance": {
       "typical": 280,
@@ -157,7 +158,21 @@
   "pros": [
     "Excellent spring-like climate similar to Atenas",
     "More affordable than Atenas or Escazú",
-    "Famous red metal church and charming town center"
+    {
+      "text": "Famous red metal church (Iglesia de la Mercedes — designed 1894 by Belgian architect Charles Thirion, prefabricated in Belgium and assembled in Grecia)",
+      "sources": [
+        {
+          "title": "Sistema Nacional de Bibliotecas — Iglesia de la Mercedes (Grecia)",
+          "url": "https://www.sinabi.go.cr/biblioteca_digital/atlas_de_costa_rica/",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "Visit Costa Rica — Grecia (Iglesia de la Mercedes red metal church)",
+          "url": "https://www.visitcostarica.com/en/costa-rica/destinations/central-valley/grecia",
+          "accessed": "2026-05-03"
+        }
+      ]
+    }
   ],
   "cons": [
     {

@@ -240,9 +240,46 @@
     "safetyRating": 5
   },
   "pros": [
-    "World-class healthcare (Penn, Jefferson, Temple)",
-    "PA exempts SS and retirement income from state tax",
-    "Excellent public transit (SEPTA + Amtrak hub)",
+    {
+      "text": "World-class healthcare (Penn, Jefferson, Temple)",
+      "sources": [
+        {
+          "title": "Penn Medicine — Hospital of the University of Pennsylvania",
+          "url": "https://www.pennmedicine.org/",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "Thomas Jefferson University Hospitals",
+          "url": "https://www.jeffersonhealth.org/",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "Temple University Hospital",
+          "url": "https://www.templehealth.org/locations/temple-university-hospital",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "text": "PA exempts SS and retirement income from state tax",
+      "sources": [
+        {
+          "title": "PA DOR — Retirement income (SS, IRA, qualified pension) not taxable for PIT",
+          "url": "https://www.revenue.pa.gov/FormsandPublications/PAPersonalIncomeTaxGuide/Pages/Gross-Compensation.aspx",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "text": "Excellent public transit (SEPTA + Amtrak hub)",
+      "sources": [
+        {
+          "title": "SEPTA (Southeastern Pennsylvania Transportation Authority) — Multimodal Philadelphia transit",
+          "url": "https://www.septa.org/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Rich cultural scene (museums, music, food)",
     "More affordable than NYC/DC"
   ],
@@ -251,13 +288,27 @@
       "text": "Cold winters (25F lows)"
     },
     {
-      "text": "Philadelphia city wage tax (3.75%)"
+      "text": "Philadelphia city wage tax (3.75% resident, FY 2025)",
+      "sources": [
+        {
+          "title": "City of Philadelphia Department of Revenue — Wage Tax (3.75% resident, 3.44% nonresident, FY 2025)",
+          "url": "https://www.phila.gov/services/payments-assistance-taxes/income-taxes/wage-tax-employers/",
+          "accessed": "2026-05-03"
+        }
+      ]
     },
     {
       "text": "Higher crime in some areas"
     },
     {
-      "text": "High sales tax (8%)"
+      "text": "High sales tax (8% — 6% PA state + 2% Philadelphia local)",
+      "sources": [
+        {
+          "title": "PA DOR — Sales tax (6% state + 2% Philadelphia local = 8% combined)",
+          "url": "https://www.revenue.pa.gov/TaxTypes/SUT/Pages/default.aspx",
+          "accessed": "2026-05-03"
+        }
+      ]
     },
     {
       "text": "Aging infrastructure"

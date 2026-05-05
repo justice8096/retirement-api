@@ -248,8 +248,31 @@
   },
   "pros": [
     "~20% cheaper rent than Fairfax",
-    "MD tax benefits: Social Security exempt, pension exclusion, no vehicle personal property tax",
-    "Exceptional healthcare access (Johns Hopkins + UM within 20 min)",
+    {
+      "text": "MD tax benefits: Social Security exempt, pension exclusion, no vehicle personal property tax",
+      "sources": [
+        {
+          "title": "Comptroller of Maryland — Pension Exclusion (Worksheet 13A) and SS exemption",
+          "url": "https://www.marylandtaxes.gov/individual/income/tax-info/pension-exclusion.php",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "text": "Exceptional healthcare access (Johns Hopkins + UM within 20 min)",
+      "sources": [
+        {
+          "title": "Johns Hopkins Hospital — Baltimore, MD",
+          "url": "https://www.hopkinsmedicine.org/the_johns_hopkins_hospital/",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "University of Maryland Medical System",
+          "url": "https://www.umms.org/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "MARC (Maryland Area Regional Commuter) Camden Line to DC (~45 min)",
     "BWI (Baltimore-Washington International) Airport 10 min — easy regional + international flights",
     "Howard County schools + safety reputation",

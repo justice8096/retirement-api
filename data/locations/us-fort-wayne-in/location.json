@@ -41,7 +41,8 @@
       "typical": 470,
       "min": 370,
       "max": 600,
-      "annualInflation": 0.05
+      "annualInflation": 0.05,
+      "notes": "Medicare Part B ($185/mo, 2025) + Medigap Plan G (~$130-170/mo per person) + Part D (~$30-50/mo). Dominant ACA insurers: Anthem BCBS, CareSource, MDwise, UnitedHealth. Local Fort Wayne systems: Parkview Health (regional anchor with Parkview Eye Center for retinal subspecialty), Lutheran Health Network (CHS), Indiana University Health. IU Health Methodist Indianapolis ~2 hr south for academic tertiary care. Anti-VEGF Medicare Part B; GLP-1 Part D tier-dependent; generics $4-15/mo at Walmart/Meijer/Costco."
     },
     "insurance": {
       "typical": 260,
@@ -179,7 +180,14 @@
       "text": "Limited public transit"
     },
     {
-      "text": "IN flat state income tax (3.05%) plus county tax"
+      "text": "IN flat state income tax (3.05% TY2024, 3.0% TY2025) plus county tax",
+      "sources": [
+        {
+          "title": "IN Department of Revenue — Individual Income Tax flat rate (3.05% TY2024, scheduled to 3.0% TY2025) plus county",
+          "url": "https://www.in.gov/dor/individual-income-taxes/",
+          "accessed": "2026-05-03"
+        }
+      ]
     },
     {
       "text": "Safety & crime: see cited reports for current figures by city and country",

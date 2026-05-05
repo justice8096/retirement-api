@@ -41,7 +41,8 @@
       "typical": 500,
       "min": 400,
       "max": 640,
-      "annualInflation": 0.05
+      "annualInflation": 0.05,
+      "notes": "Medicare Part B ($185/mo, 2025) + Medigap Plan G (~$130-180/mo per person) + Part D (~$30-50/mo). Dominant ACA insurers: Quartz Health, Anthem BCBS, Network Health, Children's Community Health Plan, Common Ground. Major Milwaukee systems: Aurora Health Care (Advocate Health), Froedtert & MCW (Medical College of WI — academic anchor, includes MCW Eye Institute for retinal subspecialty), Ascension Wisconsin, Children's WI. Marshfield Clinic dominant in central/north-central WI. Anti-VEGF and GLP-1 widely available via Medicare; generics $4-15/mo at Walmart/Pick 'n Save/Costco."
     },
     "insurance": {
       "typical": 280,
@@ -176,7 +177,14 @@
       "text": "Very cold, snowy winters"
     },
     {
-      "text": "WI state income tax (3.54-7.65%)"
+      "text": "WI state income tax (3.50-7.65%)",
+      "sources": [
+        {
+          "title": "WI Department of Revenue — Individual Income Tax brackets (3.50-7.65%)",
+          "url": "https://www.revenue.wi.gov/Pages/Individuals/home.aspx",
+          "accessed": "2026-05-03"
+        }
+      ]
     },
     {
       "text": "Some neighborhoods have higher crime"

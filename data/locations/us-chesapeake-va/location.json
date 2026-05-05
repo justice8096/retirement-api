@@ -240,7 +240,16 @@
     "Great Dismal Swamp National Wildlife Refuge nearby",
     "Lower crime rate than neighboring cities",
     "No visa needed — domestic relocation",
-    "SS fully exempt from VA state income tax",
+    {
+      "text": "SS fully exempt from VA state income tax",
+      "sources": [
+        {
+          "title": "Virginia DOT — Social Security and Tier 1 Railroad Retirement subtractions",
+          "url": "https://www.tax.virginia.gov/subtractions",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Proximity to Virginia Beach oceanfront (30 min)",
     "Strong military community and VA healthcare access"
   ],
@@ -252,7 +261,14 @@
       "text": "Limited public transit (HRT bus only)"
     },
     {
-      "text": "VA state income tax (2-5.75%)"
+      "text": "VA state income tax (2-5.75%)",
+      "sources": [
+        {
+          "title": "Virginia Department of Taxation — Individual Income Tax brackets (2-5.75%)",
+          "url": "https://www.tax.virginia.gov/income-tax-calculator",
+          "accessed": "2026-05-03"
+        }
+      ]
     },
     {
       "text": "Flood risk in low-lying areas — may require flood insurance"

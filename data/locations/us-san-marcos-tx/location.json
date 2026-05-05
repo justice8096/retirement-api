@@ -41,7 +41,8 @@
       "typical": 500,
       "min": 400,
       "max": 640,
-      "annualInflation": 0.05
+      "annualInflation": 0.05,
+      "notes": "Medicare Part B ($185/mo, 2025) + Medigap Plan G (~$130-180/mo per person) + Part D (~$30-50/mo). Dominant ACA insurers: BCBS TX, Ambetter, Oscar. Local: Baylor Scott & White (Killeen-Temple corridor — Temple is the academic anchor with regional retinal subspecialty), AdventHealth Central Texas. San Marcos: Central Texas Medical Center (Ascension Seton); Austin academic centers (Dell Med, Ascension Seton) ~30 min north. Anti-VEGF and GLP-1 widely available via Medicare; generics $4-15/mo at HEB."
     },
     "insurance": {
       "typical": 280,
@@ -167,7 +168,16 @@
     "safetyRating": 7
   },
   "pros": [
-    "No state income tax",
+    {
+      "text": "No state income tax",
+      "sources": [
+        {
+          "title": "Texas Comptroller of Public Accounts — No state income tax",
+          "url": "https://comptroller.texas.gov/taxes/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Hill Country beauty with San Marcos River",
     "Affordable college town between Austin and San Antonio"
   ],

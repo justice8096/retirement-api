@@ -253,9 +253,32 @@
   "pros": [
     "~15% cheaper rent than Fairfax",
     "No vehicle personal property tax (MD)",
-    "SS and partial pension tax-exempt in MD",
+    {
+      "text": "SS and partial pension tax-exempt in MD",
+      "sources": [
+        {
+          "title": "Comptroller of Maryland — Pension Exclusion (Worksheet 13A) and SS exemption",
+          "url": "https://www.marylandtaxes.gov/individual/income/tax-info/pension-exclusion.php",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Waterfront lifestyle and Chesapeake Bay access",
-    "Access to Johns Hopkins / Univ of MD specialists",
+    {
+      "text": "Access to Johns Hopkins / Univ of MD specialists",
+      "sources": [
+        {
+          "title": "Johns Hopkins Hospital — Baltimore, MD",
+          "url": "https://www.hopkinsmedicine.org/the_johns_hopkins_hospital/",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "University of Maryland Medical System",
+          "url": "https://www.umms.org/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Walkable historic downtown"
   ],
   "cons": [

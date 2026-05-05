@@ -52,7 +52,8 @@
       "typical": 110,
       "min": 70,
       "max": 160,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "notes": "Sistema Nacional de Salud (SNS) universal coverage after residency permit. Private (Sanitas, Adeslas, ASISA) ~€60-150/mo with pre-existing condition loadings. Anti-VEGF injections available widely via SNS at public ophthalmology. GLP-1 covered for diabetes via SNS. Chronic-disease coverage is strong; regional variation — Catalonia and Madrid have densest infrastructure."
     },
     "insurance": {
       "typical": 125,
@@ -163,7 +164,21 @@
   },
   "pros": [
     "Year-round warm and mild climate (eternal spring)",
-    "Lower IGIC tax (7%) instead of mainland VAT (21%)",
+    {
+      "text": "Lower IGIC general rate (7%) instead of mainland IVA (21%) under the Canary Islands Special Tax Regime",
+      "sources": [
+        {
+          "title": "Agencia Tributaria Canaria — IGIC (general rate 7%)",
+          "url": "https://www.gobiernodecanarias.org/tributos/impuestos/igic/",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "Agencia Tributaria — IVA tipos impositivos",
+          "url": "https://sede.agenciatributaria.gob.es/Sede/iva/tipos.html",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Large Northern European expat community"
   ],
   "cons": [

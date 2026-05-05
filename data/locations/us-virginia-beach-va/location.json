@@ -41,7 +41,8 @@
       "typical": 520,
       "min": 420,
       "max": 660,
-      "annualInflation": 0.05
+      "annualInflation": 0.05,
+      "notes": "Medicare Part B ($185/mo, 2025) + Medigap Plan G (~$140-190/mo per person) + Part D (~$30-50/mo). Dominant ACA insurers: Anthem BCBS, Sentara/Optima Health (which also operates Sentara hospitals — vertically integrated), CareFirst. Sentara is the dominant Tidewater system: Sentara Norfolk General (Level 1 trauma + academic — EVMS teaching), Sentara Princess Anne, Sentara Leigh, Sentara Virginia Beach General, Bon Secours Maryview/DePaul. EVMS retinal subspecialty available. Tertiary referral path: VCU Richmond (~2 hr) or Duke (~3 hr). Anti-VEGF Medicare Part B; GLP-1 Part D tier-dependent."
     },
     "insurance": {
       "typical": 300,
@@ -179,7 +180,14 @@
       "text": "Higher housing costs than inland VA"
     },
     {
-      "text": "VA state income tax (2-5.75%)"
+      "text": "VA state income tax (2-5.75%)",
+      "sources": [
+        {
+          "title": "Virginia Department of Taxation — Individual Income Tax brackets (2-5.75%)",
+          "url": "https://www.tax.virginia.gov/income-tax-calculator",
+          "accessed": "2026-05-03"
+        }
+      ]
     },
     {
       "text": "Safety & crime: see cited reports for current figures by city and country",

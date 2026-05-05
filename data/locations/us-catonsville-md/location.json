@@ -248,8 +248,31 @@
   },
   "pros": [
     "~$2,500/mo cheaper than Fairfax while keeping walkable-town character",
-    "MD tax benefits: Social Security exempt, pension exclusion, no vehicle property tax",
-    "World-class healthcare (St. Agnes in town, Johns Hopkins + UM 15 min)",
+    {
+      "text": "MD tax benefits: Social Security exempt, pension exclusion, no vehicle property tax",
+      "sources": [
+        {
+          "title": "Comptroller of Maryland — Pension Exclusion (Worksheet 13A) and SS exemption",
+          "url": "https://www.marylandtaxes.gov/individual/income/tax-info/pension-exclusion.php",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "text": "World-class healthcare (St. Agnes in town, Johns Hopkins + UM 15 min)",
+      "sources": [
+        {
+          "title": "Johns Hopkins Hospital — Baltimore, MD",
+          "url": "https://www.hopkinsmedicine.org/the_johns_hopkins_hospital/",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "University of Maryland Medical System",
+          "url": "https://www.umms.org/",
+          "accessed": "2026-05-03"
+        }
+      ]
+    },
     "Walkable Frederick Road commercial strip — real pedestrian life",
     "Patapsco Valley State Park trails in town",
     "UMBC (University of Maryland, Baltimore County) campus = cultural events, continuing education, Fine Arts",
