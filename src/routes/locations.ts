@@ -50,13 +50,15 @@ function injectSources(data: Record<string, unknown>, country: string | null | u
     data.taxes = taxes;
   }
 
-  // Per-category cost sources.
+  // Per-category cost sources. Country-aware (#13): country-specific
+  // first-party sources (national stat offices, regulators) are
+  // prepended; global supranational/aggregator sources follow.
   const monthlyCosts = data.monthlyCosts as Record<string, Record<string, unknown>> | undefined;
   if (monthlyCosts) {
     for (const key of Object.keys(monthlyCosts)) {
       const range = monthlyCosts[key];
       if (!range || typeof range !== 'object') continue;
-      const catSources = costSourcesFor(key);
+      const catSources = costSourcesFor(key, country);
       if (catSources && (!Array.isArray(range.sources) || range.sources.length === 0)) {
         range.sources = catSources;
       }
