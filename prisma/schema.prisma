@@ -198,6 +198,13 @@ model UserFinancialSettings {
   mortgageMonthlyPayment Decimal @default(0) @map("mortgage_monthly_payment")
   mortgageEndYear        Int     @default(0) @map("mortgage_end_year")
 
+  // ─── First-year ACA transition income (Todo #38) ──────────────────
+  // One-shot extra income in sim year 0 only — captures W-2 wages
+  // earned Jan-retirement, severance, unused PTO, final-year bonuses,
+  // and year-of-retirement RMDs. Drives ACA MAGI for year 1; never
+  // persisted to MAGI baseline (it's a spike, not a steady-state).
+  transitionYearExtraIncome Decimal @default(0) @map("transition_year_extra_income")
+
   updatedAt        DateTime @updatedAt @map("updated_at")
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)

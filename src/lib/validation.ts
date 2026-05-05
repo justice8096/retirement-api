@@ -63,6 +63,9 @@ const FIELD_LABELS: Record<string, string> = {
   retirementPath: 'Retirement path',
   fireTargetAge: 'FIRE target age',
   annualSavings: 'Yearly savings amount',
+  mortgageMonthlyPayment: 'Mortgage payment per month',
+  mortgageEndYear: 'Year the mortgage ends',
+  transitionYearExtraIncome: 'Extra income in first retirement year',
 
   // fees.ts
   brokerageFeePct: 'Advisor or brokerage fee',

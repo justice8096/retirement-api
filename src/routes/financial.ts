@@ -96,6 +96,11 @@ const financialSchema = z.object({
   // year fields).
   mortgageMonthlyPayment: num.min(0).max(100_000).optional(),
   mortgageEndYear: num.int().min(0).max(100).optional(),
+
+  // First-year ACA transition extra income (Todo #38). One-shot MAGI
+  // bump in sim year 0 only (severance, unused PTO, final-year bonuses,
+  // year-of-retirement RMDs). 0 = no transition spike configured.
+  transitionYearExtraIncome: num.min(0).max(10_000_000).optional(),
 }).strict();  // SAST M-02: reject unknown keys
 
 // Defaults sent to client when no DB record exists (client-side format).
@@ -116,6 +121,7 @@ const DEFAULTS = {
   rentalProperties: [],
   mortgageMonthlyPayment: 0,
   mortgageEndYear: 0,
+  transitionYearExtraIncome: 0,
 };
 
 /** Encrypted balance field names. */
@@ -156,6 +162,8 @@ const NUMERIC_FIELDS = new Set<string>([
   // is Int — both come back as String / number from Prisma but the
   // dashboard expects JS numbers everywhere, so coerce on egress.
   'mortgageMonthlyPayment', 'mortgageEndYear',
+  // Transition-year ACA spike (Todo #38). Decimal in DB → JS number.
+  'transitionYearExtraIncome',
 ]);
 
 /** Decrypt sensitive fields and convert DB decimals to client percentages.
@@ -201,6 +209,7 @@ const LABELED_FIELDS = [
   'traditionalLoadPct', 'rothLoadPct', 'taxableLoadPct', 'hsaLoadPct',
   'traditionalFeesPct', 'rothFeesPct', 'taxableFeesPct', 'hsaFeesPct',
   'mortgageMonthlyPayment', 'mortgageEndYear',
+  'transitionYearExtraIncome',
 ] as const;
 
 /** Build the `_units` metadata block for a response.
@@ -237,6 +246,7 @@ function unitsMeta(locale: string, apiVersion: 1 | 2 = 1) {
     hsaFeesPct: pct(ex('0.2 = 0.2% expense ratio', '0.002 = 0.2% expense ratio')),
     mortgageMonthlyPayment: { encoding: 'amount', currency, periodicity: 'month' },
     mortgageEndYear: { encoding: 'count', meaning: 'Sim-year (exclusive) when mortgage ends. 0 = no mortgage.' },
+    transitionYearExtraIncome: { encoding: 'amount', currency, periodicity: 'year' },
   };
 }
 
