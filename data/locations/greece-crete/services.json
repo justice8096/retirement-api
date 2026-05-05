@@ -289,7 +289,7 @@
       "categoryId": "religious_mosque",
       "name": "Local mosques (search)",
       "distanceMi": 30,
-      "notes": "Search Google Maps for mosques within ~30 mi of the city centre. Replace with a specific mosque once identified.",
+      "notes": "A small mosque exists in Heraklion per halal travel guides, but no specific facility name was found via web search. Several historic mosque buildings in Heraklion (e.g. Defterdar Ahmet Pasha Mosque) are now art galleries / museums, not active places of worship.",
       "sources": [
         {
           "title": "Google Maps — mosque near Crete, Greece",
@@ -300,14 +300,14 @@
     },
     {
       "categoryId": "religious_synagogue",
-      "name": "Local synagogues / Hebrew temples (search)",
+      "name": "Etz Hayyim Synagogue (Chania)",
       "distanceMi": 30,
-      "notes": "Search Google Maps for synagogues / Hebrew temples within ~30 mi.",
+      "notes": "Only operating synagogue in Crete (Chania old town). Romaniote-tradition; restored 1999 after 1944 deportation. Open during Jewish holidays + cultural events. Verify denomination/sect (e.g. Sunni / Shia / Sufi for mosques; Orthodox / Conservative / Reform / Reconstructionist for synagogues) for personal religious requirements before relying on it.",
       "sources": [
         {
-          "title": "Google Maps — synagogue near Crete, Greece",
-          "url": "https://www.google.com/maps/search/synagogue%20near%20Crete%2C%20Greece",
-          "accessed": "2026-04-23"
+          "title": "Etz Hayyim Synagogue (Chania) — directory page",
+          "url": "https://www.etz-hayyim-hania.org/",
+          "accessed": "2026-05-05"
         }
       ]
     },
