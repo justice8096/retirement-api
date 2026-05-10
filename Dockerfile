@@ -4,7 +4,7 @@
 # To refresh manually:
 #   docker buildx imagetools inspect node:25-alpine --format '{{json .Manifest.Digest}}'
 # and replace the sha256 below with the new value across all four FROM lines.
-FROM node:25-alpine@sha256:bdf2cca6fe3dabd014ea60163eca3f0f7015fbd5c7ee1b0e9ccb4ced6eb02ef4 AS deps
+FROM node:26-alpine@sha256:e71ac5e964b9201072425d59d2e876359efa25dc96bb1768cb73295728d6e4ea AS deps
 WORKDIR /app
 
 COPY package.json package-lock.json ./
@@ -15,7 +15,7 @@ COPY package.json package-lock.json ./
 RUN npm ci --ignore-scripts
 
 # ─── Stage 2: Generate Prisma client ──────────────────────────────────────
-FROM node:25-alpine@sha256:bdf2cca6fe3dabd014ea60163eca3f0f7015fbd5c7ee1b0e9ccb4ced6eb02ef4 AS prisma
+FROM node:26-alpine@sha256:e71ac5e964b9201072425d59d2e876359efa25dc96bb1768cb73295728d6e4ea AS prisma
 WORKDIR /app
 
 COPY --from=deps /app/node_modules ./node_modules
@@ -28,7 +28,7 @@ COPY prisma.config.ts tsconfig.json package.json ./
 RUN npx prisma generate --schema=prisma/schema.prisma
 
 # ─── Stage 3: TypeScript build ────────────────────────────────────────────
-FROM node:25-alpine@sha256:bdf2cca6fe3dabd014ea60163eca3f0f7015fbd5c7ee1b0e9ccb4ced6eb02ef4 AS builder
+FROM node:26-alpine@sha256:e71ac5e964b9201072425d59d2e876359efa25dc96bb1768cb73295728d6e4ea AS builder
 WORKDIR /app
 
 COPY --from=deps /app/node_modules ./node_modules
@@ -44,7 +44,7 @@ COPY tsconfig.json package.json ./
 RUN npx tsc
 
 # ─── Stage 4: Production image ────────────────────────────────────────────
-FROM node:25-alpine@sha256:bdf2cca6fe3dabd014ea60163eca3f0f7015fbd5c7ee1b0e9ccb4ced6eb02ef4 AS runner
+FROM node:26-alpine@sha256:e71ac5e964b9201072425d59d2e876359efa25dc96bb1768cb73295728d6e4ea AS runner
 WORKDIR /app
 
 # Non-root user for security
