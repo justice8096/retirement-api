@@ -1,0 +1,67 @@
+name: Deploy to Rogue
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-rogue
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    needs: []
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'push'
+    timeout-minutes: 15
+
+    steps:
+      - name: Install Tailscale
+        uses: tailscale/github-action@v3
+        with:
+          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
+          tags: tag:ci
+
+      - name: Deploy to rogue
+        run: |
+          ssh -o StrictHostKeyChecking=accept-new root@rogue bash <<'DEPLOY'
+          set -euo pipefail
+          cd /srv/retirement/retirement-api
+
+          echo "=== Pulling latest ==="
+          git fetch origin
+          BEHIND=$(git rev-list HEAD..origin/master --count)
+          if [ "$BEHIND" -eq 0 ]; then
+            echo "Already up to date."
+            exit 0
+          fi
+          echo "$BEHIND new commit(s) to deploy:"
+          git log HEAD..origin/master --oneline
+          git pull --ff-only origin master
+
+          echo "=== Running migrations ==="
+          docker compose build --no-cache migrate
+          docker compose run --rm migrate
+
+          echo "=== Rebuilding API ==="
+          docker compose build --no-cache api
+          docker compose up -d api
+
+          echo "=== Rebuilding Dashboard ==="
+          docker compose build --no-cache dashboard
+          docker compose up -d dashboard
+
+          echo "=== Health check ==="
+          sleep 10
+          docker compose ps --format 'table {{.Name}}\t{{.Status}}'
+
+          UNHEALTHY=$(docker compose ps --format json | grep -c '"unhealthy"' || true)
+          if [ "$UNHEALTHY" -gt 0 ]; then
+            echo "WARNING: $UNHEALTHY unhealthy container(s)"
+            docker compose logs --tail=50 api
+            exit 1
+          fi
+          echo "All containers healthy."
+          DEPLOY
