@@ -26,11 +26,7 @@
       "typical": 1715,
       "type": "2-bedroom single-family house",
       "annualInflation": 0.03,
-      "notes": "Virginia has no rental tax. Water, sewage, and trash are separate utility bills (not included in rent).",
-      "gigInternetTypical": 1800,
-      "gigInternetCoverage": 77,
-      "gigInternetProviders": "Verizon Fios (77%), Comcast",
-      "gigInternetNotes": "Fios covers 77.2% of Richmond per BroadbandNow. Gaps in Monroe Ward, Gambles Hill, downtown. Good coverage west of Oregon Hill and south of James River."
+      "notes": "Virginia has no rental tax. Water, sewage, and trash are separate utility bills (not included in rent)."
     },
     "groceries": {
       "min": 1135,
@@ -186,44 +182,21 @@
     }
   },
   "taxes": {
-    "federalIncomeTax": {
-      "applies": true
-    },
+    "federalIncomeTax": { "applies": true },
     "stateIncomeTax": {
       "rate": 0.0575,
       "type": "top-marginal",
       "brackets": [
-        {
-          "min": 0,
-          "max": 3000,
-          "rate": 0.02
-        },
-        {
-          "min": 3000,
-          "max": 5000,
-          "rate": 0.03
-        },
-        {
-          "min": 5000,
-          "max": 17000,
-          "rate": 0.05
-        },
-        {
-          "min": 17000,
-          "max": null,
-          "rate": 0.0575
-        }
+        { "min": 0, "max": 3000, "rate": 0.02 },
+        { "min": 3000, "max": 5000, "rate": 0.03 },
+        { "min": 5000, "max": 17000, "rate": 0.05 },
+        { "min": 17000, "max": null, "rate": 0.0575 }
       ],
       "deduction": 24000,
       "exemptions": "Age 65+ deduction $12K/person. SS fully exempt from VA tax."
     },
-    "salesTax": {
-      "rate": 0.053,
-      "notes": "4.3% state + 1% local"
-    },
-    "propertyTax": {
-      "rate": 0
-    },
+    "salesTax": { "rate": 0.053, "notes": "4.3% state + 1% local" },
+    "propertyTax": { "rate": 0 },
     "socialCharges": null,
     "vatRate": 0,
     "estVehicleTax": 900,
@@ -259,16 +232,8 @@
     {
       "text": "VA age deduction + SS tax exempt",
       "sources": [
-        {
-          "title": "Virginia DOT — Social Security and Tier 1 Railroad Retirement subtractions",
-          "url": "https://www.tax.virginia.gov/subtractions",
-          "accessed": "2026-05-03"
-        },
-        {
-          "title": "Virginia DOT — Age Deduction for taxpayers 65+",
-          "url": "https://www.tax.virginia.gov/deductions",
-          "accessed": "2026-05-03"
-        }
+        { "title": "Virginia DOT — Social Security and Tier 1 Railroad Retirement subtractions", "url": "https://www.tax.virginia.gov/subtractions", "accessed": "2026-05-03" },
+        { "title": "Virginia DOT — Age Deduction for taxpayers 65+", "url": "https://www.tax.virginia.gov/deductions", "accessed": "2026-05-03" }
       ]
     },
     "State capital with good healthcare",
@@ -276,39 +241,17 @@
     "Historic charm (Church Hill, Fan District)"
   ],
   "cons": [
-    {
-      "text": "Cold winters (28F lows)"
-    },
-    {
-      "text": "Car-dependent"
-    },
-    {
-      "text": "Hot humid summers"
-    },
-    {
-      "text": "Higher crime in some neighborhoods"
-    },
-    {
-      "text": "Smaller job market than NoVA"
-    },
+    { "text": "Cold winters (28F lows)" },
+    { "text": "Car-dependent" },
+    { "text": "Hot humid summers" },
+    { "text": "Higher crime in some neighborhoods" },
+    { "text": "Smaller job market than NoVA" },
     {
       "text": "Safety & crime: see cited reports for current figures by city and country",
       "sources": [
-        {
-          "title": "Numbeo — Crime in Richmond",
-          "url": "https://www.numbeo.com/crime/in/Richmond",
-          "accessed": "2026-04-23"
-        },
-        {
-          "title": "Numbeo — Crime in United States",
-          "url": "https://www.numbeo.com/crime/country_result.jsp?country=United%2BStates",
-          "accessed": "2026-04-23"
-        },
-        {
-          "title": "Wikipedia — Crime in United States",
-          "url": "https://en.wikipedia.org/wiki/Crime_in_United_States",
-          "accessed": "2026-04-23"
-        }
+        { "title": "Numbeo — Crime in Richmond", "url": "https://www.numbeo.com/crime/in/Richmond", "accessed": "2026-04-23" },
+        { "title": "Numbeo — Crime in United States", "url": "https://www.numbeo.com/crime/country_result.jsp?country=United%2BStates", "accessed": "2026-04-23" },
+        { "title": "Wikipedia — Crime in United States", "url": "https://en.wikipedia.org/wiki/Crime_in_United_States", "accessed": "2026-04-23" }
       ]
     }
   ],

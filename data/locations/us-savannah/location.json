@@ -26,11 +26,7 @@
       "typical": 1630,
       "type": "2-bedroom single-family house",
       "annualInflation": 0.03,
-      "notes": "Georgia has no residential rental tax. Water, sewage, and trash are separate utility bills (not included in rent).",
-      "gigInternetTypical": 1730,
-      "gigInternetCoverage": 60,
-      "gigInternetProviders": "AT&T Fiber, Comcast Xfinity",
-      "gigInternetNotes": "AT&T Fiber expanding but moderate penetration (~60%). Many historic district homes on cable only. Fiber concentrated in newer subdivisions and suburban areas."
+      "notes": "Georgia has no residential rental tax. Water, sewage, and trash are separate utility bills (not included in rent)."
     },
     "groceries": {
       "min": 1050,
@@ -186,39 +182,20 @@
     }
   },
   "taxes": {
-    "federalIncomeTax": {
-      "applies": true
-    },
+    "federalIncomeTax": { "applies": true },
     "stateIncomeTax": {
       "rate": 0.0549,
       "type": "graduated",
       "brackets": [
-        {
-          "min": 0,
-          "max": 7000,
-          "rate": 0.01
-        },
-        {
-          "min": 7000,
-          "max": 10000,
-          "rate": 0.02
-        },
-        {
-          "min": 10000,
-          "max": null,
-          "rate": 0.0549
-        }
+        { "min": 0, "max": 7000, "rate": 0.01 },
+        { "min": 7000, "max": 10000, "rate": 0.02 },
+        { "min": 10000, "max": null, "rate": 0.0549 }
       ],
       "deduction": 6500,
       "exemptions": "$65K retirement income exclusion per person (65+). SS partially exempt."
     },
-    "salesTax": {
-      "rate": 0.07,
-      "notes": "4% state + 3% Chatham County"
-    },
-    "propertyTax": {
-      "rate": 0
-    },
+    "salesTax": { "rate": 0.07, "notes": "4% state + 3% Chatham County" },
+    "propertyTax": { "rate": 0 },
     "socialCharges": null,
     "vatRate": 0,
     "estVehicleTax": 300,
@@ -257,46 +234,22 @@
     "Near beaches (Tybee Island)"
   ],
   "cons": [
-    {
-      "text": "Hot, humid summers (92F)"
-    },
-    {
-      "text": "Hurricane risk"
-    },
-    {
-      "text": "Car-dependent outside historic core"
-    },
+    { "text": "Hot, humid summers (92F)" },
+    { "text": "Hurricane risk" },
+    { "text": "Car-dependent outside historic core" },
     {
       "text": "GA state income tax (5.39% flat as of 2024, HB 1015)",
       "sources": [
-        {
-          "title": "Georgia Department of Revenue — Individual Income Tax (HB 1437 / HB 1015 flat-rate transition)",
-          "url": "https://dor.georgia.gov/taxes/individual-taxes",
-          "accessed": "2026-05-03"
-        }
+        { "title": "Georgia Department of Revenue — Individual Income Tax (HB 1437 / HB 1015 flat-rate transition)", "url": "https://dor.georgia.gov/taxes/individual-taxes", "accessed": "2026-05-03" }
       ]
     },
-    {
-      "text": "Higher crime in some areas"
-    },
+    { "text": "Higher crime in some areas" },
     {
       "text": "Safety & crime: see cited reports for current figures by city and country",
       "sources": [
-        {
-          "title": "Numbeo — Crime in Savannah",
-          "url": "https://www.numbeo.com/crime/in/Savannah",
-          "accessed": "2026-04-23"
-        },
-        {
-          "title": "Numbeo — Crime in United States",
-          "url": "https://www.numbeo.com/crime/country_result.jsp?country=United%2BStates",
-          "accessed": "2026-04-23"
-        },
-        {
-          "title": "Wikipedia — Crime in United States",
-          "url": "https://en.wikipedia.org/wiki/Crime_in_United_States",
-          "accessed": "2026-04-23"
-        }
+        { "title": "Numbeo — Crime in Savannah", "url": "https://www.numbeo.com/crime/in/Savannah", "accessed": "2026-04-23" },
+        { "title": "Numbeo — Crime in United States", "url": "https://www.numbeo.com/crime/country_result.jsp?country=United%2BStates", "accessed": "2026-04-23" },
+        { "title": "Wikipedia — Crime in United States", "url": "https://en.wikipedia.org/wiki/Crime_in_United_States", "accessed": "2026-04-23" }
       ]
     }
   ],

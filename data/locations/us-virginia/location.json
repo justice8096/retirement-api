@@ -29,11 +29,7 @@
       "typical": 2885,
       "type": "2-bedroom single-family house",
       "annualInflation": 0.035,
-      "notes": "Virginia has no rental tax. Water, sewage, and trash are separate utility bills (not included in rent).",
-      "gigInternetTypical": 2950,
-      "gigInternetCoverage": 90,
-      "gigInternetProviders": "Verizon Fios (90%+), Cox",
-      "gigInternetNotes": "Fios covers nearly all of Fairfax County with symmetrical gig service. Most single-family rentals in NOVA are Fios-eligible. Minimal filtering required."
+      "notes": "Virginia has no rental tax. Water, sewage, and trash are separate utility bills (not included in rent)."
     },
     "groceries": {
       "min": 1400,
@@ -198,26 +194,10 @@
       "rate": 0.0575,
       "type": "top-marginal",
       "brackets": [
-        {
-          "min": 0,
-          "max": 3000,
-          "rate": 0.02
-        },
-        {
-          "min": 3000,
-          "max": 5000,
-          "rate": 0.03
-        },
-        {
-          "min": 5000,
-          "max": 17000,
-          "rate": 0.05
-        },
-        {
-          "min": 17000,
-          "max": null,
-          "rate": 0.0575
-        }
+        { "min": 0, "max": 3000, "rate": 0.02 },
+        { "min": 3000, "max": 5000, "rate": 0.03 },
+        { "min": 5000, "max": 17000, "rate": 0.05 },
+        { "min": 17000, "max": null, "rate": 0.0575 }
       ],
       "deduction": 24000,
       "exemptions": "Age 65+ deduction $12K/person. SS fully exempt from VA tax."
@@ -267,21 +247,13 @@
     {
       "text": "World-class healthcare (Inova system)",
       "sources": [
-        {
-          "title": "Inova Health System — Northern Virginia",
-          "url": "https://www.inova.org/",
-          "accessed": "2026-05-03"
-        }
+        { "title": "Inova Health System — Northern Virginia", "url": "https://www.inova.org/", "accessed": "2026-05-03" }
       ]
     },
     {
       "text": "SS tax exempt in VA",
       "sources": [
-        {
-          "title": "Virginia DOT — Social Security and Tier 1 Railroad Retirement subtractions",
-          "url": "https://www.tax.virginia.gov/subtractions",
-          "accessed": "2026-05-03"
-        }
+        { "title": "Virginia DOT — Social Security and Tier 1 Railroad Retirement subtractions", "url": "https://www.tax.virginia.gov/subtractions", "accessed": "2026-05-03" }
       ]
     },
     "Proximity to DC cultural resources (Smithsonian, etc.)",
@@ -290,42 +262,18 @@
     "Metro access from Vienna/Falls Church"
   ],
   "cons": [
-    {
-      "text": "Highest costs in Virginia"
-    },
-    {
-      "text": "Cold winters (24°F lows)"
-    },
-    {
-      "text": "Heavy traffic congestion"
-    },
-    {
-      "text": "Car-dependent outside Metro corridors"
-    },
-    {
-      "text": "High property tax on vehicles"
-    },
-    {
-      "text": "Healthcare expensive pre-Medicare"
-    },
+    { "text": "Highest costs in Virginia" },
+    { "text": "Cold winters (24°F lows)" },
+    { "text": "Heavy traffic congestion" },
+    { "text": "Car-dependent outside Metro corridors" },
+    { "text": "High property tax on vehicles" },
+    { "text": "Healthcare expensive pre-Medicare" },
     {
       "text": "Safety & crime: see cited reports for current figures by city and country",
       "sources": [
-        {
-          "title": "Numbeo — Crime in Fairfax VA",
-          "url": "https://www.numbeo.com/crime/in/Fairfax-VA",
-          "accessed": "2026-04-23"
-        },
-        {
-          "title": "Numbeo — Crime in United States",
-          "url": "https://www.numbeo.com/crime/country_result.jsp?country=United%2BStates",
-          "accessed": "2026-04-23"
-        },
-        {
-          "title": "Wikipedia — Crime in United States",
-          "url": "https://en.wikipedia.org/wiki/Crime_in_United_States",
-          "accessed": "2026-04-23"
-        }
+        { "title": "Numbeo — Crime in Fairfax VA", "url": "https://www.numbeo.com/crime/in/Fairfax-VA", "accessed": "2026-04-23" },
+        { "title": "Numbeo — Crime in United States", "url": "https://www.numbeo.com/crime/country_result.jsp?country=United%2BStates", "accessed": "2026-04-23" },
+        { "title": "Wikipedia — Crime in United States", "url": "https://en.wikipedia.org/wiki/Crime_in_United_States", "accessed": "2026-04-23" }
       ]
     }
   ],
