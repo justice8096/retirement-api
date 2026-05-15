@@ -33,11 +33,7 @@
       "typical": 1400,
       "type": "2-bedroom house (moradia)",
       "annualInflation": 0.035,
-      "notes": "No VAT on residential rent.",
-      "gigInternetTypical": 1415,
-      "gigInternetCoverage": 96,
-      "gigInternetProviders": "MEO (PT), NOS, Vodafone",
-      "gigInternetNotes": "Portugal 95% FTTH coverage (ANACOM, Q3 2025). Lisbon metro 99.9% penetration. Algarve at 95.8% and growing. Three-way ISP competition. Fiber is default infrastructure. Essentially no rent premium."
+      "notes": "No VAT on residential rent."
     },
     "groceries": {
       "min": 785,
@@ -191,61 +187,21 @@
       "type": "progressive",
       "label": "Portuguese Income Tax (IRS)",
       "brackets": [
-        {
-          "min": 0,
-          "max": 8704,
-          "rate": 0.125
-        },
-        {
-          "min": 8704,
-          "max": 13133,
-          "rate": 0.16
-        },
-        {
-          "min": 13133,
-          "max": 18612,
-          "rate": 0.215
-        },
-        {
-          "min": 18612,
-          "max": 24090,
-          "rate": 0.244
-        },
-        {
-          "min": 24090,
-          "max": 30672,
-          "rate": 0.314
-        },
-        {
-          "min": 30672,
-          "max": 44959,
-          "rate": 0.349
-        },
-        {
-          "min": 44959,
-          "max": 48586,
-          "rate": 0.431
-        },
-        {
-          "min": 48586,
-          "max": 90393,
-          "rate": 0.446
-        },
-        {
-          "min": 90393,
-          "max": null,
-          "rate": 0.48
-        }
+        {"min": 0, "max": 8704, "rate": 0.125},
+        {"min": 8704, "max": 13133, "rate": 0.16},
+        {"min": 13133, "max": 18612, "rate": 0.215},
+        {"min": 18612, "max": 24090, "rate": 0.244},
+        {"min": 24090, "max": 30672, "rate": 0.314},
+        {"min": 30672, "max": 44959, "rate": 0.349},
+        {"min": 44959, "max": 48586, "rate": 0.431},
+        {"min": 48586, "max": 90393, "rate": 0.446},
+        {"min": 90393, "max": null, "rate": 0.48}
       ],
       "deduction": 4432,
       "exemptions": "NHR ended Jan 2024 (IFICI replacement excludes pensions). Foreign pensions/retirement income taxed at standard progressive rates 12.5-48%. US-Portugal treaty provides foreign tax credit."
     },
-    "salesTax": {
-      "rate": 0
-    },
-    "propertyTax": {
-      "rate": 0
-    },
+    "salesTax": {"rate": 0},
+    "propertyTax": {"rate": 0},
     "socialCharges": null,
     "vatRate": 0.23,
     "estVehicleTax": 0,
@@ -298,12 +254,8 @@
     "Strong expat community"
   ],
   "cons": [
-    {
-      "text": "Rising rents (especially Lisbon)"
-    },
-    {
-      "text": "Longer healthcare waits"
-    },
+    {"text": "Rising rents (especially Lisbon)"},
+    {"text": "Longer healthcare waits"},
     {
       "text": "Permanent residency requires A2 Portuguese language certificate after 5 years",
       "sources": [
