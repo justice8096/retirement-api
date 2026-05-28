@@ -20,7 +20,19 @@
     "winterLowF": 68,
     "summerHighF": 85,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 40
+    "rainyDaysPerYear": 40,
+    "humidityAvgPct": 80,
+    "drySeasonMonths": [
+      "Jan",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -196,5 +208,9 @@
     "vatRate": 0.15,
     "socialChargesRate": 0
   },
-  "subregion": "Santa Elena"
+  "subregion": "Santa Elena",
+  "coordinates": {
+    "lat": -2.214,
+    "lon": -80.958
+  }
 }

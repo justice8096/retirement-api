@@ -27,7 +27,19 @@
     "winterLowF": 43,
     "summerHighF": 90,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 45
+    "rainyDaysPerYear": 45,
+    "humidityAvgPct": 67,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Oct",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -215,5 +227,9 @@
     "vatRate": 21,
     "socialChargesRate": 0
   },
-  "subregion": "Valencia"
+  "subregion": "Valencia",
+  "coordinates": {
+    "lat": 39.4739,
+    "lon": -0.3797
+  }
 }

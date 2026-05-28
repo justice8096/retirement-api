@@ -8,7 +8,7 @@
       "Panama City"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Pensionado",
       "incomeRequirement": {
@@ -21,7 +21,13 @@
       "winterLowF": 75,
       "summerHighF": 90,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 175
+      "rainyDaysPerYear": 175,
+      "humidityAvgPct": 85,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -46,7 +52,8 @@
         "typical": 250,
         "min": 150,
         "max": 400,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. Excellent specialist access in Panama City: Hospital Punta Pacifica (JCI-accredited, Johns Hopkins-affiliated), Hospital Nacional, Pacifica Salud, Hospital Paitilla, Hospital San Fernando. Anti-VEGF + ophthalmology + cardiology + oncology widely available locally. GLP-1 (Ozempic/Wegovy) available via private prescription, ~$200-400/mo."
       },
       "insurance": {
         "typical": 300,
@@ -103,16 +110,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -160,14 +168,45 @@
       "Major international hub with direct flights"
     ],
     "cons": [
-      "Hot and humid year-round",
-      "Traffic congestion is severe",
-      "Higher cost of living than other Panama locations"
+      {
+        "text": "Hot and humid year-round"
+      },
+      {
+        "text": "Traffic congestion is severe"
+      },
+      {
+        "text": "Higher cost of living than other Panama locations"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Panama City — Bella Vista",
+            "url": "https://www.numbeo.com/crime/in/Panama-City-%E2%80%94-Bella-Vista",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Panama",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Panama",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Panama",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Panama",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "No tax on foreign-source income. Panama City has higher living costs but extensive urban amenities.",
       "vatRate": 0.07,
       "socialChargesRate": 0
+    },
+    "subregion": "Panama Province",
+    "coordinates": {
+      "lat": 8.9936,
+      "lon": -79.5197
     }
   },
   {
@@ -179,7 +218,7 @@
       "Panama City"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Pensionado",
       "incomeRequirement": {
@@ -192,7 +231,13 @@
       "winterLowF": 75,
       "summerHighF": 90,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 175
+      "rainyDaysPerYear": 175,
+      "humidityAvgPct": 85,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -217,7 +262,8 @@
         "typical": 250,
         "min": 150,
         "max": 400,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. Excellent specialist access in Panama City: Hospital Punta Pacifica (JCI-accredited, Johns Hopkins-affiliated), Hospital Nacional, Pacifica Salud, Hospital Paitilla, Hospital San Fernando. Anti-VEGF + ophthalmology + cardiology + oncology widely available locally. GLP-1 (Ozempic/Wegovy) available via private prescription, ~$200-400/mo."
       },
       "insurance": {
         "typical": 300,
@@ -274,16 +320,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -331,14 +378,45 @@
       "Walkable neighborhood with metro access"
     ],
     "cons": [
-      "Hot and humid climate",
-      "Some areas feel congested",
-      "Noise from busy streets"
+      {
+        "text": "Hot and humid climate"
+      },
+      {
+        "text": "Some areas feel congested"
+      },
+      {
+        "text": "Noise from busy streets"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Panama City — El Cangrejo",
+            "url": "https://www.numbeo.com/crime/in/Panama-City-%E2%80%94-El-Cangrejo",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Panama",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Panama",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Panama",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Panama",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "No tax on foreign-source income.",
       "vatRate": 0.07,
       "socialChargesRate": 0
+    },
+    "subregion": "Panama Province",
+    "coordinates": {
+      "lat": 8.9936,
+      "lon": -79.5197
     }
   },
   {
@@ -350,7 +428,7 @@
       "Panama City"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Pensionado",
       "incomeRequirement": {
@@ -363,7 +441,13 @@
       "winterLowF": 75,
       "summerHighF": 90,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 175
+      "rainyDaysPerYear": 175,
+      "humidityAvgPct": 85,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -388,7 +472,8 @@
         "typical": 250,
         "min": 150,
         "max": 400,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. Excellent specialist access in Panama City: Hospital Punta Pacifica (JCI-accredited, Johns Hopkins-affiliated), Hospital Nacional, Pacifica Salud, Hospital Paitilla, Hospital San Fernando. Anti-VEGF + ophthalmology + cardiology + oncology widely available locally. GLP-1 (Ozempic/Wegovy) available via private prescription, ~$200-400/mo."
       },
       "insurance": {
         "typical": 300,
@@ -445,16 +530,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -502,14 +588,45 @@
       "Walkable cobblestone streets with ocean views"
     ],
     "cons": [
-      "Ongoing construction and renovation noise",
-      "Limited parking and narrow streets",
-      "Some surrounding areas still transitioning"
+      {
+        "text": "Ongoing construction and renovation noise"
+      },
+      {
+        "text": "Limited parking and narrow streets"
+      },
+      {
+        "text": "Some surrounding areas still transitioning"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Panama City — Casco Viejo",
+            "url": "https://www.numbeo.com/crime/in/Panama-City-%E2%80%94-Casco-Viejo",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Panama",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Panama",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Panama",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Panama",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "No tax on foreign-source income.",
       "vatRate": 0.07,
       "socialChargesRate": 0
+    },
+    "subregion": "Panama Province",
+    "coordinates": {
+      "lat": 8.9936,
+      "lon": -79.5197
     }
   },
   {
@@ -521,7 +638,7 @@
       "Panama City"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Pensionado",
       "incomeRequirement": {
@@ -534,7 +651,13 @@
       "winterLowF": 75,
       "summerHighF": 90,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 175
+      "rainyDaysPerYear": 175,
+      "humidityAvgPct": 85,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -559,7 +682,8 @@
         "typical": 250,
         "min": 150,
         "max": 400,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. Excellent specialist access in Panama City: Hospital Punta Pacifica (JCI-accredited, Johns Hopkins-affiliated), Hospital Nacional, Pacifica Salud, Hospital Paitilla, Hospital San Fernando. Anti-VEGF + ophthalmology + cardiology + oncology widely available locally. GLP-1 (Ozempic/Wegovy) available via private prescription, ~$200-400/mo. Hospital Punta Pacifica is in this neighborhood — walking distance to JCI-accredited care."
       },
       "insurance": {
         "typical": 300,
@@ -616,16 +740,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -673,14 +798,45 @@
       "Modern amenities, pools, gyms in buildings"
     ],
     "cons": [
-      "Most expensive Panama neighborhood",
-      "Somewhat sterile/corporate feel",
-      "Hot and humid year-round"
+      {
+        "text": "Most expensive Panama neighborhood"
+      },
+      {
+        "text": "Somewhat sterile/corporate feel"
+      },
+      {
+        "text": "Hot and humid year-round"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Panama City — Punta Pacifica",
+            "url": "https://www.numbeo.com/crime/in/Panama-City-%E2%80%94-Punta-Pacifica",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Panama",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Panama",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Panama",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Panama",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "No tax on foreign-source income.",
       "vatRate": 0.07,
       "socialChargesRate": 0
+    },
+    "subregion": "Panama Province",
+    "coordinates": {
+      "lat": 8.9936,
+      "lon": -79.5197
     }
   },
   {
@@ -692,7 +848,7 @@
       "Panama City"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Pensionado",
       "incomeRequirement": {
@@ -705,7 +861,13 @@
       "winterLowF": 75,
       "summerHighF": 90,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 175
+      "rainyDaysPerYear": 175,
+      "humidityAvgPct": 85,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -730,7 +892,8 @@
         "typical": 250,
         "min": 150,
         "max": 400,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. Excellent specialist access in Panama City: Hospital Punta Pacifica (JCI-accredited, Johns Hopkins-affiliated), Hospital Nacional, Pacifica Salud, Hospital Paitilla, Hospital San Fernando. Anti-VEGF + ophthalmology + cardiology + oncology widely available locally. GLP-1 (Ozempic/Wegovy) available via private prescription, ~$200-400/mo. Costa del Este is adjacent to Hospital Punta Pacifica — closest neighborhood to JCI-accredited care."
       },
       "insurance": {
         "typical": 300,
@@ -787,16 +950,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -844,14 +1008,45 @@
       "Newer construction with good building standards"
     ],
     "cons": [
-      "Car-dependent suburban layout",
-      "Further from downtown attractions",
-      "Hot and humid year-round"
+      {
+        "text": "Car-dependent suburban layout"
+      },
+      {
+        "text": "Further from downtown attractions"
+      },
+      {
+        "text": "Hot and humid year-round"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Panama City — Costa del Este",
+            "url": "https://www.numbeo.com/crime/in/Panama-City-%E2%80%94-Costa-del-Este",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Panama",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Panama",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Panama",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Panama",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "No tax on foreign-source income.",
       "vatRate": 0.07,
       "socialChargesRate": 0
+    },
+    "subregion": "Panama Province",
+    "coordinates": {
+      "lat": 8.9936,
+      "lon": -79.5197
     }
   },
   {
@@ -863,7 +1058,7 @@
       "Coronado"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Pensionado",
       "incomeRequirement": {
@@ -876,7 +1071,13 @@
       "winterLowF": 72,
       "summerHighF": 92,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 160
+      "rainyDaysPerYear": 160,
+      "humidityAvgPct": 82,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -901,7 +1102,8 @@
         "typical": 200,
         "min": 120,
         "max": 350,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. Centro Médico San Fernando-Coronado satellite + local clinics handle routine care. Panama City hospitals (~50 mi / ~1 hr east via the Pan-American Highway) for advanced specialty care, including JCI-accredited Punta Pacifica. Coronado is the closest beach community to top-tier Panama City medicine."
       },
       "insurance": {
         "typical": 250,
@@ -958,16 +1160,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -1015,14 +1218,45 @@
       "Reasonably close to Panama City for services"
     ],
     "cons": [
-      "Hot and humid beach climate",
-      "Car required for most errands",
-      "Beach can be rough for swimming"
+      {
+        "text": "Hot and humid beach climate"
+      },
+      {
+        "text": "Car required for most errands"
+      },
+      {
+        "text": "Beach can be rough for swimming"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Coronado",
+            "url": "https://www.numbeo.com/crime/in/Coronado",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Panama",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Panama",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Panama",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Panama",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "No tax on foreign-source income.",
       "vatRate": 0.07,
       "socialChargesRate": 0
+    },
+    "subregion": "Panamá Oeste",
+    "coordinates": {
+      "lat": 8.533,
+      "lon": -79.933
     }
   },
   {
@@ -1034,7 +1268,7 @@
       "El Valle de Antón"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Pensionado",
       "incomeRequirement": {
@@ -1047,7 +1281,13 @@
       "winterLowF": 60,
       "summerHighF": 82,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 190
+      "rainyDaysPerYear": 190,
+      "humidityAvgPct": 90,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -1072,7 +1312,8 @@
         "typical": 150,
         "min": 80,
         "max": 250,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. El Valle de Antón is a small mountain town with a Centro de Salud (public clinic). Hospital Aquilino Tejeira in Penonomé (~40 min east) handles regional cases; Panama City (~75 mi east) for tertiary care. Anti-VEGF + advanced ophthalmology only in capital."
       },
       "insurance": {
         "typical": 250,
@@ -1129,16 +1370,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -1186,14 +1428,45 @@
       "Famous Sunday market and natural hot springs"
     ],
     "cons": [
-      "Very small town with limited services",
-      "Heavy rainfall during rainy season",
-      "Far from quality healthcare"
+      {
+        "text": "Very small town with limited services"
+      },
+      {
+        "text": "Heavy rainfall during rainy season"
+      },
+      {
+        "text": "Far from quality healthcare"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in El Valle de Antón",
+            "url": "https://www.numbeo.com/crime/in/El-Valle-de-Anton",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Panama",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Panama",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Panama",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Panama",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "No tax on foreign-source income.",
       "vatRate": 0.07,
       "socialChargesRate": 0
+    },
+    "subregion": "Coclé",
+    "coordinates": {
+      "lat": 8.612,
+      "lon": -80.126
     }
   },
   {
@@ -1205,7 +1478,7 @@
       "Chitré"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Pensionado",
       "incomeRequirement": {
@@ -1218,7 +1491,14 @@
       "winterLowF": 70,
       "summerHighF": 95,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 120
+      "rainyDaysPerYear": 120,
+      "humidityAvgPct": 82,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -1243,7 +1523,8 @@
         "typical": 130,
         "min": 70,
         "max": 220,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. Hospital Cecilio Castillero is the Azuero Peninsula's regional public hospital. Hospital Anita Moreno (private) and Centro Médico Paitilla satellite serve private patients. Tertiary care (cardiology, oncology, complex surgery) typically referred to Panama City (~3 hr northwest)."
       },
       "insurance": {
         "typical": 250,
@@ -1300,16 +1581,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -1357,14 +1639,45 @@
       "Authentic Panamanian culture and festivals"
     ],
     "cons": [
-      "Very hot during dry season",
-      "Minimal expat community",
-      "Limited English spoken"
+      {
+        "text": "Very hot during dry season"
+      },
+      {
+        "text": "Minimal expat community"
+      },
+      {
+        "text": "Limited English spoken"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Chitré",
+            "url": "https://www.numbeo.com/crime/in/Chitre",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Panama",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Panama",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Panama",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Panama",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "No tax on foreign-source income.",
       "vatRate": 0.07,
       "socialChargesRate": 0
+    },
+    "subregion": "Herrera",
+    "coordinates": {
+      "lat": 7.9601,
+      "lon": -80.4288
     }
   },
   {
@@ -1376,7 +1689,7 @@
       "David"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Pensionado",
       "incomeRequirement": {
@@ -1389,7 +1702,13 @@
       "winterLowF": 72,
       "summerHighF": 95,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 170
+      "rainyDaysPerYear": 170,
+      "humidityAvgPct": 84,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -1414,7 +1733,8 @@
         "typical": 160,
         "min": 90,
         "max": 260,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. Hospital Chiriquí is the regional anchor in David — the largest hospital in Western Panama, with cardiology + general surgery + maternity. Anti-VEGF and routine ophthalmology available locally; complex specialty care typically referred to Panama City (~5-6 hr drive east). David is also Boquete's referral hospital (~30 mi north)."
       },
       "insurance": {
         "typical": 250,
@@ -1471,16 +1791,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -1528,14 +1849,45 @@
       "Affordable with urban conveniences"
     ],
     "cons": [
-      "Very hot lowland climate",
-      "Limited cultural/entertainment options",
-      "Not as scenic as highland or beach alternatives"
+      {
+        "text": "Very hot lowland climate"
+      },
+      {
+        "text": "Limited cultural/entertainment options"
+      },
+      {
+        "text": "Not as scenic as highland or beach alternatives"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in David",
+            "url": "https://www.numbeo.com/crime/in/David",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Panama",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Panama",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Panama",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Panama",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "No tax on foreign-source income.",
       "vatRate": 0.07,
       "socialChargesRate": 0
+    },
+    "subregion": "Chiriquí",
+    "coordinates": {
+      "lat": 8.4273,
+      "lon": -82.4309
     }
   },
   {
@@ -1547,7 +1899,7 @@
       "Pedasí"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Pensionado",
       "incomeRequirement": {
@@ -1560,7 +1912,13 @@
       "winterLowF": 70,
       "summerHighF": 93,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 130
+      "rainyDaysPerYear": 130,
+      "humidityAvgPct": 83,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -1585,7 +1943,8 @@
         "typical": 120,
         "min": 60,
         "max": 200,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. Pedasí has a small Centro de Salud (public clinic); Hospital Cecilio Castillero in Chitré (~50 mi north) is the regional hospital. Tertiary care via Panama City (~4 hr northwest). Anti-VEGF + advanced ophthalmology only available in capital."
       },
       "insurance": {
         "typical": 250,
@@ -1642,16 +2001,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -1699,14 +2059,45 @@
       "Very affordable with low crime"
     ],
     "cons": [
-      "Very small town with minimal services",
-      "Far from quality healthcare",
-      "Limited shopping and dining options"
+      {
+        "text": "Very small town with minimal services"
+      },
+      {
+        "text": "Far from quality healthcare"
+      },
+      {
+        "text": "Limited shopping and dining options"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Pedasí",
+            "url": "https://www.numbeo.com/crime/in/Pedasi",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Panama",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Panama",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Panama",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Panama",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "No tax on foreign-source income.",
       "vatRate": 0.07,
       "socialChargesRate": 0
+    },
+    "subregion": "Los Santos",
+    "coordinates": {
+      "lat": 7.5303,
+      "lon": -80.027
     }
   },
   {
@@ -1718,7 +2109,7 @@
       "Volcán"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Pensionado",
       "incomeRequirement": {
@@ -1731,7 +2122,11 @@
       "winterLowF": 52,
       "summerHighF": 78,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 185
+      "rainyDaysPerYear": 185,
+      "humidityAvgPct": 86,
+      "drySeasonMonths": [
+        "Feb"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -1756,7 +2151,8 @@
         "typical": 130,
         "min": 70,
         "max": 220,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. Volcán has a small clinic; Hospital Chiriquí in David (~30 mi south) is the closest hospital. Tertiary care + anti-VEGF / advanced ophthalmology requires David or Panama City. Mountain location means weather can occasionally disrupt road access to David."
       },
       "insurance": {
         "typical": 250,
@@ -1813,16 +2209,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -1870,14 +2267,45 @@
       "Rich agricultural area with fresh produce"
     ],
     "cons": [
-      "Small town with limited amenities",
-      "Heavy rainfall during rainy season",
-      "Less developed expat infrastructure than Boquete"
+      {
+        "text": "Small town with limited amenities"
+      },
+      {
+        "text": "Heavy rainfall during rainy season"
+      },
+      {
+        "text": "Less developed expat infrastructure than Boquete"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Volcán",
+            "url": "https://www.numbeo.com/crime/in/Volcan",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Panama",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Panama",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Panama",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Panama",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "No tax on foreign-source income.",
       "vatRate": 0.07,
       "socialChargesRate": 0
+    },
+    "subregion": "Chiriquí",
+    "coordinates": {
+      "lat": 8.7805,
+      "lon": -82.639
     }
   },
   {
@@ -1889,7 +2317,7 @@
       "Bocas del Toro"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Pensionado",
       "incomeRequirement": {
@@ -1902,7 +2330,9 @@
       "winterLowF": 73,
       "summerHighF": 88,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 200
+      "rainyDaysPerYear": 200,
+      "humidityAvgPct": 85,
+      "drySeasonMonths": []
     },
     "monthlyCosts": {
       "rent": {
@@ -1927,7 +2357,8 @@
         "typical": 140,
         "min": 70,
         "max": 230,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. Hospital Bocas del Toro on Isla Colón handles primary care and stabilization. Limited specialty services — medevac to David (~6 hr by boat-then-drive via Almirante) or Panama City flight for serious conditions. Anti-VEGF + advanced ophthalmology not available locally; planned trips to Panama City required for chronic eye conditions."
       },
       "insurance": {
         "typical": 250,
@@ -1984,16 +2415,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -2041,14 +2473,45 @@
       "Growing expat and digital nomad community"
     ],
     "cons": [
-      "Isolated island location limits healthcare access",
-      "Very rainy climate year-round",
-      "Infrastructure can be unreliable (power, water)"
+      {
+        "text": "Isolated island location limits healthcare access"
+      },
+      {
+        "text": "Very rainy climate year-round"
+      },
+      {
+        "text": "Infrastructure can be unreliable (power, water)"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Bocas del Toro",
+            "url": "https://www.numbeo.com/crime/in/Bocas-del-Toro",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Panama",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Panama",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Panama",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Panama",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "No tax on foreign-source income.",
       "vatRate": 0.07,
       "socialChargesRate": 0
+    },
+    "subregion": "Bocas del Toro",
+    "coordinates": {
+      "lat": 9.3403,
+      "lon": -82.242
     }
   },
   {
@@ -2060,7 +2523,7 @@
       "Puerto Armuelles"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Pensionado",
       "incomeRequirement": {
@@ -2073,7 +2536,11 @@
       "winterLowF": 72,
       "summerHighF": 90,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 180
+      "rainyDaysPerYear": 180,
+      "humidityAvgPct": 89,
+      "drySeasonMonths": [
+        "Feb"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -2098,7 +2565,8 @@
         "typical": 110,
         "min": 60,
         "max": 180,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. Hospital Ciudad de Puerto Armuelles handles primary care; Hospital Chiriquí in David (~30 mi northeast) for advanced cases. Pacific-coast rural location — emergency transport via road to David is ~45 min."
       },
       "insurance": {
         "typical": 250,
@@ -2155,16 +2623,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -2212,14 +2681,45 @@
       "Small but friendly expat community"
     ],
     "cons": [
-      "Former banana company town still recovering economically",
-      "Very limited services and infrastructure",
-      "Remote location far from major amenities"
+      {
+        "text": "Former banana company town still recovering economically"
+      },
+      {
+        "text": "Very limited services and infrastructure"
+      },
+      {
+        "text": "Remote location far from major amenities"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Puerto Armuelles",
+            "url": "https://www.numbeo.com/crime/in/Puerto-Armuelles",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Panama",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Panama",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Panama",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Panama",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "No tax on foreign-source income.",
       "vatRate": 0.07,
       "socialChargesRate": 0
+    },
+    "subregion": "Chiriquí",
+    "coordinates": {
+      "lat": 8.2778,
+      "lon": -82.8621
     }
   },
   {
@@ -2233,20 +2733,26 @@
       "Santa Ana"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Pensionado",
       "incomeRequirement": {
         "monthly": 1000,
         "currency": "USD"
       },
-      "notes": "Pensionado visa requires $1,000/mo pension or retirement income. Must spend at least 4 months/year in Costa Rica."
+      "notes": "Pensionado: $1,000/mo permanent pension or retirement income (e.g., Social Security), covering a married couple and dependents. Two-year renewable temporary residency; eligible for permanent residency after three years. Renewal requires converting the income through a Costa Rican bank and demonstrating in-country presence (commonly cited as ~4 months/year). Alternative: Rentista visa - $2,500/mo guaranteed income for 2+ years, or a $60,000 deposit in an approved CR bank. CAJA (public health) enrollment is mandatory at ~7-11% of declared income."
     },
     "climate": {
       "winterLowF": 60,
       "summerHighF": 80,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 150
+      "rainyDaysPerYear": 150,
+      "humidityAvgPct": 81,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -2271,7 +2777,8 @@
         "typical": 200,
         "min": 100,
         "max": 350,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "CCSS (Caja) universal coverage after pensionado/rentista visa, ~7-11% of declared income (~$60-150/mo). Private (INS / international plans) ~$100-250/mo with pre-existing loadings. Anti-VEGF injections at CIMA and Hospital La Católica in San José. GLP-1 ~$300-400/mo private. Pensionado discount 10-25% on most medical services."
       },
       "insurance": {
         "typical": 280,
@@ -2328,16 +2835,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 83,
+        "min": 68,
+        "max": 103,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -2380,19 +2888,64 @@
       "safetyRating": 6
     },
     "pros": [
-      "Best healthcare infrastructure in Central America",
+      {
+        "text": "Best healthcare infrastructure in Central America (CCSS universal coverage; PAHO ranks Costa Rica at or near the top of Latin America in health-system indicators)",
+        "sources": [
+          {
+            "title": "PAHO — Costa Rica Country Profile (Health Indicators)",
+            "url": "https://www.paho.org/en/countries/costa-rica",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "Ministerio de Salud Costa Rica — Sistema de salud",
+            "url": "https://www.ministeriodesalud.go.cr/",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Spring-like climate year-round in the valley",
       "Large established expat community in Escazú/Santa Ana"
     ],
     "cons": [
-      "Traffic congestion in San José metro area",
-      "Higher cost of living than other Costa Rica areas",
-      "Air quality issues in urban core"
+      {
+        "text": "Traffic congestion in San José metro area"
+      },
+      {
+        "text": "Higher cost of living than other Costa Rica areas"
+      },
+      {
+        "text": "Air quality issues in urban core"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Central Valley",
+            "url": "https://www.numbeo.com/crime/in/Central-Valley",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Costa Rica",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Costa%2BRica",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Costa Rica",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Costa_Rica",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
-      "notes": "Territorial tax system: only Costa Rica-sourced income is taxed. Foreign pensions and Social Security not taxed. CAJA mandatory contribution ~11% of declared income.",
+      "notes": "Territorial tax system: only Costa Rica-sourced income is taxed. Foreign pensions, Social Security, and IRA/investment income are not taxed by Costa Rica. VAT (IVA) is 13%. The mandatory CAJA social-health contribution (~7-11% of declared income) funds public healthcare and is separate from income tax.",
       "vatRate": 0.13,
       "socialChargesRate": 0
+    },
+    "subregion": "Central Valley",
+    "coordinates": {
+      "lat": 9.9339,
+      "lon": -84.0849
     }
   },
   {
@@ -2406,20 +2959,27 @@
       "Liberia"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Pensionado",
       "incomeRequirement": {
         "monthly": 1000,
         "currency": "USD"
       },
-      "notes": "Pensionado visa requires $1,000/mo pension income."
+      "notes": "Pensionado: $1,000/mo permanent pension or retirement income (e.g., Social Security), covering a married couple and dependents. Two-year renewable temporary residency; eligible for permanent residency after three years. Renewal requires converting the income through a Costa Rican bank and demonstrating in-country presence (commonly cited as ~4 months/year). Alternative: Rentista visa - $2,500/mo guaranteed income for 2+ years, or a $60,000 deposit in an approved CR bank. CAJA (public health) enrollment is mandatory at ~7-11% of declared income."
     },
     "climate": {
       "winterLowF": 68,
       "summerHighF": 95,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 100
+      "rainyDaysPerYear": 100,
+      "humidityAvgPct": 76,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -2444,7 +3004,8 @@
         "typical": 180,
         "min": 100,
         "max": 300,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "CCSS (Caja) universal coverage after pensionado/rentista visa, ~7-11% of declared income (~$60-150/mo). Private (INS / international plans) ~$100-250/mo with pre-existing loadings. Anti-VEGF injections at CIMA and Hospital La Católica in San José. GLP-1 ~$300-400/mo private. Pensionado discount 10-25% on most medical services."
       },
       "insurance": {
         "typical": 280,
@@ -2501,16 +3062,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 83,
+        "min": 68,
+        "max": 103,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -2555,17 +3117,62 @@
     "pros": [
       "Driest region with beautiful Pacific beaches",
       "Strong surf/yoga/wellness culture",
-      "International airport in Liberia for easy access"
+      {
+        "text": "International airport in Liberia (LIR — Daniel Oduber Quirós) with direct flights to North America and Europe; second-largest in Costa Rica after SJO",
+        "sources": [
+          {
+            "title": "Aeropuerto Internacional Daniel Oduber Quirós (LIR) — Liberia, Guanacaste",
+            "url": "https://www.liberiacostaricaairport.net/",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "Dirección General de Aviación Civil Costa Rica — Aeropuertos internacionales",
+            "url": "https://www.dgac.go.cr/",
+            "accessed": "2026-05-03"
+          }
+        ]
+      }
     ],
     "cons": [
-      "Tourist prices in Tamarindo and Nosara",
-      "Very hot during dry season",
-      "Car essential; roads can be rough in rainy season"
+      {
+        "text": "Tourist prices in Tamarindo and Nosara"
+      },
+      {
+        "text": "Very hot during dry season"
+      },
+      {
+        "text": "Car essential; roads can be rough in rainy season"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Guanacaste",
+            "url": "https://www.numbeo.com/crime/in/Guanacaste",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Costa Rica",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Costa%2BRica",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Costa Rica",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Costa_Rica",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
-      "notes": "Territorial tax system: foreign income not taxed.",
+      "notes": "Territorial tax system: only Costa Rica-sourced income is taxed. Foreign pensions, Social Security, and IRA/investment income are not taxed by Costa Rica. VAT (IVA) is 13%. The mandatory CAJA social-health contribution (~7-11% of declared income) funds public healthcare and is separate from income tax.",
       "vatRate": 0.13,
       "socialChargesRate": 0
+    },
+    "subregion": "Guanacaste",
+    "coordinates": {
+      "lat": 10.2991,
+      "lon": -85.8411
     }
   },
   {
@@ -2579,20 +3186,22 @@
       "Tilarán"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Pensionado",
       "incomeRequirement": {
         "monthly": 1000,
         "currency": "USD"
       },
-      "notes": "Pensionado visa requires $1,000/mo pension income."
+      "notes": "Pensionado: $1,000/mo permanent pension or retirement income (e.g., Social Security), covering a married couple and dependents. Two-year renewable temporary residency; eligible for permanent residency after three years. Renewal requires converting the income through a Costa Rican bank and demonstrating in-country presence (commonly cited as ~4 months/year). Alternative: Rentista visa - $2,500/mo guaranteed income for 2+ years, or a $60,000 deposit in an approved CR bank. CAJA (public health) enrollment is mandatory at ~7-11% of declared income."
     },
     "climate": {
       "winterLowF": 62,
       "summerHighF": 85,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 180
+      "rainyDaysPerYear": 180,
+      "humidityAvgPct": 91,
+      "drySeasonMonths": []
     },
     "monthlyCosts": {
       "rent": {
@@ -2617,7 +3226,8 @@
         "typical": 160,
         "min": 80,
         "max": 280,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "CCSS (Caja) universal coverage after pensionado/rentista visa, ~7-11% of declared income (~$60-150/mo). Private (INS / international plans) ~$100-250/mo with pre-existing loadings. Anti-VEGF injections at CIMA and Hospital La Católica in San José. GLP-1 ~$300-400/mo private. Pensionado discount 10-25% on most medical services."
       },
       "insurance": {
         "typical": 280,
@@ -2674,16 +3284,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 83,
+        "min": 68,
+        "max": 103,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -2731,14 +3342,45 @@
       "Affordable with cooler highland climate"
     ],
     "cons": [
-      "Windy conditions around the lake",
-      "Significant rainfall year-round",
-      "Remote from major healthcare facilities"
+      {
+        "text": "Windy conditions around the lake"
+      },
+      {
+        "text": "Significant rainfall year-round"
+      },
+      {
+        "text": "Remote from major healthcare facilities"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Arenal / Lake Arenal",
+            "url": "https://www.numbeo.com/crime/in/Arenal-%2F-Lake-Arenal",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Costa Rica",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Costa%2BRica",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Costa Rica",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Costa_Rica",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
-      "notes": "Territorial tax system: foreign income not taxed.",
+      "notes": "Territorial tax system: only Costa Rica-sourced income is taxed. Foreign pensions, Social Security, and IRA/investment income are not taxed by Costa Rica. VAT (IVA) is 13%. The mandatory CAJA social-health contribution (~7-11% of declared income) funds public healthcare and is separate from income tax.",
       "vatRate": 0.13,
       "socialChargesRate": 0
+    },
+    "subregion": "Alajuela",
+    "coordinates": {
+      "lat": 10.5452,
+      "lon": -84.8962
     }
   },
   {
@@ -2750,20 +3392,22 @@
       "Puerto Viejo de Talamanca"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Pensionado",
       "incomeRequirement": {
         "monthly": 1000,
         "currency": "USD"
       },
-      "notes": "Pensionado visa requires $1,000/mo pension income."
+      "notes": "Pensionado: $1,000/mo permanent pension or retirement income (e.g., Social Security), covering a married couple and dependents. Two-year renewable temporary residency; eligible for permanent residency after three years. Renewal requires converting the income through a Costa Rican bank and demonstrating in-country presence (commonly cited as ~4 months/year). Alternative: Rentista visa - $2,500/mo guaranteed income for 2+ years, or a $60,000 deposit in an approved CR bank. CAJA (public health) enrollment is mandatory at ~7-11% of declared income."
     },
     "climate": {
       "winterLowF": 70,
       "summerHighF": 88,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 200
+      "rainyDaysPerYear": 200,
+      "humidityAvgPct": 86,
+      "drySeasonMonths": []
     },
     "monthlyCosts": {
       "rent": {
@@ -2788,7 +3432,8 @@
         "typical": 140,
         "min": 70,
         "max": 240,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "CCSS (Caja) universal coverage after pensionado/rentista visa, ~7-11% of declared income (~$60-150/mo). Private (INS / international plans) ~$100-250/mo with pre-existing loadings. Anti-VEGF injections at CIMA and Hospital La Católica in San José. GLP-1 ~$300-400/mo private. Pensionado discount 10-25% on most medical services."
       },
       "insurance": {
         "typical": 280,
@@ -2845,16 +3490,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 83,
+        "min": 68,
+        "max": 103,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -2902,14 +3548,45 @@
       "Diverse international community"
     ],
     "cons": [
-      "Very rainy with frequent flooding",
-      "Remote from quality healthcare",
-      "Petty theft can be an issue"
+      {
+        "text": "Very rainy with frequent flooding"
+      },
+      {
+        "text": "Remote from quality healthcare"
+      },
+      {
+        "text": "Petty theft can be an issue"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Puerto Viejo",
+            "url": "https://www.numbeo.com/crime/in/Puerto-Viejo",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Costa Rica",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Costa%2BRica",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Costa Rica",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Costa_Rica",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
-      "notes": "Territorial tax system: foreign income not taxed.",
+      "notes": "Territorial tax system: only Costa Rica-sourced income is taxed. Foreign pensions, Social Security, and IRA/investment income are not taxed by Costa Rica. VAT (IVA) is 13%. The mandatory CAJA social-health contribution (~7-11% of declared income) funds public healthcare and is separate from income tax.",
       "vatRate": 0.13,
       "socialChargesRate": 0
+    },
+    "subregion": "Limón",
+    "coordinates": {
+      "lat": 9.6569,
+      "lon": -82.7545
     }
   },
   {
@@ -2921,20 +3598,26 @@
       "Atenas"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Pensionado",
       "incomeRequirement": {
         "monthly": 1000,
         "currency": "USD"
       },
-      "notes": "Pensionado visa requires $1,000/mo pension income."
+      "notes": "Pensionado: $1,000/mo permanent pension or retirement income (e.g., Social Security), covering a married couple and dependents. Two-year renewable temporary residency; eligible for permanent residency after three years. Renewal requires converting the income through a Costa Rican bank and demonstrating in-country presence (commonly cited as ~4 months/year). Alternative: Rentista visa - $2,500/mo guaranteed income for 2+ years, or a $60,000 deposit in an approved CR bank. CAJA (public health) enrollment is mandatory at ~7-11% of declared income."
     },
     "climate": {
       "winterLowF": 62,
       "summerHighF": 82,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 140
+      "rainyDaysPerYear": 140,
+      "humidityAvgPct": 82,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -2959,7 +3642,8 @@
         "typical": 170,
         "min": 90,
         "max": 280,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "CCSS (Caja) universal coverage after pensionado/rentista visa, ~7-11% of declared income (~$60-150/mo). Private (INS / international plans) ~$100-250/mo with pre-existing loadings. Anti-VEGF injections at CIMA and Hospital La Católica in San José. GLP-1 ~$300-400/mo private. Pensionado discount 10-25% on most medical services."
       },
       "insurance": {
         "typical": 280,
@@ -3016,16 +3700,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 83,
+        "min": 68,
+        "max": 103,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -3068,19 +3753,64 @@
       "safetyRating": 7
     },
     "pros": [
-      "Claimed 'best climate in the world' by National Geographic",
+      {
+        "text": "Notably stable mild climate year-round (avg highs 28-30°C / 82-86°F, lows 18-20°C / 64-68°F; dry season Dec-April; ~700m elevation)",
+        "sources": [
+          {
+            "title": "Climate-Data.org — Atenas, Costa Rica (avg highs 28-30°C / lows 18-20°C, dry season Dec-April)",
+            "url": "https://en.climate-data.org/north-america/costa-rica/alajuela/atenas-22729/",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "Instituto Meteorológico Nacional Costa Rica (IMN) — Climate stations",
+            "url": "https://www.imn.ac.cr/",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Close to San José for healthcare and shopping",
       "Established expat community in small-town setting"
     ],
     "cons": [
-      "Small town with limited nightlife",
-      "Car needed for most errands",
-      "Growing popularity increasing prices"
+      {
+        "text": "Small town with limited nightlife"
+      },
+      {
+        "text": "Car needed for most errands"
+      },
+      {
+        "text": "Growing popularity increasing prices"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Atenas",
+            "url": "https://www.numbeo.com/crime/in/Atenas",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Costa Rica",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Costa%2BRica",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Costa Rica",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Costa_Rica",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
-      "notes": "Territorial tax system: foreign income not taxed.",
+      "notes": "Territorial tax system: only Costa Rica-sourced income is taxed. Foreign pensions, Social Security, and IRA/investment income are not taxed by Costa Rica. VAT (IVA) is 13%. The mandatory CAJA social-health contribution (~7-11% of declared income) funds public healthcare and is separate from income tax.",
       "vatRate": 0.13,
       "socialChargesRate": 0
+    },
+    "subregion": "Alajuela",
+    "coordinates": {
+      "lat": 9.9749,
+      "lon": -84.3789
     }
   },
   {
@@ -3092,20 +3822,26 @@
       "Grecia"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Pensionado",
       "incomeRequirement": {
         "monthly": 1000,
         "currency": "USD"
       },
-      "notes": "Pensionado visa requires $1,000/mo pension income."
+      "notes": "Pensionado: $1,000/mo permanent pension or retirement income (e.g., Social Security), covering a married couple and dependents. Two-year renewable temporary residency; eligible for permanent residency after three years. Renewal requires converting the income through a Costa Rican bank and demonstrating in-country presence (commonly cited as ~4 months/year). Alternative: Rentista visa - $2,500/mo guaranteed income for 2+ years, or a $60,000 deposit in an approved CR bank. CAJA (public health) enrollment is mandatory at ~7-11% of declared income."
     },
     "climate": {
       "winterLowF": 62,
       "summerHighF": 82,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 145
+      "rainyDaysPerYear": 145,
+      "humidityAvgPct": 83,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -3130,7 +3866,8 @@
         "typical": 160,
         "min": 80,
         "max": 260,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "CCSS (Caja) universal coverage after pensionado/rentista visa, ~7-11% of declared income (~$60-150/mo). Private (INS / international plans) ~$100-250/mo with pre-existing loadings. Anti-VEGF injections at CIMA and Hospital La Católica in San José. GLP-1 ~$300-400/mo private. Pensionado discount 10-25% on most medical services."
       },
       "insurance": {
         "typical": 280,
@@ -3187,16 +3924,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 83,
+        "min": 68,
+        "max": 103,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -3241,17 +3979,62 @@
     "pros": [
       "Excellent spring-like climate similar to Atenas",
       "More affordable than Atenas or Escazú",
-      "Famous red metal church and charming town center"
+      {
+        "text": "Famous red metal church (Iglesia de la Mercedes — designed 1894 by Belgian architect Charles Thirion, prefabricated in Belgium and assembled in Grecia)",
+        "sources": [
+          {
+            "title": "Sistema Nacional de Bibliotecas — Iglesia de la Mercedes (Grecia)",
+            "url": "https://www.sinabi.go.cr/biblioteca_digital/atlas_de_costa_rica/",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "Visit Costa Rica — Grecia (Iglesia de la Mercedes red metal church)",
+            "url": "https://www.visitcostarica.com/en/costa-rica/destinations/central-valley/grecia",
+            "accessed": "2026-05-03"
+          }
+        ]
+      }
     ],
     "cons": [
-      "Smaller expat community than other CR locations",
-      "Limited English spoken outside expat circles",
-      "Small-town pace may not suit everyone"
+      {
+        "text": "Smaller expat community than other CR locations"
+      },
+      {
+        "text": "Limited English spoken outside expat circles"
+      },
+      {
+        "text": "Small-town pace may not suit everyone"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Grecia",
+            "url": "https://www.numbeo.com/crime/in/Grecia",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Costa Rica",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Costa%2BRica",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Costa Rica",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Costa_Rica",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
-      "notes": "Territorial tax system: foreign income not taxed.",
+      "notes": "Territorial tax system: only Costa Rica-sourced income is taxed. Foreign pensions, Social Security, and IRA/investment income are not taxed by Costa Rica. VAT (IVA) is 13%. The mandatory CAJA social-health contribution (~7-11% of declared income) funds public healthcare and is separate from income tax.",
       "vatRate": 0.13,
       "socialChargesRate": 0
+    },
+    "subregion": "Alajuela",
+    "coordinates": {
+      "lat": 10.0724,
+      "lon": -84.3112
     }
   },
   {
@@ -3265,7 +4048,7 @@
       "San Juan Cosalá"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Temporary Resident",
       "incomeRequirement": {
@@ -3278,7 +4061,18 @@
       "winterLowF": 50,
       "summerHighF": 80,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 80
+      "rainyDaysPerYear": 80,
+      "humidityAvgPct": 61,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Oct",
+        "Nov",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -3303,7 +4097,8 @@
         "typical": 180,
         "min": 90,
         "max": 300,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "IMSS public system available to residents (~$500-700/yr fixed, varies by age). Private international plans ~$100-300/mo. Anti-VEGF injections widely available in Mexico City, Guadalajara, Monterrey, and San Miguel; ~$700-1,200/injection at private. GLP-1 via private prescription, ~$200-400/mo. Major retiree expat hubs (San Miguel, Lake Chapala, Mérida) have strong English-speaking specialist networks."
       },
       "insurance": {
         "typical": 250,
@@ -3360,16 +4155,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 81,
+        "min": 66,
+        "max": 101,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -3417,14 +4213,45 @@
       "Extremely well-established expat infrastructure"
     ],
     "cons": [
-      "Can feel like an American bubble",
-      "Lake water quality concerns",
-      "Limited direct international flights"
+      {
+        "text": "Can feel like an American bubble"
+      },
+      {
+        "text": "Lake water quality concerns"
+      },
+      {
+        "text": "Limited direct international flights"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Lake Chapala / Ajijic",
+            "url": "https://www.numbeo.com/crime/in/Lake-Chapala-%2F-Ajijic",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Mexico",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Mexico",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Mexico",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Mexico",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Territorial tax for temporary residents: only Mexican-source income taxed. US pensions and Social Security not taxed by Mexico for temporary residents.",
       "vatRate": 0.16,
       "socialChargesRate": 0
+    },
+    "subregion": "Jalisco",
+    "coordinates": {
+      "lat": 20.2999,
+      "lon": -103.2614
     }
   },
   {
@@ -3436,7 +4263,7 @@
       "San Miguel de Allende"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Temporary Resident",
       "incomeRequirement": {
@@ -3449,7 +4276,18 @@
       "winterLowF": 42,
       "summerHighF": 85,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 75
+      "rainyDaysPerYear": 75,
+      "humidityAvgPct": 60,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Oct",
+        "Nov",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -3474,7 +4312,8 @@
         "typical": 180,
         "min": 90,
         "max": 300,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "IMSS public system available to residents (~$500-700/yr fixed, varies by age). Private international plans ~$100-300/mo. Anti-VEGF injections widely available in Mexico City, Guadalajara, Monterrey, and San Miguel; ~$700-1,200/injection at private. GLP-1 via private prescription, ~$200-400/mo. Major retiree expat hubs (San Miguel, Lake Chapala, Mérida) have strong English-speaking specialist networks."
       },
       "insurance": {
         "typical": 250,
@@ -3531,16 +4370,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 81,
+        "min": 66,
+        "max": 101,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -3583,19 +4423,59 @@
       "safetyRating": 7
     },
     "pros": [
-      "UNESCO World Heritage colonial architecture",
+      {
+        "text": "UNESCO World Heritage colonial architecture (Protective Town of San Miguel + Sanctuary of Atotonilco, listed 2008)",
+        "sources": [
+          {
+            "title": "UNESCO World Heritage List — Protective Town of San Miguel and the Sanctuary of Jesús Nazareno de Atotonilco (1274)",
+            "url": "https://whc.unesco.org/en/list/1274",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Vibrant arts, culture, and food scene",
       "Large welcoming expat community"
     ],
     "cons": [
-      "Winter nights can be cold (no central heating)",
-      "Prices inflated by tourism and expat demand",
-      "Cobblestone streets difficult for mobility issues"
+      {
+        "text": "Winter nights can be cold (no central heating)"
+      },
+      {
+        "text": "Prices inflated by tourism and expat demand"
+      },
+      {
+        "text": "Cobblestone streets difficult for mobility issues"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in San Miguel de Allende",
+            "url": "https://www.numbeo.com/crime/in/San-Miguel-de-Allende",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Mexico",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Mexico",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Mexico",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Mexico",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Territorial tax for temporary residents. Foreign income not taxed.",
       "vatRate": 0.16,
       "socialChargesRate": 0
+    },
+    "subregion": "Guanajuato",
+    "coordinates": {
+      "lat": 20.9153,
+      "lon": -100.7439
     }
   },
   {
@@ -3607,7 +4487,7 @@
       "Mérida"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Temporary Resident",
       "incomeRequirement": {
@@ -3620,7 +4500,18 @@
       "winterLowF": 62,
       "summerHighF": 98,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 100
+      "rainyDaysPerYear": 100,
+      "humidityAvgPct": 73,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jul",
+        "Nov",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -3645,7 +4536,8 @@
         "typical": 160,
         "min": 80,
         "max": 270,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "IMSS public system available to residents (~$500-700/yr fixed, varies by age). Private international plans ~$100-300/mo. Anti-VEGF injections widely available in Mexico City, Guadalajara, Monterrey, and San Miguel; ~$700-1,200/injection at private. GLP-1 via private prescription, ~$200-400/mo. Major retiree expat hubs (San Miguel, Lake Chapala, Mérida) have strong English-speaking specialist networks."
       },
       "insurance": {
         "typical": 250,
@@ -3702,16 +4594,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 81,
+        "min": 66,
+        "max": 101,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -3754,19 +4647,59 @@
       "safetyRating": 8
     },
     "pros": [
-      "One of the safest cities in Mexico",
+      {
+        "text": "One of the safest cities in Mexico (consistently top-3 in INEGI ENSU perception-of-safety surveys)",
+        "sources": [
+          {
+            "title": "INEGI — Encuesta Nacional de Seguridad Pública Urbana (ENSU)",
+            "url": "https://www.inegi.org.mx/programas/ensu/",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Rich Mayan culture and excellent cuisine",
       "Affordable with good infrastructure"
     ],
     "cons": [
-      "Extremely hot and humid summers",
-      "Less English spoken than other expat hubs",
-      "Hurricane zone (though inland)"
+      {
+        "text": "Extremely hot and humid summers"
+      },
+      {
+        "text": "Less English spoken than other expat hubs"
+      },
+      {
+        "text": "Hurricane zone (though inland)"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Mérida",
+            "url": "https://www.numbeo.com/crime/in/Merida",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Mexico",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Mexico",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Mexico",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Mexico",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Territorial tax for temporary residents. Foreign income not taxed.",
       "vatRate": 0.16,
       "socialChargesRate": 0
+    },
+    "subregion": "Yucatán",
+    "coordinates": {
+      "lat": 20.967,
+      "lon": -89.6232
     }
   },
   {
@@ -3778,7 +4711,7 @@
       "Puerto Vallarta"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Temporary Resident",
       "incomeRequirement": {
@@ -3791,7 +4724,17 @@
       "winterLowF": 62,
       "summerHighF": 93,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 90
+      "rainyDaysPerYear": 90,
+      "humidityAvgPct": 83,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Nov",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -3816,7 +4759,8 @@
         "typical": 180,
         "min": 90,
         "max": 300,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "IMSS public system available to residents (~$500-700/yr fixed, varies by age). Private international plans ~$100-300/mo. Anti-VEGF injections widely available in Mexico City, Guadalajara, Monterrey, and San Miguel; ~$700-1,200/injection at private. GLP-1 via private prescription, ~$200-400/mo. Major retiree expat hubs (San Miguel, Lake Chapala, Mérida) have strong English-speaking specialist networks."
       },
       "insurance": {
         "typical": 250,
@@ -3873,16 +4817,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 81,
+        "min": 66,
+        "max": 101,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -3930,14 +4875,45 @@
       "Excellent dining and nightlife"
     ],
     "cons": [
-      "Hot and humid summers with heavy rain",
-      "Tourist prices in popular zones",
-      "Seasonal (many expats leave in summer)"
+      {
+        "text": "Hot and humid summers with heavy rain"
+      },
+      {
+        "text": "Tourist prices in popular zones"
+      },
+      {
+        "text": "Seasonal (many expats leave in summer)"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Puerto Vallarta",
+            "url": "https://www.numbeo.com/crime/in/Puerto-Vallarta",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Mexico",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Mexico",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Mexico",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Mexico",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Territorial tax for temporary residents. Foreign income not taxed.",
       "vatRate": 0.16,
       "socialChargesRate": 0
+    },
+    "subregion": "Jalisco",
+    "coordinates": {
+      "lat": 20.617,
+      "lon": -105.2302
     }
   },
   {
@@ -3949,7 +4925,7 @@
       "Playa del Carmen"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Temporary Resident",
       "incomeRequirement": {
@@ -3962,7 +4938,13 @@
       "winterLowF": 68,
       "summerHighF": 92,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 110
+      "rainyDaysPerYear": 110,
+      "humidityAvgPct": 80,
+      "drySeasonMonths": [
+        "Feb",
+        "Mar",
+        "Apr"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -3987,7 +4969,8 @@
         "typical": 170,
         "min": 80,
         "max": 280,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "IMSS public system available to residents (~$500-700/yr fixed, varies by age). Private international plans ~$100-300/mo. Anti-VEGF injections widely available in Mexico City, Guadalajara, Monterrey, and San Miguel; ~$700-1,200/injection at private. GLP-1 via private prescription, ~$200-400/mo. Major retiree expat hubs (San Miguel, Lake Chapala, Mérida) have strong English-speaking specialist networks."
       },
       "insurance": {
         "typical": 250,
@@ -4044,16 +5027,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 81,
+        "min": 66,
+        "max": 101,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -4098,17 +5082,57 @@
     "pros": [
       "Caribbean beaches with turquoise water",
       "International community and diverse dining",
-      "Convenient to Cancún airport for US flights"
+      {
+        "text": "Convenient to Cancún airport for US flights (~50 min via Hwy 307; ASUR-operated, Mexico's #2 airport by passenger volume with 30M+ annual)",
+        "sources": [
+          {
+            "title": "ASUR — Cancún International Airport (Mexico's #2 by passenger volume)",
+            "url": "https://www.asur.com.mx/en/airports/cancun.html",
+            "accessed": "2026-05-03"
+          }
+        ]
+      }
     ],
     "cons": [
-      "Sargassum seaweed issues seasonally",
-      "Rising security concerns in Quintana Roo",
-      "Tourism-driven prices; less authentic feel"
+      {
+        "text": "Sargassum seaweed issues seasonally"
+      },
+      {
+        "text": "Rising security concerns in Quintana Roo"
+      },
+      {
+        "text": "Tourism-driven prices; less authentic feel"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Playa del Carmen",
+            "url": "https://www.numbeo.com/crime/in/Playa-del-Carmen",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Mexico",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Mexico",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Mexico",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Mexico",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Territorial tax for temporary residents. Foreign income not taxed.",
       "vatRate": 0.16,
       "socialChargesRate": 0
+    },
+    "subregion": "Quintana Roo",
+    "coordinates": {
+      "lat": 20.6274,
+      "lon": -87.0799
     }
   },
   {
@@ -4120,7 +5144,7 @@
       "Oaxaca City"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Temporary Resident",
       "incomeRequirement": {
@@ -4133,7 +5157,16 @@
       "winterLowF": 48,
       "summerHighF": 85,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 85
+      "rainyDaysPerYear": 85,
+      "humidityAvgPct": 65,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "Nov",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -4158,7 +5191,8 @@
         "typical": 140,
         "min": 70,
         "max": 240,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "IMSS public system available to residents (~$500-700/yr fixed, varies by age). Private international plans ~$100-300/mo. Anti-VEGF injections widely available in Mexico City, Guadalajara, Monterrey, and San Miguel; ~$700-1,200/injection at private. GLP-1 via private prescription, ~$200-400/mo. Major retiree expat hubs (San Miguel, Lake Chapala, Mérida) have strong English-speaking specialist networks."
       },
       "insurance": {
         "typical": 250,
@@ -4215,16 +5249,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 81,
+        "min": 66,
+        "max": 101,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -4272,14 +5307,45 @@
       "Very affordable cost of living"
     ],
     "cons": [
-      "Periodic political protests and road blockades",
-      "Winter nights can be chilly",
-      "Limited healthcare for complex needs"
+      {
+        "text": "Periodic political protests and road blockades"
+      },
+      {
+        "text": "Winter nights can be chilly"
+      },
+      {
+        "text": "Limited healthcare for complex needs"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Oaxaca City",
+            "url": "https://www.numbeo.com/crime/in/Oaxaca-City",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Mexico",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Mexico",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Mexico",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Mexico",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Territorial tax for temporary residents. Foreign income not taxed.",
       "vatRate": 0.16,
       "socialChargesRate": 0
+    },
+    "subregion": "Oaxaca",
+    "coordinates": {
+      "lat": 17.0603,
+      "lon": -96.7254
     }
   },
   {
@@ -4291,7 +5357,7 @@
       "Querétaro"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Temporary Resident",
       "incomeRequirement": {
@@ -4304,7 +5370,15 @@
       "winterLowF": 42,
       "summerHighF": 86,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 70
+      "rainyDaysPerYear": 70,
+      "humidityAvgPct": 73,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -4329,7 +5403,8 @@
         "typical": 170,
         "min": 85,
         "max": 280,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "IMSS public system available to residents (~$500-700/yr fixed, varies by age). Private international plans ~$100-300/mo. Anti-VEGF injections widely available in Mexico City, Guadalajara, Monterrey, and San Miguel; ~$700-1,200/injection at private. GLP-1 via private prescription, ~$200-400/mo. Major retiree expat hubs (San Miguel, Lake Chapala, Mérida) have strong English-speaking specialist networks."
       },
       "insurance": {
         "typical": 250,
@@ -4386,16 +5461,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 81,
+        "min": 66,
+        "max": 101,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -4438,19 +5514,64 @@
       "safetyRating": 8
     },
     "pros": [
-      "One of Mexico's safest and fastest-growing cities",
+      {
+        "text": "One of Mexico's safest and fastest-growing cities (INEGI ENSU; ~3-4% annual population growth vs national ~1%)",
+        "sources": [
+          {
+            "title": "INEGI — Encuesta Nacional de Seguridad Pública Urbana (ENSU)",
+            "url": "https://www.inegi.org.mx/programas/ensu/",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "INEGI — Querétaro population statistics (Censo de Población 2020)",
+            "url": "https://www.inegi.org.mx/app/areasgeograficas/?ag=22",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Modern infrastructure with colonial centro",
       "Growing tech/business hub with good jobs"
     ],
     "cons": [
-      "Winter nights can be cold",
-      "Smaller expat community than Chapala or SMA",
-      "Less tourist infrastructure than beach towns"
+      {
+        "text": "Winter nights can be cold"
+      },
+      {
+        "text": "Smaller expat community than Chapala or SMA"
+      },
+      {
+        "text": "Less tourist infrastructure than beach towns"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Querétaro",
+            "url": "https://www.numbeo.com/crime/in/Queretaro",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Mexico",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Mexico",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Mexico",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Mexico",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Territorial tax for temporary residents. Foreign income not taxed.",
       "vatRate": 0.16,
       "socialChargesRate": 0
+    },
+    "subregion": "Querétaro",
+    "coordinates": {
+      "lat": 15.8375,
+      "lon": -92.7577
     }
   },
   {
@@ -4462,7 +5583,7 @@
       "Mazatlán"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Temporary Resident",
       "incomeRequirement": {
@@ -4475,7 +5596,18 @@
       "winterLowF": 58,
       "summerHighF": 93,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 75
+      "rainyDaysPerYear": 75,
+      "humidityAvgPct": 79,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Nov",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -4500,7 +5632,8 @@
         "typical": 160,
         "min": 80,
         "max": 260,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "IMSS public system available to residents (~$500-700/yr fixed, varies by age). Private international plans ~$100-300/mo. Anti-VEGF injections widely available in Mexico City, Guadalajara, Monterrey, and San Miguel; ~$700-1,200/injection at private. GLP-1 via private prescription, ~$200-400/mo. Major retiree expat hubs (San Miguel, Lake Chapala, Mérida) have strong English-speaking specialist networks."
       },
       "insurance": {
         "typical": 250,
@@ -4557,16 +5690,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 81,
+        "min": 66,
+        "max": 101,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -4614,14 +5748,52 @@
       "Growing expat community with authentic Mexican feel"
     ],
     "cons": [
-      "Hot and humid summers",
-      "Sinaloa state has security reputation issues",
-      "Seasonal—quieter in summer heat"
+      {
+        "text": "Hot and humid summers"
+      },
+      {
+        "text": "Sinaloa state has security reputation issues (US State Dept Travel Advisory Level 3 — \"Reconsider Travel\"; tourist zones generally OK)",
+        "sources": [
+          {
+            "title": "US Department of State — Mexico Travel Advisory (Sinaloa state)",
+            "url": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/mexico-travel-advisory.html",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
+      {
+        "text": "Seasonal—quieter in summer heat"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Mazatlán",
+            "url": "https://www.numbeo.com/crime/in/Mazatlan",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Mexico",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Mexico",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Mexico",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Mexico",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Territorial tax for temporary residents. Foreign income not taxed.",
       "vatRate": 0.16,
       "socialChargesRate": 0
+    },
+    "subregion": "Sinaloa",
+    "coordinates": {
+      "lat": 23.2216,
+      "lon": -106.4188
     }
   },
   {
@@ -4633,7 +5805,7 @@
       "Medellín"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Retirement (M-Type)",
       "incomeRequirement": {
@@ -4646,7 +5818,9 @@
       "winterLowF": 60,
       "summerHighF": 80,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 180
+      "rainyDaysPerYear": 180,
+      "humidityAvgPct": 86,
+      "drySeasonMonths": []
     },
     "monthlyCosts": {
       "rent": {
@@ -4671,7 +5845,8 @@
         "typical": 150,
         "min": 80,
         "max": 250,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "EPS public system available to residents (Migration Visa M after 5 years for permanent residency). Private international plans ~$80-150/person/mo with pre-existing condition loadings; exclusions common first 6-12 months. Anti-VEGF injections available in Bogotá (Fundación Oftalmológica Nacional), Medellín, Cali. GLP-1 imported, ~$300-450/mo private. Hypertension/diabetes generics widely available at ~10-30% of US prices."
       },
       "insurance": {
         "typical": 200,
@@ -4728,16 +5903,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 80,
+        "min": 65,
+        "max": 100,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -4785,14 +5961,45 @@
       "Large and growing expat community"
     ],
     "cons": [
-      "Security varies significantly by neighborhood",
-      "Expat reputation issues in some areas (El Poblado)",
-      "Language barrier—Spanish essential outside expat zones"
+      {
+        "text": "Security varies significantly by neighborhood"
+      },
+      {
+        "text": "Expat reputation issues in some areas (El Poblado)"
+      },
+      {
+        "text": "Language barrier—Spanish essential outside expat zones"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Medellín",
+            "url": "https://www.numbeo.com/crime/in/Medellin",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Colombia",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Colombia",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Colombia",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Colombia",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "No tax on foreign-source income if not a tax resident (under 183 days). If tax resident, worldwide income is taxed at progressive rates up to 39%.",
       "vatRate": 0.19,
       "socialChargesRate": 0
+    },
+    "subregion": "Antioquia",
+    "coordinates": {
+      "lat": 6.245,
+      "lon": -75.5715
     }
   },
   {
@@ -4806,7 +6013,7 @@
       "Armenia"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Retirement (M-Type)",
       "incomeRequirement": {
@@ -4819,7 +6026,9 @@
       "winterLowF": 58,
       "summerHighF": 78,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 170
+      "rainyDaysPerYear": 170,
+      "humidityAvgPct": 86,
+      "drySeasonMonths": []
     },
     "monthlyCosts": {
       "rent": {
@@ -4844,7 +6053,8 @@
         "typical": 120,
         "min": 60,
         "max": 200,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "EPS public system available to residents (Migration Visa M after 5 years for permanent residency). Private international plans ~$80-150/person/mo with pre-existing condition loadings; exclusions common first 6-12 months. Anti-VEGF injections available in Bogotá (Fundación Oftalmológica Nacional), Medellín, Cali. GLP-1 imported, ~$300-450/mo private. Hypertension/diabetes generics widely available at ~10-30% of US prices."
       },
       "insurance": {
         "typical": 180,
@@ -4901,16 +6111,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 80,
+        "min": 65,
+        "max": 100,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -4953,19 +6164,59 @@
       "safetyRating": 6
     },
     "pros": [
-      "UNESCO Coffee Cultural Landscape",
+      {
+        "text": "UNESCO Coffee Cultural Landscape of Colombia (1121, listed 2011 — covers Pereira and surrounding coffee-growing zones)",
+        "sources": [
+          {
+            "title": "UNESCO World Heritage List — Coffee Cultural Landscape of Colombia (1121)",
+            "url": "https://whc.unesco.org/en/list/1121",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Very affordable cost of living",
       "Pleasant spring-like climate in coffee region"
     ],
     "cons": [
-      "Very limited English spoken",
-      "Small expat community",
-      "Less developed infrastructure than Medellín"
+      {
+        "text": "Very limited English spoken"
+      },
+      {
+        "text": "Small expat community"
+      },
+      {
+        "text": "Less developed infrastructure than Medellín"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Pereira / Coffee Axis",
+            "url": "https://www.numbeo.com/crime/in/Pereira-%2F-Coffee-Axis",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Colombia",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Colombia",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Colombia",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Colombia",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "No tax on foreign-source income if under 183 days/year.",
       "vatRate": 0.19,
       "socialChargesRate": 0
+    },
+    "subregion": "Risaralda",
+    "coordinates": {
+      "lat": 4.8143,
+      "lon": -75.6949
     }
   },
   {
@@ -4977,7 +6228,7 @@
       "Cartagena"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Retirement (M-Type)",
       "incomeRequirement": {
@@ -4990,7 +6241,14 @@
       "winterLowF": 75,
       "summerHighF": 92,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 130
+      "rainyDaysPerYear": 130,
+      "humidityAvgPct": 81,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -5015,7 +6273,8 @@
         "typical": 150,
         "min": 80,
         "max": 250,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "EPS public system available to residents (Migration Visa M after 5 years for permanent residency). Private international plans ~$80-150/person/mo with pre-existing condition loadings; exclusions common first 6-12 months. Anti-VEGF injections available in Bogotá (Fundación Oftalmológica Nacional), Medellín, Cali. GLP-1 imported, ~$300-450/mo private. Hypertension/diabetes generics widely available at ~10-30% of US prices."
       },
       "insurance": {
         "typical": 200,
@@ -5072,16 +6331,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 80,
+        "min": 65,
+        "max": 100,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -5124,19 +6384,59 @@
       "safetyRating": 5
     },
     "pros": [
-      "Stunning UNESCO colonial walled city",
+      {
+        "text": "Stunning UNESCO colonial walled city (Port, Fortresses and Group of Monuments, Cartagena — listed 1984)",
+        "sources": [
+          {
+            "title": "UNESCO World Heritage List — Port, Fortresses and Group of Monuments, Cartagena (285)",
+            "url": "https://whc.unesco.org/en/list/285",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Caribbean beach lifestyle",
       "Growing international community"
     ],
     "cons": [
-      "Hot and humid year-round",
-      "Tourist area prices can be high",
-      "Aggressive street vendors in tourist zones"
+      {
+        "text": "Hot and humid year-round"
+      },
+      {
+        "text": "Tourist area prices can be high"
+      },
+      {
+        "text": "Aggressive street vendors in tourist zones"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Cartagena",
+            "url": "https://www.numbeo.com/crime/in/Cartagena",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Colombia",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Colombia",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Colombia",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Colombia",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "No tax on foreign-source income if under 183 days/year.",
       "vatRate": 0.19,
       "socialChargesRate": 0
+    },
+    "subregion": "Bolívar",
+    "coordinates": {
+      "lat": 10.3982,
+      "lon": -75.4933
     }
   },
   {
@@ -5148,7 +6448,7 @@
       "Santa Marta"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Retirement (M-Type)",
       "incomeRequirement": {
@@ -5161,7 +6461,15 @@
       "winterLowF": 73,
       "summerHighF": 92,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 100
+      "rainyDaysPerYear": 100,
+      "humidityAvgPct": 77,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -5186,7 +6494,8 @@
         "typical": 130,
         "min": 70,
         "max": 220,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "EPS public system available to residents (Migration Visa M after 5 years for permanent residency). Private international plans ~$80-150/person/mo with pre-existing condition loadings; exclusions common first 6-12 months. Anti-VEGF injections available in Bogotá (Fundación Oftalmológica Nacional), Medellín, Cali. GLP-1 imported, ~$300-450/mo private. Hypertension/diabetes generics widely available at ~10-30% of US prices."
       },
       "insurance": {
         "typical": 180,
@@ -5243,16 +6552,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 80,
+        "min": 65,
+        "max": 100,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -5296,18 +6606,58 @@
     },
     "pros": [
       "Affordable Caribbean beach city",
-      "Gateway to Tayrona National Park",
+      {
+        "text": "Gateway to Tayrona National Natural Park (Parques Nacionales Naturales de Colombia)",
+        "sources": [
+          {
+            "title": "Parques Nacionales Naturales de Colombia — Tayrona PNN",
+            "url": "https://www.parquesnacionales.gov.co/portal/es/parques-nacionales/parque-nacional-natural-tayrona/",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Less touristy than Cartagena"
     ],
     "cons": [
-      "Infrastructure less developed than other cities",
-      "Limited English spoken",
-      "Hot year-round with fewer services"
+      {
+        "text": "Infrastructure less developed than other cities"
+      },
+      {
+        "text": "Limited English spoken"
+      },
+      {
+        "text": "Hot year-round with fewer services"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Santa Marta",
+            "url": "https://www.numbeo.com/crime/in/Santa-Marta",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Colombia",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Colombia",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Colombia",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Colombia",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "No tax on foreign-source income if under 183 days/year.",
       "vatRate": 0.19,
       "socialChargesRate": 0
+    },
+    "subregion": "Magdalena",
+    "coordinates": {
+      "lat": 11.2386,
+      "lon": -74.1943
     }
   },
   {
@@ -5319,7 +6669,7 @@
       "Bogotá"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Retirement (M-Type)",
       "incomeRequirement": {
@@ -5332,7 +6682,14 @@
       "winterLowF": 45,
       "summerHighF": 65,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 185
+      "rainyDaysPerYear": 185,
+      "humidityAvgPct": 79,
+      "drySeasonMonths": [
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -5357,7 +6714,8 @@
         "typical": 150,
         "min": 80,
         "max": 250,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "EPS public system available to residents (Migration Visa M after 5 years for permanent residency). Private international plans ~$80-150/person/mo with pre-existing condition loadings; exclusions common first 6-12 months. Anti-VEGF injections available in Bogotá (Fundación Oftalmológica Nacional), Medellín, Cali. GLP-1 imported, ~$300-450/mo private. Hypertension/diabetes generics widely available at ~10-30% of US prices."
       },
       "insurance": {
         "typical": 200,
@@ -5414,16 +6772,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 80,
+        "min": 65,
+        "max": 100,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -5471,14 +6830,45 @@
       "Affordable compared to major world capitals"
     ],
     "cons": [
-      "Cool and rainy climate (8,600 ft elevation)",
-      "Traffic congestion is severe",
-      "Altitude adjustment can be difficult"
+      {
+        "text": "Cool and rainy climate (8,600 ft elevation)"
+      },
+      {
+        "text": "Traffic congestion is severe"
+      },
+      {
+        "text": "Altitude adjustment can be difficult"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Bogotá",
+            "url": "https://www.numbeo.com/crime/in/Bogota",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Colombia",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Colombia",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Colombia",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Colombia",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "No tax on foreign-source income if under 183 days/year.",
       "vatRate": 0.19,
       "socialChargesRate": 0
+    },
+    "subregion": "Distrito Capital",
+    "coordinates": {
+      "lat": 4.6097,
+      "lon": -74.0817
     }
   },
   {
@@ -5490,7 +6880,7 @@
       "Cuenca"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Retirement (Jubilado)",
       "incomeRequirement": {
@@ -5503,7 +6893,9 @@
       "winterLowF": 50,
       "summerHighF": 70,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 140
+      "rainyDaysPerYear": 140,
+      "humidityAvgPct": 80,
+      "drySeasonMonths": []
     },
     "monthlyCosts": {
       "rent": {
@@ -5528,7 +6920,8 @@
         "typical": 130,
         "min": 60,
         "max": 220,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "IESS public system affordable for residents with pensionado/visa, ~$70-90/person/mo. Private international plans ~$80-180/mo. Anti-VEGF injections available in Quito (Hospital Metropolitano), Cuenca, and Guayaquil; ~$1,200-2,000/injection at private clinics. GLP-1 limited availability, ~$300/mo private. Cuenca is a regional medical hub for retirees with strong specialist density."
       },
       "insurance": {
         "typical": 180,
@@ -5585,16 +6978,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 77,
+        "min": 62,
+        "max": 97,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -5638,18 +7032,58 @@
     },
     "pros": [
       "Large established expat community",
-      "UNESCO World Heritage colonial city",
+      {
+        "text": "UNESCO World Heritage colonial city (Historic Centre of Santa Ana de los Ríos de Cuenca, listed 1999)",
+        "sources": [
+          {
+            "title": "UNESCO World Heritage List — Historic Centre of Santa Ana de los Ríos de Cuenca (863)",
+            "url": "https://whc.unesco.org/en/list/863",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Very affordable with USD currency (no exchange risk)"
     ],
     "cons": [
-      "Altitude (8,400 ft) may cause adjustment issues",
-      "Cool climate may not suit warm-weather seekers",
-      "Political instability and occasional unrest in Ecuador"
+      {
+        "text": "Altitude (8,400 ft) may cause adjustment issues"
+      },
+      {
+        "text": "Cool climate may not suit warm-weather seekers"
+      },
+      {
+        "text": "Political instability and occasional unrest in Ecuador"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Cuenca",
+            "url": "https://www.numbeo.com/crime/in/Cuenca",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Ecuador",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Ecuador",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Ecuador",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Ecuador",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Ecuador uses USD. Income tax on worldwide income if fiscal resident, but retiree visa holders may qualify for exemptions. Progressive rates 0-37%. Jubilado discount benefits offset many costs.",
       "vatRate": 0.15,
       "socialChargesRate": 0
+    },
+    "subregion": "Azuay",
+    "coordinates": {
+      "lat": -2.8953,
+      "lon": -78.9963
     }
   },
   {
@@ -5661,7 +7095,7 @@
       "Quito"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Retirement (Jubilado)",
       "incomeRequirement": {
@@ -5674,7 +7108,9 @@
       "winterLowF": 48,
       "summerHighF": 68,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 150
+      "rainyDaysPerYear": 150,
+      "humidityAvgPct": 80,
+      "drySeasonMonths": []
     },
     "monthlyCosts": {
       "rent": {
@@ -5699,7 +7135,8 @@
         "typical": 140,
         "min": 70,
         "max": 240,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "IESS public system affordable for residents with pensionado/visa, ~$70-90/person/mo. Private international plans ~$80-180/mo. Anti-VEGF injections available in Quito (Hospital Metropolitano), Cuenca, and Guayaquil; ~$1,200-2,000/injection at private clinics. GLP-1 limited availability, ~$300/mo private. Cuenca is a regional medical hub for retirees with strong specialist density."
       },
       "insurance": {
         "typical": 200,
@@ -5756,16 +7193,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 77,
+        "min": 62,
+        "max": 97,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -5809,18 +7247,67 @@
     },
     "pros": [
       "Capital city with best healthcare and services",
-      "UNESCO World Heritage historic center",
-      "Uses USD with no exchange rate risk"
+      {
+        "text": "UNESCO World Heritage historic center (City of Quito — among the first 12 sites listed in 1978, alongside Galápagos)",
+        "sources": [
+          {
+            "title": "UNESCO World Heritage List — City of Quito (2 — among the first 12 sites listed in 1978)",
+            "url": "https://whc.unesco.org/en/list/2",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
+      {
+        "text": "Uses USD with no exchange rate risk (Ecuador adopted the US dollar in 2000 per Ley de Transformación Económica)",
+        "sources": [
+          {
+            "title": "Banco Central del Ecuador — USD adoption (since 2000-09-09 per Ley 2000-4)",
+            "url": "https://www.bce.fin.ec/",
+            "accessed": "2026-05-03"
+          }
+        ]
+      }
     ],
     "cons": [
-      "High altitude (9,350 ft) causes adjustment issues",
-      "Cool and rainy climate",
-      "Security concerns in some neighborhoods"
+      {
+        "text": "High altitude (9,350 ft) causes adjustment issues"
+      },
+      {
+        "text": "Cool and rainy climate"
+      },
+      {
+        "text": "Security concerns in some neighborhoods"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Quito",
+            "url": "https://www.numbeo.com/crime/in/Quito",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Ecuador",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Ecuador",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Ecuador",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Ecuador",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Ecuador uses USD. Progressive income tax 0-37% on worldwide income for residents.",
       "vatRate": 0.15,
       "socialChargesRate": 0
+    },
+    "subregion": "Pichincha",
+    "coordinates": {
+      "lat": -0.2298,
+      "lon": -78.5249
     }
   },
   {
@@ -5832,7 +7319,7 @@
       "Cotacachi"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Retirement (Jubilado)",
       "incomeRequirement": {
@@ -5845,7 +7332,13 @@
       "winterLowF": 48,
       "summerHighF": 70,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 130
+      "rainyDaysPerYear": 130,
+      "humidityAvgPct": 77,
+      "drySeasonMonths": [
+        "Jul",
+        "Aug",
+        "Sep"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -5870,7 +7363,8 @@
         "typical": 100,
         "min": 50,
         "max": 180,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "IESS public system affordable for residents with pensionado/visa, ~$70-90/person/mo. Private international plans ~$80-180/mo. Anti-VEGF injections available in Quito (Hospital Metropolitano), Cuenca, and Guayaquil; ~$1,200-2,000/injection at private clinics. GLP-1 limited availability, ~$300/mo private. Cuenca is a regional medical hub for retirees with strong specialist density."
       },
       "insurance": {
         "typical": 180,
@@ -5927,16 +7421,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 77,
+        "min": 62,
+        "max": 97,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -5984,14 +7479,45 @@
       "Small but established expat community"
     ],
     "cons": [
-      "Cool climate at altitude",
-      "Very small town with limited services",
-      "Far from quality healthcare"
+      {
+        "text": "Cool climate at altitude"
+      },
+      {
+        "text": "Very small town with limited services"
+      },
+      {
+        "text": "Far from quality healthcare"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Cotacachi",
+            "url": "https://www.numbeo.com/crime/in/Cotacachi",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Ecuador",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Ecuador",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Ecuador",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Ecuador",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Ecuador uses USD. Jubilado discounts apply.",
       "vatRate": 0.15,
       "socialChargesRate": 0
+    },
+    "subregion": "Imbabura",
+    "coordinates": {
+      "lat": 0.2995,
+      "lon": -78.2656
     }
   },
   {
@@ -6003,7 +7529,7 @@
       "Vilcabamba"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Retirement (Jubilado)",
       "incomeRequirement": {
@@ -6016,7 +7542,13 @@
       "winterLowF": 55,
       "summerHighF": 78,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 110
+      "rainyDaysPerYear": 110,
+      "humidityAvgPct": 74,
+      "drySeasonMonths": [
+        "Jul",
+        "Aug",
+        "Sep"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -6041,7 +7573,8 @@
         "typical": 90,
         "min": 45,
         "max": 160,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "IESS public system affordable for residents with pensionado/visa, ~$70-90/person/mo. Private international plans ~$80-180/mo. Anti-VEGF injections available in Quito (Hospital Metropolitano), Cuenca, and Guayaquil; ~$1,200-2,000/injection at private clinics. GLP-1 limited availability, ~$300/mo private. Cuenca is a regional medical hub for retirees with strong specialist density."
       },
       "insurance": {
         "typical": 180,
@@ -6098,16 +7631,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 77,
+        "min": 62,
+        "max": 97,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -6155,14 +7689,45 @@
       "Peaceful rural setting with organic food culture"
     ],
     "cons": [
-      "Very remote with minimal services",
-      "Healthcare extremely limited",
-      "Small, isolated community"
+      {
+        "text": "Very remote with minimal services"
+      },
+      {
+        "text": "Healthcare extremely limited"
+      },
+      {
+        "text": "Small, isolated community"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Vilcabamba",
+            "url": "https://www.numbeo.com/crime/in/Vilcabamba",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Ecuador",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Ecuador",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Ecuador",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Ecuador",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Ecuador uses USD. Jubilado discounts apply.",
       "vatRate": 0.15,
       "socialChargesRate": 0
+    },
+    "subregion": "Loja",
+    "coordinates": {
+      "lat": -4.2608,
+      "lon": -79.2226
     }
   },
   {
@@ -6174,7 +7739,7 @@
       "Salinas"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Retirement (Jubilado)",
       "incomeRequirement": {
@@ -6187,7 +7752,19 @@
       "winterLowF": 68,
       "summerHighF": 85,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 40
+      "rainyDaysPerYear": 40,
+      "humidityAvgPct": 80,
+      "drySeasonMonths": [
+        "Jan",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -6212,7 +7789,8 @@
         "typical": 120,
         "min": 60,
         "max": 200,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "IESS public system affordable for residents with pensionado/visa, ~$70-90/person/mo. Private international plans ~$80-180/mo. Anti-VEGF injections available in Quito (Hospital Metropolitano), Cuenca, and Guayaquil; ~$1,200-2,000/injection at private clinics. GLP-1 limited availability, ~$300/mo private. Cuenca is a regional medical hub for retirees with strong specialist density."
       },
       "insurance": {
         "typical": 180,
@@ -6269,16 +7847,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 77,
+        "min": 62,
+        "max": 97,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -6326,14 +7905,45 @@
       "Popular with Ecuadorian and expat retirees"
     ],
     "cons": [
-      "Very seasonal—dead during off-season",
-      "Limited healthcare locally",
-      "Can feel isolated from major services"
+      {
+        "text": "Very seasonal—dead during off-season"
+      },
+      {
+        "text": "Limited healthcare locally"
+      },
+      {
+        "text": "Can feel isolated from major services"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Salinas",
+            "url": "https://www.numbeo.com/crime/in/Salinas",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Ecuador",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Ecuador",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Ecuador",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Ecuador",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Ecuador uses USD. Jubilado discounts apply.",
       "vatRate": 0.15,
       "socialChargesRate": 0
+    },
+    "subregion": "Santa Elena",
+    "coordinates": {
+      "lat": -2.214,
+      "lon": -80.958
     }
   },
   {
@@ -6345,7 +7955,7 @@
       "Montevideo"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Retirement Residence",
       "incomeRequirement": {
@@ -6358,7 +7968,9 @@
       "winterLowF": 42,
       "summerHighF": 82,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 100
+      "rainyDaysPerYear": 100,
+      "humidityAvgPct": 74,
+      "drySeasonMonths": []
     },
     "monthlyCosts": {
       "rent": {
@@ -6383,7 +7995,8 @@
         "typical": 180,
         "min": 100,
         "max": 300,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "ASSE/FONASA universal coverage for residents (pensioner residency requires legal pension income proof). Private (Hospital Británico, Casa de Galicia, Asociación Española) ~$100-220/mo. Anti-VEGF injections available in Montevideo. GLP-1 partially covered through FONASA for diabetes. Strong public infrastructure; Montevideo is the medical hub."
       },
       "insurance": {
         "typical": 250,
@@ -6440,16 +8053,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 87,
+        "min": 72,
+        "max": 107,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -6492,19 +8106,54 @@
       "safetyRating": 7
     },
     "pros": [
-      "Most stable democracy in South America",
+      {
+        "text": "Most stable democracy in South America (EIU Democracy Index — Uruguay consistently #1 in Latin America since the index began)",
+        "sources": [
+          {
+            "title": "EIU Democracy Index — Uruguay (consistently #1 in Latin America since the index began)",
+            "url": "https://www.eiu.com/n/campaigns/democracy-index/",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "High quality of life with European feel",
       "Good healthcare system and infrastructure"
     ],
     "cons": [
-      "Higher cost of living than most Latin American options",
-      "Cool winters (not warm-weather destination)",
-      "Smaller expat community; Spanish essential"
+      {
+        "text": "Higher cost of living than most Latin American options"
+      },
+      {
+        "text": "Cool winters (not warm-weather destination)"
+      },
+      {
+        "text": "Smaller expat community; Spanish essential"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Montevideo",
+            "url": "https://www.numbeo.com/crime/in/Montevideo",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Uruguay",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Uruguay",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Foreign income tax-exempt in year 1. After that, foreign income taxed at flat 12% (reduced from standard rates). Uruguay has 22% IVA (VAT).",
       "vatRate": 0.22,
       "socialChargesRate": 0
+    },
+    "subregion": "Montevideo",
+    "coordinates": {
+      "lat": -34.9033,
+      "lon": -56.1882
     }
   },
   {
@@ -6516,7 +8165,7 @@
       "Punta del Este"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Retirement Residence",
       "incomeRequirement": {
@@ -6529,7 +8178,9 @@
       "winterLowF": 40,
       "summerHighF": 80,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 90
+      "rainyDaysPerYear": 90,
+      "humidityAvgPct": 77,
+      "drySeasonMonths": []
     },
     "monthlyCosts": {
       "rent": {
@@ -6554,7 +8205,8 @@
         "typical": 200,
         "min": 120,
         "max": 320,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "ASSE/FONASA universal coverage for residents (pensioner residency requires legal pension income proof). Private (Hospital Británico, Casa de Galicia, Asociación Española) ~$100-220/mo. Anti-VEGF injections available in Montevideo. GLP-1 partially covered through FONASA for diabetes. Strong public infrastructure; Montevideo is the medical hub."
       },
       "insurance": {
         "typical": 280,
@@ -6611,16 +8263,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 87,
+        "min": 72,
+        "max": 107,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -6668,14 +8321,40 @@
       "Very safe with high quality of life"
     ],
     "cons": [
-      "Very seasonal—dead in winter, expensive in summer",
-      "One of the most expensive places in South America",
-      "Cool winters and windy conditions"
+      {
+        "text": "Very seasonal—dead in winter, expensive in summer"
+      },
+      {
+        "text": "One of the most expensive places in South America"
+      },
+      {
+        "text": "Cool winters and windy conditions"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Punta del Este",
+            "url": "https://www.numbeo.com/crime/in/Punta-del-Este",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Uruguay",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Uruguay",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Foreign income tax-exempt year 1, then 12% flat rate on foreign income.",
       "vatRate": 0.22,
       "socialChargesRate": 0
+    },
+    "subregion": "Maldonado",
+    "coordinates": {
+      "lat": -34.9475,
+      "lon": -54.9338
     }
   },
   {
@@ -6687,7 +8366,7 @@
       "Colonia del Sacramento"
     ],
     "currency": "USD",
-    "exchangeRate": 1.0,
+    "exchangeRate": 1,
     "visa": {
       "type": "Retirement Residence",
       "incomeRequirement": {
@@ -6700,7 +8379,11 @@
       "winterLowF": 40,
       "summerHighF": 82,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 95
+      "rainyDaysPerYear": 95,
+      "humidityAvgPct": 72,
+      "drySeasonMonths": [
+        "Jun"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -6725,7 +8408,8 @@
         "typical": 160,
         "min": 90,
         "max": 260,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "ASSE/FONASA universal coverage for residents (pensioner residency requires legal pension income proof). Private (Hospital Británico, Casa de Galicia, Asociación Española) ~$100-220/mo. Anti-VEGF injections available in Montevideo. GLP-1 partially covered through FONASA for diabetes. Strong public infrastructure; Montevideo is the medical hub."
       },
       "insurance": {
         "typical": 250,
@@ -6782,16 +8466,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 40,
-        "min": 20,
-        "max": 60,
+        "typical": 87,
+        "min": 72,
+        "max": 107,
         "annualInflation": 0.02
       },
       "taxes": {
         "typical": 0,
         "min": 0,
         "max": 0,
-        "annualInflation": 0
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 100,
@@ -6834,19 +8519,54 @@
       "safetyRating": 7
     },
     "pros": [
-      "UNESCO World Heritage charming colonial town",
+      {
+        "text": "UNESCO World Heritage charming colonial town (Historic Quarter of Colonia del Sacramento, listed 1995)",
+        "sources": [
+          {
+            "title": "UNESCO World Heritage List — Historic Quarter of the City of Colonia del Sacramento (747)",
+            "url": "https://whc.unesco.org/en/list/747",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Affordable by Uruguay standards",
       "Ferry access to Buenos Aires for services and culture"
     ],
     "cons": [
-      "Small town with limited services",
-      "Cool winters",
-      "Very limited English spoken"
+      {
+        "text": "Small town with limited services"
+      },
+      {
+        "text": "Cool winters"
+      },
+      {
+        "text": "Very limited English spoken"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Colonia del Sacramento",
+            "url": "https://www.numbeo.com/crime/in/Colonia-del-Sacramento",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Uruguay",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Uruguay",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Foreign income tax-exempt year 1, then 12% flat rate on foreign income.",
       "vatRate": 0.22,
       "socialChargesRate": 0
+    },
+    "subregion": "Colonia",
+    "coordinates": {
+      "lat": -34.4626,
+      "lon": -57.8398
     }
   }
 ]

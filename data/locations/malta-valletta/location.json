@@ -27,7 +27,21 @@
     "winterLowF": 50,
     "summerHighF": 92,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 40
+    "rainyDaysPerYear": 40,
+    "humidityAvgPct": 73,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -221,5 +235,9 @@
     "vatRate": 18,
     "socialChargesRate": 0
   },
-  "subregion": "South Eastern Region"
+  "subregion": "South Eastern Region",
+  "coordinates": {
+    "lat": 35.8997,
+    "lon": 14.5148
+  }
 }

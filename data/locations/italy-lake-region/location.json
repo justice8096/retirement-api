@@ -27,7 +27,9 @@
     "winterLowF": 32,
     "summerHighF": 84,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 90
+    "rainyDaysPerYear": 90,
+    "humidityAvgPct": 72,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -203,5 +205,9 @@
     "vatRate": 22,
     "socialChargesRate": 0
   },
-  "subregion": "Lombardy"
+  "subregion": "Lombardy",
+  "coordinates": {
+    "lat": 45.8816,
+    "lon": 8.5383
+  }
 }

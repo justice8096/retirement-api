@@ -20,7 +20,9 @@
     "winterLowF": 35,
     "summerHighF": 92,
     "rainyDaysPerYear": 105,
-    "meetsWarmWinterReq": false
+    "meetsWarmWinterReq": false,
+    "humidityAvgPct": 72,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -343,5 +345,9 @@
       ]
     }
   ],
-  "subregion": "South Carolina"
+  "subregion": "South Carolina",
+  "coordinates": {
+    "lat": 34.4806,
+    "lon": -85.3477
+  }
 }

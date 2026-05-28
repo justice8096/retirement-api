@@ -20,7 +20,15 @@
     "winterLowF": 42,
     "summerHighF": 86,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 70
+    "rainyDaysPerYear": 70,
+    "humidityAvgPct": 73,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -210,5 +218,9 @@
     "vatRate": 0.16,
     "socialChargesRate": 0
   },
-  "subregion": "Querétaro"
+  "subregion": "Querétaro",
+  "coordinates": {
+    "lat": 15.8375,
+    "lon": -92.7577
+  }
 }

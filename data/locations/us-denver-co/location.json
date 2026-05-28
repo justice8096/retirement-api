@@ -16,7 +16,21 @@
     "winterLowF": 17,
     "summerHighF": 90,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 88
+    "rainyDaysPerYear": 88,
+    "humidityAvgPct": 54,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -217,5 +231,9 @@
     "vatRate": 0,
     "socialChargesRate": 0
   },
-  "subregion": "Colorado"
+  "subregion": "Colorado",
+  "coordinates": {
+    "lat": 39.7392,
+    "lon": -104.9847
+  }
 }

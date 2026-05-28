@@ -20,7 +20,9 @@
     "winterLowF": 60,
     "summerHighF": 80,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 180
+    "rainyDaysPerYear": 180,
+    "humidityAvgPct": 86,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -196,5 +198,9 @@
     "vatRate": 0.19,
     "socialChargesRate": 0
   },
-  "subregion": "Antioquia"
+  "subregion": "Antioquia",
+  "coordinates": {
+    "lat": 6.245,
+    "lon": -75.5715
+  }
 }

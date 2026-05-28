@@ -17,7 +17,9 @@
     "winterLowF": 74,
     "summerHighF": 88,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 230
+    "rainyDaysPerYear": 230,
+    "humidityAvgPct": 80,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -214,5 +216,9 @@
     "vatRate": 0,
     "socialChargesRate": 0
   },
-  "subregion": "American Samoa"
+  "subregion": "American Samoa",
+  "coordinates": {
+    "lat": -14.351,
+    "lon": -170.76
+  }
 }

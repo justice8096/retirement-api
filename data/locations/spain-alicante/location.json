@@ -25,7 +25,22 @@
     "winterLowF": 45,
     "summerHighF": 90,
     "rainyDaysPerYear": 45,
-    "meetsWarmWinterReq": true
+    "meetsWarmWinterReq": true,
+    "humidityAvgPct": 65,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -321,5 +336,9 @@
     "mid": 0.93,
     "note": "EUR per 1 USD. Based on 2016-2026 historical range. Optimistic = strong EUR (good for USD→EUR), Pessimistic = weak EUR."
   },
-  "subregion": "Valencia"
+  "subregion": "Valencia",
+  "coordinates": {
+    "lat": 38.3452,
+    "lon": -0.4815
+  }
 }

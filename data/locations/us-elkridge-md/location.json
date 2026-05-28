@@ -19,7 +19,9 @@
     "winterLowF": 25,
     "summerHighF": 88,
     "rainyDaysPerYear": 114,
-    "meetsWarmWinterReq": false
+    "meetsWarmWinterReq": false,
+    "humidityAvgPct": 69,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -315,5 +317,9 @@
       ]
     }
   ],
-  "subregion": "Maryland"
+  "subregion": "Maryland",
+  "coordinates": {
+    "lat": 39.2126,
+    "lon": -76.7136
+  }
 }

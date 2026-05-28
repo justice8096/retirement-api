@@ -20,7 +20,13 @@
     "winterLowF": 60,
     "summerHighF": 82,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 190
+    "rainyDaysPerYear": 190,
+    "humidityAvgPct": 90,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -196,5 +202,9 @@
     "vatRate": 0.07,
     "socialChargesRate": 0
   },
-  "subregion": "Coclé"
+  "subregion": "Coclé",
+  "coordinates": {
+    "lat": 8.612,
+    "lon": -80.126
+  }
 }

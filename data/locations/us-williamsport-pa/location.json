@@ -16,7 +16,9 @@
     "winterLowF": 18,
     "summerHighF": 84,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 140
+    "rainyDaysPerYear": 140,
+    "humidityAvgPct": 72,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -215,5 +217,9 @@
     "vatRate": 0,
     "socialChargesRate": 0
   },
-  "subregion": "Pennsylvania"
+  "subregion": "Pennsylvania",
+  "coordinates": {
+    "lat": 41.2412,
+    "lon": -77.0011
+  }
 }

@@ -27,7 +27,12 @@
     "winterLowF": 44,
     "summerHighF": 88,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 90
+    "rainyDaysPerYear": 90,
+    "humidityAvgPct": 71,
+    "drySeasonMonths": [
+      "Jul",
+      "Aug"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -226,5 +231,9 @@
     "vatRate": 25,
     "socialChargesRate": 0
   },
-  "subregion": "Dubrovnik-Neretva"
+  "subregion": "Dubrovnik-Neretva",
+  "coordinates": {
+    "lat": 42.6413,
+    "lon": 18.1091
+  }
 }

@@ -27,7 +27,15 @@
     "winterLowF": 43,
     "summerHighF": 86,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 60
+    "rainyDaysPerYear": 60,
+    "humidityAvgPct": 71,
+    "drySeasonMonths": [
+      "Mar",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -203,5 +211,9 @@
     "vatRate": 20,
     "socialChargesRate": 9.1
   },
-  "subregion": "Provence-Alpes-Côte d'Azur"
+  "subregion": "Provence-Alpes-Côte d'Azur",
+  "coordinates": {
+    "lat": 43.7031,
+    "lon": 7.2661
+  }
 }

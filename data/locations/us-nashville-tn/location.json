@@ -16,7 +16,9 @@
     "winterLowF": 30,
     "summerHighF": 91,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 119
+    "rainyDaysPerYear": 119,
+    "humidityAvgPct": 72,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -217,5 +219,9 @@
     "vatRate": 0,
     "socialChargesRate": 0
   },
-  "subregion": "Tennessee"
+  "subregion": "Tennessee",
+  "coordinates": {
+    "lat": 36.1659,
+    "lon": -86.7844
+  }
 }

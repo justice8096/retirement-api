@@ -20,7 +20,15 @@
     "winterLowF": 73,
     "summerHighF": 92,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 100
+    "rainyDaysPerYear": 100,
+    "humidityAvgPct": 77,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -205,5 +213,9 @@
     "vatRate": 0.19,
     "socialChargesRate": 0
   },
-  "subregion": "Magdalena"
+  "subregion": "Magdalena",
+  "coordinates": {
+    "lat": 11.2386,
+    "lon": -74.1943
+  }
 }

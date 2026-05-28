@@ -27,7 +27,16 @@
     "winterLowF": 41,
     "summerHighF": 90,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 55
+    "rainyDaysPerYear": 55,
+    "humidityAvgPct": 72,
+    "drySeasonMonths": [
+      "Jan",
+      "Apr",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -232,5 +241,9 @@
     "vatRate": 22,
     "socialChargesRate": 0
   },
-  "subregion": "Apulia"
+  "subregion": "Apulia",
+  "coordinates": {
+    "lat": 40.3548,
+    "lon": 18.1724
+  }
 }

@@ -27,7 +27,13 @@
     "winterLowF": 43,
     "summerHighF": 88,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 100
+    "rainyDaysPerYear": 100,
+    "humidityAvgPct": 73,
+    "drySeasonMonths": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -212,5 +218,9 @@
     "vatRate": 24,
     "socialChargesRate": 0
   },
-  "subregion": "Ionian Islands"
+  "subregion": "Ionian Islands",
+  "coordinates": {
+    "lat": 39.624,
+    "lon": 19.921
+  }
 }

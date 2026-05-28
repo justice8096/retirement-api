@@ -20,7 +20,13 @@
     "winterLowF": 75,
     "summerHighF": 90,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 175
+    "rainyDaysPerYear": 175,
+    "humidityAvgPct": 85,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -196,5 +202,9 @@
     "vatRate": 0.07,
     "socialChargesRate": 0
   },
-  "subregion": "Panama Province"
+  "subregion": "Panama Province",
+  "coordinates": {
+    "lat": 8.9936,
+    "lon": -79.5197
+  }
 }

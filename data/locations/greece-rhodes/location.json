@@ -27,7 +27,17 @@
     "winterLowF": 50,
     "summerHighF": 93,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 40
+    "rainyDaysPerYear": 40,
+    "humidityAvgPct": 67,
+    "drySeasonMonths": [
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -212,5 +222,9 @@
     "vatRate": 24,
     "socialChargesRate": 0
   },
-  "subregion": "South Aegean"
+  "subregion": "South Aegean",
+  "coordinates": {
+    "lat": 36.434,
+    "lon": 28.217
+  }
 }

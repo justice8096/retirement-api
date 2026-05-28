@@ -20,7 +20,13 @@
     "winterLowF": 55,
     "summerHighF": 78,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 110
+    "rainyDaysPerYear": 110,
+    "humidityAvgPct": 74,
+    "drySeasonMonths": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -196,5 +202,9 @@
     "vatRate": 0.15,
     "socialChargesRate": 0
   },
-  "subregion": "Loja"
+  "subregion": "Loja",
+  "coordinates": {
+    "lat": -4.2608,
+    "lon": -79.2226
+  }
 }

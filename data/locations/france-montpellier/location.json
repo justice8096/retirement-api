@@ -17,7 +17,18 @@
     "winterLowF": 36,
     "summerHighF": 88,
     "rainyDaysPerYear": 70,
-    "meetsWarmWinterReq": false
+    "meetsWarmWinterReq": false,
+    "humidityAvgPct": 67,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -276,5 +287,9 @@
     "mid": 0.93,
     "note": "EUR per 1 USD. Based on 2016-2026 historical range. Optimistic = strong EUR (good for USD→EUR), Pessimistic = weak EUR."
   },
-  "subregion": "Occitanie"
+  "subregion": "Occitanie",
+  "coordinates": {
+    "lat": 43.6109,
+    "lon": 3.8764
+  }
 }

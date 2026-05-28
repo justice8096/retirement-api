@@ -20,7 +20,14 @@
     "winterLowF": 75,
     "summerHighF": 92,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 130
+    "rainyDaysPerYear": 130,
+    "humidityAvgPct": 81,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -205,5 +212,9 @@
     "vatRate": 0.19,
     "socialChargesRate": 0
   },
-  "subregion": "Bolívar"
+  "subregion": "Bolívar",
+  "coordinates": {
+    "lat": 10.3982,
+    "lon": -75.4933
+  }
 }

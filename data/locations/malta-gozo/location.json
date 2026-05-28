@@ -27,7 +27,20 @@
     "winterLowF": 50,
     "summerHighF": 90,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 40
+    "rainyDaysPerYear": 40,
+    "humidityAvgPct": 76,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -203,5 +216,9 @@
     "vatRate": 18,
     "socialChargesRate": 0
   },
-  "subregion": "Gozo"
+  "subregion": "Gozo",
+  "coordinates": {
+    "lat": 36.046,
+    "lon": 14.239
+  }
 }

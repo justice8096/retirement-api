@@ -16,7 +16,9 @@
     "winterLowF": 5,
     "summerHighF": 80,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 130
+    "rainyDaysPerYear": 130,
+    "humidityAvgPct": 73,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -208,5 +210,9 @@
     "vatRate": 0,
     "socialChargesRate": 0
   },
-  "subregion": "Maine"
+  "subregion": "Maine",
+  "coordinates": {
+    "lat": 44.7651,
+    "lon": -69.7192
+  }
 }

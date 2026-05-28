@@ -20,7 +20,18 @@
     "winterLowF": 62,
     "summerHighF": 98,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 100
+    "rainyDaysPerYear": 100,
+    "humidityAvgPct": 73,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jul",
+      "Nov",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -205,5 +216,9 @@
     "vatRate": 0.16,
     "socialChargesRate": 0
   },
-  "subregion": "Yucatán"
+  "subregion": "Yucatán",
+  "coordinates": {
+    "lat": 20.967,
+    "lon": -89.6232
+  }
 }

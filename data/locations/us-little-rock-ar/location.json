@@ -16,7 +16,9 @@
     "winterLowF": 32,
     "summerHighF": 93,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 104
+    "rainyDaysPerYear": 104,
+    "humidityAvgPct": 71,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -208,5 +210,9 @@
     "vatRate": 0,
     "socialChargesRate": 0
   },
-  "subregion": "Arkansas"
+  "subregion": "Arkansas",
+  "coordinates": {
+    "lat": 34.7465,
+    "lon": -92.2896
+  }
 }

@@ -19,7 +19,9 @@
     "winterLowF": 24,
     "summerHighF": 87,
     "rainyDaysPerYear": 120,
-    "meetsWarmWinterReq": false
+    "meetsWarmWinterReq": false,
+    "humidityAvgPct": 68,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -186,22 +188,49 @@
     }
   },
   "taxes": {
-    "federalIncomeTax": { "applies": true },
+    "federalIncomeTax": {
+      "applies": true
+    },
     "stateIncomeTax": {
       "rate": 0.0637,
       "type": "progressive",
       "brackets": [
-        { "min": 0, "max": 20000, "rate": 0.014 },
-        { "min": 20000, "max": 35000, "rate": 0.0175 },
-        { "min": 35000, "max": 40000, "rate": 0.035 },
-        { "min": 40000, "max": 75000, "rate": 0.05525 },
-        { "min": 75000, "max": 500000, "rate": 0.0637 }
+        {
+          "min": 0,
+          "max": 20000,
+          "rate": 0.014
+        },
+        {
+          "min": 20000,
+          "max": 35000,
+          "rate": 0.0175
+        },
+        {
+          "min": 35000,
+          "max": 40000,
+          "rate": 0.035
+        },
+        {
+          "min": 40000,
+          "max": 75000,
+          "rate": 0.05525
+        },
+        {
+          "min": 75000,
+          "max": 500000,
+          "rate": 0.0637
+        }
       ],
       "deduction": 0,
       "exemptions": "SS exempt. Retirement income exclusion up to $100K for couples (income <$150K)."
     },
-    "salesTax": { "rate": 0.06625, "notes": "6.625% state rate" },
-    "propertyTax": { "rate": 0 },
+    "salesTax": {
+      "rate": 0.06625,
+      "notes": "6.625% state rate"
+    },
+    "propertyTax": {
+      "rate": 0
+    },
     "socialCharges": null,
     "vatRate": 0,
     "estVehicleTax": 0,
@@ -235,50 +264,98 @@
     {
       "text": "Quiet suburb with access to Philly via PATCO",
       "sources": [
-        { "title": "PATCO Speedline — Camden NJ ↔ Center City Philadelphia rapid transit", "url": "https://www.ridepatco.org/", "accessed": "2026-05-03" }
+        {
+          "title": "PATCO Speedline — Camden NJ ↔ Center City Philadelphia rapid transit",
+          "url": "https://www.ridepatco.org/",
+          "accessed": "2026-05-03"
+        }
       ]
     },
     {
       "text": "NJ exempts SS from state tax",
       "sources": [
-        { "title": "NJ Division of Taxation — Social Security exempt; pension/retirement income exclusion", "url": "https://www.nj.gov/treasury/taxation/njit6.shtml", "accessed": "2026-05-03" }
+        {
+          "title": "NJ Division of Taxation — Social Security exempt; pension/retirement income exclusion",
+          "url": "https://www.nj.gov/treasury/taxation/njit6.shtml",
+          "accessed": "2026-05-03"
+        }
       ]
     },
     {
       "text": "No sales tax on groceries or clothing",
       "sources": [
-        { "title": "NJ DOT — Sales tax exemptions (groceries / most clothing exempt)", "url": "https://www.nj.gov/treasury/taxation/su.shtml", "accessed": "2026-05-03" }
+        {
+          "title": "NJ DOT — Sales tax exemptions (groceries / most clothing exempt)",
+          "url": "https://www.nj.gov/treasury/taxation/su.shtml",
+          "accessed": "2026-05-03"
+        }
       ]
     },
     "Good schools and suburban amenities",
     {
       "text": "Access to Philly healthcare (Penn, Jefferson)",
       "sources": [
-        { "title": "Penn Medicine — Hospital of the University of Pennsylvania", "url": "https://www.pennmedicine.org/", "accessed": "2026-05-03" },
-        { "title": "Thomas Jefferson University Hospitals", "url": "https://www.jeffersonhealth.org/", "accessed": "2026-05-03" }
+        {
+          "title": "Penn Medicine — Hospital of the University of Pennsylvania",
+          "url": "https://www.pennmedicine.org/",
+          "accessed": "2026-05-03"
+        },
+        {
+          "title": "Thomas Jefferson University Hospitals",
+          "url": "https://www.jeffersonhealth.org/",
+          "accessed": "2026-05-03"
+        }
       ]
     },
     "Lower crime than Philadelphia"
   ],
   "cons": [
-    { "text": "Cold winters (24F lows)" },
+    {
+      "text": "Cold winters (24F lows)"
+    },
     {
       "text": "Higher NJ state income tax rates (1.4-10.75% bracket)",
       "sources": [
-        { "title": "NJ Division of Taxation — Gross Income Tax brackets (1.4%-10.75%)", "url": "https://www.nj.gov/treasury/taxation/taxtables.shtml", "accessed": "2026-05-03" }
+        {
+          "title": "NJ Division of Taxation — Gross Income Tax brackets (1.4%-10.75%)",
+          "url": "https://www.nj.gov/treasury/taxation/taxtables.shtml",
+          "accessed": "2026-05-03"
+        }
       ]
     },
-    { "text": "Car-dependent" },
-    { "text": "Higher property insurance than some areas" },
-    { "text": "NJ cost of living above national average" },
+    {
+      "text": "Car-dependent"
+    },
+    {
+      "text": "Higher property insurance than some areas"
+    },
+    {
+      "text": "NJ cost of living above national average"
+    },
     {
       "text": "Safety & crime: see cited reports for current figures by city and country",
       "sources": [
-        { "title": "Numbeo — Crime in Cherry Hill", "url": "https://www.numbeo.com/crime/in/Cherry-Hill", "accessed": "2026-04-23" },
-        { "title": "Numbeo — Crime in United States", "url": "https://www.numbeo.com/crime/country_result.jsp?country=United%2BStates", "accessed": "2026-04-23" },
-        { "title": "Wikipedia — Crime in United States", "url": "https://en.wikipedia.org/wiki/Crime_in_United_States", "accessed": "2026-04-23" }
+        {
+          "title": "Numbeo — Crime in Cherry Hill",
+          "url": "https://www.numbeo.com/crime/in/Cherry-Hill",
+          "accessed": "2026-04-23"
+        },
+        {
+          "title": "Numbeo — Crime in United States",
+          "url": "https://www.numbeo.com/crime/country_result.jsp?country=United%2BStates",
+          "accessed": "2026-04-23"
+        },
+        {
+          "title": "Wikipedia — Crime in United States",
+          "url": "https://en.wikipedia.org/wiki/Crime_in_United_States",
+          "accessed": "2026-04-23"
+        }
       ]
     }
   ],
-  "subregion": "New Jersey"
+  "subregion": "New Jersey",
+  "coordinates": {
+    "lat": 39.9348,
+    "lon": -75.0307
+  }
 }

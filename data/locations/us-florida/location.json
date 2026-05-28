@@ -19,7 +19,11 @@
     "winterLowF": 55,
     "summerHighF": 92,
     "rainyDaysPerYear": 130,
-    "meetsWarmWinterReq": true
+    "meetsWarmWinterReq": true,
+    "humidityAvgPct": 75,
+    "drySeasonMonths": [
+      "Mar"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -181,7 +185,9 @@
     }
   },
   "taxes": {
-    "federalIncomeTax": { "applies": true },
+    "federalIncomeTax": {
+      "applies": true
+    },
     "stateIncomeTax": {
       "rate": 0,
       "type": "none",
@@ -189,8 +195,14 @@
       "deduction": 0,
       "exemptions": "No state income tax."
     },
-    "salesTax": { "rate": 0.06, "notes": "6% state, some counties add 0.5-1.5%" },
-    "propertyTax": { "rate": 0, "notes": "Renters: no direct property tax" },
+    "salesTax": {
+      "rate": 0.06,
+      "notes": "6% state, some counties add 0.5-1.5%"
+    },
+    "propertyTax": {
+      "rate": 0,
+      "notes": "Renters: no direct property tax"
+    },
     "socialCharges": null,
     "vatRate": 0,
     "estVehicleTax": 0,
@@ -224,7 +236,11 @@
     {
       "text": "No state income tax",
       "sources": [
-        { "title": "Florida Department of Revenue — No state personal income tax", "url": "https://floridarevenue.com/taxes/taxesfees/Pages/personal_income.aspx", "accessed": "2026-05-03" }
+        {
+          "title": "Florida Department of Revenue — No state personal income tax",
+          "url": "https://floridarevenue.com/taxes/taxesfees/Pages/personal_income.aspx",
+          "accessed": "2026-05-03"
+        }
       ]
     },
     "Warm winters",
@@ -232,19 +248,45 @@
     "Close to Latin America (Panama flights)"
   ],
   "cons": [
-    { "text": "Hurricane risk" },
-    { "text": "High insurance costs" },
-    { "text": "Rising rents" },
-    { "text": "Humidity" },
-    { "text": "Car-dependent" },
+    {
+      "text": "Hurricane risk"
+    },
+    {
+      "text": "High insurance costs"
+    },
+    {
+      "text": "Rising rents"
+    },
+    {
+      "text": "Humidity"
+    },
+    {
+      "text": "Car-dependent"
+    },
     {
       "text": "Safety & crime: see cited reports for current figures by city and country",
       "sources": [
-        { "title": "Numbeo — Crime in Florida", "url": "https://www.numbeo.com/crime/in/Florida", "accessed": "2026-04-23" },
-        { "title": "Numbeo — Crime in United States", "url": "https://www.numbeo.com/crime/country_result.jsp?country=United%2BStates", "accessed": "2026-04-23" },
-        { "title": "Wikipedia — Crime in United States", "url": "https://en.wikipedia.org/wiki/Crime_in_United_States", "accessed": "2026-04-23" }
+        {
+          "title": "Numbeo — Crime in Florida",
+          "url": "https://www.numbeo.com/crime/in/Florida",
+          "accessed": "2026-04-23"
+        },
+        {
+          "title": "Numbeo — Crime in United States",
+          "url": "https://www.numbeo.com/crime/country_result.jsp?country=United%2BStates",
+          "accessed": "2026-04-23"
+        },
+        {
+          "title": "Wikipedia — Crime in United States",
+          "url": "https://en.wikipedia.org/wiki/Crime_in_United_States",
+          "accessed": "2026-04-23"
+        }
       ]
     }
   ],
-  "subregion": "Florida"
+  "subregion": "Florida",
+  "coordinates": {
+    "lat": 25.7743,
+    "lon": -80.1937
+  }
 }

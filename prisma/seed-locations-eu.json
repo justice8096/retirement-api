@@ -28,7 +28,20 @@
       "winterLowF": 50,
       "summerHighF": 90,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 55
+      "rainyDaysPerYear": 55,
+      "humidityAvgPct": 70,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -53,7 +66,8 @@
         "typical": 110,
         "min": 75,
         "max": 160,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "SNS public healthcare after NHR/D7 visa residency. Private insurance optional (~€80-120/person/mo with pre-existing conditions). Anti-VEGF injections available through SNS hospitals. Pre-existing condition loading on private plans. GLP-1 covered through SNS for diabetes."
       },
       "insurance": {
         "typical": 130,
@@ -110,16 +124,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 600,
+        "min": 540,
+        "max": 660,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -167,14 +182,112 @@
       "Affordable cost of living by Western European standards"
     ],
     "cons": [
-      "Tourist-heavy areas can feel less authentic",
-      "Limited public transit outside Faro",
-      "Summer heat can be intense (90F+)"
+      {
+        "text": "Tourist-heavy areas can feel less authentic"
+      },
+      {
+        "text": "Limited public transit outside Faro"
+      },
+      {
+        "text": "Summer heat can be intense (90F+)"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Algarve",
+            "url": "https://www.numbeo.com/crime/in/Algarve",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Portugal",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Portugal",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Portugal",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Portugal",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
-      "notes": "NHR ended Jan 2024. IFICI replacement excludes pensions. Standard progressive rates 14.5%-48%. US-Portugal tax treaty helps avoid double taxation.",
-      "vatRate": 23,
-      "socialChargesRate": 0
+      "federalIncomeTax": {
+        "applies": true,
+        "foreignTaxCredit": true
+      },
+      "stateIncomeTax": {
+        "rate": 0.48,
+        "type": "progressive",
+        "label": "Portuguese Income Tax (IRS)",
+        "brackets": [
+          {
+            "min": 0,
+            "max": 8704,
+            "rate": 0.125
+          },
+          {
+            "min": 8704,
+            "max": 13133,
+            "rate": 0.16
+          },
+          {
+            "min": 13133,
+            "max": 18612,
+            "rate": 0.215
+          },
+          {
+            "min": 18612,
+            "max": 24090,
+            "rate": 0.244
+          },
+          {
+            "min": 24090,
+            "max": 30672,
+            "rate": 0.314
+          },
+          {
+            "min": 30672,
+            "max": 44959,
+            "rate": 0.349
+          },
+          {
+            "min": 44959,
+            "max": 48586,
+            "rate": 0.431
+          },
+          {
+            "min": 48586,
+            "max": 90393,
+            "rate": 0.446
+          },
+          {
+            "min": 90393,
+            "max": null,
+            "rate": 0.48
+          }
+        ],
+        "deduction": 4432,
+        "exemptions": "NHR ended Jan 2024 (IFICI replacement excludes pensions). Foreign pensions/retirement income taxed at standard progressive rates 12.5-48%. US-Portugal treaty provides foreign tax credit."
+      },
+      "salesTax": {
+        "rate": 0
+      },
+      "propertyTax": {
+        "rate": 0
+      },
+      "socialCharges": null,
+      "vatRate": 0.23,
+      "estVehicleTax": 0,
+      "ssExempt": false,
+      "ssTaxedInCountry": true,
+      "notes": "NHR ended Jan 2024. IFICI replacement excludes pensions. Standard progressive rates 14.5%-48%. US-Portugal tax treaty helps avoid double taxation."
+    },
+    "subregion": "Algarve",
+    "coordinates": {
+      "lat": 37.0187,
+      "lon": -7.9272
     }
   },
   {
@@ -206,7 +319,13 @@
       "winterLowF": 41,
       "summerHighF": 79,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 110
+      "rainyDaysPerYear": 110,
+      "humidityAvgPct": 79,
+      "drySeasonMonths": [
+        "Jun",
+        "Jul",
+        "Aug"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -231,7 +350,8 @@
         "typical": 105,
         "min": 70,
         "max": 155,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "SNS public healthcare after NHR/D7 visa residency. Private insurance optional (~€80-120/person/mo with pre-existing conditions). Anti-VEGF injections available through SNS hospitals. Pre-existing condition loading on private plans. GLP-1 covered through SNS for diabetes."
       },
       "insurance": {
         "typical": 125,
@@ -288,16 +408,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 600,
+        "min": 540,
+        "max": 660,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -342,17 +463,124 @@
     "pros": [
       "More affordable than Lisbon with similar amenities",
       "World-famous wine region (Port wine)",
-      "UNESCO World Heritage riverside district"
+      {
+        "text": "UNESCO World Heritage riverside district (Historic Centre of Oporto, listed 1996)",
+        "sources": [
+          {
+            "title": "UNESCO World Heritage List — Historic Centre of Oporto, Luiz I Bridge and Monastery of Serra do Pilar",
+            "url": "https://whc.unesco.org/en/list/755",
+            "accessed": "2026-05-03"
+          }
+        ]
+      }
     ],
     "cons": [
-      "Cooler and rainier than southern Portugal",
-      "Hilly terrain throughout the city",
-      "Smaller international community than Lisbon"
+      {
+        "text": "Cooler and rainier than southern Portugal"
+      },
+      {
+        "text": "Hilly terrain throughout the city"
+      },
+      {
+        "text": "Smaller international community than Lisbon"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Porto",
+            "url": "https://www.numbeo.com/crime/in/Porto",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Portugal",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Portugal",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Portugal",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Portugal",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
-      "notes": "NHR ended Jan 2024. IFICI replacement excludes pensions. Standard progressive rates 14.5%-48%.",
-      "vatRate": 23,
-      "socialChargesRate": 0
+      "federalIncomeTax": {
+        "applies": true,
+        "foreignTaxCredit": true
+      },
+      "stateIncomeTax": {
+        "rate": 0.48,
+        "type": "progressive",
+        "label": "Portuguese Income Tax (IRS)",
+        "brackets": [
+          {
+            "min": 0,
+            "max": 8704,
+            "rate": 0.125
+          },
+          {
+            "min": 8704,
+            "max": 13133,
+            "rate": 0.16
+          },
+          {
+            "min": 13133,
+            "max": 18612,
+            "rate": 0.215
+          },
+          {
+            "min": 18612,
+            "max": 24090,
+            "rate": 0.244
+          },
+          {
+            "min": 24090,
+            "max": 30672,
+            "rate": 0.314
+          },
+          {
+            "min": 30672,
+            "max": 44959,
+            "rate": 0.349
+          },
+          {
+            "min": 44959,
+            "max": 48586,
+            "rate": 0.431
+          },
+          {
+            "min": 48586,
+            "max": 90393,
+            "rate": 0.446
+          },
+          {
+            "min": 90393,
+            "max": null,
+            "rate": 0.48
+          }
+        ],
+        "deduction": 4432,
+        "exemptions": "NHR ended Jan 2024 (IFICI replacement excludes pensions). Foreign pensions/retirement income taxed at standard progressive rates 12.5-48%. US-Portugal treaty provides foreign tax credit."
+      },
+      "salesTax": {
+        "rate": 0
+      },
+      "propertyTax": {
+        "rate": 0
+      },
+      "socialCharges": null,
+      "vatRate": 0.23,
+      "estVehicleTax": 0,
+      "ssExempt": false,
+      "ssTaxedInCountry": true,
+      "notes": "NHR ended Jan 2024. IFICI replacement excludes pensions. Standard progressive rates 14.5%-48%."
+    },
+    "subregion": "Norte",
+    "coordinates": {
+      "lat": 41.1485,
+      "lon": -8.611
     }
   },
   {
@@ -384,7 +612,15 @@
       "winterLowF": 44,
       "summerHighF": 82,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 80
+      "rainyDaysPerYear": 80,
+      "humidityAvgPct": 79,
+      "drySeasonMonths": [
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -409,7 +645,8 @@
         "typical": 100,
         "min": 65,
         "max": 150,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "SNS public healthcare after NHR/D7 visa residency. Private insurance optional (~€80-120/person/mo with pre-existing conditions). Anti-VEGF injections available through SNS hospitals. Pre-existing condition loading on private plans. GLP-1 covered through SNS for diabetes."
       },
       "insurance": {
         "typical": 120,
@@ -466,16 +703,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 600,
+        "min": 540,
+        "max": 660,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -523,14 +761,112 @@
       "Close to Lisbon (1 hour) while maintaining small-town feel"
     ],
     "cons": [
-      "Smaller expat community than Algarve or Lisbon",
-      "Limited public transit between towns",
-      "Cooler and windier than southern Portugal"
+      {
+        "text": "Smaller expat community than Algarve or Lisbon"
+      },
+      {
+        "text": "Limited public transit between towns"
+      },
+      {
+        "text": "Cooler and windier than southern Portugal"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Silver Coast",
+            "url": "https://www.numbeo.com/crime/in/Silver-Coast",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Portugal",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Portugal",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Portugal",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Portugal",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
-      "notes": "NHR ended Jan 2024. IFICI replacement excludes pensions. Standard progressive rates 14.5%-48%.",
-      "vatRate": 23,
-      "socialChargesRate": 0
+      "federalIncomeTax": {
+        "applies": true,
+        "foreignTaxCredit": true
+      },
+      "stateIncomeTax": {
+        "rate": 0.48,
+        "type": "progressive",
+        "label": "Portuguese Income Tax (IRS)",
+        "brackets": [
+          {
+            "min": 0,
+            "max": 8704,
+            "rate": 0.125
+          },
+          {
+            "min": 8704,
+            "max": 13133,
+            "rate": 0.16
+          },
+          {
+            "min": 13133,
+            "max": 18612,
+            "rate": 0.215
+          },
+          {
+            "min": 18612,
+            "max": 24090,
+            "rate": 0.244
+          },
+          {
+            "min": 24090,
+            "max": 30672,
+            "rate": 0.314
+          },
+          {
+            "min": 30672,
+            "max": 44959,
+            "rate": 0.349
+          },
+          {
+            "min": 44959,
+            "max": 48586,
+            "rate": 0.431
+          },
+          {
+            "min": 48586,
+            "max": 90393,
+            "rate": 0.446
+          },
+          {
+            "min": 90393,
+            "max": null,
+            "rate": 0.48
+          }
+        ],
+        "deduction": 4432,
+        "exemptions": "NHR ended Jan 2024 (IFICI replacement excludes pensions). Foreign pensions/retirement income taxed at standard progressive rates 12.5-48%. US-Portugal treaty provides foreign tax credit."
+      },
+      "salesTax": {
+        "rate": 0
+      },
+      "propertyTax": {
+        "rate": 0
+      },
+      "socialCharges": null,
+      "vatRate": 0.23,
+      "estVehicleTax": 0,
+      "ssExempt": false,
+      "ssTaxedInCountry": true,
+      "notes": "NHR ended Jan 2024. IFICI replacement excludes pensions. Standard progressive rates 14.5%-48%."
+    },
+    "subregion": "Centro",
+    "coordinates": {
+      "lat": 39.4033,
+      "lon": -9.1384
     }
   },
   {
@@ -562,7 +898,16 @@
       "winterLowF": 47,
       "summerHighF": 82,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 60
+      "rainyDaysPerYear": 60,
+      "humidityAvgPct": 79,
+      "drySeasonMonths": [
+        "Feb",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -587,7 +932,8 @@
         "typical": 120,
         "min": 80,
         "max": 170,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "SNS public healthcare after NHR/D7 visa residency. Private insurance optional (~€80-120/person/mo with pre-existing conditions). Anti-VEGF injections available through SNS hospitals. Pre-existing condition loading on private plans. GLP-1 covered through SNS for diabetes."
       },
       "insurance": {
         "typical": 140,
@@ -644,16 +990,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 600,
+        "min": 540,
+        "max": 660,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -697,18 +1044,125 @@
     },
     "pros": [
       "Upscale beach town with excellent quality of life",
-      "Train connection to Lisbon (35 min)",
+      {
+        "text": "Train connection to Lisbon (~35 min on the CP Linha de Cascais)",
+        "sources": [
+          {
+            "title": "CP — Linha de Cascais timetable (Lisboa Cais do Sodré ↔ Cascais)",
+            "url": "https://www.cp.pt/passageiros/en/train-times/lines/cascais-line",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Strong international community and English widely spoken"
     ],
     "cons": [
-      "One of the most expensive areas in Portugal",
-      "Crowded in summer tourist season",
-      "Housing market very competitive"
+      {
+        "text": "One of the most expensive areas in Portugal"
+      },
+      {
+        "text": "Crowded in summer tourist season"
+      },
+      {
+        "text": "Housing market very competitive"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Cascais",
+            "url": "https://www.numbeo.com/crime/in/Cascais",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Portugal",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Portugal",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Portugal",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Portugal",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
-      "notes": "NHR ended Jan 2024. IFICI replacement excludes pensions. Standard progressive rates 14.5%-48%.",
-      "vatRate": 23,
-      "socialChargesRate": 0
+      "federalIncomeTax": {
+        "applies": true,
+        "foreignTaxCredit": true
+      },
+      "stateIncomeTax": {
+        "rate": 0.48,
+        "type": "progressive",
+        "label": "Portuguese Income Tax (IRS)",
+        "brackets": [
+          {
+            "min": 0,
+            "max": 8704,
+            "rate": 0.125
+          },
+          {
+            "min": 8704,
+            "max": 13133,
+            "rate": 0.16
+          },
+          {
+            "min": 13133,
+            "max": 18612,
+            "rate": 0.215
+          },
+          {
+            "min": 18612,
+            "max": 24090,
+            "rate": 0.244
+          },
+          {
+            "min": 24090,
+            "max": 30672,
+            "rate": 0.314
+          },
+          {
+            "min": 30672,
+            "max": 44959,
+            "rate": 0.349
+          },
+          {
+            "min": 44959,
+            "max": 48586,
+            "rate": 0.431
+          },
+          {
+            "min": 48586,
+            "max": 90393,
+            "rate": 0.446
+          },
+          {
+            "min": 90393,
+            "max": null,
+            "rate": 0.48
+          }
+        ],
+        "deduction": 4432,
+        "exemptions": "NHR ended Jan 2024 (IFICI replacement excludes pensions). Foreign pensions/retirement income taxed at standard progressive rates 12.5-48%. US-Portugal treaty provides foreign tax credit."
+      },
+      "salesTax": {
+        "rate": 0
+      },
+      "propertyTax": {
+        "rate": 0
+      },
+      "socialCharges": null,
+      "vatRate": 0.23,
+      "estVehicleTax": 0,
+      "ssExempt": false,
+      "ssTaxedInCountry": true,
+      "notes": "NHR ended Jan 2024. IFICI replacement excludes pensions. Standard progressive rates 14.5%-48%."
+    },
+    "subregion": "Lisboa",
+    "coordinates": {
+      "lat": 38.6968,
+      "lon": -9.4215
     }
   },
   {
@@ -740,7 +1194,20 @@
       "winterLowF": 48,
       "summerHighF": 92,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 45
+      "rainyDaysPerYear": 45,
+      "humidityAvgPct": 66,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -765,7 +1232,8 @@
         "typical": 115,
         "min": 75,
         "max": 165,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "Sistema Nacional de Salud (SNS) universal coverage after residency permit. Private (Sanitas, Adeslas, ASISA) ~€60-150/mo with pre-existing condition loadings. Anti-VEGF injections available widely via SNS at public ophthalmology. GLP-1 covered for diabetes via SNS. Chronic-disease coverage is strong; regional variation — Catalonia and Madrid have densest infrastructure."
       },
       "insurance": {
         "typical": 135,
@@ -822,16 +1290,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 79,
+        "min": 64,
+        "max": 99,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 840,
+        "min": 756,
+        "max": 924,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -879,14 +1348,45 @@
       "Excellent healthcare infrastructure in Málaga"
     ],
     "cons": [
-      "Tourist-heavy areas can feel like enclaves",
-      "Marbella significantly more expensive",
-      "Summer heat extreme in July-August"
+      {
+        "text": "Tourist-heavy areas can feel like enclaves"
+      },
+      {
+        "text": "Marbella significantly more expensive"
+      },
+      {
+        "text": "Summer heat extreme in July-August"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Costa del Sol",
+            "url": "https://www.numbeo.com/crime/in/Costa-del-Sol",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Spain",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Spain",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Spain",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Spain",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Spanish progressive income tax 19%-47%. Beckham Law may apply for new residents (flat 24% up to €600K). US-Spain tax treaty.",
       "vatRate": 21,
       "socialChargesRate": 0
+    },
+    "subregion": "Andalusia",
+    "coordinates": {
+      "lat": 36.7202,
+      "lon": -4.4203
     }
   },
   {
@@ -918,7 +1418,19 @@
       "winterLowF": 43,
       "summerHighF": 90,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 45
+      "rainyDaysPerYear": 45,
+      "humidityAvgPct": 67,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Oct",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -943,7 +1455,8 @@
         "typical": 110,
         "min": 70,
         "max": 160,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "Sistema Nacional de Salud (SNS) universal coverage after residency permit. Private (Sanitas, Adeslas, ASISA) ~€60-150/mo with pre-existing condition loadings. Anti-VEGF injections available widely via SNS at public ophthalmology. GLP-1 covered for diabetes via SNS. Chronic-disease coverage is strong; regional variation — Catalonia and Madrid have densest infrastructure."
       },
       "insurance": {
         "typical": 125,
@@ -1000,16 +1513,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 79,
+        "min": 64,
+        "max": 99,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 840,
+        "min": 756,
+        "max": 924,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -1057,14 +1571,57 @@
       "Good metro and bus system, bikeable"
     ],
     "cons": [
-      "Less English spoken than Costa del Sol",
-      "Flash flooding risk in autumn (DANA events)",
-      "Summer humidity can be uncomfortable"
+      {
+        "text": "Less English spoken than Costa del Sol"
+      },
+      {
+        "text": "Flash flooding risk in autumn from DANA cold-drop events (catastrophic October 2024 DANA prompted RDL 7/2024 emergency relief)",
+        "sources": [
+          {
+            "title": "AEMET — DANA (cold-drop) explainer + Mediterranean autumn flood events",
+            "url": "https://www.aemet.es/es/conocermas/borrascas/dana",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "BOE — Real Decreto-Ley 7/2024 (Valencia DANA emergency relief)",
+            "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2024-22641",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
+      {
+        "text": "Summer humidity can be uncomfortable"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Valencia",
+            "url": "https://www.numbeo.com/crime/in/Valencia",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Spain",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Spain",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Spain",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Spain",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Spanish progressive income tax 19%-47%. Valencia region may have slightly different regional rates.",
       "vatRate": 21,
       "socialChargesRate": 0
+    },
+    "subregion": "Valencia",
+    "coordinates": {
+      "lat": 39.4739,
+      "lon": -0.3797
     }
   },
   {
@@ -1096,7 +1653,19 @@
       "winterLowF": 41,
       "summerHighF": 87,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 55
+      "rainyDaysPerYear": 55,
+      "humidityAvgPct": 76,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -1121,7 +1690,8 @@
         "typical": 120,
         "min": 80,
         "max": 170,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "Sistema Nacional de Salud (SNS) universal coverage after residency permit. Private (Sanitas, Adeslas, ASISA) ~€60-150/mo with pre-existing condition loadings. Anti-VEGF injections available widely via SNS at public ophthalmology. GLP-1 covered for diabetes via SNS. Chronic-disease coverage is strong; regional variation — Catalonia and Madrid have densest infrastructure."
       },
       "insurance": {
         "typical": 140,
@@ -1178,16 +1748,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 79,
+        "min": 64,
+        "max": 99,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 840,
+        "min": 756,
+        "max": 924,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -1235,14 +1806,45 @@
       "Beach city with Mediterranean climate"
     ],
     "cons": [
-      "High cost of living, especially rent",
-      "Pickpocketing and petty crime in tourist areas",
-      "Political tensions around Catalan independence"
+      {
+        "text": "High cost of living, especially rent"
+      },
+      {
+        "text": "Pickpocketing and petty crime in tourist areas"
+      },
+      {
+        "text": "Political tensions around Catalan independence"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Barcelona",
+            "url": "https://www.numbeo.com/crime/in/Barcelona",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Spain",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Spain",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Spain",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Spain",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Spanish progressive income tax 19%-47%. Catalonia has slightly higher regional surcharges.",
       "vatRate": 21,
       "socialChargesRate": 0
+    },
+    "subregion": "Catalonia",
+    "coordinates": {
+      "lat": 41.3888,
+      "lon": 2.159
     }
   },
   {
@@ -1274,7 +1876,20 @@
       "winterLowF": 59,
       "summerHighF": 84,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 25
+      "rainyDaysPerYear": 25,
+      "humidityAvgPct": 64,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Nov",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -1299,7 +1914,8 @@
         "typical": 110,
         "min": 70,
         "max": 160,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "Sistema Nacional de Salud (SNS) universal coverage after residency permit. Private (Sanitas, Adeslas, ASISA) ~€60-150/mo with pre-existing condition loadings. Anti-VEGF injections available widely via SNS at public ophthalmology. GLP-1 covered for diabetes via SNS. Chronic-disease coverage is strong; regional variation — Catalonia and Madrid have densest infrastructure."
       },
       "insurance": {
         "typical": 125,
@@ -1356,16 +1972,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 79,
+        "min": 64,
+        "max": 99,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 840,
+        "min": 756,
+        "max": 924,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -1409,18 +2026,63 @@
     },
     "pros": [
       "Year-round warm and mild climate (eternal spring)",
-      "Lower IGIC tax (7%) instead of mainland VAT (21%)",
+      {
+        "text": "Lower IGIC general rate (7%) instead of mainland IVA (21%) under the Canary Islands Special Tax Regime",
+        "sources": [
+          {
+            "title": "Agencia Tributaria Canaria — IGIC (general rate 7%)",
+            "url": "https://www.gobiernodecanarias.org/tributos/impuestos/igic/",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "Agencia Tributaria — IVA tipos impositivos",
+            "url": "https://sede.agenciatributaria.gob.es/Sede/iva/tipos.html",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Large Northern European expat community"
     ],
     "cons": [
-      "Island isolation - flights to mainland are 2.5+ hours",
-      "Limited shopping and cultural options vs mainland",
-      "Some goods more expensive due to shipping costs"
+      {
+        "text": "Island isolation - flights to mainland are 2.5+ hours"
+      },
+      {
+        "text": "Limited shopping and cultural options vs mainland"
+      },
+      {
+        "text": "Some goods more expensive due to shipping costs"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Canary Islands",
+            "url": "https://www.numbeo.com/crime/in/Canary-Islands",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Spain",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Spain",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Spain",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Spain",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Spanish progressive income tax 19%-47%. Canary Islands use IGIC (7%) instead of mainland IVA/VAT (21%).",
       "vatRate": 7,
       "socialChargesRate": 0
+    },
+    "subregion": "Canary Islands",
+    "coordinates": {
+      "lat": 28.3298,
+      "lon": -16.5097
     }
   },
   {
@@ -1452,7 +2114,19 @@
       "winterLowF": 44,
       "summerHighF": 95,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 50
+      "rainyDaysPerYear": 50,
+      "humidityAvgPct": 63,
+      "drySeasonMonths": [
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -1477,7 +2151,8 @@
         "typical": 100,
         "min": 65,
         "max": 150,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "ESY (National Health System) universal coverage after residency permit. Private supplementary ~€80-180/mo. Anti-VEGF injections available in Athens (Hygeia, Metropolitan) and Thessaloniki; covered via ESY with prescription. GLP-1 covered for diabetes indication. Crisis-era underfunding means longer public waits — private picks up the gap. English availability moderate, better in private sector."
       },
       "insurance": {
         "typical": 115,
@@ -1534,16 +2209,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 87,
+        "min": 72,
+        "max": 107,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 420,
+        "min": 378,
+        "max": 462,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -1586,19 +2262,59 @@
       "safetyRating": 7
     },
     "pros": [
-      "Rich ancient history at your doorstep",
+      {
+        "text": "Rich ancient history at your doorstep (Acropolis UNESCO World Heritage site, listed 1987)",
+        "sources": [
+          {
+            "title": "UNESCO World Heritage List — Acropolis, Athens (404)",
+            "url": "https://whc.unesco.org/en/list/404",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Very affordable dining and daily costs",
       "Good public transit (metro, buses, tram)"
     ],
     "cons": [
-      "Extreme summer heat (95F+ for weeks)",
-      "Air pollution can be poor in summer",
-      "Bureaucracy can be challenging for residents"
+      {
+        "text": "Extreme summer heat (95F+ for weeks)"
+      },
+      {
+        "text": "Air pollution can be poor in summer"
+      },
+      {
+        "text": "Bureaucracy can be challenging for residents"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Athens",
+            "url": "https://www.numbeo.com/crime/in/Athens",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Greece",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Greece",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Greece",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Greece",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Greek progressive income tax 9%-44%. Special 7% flat tax for foreign retirees transferring tax residency (10-year program). US-Greece tax treaty.",
       "vatRate": 24,
       "socialChargesRate": 0
+    },
+    "subregion": "Attica",
+    "coordinates": {
+      "lat": 37.9838,
+      "lon": 23.7278
     }
   },
   {
@@ -1630,7 +2346,16 @@
       "winterLowF": 48,
       "summerHighF": 90,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 50
+      "rainyDaysPerYear": 50,
+      "humidityAvgPct": 68,
+      "drySeasonMonths": [
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -1655,7 +2380,8 @@
         "typical": 90,
         "min": 60,
         "max": 140,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "ESY (National Health System) universal coverage after residency permit. Private supplementary ~€80-180/mo. Anti-VEGF injections available in Athens (Hygeia, Metropolitan) and Thessaloniki; covered via ESY with prescription. GLP-1 covered for diabetes indication. Crisis-era underfunding means longer public waits — private picks up the gap. English availability moderate, better in private sector."
       },
       "insurance": {
         "typical": 110,
@@ -1712,16 +2438,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 87,
+        "min": 72,
+        "max": 107,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 420,
+        "min": 378,
+        "max": 462,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -1769,14 +2496,45 @@
       "Excellent Cretan cuisine and food culture"
     ],
     "cons": [
-      "Island isolation - ferry or flights to mainland",
-      "Limited specialist healthcare",
-      "Car essentially required outside cities"
+      {
+        "text": "Island isolation - ferry or flights to mainland"
+      },
+      {
+        "text": "Limited specialist healthcare"
+      },
+      {
+        "text": "Car essentially required outside cities"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Crete",
+            "url": "https://www.numbeo.com/crime/in/Crete",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Greece",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Greece",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Greece",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Greece",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Greek progressive income tax 9%-44%. 7% flat tax option for foreign retirees.",
       "vatRate": 24,
       "socialChargesRate": 0
+    },
+    "subregion": "Crete",
+    "coordinates": {
+      "lat": 35.5112,
+      "lon": 24.0292
     }
   },
   {
@@ -1808,7 +2566,13 @@
       "winterLowF": 43,
       "summerHighF": 88,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 100
+      "rainyDaysPerYear": 100,
+      "humidityAvgPct": 73,
+      "drySeasonMonths": [
+        "Jun",
+        "Jul",
+        "Aug"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -1833,7 +2597,8 @@
         "typical": 85,
         "min": 55,
         "max": 130,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "ESY (National Health System) universal coverage after residency permit. Private supplementary ~€80-180/mo. Anti-VEGF injections available in Athens (Hygeia, Metropolitan) and Thessaloniki; covered via ESY with prescription. GLP-1 covered for diabetes indication. Crisis-era underfunding means longer public waits — private picks up the gap. English availability moderate, better in private sector."
       },
       "insurance": {
         "typical": 105,
@@ -1890,16 +2655,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 87,
+        "min": 72,
+        "max": 107,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 420,
+        "min": 378,
+        "max": 462,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -1943,18 +2709,58 @@
     },
     "pros": [
       "Lush green Ionian island (unlike drier Aegean islands)",
-      "Venetian and British architectural heritage",
+      {
+        "text": "Venetian, French, and British architectural heritage (Old Town of Corfu UNESCO World Heritage, listed 2007)",
+        "sources": [
+          {
+            "title": "UNESCO World Heritage List — Old Town of Corfu (978)",
+            "url": "https://whc.unesco.org/en/list/978",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Affordable and peaceful year-round lifestyle"
     ],
     "cons": [
-      "Rainier than other Greek islands",
-      "Very quiet in winter (many businesses close)",
-      "Limited healthcare facilities on island"
+      {
+        "text": "Rainier than other Greek islands"
+      },
+      {
+        "text": "Very quiet in winter (many businesses close)"
+      },
+      {
+        "text": "Limited healthcare facilities on island"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Corfu",
+            "url": "https://www.numbeo.com/crime/in/Corfu",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Greece",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Greece",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Greece",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Greece",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Greek progressive income tax 9%-44%. 7% flat tax option for foreign retirees.",
       "vatRate": 24,
       "socialChargesRate": 0
+    },
+    "subregion": "Ionian Islands",
+    "coordinates": {
+      "lat": 39.624,
+      "lon": 19.921
     }
   },
   {
@@ -1986,7 +2792,17 @@
       "winterLowF": 50,
       "summerHighF": 93,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 40
+      "rainyDaysPerYear": 40,
+      "humidityAvgPct": 67,
+      "drySeasonMonths": [
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -2011,7 +2827,8 @@
         "typical": 85,
         "min": 55,
         "max": 130,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "ESY (National Health System) universal coverage after residency permit. Private supplementary ~€80-180/mo. Anti-VEGF injections available in Athens (Hygeia, Metropolitan) and Thessaloniki; covered via ESY with prescription. GLP-1 covered for diabetes indication. Crisis-era underfunding means longer public waits — private picks up the gap. English availability moderate, better in private sector."
       },
       "insurance": {
         "typical": 105,
@@ -2068,16 +2885,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 87,
+        "min": 72,
+        "max": 107,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 420,
+        "min": 378,
+        "max": 462,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -2121,18 +2939,58 @@
     },
     "pros": [
       "Very warm climate with 300+ days of sunshine",
-      "Medieval old town is a UNESCO World Heritage site",
+      {
+        "text": "Medieval old town is a UNESCO World Heritage site (Medieval City of Rhodes, listed 1988 — best-preserved medieval walled city in Europe)",
+        "sources": [
+          {
+            "title": "UNESCO World Heritage List — Medieval City of Rhodes (493)",
+            "url": "https://whc.unesco.org/en/list/493",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Affordable cost of living"
     ],
     "cons": [
-      "Tourism-dominated economy (very quiet off-season)",
-      "Limited specialist healthcare",
-      "Island isolation with seasonal flight connections"
+      {
+        "text": "Tourism-dominated economy (very quiet off-season)"
+      },
+      {
+        "text": "Limited specialist healthcare"
+      },
+      {
+        "text": "Island isolation with seasonal flight connections"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Rhodes",
+            "url": "https://www.numbeo.com/crime/in/Rhodes",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Greece",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Greece",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Greece",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Greece",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Greek progressive income tax 9%-44%. 7% flat tax option for foreign retirees.",
       "vatRate": 24,
       "socialChargesRate": 0
+    },
+    "subregion": "South Aegean",
+    "coordinates": {
+      "lat": 36.434,
+      "lon": 28.217
     }
   },
   {
@@ -2164,7 +3022,22 @@
       "winterLowF": 42,
       "summerHighF": 92,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 60
+      "rainyDaysPerYear": 60,
+      "humidityAvgPct": 62,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -2189,7 +3062,8 @@
         "typical": 80,
         "min": 50,
         "max": 120,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "ESY (National Health System) universal coverage after residency permit. Private supplementary ~€80-180/mo. Anti-VEGF injections available in Athens (Hygeia, Metropolitan) and Thessaloniki; covered via ESY with prescription. GLP-1 covered for diabetes indication. Crisis-era underfunding means longer public waits — private picks up the gap. English availability moderate, better in private sector."
       },
       "insurance": {
         "typical": 100,
@@ -2246,16 +3120,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 87,
+        "min": 72,
+        "max": 107,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 420,
+        "min": 378,
+        "max": 462,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -2299,18 +3174,68 @@
     },
     "pros": [
       "Among the most affordable areas in the EU",
-      "Rich ancient history (Mycenae, Olympia, Epidaurus)",
+      {
+        "text": "Rich ancient history: Mycenae, Olympia, and Epidaurus are all UNESCO World Heritage sites",
+        "sources": [
+          {
+            "title": "UNESCO World Heritage List — Archaeological Sites of Mycenae and Tiryns (941)",
+            "url": "https://whc.unesco.org/en/list/941",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "UNESCO World Heritage List — Archaeological Site of Olympia (517)",
+            "url": "https://whc.unesco.org/en/list/517",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "UNESCO World Heritage List — Sanctuary of Asklepios at Epidaurus (491)",
+            "url": "https://whc.unesco.org/en/list/491",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Authentic Greek mainland experience without mass tourism"
     ],
     "cons": [
-      "Very small expat community",
-      "Car essential for daily life",
-      "Limited English spoken outside tourist spots"
+      {
+        "text": "Very small expat community"
+      },
+      {
+        "text": "Car essential for daily life"
+      },
+      {
+        "text": "Limited English spoken outside tourist spots"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Peloponnese",
+            "url": "https://www.numbeo.com/crime/in/Peloponnese",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Greece",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Greece",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Greece",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Greece",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Greek progressive income tax 9%-44%. 7% flat tax option for foreign retirees.",
       "vatRate": 24,
       "socialChargesRate": 0
+    },
+    "subregion": "Peloponnese",
+    "coordinates": {
+      "lat": 37.5686,
+      "lon": 22.8069
     }
   },
   {
@@ -2342,7 +3267,18 @@
       "winterLowF": 37,
       "summerHighF": 90,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 55
+      "rainyDaysPerYear": 55,
+      "humidityAvgPct": 67,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -2367,7 +3303,8 @@
         "typical": 130,
         "min": 90,
         "max": 185,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "PUMA universal coverage + Mutuelle complémentaire (~€55-80/person/mo, higher tier for chronic conditions). ALD (Affection Longue Durée) provides 100% coverage for hypertension and diabetes. Macular degeneration: anti-VEGF injections covered 100% at hospital. Hypothyroidism monitoring covered. GLP-1 covered for diabetes indication."
       },
       "insurance": {
         "typical": 150,
@@ -2424,16 +3361,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 720,
+        "min": 648,
+        "max": 792,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -2478,17 +3416,57 @@
     "pros": [
       "Warm Mediterranean climate in southern France",
       "Affordable by French standards",
-      "Montpellier is a vibrant university city with tram system"
+      {
+        "text": "Montpellier is a vibrant university city with the TaM tram (4 lines, ~83 km — among the largest French tram networks outside Paris)",
+        "sources": [
+          {
+            "title": "TaM — Tramway de Montpellier (4 lines, ~83 km)",
+            "url": "https://www.tam-voyages.com/le-reseau/tramway",
+            "accessed": "2026-05-03"
+          }
+        ]
+      }
     ],
     "cons": [
-      "French language essential for daily life",
-      "Mistral winds can be intense",
-      "Smaller international community than Côte d'Azur"
+      {
+        "text": "French language essential for daily life"
+      },
+      {
+        "text": "Mistral winds can be intense"
+      },
+      {
+        "text": "Smaller international community than Côte d'Azur"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Languedoc",
+            "url": "https://www.numbeo.com/crime/in/Languedoc",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in France",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=France",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in France",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_France",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "French progressive income tax 11%-45%. Social charges ~9.1% on foreign income (CSG/CRDS). US-France tax treaty.",
       "vatRate": 20,
       "socialChargesRate": 9.1
+    },
+    "subregion": "Occitanie",
+    "coordinates": {
+      "lat": 43.6109,
+      "lon": 3.8764
     }
   },
   {
@@ -2520,7 +3498,13 @@
       "winterLowF": 34,
       "summerHighF": 82,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 120
+      "rainyDaysPerYear": 120,
+      "humidityAvgPct": 74,
+      "drySeasonMonths": [
+        "Jul",
+        "Aug",
+        "Sep"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -2545,7 +3529,8 @@
         "typical": 125,
         "min": 85,
         "max": 175,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "PUMA universal coverage + Mutuelle complémentaire (~€55-80/person/mo, higher tier for chronic conditions). ALD (Affection Longue Durée) provides 100% coverage for hypertension and diabetes. Macular degeneration: anti-VEGF injections covered 100% at hospital. Hypothyroidism monitoring covered. GLP-1 covered for diabetes indication."
       },
       "insurance": {
         "typical": 145,
@@ -2602,16 +3587,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 720,
+        "min": 648,
+        "max": 792,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -2659,14 +3645,45 @@
       "Very affordable housing with large properties available"
     ],
     "cons": [
-      "Cold and damp winters",
-      "Car absolutely essential",
-      "Very limited public transit"
+      {
+        "text": "Cold and damp winters"
+      },
+      {
+        "text": "Car absolutely essential"
+      },
+      {
+        "text": "Very limited public transit"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Dordogne",
+            "url": "https://www.numbeo.com/crime/in/Dordogne",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in France",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=France",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in France",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_France",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "French progressive income tax 11%-45%. Social charges ~9.1% on foreign income.",
       "vatRate": 20,
       "socialChargesRate": 9.1
+    },
+    "subregion": "Nouvelle-Aquitaine",
+    "coordinates": {
+      "lat": 44.889,
+      "lon": 1.2166
     }
   },
   {
@@ -2698,7 +3715,14 @@
       "winterLowF": 35,
       "summerHighF": 85,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 110
+      "rainyDaysPerYear": 110,
+      "humidityAvgPct": 76,
+      "drySeasonMonths": [
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -2723,7 +3747,8 @@
         "typical": 120,
         "min": 80,
         "max": 170,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "PUMA universal coverage + Mutuelle complémentaire (~€55-80/person/mo, higher tier for chronic conditions). ALD (Affection Longue Durée) provides 100% coverage for hypertension and diabetes. Macular degeneration: anti-VEGF injections covered 100% at hospital. Hypothyroidism monitoring covered. GLP-1 covered for diabetes indication."
       },
       "insurance": {
         "typical": 140,
@@ -2780,16 +3805,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 720,
+        "min": 648,
+        "max": 792,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -2837,14 +3863,45 @@
       "Peaceful rural lifestyle with friendly locals"
     ],
     "cons": [
-      "Very limited English spoken",
-      "Car essential, minimal public transit",
-      "Small expat community, can feel isolated"
+      {
+        "text": "Very limited English spoken"
+      },
+      {
+        "text": "Car essential, minimal public transit"
+      },
+      {
+        "text": "Small expat community, can feel isolated"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Gascony",
+            "url": "https://www.numbeo.com/crime/in/Gascony",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in France",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=France",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in France",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_France",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "French progressive income tax 11%-45%. Social charges ~9.1% on foreign income.",
       "vatRate": 20,
       "socialChargesRate": 9.1
+    },
+    "subregion": "Nouvelle-Aquitaine",
+    "coordinates": {
+      "lat": 43.6456,
+      "lon": 0.5886
     }
   },
   {
@@ -2876,7 +3933,15 @@
       "winterLowF": 43,
       "summerHighF": 86,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 60
+      "rainyDaysPerYear": 60,
+      "humidityAvgPct": 71,
+      "drySeasonMonths": [
+        "Mar",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -2901,7 +3966,8 @@
         "typical": 140,
         "min": 95,
         "max": 195,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "PUMA universal coverage + Mutuelle complémentaire (~€55-80/person/mo, higher tier for chronic conditions). ALD (Affection Longue Durée) provides 100% coverage for hypertension and diabetes. Macular degeneration: anti-VEGF injections covered 100% at hospital. Hypothyroidism monitoring covered. GLP-1 covered for diabetes indication."
       },
       "insurance": {
         "typical": 160,
@@ -2958,16 +4024,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 720,
+        "min": 648,
+        "max": 792,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -3015,14 +4082,45 @@
       "Large international community and English widely understood"
     ],
     "cons": [
-      "Very high cost of living, especially rent",
-      "Crowded in summer tourist season",
-      "Petty crime (pickpocketing) in tourist areas"
+      {
+        "text": "Very high cost of living, especially rent"
+      },
+      {
+        "text": "Crowded in summer tourist season"
+      },
+      {
+        "text": "Petty crime (pickpocketing) in tourist areas"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Nice / Côte d'Azur",
+            "url": "https://www.numbeo.com/crime/in/Nice-%2F-Cote-d'Azur",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in France",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=France",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in France",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_France",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "French progressive income tax 11%-45%. Social charges ~9.1% on foreign income.",
       "vatRate": 20,
       "socialChargesRate": 9.1
+    },
+    "subregion": "Provence-Alpes-Côte d'Azur",
+    "coordinates": {
+      "lat": 43.7031,
+      "lon": 7.2661
     }
   },
   {
@@ -3054,7 +4152,14 @@
       "winterLowF": 35,
       "summerHighF": 79,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 110
+      "rainyDaysPerYear": 110,
+      "humidityAvgPct": 76,
+      "drySeasonMonths": [
+        "Feb",
+        "Apr",
+        "Jul",
+        "Sep"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -3079,7 +4184,8 @@
         "typical": 145,
         "min": 100,
         "max": 200,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "PUMA universal coverage + Mutuelle complémentaire (~€55-80/person/mo, higher tier for chronic conditions). ALD (Affection Longue Durée) provides 100% coverage for hypertension and diabetes. Macular degeneration: anti-VEGF injections covered 100% at hospital. Hypothyroidism monitoring covered. GLP-1 covered for diabetes indication."
       },
       "insurance": {
         "typical": 165,
@@ -3136,16 +4242,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 720,
+        "min": 648,
+        "max": 792,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -3189,18 +4296,63 @@
     },
     "pros": [
       "Unmatched cultural offerings (museums, theater, cuisine)",
-      "World-class public transit (metro, RER, buses)",
+      {
+        "text": "World-class public transit: 16-line métro + RER + bus network operated under Île-de-France Mobilités (~1.5 billion annual métro riders)",
+        "sources": [
+          {
+            "title": "Île-de-France Mobilités — Paris regional transit network",
+            "url": "https://www.iledefrance-mobilites.fr/en/discover/transport-network",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "RATP — Métro de Paris (16 lines, ~225 km, ~1.5 billion annual riders)",
+            "url": "https://www.ratp.fr/en/metro",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "International city with huge expat community"
     ],
     "cons": [
-      "Very high cost of living, especially rent",
-      "Cold, grey winters",
-      "Can feel overwhelming and fast-paced"
+      {
+        "text": "Very high cost of living, especially rent"
+      },
+      {
+        "text": "Cold, grey winters"
+      },
+      {
+        "text": "Can feel overwhelming and fast-paced"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Paris",
+            "url": "https://www.numbeo.com/crime/in/Paris",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in France",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=France",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in France",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_France",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "French progressive income tax 11%-45%. Social charges ~9.1% on foreign income.",
       "vatRate": 20,
       "socialChargesRate": 9.1
+    },
+    "subregion": "Île-de-France",
+    "coordinates": {
+      "lat": 48.8534,
+      "lon": 2.3488
     }
   },
   {
@@ -3232,7 +4384,17 @@
       "winterLowF": 41,
       "summerHighF": 86,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 55
+      "rainyDaysPerYear": 55,
+      "humidityAvgPct": 69,
+      "drySeasonMonths": [
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -3257,7 +4419,8 @@
         "typical": 130,
         "min": 90,
         "max": 185,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "PUMA universal coverage + Mutuelle complémentaire (~€55-80/person/mo, higher tier for chronic conditions). ALD (Affection Longue Durée) provides 100% coverage for hypertension and diabetes. Macular degeneration: anti-VEGF injections covered 100% at hospital. Hypothyroidism monitoring covered. GLP-1 covered for diabetes indication."
       },
       "insurance": {
         "typical": 150,
@@ -3314,16 +4477,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 720,
+        "min": 648,
+        "max": 792,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -3371,14 +4535,45 @@
       "Access to Porquerolles and Hyères islands"
     ],
     "cons": [
-      "Less glamorous and fewer amenities than Nice/Cannes",
-      "Smaller expat community",
-      "Some rougher neighborhoods in the city center"
+      {
+        "text": "Less glamorous and fewer amenities than Nice/Cannes"
+      },
+      {
+        "text": "Smaller expat community"
+      },
+      {
+        "text": "Some rougher neighborhoods in the city center"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Toulon",
+            "url": "https://www.numbeo.com/crime/in/Toulon",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in France",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=France",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in France",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_France",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "French progressive income tax 11%-45%. Social charges ~9.1% on foreign income.",
       "vatRate": 20,
       "socialChargesRate": 9.1
+    },
+    "subregion": "Provence-Alpes-Côte d'Azur",
+    "coordinates": {
+      "lat": 43.1244,
+      "lon": 5.9284
     }
   },
   {
@@ -3410,7 +4605,14 @@
       "winterLowF": 35,
       "summerHighF": 86,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 75
+      "rainyDaysPerYear": 75,
+      "humidityAvgPct": 76,
+      "drySeasonMonths": [
+        "Jun",
+        "Jul",
+        "Aug",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -3435,7 +4637,8 @@
         "typical": 95,
         "min": 60,
         "max": 140,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "SSN (Servizio Sanitario Nazionale) universal coverage after Elective Residence visa. Private supplementary ~€60-180/mo. Anti-VEGF injections available widely via SSN at hospital ophthalmology. GLP-1 covered for diabetes through SSN with prescription. Regional variation: Northern Italy has strongest public infrastructure; Southern regions thinner. English availability moderate in private sector."
       },
       "insurance": {
         "typical": 110,
@@ -3492,16 +4695,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 81,
+        "min": 66,
+        "max": 101,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 420,
+        "min": 378,
+        "max": 462,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -3546,17 +4750,80 @@
     "pros": [
       "Among the most affordable regions in Italy",
       "Both mountains and coast within 30 minutes",
-      "Authentic Italian lifestyle without mass tourism"
+      "Authentic Italian lifestyle without mass tourism",
+      {
+        "text": "7% flat tax on foreign-source income for 9 years for new residents in qualifying southern-region municipalities <20K population (TUIR Art. 24-ter / Decreto Crescita 2019)",
+        "sources": [
+          {
+            "title": "Italian TUIR Art. 24-ter (Normattiva — opzione per imposta sostitutiva 7% sui redditi di fonte estera)",
+            "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:1986-12-22;917!vig=",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "Decreto-Legge 30 aprile 2019, n. 34 (Decreto Crescita) — introduces 7% flat-tax regime for foreign retirees",
+            "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2019-04-30;34",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "Agenzia delle Entrate — Regime opzionale per pensionati esteri (TUIR Art. 24-ter)",
+            "url": "https://www.agenziaentrate.gov.it/portale/web/guest/schede/agevolazioni/regimespecialepensionatiesteri/scheda-info-regime-pensionati-esteri",
+            "accessed": "2026-05-03"
+          }
+        ]
+      }
     ],
     "cons": [
-      "Very limited English spoken",
-      "Small expat community",
-      "L'Aquila still recovering from 2009 earthquake"
+      {
+        "text": "Very limited English spoken"
+      },
+      {
+        "text": "Small expat community"
+      },
+      {
+        "text": "L'Aquila still recovering from the M6.3 2009 earthquake (309 fatalities; reconstruction ongoing 15+ years later)",
+        "sources": [
+          {
+            "title": "INGV — Terremoto dell'Aquila del 6 aprile 2009 (M6.3)",
+            "url": "https://terremoti.ingv.it/event/1895389",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "Protezione Civile — Terremoto Abruzzo 2009 reconstruction",
+            "url": "https://www.protezionecivile.gov.it/it/notizia/terremoto-abruzzo-2009",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Abruzzo",
+            "url": "https://www.numbeo.com/crime/in/Abruzzo",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Italy",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Italy",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Italy",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Italy",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Italian progressive income tax 23%-43%. Italy offers 7% flat tax for retirees moving to southern regions (towns under 20K population). US-Italy tax treaty.",
       "vatRate": 22,
       "socialChargesRate": 0
+    },
+    "subregion": "Abruzzo",
+    "coordinates": {
+      "lat": 42.4584,
+      "lon": 14.2028
     }
   },
   {
@@ -3588,7 +4855,16 @@
       "winterLowF": 41,
       "summerHighF": 90,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 55
+      "rainyDaysPerYear": 55,
+      "humidityAvgPct": 72,
+      "drySeasonMonths": [
+        "Jan",
+        "Apr",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -3613,7 +4889,8 @@
         "typical": 90,
         "min": 60,
         "max": 135,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "SSN (Servizio Sanitario Nazionale) universal coverage after Elective Residence visa. Private supplementary ~€60-180/mo. Anti-VEGF injections available widely via SSN at hospital ophthalmology. GLP-1 covered for diabetes through SSN with prescription. Regional variation: Northern Italy has strongest public infrastructure; Southern regions thinner. English availability moderate in private sector."
       },
       "insurance": {
         "typical": 110,
@@ -3670,16 +4947,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 81,
+        "min": 66,
+        "max": 101,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 420,
+        "min": 378,
+        "max": 462,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -3724,17 +5002,77 @@
     "pros": [
       "Beautiful Baroque architecture (Lecce is 'Florence of the South')",
       "Excellent food and wine at very low prices",
-      "Stunning coastline and trulli houses in Ostuni/Alberobello"
+      {
+        "text": "Stunning coastline and trulli houses in Ostuni/Alberobello (Trulli of Alberobello are UNESCO World Heritage)",
+        "sources": [
+          {
+            "title": "UNESCO World Heritage List — Trulli of Alberobello (787)",
+            "url": "https://whc.unesco.org/en/list/787",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
+      {
+        "text": "7% flat tax on foreign-source income for 9 years for new residents in qualifying southern-region municipalities <20K population (TUIR Art. 24-ter / Decreto Crescita 2019)",
+        "sources": [
+          {
+            "title": "Italian TUIR Art. 24-ter (Normattiva — opzione per imposta sostitutiva 7% sui redditi di fonte estera)",
+            "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:1986-12-22;917!vig=",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "Decreto-Legge 30 aprile 2019, n. 34 (Decreto Crescita) — introduces 7% flat-tax regime for foreign retirees",
+            "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2019-04-30;34",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "Agenzia delle Entrate — Regime opzionale per pensionati esteri (TUIR Art. 24-ter)",
+            "url": "https://www.agenziaentrate.gov.it/portale/web/guest/schede/agevolazioni/regimespecialepensionatiesteri/scheda-info-regime-pensionati-esteri",
+            "accessed": "2026-05-03"
+          }
+        ]
+      }
     ],
     "cons": [
-      "Limited English spoken outside tourist areas",
-      "Public transit limited outside Bari",
-      "Southern Italian bureaucracy can be slow"
+      {
+        "text": "Limited English spoken outside tourist areas"
+      },
+      {
+        "text": "Public transit limited outside Bari"
+      },
+      {
+        "text": "Southern Italian bureaucracy can be slow"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Puglia",
+            "url": "https://www.numbeo.com/crime/in/Puglia",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Italy",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Italy",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Italy",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Italy",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Italian progressive income tax 23%-43%. 7% flat tax for retirees in southern towns under 20K population.",
       "vatRate": 22,
       "socialChargesRate": 0
+    },
+    "subregion": "Apulia",
+    "coordinates": {
+      "lat": 40.3548,
+      "lon": 18.1724
     }
   },
   {
@@ -3766,7 +5104,15 @@
       "winterLowF": 46,
       "summerHighF": 93,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 45
+      "rainyDaysPerYear": 45,
+      "humidityAvgPct": 74,
+      "drySeasonMonths": [
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -3791,7 +5137,8 @@
         "typical": 85,
         "min": 55,
         "max": 130,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "SSN (Servizio Sanitario Nazionale) universal coverage after Elective Residence visa. Private supplementary ~€60-180/mo. Anti-VEGF injections available widely via SSN at hospital ophthalmology. GLP-1 covered for diabetes through SSN with prescription. Regional variation: Northern Italy has strongest public infrastructure; Southern regions thinner. English availability moderate in private sector."
       },
       "insurance": {
         "typical": 105,
@@ -3848,16 +5195,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 81,
+        "min": 66,
+        "max": 101,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 420,
+        "min": 378,
+        "max": 462,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -3902,17 +5250,75 @@
     "pros": [
       "Among the cheapest places to live in Western Europe",
       "Incredible food, history, and natural beauty",
-      "Warm climate with mild winters"
+      "Warm climate with mild winters",
+      {
+        "text": "7% flat tax on foreign-source income for 9 years for new residents in qualifying southern-region municipalities <20K population (TUIR Art. 24-ter / Decreto Crescita 2019)",
+        "sources": [
+          {
+            "title": "Italian TUIR Art. 24-ter (Normattiva — opzione per imposta sostitutiva 7% sui redditi di fonte estera)",
+            "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:1986-12-22;917!vig=",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "Decreto-Legge 30 aprile 2019, n. 34 (Decreto Crescita) — introduces 7% flat-tax regime for foreign retirees",
+            "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2019-04-30;34",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "Agenzia delle Entrate — Regime opzionale per pensionati esteri (TUIR Art. 24-ter)",
+            "url": "https://www.agenziaentrate.gov.it/portale/web/guest/schede/agevolazioni/regimespecialepensionatiesteri/scheda-info-regime-pensionati-esteri",
+            "accessed": "2026-05-03"
+          }
+        ]
+      }
     ],
     "cons": [
-      "Infrastructure and bureaucracy can be challenging",
-      "Limited specialist healthcare quality",
-      "Organized crime still present in some areas"
+      {
+        "text": "Infrastructure and bureaucracy can be challenging"
+      },
+      {
+        "text": "Limited specialist healthcare quality"
+      },
+      {
+        "text": "Organized crime (Cosa Nostra) still present in some areas; activity tracked in the Italian DIA's semiannual reports",
+        "sources": [
+          {
+            "title": "Direzione Investigativa Antimafia (DIA) — Relazioni semestrali",
+            "url": "https://direzioneinvestigativaantimafia.interno.gov.it/relazioni-semestrali/",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Sicily",
+            "url": "https://www.numbeo.com/crime/in/Sicily",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Italy",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Italy",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Italy",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Italy",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Italian progressive income tax 23%-43%. 7% flat tax for retirees in southern towns under 20K population.",
       "vatRate": 22,
       "socialChargesRate": 0
+    },
+    "subregion": "Sicily",
+    "coordinates": {
+      "lat": 38.1166,
+      "lon": 13.3636
     }
   },
   {
@@ -3944,7 +5350,12 @@
       "winterLowF": 35,
       "summerHighF": 90,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 80
+      "rainyDaysPerYear": 80,
+      "humidityAvgPct": 76,
+      "drySeasonMonths": [
+        "Jul",
+        "Aug"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -3969,7 +5380,8 @@
         "typical": 110,
         "min": 75,
         "max": 160,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "SSN (Servizio Sanitario Nazionale) universal coverage after Elective Residence visa. Private supplementary ~€60-180/mo. Anti-VEGF injections available widely via SSN at hospital ophthalmology. GLP-1 covered for diabetes through SSN with prescription. Regional variation: Northern Italy has strongest public infrastructure; Southern regions thinner. English availability moderate in private sector."
       },
       "insurance": {
         "typical": 130,
@@ -4026,16 +5438,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 81,
+        "min": 66,
+        "max": 101,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 420,
+        "min": 378,
+        "max": 462,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -4078,19 +5491,69 @@
       "safetyRating": 9
     },
     "pros": [
-      "Iconic rolling hills, vineyards, and Renaissance culture",
+      {
+        "text": "Iconic rolling hills, vineyards, and Renaissance culture (Tuscany hosts 5 UNESCO World Heritage sites: Florence, Siena, Pienza, San Gimignano, Val d'Orcia)",
+        "sources": [
+          {
+            "title": "UNESCO World Heritage List — Historic Centre of Florence (174)",
+            "url": "https://whc.unesco.org/en/list/174",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "UNESCO World Heritage List — Historic Centre of Siena (379)",
+            "url": "https://whc.unesco.org/en/list/379",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "UNESCO World Heritage List — Val d'Orcia (1026)",
+            "url": "https://whc.unesco.org/en/list/1026",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Strong expat community in smaller towns like Lucca",
       "Excellent food and wine at every price point"
     ],
     "cons": [
-      "Higher cost of living than southern Italy",
-      "Tourist congestion in popular areas",
-      "Car needed for rural living"
+      {
+        "text": "Higher cost of living than southern Italy"
+      },
+      {
+        "text": "Tourist congestion in popular areas"
+      },
+      {
+        "text": "Car needed for rural living"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Tuscany",
+            "url": "https://www.numbeo.com/crime/in/Tuscany",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Italy",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Italy",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Italy",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Italy",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Italian progressive income tax 23%-43%. 7% flat tax not available in most Tuscan towns (population over 20K).",
       "vatRate": 22,
       "socialChargesRate": 0
+    },
+    "subregion": "Tuscany",
+    "coordinates": {
+      "lat": 43.8437,
+      "lon": 10.5045
     }
   },
   {
@@ -4122,7 +5585,21 @@
       "winterLowF": 44,
       "summerHighF": 90,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 50
+      "rainyDaysPerYear": 50,
+      "humidityAvgPct": 71,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -4147,7 +5624,8 @@
         "typical": 90,
         "min": 60,
         "max": 135,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "SSN (Servizio Sanitario Nazionale) universal coverage after Elective Residence visa. Private supplementary ~€60-180/mo. Anti-VEGF injections available widely via SSN at hospital ophthalmology. GLP-1 covered for diabetes through SSN with prescription. Regional variation: Northern Italy has strongest public infrastructure; Southern regions thinner. English availability moderate in private sector."
       },
       "insurance": {
         "typical": 110,
@@ -4204,16 +5682,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 81,
+        "min": 66,
+        "max": 101,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 420,
+        "min": 378,
+        "max": 462,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -4258,17 +5737,68 @@
     "pros": [
       "Stunning beaches rivaling Caribbean quality",
       "Warm Mediterranean climate",
-      "Unique Sardinian culture and cuisine"
+      "Unique Sardinian culture and cuisine",
+      {
+        "text": "7% flat tax on foreign-source income for 9 years for new residents in qualifying southern-region municipalities <20K population (TUIR Art. 24-ter / Decreto Crescita 2019)",
+        "sources": [
+          {
+            "title": "Italian TUIR Art. 24-ter (Normattiva — opzione per imposta sostitutiva 7% sui redditi di fonte estera)",
+            "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:1986-12-22;917!vig=",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "Decreto-Legge 30 aprile 2019, n. 34 (Decreto Crescita) — introduces 7% flat-tax regime for foreign retirees",
+            "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2019-04-30;34",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "Agenzia delle Entrate — Regime opzionale per pensionati esteri (TUIR Art. 24-ter)",
+            "url": "https://www.agenziaentrate.gov.it/portale/web/guest/schede/agevolazioni/regimespecialepensionatiesteri/scheda-info-regime-pensionati-esteri",
+            "accessed": "2026-05-03"
+          }
+        ]
+      }
     ],
     "cons": [
-      "Island isolation - flights or ferry to mainland",
-      "Car essential outside Cagliari",
-      "Limited English and smaller expat scene"
+      {
+        "text": "Island isolation - flights or ferry to mainland"
+      },
+      {
+        "text": "Car essential outside Cagliari"
+      },
+      {
+        "text": "Limited English and smaller expat scene"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Sardinia",
+            "url": "https://www.numbeo.com/crime/in/Sardinia",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Italy",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Italy",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Italy",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Italy",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Italian progressive income tax 23%-43%. 7% flat tax may apply in qualifying small towns.",
       "vatRate": 22,
       "socialChargesRate": 0
+    },
+    "subregion": "Sardinia",
+    "coordinates": {
+      "lat": 39.2305,
+      "lon": 9.1192
     }
   },
   {
@@ -4300,7 +5830,9 @@
       "winterLowF": 32,
       "summerHighF": 84,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 90
+      "rainyDaysPerYear": 90,
+      "humidityAvgPct": 72,
+      "drySeasonMonths": []
     },
     "monthlyCosts": {
       "rent": {
@@ -4325,7 +5857,8 @@
         "typical": 115,
         "min": 75,
         "max": 165,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "SSN (Servizio Sanitario Nazionale) universal coverage after Elective Residence visa. Private supplementary ~€60-180/mo. Anti-VEGF injections available widely via SSN at hospital ophthalmology. GLP-1 covered for diabetes through SSN with prescription. Regional variation: Northern Italy has strongest public infrastructure; Southern regions thinner. English availability moderate in private sector."
       },
       "insurance": {
         "typical": 135,
@@ -4382,16 +5915,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 81,
+        "min": 66,
+        "max": 101,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 420,
+        "min": 378,
+        "max": 462,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -4439,14 +5973,45 @@
       "Mild microclimate (warmer than surrounding areas due to lakes)"
     ],
     "cons": [
-      "Higher cost of living than southern Italy",
-      "Cold winters with fog",
-      "Tourist-heavy in summer months"
+      {
+        "text": "Higher cost of living than southern Italy"
+      },
+      {
+        "text": "Cold winters with fog"
+      },
+      {
+        "text": "Tourist-heavy in summer months"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Italian Lake Region",
+            "url": "https://www.numbeo.com/crime/in/Italian-Lake-Region",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Italy",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Italy",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Italy",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Italy",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Italian progressive income tax 23%-43%. 7% flat tax not available (northern Italy, larger towns).",
       "vatRate": 22,
       "socialChargesRate": 0
+    },
+    "subregion": "Lombardy",
+    "coordinates": {
+      "lat": 45.8816,
+      "lon": 8.5383
     }
   },
   {
@@ -4478,7 +6043,9 @@
       "winterLowF": 38,
       "summerHighF": 64,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 200
+      "rainyDaysPerYear": 200,
+      "humidityAvgPct": 81,
+      "drySeasonMonths": []
     },
     "monthlyCosts": {
       "rent": {
@@ -4503,7 +6070,8 @@
         "typical": 165,
         "min": 115,
         "max": 230,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "Private insurance (VHI/Laya Healthcare) ~€220-280/person/mo for 2 adults with pre-existing conditions. Higher loading for macular degeneration, obesity, hypertension. GMS Medical Card may apply based on income. Anti-VEGF injections covered through public ophthalmology. DPS scheme caps drug costs at €80/mo."
       },
       "insurance": {
         "typical": 190,
@@ -4560,16 +6128,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 90,
+        "min": 75,
+        "max": 110,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 720,
+        "min": 648,
+        "max": 792,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -4617,14 +6186,40 @@
       "English-speaking with welcoming community"
     ],
     "cons": [
-      "Very rainy (200+ days/year)",
-      "Higher rents due to university town demand",
-      "Remote from major airports"
+      {
+        "text": "Very rainy (200+ days/year)"
+      },
+      {
+        "text": "Higher rents due to university town demand"
+      },
+      {
+        "text": "Remote from major airports"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Galway",
+            "url": "https://www.numbeo.com/crime/in/Galway",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Ireland",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Ireland",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Irish progressive income tax 20%/40%. USC 0.5-8%. US-Ireland tax treaty.",
       "vatRate": 23,
       "socialChargesRate": 4
+    },
+    "subregion": "Connacht",
+    "coordinates": {
+      "lat": 53.2725,
+      "lon": -9.0509
     }
   },
   {
@@ -4656,7 +6251,9 @@
       "winterLowF": 38,
       "summerHighF": 66,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 185
+      "rainyDaysPerYear": 185,
+      "humidityAvgPct": 83,
+      "drySeasonMonths": []
     },
     "monthlyCosts": {
       "rent": {
@@ -4681,7 +6278,8 @@
         "typical": 165,
         "min": 115,
         "max": 230,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "Private insurance (VHI/Laya Healthcare) ~€220-280/person/mo for 2 adults with pre-existing conditions. Higher loading for macular degeneration, obesity, hypertension. GMS Medical Card may apply based on income. Anti-VEGF injections covered through public ophthalmology. DPS scheme caps drug costs at €80/mo."
       },
       "insurance": {
         "typical": 190,
@@ -4738,16 +6336,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 90,
+        "min": 75,
+        "max": 110,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 720,
+        "min": 648,
+        "max": 792,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -4791,18 +6390,53 @@
     },
     "pros": [
       "Ireland's food capital with English Market and restaurant scene",
-      "Growing tech hub with Apple, EMC, and others",
+      {
+        "text": "Growing tech hub: Apple's European HQ in Cork since 1980 (~6,000 employees as of 2024); also Dell EMC, Pfizer, others",
+        "sources": [
+          {
+            "title": "Apple — Cork campus (European HQ since 1980, ~6,000 employees as of 2024)",
+            "url": "https://www.apple.com/ie/job-creation/",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Good airport with European connections"
     ],
     "cons": [
-      "Rainy climate (185+ days/year)",
-      "Housing market very competitive",
-      "Public transit limited compared to Dublin"
+      {
+        "text": "Rainy climate (185+ days/year)"
+      },
+      {
+        "text": "Housing market very competitive"
+      },
+      {
+        "text": "Public transit limited compared to Dublin"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Cork",
+            "url": "https://www.numbeo.com/crime/in/Cork",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Ireland",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Ireland",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Irish progressive income tax 20%/40%. USC 0.5-8%. US-Ireland tax treaty.",
       "vatRate": 23,
       "socialChargesRate": 4
+    },
+    "subregion": "Munster",
+    "coordinates": {
+      "lat": 51.898,
+      "lon": -8.4706
     }
   },
   {
@@ -4834,7 +6468,9 @@
       "winterLowF": 37,
       "summerHighF": 65,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 190
+      "rainyDaysPerYear": 190,
+      "humidityAvgPct": 83,
+      "drySeasonMonths": []
     },
     "monthlyCosts": {
       "rent": {
@@ -4859,7 +6495,8 @@
         "typical": 155,
         "min": 105,
         "max": 215,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "Private insurance (VHI/Laya Healthcare) ~€220-280/person/mo for 2 adults with pre-existing conditions. Higher loading for macular degeneration, obesity, hypertension. GMS Medical Card may apply based on income. Anti-VEGF injections covered through public ophthalmology. DPS scheme caps drug costs at €80/mo."
       },
       "insurance": {
         "typical": 180,
@@ -4916,16 +6553,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 90,
+        "min": 75,
+        "max": 110,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 720,
+        "min": 648,
+        "max": 792,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -4973,14 +6611,40 @@
       "Strong rugby culture and community spirit"
     ],
     "cons": [
-      "Rainy climate",
-      "Some areas have reputation for anti-social behavior",
-      "Fewer cultural amenities than Cork or Galway"
+      {
+        "text": "Rainy climate"
+      },
+      {
+        "text": "Some areas have reputation for anti-social behavior"
+      },
+      {
+        "text": "Fewer cultural amenities than Cork or Galway"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Limerick",
+            "url": "https://www.numbeo.com/crime/in/Limerick",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Ireland",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Ireland",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Irish progressive income tax 20%/40%. USC 0.5-8%. US-Ireland tax treaty.",
       "vatRate": 23,
       "socialChargesRate": 4
+    },
+    "subregion": "Munster",
+    "coordinates": {
+      "lat": 52.6647,
+      "lon": -8.6231
     }
   },
   {
@@ -5012,7 +6676,9 @@
       "winterLowF": 37,
       "summerHighF": 67,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 160
+      "rainyDaysPerYear": 160,
+      "humidityAvgPct": 82,
+      "drySeasonMonths": []
     },
     "monthlyCosts": {
       "rent": {
@@ -5037,7 +6703,8 @@
         "typical": 155,
         "min": 105,
         "max": 215,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "Private insurance (VHI/Laya Healthcare) ~€220-280/person/mo for 2 adults with pre-existing conditions. Higher loading for macular degeneration, obesity, hypertension. GMS Medical Card may apply based on income. Anti-VEGF injections covered through public ophthalmology. DPS scheme caps drug costs at €80/mo."
       },
       "insurance": {
         "typical": 180,
@@ -5094,16 +6761,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 90,
+        "min": 75,
+        "max": 110,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 720,
+        "min": 648,
+        "max": 792,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -5151,14 +6819,40 @@
       "Beautiful beaches and historic Norman heritage"
     ],
     "cons": [
-      "Very small expat community",
-      "Limited cultural and dining scene",
-      "Car essential for daily life"
+      {
+        "text": "Very small expat community"
+      },
+      {
+        "text": "Limited cultural and dining scene"
+      },
+      {
+        "text": "Car essential for daily life"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Wexford",
+            "url": "https://www.numbeo.com/crime/in/Wexford",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Ireland",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Ireland",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Irish progressive income tax 20%/40%. USC 0.5-8%. US-Ireland tax treaty.",
       "vatRate": 23,
       "socialChargesRate": 4
+    },
+    "subregion": "Leinster",
+    "coordinates": {
+      "lat": 52.3342,
+      "lon": -6.4575
     }
   },
   {
@@ -5190,7 +6884,12 @@
       "winterLowF": 44,
       "summerHighF": 88,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 90
+      "rainyDaysPerYear": 90,
+      "humidityAvgPct": 71,
+      "drySeasonMonths": [
+        "Jul",
+        "Aug"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -5215,7 +6914,8 @@
         "typical": 95,
         "min": 60,
         "max": 140,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "HZZO (Croatian Health Insurance Fund) universal coverage after temporary residence permit. Private supplementary ~€70-130/mo for expat plans. Anti-VEGF injections available in Zagreb (KBC Zagreb) and Split; covered under HZZO with diagnosis. GLP-1 covered for diabetes indication via HZZO. English availability moderate in major hospitals; better in private sector."
       },
       "insurance": {
         "typical": 115,
@@ -5272,16 +6972,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 720,
+        "min": 648,
+        "max": 792,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -5324,19 +7025,73 @@
       "safetyRating": 9
     },
     "pros": [
-      "Stunning medieval walled city on the Adriatic",
+      {
+        "text": "Stunning medieval walled city on the Adriatic (Old City of Dubrovnik UNESCO World Heritage, listed 1979)",
+        "sources": [
+          {
+            "title": "UNESCO World Heritage List — Old City of Dubrovnik (95)",
+            "url": "https://whc.unesco.org/en/list/95",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Excellent seafood and Mediterranean lifestyle",
-      "Croatia in EU and Schengen since 2023"
+      {
+        "text": "Croatia in EU since 2013, Schengen + eurozone since 2023-01-01 (free movement + euro replacing kuna)",
+        "sources": [
+          {
+            "title": "Council of the EU — Croatia joins Schengen and the eurozone (1 January 2023)",
+            "url": "https://www.consilium.europa.eu/en/press/press-releases/2022/12/08/schengen-area-council-decides-to-lift-internal-border-controls-with-croatia/",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "Hrvatska narodna banka — Euro changeover (kuna → euro 2023-01-01)",
+            "url": "https://www.hnb.hr/en/euro",
+            "accessed": "2026-05-03"
+          }
+        ]
+      }
     ],
     "cons": [
-      "Extremely tourism-heavy (Game of Thrones effect)",
-      "Higher cost than rest of Croatia",
-      "Very crowded May-October"
+      {
+        "text": "Extremely tourism-heavy (Game of Thrones effect)"
+      },
+      {
+        "text": "Higher cost than rest of Croatia"
+      },
+      {
+        "text": "Very crowded May-October"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Dubrovnik",
+            "url": "https://www.numbeo.com/crime/in/Dubrovnik",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Croatia",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Croatia",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Croatia",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Croatia",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Croatian progressive income tax 20% (up to €50,400) and 30% above. Surtax may apply (0-18% depending on municipality). No US-Croatia tax treaty.",
       "vatRate": 25,
       "socialChargesRate": 0
+    },
+    "subregion": "Dubrovnik-Neretva",
+    "coordinates": {
+      "lat": 42.6413,
+      "lon": 18.1091
     }
   },
   {
@@ -5368,7 +7123,13 @@
       "winterLowF": 42,
       "summerHighF": 90,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 75
+      "rainyDaysPerYear": 75,
+      "humidityAvgPct": 66,
+      "drySeasonMonths": [
+        "Jun",
+        "Jul",
+        "Aug"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -5393,7 +7154,8 @@
         "typical": 85,
         "min": 55,
         "max": 130,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "HZZO (Croatian Health Insurance Fund) universal coverage after temporary residence permit. Private supplementary ~€70-130/mo for expat plans. Anti-VEGF injections available in Zagreb (KBC Zagreb) and Split; covered under HZZO with diagnosis. GLP-1 covered for diabetes indication via HZZO. English availability moderate in major hospitals; better in private sector."
       },
       "insurance": {
         "typical": 105,
@@ -5450,16 +7212,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 720,
+        "min": 648,
+        "max": 792,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -5502,19 +7265,59 @@
       "safetyRating": 9
     },
     "pros": [
-      "Diocletian's Palace - living in a Roman monument",
+      {
+        "text": "Diocletian's Palace — living in a Roman monument (Historical Complex of Split UNESCO World Heritage, listed 1979)",
+        "sources": [
+          {
+            "title": "UNESCO World Heritage List — Historical Complex of Split with the Palace of Diocletian (97)",
+            "url": "https://whc.unesco.org/en/list/97",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Good ferry connections to islands",
       "More affordable than Dubrovnik with better daily infrastructure"
     ],
     "cons": [
-      "Tourist crowds in summer",
-      "Limited public transit",
-      "Winter can feel quiet and grey"
+      {
+        "text": "Tourist crowds in summer"
+      },
+      {
+        "text": "Limited public transit"
+      },
+      {
+        "text": "Winter can feel quiet and grey"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Split",
+            "url": "https://www.numbeo.com/crime/in/Split",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Croatia",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Croatia",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Croatia",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Croatia",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Croatian progressive income tax 20%/30%. Municipal surtax may apply. No US-Croatia tax treaty.",
       "vatRate": 25,
       "socialChargesRate": 0
+    },
+    "subregion": "Split-Dalmatia",
+    "coordinates": {
+      "lat": 43.5089,
+      "lon": 16.4392
     }
   },
   {
@@ -5546,7 +7349,9 @@
       "winterLowF": 37,
       "summerHighF": 86,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 80
+      "rainyDaysPerYear": 80,
+      "humidityAvgPct": 70,
+      "drySeasonMonths": []
     },
     "monthlyCosts": {
       "rent": {
@@ -5571,7 +7376,8 @@
         "typical": 85,
         "min": 55,
         "max": 130,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "HZZO (Croatian Health Insurance Fund) universal coverage after temporary residence permit. Private supplementary ~€70-130/mo for expat plans. Anti-VEGF injections available in Zagreb (KBC Zagreb) and Split; covered under HZZO with diagnosis. GLP-1 covered for diabetes indication via HZZO. English availability moderate in major hospitals; better in private sector."
       },
       "insurance": {
         "typical": 105,
@@ -5628,16 +7434,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 720,
+        "min": 648,
+        "max": 792,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -5685,14 +7492,45 @@
       "Close to Italy and Slovenia for day trips"
     ],
     "cons": [
-      "Cooler winters than Dalmatian coast",
-      "Tourism-driven economy (quiet off-season)",
-      "Car essential for exploring the peninsula"
+      {
+        "text": "Cooler winters than Dalmatian coast"
+      },
+      {
+        "text": "Tourism-driven economy (quiet off-season)"
+      },
+      {
+        "text": "Car essential for exploring the peninsula"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Istria",
+            "url": "https://www.numbeo.com/crime/in/Istria",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Croatia",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Croatia",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Croatia",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Croatia",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Croatian progressive income tax 20%/30%. Municipal surtax may apply. No US-Croatia tax treaty.",
       "vatRate": 25,
       "socialChargesRate": 0
+    },
+    "subregion": "Istria",
+    "coordinates": {
+      "lat": 45.0827,
+      "lon": 13.6346
     }
   },
   {
@@ -5724,7 +7562,11 @@
       "winterLowF": 28,
       "summerHighF": 84,
       "meetsWarmWinterReq": false,
-      "rainyDaysPerYear": 100
+      "rainyDaysPerYear": 100,
+      "humidityAvgPct": 75,
+      "drySeasonMonths": [
+        "Mar"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -5749,7 +7591,8 @@
         "typical": 80,
         "min": 50,
         "max": 120,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "HZZO (Croatian Health Insurance Fund) universal coverage after temporary residence permit. Private supplementary ~€70-130/mo for expat plans. Anti-VEGF injections available in Zagreb (KBC Zagreb) and Split; covered under HZZO with diagnosis. GLP-1 covered for diabetes indication via HZZO. English availability moderate in major hospitals; better in private sector."
       },
       "insurance": {
         "typical": 100,
@@ -5806,16 +7649,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 85,
+        "min": 70,
+        "max": 105,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 720,
+        "min": 648,
+        "max": 792,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -5863,14 +7707,57 @@
       "Good public tram and bus system"
     ],
     "cons": [
-      "Cold continental winters (below freezing)",
-      "No coast (2+ hours to the sea)",
-      "Earthquake damage (2020) still being repaired in some areas"
+      {
+        "text": "Cold continental winters (below freezing)"
+      },
+      {
+        "text": "No coast (2+ hours to the sea)"
+      },
+      {
+        "text": "Earthquake damage from 2020-03-22 M5.5 Zagreb event still being repaired in Upper Town heritage areas (5+ years on)",
+        "sources": [
+          {
+            "title": "Croatian Seismological Survey — 2020-03-22 Zagreb earthquake (M5.5)",
+            "url": "https://www.pmf.unizg.hr/geof/seizmoloska_sluzba",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "Croatia Ministry of Physical Planning — Zagreb post-earthquake reconstruction",
+            "url": "https://mpgi.gov.hr/",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Zagreb",
+            "url": "https://www.numbeo.com/crime/in/Zagreb",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Croatia",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Croatia",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Croatia",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Croatia",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Croatian progressive income tax 20%/30%. Zagreb has 18% municipal surtax. No US-Croatia tax treaty.",
       "vatRate": 25,
       "socialChargesRate": 0
+    },
+    "subregion": "Zagreb",
+    "coordinates": {
+      "lat": 45.8144,
+      "lon": 15.978
     }
   },
   {
@@ -5902,7 +7789,19 @@
       "winterLowF": 50,
       "summerHighF": 93,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 40
+      "rainyDaysPerYear": 40,
+      "humidityAvgPct": 69,
+      "drySeasonMonths": [
+        "Feb",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -5927,7 +7826,8 @@
         "typical": 100,
         "min": 65,
         "max": 150,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "GeSY (General Health System) universal coverage after residency, contributions ~2.65% of income (~€60-120/mo). Private supplementary ~€80-180/mo. Anti-VEGF injections available in Nicosia and Limassol; partial GeSY coverage. GLP-1 covered for diabetes via GeSY. Strong English-speaking healthcare workforce; both public and private widely accessible."
       },
       "insurance": {
         "typical": 120,
@@ -5984,16 +7884,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 87,
+        "min": 72,
+        "max": 107,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 300,
+        "min": 270,
+        "max": 330,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -6038,17 +7939,67 @@
     "pros": [
       "Massive British expat community, English widely spoken",
       "Warm year-round climate with 340 days of sunshine",
-      "Very favorable tax treatment for retirees (2.65% on pensions)"
+      {
+        "text": "Very favorable tax treatment for retirees: optional 5% flat tax on foreign pension income above €3,420/yr (or normal progressive brackets) + separate 2.65% GeSY health contribution",
+        "sources": [
+          {
+            "title": "Cyprus Tax Department — Income Tax Law (foreign pension special regime, Art. 13)",
+            "url": "https://www.mof.gov.cy/mof/tax/taxdep.nsf",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "PwC Cyprus — Pension income tax options for retirees",
+            "url": "https://taxsummaries.pwc.com/cyprus/individual/income-determination",
+            "accessed": "2026-05-03"
+          },
+          {
+            "title": "Health Insurance Organisation Cyprus — GeSY contribution rates (2.65% pensioner rate)",
+            "url": "https://www.gesy.org.cy/en-gb/contributions",
+            "accessed": "2026-05-03"
+          }
+        ]
+      }
     ],
     "cons": [
-      "Island isolation from mainland Europe",
-      "Hot, dry summers (93F+)",
-      "Car essential outside city centers"
+      {
+        "text": "Island isolation from mainland Europe"
+      },
+      {
+        "text": "Hot, dry summers (93F+)"
+      },
+      {
+        "text": "Car essential outside city centers"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Paphos",
+            "url": "https://www.numbeo.com/crime/in/Paphos",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Cyprus",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Cyprus",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Cyprus",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Cyprus",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Cyprus: flat 2.65% on pension income for first €3,420, then 0%. Or opt for standard progressive rates 20%-35%. Very favorable for retirees. US-Cyprus tax treaty.",
       "vatRate": 19,
       "socialChargesRate": 0
+    },
+    "subregion": "Paphos District",
+    "coordinates": {
+      "lat": 34.7768,
+      "lon": 32.4245
     }
   },
   {
@@ -6080,7 +8031,20 @@
       "winterLowF": 50,
       "summerHighF": 95,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 35
+      "rainyDaysPerYear": 35,
+      "humidityAvgPct": 63,
+      "drySeasonMonths": [
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -6105,7 +8069,8 @@
         "typical": 105,
         "min": 70,
         "max": 155,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "GeSY (General Health System) universal coverage after residency, contributions ~2.65% of income (~€60-120/mo). Private supplementary ~€80-180/mo. Anti-VEGF injections available in Nicosia and Limassol; partial GeSY coverage. GLP-1 covered for diabetes via GeSY. Strong English-speaking healthcare workforce; both public and private widely accessible."
       },
       "insurance": {
         "typical": 125,
@@ -6162,16 +8127,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 87,
+        "min": 72,
+        "max": 107,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 300,
+        "min": 270,
+        "max": 330,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -6219,14 +8185,45 @@
       "New marina and waterfront development"
     ],
     "cons": [
-      "Higher cost than other Cypriot cities",
-      "Traffic congestion in city center",
-      "Very hot and humid summers"
+      {
+        "text": "Higher cost than other Cypriot cities"
+      },
+      {
+        "text": "Traffic congestion in city center"
+      },
+      {
+        "text": "Very hot and humid summers"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Limassol",
+            "url": "https://www.numbeo.com/crime/in/Limassol",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Cyprus",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Cyprus",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Cyprus",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Cyprus",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Cyprus: flat 2.65% on pension income for first €3,420, then 0%. Very favorable for retirees.",
       "vatRate": 19,
       "socialChargesRate": 0
+    },
+    "subregion": "Limassol District",
+    "coordinates": {
+      "lat": 34.6841,
+      "lon": 33.0379
     }
   },
   {
@@ -6258,7 +8255,22 @@
       "winterLowF": 50,
       "summerHighF": 95,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 30
+      "rainyDaysPerYear": 30,
+      "humidityAvgPct": 62,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -6283,7 +8295,8 @@
         "typical": 95,
         "min": 60,
         "max": 140,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "GeSY (General Health System) universal coverage after residency, contributions ~2.65% of income (~€60-120/mo). Private supplementary ~€80-180/mo. Anti-VEGF injections available in Nicosia and Limassol; partial GeSY coverage. GLP-1 covered for diabetes via GeSY. Strong English-speaking healthcare workforce; both public and private widely accessible."
       },
       "insurance": {
         "typical": 115,
@@ -6340,16 +8353,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 87,
+        "min": 72,
+        "max": 107,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 300,
+        "min": 270,
+        "max": 330,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -6393,18 +8407,58 @@
     },
     "pros": [
       "Most affordable Cypriot city",
-      "International airport for easy travel",
+      {
+        "text": "International airport for easy travel (Larnaca International — Cyprus' main gateway, ~7M annual passengers)",
+        "sources": [
+          {
+            "title": "Hermes Airports — Larnaca International Airport (LCA)",
+            "url": "https://www.hermesairports.com/larnaka",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Relaxed beach town atmosphere"
     ],
     "cons": [
-      "Smaller and less cosmopolitan than Limassol",
-      "Limited cultural and dining scene",
-      "Very hot summers"
+      {
+        "text": "Smaller and less cosmopolitan than Limassol"
+      },
+      {
+        "text": "Limited cultural and dining scene"
+      },
+      {
+        "text": "Very hot summers"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Larnaca",
+            "url": "https://www.numbeo.com/crime/in/Larnaca",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Cyprus",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Cyprus",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Cyprus",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Cyprus",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Cyprus: flat 2.65% on pension income for first €3,420, then 0%. Very favorable for retirees.",
       "vatRate": 19,
       "socialChargesRate": 0
+    },
+    "subregion": "Larnaca District",
+    "coordinates": {
+      "lat": 34.9221,
+      "lon": 33.6279
     }
   },
   {
@@ -6436,7 +8490,21 @@
       "winterLowF": 50,
       "summerHighF": 92,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 40
+      "rainyDaysPerYear": 40,
+      "humidityAvgPct": 73,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -6461,7 +8529,8 @@
         "typical": 110,
         "min": 75,
         "max": 160,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "National Health Service free at point of use for residents (EU after 3 months; non-EU after residence permit). Private (BUPA Malta, Atlas) ~€70-150/mo. Anti-VEGF injections at Mater Dei Hospital (sole tertiary public hospital). GLP-1 covered via NHS for diabetes. English is an official language — strong English-speaking workforce. Compact size means specialist access usually within 30 min."
       },
       "insurance": {
         "typical": 130,
@@ -6518,16 +8587,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 87,
+        "min": 72,
+        "max": 107,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 625,
+        "min": 563,
+        "max": 688,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -6570,19 +8640,68 @@
       "safetyRating": 9
     },
     "pros": [
-      "English is an official language",
+      {
+        "text": "English is an official language alongside Maltese (Constitution of Malta, Article 5)",
+        "sources": [
+          {
+            "title": "Constitution of Malta, Article 5 — Maltese and English are official languages",
+            "url": "https://legislation.mt/eli/const/eng/pdf",
+            "accessed": "2026-05-03"
+          }
+        ]
+      },
       "Warm year-round Mediterranean climate",
-      "Stunning historic capital (UNESCO World Heritage)"
+      {
+        "text": "Stunning historic capital (City of Valletta UNESCO World Heritage, listed 1980)",
+        "sources": [
+          {
+            "title": "UNESCO World Heritage List — City of Valletta (131, listed 1980)",
+            "url": "https://whc.unesco.org/en/list/131",
+            "accessed": "2026-05-03"
+          }
+        ]
+      }
     ],
     "cons": [
-      "Very small and densely populated island",
-      "Traffic congestion is severe",
-      "Limited green spaces and dog-walking areas"
+      {
+        "text": "Very small and densely populated island"
+      },
+      {
+        "text": "Traffic congestion is severe"
+      },
+      {
+        "text": "Limited green spaces and dog-walking areas"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Valletta",
+            "url": "https://www.numbeo.com/crime/in/Valletta",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Malta",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Malta",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Malta",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Malta",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Malta Retirement Programme: 15% flat tax on remitted income, min €7,500/year. Standard rates 0%-35% otherwise. US-Malta tax treaty.",
       "vatRate": 18,
       "socialChargesRate": 0
+    },
+    "subregion": "South Eastern Region",
+    "coordinates": {
+      "lat": 35.8997,
+      "lon": 14.5148
     }
   },
   {
@@ -6614,7 +8733,21 @@
       "winterLowF": 50,
       "summerHighF": 92,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 40
+      "rainyDaysPerYear": 40,
+      "humidityAvgPct": 73,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -6639,7 +8772,8 @@
         "typical": 110,
         "min": 75,
         "max": 160,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "National Health Service free at point of use for residents (EU after 3 months; non-EU after residence permit). Private (BUPA Malta, Atlas) ~€70-150/mo. Anti-VEGF injections at Mater Dei Hospital (sole tertiary public hospital). GLP-1 covered via NHS for diabetes. English is an official language — strong English-speaking workforce. Compact size means specialist access usually within 30 min."
       },
       "insurance": {
         "typical": 130,
@@ -6696,16 +8830,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 87,
+        "min": 72,
+        "max": 107,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 625,
+        "min": 563,
+        "max": 688,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -6753,14 +8888,45 @@
       "English widely spoken everywhere"
     ],
     "cons": [
-      "Construction boom causing noise and disruption",
-      "Higher rents than rest of Malta",
-      "Very crowded and built-up"
+      {
+        "text": "Construction boom causing noise and disruption"
+      },
+      {
+        "text": "Higher rents than rest of Malta"
+      },
+      {
+        "text": "Very crowded and built-up"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Sliema",
+            "url": "https://www.numbeo.com/crime/in/Sliema",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Malta",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Malta",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Malta",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Malta",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Malta Retirement Programme: 15% flat tax on remitted income, min €7,500/year.",
       "vatRate": 18,
       "socialChargesRate": 0
+    },
+    "subregion": "Central Region",
+    "coordinates": {
+      "lat": 35.9125,
+      "lon": 14.5018
     }
   },
   {
@@ -6792,7 +8958,20 @@
       "winterLowF": 50,
       "summerHighF": 90,
       "meetsWarmWinterReq": true,
-      "rainyDaysPerYear": 40
+      "rainyDaysPerYear": 40,
+      "humidityAvgPct": 76,
+      "drySeasonMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Dec"
+      ]
     },
     "monthlyCosts": {
       "rent": {
@@ -6817,7 +8996,8 @@
         "typical": 100,
         "min": 65,
         "max": 150,
-        "annualInflation": 0.04
+        "annualInflation": 0.04,
+        "notes": "National Health Service free at point of use for residents (EU after 3 months; non-EU after residence permit). Private (BUPA Malta, Atlas) ~€70-150/mo. Anti-VEGF injections at Mater Dei Hospital (sole tertiary public hospital). GLP-1 covered via NHS for diabetes. English is an official language — strong English-speaking workforce. Compact size means specialist access usually within 30 min."
       },
       "insurance": {
         "typical": 120,
@@ -6874,16 +9054,17 @@
         "annualInflation": 0.05
       },
       "phoneCell": {
-        "typical": 50,
-        "min": 30,
-        "max": 80,
+        "typical": 87,
+        "min": 72,
+        "max": 107,
         "annualInflation": 0.02
       },
       "taxes": {
-        "typical": 0,
-        "min": 0,
-        "max": 0,
-        "annualInflation": 0
+        "typical": 625,
+        "min": 563,
+        "max": 688,
+        "annualInflation": 0.02,
+        "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
       },
       "miscellaneous": {
         "typical": 120,
@@ -6931,14 +9112,45 @@
       "English spoken, very safe, warm climate"
     ],
     "cons": [
-      "Dependent on ferry to Malta for specialist healthcare and shopping",
-      "Limited entertainment and dining options",
-      "Can feel isolated, especially in winter"
+      {
+        "text": "Dependent on ferry to Malta for specialist healthcare and shopping"
+      },
+      {
+        "text": "Limited entertainment and dining options"
+      },
+      {
+        "text": "Can feel isolated, especially in winter"
+      },
+      {
+        "text": "Safety & crime: see cited reports for current figures by city and country",
+        "sources": [
+          {
+            "title": "Numbeo — Crime in Gozo",
+            "url": "https://www.numbeo.com/crime/in/Gozo",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Numbeo — Crime in Malta",
+            "url": "https://www.numbeo.com/crime/country_result.jsp?country=Malta",
+            "accessed": "2026-04-23"
+          },
+          {
+            "title": "Wikipedia — Crime in Malta",
+            "url": "https://en.wikipedia.org/wiki/Crime_in_Malta",
+            "accessed": "2026-04-23"
+          }
+        ]
+      }
     ],
     "taxes": {
       "notes": "Malta Retirement Programme: 15% flat tax on remitted income, min €7,500/year. Gozo has reduced property requirements.",
       "vatRate": 18,
       "socialChargesRate": 0
+    },
+    "subregion": "Gozo",
+    "coordinates": {
+      "lat": 36.046,
+      "lon": 14.239
     }
   }
 ]

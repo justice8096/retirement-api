@@ -27,7 +27,20 @@
     "winterLowF": 59,
     "summerHighF": 84,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 25
+    "rainyDaysPerYear": 25,
+    "humidityAvgPct": 64,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Nov",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -217,5 +230,9 @@
     "vatRate": 7,
     "socialChargesRate": 0
   },
-  "subregion": "Canary Islands"
+  "subregion": "Canary Islands",
+  "coordinates": {
+    "lat": 28.3298,
+    "lon": -16.5097
+  }
 }

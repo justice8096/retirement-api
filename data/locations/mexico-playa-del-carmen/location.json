@@ -20,7 +20,13 @@
     "winterLowF": 68,
     "summerHighF": 92,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 110
+    "rainyDaysPerYear": 110,
+    "humidityAvgPct": 80,
+    "drySeasonMonths": [
+      "Feb",
+      "Mar",
+      "Apr"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -205,5 +211,9 @@
     "vatRate": 0.16,
     "socialChargesRate": 0
   },
-  "subregion": "Quintana Roo"
+  "subregion": "Quintana Roo",
+  "coordinates": {
+    "lat": 20.6274,
+    "lon": -87.0799
+  }
 }

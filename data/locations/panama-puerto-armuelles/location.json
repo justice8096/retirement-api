@@ -20,7 +20,11 @@
     "winterLowF": 72,
     "summerHighF": 90,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 180
+    "rainyDaysPerYear": 180,
+    "humidityAvgPct": 89,
+    "drySeasonMonths": [
+      "Feb"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -196,5 +200,9 @@
     "vatRate": 0.07,
     "socialChargesRate": 0
   },
-  "subregion": "Chiriquí"
+  "subregion": "Chiriquí",
+  "coordinates": {
+    "lat": 8.2778,
+    "lon": -82.8621
+  }
 }

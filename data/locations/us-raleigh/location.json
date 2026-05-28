@@ -20,7 +20,9 @@
     "winterLowF": 30,
     "summerHighF": 90,
     "rainyDaysPerYear": 110,
-    "meetsWarmWinterReq": false
+    "meetsWarmWinterReq": false,
+    "humidityAvgPct": 71,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -318,5 +320,9 @@
       ]
     }
   ],
-  "subregion": "North Carolina"
+  "subregion": "North Carolina",
+  "coordinates": {
+    "lat": 35.7721,
+    "lon": -78.6386
+  }
 }

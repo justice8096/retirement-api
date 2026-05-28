@@ -16,7 +16,9 @@
     "winterLowF": 31,
     "summerHighF": 89,
     "rainyDaysPerYear": 115,
-    "meetsWarmWinterReq": false
+    "meetsWarmWinterReq": false,
+    "humidityAvgPct": 74,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -303,5 +305,9 @@
       ]
     }
   ],
-  "subregion": "Virginia"
+  "subregion": "Virginia",
+  "coordinates": {
+    "lat": 36.819,
+    "lon": -76.2749
+  }
 }

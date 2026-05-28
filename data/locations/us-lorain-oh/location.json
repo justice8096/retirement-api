@@ -16,7 +16,9 @@
     "winterLowF": 20,
     "summerHighF": 82,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 155
+    "rainyDaysPerYear": 155,
+    "humidityAvgPct": 74,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -208,5 +210,9 @@
     "vatRate": 0,
     "socialChargesRate": 0
   },
-  "subregion": "Ohio"
+  "subregion": "Ohio",
+  "coordinates": {
+    "lat": 41.4528,
+    "lon": -82.1824
+  }
 }

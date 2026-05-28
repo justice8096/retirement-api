@@ -20,7 +20,11 @@
     "winterLowF": 40,
     "summerHighF": 82,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 95
+    "rainyDaysPerYear": 95,
+    "humidityAvgPct": 72,
+    "drySeasonMonths": [
+      "Jun"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -200,5 +204,9 @@
     "vatRate": 0.22,
     "socialChargesRate": 0
   },
-  "subregion": "Colonia"
+  "subregion": "Colonia",
+  "coordinates": {
+    "lat": -34.4626,
+    "lon": -57.8398
+  }
 }

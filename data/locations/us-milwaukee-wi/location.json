@@ -16,7 +16,14 @@
     "winterLowF": 14,
     "summerHighF": 82,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 126
+    "rainyDaysPerYear": 126,
+    "humidityAvgPct": 72,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Nov",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -215,5 +222,9 @@
     "vatRate": 0,
     "socialChargesRate": 0
   },
-  "subregion": "Wisconsin"
+  "subregion": "Wisconsin",
+  "coordinates": {
+    "lat": 43.0389,
+    "lon": -87.9065
+  }
 }

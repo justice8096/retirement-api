@@ -20,7 +20,18 @@
     "winterLowF": 42,
     "summerHighF": 85,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 75
+    "rainyDaysPerYear": 75,
+    "humidityAvgPct": 60,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Oct",
+      "Nov",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -205,5 +216,9 @@
     "vatRate": 0.16,
     "socialChargesRate": 0
   },
-  "subregion": "Guanajuato"
+  "subregion": "Guanajuato",
+  "coordinates": {
+    "lat": 20.9153,
+    "lon": -100.7439
+  }
 }

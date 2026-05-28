@@ -16,7 +16,9 @@
     "winterLowF": 34,
     "summerHighF": 93,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 117
+    "rainyDaysPerYear": 117,
+    "humidityAvgPct": 71,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -217,5 +219,9 @@
     "vatRate": 0,
     "socialChargesRate": 0
   },
-  "subregion": "Alabama"
+  "subregion": "Alabama",
+  "coordinates": {
+    "lat": 33.5207,
+    "lon": -86.8025
+  }
 }

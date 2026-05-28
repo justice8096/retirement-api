@@ -16,7 +16,18 @@
     "winterLowF": -3,
     "summerHighF": 82,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 100
+    "rainyDaysPerYear": 100,
+    "humidityAvgPct": 69,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "Aug",
+      "Oct",
+      "Nov",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -208,5 +219,9 @@
     "vatRate": 0,
     "socialChargesRate": 0
   },
-  "subregion": "North Dakota"
+  "subregion": "North Dakota",
+  "coordinates": {
+    "lat": 47.9253,
+    "lon": -97.0328
+  }
 }

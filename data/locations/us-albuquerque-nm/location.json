@@ -16,7 +16,22 @@
     "winterLowF": 25,
     "summerHighF": 94,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 61
+    "rainyDaysPerYear": 61,
+    "humidityAvgPct": 40,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -217,5 +232,9 @@
     "vatRate": 0,
     "socialChargesRate": 0
   },
-  "subregion": "New Mexico"
+  "subregion": "New Mexico",
+  "coordinates": {
+    "lat": 35.0845,
+    "lon": -106.6511
+  }
 }

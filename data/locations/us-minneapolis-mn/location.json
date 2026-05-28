@@ -16,7 +16,15 @@
     "winterLowF": 4,
     "summerHighF": 83,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 115
+    "rainyDaysPerYear": 115,
+    "humidityAvgPct": 70,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Nov",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -231,5 +239,9 @@
     "vatRate": 0,
     "socialChargesRate": 0
   },
-  "subregion": "Minnesota"
+  "subregion": "Minnesota",
+  "coordinates": {
+    "lat": 44.98,
+    "lon": -93.2638
+  }
 }

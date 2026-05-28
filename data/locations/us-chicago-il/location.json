@@ -16,7 +16,11 @@
     "winterLowF": 16,
     "summerHighF": 84,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 125
+    "rainyDaysPerYear": 125,
+    "humidityAvgPct": 74,
+    "drySeasonMonths": [
+      "Nov"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -208,5 +212,9 @@
     "vatRate": 0,
     "socialChargesRate": 0
   },
-  "subregion": "Illinois"
+  "subregion": "Illinois",
+  "coordinates": {
+    "lat": 41.85,
+    "lon": -87.65
+  }
 }

@@ -27,7 +27,9 @@
     "winterLowF": 37,
     "summerHighF": 67,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 160
+    "rainyDaysPerYear": 160,
+    "humidityAvgPct": 82,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -198,5 +200,9 @@
     "vatRate": 23,
     "socialChargesRate": 4
   },
-  "subregion": "Leinster"
+  "subregion": "Leinster",
+  "coordinates": {
+    "lat": 52.3342,
+    "lon": -6.4575
+  }
 }

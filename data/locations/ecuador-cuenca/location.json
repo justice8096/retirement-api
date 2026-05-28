@@ -20,7 +20,9 @@
     "winterLowF": 50,
     "summerHighF": 70,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 140
+    "rainyDaysPerYear": 140,
+    "humidityAvgPct": 80,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -205,5 +207,9 @@
     "vatRate": 0.15,
     "socialChargesRate": 0
   },
-  "subregion": "Azuay"
+  "subregion": "Azuay",
+  "coordinates": {
+    "lat": -2.8953,
+    "lon": -78.9963
+  }
 }

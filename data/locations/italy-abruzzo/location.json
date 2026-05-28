@@ -27,7 +27,14 @@
     "winterLowF": 35,
     "summerHighF": 86,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 75
+    "rainyDaysPerYear": 75,
+    "humidityAvgPct": 76,
+    "drySeasonMonths": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -235,5 +242,9 @@
     "vatRate": 22,
     "socialChargesRate": 0
   },
-  "subregion": "Abruzzo"
+  "subregion": "Abruzzo",
+  "coordinates": {
+    "lat": 42.4584,
+    "lon": 14.2028
+  }
 }

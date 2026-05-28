@@ -18,7 +18,15 @@
     "winterLowF": 72,
     "summerHighF": 88,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 200
+    "rainyDaysPerYear": 200,
+    "humidityAvgPct": 77,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Jun",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -218,5 +226,9 @@
     "vatRate": 0.115,
     "socialChargesRate": 0
   },
-  "subregion": "Puerto Rico"
+  "subregion": "Puerto Rico",
+  "coordinates": {
+    "lat": 18.466,
+    "lon": -66.106
+  }
 }

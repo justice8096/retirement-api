@@ -16,7 +16,13 @@
     "winterLowF": 45,
     "summerHighF": 91,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 112
+    "rainyDaysPerYear": 112,
+    "humidityAvgPct": 80,
+    "drySeasonMonths": [
+      "Feb",
+      "Mar",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -226,5 +232,9 @@
     "vatRate": 0,
     "socialChargesRate": 0
   },
-  "subregion": "Florida"
+  "subregion": "Florida",
+  "coordinates": {
+    "lat": 29.901,
+    "lon": -81.313
+  }
 }

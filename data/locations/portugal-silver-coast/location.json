@@ -27,7 +27,15 @@
     "winterLowF": 44,
     "summerHighF": 82,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 80
+    "rainyDaysPerYear": 80,
+    "humidityAvgPct": 79,
+    "drySeasonMonths": [
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -270,5 +278,9 @@
     "ssTaxedInCountry": true,
     "notes": "NHR ended Jan 2024. IFICI replacement excludes pensions. Standard progressive rates 14.5%-48%."
   },
-  "subregion": "Centro"
+  "subregion": "Centro",
+  "coordinates": {
+    "lat": 39.4033,
+    "lon": -9.1384
+  }
 }
