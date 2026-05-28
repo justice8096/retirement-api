@@ -52,8 +52,6 @@
     "vitest": "^4.1.6"
   },
   "overrides": {
-    "@hono/node-server": "^1.19.13",
-    "js-cookie": "^3.0.7",
-    "brace-expansion": "^5.0.6"
+    "@hono/node-server": "^1.19.13"
   }
 }
