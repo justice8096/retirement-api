@@ -52,8 +52,13 @@ npm run dev
 
 ```bash
 npm run db:migrate
-npm run db:seed
+DATA_DIR=./data npm run db:seed
 ```
+
+`db:seed` needs `DATA_DIR=./data` when run from the project root — the
+script's default (`../../data`) resolves outside the repo. Seeding is an
+idempotent upsert (bumps each row's `version`); it reads canonical
+`data/locations/<id>/location.json`, not the `prisma/seed-*.json` snapshots.
 
 ### 4. Run tests
 
