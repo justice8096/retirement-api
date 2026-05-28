@@ -21,7 +21,9 @@
     "winterLowF": 26,
     "summerHighF": 85,
     "rainyDaysPerYear": 122,
-    "meetsWarmWinterReq": false
+    "meetsWarmWinterReq": false,
+    "humidityAvgPct": 71,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -394,5 +396,9 @@
       ]
     }
   ],
-  "subregion": "New York"
+  "subregion": "New York",
+  "coordinates": {
+    "lat": 40.7834,
+    "lon": -73.9662
+  }
 }

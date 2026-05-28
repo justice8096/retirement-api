@@ -27,7 +27,20 @@
     "winterLowF": 50,
     "summerHighF": 95,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 35
+    "rainyDaysPerYear": 35,
+    "humidityAvgPct": 63,
+    "drySeasonMonths": [
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -203,5 +216,9 @@
     "vatRate": 19,
     "socialChargesRate": 0
   },
-  "subregion": "Limassol District"
+  "subregion": "Limassol District",
+  "coordinates": {
+    "lat": 34.6841,
+    "lon": 33.0379
+  }
 }

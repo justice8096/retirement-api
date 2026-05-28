@@ -27,7 +27,9 @@
     "winterLowF": 37,
     "summerHighF": 86,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 80
+    "rainyDaysPerYear": 80,
+    "humidityAvgPct": 70,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -203,5 +205,9 @@
     "vatRate": 25,
     "socialChargesRate": 0
   },
-  "subregion": "Istria"
+  "subregion": "Istria",
+  "coordinates": {
+    "lat": 45.0827,
+    "lon": 13.6346
+  }
 }

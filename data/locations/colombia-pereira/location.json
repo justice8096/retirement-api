@@ -22,7 +22,9 @@
     "winterLowF": 58,
     "summerHighF": 78,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 170
+    "rainyDaysPerYear": 170,
+    "humidityAvgPct": 86,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -207,5 +209,9 @@
     "vatRate": 0.19,
     "socialChargesRate": 0
   },
-  "subregion": "Risaralda"
+  "subregion": "Risaralda",
+  "coordinates": {
+    "lat": 4.8143,
+    "lon": -75.6949
+  }
 }

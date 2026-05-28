@@ -20,7 +20,13 @@
     "winterLowF": 72,
     "summerHighF": 92,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 160
+    "rainyDaysPerYear": 160,
+    "humidityAvgPct": 82,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -196,5 +202,9 @@
     "vatRate": 0.07,
     "socialChargesRate": 0
   },
-  "subregion": "Panamá Oeste"
+  "subregion": "Panamá Oeste",
+  "coordinates": {
+    "lat": 8.533,
+    "lon": -79.933
+  }
 }

@@ -20,7 +20,18 @@
     "winterLowF": 58,
     "summerHighF": 93,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 75
+    "rainyDaysPerYear": 75,
+    "humidityAvgPct": 79,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Nov",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -203,5 +214,9 @@
     "vatRate": 0.16,
     "socialChargesRate": 0
   },
-  "subregion": "Sinaloa"
+  "subregion": "Sinaloa",
+  "coordinates": {
+    "lat": 23.2216,
+    "lon": -106.4188
+  }
 }

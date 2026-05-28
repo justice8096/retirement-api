@@ -27,7 +27,13 @@
     "winterLowF": 41,
     "summerHighF": 79,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 110
+    "rainyDaysPerYear": 110,
+    "humidityAvgPct": 79,
+    "drySeasonMonths": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -279,5 +285,9 @@
     "ssTaxedInCountry": true,
     "notes": "NHR ended Jan 2024. IFICI replacement excludes pensions. Standard progressive rates 14.5%-48%."
   },
-  "subregion": "Norte"
+  "subregion": "Norte",
+  "coordinates": {
+    "lat": 41.1485,
+    "lon": -8.611
+  }
 }

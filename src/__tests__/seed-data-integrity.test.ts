@@ -405,6 +405,42 @@ describe('Visa data', () => {
   }
 });
 
+// ─── Climate normals + coordinates (canonical only) ─────────────────────────
+// Backfilled by scripts/backfill-climate-normals.mjs from Open-Meteo ERA5
+// (2014-2023). Scoped to canonical data/locations/ — the prisma/seed-*.json
+// snapshots predate these fields and are deduped behind canonical elsewhere.
+
+describe('Climate normals + coordinates (canonical locations)', () => {
+  const VALID_MONTHS = new Set(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']);
+  for (const loc of originalLocations) {
+    describe(loc.name || loc.id, () => {
+      it('has coordinates with valid lat/lon', () => {
+        const co = (loc as Record<string, unknown>).coordinates as { lat?: number; lon?: number } | undefined;
+        expect(co).toBeDefined();
+        expect(typeof co!.lat).toBe('number');
+        expect(typeof co!.lon).toBe('number');
+        expect(co!.lat!).toBeGreaterThanOrEqual(-90);
+        expect(co!.lat!).toBeLessThanOrEqual(90);
+        expect(co!.lon!).toBeGreaterThanOrEqual(-180);
+        expect(co!.lon!).toBeLessThanOrEqual(180);
+      });
+
+      it('has climate.humidityAvgPct in 0..100', () => {
+        const h = (loc.climate as Record<string, unknown>).humidityAvgPct;
+        expect(typeof h).toBe('number');
+        expect(h as number).toBeGreaterThanOrEqual(0);
+        expect(h as number).toBeLessThanOrEqual(100);
+      });
+
+      it('has climate.drySeasonMonths as a valid month array', () => {
+        const d = (loc.climate as Record<string, unknown>).drySeasonMonths;
+        expect(Array.isArray(d)).toBe(true);
+        for (const m of d as string[]) expect(VALID_MONTHS.has(m)).toBe(true);
+      });
+    });
+  }
+});
+
 describe('EUR locations have exchange rates', () => {
   const eurLocations = allLocations.filter((l) => l.currency === 'EUR');
 

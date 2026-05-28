@@ -20,7 +20,9 @@
     "winterLowF": 73,
     "summerHighF": 88,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 200
+    "rainyDaysPerYear": 200,
+    "humidityAvgPct": 85,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -196,5 +198,9 @@
     "vatRate": 0.07,
     "socialChargesRate": 0
   },
-  "subregion": "Bocas del Toro"
+  "subregion": "Bocas del Toro",
+  "coordinates": {
+    "lat": 9.3403,
+    "lon": -82.242
+  }
 }

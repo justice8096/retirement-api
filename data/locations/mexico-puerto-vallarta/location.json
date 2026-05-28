@@ -20,7 +20,17 @@
     "winterLowF": 62,
     "summerHighF": 93,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 90
+    "rainyDaysPerYear": 90,
+    "humidityAvgPct": 83,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Nov",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -196,5 +206,9 @@
     "vatRate": 0.16,
     "socialChargesRate": 0
   },
-  "subregion": "Jalisco"
+  "subregion": "Jalisco",
+  "coordinates": {
+    "lat": 20.617,
+    "lon": -105.2302
+  }
 }

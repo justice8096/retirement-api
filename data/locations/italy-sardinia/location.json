@@ -27,7 +27,21 @@
     "winterLowF": 44,
     "summerHighF": 90,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 50
+    "rainyDaysPerYear": 50,
+    "humidityAvgPct": 71,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -223,5 +237,9 @@
     "vatRate": 22,
     "socialChargesRate": 0
   },
-  "subregion": "Sardinia"
+  "subregion": "Sardinia",
+  "coordinates": {
+    "lat": 39.2305,
+    "lon": 9.1192
+  }
 }

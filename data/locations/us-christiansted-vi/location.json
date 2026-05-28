@@ -17,7 +17,15 @@
     "winterLowF": 73,
     "summerHighF": 88,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 140
+    "rainyDaysPerYear": 140,
+    "humidityAvgPct": 77,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -215,5 +223,9 @@
     "vatRate": 0,
     "socialChargesRate": 0
   },
-  "subregion": "US Virgin Islands"
+  "subregion": "US Virgin Islands",
+  "coordinates": {
+    "lat": 17.747,
+    "lon": -64.703
+  }
 }

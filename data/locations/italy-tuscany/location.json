@@ -27,7 +27,12 @@
     "winterLowF": 35,
     "summerHighF": 90,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 80
+    "rainyDaysPerYear": 80,
+    "humidityAvgPct": 76,
+    "drySeasonMonths": [
+      "Jul",
+      "Aug"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -222,5 +227,9 @@
     "vatRate": 22,
     "socialChargesRate": 0
   },
-  "subregion": "Tuscany"
+  "subregion": "Tuscany",
+  "coordinates": {
+    "lat": 43.8437,
+    "lon": 10.5045
+  }
 }

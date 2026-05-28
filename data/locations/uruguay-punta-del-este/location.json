@@ -20,7 +20,9 @@
     "winterLowF": 40,
     "summerHighF": 80,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 90
+    "rainyDaysPerYear": 90,
+    "humidityAvgPct": 77,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -191,5 +193,9 @@
     "vatRate": 0.22,
     "socialChargesRate": 0
   },
-  "subregion": "Maldonado"
+  "subregion": "Maldonado",
+  "coordinates": {
+    "lat": -34.9475,
+    "lon": -54.9338
+  }
 }

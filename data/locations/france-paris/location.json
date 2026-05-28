@@ -27,7 +27,14 @@
     "winterLowF": 35,
     "summerHighF": 79,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 110
+    "rainyDaysPerYear": 110,
+    "humidityAvgPct": 76,
+    "drySeasonMonths": [
+      "Feb",
+      "Apr",
+      "Jul",
+      "Sep"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -217,5 +224,9 @@
     "vatRate": 20,
     "socialChargesRate": 9.1
   },
-  "subregion": "Île-de-France"
+  "subregion": "Île-de-France",
+  "coordinates": {
+    "lat": 48.8534,
+    "lon": 2.3488
+  }
 }

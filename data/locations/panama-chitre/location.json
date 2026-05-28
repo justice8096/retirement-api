@@ -20,7 +20,14 @@
     "winterLowF": 70,
     "summerHighF": 95,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 120
+    "rainyDaysPerYear": 120,
+    "humidityAvgPct": 82,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -196,5 +203,9 @@
     "vatRate": 0.07,
     "socialChargesRate": 0
   },
-  "subregion": "Herrera"
+  "subregion": "Herrera",
+  "coordinates": {
+    "lat": 7.9601,
+    "lon": -80.4288
+  }
 }

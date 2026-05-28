@@ -27,7 +27,19 @@
     "winterLowF": 41,
     "summerHighF": 87,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 55
+    "rainyDaysPerYear": 55,
+    "humidityAvgPct": 76,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -203,5 +215,9 @@
     "vatRate": 21,
     "socialChargesRate": 0
   },
-  "subregion": "Catalonia"
+  "subregion": "Catalonia",
+  "coordinates": {
+    "lat": 41.3888,
+    "lon": 2.159
+  }
 }

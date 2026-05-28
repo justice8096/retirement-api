@@ -20,7 +20,9 @@
     "winterLowF": 42,
     "summerHighF": 82,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 100
+    "rainyDaysPerYear": 100,
+    "humidityAvgPct": 74,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -200,5 +202,9 @@
     "vatRate": 0.22,
     "socialChargesRate": 0
   },
-  "subregion": "Montevideo"
+  "subregion": "Montevideo",
+  "coordinates": {
+    "lat": -34.9033,
+    "lon": -56.1882
+  }
 }

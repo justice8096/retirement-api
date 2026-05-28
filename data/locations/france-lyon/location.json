@@ -17,7 +17,15 @@
     "winterLowF": 30,
     "summerHighF": 82,
     "rainyDaysPerYear": 100,
-    "meetsWarmWinterReq": false
+    "meetsWarmWinterReq": false,
+    "humidityAvgPct": 72,
+    "drySeasonMonths": [
+      "Feb",
+      "Mar",
+      "Apr",
+      "Aug",
+      "Sep"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -295,5 +303,9 @@
     "mid": 0.93,
     "note": "EUR per 1 USD. Based on 2016-2026 historical range. Optimistic = strong EUR (good for USD→EUR), Pessimistic = weak EUR."
   },
-  "subregion": "Auvergne-Rhône-Alpes"
+  "subregion": "Auvergne-Rhône-Alpes",
+  "coordinates": {
+    "lat": 45.7491,
+    "lon": 4.8479
+  }
 }

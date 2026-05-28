@@ -20,7 +20,15 @@
     "winterLowF": 38,
     "summerHighF": 72,
     "rainyDaysPerYear": 160,
-    "meetsWarmWinterReq": false
+    "meetsWarmWinterReq": false,
+    "humidityAvgPct": 78,
+    "drySeasonMonths": [
+      "Apr",
+      "May",
+      "Jul",
+      "Aug",
+      "Sep"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -324,5 +332,9 @@
     "mid": 0.93,
     "note": "EUR per 1 USD. Based on 2016-2026 historical range. Optimistic = strong EUR (good for USD→EUR), Pessimistic = weak EUR."
   },
-  "subregion": "Brittany"
+  "subregion": "Brittany",
+  "coordinates": {
+    "lat": 47.6569,
+    "lon": -2.762
+  }
 }

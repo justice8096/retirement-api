@@ -27,7 +27,11 @@
     "winterLowF": 28,
     "summerHighF": 84,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 100
+    "rainyDaysPerYear": 100,
+    "humidityAvgPct": 75,
+    "drySeasonMonths": [
+      "Mar"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -215,5 +219,9 @@
     "vatRate": 25,
     "socialChargesRate": 0
   },
-  "subregion": "Zagreb"
+  "subregion": "Zagreb",
+  "coordinates": {
+    "lat": 45.8144,
+    "lon": 15.978
+  }
 }

@@ -16,13 +16,15 @@
       "monthly": 1000,
       "currency": "USD"
     },
-    "notes": "Pensionado visa requires $1,000/mo pension income."
+    "notes": "Pensionado: $1,000/mo permanent pension or retirement income (e.g., Social Security), covering a married couple and dependents. Two-year renewable temporary residency; eligible for permanent residency after three years. Renewal requires converting the income through a Costa Rican bank and demonstrating in-country presence (commonly cited as ~4 months/year). Alternative: Rentista visa - $2,500/mo guaranteed income for 2+ years, or a $60,000 deposit in an approved CR bank. CAJA (public health) enrollment is mandatory at ~7-11% of declared income."
   },
   "climate": {
     "winterLowF": 62,
     "summerHighF": 85,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 180
+    "rainyDaysPerYear": 180,
+    "humidityAvgPct": 91,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -194,9 +196,13 @@
     }
   ],
   "taxes": {
-    "notes": "Territorial tax system: foreign income not taxed.",
+    "notes": "Territorial tax system: only Costa Rica-sourced income is taxed. Foreign pensions, Social Security, and IRA/investment income are not taxed by Costa Rica. VAT (IVA) is 13%. The mandatory CAJA social-health contribution (~7-11% of declared income) funds public healthcare and is separate from income tax.",
     "vatRate": 0.13,
     "socialChargesRate": 0
   },
-  "subregion": "Alajuela"
+  "subregion": "Alajuela",
+  "coordinates": {
+    "lat": 10.5452,
+    "lon": -84.8962
+  }
 }

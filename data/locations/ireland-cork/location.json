@@ -27,7 +27,9 @@
     "winterLowF": 38,
     "summerHighF": 66,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 185
+    "rainyDaysPerYear": 185,
+    "humidityAvgPct": 83,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -207,5 +209,9 @@
     "vatRate": 23,
     "socialChargesRate": 4
   },
-  "subregion": "Munster"
+  "subregion": "Munster",
+  "coordinates": {
+    "lat": 51.898,
+    "lon": -8.4706
+  }
 }

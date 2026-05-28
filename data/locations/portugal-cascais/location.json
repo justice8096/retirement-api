@@ -27,7 +27,16 @@
     "winterLowF": 47,
     "summerHighF": 82,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 60
+    "rainyDaysPerYear": 60,
+    "humidityAvgPct": 79,
+    "drySeasonMonths": [
+      "Feb",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -279,5 +288,9 @@
     "ssTaxedInCountry": true,
     "notes": "NHR ended Jan 2024. IFICI replacement excludes pensions. Standard progressive rates 14.5%-48%."
   },
-  "subregion": "Lisboa"
+  "subregion": "Lisboa",
+  "coordinates": {
+    "lat": 38.6968,
+    "lon": -9.4215
+  }
 }

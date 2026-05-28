@@ -27,7 +27,18 @@
     "winterLowF": 37,
     "summerHighF": 90,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 55
+    "rainyDaysPerYear": 55,
+    "humidityAvgPct": 67,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -212,5 +223,9 @@
     "vatRate": 20,
     "socialChargesRate": 9.1
   },
-  "subregion": "Occitanie"
+  "subregion": "Occitanie",
+  "coordinates": {
+    "lat": 43.6109,
+    "lon": 3.8764
+  }
 }

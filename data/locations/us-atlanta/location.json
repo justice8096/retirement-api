@@ -20,7 +20,9 @@
     "winterLowF": 33,
     "summerHighF": 89,
     "rainyDaysPerYear": 115,
-    "meetsWarmWinterReq": false
+    "meetsWarmWinterReq": false,
+    "humidityAvgPct": 72,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -339,5 +341,9 @@
       ]
     }
   ],
-  "subregion": "Georgia"
+  "subregion": "Georgia",
+  "coordinates": {
+    "lat": 33.749,
+    "lon": -84.388
+  }
 }

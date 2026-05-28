@@ -27,7 +27,22 @@
     "winterLowF": 42,
     "summerHighF": 92,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 60
+    "rainyDaysPerYear": 60,
+    "humidityAvgPct": 62,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -222,5 +237,9 @@
     "vatRate": 24,
     "socialChargesRate": 0
   },
-  "subregion": "Peloponnese"
+  "subregion": "Peloponnese",
+  "coordinates": {
+    "lat": 37.5686,
+    "lon": 22.8069
+  }
 }

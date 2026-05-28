@@ -18,7 +18,13 @@
     "winterLowF": 75,
     "summerHighF": 88,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 180
+    "rainyDaysPerYear": 180,
+    "humidityAvgPct": 79,
+    "drySeasonMonths": [
+      "Feb",
+      "Mar",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -219,5 +225,9 @@
     "vatRate": 0,
     "socialChargesRate": 0
   },
-  "subregion": "Northern Mariana Islands"
+  "subregion": "Northern Mariana Islands",
+  "coordinates": {
+    "lat": 15.178,
+    "lon": 145.751
+  }
 }

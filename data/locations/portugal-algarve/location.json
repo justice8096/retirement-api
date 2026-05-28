@@ -27,7 +27,20 @@
     "winterLowF": 50,
     "summerHighF": 90,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 55
+    "rainyDaysPerYear": 55,
+    "humidityAvgPct": 70,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -270,5 +283,9 @@
     "ssTaxedInCountry": true,
     "notes": "NHR ended Jan 2024. IFICI replacement excludes pensions. Standard progressive rates 14.5%-48%. US-Portugal tax treaty helps avoid double taxation."
   },
-  "subregion": "Algarve"
+  "subregion": "Algarve",
+  "coordinates": {
+    "lat": 37.0187,
+    "lon": -7.9272
+  }
 }

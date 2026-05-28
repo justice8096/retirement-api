@@ -20,7 +20,14 @@
     "winterLowF": 45,
     "summerHighF": 65,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 185
+    "rainyDaysPerYear": 185,
+    "humidityAvgPct": 79,
+    "drySeasonMonths": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -196,5 +203,9 @@
     "vatRate": 0.19,
     "socialChargesRate": 0
   },
-  "subregion": "Distrito Capital"
+  "subregion": "Distrito Capital",
+  "coordinates": {
+    "lat": 4.6097,
+    "lon": -74.0817
+  }
 }

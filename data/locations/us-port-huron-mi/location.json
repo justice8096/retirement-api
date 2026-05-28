@@ -16,7 +16,13 @@
     "winterLowF": 16,
     "summerHighF": 82,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 135
+    "rainyDaysPerYear": 135,
+    "humidityAvgPct": 73,
+    "drySeasonMonths": [
+      "Jan",
+      "Nov",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -208,5 +214,9 @@
     "vatRate": 0,
     "socialChargesRate": 0
   },
-  "subregion": "Michigan"
+  "subregion": "Michigan",
+  "coordinates": {
+    "lat": 42.9709,
+    "lon": -82.4249
+  }
 }

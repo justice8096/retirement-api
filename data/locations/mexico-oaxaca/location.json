@@ -20,7 +20,16 @@
     "winterLowF": 48,
     "summerHighF": 85,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 85
+    "rainyDaysPerYear": 85,
+    "humidityAvgPct": 65,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "Nov",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -196,5 +205,9 @@
     "vatRate": 0.16,
     "socialChargesRate": 0
   },
-  "subregion": "Oaxaca"
+  "subregion": "Oaxaca",
+  "coordinates": {
+    "lat": 17.0603,
+    "lon": -96.7254
+  }
 }

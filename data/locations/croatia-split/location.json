@@ -27,7 +27,13 @@
     "winterLowF": 42,
     "summerHighF": 90,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 75
+    "rainyDaysPerYear": 75,
+    "humidityAvgPct": 66,
+    "drySeasonMonths": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -212,5 +218,9 @@
     "vatRate": 25,
     "socialChargesRate": 0
   },
-  "subregion": "Split-Dalmatia"
+  "subregion": "Split-Dalmatia",
+  "coordinates": {
+    "lat": 43.5089,
+    "lon": 16.4392
+  }
 }

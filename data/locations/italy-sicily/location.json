@@ -27,7 +27,15 @@
     "winterLowF": 46,
     "summerHighF": 93,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 45
+    "rainyDaysPerYear": 45,
+    "humidityAvgPct": 74,
+    "drySeasonMonths": [
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -230,5 +238,9 @@
     "vatRate": 22,
     "socialChargesRate": 0
   },
-  "subregion": "Sicily"
+  "subregion": "Sicily",
+  "coordinates": {
+    "lat": 38.1166,
+    "lon": 13.3636
+  }
 }

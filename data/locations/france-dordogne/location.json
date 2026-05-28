@@ -27,7 +27,13 @@
     "winterLowF": 34,
     "summerHighF": 82,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 120
+    "rainyDaysPerYear": 120,
+    "humidityAvgPct": 74,
+    "drySeasonMonths": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -203,5 +209,9 @@
     "vatRate": 20,
     "socialChargesRate": 9.1
   },
-  "subregion": "Nouvelle-Aquitaine"
+  "subregion": "Nouvelle-Aquitaine",
+  "coordinates": {
+    "lat": 44.889,
+    "lon": 1.2166
+  }
 }

@@ -20,7 +20,9 @@
     "winterLowF": 48,
     "summerHighF": 68,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 150
+    "rainyDaysPerYear": 150,
+    "humidityAvgPct": 80,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -214,5 +216,9 @@
     "vatRate": 0.15,
     "socialChargesRate": 0
   },
-  "subregion": "Pichincha"
+  "subregion": "Pichincha",
+  "coordinates": {
+    "lat": -0.2298,
+    "lon": -78.5249
+  }
 }

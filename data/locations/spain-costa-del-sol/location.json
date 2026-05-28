@@ -27,7 +27,20 @@
     "winterLowF": 48,
     "summerHighF": 92,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 45
+    "rainyDaysPerYear": 45,
+    "humidityAvgPct": 66,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -203,5 +216,9 @@
     "vatRate": 21,
     "socialChargesRate": 0
   },
-  "subregion": "Andalusia"
+  "subregion": "Andalusia",
+  "coordinates": {
+    "lat": 36.7202,
+    "lon": -4.4203
+  }
 }

@@ -27,7 +27,16 @@
     "winterLowF": 48,
     "summerHighF": 90,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 50
+    "rainyDaysPerYear": 50,
+    "humidityAvgPct": 68,
+    "drySeasonMonths": [
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -203,5 +212,9 @@
     "vatRate": 24,
     "socialChargesRate": 0
   },
-  "subregion": "Crete"
+  "subregion": "Crete",
+  "coordinates": {
+    "lat": 35.5112,
+    "lon": 24.0292
+  }
 }

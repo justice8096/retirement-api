@@ -19,7 +19,9 @@
     "winterLowF": 24,
     "summerHighF": 87,
     "rainyDaysPerYear": 120,
-    "meetsWarmWinterReq": false
+    "meetsWarmWinterReq": false,
+    "humidityAvgPct": 68,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -343,5 +345,9 @@
       ]
     }
   ],
-  "subregion": "New Jersey"
+  "subregion": "New Jersey",
+  "coordinates": {
+    "lat": 39.926,
+    "lon": -75.1196
+  }
 }

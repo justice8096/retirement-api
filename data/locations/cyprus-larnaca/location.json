@@ -27,7 +27,22 @@
     "winterLowF": 50,
     "summerHighF": 95,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 30
+    "rainyDaysPerYear": 30,
+    "humidityAvgPct": 62,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -212,5 +227,9 @@
     "vatRate": 19,
     "socialChargesRate": 0
   },
-  "subregion": "Larnaca District"
+  "subregion": "Larnaca District",
+  "coordinates": {
+    "lat": 34.9221,
+    "lon": 33.6279
+  }
 }

@@ -27,7 +27,19 @@
     "winterLowF": 50,
     "summerHighF": 93,
     "meetsWarmWinterReq": true,
-    "rainyDaysPerYear": 40
+    "rainyDaysPerYear": 40,
+    "humidityAvgPct": 69,
+    "drySeasonMonths": [
+      "Feb",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -222,5 +234,9 @@
     "vatRate": 19,
     "socialChargesRate": 0
   },
-  "subregion": "Paphos District"
+  "subregion": "Paphos District",
+  "coordinates": {
+    "lat": 34.7768,
+    "lon": 32.4245
+  }
 }

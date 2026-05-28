@@ -16,7 +16,12 @@
     "winterLowF": 34,
     "summerHighF": 97,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 79
+    "rainyDaysPerYear": 79,
+    "humidityAvgPct": 63,
+    "drySeasonMonths": [
+      "Jan",
+      "Jul"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -217,5 +222,9 @@
     "vatRate": 0,
     "socialChargesRate": 0
   },
-  "subregion": "Texas"
+  "subregion": "Texas",
+  "coordinates": {
+    "lat": 32.7254,
+    "lon": -97.3208
+  }
 }

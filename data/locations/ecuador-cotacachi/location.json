@@ -20,7 +20,13 @@
     "winterLowF": 48,
     "summerHighF": 70,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 130
+    "rainyDaysPerYear": 130,
+    "humidityAvgPct": 77,
+    "drySeasonMonths": [
+      "Jul",
+      "Aug",
+      "Sep"
+    ]
   },
   "monthlyCosts": {
     "rent": {
@@ -196,5 +202,9 @@
     "vatRate": 0.15,
     "socialChargesRate": 0
   },
-  "subregion": "Imbabura"
+  "subregion": "Imbabura",
+  "coordinates": {
+    "lat": 0.2995,
+    "lon": -78.2656
+  }
 }

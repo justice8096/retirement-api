@@ -20,7 +20,9 @@
     "winterLowF": 35,
     "summerHighF": 68,
     "rainyDaysPerYear": 200,
-    "meetsWarmWinterReq": false
+    "meetsWarmWinterReq": false,
+    "humidityAvgPct": 82,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -367,5 +369,9 @@
     "mid": 0.95,
     "note": "EUR per 1 USD. Based on historical range. Optimistic = strong EUR (good for USD→EUR), Pessimistic = weak EUR. Using 1.05 USD per EUR for cost calculations."
   },
-  "subregion": "Munster"
+  "subregion": "Munster",
+  "coordinates": {
+    "lat": 52.2583,
+    "lon": -7.1119
+  }
 }

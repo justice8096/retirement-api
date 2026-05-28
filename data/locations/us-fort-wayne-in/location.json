@@ -16,7 +16,9 @@
     "winterLowF": 18,
     "summerHighF": 84,
     "meetsWarmWinterReq": false,
-    "rainyDaysPerYear": 130
+    "rainyDaysPerYear": 130,
+    "humidityAvgPct": 71,
+    "drySeasonMonths": []
   },
   "monthlyCosts": {
     "rent": {
@@ -215,5 +217,9 @@
     "vatRate": 0,
     "socialChargesRate": 0
   },
-  "subregion": "Indiana"
+  "subregion": "Indiana",
+  "coordinates": {
+    "lat": 41.1306,
+    "lon": -85.1289
+  }
 }
