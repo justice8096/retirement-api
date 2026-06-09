@@ -31,7 +31,7 @@ the two are designed to ship together but the API is consumable standalone.
 |---|---|---|
 | Language | TypeScript (strict, ESM) | Type-safety end-to-end |
 | HTTP | Fastify 5 | Fast, hook-first, strong schema validation |
-| DB | PostgreSQL 16 + Prisma 6 | JSONB for flexible blobs, relational for indexed access |
+| DB | PostgreSQL 16 + Prisma 7 | JSONB for flexible blobs, relational for indexed access |
 | Cache / rate-limit | Redis 7 (optional; falls back to in-memory) | Distributed counters |
 | Auth | Clerk (JWT) | Managed identity; avoids rolling our own |
 | Billing | Stripe | Webhooks for one-time feature unlocks + legacy subscriptions |

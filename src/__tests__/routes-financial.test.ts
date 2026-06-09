@@ -54,7 +54,7 @@ describe('Financial routes', () => {
       expect(res.statusCode).toBe(200);
       expect(body.portfolioBalance).toBe(500000);
       expect(body.ssCutYear).toBe(2033);
-      expect(body.ssCola).toBe(2.5);
+      expect(body.ssCola).toBe(2.8);
     });
 
     it('returns decrypted settings when they exist', async () => {

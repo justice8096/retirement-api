@@ -15,7 +15,7 @@ Each stack choice is one line so you can skim.
 | HTTP framework | Fastify 5 |
 | Runtime | Node.js 20 or newer |
 | Database | PostgreSQL 16 |
-| ORM | Prisma 6 |
+| ORM | Prisma 7 |
 | Cache | Redis 7 |
 | Auth | Clerk (JWT) |
 | Billing | Stripe |

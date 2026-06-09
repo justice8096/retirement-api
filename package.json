@@ -28,30 +28,31 @@
     "#shared/*": "./shared/*"
   },
   "dependencies": {
-    "@clerk/fastify": "^3.1.32",
+    "@clerk/fastify": "^3.1.33",
     "@fastify/cookie": "^11.0.2",
     "@fastify/cors": "^11.2.0",
     "@fastify/helmet": "^13.0.2",
-    "@fastify/rate-limit": "^10.0.0",
+    "@fastify/rate-limit": "^11.0.0",
     "@fastify/swagger": "^9.0.0",
-    "@fastify/swagger-ui": "^5.0.0",
+    "@fastify/swagger-ui": "^6.0.0",
     "@prisma/adapter-pg": "^7.7.0",
     "@prisma/client": "^7.7.0",
-    "@sentry/node": "^10.55.0",
+    "@sentry/node": "^10.57.0",
     "dotenv": "^17.4.2",
     "fastify": "^5.0.0",
-    "ioredis": "^5.10.1",
-    "stripe": "22.1.1",
+    "ioredis": "^5.11.1",
+    "stripe": "^22.2.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@types/node": "^25.9.1",
+    "@types/node": "^25.9.2",
     "prisma": "^7.7.0",
-    "tsx": "^4.22.3",
+    "tsx": "^4.22.4",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.7"
+    "vitest": "^4.1.8"
   },
   "overrides": {
-    "@hono/node-server": "^1.19.13"
+    "@hono/node-server": "^1.19.13",
+    "hono": "^4.12.21"
   }
 }
