@@ -42,6 +42,7 @@ import contributionRoutes, { adminContributionRoutes } from './routes/contributi
 import badgeRoutes from './routes/badges.js';
 import feesRoutes from './routes/fees.js';
 import glossaryRoutes from './routes/glossary.js';
+import simulateRoutes from './routes/simulate.js';
 
 const app = Fastify({
   logger: true,
@@ -337,6 +338,7 @@ await app.register(contributionRoutes, { prefix: '/api/contributions' });
 await app.register(badgeRoutes, { prefix: '/api/badges' });
 await app.register(feesRoutes, { prefix: '/api/me/fees' });
 await app.register(glossaryRoutes, { prefix: '/api/glossary' });
+await app.register(simulateRoutes, { prefix: '/api/simulate' });
 
 // ─── OpenAPI / Swagger (Dyslexia audit F-001) ─────────────────────────────
 // Registers @fastify/swagger + swagger-ui when available; falls back to a
