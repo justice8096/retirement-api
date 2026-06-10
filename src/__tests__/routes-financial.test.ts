@@ -55,6 +55,12 @@ describe('Financial routes', () => {
       expect(body.portfolioBalance).toBe(500000);
       expect(body.ssCutYear).toBe(2033);
       expect(body.ssCola).toBe(2.8);
+      // Income-composition + ACA assumption defaults
+      expect(body.apportionStrategy).toBe('manual');
+      expect(body.subsidyRegime).toBe('cliff');
+      expect(body.firstYearUnsubsidized).toBe(true);
+      expect(body.filingStatus).toBe('joint');
+      expect(body.taxableBrokerageTaxablePct).toBe(0.5);
     });
 
     it('returns decrypted settings when they exist', async () => {
@@ -113,6 +119,29 @@ describe('Financial routes', () => {
 
       const call = prisma.userFinancialSettings.upsert.mock.calls[0][0];
       expect(call.update.portfolioBalance).toBe('ENC:800000');
+    });
+
+    it('persists income composition: encrypts $ amounts, passes assumptions through', async () => {
+      prisma.userFinancialSettings.upsert.mockResolvedValue({ traditionalAnnual: 'ENC:60000' });
+
+      await app.inject({
+        method: 'PUT',
+        url: '/api/me/financial',
+        payload: {
+          traditionalAnnual: 60000, ssAnnual: 30000, totalAnnualNeed: 90000,
+          taxableBrokerageTaxablePct: 0.5, filingStatus: 'single',
+          apportionStrategy: 'magi-targeted', subsidyRegime: 'cliff', firstYearUnsubsidized: false,
+        },
+        headers: { 'content-type': 'application/json' },
+      });
+
+      const u = prisma.userFinancialSettings.upsert.mock.calls[0][0].update;
+      expect(u.traditionalAnnual).toBe('ENC:60000');   // encrypted
+      expect(u.ssAnnual).toBe('ENC:30000');             // encrypted
+      expect(u.taxableBrokerageTaxablePct).toBe(0.5);   // fraction, NOT %-converted
+      expect(u.filingStatus).toBe('single');            // pass-through
+      expect(u.apportionStrategy).toBe('magi-targeted');
+      expect(u.firstYearUnsubsidized).toBe(false);
     });
 
     it('rejects invalid schema (extra fields)', async () => {

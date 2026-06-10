@@ -205,6 +205,23 @@ model UserFinancialSettings {
   // persisted to MAGI baseline (it's a spike, not a steady-state).
   transitionYearExtraIncome Decimal @default(0) @map("transition_year_extra_income")
 
+  // ─── Income composition + ACA assumptions (Assumptions screen) ────
+  // Annual income split + total cash need that drive the MAGI / ACA-subsidy
+  // calc and auto-apportionment. Dollar amounts are financial PII → encrypted
+  // at rest (AES-256-GCM), same as the balance fields above.
+  traditionalAnnual      String?  @map("traditional_annual")        // Encrypted
+  rothAnnual             String?  @map("roth_annual")               // Encrypted
+  taxableBrokerageAnnual String?  @map("taxable_brokerage_annual")  // Encrypted
+  pensionAnnual          String?  @map("pension_annual")            // Encrypted
+  ssAnnual               String?  @map("ss_annual")                 // Encrypted
+  totalAnnualNeed        String?  @map("total_annual_need")         // Encrypted
+  // Fraction (0..1) of taxable-brokerage withdrawals counted as taxable income.
+  taxableBrokerageTaxablePct Decimal @default(0.5) @map("taxable_brokerage_taxable_pct")
+  filingStatus           String   @default("joint")   @map("filing_status")          // single | joint
+  apportionStrategy      String   @default("manual")  @map("apportion_strategy")      // manual | proportional | tax-efficient | magi-targeted
+  subsidyRegime          String   @default("cliff")   @map("subsidy_regime")          // cliff | enhanced
+  firstYearUnsubsidized  Boolean  @default(true)      @map("first_year_unsubsidized")
+
   updatedAt        DateTime @updatedAt @map("updated_at")
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
