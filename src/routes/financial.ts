@@ -75,6 +75,20 @@ const financialSchema = z.object({
   taxableBalance: num.min(0).max(100_000_000).nullable().optional(),
   hsaBalance: num.min(0).max(100_000_000).nullable().optional(),
 
+  // Income composition + ACA assumptions (Assumptions screen). Dollar amounts
+  // are encrypted at rest; the rest are plain assumption fields.
+  traditionalAnnual: num.min(0).max(100_000_000).nullable().optional(),
+  rothAnnual: num.min(0).max(100_000_000).nullable().optional(),
+  taxableBrokerageAnnual: num.min(0).max(100_000_000).nullable().optional(),
+  pensionAnnual: num.min(0).max(100_000_000).nullable().optional(),
+  ssAnnual: num.min(0).max(100_000_000).nullable().optional(),
+  totalAnnualNeed: num.min(0).max(100_000_000).nullable().optional(),
+  taxableBrokerageTaxablePct: num.min(0).max(1).optional(), // fraction, not %
+  filingStatus: z.enum(['single', 'joint']).optional(),
+  apportionStrategy: z.enum(['manual', 'proportional', 'tax-efficient', 'magi-targeted']).optional(),
+  subsidyRegime: z.enum(['cliff', 'enhanced']).optional(),
+  firstYearUnsubsidized: z.boolean().optional(),
+
   // Per-Account Load % and Fees % (whole-number percent on wire, e.g. 0.5 = 0.5%)
   traditionalLoadPct: num.min(0).max(10).optional(),
   rothLoadPct: num.min(0).max(10).optional(),
@@ -122,6 +136,18 @@ const DEFAULTS = {
   mortgageMonthlyPayment: 0,
   mortgageEndYear: 0,
   transitionYearExtraIncome: 0,
+  // Income composition + ACA assumptions (Assumptions screen).
+  traditionalAnnual: 0,
+  rothAnnual: 0,
+  taxableBrokerageAnnual: 0,
+  pensionAnnual: 0,
+  ssAnnual: 0,
+  totalAnnualNeed: 0,
+  taxableBrokerageTaxablePct: 0.5,
+  filingStatus: 'joint',
+  apportionStrategy: 'manual',
+  subsidyRegime: 'cliff',
+  firstYearUnsubsidized: true,
 };
 
 /** Encrypted balance field names. */
@@ -131,6 +157,13 @@ const ENCRYPTED_FIELDS = [
   'rothBalance',
   'taxableBalance',
   'hsaBalance',
+  // Income composition (annual $ amounts) — financial PII, encrypted at rest.
+  'traditionalAnnual',
+  'rothAnnual',
+  'taxableBrokerageAnnual',
+  'pensionAnnual',
+  'ssAnnual',
+  'totalAnnualNeed',
 ] as const;
 
 /** Decimal-fraction fields stored as 0.60 in DB but sent as 60 to client. */
@@ -164,6 +197,9 @@ const NUMERIC_FIELDS = new Set<string>([
   'mortgageMonthlyPayment', 'mortgageEndYear',
   // Transition-year ACA spike (Todo #38). Decimal in DB → JS number.
   'transitionYearExtraIncome',
+  // Income composition: encrypted annual $ amounts + the taxable fraction.
+  'traditionalAnnual', 'rothAnnual', 'taxableBrokerageAnnual', 'pensionAnnual',
+  'ssAnnual', 'totalAnnualNeed', 'taxableBrokerageTaxablePct',
 ]);
 
 /** Decrypt sensitive fields and convert DB decimals to client percentages.
@@ -210,6 +246,8 @@ const LABELED_FIELDS = [
   'traditionalFeesPct', 'rothFeesPct', 'taxableFeesPct', 'hsaFeesPct',
   'mortgageMonthlyPayment', 'mortgageEndYear',
   'transitionYearExtraIncome',
+  'traditionalAnnual', 'rothAnnual', 'taxableBrokerageAnnual', 'pensionAnnual',
+  'ssAnnual', 'totalAnnualNeed',
 ] as const;
 
 /** Build the `_units` metadata block for a response.
