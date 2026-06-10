@@ -4473,11 +4473,11 @@
         "annualInflation": 0.055
       },
       "healthcarePreMedicare": {
-        "min": 1845,
-        "max": 2655,
-        "typical": 2250,
+        "min": 1583,
+        "max": 2277,
+        "typical": 1930,
         "annualInflation": 0.06,
-        "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Norfolk City, VA). Hampton Roads marketplace. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+        "notes": "ACA silver benchmark for a 2-adult household, both age ~60, before subsidies (county-level estimate, Norfolk City). Estimated, not a quote. Anchored to KFF 2026 Virginia statewide benchmark silver ($455/mo at age 40) scaled to age ~60 via the HHS federal default age curve (x2.12); rating-area variation +/-15%. Verify a specific ZIP on Virginia's Insurance Marketplace (marketplace.virginia.gov). Accessed 2026-06-10."
       }
     },
     "healthcare": {
@@ -4487,13 +4487,13 @@
       "waitTimes": "Short to moderate",
       "prescriptionCoverage": "Via insurance plan",
       "acaMarketplace": {
-        "benchmarkSilverMonthly2Adult": 2250,
-        "benchmarkSilverMonthlySingle": 1125,
+        "benchmarkSilverMonthly2Adult": 1930,
+        "benchmarkSilverMonthlySingle": 965,
         "premiumCapPctOfIncome": 0.085,
         "rateArea": "Norfolk City",
         "notes": "Hampton Roads marketplace.",
         "estimationLevel": "county",
-        "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+        "disclaimer": "Estimated, not a quote. Anchored to KFF 2026 Virginia statewide benchmark silver ($455/mo at age 40) scaled to age ~60 via the HHS federal default age curve (x2.12); rating-area variation +/-15%. Verify a specific ZIP on Virginia's Insurance Marketplace (marketplace.virginia.gov). Accessed 2026-06-10."
       }
     },
     "lifestyle": {
@@ -4698,11 +4698,11 @@
         "annualInflation": 0.055
       },
       "healthcarePreMedicare": {
-        "min": 1845,
-        "max": 2655,
-        "typical": 2250,
+        "min": 1583,
+        "max": 2277,
+        "typical": 1930,
         "annualInflation": 0.06,
-        "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Virginia Beach City, VA). Coastal VA — competitive marketplace. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+        "notes": "ACA silver benchmark for a 2-adult household, both age ~60, before subsidies (county-level estimate, Virginia Beach City). Estimated, not a quote. Anchored to KFF 2026 Virginia statewide benchmark silver ($455/mo at age 40) scaled to age ~60 via the HHS federal default age curve (x2.12); rating-area variation +/-15%. Verify a specific ZIP on Virginia's Insurance Marketplace (marketplace.virginia.gov). Accessed 2026-06-10."
       }
     },
     "healthcare": {
@@ -4712,13 +4712,13 @@
       "waitTimes": "Short to moderate",
       "prescriptionCoverage": "Via insurance plan",
       "acaMarketplace": {
-        "benchmarkSilverMonthly2Adult": 2250,
-        "benchmarkSilverMonthlySingle": 1125,
+        "benchmarkSilverMonthly2Adult": 1930,
+        "benchmarkSilverMonthlySingle": 965,
         "premiumCapPctOfIncome": 0.085,
         "rateArea": "Virginia Beach City",
         "notes": "Coastal VA — competitive marketplace.",
         "estimationLevel": "county",
-        "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+        "disclaimer": "Estimated, not a quote. Anchored to KFF 2026 Virginia statewide benchmark silver ($455/mo at age 40) scaled to age ~60 via the HHS federal default age curve (x2.12); rating-area variation +/-15%. Verify a specific ZIP on Virginia's Insurance Marketplace (marketplace.virginia.gov). Accessed 2026-06-10."
       }
     },
     "lifestyle": {
@@ -4923,11 +4923,11 @@
         "annualInflation": 0.055
       },
       "healthcarePreMedicare": {
-        "min": 1886,
-        "max": 2714,
-        "typical": 2300,
+        "min": 1583,
+        "max": 2277,
+        "typical": 1930,
         "annualInflation": 0.06,
-        "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Portsmouth City, VA). Hampton Roads marketplace. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+        "notes": "ACA silver benchmark for a 2-adult household, both age ~60, before subsidies (county-level estimate, Portsmouth City). Estimated, not a quote. Anchored to KFF 2026 Virginia statewide benchmark silver ($455/mo at age 40) scaled to age ~60 via the HHS federal default age curve (x2.12); rating-area variation +/-15%. Verify a specific ZIP on Virginia's Insurance Marketplace (marketplace.virginia.gov). Accessed 2026-06-10."
       }
     },
     "healthcare": {
@@ -4937,13 +4937,13 @@
       "waitTimes": "Short to moderate",
       "prescriptionCoverage": "Via insurance plan",
       "acaMarketplace": {
-        "benchmarkSilverMonthly2Adult": 2300,
-        "benchmarkSilverMonthlySingle": 1150,
+        "benchmarkSilverMonthly2Adult": 1930,
+        "benchmarkSilverMonthlySingle": 965,
         "premiumCapPctOfIncome": 0.085,
         "rateArea": "Portsmouth City",
         "notes": "Hampton Roads marketplace.",
         "estimationLevel": "county",
-        "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+        "disclaimer": "Estimated, not a quote. Anchored to KFF 2026 Virginia statewide benchmark silver ($455/mo at age 40) scaled to age ~60 via the HHS federal default age curve (x2.12); rating-area variation +/-15%. Verify a specific ZIP on Virginia's Insurance Marketplace (marketplace.virginia.gov). Accessed 2026-06-10."
       }
     },
     "lifestyle": {
@@ -5141,11 +5141,11 @@
         "annualInflation": 0.055
       },
       "healthcarePreMedicare": {
-        "min": 1968,
-        "max": 2832,
-        "typical": 2400,
+        "min": 1681,
+        "max": 2419,
+        "typical": 2050,
         "annualInflation": 0.06,
-        "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Lynchburg City, VA). Central VA — limited insurer competition vs NOVA. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+        "notes": "ACA silver benchmark for a 2-adult household, both age ~60, before subsidies (county-level estimate, Lynchburg City). Estimated, not a quote. Anchored to KFF 2026 Virginia statewide benchmark silver ($455/mo at age 40) scaled to age ~60 via the HHS federal default age curve (x2.12); rating-area variation +/-15%. Verify a specific ZIP on Virginia's Insurance Marketplace (marketplace.virginia.gov). Accessed 2026-06-10."
       }
     },
     "healthcare": {
@@ -5155,13 +5155,13 @@
       "waitTimes": "Short to moderate",
       "prescriptionCoverage": "Via insurance plan",
       "acaMarketplace": {
-        "benchmarkSilverMonthly2Adult": 2400,
-        "benchmarkSilverMonthlySingle": 1200,
+        "benchmarkSilverMonthly2Adult": 2050,
+        "benchmarkSilverMonthlySingle": 1025,
         "premiumCapPctOfIncome": 0.085,
         "rateArea": "Lynchburg City",
         "notes": "Central VA — limited insurer competition vs NOVA.",
         "estimationLevel": "county",
-        "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+        "disclaimer": "Estimated, not a quote. Anchored to KFF 2026 Virginia statewide benchmark silver ($455/mo at age 40) scaled to age ~60 via the HHS federal default age curve (x2.12); rating-area variation +/-15%. Verify a specific ZIP on Virginia's Insurance Marketplace (marketplace.virginia.gov). Accessed 2026-06-10."
       }
     },
     "lifestyle": {
