@@ -45,6 +45,15 @@ describe('POST /api/simulate', () => {
     expect(a.p5).toBe(b.p5);
   });
 
+  it('is deterministic for a fixed seed in bootstrap mode (Codex P2)', async () => {
+    const body = { portfolio: 1_000_000, annualSpending: 50_000, years: 30, returnMode: 'bootstrap', seed: 7 };
+    const a = (await post(body)).json();
+    const b = (await post(body)).json();
+    expect(a.successPct).toBe(b.successPct);
+    expect(a.median).toBe(b.median);
+    expect(a.p5).toBe(b.p5);
+  });
+
   it('rejects a missing required field with 400', async () => {
     const res = await post({ annualSpending: 50_000, years: 30 }); // no portfolio
     expect(res.statusCode).toBe(400);
