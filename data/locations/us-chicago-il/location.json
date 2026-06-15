@@ -61,10 +61,11 @@
       "annualInflation": 0.03
     },
     "petDaycare": {
-      "typical": 200,
-      "min": 150,
-      "max": 300,
-      "annualInflation": 0.03
+      "typical": 365,
+      "min": 290,
+      "max": 435,
+      "annualInflation": 0.03,
+      "notes": "Doggy daycare 2 days/week, large breed rate (~$42/day). Chicago avg $42.28/day per Rover 2026."
     },
     "petGrooming": {
       "typical": 60,
