@@ -1,0 +1,277 @@
+{
+  "id": "panama-dolega",
+  "name": "Dolega, Panama",
+  "country": "Panama",
+  "region": "Central America",
+  "cities": [
+    "Dolega",
+    "Potrerillos"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Pensionado Visa",
+    "incomeRequirement": {
+      "monthly": 1000,
+      "annual": 12000,
+      "currency": "USD"
+    },
+    "notes": "Same Pensionado program as all Panama. $1,000/mo pension income required. Dolega is a quiet alternative to the more expat-saturated Boquete — 25 km north — with meaningfully lower rents."
+  },
+  "climate": {
+    "winterLowF": 63,
+    "summerHighF": 88,
+    "meetsWarmWinterReq": true,
+    "rainyDaysPerYear": 180,
+    "humidityAvgPct": 82,
+    "drySeasonMonths": [
+      "Jan",
+      "Feb",
+      "Mar"
+    ]
+  },
+  "monthlyCosts": {
+    "rent": {
+      "min": 350,
+      "max": 700,
+      "typical": 525,
+      "type": "2-3 bedroom house",
+      "annualInflation": 0.025,
+      "notes": "No rental tax in Panama. Dolega rents run 30-50% below Boquete. Median ~$525/mo for a modest 2-3BR home per 2025 listings (Encuentra24, Rent By Owner). Furnished homes with expat amenities trend toward the upper end. David 15-20 min south for shopping, hospital, airport."
+    },
+    "groceries": {
+      "min": 590,
+      "max": 940,
+      "typical": 760,
+      "notes": "2 adults + pet food; shop primarily in David (Super Baru, PriceSmart, Romero). Local Dolega market for produce. Prices similar to Boquete — same regional supply chain.",
+      "annualInflation": 0.03
+    },
+    "utilities": {
+      "min": 65,
+      "max": 135,
+      "typical": 95,
+      "annualInflation": 0.025,
+      "breakdown": {
+        "electricity": {
+          "typical": 65,
+          "notes": "EDECHI. Dolega at ~1,150 ft elevation — warmer than Boquete, cooler than David. Fans sufficient most mornings and evenings; AC useful on hot afternoons (Mar-Apr peak). Higher than Boquete, much lower than David."
+        },
+        "gas": {
+          "typical": 10,
+          "notes": "Propane (tanque) for cooking. No natural gas grid."
+        },
+        "water": {
+          "typical": 15,
+          "notes": "IDAAN or community water cooperative. Mountain water affordable."
+        },
+        "sewage": {
+          "typical": 5,
+          "notes": "Septic systems common in rural Dolega properties."
+        },
+        "trash": {
+          "typical": 0,
+          "notes": "Garbage collection typically included in rent or covered by municipality."
+        }
+      },
+      "taxes": "ITBMS 7% on electricity. Water exempt for residential.",
+      "notes": "Electricity, propane, water, sewage. Internet is in entertainment. Trash typically included in rent."
+    },
+    "healthcare": {
+      "min": 280,
+      "max": 550,
+      "typical": 400,
+      "notes": "Private insurance required (~$175-250/person/mo). No public hospital in Dolega — Hospital Chiriquí and Hospital Mae Lewis both in David (15-20 min drive). Routine care at local Dolega clinics and pharmacies. Anti-VEGF and ophthalmology in David or Panama City. Pensionado discount 15-25% on services. Pre-existing condition exclusions common first 12-24 months.",
+      "annualInflation": 0.06
+    },
+    "insurance": {
+      "min": 10,
+      "max": 20,
+      "typical": 15,
+      "annualInflation": 0.02
+    },
+    "petCare": {
+      "min": 35,
+      "max": 100,
+      "typical": 65,
+      "annualInflation": 0.03,
+      "notes": "Basic vet care available in David (15-20 min). Fewer pet services than Boquete. Local vets affordable but limited specialty capability."
+    },
+    "petDaycare": {
+      "min": 90,
+      "max": 180,
+      "typical": 130,
+      "annualInflation": 0.025,
+      "notes": "No commercial pet daycare in Dolega. Informal pet sitters via expat/local network. David has a few boarding options. Expect to pay $12-18/visit for in-home sitting."
+    },
+    "petGrooming": {
+      "min": 25,
+      "max": 60,
+      "typical": 40,
+      "annualInflation": 0.025,
+      "notes": "Groomers available in David; may need to travel. Fewer options than Boquete."
+    },
+    "transportation": {
+      "min": 70,
+      "max": 170,
+      "typical": 115,
+      "notes": "Car strongly recommended — no expat-targeted local transit. David runs ($1-2 bus or $5-8 taxi). Gas, insurance, and David supply runs (~2-3x/week for many expats). Closer to David than Boquete, which reduces per-trip cost slightly.",
+      "annualInflation": 0.025
+    },
+    "entertainment": {
+      "min": 220,
+      "max": 390,
+      "typical": 290,
+      "annualInflation": 0.02,
+      "notes": "Incl cable+internet (slower than Boquete — 50-150Mbps), Netflix, Amazon Prime, Apple TV+, NFL RedZone (DAZN). Fewer dining-out options than Boquete; David restaurants 15-20 min away. Small-town social scene; Boquete expat events accessible."
+    },
+    "clothing": {
+      "min": 30,
+      "max": 80,
+      "typical": 50,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "min": 15,
+      "max": 40,
+      "typical": 25,
+      "annualInflation": 0.02
+    },
+    "subscriptions": {
+      "min": 30,
+      "max": 80,
+      "typical": 50,
+      "annualInflation": 0.03,
+      "notes": "Streaming, news, apps"
+    },
+    "phoneCell": {
+      "min": 68,
+      "max": 100,
+      "typical": 83,
+      "annualInflation": 0.02,
+      "notes": "Google Fi Flexible (US number) + +Movil or Claro prepaid (local). Same setup as Boquete region. 2 phones."
+    },
+    "miscellaneous": {
+      "min": 35,
+      "max": 75,
+      "typical": 55,
+      "annualInflation": 0.025
+    },
+    "buffer": {
+      "min": 800,
+      "max": 800,
+      "typical": 800,
+      "annualInflation": 0.025,
+      "notes": "Monthly safety buffer for unexpected expenses"
+    },
+    "medicalOOP": {
+      "min": 100,
+      "max": 325,
+      "typical": 175,
+      "annualInflation": 0.06,
+      "notes": "Private system OOP: specialist visits $40-80 in David, anti-VEGF injections $400-800 each at David/Panama City clinics. Labs $15-30/panel. Pensionado discounts offset some costs. Serious specialties may require travel to Panama City."
+    },
+    "medicine": {
+      "min": 383,
+      "typical": 479,
+      "max": 529,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household. Farmacia Arrocha and local pharmacies in David carry most common medications at Panama prices."
+    },
+    "taxes": {
+      "typical": 0,
+      "min": 0,
+      "max": 0,
+      "annualInflation": 0.02,
+      "notes": "Panama territorial tax system: foreign-sourced income (SS, pension, foreign investments) not taxed. No state income tax."
+    }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true
+    },
+    "stateIncomeTax": {
+      "rate": 0,
+      "type": "territorial",
+      "label": "Panama Income Tax",
+      "brackets": [],
+      "deduction": 0,
+      "exemptions": "Territorial system: foreign-sourced income NOT taxed in Panama."
+    },
+    "salesTax": {
+      "rate": 0
+    },
+    "propertyTax": {
+      "rate": 0
+    },
+    "socialCharges": null,
+    "vatRate": 0.07,
+    "estVehicleTax": 0,
+    "ssExempt": true,
+    "notes": "Territorial tax: only Panama-sourced income taxed. Foreign pension/SS/investment income is fully exempt."
+  },
+  "healthcare": {
+    "system": "Private (Hospital Chiriquí and Mae Lewis in David, 15-20 min)",
+    "qualityRating": 6,
+    "waitTimes": "low for private in David",
+    "dentalIncluded": false,
+    "prescriptionCoverage": "varies by plan; good pharmacy availability in David"
+  },
+  "lifestyle": {
+    "internetSpeed": "50-150Mbps; fiber expanding but patchier than Boquete",
+    "dogFriendly": 7,
+    "expatCommunity": 5,
+    "englishPrevalence": 4,
+    "safetyRating": 8,
+    "notes": "Quiet agricultural town. Tight-knit community with outdoor markets, local fiestas, and a slower pace than Boquete. Potrerillos Arriba nearby offers scenic highland views. Smaller expat community than Boquete — more immersive local living."
+  },
+  "pros": [
+    "USD currency (no exchange risk)",
+    "No income tax on foreign income",
+    "Rents 30-50% below Boquete",
+    "Cool highland climate (no AC most of the year)",
+    "Quiet, authentic Panamanian small-town life",
+    "Pensionado discounts (20-50% on many services)",
+    "15-20 min from David hospital, airport, and full shopping",
+    "25 min from Boquete for expat social events and restaurants"
+  ],
+  "cons": [
+    {
+      "text": "Smaller expat community than Boquete — fewer English-speaking neighbors"
+    },
+    {
+      "text": "Fewer dining, entertainment, and pet services than Boquete"
+    },
+    {
+      "text": "Internet not gigabit — 50-150Mbps, patchier coverage"
+    },
+    {
+      "text": "Car is not optional — no local transit"
+    },
+    {
+      "text": "No hospital in town — David for all medical needs"
+    },
+    {
+      "text": "Heavy rainy season (Apr-Dec), ~180 rainy days/year"
+    },
+    {
+      "text": "Safety & crime: see cited reports for current figures by city and country",
+      "sources": [
+        {
+          "title": "Numbeo — Crime in Panama",
+          "url": "https://www.numbeo.com/crime/country_result.jsp?country=Panama",
+          "accessed": "2026-07-17"
+        },
+        {
+          "title": "Wikipedia — Crime in Panama",
+          "url": "https://en.wikipedia.org/wiki/Crime_in_Panama",
+          "accessed": "2026-07-17"
+        }
+      ]
+    }
+  ],
+  "subregion": "Chiriquí",
+  "coordinates": {
+    "lat": 8.534,
+    "lon": -82.416
+  }
+}
