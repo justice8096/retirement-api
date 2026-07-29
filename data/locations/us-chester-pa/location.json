@@ -1,0 +1,269 @@
+{
+  "id": "us-chester-pa",
+  "name": "Chester, Pennsylvania",
+  "country": "United States",
+  "region": "US Northeast",
+  "cities": [
+    "Chester"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Citizen",
+    "incomeRequirement": null,
+    "notes": "US citizen, no visa required."
+  },
+  "climate": {
+    "winterLowF": 26,
+    "summerHighF": 88,
+    "rainyDaysPerYear": 118,
+    "meetsWarmWinterReq": false,
+    "humidityAvgPct": 68,
+    "drySeasonMonths": []
+  },
+  "monthlyCosts": {
+    "rent": {
+      "min": 1050,
+      "max": 1600,
+      "typical": 1300,
+      "type": "2-bedroom rowhouse/apartment",
+      "annualInflation": 0.03,
+      "notes": "One of the most affordable places near Philadelphia; ~30% below city rents. Older riverfront city undergoing redevelopment. Water, sewer, and trash are separate utility bills."
+    },
+    "groceries": {
+      "min": 1150,
+      "max": 1500,
+      "typical": 1330,
+      "annualInflation": 0.03,
+      "notes": "2 adults + pet food. Limited full-service supermarkets in-city; some residents shop neighboring Brookhaven/Aston."
+    },
+    "utilities": {
+      "min": 240,
+      "max": 395,
+      "typical": 300,
+      "annualInflation": 0.03,
+      "breakdown": {
+        "electricity": {
+          "typical": 125,
+          "notes": "PECO Energy."
+        },
+        "gas": {
+          "typical": 68,
+          "notes": "PECO. Primary heating."
+        },
+        "water": {
+          "typical": 48,
+          "notes": "Aqua Pennsylvania."
+        },
+        "sewage": {
+          "typical": 39,
+          "notes": "DELCORA sewer charges."
+        },
+        "trash": {
+          "typical": 20,
+          "notes": "City refuse service."
+        }
+      },
+      "taxes": "Pennsylvania exempts residential utilities from sales tax.",
+      "notes": "Electricity, gas, water, sewage, trash. Internet is in entertainment."
+    },
+    "healthcare": {
+      "min": 550,
+      "max": 850,
+      "typical": 650,
+      "annualInflation": 0.055,
+      "notes": "Medicare Part B + Medigap Plan G (x2) + Part D (x2) + dental/vision. Crozer-Chester Medical Center locally; Penn/Jefferson within the metro."
+    },
+    "insurance": {
+      "min": 30,
+      "max": 50,
+      "typical": 40,
+      "annualInflation": 0.03
+    },
+    "petCare": {
+      "min": 115,
+      "max": 210,
+      "typical": 155,
+      "annualInflation": 0.04,
+      "notes": "Vet visits, vaccinations, flea/tick, pet insurance."
+    },
+    "petDaycare": {
+      "min": 290,
+      "max": 450,
+      "typical": 360,
+      "annualInflation": 0.03,
+      "notes": "Doggy daycare 2 days/week, large-breed rate. Suburban pricing."
+    },
+    "petGrooming": {
+      "min": 75,
+      "max": 145,
+      "typical": 105,
+      "annualInflation": 0.03,
+      "notes": "Professional grooming monthly."
+    },
+    "transportation": {
+      "min": 150,
+      "max": 300,
+      "typical": 210,
+      "annualInflation": 0.03,
+      "notes": "SEPTA Regional Rail (Wilmington/Newark Line) to Center City ~35 min; more car-dependent than inner-ring suburbs."
+    },
+    "entertainment": {
+      "min": 400,
+      "max": 640,
+      "typical": 510,
+      "annualInflation": 0.025,
+      "notes": "Incl cable+1Gig internet, streaming, dining out. Subaru Park (soccer) and riverfront venues nearby."
+    },
+    "clothing": {
+      "min": 100,
+      "max": 250,
+      "typical": 145,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "min": 40,
+      "max": 90,
+      "typical": 58,
+      "annualInflation": 0.02
+    },
+    "subscriptions": {
+      "min": 30,
+      "max": 80,
+      "typical": 50,
+      "annualInflation": 0.03,
+      "notes": "Streaming, news, apps."
+    },
+    "phoneCell": {
+      "min": 55,
+      "max": 90,
+      "typical": 68,
+      "annualInflation": 0.02,
+      "notes": "T-Mobile 55+ Essentials. 2 phones, all taxes included."
+    },
+    "miscellaneous": {
+      "min": 100,
+      "max": 180,
+      "typical": 135,
+      "annualInflation": 0.025
+    },
+    "buffer": {
+      "min": 800,
+      "max": 800,
+      "typical": 800,
+      "annualInflation": 0.025,
+      "notes": "Monthly safety buffer for unexpected expenses."
+    },
+    "medicalOOP": {
+      "min": 325,
+      "max": 700,
+      "typical": 475,
+      "annualInflation": 0.055,
+      "notes": "Specialist visits, labs, and out-of-pocket shares after Medicare. Metro provider network."
+    },
+    "medicine": {
+      "min": 73,
+      "typical": 91,
+      "max": 925,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household."
+    },
+    "taxes": {
+      "typical": 380,
+      "min": 342,
+      "max": 418,
+      "annualInflation": 0.02,
+      "notes": "Estimated monthly income tax on $72,000/yr household income. PA flat 3.07% with SS/retirement exempt; no Philadelphia city wage tax (a 1% local EIT applies to earned income only, not retirement). Excludes sales/property tax."
+    },
+    "healthcarePreMedicare": {
+      "min": 1886,
+      "max": 2714,
+      "typical": 2300,
+      "annualInflation": 0.06,
+      "notes": "ACA silver benchmark for a 2-adult household, both age ~60, before subsidies (county-level estimate, Delaware County). Shares Pennsylvania's Philadelphia-region rating area with Philadelphia, so the benchmark matches the Philadelphia base. Estimated +/-15% vs a healthcare.gov quote. Verify a specific ZIP on Pennie (pennie.com). Accessed 2026-07-29."
+    }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true
+    },
+    "stateIncomeTax": {
+      "rate": 0.0307,
+      "type": "flat",
+      "brackets": [
+        {
+          "min": 0,
+          "max": null,
+          "rate": 0.0307
+        }
+      ],
+      "deduction": 0,
+      "exemptions": "SS and all retirement income exempt from PA tax. Local Earned Income Tax (~1%) applies to earned income only, not retirement income. No Philadelphia city wage tax."
+    },
+    "salesTax": {
+      "rate": 0.06,
+      "notes": "6% state; Delaware County has no local sales-tax add-on (unlike Philadelphia's 8%)."
+    },
+    "propertyTax": {
+      "rate": 0,
+      "notes": "Not modeled for renters; Chester's effective property-tax rate is high but is reflected in rents."
+    },
+    "socialCharges": null,
+    "vatRate": 0,
+    "estVehicleTax": 0,
+    "ssExempt": true,
+    "retirementExempt": true,
+    "notes": "PA exempts all retirement income from state tax. Lower combined sales tax than Philadelphia (6% vs 8%) and no city wage tax."
+  },
+  "healthcare": {
+    "system": "Medicare (at 65) + private supplement",
+    "qualityRating": 8,
+    "waitTimes": "low-moderate",
+    "dentalIncluded": false,
+    "prescriptionCoverage": "Part D plan",
+    "acaMarketplace": {
+      "benchmarkSilverMonthly2Adult": 2300,
+      "benchmarkSilverMonthlySingle": 1150,
+      "premiumCapPctOfIncome": 0.085,
+      "rateArea": "Delaware County",
+      "notes": "Pennie (PA state marketplace). Delaware County shares the Philadelphia-region rating area; benchmark matches the Philadelphia base.",
+      "estimationLevel": "county",
+      "disclaimer": "Estimated +/-15% vs a healthcare.gov/Pennie quote. Verify a specific ZIP on pennie.com. Accessed 2026-07-29."
+    }
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps+ available (Verizon Fios/Comcast)",
+    "dogFriendly": 6,
+    "expatCommunity": 0,
+    "englishPrevalence": 10,
+    "safetyRating": 3
+  },
+  "pros": [
+    "Cheapest rents in the Philadelphia suburbs (~30% below city)",
+    "SEPTA Regional Rail to Center City",
+    "No Philadelphia city wage tax; lower 6% sales tax",
+    "PA exempts SS and retirement income from state tax",
+    "Ongoing riverfront redevelopment"
+  ],
+  "cons": [
+    "Higher crime; do block-by-block safety diligence",
+    "Limited in-city full-service grocery options",
+    "More car-dependent than inner-ring suburbs",
+    "Cold winters (26F lows)",
+    {
+      "text": "Safety & crime: see cited reports for current figures by city and country",
+      "sources": [
+        {
+          "title": "Numbeo — Crime in Philadelphia metro",
+          "url": "https://www.numbeo.com/crime/in/Philadelphia",
+          "accessed": "2026-07-29"
+        }
+      ]
+    }
+  ],
+  "subregion": "Pennsylvania",
+  "coordinates": {
+    "lat": 39.8496,
+    "lon": -75.3557
+  }
+}

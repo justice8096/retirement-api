@@ -80,6 +80,19 @@ All notable changes to `retirement-api`. Format based on
 - `getLabelsFor()` exported from `src/lib/validation.ts`.
 - `validateBody()` exported from `src/lib/validation.ts`.
 
+### Data
+- **Fixed NoVA ACA benchmarks** — `us-annandale-va`, `us-lorton-va`,
+  `us-gainesville-va`, and `us-manassas-va` were anchored to a statewide-scaled
+  silver benchmark ($1,900/mo, 2-adult) that understated the Northern Virginia
+  rating area and contradicted the sibling `us-virginia` (Fairfax base, $2,300)
+  record. Corrected to the NOVA metro benchmark ($2,300/mo; single $1,150;
+  pre-Medicare min/typical/max 1886/2300/2714) and reconciled the notes.
+- **Added three affordable Philadelphia-suburb locations** — `us-upper-darby-pa`
+  (Delaware Co, rent ~$1,500), `us-chester-pa` (Delaware Co, rent ~$1,300), and
+  `us-norristown-pa` (Montgomery Co, rent ~$1,600). All use the Philadelphia
+  ACA rating-area benchmark ($2,300) and the PA retirement-tax regime minus the
+  Philadelphia city wage tax and 2% local sales tax.
+
 ---
 
 ## [0.1.0] — 2026-04-19

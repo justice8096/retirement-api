@@ -1,0 +1,268 @@
+{
+  "id": "us-norristown-pa",
+  "name": "Norristown, Pennsylvania",
+  "country": "United States",
+  "region": "US Northeast",
+  "cities": [
+    "Norristown"
+  ],
+  "currency": "USD",
+  "exchangeRate": 1,
+  "visa": {
+    "type": "Citizen",
+    "incomeRequirement": null,
+    "notes": "US citizen, no visa required."
+  },
+  "climate": {
+    "winterLowF": 24,
+    "summerHighF": 87,
+    "rainyDaysPerYear": 120,
+    "meetsWarmWinterReq": false,
+    "humidityAvgPct": 67,
+    "drySeasonMonths": []
+  },
+  "monthlyCosts": {
+    "rent": {
+      "min": 1350,
+      "max": 1950,
+      "typical": 1600,
+      "type": "2-bedroom apartment/twin home",
+      "annualInflation": 0.03,
+      "notes": "Montgomery County seat; among the most affordable boroughs in an otherwise pricey county. ~15% below Philadelphia city rents. Water, sewer, and trash are separate utility bills."
+    },
+    "groceries": {
+      "min": 1200,
+      "max": 1560,
+      "typical": 1390,
+      "annualInflation": 0.03,
+      "notes": "2 adults + pet food. Wegmans, Giant, and international markets nearby."
+    },
+    "utilities": {
+      "min": 250,
+      "max": 405,
+      "typical": 310,
+      "annualInflation": 0.03,
+      "breakdown": {
+        "electricity": {
+          "typical": 128,
+          "notes": "PECO Energy."
+        },
+        "gas": {
+          "typical": 72,
+          "notes": "PECO. Primary heating."
+        },
+        "water": {
+          "typical": 50,
+          "notes": "Pennsylvania American Water."
+        },
+        "sewage": {
+          "typical": 40,
+          "notes": "Municipal sewer charges."
+        },
+        "trash": {
+          "typical": 20,
+          "notes": "Borough refuse service."
+        }
+      },
+      "taxes": "Pennsylvania exempts residential utilities from sales tax.",
+      "notes": "Electricity, gas, water, sewage, trash. Internet is in entertainment."
+    },
+    "healthcare": {
+      "min": 550,
+      "max": 850,
+      "typical": 650,
+      "annualInflation": 0.055,
+      "notes": "Medicare Part B + Medigap Plan G (x2) + Part D (x2) + dental/vision. Einstein Montgomery and Main Line Health nearby; Penn/Jefferson within the metro."
+    },
+    "insurance": {
+      "min": 30,
+      "max": 50,
+      "typical": 40,
+      "annualInflation": 0.03
+    },
+    "petCare": {
+      "min": 120,
+      "max": 220,
+      "typical": 160,
+      "annualInflation": 0.04,
+      "notes": "Vet visits, vaccinations, flea/tick, pet insurance."
+    },
+    "petDaycare": {
+      "min": 305,
+      "max": 465,
+      "typical": 375,
+      "annualInflation": 0.03,
+      "notes": "Doggy daycare 2 days/week, large-breed rate. Suburban pricing."
+    },
+    "petGrooming": {
+      "min": 80,
+      "max": 150,
+      "typical": 110,
+      "annualInflation": 0.03,
+      "notes": "Professional grooming monthly."
+    },
+    "transportation": {
+      "min": 125,
+      "max": 260,
+      "typical": 175,
+      "annualInflation": 0.03,
+      "notes": "SEPTA Manayunk/Norristown Regional Rail + Norristown High Speed Line to 69th Street; ~45 min to Center City. Car helpful but not required."
+    },
+    "entertainment": {
+      "min": 415,
+      "max": 655,
+      "typical": 525,
+      "annualInflation": 0.025,
+      "notes": "Incl cable+1Gig internet, streaming, dining out. Elmwood Park Zoo and Schuylkill River Trail nearby."
+    },
+    "clothing": {
+      "min": 100,
+      "max": 250,
+      "typical": 150,
+      "annualInflation": 0.02
+    },
+    "personalCare": {
+      "min": 40,
+      "max": 90,
+      "typical": 60,
+      "annualInflation": 0.02
+    },
+    "subscriptions": {
+      "min": 30,
+      "max": 80,
+      "typical": 50,
+      "annualInflation": 0.03,
+      "notes": "Streaming, news, apps."
+    },
+    "phoneCell": {
+      "min": 55,
+      "max": 90,
+      "typical": 68,
+      "annualInflation": 0.02,
+      "notes": "T-Mobile 55+ Essentials. 2 phones, all taxes included."
+    },
+    "miscellaneous": {
+      "min": 100,
+      "max": 180,
+      "typical": 140,
+      "annualInflation": 0.025
+    },
+    "buffer": {
+      "min": 800,
+      "max": 800,
+      "typical": 800,
+      "annualInflation": 0.025,
+      "notes": "Monthly safety buffer for unexpected expenses."
+    },
+    "medicalOOP": {
+      "min": 325,
+      "max": 700,
+      "typical": 475,
+      "annualInflation": 0.055,
+      "notes": "Specialist visits, labs, and out-of-pocket shares after Medicare. Metro provider network."
+    },
+    "medicine": {
+      "min": 73,
+      "typical": 91,
+      "max": 925,
+      "annualInflation": 0.045,
+      "notes": "Monthly prescription medication costs for household."
+    },
+    "taxes": {
+      "typical": 380,
+      "min": 342,
+      "max": 418,
+      "annualInflation": 0.02,
+      "notes": "Estimated monthly income tax on $72,000/yr household income. PA flat 3.07% with SS/retirement exempt; no Philadelphia city wage tax (a 1% local EIT applies to earned income only, not retirement). Excludes sales/property tax."
+    },
+    "healthcarePreMedicare": {
+      "min": 1886,
+      "max": 2714,
+      "typical": 2300,
+      "annualInflation": 0.06,
+      "notes": "ACA silver benchmark for a 2-adult household, both age ~60, before subsidies (county-level estimate, Montgomery County). Shares Pennsylvania's Philadelphia-region rating area with Philadelphia, so the benchmark matches the Philadelphia base. Estimated +/-15% vs a healthcare.gov quote. Verify a specific ZIP on Pennie (pennie.com). Accessed 2026-07-29."
+    }
+  },
+  "taxes": {
+    "federalIncomeTax": {
+      "applies": true
+    },
+    "stateIncomeTax": {
+      "rate": 0.0307,
+      "type": "flat",
+      "brackets": [
+        {
+          "min": 0,
+          "max": null,
+          "rate": 0.0307
+        }
+      ],
+      "deduction": 0,
+      "exemptions": "SS and all retirement income exempt from PA tax. Local Earned Income Tax (~1%) applies to earned income only, not retirement income. No Philadelphia city wage tax."
+    },
+    "salesTax": {
+      "rate": 0.06,
+      "notes": "6% state; Montgomery County has no local sales-tax add-on (unlike Philadelphia's 8%)."
+    },
+    "propertyTax": {
+      "rate": 0,
+      "notes": "Not modeled for renters; Montgomery County property taxes are moderate and are reflected in rents."
+    },
+    "socialCharges": null,
+    "vatRate": 0,
+    "estVehicleTax": 0,
+    "ssExempt": true,
+    "retirementExempt": true,
+    "notes": "PA exempts all retirement income from state tax. Lower combined sales tax than Philadelphia (6% vs 8%) and no city wage tax."
+  },
+  "healthcare": {
+    "system": "Medicare (at 65) + private supplement",
+    "qualityRating": 9,
+    "waitTimes": "low-moderate",
+    "dentalIncluded": false,
+    "prescriptionCoverage": "Part D plan",
+    "acaMarketplace": {
+      "benchmarkSilverMonthly2Adult": 2300,
+      "benchmarkSilverMonthlySingle": 1150,
+      "premiumCapPctOfIncome": 0.085,
+      "rateArea": "Montgomery County",
+      "notes": "Pennie (PA state marketplace). Montgomery County shares the Philadelphia-region rating area; benchmark matches the Philadelphia base.",
+      "estimationLevel": "county",
+      "disclaimer": "Estimated +/-15% vs a healthcare.gov/Pennie quote. Verify a specific ZIP on pennie.com. Accessed 2026-07-29."
+    }
+  },
+  "lifestyle": {
+    "internetSpeed": "1Gbps+ available (Verizon Fios/Comcast)",
+    "dogFriendly": 7,
+    "expatCommunity": 0,
+    "englishPrevalence": 10,
+    "safetyRating": 4
+  },
+  "pros": [
+    "Most affordable borough in higher-cost Montgomery County",
+    "Two SEPTA rail lines to Center City and 69th Street",
+    "No Philadelphia city wage tax; lower 6% sales tax",
+    "PA exempts SS and retirement income from state tax",
+    "Schuylkill River Trail, Elmwood Park Zoo, county-seat amenities"
+  ],
+  "cons": [
+    "Cold winters (24F lows)",
+    "Crime higher than surrounding Montgomery County suburbs",
+    "Aging housing stock in the borough core",
+    {
+      "text": "Safety & crime: see cited reports for current figures by city and country",
+      "sources": [
+        {
+          "title": "Numbeo — Crime in Philadelphia metro",
+          "url": "https://www.numbeo.com/crime/in/Philadelphia",
+          "accessed": "2026-07-29"
+        }
+      ]
+    }
+  ],
+  "subregion": "Pennsylvania",
+  "coordinates": {
+    "lat": 40.1215,
+    "lon": -75.3399
+  }
+}
