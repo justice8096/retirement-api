@@ -6,6 +6,13 @@ All notable changes to `retirement-api`. Format based on
 ## [Unreleased]
 
 ### Security
+- **Dependency audit — 0 vulnerabilities** — `npm audit fix` cleared all 15
+  advisories (5 high, 9 moderate, 1 low), including the high-severity
+  `@fastify/static`, `fast-uri`, `find-my-way`, `brace-expansion`, and
+  `postcss` findings that were failing the `security-audit` CI gate
+  (`npm audit --audit-level=high`). Lockfile-only: transitive updates within
+  existing semver ranges, no direct-dependency version bumps. Typecheck, full
+  test suite (36,912), and shared tests (231) all pass.
 - **H-05 CLOSED** — `invalidateUserCache()` exported from `src/middleware/auth.ts`
   and invoked from both Stripe webhook tier-change paths. Multi-replica
   deployments still need Redis pub/sub; documented as a follow-up.
