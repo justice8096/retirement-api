@@ -6,6 +6,13 @@ All notable changes to `retirement-api`. Format based on
 ## [Unreleased]
 
 ### Security
+- **Dependency audit — 0 vulnerabilities** — `npm audit fix` cleared all 15
+  advisories (5 high, 9 moderate, 1 low), including the high-severity
+  `@fastify/static`, `fast-uri`, `find-my-way`, `brace-expansion`, and
+  `postcss` findings that were failing the `security-audit` CI gate
+  (`npm audit --audit-level=high`). Lockfile-only: transitive updates within
+  existing semver ranges, no direct-dependency version bumps. Typecheck, full
+  test suite (36,912), and shared tests (231) all pass.
 - **H-05 CLOSED** — `invalidateUserCache()` exported from `src/middleware/auth.ts`
   and invoked from both Stripe webhook tier-change paths. Multi-replica
   deployments still need Redis pub/sub; documented as a follow-up.
@@ -79,6 +86,19 @@ All notable changes to `retirement-api`. Format based on
 - New `src/lib/stripe-customer.ts` — shared Stripe customer helper.
 - `getLabelsFor()` exported from `src/lib/validation.ts`.
 - `validateBody()` exported from `src/lib/validation.ts`.
+
+### Data
+- **Fixed NoVA ACA benchmarks** — `us-annandale-va`, `us-lorton-va`,
+  `us-gainesville-va`, and `us-manassas-va` were anchored to a statewide-scaled
+  silver benchmark ($1,900/mo, 2-adult) that understated the Northern Virginia
+  rating area and contradicted the sibling `us-virginia` (Fairfax base, $2,300)
+  record. Corrected to the NOVA metro benchmark ($2,300/mo; single $1,150;
+  pre-Medicare min/typical/max 1886/2300/2714) and reconciled the notes.
+- **Added three affordable Philadelphia-suburb locations** — `us-upper-darby-pa`
+  (Delaware Co, rent ~$1,500), `us-chester-pa` (Delaware Co, rent ~$1,300), and
+  `us-norristown-pa` (Montgomery Co, rent ~$1,600). All use the Philadelphia
+  ACA rating-area benchmark ($2,300) and the PA retirement-tax regime minus the
+  Philadelphia city wage tax and 2% local sales tax.
 
 ---
 
