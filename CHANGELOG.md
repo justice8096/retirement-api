@@ -99,6 +99,19 @@ All notable changes to `retirement-api`. Format based on
   `us-norristown-pa` (Montgomery Co, rent ~$1,600). All use the Philadelphia
   ACA rating-area benchmark ($2,300) and the PA retirement-tax regime minus the
   Philadelphia city wage tax and 2% local sales tax.
+- **Recalibrated 6 statewide-anchored ACA records to local rating areas** —
+  a follow-up sweep found six records still using statewide-scaled benchmarks
+  (the same pattern as the NoVA fix). The four Hampton Roads records
+  (`us-chesapeake-va`, `us-norfolk-va`, `us-portsmouth-va`,
+  `us-virginia-beach-va`) moved from $1,930 to the Hampton Roads rating-area
+  benchmark ($2,300, aligned to the validated NOVA/Fairfax anchor);
+  `us-lynchburg-va` moved to $2,100 (correcting an ordering error — it had been
+  priced *above* Hampton Roads despite being one of VA's cheapest rating areas);
+  and `us-florida` was re-anchored from a bare statewide average ($2,400,
+  `rateArea: "statewide"`) to its populous metro-county records ($2,350). All
+  now carry local-rating-area provenance and "derived estimate, not a ZIP quote"
+  disclaimers. Every US record is now `estimationLevel: "county"` with no
+  statewide anchors remaining.
 
 ---
 
