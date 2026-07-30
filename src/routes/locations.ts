@@ -18,6 +18,8 @@ import { toValidationErrorPayload } from '../lib/validation.js';
 import { taxSourcesFor } from '../../shared/country-tax-sources.js';
 import { costSourcesFor } from '../../shared/category-cost-sources.js';
 import { inheritanceTaxFor } from '../../shared/country-inheritance-tax.js';
+import { calcTaxesForLocation } from '../../shared/taxes.js';
+import { computeAcaBridgeSavingsDraw } from '../../shared/aca-bridge.js';
 
 /** Shape a location data object in place with country-level tax citations,
  *  country-level inheritance-tax info, and per-category cost citations.
@@ -325,6 +327,17 @@ export default async function locationRoutes(app: FastifyInstance): Promise<void
       // Additive: seed sources are preserved.
       injectSources(data, loc.country);
 
+      // ACA-bridge savings draw — tax-inclusive monthly spending that must be
+      // funded from non-MAGI savings to hold MAGI at the 2026 400%-FPL cliff.
+      // Computed via the real tax engine (needs data.taxes, set above). US-only
+      // (applicable:false + zeros elsewhere). Kept top-level so it is never
+      // summed into monthlyCosts / monthlyCostTotal.
+      // See docs/superpowers/specs/2026-07-30-aca-bridge-savings-draw-design.md.
+      const acaBridgeSavingsDraw = computeAcaBridgeSavingsDraw(
+        { ...data, country: loc.country },
+        { calcTaxesForLocation },
+      );
+
       // WCAG best-practice — natural-language summary that downstream
       // screen-reader UIs can announce without re-synthesizing from fields.
       const costText = loc.monthlyCostTotal
@@ -346,6 +359,7 @@ export default async function locationRoutes(app: FastifyInstance): Promise<void
         monthlyCostTotal: loc.monthlyCostTotal,
         updatedAt: loc.updatedAt,
         _version: loc.version,
+        acaBridgeSavingsDraw,
         _a11y: a11y,
       };
     } catch (err) {

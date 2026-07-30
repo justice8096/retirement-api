@@ -187,6 +187,70 @@ describe('GET /api/locations/:id', () => {
     expect(body.monthlyCosts.rent.typical).toBe(2200);
   });
 
+  it('injects an applicable acaBridgeSavingsDraw for a US ACA location', async () => {
+    (prisma.adminLocation.findUnique as ReturnType<typeof vi.fn>).mockResolvedValue({
+      id: 'us-glen-burnie-md',
+      version: 2,
+      name: 'Glen Burnie, MD',
+      country: 'United States',
+      region: 'Maryland',
+      currency: 'USD',
+      monthlyCostTotal: 9713,
+      updatedAt: new Date('2026-05-05'),
+      locationData: {
+        name: 'Glen Burnie, MD',
+        country: 'United States',
+        taxes: { federalIncomeTax: {} },
+        monthlyCosts: {
+          rent: { typical: 8000 },
+          groceries: { typical: 2000 },
+          healthcare: { typical: 640 },
+          healthcarePreMedicare: { typical: 2150 },
+        },
+        healthcare: {
+          acaMarketplace: {
+            benchmarkSilverMonthly2Adult: 2150,
+            benchmarkSilverMonthlySingle: 1075,
+          },
+        },
+      },
+    });
+
+    const res = await app.inject({ method: 'GET', url: '/api/locations/us-glen-burnie-md' });
+    expect(res.statusCode).toBe(200);
+    const body = JSON.parse(res.payload);
+
+    expect(body.acaBridgeSavingsDraw.applicable).toBe(true);
+    expect(typeof body.acaBridgeSavingsDraw.couple).toBe('number');
+    expect(body.acaBridgeSavingsDraw.couple).toBeGreaterThan(0);
+    expect(body.acaBridgeSavingsDraw._meta.taxIncluded).toBe(true);
+    // Must NOT be summed into the cost categories.
+    expect(body.monthlyCosts.acaBridgeSavingsDraw).toBeUndefined();
+  });
+
+  it('marks acaBridgeSavingsDraw not-applicable for a non-US location', async () => {
+    (prisma.adminLocation.findUnique as ReturnType<typeof vi.fn>).mockResolvedValue({
+      id: 'panama-boquete',
+      version: 1,
+      name: 'Boquete, Panama',
+      country: 'Panama',
+      region: 'Chiriquí',
+      currency: 'USD',
+      monthlyCostTotal: 2400,
+      updatedAt: new Date('2026-05-05'),
+      locationData: {
+        name: 'Boquete, Panama',
+        country: 'Panama',
+        monthlyCosts: { rent: { typical: 1200 } },
+      },
+    });
+
+    const res = await app.inject({ method: 'GET', url: '/api/locations/panama-boquete' });
+    expect(res.statusCode).toBe(200);
+    const body = JSON.parse(res.payload);
+    expect(body.acaBridgeSavingsDraw).toMatchObject({ applicable: false, couple: 0, single: 0 });
+  });
+
   it('returns 404 for unknown location', async () => {
     (prisma.adminLocation.findUnique as ReturnType<typeof vi.fn>).mockResolvedValue(null);
 
