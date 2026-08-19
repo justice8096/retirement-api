@@ -6,6 +6,15 @@ All notable changes to `retirement-api`. Format based on
 ## [Unreleased]
 
 ### Security
+- **Dependency audit — cleared a new batch of high-severity advisories** —
+  `npm audit fix` resolved newly-published findings in `brace-expansion`,
+  `fast-uri`, and `nanoid` (lockfile-only). The remaining high, `deepmerge-ts`
+  (stack exhaustion, GHSA-ggr8-5vv4-36mx), reaches the tree only via
+  `prisma` → `@prisma/config`, whose latest release (7.9.1) still pins the
+  vulnerable `deepmerge-ts@7.1.5`; npm's only auto-fix downgraded prisma to
+  6.12.0 (a breaking regression). Instead pinned `deepmerge-ts@^8.0.1` via
+  `overrides`, keeping prisma at 7.9.1. `npm audit --audit-level=high` is clean;
+  `prisma generate`, typecheck, and the full suite all pass.
 - **Dependency audit — 0 vulnerabilities** — `npm audit fix` cleared all 15
   advisories (5 high, 9 moderate, 1 low), including the high-severity
   `@fastify/static`, `fast-uri`, `find-my-way`, `brace-expansion`, and
