@@ -6,6 +6,15 @@ All notable changes to `retirement-api`. Format based on
 ## [Unreleased]
 
 ### Security
+- **Dependency audit — cleared a new batch of high-severity advisories** —
+  `npm audit fix` resolved newly-published findings in `brace-expansion`,
+  `fast-uri`, and `nanoid` (lockfile-only). The remaining high, `deepmerge-ts`
+  (stack exhaustion, GHSA-ggr8-5vv4-36mx), reaches the tree only via
+  `prisma` → `@prisma/config`, whose latest release (7.9.1) still pins the
+  vulnerable `deepmerge-ts@7.1.5`; npm's only auto-fix downgraded prisma to
+  6.12.0 (a breaking regression). Instead pinned `deepmerge-ts@^8.0.1` via
+  `overrides`, keeping prisma at 7.9.1. `npm audit --audit-level=high` is clean;
+  `prisma generate`, typecheck, and the full suite all pass.
 - **Dependency audit — 0 vulnerabilities** — `npm audit fix` cleared all 15
   advisories (5 high, 9 moderate, 1 low), including the high-severity
   `@fastify/static`, `fast-uri`, `find-my-way`, `brace-expansion`, and
@@ -99,6 +108,19 @@ All notable changes to `retirement-api`. Format based on
   `us-norristown-pa` (Montgomery Co, rent ~$1,600). All use the Philadelphia
   ACA rating-area benchmark ($2,300) and the PA retirement-tax regime minus the
   Philadelphia city wage tax and 2% local sales tax.
+- **Recalibrated 6 statewide-anchored ACA records to local rating areas** —
+  a follow-up sweep found six records still using statewide-scaled benchmarks
+  (the same pattern as the NoVA fix). The four Hampton Roads records
+  (`us-chesapeake-va`, `us-norfolk-va`, `us-portsmouth-va`,
+  `us-virginia-beach-va`) moved from $1,930 to the Hampton Roads rating-area
+  benchmark ($2,300, aligned to the validated NOVA/Fairfax anchor);
+  `us-lynchburg-va` moved to $2,100 (correcting an ordering error — it had been
+  priced *above* Hampton Roads despite being one of VA's cheapest rating areas);
+  and `us-florida` was re-anchored from a bare statewide average ($2,400,
+  `rateArea: "statewide"`) to its populous metro-county records ($2,350). All
+  now carry local-rating-area provenance and "derived estimate, not a ZIP quote"
+  disclaimers. Every US record is now `estimationLevel: "county"` with no
+  statewide anchors remaining.
 
 ---
 

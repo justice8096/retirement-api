@@ -177,11 +177,11 @@
       "notes": "Estimated monthly income tax on $72,000/yr household income. Based on jurisdiction's effective retiree rate; excludes sales/VAT/property tax."
     },
     "healthcarePreMedicare": {
-      "min": 1968,
-      "max": 2832,
-      "typical": 2400,
+      "min": 1927,
+      "max": 2773,
+      "typical": 2350,
       "annualInflation": 0.06,
-      "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (statewide, FL). Statewide average; varies by county from ~$2,300 (Miami) to $2,500 (rural panhandle). Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+      "notes": "ACA silver benchmark for a 2-adult household, both age ~60, before subsidies. Representative Florida metro-county estimate, anchored to Florida's populous county records (Miami-Dade / Hillsborough / Broward, all ~$2,300 in this dataset) rather than one blended figure for the whole state; less-populous and rural panhandle counties run higher (~$2,500). Derived estimate, not a ZIP quote. Estimated +/-15% vs a healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
   "taxes": {
@@ -216,13 +216,13 @@
     "dentalIncluded": false,
     "prescriptionCoverage": "Part D plan",
     "acaMarketplace": {
-      "benchmarkSilverMonthly2Adult": 2400,
-      "benchmarkSilverMonthlySingle": 1200,
+      "benchmarkSilverMonthly2Adult": 2350,
+      "benchmarkSilverMonthlySingle": 1175,
       "premiumCapPctOfIncome": 0.085,
-      "rateArea": "statewide",
-      "notes": "Statewide average; varies by county from ~$2,300 (Miami) to $2,500 (rural panhandle).",
+      "rateArea": "FL populous metro (Miami-Dade/Hillsborough/Broward)",
+      "notes": "Representative metro-county benchmark, anchored to Florida's populous county records (~$2,300); less-populous and rural panhandle counties run higher (~$2,500).",
       "estimationLevel": "county",
-      "disclaimer": "Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+      "disclaimer": "Derived estimate, not a ZIP quote. Anchored to the populous FL metro-county records rather than one blended figure for the whole state. Estimated +/-15% vs a healthcare.gov quote — verify for a specific ZIP before relying on the number."
     }
   },
   "lifestyle": {
