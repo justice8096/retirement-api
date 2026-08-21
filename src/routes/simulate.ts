@@ -53,6 +53,14 @@ const simulateSchema = z
     regime: regimeSchema.optional(),
     historicalStartYear: z.coerce.number().int().min(1900).max(2100).optional(),
 
+    // Per-year household cost curves — annual USD in today's dollars,
+    // index = sim year (sparse; shorter than `years` is fine). Build them
+    // via GET /api/me/household/cost-curves or lib/engine/household-costs.ts.
+    // NOTE: petCostByYear replaces the location's petCare/petDaycare/
+    // petGrooming categories — exclude those from annualSpending when set.
+    petCostByYear: z.array(num.min(0).max(10_000_000)).max(100).optional(),
+    dependentCostByYear: z.array(num.min(0).max(10_000_000)).max(100).optional(),
+
     // Reproducibility: integer seed → mulberry32. Omit for fresh randomness.
     seed: z.coerce.number().int().optional(),
   })
@@ -83,6 +91,8 @@ export default async function simulateRoutes(app: FastifyInstance): Promise<void
       returnMode: i.returnMode,
       regime: i.regime,
       historicalStartYear: i.historicalStartYear,
+      petCostByYear: i.petCostByYear,
+      dependentCostByYear: i.dependentCostByYear,
       // Deterministic when a seed is supplied; Math.random otherwise.
       seededRandom: i.seed != null ? mulberry32(i.seed) : undefined,
     };
@@ -107,6 +117,8 @@ export default async function simulateRoutes(app: FastifyInstance): Promise<void
         meanReturn: i.meanReturn,
         volReturn: i.volReturn,
         returnMode: i.returnMode,
+        petCurveYears: i.petCostByYear?.length ?? 0,
+        dependentCurveYears: i.dependentCostByYear?.length ?? 0,
         seed: i.seed ?? null,
       },
     });
