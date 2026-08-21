@@ -127,16 +127,41 @@ deployed instance, exposed via the `tailscale-dashboard` sidecar in
 in-script list (`server.py:47-77`) with no network call.
 
 **(c) Which copy of `@retirement/shared` it loads at runtime:**
-None. `D:\retirement-planner-mcp` has no `node_modules` and is not a Node
-project at all (`find ... -iname node_modules` returned nothing); its only
-dependencies are the PyPI packages `mcp` and `httpx` declared in the PEP 723
-header (`server.py:1-4`). The Monte Carlo math it reports comes from whatever
-build of `@retirement/shared`/`monte-carlo.ts` is compiled into the
-**running retirement-api container** behind the funnel — not from any file
-this MCP process loads itself. This audit did not additionally verify which
-source `@retirement/shared` copy the *deployed retirement-api container's
-image* was built from (that's a retirement-api build/deploy question, not an
-MCP-registration question) — flagged as an open item below.
+None — the Python MCP server loads no JS at all. `D:\retirement-planner-mcp`
+has no `node_modules` and is not a Node project at all (`find ... -iname
+node_modules` returned nothing); its only dependencies are the PyPI packages
+`mcp` and `httpx` declared in the PEP 723 header (`server.py:1-4`). The
+simulation numbers it returns come entirely from **retirement-api's deployed
+container** on the other end of the HTTP call (Fact (b)), and inside that
+container two separate pieces do the work, not one:
+- The engine `/api/simulate` actually runs is
+  `retirement-api/src/lib/engine/monte-carlo.ts` — a **generated copy**, not
+  hand-authored there. Its canonical source is
+  `D:\retirement\retirement-dashboard-angular\src\app\lib\monte-carlo.ts`,
+  copied over by `retirement-api/tools/sync-engine.mjs` (see its own doc
+  comment, `sync-engine.mjs:3-14`: "regenerate the server-side copy of the
+  Monte Carlo retirement engine from its canonical home in the dashboard
+  repo"; `sync-engine.mjs:30` lists `monte-carlo.ts` in the files it copies).
+  This is exactly what `retirement-api/src/routes/simulate.ts:9-11` already
+  says: "the SAME engine the dashboard runs client-side (generated into
+  `src/lib/engine/` from the dashboard repo via `npm run engine:sync`)."
+- `@retirement/shared` (`retirement-api/shared/`) is a **separate library**
+  and does not contain the Monte Carlo engine at all — confirmed by listing
+  the directory: it holds `taxes.js`, `rmd.js`, `inflation.js`, `fire.js`,
+  `withdrawalStrategies.js`, `socialSecurity.js`, `aca-bridge.js`,
+  `country-tax-sources.js`, `spendingModels.js`, `formatting.js`,
+  `constants.js`, `category-cost-sources.js`, `country-inheritance-tax.js`
+  (plus `.d.ts` files) — supporting calc helpers, no `monte-carlo.*` among
+  them. It may still be a runtime dependency of `simulate.ts` for these
+  helper calculations, but it is not the source of the Monte Carlo math
+  itself.
+
+This audit did not additionally verify which git ref/build of either
+`src/lib/engine/monte-carlo.ts` or `shared/` the *deployed retirement-api
+container's image* currently runs (i.e., whether the container has picked up
+the latest `engine:sync` output) — that's a retirement-api build/deploy
+freshness question, not an MCP-registration question — flagged as an open
+item.
 
 ## Consequences for the plan
 
