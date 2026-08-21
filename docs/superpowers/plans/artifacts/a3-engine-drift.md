@@ -219,3 +219,15 @@ is nothing there to port.
 
 Copies (2) (generated `src/lib/engine`) and (3) (monorepo shared, which is
 empty) have **zero real drift** — for those two, Task B2 Step 3 is a no-op.
+
+## User decision (2026-08-21, post-review)
+
+`petCostByYear[]` / `dependentCostByYear[]` stay classified as dead code for
+the purposes of this consolidation (nothing to port as-is), but the user has
+decided the capability is wanted **later, populated end-to-end**: per-year
+pet and dependent cost curves supported in the consolidated
+`@retirement/shared/engine` kernel AND actually fed with real data (household
+pets already persist via `/api/me/household`; per-location pet-care costs
+already exist in `monthlyCosts.petCare`/`petDaycare`/`petGrooming`). This is
+deliberately OUT of the B2 work queue — tracked as a post-consolidation
+backlog item in the plan's Phase E section.
