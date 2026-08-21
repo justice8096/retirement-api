@@ -2,146 +2,140 @@
   "city": "Dededo",
   "neighborhoods": [
     {
-      "id": "brickell-downtown",
-      "name": "Brickell / Downtown",
-      "description": "Financial district with gleaming towers, Brickell City Centre, and the vibrant urban Latin energy",
-      "character": "Financial towers, Latin energy, urban vibrant",
+      "id": "dededo-ypaopao-estates",
+      "name": "Ypaopao Estates",
+      "description": "Established subdivision in northern Dededo with typhoon-rated concrete single-family homes, popular with military families for its short commute to Andersen Air Force Base",
+      "character": "Suburban, family-oriented, military-adjacent, quiet, established",
       "housing": {
-        "avgRentOneBedroomUSD": 3250,
-        "avgRentTwoBedroomUSD": 4388,
-        "buyPricePerSqmUSD": 9800,
-        "predominantType": "High-rise luxury condos and modern apartments"
+        "avgRentOneBedroomUSD": 1600,
+        "avgRentTwoBedroomUSD": 2100,
+        "buyPricePerSqmUSD": 2700,
+        "predominantType": "Concrete single-family homes"
       },
-      "walkabilityScore": 91,
-      "transitScore": 73,
+      "walkabilityScore": 25,
+      "transitScore": 15,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
         "englishPrevalence": "high"
       },
-      "character_notes": "The historic and commercial heart of Dededo. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "character_notes": "A car is essential; Guam Memorial Hospital in Tamuning is roughly a 20-25 minute drive south. Homes are mostly single-story reinforced concrete, which holds up well in typhoons and suits single-level living. Military rental demand (Andersen AFB and Camp Blaz) keeps the subdivision well maintained but pushes rents toward the top of the Dededo range.",
       "sources": [
         {
-          "title": "Numbeo Cost of Living Dededo",
-          "url": "https://www.numbeo.com/cost-of-living/in/Dededo"
+          "title": "Dededo, Guam Real Estate - Guam Real Estate Online",
+          "url": "https://guamrealestateonline.com/dededo-guam-real-estate/"
         },
         {
-          "title": "Zillow",
-          "url": "https://www.zillow.com/"
+          "title": "Guam Rentals Near Andersen Air Force Base - Guam House Finder",
+          "url": "https://guamhousefinder.com/guam-rentals-near-andersen-air-force-base/"
         },
         {
-          "title": "Realtor.com",
-          "url": "https://www.realtor.com/"
+          "title": "Dededo, Guam - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Dededo,_Guam"
         }
       ]
     },
     {
-      "id": "coral-gables",
-      "name": "Coral Gables",
-      "description": "Planned Mediterranean-themed city with Miracle Mile, Venetian Pool, and University of Dededo",
-      "character": "Mediterranean planned, Miracle Mile, university",
+      "id": "dededo-astumbo",
+      "name": "Astumbo",
+      "description": "Affordable-to-moderate residential district in northwest Dededo with older concrete homes, government housing areas, and the Astumbo community center and gym",
+      "character": "Working-class, affordable, local, densely settled",
       "housing": {
-        "avgRentOneBedroomUSD": 2375,
-        "avgRentTwoBedroomUSD": 3206,
-        "buyPricePerSqmUSD": 6300,
-        "predominantType": "Mediterranean-style houses, condos, and historic properties"
+        "avgRentOneBedroomUSD": 1150,
+        "avgRentTwoBedroomUSD": 1500,
+        "buyPricePerSqmUSD": 2400,
+        "predominantType": "Older concrete single-family homes and duplexes"
       },
-      "walkabilityScore": 59,
-      "transitScore": 52,
-      "safetyRating": "high",
-      "expats": {
-        "communitySize": "not-applicable",
-        "englishPrevalence": "high"
-      },
-      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Dededo's center and services.",
-      "sources": [
-        {
-          "title": "Numbeo Cost of Living Dededo",
-          "url": "https://www.numbeo.com/cost-of-living/in/Dededo"
-        },
-        {
-          "title": "Zillow",
-          "url": "https://www.zillow.com/"
-        },
-        {
-          "title": "Realtor.com",
-          "url": "https://www.realtor.com/"
-        }
-      ]
-    },
-    {
-      "id": "hialeah-doral",
-      "name": "Hialeah / Doral",
-      "description": "Western communities with strong Cuban heritage, affordable housing, and commercial growth",
-      "character": "Cuban heritage, affordable, commercial growth",
-      "housing": {
-        "avgRentOneBedroomUSD": 1625,
-        "avgRentTwoBedroomUSD": 2194,
-        "buyPricePerSqmUSD": 3850,
-        "predominantType": "Single-family homes, townhomes, and apartments"
-      },
-      "walkabilityScore": 41,
-      "transitScore": 44,
+      "walkabilityScore": 25,
+      "transitScore": 20,
       "safetyRating": "moderate",
       "expats": {
         "communitySize": "not-applicable",
         "englishPrevalence": "high"
       },
-      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "character_notes": "One of the cheapest ways to live in northern Guam, but budget for a car and for higher utility costs in older housing stock. Petty and property crime run somewhat higher here than in gated subdivisions, so favor fenced properties. GRTA buses serve Dededo on weekday routes, but service ends by early evening and is not reliable enough to live car-free; Guam Memorial Hospital is about 25 minutes away by car.",
       "sources": [
         {
-          "title": "Numbeo Cost of Living Dededo",
-          "url": "https://www.numbeo.com/cost-of-living/in/Dededo"
+          "title": "Dededo Homes for Rent - GuamHome",
+          "url": "https://www.guamhome.com/dededo-for-rent/"
         },
         {
-          "title": "Zillow",
-          "url": "https://www.zillow.com/"
+          "title": "Cost of Living in Guam - Numbeo",
+          "url": "https://www.numbeo.com/cost-of-living/country_result.jsp?country=Guam"
         },
         {
-          "title": "Realtor.com",
-          "url": "https://www.realtor.com/"
+          "title": "GRTA Bus Routes Schedule - Guam Regional Transit Authority",
+          "url": "https://grta.guam.gov/bus-routes-schedule"
         }
       ]
     },
     {
-      "id": "coconut-grove",
-      "name": "Coconut Grove",
-      "description": "Historic bayfront village with banyan trees, CocoWalk shopping, and a bohemian-meets-affluent character",
-      "character": "Bayfront village, banyan trees, bohemian-affluent",
+      "id": "dededo-micronesia-mall-area",
+      "name": "Micronesia Mall / NCS Area",
+      "description": "Commercial heart of southern Dededo around Micronesia Mall and the former NCS communications station, with condos and apartments along Marine Corps Drive close to Tamuning services",
+      "character": "Commercial, convenient, condo-heavy, busy traffic",
       "housing": {
-        "avgRentOneBedroomUSD": 2750,
-        "avgRentTwoBedroomUSD": 3713,
-        "buyPricePerSqmUSD": 8050,
-        "predominantType": "Historic houses, modern condos, and waterfront properties"
+        "avgRentOneBedroomUSD": 1700,
+        "avgRentTwoBedroomUSD": 2200,
+        "buyPricePerSqmUSD": 2900,
+        "predominantType": "Mid-rise condos and apartment complexes"
       },
-      "walkabilityScore": 77,
-      "transitScore": 56,
+      "walkabilityScore": 40,
+      "transitScore": 30,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "The most practical Dededo base for a retiree who wants to minimize driving: Micronesia Mall (groceries, pharmacy, bank branches) is walkable from nearby condos, and several GRTA routes converge here. Guam Memorial Hospital in Tamuning is only 10-15 minutes by car. Condo buildings such as Villa Rosario are typhoon-rated concrete with elevators, though Marine Corps Drive traffic is heavy and rents run at the top of the Dededo range.",
+      "sources": [
+        {
+          "title": "Dededo Condo Apartment Townhouse For Rent - Guam House Finder",
+          "url": "https://guamhousefinder.com/find/dededo-condo-apartment-for-rent.php"
+        },
+        {
+          "title": "Dededo, Guam Rental Properties - Guam Dream Homes",
+          "url": "https://www.guamdreamhomes.com/dededo-guam-homes-for-sale/rentals/"
+        },
+        {
+          "title": "Property Prices in Guam - Numbeo",
+          "url": "https://www.numbeo.com/property-investment/country_result.jsp?country=Guam"
+        }
+      ]
+    },
+    {
+      "id": "dededo-yigo-village",
+      "name": "Yigo Village",
+      "description": "Guam's northernmost and largest-area village, a rural-suburban community of about 20,000 next to Andersen Air Force Base with gated townhome communities and larger-lot homes",
+      "character": "Rural-suburban, spacious lots, military-adjacent, quiet, green",
+      "housing": {
+        "avgRentOneBedroomUSD": 1400,
+        "avgRentTwoBedroomUSD": 1850,
+        "buyPricePerSqmUSD": 2300,
+        "predominantType": "Single-family homes on large lots and gated townhomes"
+      },
+      "walkabilityScore": 20,
+      "transitScore": 10,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
         "englishPrevalence": "high"
       },
-      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
+      "character_notes": "The best value for space in northern Guam (median home price around $387,000, below the island-wide $462,500), but it is the most car-dependent choice on the island: Guam Memorial Hospital is a 30-35 minute drive and GRTA service is sparse. Generally regarded as a safe village with newer gated townhome options. Buy typhoon-rated concrete construction and expect to drive for every errand.",
       "sources": [
         {
-          "title": "Numbeo Cost of Living Dededo",
-          "url": "https://www.numbeo.com/cost-of-living/in/Dededo"
+          "title": "Andersen AFB Guam - Military Town Advisor",
+          "url": "https://www.militarytownadvisor.com/bases/air-force/guam/113/andersen-afb-guam/"
         },
         {
-          "title": "Zillow",
-          "url": "https://www.zillow.com/"
+          "title": "Yigo, Guam - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Yigo,_Guam"
         },
         {
-          "title": "Realtor.com",
-          "url": "https://www.realtor.com/"
+          "title": "Guam Real Estate Market Update March 2026 - Living on Guam",
+          "url": "https://www.livingonguam.com/blog/guam-real-estate-market-update-march-2026/"
         }
       ]
     }
-  ],
-  "_seedOrigin": {
-    "kind": "starter-template",
-    "from": "us-miami-fl",
-    "generatedAt": "2026-04-23",
-    "note": "Template-derived content — prices and names adapted from the template city. Needs per-location review."
-  }
+  ]
 }

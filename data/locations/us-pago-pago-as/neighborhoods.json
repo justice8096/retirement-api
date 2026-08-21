@@ -2,146 +2,140 @@
   "city": "Pago Pago",
   "neighborhoods": [
     {
-      "id": "brickell-downtown",
-      "name": "Brickell / Downtown",
-      "description": "Financial district with gleaming towers, Brickell City Centre, and the vibrant urban Latin energy",
-      "character": "Financial towers, Latin energy, urban vibrant",
+      "id": "pago-pago-fagatogo",
+      "name": "Fagatogo",
+      "description": "The downtown and legislative seat of American Samoa, home to the Fono, the courthouse, the market, and the main bus depot on the south shore of Pago Pago Harbor",
+      "character": "Downtown, government seat, market town, harborfront, historic",
       "housing": {
-        "avgRentOneBedroomUSD": 3250,
-        "avgRentTwoBedroomUSD": 4388,
-        "buyPricePerSqmUSD": 9800,
-        "predominantType": "High-rise luxury condos and modern apartments"
+        "avgRentOneBedroomUSD": 900,
+        "avgRentTwoBedroomUSD": 1200,
+        "buyPricePerSqmUSD": null,
+        "predominantType": "Single-family homes and a small stock of walk-up apartments"
       },
-      "walkabilityScore": 91,
-      "transitScore": 73,
+      "walkabilityScore": 55,
+      "transitScore": 45,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
         "englishPrevalence": "high"
       },
-      "character_notes": "The historic and commercial heart of Pago Pago. Most walkable area with best access to cultural attractions, restaurants, and public services.",
+      "character_notes": "The most walkable spot on Tutuila: the Fagatogo Market is the hub of the aiga bus system (fares roughly $0.50-$2.00; no buses Sundays), so a retiree here can reach most of the island without a car. Formal rentals are scarce because roughly 90% of land is communally owned under the fa'amatai system and cannot be sold to anyone less than half Samoan, so most housing is family land; expect word-of-mouth listings and lease-only arrangements. LBJ Tropical Medical Center in Faga'alu, the territory's only hospital, is about 5 minutes away by car or bus.",
       "sources": [
         {
-          "title": "Numbeo Cost of Living Pago Pago",
-          "url": "https://www.numbeo.com/cost-of-living/in/Pago Pago"
+          "title": "Pago Pago, American Samoa - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Pago_Pago,_American_Samoa"
         },
         {
-          "title": "Zillow",
-          "url": "https://www.zillow.com/"
+          "title": "Taking the 'Aiga Buses in American Samoa - American Samoa Pocket Guide",
+          "url": "https://americansamoapocketguide.com/taking-the-aiga-buses-in-american-samoa-bus-fares-routes-more"
         },
         {
-          "title": "Realtor.com",
-          "url": "https://www.realtor.com/"
+          "title": "Real Property - American Samoa Bar Association",
+          "url": "https://asbar.org/real-property-d100/"
         }
       ]
     },
     {
-      "id": "coral-gables",
-      "name": "Coral Gables",
-      "description": "Planned Mediterranean-themed city with Miracle Mile, Venetian Pool, and University of Pago Pago",
-      "character": "Mediterranean planned, Miracle Mile, university",
+      "id": "pago-pago-utulei",
+      "name": "Utulei",
+      "description": "Waterfront village on the southwest edge of Pago Pago Harbor housing the governor's office, ASG executive buildings, Utulei Beach Park, and the harbor-area hotels",
+      "character": "Waterfront, government offices, hotels, beach park, tidy",
       "housing": {
-        "avgRentOneBedroomUSD": 2375,
-        "avgRentTwoBedroomUSD": 3206,
-        "buyPricePerSqmUSD": 6300,
-        "predominantType": "Mediterranean-style houses, condos, and historic properties"
+        "avgRentOneBedroomUSD": 1000,
+        "avgRentTwoBedroomUSD": 1400,
+        "buyPricePerSqmUSD": null,
+        "predominantType": "Single-family homes and government/employer-tied housing"
       },
-      "walkabilityScore": 59,
-      "transitScore": 52,
+      "walkabilityScore": 50,
+      "transitScore": 40,
       "safetyRating": "high",
       "expats": {
         "communitySize": "not-applicable",
         "englishPrevalence": "high"
       },
-      "character_notes": "Established residential area offering a quieter lifestyle while maintaining reasonable access to Pago Pago's center and services.",
+      "character_notes": "The most polished address in the harbor area, with a swimmable beach park, the ASG executive offices, and the Sadie Thompson-linked hotels; what little formal rental stock exists here is often tied to government or contract workers, and it sits at the top of the island's price range. Flat waterfront walking to Fagatogo suits limited mobility better than most of Tutuila, and aiga buses pass along the main road on weekdays. LBJ Tropical Medical Center in Faga'alu is under 10 minutes away; serious care beyond it means a medevac or the roughly 5.5-hour Hawaiian Airlines flight to Honolulu.",
       "sources": [
         {
-          "title": "Numbeo Cost of Living Pago Pago",
-          "url": "https://www.numbeo.com/cost-of-living/in/Pago Pago"
+          "title": "Utulei, American Samoa - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Utulei"
         },
         {
-          "title": "Zillow",
-          "url": "https://www.zillow.com/"
+          "title": "Sadie Thompson Inn - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Sadie_Thompson_Inn"
         },
         {
-          "title": "Realtor.com",
-          "url": "https://www.realtor.com/"
+          "title": "Getting Around - Visit American Samoa",
+          "url": "https://www.visitamericansamoa.org/getting-around"
         }
       ]
     },
     {
-      "id": "hialeah-doral",
-      "name": "Hialeah / Doral",
-      "description": "Western communities with strong Cuban heritage, affordable housing, and commercial growth",
-      "character": "Cuban heritage, affordable, commercial growth",
+      "id": "pago-pago-village",
+      "name": "Pago Pago Village",
+      "description": "Pago Pago village proper sits at the head of the harbor beneath Rainmaker Mountain, a quiet residential settlement that lends its name to the whole capital area",
+      "character": "Village life, harbor head, mountain backdrop, rainy, residential",
       "housing": {
-        "avgRentOneBedroomUSD": 1625,
-        "avgRentTwoBedroomUSD": 2194,
-        "buyPricePerSqmUSD": 3850,
-        "predominantType": "Single-family homes, townhomes, and apartments"
+        "avgRentOneBedroomUSD": 850,
+        "avgRentTwoBedroomUSD": 1150,
+        "buyPricePerSqmUSD": null,
+        "predominantType": "Extended-family homes on communal land"
       },
-      "walkabilityScore": 41,
-      "transitScore": 44,
+      "walkabilityScore": 40,
+      "transitScore": 40,
+      "safetyRating": "high",
+      "expats": {
+        "communitySize": "not-applicable",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Traditional village life dominates: housing is mostly aiga (extended family) compounds, Sunday is strictly observed with church and quiet, and evening sa (prayer curfew) is respected in some villages — retirees renting here live within that rhythm. This is one of the wettest harbor areas in the Pacific, so expect heavy rain and year-round heat and humidity. Aiga buses run frequently to Fagatogo on weekdays, and LBJ Tropical Medical Center is a short ride around the harbor.",
+      "sources": [
+        {
+          "title": "Pago Pago, American Samoa - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Pago_Pago,_American_Samoa"
+        },
+        {
+          "title": "Pago Pago Harbor - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Pago_Pago_Harbor"
+        },
+        {
+          "title": "Cost of Living in Pago Pago - Wise",
+          "url": "https://wise.com/us/cost-of-living/american-samoa/pago-pago"
+        }
+      ]
+    },
+    {
+      "id": "pago-pago-aua-atuu",
+      "name": "Aua & Atu'u",
+      "description": "Aua and Atu'u line the north side of Pago Pago Harbor, with Atu'u dominated by the StarKist tuna cannery and Aua a larger traditional village toward Rainmaker Pass",
+      "character": "Working harbor, cannery, traditional village, affordable, industrial edge",
+      "housing": {
+        "avgRentOneBedroomUSD": 700,
+        "avgRentTwoBedroomUSD": 1000,
+        "buyPricePerSqmUSD": null,
+        "predominantType": "Village family homes; very few formal rentals"
+      },
+      "walkabilityScore": 35,
+      "transitScore": 35,
       "safetyRating": "moderate",
       "expats": {
         "communitySize": "not-applicable",
         "englishPrevalence": "high"
       },
-      "character_notes": "More affordable option for budget-conscious retirees. May require a car or longer transit times to reach central amenities.",
+      "character_notes": "The cheapest harbor-area option, but the StarKist cannery in Atu'u brings truck traffic and a fish-processing smell when the wind is wrong, so most retirees would look toward Aua's quieter shoreline. Rental stock is essentially whatever a family compound offers — the communal land system means non-Samoans cannot buy, only lease or rent. Aiga buses run the harbor road to Fagatogo on weekdays; LBJ Tropical Medical Center is about 15 minutes around the harbor.",
       "sources": [
         {
-          "title": "Numbeo Cost of Living Pago Pago",
-          "url": "https://www.numbeo.com/cost-of-living/in/Pago Pago"
+          "title": "Atu'u, American Samoa - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Atu%CA%BBu,_American_Samoa"
         },
         {
-          "title": "Zillow",
-          "url": "https://www.zillow.com/"
+          "title": "Pago Pago StarKist Tuna Plant - Center for Land Use Interpretation",
+          "url": "https://clui.org/ludb/site/pago-pago-starkist-tuna-plant-american-samoa"
         },
         {
-          "title": "Realtor.com",
-          "url": "https://www.realtor.com/"
-        }
-      ]
-    },
-    {
-      "id": "coconut-grove",
-      "name": "Coconut Grove",
-      "description": "Historic bayfront village with banyan trees, CocoWalk shopping, and a bohemian-meets-affluent character",
-      "character": "Bayfront village, banyan trees, bohemian-affluent",
-      "housing": {
-        "avgRentOneBedroomUSD": 2750,
-        "avgRentTwoBedroomUSD": 3713,
-        "buyPricePerSqmUSD": 8050,
-        "predominantType": "Historic houses, modern condos, and waterfront properties"
-      },
-      "walkabilityScore": 77,
-      "transitScore": 56,
-      "safetyRating": "high",
-      "expats": {
-        "communitySize": "not-applicable",
-        "englishPrevalence": "high"
-      },
-      "character_notes": "Family-friendly area with good schools, parks, and community amenities. Popular with active retirees and families.",
-      "sources": [
-        {
-          "title": "Numbeo Cost of Living Pago Pago",
-          "url": "https://www.numbeo.com/cost-of-living/in/Pago Pago"
-        },
-        {
-          "title": "Zillow",
-          "url": "https://www.zillow.com/"
-        },
-        {
-          "title": "Realtor.com",
-          "url": "https://www.realtor.com/"
+          "title": "Pago Pago Harbor - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Pago_Pago_Harbor"
         }
       ]
     }
-  ],
-  "_seedOrigin": {
-    "kind": "starter-template",
-    "from": "us-miami-fl",
-    "generatedAt": "2026-04-23",
-    "note": "Template-derived content — prices and names adapted from the template city. Needs per-location review."
-  }
+  ]
 }
