@@ -5,6 +5,21 @@
 A JSON API for a retirement planning app. It stores your settings. It runs
 projections. It serves location cost data. Frontend clients call it.
 
+## Ecosystem (consolidated 2026-08)
+
+- **This repo is canonical for data and the engine.** Location data lives in
+  `data/locations/<id>/*.json`; the calculation library (including the Monte
+  Carlo engine at `shared/engine/`) is the `@retirement/shared` package in
+  `shared/`, consumed by this API (`#shared/*` imports), the Angular
+  dashboard, and retirement-mcp via `file:` dependencies. There is no
+  copy-sync script; edit `shared/engine/*.ts` and run `npm run engine:build`
+  (`test:shared` and `build` do this automatically; CI has a drift gate).
+- **The dashboard is `retirement-dashboard-angular`** (a pure API client).
+  The old React dashboard and the `commercialRetirementProject` monorepo are
+  archived under `D:\retirement\_archive\`.
+- **Single data path:** edit canonical JSON → `npm run db:seed` → the API
+  serves it. There is no mirror step to any dashboard.
+
 ## How it's built
 
 Each stack choice is one line so you can skim.
