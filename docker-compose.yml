@@ -92,10 +92,21 @@ services:
   # Build context is a sibling clone — repo layout on the deploy host
   # must place retirement-api/ and retirement-dashboard-angular/ in the
   # same parent directory.
+  #
+  # additional_contexts.shared-src exposes this repo's shared/ (the
+  # @retirement/shared engine package, B2/B4 consolidation) to the
+  # dashboard build under the BuildKit context name `shared-src`. The
+  # dashboard Dockerfile copies it to /retirement-api/shared so its
+  # "@retirement/shared": "file:../retirement-api/shared" dependency
+  # resolves inside the isolated build container. Requires
+  # DOCKER_BUILDKIT=1 / a buildx-enabled compose (default in modern
+  # `docker compose`).
   dashboard:
     build:
       context: ../retirement-dashboard-angular
       dockerfile: Dockerfile
+      additional_contexts:
+        shared-src: ./shared
     networks: [internal]
     ports:
       - '${DASHBOARD_PORT:-8080}:8080'
