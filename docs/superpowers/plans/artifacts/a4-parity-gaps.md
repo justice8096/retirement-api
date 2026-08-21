@@ -130,19 +130,19 @@ Angular's `dyslexia.service.ts` / `dyscalculia.service.ts` plus `components/{acc
 
 ## Decisions needed
 
-Mark each row **port** or **drop**. My recommendation is listed; it is input for you to weigh, not a decision already made.
+DECIDED by the user 2026-08-21 ("recommendations approved"): all recommendations adopted as-is — rows 1-7, 9, 10 are **port**; row 8 is **drop**.
 
 | # | Item | My recommendation | Your call |
 |---|---|---|---|
-| 1 | Neighborhoods: per-neighborhood map pins + "Open in Google Maps" links | port | ☐ port ☐ drop |
-| 2 | Monte Carlo: run simulation in a real Web Worker instead of main-thread `setTimeout` | port | ☐ port ☐ drop |
-| 3 | Groceries: per-item override UI (enabled/cost/quantity) + saved shopping lists + `/api/me/groceries` client | port | ☐ port ☐ drop |
-| 4 | Data Export: CSV export (location-costs.csv, tax-comparison.csv, scenario-projection.csv) | port | ☐ port ☐ drop |
-| 5 | Housing: editable rent override that feeds downstream calculations (`setBaseOverride`) | port | ☐ port ☐ drop |
-| 6 | Manage Locations: admin location CRUD + version history + reindex (`/api/admin/locations`) | port | ☐ port ☐ drop |
-| 7 | Roth: progressive-bracket marginal tax calc + year-by-year traditional-balance depletion table | port | ☐ port ☐ drop |
-| 8 | Settings: badges / contributions / tier gamification UI | drop | ☐ port ☐ drop |
-| 9 | Social Security: interactive per-spouse claim-age sliders with live 62/FRA/70 comparison | port | ☐ port ☐ drop |
-| 10 | Withdrawal: interactive multi-strategy (fixed/VPW/bucket/floor-ceiling/CAPE/guardrails) comparison calculator + year-by-year projection table | port | ☐ port ☐ drop |
+| 1 | Neighborhoods: per-neighborhood map pins + "Open in Google Maps" links | port | **PORT** |
+| 2 | Monte Carlo: run simulation in a real Web Worker instead of main-thread `setTimeout` | port | **PORT** |
+| 3 | Groceries: per-item override UI (enabled/cost/quantity) + saved shopping lists + `/api/me/groceries` client | port | **PORT** |
+| 4 | Data Export: CSV export (location-costs.csv, tax-comparison.csv, scenario-projection.csv) | port | **PORT** |
+| 5 | Housing: editable rent override that feeds downstream calculations (`setBaseOverride`) | port | **PORT** |
+| 6 | Manage Locations: admin location CRUD + version history + reindex (`/api/admin/locations`) | port | **PORT** |
+| 7 | Roth: progressive-bracket marginal tax calc + year-by-year traditional-balance depletion table | port | **PORT** |
+| 8 | Settings: badges / contributions / tier gamification UI | drop | **DROP** |
+| 9 | Social Security: interactive per-spouse claim-age sliders with live 62/FRA/70 comparison | port | **PORT** |
+| 10 | Withdrawal: interactive multi-strategy (fixed/VPW/bucket/floor-ceiling/CAPE/guardrails) comparison calculator + year-by-year projection table | port | **PORT** |
 
 (`annualAccountFees` deliberately excluded — already queued in Task B2 per `a3-engine-drift.md`.)
