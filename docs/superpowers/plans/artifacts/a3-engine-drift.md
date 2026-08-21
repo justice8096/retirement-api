@@ -11,11 +11,11 @@ B2's work queue. Read-only audit — no engine code was modified.
 |---|---|---|---|
 | (2) `retirement-api/src/lib/engine/*` (generated) | `monte-carlo.ts`, `rental-income.ts`, `tax-sources.ts`, `aca-constants.ts`, `historical-returns.ts` | **Yes** — every hunk matches `sync-engine.mjs`'s `REWRITES` array exactly | 0 |
 | (3) monorepo `commercialRetirementProject/packages/shared` vs `retirement-api/shared` | file-list + `diff -qr` | N/A — monorepo side is **empty** | 0 (nothing to port; nothing to lose) |
-| (4) React worker `retirement-dashboard/src/workers/montecarlo.worker.ts` | embedded standalone kernel vs Angular `lib/monte-carlo.ts` | No — not a generated copy at all, a hand-rolled reimplementation | 2 real gaps, 1 investigate, 2 items confirmed non-issues (dead code / superseded) |
+| (4) React worker `retirement-dashboard/src/workers/montecarlo.worker.ts` | embedded standalone kernel vs Angular `lib/monte-carlo.ts` | No — not a generated copy at all, a hand-rolled reimplementation | 1 real gap (`port-into-canonical`), 4 items confirmed non-issues (dead code / superseded) |
 
 **Bottom line: copies (2) and (3) are clean — Task B2 Step 3 has a no-op for
-those two.** Copy (4), the React worker, is the one place with real,
-actionable findings — see the work queue at the end.
+those two.** Copy (4), the React worker, contributes exactly one actionable
+item — see the single-item work queue at the end.
 
 ---
 
@@ -137,17 +137,31 @@ which UI tabs reference it, then checked whether those tabs actually call
    worker itself (accepts three params that do nothing), not a feature to
    port — porting it would mean porting a no-op.
 3. **`avgEffectiveRate` / `incomeVolatility` / `worstYearIncome` /
-   `avgIncome` / `fireSuccessRate`** — computed by the worker (lines
-   191-206) and put on its output, but `useMonteCarloWorker.ts`'s
-   `MonteCarloOutput` (lines 26-35) doesn't declare them, and a repo-wide
-   grep for all five names outside the worker file found no reader (the one
-   `avgIncome` hit, in `VisaResidencyTab.tsx:50`, is an unrelated local
-   variable in a visa-requirements calculator, not this output). Dead
-   output; nothing consumes it.
+   `avgIncome`** — computed by the worker (lines 191-206) and put on its
+   output (lines 208-211), but `useMonteCarloWorker.ts`'s `MonteCarloOutput`
+   (lines 26-35) doesn't declare them, and a repo-wide grep for all four
+   names outside the worker file found no reader (the one `avgIncome` hit,
+   in `VisaResidencyTab.tsx:50`, is an unrelated local variable in a
+   visa-requirements calculator, not this output). Dead output; nothing
+   consumes it. **`fireSuccessRate` is a separate, narrower case**: it's
+   declared on the worker's own `MonteCarloOutput` interface (worker line
+   56) but is never computed anywhere in the function body and never
+   appears in the output object literal at lines 208-211 — it's a type-level
+   field with no producing code at all, not merely an unread one.
+4. **`petCostByYear[y]` / `dependentCostByYear[y]`** — declared on both the
+   worker's own `MonteCarloInput` (worker lines 20, 22) and
+   `useMonteCarloWorker.ts`'s `MonteCarloInput` (lines 18-19), and read
+   inside the worker's loop (worker lines 115-116: `petCostByYear?.[y] ?? 0`
+   folded into `annualExpense`). But re-checked the sole call site,
+   `MonteCarloTab.tsx`'s `handleRun()` (`run({...})` around lines 86-109) —
+   it never sets either field, and a repo-wide grep for `useMonteCarloWorker`
+   turns up no other caller. So despite being wired all the way through the
+   type chain and into the loop body, **no code path ever populates these
+   arrays** — functionally dead, same as items 1-3 above, not a live feature.
 
 ### Real drift — needs a verdict
 
-1. **`annualAccountFees`** (worker line 91: `bal -= acctFees` once per
+**`annualAccountFees`** (worker line 91: `bal -= acctFees` once per
    sim-year, flat dollar deduction) — **wired and live**: present in both the
    worker's and `useMonteCarloWorker.ts`'s `MonteCarloInput`. Grepped the
    Angular canonical for any equivalent (`annualAccountFees`, `acctFee`,
@@ -173,29 +187,12 @@ which UI tabs reference it, then checked whether those tabs actually call
    needs a fee-deduction line before this consolidation is complete, using
    the existing `brokerageFeePct`/`brokerageFeeFlat` settings as the input
    shape rather than reintroducing the worker's flatter `annualAccountFees`.
-2. **`petCostByYear[y]` / `dependentCostByYear[y]`** (worker lines 115-117:
-   per-simulation-year cost adjustment arrays, added into `annualExpense`
-   each year) — **wired and live**: present in both interfaces, and
-   `useMonteCarloWorker.ts` passes them through unconditionally. Grepped the
-   Angular canonical (`monte-carlo.ts`, `monte-carlo-runner.service.ts`) —
-   zero matches for `petCost`/`dependentCost` in either. The only hits
-   anywhere in the Angular app are in `location.model.ts`, where pet-care
-   cost is one static line item folded into a location's overall
-   cost-of-living total (baked into `baseCost`/`nonHealthcareBase`, no
-   per-year trajectory).
-   **Verdict: `investigate`.** I can't tell from static analysis alone
-   whether "per-year-varying pet/dependent cost" was a deliberate product
-   simplification (pets and dependents' costs folded into a flat location
-   line item going forward) or a genuine dropped feature (e.g. a pet that
-   ages out of expensive vet care in year 8, or a dependent who ages out of
-   daycare costs at a known year). The Angular `LocationMove` segment model
-   *could* express a step-change via `moveSchedule`/`lifeEvents` (e.g. an
-   `incomeChange`-style event zeroing out a cost line at a known year), but
-   nothing in the current life-events union (`monte-carlo.ts:171-217`) is
-   shaped for a smooth *per-year* cost curve the way the worker's arrays are.
-   Whoever picks this up for B2 should ask the product owner whether dynamic
-   per-year pet/dependent cost curves are still wanted, or whether the
-   location-level static line item is the intended replacement.
+
+This is the only real-drift item from the worker. `petCostByYear`/
+`dependentCostByYear` looked like a second candidate on first pass (wired
+through both type interfaces and read inside the loop), but tracing the sole
+caller showed it's never actually populated — moved to the confirmed
+non-issues bucket above (item 4).
 
 ---
 
@@ -211,18 +208,14 @@ which UI tabs reference it, then checked whether those tabs actually call
    shape) before the four-copy consolidation is considered feature-complete.
    The worker's `annualAccountFees` (flat-only) is not worth porting verbatim
    — build against the richer existing settings model instead.
-2. **`investigate` — per-year pet/dependent cost trajectories.** The worker
-   supported `petCostByYear[]` / `dependentCostByYear[]` (per-sim-year cost
-   adjustment arrays); the canonical only has a flat, location-baked pet-care
-   line item with no per-year curve and no life-events hook shaped for one.
-   Needs a product-owner decision on whether this is an intentional
-   simplification or a gap to close, before B2 can assign it a real verdict.
 
-No other items. Everything else checked in Step 2 (withdrawal
-strategies/guardrails/spending models/FIRE savings phase, the short-term
-vehicle fields, and the income-volatility output metrics) is dead code in the
-worker itself — never exercised by any current caller — so there is nothing
-there to port.
+That is the entire work queue — a single item. Everything else checked in
+Step 2 (withdrawal strategies/guardrails/spending models/FIRE savings phase,
+the short-term vehicle fields, the income-volatility output metrics
+including `fireSuccessRate`, and `petCostByYear`/`dependentCostByYear`) is
+dead code in the worker itself — declared and in some cases even read inside
+the loop, but never populated or consumed by any current caller — so there
+is nothing there to port.
 
 Copies (2) (generated `src/lib/engine`) and (3) (monorepo shared, which is
 empty) have **zero real drift** — for those two, Task B2 Step 3 is a no-op.
