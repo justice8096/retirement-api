@@ -251,6 +251,33 @@ export interface MonteCarloParams {
   historicalStartYear?: number;
 
   /**
+   * Brokerage / account fee support (A3 drift item 1). Names and units
+   * mirror what `retirement-api/src/routes/fees.ts` persists so the caller
+   * can pass the user's stored settings straight through.
+   *
+   * Each sim year, right after the year's return is applied to `bal`, the
+   * kernel deducts `bal * brokerageFeePct + brokerageAnnualFee * cumInfl`.
+   * Both default to 0 — absent or zero, the deduction is a no-op and
+   * behavior is bit-identical to before this field existed.
+   */
+  /** Decimal fraction of balance taken per year (e.g. 0.005 = 0.5%/yr expense
+   *  ratio / AUM fee). Matches the DB-stored decimal-fraction encoding of
+   *  `brokerageFeePct` in `fees.ts` (not the whole-number-percent wire format
+   *  v1 API clients see — that conversion happens in the route layer). */
+  brokerageFeePct?: number;
+  /**
+   * Flat USD/year account-maintenance fee (matches `fees.ts`'s
+   * `brokerageAnnualFee`, a per-year flat amount — distinct from
+   * `brokerageFeeFlat`, which is a per-trade fee with no natural per-year
+   * cadence in this engine and is intentionally NOT modeled here). Given in
+   * today's USD; the kernel inflates it by accumulated inflation (`cumInfl`)
+   * the same way it inflates other recurring flat annual costs (see the LTC
+   * insurance premium line, `ltcInsMonthly * 12 * cumInfl`) — unlike the
+   * primary-residence mortgage payment, which is intentionally nominal.
+   */
+  brokerageAnnualFee?: number;
+
+  /**
    * Birth years of non-dependent adults — used to determine Medicare
    * eligibility per sim year (age ≥ 65). When absent, segments fall back to
    * their ACA baseline regardless of year.
@@ -1387,6 +1414,14 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
       const activePartTime = (partTimeEndYear > 0 && y < partTimeEndYear) ? partTime : 0;
 
       bal *= (1 + ret);
+
+      // Brokerage / account fee (A3 drift item 1). Deducted right after the
+      // year's return, before the year's income/cost cash flow. Both terms
+      // default to 0 (undefined -> 0 via `??`), so an absent or all-zero
+      // fee config is a bit-identical no-op — `bal -= bal * 0 + 0 * cumInfl`
+      // leaves `bal` unchanged.
+      bal -= bal * (p.brokerageFeePct ?? 0) + (p.brokerageAnnualFee ?? 0) * cumInfl;
+
       const effectiveFxShock = curIsForeign ? fxShockMult : 1;
       const costShockMult = currShock * fxMult * effectiveFxShock;
 

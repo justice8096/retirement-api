@@ -692,6 +692,12 @@ export function runMonteCarlo(p) {
             // Part-time income stops at `partTimeEndYear` (exclusive — year == end is zero).
             const activePartTime = (partTimeEndYear > 0 && y < partTimeEndYear) ? partTime : 0;
             bal *= (1 + ret);
+            // Brokerage / account fee (A3 drift item 1). Deducted right after the
+            // year's return, before the year's income/cost cash flow. Both terms
+            // default to 0 (undefined -> 0 via `??`), so an absent or all-zero
+            // fee config is a bit-identical no-op — `bal -= bal * 0 + 0 * cumInfl`
+            // leaves `bal` unchanged.
+            bal -= bal * (p.brokerageFeePct ?? 0) + (p.brokerageAnnualFee ?? 0) * cumInfl;
             const effectiveFxShock = curIsForeign ? fxShockMult : 1;
             const costShockMult = currShock * fxMult * effectiveFxShock;
             // HSA logic (#33 item 3) — runs only when HSA is active. Order:
