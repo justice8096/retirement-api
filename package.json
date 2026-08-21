@@ -9,6 +9,7 @@
     "start": "node dist/server.js",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:data": "vitest run data/__tests__",
     "test:shared": "npm run engine:build && cd shared && npx vitest run",
     "typecheck": "tsc --noEmit",
     "engine:build": "tsc -p shared/tsconfig.json",
