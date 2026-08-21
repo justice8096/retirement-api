@@ -1,0 +1,169 @@
+{
+  "city": "Upper Darby",
+  "neighborhoods": [
+    {
+      "id": "ud-drexel-hill",
+      "name": "Drexel Hill",
+      "description": "The township's largest and leafiest section — tree-lined streets of twins and single homes, with the Media/Sharon Hill trolleys (101/102) running through it",
+      "character": "Classic streetcar suburb, family-oriented, quietest part of the township",
+      "housing": {
+        "avgRentOneBedroomUSD": 1200,
+        "avgRentTwoBedroomUSD": 1500,
+        "buyPricePerSqmUSD": 2400,
+        "predominantType": "Twin homes and modest singles, 1920s-1950s stock"
+      },
+      "walkabilityScore": 68,
+      "transitScore": 65,
+      "safetyRating": "good",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Trolley 101 to 69th Street or Media. The redeveloped Drexeline center (ShopRite anchor) covers daily shopping. Naylor's Run park nearby.",
+      "sources": [
+        {
+          "title": "Zumper — Upper Darby rent research",
+          "url": "https://www.zumper.com/rent-research/upper-darby-pa"
+        },
+        {
+          "title": "Upper Darby Township",
+          "url": "https://www.upperdarby.org/"
+        }
+      ]
+    },
+    {
+      "id": "ud-69th-street",
+      "name": "69th Street District / Terminal Square",
+      "description": "The commercial heart of the township around the 69th Street Transportation Center — a dense, extraordinarily diverse shopping and dining corridor",
+      "character": "Urban, transit-rich, immigrant-entrepreneur retail, always busy",
+      "housing": {
+        "avgRentOneBedroomUSD": 1050,
+        "avgRentTwoBedroomUSD": 1300,
+        "buyPricePerSqmUSD": 1900,
+        "predominantType": "Apartments over storefronts and mid-rise buildings"
+      },
+      "walkabilityScore": 88,
+      "transitScore": 95,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Market-Frankford El terminus, trolleys, and the Norristown High Speed Line converge here. H Mart, Fresh Grocer, the Tower Theater, and dozens of international restaurants and markets. Do block-by-block diligence in the immediate corridor at night.",
+      "sources": [
+        {
+          "title": "SEPTA — 69th Street Transportation Center",
+          "url": "https://www.septa.org/"
+        },
+        {
+          "title": "Numbeo — Crime in Philadelphia metro",
+          "url": "https://www.numbeo.com/crime/in/Philadelphia"
+        }
+      ]
+    },
+    {
+      "id": "ud-highland-park",
+      "name": "Highland Park",
+      "description": "Dense twin-home neighborhood on the hill west of 69th Street, one of the township's most internationally diverse residential areas",
+      "character": "Dense residential, diverse, walkable to the transit hub",
+      "housing": {
+        "avgRentOneBedroomUSD": 1100,
+        "avgRentTwoBedroomUSD": 1350,
+        "buyPricePerSqmUSD": 2000,
+        "predominantType": "Brick twins and rowhomes"
+      },
+      "walkabilityScore": 78,
+      "transitScore": 85,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "large",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Walkable to 69th Street shopping and the El. Strong South Asian, African, and Caribbean communities.",
+      "sources": [
+        {
+          "title": "Upper Darby Township",
+          "url": "https://www.upperdarby.org/"
+        }
+      ]
+    },
+    {
+      "id": "ud-stonehurst",
+      "name": "Stonehurst",
+      "description": "Compact rowhome blocks in the township's southeast — its most affordable entry point",
+      "character": "Working-class rowhome grid, budget-friendly",
+      "housing": {
+        "avgRentOneBedroomUSD": 950,
+        "avgRentTwoBedroomUSD": 1200,
+        "buyPricePerSqmUSD": 1600,
+        "predominantType": "Brick rowhomes, 1920s-1940s"
+      },
+      "walkabilityScore": 72,
+      "transitScore": 75,
+      "safetyRating": "moderate",
+      "expats": {
+        "communitySize": "medium",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Cheapest rents in the township. Bus routes to 69th Street. Aging housing stock — inspect condition carefully.",
+      "sources": [
+        {
+          "title": "Zumper — Upper Darby rent research",
+          "url": "https://www.zumper.com/rent-research/upper-darby-pa"
+        }
+      ]
+    },
+    {
+      "id": "ud-westbrook-park",
+      "name": "Westbrook Park",
+      "description": "Tidy postwar rowhome pocket near the Clifton Heights border, popular with long-time owners and downsizers",
+      "character": "Quiet, well-kept, suburban-feeling rows",
+      "housing": {
+        "avgRentOneBedroomUSD": 1150,
+        "avgRentTwoBedroomUSD": 1400,
+        "buyPricePerSqmUSD": 2100,
+        "predominantType": "Postwar brick rowhomes with small yards"
+      },
+      "walkabilityScore": 60,
+      "transitScore": 60,
+      "safetyRating": "good",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Near Westbrook Park shopping and bus routes on West Chester Pike.",
+      "sources": [
+        {
+          "title": "Upper Darby Township",
+          "url": "https://www.upperdarby.org/"
+        }
+      ]
+    },
+    {
+      "id": "ud-kirklyn",
+      "name": "Kirklyn",
+      "description": "Small neighborhood on the Havertown border along West Chester Pike, blending Upper Darby affordability with Haverford Township adjacency",
+      "character": "Border neighborhood, quiet streets off a busy pike",
+      "housing": {
+        "avgRentOneBedroomUSD": 1150,
+        "avgRentTwoBedroomUSD": 1400,
+        "buyPricePerSqmUSD": 2200,
+        "predominantType": "Twins and small singles"
+      },
+      "walkabilityScore": 62,
+      "transitScore": 65,
+      "safetyRating": "good",
+      "expats": {
+        "communitySize": "small",
+        "englishPrevalence": "high"
+      },
+      "character_notes": "Bus routes on West Chester Pike run straight to the 69th Street hub.",
+      "sources": [
+        {
+          "title": "Upper Darby Township",
+          "url": "https://www.upperdarby.org/"
+        }
+      ]
+    }
+  ]
+}

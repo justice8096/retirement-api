@@ -1,8 +1,8 @@
 {
   "meta": {
     "description": "Retirement planning location index â€” lightweight summary for dashboard boot",
-    "lastUpdated": "2026-04-17",
-    "totalLocations": 148,
+    "lastUpdated": "2026-08-20",
+    "totalLocations": 159,
     "dataVersion": 2,
     "note": "Full location data loaded on demand from data/locations/{id}/"
   },
@@ -3863,6 +3863,31 @@
       "inclusionScore": null,
       "neighborhoodCount": 0,
       "hasDetailedCosts": null
+    },
+    {
+      "id": "us-upper-darby-pa",
+      "name": "Upper Darby, Pennsylvania",
+      "country": "United States",
+      "region": "US Northeast",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 7319,
+      "climate": {
+        "winterLowF": 25,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": false
+      },
+      "scores": {
+        "healthcare": 8,
+        "dogFriendly": 7,
+        "expatCommunity": 0,
+        "safety": 5,
+        "internetSpeed": "1Gbps+ available (Verizon Fios/Comcast)",
+        "englishPrevalence": 10
+      },
+      "inclusionScore": 8,
+      "neighborhoodCount": 6,
+      "hasDetailedCosts": true
     },
     {
       "id": "us-virginia",

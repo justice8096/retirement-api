@@ -23,12 +23,24 @@
   },
   "monthlyCosts": {
     "rent": {
-      "min": 1200,
-      "max": 1800,
-      "typical": 1500,
+      "min": 1100,
+      "max": 1700,
+      "typical": 1400,
       "type": "2-bedroom apartment/twin home",
       "annualInflation": 0.03,
-      "notes": "Delaware County inner-ring suburb; ~20% below Philadelphia city for comparable 2BR. Older twin homes and apartments near the 69th Street Transportation Center. Water, sewer, and trash are separate utility bills."
+      "notes": "Delaware County inner-ring suburb; ~20% below Philadelphia city for comparable 2BR. Older twin homes and apartments near the 69th Street Transportation Center. Water, sewer, and trash are separate utility bills.",
+      "sources": [
+        {
+          "title": "Zumper — Average Rent in Upper Darby, PA ($1,389 2BR avg)",
+          "url": "https://www.zumper.com/rent-research/upper-darby-pa",
+          "accessed": "2026-08-20"
+        },
+        {
+          "title": "RentCafe — Average Rent in Upper Darby, PA ($1,379 2BR avg)",
+          "url": "https://www.rentcafe.com/average-rent-market-trends/us/pa/upper-darby/",
+          "accessed": "2026-08-20"
+        }
+      ]
     },
     "groceries": {
       "min": 1200,
@@ -72,7 +84,14 @@
       "max": 850,
       "typical": 650,
       "annualInflation": 0.055,
-      "notes": "Medicare Part B + Medigap Plan G (x2) + Part D (x2) + dental/vision. Same metro baseline as Philadelphia; Penn/Jefferson/Main Line Health all accessible."
+      "notes": "Medicare Part B + Medigap Plan G (x2) + Part D (x2) + dental/vision. Same metro baseline as Philadelphia. NOTE: Crozer-Chester Medical Center and Taylor Hospital closed May 2025; Delaware County retains only Riddle (Media) and Mercy Fitzgerald (Darby, ~2 mi). Upper Darby is well-positioned regardless — Lankenau Medical Center ~4 mi and Penn Presbyterian reachable via the El.",
+      "sources": [
+        {
+          "title": "WHYY — Delaware County Crozer Health closure, longer ambulance rides",
+          "url": "https://whyy.org/articles/delaware-county-crozer-health-closure-longer-ambulance-rides-emergency-room-waits/",
+          "accessed": "2026-08-20"
+        }
+      ]
     },
     "insurance": {
       "min": 30,
@@ -217,7 +236,7 @@
   },
   "healthcare": {
     "system": "Medicare (at 65) + private supplement",
-    "qualityRating": 9,
+    "qualityRating": 8,
     "waitTimes": "low-moderate",
     "dentalIncluded": false,
     "prescriptionCoverage": "Part D plan",

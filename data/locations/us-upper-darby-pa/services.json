@@ -1,0 +1,188 @@
+{
+  "distanceUnit": "mi",
+  "currency": "USD",
+  "services": [
+    {
+      "categoryId": "hospital",
+      "name": "Mercy Fitzgerald Hospital (Trinity Health)",
+      "address": "1500 Lansdowne Avenue, Darby, PA 19023",
+      "notes": "Closest full-service hospital and ER since the 2025 Crozer closures. Community teaching hospital.",
+      "sources": [
+        {
+          "title": "Trinity Health Mid-Atlantic",
+          "url": "https://www.trinityhealthma.org/"
+        }
+      ],
+      "distanceMi": 2.0
+    },
+    {
+      "categoryId": "hospital",
+      "name": "Lankenau Medical Center (Main Line Health)",
+      "address": "100 E Lancaster Avenue, Wynnewood, PA 19096",
+      "notes": "Highly rated regional medical center; cardiology and surgery strengths.",
+      "sources": [
+        {
+          "title": "Main Line Health",
+          "url": "https://www.mainlinehealth.org/"
+        }
+      ],
+      "distanceMi": 4.0
+    },
+    {
+      "categoryId": "hospital",
+      "name": "Penn Presbyterian Medical Center",
+      "address": "51 N 39th Street, Philadelphia, PA 19104",
+      "notes": "Level 1 trauma center; Penn Medicine network. Direct El ride from 69th Street.",
+      "sources": [
+        {
+          "title": "Penn Medicine",
+          "url": "https://www.pennmedicine.org/"
+        }
+      ],
+      "distanceMi": 5.5
+    },
+    {
+      "categoryId": "pharmacy",
+      "name": "CVS Pharmacy — 69th Street area",
+      "address": "69th Street corridor, Upper Darby, PA 19082",
+      "notes": "Chain pharmacy near the transit hub; multiple CVS locations across the township.",
+      "sources": [
+        {
+          "title": "CVS",
+          "url": "https://www.cvs.com/"
+        }
+      ],
+      "distanceMi": 0.3
+    },
+    {
+      "categoryId": "grocery",
+      "name": "H Mart Upper Darby",
+      "address": "7050 Terminal Square, Upper Darby, PA 19082",
+      "notes": "Large Asian supermarket at the transit hub; standout produce and seafood.",
+      "sources": [
+        {
+          "title": "H Mart",
+          "url": "https://www.hmart.com/"
+        }
+      ],
+      "distanceMi": 0.2
+    },
+    {
+      "categoryId": "grocery",
+      "name": "The Fresh Grocer of 69th Street",
+      "address": "S 69th Street, Upper Darby, PA 19082",
+      "notes": "Full-service supermarket on the corridor.",
+      "sources": [
+        {
+          "title": "The Fresh Grocer",
+          "url": "https://www.thefreshgrocer.com/"
+        }
+      ],
+      "distanceMi": 0.3
+    },
+    {
+      "categoryId": "grocery_halal",
+      "name": "69th Street halal markets",
+      "address": "69th Street corridor, Upper Darby, PA 19082",
+      "notes": "Multiple halal butchers and Middle Eastern/South Asian groceries along the corridor.",
+      "sources": [
+        {
+          "title": "Upper Darby Township",
+          "url": "https://www.upperdarby.org/"
+        }
+      ],
+      "distanceMi": 0.3
+    },
+    {
+      "categoryId": "public_transit",
+      "name": "69th Street Transportation Center",
+      "address": "6900 Market Street, Upper Darby, PA 19082",
+      "notes": "Market-Frankford El terminus + trolleys 101/102 + Norristown High Speed Line + bus routes. Seniors 65+ ride free with SEPTA Senior Key Card.",
+      "sources": [
+        {
+          "title": "SEPTA",
+          "url": "https://www.septa.org/"
+        }
+      ],
+      "distanceMi": 0.0
+    },
+    {
+      "categoryId": "bank",
+      "name": "WSFS Bank — Upper Darby area branches",
+      "address": "69th Street corridor / West Chester Pike",
+      "notes": "Largest Delaware County-based bank; multiple branches near the township.",
+      "sources": [
+        {
+          "title": "WSFS Bank",
+          "url": "https://www.wsfsbank.com/"
+        }
+      ],
+      "distanceMi": 0.5
+    },
+    {
+      "categoryId": "bank",
+      "name": "PNC Bank — 69th Street",
+      "address": "69th Street corridor, Upper Darby, PA 19082",
+      "notes": "National bank branch with ATMs near the hub.",
+      "sources": [
+        {
+          "title": "PNC",
+          "url": "https://www.pnc.com/"
+        }
+      ],
+      "distanceMi": 0.3
+    },
+    {
+      "categoryId": "vet",
+      "name": "Metropolitan Veterinary Associates (24/7 ER)",
+      "address": "2626 Van Buren Avenue, Norristown, PA 19403",
+      "notes": "Regional 24/7 veterinary emergency and specialty hospital. Routine care available from several local practices within 2-3 mi.",
+      "sources": [
+        {
+          "title": "Metropolitan Veterinary Associates",
+          "url": "https://www.metro-vet.com/"
+        }
+      ],
+      "distanceMi": 14.0
+    },
+    {
+      "categoryId": "dog_park",
+      "name": "Naylor's Run Park",
+      "address": "Garrett Road, Upper Darby, PA 19082",
+      "notes": "Township's main linear park — trails and open space along Naylor's Run creek.",
+      "sources": [
+        {
+          "title": "Upper Darby Township",
+          "url": "https://www.upperdarby.org/"
+        }
+      ],
+      "distanceMi": 1.2
+    },
+    {
+      "categoryId": "restaurant_local",
+      "name": "69th Street international dining corridor",
+      "address": "S 69th Street, Upper Darby, PA 19082",
+      "notes": "West African, Caribbean, South Asian, Middle Eastern, and East Asian restaurants — one of the best cheap-eats strips in the Philadelphia metro.",
+      "sources": [
+        {
+          "title": "Visit Delco",
+          "url": "https://www.visitdelcopa.com/"
+        }
+      ],
+      "distanceMi": 0.3
+    },
+    {
+      "categoryId": "airport",
+      "name": "Philadelphia International Airport (PHL)",
+      "address": "8000 Essington Avenue, Philadelphia, PA 19153",
+      "notes": "About 20-25 min by car; also reachable by SEPTA with a transfer.",
+      "sources": [
+        {
+          "title": "PHL Airport",
+          "url": "https://www.phl.org/"
+        }
+      ],
+      "distanceMi": 8.5
+    }
+  ]
+}
