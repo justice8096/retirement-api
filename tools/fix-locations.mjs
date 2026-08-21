@@ -10,8 +10,9 @@ async function main() {
 
   // Add Camden NJ
   const camdenData = JSON.parse(fs.readFileSync('data/locations/us-camden-nj/location.json', 'utf-8'));
-  const total = Object.values(camdenData.monthlyCosts || {}).reduce(
-    (sum, c) => sum + (c.typical || 0), 0
+  // healthcarePreMedicare is an alternate to healthcare — count one only.
+  const total = Object.entries(camdenData.monthlyCosts || {}).reduce(
+    (sum, [key, c]) => key === 'healthcarePreMedicare' ? sum : sum + (c.typical || 0), 0
   );
 
   await prisma.adminLocation.upsert({

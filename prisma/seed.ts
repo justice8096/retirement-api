@@ -63,7 +63,10 @@ async function main(): Promise<void> {
       monthlyCostTotal: 0,
     };
     if (locationData.monthlyCosts && typeof locationData.monthlyCosts === 'object') {
-      for (const val of Object.values(locationData.monthlyCosts as Record<string, { typical?: number }>)) {
+      for (const [key, val] of Object.entries(locationData.monthlyCosts as Record<string, { typical?: number }>)) {
+        // healthcarePreMedicare is an ALTERNATE to healthcare (one or the
+        // other, never both) — exclude it from the catalog baseline total.
+        if (key === 'healthcarePreMedicare') continue;
         if (val && typeof val.typical === 'number') searchFields.monthlyCostTotal += val.typical;
       }
       searchFields.monthlyCostTotal = Math.round(searchFields.monthlyCostTotal);

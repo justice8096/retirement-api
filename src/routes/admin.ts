@@ -62,11 +62,16 @@ function extractSearchFields(locationData: Record<string, unknown>) {
   const subregion = typeof locationData.subregion === 'string' ? locationData.subregion : null;
   const currency = typeof locationData.currency === 'string' ? locationData.currency : 'USD';
 
-  // Sum all monthlyCosts.*.typical values for cost-range filtering
+  // Sum monthlyCosts.*.typical values for cost-range filtering — counting
+  // exactly ONE healthcare figure. `healthcarePreMedicare` is an ALTERNATE
+  // to `healthcare` (a household pays one or the other, never both), so it
+  // is excluded from the catalog baseline; age-aware UIs swap it in
+  // client-side for pre-Medicare households.
   let monthlyCostTotal = 0;
   const costs = locationData.monthlyCosts;
   if (costs && typeof costs === 'object') {
-    for (const val of Object.values(costs as Record<string, unknown>)) {
+    for (const [key, val] of Object.entries(costs as Record<string, unknown>)) {
+      if (key === 'healthcarePreMedicare') continue;
       if (val && typeof val === 'object' && 'typical' in (val as Record<string, unknown>)) {
         const typical = (val as Record<string, unknown>).typical;
         if (typeof typical === 'number') monthlyCostTotal += typical;
