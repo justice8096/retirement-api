@@ -73,7 +73,7 @@ db.exec(`
   );
 
   CREATE TABLE neighborhoods (
-    id TEXT PRIMARY KEY,
+    id TEXT NOT NULL,
     location_id TEXT NOT NULL,
     name TEXT NOT NULL,
     description TEXT,
@@ -86,6 +86,7 @@ db.exec(`
     expat_english TEXT,
     character_notes TEXT,
     sources_json TEXT,
+    PRIMARY KEY (location_id, id),
     FOREIGN KEY (location_id) REFERENCES locations(id)
   );
 

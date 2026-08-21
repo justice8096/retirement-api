@@ -7,5 +7,8 @@
     "@retirement/shared": "*",
     "better-sqlite3": "^12.8.0",
     "sql.js": "^1.14.1"
+  },
+  "allowScripts": {
+    "better-sqlite3@12.11.1": true
   }
 }
