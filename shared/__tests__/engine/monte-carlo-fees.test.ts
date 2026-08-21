@@ -6,10 +6,12 @@ import { HISTORICAL_RETURNS } from '../../engine/historical-returns.js';
  * A3 drift item 1 — brokerage/account fee support in the Monte Carlo kernel.
  *
  * The kernel previously applied no brokerage/account fee at all, even though
- * `retirement-api/src/routes/fees.ts` persists `brokerageFeePct` (decimal
- * fraction of balance, e.g. 0.005 = 0.5%/yr) and `brokerageAnnualFee` (flat
- * USD/year) for exactly this purpose. These tests pin down the new fields'
- * behavior before they exist.
+ * `retirement-api/src/routes/fees.ts` persists `brokerageExpenseRatio`
+ * (decimal fraction of balance drawn every year, e.g. 0.002 = 0.2%/yr — the
+ * ongoing AUM drag) and `brokerageAnnualFee` (flat USD/year) for exactly
+ * this purpose. fees.ts's `brokerageFeePct` is a PER-TRADE fee and is
+ * deliberately not read by the kernel (no per-trade concept here). These
+ * tests pin down the new fields' behavior before they exist.
  *
  * All tests use `returnMode: 'historical-sequence'` starting at the first
  * year in HISTORICAL_RETURNS (1928) — a fully deterministic path (no RNG
@@ -45,7 +47,7 @@ describe('brokerage/account fee support (A3 drift item 1)', () => {
   it('zero/omitted fees produce the identical median ending balance', () => {
     const omitted = runMonteCarlo(baseParams());
     const explicitZero = runMonteCarlo(
-      baseParams({ brokerageFeePct: 0, brokerageAnnualFee: 0 }),
+      baseParams({ brokerageExpenseRatio: 0, brokerageAnnualFee: 0 }),
     );
 
     expect(explicitZero.median).toBeCloseTo(omitted.median, 9);
@@ -54,7 +56,7 @@ describe('brokerage/account fee support (A3 drift item 1)', () => {
   it('a percentage fee strictly lowers the ending balance, matching the expected 1-year deduction', () => {
     const baseline = runMonteCarlo(baseParams({ years: 1 }));
     const withFee = runMonteCarlo(
-      baseParams({ years: 1, brokerageFeePct: 0.01 }),
+      baseParams({ years: 1, brokerageExpenseRatio: 0.01 }),
     );
 
     expect(withFee.median).toBeLessThan(baseline.median);

@@ -697,7 +697,7 @@ export function runMonteCarlo(p) {
             // default to 0 (undefined -> 0 via `??`), so an absent or all-zero
             // fee config is a bit-identical no-op — `bal -= bal * 0 + 0 * cumInfl`
             // leaves `bal` unchanged.
-            bal -= bal * (p.brokerageFeePct ?? 0) + (p.brokerageAnnualFee ?? 0) * cumInfl;
+            bal -= bal * (p.brokerageExpenseRatio ?? 0) + (p.brokerageAnnualFee ?? 0) * cumInfl;
             const effectiveFxShock = curIsForeign ? fxShockMult : 1;
             const costShockMult = currShock * fxMult * effectiveFxShock;
             // HSA logic (#33 item 3) — runs only when HSA is active. Order:

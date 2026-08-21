@@ -261,18 +261,25 @@ export interface MonteCarloParams {
     /**
      * Brokerage / account fee support (A3 drift item 1). Names and units
      * mirror what `retirement-api/src/routes/fees.ts` persists so the caller
-     * can pass the user's stored settings straight through.
+     * can pass the user's stored settings straight through — specifically,
+     * `brokerageExpenseRatio` (fees.ts's ongoing annual AUM drag) and
+     * `brokerageAnnualFee` (fees.ts's flat per-year account fee). fees.ts's
+     * `brokerageFeePct` and `brokerageFeeFlat` are PER-TRADE fees and are
+     * intentionally NOT read here — this engine has no concept of individual
+     * trades, only sim years, so a per-trade fee has no yearly cadence to
+     * apply against.
      *
      * Each sim year, right after the year's return is applied to `bal`, the
-     * kernel deducts `bal * brokerageFeePct + brokerageAnnualFee * cumInfl`.
-     * Both default to 0 — absent or zero, the deduction is a no-op and
-     * behavior is bit-identical to before this field existed.
+     * kernel deducts `bal * brokerageExpenseRatio + brokerageAnnualFee *
+     * cumInfl`. Both default to 0 — absent or zero, the deduction is a no-op
+     * and behavior is bit-identical to before this field existed.
      */
-    /** Decimal fraction of balance taken per year (e.g. 0.005 = 0.5%/yr expense
+    /** Decimal fraction of balance taken per year (e.g. 0.002 = 0.2%/yr expense
      *  ratio / AUM fee). Matches the DB-stored decimal-fraction encoding of
-     *  `brokerageFeePct` in `fees.ts` (not the whole-number-percent wire format
-     *  v1 API clients see — that conversion happens in the route layer). */
-    brokerageFeePct?: number;
+     *  `brokerageExpenseRatio` in `fees.ts` (fees.ts:111, "0.002 = 0.2% annual
+     *  expense ratio") — NOT `brokerageFeePct` (fees.ts:108), which fees.ts
+     *  documents as a PER-TRADE fee and which this engine does not read. */
+    brokerageExpenseRatio?: number;
     /**
      * Flat USD/year account-maintenance fee (matches `fees.ts`'s
      * `brokerageAnnualFee`, a per-year flat amount — distinct from
