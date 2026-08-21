@@ -749,6 +749,15 @@ export function runMonteCarlo(p) {
             if (mortgageMonthlyPayment > 0 && y < mortgageEndYear) {
                 bal -= mortgageMonthlyPayment * 12;
             }
+            // Per-year pet / dependent cost curves — annual USD in today's
+            // dollars scaled by cumInfl. USD baseline, no per-trial FX (same
+            // convention as the LTC / rental lines). Sparse: missing or
+            // non-positive entries deduct nothing, so legacy callers (both
+            // fields absent) never enter this branch.
+            const householdExtraAnnual = Math.max(0, p.petCostByYear?.[y] ?? 0) +
+                Math.max(0, p.dependentCostByYear?.[y] ?? 0);
+            if (householdExtraAnnual > 0)
+                bal -= householdExtraAnnual * cumInfl;
             // Late-pass dispatch (#31 step 2a + priority 2) — handles event
             // kinds whose effect is a balance mutation AFTER the year's
             // income / cost mutation. Two kinds today: `oneTimeExpense`
