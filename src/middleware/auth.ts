@@ -1,64 +1,94 @@
 /**
- * Clerk JWT authentication middleware for Fastify.
+ * Local-auth middleware for Fastify (Clerk removed 2026-08-21 — see
+ * docs/superpowers/specs/2026-08-21-local-auth-design.md).
  *
- * Verifies the Bearer token from the Authorization header using Clerk's
- * JWKS endpoint. On success, decorates `request.userId` (Clerk sub) and
- * `request.user` (DB row, lazy-loaded).
+ * Verifies self-issued HS256 JWTs from the Authorization header. On
+ * success, decorates `request.userId` (DB id), `request.user` (DB row via
+ * a short-lived cache) and `request.authProviderId`.
  *
  * Environment:
- *   CLERK_SECRET_KEY   — required
- *   CLERK_PUBLISHABLE_KEY — required (used by Clerk SDK internally)
+ *   AUTH_JWT_SECRET      — required in production (startup assert);
+ *                          dev generates an ephemeral secret + warning
+ *   AUTH_TOKEN_TTL_DAYS  — token lifetime, default 30
  */
-import { clerkPlugin, getAuth } from '@clerk/fastify';
-import type { FastifyInstance, FastifyRequest, FastifyReply } from 'fastify';
+import { createSigner, createVerifier } from 'fast-jwt';
+import { randomBytes } from 'node:crypto';
+import type { FastifyRequest, FastifyReply } from 'fastify';
 import type { User } from '@prisma/client';
 import prisma from '../db/prisma.js';
 
-// ─── Clerk user profile fetch ────────────────────────────────────────────���
+// ─── Token signing / verification ─────────────────────────────────────────
+
+/** True when the secret came from the environment (vs dev-ephemeral). */
+export const authSecretConfigured = !!process.env.AUTH_JWT_SECRET;
+
+const authSecret = process.env.AUTH_JWT_SECRET ?? randomBytes(32).toString('hex');
+if (!authSecretConfigured && process.env.NODE_ENV !== 'production') {
+  // eslint-disable-next-line no-console
+  console.warn('[auth] AUTH_JWT_SECRET not set — using an ephemeral dev secret; tokens die on restart.');
+}
+
+const AUTH_TTL_DAYS = Number(process.env.AUTH_TOKEN_TTL_DAYS ?? 30);
+const AUTH_TTL_MS = AUTH_TTL_DAYS * 24 * 60 * 60 * 1000;
+
+const signToken = createSigner({ key: authSecret, expiresIn: AUTH_TTL_MS });
+const verifyToken = createVerifier({ key: authSecret });
+
+export interface AuthTokenPayload {
+  sub: string;
+  username: string | null;
+  tier: string;
+  iat: number;
+  exp: number;
+}
 
 /**
- * Fetches the full user profile from Clerk's Backend API.
- * Used on first sign-in to get the real email + name,
- * since the JWT session claims may not include them by default.
+ * Startup safety check — refuse to boot in production without a real
+ * secret (mirrors the encryption-key enforcement).
  */
-async function fetchClerkUser(clerkUserId: string): Promise<{ email: string | null; name: string | null }> {
-  const secretKey = process.env.CLERK_SECRET_KEY;
-  if (!secretKey) return { email: null, name: null };
-  try {
-    const res = await fetch(`https://api.clerk.com/v1/users/${clerkUserId}`, {
-      headers: { Authorization: `Bearer ${secretKey}` },
-    });
-    if (!res.ok) return { email: null, name: null };
-    const data = await res.json() as {
-      email_addresses?: Array<{ email_address?: string }>;
-      first_name?: string | null;
-      last_name?: string | null;
-    };
-    const email = data.email_addresses?.[0]?.email_address ?? null;
-    const parts = [data.first_name, data.last_name].filter(Boolean);
-    const name = parts.length > 0 ? parts.join(' ') : null;
-    return { email, name };
-  } catch {
-    return { email: null, name: null };
+export function assertAuthSecretInProd(): void {
+  if (process.env.NODE_ENV === 'production' && !process.env.AUTH_JWT_SECRET) {
+    throw new Error('AUTH_JWT_SECRET must be set in production');
   }
 }
 
-// ─── User cache — avoids DB upsert on every authenticated request ─────────
-// Key: Clerk authProviderId → { user, expiresAt }
+/** Issue a bearer token for a user. */
+export function signAuthToken(user: User): { token: string; expiresAt: string } {
+  const token = signToken({ sub: user.id, username: user.username, tier: user.tier });
+  return { token, expiresAt: new Date(Date.now() + AUTH_TTL_MS).toISOString() };
+}
+
+/**
+ * Soft verification: parse + verify a `Bearer <token>` Authorization header
+ * value, returning the payload or null. Never throws. Used by routes that
+ * only OPTIONALLY elevate on auth (e.g. the health endpoint's admin
+ * detail section) without rejecting unauthenticated callers.
+ */
+export function verifyAuthHeader(header: string | undefined): AuthTokenPayload | null {
+  if (!header?.startsWith('Bearer ')) return null;
+  try {
+    return verifyToken(header.slice(7)) as AuthTokenPayload;
+  } catch {
+    return null;
+  }
+}
+
+// ─── User cache — avoids a DB hit on every authenticated request ──────────
+// Key: user id (JWT `sub`) → { user, expiresAt }
 // TTL: 10 seconds — short enough to pick up tier changes quickly
 
 const USER_CACHE_TTL_MS = 10_000;
 const userCache = new Map<string, { user: User; expiresAt: number }>();
 
-function getCachedUser(authProviderId: string): User | null {
-  const entry = userCache.get(authProviderId);
+function getCachedUser(userId: string): User | null {
+  const entry = userCache.get(userId);
   if (entry && entry.expiresAt > Date.now()) return entry.user;
-  if (entry) userCache.delete(authProviderId);
+  if (entry) userCache.delete(userId);
   return null;
 }
 
-function setCachedUser(authProviderId: string, user: User): void {
-  userCache.set(authProviderId, { user, expiresAt: Date.now() + USER_CACHE_TTL_MS });
+function setCachedUser(userId: string, user: User): void {
+  userCache.set(userId, { user, expiresAt: Date.now() + USER_CACHE_TTL_MS });
   // Prevent unbounded growth: evict expired entries when map grows large
   if (userCache.size > 500) {
     const now = Date.now();
@@ -69,16 +99,16 @@ function setCachedUser(authProviderId: string, user: User): void {
 }
 
 /**
- * Invalidate the in-memory user cache for a specific authProviderId.
+ * Invalidate the in-memory user cache for a specific user id.
  * Call from tier-change paths (webhooks, admin endpoints) so that elevated
  * or downgraded permissions take effect within the next request instead of
  * waiting for the 10-second TTL.
  *
  * SAST H-05 (2026-04-19). For multi-replica deployments, also publish the
- * authProviderId on a Redis channel and have each replica subscribe.
+ * user id on a Redis channel and have each replica subscribe.
  */
-export function invalidateUserCache(authProviderId: string): void {
-  userCache.delete(authProviderId);
+export function invalidateUserCache(userId: string): void {
+  userCache.delete(userId);
 }
 
 /**
@@ -99,19 +129,6 @@ export async function assertNoDevBypassUserInProd(): Promise<void> {
         'Delete it before launching.',
     );
   }
-}
-
-// ─── Clerk plugin registration ────────────────────────────────────────────
-
-export let clerkEnabled = false;
-
-export async function registerClerk(app: FastifyInstance): Promise<void> {
-  if (!process.env.CLERK_PUBLISHABLE_KEY || !process.env.CLERK_SECRET_KEY) {
-    app.log.warn('CLERK_PUBLISHABLE_KEY or CLERK_SECRET_KEY not set — auth disabled (local mode)');
-    return;
-  }
-  await app.register(clerkPlugin);
-  clerkEnabled = true;
 }
 
 // ─── Auth hook: require signed-in user ────────────────────────────────────
@@ -144,77 +161,48 @@ export async function requireAuth(request: FastifyRequest, reply: FastifyReply):
       request.authProviderId = devUser.authProviderId;
       return;
     } catch (err) {
-      request.log.warn({ err: (err as Error).message }, 'Dev bypass failed — falling through to Clerk');
+      request.log.warn({ err: (err as Error).message }, 'Dev bypass failed — falling through to token auth');
     }
   }
 
-  if (!clerkEnabled) {
-    reply.code(503).send({ error: 'Authentication not configured (local mode)' });
+  const header = request.headers.authorization;
+  if (!header?.startsWith('Bearer ')) {
+    reply.code(401).send({ error: 'Please sign in to use this feature.' });
     return;
   }
 
-  let auth: ReturnType<typeof getAuth>;
+  let payload: AuthTokenPayload;
   try {
-    auth = getAuth(request);
-  } catch (err) {
-    // Clerk SDK can throw on malformed/invalid tokens — treat as 401, not 500
-    request.log.warn({ err: (err as Error).message }, 'Clerk getAuth threw — rejecting as 401');
-    reply.code(401).send({ error: 'Invalid authentication token' });
+    payload = verifyToken(header.slice(7)) as AuthTokenPayload;
+  } catch {
+    // Expired, malformed, or signed with a rotated secret — all read the
+    // same to the user: sign in again. (Plain-language per house style.)
+    reply.code(401).send({ error: 'Your session has expired. Please sign in again.' });
     return;
   }
 
-  if (!auth?.userId) {
-    reply.code(401).send({ error: 'Authentication required' });
-    return;
-  }
-
-  // Clerk subject ID (e.g. "user_2abc...")
-  request.authProviderId = auth.userId;
-
-  // Find or create local DB user (with short-lived cache to avoid DB hit on every request)
   try {
-    const cached = getCachedUser(auth.userId);
+    const cached = getCachedUser(payload.sub);
     if (cached) {
       request.user = cached;
       request.userId = cached.id;
+      request.authProviderId = cached.authProviderId;
       return;
     }
 
-    // Check if user already exists
-    let existingUser = await prisma.user.findUnique({ where: { authProviderId: auth.userId } });
-
-    if (existingUser) {
-      // Backfill email/name if user was created with a placeholder
-      if (existingUser.email.endsWith('@placeholder.local') || !existingUser.displayName) {
-        const clerkProfile = await fetchClerkUser(auth.userId);
-        const updates: { email?: string; displayName?: string; updatedAt: Date } = { updatedAt: new Date() };
-        if (clerkProfile.email && existingUser.email.endsWith('@placeholder.local')) {
-          updates.email = clerkProfile.email;
-        }
-        if (clerkProfile.name && !existingUser.displayName) {
-          updates.displayName = clerkProfile.name;
-        }
-        existingUser = await prisma.user.update({ where: { id: existingUser.id }, data: updates });
-      } else {
-        await prisma.user.update({ where: { id: existingUser.id }, data: { updatedAt: new Date() } });
-      }
-      request.user = existingUser;
-    } else {
-      // New user — fetch real email/name from Clerk Backend API
-      const clerkProfile = await fetchClerkUser(auth.userId);
-      request.user = await prisma.user.create({
-        data: {
-          authProviderId: auth.userId,
-          email: clerkProfile.email ?? `${auth.userId}@placeholder.local`,
-          displayName: clerkProfile.name ?? null,
-        },
-      });
+    const user = await prisma.user.findUnique({ where: { id: payload.sub } });
+    if (!user) {
+      // Token is valid but the account is gone (deleted user).
+      reply.code(401).send({ error: 'Your session has expired. Please sign in again.' });
+      return;
     }
 
-    setCachedUser(auth.userId, request.user);
-    request.userId = request.user.id;
+    setCachedUser(user.id, user);
+    request.user = user;
+    request.userId = user.id;
+    request.authProviderId = user.authProviderId;
   } catch (err) {
-    request.log.error({ err: (err as Error).message }, 'Failed to upsert user from Clerk auth');
+    request.log.error({ err: (err as Error).message }, 'Failed to load user for auth token');
     reply.code(500).send({ error: 'Authentication processing failed' });
     return;
   }
