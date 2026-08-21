@@ -19,7 +19,11 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const API_ROOT = resolve(__dirname, '..');
-const DASH_ROOT = resolve(API_ROOT, '..', 'retirement-dashboard-angular');
+// Overridable so worktree checkouts of either repo can sync against each
+// other: DASH_ROOT=/path/to/dashboard-checkout npm run engine:sync
+const DASH_ROOT = process.env.DASH_ROOT
+  ? resolve(process.env.DASH_ROOT)
+  : resolve(API_ROOT, '..', 'retirement-dashboard-angular');
 const OUT_DIR = join(API_ROOT, 'src', 'lib', 'engine');
 
 const SRC_LIB = join(DASH_ROOT, 'src', 'app', 'lib');
@@ -31,6 +35,7 @@ const FILES = [
   [join(SRC_LIB, 'rental-income.ts'), 'rental-income.ts'],
   [join(SRC_LIB, 'tax-sources.ts'), 'tax-sources.ts'],
   [join(SRC_LIB, 'aca-constants.ts'), 'aca-constants.ts'],
+  [join(SRC_LIB, 'household-costs.ts'), 'household-costs.ts'],
   [join(SRC_DATA, 'historical-returns.ts'), 'historical-returns.ts'],
 ];
 
