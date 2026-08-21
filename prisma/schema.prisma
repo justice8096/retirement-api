@@ -115,6 +115,9 @@ model HouseholdMember {
   ssPia          String?  @map("ss_pia")       // Monthly PIA at FRA — encrypted at rest (AES-256-GCM)
   ssFra          Int?    @map("ss_fra")        // Full Retirement Age
   ssClaimAge     Int?    @map("ss_claim_age")
+  // Months past ssClaimAge (0-11) — SSA reckons claim dates in months;
+  // e.g. claiming at 67y4m is ssClaimAge=67, ssClaimAgeMonths=4.
+  ssClaimAgeMonths Int   @default(0) @map("ss_claim_age_months")
   sortOrder      Int     @default(0) @map("sort_order")
 
   household HouseholdProfile @relation(fields: [householdId], references: [id], onDelete: Cascade)

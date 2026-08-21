@@ -73,6 +73,10 @@ const FIELD_LABELS: Record<string, string> = {
   fxSpreadPct: 'Currency exchange spread',
   transferFeeFixed: 'Fixed transfer fee',
 
+  // household.ts (members)
+  ssClaimAge: 'Social Security claim age (years)',
+  ssClaimAgeMonths: 'Social Security claim age (extra months)',
+
   // household.ts (cost curves)
   petCostByYear: 'Pet costs by year',
   dependentCostByYear: 'Dependent costs by year',

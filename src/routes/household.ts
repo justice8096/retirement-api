@@ -32,6 +32,8 @@ const memberSchema = z.object({
   ssPia: z.number().min(0).max(50000).nullable().optional(),
   ssFra: z.number().int().min(62).max(70).nullable().optional(),
   ssClaimAge: z.number().int().min(62).max(75).nullable().optional(),
+  // Months past ssClaimAge (0-11) — claim at 67y4m = ssClaimAge 67 + 4.
+  ssClaimAgeMonths: z.number().int().min(0).max(11).default(0),
   sortOrder: z.number().int().min(0).default(0),
 }).refine(
   (data) => {
@@ -249,6 +251,7 @@ export default async function householdRoutes(app: FastifyInstance): Promise<voi
               ssPia: encryptField(m.ssPia),  // Encrypt SS PIA
               ssFra: m.ssFra ?? null,
               ssClaimAge: m.ssClaimAge ?? null,
+              ssClaimAgeMonths: m.ssClaimAgeMonths ?? 0,
               sortOrder: m.sortOrder ?? i,
             })),
           });
