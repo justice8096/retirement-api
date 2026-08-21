@@ -123,8 +123,8 @@ These are hardcoded **absolute Windows paths missing the `retirement\` parent
 directory** that both real repos actually live under
 (`D:\retirement\retirement-dashboard`, `D:\retirement\retirement-api`).
 Verified `D:\retirement-dashboard` and `D:\retirement-api` (top-level, no
-`retirement\` prefix) do not exist as repos on this machine — `D:\retirement-dashboard`
-only contains unrelated Claude session-scratch folders, and `D:\retirement-api`
+`retirement\` prefix) do not exist as repos on this machine — `D:\retirement-api`
+only contains unrelated Claude session-scratch folders, and `D:\retirement-dashboard`
 doesn't exist at all. These two scripts are already broken/non-functional as
 written; they cannot currently sync anywhere real. They die with the monorepo
 in Phase D regardless, and would need no separate repointing even if they were
