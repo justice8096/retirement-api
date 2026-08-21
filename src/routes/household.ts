@@ -18,6 +18,10 @@ import { requireAuth } from '../middleware/auth.js';
 import { encryptField, decryptField } from '../middleware/encryption.js';
 import { toValidationErrorPayload, getLabelsFor } from '../lib/validation.js';
 import { defaultCurrencyFor } from '../lib/locale.js';
+import {
+  buildPetCostByYear, buildDependentCostByYear,
+  PET_COST_CATEGORY_KEYS, DEFAULT_CHILD_SUPPORT_UNTIL_AGE, DEFAULT_DEPENDENT_MONTHLY_COST,
+} from '#shared/engine/household-costs.js';
 
 const memberSchema = z.object({
   id: z.string().uuid().optional(),
@@ -94,8 +98,91 @@ function decryptHousehold(household: HouseholdWithRelations | null) {
   };
 }
 
+const costCurvesQuerySchema = z.object({
+  locationId: z.string().min(1),
+  years: z.coerce.number().int().min(1).max(100).optional(),
+  simStartYear: z.coerce.number().int().min(2024).max(2100).optional(),
+  monthlyCostPerDependent: z.coerce.number().min(0).max(100_000).default(DEFAULT_DEPENDENT_MONTHLY_COST),
+  childSupportUntilAge: z.coerce.number().int().min(16).max(30).default(DEFAULT_CHILD_SUPPORT_UNTIL_AGE),
+  // Query strings arrive as strings — z.coerce.boolean() would turn "false"
+  // into true, so map the literal strings explicitly.
+  replacePets: z.preprocess((v) => v === 'true' || v === true, z.boolean()).default(false),
+}).strict();
+
 export default async function householdRoutes(app: FastifyInstance): Promise<void> {
   app.addHook('preHandler', requireAuth);
+
+  // GET /api/me/household/cost-curves — per-year pet/dependent cost curves
+  // for the Monte Carlo engine, built server-side from the household's pets
+  // and dependents plus the named location's pet cost categories. Feed the
+  // result straight into POST /api/simulate (petCostByYear /
+  // dependentCostByYear) — and exclude the pet categories from any flat
+  // spending figure you pass, since the pet curve replaces them.
+  app.get('/cost-curves', async (request, reply) => {
+    const parsed = costCurvesQuerySchema.safeParse(request.query);
+    if (!parsed.success) {
+      return reply.code(400).send(toValidationErrorPayload(parsed.error));
+    }
+    const q = parsed.data;
+
+    const household = await prisma.householdProfile.findUnique({
+      where: { userId: request.userId },
+      include: {
+        members: { orderBy: { sortOrder: 'asc' } },
+        pets: { orderBy: { sortOrder: 'asc' } },
+      },
+    });
+    if (!household) return reply.code(404).send({ error: 'No household profile yet' });
+
+    const loc = await prisma.adminLocation.findUnique({ where: { id: q.locationId } });
+    if (!loc) return reply.code(404).send({ error: 'Location not found' });
+
+    const monthlyCosts = (loc.locationData as {
+      monthlyCosts?: Record<string, { typical?: number }>;
+    }).monthlyCosts ?? {};
+    const petMonthlyTotal = PET_COST_CATEGORY_KEYS
+      .reduce((sum, key) => sum + (monthlyCosts[key]?.typical ?? 0), 0);
+
+    const years = q.years ?? household.planningYears;
+    const simStartYear = q.simStartYear ?? household.planningStartYear;
+
+    const petCostByYear = buildPetCostByYear(household.pets, {
+      years, simStartYear,
+      petMonthlyTotalAtYear: () => petMonthlyTotal, // single-location v1
+      replacePets: q.replacePets,
+    });
+    const dependentCostByYear = buildDependentCostByYear(
+      household.members.filter((m) => m.role === 'dependent'),
+      {
+        years, simStartYear,
+        monthlyCostPerDependent: q.monthlyCostPerDependent,
+        childSupportUntilAge: q.childSupportUntilAge,
+      },
+    );
+
+    reply.header('Cache-Control', 'private, no-store');
+    return {
+      locationId: q.locationId,
+      years,
+      simStartYear,
+      petMonthlyTotal,
+      petCostByYear,
+      dependentCostByYear,
+      assumptions: {
+        monthlyCostPerDependent: q.monthlyCostPerDependent,
+        childSupportUntilAge: q.childSupportUntilAge,
+        replacePets: q.replacePets,
+        petCostCategories: [...PET_COST_CATEGORY_KEYS],
+      },
+      _units: {
+        'petCostByYear[]': { encoding: 'amount', currency: 'USD', periodicity: 'year' },
+        'dependentCostByYear[]': { encoding: 'amount', currency: 'USD', periodicity: 'year' },
+        petMonthlyTotal: { encoding: 'amount', currency: 'USD', periodicity: 'month' },
+        'assumptions.monthlyCostPerDependent': { encoding: 'amount', currency: 'USD', periodicity: 'month' },
+      },
+      _labels: getLabelsFor(['petCostByYear', 'dependentCostByYear', 'petMonthlyTotal']),
+    };
+  });
 
   // GET /api/me/household — fetch household with members and pets
   app.get('/', async (request, reply) => {

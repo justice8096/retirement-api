@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "declaration": true,
+    "composite": true,
+    "outDir": "engine",
+    "rootDir": "engine",
+    "strict": false
+  },
+  "include": ["engine/*.ts"],
+  "exclude": ["engine/*.d.ts", "engine/*.js", "node_modules"]
+}

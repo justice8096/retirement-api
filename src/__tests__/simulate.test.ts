@@ -6,7 +6,7 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import Fastify, { type FastifyInstance } from 'fastify';
 import simulateRoutes from '../routes/simulate.js';
-import { runMonteCarlo, mulberry32 } from '../lib/engine/monte-carlo.js';
+import { runMonteCarlo, mulberry32 } from '#shared/engine/monte-carlo.js';
 
 describe('POST /api/simulate', () => {
   let app: FastifyInstance;
@@ -85,5 +85,50 @@ describe('engine determinism (mulberry32)', () => {
     const b = runMonteCarlo(mk(123));
     expect(a.results).toEqual(b.results);
     expect(a.successRate).toBe(b.successRate);
+  });
+});
+
+describe('POST /api/simulate — pet/dependent cost curves', () => {
+  let app: FastifyInstance;
+
+  beforeEach(async () => {
+    app = Fastify({ logger: false });
+    await app.register(simulateRoutes, { prefix: '/api/simulate' });
+  });
+
+  afterEach(async () => {
+    await app.close();
+  });
+
+  const post = (body: unknown) =>
+    app.inject({ method: 'POST', url: '/api/simulate', payload: body });
+
+  // Zero return / vol / inflation / income so balance arithmetic is exact.
+  const flatBody = {
+    portfolio: 100_000, annualSpending: 0, years: 3, runs: 3,
+    meanReturn: 0, volReturn: 0, meanInflation: 0, volInflation: 0, seed: 42,
+  };
+
+  it('applies supplied curves to the simulation', async () => {
+    const without = (await post(flatBody)).json();
+    const res = await post({
+      ...flatBody, petCostByYear: [1_200, 0, 600], dependentCostByYear: [0, 2_400, 0],
+    });
+    expect(res.statusCode).toBe(200);
+    const withCurves = res.json();
+    expect(without.median).toBe(100_000);
+    expect(withCurves.median).toBe(100_000 - 4_200);
+    expect(withCurves.inputs.petCurveYears).toBe(3);
+    expect(withCurves.inputs.dependentCurveYears).toBe(3);
+  });
+
+  it('rejects negative entries and over-long arrays', async () => {
+    const bad1 = await post({ portfolio: 1, annualSpending: 1, years: 1, petCostByYear: [-5] });
+    expect(bad1.statusCode).toBe(400);
+    const bad2 = await post({
+      portfolio: 1, annualSpending: 1, years: 1,
+      dependentCostByYear: new Array(101).fill(0),
+    });
+    expect(bad2.statusCode).toBe(400);
   });
 });

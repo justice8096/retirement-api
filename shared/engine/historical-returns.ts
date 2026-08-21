@@ -1,10 +1,3 @@
-// ╔══════════════════════════════════════════════════════════════════╗
-// ║  GENERATED FILE — DO NOT EDIT.                                      ║
-// ║  Source of truth: retirement-dashboard-angular/src/app/data/historical-returns.ts
-// ║  Regenerate:      npm run engine:sync                               ║
-// ╚══════════════════════════════════════════════════════════════════╝
-// @ts-nocheck
-
 /**
  * Annual S&P 500 total return + US CPI inflation, 1928–2024.
  *

@@ -1,10 +1,3 @@
-// ╔══════════════════════════════════════════════════════════════════╗
-// ║  GENERATED FILE — DO NOT EDIT.                                      ║
-// ║  Source of truth: retirement-dashboard-angular/src/app/lib/rental-income.ts
-// ║  Regenerate:      npm run engine:sync                               ║
-// ╚══════════════════════════════════════════════════════════════════╝
-// @ts-nocheck
-
 /**
  * Rental / real-estate income helpers — Schedule E modeling for the
  * retirement dashboard (Todos #29).

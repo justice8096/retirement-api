@@ -1,10 +1,3 @@
-// ╔══════════════════════════════════════════════════════════════════╗
-// ║  GENERATED FILE — DO NOT EDIT.                                      ║
-// ║  Source of truth: retirement-dashboard-angular/src/app/lib/monte-carlo.ts
-// ║  Regenerate:      npm run engine:sync                               ║
-// ╚══════════════════════════════════════════════════════════════════╝
-// @ts-nocheck
-
 /**
  * Monte Carlo retirement simulation.
  *
@@ -256,6 +249,40 @@ export interface MonteCarloParams {
   regime?: RegimeConfig;
   /** Start year for 'historical-sequence' mode. Required for that mode. */
   historicalStartYear?: number;
+
+  /**
+   * Brokerage / account fee support (A3 drift item 1). Names and units
+   * mirror what `retirement-api/src/routes/fees.ts` persists so the caller
+   * can pass the user's stored settings straight through — specifically,
+   * `brokerageExpenseRatio` (fees.ts's ongoing annual AUM drag) and
+   * `brokerageAnnualFee` (fees.ts's flat per-year account fee). fees.ts's
+   * `brokerageFeePct` and `brokerageFeeFlat` are PER-TRADE fees and are
+   * intentionally NOT read here — this engine has no concept of individual
+   * trades, only sim years, so a per-trade fee has no yearly cadence to
+   * apply against.
+   *
+   * Each sim year, right after the year's return is applied to `bal`, the
+   * kernel deducts `bal * brokerageExpenseRatio + brokerageAnnualFee *
+   * cumInfl`. Both default to 0 — absent or zero, the deduction is a no-op
+   * and behavior is bit-identical to before this field existed.
+   */
+  /** Decimal fraction of balance taken per year (e.g. 0.002 = 0.2%/yr expense
+   *  ratio / AUM fee). Matches the DB-stored decimal-fraction encoding of
+   *  `brokerageExpenseRatio` in `fees.ts` (fees.ts:111, "0.002 = 0.2% annual
+   *  expense ratio") — NOT `brokerageFeePct` (fees.ts:108), which fees.ts
+   *  documents as a PER-TRADE fee and which this engine does not read. */
+  brokerageExpenseRatio?: number;
+  /**
+   * Flat USD/year account-maintenance fee (matches `fees.ts`'s
+   * `brokerageAnnualFee`, a per-year flat amount — distinct from
+   * `brokerageFeeFlat`, which is a per-trade fee with no natural per-year
+   * cadence in this engine and is intentionally NOT modeled here). Given in
+   * today's USD; the kernel inflates it by accumulated inflation (`cumInfl`)
+   * the same way it inflates other recurring flat annual costs (see the LTC
+   * insurance premium line, `ltcInsMonthly * 12 * cumInfl`) — unlike the
+   * primary-residence mortgage payment, which is intentionally nominal.
+   */
+  brokerageAnnualFee?: number;
 
   /**
    * Birth years of non-dependent adults — used to determine Medicare
@@ -585,6 +612,31 @@ export interface MonteCarloParams {
    * override is naturally inert when the heir is abroad.
    */
   medicareMonthlyByYear?: (number | undefined)[];
+
+  /**
+   * Per-year household pet cost — annual USD in today's dollars, index =
+   * sim year. Sparse: missing / undefined / non-positive entries deduct
+   * nothing. Inflated by accumulated inflation (cumInfl) at deduction
+   * time — USD baseline with NO per-trial FX, same convention as
+   * ltcCostPerYearUSD and rental cash flows. Built by `buildPetCostByYear`
+   * (household-costs.ts) from household pets (birth year + expected
+   * lifespan) and the active location's petCare/petDaycare/petGrooming
+   * monthly costs.
+   *
+   * IMPORTANT: when supplying this, the caller must EXCLUDE the pet cost
+   * categories from segment baseCost — the curve replaces the flat
+   * inclusion (otherwise pets double-count). Absent → no code path
+   * executes (byte-identical legacy behavior).
+   */
+  petCostByYear?: number[];
+
+  /**
+   * Per-year dependent (children / adult dependents) cost — annual USD in
+   * today's dollars. Purely additive: the flat baseCost never included
+   * dependent-specific costs. Same sparse + cumInfl semantics as
+   * petCostByYear. Built by `buildDependentCostByYear`.
+   */
+  dependentCostByYear?: number[];
 
   /**
    * Optional rental property portfolio (Todo #34, Stage 4b of #29).
@@ -1394,6 +1446,14 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
       const activePartTime = (partTimeEndYear > 0 && y < partTimeEndYear) ? partTime : 0;
 
       bal *= (1 + ret);
+
+      // Brokerage / account fee (A3 drift item 1). Deducted right after the
+      // year's return, before the year's income/cost cash flow. Both terms
+      // default to 0 (undefined -> 0 via `??`), so an absent or all-zero
+      // fee config is a bit-identical no-op — `bal -= bal * 0 + 0 * cumInfl`
+      // leaves `bal` unchanged.
+      bal -= bal * (p.brokerageExpenseRatio ?? 0) + (p.brokerageAnnualFee ?? 0) * cumInfl;
+
       const effectiveFxShock = curIsForeign ? fxShockMult : 1;
       const costShockMult = currShock * fxMult * effectiveFxShock;
 
@@ -1447,6 +1507,16 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
       if (mortgageMonthlyPayment > 0 && y < mortgageEndYear) {
         bal -= mortgageMonthlyPayment * 12;
       }
+
+      // Per-year pet / dependent cost curves — annual USD in today's
+      // dollars scaled by cumInfl. USD baseline, no per-trial FX (same
+      // convention as the LTC / rental lines). Sparse: missing or
+      // non-positive entries deduct nothing, so legacy callers (both
+      // fields absent) never enter this branch.
+      const householdExtraAnnual =
+        Math.max(0, p.petCostByYear?.[y] ?? 0) +
+        Math.max(0, p.dependentCostByYear?.[y] ?? 0);
+      if (householdExtraAnnual > 0) bal -= householdExtraAnnual * cumInfl;
 
       // Late-pass dispatch (#31 step 2a + priority 2) — handles event
       // kinds whose effect is a balance mutation AFTER the year's

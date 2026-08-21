@@ -1,10 +1,3 @@
-// ╔══════════════════════════════════════════════════════════════════╗
-// ║  GENERATED FILE — DO NOT EDIT.                                      ║
-// ║  Source of truth: retirement-dashboard-angular/src/app/lib/tax-sources.ts
-// ║  Regenerate:      npm run engine:sync                               ║
-// ╚══════════════════════════════════════════════════════════════════╝
-// @ts-nocheck
-
 import type { Source, TaxBracket } from './types.js';
 
 /**

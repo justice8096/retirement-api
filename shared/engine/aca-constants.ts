@@ -1,10 +1,3 @@
-// ╔══════════════════════════════════════════════════════════════════╗
-// ║  GENERATED FILE — DO NOT EDIT.                                      ║
-// ║  Source of truth: retirement-dashboard-angular/src/app/lib/aca-constants.ts
-// ║  Regenerate:      npm run engine:sync                               ║
-// ╚══════════════════════════════════════════════════════════════════╝
-// @ts-nocheck
-
 /**
  * Single source of truth for ACA subsidy math constants and helpers.
  *

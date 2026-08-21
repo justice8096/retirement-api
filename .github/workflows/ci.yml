@@ -31,6 +31,9 @@ jobs:
       - name: Run shared tests
         run: npm run test:shared
 
+      - name: Verify committed shared/engine matches its .ts source
+        run: npm run engine:build && git diff --exit-code -- shared/engine
+
       - name: Run API tests
         run: npm test
 
