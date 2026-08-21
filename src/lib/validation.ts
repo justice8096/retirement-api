@@ -73,6 +73,11 @@ const FIELD_LABELS: Record<string, string> = {
   fxSpreadPct: 'Currency exchange spread',
   transferFeeFixed: 'Fixed transfer fee',
 
+  // household.ts (cost curves)
+  petCostByYear: 'Pet costs by year',
+  dependentCostByYear: 'Dependent costs by year',
+  petMonthlyTotal: 'Monthly pet costs at this location',
+
   // withdrawal.ts
   strategyType: 'Withdrawal strategy',
   withdrawalRate: 'Withdrawal rate',
