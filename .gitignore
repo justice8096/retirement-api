@@ -11,3 +11,6 @@ api.log
 check-tier.mjs
 tools/seed-dev-user.sh
 __pycache__/
+
+# Derived SQLite snapshot (rebuild with: node tools/build-db.js)
+data/retirement.db

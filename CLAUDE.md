@@ -60,6 +60,15 @@ script's default (`../../data`) resolves outside the repo. Seeding is an
 idempotent upsert (bumps each row's `version`); it reads canonical
 `data/locations/<id>/location.json`, not the `prisma/seed-*.json` snapshots.
 
+### Optional: SQLite snapshot for ad-hoc analysis
+
+```bash
+node tools/build-db.js
+# Builds data/retirement.db (untracked, derived) from the canonical
+# data/locations JSON — handy for ad-hoc SQL queries. Nothing in the
+# runtime stack consumes it; the API serves Postgres seeded by db:seed.
+```
+
 ### 4. Run tests
 
 ```bash
