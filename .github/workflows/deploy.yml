@@ -40,6 +40,10 @@ jobs:
           git log HEAD..origin/master --oneline
           git pull --ff-only origin master
 
+          echo "=== Pulling dashboard (sibling checkout feeds the dashboard image) ==="
+          git -C /srv/retirement/retirement-dashboard-angular fetch origin
+          git -C /srv/retirement/retirement-dashboard-angular pull --ff-only origin main
+
           echo "=== Running migrations ==="
           docker compose build --no-cache migrate
           docker compose run --rm migrate
