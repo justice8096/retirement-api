@@ -13,8 +13,7 @@ import { z } from 'zod';
 import type { FastifyInstance } from 'fastify';
 import prisma from '../db/prisma.js';
 import { cleanupProcessedEvents } from './webhooks.js';
-import { requireAdmin, requireAuth, clerkEnabled } from '../middleware/auth.js';
-import { getAuth } from '@clerk/fastify';
+import { requireAdmin, requireAuth, verifyAuthHeader } from '../middleware/auth.js';
 import { isEncryptionEnabled } from '../middleware/encryption.js';
 import { toValidationErrorPayload } from '../lib/validation.js';
 
@@ -85,16 +84,11 @@ export default async function healthRoutes(app: FastifyInstance): Promise<void> 
       health.status = 'degraded';
     }
 
-    // Only expose config/memory details to admin users (prevent info disclosure)
-    let isAdmin = false;
-    if (clerkEnabled) {
-      try {
-        const auth = getAuth(_request);
-        if (auth?.userId) {
-          isAdmin = _request.user?.tier === 'admin';
-        }
-      } catch { /* unauthenticated — OK for basic health check */ }
-    }
+    // Only expose config/memory details to admin users (prevent info disclosure).
+    // Soft check — health stays public; a valid admin token merely elevates
+    // the detail level. Tier comes from the token claim (no DB hit).
+    const authPayload = verifyAuthHeader(_request.headers.authorization);
+    const isAdmin = authPayload?.tier === 'admin';
 
     if (isAdmin) {
       // Encryption key configured

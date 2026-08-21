@@ -30,21 +30,17 @@ vi.mock('stripe', () => ({
   }),
 }));
 
-// Mock auth middleware
+// Mock auth middleware (local JWT — health does a soft verifyAuthHeader
+// check to decide whether to include admin-only detail sections)
 vi.mock('../middleware/auth.js', () => ({
   requireAdmin: vi.fn((req, reply, done) => done()),
   requireAuth: vi.fn(async () => {}),
-  clerkEnabled: true,
-}));
-
-// Mock Clerk (getAuth used in health route for conditional details)
-vi.mock('@clerk/fastify', () => ({
-  getAuth: vi.fn(() => null), // default: unauthenticated
+  verifyAuthHeader: vi.fn(() => null), // default: unauthenticated
 }));
 
 import prisma from '../db/prisma.js';
 import healthRoutes from '../routes/health.js';
-import { getAuth } from '@clerk/fastify';
+import { verifyAuthHeader } from '../middleware/auth.js';
 
 describe('Health routes', () => {
   let app: FastifyInstance;
@@ -115,7 +111,7 @@ describe('Health routes', () => {
 
     it('hides config details from unauthenticated requests', async () => {
       prisma.$queryRaw.mockResolvedValue([{ result: 1 }]);
-      (getAuth as ReturnType<typeof vi.fn>).mockReturnValue(null);
+      (verifyAuthHeader as ReturnType<typeof vi.fn>).mockReturnValue(null);
 
       const res = await app.inject({ method: 'GET', url: '/api/health' });
       const body = JSON.parse(res.payload);
@@ -130,7 +126,7 @@ describe('Health routes', () => {
       // disclosure hardening). Mark the request as admin via the test
       // helper.
       prisma.$queryRaw.mockResolvedValue([{ result: 1 }]);
-      (getAuth as ReturnType<typeof vi.fn>).mockReturnValue({ userId: 'user_admin' });
+      (verifyAuthHeader as ReturnType<typeof vi.fn>).mockReturnValue({ sub: 'user_admin', tier: 'admin' });
       delete process.env.ENCRYPTION_MASTER_KEY;
 
       const res = await injectAsAdmin('/api/health');
@@ -150,7 +146,7 @@ describe('Health routes', () => {
     it('includes memory stats for admin users', async () => {
       // Memory stats are admin-only (info disclosure hardening).
       prisma.$queryRaw.mockResolvedValue([{ result: 1 }]);
-      (getAuth as ReturnType<typeof vi.fn>).mockReturnValue({ userId: 'user_admin' });
+      (verifyAuthHeader as ReturnType<typeof vi.fn>).mockReturnValue({ sub: 'user_admin', tier: 'admin' });
 
       const res = await injectAsAdmin('/api/health');
       const body = JSON.parse(res.payload);

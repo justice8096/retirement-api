@@ -6,8 +6,7 @@ import cors from '@fastify/cors';
 import helmet from '@fastify/helmet';
 import rateLimit from '@fastify/rate-limit';
 import cookie from '@fastify/cookie';
-import { registerClerk, assertNoDevBypassUserInProd } from './middleware/auth.js';
-import { isPublicApiPath } from './middleware/public-paths.js';
+import { assertNoDevBypassUserInProd, assertAuthSecretInProd } from './middleware/auth.js';
 import { rateLimitConfig, buildRedisStore } from './middleware/rate-limit.js';
 import { initSentry, captureException } from './lib/sentry.js';
 import { validateEncryptionConfig } from './middleware/encryption.js';
@@ -23,6 +22,7 @@ validateEncryptionConfig();
 
 // SAST M-NEW-01 — refuse to boot if a dev-bypass user exists in a prod DB.
 await assertNoDevBypassUserInProd();
+assertAuthSecretInProd();
 
 import locationRoutes from './routes/locations.js';
 import userRoutes from './routes/users.js';
@@ -43,6 +43,7 @@ import badgeRoutes from './routes/badges.js';
 import feesRoutes from './routes/fees.js';
 import glossaryRoutes from './routes/glossary.js';
 import simulateRoutes from './routes/simulate.js';
+import authRoutes from './routes/auth.js';
 
 const app = Fastify({
   logger: true,
@@ -194,36 +195,10 @@ app.addHook('onResponse', (request, reply, done) => {
   done();
 });
 
-// ─── Auth (Clerk) ─────────────────────────────────────────────────────────
-
-// Suppress Clerk dev-instance handshake on public endpoints.
-//
-// `clerkPlugin` registers a global `preHandler` hook (via `fastify-plugin`,
-// so encapsulation does not isolate it). On dev Clerk instances, that hook
-// returns HTTP 307 → `https://<dev-instance>.clerk.accounts.dev/v1/client/
-// handshake?redirect_url=http://...` whenever the request looks like a
-// browser (HTML in `Accept`) and lacks a `__clerk_db_jwt` cookie. The
-// handshake's `redirect_url` is fixed at `http://`, so any HTTP client that
-// follows redirects (e.g. axios `maxRedirects: 10` in Uptime Kuma) ends up
-// trying to connect to port 80 of the host — manifesting as
-// `ECONNREFUSED <ip>:80` on monitors pointed at our health endpoints.
-//
-// The fix runs BEFORE the Clerk preHandler (Fastify lifecycle: onRequest →
-// preHandler) and rewrites `Accept` to `application/json` for known-public
-// paths. Clerk's `authenticateRequest` only triggers handshake when it sees
-// a browser `Accept`; with JSON it lets the request through without auth
-// state, and our public route handlers proceed normally.
-//
-// Production Clerk instances do not perform this handshake, so this guard
-// is defensive on dev keys and a no-op on prod keys.
-app.addHook('onRequest', (request, _reply, done) => {
-  if (isPublicApiPath(request.url)) {
-    request.headers.accept = 'application/json';
-  }
-  done();
-});
-
-await registerClerk(app);
+// ─── Auth (local username/password + self-issued JWT) ─────────────────────
+// Clerk was removed 2026-08-21 — with it went the dev-instance handshake
+// 307s and the Accept-header rewrite workaround (PR #85). Token issuance
+// lives in routes/auth.ts; verification in middleware/auth.ts requireAuth.
 
 // ─── Global Error Handler ─────────────────────────────────────────────────
 
@@ -339,6 +314,7 @@ await app.register(badgeRoutes, { prefix: '/api/badges' });
 await app.register(feesRoutes, { prefix: '/api/me/fees' });
 await app.register(glossaryRoutes, { prefix: '/api/glossary' });
 await app.register(simulateRoutes, { prefix: '/api/simulate' });
+await app.register(authRoutes, { prefix: '/api/auth' });
 
 // ─── OpenAPI / Swagger (Dyslexia audit F-001) ─────────────────────────────
 // Registers @fastify/swagger + swagger-ui when available; falls back to a

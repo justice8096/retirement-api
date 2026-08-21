@@ -32,7 +32,6 @@ const DEFAULT_LIMIT = 100; // unauthenticated (auth resolves after rate-limit in
 const EXEMPT_PATHS = new Set([
   '/api/health',
   '/api/billing/status',
-  '/api/webhooks/clerk',
   '/api/webhooks/stripe',
 ]);
 
