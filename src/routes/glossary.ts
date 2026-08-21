@@ -341,6 +341,30 @@ const GLOSSARY: GlossaryEntry[] = [
       'Under cliff rules (current for 2026 per Rev Proc 2025-25) the sliding scale runs 2.10% (at 100% FPL) up to 9.96% (at 400% FPL). Under enhanced rules (ARPA/IRA 2021–2025, expired) the scale was 0% (≤150% FPL) up to 8.5% flat above 400% FPL.',
     seeAlso: ['aca', 'subsidy_cliff', 'magi'],
   },
+  {
+    key: 'pet_cost_curve',
+    term: 'Pet Cost Curve',
+    aliases: ['pet costs by year', 'petCostByYear'],
+    plain:
+      'A year-by-year estimate of what your pets will cost, following each pet’s age: costs rise in senior years and stop at the end of the expected lifespan.',
+    example:
+      'A 8-year-old dog with a 12-year expected lifespan is modeled for 4 more years — the last 3 at higher senior-care rates — instead of pretending pet costs run forever.',
+    technical:
+      'Annual USD amounts (today’s dollars) per simulation year, built from household pets plus the location’s petCare/petDaycare/petGrooming monthly costs. Senior years (last quarter of expected lifespan) apply a 1.25× uplift. When enabled, the curve replaces the flat pet categories in the monthly cost baseline.',
+    seeAlso: ['dependent_cost_curve'],
+  },
+  {
+    key: 'dependent_cost_curve',
+    term: 'Dependent Cost Curve',
+    aliases: ['dependent costs by year', 'dependentCostByYear'],
+    plain:
+      'A year-by-year estimate of what your dependents cost: a child’s costs stop at the age you choose (usually 22); a supported adult’s costs continue for the whole plan.',
+    example:
+      'A 16-year-old supported until age 22 adds costs for the first 6 years of the plan and none after.',
+    technical:
+      'Annual USD amounts (today’s dollars) per simulation year: monthly cost per dependent × 12 for each dependent active that year. Children are active while age < the chosen support age; adult dependents are active for the whole horizon.',
+    seeAlso: ['pet_cost_curve'],
+  },
 ];
 
 export default async function glossaryRoutes(app: FastifyInstance): Promise<void> {
