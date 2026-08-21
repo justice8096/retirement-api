@@ -41,7 +41,7 @@ COPY src ./src
 # is reachable).
 COPY tsconfig.json package.json ./
 
-RUN npx tsc
+RUN npm run build
 
 # ─── Stage 4: Production image ────────────────────────────────────────────
 FROM node:26-alpine@sha256:7c6af15abe4e3de859690e7db171d0d711bf37d27528eddfe625b2fe89e097f8 AS runner

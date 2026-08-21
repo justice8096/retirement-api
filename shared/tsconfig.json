@@ -4,6 +4,7 @@
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "declaration": true,
+    "composite": true,
     "outDir": "engine",
     "rootDir": "engine",
     "strict": false

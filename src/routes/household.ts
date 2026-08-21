@@ -21,7 +21,7 @@ import { defaultCurrencyFor } from '../lib/locale.js';
 import {
   buildPetCostByYear, buildDependentCostByYear,
   PET_COST_CATEGORY_KEYS, DEFAULT_CHILD_SUPPORT_UNTIL_AGE, DEFAULT_DEPENDENT_MONTHLY_COST,
-} from '../lib/engine/household-costs.js';
+} from '#shared/engine/household-costs.js';
 
 const memberSchema = z.object({
   id: z.string().uuid().optional(),

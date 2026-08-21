@@ -1,0 +1,10 @@
+# shared/engine/ is compiled by `npm run engine:build` (tsc) from its .ts
+# sources into sibling .js/.d.ts files, and CI diffs that output against
+# what's committed to catch drift (see .github/workflows/ci.yml). tsc always
+# emits LF; on a Windows checkout with core.autocrlf enabled the *source*
+# .ts files can otherwise round-trip through CRLF, making every build show
+# EOL-only churn that isn't real drift. Force LF for all three so the CI
+# gate only fails on genuine content differences.
+shared/engine/*.ts text eol=lf
+shared/engine/*.js text eol=lf
+shared/engine/*.d.ts text eol=lf
