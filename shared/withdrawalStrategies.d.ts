@@ -140,6 +140,37 @@ export interface FloorCeilingParams {
 }
 
 /**
+ * Result from CAPE-Based (Big ERN) withdrawal strategy.
+ * Includes the unclamped raw rate and whether the floor/ceiling clamp applied.
+ */
+export interface CAPEResult extends WithdrawalResult {
+  amount: number;
+  effectiveRate: number;
+  /** Withdrawal rate before floor/ceiling clamping: (1/capeRatio) * capeMultiplier + fixedComponent */
+  rawRate: number;
+  /** Whether the raw rate was clamped to floorRate/ceilingRate */
+  clamped: boolean;
+}
+
+/**
+ * Parameters for CAPE-Based (Big ERN / Early Retirement Now) withdrawal strategy.
+ */
+export interface CAPEParams {
+  /** Current portfolio balance */
+  currentPortfolio: number;
+  /** Shiller CAPE (cyclically-adjusted P/E) ratio */
+  capeRatio: number;
+  /** Weight applied to 1/capeRatio (default 0.5) */
+  capeMultiplier?: number;
+  /** Constant added to the CAPE-derived rate as a decimal (default 0.015 = 1.5%) */
+  fixedComponent?: number;
+  /** Minimum withdrawal rate as a decimal (default 0.02 = 2%) */
+  floorRate?: number;
+  /** Maximum withdrawal rate as a decimal (default 0.06 = 6%) */
+  ceilingRate?: number;
+}
+
+/**
  * VPW divisors lookup table by age.
  * Maps age to life-expectancy-based divisor for portfolio division.
  */
@@ -225,10 +256,20 @@ export function calcBucketWithdrawal(params: BucketParams): BucketResult;
 export function calcFloorCeilingWithdrawal(params: FloorCeilingParams): FloorCeilingResult;
 
 /**
+ * CAPE-Based Withdrawal Strategy (Big ERN / Early Retirement Now)
+ * Uses the Shiller CAPE ratio to dynamically set the withdrawal rate:
+ * rate = (1 / capeRatio) * capeMultiplier + fixedComponent, clamped to [floorRate, ceilingRate].
+ *
+ * @param params - CAPE strategy parameters
+ * @returns CAPE withdrawal result with raw (unclamped) and effective (clamped) rates
+ */
+export function calcCAPEWithdrawal(params: CAPEParams): CAPEResult;
+
+/**
  * Strategy Dispatcher
  * Routes to the appropriate withdrawal strategy function based on strategy type.
  *
- * @param strategyType - Strategy name ('fixed-percentage', 'constant-percentage', 'guardrails', 'vpw', 'bucket', 'floor-ceiling')
+ * @param strategyType - Strategy name ('fixed-percentage', 'constant-percentage', 'guardrails', 'vpw', 'bucket', 'floor-ceiling', 'cape')
  * @param params - Parameters object specific to the chosen strategy
  * @returns Strategy-specific result object
  * @throws Error if strategyType is unknown
@@ -240,7 +281,8 @@ export function calcWithdrawal(
     | 'guardrails'
     | 'vpw'
     | 'bucket'
-    | 'floor-ceiling',
+    | 'floor-ceiling'
+    | 'cape',
   params:
     | {
         initialPortfolio: number;
@@ -254,10 +296,12 @@ export function calcWithdrawal(
     | { currentPortfolio: number; age: number; mortalityTable?: Record<number, number> }
     | BucketParams
     | FloorCeilingParams
+    | CAPEParams
 ):
   | FixedPercentageResult
   | ConstantPercentageResult
   | GuardrailsResult
   | VPWResult
   | BucketResult
-  | FloorCeilingResult;
+  | FloorCeilingResult
+  | CAPEResult;

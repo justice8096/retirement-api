@@ -321,6 +321,62 @@ export function calcFloorCeilingWithdrawal(params) {
 }
 
 /**
+ * CAPE-Based Withdrawal Strategy (Big ERN / Early Retirement Now)
+ * Uses the Shiller CAPE (Cyclically Adjusted Price-to-Earnings) ratio to dynamically set withdrawal rate.
+ * Formula: withdrawalRate = (1 / CAPE) * CAPEMultiplier + fixedComponent
+ *
+ * Ported from the retired React app's divergent copy of this package
+ * (`retirement-dashboard/shared/withdrawalStrategies.js`), which is where
+ * this function originated. Semantics preserved exactly (A4 parity port #10
+ * completeness).
+ *
+ * @param {{
+ *   currentPortfolio: number,
+ *   capeRatio: number,
+ *   capeMultiplier?: number,  // default 0.5
+ *   fixedComponent?: number,  // default 0.015 (1.5%)
+ *   floorRate?: number,       // default 0.02 (2%)
+ *   ceilingRate?: number      // default 0.06 (6%)
+ * }} params
+ * @returns {{ amount: number, effectiveRate: number, rawRate: number, clamped: boolean }}
+ */
+export function calcCAPEWithdrawal(params) {
+  const {
+    currentPortfolio,
+    capeRatio,
+    capeMultiplier = 0.5,
+    fixedComponent = 0.015,
+    floorRate = 0.02,
+    ceilingRate = 0.06,
+  } = params;
+
+  if (!currentPortfolio || currentPortfolio <= 0 || !capeRatio || capeRatio <= 0) {
+    return {
+      amount: 0,
+      effectiveRate: 0,
+      rawRate: 0,
+      clamped: false,
+    };
+  }
+
+  // Calculate raw withdrawal rate from CAPE formula
+  const rawRate = (1 / capeRatio) * capeMultiplier + fixedComponent;
+
+  // Clamp the rate between floor and ceiling
+  const clampedRate = Math.max(floorRate, Math.min(ceilingRate, rawRate));
+  const clamped = Math.abs(rawRate - clampedRate) > 0.00001; // floating point safe comparison
+
+  const amount = currentPortfolio * clampedRate;
+
+  return {
+    amount,
+    effectiveRate: clampedRate,
+    rawRate,
+    clamped,
+  };
+}
+
+/**
  * Strategy Dispatcher
  * Routes to the appropriate withdrawal strategy function based on strategy type.
  *
@@ -354,10 +410,13 @@ export function calcWithdrawal(strategyType, params) {
     case 'floor-ceiling':
       return calcFloorCeilingWithdrawal(params);
 
+    case 'cape':
+      return calcCAPEWithdrawal(params);
+
     default:
       throw new Error(
         `Unknown withdrawal strategy: ${strategyType}. ` +
-          `Valid strategies: fixed-percentage, constant-percentage, guardrails, vpw, bucket, floor-ceiling`
+          `Valid strategies: fixed-percentage, constant-percentage, guardrails, vpw, bucket, floor-ceiling, cape`
       );
   }
 }
