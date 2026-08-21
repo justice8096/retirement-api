@@ -17,7 +17,7 @@ Each stack choice is one line so you can skim.
 | Database | PostgreSQL 16 |
 | ORM | Prisma 7 |
 | Cache | Redis 7 |
-| Auth | Clerk (JWT) |
+| Auth | Local username/password → self-issued JWT (HS256, `AUTH_JWT_SECRET`) |
 | Billing | Stripe |
 | Encryption | AES-256-GCM for financial fields |
 
@@ -129,7 +129,9 @@ as `request.locale`. See `src/lib/locale.ts` for the supported tags.
 ## Security
 
 - Financial fields at rest: AES-256-GCM.
-- Authenticated routes: Clerk JWT.
+- Authenticated routes: self-issued JWT via `POST /api/auth/login` (scrypt
+  password hashes; accounts managed with `tools/manage-users.mjs` — no
+  registration endpoint).
 - Per-tier rate limiting: Redis-backed in production.
 - CORS: allowlist via `CORS_ORIGIN` (comma-separated).
 - Helmet headers.
@@ -140,6 +142,7 @@ as `request.locale`. See `src/lib/locale.ts` for the supported tags.
 
 | Prefix | Auth | Description |
 |--------|------|-------------|
+| `/api/auth` | None | Username/password login → JWT (`/login`, `/me`) |
 | `/api/health` | None | Liveness and readiness probes |
 | `/api/locations` | None | Public location data (138 locations) |
 | `/api/glossary` | None | Plain-language financial definitions |
