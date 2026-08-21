@@ -46,7 +46,11 @@ jobs:
 
           echo "=== Running migrations ==="
           docker compose build --no-cache migrate
-          docker compose run --rm migrate
+          # </dev/null is load-bearing: `compose run` is interactive by
+          # default and would swallow the remainder of this heredoc as the
+          # container's stdin — leaving the api/dashboard rebuilds below
+          # silently unexecuted while the job still reports success.
+          docker compose run --rm migrate </dev/null
 
           echo "=== Rebuilding API ==="
           docker compose build --no-cache api
