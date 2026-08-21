@@ -51,7 +51,7 @@ Roth Planner → `roth-screen`, and Withdrawal + Withdrawal Strategy →
 | LocalInfoTab | localinfo-screen | exists (spot-checked) | |
 | LocationMapTab | map-screen | exists (spot-checked) | |
 | ManageLocationsTab | *(none found)* | **missing** — React's admin location CRUD (`AdminPanel`, `LocationForm`, `BulkOperationsPanel`) drives `/api/admin/locations` (create/update/delete + `/history` version log + `/reindex`). `grep -rn "admin"` and `"customLocation"` over `retirement-dashboard-angular/src/app` and `api.service.ts` returned zero matches — the route isn't called from Angular at all. | **port** — the user is the sole maintainer of the 138+ location dataset (see recent commits like "Recalibrate statewide-anchored ACA records to local rating areas"). Without this screen, editing location data after the React app is archived means either a raw DB/API tool or reverting to the archived app just for data maintenance — worth porting before Phase C archives React. |
-| MedicareIRMAATab | medicare-irmaa-screen | exists — read in full; same 2026 IRMAA bracket table, editable `projectedMAGI`/`filingStatus`, same tier-lookup logic | |
+| MedicareIRMAATab | medicare-irmaa-screen | exists — read in full; same feature and same tier-lookup mechanics (editable `projectedMAGI`/`filingStatus`, bracket-indexed surcharge lookup), but the **data differs**: React's table (`MedicareIRMAATab.tsx:34-49`) uses stale 2025 figures mislabeled as 2026 — tier-1 threshold $106,000 (single), base Part B premium $185, tier-1 surcharges $74.0/$13.7. Angular's table (`lib/irmaa.ts:24-43`) has the actual 2026 CMS figures (finalized Nov 14, 2025) — threshold $109,000, base Part B $202.90, tier-1 surcharges $81.2/$14.5, with a source citation in the file comment. This is a point in Angular's favor, not a parity gap — no row/recommendation needed. | |
 | MedicineTab | medicine-screen | exists (spot-checked) | |
 | MonteCarloTab | montecarlo-screen | **partial** — see "Monte Carlo worker pattern" deep check below | **port** (see below) |
 | NeighborhoodsTab | neighborhoods-screen | **partial** — see "Neighborhoods map" deep check below | **port** (see below) |
@@ -123,6 +123,10 @@ Angular's `dyslexia.service.ts` / `dyscalculia.service.ts` plus `components/{acc
 **Verdict: exists — Angular meets or exceeds React's accessibility coverage.** No row/recommendation needed; this is not a porting gap. (Flagging for the record: the plan's CLAUDE.md pointer to `retirement-api/audits/*-2026-04-16.md` is stale/mis-scoped — worth a correction if that CLAUDE.md line gets touched again, but out of scope for this audit.)
 
 ---
+
+## Notes / concerns
+
+- **React's Medicare IRMAA data is stale and mislabeled.** `MedicareIRMAATab.tsx` labels its bracket table "2026 IRMAA brackets" but the figures ($106,000 tier-1 threshold, $185 base Part B, $74.0/$13.7 tier-1 surcharges) are the 2025 numbers — Angular's `lib/irmaa.ts` has the correct, sourced 2026 CMS figures ($109,000 / $202.90 / $81.2 / $14.5). This doesn't affect the parity verdict (both sides implement the same feature), but it's supporting evidence for retiring React sooner rather than later: it is currently serving the user a mislabeled, out-of-date Medicare premium estimate.
 
 ## Decisions needed
 
