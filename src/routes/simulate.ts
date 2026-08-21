@@ -1,16 +1,16 @@
 import { z } from 'zod';
 import type { FastifyInstance } from 'fastify';
 import { toValidationErrorPayload } from '../lib/validation.js';
-import { runMonteCarlo, mulberry32, type MonteCarloParams } from '../lib/engine/monte-carlo.js';
+import { runMonteCarlo, mulberry32, type MonteCarloParams } from '#shared/engine/monte-carlo.js';
 
 /**
  * POST /api/simulate — run the canonical Monte Carlo retirement engine
  * server-side and return success rate + ending-balance percentiles.
  *
- * This is the SAME engine the dashboard runs client-side (generated into
- * `src/lib/engine/` from the dashboard repo via `npm run engine:sync`), so
- * remote callers — notably the retirement MCP on a thin client — get
- * results identical to the app without reimplementing the kernel.
+ * This is the SAME engine the dashboard runs client-side, imported from the
+ * shared `shared/engine/` package (`#shared/engine/...`), so remote callers
+ * — notably the retirement MCP on a thin client — get results identical to
+ * the app without reimplementing the kernel.
  *
  * Public + stateless: no auth, no persistence. Inputs are capped (runs,
  * years) so a single call can't pin a CPU. Annual dollar figures at the

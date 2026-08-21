@@ -6,7 +6,7 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import Fastify, { type FastifyInstance } from 'fastify';
 import simulateRoutes from '../routes/simulate.js';
-import { runMonteCarlo, mulberry32 } from '../lib/engine/monte-carlo.js';
+import { runMonteCarlo, mulberry32 } from '#shared/engine/monte-carlo.js';
 
 describe('POST /api/simulate', () => {
   let app: FastifyInstance;

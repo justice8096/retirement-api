@@ -11,7 +11,6 @@
     "test:watch": "vitest",
     "test:shared": "npm run engine:build && cd shared && npx vitest run",
     "typecheck": "tsc --noEmit",
-    "engine:sync": "node tools/sync-engine.mjs",
     "engine:build": "tsc -p shared/tsconfig.json",
     "postinstall": "prisma generate --schema=prisma/schema.prisma",
     "db:migrate": "prisma migrate dev",
