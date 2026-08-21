@@ -16,10 +16,15 @@
     "isolatedModules": true,
     "noUncheckedIndexedAccess": true,
     "types": ["node"],
-    "paths": {
-      "@retirement/shared": ["./shared/index.js"],
-      "@retirement/shared/*": ["./shared/*"]
-    },
+    // "composite"+"references"/"disableSourceOfProjectReferenceRedirect" below
+    // are load-bearing, not optional polish: shared/engine/ ships its .ts
+    // sources beside the compiled .js/.d.ts, and under NodeNext resolution
+    // TypeScript prefers a sibling .ts source over its .d.ts when resolving
+    // a "#shared/engine/*.js" specifier. Without the project-reference
+    // redirect disabled, tsc pulls shared/engine/*.ts straight into this
+    // src-rooted program and fails with TS6059 ("not under rootDir"),
+    // confirmed empirically by removing these flags and re-running
+    // `npm run typecheck`. Do not remove without re-verifying that.
     "disableSourceOfProjectReferenceRedirect": true
   },
   "include": ["src/**/*.ts"],
