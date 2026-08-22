@@ -22,6 +22,7 @@ import {
   buildPetCostByYear, buildDependentCostByYear,
   PET_COST_CATEGORY_KEYS, DEFAULT_CHILD_SUPPORT_UNTIL_AGE, DEFAULT_DEPENDENT_MONTHLY_COST,
 } from '#shared/engine/household-costs.js';
+import { calcSSBenefit, calcSpousalBenefit } from '#shared/socialSecurity.js';
 
 const memberSchema = z.object({
   id: z.string().uuid().optional(),
@@ -183,6 +184,87 @@ export default async function householdRoutes(app: FastifyInstance): Promise<voi
         'assumptions.monthlyCostPerDependent': { encoding: 'amount', currency: 'USD', periodicity: 'month' },
       },
       _labels: getLabelsFor(['petCostByYear', 'dependentCostByYear', 'petMonthlyTotal']),
+    };
+  });
+
+  // GET /api/me/household/ss-benefits — server-computed own + spousal Social
+  // Security benefits from the members' SS profiles. Steady state, today's
+  // dollars: assumes both spouses have reached their claim ages; COLA and the
+  // trust-fund cut stay scenario-level knobs downstream. Spec:
+  // docs/superpowers/specs/2026-08-22-spousal-ss-benefits-design.md
+  app.get('/ss-benefits', async (request, reply) => {
+    const household = await prisma.householdProfile.findUnique({
+      where: { userId: request.userId },
+      include: { members: { orderBy: { sortOrder: 'asc' } } },
+    });
+    if (!household) return reply.code(404).send({ error: 'No household profile yet' });
+
+    const notes: string[] = [];
+    const adults = household.members
+      .filter((m) => m.role === 'primary' || m.role === 'spouse')
+      .map((m) => ({ ...m, ssPia: decryptField(m.ssPia) as number | null }));
+
+    // Absence of data is not an error: members without a PIA simply don't
+    // appear; a PIA without an FRA is skipped with a plain-language note.
+    const qualifying = adults.filter((m) => (m.ssPia ?? 0) > 0 && m.ssFra != null);
+    for (const m of adults.filter((m) => (m.ssPia ?? 0) > 0 && m.ssFra == null)) {
+      notes.push(`${m.name ?? 'One member'} has a basic Social Security amount but no Full Retirement Age, so their benefit is not included yet. Add their Full Retirement Age to count it.`);
+    }
+
+    const fmt = new Intl.NumberFormat(request.locale ?? 'en-US', {
+      style: 'currency', currency: 'USD', maximumFractionDigits: 0,
+    });
+
+    const members = qualifying.map((own) => {
+      const claimYears = own.ssClaimAge ?? own.ssFra!;
+      const claimMonths = own.ssClaimAgeMonths ?? 0;
+      const claimAge = claimYears + claimMonths / 12;
+      const other = qualifying.find((m) => m.id !== own.id);
+      const ownMonthly = calcSSBenefit(own.ssPia!, own.ssFra!, claimAge);
+      const spousalTopUpMonthly = qualifying.length === 2 && other
+        ? calcSpousalBenefit(other.ssPia!, own.ssPia!, own.ssFra!, claimAge)
+        : 0;
+      return {
+        id: own.id,
+        name: own.name,
+        role: own.role,
+        ownMonthly,
+        spousalTopUpMonthly,
+        totalMonthly: ownMonthly + spousalTopUpMonthly,
+        claimAge: { years: claimYears, months: claimMonths },
+      };
+    });
+
+    const totalMonthly = members.reduce((sum, m) => sum + m.totalMonthly, 0);
+    const totalAnnual = totalMonthly * 12;
+
+    let plainSummary: string;
+    if (members.length === 0) {
+      plainSummary = 'Add each member’s basic Social Security amount (PIA) and Full Retirement Age to see your household’s expected benefit.';
+    } else {
+      plainSummary = `Together your household expects ${fmt.format(totalMonthly)} per month (${fmt.format(totalAnnual)} per year) from Social Security.`;
+      const topped = members.find((m) => m.spousalTopUpMonthly > 0);
+      if (topped) {
+        const other = members.find((m) => m.id !== topped.id);
+        plainSummary += ` ${topped.name ?? 'The lower earner'} gets a ${fmt.format(topped.spousalTopUpMonthly)} monthly top-up because half of ${other?.name ?? 'the higher earner'}’s benefit is larger than their own.`;
+      }
+      notes.push('Amounts are in today’s dollars and assume both of you have started collecting.');
+      notes.push('The top-up compares each person’s basic amount (PIA) before any early or late claiming adjustment.');
+    }
+
+    reply.header('Cache-Control', 'private, no-store');
+    return {
+      members,
+      household: { totalMonthly, totalAnnual },
+      plainSummary,
+      notes,
+      _units: {
+        'members[].ownMonthly': { encoding: 'amount', currency: 'USD', periodicity: 'month' },
+        'members[].spousalTopUpMonthly': { encoding: 'amount', currency: 'USD', periodicity: 'month' },
+        'members[].totalMonthly': { encoding: 'amount', currency: 'USD', periodicity: 'month' },
+        'household.totalMonthly': { encoding: 'amount', currency: 'USD', periodicity: 'month' },
+        'household.totalAnnual': { encoding: 'amount', currency: 'USD', periodicity: 'year' },
+      },
     };
   });
 

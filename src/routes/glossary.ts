@@ -377,6 +377,54 @@ const GLOSSARY: GlossaryEntry[] = [
       'Annual USD amounts (today’s dollars) per simulation year: monthly cost per dependent × 12 for each dependent active that year. Children are active while age < the chosen support age; adult dependents are active for the whole horizon.',
     seeAlso: ['pet_cost_curve'],
   },
+  {
+    key: 'pia',
+    term: 'Primary Insurance Amount (PIA)',
+    aliases: ['PIA', 'primary insurance amount', 'basic Social Security amount'],
+    plain:
+      'Your basic monthly Social Security amount — what you would get by starting your benefit exactly at your Full Retirement Age.',
+    example:
+      'If your PIA is $2,400, you get $2,400 per month by claiming at your Full Retirement Age. Claiming earlier pays less each month; claiming later pays more.',
+    technical:
+      'The monthly benefit computed from the worker’s 35 highest indexed earning years via the AIME bend-point formula, before any adjustment for claiming age. Spousal benefits compare PIAs, not age-adjusted benefits.',
+    seeAlso: ['full_retirement_age', 'claim_age', 'spousal_benefit'],
+  },
+  {
+    key: 'full_retirement_age',
+    term: 'Full Retirement Age',
+    aliases: ['FRA', 'normal retirement age'],
+    plain:
+      'The age when you qualify for your full Social Security amount with no reduction — 67 for most people retiring now.',
+    example:
+      'With a Full Retirement Age of 67, claiming at 62 cuts your check by 30%; waiting until 70 raises it by 24%.',
+    technical:
+      'SSA normal retirement age: 66 + 2 months per birth year from 1955, reaching 67 for births in 1960 or later. Early-claiming reductions and delayed-retirement credits are both measured from this age.',
+    seeAlso: ['pia', 'claim_age', 'spousal_benefit'],
+  },
+  {
+    key: 'claim_age',
+    term: 'Social Security Claim Age',
+    aliases: ['claiming age', 'SS claim age', 'start age'],
+    plain:
+      'The age you choose to start your Social Security checks — any month from 62 to 70. Starting earlier means smaller checks; later means bigger ones.',
+    example:
+      'A $2,000 basic amount becomes about $1,400 per month if you start at 62, or about $2,480 per month if you wait until 70.',
+    technical:
+      'Claim dates are reckoned in months. Before FRA: minus 5/9 of 1% per month for the first 36 months, then 5/12 of 1% per month. After FRA: plus 2/3 of 1% per month (8% per year) up to age 70.',
+    seeAlso: ['pia', 'full_retirement_age', 'spousal_benefit'],
+  },
+  {
+    key: 'spousal_benefit',
+    term: 'Spousal Benefit',
+    aliases: ['spousal top-up', 'spouse benefit', 'spousal portion'],
+    plain:
+      'A top-up for the lower-earning spouse: together with their own benefit, they can get up to half of the higher earner’s basic amount.',
+    example:
+      'Pat’s basic amount is $2,400 and Sam’s is $760. Half of Pat’s is $1,200, so Sam gets a $440 monthly top-up — $760 own plus $440 spousal. Claiming the top-up before Sam’s Full Retirement Age would shrink it.',
+    technical:
+      'The excess of 50% of the other spouse’s PIA over the claimant’s own PIA, payable once both have filed (deemed filing applies for post-1954 births — filing for one benefit files for both). Reduced by 25/36 of 1% per month for the first 36 months before the claimant’s FRA, then 5/12 of 1% per month.',
+    seeAlso: ['pia', 'full_retirement_age', 'claim_age'],
+  },
 ];
 
 export default async function glossaryRoutes(app: FastifyInstance): Promise<void> {

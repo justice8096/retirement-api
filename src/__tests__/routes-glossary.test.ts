@@ -47,6 +47,24 @@ describe('Glossary routes', () => {
     expect(Array.isArray(body.seeAlso)).toBe(true);
   });
 
+  it('defines the Social Security claiming terms (spousal SS spec)', async () => {
+    for (const [key, alias] of [
+      ['pia', 'PIA'],
+      ['full_retirement_age', 'FRA'],
+      ['spousal_benefit', 'spousal top-up'],
+      ['claim_age', 'claiming age'],
+    ] as const) {
+      const res = await app.inject({ method: 'GET', url: `/api/glossary?key=${key}` });
+      const body = JSON.parse(res.payload);
+      expect(res.statusCode).toBe(200);
+      expect(body.key).toBe(key);
+      expect(body.aliases).toContain(alias);
+      expect(body.plain).toBeTruthy();
+      expect(body.example).toBeTruthy();
+      expect(body.technical).toBeTruthy();
+    }
+  });
+
   it('404s with a plain-language envelope for unknown keys', async () => {
     const res = await app.inject({ method: 'GET', url: '/api/glossary?key=nope' });
     const body = JSON.parse(res.payload);
