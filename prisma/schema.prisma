@@ -242,7 +242,7 @@ model UserFinancialSettings {
 model UserWithdrawalStrategy {
   id                String   @id @default(uuid())
   userId            String   @unique @map("user_id")
-  strategyType      String   @default("fixed") @map("strategy_type") // fixed | constant | guardrails | vpw | bucket | floor-ceiling
+  strategyType      String   @default("fixed") @map("strategy_type") // fixed | constant | guardrails | vpw | bucket | floor-ceiling | cape
 
   // Fixed / Constant Percentage
   withdrawalRate    Decimal  @default(0.04) @map("withdrawal_rate")
@@ -270,6 +270,11 @@ model UserWithdrawalStrategy {
   rothConversionEnabled Boolean @default(false) @map("roth_conversion_enabled")
   rothConversionAmount  Decimal? @map("roth_conversion_amount") // Annual target
   rothConversionEndAge  Int?    @map("roth_conversion_end_age")
+
+  // CAPE-Based (Big ERN) — reuses floorRate/ceilingRate above for the
+  // strategy's own clamp range.
+  capeMultiplier      Decimal? @map("cape_multiplier")       // Weight on 1/CAPE, e.g. 0.5
+  capeFixedComponent  Decimal? @map("cape_fixed_component")  // Added constant, e.g. 0.015 (1.5%)
 
   updatedAt         DateTime @updatedAt @map("updated_at")
 
