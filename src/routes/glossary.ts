@@ -176,7 +176,7 @@ const GLOSSARY: GlossaryEntry[] = [
   {
     key: 'cape',
     term: 'CAPE-Based Withdrawal',
-    aliases: ['Big ERN', 'valuation-based withdrawal'],
+    aliases: ['CAPE', 'Shiller PE', 'Big ERN', 'valuation-based withdrawal'],
     plain:
       'You spend more when stocks look cheap and less when they look expensive, based on a long-run stock-market valuation measure.',
     example:

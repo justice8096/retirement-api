@@ -94,6 +94,8 @@ const FIELD_LABELS: Record<string, string> = {
   essentialSpending: 'Essential yearly spending',
   discretionaryBudget: 'Discretionary yearly spending',
   maxDiscretionaryRate: 'Maximum discretionary rate',
+  capeMultiplier: 'CAPE multiplier',
+  capeFixedComponent: 'CAPE fixed component',
   spendingModel: 'Spending model',
   declineRate: 'Spending decline rate',
   rothConversionEnabled: 'Roth conversions on',

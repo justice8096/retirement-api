@@ -166,26 +166,34 @@ describe('Withdrawal strategy routes', () => {
       expect(body._units.capeFixedComponent.encoding).toBe('fraction');
     });
 
-    it('PUT rejects capeMultiplier out of range', async () => {
+    it('PUT rejects capeMultiplier out of range with a plain-language fieldLabel', async () => {
       const res = await app.inject({
         method: 'PUT',
         url: '/api/me/withdrawal',
         payload: { strategyType: 'cape', capeMultiplier: 5 },
         headers: { 'content-type': 'application/json' },
       });
+      const body = JSON.parse(res.payload);
 
       expect(res.statusCode).toBe(400);
+      // FIELD_LABELS convention (validation.ts): every schema field ships a
+      // hand-written label, not the auto title-case fallback ("Cape Multiplier").
+      const issue = body.details.find((d: { field: string }) => d.field === 'capeMultiplier');
+      expect(issue.fieldLabel).toBe('CAPE multiplier');
     });
 
-    it('PUT rejects negative capeFixedComponent', async () => {
+    it('PUT rejects negative capeFixedComponent with a plain-language fieldLabel', async () => {
       const res = await app.inject({
         method: 'PUT',
         url: '/api/me/withdrawal',
         payload: { strategyType: 'cape', capeFixedComponent: -0.01 },
         headers: { 'content-type': 'application/json' },
       });
+      const body = JSON.parse(res.payload);
 
       expect(res.statusCode).toBe(400);
+      const issue = body.details.find((d: { field: string }) => d.field === 'capeFixedComponent');
+      expect(issue.fieldLabel).toBe('CAPE fixed component');
     });
 
     it('PUT accepts null capeMultiplier/capeFixedComponent (fall back to shared-lib defaults)', async () => {
