@@ -16,3 +16,6 @@ export type { FormatOpts, PctOpts } from './formatting';
 
 export { CURRENT_YEAR, COLORS, CAT_COLORS, PROJ_CAT_LABELS, COST_CATEGORIES, TAB_CONFIG } from './constants';
 export type { CostCategoryDef, TabConfigEntry } from './constants';
+
+export { calcFixedPercentageWithdrawal, calcConstantPercentageWithdrawal, calcGuardrailsWithdrawal, calcVPWWithdrawal, calcBucketWithdrawal, calcFloorCeilingWithdrawal, calcCAPEWithdrawal, calcWithdrawal, VPW_DIVISORS } from './withdrawalStrategies';
+export type { WithdrawalResult, FixedPercentageResult, ConstantPercentageResult, GuardrailsResult, GuardrailsParams, VPWResult, Bucket, BucketResult, BucketParams, FloorCeilingResult, FloorCeilingParams, CAPEResult, CAPEParams } from './withdrawalStrategies';
