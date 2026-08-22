@@ -143,6 +143,52 @@ describe('Health routes', () => {
       expect(body.checks.redis.status).toBe('info');
     });
 
+    describe('Redis check (REDIS_URL configured)', () => {
+      afterEach(() => {
+        delete process.env.REDIS_URL;
+      });
+
+      it('reports ok when the decorated Redis client answers ping', async () => {
+        prisma.$queryRaw.mockResolvedValue([{ result: 1 }]);
+        process.env.REDIS_URL = 'redis://localhost:6379';
+        app.decorate('redisClient', {
+          ping: vi.fn().mockResolvedValue('PONG'),
+          quit: vi.fn().mockResolvedValue(undefined),
+        });
+
+        const res = await app.inject({ method: 'GET', url: '/api/health' });
+        expect(res.statusCode).toBe(200);
+        const body = JSON.parse(res.payload);
+        expect(body.checks.redis.status).toBe('ok');
+      });
+
+      it('reports warning when no Redis client connected (in-memory fallback)', async () => {
+        prisma.$queryRaw.mockResolvedValue([{ result: 1 }]);
+        process.env.REDIS_URL = 'redis://localhost:6379';
+        // No redisClient decoration — boot fell back to in-memory.
+
+        const res = await app.inject({ method: 'GET', url: '/api/health' });
+        expect(res.statusCode).toBe(200);
+        const body = JSON.parse(res.payload);
+        expect(body.checks.redis.status).toBe('warning');
+      });
+
+      it('reports error and degrades when the Redis client ping fails', async () => {
+        prisma.$queryRaw.mockResolvedValue([{ result: 1 }]);
+        process.env.REDIS_URL = 'redis://localhost:6379';
+        app.decorate('redisClient', {
+          ping: vi.fn().mockRejectedValue(new Error('Connection lost')),
+          quit: vi.fn().mockResolvedValue(undefined),
+        });
+
+        const res = await app.inject({ method: 'GET', url: '/api/health' });
+        expect(res.statusCode).toBe(503);
+        const body = JSON.parse(res.payload);
+        expect(body.status).toBe('degraded');
+        expect(body.checks.redis.status).toBe('error');
+      });
+    });
+
     it('includes memory stats for admin users', async () => {
       // Memory stats are admin-only (info disclosure hardening).
       prisma.$queryRaw.mockResolvedValue([{ result: 1 }]);

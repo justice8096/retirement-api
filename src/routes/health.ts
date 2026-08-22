@@ -59,16 +59,17 @@ export default async function healthRoutes(app: FastifyInstance): Promise<void> 
       health.status = 'degraded';
     }
 
-    // Redis connectivity (if configured)
+    // Redis connectivity (if configured). The server decorates the actual
+    // ioredis client used by rate limiting as `app.redisClient`; no client
+    // decorated means boot fell back to the in-memory store.
     if (process.env.REDIS_URL) {
       try {
-        const rateLimitStore = (app as unknown as { rateLimit?: { store?: { client?: { ping: () => Promise<string> } } } }).rateLimit;
-        const redisClient = rateLimitStore?.store?.client;
-        if (redisClient && typeof redisClient.ping === 'function') {
+        const redisClient = app.redisClient;
+        if (redisClient) {
           await redisClient.ping();
           health.checks.redis = { status: 'ok' };
         } else {
-          health.checks.redis = { status: 'warning', message: 'Redis configured but store not accessible' };
+          health.checks.redis = { status: 'warning', message: 'Redis configured but not connected (using in-memory rate limiting)' };
         }
       } catch {
         health.checks.redis = { status: 'error', message: 'Redis unreachable' };

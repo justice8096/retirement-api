@@ -1,6 +1,12 @@
 import type { User } from '@prisma/client';
 
 declare module 'fastify' {
+  interface FastifyInstance {
+    /** ioredis client backing rate limiting, decorated at boot when REDIS_URL
+     *  connects. Absent (undefined) when using the in-memory fallback. */
+    redisClient?: { ping: () => Promise<string>; quit: () => Promise<void> };
+  }
+
   interface FastifyRequest {
     userId: string;
     user: User;
