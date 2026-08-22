@@ -19,3 +19,9 @@ export type { CostCategoryDef, TabConfigEntry } from './constants';
 
 export { calcFixedPercentageWithdrawal, calcConstantPercentageWithdrawal, calcGuardrailsWithdrawal, calcVPWWithdrawal, calcBucketWithdrawal, calcFloorCeilingWithdrawal, calcCAPEWithdrawal, calcWithdrawal, VPW_DIVISORS } from './withdrawalStrategies';
 export type { WithdrawalResult, FixedPercentageResult, ConstantPercentageResult, GuardrailsResult, GuardrailsParams, VPWResult, Bucket, BucketResult, BucketParams, FloorCeilingResult, FloorCeilingParams, CAPEResult, CAPEParams } from './withdrawalStrategies';
+
+export { calcFIRENumber, calcFIREProgress, calcCoastFIRE, calcBaristaFIRE, calcTimeToFIRE, calcFIREVariants, calc72tSEPP } from './fire';
+export type { FIREProgress, CoastFIREResult, CoastFIREParams, BaristaFIREResult, BaristaFIREParams, TimeToFIREResult, TimeToFIREParams, FIREVariant, FIREVariantsResult, SEPP72tResult } from './fire';
+
+export { calcSpendingSmile, calcDecliningSpending, calcEssentialDiscretionary, applySpendingModel } from './spendingModels';
+export type { Phase, ModelType, CategoryClassification, SpendingSmileResult, DecliningSpendingResult, EssentialDiscretionaryResult, ApplySpendingModelParams } from './spendingModels';
