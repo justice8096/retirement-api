@@ -1233,5 +1233,95 @@
         }
       ]
     }
+  },
+  "visionDental": {
+    "monthlyBudget": {
+      "min": 15,
+      "typical": 30,
+      "max": 60
+    },
+    "vision": {
+      "eyeExam": {
+        "withInsurance": 0,
+        "withoutInsurance": 45,
+        "notes": "Comprehensive exam $25-60 at ópticas and ophthalmology clinics; Hospital Punta Pacífica (JCI, Johns Hopkins affiliate) for medical eye care. Jubilado/Pensionado: 15% off eye exams (Law 6 of 1987). Ópticas often include a basic exam free with glasses purchase."
+      },
+      "glasses": {
+        "basic": 99,
+        "progressive": 260,
+        "contacts12mo": 200,
+        "notes": "Complete basic pair from ~$99 at Óptica Sosa / Óptica López branches; designer frames and progressives at Multiplaza run US-like prices."
+      },
+      "insurance": {
+        "monthlyPremium": 0,
+        "coverage": "No standalone vision insurance in Panama; some private health plans (ASSA, Cigna international) include an annual eye exam or small optical benefit",
+        "notes": "Most residents pay cash for vision care — prices are low enough that insurance rarely pays off."
+      }
+    },
+    "dental": {
+      "cleaning": {
+        "withInsurance": 15,
+        "withoutInsurance": 45,
+        "notes": "Jubilado discount 15% applies to the cash price."
+      },
+      "filling": {
+        "withInsurance": 25,
+        "withoutInsurance": 55,
+        "notes": "Composite filling, cash price."
+      },
+      "crown": {
+        "withInsurance": 330,
+        "withoutInsurance": 550,
+        "notes": "Wide choice of English-speaking dentists; Panama City is a dental-tourism hub (crowns $500-800, implants $1,500-2,100)."
+      },
+      "insurance": {
+        "monthlyPremium": 25,
+        "coverage": "Dental rider on a private health plan (ASSA, MAPFRE, Vivir Seguros): typically 2 cleanings/yr plus 40-70% off treatments",
+        "notes": "Many expats skip dental insurance — cash prices are 50-70% below US and the jubilado 15% discount applies (Law 6 of 1987)."
+      }
+    },
+    "annualEstimate": {
+      "withInsurance": {
+        "premiums": 300,
+        "outOfPocket": 98,
+        "total": 398,
+        "monthlyEquiv": 33
+      },
+      "withoutInsurance": {
+        "outOfPocket": 226,
+        "monthlyEquiv": 19
+      }
+    },
+    "_sources": {
+      "authoredAt": "2026-08-22",
+      "note": "USD pricing authored from live sources for the Panama region (replaces the EUR italy-puglia starter template where one existed).",
+      "links": [
+        {
+          "title": "Numbeo — Cost of Living in Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City",
+          "accessed": "2026-08-22"
+        },
+        {
+          "title": "Viva Tropical — Dental Care in Panama for Expats",
+          "url": "https://vivatropical.com/panama/dental-care-in-panama/",
+          "accessed": "2026-08-22"
+        },
+        {
+          "title": "Expat Focus — Panama Eye Care",
+          "url": "https://www.expatfocus.com/panama/guide/panama-eye-care",
+          "accessed": "2026-08-22"
+        },
+        {
+          "title": "Mahogany Panama — Vision Care in Panama",
+          "url": "https://mahoganypanama.com/blog/vision-care-in-panama-where-to-get-glasses-or-contact-lenses/",
+          "accessed": "2026-08-22"
+        },
+        {
+          "title": "Medical Tourism Packages — Dental costs in Panama",
+          "url": "https://www.medicaltourismpackages.com/dental-tourism-in-panama/",
+          "accessed": "2026-08-22"
+        }
+      ]
+    }
   }
 }

@@ -222,6 +222,52 @@
             "unit": "lb/week",
             "forWhom": "dog",
             "notes": "Home-cooked dog diet essential"
+          },
+          {
+            "name": "Beans / Lentils",
+            "monthlyCost": 3,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "grains",
+        "name": "Grains & Starches",
+        "items": [
+          {
+            "name": "Rice (brown/white)",
+            "monthlyCost": 6.75,
+            "quantity": 5,
+            "unit": "lbs/month",
+            "forWhom": "shared",
+            "notes": "Price-controlled staple; dog diet carb source"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 7,
+            "quantity": 2,
+            "unit": "loaves/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 5.5,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Oats / Cereal",
+            "monthlyCost": 6.5,
+            "quantity": 1,
+            "unit": "container/week",
+            "forWhom": "adults",
+            "notes": "Berard stocks some imports; wider choice in David"
           }
         ]
       },
@@ -268,22 +314,6 @@
         "name": "Pantry Staples",
         "items": [
           {
-            "name": "Rice / Pasta / Beans",
-            "monthlyCost": 10,
-            "quantity": 1,
-            "unit": "monthly stock",
-            "forWhom": "shared",
-            "notes": "Staples very affordable locally"
-          },
-          {
-            "name": "Bread / Tortillas",
-            "monthlyCost": 7,
-            "quantity": 1,
-            "unit": "weekly",
-            "forWhom": "adults",
-            "notes": ""
-          },
-          {
             "name": "Canned Goods / Sauces",
             "monthlyCost": 7,
             "quantity": 1,
@@ -297,14 +327,6 @@
             "quantity": 1,
             "unit": "monthly",
             "forWhom": "shared",
-            "notes": ""
-          },
-          {
-            "name": "Snacks / Crackers",
-            "monthlyCost": 6,
-            "quantity": 1,
-            "unit": "weekly",
-            "forWhom": "adults",
             "notes": ""
           }
         ]
@@ -348,6 +370,104 @@
         ]
       },
       {
+        "id": "snacks",
+        "name": "Snacks & Treats",
+        "items": [
+          {
+            "name": "Nuts & Trail Mix",
+            "monthlyCost": 10.75,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": "Supermercado Berard in Volcán; David 1.25 hr for PriceSmart"
+          },
+          {
+            "name": "Crackers / Chips",
+            "monthlyCost": 6,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Dark Chocolate",
+            "monthlyCost": 5.75,
+            "quantity": 4,
+            "unit": "bars/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "frozen",
+        "name": "Frozen Foods",
+        "items": [
+          {
+            "name": "Frozen Vegetables",
+            "monthlyCost": 7.75,
+            "quantity": 4,
+            "unit": "bags/month",
+            "forWhom": "shared",
+            "notes": "Backup for dog food prep. Berard carries basics; David runs for bulk frozen"
+          },
+          {
+            "name": "Frozen Fruit (smoothies)",
+            "monthlyCost": 6.5,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Frozen Meals (convenience)",
+            "monthlyCost": 9.75,
+            "quantity": 4,
+            "unit": "meals/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "supplements",
+        "name": "Pet Supplements & Health",
+        "items": [
+          {
+            "name": "Joint Supplement (glucosamine)",
+            "monthlyCost": 21.5,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Essential for Bernese — hip/joint health"
+          },
+          {
+            "name": "Fish Oil (omega-3)",
+            "monthlyCost": 10.75,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Coat & skin health. PriceSmart David runs or Farmacia Arrocha David"
+          },
+          {
+            "name": "Multivitamin / Mineral Mix",
+            "monthlyCost": 14.25,
+            "quantity": 1,
+            "unit": "container/month",
+            "forWhom": "dog",
+            "notes": "Balance home-cooked diet"
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 5,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "dog",
+            "notes": "Training & dental chews"
+          }
+        ]
+      },
+      {
         "id": "pet",
         "name": "Pet Food & Supplements",
         "items": [
@@ -358,26 +478,11 @@
             "unit": "lbs/month",
             "forWhom": "dog",
             "notes": "Imported premium brands cost more; local brands available"
-          },
-          {
-            "name": "Dog Supplements (glucosamine, fish oil)",
-            "monthlyCost": 10,
-            "quantity": 1,
-            "unit": "monthly",
-            "forWhom": "dog",
-            "notes": ""
-          },
-          {
-            "name": "Dog Treats",
-            "monthlyCost": 5,
-            "quantity": 1,
-            "unit": "monthly",
-            "forWhom": "dog",
-            "notes": ""
           }
         ]
       }
-    ]
+    ],
+    "monthlyTotal": 353
   },
   "housing": {
     "propertyType": "2-bedroom house/apartment",
@@ -726,67 +831,92 @@
   },
   "visionDental": {
     "monthlyBudget": {
-      "min": 40,
-      "typical": 70,
-      "max": 120
+      "min": 10,
+      "typical": 22,
+      "max": 48
     },
     "vision": {
       "eyeExam": {
         "withInsurance": 0,
-        "withoutInsurance": 34,
-        "notes": "Visita oculistica ~30 EUR. SSN (public health) covers ophthalmologist with GP referral. Private ~30-50 EUR."
+        "withoutInsurance": 30,
+        "notes": "Basic vision checks locally; ophthalmology in David (1.25 hr) at Hospital Chiriquí / Mae Lewis. Jubilado/Pensionado: 15% off eye exams (Law 6 of 1987). Ópticas often include a basic exam free with glasses purchase."
       },
       "glasses": {
-        "basic": 90,
-        "progressive": 200,
-        "contacts12mo": 170,
-        "notes": "Basic frames+lenses ~80 EUR at chains like GrandVision, Salmoiraghi. Progressive ~180 EUR. Not covered by SSN."
+        "basic": 75,
+        "progressive": 190,
+        "contacts12mo": 160,
+        "notes": "Buy in David — basic complete pair $60-80 at Óptica Sosa / Óptica López."
       },
       "insurance": {
         "monthlyPremium": 0,
-        "coverage": "SSN covers ophthalmology referrals; glasses/contacts not covered",
-        "notes": "No standalone vision insurance common. Private health (Unisalute, Generali) may include vision benefits."
+        "coverage": "No standalone vision insurance in Panama; some private health plans (ASSA, Cigna international) include an annual eye exam or small optical benefit",
+        "notes": "Most residents pay cash for vision care — prices are low enough that insurance rarely pays off."
       }
     },
     "dental": {
       "cleaning": {
-        "withInsurance": 10,
-        "withoutInsurance": 57,
-        "notes": "Pulizia dentale ~50 EUR. Very limited public dental for adults."
+        "withInsurance": 12,
+        "withoutInsurance": 38,
+        "notes": "Jubilado discount 15% applies to the cash price."
       },
       "filling": {
-        "withInsurance": 34,
-        "withoutInsurance": 80,
-        "notes": "Otturazione composita ~70 EUR. Private dental is standard; public waitlists are long."
+        "withInsurance": 20,
+        "withoutInsurance": 48,
+        "notes": "Composite filling, cash price."
       },
       "crown": {
-        "withInsurance": 285,
-        "withoutInsurance": 455,
-        "notes": "Corona in ceramica ~400 EUR. Dental funds (fondi sanitari) through employers reduce costs."
+        "withInsurance": 280,
+        "withoutInsurance": 420,
+        "notes": "Basic dental in Volcán town; David clinics (Clínica Dental Chiriquí, Periodent) for crowns and specialty work."
       },
       "insurance": {
-        "monthlyPremium": 17,
-        "coverage": "Private dental plan or fondo sanitario, discounted cleanings and treatments",
-        "notes": "Dental-only plans ~15 EUR/mo (DentaVox, Unisalute Dental). Free cleanings, 30-50% off treatments. Fondi sanitari via CCNL employment contracts common."
+        "monthlyPremium": 18,
+        "coverage": "Dental rider on a private health plan (ASSA, MAPFRE, Vivir Seguros): typically 2 cleanings/yr plus 40-70% off treatments",
+        "notes": "Many expats skip dental insurance — cash prices are 50-70% below US and the jubilado 15% discount applies (Law 6 of 1987)."
       }
     },
     "annualEstimate": {
       "withInsurance": {
-        "premiums": 204,
-        "outOfPocket": 160,
-        "total": 364,
-        "monthlyEquiv": 30
+        "premiums": 216,
+        "outOfPocket": 77,
+        "total": 293,
+        "monthlyEquiv": 24
       },
       "withoutInsurance": {
-        "outOfPocket": 400,
-        "monthlyEquiv": 33
+        "outOfPocket": 180,
+        "monthlyEquiv": 15
       }
     },
-    "_seedOrigin": {
-      "kind": "starter-template",
-      "from": "italy-puglia",
-      "generatedAt": "2026-04-23",
-      "note": "Template-derived section — prices are EUR-denominated from Puglia, Italy. Needs per-location currency + cost-of-living adaptation."
+    "_sources": {
+      "authoredAt": "2026-08-22",
+      "note": "USD pricing authored from live sources for the Panama region (replaces the EUR italy-puglia starter template where one existed).",
+      "links": [
+        {
+          "title": "Numbeo — Cost of Living in Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City",
+          "accessed": "2026-08-22"
+        },
+        {
+          "title": "Viva Tropical — Dental Care in Panama for Expats",
+          "url": "https://vivatropical.com/panama/dental-care-in-panama/",
+          "accessed": "2026-08-22"
+        },
+        {
+          "title": "Expat Focus — Panama Eye Care",
+          "url": "https://www.expatfocus.com/panama/guide/panama-eye-care",
+          "accessed": "2026-08-22"
+        },
+        {
+          "title": "Mahogany Panama — Vision Care in Panama",
+          "url": "https://mahoganypanama.com/blog/vision-care-in-panama-where-to-get-glasses-or-contact-lenses/",
+          "accessed": "2026-08-22"
+        },
+        {
+          "title": "Medical Tourism Packages — Dental costs in Panama",
+          "url": "https://www.medicaltourismpackages.com/dental-tourism-in-panama/",
+          "accessed": "2026-08-22"
+        }
+      ]
     }
   },
   "entertainment": {

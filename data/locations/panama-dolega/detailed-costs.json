@@ -1,0 +1,895 @@
+{
+  "housing": {
+    "propertyType": "2-3 bedroom house",
+    "monthlyBudget": {
+      "min": 350,
+      "typical": 525,
+      "max": 700
+    },
+    "breakdown": {
+      "baseRent": 525,
+      "condoFees": 0,
+      "deposit": "525 (1 month typical)",
+      "rentersInsurance": 0,
+      "localTaxesFees": 0,
+      "total": 525,
+      "notes": "No rental tax in Panama. Mostly standalone houses — condo fees are rare in Dolega."
+    },
+    "taxNotes": "No rental income tax for tenants. No VAT/ITBMS on residential rent. Property tax exemptions for new construction (up to 20 years).",
+    "leaseTerms": "12-month lease standard. Security deposit 1 month rent. Smaller rental market than Boquete — many finds come through word of mouth and Encuentra24.",
+    "marketNotes": "Dolega rents run 30-50% below Boquete for comparable houses. Potrerillos Arriba (10 min uphill) adds elevation and views at similar prices.",
+    "sources": [
+      {
+        "name": "Encuentra24 Panama",
+        "url": "https://www.encuentra24.com/panama"
+      },
+      {
+        "name": "Compreoalquile",
+        "url": "https://www.compreoalquile.com/"
+      }
+    ]
+  },
+  "entertainment": {
+    "monthlyBudget": {
+      "min": 220,
+      "typical": 290,
+      "max": 390
+    },
+    "categories": [
+      {
+        "name": "Dining Out",
+        "monthlyCost": 150,
+        "seniorDiscounts": "Jubilado discounts 10-25% at restaurants by law.",
+        "notes": "Local fondas in Dolega are cheap ($4-6 plates); David restaurants 15-20 min, Boquete dining 25 min. ~2 outings/week."
+      },
+      {
+        "name": "Cable + Internet",
+        "monthlyCost": 50,
+        "seniorDiscounts": "Jubilado discount 25% on utilities.",
+        "notes": "Tigo (Cable Onda) or fiber where available — 50-150 Mbps realistic in Dolega, patchier than Boquete."
+      },
+      {
+        "name": "Netflix (Standard, no ads)",
+        "monthlyCost": 14,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "~$13.99/mo."
+      },
+      {
+        "name": "Amazon Prime",
+        "monthlyCost": 7,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "~$6.99/mo."
+      },
+      {
+        "name": "Apple TV+",
+        "monthlyCost": 10,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "~$9.99/mo."
+      },
+      {
+        "name": "NFL RedZone (DAZN)",
+        "monthlyCost": 15,
+        "seniorDiscounts": "No senior discount.",
+        "notes": "Streams fine on 50+ Mbps connections."
+      },
+      {
+        "name": "Gym/Fitness",
+        "monthlyCost": 15,
+        "seniorDiscounts": "Jubilado discounts.",
+        "notes": "Small local gyms in Dolega/David; PowerClub David for full facilities."
+      },
+      {
+        "name": "Books/Media",
+        "monthlyCost": 8,
+        "seniorDiscounts": "",
+        "notes": "Boquete Library (25 min) has an English section."
+      },
+      {
+        "name": "Coffee/Cafes",
+        "monthlyCost": 12,
+        "seniorDiscounts": "Jubilado discounts.",
+        "notes": "Boquete-corridor roasters; cafes in David and Boquete."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Tigo Panama",
+        "url": "https://www.tigo.com.pa/"
+      },
+      {
+        "title": "Panama Jubilado Discounts",
+        "url": "https://www.visitpanama.com"
+      }
+    ]
+  },
+  "transportation": {
+    "monthlyBudget": {
+      "min": 70,
+      "typical": 115,
+      "max": 170
+    },
+    "publicTransit": {
+      "monthlyPass": {
+        "regular": 0,
+        "senior": 0,
+        "notes": "No transit pass system. Chivas/buses run the David-Dolega-Boquete corridor frequently ($1-2 per hop)."
+      },
+      "singleRide": 1.5,
+      "coverage": "Corridor buses between David, Dolega, Potrerillos and Boquete. No expat-targeted local transit inside Dolega.",
+      "seniorDiscount": "Jubilado 15% off bus fares."
+    },
+    "rideShare": {
+      "baseFare": 2.5,
+      "perKm": 0.7,
+      "typicalCrossTownTrip": {
+        "min": 3,
+        "typical": 6,
+        "max": 12
+      },
+      "availability": "Uber and InDriver operate from David and usually accept Dolega pickups; local taxis $5-8 to David.",
+      "notes": "A car is effectively required — rides thin out after dark."
+    },
+    "carOwnership": {
+      "registration": {
+        "annualCost": 47,
+        "initialRegistration": {
+          "min": 93,
+          "typical": 187,
+          "max": 373
+        },
+        "notes": "Vehicle registration through the David transit authority."
+      },
+      "insurance": {
+        "monthlyMin": 37,
+        "monthlyTypical": 61,
+        "monthlyMax": 112,
+        "notes": "Liability insurance mandatory. Jubilado 15% discount at some providers."
+      },
+      "fuel": {
+        "pricePerLiter": 0.89,
+        "monthlyEstimate": {
+          "min": 45,
+          "typical": 75,
+          "max": 130
+        },
+        "notes": "Short David supply runs (15-20 min each way) keep fuel spend below Boquete commuters’."
+      },
+      "parking": {
+        "monthlyResident": {
+          "min": 0,
+          "typical": 0,
+          "max": 0
+        },
+        "hourlyStreet": 0,
+        "notes": "Free parking everywhere in Dolega; David malls and supermarkets have free lots."
+      },
+      "tolls": {
+        "monthlyEstimate": 0,
+        "notes": "No toll roads in Chiriquí."
+      },
+      "seniorDiscounts": "Pensionado 15% discount on auto insurance premiums at some providers."
+    },
+    "walkability": "Town core is walkable and flat; daily needs beyond the minisupers require driving.",
+    "cycling": {
+      "bikeShareMonthly": 0,
+      "infrastructure": "Quiet secondary roads toward Potrerillos are popular with cyclists; no bike lanes.",
+      "notes": "Pleasant climate for cycling at ~1,150 ft — hotter than Boquete."
+    },
+    "monthlyEstimate": {
+      "carFree": {
+        "min": 30,
+        "typical": 60,
+        "max": 100
+      },
+      "withCar": {
+        "min": 90,
+        "typical": 140,
+        "max": 220
+      }
+    },
+    "sources": [
+      {
+        "title": "MiBus Panama",
+        "url": "https://www.mibus.com.pa/"
+      }
+    ]
+  },
+  "groceries": {
+    "categories": [
+      {
+        "id": "produce",
+        "name": "Fresh Produce",
+        "items": [
+          {
+            "name": "Seasonal Vegetables (mixed)",
+            "monthlyCost": 31.5,
+            "quantity": 1,
+            "unit": "weekly box",
+            "forWhom": "shared",
+            "notes": "Dolega produce stands and Boquete-corridor farm stalls"
+          },
+          {
+            "name": "Fresh Fruit",
+            "monthlyCost": 21,
+            "quantity": 1,
+            "unit": "weekly variety",
+            "forWhom": "adults",
+            "notes": "Bananas, papaya, pineapple, citrus — Chiriquí grows most of it"
+          },
+          {
+            "name": "Leafy Greens (salads/spinach)",
+            "monthlyCost": 10.5,
+            "quantity": 1,
+            "unit": "weekly",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Sweet Potatoes / Potatoes",
+            "monthlyCost": 7.75,
+            "quantity": 4,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet staple"
+          },
+          {
+            "name": "Carrots / Peas / Green Beans",
+            "monthlyCost": 6.25,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Dog diet vegetables"
+          },
+          {
+            "name": "Pumpkin / Squash",
+            "monthlyCost": 5.25,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "dog",
+            "notes": "Digestive health, home-cooked diet"
+          }
+        ]
+      },
+      {
+        "id": "proteins",
+        "name": "Proteins",
+        "items": [
+          {
+            "name": "Chicken (whole/thighs)",
+            "monthlyCost": 26.25,
+            "quantity": 5,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Primary protein for both adults & dog"
+          },
+          {
+            "name": "Ground Turkey / Beef",
+            "monthlyCost": 23.75,
+            "quantity": 3,
+            "unit": "lbs/week",
+            "forWhom": "shared",
+            "notes": "Lean ground for dog food base"
+          },
+          {
+            "name": "Fish (salmon/tilapia)",
+            "monthlyCost": 21,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": "Super Barú David for salmon; local tilapia"
+          },
+          {
+            "name": "Eggs",
+            "monthlyCost": 7.75,
+            "quantity": 2,
+            "unit": "dozen/week",
+            "forWhom": "shared",
+            "notes": "Eggs also for dog diet"
+          },
+          {
+            "name": "Organ Meat (liver/heart)",
+            "monthlyCost": 6.25,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "dog",
+            "notes": "Essential for balanced home-cooked dog diet"
+          },
+          {
+            "name": "Beans / Lentils",
+            "monthlyCost": 5.75,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "grains",
+        "name": "Grains & Starches",
+        "items": [
+          {
+            "name": "Rice (brown/white)",
+            "monthlyCost": 7,
+            "quantity": 5,
+            "unit": "lbs/month",
+            "forWhom": "shared",
+            "notes": "Price-controlled staple; dog diet carb source"
+          },
+          {
+            "name": "Bread / Tortillas",
+            "monthlyCost": 10.5,
+            "quantity": 2,
+            "unit": "loaves/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Pasta",
+            "monthlyCost": 5.75,
+            "quantity": 2,
+            "unit": "lbs/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Oats / Cereal",
+            "monthlyCost": 6.75,
+            "quantity": 1,
+            "unit": "container/week",
+            "forWhom": "adults",
+            "notes": "Imported brands at Super Barú / El Rey in David"
+          }
+        ]
+      },
+      {
+        "id": "dairy",
+        "name": "Dairy & Alternatives",
+        "items": [
+          {
+            "name": "Milk / Plant Milk",
+            "monthlyCost": 7.75,
+            "quantity": 2,
+            "unit": "gallons/week",
+            "forWhom": "adults",
+            "notes": "Chiriquí is Panama’s dairy province — local milk is cheap"
+          },
+          {
+            "name": "Cheese",
+            "monthlyCost": 10.5,
+            "quantity": 1,
+            "unit": "lb/week",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Yogurt / Kefir",
+            "monthlyCost": 7.75,
+            "quantity": 1,
+            "unit": "quart/week",
+            "forWhom": "shared",
+            "notes": "Probiotics for dog digestion too"
+          },
+          {
+            "name": "Butter / Cooking Oil",
+            "monthlyCost": 5.25,
+            "quantity": 1,
+            "unit": "unit/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "pantry",
+        "name": "Pantry Staples",
+        "items": [
+          {
+            "name": "Olive Oil / Cooking Oils",
+            "monthlyCost": 11,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Spices & Seasonings",
+            "monthlyCost": 6.75,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Canned Goods (tomatoes, beans)",
+            "monthlyCost": 8.25,
+            "quantity": 6,
+            "unit": "cans/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Condiments & Sauces",
+            "monthlyCost": 6.75,
+            "quantity": 1,
+            "unit": "assorted",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "beverages",
+        "name": "Beverages",
+        "items": [
+          {
+            "name": "Coffee",
+            "monthlyCost": 16,
+            "quantity": 2,
+            "unit": "lbs/month",
+            "forWhom": "adults",
+            "notes": "Chiriquí-grown — buy direct from Boquete-corridor roasters"
+          },
+          {
+            "name": "Tea",
+            "monthlyCost": 5.5,
+            "quantity": 1,
+            "unit": "box/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Wine / Beer",
+            "monthlyCost": 29,
+            "quantity": 8,
+            "unit": "bottles/month",
+            "forWhom": "adults",
+            "notes": "Optional"
+          },
+          {
+            "name": "Sparkling Water / Juice",
+            "monthlyCost": 8.25,
+            "quantity": 1,
+            "unit": "case/week",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "snacks",
+        "name": "Snacks & Treats",
+        "items": [
+          {
+            "name": "Nuts & Trail Mix",
+            "monthlyCost": 11,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": "PriceSmart David"
+          },
+          {
+            "name": "Crackers / Chips",
+            "monthlyCost": 6.75,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Dark Chocolate",
+            "monthlyCost": 5.75,
+            "quantity": 4,
+            "unit": "bars/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "frozen",
+        "name": "Frozen Foods",
+        "items": [
+          {
+            "name": "Frozen Vegetables",
+            "monthlyCost": 8.25,
+            "quantity": 4,
+            "unit": "bags/month",
+            "forWhom": "shared",
+            "notes": "Backup for dog food prep. Full frozen aisles at Super Barú / PriceSmart David"
+          },
+          {
+            "name": "Frozen Fruit (smoothies)",
+            "monthlyCost": 6.75,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "adults",
+            "notes": ""
+          },
+          {
+            "name": "Frozen Meals (convenience)",
+            "monthlyCost": 10.25,
+            "quantity": 4,
+            "unit": "meals/month",
+            "forWhom": "adults",
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "supplements",
+        "name": "Pet Supplements & Health",
+        "items": [
+          {
+            "name": "Joint Supplement (glucosamine)",
+            "monthlyCost": 21.75,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Essential for Bernese — hip/joint health"
+          },
+          {
+            "name": "Fish Oil (omega-3)",
+            "monthlyCost": 11,
+            "quantity": 1,
+            "unit": "bottle/month",
+            "forWhom": "dog",
+            "notes": "Coat & skin health. PriceSmart David (Kirkland) or Melo pet stores"
+          },
+          {
+            "name": "Multivitamin / Mineral Mix",
+            "monthlyCost": 14.5,
+            "quantity": 1,
+            "unit": "container/month",
+            "forWhom": "dog",
+            "notes": "Balance home-cooked diet"
+          },
+          {
+            "name": "Dog Treats",
+            "monthlyCost": 11,
+            "quantity": 2,
+            "unit": "bags/month",
+            "forWhom": "dog",
+            "notes": "Training & dental chews"
+          }
+        ]
+      }
+    ],
+    "monthlyTotal": 433
+  },
+  "visionDental": {
+    "monthlyBudget": {
+      "min": 8,
+      "typical": 20,
+      "max": 45
+    },
+    "vision": {
+      "eyeExam": {
+        "withInsurance": 0,
+        "withoutInsurance": 25,
+        "notes": "No optometry in Dolega — David (15-20 min) for Óptica Sosa / Óptica López and hospital ophthalmology. Jubilado/Pensionado: 15% off eye exams (Law 6 of 1987). Ópticas often include a basic exam free with glasses purchase."
+      },
+      "glasses": {
+        "basic": 70,
+        "progressive": 180,
+        "contacts12mo": 150,
+        "notes": "David pricing: basic complete pair $60-80."
+      },
+      "insurance": {
+        "monthlyPremium": 0,
+        "coverage": "No standalone vision insurance in Panama; some private health plans (ASSA, Cigna international) include an annual eye exam or small optical benefit",
+        "notes": "Most residents pay cash for vision care — prices are low enough that insurance rarely pays off."
+      }
+    },
+    "dental": {
+      "cleaning": {
+        "withInsurance": 10,
+        "withoutInsurance": 35,
+        "notes": "Jubilado discount 15% applies to the cash price."
+      },
+      "filling": {
+        "withInsurance": 20,
+        "withoutInsurance": 50,
+        "notes": "Composite filling, cash price."
+      },
+      "crown": {
+        "withInsurance": 260,
+        "withoutInsurance": 400,
+        "notes": "No dental office in Dolega town; David (15-20 min) — Clínica Dental Chiriquí, Periodent. Simple PFM crowns from ~$250."
+      },
+      "insurance": {
+        "monthlyPremium": 18,
+        "coverage": "Dental rider on a private health plan (ASSA, MAPFRE, Vivir Seguros): typically 2 cleanings/yr plus 40-70% off treatments",
+        "notes": "Many expats skip dental insurance — cash prices are 50-70% below US and the jubilado 15% discount applies (Law 6 of 1987)."
+      }
+    },
+    "annualEstimate": {
+      "withInsurance": {
+        "premiums": 216,
+        "outOfPocket": 70,
+        "total": 286,
+        "monthlyEquiv": 24
+      },
+      "withoutInsurance": {
+        "outOfPocket": 168,
+        "monthlyEquiv": 14
+      }
+    },
+    "_sources": {
+      "authoredAt": "2026-08-22",
+      "note": "USD pricing authored from live sources for the Panama region (replaces the EUR italy-puglia starter template where one existed).",
+      "links": [
+        {
+          "title": "Numbeo — Cost of Living in Panama City",
+          "url": "https://www.numbeo.com/cost-of-living/in/Panama-City",
+          "accessed": "2026-08-22"
+        },
+        {
+          "title": "Viva Tropical — Dental Care in Panama for Expats",
+          "url": "https://vivatropical.com/panama/dental-care-in-panama/",
+          "accessed": "2026-08-22"
+        },
+        {
+          "title": "Expat Focus — Panama Eye Care",
+          "url": "https://www.expatfocus.com/panama/guide/panama-eye-care",
+          "accessed": "2026-08-22"
+        },
+        {
+          "title": "Mahogany Panama — Vision Care in Panama",
+          "url": "https://mahoganypanama.com/blog/vision-care-in-panama-where-to-get-glasses-or-contact-lenses/",
+          "accessed": "2026-08-22"
+        },
+        {
+          "title": "Medical Tourism Packages — Dental costs in Panama",
+          "url": "https://www.medicaltourismpackages.com/dental-tourism-in-panama/",
+          "accessed": "2026-08-22"
+        }
+      ]
+    }
+  },
+  "personalCare": {
+    "hairCare": {
+      "mensCut": {
+        "min": 4,
+        "typical": 8,
+        "max": 15,
+        "notes": "Local barbers in Dolega town; David salons for more options"
+      },
+      "womensCut": {
+        "min": 12,
+        "typical": 25,
+        "max": 45,
+        "notes": "Salons in David (15-20 min); limited options in Dolega"
+      },
+      "colorTreatment": {
+        "min": 25,
+        "typical": 50,
+        "max": 90,
+        "notes": "David salons"
+      }
+    },
+    "fitness": {
+      "gymMonthly": {
+        "min": 15,
+        "typical": 30,
+        "max": 50,
+        "notes": "Small local gyms; PowerClub David for full facilities"
+      },
+      "yogaClassDrop": {
+        "min": 6,
+        "typical": 10,
+        "max": 15,
+        "notes": "Classes in Boquete (25 min) and David"
+      }
+    },
+    "spa": {
+      "massage60min": {
+        "min": 18,
+        "typical": 30,
+        "max": 55,
+        "notes": "Boquete spa scene 25 min away; Jubilado discounts at some"
+      },
+      "manicure": {
+        "min": 5,
+        "typical": 9,
+        "max": 15,
+        "notes": "Dolega and David salons"
+      }
+    }
+  },
+  "healthcare": {
+    "system": "Private (David hospitals) + CSS public",
+    "coverageSummary": "No hospital in Dolega — Hospital Chiriquí and Hospital Mae Lewis in David (15-20 min) handle everything from routine specialists to surgery. Private insurance $175-250/person/mo. Local clinics and farmacias cover day-to-day needs.",
+    "gpVisit": {
+      "withInsurance": 15,
+      "withoutInsurance": 35,
+      "notes": "Local Dolega clinics and David GPs $30-50. Pensionado discount 15-25%."
+    },
+    "specialist": {
+      "withInsurance": 25,
+      "withoutInsurance": 70,
+      "notes": "Specialists $40-80 in David. Anti-VEGF injections $400-800 at David/Panama City clinics."
+    },
+    "privateInsurance": {
+      "monthlyPerPerson": 215,
+      "notes": "ASSA, MAPFRE, or international plans. Pre-existing condition exclusions common in the first 12-24 months."
+    },
+    "emergency": {
+      "withInsurance": 50,
+      "withoutInsurance": 500,
+      "notes": "Private ER in David $300-800. Ambulance response to Dolega is slow — most drive to David."
+    },
+    "dental": {
+      "cleaning": 35,
+      "filling": 50,
+      "crown": 350,
+      "notes": "David clinics (15-20 min): Clínica Dental Chiriquí, Periodent. Simple PFM crowns from ~$250."
+    },
+    "notes": "Serious specialties (oncology, cardiac surgery) may require Panama City. Pensionado 15-25% discounts on consultations, labs and hospital services."
+  },
+  "medicine": {
+    "monthlyPrescriptionCosts": {
+      "min": 383,
+      "typical": 479,
+      "max": 529
+    },
+    "commonMedications": [
+      {
+        "name": "Semaglutide / GLP-1 (Ozempic) [P1]",
+        "monthlyCost": 350,
+        "withoutInsurance": 350,
+        "coverageNote": "No local insurance coverage for GLP-1. Cash price at Farmacia Arrocha or imported."
+      },
+      {
+        "name": "Levothyroxine (Synthroid) [P1]",
+        "monthlyCost": 8,
+        "withoutInsurance": 12,
+        "coverageNote": "Available at local pharmacies, no prescription required for many medications"
+      },
+      {
+        "name": "Atorvastatin 20mg [P1]",
+        "monthlyCost": 12,
+        "withoutInsurance": 18,
+        "coverageNote": "Generic widely available"
+      },
+      {
+        "name": "Montelukast [P1]",
+        "monthlyCost": 15,
+        "withoutInsurance": 20,
+        "coverageNote": "Available at major pharmacies"
+      },
+      {
+        "name": "Hydrochlorothiazide [P1]",
+        "monthlyCost": 6,
+        "withoutInsurance": 8,
+        "coverageNote": "Inexpensive generic"
+      },
+      {
+        "name": "Olmesartan [P1]",
+        "monthlyCost": 20,
+        "withoutInsurance": 30,
+        "coverageNote": "Brand or generic available"
+      },
+      {
+        "name": "Albuterol inhaler (Salbutamol) [P1]",
+        "monthlyCost": 8,
+        "withoutInsurance": 12,
+        "coverageNote": "OTC at pharmacies"
+      },
+      {
+        "name": "Metformin 500mg [P2]",
+        "monthlyCost": 6,
+        "withoutInsurance": 8,
+        "coverageNote": "Inexpensive generic"
+      },
+      {
+        "name": "Allopurinol [P2]",
+        "monthlyCost": 8,
+        "withoutInsurance": 12,
+        "coverageNote": "Generic available"
+      },
+      {
+        "name": "Lisinopril [P2]",
+        "monthlyCost": 8,
+        "withoutInsurance": 12,
+        "coverageNote": "Generic available"
+      },
+      {
+        "name": "Topiramate [P2]",
+        "monthlyCost": 18,
+        "withoutInsurance": 25,
+        "coverageNote": "Available at major pharmacies"
+      },
+      {
+        "name": "Metoprolol [P2]",
+        "monthlyCost": 8,
+        "withoutInsurance": 12,
+        "coverageNote": "Generic available"
+      },
+      {
+        "name": "Atorvastatin 20mg [P2]",
+        "monthlyCost": 12,
+        "withoutInsurance": 18,
+        "coverageNote": "Generic widely available"
+      }
+    ],
+    "pharmacyAccess": "Small farmacias in Dolega town for basics; Farmacia Arrocha and Metro Plus in David (15-20 min) carry the full household list. Many medications available without prescription.",
+    "notes": "Same national pricing as David — the household shops David pharmacies. No universal drug coverage for expats; most pay cash. Pensionado visa holders get 15-25% pharmacy discounts. GLP-1 drugs are expensive imports."
+  },
+  "cellPhone": {
+    "monthlyBudget": {
+      "min": 70,
+      "typical": 85,
+      "max": 105
+    },
+    "plans": [
+      {
+        "name": "Google Fi Flexible (US Number)",
+        "type": "US Service",
+        "lines": 2,
+        "dataPerLine": "1.5GB high-speed",
+        "baseCost": 35,
+        "taxesAndFees": 0,
+        "monthlyTotal": 65,
+        "notes": "Line 1 $20 + Line 2 $15 = $35 base. Data $10/GB × 3GB = $30. Works in Panama at same rate. Keeps US number for banking/2FA."
+      },
+      {
+        "name": "+Movil Postpaid",
+        "type": "Local Service",
+        "lines": 2,
+        "dataPerLine": "3GB 4G/5G",
+        "baseCost": 20,
+        "taxesAndFees": 0,
+        "monthlyTotal": 20,
+        "notes": "2 lines ~$10/line. +Movil has solid coverage along the David-Boquete corridor through Dolega. ITBMS tax included."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Google Fi Plans",
+        "url": "https://fi.google.com/about/plans"
+      }
+    ]
+  },
+  "seniorDiscounts": {
+    "minimumAge": 55,
+    "programName": "Jubilado/Pensionado Program",
+    "discounts": [
+      {
+        "name": "Jubilado/Pensionado Discounts",
+        "description": "One of the world's best senior discount programs. Women 55+, men 60+ (or retirees of any age with Pensionado visa).",
+        "eligibilityAge": 55
+      },
+      {
+        "name": "Medical Services",
+        "description": "15-25% off medical consultations, dental, eye exams, and hospital services.",
+        "eligibilityAge": 55
+      },
+      {
+        "name": "Transportation",
+        "description": "25% off domestic flights, 15% off bus fares, 15-20% off boat/ferry travel.",
+        "eligibilityAge": 55
+      },
+      {
+        "name": "Restaurants & Entertainment",
+        "description": "10-25% off restaurant meals (Mon-Thu typically), 25-50% off movies, entertainment, and hotels.",
+        "eligibilityAge": 55
+      },
+      {
+        "name": "Utilities & Services",
+        "description": "25% off electricity (first 500 kWh), 25% off water, 25% off phone service. One of the most generous utility discount programs globally.",
+        "eligibilityAge": 55
+      },
+      {
+        "name": "Property Tax Exemption",
+        "description": "Tax exemption on primary residence (up to $120,000 assessed value). New construction exempt up to 20 years.",
+        "eligibilityAge": 55
+      },
+      {
+        "name": "Closing Costs",
+        "description": "15% off mortgage closing costs and professional services (lawyers, architects).",
+        "eligibilityAge": 55
+      }
+    ]
+  }
+}
