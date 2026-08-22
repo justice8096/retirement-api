@@ -139,12 +139,15 @@ app.addHook('onSend', async (request, reply, payload) => {
   return payload;
 });
 // Build Redis store for distributed rate limiting (falls back to in-memory)
-let redisClient: { quit: () => Promise<void> } | undefined;
+let redisClient: { ping: () => Promise<string>; quit: () => Promise<void> } | undefined;
 try {
-  redisClient = await buildRedisStore() as { quit: () => Promise<void> } | undefined;
+  redisClient = await buildRedisStore() as { ping: () => Promise<string>; quit: () => Promise<void> } | undefined;
 } catch (err) {
   app.log.warn(err, 'Failed to build Redis store for rate limiting — using in-memory');
 }
+// Expose the client so health checks can ping the real connection instead of
+// reaching into @fastify/rate-limit internals. Undefined = in-memory fallback.
+app.decorate('redisClient', redisClient);
 await app.register(rateLimit, {
   ...rateLimitConfig,
   ...(redisClient ? { redis: redisClient } : {}),
