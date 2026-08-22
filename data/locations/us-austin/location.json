@@ -28,9 +28,9 @@
   },
   "monthlyCosts": {
     "rent": {
-      "min": 1800,
-      "max": 2600,
-      "typical": 2150,
+      "min": 1500,
+      "max": 2700,
+      "typical": 1950,
       "type": "2-bedroom single-family house",
       "annualInflation": 0.03,
       "notes": "Texas has no state income tax but higher property taxes reflected in rent. Water, sewage, trash typically separate.",
@@ -47,9 +47,9 @@
       "notes": "Austin grocery prices near national average. H-E-B is dominant and competitively priced. No sales tax on groceries in Texas."
     },
     "utilities": {
-      "min": 240,
-      "max": 420,
-      "typical": 320,
+      "min": 200,
+      "max": 370,
+      "typical": 265,
       "annualInflation": 0.035,
       "breakdown": {
         "electricity": {

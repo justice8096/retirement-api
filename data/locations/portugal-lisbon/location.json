@@ -39,12 +39,12 @@
   },
   "monthlyCosts": {
     "rent": {
-      "min": 1100,
-      "max": 1800,
-      "typical": 1400,
+      "min": 1200,
+      "max": 2600,
+      "typical": 1900,
       "type": "2-bedroom house (moradia)",
       "annualInflation": 0.035,
-      "notes": "No VAT on residential rent."
+      "notes": "No VAT on residential rent. Lisbon market up ~37% vs. prior data; Investropa 2026 avg ~€1,850 ($1,925 USD); Global Property Guide confirms strong demand."
     },
     "groceries": {
       "min": 785,
