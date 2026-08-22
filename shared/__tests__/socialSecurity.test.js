@@ -58,6 +58,16 @@ describe('calcSSBenefit', () => {
       expect(calcSSBenefit(1, fra, fra)).toBe(1);
       expect(calcSSBenefit(1, fra, 62)).toBe(Math.round(1 * 0.70));
     });
+
+    it('supports month-precision claim ages (66y8m = 4 months early)', () => {
+      // reduction = 4 * (5/900) = 0.02222 → 2000 * 0.97778 = 1955.56 → 1956
+      expect(calcSSBenefit(2000, 67, 66 + 8 / 12)).toBe(1956);
+    });
+
+    it('supports month-precision delayed credits (67y4m = 4 months late)', () => {
+      // 2/3% per month * 4 = 2.667% → 1000 * 1.02667 = 1026.67 → 1027
+      expect(calcSSBenefit(1000, 67, 67 + 4 / 12)).toBe(1027);
+    });
   });
 });
 
@@ -78,11 +88,13 @@ describe('calcSpousalBenefit', () => {
   });
 
   describe('early claiming reduction on spousal', () => {
-    it('reduces spousal excess when claiming before own FRA', () => {
+    // SSA: 25/36 of 1% per month for the first 36 months before FRA,
+    // then 5/12 of 1% per month beyond 36. 60 months early = 35%.
+    it('applies the two-tier reduction at 60 months early (35%)', () => {
       // claimAge=62, ownFRA=67, 60 months early
-      // reduction = min(60 * 25/36/100, 0.30) = min(0.4167, 0.30) = 0.30
+      // reduction = 36 * (25/3600) + 24 * (5/1200) = 0.25 + 0.10 = 0.35
       const spousalExcess = 2400 * 0.5 - 800; // 400
-      const reduced = spousalExcess * (1 - 0.30);
+      const reduced = spousalExcess * (1 - 0.35);
       expect(calcSpousalBenefit(2400, 800, 67, 62)).toBe(Math.max(0, Math.round(reduced)));
     });
 
@@ -90,20 +102,29 @@ describe('calcSpousalBenefit', () => {
       expect(calcSpousalBenefit(2400, 800, 67, 67)).toBe(400);
     });
 
-    it('caps early claiming reduction at 30%', () => {
-      // 60 months early: 60 * 25/36/100 = 0.4167 > 0.30, capped at 0.30
-      const spousalExcess = 2400 * 0.5 - 800;
-      const reduced = spousalExcess * (1 - 0.30);
-      expect(calcSpousalBenefit(2400, 800, 67, 62)).toBe(Math.round(reduced));
+    it('uses the 5/12%-per-month tier past 36 months early', () => {
+      // claimAge=63.5, ownFRA=67, 42 months early
+      // reduction = 36 * (25/3600) + 6 * (5/1200) = 0.25 + 0.025 = 0.275
+      const spousalExcess = 2400 * 0.5 - 800; // 400
+      const reduced = spousalExcess * (1 - 0.275);
+      expect(calcSpousalBenefit(2400, 800, 67, 63.5)).toBe(Math.round(reduced));
     });
 
-    it('calculates partial early reduction (< 30%)', () => {
+    it('calculates first-tier-only reduction under 36 months early', () => {
       // claimAge=65, ownFRA=67, 24 months early
-      // reduction = min(24 * 25/36/100, 0.30) = min(0.1667, 0.30) = 0.1667
+      // reduction = 24 * (25/3600) = 0.1667
       const spousalExcess = 2400 * 0.5 - 800; // 400
       const reduction = 24 * (25 / 36 / 100);
       const reduced = spousalExcess * (1 - reduction);
       expect(calcSpousalBenefit(2400, 800, 67, 65)).toBe(Math.round(reduced));
+    });
+
+    it('supports month-precision claim ages (66y8m = 4 months early)', () => {
+      // ssClaimAge=66 + ssClaimAgeMonths=8 → claimAge 66 + 8/12
+      // reduction = 4 * (25/3600) = 0.02778
+      const spousalExcess = 2400 * 0.5 - 800; // 400
+      const reduced = spousalExcess * (1 - 4 * (25 / 3600));
+      expect(calcSpousalBenefit(2400, 800, 67, 66 + 8 / 12)).toBe(Math.round(reduced));
     });
   });
 
