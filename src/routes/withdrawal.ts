@@ -21,7 +21,7 @@ import { defaultCurrencyFor } from '../lib/locale.js';
  *   - An `explanation` field paraphrases the numbers in plain language.
  */
 
-const STRATEGY_TYPES = ['fixed', 'constant', 'guardrails', 'vpw', 'bucket', 'floor-ceiling'] as const;
+const STRATEGY_TYPES = ['fixed', 'constant', 'guardrails', 'vpw', 'bucket', 'floor-ceiling', 'cape'] as const;
 const SPENDING_MODELS = ['level', 'smile', 'declining', 'essential-first'] as const;
 
 const withdrawalStrategySchema = z.object({
@@ -68,6 +68,12 @@ const withdrawalStrategySchema = z.object({
   rothConversionAmount: z.number().min(0).max(500_000).optional().nullable()
     .describe('Yearly Roth conversion amount in user currency.'),
   rothConversionEndAge: z.number().int().min(50).max(100).optional().nullable(),
+
+  capeMultiplier: z.number().min(0.1).max(2).optional().nullable()
+    .describe('CAPE strategy: weight applied to 1/CAPE as a decimal fraction. 0.5 = half-weight (the strategy default).'),
+
+  capeFixedComponent: z.number().min(0).max(0.10).optional().nullable()
+    .describe('CAPE strategy: constant added to the CAPE-derived rate as a decimal fraction. 0.015 = 1.5%.'),
 }).strict();
 
 const DEFAULTS = {
@@ -87,6 +93,8 @@ const DEFAULTS = {
   rothConversionEnabled: false,
   rothConversionAmount: null,
   rothConversionEndAge: null,
+  capeMultiplier: null,
+  capeFixedComponent: null,
 };
 
 /** Decrypt sensitive fields before sending to client. */
@@ -139,12 +147,14 @@ function decorate(strategy: StrategyLike, locale: string) {
       adjustmentPct: { encoding: 'fraction', meaning: '0.10 = 10%' },
       maxDiscretionaryRate: { encoding: 'fraction', meaning: '0.02 = 2%' },
       declineRate: { encoding: 'fraction', meaning: '0.01 = 1% per year' },
+      capeMultiplier: { encoding: 'fraction', meaning: '0.5 = half-weight on 1/CAPE (not a percentage of your portfolio)' },
+      capeFixedComponent: { encoding: 'fraction', meaning: '0.015 = 1.5%' },
       essentialSpending: { encoding: 'amount', currency, periodicity: 'year' },
       discretionaryBudget: { encoding: 'amount', currency, periodicity: 'year' },
       rothConversionAmount: { encoding: 'amount', currency, periodicity: 'year' },
     },
     explanation: explanationPlain,
-    glossary: `/api/glossary?key=${strat === 'vpw' ? 'vpw' : strat === 'guardrails' ? 'guardrails' : 'safe_withdrawal_rate'}`,
+    glossary: `/api/glossary?key=${strat === 'vpw' ? 'vpw' : strat === 'guardrails' ? 'guardrails' : strat === 'cape' ? 'cape' : 'safe_withdrawal_rate'}`,
   };
 }
 

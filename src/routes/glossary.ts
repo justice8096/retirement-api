@@ -174,6 +174,18 @@ const GLOSSARY: GlossaryEntry[] = [
     seeAlso: ['guardrails', 'bucket_strategy'],
   },
   {
+    key: 'cape',
+    term: 'CAPE-Based Withdrawal',
+    aliases: ['Big ERN', 'valuation-based withdrawal'],
+    plain:
+      'You spend more when stocks look cheap and less when they look expensive, based on a long-run stock-market valuation measure.',
+    example:
+      'When the market valuation measure is high (stocks look pricey), this strategy pulls your withdrawal rate down toward its floor; when it is low (stocks look cheap), your rate rises toward its ceiling.',
+    technical:
+      'rate = (1 / capeRatio) × capeMultiplier + fixedComponent, clamped to [floorRate, ceilingRate]. capeRatio is the Shiller CAPE (cyclically-adjusted price-to-earnings) ratio.',
+    seeAlso: ['guardrails', 'safe_withdrawal_rate'],
+  },
+  {
     key: 'rmd',
     term: 'Required Minimum Distribution',
     aliases: ['RMD'],
