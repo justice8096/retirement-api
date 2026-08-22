@@ -25,23 +25,31 @@ jobs:
 
       - name: Deploy to rogue
         run: |
-          ssh -o StrictHostKeyChecking=accept-new root@rogue bash <<'DEPLOY'
+          # FORCE=1 on manual dispatch: a retry after a failed deploy must not
+          # be skipped by the up-to-date guard (the failed run already pulled).
+          ssh -o StrictHostKeyChecking=accept-new root@rogue \
+            FORCE=${{ github.event_name == 'workflow_dispatch' && '1' || '0' }} \
+            bash <<'DEPLOY'
           set -euo pipefail
           cd /srv/retirement/retirement-api
 
           echo "=== Pulling latest ==="
           git fetch origin
+          git -C /srv/retirement/retirement-dashboard-angular fetch origin
           BEHIND=$(git rev-list HEAD..origin/master --count)
-          if [ "$BEHIND" -eq 0 ]; then
+          DASH_BEHIND=$(git -C /srv/retirement/retirement-dashboard-angular rev-list HEAD..origin/main --count)
+          # Guard checks BOTH repos: a dashboard-only push still needs a
+          # deploy, and a prior failed run may have pulled without rebuilding.
+          if [ "${FORCE:-0}" != "1" ] && [ "$BEHIND" -eq 0 ] && [ "$DASH_BEHIND" -eq 0 ]; then
             echo "Already up to date."
             exit 0
           fi
-          echo "$BEHIND new commit(s) to deploy:"
+          echo "api: $BEHIND new commit(s); dashboard: $DASH_BEHIND new commit(s)"
           git log HEAD..origin/master --oneline
           git pull --ff-only origin master
 
           echo "=== Pulling dashboard (sibling checkout feeds the dashboard image) ==="
-          git -C /srv/retirement/retirement-dashboard-angular fetch origin
+          git -C /srv/retirement/retirement-dashboard-angular log HEAD..origin/main --oneline
           git -C /srv/retirement/retirement-dashboard-angular pull --ff-only origin main
 
           echo "=== Running migrations ==="
