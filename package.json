@@ -11,7 +11,7 @@
     "test:watch": "vitest",
     "test:data": "vitest run --config vitest.data.config.ts --exclude data/__tests__/localInfoLinks.test.ts",
     "test:data:links": "vitest run --config vitest.data.config.ts data/__tests__/localInfoLinks.test.ts",
-    "test:shared": "npm run engine:build && cd shared && npx vitest run",
+    "test:shared": "npm run engine:build && vitest run shared/__tests__",
     "typecheck": "tsc --noEmit",
     "engine:build": "tsc -p shared/tsconfig.json",
     "postinstall": "prisma generate --schema=prisma/schema.prisma",
