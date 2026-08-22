@@ -132,9 +132,14 @@ New terms, each with plain-language definition + worked example:
 
 ## Consumers (follow-ups, not in this repo's scope)
 
-- **Dashboard** (`feat/persist-income-assumptions`): Assumptions screen gains a
-  "use my household's computed Social Security" action that calls the endpoint and
-  writes `household.totalAnnual` into `ssAnnual`. Manual entry remains possible.
+- **Dashboard** (`feat/spousal-ss-display`, built 2026-08-22): the Assumptions
+  screen's "Use household Social Security" button fills `ssAnnual` with the
+  household annual total. Implementation note: the screen computes it locally
+  from the **live member draft** via `src/app/lib/ss-benefits.ts` (a mirror of
+  `shared/socialSecurity.js` kept in sync by mirrored tests) rather than calling
+  the endpoint — so unsaved member edits are included and the button always
+  matches the on-screen top-up echoes. The endpoint remains the canonical
+  source for non-interactive clients. Manual entry remains possible.
 - **retirement-mcp**: can expose the endpoint as a tool with zero extra math.
 
 ## Explicitly out of scope
