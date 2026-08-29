@@ -251,6 +251,23 @@ export interface MonteCarloParams {
   historicalStartYear?: number;
 
   /**
+   * Scheduled Social Security reduction (trust-fund depletion, spec
+   * 2026-08-29). All three fields absent ⇒ no-op, bit-identical to the
+   * pre-feature kernel (same contract as the brokerage-fee fields).
+   */
+  /** Portion of `monthlyIncome` that is Social Security (USD/month, today's
+   *  $). Clamped to [0, monthlyIncome]. Grows at `incGrowth` alongside
+   *  `income`. */
+  ssMonthlyIncome?: number;
+  /** Sim year (0-indexed) at which the scheduled SS benefit reduction
+   *  fires. Negative or zero ⇒ the cut is already in effect at year 0.
+   *  Undefined ⇒ no cut is modeled. */
+  ssCutYear?: number;
+  /** Fraction of the SS benefit REMAINING after the cut (e.g. 0.77 = 23%
+   *  cut, the ~2032 Trustees/CRFB projection). Default 0.77. */
+  ssCutFactor?: number;
+
+  /**
    * Brokerage / account fee support (A3 drift item 1). Names and units
    * mirror what `retirement-api/src/routes/fees.ts` persists so the caller
    * can pass the user's stored settings straight through — specifically,
@@ -1173,6 +1190,12 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
     // healthcare cost each year (#33 item 3).
     let hsaBal = hsaInitial;
     let income = monthlyIncome;
+    // SS scheduled-cut tracking (spec 2026-08-29). The SS slice grows with
+    // `incGrowth` alongside `income`; at `ssCutYear` it is reduced once by
+    // (1 - ssCutFactor). No cut year ⇒ the slice is inert.
+    const ssCutFactor = p.ssCutFactor ?? 0.77;
+    let ssIncome = Math.min(Math.max(p.ssMonthlyIncome ?? 0, 0), monthlyIncome);
+    let ssCutApplied = false;
     // Part-time income tracked separately so it can cliff to zero at
     // `partTimeEndYear` without disturbing the base income (SS + pension)
     // stream. Inflates at the same `incGrowth` rate as income.
@@ -1321,7 +1344,13 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
       }
       if (!survivorPhase && spouseDeathThisYear) {
         survivorPhase = true;
-        if (survivorIncome != null) income = survivorIncome;
+        if (survivorIncome != null) {
+          // Survivor income is typically pure SS (max PIA) — treated as
+          // fully SS for cut purposes (documented v1 simplification,
+          // spec 2026-08-29).
+          income = ssCutApplied ? survivorIncome * ssCutFactor : survivorIncome;
+          ssIncome = income;
+        }
 
         // Survivor relocation (#31 priority 4) — if the caller supplied
         // `p.survivorRelocate`, treat the death year as a location swap
@@ -1374,6 +1403,15 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
           cost = sc.total * cumInfl;
           costHealthcare = sc.healthcare * cumInfl;
         }
+      }
+
+      // Scheduled Social Security reduction — fires once at the first year
+      // >= ssCutYear (negative/zero ⇒ year 0). Ordered AFTER the survivor
+      // swap so a same-year death is cut in its first survivor year.
+      if (!ssCutApplied && p.ssCutYear != null && y >= p.ssCutYear && ssIncome > 0) {
+        income -= ssIncome * (1 - ssCutFactor);
+        ssIncome *= ssCutFactor;
+        ssCutApplied = true;
       }
 
       // Early-pass dispatch (#31 steps 2a + 2b + 2c) — handles event
@@ -1719,6 +1757,7 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
       costHealthcare *= (1 + inf);
       cumInfl *= (1 + inf);
       income *= (1 + incGrowth);
+      ssIncome *= (1 + incGrowth);
       partTime *= (1 + incGrowth);
 
       path.push(bal);
