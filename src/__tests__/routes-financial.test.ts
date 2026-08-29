@@ -53,7 +53,7 @@ describe('Financial routes', () => {
 
       expect(res.statusCode).toBe(200);
       expect(body.portfolioBalance).toBe(500000);
-      expect(body.ssCutYear).toBe(2033);
+      expect(body.ssCutYear).toBe(2032);
       expect(body.ssCola).toBe(2.8);
       // Income-composition + ACA assumption defaults
       expect(body.apportionStrategy).toBe('manual');

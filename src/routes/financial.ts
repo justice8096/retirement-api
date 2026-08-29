@@ -123,7 +123,7 @@ const DEFAULTS = {
   fxDriftEnabled: true,
   fxDriftAnnualRate: 1,    // 1% — client format
   ssCutEnabled: true,
-  ssCutYear: 2033,
+  ssCutYear: 2032,  // CRFB post-Fairness-Act OASI depletion estimate (was 2033)
   ssCola: 2.8,  // 2026 SSA COLA (announced 2025-10-24); was 2.5% for 2025
   equityPct: 60,
   bondPct: 30,
