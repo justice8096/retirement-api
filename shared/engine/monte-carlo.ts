@@ -262,7 +262,7 @@ export interface MonteCarloParams {
   /** Sim year (0-indexed) at which the scheduled SS benefit reduction
    *  fires. Negative or zero ⇒ the cut is already in effect at year 0.
    *  Undefined ⇒ no cut is modeled. */
-  ssCutYear?: number;
+  ssCutSimYear?: number;
   /** Fraction of the SS benefit REMAINING after the cut (e.g. 0.77 = 23%
    *  cut, the ~2032 Trustees/CRFB projection). Default 0.77. */
   ssCutFactor?: number;
@@ -1191,7 +1191,7 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
     let hsaBal = hsaInitial;
     let income = monthlyIncome;
     // SS scheduled-cut tracking (spec 2026-08-29). The SS slice grows with
-    // `incGrowth` alongside `income`; at `ssCutYear` it is reduced once by
+    // `incGrowth` alongside `income`; at `ssCutSimYear` it is reduced once by
     // (1 - ssCutFactor). No cut year ⇒ the slice is inert.
     const ssCutFactor = p.ssCutFactor ?? 0.77;
     let ssIncome = Math.min(Math.max(p.ssMonthlyIncome ?? 0, 0), monthlyIncome);
@@ -1406,9 +1406,9 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
       }
 
       // Scheduled Social Security reduction — fires once at the first year
-      // >= ssCutYear (negative/zero ⇒ year 0). Ordered AFTER the survivor
+      // >= ssCutSimYear (negative/zero ⇒ year 0). Ordered AFTER the survivor
       // swap so a same-year death is cut in its first survivor year.
-      if (!ssCutApplied && p.ssCutYear != null && y >= p.ssCutYear && ssIncome > 0) {
+      if (!ssCutApplied && p.ssCutSimYear != null && y >= p.ssCutSimYear && ssIncome > 0) {
         income -= ssIncome * (1 - ssCutFactor);
         ssIncome *= ssCutFactor;
         ssCutApplied = true;

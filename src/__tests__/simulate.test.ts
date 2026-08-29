@@ -132,3 +132,58 @@ describe('POST /api/simulate — pet/dependent cost curves', () => {
     expect(bad2.statusCode).toBe(400);
   });
 });
+
+describe('SS scheduled-cut fields (spec 2026-08-29)', () => {
+  let app: FastifyInstance;
+  beforeEach(async () => {
+    app = Fastify({ logger: false });
+    await app.register(simulateRoutes, { prefix: '/api/simulate' });
+  });
+  afterEach(async () => { await app.close(); });
+  const post = (body: unknown) =>
+    app.inject({ method: 'POST', url: '/api/simulate', payload: body });
+
+  const deterministic = {
+    portfolio: 500_000, annualSpending: 36_000, annualIncome: 24_000,
+    years: 1, runs: 1, meanReturn: 0, volReturn: 0, meanInflation: 0,
+    volInflation: 0, seed: 1,
+  };
+
+  it('models the cut from the calendar year, echoing the inputs', async () => {
+    const thisYear = new Date().getFullYear();
+    // Cut already active (calendar year = current): SS slice 12000/yr →
+    // income 1000 non-SS + 1000*0.77 SS = 1770/mo → 500000 + 21240 - 36000.
+    const res = await post({
+      ...deterministic, ssAnnualIncome: 12_000, ssCutCalendarYear: thisYear,
+    });
+    expect(res.statusCode).toBe(200);
+    const b = res.json();
+    expect(b.median).toBe(485_240);
+    expect(b.inputs.ssAnnualIncome).toBe(12_000);
+    expect(b.inputs.ssCutCalendarYear).toBe(thisYear);
+    expect(b.inputs.ssCutPct).toBe(0.23);
+  });
+
+  it('does not cut before the calendar year arrives', async () => {
+    const nextYear = new Date().getFullYear() + 1;
+    const res = await post({
+      ...deterministic, ssAnnualIncome: 12_000, ssCutCalendarYear: nextYear,
+    });
+    // years:1 ends before the cut year → baseline math.
+    expect(res.json().median).toBe(488_000);
+  });
+
+  it('defaults: no ssAnnualIncome ⇒ no cut, legacy result', async () => {
+    const res = await post(deterministic);
+    expect(res.json().median).toBe(488_000);
+    expect(res.json().inputs.ssAnnualIncome).toBe(0);
+  });
+
+  it('rejects SS income above total income with a plain-language envelope', async () => {
+    const res = await post({ ...deterministic, ssAnnualIncome: 30_000 });
+    expect(res.statusCode).toBe(400);
+    const d = res.json().details.find((x: { field: string }) => x.field === 'ssAnnualIncome');
+    expect(d.fieldLabel).toBe('Social Security income');
+    expect(d.message).toBe('Social Security income cannot exceed total income.');
+  });
+});

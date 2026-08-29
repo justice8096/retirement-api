@@ -47,6 +47,10 @@ const FIELD_LABELS: Record<string, string> = {
   ssCola: 'Social Security cost-of-living adjustment',
   ssCutYear: 'Year Social Security benefits are cut',
   ssCutEnabled: 'Apply Social Security cut scenario',
+  // /api/simulate SS scheduled-cut fields (spec 2026-08-29)
+  ssAnnualIncome: 'Social Security income',
+  ssCutCalendarYear: 'Year Social Security benefits are reduced',
+  ssCutPct: 'Size of the Social Security reduction',
   ssExempt: 'Exempt Social Security from state tax',
   traditionalBalance: 'Traditional account balance',
   rothBalance: 'Roth account balance',

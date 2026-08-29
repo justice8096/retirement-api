@@ -270,7 +270,7 @@ export interface MonteCarloParams {
     /** Sim year (0-indexed) at which the scheduled SS benefit reduction
      *  fires. Negative or zero ⇒ the cut is already in effect at year 0.
      *  Undefined ⇒ no cut is modeled. */
-    ssCutYear?: number;
+    ssCutSimYear?: number;
     /** Fraction of the SS benefit REMAINING after the cut (e.g. 0.77 = 23%
      *  cut, the ~2032 Trustees/CRFB projection). Default 0.77. */
     ssCutFactor?: number;

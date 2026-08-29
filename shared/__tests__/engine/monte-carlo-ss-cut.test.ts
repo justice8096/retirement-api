@@ -5,7 +5,7 @@ import { runMonteCarlo, mulberry32, type MonteCarloParams } from '../../engine/m
  * SS scheduled-cut support (spec 2026-08-29). The kernel previously modeled
  * SS inside the lump `monthlyIncome` with no way to express the ~23%
  * benefit reduction scheduled at trust-fund depletion (~2032). These tests
- * pin the new `ssMonthlyIncome` / `ssCutYear` / `ssCutFactor` params.
+ * pin the new `ssMonthlyIncome` / `ssCutSimYear` / `ssCutFactor` params.
  *
  * All-zero rates + runs:1 + seeded RNG ⇒ fully deterministic arithmetic:
  * each year `bal += income*12 - baseCost*12`. Baseline drift is
@@ -31,10 +31,10 @@ function baseParams(overrides: Partial<MonteCarloParams> = {}): MonteCarloParams
   };
 }
 
-describe('SS scheduled-cut (ssMonthlyIncome / ssCutYear / ssCutFactor)', () => {
+describe('SS scheduled-cut (ssMonthlyIncome / ssCutSimYear / ssCutFactor)', () => {
   it('is a no-op when the fields are absent, zero, or lack a cut year', () => {
     const baseline = runMonteCarlo(baseParams());
-    const zeroSlice = runMonteCarlo(baseParams({ ssMonthlyIncome: 0, ssCutYear: 0 }));
+    const zeroSlice = runMonteCarlo(baseParams({ ssMonthlyIncome: 0, ssCutSimYear: 0 }));
     const noYear = runMonteCarlo(baseParams({ ssMonthlyIncome: 1_000 }));
     expect(baseline.median).toBe(488_000);
     expect(zeroSlice.median).toBe(baseline.median);
@@ -43,30 +43,30 @@ describe('SS scheduled-cut (ssMonthlyIncome / ssCutYear / ssCutFactor)', () => {
 
   it('applies the default 23% cut to the SS slice from the cut year onward', () => {
     // income 2000 - 1000*0.23 = 1770 → 500000 + 1770*12 - 36000
-    const r = runMonteCarlo(baseParams({ ssMonthlyIncome: 1_000, ssCutYear: 0 }));
+    const r = runMonteCarlo(baseParams({ ssMonthlyIncome: 1_000, ssCutSimYear: 0 }));
     expect(r.median).toBe(485_240);
   });
 
   it('leaves years before the cut untouched', () => {
     // y0: -12000 → 488000; y1 (cut): 1770*12 - 36000 = -14760 → 473240
-    const r = runMonteCarlo(baseParams({ years: 2, ssMonthlyIncome: 1_000, ssCutYear: 1 }));
+    const r = runMonteCarlo(baseParams({ years: 2, ssMonthlyIncome: 1_000, ssCutSimYear: 1 }));
     expect(r.median).toBe(473_240);
   });
 
   it('treats a negative cut year as already-cut at year 0', () => {
-    const r = runMonteCarlo(baseParams({ ssMonthlyIncome: 1_000, ssCutYear: -3 }));
+    const r = runMonteCarlo(baseParams({ ssMonthlyIncome: 1_000, ssCutSimYear: -3 }));
     expect(r.median).toBe(485_240);
   });
 
   it('honors a custom ssCutFactor', () => {
     // income 2000 - 1000*0.5 = 1500 → 500000 + 18000 - 36000
-    const r = runMonteCarlo(baseParams({ ssMonthlyIncome: 1_000, ssCutYear: 0, ssCutFactor: 0.5 }));
+    const r = runMonteCarlo(baseParams({ ssMonthlyIncome: 1_000, ssCutSimYear: 0, ssCutFactor: 0.5 }));
     expect(r.median).toBe(482_000);
   });
 
   it('clamps the SS slice to monthlyIncome', () => {
     // slice clamped 5000→2000; income 2000*0.77 = 1540 → 500000 + 18480 - 36000
-    const r = runMonteCarlo(baseParams({ ssMonthlyIncome: 5_000, ssCutYear: 0 }));
+    const r = runMonteCarlo(baseParams({ ssMonthlyIncome: 5_000, ssCutSimYear: 0 }));
     expect(r.median).toBe(482_480);
   });
 
@@ -74,7 +74,7 @@ describe('SS scheduled-cut (ssMonthlyIncome / ssCutYear / ssCutFactor)', () => {
     // y0: income 2000 → -12000 → 488000; growth: income 2200, ss 1100.
     // y1 cut: income 2200 - 1100*0.23 = 1947 → 488000 + 23364 - 36000
     const r = runMonteCarlo(
-      baseParams({ years: 2, incGrowth: 0.1, ssMonthlyIncome: 1_000, ssCutYear: 1 }),
+      baseParams({ years: 2, incGrowth: 0.1, ssMonthlyIncome: 1_000, ssCutSimYear: 1 }),
     );
     expect(r.median).toBeCloseTo(475_364, 6);
   });
@@ -85,7 +85,7 @@ describe('SS scheduled-cut (ssMonthlyIncome / ssCutYear / ssCutFactor)', () => {
     // 1000*0.23*12 = 2760; y1,y2 survivor 1500*0.23*12 = 4140 each.
     const survivor = { years: 3, spouseDeathYear: 1, survivorMonthlyIncome: 1_500 };
     const noCut = runMonteCarlo(baseParams(survivor));
-    const cut = runMonteCarlo(baseParams({ ...survivor, ssMonthlyIncome: 1_000, ssCutYear: 0 }));
+    const cut = runMonteCarlo(baseParams({ ...survivor, ssMonthlyIncome: 1_000, ssCutSimYear: 0 }));
     expect(noCut.median - cut.median).toBeCloseTo(2_760 + 4_140 + 4_140, 6);
   });
 
@@ -94,7 +94,7 @@ describe('SS scheduled-cut (ssMonthlyIncome / ssCutYear / ssCutFactor)', () => {
     // delta = 1500*0.23*12 = 4140 in y2 only.
     const survivor = { years: 3, spouseDeathYear: 1, survivorMonthlyIncome: 1_500 };
     const noCut = runMonteCarlo(baseParams(survivor));
-    const cut = runMonteCarlo(baseParams({ ...survivor, ssMonthlyIncome: 1_000, ssCutYear: 2 }));
+    const cut = runMonteCarlo(baseParams({ ...survivor, ssMonthlyIncome: 1_000, ssCutSimYear: 2 }));
     expect(noCut.median - cut.median).toBeCloseTo(4_140, 6);
   });
 });
