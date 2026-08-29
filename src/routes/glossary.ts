@@ -425,6 +425,18 @@ const GLOSSARY: GlossaryEntry[] = [
       'The excess of 50% of the other spouse’s PIA over the claimant’s own PIA, payable once both have filed (deemed filing applies for post-1954 births — filing for one benefit files for both). Reduced by 25/36 of 1% per month for the first 36 months before the claimant’s FRA, then 5/12 of 1% per month.',
     seeAlso: ['pia', 'full_retirement_age', 'claim_age'],
   },
+  {
+    key: 'ss_scheduled_reduction',
+    term: 'Social Security Scheduled Reduction',
+    aliases: ['trust fund depletion', '2032 Social Security cut', 'benefit cut'],
+    plain:
+      'Social Security is projected to be able to pay only part of promised benefits starting around 2032–2033, when its reserve fund runs out. Unless Congress acts, checks would automatically shrink by roughly a quarter.',
+    example:
+      'A $2,000 monthly benefit would drop to about $1,540 if a 23% reduction took effect in 2032. The planner models this by default; you can change the year and size, or turn it off.',
+    technical:
+      'OASI trust-fund depletion per the SSA Trustees (≈2033) and CRFB post-Fairness-Act estimates (≈2032), after which continuing payroll-tax revenue covers ~76–79% of scheduled benefits. Modeled in /api/simulate via ssAnnualIncome, ssCutCalendarYear (default 2032), and ssCutPct (default 0.23, a decimal fraction).',
+    seeAlso: ['pia', 'full_retirement_age'],
+  },
 ];
 
 export default async function glossaryRoutes(app: FastifyInstance): Promise<void> {
