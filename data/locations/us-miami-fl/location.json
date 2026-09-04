@@ -61,10 +61,11 @@
       "annualInflation": 0.03
     },
     "petDaycare": {
-      "typical": 200,
-      "min": 150,
-      "max": 300,
-      "annualInflation": 0.03
+      "typical": 330,
+      "min": 260,
+      "max": 480,
+      "annualInflation": 0.03,
+      "notes": "Doggy daycare 2 days/week, large breed rate (~$38/day). Miami avg $38.37/day per Rover 2026."
     },
     "petGrooming": {
       "typical": 60,
