@@ -16,6 +16,7 @@
 import { HISTORICAL_RETURNS, bootstrapYear } from './historical-returns.js';
 import { aggregateRentalIncome, straightLineDepreciation } from './rental-income.js';
 import { ltcgFederalTax } from './tax-sources.js';
+import { calcRMD } from '../rmd.js';
 export const DEFAULT_REGIME = {
     bullMean: 0.12,
     bullVol: 0.12,
@@ -418,6 +419,40 @@ export function runMonteCarlo(p) {
     // scaled by ltcProbability. Cross-trial average of the random mode equals
     // the per-year EV deduction, so this preserves intent without the noise.
     const ltcUseExpectedValue = effectiveRuns === 1;
+    // RMD / Roth-conversion config (see MonteCarloParams.rmdEnabled). All of
+    // this is inert unless the caller opts in AND supplies adultBirthYears.
+    const rmdAdults = (p.adultBirthYears && p.adultBirthYears.length)
+        ? p.adultBirthYears.slice()
+        : [];
+    const rmdOn = !!p.rmdEnabled && rmdAdults.length > 0;
+    const rmdRate = Math.min(1, Math.max(0, p.rmdEffectiveTaxRate ?? 0.22));
+    const convRate = Math.min(1, Math.max(0, p.rothConversionTaxRate ?? rmdRate));
+    const tradFirst = (p.rmdWithdrawalOrder ?? 'traditional-first') === 'traditional-first';
+    const tradInit = rmdAdults.map(() => 0);
+    if (rmdOn) {
+        const tb = p.traditionalBalance;
+        if (Array.isArray(tb)) {
+            for (let i = 0; i < rmdAdults.length; i++)
+                tradInit[i] = Math.max(0, tb[i] ?? 0);
+        }
+        else {
+            tradInit[0] = Math.max(0, tb ?? portfolio);
+        }
+    }
+    // Default deceased owner for a spouseDeath event without deceasedIndex:
+    // the oldest adult (mirrors the LTC anchor convention).
+    let rmdOldestIdx = 0;
+    for (let i = 1; i < rmdAdults.length; i++)
+        if (rmdAdults[i] < rmdAdults[rmdOldestIdx])
+            rmdOldestIdx = i;
+    const rmdAcc = rmdOn ? {
+        gross: new Array(years).fill(0),
+        excess: new Array(years).fill(0),
+        tax: new Array(years).fill(0),
+        conversion: new Array(years).fill(0),
+        conversionTax: new Array(years).fill(0),
+        tradEnd: new Array(years).fill(0),
+    } : null;
     for (let r = 0; r < effectiveRuns; r++) {
         let bal = portfolio;
         // Parallel HSA accumulator. Stays at 0 when HSA is inactive; otherwise
@@ -460,6 +495,9 @@ export function runMonteCarlo(p) {
         let fxShockMult = 1;
         let cumInfl = 1; // accumulated inflation from year 0 — used to re-baseline cost on moves
         let survivorPhase = false;
+        // Per-owner pre-tax buckets for the RMD / conversion pass (empty when off).
+        const trad = tradInit.slice();
+        const tradAlive = rmdAdults.map(() => true);
         const regimeState = { inBear: false };
         const path = [bal];
         // Per-trial LTC roll. Resolves once at trial start; deterministic across
@@ -492,6 +530,8 @@ export function runMonteCarlo(p) {
             // that consumes it (post-65 IRMAA tier ripple is a documented
             // limitation — see segmentCostAtYear's medicareMonthly handling).
             const magiAugmentY = magiAugmentByYear[y] ?? 0;
+            // Prior year-end pre-tax balances: the IRS base for this year's RMD.
+            const tradPrior = rmdOn ? trad.slice() : trad;
             // Move dispatch (#31 step 2b). Replaces the legacy
             // `movesByYear.has(y)` lookup. The `y > 0` guard preserves legacy
             // behavior: a moveSchedule[0] entry at fromYear=0 is the trial's
@@ -576,6 +616,32 @@ export function runMonteCarlo(p) {
             }
             if (!survivorPhase && spouseDeathThisYear) {
                 survivorPhase = true;
+                if (rmdOn && rmdAdults.length > 1) {
+                    // Spousal rollover: the deceased owner's pre-tax bucket joins the
+                    // survivor's, and future RMDs use the survivor's age.
+                    let dIdx = rmdOldestIdx;
+                    if (eventsThisYear) {
+                        for (const ev of eventsThisYear) {
+                            if (ev.kind === 'spouseDeath' && ev.deceasedIndex != null) {
+                                dIdx = ev.deceasedIndex;
+                                break;
+                            }
+                        }
+                    }
+                    if (dIdx < 0 || dIdx >= rmdAdults.length)
+                        dIdx = rmdOldestIdx;
+                    let sIdx = -1;
+                    for (let i = 0; i < rmdAdults.length; i++)
+                        if (i !== dIdx && tradAlive[i]) {
+                            sIdx = i;
+                            break;
+                        }
+                    if (sIdx >= 0) {
+                        trad[sIdx] += trad[dIdx];
+                        trad[dIdx] = 0;
+                    }
+                    tradAlive[dIdx] = false;
+                }
                 if (survivorIncome != null) {
                     // Survivor income is typically pure SS (max PIA) — treated as
                     // fully SS for cut purposes (documented v1 simplification,
@@ -717,6 +783,13 @@ export function runMonteCarlo(p) {
             // fee config is a bit-identical no-op — `bal -= bal * 0 + 0 * cumInfl`
             // leaves `bal` unchanged.
             bal -= bal * (p.brokerageExpenseRatio ?? 0) + (p.brokerageAnnualFee ?? 0) * cumInfl;
+            if (rmdOn) {
+                // Pre-tax buckets ride the same return and expense ratio as the whole
+                // portfolio (the flat annual fee is treated as paid from after-tax money).
+                const feeRatio = p.brokerageExpenseRatio ?? 0;
+                for (let i = 0; i < trad.length; i++)
+                    trad[i] = Math.max(0, trad[i] * (1 + ret) * (1 - feeRatio));
+            }
             const effectiveFxShock = curIsForeign ? fxShockMult : 1;
             const costShockMult = currShock * fxMult * effectiveFxShock;
             // HSA logic (#33 item 3) — runs only when HSA is active. Order:
@@ -777,6 +850,80 @@ export function runMonteCarlo(p) {
                 Math.max(0, p.dependentCostByYear?.[y] ?? 0);
             if (householdExtraAnnual > 0)
                 bal -= householdExtraAnnual * cumInfl;
+            // RMD / Roth-conversion pass (see MonteCarloParams.rmdEnabled). Lands
+            // after the year's regular cash flow so the voluntary pre-tax draw is
+            // known, and before the late-pass event dispatch.
+            if (rmdOn && rmdAcc) {
+                // 1. Attribute the year's spending shortfall to buckets.
+                const mortgageAnnual = (mortgageMonthlyPayment > 0 && y < mortgageEndYear) ? mortgageMonthlyPayment * 12 : 0;
+                const netCash = (income + activePartTime) * 12 - costAnnualWithShock + hsaDraw
+                    - mortgageAnnual - householdExtraAnnual * cumInfl;
+                const tradTotalBefore = trad.reduce((s, v) => s + v, 0);
+                const otherBefore = Math.max(0, (bal - netCash) - tradTotalBefore);
+                let voluntaryTrad = 0;
+                if (netCash < 0) {
+                    const draw = -netCash;
+                    if (tradFirst) {
+                        voluntaryTrad = Math.min(draw, tradTotalBefore);
+                    }
+                    else {
+                        const fromOther = Math.min(draw, otherBefore);
+                        voluntaryTrad = Math.min(draw - fromOther, tradTotalBefore);
+                    }
+                }
+                let remainingDraw = voluntaryTrad;
+                for (let i = 0; i < trad.length && remainingDraw > 0; i++) {
+                    const take = Math.min(trad[i], remainingDraw);
+                    trad[i] -= take;
+                    remainingDraw -= take;
+                }
+                // 2. Roth conversion (nominal USD schedule), tax paid from the balance.
+                let convWanted = Math.max(0, p.rothConversionByYear?.[y] ?? 0);
+                let convDone = 0;
+                for (let i = 0; i < trad.length && convWanted > 0; i++) {
+                    const take = Math.min(trad[i], convWanted);
+                    trad[i] -= take;
+                    convWanted -= take;
+                    convDone += take;
+                }
+                const convTax = convDone * convRate;
+                bal -= convTax;
+                // 3. RMD per living owner from the prior year-end bucket and the age
+                //    attained this calendar year. Only the excess over this year's
+                //    voluntary pre-tax draw is forced; conversions do not offset it.
+                let grossRmd = 0;
+                for (let i = 0; i < trad.length; i++) {
+                    if (!tradAlive[i])
+                        continue;
+                    const age = (calStart + y) - rmdAdults[i];
+                    const r = calcRMD(tradPrior[i], age, rmdAdults[i]);
+                    if (r.required && r.rmd > 0)
+                        grossRmd += r.rmd;
+                }
+                const tradTotalNow = trad.reduce((s, v) => s + v, 0);
+                const excess = Math.max(0, Math.min(grossRmd - voluntaryTrad, tradTotalNow));
+                let remainingExcess = excess;
+                for (let i = 0; i < trad.length && remainingExcess > 0; i++) {
+                    const take = Math.min(trad[i], remainingExcess);
+                    trad[i] -= take;
+                    remainingExcess -= take;
+                }
+                const rmdTax = excess * rmdRate;
+                bal -= rmdTax;
+                // Buckets can never exceed the whole portfolio.
+                const tradTotalAfter = trad.reduce((s, v) => s + v, 0);
+                if (tradTotalAfter > Math.max(0, bal)) {
+                    const scale = tradTotalAfter > 0 ? Math.max(0, bal) / tradTotalAfter : 0;
+                    for (let i = 0; i < trad.length; i++)
+                        trad[i] *= scale;
+                }
+                rmdAcc.gross[y] += grossRmd;
+                rmdAcc.excess[y] += excess;
+                rmdAcc.tax[y] += rmdTax;
+                rmdAcc.conversion[y] += convDone;
+                rmdAcc.conversionTax[y] += convTax;
+                rmdAcc.tradEnd[y] += trad.reduce((s, v) => s + v, 0);
+            }
             // Late-pass dispatch (#31 step 2a + priority 2) — handles event
             // kinds whose effect is a balance mutation AFTER the year's
             // income / cost mutation. Two kinds today: `oneTimeExpense`
@@ -996,6 +1143,16 @@ export function runMonteCarlo(p) {
         p25: at(0.25),
         p75: at(0.75),
         p95: at(0.95),
+        ...(rmdAcc ? {
+            rmd: {
+                meanGrossByYear: rmdAcc.gross.map((v) => v / effectiveRuns),
+                meanExcessByYear: rmdAcc.excess.map((v) => v / effectiveRuns),
+                meanTaxByYear: rmdAcc.tax.map((v) => v / effectiveRuns),
+                meanConversionByYear: rmdAcc.conversion.map((v) => v / effectiveRuns),
+                meanConversionTaxByYear: rmdAcc.conversionTax.map((v) => v / effectiveRuns),
+                meanTraditionalEndByYear: rmdAcc.tradEnd.map((v) => v / effectiveRuns),
+            },
+        } : {}),
     };
 }
 /**
