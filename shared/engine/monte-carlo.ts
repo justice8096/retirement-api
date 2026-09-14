@@ -17,6 +17,7 @@
 import { HISTORICAL_RETURNS, bootstrapYear } from './historical-returns.js';
 import { aggregateRentalIncome, straightLineDepreciation, type RentalProperty } from './rental-income.js';
 import { ltcgFederalTax, type LtcgFilingStatus } from './tax-sources.js';import { calcRMD } from '../rmd.js';
+import { ordinaryTaxDelta, type OrdinaryFilingStatus, type OrdinaryTaxInputs } from './ordinary-tax.js';
 
 
 export type ReturnMode = 'normal' | 'bootstrap' | 'regime' | 'historical-sequence';
@@ -666,6 +667,19 @@ export interface MonteCarloParams {
   rothConversionByYear?: number[];
   /** Decimal rate on Roth conversions. Default = `rmdEffectiveTaxRate`. */
   rothConversionTaxRate?: number;
+  /**
+   * How RMD excess and conversions are taxed. 'flat' (default) uses
+   * rmdEffectiveTaxRate / rothConversionTaxRate. 'bracket' stacks each
+   * amount on the year's other ordinary income and Social Security using
+   * the 2026 federal tables indexed by accumulated inflation (see
+   * ordinary-tax.ts): MFJ while both adults are alive, single after a
+   * spouseDeath; the 65+ additional standard deduction is applied per
+   * living adult; the taxable share of SS is re-derived from provisional
+   * income so the SS "tax torpedo" is captured. Conversions are stacked
+   * first, then the forced RMD excess on top. The SS slice is
+   * `ssMonthlyIncome` when supplied, otherwise all of `monthlyIncome`.
+   */
+  rmdTaxMode?: 'flat' | 'bracket';
 
   /**
    * Optional per-year override of the household-wide Medicare monthly cost.
@@ -810,6 +824,15 @@ export interface RmdSummary {
   meanConversionTaxByYear: number[];
   /** Pre-tax bucket total at year end. */
   meanTraditionalEndByYear: number[];
+  /**
+   * Ending balance net of the deferred tax on whatever is still pre-tax,
+   * valued as if drained over 10 years (SECURE Act heir rule) from the
+   * household's final-year position: flat mode uses rmdEffectiveTaxRate,
+   * bracket mode uses the stacked tables. Same percentile convention as
+   * the headline figures; successRate counts trials ending above zero
+   * after the deferred tax.
+   */
+  afterTax: { successRate: number; median: number; p5: number; p25: number; p75: number; p95: number };
 }
 export interface MonteCarloResult {
   /** Ending balances for every run, sorted ascending */
@@ -1291,6 +1314,10 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
     conversionTax: new Array<number>(years).fill(0),
     tradEnd: new Array<number>(years).fill(0),
   } : null;
+  const rmdBracket = rmdOn && (p.rmdTaxMode ?? 'flat') === 'bracket';
+  // Indexation of the 2026 tables to the sim's calendar start year.
+  const rmdIndexBase = Math.pow(1 + (p.meanInflation ?? 0), Math.max(0, calStart - 2026));
+  const afterTaxResults: number[] = [];
 
   for (let r = 0; r < effectiveRuns; r++) {
     let bal = portfolio;
@@ -1338,6 +1365,8 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
     // Per-owner pre-tax buckets for the RMD / conversion pass (empty when off).
     const trad: number[] = tradInit.slice();
     const tradAlive: boolean[] = rmdAdults.map(() => true);
+    // Final-year tax position, kept for the after-deferred-tax valuation.
+    let lastTaxInp: OrdinaryTaxInputs | null = null;
     const regimeState = { inBear: false };
     const path: number[] = [bal];
 
@@ -1730,7 +1759,24 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
           convWanted -= take;
           convDone += take;
         }
-        const convTax = convDone * convRate;
+        // Tax position for this year (nominal USD). Voluntary pre-tax draws
+        // count as ordinary income already on the return; conversions stack
+        // on top of them, then the forced RMD excess on top of both.
+        const ssAnnualNow = (p.ssMonthlyIncome != null ? ssIncome : income) * 12;
+        const otherOrdinaryNow = Math.max(0, income * 12 - ssAnnualNow) + activePartTime * 12 + voluntaryTrad;
+        let livingAdults = 0;
+        let filers65 = 0;
+        for (let i = 0; i < rmdAdults.length; i++) {
+          if (!tradAlive[i]) continue;
+          livingAdults++;
+          if ((calStart + y) - rmdAdults[i] >= 65) filers65++;
+        }
+        const filingNow: OrdinaryFilingStatus = (livingAdults >= 2 && !survivorPhase) ? 'mfj' : 'single';
+        const taxInp: OrdinaryTaxInputs = {
+          otherOrdinary: otherOrdinaryNow, ssAnnual: ssAnnualNow, filingStatus: filingNow,
+          filers65, indexFactor: rmdIndexBase * cumInfl,
+        };
+        const convTax = rmdBracket ? ordinaryTaxDelta(taxInp, convDone) : convDone * convRate;
         bal -= convTax;
 
         // 3. RMD per living owner from the prior year-end bucket and the age
@@ -1751,7 +1797,10 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
           trad[i] -= take;
           remainingExcess -= take;
         }
-        const rmdTax = excess * rmdRate;
+        const rmdTax = rmdBracket
+          ? ordinaryTaxDelta({ ...taxInp, otherOrdinary: otherOrdinaryNow + convDone }, excess)
+          : excess * rmdRate;
+        lastTaxInp = { ...taxInp, otherOrdinary: otherOrdinaryNow + convDone + excess };
         bal -= rmdTax;
 
         // Buckets can never exceed the whole portfolio.
@@ -1977,10 +2026,32 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
     }
 
     results.push(bal);
+    if (rmdOn) {
+      // Deferred tax on the remaining pre-tax bucket, valued as a 10-year
+      // drain from the final-year position (SECURE Act heir rule).
+      const tradEndTotal = trad.reduce((s, v) => s + v, 0);
+      let deferred = 0;
+      if (tradEndTotal > 0) {
+        deferred = (rmdBracket && lastTaxInp)
+          ? ordinaryTaxDelta(lastTaxInp, tradEndTotal / 10) * 10
+          : tradEndTotal * rmdRate;
+      }
+      afterTaxResults.push(bal - deferred);
+    }
     if (r < 50) paths.push(path);
   }
 
   results.sort((a, b) => a - b);
+  const afterTaxSorted = afterTaxResults.slice().sort((a, b) => a - b);
+  const atAfterTax = (q: number): number => afterTaxSorted[Math.floor(effectiveRuns * q)] ?? 0;
+  const rmdAfterTaxSummary = {
+    successRate: afterTaxSorted.length ? afterTaxSorted.filter((v) => v > 0).length / effectiveRuns : 0,
+    median: atAfterTax(0.5),
+    p5: atAfterTax(0.05),
+    p25: atAfterTax(0.25),
+    p75: atAfterTax(0.75),
+    p95: atAfterTax(0.95),
+  };
   const successRate = results.filter((v) => v > 0).length / effectiveRuns;
 
   // Percentile sampling (matches original floor-index behavior)
@@ -2003,6 +2074,7 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
         meanConversionByYear: rmdAcc.conversion.map((v) => v / effectiveRuns),
         meanConversionTaxByYear: rmdAcc.conversionTax.map((v) => v / effectiveRuns),
         meanTraditionalEndByYear: rmdAcc.tradEnd.map((v) => v / effectiveRuns),
+        afterTax: rmdAfterTaxSummary,
       },
     } : {}),  };
 }

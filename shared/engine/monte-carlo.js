@@ -17,6 +17,7 @@ import { HISTORICAL_RETURNS, bootstrapYear } from './historical-returns.js';
 import { aggregateRentalIncome, straightLineDepreciation } from './rental-income.js';
 import { ltcgFederalTax } from './tax-sources.js';
 import { calcRMD } from '../rmd.js';
+import { ordinaryTaxDelta } from './ordinary-tax.js';
 export const DEFAULT_REGIME = {
     bullMean: 0.12,
     bullVol: 0.12,
@@ -453,6 +454,10 @@ export function runMonteCarlo(p) {
         conversionTax: new Array(years).fill(0),
         tradEnd: new Array(years).fill(0),
     } : null;
+    const rmdBracket = rmdOn && (p.rmdTaxMode ?? 'flat') === 'bracket';
+    // Indexation of the 2026 tables to the sim's calendar start year.
+    const rmdIndexBase = Math.pow(1 + (p.meanInflation ?? 0), Math.max(0, calStart - 2026));
+    const afterTaxResults = [];
     for (let r = 0; r < effectiveRuns; r++) {
         let bal = portfolio;
         // Parallel HSA accumulator. Stays at 0 when HSA is inactive; otherwise
@@ -498,6 +503,8 @@ export function runMonteCarlo(p) {
         // Per-owner pre-tax buckets for the RMD / conversion pass (empty when off).
         const trad = tradInit.slice();
         const tradAlive = rmdAdults.map(() => true);
+        // Final-year tax position, kept for the after-deferred-tax valuation.
+        let lastTaxInp = null;
         const regimeState = { inBear: false };
         const path = [bal];
         // Per-trial LTC roll. Resolves once at trial start; deterministic across
@@ -886,7 +893,26 @@ export function runMonteCarlo(p) {
                     convWanted -= take;
                     convDone += take;
                 }
-                const convTax = convDone * convRate;
+                // Tax position for this year (nominal USD). Voluntary pre-tax draws
+                // count as ordinary income already on the return; conversions stack
+                // on top of them, then the forced RMD excess on top of both.
+                const ssAnnualNow = (p.ssMonthlyIncome != null ? ssIncome : income) * 12;
+                const otherOrdinaryNow = Math.max(0, income * 12 - ssAnnualNow) + activePartTime * 12 + voluntaryTrad;
+                let livingAdults = 0;
+                let filers65 = 0;
+                for (let i = 0; i < rmdAdults.length; i++) {
+                    if (!tradAlive[i])
+                        continue;
+                    livingAdults++;
+                    if ((calStart + y) - rmdAdults[i] >= 65)
+                        filers65++;
+                }
+                const filingNow = (livingAdults >= 2 && !survivorPhase) ? 'mfj' : 'single';
+                const taxInp = {
+                    otherOrdinary: otherOrdinaryNow, ssAnnual: ssAnnualNow, filingStatus: filingNow,
+                    filers65, indexFactor: rmdIndexBase * cumInfl,
+                };
+                const convTax = rmdBracket ? ordinaryTaxDelta(taxInp, convDone) : convDone * convRate;
                 bal -= convTax;
                 // 3. RMD per living owner from the prior year-end bucket and the age
                 //    attained this calendar year. Only the excess over this year's
@@ -908,7 +934,10 @@ export function runMonteCarlo(p) {
                     trad[i] -= take;
                     remainingExcess -= take;
                 }
-                const rmdTax = excess * rmdRate;
+                const rmdTax = rmdBracket
+                    ? ordinaryTaxDelta({ ...taxInp, otherOrdinary: otherOrdinaryNow + convDone }, excess)
+                    : excess * rmdRate;
+                lastTaxInp = { ...taxInp, otherOrdinary: otherOrdinaryNow + convDone + excess };
                 bal -= rmdTax;
                 // Buckets can never exceed the whole portfolio.
                 const tradTotalAfter = trad.reduce((s, v) => s + v, 0);
@@ -1127,10 +1156,32 @@ export function runMonteCarlo(p) {
             path.push(bal);
         }
         results.push(bal);
+        if (rmdOn) {
+            // Deferred tax on the remaining pre-tax bucket, valued as a 10-year
+            // drain from the final-year position (SECURE Act heir rule).
+            const tradEndTotal = trad.reduce((s, v) => s + v, 0);
+            let deferred = 0;
+            if (tradEndTotal > 0) {
+                deferred = (rmdBracket && lastTaxInp)
+                    ? ordinaryTaxDelta(lastTaxInp, tradEndTotal / 10) * 10
+                    : tradEndTotal * rmdRate;
+            }
+            afterTaxResults.push(bal - deferred);
+        }
         if (r < 50)
             paths.push(path);
     }
     results.sort((a, b) => a - b);
+    const afterTaxSorted = afterTaxResults.slice().sort((a, b) => a - b);
+    const atAfterTax = (q) => afterTaxSorted[Math.floor(effectiveRuns * q)] ?? 0;
+    const rmdAfterTaxSummary = {
+        successRate: afterTaxSorted.length ? afterTaxSorted.filter((v) => v > 0).length / effectiveRuns : 0,
+        median: atAfterTax(0.5),
+        p5: atAfterTax(0.05),
+        p25: atAfterTax(0.25),
+        p75: atAfterTax(0.75),
+        p95: atAfterTax(0.95),
+    };
     const successRate = results.filter((v) => v > 0).length / effectiveRuns;
     // Percentile sampling (matches original floor-index behavior)
     const at = (q) => results[Math.floor(effectiveRuns * q)] ?? 0;
@@ -1151,6 +1202,7 @@ export function runMonteCarlo(p) {
                 meanConversionByYear: rmdAcc.conversion.map((v) => v / effectiveRuns),
                 meanConversionTaxByYear: rmdAcc.conversionTax.map((v) => v / effectiveRuns),
                 meanTraditionalEndByYear: rmdAcc.tradEnd.map((v) => v / effectiveRuns),
+                afterTax: rmdAfterTaxSummary,
             },
         } : {}),
     };
