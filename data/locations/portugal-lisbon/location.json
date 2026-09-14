@@ -39,12 +39,12 @@
   },
   "monthlyCosts": {
     "rent": {
-      "min": 1100,
-      "max": 1800,
-      "typical": 1400,
+      "min": 1200,
+      "max": 2400,
+      "typical": 1700,
       "type": "2-bedroom house (moradia)",
       "annualInflation": 0.035,
-      "notes": "No VAT on residential rent."
+      "notes": "No VAT on residential rent. Lisbon city 2BR median ~€1,900 (2026); Algarve (Faro/Lagos) lower at €1,200–€1,600."
     },
     "groceries": {
       "min": 785,
