@@ -600,6 +600,62 @@ export interface MonteCarloParams {
      */
     lifeEvents?: LifeEvent[];
     /**
+     * Required Minimum Distributions (SECURE 2.0). Off by default; when
+     * `rmdEnabled` is false every field below is inert and the kernel is
+     * bit-identical to the pre-feature build.
+     *
+     * The portfolio stays one balance for returns and cash flow. This feature
+     * adds a parallel per-owner pre-tax (traditional IRA / 401k) bucket so the
+     * kernel can compute each owner's RMD from the prior year-end bucket
+     * balance and the IRS Uniform Lifetime divisor for the age the owner
+     * attains that year (start age via `getRMDStartAge`: 73 for 1951-1959
+     * births, 75 for 1960 and later).
+     *
+     * Only the FORCED part of a distribution costs anything: the RMD in excess
+     * of what the household already drew from pre-tax money that year to fund
+     * spending. Voluntary draws are assumed taxed through the segment's
+     * `monthlyIncomeTax` line, as before. The excess moves out of the pre-tax
+     * bucket into the after-tax remainder of the portfolio and
+     * `excess x rmdEffectiveTaxRate` is deducted from the balance.
+     *
+     * Roth conversions (`rothConversionByYear`) use the same bucket: the
+     * converted amount leaves the pre-tax bucket, `amount x rothConversionTaxRate`
+     * is deducted from the balance, and later RMDs shrink accordingly.
+     * Conversions do not count toward the year's RMD (IRS ordering rule).
+     *
+     * v1 simplifications: flat effective tax rates (no bracket stacking);
+     * IRMAA ripple not modeled (the kernel's MAGI augment is trial-invariant);
+     * pre-tax buckets earn the whole-portfolio return and expense ratio; on
+     * spouse death the deceased owner's bucket rolls over to the survivor.
+     */
+    rmdEnabled?: boolean;
+    /**
+     * Starting pre-tax balance per adult, aligned index-for-index with
+     * `adultBirthYears`. Scalar form assigns the whole amount to the first
+     * adult. Absent => the entire `portfolio` is treated as pre-tax and owned
+     * by the first adult. Requires `adultBirthYears`; without it the feature
+     * is inert.
+     */
+    traditionalBalance?: number | number[];
+    /** Decimal effective ordinary-income rate on forced RMD excess. Default 0.22. */
+    rmdEffectiveTaxRate?: number;
+    /**
+     * Which money funds a year's spending shortfall (cost above income):
+     * 'traditional-first' (default: spend pre-tax first, which shrinks future
+     * RMDs and matches the usual pre-RMD-age drawdown) or 'other-first'
+     * (spend taxable / Roth first, which maximizes the pre-tax bucket and RMD).
+     */
+    rmdWithdrawalOrder?: 'traditional-first' | 'other-first';
+    /**
+     * Roth conversion schedule in nominal USD per sim year (index = sim year;
+     * missing or non-positive entries convert nothing). Executed after the
+     * year's return and cash flow, capped at the remaining pre-tax balance,
+     * drawn from the first adult's bucket then the next.
+     */
+    rothConversionByYear?: number[];
+    /** Decimal rate on Roth conversions. Default = `rmdEffectiveTaxRate`. */
+    rothConversionTaxRate?: number;
+    /**
      * Optional per-year override of the household-wide Medicare monthly cost.
      * Sparse array: index `y` may be `undefined`, which falls through to the
      * active segment's `m.medicareMonthly`. Set entries are used instead of
@@ -717,6 +773,24 @@ export interface MonteCarloParams {
      */
     seededRandom?: () => number;
 }
+/**
+ * Cross-trial mean per sim year (nominal USD) of the RMD / conversion
+ * pass. Present on `MonteCarloResult.rmd` only when `rmdEnabled`.
+ */
+export interface RmdSummary {
+    /** Gross RMD required across all living owners. */
+    meanGrossByYear: number[];
+    /** Forced excess: RMD not already covered by voluntary pre-tax draws. */
+    meanExcessByYear: number[];
+    /** Tax deducted on the forced excess. */
+    meanTaxByYear: number[];
+    /** Roth conversion executed. */
+    meanConversionByYear: number[];
+    /** Tax deducted on conversions. */
+    meanConversionTaxByYear: number[];
+    /** Pre-tax bucket total at year end. */
+    meanTraditionalEndByYear: number[];
+}
 export interface MonteCarloResult {
     /** Ending balances for every run, sorted ascending */
     results: number[];
@@ -730,6 +804,8 @@ export interface MonteCarloResult {
     p25: number;
     p75: number;
     p95: number;
+    /** Present only when `rmdEnabled` (see RmdSummary). */
+    rmd?: RmdSummary;
 }
 /**
  * Mulberry32 seeded PRNG factory. Returns a function that produces a
