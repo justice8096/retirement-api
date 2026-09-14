@@ -119,3 +119,46 @@ describe('RMD pass (rmdEnabled / traditionalBalance / rothConversionByYear)', ()
     expect(youngerSurvives.rmd?.meanGrossByYear[1]).toBe(0);
   });
 });
+describe('RMD pass: bracket tax mode and after-tax ending balance', () => {
+  it('flat mode reports the ending balance net of 22% on the remaining pre-tax bucket', () => {
+    const r = runMonteCarlo(baseParams({ rmdEnabled: true, adultBirthYears: [1950] }));
+    // bal 485836.51, trad end 478165.94 -> deferred 105196.51
+    expect(r.rmd?.afterTax.median).toBeCloseTo(485_836.51 - 478_165.94 * 0.22, 0);
+    expect(r.rmd?.afterTax.successRate).toBe(1);
+  });
+
+  it('bracket mode stacks the forced excess on voluntary draws and Social Security', () => {
+    // Single filer born 1950 (age 77 in 2027, 65+ deduction 2050), SS 24000/yr (all of monthlyIncome),
+    // voluntary pre-tax draw 12000, RMD excess 9834.06.
+    // Base: provisional 24000 < 25000, taxable 12000 - 18150 < 0 -> 0.
+    // With excess: taxable SS 4417.03, taxable 8101.09 -> 810.11 at 10%.
+    const r = runMonteCarlo(baseParams({ rmdEnabled: true, adultBirthYears: [1950], rmdTaxMode: 'bracket' }));
+    expect(r.rmd?.meanTaxByYear[0]).toBeCloseTo(810.11, 1);
+    expect(r.median).toBeCloseTo(500_000 - 12_000 - 810.11, 0);
+    // Deferred: 10-year drain of 478165.94 from the final position -> 9720.03/yr -> 97200.3
+    expect(r.rmd?.afterTax.median).toBeCloseTo(500_000 - 12_000 - 810.11 - 97_200.3, 0);
+  });
+
+  it('bracket mode taxes a conversion at the stacked marginal rate and leaves flat mode untouched', () => {
+    // Young owner, no RMD. SS 24000, 12000 voluntary. Convert 50000 single filer under 65 (deduction 16100).
+    // With: provisional 74000 -> taxable SS 20400 (cap); taxable 62000+20400-16100 = 66300
+    //   -> 1240 + 4560 + 15900*0.22 = 9298. Base tax 0. Delta 9298.
+    const bracket = runMonteCarlo(baseParams({ rmdEnabled: true, adultBirthYears: [1990], rmdTaxMode: 'bracket', rothConversionByYear: [50_000] }));
+    expect(bracket.rmd?.meanConversionTaxByYear[0]).toBeCloseTo(9_298, 0);
+    const flat = runMonteCarlo(baseParams({ rmdEnabled: true, adultBirthYears: [1990], rothConversionByYear: [50_000] }));
+    expect(flat.rmd?.meanConversionTaxByYear[0]).toBe(11_000);
+  });
+
+  it('switches to single-filer brackets after spouse death', () => {
+    const common = {
+      years: 2, monthlyIncome: 3_000, rmdEnabled: true, rmdTaxMode: 'bracket' as const,
+      adultBirthYears: [1950, 1960], traditionalBalance: [0, 400_000],
+      lifeEvents: [{ kind: 'spouseDeath' as const, year: 0, deceasedIndex: 1 }],
+    };
+    const r = runMonteCarlo(baseParams(common));
+    // Year 1: survivor born 1950 (age 78), RMD 400000/22 = 18181.82 all forced, single, 65+ deduction.
+    // SS 36000: provisional 18181.82 + 18000 = 36181.82 > 34000: tier1 4500 + 0.85*2181.82 = 6354.55
+    // taxable 18181.82 + 6354.55 - 18150 = 6386.37 -> 638.64
+    expect(r.rmd?.meanTaxByYear[1]).toBeCloseTo(638.64, 1);
+  });
+});

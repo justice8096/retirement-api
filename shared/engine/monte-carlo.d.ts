@@ -656,6 +656,19 @@ export interface MonteCarloParams {
     /** Decimal rate on Roth conversions. Default = `rmdEffectiveTaxRate`. */
     rothConversionTaxRate?: number;
     /**
+     * How RMD excess and conversions are taxed. 'flat' (default) uses
+     * rmdEffectiveTaxRate / rothConversionTaxRate. 'bracket' stacks each
+     * amount on the year's other ordinary income and Social Security using
+     * the 2026 federal tables indexed by accumulated inflation (see
+     * ordinary-tax.ts): MFJ while both adults are alive, single after a
+     * spouseDeath; the 65+ additional standard deduction is applied per
+     * living adult; the taxable share of SS is re-derived from provisional
+     * income so the SS "tax torpedo" is captured. Conversions are stacked
+     * first, then the forced RMD excess on top. The SS slice is
+     * `ssMonthlyIncome` when supplied, otherwise all of `monthlyIncome`.
+     */
+    rmdTaxMode?: 'flat' | 'bracket';
+    /**
      * Optional per-year override of the household-wide Medicare monthly cost.
      * Sparse array: index `y` may be `undefined`, which falls through to the
      * active segment's `m.medicareMonthly`. Set entries are used instead of
@@ -790,6 +803,22 @@ export interface RmdSummary {
     meanConversionTaxByYear: number[];
     /** Pre-tax bucket total at year end. */
     meanTraditionalEndByYear: number[];
+    /**
+     * Ending balance net of the deferred tax on whatever is still pre-tax,
+     * valued as if drained over 10 years (SECURE Act heir rule) from the
+     * household's final-year position: flat mode uses rmdEffectiveTaxRate,
+     * bracket mode uses the stacked tables. Same percentile convention as
+     * the headline figures; successRate counts trials ending above zero
+     * after the deferred tax.
+     */
+    afterTax: {
+        successRate: number;
+        median: number;
+        p5: number;
+        p25: number;
+        p75: number;
+        p95: number;
+    };
 }
 export interface MonteCarloResult {
     /** Ending balances for every run, sorted ascending */
