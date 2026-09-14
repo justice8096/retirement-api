@@ -162,3 +162,37 @@ describe('RMD pass: bracket tax mode and after-tax ending balance', () => {
     expect(r.rmd?.meanTaxByYear[1]).toBeCloseTo(638.64, 1);
   });
 });
+describe('RMD pass: IRMAA surcharge with two-year lookback', () => {
+  const single1950 = { years: 3, rmdEnabled: true, adultBirthYears: [1950], rmdTaxMode: 'bracket' as const };
+
+  it('uses caller-supplied prior MAGI for sim years 0 and 1, then in-sim history', () => {
+    // Prior MAGI 200000 single -> tier 3 -> (324.60 + 60.40) * 12 = 4620/yr for years 0 and 1.
+    // Year 2 looks back at year-0 in-sim MAGI (~26251) -> tier 0.
+    const off = runMonteCarlo(baseParams(single1950));
+    const on = runMonteCarlo(baseParams({ ...single1950, irmaaEnabled: true, irmaaPriorMagi: [200_000, 200_000] }));
+    expect(on.rmd?.meanIrmaaByYear).toEqual([4_620, 4_620, 0]);
+    expect(on.rmd?.meanMagiByYear[0]).toBeCloseTo(12_000 + 9_834.06 + 4_417.03, 1);
+    expect(on.median).toBeCloseTo(off.median - 9_240, 6);
+  });
+
+  it('falls back to the current-year MAGI when no prior MAGI is supplied', () => {
+    const on = runMonteCarlo(baseParams({ ...single1950, irmaaEnabled: true }));
+    expect(on.rmd?.meanIrmaaByYear).toEqual([0, 0, 0]);
+  });
+
+  it('charges nothing before Medicare age and can exclude Part D', () => {
+    const young = runMonteCarlo(baseParams({ years: 2, rmdEnabled: true, adultBirthYears: [1990], irmaaEnabled: true, irmaaPriorMagi: [900_000, 900_000] }));
+    expect(young.rmd?.meanIrmaaByYear).toEqual([0, 0]);
+    const noD = runMonteCarlo(baseParams({ ...single1950, irmaaEnabled: true, irmaaPartD: false, irmaaPriorMagi: [200_000, 200_000] }));
+    expect(noD.rmd?.meanIrmaaByYear[0]).toBeCloseTo(324.60 * 12, 6);
+  });
+
+  it('charges each enrolled adult and uses joint thresholds while both live', () => {
+    // Both 65+, prior MAGI 250000 joint -> tier 1 -> 95.70 * 12 * 2 = 2296.80
+    const r = runMonteCarlo(baseParams({
+      years: 1, monthlyIncome: 3_000, rmdEnabled: true, adultBirthYears: [1950, 1955], traditionalBalance: [0, 0],
+      irmaaEnabled: true, irmaaPriorMagi: [250_000, 250_000],
+    }));
+    expect(r.rmd?.meanIrmaaByYear[0]).toBeCloseTo(2_296.80, 6);
+  });
+});

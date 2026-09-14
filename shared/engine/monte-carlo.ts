@@ -18,6 +18,8 @@ import { HISTORICAL_RETURNS, bootstrapYear } from './historical-returns.js';
 import { aggregateRentalIncome, straightLineDepreciation, type RentalProperty } from './rental-income.js';
 import { ltcgFederalTax, type LtcgFilingStatus } from './tax-sources.js';import { calcRMD } from '../rmd.js';
 import { ordinaryTaxDelta, type OrdinaryFilingStatus, type OrdinaryTaxInputs } from './ordinary-tax.js';
+import { taxableSocialSecurity } from './ordinary-tax.js';
+import { irmaaTier, irmaaMonthlySurcharge } from './irmaa.js';
 
 
 export type ReturnMode = 'normal' | 'bootstrap' | 'regime' | 'historical-sequence';
@@ -680,6 +682,31 @@ export interface MonteCarloParams {
    * `ssMonthlyIncome` when supplied, otherwise all of `monthlyIncome`.
    */
   rmdTaxMode?: 'flat' | 'bracket';
+  /**
+   * Medicare IRMAA surcharges driven by the RMD pass's own MAGI proxy
+   * (ordinary income + conversions + forced RMD excess + taxable SS), with
+   * the statutory two-year lookback. Requires `rmdEnabled`. Each living
+   * adult aged `irmaaFromAge` (default 65) or older pays the per-person
+   * Part B surcharge (and Part D when `irmaaPartD`, default true) for the
+   * tier their household MAGI of two years earlier lands in, using the
+   * filing status of the current year. Thresholds and surcharge amounts
+   * are the 2026 CMS figures indexed by accumulated inflation.
+   *
+   * Only the SURCHARGE is deducted here; the standard Part B premium is
+   * left to the segment cost model so this can be used with foreign
+   * segments (an expat who keeps Part B still owes IRMAA). Do not combine
+   * with a US segment whose medicareMonthly already bakes IRMAA in.
+   */
+  irmaaEnabled?: boolean;
+  irmaaPartD?: boolean;
+  irmaaFromAge?: number;
+  /**
+   * Household MAGI for the two tax years before `simStartYear`, oldest
+   * first, in nominal USD. Fills the lookback for sim years 0 and 1
+   * (e.g. final working-year salary that sets premiums at 65). Missing
+   * entries fall back to the year-0 in-sim MAGI.
+   */
+  irmaaPriorMagi?: number[];
 
   /**
    * Optional per-year override of the household-wide Medicare monthly cost.
@@ -824,6 +851,10 @@ export interface RmdSummary {
   meanConversionTaxByYear: number[];
   /** Pre-tax bucket total at year end. */
   meanTraditionalEndByYear: number[];
+  /** IRMAA surcharges deducted (Part B plus Part D when enabled), per year. */
+  meanIrmaaByYear: number[];
+  /** Household MAGI proxy used for IRMAA tiers, per year (nominal, mean). */
+  meanMagiByYear: number[];
   /**
    * Ending balance net of the deferred tax on whatever is still pre-tax,
    * valued as if drained over 10 years (SECURE Act heir rule) from the
@@ -1313,11 +1344,17 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
     conversion: new Array<number>(years).fill(0),
     conversionTax: new Array<number>(years).fill(0),
     tradEnd: new Array<number>(years).fill(0),
+    irmaa: new Array<number>(years).fill(0),
+    magi: new Array<number>(years).fill(0),
   } : null;
   const rmdBracket = rmdOn && (p.rmdTaxMode ?? 'flat') === 'bracket';
   // Indexation of the 2026 tables to the sim's calendar start year.
   const rmdIndexBase = Math.pow(1 + (p.meanInflation ?? 0), Math.max(0, calStart - 2026));
   const afterTaxResults: number[] = [];
+  const irmaaOn = rmdOn && !!p.irmaaEnabled;
+  const irmaaPartD = p.irmaaPartD ?? true;
+  const irmaaFromAge = p.irmaaFromAge ?? 65;
+  const irmaaPrior = p.irmaaPriorMagi ?? [];
 
   for (let r = 0; r < effectiveRuns; r++) {
     let bal = portfolio;
@@ -1367,6 +1404,8 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
     const tradAlive: boolean[] = rmdAdults.map(() => true);
     // Final-year tax position, kept for the after-deferred-tax valuation.
     let lastTaxInp: OrdinaryTaxInputs | null = null;
+    // Household MAGI proxy by sim year, for the IRMAA two-year lookback.
+    const magiHistory: number[] = [];
     const regimeState = { inBear: false };
     const path: number[] = [bal];
 
@@ -1801,6 +1840,33 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
           ? ordinaryTaxDelta({ ...taxInp, otherOrdinary: otherOrdinaryNow + convDone }, excess)
           : excess * rmdRate;
         lastTaxInp = { ...taxInp, otherOrdinary: otherOrdinaryNow + convDone + excess };
+
+        // MAGI proxy for this year (AGI: ordinary + conversions + forced
+        // excess + taxable SS), recorded for the IRMAA lookback.
+        const magiNow = otherOrdinaryNow + convDone + excess
+          + taxableSocialSecurity(ssAnnualNow, otherOrdinaryNow + convDone + excess, filingNow);
+        magiHistory[y] = magiNow;
+        rmdAcc.magi[y] += magiNow;
+
+        if (irmaaOn && filers65 > 0) {
+          // Two-year lookback: in-sim history, else caller-supplied prior
+          // years, else this year's MAGI as the best available proxy.
+          let lookback: number;
+          if (y >= 2) lookback = magiHistory[y - 2];
+          else if (irmaaPrior.length >= 2 - y) lookback = irmaaPrior[irmaaPrior.length - 2 + y];
+          else lookback = magiNow;
+          let enrolled = 0;
+          for (let i = 0; i < rmdAdults.length; i++) {
+            if (tradAlive[i] && (calStart + y) - rmdAdults[i] >= irmaaFromAge) enrolled++;
+          }
+          if (enrolled > 0) {
+            const idx = rmdIndexBase * cumInfl;
+            const tier = irmaaTier(lookback, filingNow, idx);
+            const surcharge = irmaaMonthlySurcharge(tier, irmaaPartD, idx) * 12 * enrolled;
+            bal -= surcharge;
+            rmdAcc.irmaa[y] += surcharge;
+          }
+        }
         bal -= rmdTax;
 
         // Buckets can never exceed the whole portfolio.
@@ -2074,6 +2140,8 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
         meanConversionByYear: rmdAcc.conversion.map((v) => v / effectiveRuns),
         meanConversionTaxByYear: rmdAcc.conversionTax.map((v) => v / effectiveRuns),
         meanTraditionalEndByYear: rmdAcc.tradEnd.map((v) => v / effectiveRuns),
+        meanIrmaaByYear: rmdAcc.irmaa.map((v) => v / effectiveRuns),
+        meanMagiByYear: rmdAcc.magi.map((v) => v / effectiveRuns),
         afterTax: rmdAfterTaxSummary,
       },
     } : {}),  };
