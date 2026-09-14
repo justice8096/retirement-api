@@ -53,6 +53,13 @@ const simulateSchema = z
     regime: regimeSchema.optional(),
     historicalStartYear: z.coerce.number().int().min(1900).max(2100).optional(),
 
+    // Scheduled Social Security reduction (spec 2026-08-29). Decimal-
+    // fraction rate per API style: ssCutPct 0.23 = 23% cut at trust-fund
+    // depletion. ssAnnualIncome is the SS portion of annualIncome.
+    ssAnnualIncome: num.min(0).max(100_000_000).default(0),
+    ssCutCalendarYear: z.coerce.number().int().min(2026).max(2100).default(2032),
+    ssCutPct: num.min(0).max(1).default(0.23),
+
     // Per-year household cost curves — annual USD in today's dollars,
     // index = sim year (sparse; shorter than `years` is fine). Build them
     // via GET /api/me/household/cost-curves or shared/engine/household-costs.ts.
@@ -64,7 +71,16 @@ const simulateSchema = z
     // Reproducibility: integer seed → mulberry32. Omit for fresh randomness.
     seed: z.coerce.number().int().optional(),
   })
-  .strict();
+  .strict()
+  .superRefine((v, ctx) => {
+    if (v.ssAnnualIncome > v.annualIncome) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['ssAnnualIncome'],
+        message: 'Social Security income cannot exceed total income.',
+      });
+    }
+  });
 
 export default async function simulateRoutes(app: FastifyInstance): Promise<void> {
   app.post('/', async (request, reply) => {
@@ -77,6 +93,11 @@ export default async function simulateRoutes(app: FastifyInstance): Promise<void
     const params: MonteCarloParams = {
       portfolio: i.portfolio,
       monthlyIncome: i.annualIncome / 12,
+      // Calendar → sim-year translation; negative means already cut and the
+      // engine applies it at year 0. Slice of 0 keeps the engine no-op.
+      ssMonthlyIncome: i.ssAnnualIncome / 12,
+      ssCutSimYear: i.ssAnnualIncome > 0 ? i.ssCutCalendarYear - new Date().getFullYear() : undefined,
+      ssCutFactor: 1 - i.ssCutPct,
       baseCost: i.annualSpending / 12,
       isForeign: i.isForeign,
       fxDrift: i.fxDrift,
@@ -112,6 +133,9 @@ export default async function simulateRoutes(app: FastifyInstance): Promise<void
         portfolio: i.portfolio,
         annualSpending: i.annualSpending,
         annualIncome: i.annualIncome,
+        ssAnnualIncome: i.ssAnnualIncome,
+        ssCutCalendarYear: i.ssCutCalendarYear,
+        ssCutPct: i.ssCutPct,
         years: i.years,
         runs: i.runs,
         meanReturn: i.meanReturn,

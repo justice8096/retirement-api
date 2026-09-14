@@ -425,6 +425,12 @@ export function runMonteCarlo(p) {
         // healthcare cost each year (#33 item 3).
         let hsaBal = hsaInitial;
         let income = monthlyIncome;
+        // SS scheduled-cut tracking (spec 2026-08-29). The SS slice grows with
+        // `incGrowth` alongside `income`; at `ssCutSimYear` it is reduced once by
+        // (1 - ssCutFactor). No cut year ⇒ the slice is inert.
+        const ssCutFactor = p.ssCutFactor ?? 0.77;
+        let ssIncome = Math.min(Math.max(p.ssMonthlyIncome ?? 0, 0), monthlyIncome);
+        let ssCutApplied = false;
         // Part-time income tracked separately so it can cliff to zero at
         // `partTimeEndYear` without disturbing the base income (SS + pension)
         // stream. Inflates at the same `incGrowth` rate as income.
@@ -570,8 +576,13 @@ export function runMonteCarlo(p) {
             }
             if (!survivorPhase && spouseDeathThisYear) {
                 survivorPhase = true;
-                if (survivorIncome != null)
-                    income = survivorIncome;
+                if (survivorIncome != null) {
+                    // Survivor income is typically pure SS (max PIA) — treated as
+                    // fully SS for cut purposes (documented v1 simplification,
+                    // spec 2026-08-29).
+                    income = ssCutApplied ? survivorIncome * ssCutFactor : survivorIncome;
+                    ssIncome = income;
+                }
                 // Survivor relocation (#31 priority 4) — if the caller supplied
                 // `p.survivorRelocate`, treat the death year as a location swap
                 // to that segment (mirror of regular move dispatch). Extends
@@ -625,6 +636,14 @@ export function runMonteCarlo(p) {
                     cost = sc.total * cumInfl;
                     costHealthcare = sc.healthcare * cumInfl;
                 }
+            }
+            // Scheduled Social Security reduction — fires once at the first year
+            // >= ssCutSimYear (negative/zero ⇒ year 0). Ordered AFTER the survivor
+            // swap so a same-year death is cut in its first survivor year.
+            if (!ssCutApplied && p.ssCutSimYear != null && y >= p.ssCutSimYear && ssIncome > 0) {
+                income -= ssIncome * (1 - ssCutFactor);
+                ssIncome *= ssCutFactor;
+                ssCutApplied = true;
             }
             // Early-pass dispatch (#31 steps 2a + 2b + 2c) — handles event
             // kinds whose effect is a simple balance mutation BEFORE the
@@ -956,6 +975,7 @@ export function runMonteCarlo(p) {
             costHealthcare *= (1 + inf);
             cumInfl *= (1 + inf);
             income *= (1 + incGrowth);
+            ssIncome *= (1 + incGrowth);
             partTime *= (1 + incGrowth);
             path.push(bal);
         }

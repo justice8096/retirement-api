@@ -259,6 +259,22 @@ export interface MonteCarloParams {
     /** Start year for 'historical-sequence' mode. Required for that mode. */
     historicalStartYear?: number;
     /**
+     * Scheduled Social Security reduction (trust-fund depletion, spec
+     * 2026-08-29). All three fields absent ⇒ no-op, bit-identical to the
+     * pre-feature kernel (same contract as the brokerage-fee fields).
+     */
+    /** Portion of `monthlyIncome` that is Social Security (USD/month, today's
+     *  $). Clamped to [0, monthlyIncome]. Grows at `incGrowth` alongside
+     *  `income`. */
+    ssMonthlyIncome?: number;
+    /** Sim year (0-indexed) at which the scheduled SS benefit reduction
+     *  fires. Negative or zero ⇒ the cut is already in effect at year 0.
+     *  Undefined ⇒ no cut is modeled. */
+    ssCutSimYear?: number;
+    /** Fraction of the SS benefit REMAINING after the cut (e.g. 0.77 = 23%
+     *  cut, the ~2032 Trustees/CRFB projection). Default 0.77. */
+    ssCutFactor?: number;
+    /**
      * Brokerage / account fee support (A3 drift item 1). Names and units
      * mirror what `retirement-api/src/routes/fees.ts` persists so the caller
      * can pass the user's stored settings straight through — specifically,
