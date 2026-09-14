@@ -18,6 +18,8 @@ import { aggregateRentalIncome, straightLineDepreciation } from './rental-income
 import { ltcgFederalTax } from './tax-sources.js';
 import { calcRMD } from '../rmd.js';
 import { ordinaryTaxDelta } from './ordinary-tax.js';
+import { taxableSocialSecurity } from './ordinary-tax.js';
+import { irmaaTier, irmaaMonthlySurcharge } from './irmaa.js';
 export const DEFAULT_REGIME = {
     bullMean: 0.12,
     bullVol: 0.12,
@@ -453,11 +455,17 @@ export function runMonteCarlo(p) {
         conversion: new Array(years).fill(0),
         conversionTax: new Array(years).fill(0),
         tradEnd: new Array(years).fill(0),
+        irmaa: new Array(years).fill(0),
+        magi: new Array(years).fill(0),
     } : null;
     const rmdBracket = rmdOn && (p.rmdTaxMode ?? 'flat') === 'bracket';
     // Indexation of the 2026 tables to the sim's calendar start year.
     const rmdIndexBase = Math.pow(1 + (p.meanInflation ?? 0), Math.max(0, calStart - 2026));
     const afterTaxResults = [];
+    const irmaaOn = rmdOn && !!p.irmaaEnabled;
+    const irmaaPartD = p.irmaaPartD ?? true;
+    const irmaaFromAge = p.irmaaFromAge ?? 65;
+    const irmaaPrior = p.irmaaPriorMagi ?? [];
     for (let r = 0; r < effectiveRuns; r++) {
         let bal = portfolio;
         // Parallel HSA accumulator. Stays at 0 when HSA is inactive; otherwise
@@ -505,6 +513,8 @@ export function runMonteCarlo(p) {
         const tradAlive = rmdAdults.map(() => true);
         // Final-year tax position, kept for the after-deferred-tax valuation.
         let lastTaxInp = null;
+        // Household MAGI proxy by sim year, for the IRMAA two-year lookback.
+        const magiHistory = [];
         const regimeState = { inBear: false };
         const path = [bal];
         // Per-trial LTC roll. Resolves once at trial start; deterministic across
@@ -938,6 +948,35 @@ export function runMonteCarlo(p) {
                     ? ordinaryTaxDelta({ ...taxInp, otherOrdinary: otherOrdinaryNow + convDone }, excess)
                     : excess * rmdRate;
                 lastTaxInp = { ...taxInp, otherOrdinary: otherOrdinaryNow + convDone + excess };
+                // MAGI proxy for this year (AGI: ordinary + conversions + forced
+                // excess + taxable SS), recorded for the IRMAA lookback.
+                const magiNow = otherOrdinaryNow + convDone + excess
+                    + taxableSocialSecurity(ssAnnualNow, otherOrdinaryNow + convDone + excess, filingNow);
+                magiHistory[y] = magiNow;
+                rmdAcc.magi[y] += magiNow;
+                if (irmaaOn && filers65 > 0) {
+                    // Two-year lookback: in-sim history, else caller-supplied prior
+                    // years, else this year's MAGI as the best available proxy.
+                    let lookback;
+                    if (y >= 2)
+                        lookback = magiHistory[y - 2];
+                    else if (irmaaPrior.length >= 2 - y)
+                        lookback = irmaaPrior[irmaaPrior.length - 2 + y];
+                    else
+                        lookback = magiNow;
+                    let enrolled = 0;
+                    for (let i = 0; i < rmdAdults.length; i++) {
+                        if (tradAlive[i] && (calStart + y) - rmdAdults[i] >= irmaaFromAge)
+                            enrolled++;
+                    }
+                    if (enrolled > 0) {
+                        const idx = rmdIndexBase * cumInfl;
+                        const tier = irmaaTier(lookback, filingNow, idx);
+                        const surcharge = irmaaMonthlySurcharge(tier, irmaaPartD, idx) * 12 * enrolled;
+                        bal -= surcharge;
+                        rmdAcc.irmaa[y] += surcharge;
+                    }
+                }
                 bal -= rmdTax;
                 // Buckets can never exceed the whole portfolio.
                 const tradTotalAfter = trad.reduce((s, v) => s + v, 0);
@@ -1202,6 +1241,8 @@ export function runMonteCarlo(p) {
                 meanConversionByYear: rmdAcc.conversion.map((v) => v / effectiveRuns),
                 meanConversionTaxByYear: rmdAcc.conversionTax.map((v) => v / effectiveRuns),
                 meanTraditionalEndByYear: rmdAcc.tradEnd.map((v) => v / effectiveRuns),
+                meanIrmaaByYear: rmdAcc.irmaa.map((v) => v / effectiveRuns),
+                meanMagiByYear: rmdAcc.magi.map((v) => v / effectiveRuns),
                 afterTax: rmdAfterTaxSummary,
             },
         } : {}),

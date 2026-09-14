@@ -669,6 +669,31 @@ export interface MonteCarloParams {
      */
     rmdTaxMode?: 'flat' | 'bracket';
     /**
+     * Medicare IRMAA surcharges driven by the RMD pass's own MAGI proxy
+     * (ordinary income + conversions + forced RMD excess + taxable SS), with
+     * the statutory two-year lookback. Requires `rmdEnabled`. Each living
+     * adult aged `irmaaFromAge` (default 65) or older pays the per-person
+     * Part B surcharge (and Part D when `irmaaPartD`, default true) for the
+     * tier their household MAGI of two years earlier lands in, using the
+     * filing status of the current year. Thresholds and surcharge amounts
+     * are the 2026 CMS figures indexed by accumulated inflation.
+     *
+     * Only the SURCHARGE is deducted here; the standard Part B premium is
+     * left to the segment cost model so this can be used with foreign
+     * segments (an expat who keeps Part B still owes IRMAA). Do not combine
+     * with a US segment whose medicareMonthly already bakes IRMAA in.
+     */
+    irmaaEnabled?: boolean;
+    irmaaPartD?: boolean;
+    irmaaFromAge?: number;
+    /**
+     * Household MAGI for the two tax years before `simStartYear`, oldest
+     * first, in nominal USD. Fills the lookback for sim years 0 and 1
+     * (e.g. final working-year salary that sets premiums at 65). Missing
+     * entries fall back to the year-0 in-sim MAGI.
+     */
+    irmaaPriorMagi?: number[];
+    /**
      * Optional per-year override of the household-wide Medicare monthly cost.
      * Sparse array: index `y` may be `undefined`, which falls through to the
      * active segment's `m.medicareMonthly`. Set entries are used instead of
@@ -803,6 +828,10 @@ export interface RmdSummary {
     meanConversionTaxByYear: number[];
     /** Pre-tax bucket total at year end. */
     meanTraditionalEndByYear: number[];
+    /** IRMAA surcharges deducted (Part B plus Part D when enabled), per year. */
+    meanIrmaaByYear: number[];
+    /** Household MAGI proxy used for IRMAA tiers, per year (nominal, mean). */
+    meanMagiByYear: number[];
     /**
      * Ending balance net of the deferred tax on whatever is still pre-tax,
      * valued as if drained over 10 years (SECURE Act heir rule) from the
