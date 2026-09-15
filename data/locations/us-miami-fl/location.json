@@ -24,9 +24,9 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 2600,
+      "typical": 2900,
       "min": 2100,
-      "max": 3200,
+      "max": 3800,
       "annualInflation": 0.04
     },
     "groceries": {
@@ -36,9 +36,9 @@
       "annualInflation": 0.03
     },
     "utilities": {
-      "typical": 290,
-      "min": 230,
-      "max": 360,
+      "typical": 235,
+      "min": 185,
+      "max": 320,
       "annualInflation": 0.035
     },
     "healthcare": {
