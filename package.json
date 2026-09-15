@@ -31,20 +31,20 @@
     "#shared/*": "./shared/*"
   },
   "dependencies": {
-    "@fastify/cookie": "^11.0.2",
-    "@fastify/cors": "^11.2.0",
-    "@fastify/helmet": "^13.0.2",
-    "@fastify/rate-limit": "^11.0.0",
-    "@fastify/swagger": "^9.0.0",
+    "@fastify/cookie": "^11.1.2",
+    "@fastify/cors": "^11.3.0",
+    "@fastify/helmet": "^13.1.1",
+    "@fastify/rate-limit": "^11.2.0",
+    "@fastify/swagger": "^9.8.1",
     "@fastify/swagger-ui": "^6.0.0",
-    "@prisma/adapter-pg": "^7.7.0",
-    "@prisma/client": "^7.7.0",
-    "@sentry/node": "^10.57.0",
+    "@prisma/adapter-pg": "^7.10.0",
+    "@prisma/client": "^7.10.0",
+    "@sentry/node": "^10.74.0",
     "dotenv": "^17.4.2",
     "fast-jwt": "^6.3.2",
     "fastify": "^5.0.0",
     "ioredis": "^5.11.1",
-    "stripe": "^22.2.0",
+    "stripe": "^22.6.2",
     "zod": "^4.4.3"
   },
   "devDependencies": {
@@ -52,7 +52,7 @@
     "prisma": "^7.7.0",
     "tsx": "^4.23.13",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.8"
+    "vitest": "^5.0.0"
   },
   "overrides": {
     "@hono/node-server": "^1.19.13",
