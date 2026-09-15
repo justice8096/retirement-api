@@ -186,4 +186,55 @@ describe('SS scheduled-cut fields (spec 2026-08-29)', () => {
     expect(d.fieldLabel).toBe('Social Security income');
     expect(d.message).toBe('Social Security income cannot exceed total income.');
   });
+
+  describe('RMD / Roth conversion / IRMAA pass-through', () => {
+    const base = {
+      portfolio: 500_000, annualSpending: 36_000, annualIncome: 24_000, ssAnnualIncome: 24_000,
+      years: 3, runs: 1, meanReturn: 0, volReturn: 0, meanInflation: 0, volInflation: 0, seed: 1,
+      simStartYear: 2027,
+    };
+
+    it('omits the rmd block when rmdEnabled is false', async () => {
+      const b = (await post(base)).json();
+      expect(b.rmd).toBeUndefined();
+      expect(b.inputs.rmdEnabled).toBe(false);
+    });
+
+    it('rejects rmdEnabled without adultBirthYears', async () => {
+      const res = await post({ ...base, rmdEnabled: true });
+      expect(res.statusCode).toBe(400);
+    });
+
+    it('rejects a traditionalBalance array that does not match adultBirthYears', async () => {
+      const res = await post({ ...base, rmdEnabled: true, adultBirthYears: [1950, 1955], traditionalBalance: [1] });
+      expect(res.statusCode).toBe(400);
+    });
+
+    it('returns the rmd digest with flat-rate arithmetic matching the engine', async () => {
+      // Owner born 1950 (age 77 in 2027): RMD 500000/22.9 = 21834.06, voluntary draw 12000,
+      // excess 9834.06 taxed at 22% = 2163.49.
+      const b = (await post({ ...base, rmdEnabled: true, adultBirthYears: [1950] })).json();
+      expect(b.rmd).toBeDefined();
+      expect(b.rmd.firstRmdSimYear).toBe(0);
+      expect(b.rmd.meanGrossByYear[0]).toBe(21_834);
+      expect(b.rmd.meanTaxByYear[0]).toBe(2_163);
+      expect(b.rmd.afterTax.median).toBeLessThan(b.median);
+      expect(b.rmd.totalIrmaa).toBe(0);
+      expect(b.inputs.rmdTaxMode).toBe('flat');
+    });
+
+    it('applies conversions, bracket mode and IRMAA', async () => {
+      const b = (await post({
+        ...base, rmdEnabled: true, adultBirthYears: [1950], rmdTaxMode: 'bracket',
+        rothConversionByYear: [50_000], irmaaEnabled: true, irmaaPriorMagi: [200_000, 200_000],
+      })).json();
+      expect(b.rmd.meanConversionByYear[0]).toBe(50_000);
+      expect(b.rmd.totalConversions).toBe(50_000);
+      // Tier 3 single: (324.60 + 60.40) * 12 = 4620 for the two prior-MAGI years
+      expect(b.rmd.meanIrmaaByYear.slice(0, 2)).toEqual([4_620, 4_620]);
+      expect(b.inputs.rmdTaxMode).toBe('bracket');
+      expect(b.inputs.conversionYears).toBe(1);
+    });
+  });
+
 });
