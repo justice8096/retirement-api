@@ -2,6 +2,7 @@ import { z } from 'zod';
 import type { FastifyInstance } from 'fastify';
 import { toValidationErrorPayload } from '../lib/validation.js';
 import { runMonteCarlo, mulberry32, type MonteCarloParams } from '#shared/engine/monte-carlo.js';
+import { digestRmdSummary } from '#shared/engine/rmd-summary.js';
 
 /**
  * POST /api/simulate — run the canonical Monte Carlo retirement engine
@@ -68,11 +69,46 @@ const simulateSchema = z
     petCostByYear: z.array(num.min(0).max(10_000_000)).max(100).optional(),
     dependentCostByYear: z.array(num.min(0).max(10_000_000)).max(100).optional(),
 
+    // Required Minimum Distributions, Roth conversions and Medicare IRMAA
+    // (engine PRs #177, #179, #180). Off unless rmdEnabled; then adultBirthYears
+    // is required. traditionalBalance is a scalar or one entry per adult.
+    // rothConversionByYear is nominal USD per sim year (index = sim year).
+    // irmaaPriorMagi is household MAGI for the two tax years before simStartYear.
+    rmdEnabled: z.coerce.boolean().default(false),
+    adultBirthYears: z.array(z.coerce.number().int().min(1900).max(2100)).max(4).optional(),
+    simStartYear: z.coerce.number().int().min(2000).max(2100).optional(),
+    // Array branch first: z.coerce.number() would turn [1] into 1.
+    traditionalBalance: z.union([z.array(num.min(0).max(1_000_000_000)).max(4), z.number().min(0).max(1_000_000_000)]).optional(),
+    rmdEffectiveTaxRate: num.min(0).max(1).optional(),
+    rmdWithdrawalOrder: z.enum(['traditional-first', 'other-first']).optional(),
+    rmdTaxMode: z.enum(['flat', 'bracket']).optional(),
+    rothConversionByYear: z.array(num.min(0).max(100_000_000)).max(100).optional(),
+    rothConversionTaxRate: num.min(0).max(1).optional(),
+    irmaaEnabled: z.coerce.boolean().default(false),
+    irmaaPartD: z.coerce.boolean().optional(),
+    irmaaFromAge: z.coerce.number().int().min(60).max(100).optional(),
+    irmaaPriorMagi: z.array(num.min(0).max(100_000_000)).max(2).optional(),
+
     // Reproducibility: integer seed → mulberry32. Omit for fresh randomness.
     seed: z.coerce.number().int().optional(),
   })
   .strict()
   .superRefine((v, ctx) => {
+    if (v.rmdEnabled && !(v.adultBirthYears && v.adultBirthYears.length)) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['adultBirthYears'],
+        message: 'adultBirthYears is required when rmdEnabled is true.',
+      });
+    }
+    if (v.rmdEnabled && Array.isArray(v.traditionalBalance) && v.adultBirthYears
+        && v.traditionalBalance.length !== v.adultBirthYears.length) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['traditionalBalance'],
+        message: 'traditionalBalance array must have one entry per adultBirthYears entry.',
+      });
+    }
     if (v.ssAnnualIncome > v.annualIncome) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
@@ -114,6 +150,19 @@ export default async function simulateRoutes(app: FastifyInstance): Promise<void
       historicalStartYear: i.historicalStartYear,
       petCostByYear: i.petCostByYear,
       dependentCostByYear: i.dependentCostByYear,
+      adultBirthYears: i.adultBirthYears,
+      simStartYear: i.simStartYear,
+      rmdEnabled: i.rmdEnabled,
+      traditionalBalance: i.traditionalBalance,
+      rmdEffectiveTaxRate: i.rmdEffectiveTaxRate,
+      rmdWithdrawalOrder: i.rmdWithdrawalOrder,
+      rmdTaxMode: i.rmdTaxMode,
+      rothConversionByYear: i.rothConversionByYear,
+      rothConversionTaxRate: i.rothConversionTaxRate,
+      irmaaEnabled: i.irmaaEnabled,
+      irmaaPartD: i.irmaaPartD,
+      irmaaFromAge: i.irmaaFromAge,
+      irmaaPriorMagi: i.irmaaPriorMagi,
       // Deterministic when a seed is supplied; Math.random otherwise.
       seededRandom: i.seed != null ? mulberry32(i.seed) : undefined,
     };
@@ -129,6 +178,7 @@ export default async function simulateRoutes(app: FastifyInstance): Promise<void
       p75: Math.round(r.p75),
       p95: Math.round(r.p95),
       sampleCount: r.results.length,
+      ...(r.rmd ? { rmd: digestRmdSummary(r.rmd) } : {}),
       inputs: {
         portfolio: i.portfolio,
         annualSpending: i.annualSpending,
@@ -143,6 +193,10 @@ export default async function simulateRoutes(app: FastifyInstance): Promise<void
         returnMode: i.returnMode,
         petCurveYears: i.petCostByYear?.length ?? 0,
         dependentCurveYears: i.dependentCostByYear?.length ?? 0,
+        rmdEnabled: i.rmdEnabled,
+        rmdTaxMode: i.rmdTaxMode ?? (i.rmdEnabled ? 'flat' : null),
+        conversionYears: i.rothConversionByYear?.filter((v) => v > 0).length ?? 0,
+        irmaaEnabled: i.irmaaEnabled,
         seed: i.seed ?? null,
       },
     });
