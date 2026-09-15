@@ -213,7 +213,7 @@ Tooling scripts in `tools/`:
 ## AI-assisted development
 
 This project is developed by a single maintainer with material assistance
-from [Claude](https://claude.ai) (model: Claude Opus 4.7 as of 2026-04).
+from [Claude](https://claude.ai) (model: Claude Opus 4.7 - 5.1).
 Every commit is human-reviewed before push; destructive git operations
 are always gated on explicit approval. Feature cycles run ~38 / 62
 human-authored / AI-assisted; remediation cycles compress closer to
