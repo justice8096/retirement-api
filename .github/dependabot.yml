@@ -58,6 +58,13 @@ updates:
       - justice8096
     commit-message:
       prefix: chore(ci)
+    # CodeQL init and analyze must run at the same version (the analyze
+    # post-step rejects a config written by a different init version), so
+    # they are bumped together. Split PRs #159/#161 failed for this reason.
+    groups:
+      codeql:
+        patterns:
+          - "github/codeql-action*"
 
   # Dockerfile base-image updates.
   - package-ecosystem: docker
