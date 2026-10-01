@@ -10,18 +10,18 @@ import { readFileSync, writeFileSync } from 'fs';
 
 var entertainmentData = {
   "us-virginia": {
-    monthlyBudget: { min: 440, typical: 530, max: 650 },
+    monthlyBudget: { min: 444, typical: 534, max: 654 },
     categories: [
       { name: "Dining Out", monthlyCost: 355, seniorDiscounts: "Many restaurants offer 10-15% senior discounts. AARP members get discounts at Denny's, Outback, and others.",
         notes: "Lunch for 2 at moderate restaurant ~$35 + 6% tax + 20% tip = ~$44/meal, 2x/week (~8.7/mo) = ~$355/mo" },
       { name: "Cable + 1 Gig Internet", monthlyCost: 75, seniorDiscounts: "Some providers offer senior plans. Xfinity 5-year price lock at $60/mo available.",
         notes: "Xfinity 1 Gig $60-70/mo or Verizon FiOS $75/mo. No data caps." },
-      { name: "Netflix (Standard, no ads)", monthlyCost: 18, seniorDiscounts: "T-Mobile 55+ plans include Netflix.",
-        notes: "$17.99/mo. 1080p, 2 screens, full library." },
+      { name: "Netflix (Standard, no ads)", monthlyCost: 20, seniorDiscounts: "T-Mobile 55+ plans include Netflix.",
+        notes: "$19.99/mo. 1080p, 2 screens, full library." },
       { name: "Amazon Prime", monthlyCost: 15, seniorDiscounts: "Medicaid recipients qualify for Prime at $6.99/mo.",
         notes: "$14.99/mo includes Prime Video, free shipping, Prime Reading." },
-      { name: "Apple TV+", monthlyCost: 13, seniorDiscounts: "No senior discount. Annual plan $99/yr ($8.25/mo).",
-        notes: "$12.99/mo. Original content library." },
+      { name: "Apple TV+", monthlyCost: 15, seniorDiscounts: "No senior discount. Annual plan $119/yr ($9.92/mo).",
+        notes: "$14.99/mo. Original content library." },
       { name: "Gym/Fitness", monthlyCost: 25, seniorDiscounts: "SilverSneakers free gym membership through many Medicare Advantage plans." },
       { name: "Parks/Outdoors", monthlyCost: 10, seniorDiscounts: "America the Beautiful Senior Pass $20/year (lifetime $80) for national parks." },
       { name: "Books/Library", monthlyCost: 10, seniorDiscounts: "Fairfax County Library system free. Senior book clubs and digital resources." },
@@ -34,15 +34,15 @@ var entertainmentData = {
     ]
   },
   "us-florida": {
-    monthlyBudget: { min: 400, typical: 500, max: 620 },
+    monthlyBudget: { min: 404, typical: 504, max: 624 },
     categories: [
       { name: "Dining Out", monthlyCost: 330, seniorDiscounts: "Early bird specials common in FL. AARP restaurant discounts widely accepted.",
         notes: "Lunch for 2 at moderate restaurant ~$32 + 6% tax + 20% tip = ~$40/meal, 2x/week = ~$330/mo" },
       { name: "Cable + 1 Gig Internet", monthlyCost: 70, seniorDiscounts: "AT&T and Xfinity offer senior/AARP discounts on select plans.",
         notes: "Xfinity 1 Gig $60-70/mo or AT&T Fiber $80/mo." },
-      { name: "Netflix (Standard, no ads)", monthlyCost: 18, seniorDiscounts: "T-Mobile 55+ plans include Netflix.", notes: "$17.99/mo" },
+      { name: "Netflix (Standard, no ads)", monthlyCost: 20, seniorDiscounts: "T-Mobile 55+ plans include Netflix.", notes: "$19.99/mo" },
       { name: "Amazon Prime", monthlyCost: 15, seniorDiscounts: "Medicaid recipients qualify for Prime at $6.99/mo.", notes: "$14.99/mo" },
-      { name: "Apple TV+", monthlyCost: 13, seniorDiscounts: "No senior discount.", notes: "$12.99/mo" },
+      { name: "Apple TV+", monthlyCost: 15, seniorDiscounts: "No senior discount.", notes: "$14.99/mo" },
       { name: "Gym/Fitness", monthlyCost: 25, seniorDiscounts: "SilverSneakers free with many Medicare Advantage plans." },
       { name: "Parks/Outdoors", monthlyCost: 10, seniorDiscounts: "FL state parks senior discount. National parks Senior Pass." },
       { name: "Books/Library", monthlyCost: 10, seniorDiscounts: "Free library system." },
@@ -54,15 +54,15 @@ var entertainmentData = {
     ]
   },
   "us-savannah": {
-    monthlyBudget: { min: 380, typical: 480, max: 600 },
+    monthlyBudget: { min: 384, typical: 484, max: 604 },
     categories: [
       { name: "Dining Out", monthlyCost: 310, seniorDiscounts: "Southern restaurants often have lunch specials. AARP discounts at chains.",
         notes: "Lunch for 2 at moderate restaurant ~$30 + 7% tax + 20% tip = ~$38/meal, 2x/week = ~$310/mo" },
       { name: "Cable + 1 Gig Internet", monthlyCost: 70, seniorDiscounts: "Xfinity and AT&T serve Savannah area.",
         notes: "Xfinity 1 Gig $60-70/mo or AT&T Fiber $80/mo." },
-      { name: "Netflix (Standard, no ads)", monthlyCost: 18, seniorDiscounts: "T-Mobile 55+ plans include Netflix.", notes: "$17.99/mo" },
+      { name: "Netflix (Standard, no ads)", monthlyCost: 20, seniorDiscounts: "T-Mobile 55+ plans include Netflix.", notes: "$19.99/mo" },
       { name: "Amazon Prime", monthlyCost: 15, seniorDiscounts: "Medicaid recipients qualify for Prime at $6.99/mo.", notes: "$14.99/mo" },
-      { name: "Apple TV+", monthlyCost: 13, seniorDiscounts: "No senior discount.", notes: "$12.99/mo" },
+      { name: "Apple TV+", monthlyCost: 15, seniorDiscounts: "No senior discount.", notes: "$14.99/mo" },
       { name: "Gym/Fitness", monthlyCost: 20, seniorDiscounts: "SilverSneakers free with many Medicare Advantage plans." },
       { name: "Parks/Outdoors", monthlyCost: 10, seniorDiscounts: "Savannah has many free parks and squares." },
       { name: "Books/Library", monthlyCost: 8, seniorDiscounts: "Live Oak Public Libraries free." },
@@ -74,15 +74,15 @@ var entertainmentData = {
     ]
   },
   "us-richmond": {
-    monthlyBudget: { min: 400, typical: 500, max: 620 },
+    monthlyBudget: { min: 404, typical: 504, max: 624 },
     categories: [
       { name: "Dining Out", monthlyCost: 330, seniorDiscounts: "AARP restaurant discounts available at many chains.",
         notes: "Lunch for 2 at moderate restaurant ~$32 + 5.3% tax + 20% tip = ~$40/meal, 2x/week = ~$330/mo" },
       { name: "Cable + 1 Gig Internet", monthlyCost: 70, seniorDiscounts: "Xfinity and Verizon FiOS available in Richmond.",
         notes: "Xfinity 1 Gig $60-70/mo or Verizon FiOS $75/mo." },
-      { name: "Netflix (Standard, no ads)", monthlyCost: 18, seniorDiscounts: "T-Mobile 55+ plans include Netflix.", notes: "$17.99/mo" },
+      { name: "Netflix (Standard, no ads)", monthlyCost: 20, seniorDiscounts: "T-Mobile 55+ plans include Netflix.", notes: "$19.99/mo" },
       { name: "Amazon Prime", monthlyCost: 15, seniorDiscounts: "Medicaid recipients qualify for Prime at $6.99/mo.", notes: "$14.99/mo" },
-      { name: "Apple TV+", monthlyCost: 13, seniorDiscounts: "No senior discount.", notes: "$12.99/mo" },
+      { name: "Apple TV+", monthlyCost: 15, seniorDiscounts: "No senior discount.", notes: "$14.99/mo" },
       { name: "Gym/Fitness", monthlyCost: 25, seniorDiscounts: "SilverSneakers free with many Medicare Advantage plans." },
       { name: "Parks/Outdoors", monthlyCost: 10, seniorDiscounts: "James River Park System free. VA state parks senior discount." },
       { name: "Books/Library", monthlyCost: 10, seniorDiscounts: "Richmond Public Library free." },
@@ -94,15 +94,15 @@ var entertainmentData = {
     ]
   },
   "us-philadelphia": {
-    monthlyBudget: { min: 420, typical: 530, max: 660 },
+    monthlyBudget: { min: 424, typical: 534, max: 664 },
     categories: [
       { name: "Dining Out", monthlyCost: 355, seniorDiscounts: "AARP restaurant discounts. Many Philly restaurants offer lunch specials.",
         notes: "Lunch for 2 at moderate restaurant ~$34 + 8% tax + 20% tip = ~$44/meal, 2x/week = ~$355/mo" },
       { name: "Cable + 1 Gig Internet", monthlyCost: 70, seniorDiscounts: "Xfinity headquartered in Philadelphia, competitive pricing.",
         notes: "Xfinity 1 Gig $60-70/mo or Verizon FiOS $75/mo." },
-      { name: "Netflix (Standard, no ads)", monthlyCost: 18, seniorDiscounts: "T-Mobile 55+ plans include Netflix.", notes: "$17.99/mo" },
+      { name: "Netflix (Standard, no ads)", monthlyCost: 20, seniorDiscounts: "T-Mobile 55+ plans include Netflix.", notes: "$19.99/mo" },
       { name: "Amazon Prime", monthlyCost: 15, seniorDiscounts: "Medicaid recipients qualify for Prime at $6.99/mo.", notes: "$14.99/mo" },
-      { name: "Apple TV+", monthlyCost: 13, seniorDiscounts: "No senior discount.", notes: "$12.99/mo" },
+      { name: "Apple TV+", monthlyCost: 15, seniorDiscounts: "No senior discount.", notes: "$14.99/mo" },
       { name: "Gym/Fitness", monthlyCost: 25, seniorDiscounts: "SilverSneakers free with many Medicare Advantage plans." },
       { name: "Parks/Outdoors", monthlyCost: 10, seniorDiscounts: "Fairmount Park free. National parks Senior Pass." },
       { name: "Books/Library", monthlyCost: 10, seniorDiscounts: "Free Library of Philadelphia." },
@@ -114,15 +114,15 @@ var entertainmentData = {
     ]
   },
   "us-cherry-hill": {
-    monthlyBudget: { min: 420, typical: 520, max: 640 },
+    monthlyBudget: { min: 424, typical: 524, max: 644 },
     categories: [
       { name: "Dining Out", monthlyCost: 345, seniorDiscounts: "AARP restaurant discounts. Cherry Hill Mall area dining options.",
         notes: "Lunch for 2 at moderate restaurant ~$33 + 6.625% tax + 20% tip = ~$42/meal, 2x/week = ~$345/mo" },
       { name: "Cable + 1 Gig Internet", monthlyCost: 70, seniorDiscounts: "Xfinity and Verizon FiOS available.",
         notes: "Xfinity 1 Gig $60-70/mo or Verizon FiOS $75/mo." },
-      { name: "Netflix (Standard, no ads)", monthlyCost: 18, seniorDiscounts: "T-Mobile 55+ plans include Netflix.", notes: "$17.99/mo" },
+      { name: "Netflix (Standard, no ads)", monthlyCost: 20, seniorDiscounts: "T-Mobile 55+ plans include Netflix.", notes: "$19.99/mo" },
       { name: "Amazon Prime", monthlyCost: 15, seniorDiscounts: "Medicaid recipients qualify for Prime at $6.99/mo.", notes: "$14.99/mo" },
-      { name: "Apple TV+", monthlyCost: 13, seniorDiscounts: "No senior discount.", notes: "$12.99/mo" },
+      { name: "Apple TV+", monthlyCost: 15, seniorDiscounts: "No senior discount.", notes: "$14.99/mo" },
       { name: "Gym/Fitness", monthlyCost: 25, seniorDiscounts: "SilverSneakers free with many Medicare Advantage plans." },
       { name: "Parks/Outdoors", monthlyCost: 10, seniorDiscounts: "NJ state parks. Cooper River Park free." },
       { name: "Books/Library", monthlyCost: 8, seniorDiscounts: "Camden County Library system free." },
@@ -220,13 +220,13 @@ var entertainmentData = {
   },
   // Spain: EUR prices, moderate lunch ~€24 for 2 (IVA included, small tip ~5%)
   "spain-alicante": {
-    monthlyBudget: { min: 280, typical: 350, max: 440 },
+    monthlyBudget: { min: 282, typical: 352, max: 442 },
     categories: [
       { name: "Dining Out", monthlyCost: 245, seniorDiscounts: "Menu del día excellent value (€10-14 for 3 courses). Small tip 5-10% customary.",
         notes: "Lunch for 2: menú del día ~€24 + 5% tip = ~€25, 2x/week = ~€217/mo = ~$245/mo" },
       { name: "Cable + 1 Gig Internet", monthlyCost: 38, seniorDiscounts: "No specific senior discounts.",
         notes: "Movistar/Orange/MásMóvil 1 Gig fibre €30-40/mo." },
-      { name: "Netflix (Standard, no ads)", monthlyCost: 14, seniorDiscounts: "No senior discount.", notes: "€12.99/mo in Spain." },
+      { name: "Netflix (Standard, no ads)", monthlyCost: 16, seniorDiscounts: "No senior discount.", notes: "€14.99/mo in Spain." },
       { name: "Amazon Prime", monthlyCost: 5, seniorDiscounts: "No senior discount.", notes: "€4.99/mo (€49.90/yr) in Spain." },
       { name: "Apple TV+", monthlyCost: 11, seniorDiscounts: "No senior discount.", notes: "€9.99/mo in Eurozone." },
       { name: "Gym/Fitness", monthlyCost: 25, seniorDiscounts: "Municipal gyms offer senior rates." },
@@ -260,13 +260,13 @@ var entertainmentData = {
   },
   // Panama: USD prices, moderate lunch ~$18-22 for 2, tip 10%
   "panama-city": {
-    monthlyBudget: { min: 300, typical: 370, max: 470 },
+    monthlyBudget: { min: 296, typical: 366, max: 466 },
     categories: [
       { name: "Dining Out", monthlyCost: 235, seniorDiscounts: "Jubilado (retiree) discounts 10-25% at many restaurants by law.",
         notes: "Lunch for 2 at moderate restaurant: ~$22 + 7% ITBMS + 10% tip = ~$27, 2x/week = ~$235/mo" },
       { name: "Cable + 1 Gig Internet", monthlyCost: 65, seniorDiscounts: "Jubilado discount 25% on utilities including internet.",
         notes: "Cable Onda/+Movil 100-300 Mbps $40-60/mo. True 1 Gig ~$65-80/mo." },
-      { name: "Netflix (Standard, no ads)", monthlyCost: 14, seniorDiscounts: "No senior discount.", notes: "~$13.99/mo in Panama (USD pricing)." },
+      { name: "Netflix (Standard, no ads)", monthlyCost: 10, seniorDiscounts: "No senior discount.", notes: "~$9.99/mo in Panama (USD pricing)." },
       { name: "Amazon Prime", monthlyCost: 7, seniorDiscounts: "No senior discount.", notes: "~$6.99/mo (Prime Video standalone)." },
       { name: "Apple TV+", monthlyCost: 10, seniorDiscounts: "No senior discount.", notes: "~$9.99/mo." },
       { name: "Gym/Fitness", monthlyCost: 25, seniorDiscounts: "Jubilado discounts at many gyms." },
@@ -279,13 +279,13 @@ var entertainmentData = {
     ]
   },
   "panama-boquete": {
-    monthlyBudget: { min: 260, typical: 330, max: 420 },
+    monthlyBudget: { min: 256, typical: 326, max: 416 },
     categories: [
       { name: "Dining Out", monthlyCost: 200, seniorDiscounts: "Jubilado discounts 10-25% at restaurants by law. Smaller town = lower prices.",
         notes: "Lunch for 2 at moderate restaurant: ~$18 + 7% ITBMS + 10% tip = ~$23, 2x/week = ~$200/mo" },
       { name: "Cable + 1 Gig Internet", monthlyCost: 55, seniorDiscounts: "Jubilado discount 25% on utilities.",
         notes: "Cable Onda in Boquete. 100-300 Mbps ~$35-55/mo. True gigabit limited availability." },
-      { name: "Netflix (Standard, no ads)", monthlyCost: 14, seniorDiscounts: "No senior discount.", notes: "~$13.99/mo." },
+      { name: "Netflix (Standard, no ads)", monthlyCost: 10, seniorDiscounts: "No senior discount.", notes: "~$9.99/mo." },
       { name: "Amazon Prime", monthlyCost: 7, seniorDiscounts: "No senior discount.", notes: "~$6.99/mo." },
       { name: "Apple TV+", monthlyCost: 10, seniorDiscounts: "No senior discount.", notes: "~$9.99/mo." },
       { name: "Gym/Fitness", monthlyCost: 20, seniorDiscounts: "Jubilado discounts. Smaller selection than Panama City." },
