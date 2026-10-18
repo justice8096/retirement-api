@@ -84,6 +84,19 @@ const simulateSchema = z
     rmdTaxMode: z.enum(['flat', 'bracket']).optional(),
     rothConversionByYear: z.array(num.min(0).max(100_000_000)).max(100).optional(),
     rothConversionTaxRate: num.min(0).max(1).optional(),
+    // Fill-to-bracket conversions: convert up to the top of the ceiling
+    // bracket each year through rothConversionEndYear (sim year, inclusive;
+    // default = year before the first owner's RMD start). Ignores
+    // rothConversionByYear. Always bracket-taxed.
+    rothConversionMode: z.enum(['schedule', 'fill-bracket']).optional(),
+    rothConversionBracketCeiling: z.union([
+      z.literal(0.10), z.literal(0.12), z.literal(0.22), z.literal(0.24), z.literal(0.32), z.literal(0.35),
+    ]).optional(),
+    rothConversionEndYear: z.coerce.number().int().min(0).max(99).optional(),
+    // When true the same inputs are also run with every conversion turned
+    // off (same seed, so the two runs see identical return paths) and the
+    // response carries `withoutConversions` plus `rothDelta`.
+    compareWithoutConversions: z.coerce.boolean().default(false),
     irmaaEnabled: z.coerce.boolean().default(false),
     irmaaPartD: z.coerce.boolean().optional(),
     irmaaFromAge: z.coerce.number().int().min(60).max(100).optional(),
@@ -159,6 +172,9 @@ export default async function simulateRoutes(app: FastifyInstance): Promise<void
       rmdTaxMode: i.rmdTaxMode,
       rothConversionByYear: i.rothConversionByYear,
       rothConversionTaxRate: i.rothConversionTaxRate,
+      rothConversionMode: i.rothConversionMode,
+      rothConversionBracketCeiling: i.rothConversionBracketCeiling,
+      rothConversionEndYear: i.rothConversionEndYear,
       irmaaEnabled: i.irmaaEnabled,
       irmaaPartD: i.irmaaPartD,
       irmaaFromAge: i.irmaaFromAge,
@@ -167,18 +183,60 @@ export default async function simulateRoutes(app: FastifyInstance): Promise<void
       seededRandom: i.seed != null ? mulberry32(i.seed) : undefined,
     };
 
+    // A with/without comparison needs common random numbers, so pick a
+    // seed when the caller did not and run both legs from it.
+    const compare = i.compareWithoutConversions && i.rmdEnabled;
+    const seed = i.seed ?? (compare ? Math.floor(Math.random() * 2 ** 31) : undefined);
+    if (compare) params.seededRandom = mulberry32(seed!);
+
     const r = runMonteCarlo(params);
+    const digest = (x: typeof r) => ({
+      successRate: x.successRate,
+      successPct: Math.round(x.successRate * 100),
+      median: Math.round(x.median),
+      p5: Math.round(x.p5),
+      p25: Math.round(x.p25),
+      p75: Math.round(x.p75),
+      p95: Math.round(x.p95),
+      sampleCount: x.results.length,
+      ...(x.rmd ? { rmd: digestRmdSummary(x.rmd) } : {}),
+    });
+    const withConv = digest(r);
+
+    let comparison: Record<string, unknown> = {};
+    if (compare) {
+      const without = digest(runMonteCarlo({
+        ...params,
+        rothConversionMode: 'schedule',
+        rothConversionByYear: undefined,
+        seededRandom: mulberry32(seed!),
+      }));
+      const d = (a: number | undefined, b: number | undefined) => Math.round((a ?? 0) - (b ?? 0));
+      comparison = {
+        withoutConversions: without,
+        // Positive = conversions help.
+        rothDelta: {
+          successPct: d(withConv.successPct, without.successPct),
+          median: d(withConv.median, without.median),
+          afterTaxSuccessPct: d(withConv.rmd?.afterTax.successPct, without.rmd?.afterTax.successPct),
+          afterTaxMedian: d(withConv.rmd?.afterTax.median, without.rmd?.afterTax.median),
+          totalConversions: withConv.rmd?.totalConversions ?? 0,
+          totalConversionTax: withConv.rmd?.totalConversionTax ?? 0,
+          // Lifetime tax the household avoided: forced-RMD tax + IRMAA saved,
+          // net of the conversion tax it paid up front.
+          rmdTaxSaved: d(without.rmd?.totalRmdTax, withConv.rmd?.totalRmdTax),
+          irmaaSaved: d(without.rmd?.totalIrmaa, withConv.rmd?.totalIrmaa),
+          netLifetimeTax: d(without.rmd?.totalRmdTax, withConv.rmd?.totalRmdTax)
+            + d(without.rmd?.totalIrmaa, withConv.rmd?.totalIrmaa)
+            - (withConv.rmd?.totalConversionTax ?? 0),
+          peakRmdReduction: d(without.rmd?.peakRmdMean, withConv.rmd?.peakRmdMean),
+        },
+      };
+    }
 
     return reply.send({
-      successRate: r.successRate,
-      successPct: Math.round(r.successRate * 100),
-      median: Math.round(r.median),
-      p5: Math.round(r.p5),
-      p25: Math.round(r.p25),
-      p75: Math.round(r.p75),
-      p95: Math.round(r.p95),
-      sampleCount: r.results.length,
-      ...(r.rmd ? { rmd: digestRmdSummary(r.rmd) } : {}),
+      ...withConv,
+      ...comparison,
       inputs: {
         portfolio: i.portfolio,
         annualSpending: i.annualSpending,
@@ -196,8 +254,12 @@ export default async function simulateRoutes(app: FastifyInstance): Promise<void
         rmdEnabled: i.rmdEnabled,
         rmdTaxMode: i.rmdTaxMode ?? (i.rmdEnabled ? 'flat' : null),
         conversionYears: i.rothConversionByYear?.filter((v) => v > 0).length ?? 0,
+        rothConversionMode: i.rmdEnabled ? (i.rothConversionMode ?? 'schedule') : null,
+        rothConversionBracketCeiling: i.rothConversionMode === 'fill-bracket' ? (i.rothConversionBracketCeiling ?? 0.22) : null,
+        rothConversionEndYear: i.rothConversionEndYear ?? null,
+        compareWithoutConversions: compare,
         irmaaEnabled: i.irmaaEnabled,
-        seed: i.seed ?? null,
+        seed: seed ?? null,
       },
     });
   });

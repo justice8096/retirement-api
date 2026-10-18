@@ -207,7 +207,19 @@ const GLOSSARY: GlossaryEntry[] = [
       'Converting $20,000 per year from a Traditional IRA to a Roth during low-income retirement years.',
     technical:
       'Converted amount is taxed as ordinary income in the conversion year; subject to 5-year rule for withdrawals.',
-    seeAlso: ['rmd'],
+    seeAlso: ['rmd', 'fill_the_bracket'],
+  },
+  {
+    key: 'fill_the_bracket',
+    term: 'Fill the Bracket',
+    aliases: ['fill-to-bracket', 'bracket filling', 'bracket ceiling'],
+    plain:
+      'Converting just enough to a Roth each year to use up a chosen tax bracket without spilling into the next, higher one.',
+    example:
+      'A couple with $60,000 of other income picks the 22% ceiling and converts the roughly $150,000 that fits under its top each year until RMDs begin.',
+    technical:
+      'Conversion = max(0, bracketTop − (other ordinary income + taxable Social Security − standard deduction)), solved each year since extra income raises the taxable share of Social Security (IRC §86). Runs through the year before the first RMD unless an end year is set.',
+    seeAlso: ['roth_conversion', 'rmd'],
   },
   {
     key: 'expense_ratio',

@@ -71,6 +71,57 @@ export function ordinaryFederalTax(inp) {
     const taxable = Math.max(0, Math.max(0, inp.otherOrdinary) + taxableSs - stdDed);
     return bracketTax(taxable, status, idx);
 }
+/** Marginal rates a fill-to-bracket Roth conversion can target. */
+export const ROTH_FILL_BRACKET_CEILINGS = [0.10, 0.12, 0.22, 0.24, 0.32, 0.35];
+/**
+ * Taxable income (after the standard deduction) at the TOP of the bracket
+ * whose marginal rate is `ceilingRate`, indexed. Returns Infinity for the
+ * open-ended top bracket and 0 for a rate the table does not contain.
+ */
+export function bracketTopTaxable(ceilingRate, filingStatus, indexFactor = 1) {
+    const brackets = filingStatus === 'mfj' ? FED_BRACKETS_2026_MFJ : FED_BRACKETS_2026_SINGLE;
+    const b = brackets.find((x) => Math.abs(x.rate - ceilingRate) < 1e-9);
+    if (!b)
+        return 0;
+    return b.max == null ? Infinity : b.max * indexFactor;
+}
+/**
+ * How much additional ordinary income (a Roth conversion, say) the
+ * household can take this year before its taxable income crosses the top
+ * of the `ceilingRate` bracket. Zero when already at or above it.
+ *
+ * Not linear in the answer: every extra dollar can also pull more Social
+ * Security into taxable income (IRC 86 "tax torpedo"), so the taxable
+ * figure is `x + taxableSS(x)`, a monotone piecewise-linear function of
+ * x. Solved by bisection to within one dollar (about 40 iterations, cheap
+ * enough to run per trial-year inside the Monte Carlo kernel).
+ */
+export function ordinaryHeadroomToBracketTop(inp, ceilingRate) {
+    const idx = inp.indexFactor ?? 1;
+    const status = inp.filingStatus;
+    const top = bracketTopTaxable(ceilingRate, status, idx);
+    if (!(top > 0))
+        return 0;
+    const stdDed = FED_STD_DEDUCTION_2026[status] * idx
+        + Math.max(0, Math.min(2, inp.filers65)) * FED_ADDL_STD_DEDUCTION_65_2026[status] * idx;
+    const base = Math.max(0, inp.otherOrdinary);
+    const taxableAt = (extra) => Math.max(0, base + extra + taxableSocialSecurity(inp.ssAnnual, base + extra, status) - stdDed);
+    if (taxableAt(0) >= top)
+        return 0;
+    if (!Number.isFinite(top))
+        return Infinity;
+    // taxableAt(x) >= x - stdDed, so x = top + stdDed is always past the top.
+    let lo = 0;
+    let hi = top + stdDed;
+    for (let i = 0; i < 48 && hi - lo > 1; i++) {
+        const mid = (lo + hi) / 2;
+        if (taxableAt(mid) <= top)
+            lo = mid;
+        else
+            hi = mid;
+    }
+    return lo;
+}
 /**
  * Marginal federal tax of adding `extra` ordinary income on top of the
  * household's existing position: tax(base + extra) - tax(base). Non-positive

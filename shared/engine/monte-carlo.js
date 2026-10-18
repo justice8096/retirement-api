@@ -16,8 +16,8 @@
 import { HISTORICAL_RETURNS, bootstrapYear } from './historical-returns.js';
 import { aggregateRentalIncome, straightLineDepreciation } from './rental-income.js';
 import { ltcgFederalTax } from './tax-sources.js';
-import { calcRMD } from '../rmd.js';
-import { ordinaryTaxDelta } from './ordinary-tax.js';
+import { calcRMD, getRMDStartAge } from '../rmd.js';
+import { ordinaryTaxDelta, ordinaryHeadroomToBracketTop } from './ordinary-tax.js';
 import { taxableSocialSecurity } from './ordinary-tax.js';
 import { irmaaTier, irmaaMonthlySurcharge } from './irmaa.js';
 export const DEFAULT_REGIME = {
@@ -461,6 +461,26 @@ export function runMonteCarlo(p) {
     const rmdBracket = rmdOn && (p.rmdTaxMode ?? 'flat') === 'bracket';
     // Indexation of the 2026 tables to the sim's calendar start year.
     const rmdIndexBase = Math.pow(1 + (p.meanInflation ?? 0), Math.max(0, calStart - 2026));
+    // Fill-to-bracket Roth conversions (see MonteCarloParams.rothConversionMode).
+    const fillBracket = rmdOn && (p.rothConversionMode ?? 'schedule') === 'fill-bracket';
+    const fillCeiling = p.rothConversionBracketCeiling ?? 0.22;
+    let fillEndYear = years - 1;
+    if (fillBracket) {
+        if (p.rothConversionEndYear != null) {
+            fillEndYear = Math.min(years - 1, Math.floor(p.rothConversionEndYear));
+        }
+        else {
+            // Default window: through the year before the first owner's RMD start.
+            let firstRmdYear = Infinity;
+            for (const by of rmdAdults) {
+                const startCal = by + getRMDStartAge(by);
+                firstRmdYear = Math.min(firstRmdYear, startCal - calStart);
+            }
+            if (Number.isFinite(firstRmdYear) && firstRmdYear - 1 >= 0 && firstRmdYear - 1 < years) {
+                fillEndYear = firstRmdYear - 1;
+            }
+        }
+    }
     const afterTaxResults = [];
     const irmaaOn = rmdOn && !!p.irmaaEnabled;
     const irmaaPartD = p.irmaaPartD ?? true;
@@ -894,15 +914,6 @@ export function runMonteCarlo(p) {
                     trad[i] -= take;
                     remainingDraw -= take;
                 }
-                // 2. Roth conversion (nominal USD schedule), tax paid from the balance.
-                let convWanted = Math.max(0, p.rothConversionByYear?.[y] ?? 0);
-                let convDone = 0;
-                for (let i = 0; i < trad.length && convWanted > 0; i++) {
-                    const take = Math.min(trad[i], convWanted);
-                    trad[i] -= take;
-                    convWanted -= take;
-                    convDone += take;
-                }
                 // Tax position for this year (nominal USD). Voluntary pre-tax draws
                 // count as ordinary income already on the return; conversions stack
                 // on top of them, then the forced RMD excess on top of both.
@@ -922,7 +933,26 @@ export function runMonteCarlo(p) {
                     otherOrdinary: otherOrdinaryNow, ssAnnual: ssAnnualNow, filingStatus: filingNow,
                     filers65, indexFactor: rmdIndexBase * cumInfl,
                 };
-                const convTax = rmdBracket ? ordinaryTaxDelta(taxInp, convDone) : convDone * convRate;
+                // 2. Roth conversion, tax paid from the balance. Either the nominal
+                //    USD schedule or, in fill-bracket mode, the headroom left under
+                //    the target bracket's top after this year's other income.
+                let convWanted;
+                if (fillBracket) {
+                    convWanted = y <= fillEndYear ? ordinaryHeadroomToBracketTop(taxInp, fillCeiling) : 0;
+                    if (!Number.isFinite(convWanted))
+                        convWanted = Number.MAX_SAFE_INTEGER;
+                }
+                else {
+                    convWanted = Math.max(0, p.rothConversionByYear?.[y] ?? 0);
+                }
+                let convDone = 0;
+                for (let i = 0; i < trad.length && convWanted > 0; i++) {
+                    const take = Math.min(trad[i], convWanted);
+                    trad[i] -= take;
+                    convWanted -= take;
+                    convDone += take;
+                }
+                const convTax = (rmdBracket || fillBracket) ? ordinaryTaxDelta(taxInp, convDone) : convDone * convRate;
                 bal -= convTax;
                 // 3. RMD per living owner from the prior year-end bucket and the age
                 //    attained this calendar year. Only the excess over this year's

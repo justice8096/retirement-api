@@ -18,6 +18,8 @@ export interface RmdDigest {
     meanGrossByYear: number[];
     meanTaxByYear: number[];
     meanConversionByYear: number[];
+    meanConversionTaxByYear: number[];
+    meanExcessByYear: number[];
     meanIrmaaByYear: number[];
     meanMagiByYear: number[];
     meanTraditionalEndByYear: number[];

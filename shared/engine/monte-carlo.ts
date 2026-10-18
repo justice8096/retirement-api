@@ -16,8 +16,9 @@
 
 import { HISTORICAL_RETURNS, bootstrapYear } from './historical-returns.js';
 import { aggregateRentalIncome, straightLineDepreciation, type RentalProperty } from './rental-income.js';
-import { ltcgFederalTax, type LtcgFilingStatus } from './tax-sources.js';import { calcRMD } from '../rmd.js';
-import { ordinaryTaxDelta, type OrdinaryFilingStatus, type OrdinaryTaxInputs } from './ordinary-tax.js';
+import { ltcgFederalTax, type LtcgFilingStatus } from './tax-sources.js';
+import { calcRMD, getRMDStartAge } from '../rmd.js';
+import { ordinaryTaxDelta, ordinaryHeadroomToBracketTop, type OrdinaryFilingStatus, type OrdinaryTaxInputs } from './ordinary-tax.js';
 import { taxableSocialSecurity } from './ordinary-tax.js';
 import { irmaaTier, irmaaMonthlySurcharge } from './irmaa.js';
 
@@ -669,6 +670,34 @@ export interface MonteCarloParams {
   rothConversionByYear?: number[];
   /** Decimal rate on Roth conversions. Default = `rmdEffectiveTaxRate`. */
   rothConversionTaxRate?: number;
+  /**
+   * How the yearly conversion amount is chosen:
+   *   'schedule' (default): the nominal USD in `rothConversionByYear`.
+   *   'fill-bracket': convert whatever brings the household's taxable
+   *     income up to the top of the `rothConversionBracketCeiling` bracket
+   *     for the year's filing status, after the year's other ordinary
+   *     income, voluntary pre-tax draws and the resulting taxable share of
+   *     Social Security (IRC 86) are counted. Zero in a year already above
+   *     that line. Runs from sim year 0 through `rothConversionEndYear`
+   *     inclusive; `rothConversionByYear` is ignored. Conversions in this
+   *     mode are always taxed by bracket stacking (`rmdTaxMode: 'flat'`
+   *     still governs the forced RMD excess), since the fill target is
+   *     itself defined by the bracket tables.
+   */
+  rothConversionMode?: 'schedule' | 'fill-bracket';
+  /**
+   * Marginal rate whose bracket is filled in 'fill-bracket' mode, as a
+   * decimal from the 2026 federal table (0.10, 0.12, 0.22, 0.24, 0.32,
+   * 0.35). Default 0.22.
+   */
+  rothConversionBracketCeiling?: number;
+  /**
+   * Last sim year (inclusive) in which 'fill-bracket' conversions run.
+   * Default: the year before the first living owner reaches RMD start age
+   * (the classic conversion window), or `years - 1` if every owner is
+   * already past it.
+   */
+  rothConversionEndYear?: number;
   /**
    * How RMD excess and conversions are taxed. 'flat' (default) uses
    * rmdEffectiveTaxRate / rothConversionTaxRate. 'bracket' stacks each
@@ -1350,6 +1379,25 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
   const rmdBracket = rmdOn && (p.rmdTaxMode ?? 'flat') === 'bracket';
   // Indexation of the 2026 tables to the sim's calendar start year.
   const rmdIndexBase = Math.pow(1 + (p.meanInflation ?? 0), Math.max(0, calStart - 2026));
+  // Fill-to-bracket Roth conversions (see MonteCarloParams.rothConversionMode).
+  const fillBracket = rmdOn && (p.rothConversionMode ?? 'schedule') === 'fill-bracket';
+  const fillCeiling = p.rothConversionBracketCeiling ?? 0.22;
+  let fillEndYear = years - 1;
+  if (fillBracket) {
+    if (p.rothConversionEndYear != null) {
+      fillEndYear = Math.min(years - 1, Math.floor(p.rothConversionEndYear));
+    } else {
+      // Default window: through the year before the first owner's RMD start.
+      let firstRmdYear = Infinity;
+      for (const by of rmdAdults) {
+        const startCal = by + getRMDStartAge(by);
+        firstRmdYear = Math.min(firstRmdYear, startCal - calStart);
+      }
+      if (Number.isFinite(firstRmdYear) && firstRmdYear - 1 >= 0 && firstRmdYear - 1 < years) {
+        fillEndYear = firstRmdYear - 1;
+      }
+    }
+  }
   const afterTaxResults: number[] = [];
   const irmaaOn = rmdOn && !!p.irmaaEnabled;
   const irmaaPartD = p.irmaaPartD ?? true;
@@ -1789,15 +1837,6 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
           remainingDraw -= take;
         }
 
-        // 2. Roth conversion (nominal USD schedule), tax paid from the balance.
-        let convWanted = Math.max(0, p.rothConversionByYear?.[y] ?? 0);
-        let convDone = 0;
-        for (let i = 0; i < trad.length && convWanted > 0; i++) {
-          const take = Math.min(trad[i], convWanted);
-          trad[i] -= take;
-          convWanted -= take;
-          convDone += take;
-        }
         // Tax position for this year (nominal USD). Voluntary pre-tax draws
         // count as ordinary income already on the return; conversions stack
         // on top of them, then the forced RMD excess on top of both.
@@ -1815,7 +1854,25 @@ export function runMonteCarlo(p: MonteCarloParams): MonteCarloResult {
           otherOrdinary: otherOrdinaryNow, ssAnnual: ssAnnualNow, filingStatus: filingNow,
           filers65, indexFactor: rmdIndexBase * cumInfl,
         };
-        const convTax = rmdBracket ? ordinaryTaxDelta(taxInp, convDone) : convDone * convRate;
+
+        // 2. Roth conversion, tax paid from the balance. Either the nominal
+        //    USD schedule or, in fill-bracket mode, the headroom left under
+        //    the target bracket's top after this year's other income.
+        let convWanted: number;
+        if (fillBracket) {
+          convWanted = y <= fillEndYear ? ordinaryHeadroomToBracketTop(taxInp, fillCeiling) : 0;
+          if (!Number.isFinite(convWanted)) convWanted = Number.MAX_SAFE_INTEGER;
+        } else {
+          convWanted = Math.max(0, p.rothConversionByYear?.[y] ?? 0);
+        }
+        let convDone = 0;
+        for (let i = 0; i < trad.length && convWanted > 0; i++) {
+          const take = Math.min(trad[i], convWanted);
+          trad[i] -= take;
+          convWanted -= take;
+          convDone += take;
+        }
+        const convTax = (rmdBracket || fillBracket) ? ordinaryTaxDelta(taxInp, convDone) : convDone * convRate;
         bal -= convTax;
 
         // 3. RMD per living owner from the prior year-end bucket and the age

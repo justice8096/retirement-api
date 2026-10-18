@@ -656,6 +656,34 @@ export interface MonteCarloParams {
     /** Decimal rate on Roth conversions. Default = `rmdEffectiveTaxRate`. */
     rothConversionTaxRate?: number;
     /**
+     * How the yearly conversion amount is chosen:
+     *   'schedule' (default): the nominal USD in `rothConversionByYear`.
+     *   'fill-bracket': convert whatever brings the household's taxable
+     *     income up to the top of the `rothConversionBracketCeiling` bracket
+     *     for the year's filing status, after the year's other ordinary
+     *     income, voluntary pre-tax draws and the resulting taxable share of
+     *     Social Security (IRC 86) are counted. Zero in a year already above
+     *     that line. Runs from sim year 0 through `rothConversionEndYear`
+     *     inclusive; `rothConversionByYear` is ignored. Conversions in this
+     *     mode are always taxed by bracket stacking (`rmdTaxMode: 'flat'`
+     *     still governs the forced RMD excess), since the fill target is
+     *     itself defined by the bracket tables.
+     */
+    rothConversionMode?: 'schedule' | 'fill-bracket';
+    /**
+     * Marginal rate whose bracket is filled in 'fill-bracket' mode, as a
+     * decimal from the 2026 federal table (0.10, 0.12, 0.22, 0.24, 0.32,
+     * 0.35). Default 0.22.
+     */
+    rothConversionBracketCeiling?: number;
+    /**
+     * Last sim year (inclusive) in which 'fill-bracket' conversions run.
+     * Default: the year before the first living owner reaches RMD start age
+     * (the classic conversion window), or `years - 1` if every owner is
+     * already past it.
+     */
+    rothConversionEndYear?: number;
+    /**
      * How RMD excess and conversions are taxed. 'flat' (default) uses
      * rmdEffectiveTaxRate / rothConversionTaxRate. 'bracket' stacks each
      * amount on the year's other ordinary income and Social Security using

@@ -20,6 +20,8 @@ export interface RmdDigest {
   meanGrossByYear: number[];
   meanTaxByYear: number[];
   meanConversionByYear: number[];
+  meanConversionTaxByYear: number[];
+  meanExcessByYear: number[];
   meanIrmaaByYear: number[];
   meanMagiByYear: number[];
   meanTraditionalEndByYear: number[];
@@ -53,6 +55,8 @@ export function digestRmdSummary(m: RmdSummary): RmdDigest {
     meanGrossByYear: round(m.meanGrossByYear),
     meanTaxByYear: round(m.meanTaxByYear),
     meanConversionByYear: round(m.meanConversionByYear),
+    meanConversionTaxByYear: round(m.meanConversionTaxByYear),
+    meanExcessByYear: round(m.meanExcessByYear),
     meanIrmaaByYear: round(m.meanIrmaaByYear),
     meanMagiByYear: round(m.meanMagiByYear),
     meanTraditionalEndByYear: round(m.meanTraditionalEndByYear),

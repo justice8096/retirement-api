@@ -61,6 +61,27 @@ export interface OrdinaryTaxInputs {
 export declare function taxableSocialSecurity(ssAnnual: number, otherOrdinary: number, filingStatus: OrdinaryFilingStatus): number;
 /** Total federal ordinary tax for the year on the supplied inputs. */
 export declare function ordinaryFederalTax(inp: OrdinaryTaxInputs): number;
+/** Marginal rates a fill-to-bracket Roth conversion can target. */
+export declare const ROTH_FILL_BRACKET_CEILINGS: readonly [0.1, 0.12, 0.22, 0.24, 0.32, 0.35];
+export type RothFillBracketCeiling = (typeof ROTH_FILL_BRACKET_CEILINGS)[number];
+/**
+ * Taxable income (after the standard deduction) at the TOP of the bracket
+ * whose marginal rate is `ceilingRate`, indexed. Returns Infinity for the
+ * open-ended top bracket and 0 for a rate the table does not contain.
+ */
+export declare function bracketTopTaxable(ceilingRate: number, filingStatus: OrdinaryFilingStatus, indexFactor?: number): number;
+/**
+ * How much additional ordinary income (a Roth conversion, say) the
+ * household can take this year before its taxable income crosses the top
+ * of the `ceilingRate` bracket. Zero when already at or above it.
+ *
+ * Not linear in the answer: every extra dollar can also pull more Social
+ * Security into taxable income (IRC 86 "tax torpedo"), so the taxable
+ * figure is `x + taxableSS(x)`, a monotone piecewise-linear function of
+ * x. Solved by bisection to within one dollar (about 40 iterations, cheap
+ * enough to run per trial-year inside the Monte Carlo kernel).
+ */
+export declare function ordinaryHeadroomToBracketTop(inp: OrdinaryTaxInputs, ceilingRate: number): number;
 /**
  * Marginal federal tax of adding `extra` ordinary income on top of the
  * household's existing position: tax(base + extra) - tax(base). Non-positive

@@ -22,6 +22,8 @@ export function digestRmdSummary(m) {
         meanGrossByYear: round(m.meanGrossByYear),
         meanTaxByYear: round(m.meanTaxByYear),
         meanConversionByYear: round(m.meanConversionByYear),
+        meanConversionTaxByYear: round(m.meanConversionTaxByYear),
+        meanExcessByYear: round(m.meanExcessByYear),
         meanIrmaaByYear: round(m.meanIrmaaByYear),
         meanMagiByYear: round(m.meanMagiByYear),
         meanTraditionalEndByYear: round(m.meanTraditionalEndByYear),

@@ -235,6 +235,45 @@ describe('SS scheduled-cut fields (spec 2026-08-29)', () => {
       expect(b.inputs.rmdTaxMode).toBe('bracket');
       expect(b.inputs.conversionYears).toBe(1);
     });
+
+    it('fill-bracket mode converts the headroom under the ceiling and ignores the schedule', async () => {
+      // Single filer born 1990, 12000 voluntary draw, 24000 SS: 34100 fills the 12% bracket, tax 5800.
+      const b = (await post({
+        ...base, rmdEnabled: true, adultBirthYears: [1990],
+        rothConversionMode: 'fill-bracket', rothConversionBracketCeiling: 0.12, rothConversionByYear: [999_999],
+      })).json();
+      expect(b.rmd.meanConversionByYear[0]).toBeGreaterThanOrEqual(34_099);
+      expect(b.rmd.meanConversionByYear[0]).toBeLessThanOrEqual(34_101);
+      expect(b.rmd.meanConversionTaxByYear[0]).toBe(5_800);
+      expect(b.rmd.totalConversionTax).toBe(3 * 5_800); // three sim years, all under the RMD age
+      expect(b.inputs.rothConversionMode).toBe('fill-bracket');
+      expect(b.inputs.rothConversionBracketCeiling).toBe(0.12);
+    });
+
+    it('rejects a ceiling that is not a bracket rate', async () => {
+      const res = await post({ ...base, rmdEnabled: true, adultBirthYears: [1990], rothConversionMode: 'fill-bracket', rothConversionBracketCeiling: 0.15 });
+      expect(res.statusCode).toBe(400);
+    });
+
+    it('compareWithoutConversions returns both legs on a common seed plus the delta', async () => {
+      const b = (await post({
+        ...base, rmdEnabled: true, adultBirthYears: [1990], rmdTaxMode: 'bracket',
+        rothConversionMode: 'fill-bracket', rothConversionBracketCeiling: 0.12, compareWithoutConversions: true,
+      })).json();
+      expect(b.withoutConversions).toBeDefined();
+      expect(b.withoutConversions.rmd.totalConversions).toBe(0);
+      expect(b.rmd.totalConversions).toBeGreaterThan(0);
+      expect(b.rothDelta.totalConversionTax).toBe(3 * 5_800);
+      expect(b.rothDelta.median).toBe(b.median - b.withoutConversions.median);
+      expect(b.inputs.compareWithoutConversions).toBe(true);
+      expect(typeof b.inputs.seed).toBe('number');
+    });
+
+    it('compareWithoutConversions is inert without rmdEnabled', async () => {
+      const b = (await post({ ...base, compareWithoutConversions: true })).json();
+      expect(b.withoutConversions).toBeUndefined();
+      expect(b.inputs.compareWithoutConversions).toBe(false);
+    });
   });
 
 });
