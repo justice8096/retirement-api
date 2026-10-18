@@ -137,6 +137,51 @@ describe('fill-bracket Roth conversions in the kernel', () => {
     expect(r.rmd!.meanGrossByYear[1]).toBeGreaterThan(0);
   });
 
+  it('takes the forced RMD first, then fills only the remaining headroom on top of it', () => {
+    // Owner born 1950 (age 77 in 2027, 65+ deduction 2050): RMD on 1,000,000 = 43,668.12,
+    // voluntary draw 12,000, forced excess 31,668.12. Conversion sizes the headroom to the
+    // 22% top AFTER that excess, so taxable income lands on 105,700 rather than above it.
+    const r = runMonteCarlo(baseParams({
+      adultBirthYears: [1950], portfolio: 1_000_000, traditionalBalance: 1_000_000,
+      rmdTaxMode: 'bracket', rothConversionMode: 'fill-bracket', rothConversionBracketCeiling: 0.22,
+      rothConversionEndYear: 0,
+    }));
+    const m = r.rmd!;
+    expect(m.meanExcessByYear[0]).toBeCloseTo(31_668.12, 1);
+    const other = 12_000 + 31_668.12 + m.meanConversionByYear[0];
+    const taxable = other + taxableSocialSecurity(24_000, other, 'single') - 16_100 - 2_050;
+    expect(taxable).toBeCloseTo(105_700, -1);
+    // Conversion tax is the 22%-bracket marginal cost of the conversion alone.
+    expect(m.meanConversionTaxByYear[0] / m.meanConversionByYear[0]).toBeLessThan(0.221);
+  });
+
+  it('never lets a conversion swallow the RMD when the bucket is small', () => {
+    // 50,000 bucket, RMD 2,183.41 (50000/22.9), voluntary 12,000 already exceeds it: no
+    // forced excess, remaining 38,000 converts. With a 15,000 bucket the 12,000 draw plus
+    // the RMD excess (none: draw > RMD) leaves 3,000 to convert.
+    const r = runMonteCarlo(baseParams({
+      adultBirthYears: [1950], traditionalBalance: 15_000, rmdWithdrawalOrder: 'other-first',
+      rothConversionMode: 'fill-bracket', rothConversionBracketCeiling: 0.24, rothConversionEndYear: 0,
+    }));
+    // other-first: nothing voluntary from pre-tax, so the whole RMD 655.02 (15000/22.9) is forced.
+    const m = r.rmd!;
+    expect(m.meanExcessByYear[0]).toBeCloseTo(15_000 / 22.9, 1);
+    expect(m.meanConversionByYear[0]).toBeCloseTo(15_000 - 15_000 / 22.9, 1);
+    expect(m.meanTraditionalEndByYear[0]).toBeCloseTo(0, 6);
+  });
+
+  it('default window skips an owner already past RMD age and ends before the younger one starts', () => {
+    // 1950 is past start (73 in 2023); 1966 reaches 75 in 2041 = sim year 14. Window = 0..13.
+    const r = runMonteCarlo(baseParams({
+      years: 16, adultBirthYears: [1950, 1966], traditionalBalance: [1_500_000, 1_500_000],
+      portfolio: 3_000_000, monthlyIncome: 3_000, rothConversionMode: 'fill-bracket', rothConversionBracketCeiling: 0.12,
+    }));
+    const conv = r.rmd!.meanConversionByYear;
+    expect(conv.findLastIndex((v) => v > 0)).toBe(13);
+    expect(conv[14]).toBe(0);
+    expect(conv[15]).toBe(0);
+  });
+
   it('with vs without: same seed, conversions lower the nominal balance but raise the after-tax one', () => {
     const stochastic = {
       runs: 300, years: 25, meanReturn: 0.06, volReturn: 0.12, meanInflation: 0.025, volInflation: 0.01,

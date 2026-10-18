@@ -470,13 +470,17 @@ export function runMonteCarlo(p) {
             fillEndYear = Math.min(years - 1, Math.floor(p.rothConversionEndYear));
         }
         else {
-            // Default window: through the year before the first owner's RMD start.
+            // Default window: through the year before the next owner's RMD
+            // start. Owners already past their start age are skipped (their
+            // RMDs run alongside the conversions regardless); when every owner
+            // is past it the window is the whole horizon.
             let firstRmdYear = Infinity;
             for (const by of rmdAdults) {
-                const startCal = by + getRMDStartAge(by);
-                firstRmdYear = Math.min(firstRmdYear, startCal - calStart);
+                const startSimYear = by + getRMDStartAge(by) - calStart;
+                if (startSimYear >= 1)
+                    firstRmdYear = Math.min(firstRmdYear, startSimYear);
             }
-            if (Number.isFinite(firstRmdYear) && firstRmdYear - 1 >= 0 && firstRmdYear - 1 < years) {
+            if (Number.isFinite(firstRmdYear) && firstRmdYear - 1 < years) {
                 fillEndYear = firstRmdYear - 1;
             }
         }
@@ -933,30 +937,12 @@ export function runMonteCarlo(p) {
                     otherOrdinary: otherOrdinaryNow, ssAnnual: ssAnnualNow, filingStatus: filingNow,
                     filers65, indexFactor: rmdIndexBase * cumInfl,
                 };
-                // 2. Roth conversion, tax paid from the balance. Either the nominal
-                //    USD schedule or, in fill-bracket mode, the headroom left under
-                //    the target bracket's top after this year's other income.
-                let convWanted;
-                if (fillBracket) {
-                    convWanted = y <= fillEndYear ? ordinaryHeadroomToBracketTop(taxInp, fillCeiling) : 0;
-                    if (!Number.isFinite(convWanted))
-                        convWanted = Number.MAX_SAFE_INTEGER;
-                }
-                else {
-                    convWanted = Math.max(0, p.rothConversionByYear?.[y] ?? 0);
-                }
-                let convDone = 0;
-                for (let i = 0; i < trad.length && convWanted > 0; i++) {
-                    const take = Math.min(trad[i], convWanted);
-                    trad[i] -= take;
-                    convWanted -= take;
-                    convDone += take;
-                }
-                const convTax = (rmdBracket || fillBracket) ? ordinaryTaxDelta(taxInp, convDone) : convDone * convRate;
-                bal -= convTax;
-                // 3. RMD per living owner from the prior year-end bucket and the age
+                // 2. RMD per living owner from the prior year-end bucket and the age
                 //    attained this calendar year. Only the excess over this year's
-                //    voluntary pre-tax draw is forced; conversions do not offset it.
+                //    voluntary pre-tax draw is forced. The RMD comes out BEFORE any
+                //    conversion (IRS ordering rule: the first dollars distributed in
+                //    a year are the RMD and cannot be converted), so it is both
+                //    taken from the bucket and stacked on the return ahead of it.
                 let grossRmd = 0;
                 for (let i = 0; i < trad.length; i++) {
                     if (!tradAlive[i])
@@ -974,10 +960,31 @@ export function runMonteCarlo(p) {
                     trad[i] -= take;
                     remainingExcess -= take;
                 }
-                const rmdTax = rmdBracket
-                    ? ordinaryTaxDelta({ ...taxInp, otherOrdinary: otherOrdinaryNow + convDone }, excess)
-                    : excess * rmdRate;
-                lastTaxInp = { ...taxInp, otherOrdinary: otherOrdinaryNow + convDone + excess };
+                const rmdTax = rmdBracket ? ordinaryTaxDelta(taxInp, excess) : excess * rmdRate;
+                const taxInpAfterRmd = { ...taxInp, otherOrdinary: otherOrdinaryNow + excess };
+                // 3. Roth conversion, tax paid from the balance. Either the nominal
+                //    USD schedule or, in fill-bracket mode, the headroom left under
+                //    the target bracket's top after this year's other income and
+                //    the forced RMD just taken.
+                let convWanted;
+                if (fillBracket) {
+                    convWanted = y <= fillEndYear ? ordinaryHeadroomToBracketTop(taxInpAfterRmd, fillCeiling) : 0;
+                    if (!Number.isFinite(convWanted))
+                        convWanted = Number.MAX_SAFE_INTEGER;
+                }
+                else {
+                    convWanted = Math.max(0, p.rothConversionByYear?.[y] ?? 0);
+                }
+                let convDone = 0;
+                for (let i = 0; i < trad.length && convWanted > 0; i++) {
+                    const take = Math.min(trad[i], convWanted);
+                    trad[i] -= take;
+                    convWanted -= take;
+                    convDone += take;
+                }
+                const convTax = (rmdBracket || fillBracket) ? ordinaryTaxDelta(taxInpAfterRmd, convDone) : convDone * convRate;
+                bal -= convTax;
+                lastTaxInp = { ...taxInp, otherOrdinary: otherOrdinaryNow + excess + convDone };
                 // MAGI proxy for this year (AGI: ordinary + conversions + forced
                 // excess + taxable SS), recorded for the IRMAA lookback.
                 const magiNow = otherOrdinaryNow + convDone + excess

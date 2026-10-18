@@ -621,7 +621,8 @@ export interface MonteCarloParams {
      * Roth conversions (`rothConversionByYear`) use the same bucket: the
      * converted amount leaves the pre-tax bucket, `amount x rothConversionTaxRate`
      * is deducted from the balance, and later RMDs shrink accordingly.
-     * Conversions do not count toward the year's RMD (IRS ordering rule).
+     * Conversions do not count toward the year's RMD (IRS ordering rule):
+     * the RMD is distributed first, and only what remains can be converted.
      *
      * v1 simplifications: flat effective tax rates (no bracket stacking);
      * IRMAA ripple not modeled (the kernel's MAGI augment is trial-invariant);
@@ -691,8 +692,9 @@ export interface MonteCarloParams {
      * ordinary-tax.ts): MFJ while both adults are alive, single after a
      * spouseDeath; the 65+ additional standard deduction is applied per
      * living adult; the taxable share of SS is re-derived from provisional
-     * income so the SS "tax torpedo" is captured. Conversions are stacked
-     * first, then the forced RMD excess on top. The SS slice is
+     * income so the SS "tax torpedo" is captured. The forced RMD excess is
+     * stacked first (it must be distributed before any conversion), then
+     * the conversion on top of it. The SS slice is
      * `ssMonthlyIncome` when supplied, otherwise all of `monthlyIncome`.
      */
     rmdTaxMode?: 'flat' | 'bracket';
