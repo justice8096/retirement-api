@@ -517,26 +517,47 @@
     ]
   },
   "housing": {
-    "propertyType": "2-bedroom single-family house",
+    "propertyType": "2-bedroom 2-bath apartment",
     "monthlyBudget": {
-      "min": 2500,
-      "max": 3500,
-      "typical": 3000
+      "min": 2100,
+      "max": 3100,
+      "typical": 2695
     },
     "breakdown": {
-      "baseRent": 2850,
+      "baseRent": 2600,
       "rentersInsurance": 35,
+      "petRent": 60,
       "localTaxesFees": 0,
-      "total": 2885,
-      "notes": "Water, sewage, and trash are separate utility bills — see utilities breakdown."
+      "total": 2695,
+      "notes": "Base rent is a late-2026 2BR/2BA asking rent (~$2,560) indexed +1.5% for a 2027 lease. Pet rent $50-75/mo plus a $300-500 one-time pet fee is standard; many complexes cap dogs at 50-75 lb, so confirm breed/weight policy before applying. Parking is usually included for one car; garage or reserved spaces $50-150/mo. Water, sewer and trash are billed back separately, see utilities."
     },
-    "taxNotes": "Virginia has no rental tax. Property tax (avg 1.15% Fairfax County) is landlord responsibility but built into rent. Renter's insurance recommended but not legally required.",
-    "leaseTerms": "12-month standard lease. Security deposit max 2 months rent ($6,000). Pet deposit common ($300-500).",
-    "marketNotes": "Fairfax County/NoVA is one of the most expensive rental markets in the US outside major cities. 2BR houses are scarce; most rentals are apartments/townhomes. Expect competition.",
+    "taxNotes": "Virginia has no rental tax. Property tax (avg 1.15% Fairfax County) is landlord responsibility but built into rent. Renter's insurance usually required by the lease ($30-45/mo).",
+    "leaseTerms": "12-month standard lease. Security deposit typically $500 to one month's rent (VA cap is 2 months). Application/admin fees $50-500. Short-term (3-6 month) leases available at most large complexes at a $200-500/mo premium; month-to-month after lease end typically +$300-500.",
+    "marketNotes": "Fairfax County/NoVA is one of the most expensive rental markets in the US outside major cities, but rents were flat to down 1-3% YoY through 2026 (county median $2,430 Jul 2026 vs $2,463 Jul 2025; Fairfax City 2BR median $2,195, -2.9%). Vacancy is up and concessions (4-8 weeks free) are common on 12-month leases at the large Fair Oaks / Fairfax Corner complexes. Expect the 2BR/2BA mainstream band to be $2,300-2,700.",
     "sources": [
       {
-        "name": "Zillow Fairfax County Rental Market",
-        "url": "https://www.zillow.com/rental-manager/market-trends/fairfax-county-va/"
+        "name": "Zillow Fairfax VA Rental Market Trends (Nov 2026)",
+        "url": "https://www.zillow.com/rental-manager/market-trends/fairfax-va/"
+      },
+      {
+        "name": "RentCafe Average Rent in Fairfax VA (Oct 2026)",
+        "url": "https://www.rentcafe.com/average-rent-market-trends/us/va/fairfax/"
+      },
+      {
+        "name": "Apartment List Fairfax VA",
+        "url": "https://www.apartmentlist.com/va/fairfax"
+      },
+      {
+        "name": "FFXnow: Fairfax County rents less expensive than 2025 (Aug 2026)",
+        "url": "https://www.ffxnow.com/2026/08/06/apartment-rents-across-most-of-fairfax-county-remain-less-expensive-than-in-2025/"
+      },
+      {
+        "name": "Redfin Fair Oaks 2-bedroom apartments",
+        "url": "https://www.redfin.com/city/32730/VA/Fair-Oaks/2-bedroom-apartments-for-rent"
+      },
+      {
+        "name": "Zumper Fairfax VA apartments",
+        "url": "https://www.zumper.com/apartments-for-rent/fairfax-va"
       },
       {
         "name": "Fairfax County Property Tax Rates",

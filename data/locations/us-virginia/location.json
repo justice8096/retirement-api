@@ -26,12 +26,12 @@
   },
   "monthlyCosts": {
     "rent": {
-      "min": 2397,
-      "max": 3374,
-      "typical": 2885,
-      "type": "2-bedroom single-family house",
-      "annualInflation": 0.035,
-      "notes": "Virginia has no rental tax. Water, sewage, and trash are separate utility bills (not included in rent)."
+      "min": 2100,
+      "max": 3100,
+      "typical": 2695,
+      "type": "2-bedroom 2-bath apartment",
+      "annualInflation": 0.02,
+      "notes": "2BR/2BA apartment, 12-month lease, Fairfax city / Fair Oaks (22030-22033), 2027 estimate. Late-2026 asking rents for 2BR/2BA units run about $2,000-$3,000 (Finley, Ellipse, eaves Fairfax City ~$2,000-2,100; Ridgewood, Lincoln at Fair Oaks, Vista, Jefferson at Fair Oaks ~$2,400-2,500; Camden Monument Place ~$2,600; Julian at Fair Lakes ~$2,900). Stated 2BR averages: Zillow $2,400, Apartment List county median $2,412, RentCafe $2,552, Zumper $2,564, Rentable $2,590. Fairfax County rents were flat to -1.5% YoY through 2026, so 2027 is indexed +1.5%. Typical includes $35 renter's insurance and $60 pet rent (large dog). Short leases (3-6 months) carry a $200-500/mo premium: budget $3,000-3,200 for a May-Jul 2027 stay. Virginia has no rental tax. Water, sewer and trash are usually billed back by the complex (RUBS), see utilities."
     },
     "groceries": {
       "min": 1400,
@@ -41,34 +41,34 @@
       "notes": "NOVA grocery prices 15-20% above national average"
     },
     "utilities": {
-      "min": 276,
-      "max": 449,
-      "typical": 345,
+      "min": 230,
+      "max": 400,
+      "typical": 300,
       "annualInflation": 0.03,
       "breakdown": {
         "electricity": {
-          "typical": 155,
-          "notes": "Dominion Energy. Avg across seasons — $100 winter, $220 summer A/C. Includes general household."
+          "typical": 130,
+          "notes": "Dominion Energy. ~1,100 sq ft apartment, avg across seasons: $85 winter, $185 summer A/C. Includes general household."
         },
         "gas": {
-          "typical": 65,
-          "notes": "Washington Gas. Natural gas heating (Nov–Mar primary), cooking, water heater."
+          "typical": 45,
+          "notes": "Washington Gas where the building has gas heat/cooking; many Fairfax complexes are all-electric (then $0 here, higher electricity)."
         },
         "water": {
-          "typical": 50,
-          "notes": "Fairfax Water Authority. 2-adult household, ~6,000 gal/mo."
+          "typical": 45,
+          "notes": "Billed back by the complex (RUBS) or Fairfax Water direct. 2-adult household."
         },
         "sewage": {
-          "typical": 45,
-          "notes": "Billed with water. Fairfax County sanitary sewer charge."
+          "typical": 40,
+          "notes": "Billed with water (RUBS or Fairfax County sanitary sewer)."
         },
         "trash": {
-          "typical": 30,
-          "notes": "Fairfax County solid waste. Billed quarterly (~$90/qtr)."
+          "typical": 40,
+          "notes": "Complex trash/valet fee, typically $25-45/mo flat."
         }
       },
       "taxes": "Virginia exempts residential utilities from state sales tax.",
-      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig). "
+      "notes": "Apartment footprint. Electricity (heating+cooling), gas where present, water, sewage, trash/valet fee. Internet is in entertainment (Cable+1Gig)."
     },
     "healthcare": {
       "min": 550,

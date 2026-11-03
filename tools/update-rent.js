@@ -22,22 +22,25 @@ function log(msg) { process.stderr.write(msg + '\n'); }
 
 const RENT_DATA = {
   'us-virginia': {
-    rent: { min: 2500, max: 3500, typical: 3000, annualInflation: 0.035 },
+    // 2BR/2BA apartment, Fairfax city / Fair Oaks, 2027 estimate (late-2026 asking rents +1.5%).
+    rent: { min: 2100, max: 3100, typical: 2695, annualInflation: 0.02 },
     housing: {
-      propertyType: '2-bedroom single-family house',
-      monthlyBudget: { min: 2500, max: 3500, typical: 3000 },
+      propertyType: '2-bedroom 2-bath apartment',
+      monthlyBudget: { min: 2100, max: 3100, typical: 2695 },
       breakdown: {
-        baseRent: 2850,
+        baseRent: 2600,
         rentersInsurance: 35,
+        petRent: 60,
         localTaxesFees: 0,
-        trashWaterSewer: 115,
-        total: 3000
+        total: 2695
       },
-      taxNotes: 'Virginia has no rental tax. Property tax (avg 1.15% Fairfax County) is landlord responsibility but built into rent. Renter\'s insurance recommended but not legally required.',
-      leaseTerms: '12-month standard lease. Security deposit max 2 months rent ($6,000). Pet deposit common ($300-500).',
-      marketNotes: 'Fairfax County/NoVA is one of the most expensive rental markets in the US outside major cities. 2BR houses are scarce; most rentals are apartments/townhomes. Expect competition.',
+      taxNotes: 'Virginia has no rental tax. Property tax (avg 1.15% Fairfax County) is landlord responsibility but built into rent. Renter\'s insurance usually required by the lease ($30-45/mo).',
+      leaseTerms: '12-month standard lease. Security deposit typically $500 to one month\'s rent (VA cap is 2 months). Short-term (3-6 month) leases at a $200-500/mo premium.',
+      marketNotes: 'Fairfax County rents flat to down 1-3% YoY through 2026 (county median $2,430 Jul 2026). 2BR/2BA mainstream band $2,300-2,700; concessions common on 12-month leases.',
       sources: [
-        { name: 'Zillow Fairfax County Rental Market', url: 'https://www.zillow.com/rental-manager/market-trends/fairfax-county-va/' },
+        { name: 'Zillow Fairfax VA Rental Market Trends (Nov 2026)', url: 'https://www.zillow.com/rental-manager/market-trends/fairfax-va/' },
+        { name: 'RentCafe Average Rent in Fairfax VA (Oct 2026)', url: 'https://www.rentcafe.com/average-rent-market-trends/us/va/fairfax/' },
+        { name: 'FFXnow: Fairfax County rents less expensive than 2025 (Aug 2026)', url: 'https://www.ffxnow.com/2026/08/06/apartment-rents-across-most-of-fairfax-county-remain-less-expensive-than-in-2025/' },
         { name: 'Fairfax County Property Tax Rates', url: 'https://www.fairfaxcounty.gov/taxes/real-estate-tax' }
       ]
     }
