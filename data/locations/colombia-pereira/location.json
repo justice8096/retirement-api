@@ -236,10 +236,10 @@
     "medicalOOP": {
       "min": 20,
       "typical": 40,
-      "max": 160,
+      "max": 120,
       "annualInflation": 0.04,
       "lastVerified": "2026-11-06",
-      "notes": "2026 EPS cuota moderadora COP 20,100-52,800 per visit by income band; copagos 17.3-23% of service capped at COP 3.0-6.0M/yr (max reflects annual cap spread monthly). Prepagada visit bonos extra.",
+      "notes": "2026 EPS cuota moderadora COP 20,100-52,800 per visit by income band; copagos 17.3-23% of service capped at COP 3.0-6.0M/yr (max reflects annual cap spread monthly). Prepagada visit bonos extra. Max capped at 3x typical (dataset rule).",
       "sources": [
         {
           "title": "Publimetro - Cuotas moderadoras y copagos EPS 2026",

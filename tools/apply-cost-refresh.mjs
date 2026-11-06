@@ -11,6 +11,7 @@
  *     re-modeling an old-template insurance figure (health insurance stored as
  *     "insurance") down to a renters placeholder, and only when healthcare was
  *     verified in the same result so the health cost is not lost.
+ *   - max is capped at 3 x typical (dataset integrity rule).
  *   - Results whose currency differs from the location's are skipped.
  *   - detailed-costs headline budgets (housing, transportation, entertainment,
  *     cellPhone) follow verified location values; index.json totals are recomputed.
@@ -54,7 +55,9 @@ for (const f of readdirSync(dir).filter(f => f.endsWith('.json')).sort()) {
       const cur = mc[cat];
       const same = cur.min === v.min && cur.typical === v.typical && cur.max === v.max;
       if (v.verified) {
-        const next = { ...cur, min: v.min, typical: v.typical, max: v.max, lastVerified: DATE };
+        // Dataset rule (seed-data-integrity test): max <= 3 x typical.
+        const max = v.max > 3 * v.typical ? 3 * v.typical : v.max;
+        const next = { ...cur, min: v.min, typical: v.typical, max, lastVerified: DATE };
         delete next.estimate;
         if (v.notes) next.notes = v.notes;
         if (Array.isArray(v.sources) && v.sources.length) next.sources = v.sources;

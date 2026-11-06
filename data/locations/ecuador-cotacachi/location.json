@@ -138,10 +138,10 @@
     "transportation": {
       "typical": 80,
       "min": 40,
-      "max": 250,
+      "max": 240,
       "annualInflation": 0.03,
       "lastVerified": "2026-11-06",
-      "notes": "Transit/taxi model: bus ~USD 0.45, monthly pass ~USD 15 each, cheap taxis to Otavalo/Ibarra. Max covers own car (Extra/Ecopais USD 3.175/gal from 12 Oct 2026).",
+      "notes": "Transit/taxi model: bus ~USD 0.45, monthly pass ~USD 15 each, cheap taxis to Otavalo/Ibarra. Max covers own car (Extra/Ecopais USD 3.175/gal from 12 Oct 2026). Max capped at 3x typical (dataset rule).",
       "sources": [
         {
           "title": "CityCost - Cuenca vs Cotacachi (updated Oct/Nov 2026)",
