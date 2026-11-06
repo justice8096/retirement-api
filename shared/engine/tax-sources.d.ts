@@ -15,6 +15,26 @@ export declare const FED_STD_DEDUCTION_2026: {
     readonly hoh: 24150;
 };
 /**
+ * 2027 US federal tables (IRS Rev. Proc. 2026-35, released Nov 5 2026,
+ * IR-2026-133). The forward-looking Monte Carlo tax pass uses these as its
+ * base year; the 2026 tables above stay exported for current-year helpers.
+ */
+export declare const TAX_TABLE_YEAR = 2027;
+export declare const FED_BRACKETS_2027_MFJ: TaxBracket[];
+export declare const FED_BRACKETS_2027_SINGLE: TaxBracket[];
+/** 2027 standard deduction by filing status (Rev. Proc. 2026-35 section 3.15(1)). */
+export declare const FED_STD_DEDUCTION_2027: {
+    readonly mfj: 33200;
+    readonly single: 16600;
+    readonly hoh: 24925;
+};
+/** 2027 additional standard deduction per 65+/blind individual (section 3.15(3)). */
+export declare const FED_ADDL_STD_DEDUCTION_65_2027: {
+    readonly mfj: 1700;
+    readonly single: 2100;
+};
+export declare const FED_TABLES_2027_SOURCES: Source[];
+/**
  * Structured citations for the 2026 US federal tax constants used on
  * the taxes screen and in Monte Carlo.
  *
@@ -52,6 +72,26 @@ export declare const LTCG_BRACKETS_2026: {
     readonly hoh: {
         readonly zeroTop: 66200;
         readonly fifteenTop: 579600;
+    };
+};
+/** 2027 LTCG thresholds (Rev. Proc. 2026-35 section 3.03). Not yet wired into the
+ *  current-year harvesting helpers, which stay on 2026 until the year turns. */
+export declare const LTCG_BRACKETS_2027: {
+    readonly single: {
+        readonly zeroTop: 51050;
+        readonly fifteenTop: 563200;
+    };
+    readonly mfj: {
+        readonly zeroTop: 102100;
+        readonly fifteenTop: 633600;
+    };
+    readonly mfs: {
+        readonly zeroTop: 51050;
+        readonly fifteenTop: 316800;
+    };
+    readonly hoh: {
+        readonly zeroTop: 68350;
+        readonly fifteenTop: 598400;
     };
 };
 export type LtcgFilingStatus = keyof typeof LTCG_BRACKETS_2026;

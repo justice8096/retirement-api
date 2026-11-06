@@ -24,16 +24,16 @@ describe('taxableSocialSecurity (IRC 86 tiers)', () => {
 });
 
 describe('ordinaryFederalTax', () => {
-  it('applies the standard deduction and 2026 MFJ brackets', () => {
-    // taxable 100000 - 32200 = 67800: 24800 * 0.10 + 43000 * 0.12
-    expect(ordinaryFederalTax({ otherOrdinary: 100_000, ssAnnual: 0, filingStatus: 'mfj', filers65: 0 })).toBeCloseTo(7_640, 6);
+  it('applies the standard deduction and 2027 MFJ brackets', () => {
+    // taxable 100000 - 33200 = 66800: 25600 * 0.10 + 41200 * 0.12
+    expect(ordinaryFederalTax({ otherOrdinary: 100_000, ssAnnual: 0, filingStatus: 'mfj', filers65: 0 })).toBeCloseTo(7_504, 6);
   });
   it('adds the 65+ additional standard deduction per filer', () => {
-    // deduction 32200 + 2 * 1650 = 35500: taxable 64500
-    expect(ordinaryFederalTax({ otherOrdinary: 100_000, ssAnnual: 0, filingStatus: 'mfj', filers65: 2 })).toBeCloseTo(7_244, 6);
+    // deduction 33200 + 2 * 1700 = 36600: taxable 63400
+    expect(ordinaryFederalTax({ otherOrdinary: 100_000, ssAnnual: 0, filingStatus: 'mfj', filers65: 2 })).toBeCloseTo(7_096, 6);
   });
   it('indexes brackets and deductions by indexFactor', () => {
-    expect(ordinaryFederalTax({ otherOrdinary: 200_000, ssAnnual: 0, filingStatus: 'mfj', filers65: 0, indexFactor: 2 })).toBeCloseTo(15_280, 6);
+    expect(ordinaryFederalTax({ otherOrdinary: 200_000, ssAnnual: 0, filingStatus: 'mfj', filers65: 0, indexFactor: 2 })).toBeCloseTo(15_008, 6);
   });
 });
 
@@ -41,8 +41,8 @@ describe('ordinaryTaxDelta', () => {
   it('captures the SS tax torpedo: extra IRA income drags SS into taxable income', () => {
     const base = { otherOrdinary: 0, ssAnnual: 60_000, filingStatus: 'mfj' as const, filers65: 2 };
     expect(ordinaryFederalTax(base)).toBe(0);
-    // with 100000 extra: taxable SS 51000 (cap), taxable 115500 -> 2480 + 9120 + 3234
-    expect(ordinaryTaxDelta(base, 100_000)).toBeCloseTo(14_834, 6);
+    // with 100000 extra: taxable SS 51000 (cap), taxable 114400 -> 2560 + 9414 + 2277
+    expect(ordinaryTaxDelta(base, 100_000)).toBeCloseTo(14_251, 6);
   });
   it('returns 0 for non-positive extra', () => {
     const base = { otherOrdinary: 50_000, ssAnnual: 0, filingStatus: 'single' as const, filers65: 0 };

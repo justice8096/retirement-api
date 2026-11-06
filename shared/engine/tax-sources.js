@@ -30,6 +30,50 @@ export const FED_STD_DEDUCTION_2026 = {
     hoh: 24150,
 };
 /**
+ * 2027 US federal tables (IRS Rev. Proc. 2026-35, released Nov 5 2026,
+ * IR-2026-133). The forward-looking Monte Carlo tax pass uses these as its
+ * base year; the 2026 tables above stay exported for current-year helpers.
+ */
+export const TAX_TABLE_YEAR = 2027;
+export const FED_BRACKETS_2027_MFJ = [
+    { min: 0, max: 25600, rate: 0.10 },
+    { min: 25600, max: 104050, rate: 0.12 },
+    { min: 104050, max: 218250, rate: 0.22 },
+    { min: 218250, max: 416650, rate: 0.24 },
+    { min: 416650, max: 529100, rate: 0.32 },
+    { min: 529100, max: 793650, rate: 0.35 },
+    { min: 793650, max: null, rate: 0.37 },
+];
+export const FED_BRACKETS_2027_SINGLE = [
+    { min: 0, max: 12800, rate: 0.10 },
+    { min: 12800, max: 52025, rate: 0.12 },
+    { min: 52025, max: 109125, rate: 0.22 },
+    { min: 109125, max: 208325, rate: 0.24 },
+    { min: 208325, max: 264550, rate: 0.32 },
+    { min: 264550, max: 661375, rate: 0.35 },
+    { min: 661375, max: null, rate: 0.37 },
+];
+/** 2027 standard deduction by filing status (Rev. Proc. 2026-35 section 3.15(1)). */
+export const FED_STD_DEDUCTION_2027 = {
+    mfj: 33200,
+    single: 16600,
+    hoh: 24925,
+};
+/** 2027 additional standard deduction per 65+/blind individual (section 3.15(3)). */
+export const FED_ADDL_STD_DEDUCTION_65_2027 = { mfj: 1700, single: 2100 };
+export const FED_TABLES_2027_SOURCES = [
+    {
+        title: 'IRS Rev. Proc. 2026-35 (2027 inflation adjustments)',
+        url: 'https://www.irs.gov/pub/irs-drop/rp-26-35.pdf',
+        accessed: '2026-11-06',
+    },
+    {
+        title: 'IRS IR-2026-133: tax inflation adjustments for tax year 2027',
+        url: 'https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2027-taxpayers-continue-to-benefit-from-the-working-families-tax-cuts',
+        accessed: '2026-11-06',
+    },
+];
+/**
  * Structured citations for the 2026 US federal tax constants used on
  * the taxes screen and in Monte Carlo.
  *
@@ -90,6 +134,14 @@ export const LTCG_BRACKETS_2026 = {
     mfj: { zeroTop: 98_900, fifteenTop: 613_700 },
     mfs: { zeroTop: 49_450, fifteenTop: 306_850 },
     hoh: { zeroTop: 66_200, fifteenTop: 579_600 },
+};
+/** 2027 LTCG thresholds (Rev. Proc. 2026-35 section 3.03). Not yet wired into the
+ *  current-year harvesting helpers, which stay on 2026 until the year turns. */
+export const LTCG_BRACKETS_2027 = {
+    single: { zeroTop: 51_050, fifteenTop: 563_200 },
+    mfj: { zeroTop: 102_100, fifteenTop: 633_600 },
+    mfs: { zeroTop: 51_050, fifteenTop: 316_800 },
+    hoh: { zeroTop: 68_350, fifteenTop: 598_400 },
 };
 export const LTCG_BRACKETS_2026_SOURCES = [
     {

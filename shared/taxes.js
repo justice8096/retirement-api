@@ -106,6 +106,48 @@ export var FED_BRACKETS_2026_SINGLE = [
   { min: 640600,  max: null,   rate: 0.37 },
 ];
 
+
+// --- 2027 tax constants (US), IRS Rev. Proc. 2026-35 (Nov 5 2026) ---
+// Exported for callers that want 2027 tables. The location budget math and
+// LTCG helpers in this file stay on the 2026 tables until the year turns,
+// so ordinary and LTCG thresholds remain from the same tax year.
+export var FED_TABLES_2027_SOURCES = [
+  {
+    title: 'IRS Rev. Proc. 2026-35 (2027 inflation adjustments)',
+    url: 'https://www.irs.gov/pub/irs-drop/rp-26-35.pdf',
+    accessed: '2026-11-06',
+  },
+];
+export var FED_STD_DEDUCTION_2027 = {
+  mfj: 33200,
+  single: 16600,
+  hoh: 24925,
+};
+export var FED_BRACKETS_2027_MFJ = [
+  { min: 0,       max: 25600,  rate: 0.10 },
+  { min: 25600,   max: 104050, rate: 0.12 },
+  { min: 104050,  max: 218250, rate: 0.22 },
+  { min: 218250,  max: 416650, rate: 0.24 },
+  { min: 416650,  max: 529100, rate: 0.32 },
+  { min: 529100,  max: 793650, rate: 0.35 },
+  { min: 793650,  max: null,   rate: 0.37 },
+];
+export var FED_BRACKETS_2027_SINGLE = [
+  { min: 0,       max: 12800,  rate: 0.10 },
+  { min: 12800,   max: 52025,  rate: 0.12 },
+  { min: 52025,   max: 109125, rate: 0.22 },
+  { min: 109125,  max: 208325, rate: 0.24 },
+  { min: 208325,  max: 264550, rate: 0.32 },
+  { min: 264550,  max: 661375, rate: 0.35 },
+  { min: 661375,  max: null,   rate: 0.37 },
+];
+export var LTCG_BRACKETS_2027 = {
+  single: { zeroTop:  51050, fifteenTop: 563200 },
+  mfj:    { zeroTop: 102100, fifteenTop: 633600 },
+  mfs:    { zeroTop:  51050, fifteenTop: 316800 },
+  hoh:    { zeroTop:  68350, fifteenTop: 598400 },
+};
+
 // OBBBA senior bonus deduction — age 65+, stackable with standard deduction.
 // Phase-out: $200/1,000 excess MAGI over threshold, until zeroed.
 export var OBBBA_SENIOR_DEDUCTION_AMOUNT = 6000;

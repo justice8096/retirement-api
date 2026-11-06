@@ -14,9 +14,9 @@
  * dollar of IRA income can pull up to 85 cents of SS into taxable income
  * on top of itself.
  *
- * Constants are the 2026 tables in tax-sources.ts. Brackets and the
- * standard deduction are indexed by the caller-supplied `indexFactor`
- * (accumulated inflation since 2026); the SS provisional-income thresholds
+ * Constants are the 2027 tables in tax-sources.ts (Rev. Proc. 2026-35).
+ * Brackets and the standard deduction are indexed by the caller-supplied
+ * `indexFactor` (accumulated inflation since 2027); the SS provisional-income thresholds
  * are NOT indexed, matching statute (fixed since 1984 / 1994).
  *
  * Not modeled: state tax, the OBBBA 6,000 senior bonus (expires after
@@ -50,7 +50,7 @@ export interface OrdinaryTaxInputs {
     /** Number of filers aged 65+ this year (0, 1 or 2). Adds the additional
      *  standard deduction per person. */
     filers65: number;
-    /** Multiplier applied to brackets and deductions relative to 2026
+    /** Multiplier applied to brackets and deductions relative to 2027
      *  (e.g. accumulated inflation). Default 1. */
     indexFactor?: number;
 }

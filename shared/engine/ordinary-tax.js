@@ -14,15 +14,15 @@
  * dollar of IRA income can pull up to 85 cents of SS into taxable income
  * on top of itself.
  *
- * Constants are the 2026 tables in tax-sources.ts. Brackets and the
- * standard deduction are indexed by the caller-supplied `indexFactor`
- * (accumulated inflation since 2026); the SS provisional-income thresholds
+ * Constants are the 2027 tables in tax-sources.ts (Rev. Proc. 2026-35).
+ * Brackets and the standard deduction are indexed by the caller-supplied
+ * `indexFactor` (accumulated inflation since 2027); the SS provisional-income thresholds
  * are NOT indexed, matching statute (fixed since 1984 / 1994).
  *
  * Not modeled: state tax, the OBBBA 6,000 senior bonus (expires after
  * 2028 and phases out above 150k MFJ MAGI), NIIT, AMT.
  */
-import { FED_BRACKETS_2026_MFJ, FED_BRACKETS_2026_SINGLE, FED_STD_DEDUCTION_2026, } from './tax-sources.js';
+import { FED_BRACKETS_2027_MFJ, FED_BRACKETS_2027_SINGLE, FED_STD_DEDUCTION_2027, FED_ADDL_STD_DEDUCTION_65_2027, } from './tax-sources.js';
 /** 2026 additional standard deduction per qualifying 65+ individual
  *  (Rev. Proc. 2025-32 section 3.17(2)): 1,650 married, 2,050 single. */
 export const FED_ADDL_STD_DEDUCTION_65_2026 = { mfj: 1650, single: 2050 };
@@ -50,7 +50,7 @@ export function taxableSocialSecurity(ssAnnual, otherOrdinary, filingStatus) {
     return Math.min(0.85 * ssAnnual, tier1 + tier2);
 }
 function bracketTax(taxable, filingStatus, indexFactor) {
-    const brackets = filingStatus === 'mfj' ? FED_BRACKETS_2026_MFJ : FED_BRACKETS_2026_SINGLE;
+    const brackets = filingStatus === 'mfj' ? FED_BRACKETS_2027_MFJ : FED_BRACKETS_2027_SINGLE;
     let tax = 0;
     for (const b of brackets) {
         const lo = b.min * indexFactor;
@@ -66,8 +66,8 @@ export function ordinaryFederalTax(inp) {
     const idx = inp.indexFactor ?? 1;
     const status = inp.filingStatus;
     const taxableSs = taxableSocialSecurity(inp.ssAnnual, inp.otherOrdinary, status);
-    const stdDed = FED_STD_DEDUCTION_2026[status] * idx
-        + Math.max(0, Math.min(2, inp.filers65)) * FED_ADDL_STD_DEDUCTION_65_2026[status] * idx;
+    const stdDed = FED_STD_DEDUCTION_2027[status] * idx
+        + Math.max(0, Math.min(2, inp.filers65)) * FED_ADDL_STD_DEDUCTION_65_2027[status] * idx;
     const taxable = Math.max(0, Math.max(0, inp.otherOrdinary) + taxableSs - stdDed);
     return bracketTax(taxable, status, idx);
 }

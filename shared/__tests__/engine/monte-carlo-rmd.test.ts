@@ -128,23 +128,23 @@ describe('RMD pass: bracket tax mode and after-tax ending balance', () => {
   });
 
   it('bracket mode stacks the forced excess on voluntary draws and Social Security', () => {
-    // Single filer born 1950 (age 77 in 2027, 65+ deduction 2050), SS 24000/yr (all of monthlyIncome),
-    // voluntary pre-tax draw 12000, RMD excess 9834.06.
-    // Base: provisional 24000 < 25000, taxable 12000 - 18150 < 0 -> 0.
-    // With excess: taxable SS 4417.03, taxable 8101.09 -> 810.11 at 10%.
+    // Single filer born 1950 (age 77 in 2027), 2027 tables (Rev. Proc. 2026-35): std 16600 + 65+ 2100.
+    // SS 24000/yr (all of monthlyIncome), voluntary pre-tax draw 12000, RMD excess 9834.06.
+    // Base: provisional 24000 < 25000, taxable 12000 - 18700 < 0 -> 0.
+    // With excess: taxable SS 4417.03, taxable 7551.09 -> 755.11 at 10%.
     const r = runMonteCarlo(baseParams({ rmdEnabled: true, adultBirthYears: [1950], rmdTaxMode: 'bracket' }));
-    expect(r.rmd?.meanTaxByYear[0]).toBeCloseTo(810.11, 1);
-    expect(r.median).toBeCloseTo(500_000 - 12_000 - 810.11, 0);
-    // Deferred: 10-year drain of 478165.94 from the final position -> 9720.03/yr -> 97200.3
-    expect(r.rmd?.afterTax.median).toBeCloseTo(500_000 - 12_000 - 810.11 - 97_200.3, 0);
+    expect(r.rmd?.meanTaxByYear[0]).toBeCloseTo(755.11, 1);
+    expect(r.median).toBeCloseTo(500_000 - 12_000 - 755.11, 0);
+    // Deferred: 10-year drain of 478165.94 from the final position -> 9483.54/yr -> 94835.35
+    expect(r.rmd?.afterTax.median).toBeCloseTo(500_000 - 12_000 - 755.11 - 94_835.35, 0);
   });
 
   it('bracket mode taxes a conversion at the stacked marginal rate and leaves flat mode untouched', () => {
-    // Young owner, no RMD. SS 24000, 12000 voluntary. Convert 50000 single filer under 65 (deduction 16100).
-    // With: provisional 74000 -> taxable SS 20400 (cap); taxable 62000+20400-16100 = 66300
-    //   -> 1240 + 4560 + 15900*0.22 = 9298. Base tax 0. Delta 9298.
+    // Young owner, no RMD. SS 24000, 12000 voluntary. Convert 50000 single filer under 65 (2027 deduction 16600).
+    // With: provisional 74000 -> taxable SS 20400 (cap); taxable 62000+20400-16600 = 65800
+    //   -> 1280 + 4707 + 13775*0.22 = 9017.5. Base tax 0. Delta 9017.5.
     const bracket = runMonteCarlo(baseParams({ rmdEnabled: true, adultBirthYears: [1990], rmdTaxMode: 'bracket', rothConversionByYear: [50_000] }));
-    expect(bracket.rmd?.meanConversionTaxByYear[0]).toBeCloseTo(9_298, 0);
+    expect(bracket.rmd?.meanConversionTaxByYear[0]).toBeCloseTo(9_017.5, 0);
     const flat = runMonteCarlo(baseParams({ rmdEnabled: true, adultBirthYears: [1990], rothConversionByYear: [50_000] }));
     expect(flat.rmd?.meanConversionTaxByYear[0]).toBe(11_000);
   });
@@ -158,8 +158,8 @@ describe('RMD pass: bracket tax mode and after-tax ending balance', () => {
     const r = runMonteCarlo(baseParams(common));
     // Year 1: survivor born 1950 (age 78), RMD 400000/22 = 18181.82 all forced, single, 65+ deduction.
     // SS 36000: provisional 18181.82 + 18000 = 36181.82 > 34000: tier1 4500 + 0.85*2181.82 = 6354.55
-    // taxable 18181.82 + 6354.55 - 18150 = 6386.37 -> 638.64
-    expect(r.rmd?.meanTaxByYear[1]).toBeCloseTo(638.64, 1);
+    // taxable 18181.82 + 6354.55 - 18700 = 5836.37 -> 583.64 (2027 single + 65+ deduction)
+    expect(r.rmd?.meanTaxByYear[1]).toBeCloseTo(583.64, 1);
   });
 });
 describe('RMD pass: IRMAA surcharge with two-year lookback', () => {
