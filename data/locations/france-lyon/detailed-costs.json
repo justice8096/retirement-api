@@ -536,9 +536,9 @@
   "housing": {
     "propertyType": "2-bedroom house (maison)",
     "monthlyBudget": {
-      "min": 1100,
-      "max": 1650,
-      "typical": 1350
+      "min": 1150,
+      "max": 1700,
+      "typical": 1400
     },
     "breakdown": {
       "baseRentEUR": 1050,
@@ -560,7 +560,8 @@
         "name": "Lyon Encadrement des Loyers",
         "url": "https://www.lyonmetropole.fr/encadrement-des-loyers"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "groceryStores": {
     "stores": [

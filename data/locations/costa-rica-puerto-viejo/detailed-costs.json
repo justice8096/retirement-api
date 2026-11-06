@@ -90,9 +90,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 68,
-      "typical": 83,
-      "max": 103
+      "min": 20,
+      "typical": 40,
+      "max": 60
     },
     "plans": [
       {
@@ -121,7 +121,8 @@
         "title": "Google Fi Plans",
         "url": "https://fi.google.com/about/plans"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "groceries": {
     "categories": [
@@ -406,7 +407,8 @@
         "name": "CRListing",
         "url": "https://www.crlisting.com/"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "groceryStores": {
     "stores": [

@@ -28,10 +28,24 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 900,
-      "min": 700,
-      "max": 1100,
-      "annualInflation": 0.04
+      "typical": 950,
+      "min": 650,
+      "max": 1500,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-06",
+      "notes": "Pet-friendly 2-3BR house around Nuevo Arenal/Tilaran; 2BR corridor range $700-1,200, local listings $500-2,100 (3BR gated ~$500, lake-view 3BR ~$750).",
+      "sources": [
+        {
+          "title": "WhereNext - Retire abroad US to Costa Rica (May 2026)",
+          "url": "https://getwherenext.com/retire-abroad/us-to-costa-rica",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Expatra - Living in the Arenal area (upd. May 2025)",
+          "url": "https://www.expatra.com/living-in-the-arenal-area/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "groceries": {
       "typical": 420,
@@ -46,17 +60,32 @@
       "annualInflation": 0.035
     },
     "healthcare": {
-      "typical": 160,
-      "min": 80,
-      "max": 280,
+      "typical": 430,
+      "min": 200,
+      "max": 750,
       "annualInflation": 0.04,
-      "notes": "CCSS (Caja) universal coverage after pensionado/rentista visa, ~7-11% of declared income (~$60-150/mo). Private (INS / international plans) ~$100-250/mo with pre-existing loadings. Anti-VEGF injections at CIMA and Hospital La Católica in San José. GLP-1 ~$300-400/mo private. Pensionado discount 10-25% on most medical services."
+      "notes": "Resident couple: CCSS (Caja) on assessed income, about $95/mo per $1,000 assessed (5-band scale ~7-19% combined, floor ~$767/mo assessed from Jan 2026), plus private local cover (BMI/INS/Allianz ~$80-200 per adult) typical for expats; international plans push the max.",
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "Rio Times - Healthcare in Costa Rica for expats (Sep 2026)",
+          "url": "https://www.riotimesonline.com/healthcare-costa-rica-expats/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "WhereNext - Retire abroad US to Costa Rica (May 2026)",
+          "url": "https://getwherenext.com/retire-abroad/us-to-costa-rica",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "insurance": {
-      "typical": 280,
-      "min": 180,
-      "max": 420,
-      "annualInflation": 0.04
+      "typical": 20,
+      "min": 10,
+      "max": 40,
+      "annualInflation": 0.04,
+      "estimate": true,
+      "notes": "Old-template value (health insurance) re-modelled to renters/contents placeholder; health cost moved into healthcare. Not verified."
     },
     "petCare": {
       "typical": 50,
@@ -77,10 +106,24 @@
       "annualInflation": 0.03
     },
     "transportation": {
-      "typical": 160,
-      "min": 90,
-      "max": 250,
-      "annualInflation": 0.03
+      "typical": 380,
+      "min": 300,
+      "max": 500,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "One car: corridor estimate that car ownership adds $300-500/mo (fuel near US prices, marchamo, RTV, insurance, maintenance). Rural lake area, car essential.",
+      "sources": [
+        {
+          "title": "WhereNext - Retire abroad US to Costa Rica (May 2026)",
+          "url": "https://getwherenext.com/retire-abroad/us-to-costa-rica",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Pura Vida Paradise - Cost of Living in Atenas Costa Rica 2026",
+          "url": "https://www.puravidaparadise.com/article/cost-of-living-in-atenas-costa-rica-2026-guide-for-expats",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "entertainment": {
       "typical": 180,
@@ -107,10 +150,19 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 83,
-      "min": 68,
-      "max": 103,
-      "annualInflation": 0.02
+      "typical": 60,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-06",
+      "notes": "2 prepaid/postpaid lines on local carriers (Kolbi/Claro/Liberty) at ~$20-50 per line.",
+      "sources": [
+        {
+          "title": "Pura Vida Paradise - Cost of Living in Atenas Costa Rica 2026",
+          "url": "https://www.puravidaparadise.com/article/cost-of-living-in-atenas-costa-rica-2026-guide-for-expats",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "taxes": {
       "typical": 0,
@@ -139,10 +191,24 @@
       "annualInflation": 0.025
     },
     "medicalOOP": {
-      "min": 30,
-      "typical": 60,
-      "max": 120,
-      "annualInflation": 0.04
+      "min": 35,
+      "typical": 75,
+      "max": 150,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-06",
+      "notes": "Private GP visits $50-100, specialists $55-150 (CIMA from ~$55), averaged to roughly one private visit a month for two after pensionado discounts.",
+      "sources": [
+        {
+          "title": "Pura Vida Paradise - Cost of Living in Atenas Costa Rica 2026",
+          "url": "https://www.puravidaparadise.com/article/cost-of-living-in-atenas-costa-rica-2026-guide-for-expats",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Rio Times - Healthcare in Costa Rica for expats (Sep 2026)",
+          "url": "https://www.riotimesonline.com/healthcare-costa-rica-expats/",
+          "accessed": "2026-11-06"
+        }
+      ]
     }
   },
   "healthcare": {

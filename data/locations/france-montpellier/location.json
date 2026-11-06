@@ -32,12 +32,25 @@
   },
   "monthlyCosts": {
     "rent": {
-      "min": 950,
-      "max": 1400,
-      "typical": 1150,
+      "min": 1050,
+      "max": 1550,
+      "typical": 1280,
       "type": "2-bedroom house (maison/villa)",
       "annualInflation": 0.025,
-      "notes": "Taxe d'habitation eliminated for primary residences."
+      "notes": "Montpellier average house rent 14.00 EUR/m2 and apartment 16.10 EUR/m2 (Oct 2026); 2-3BR ~90 m2 house plus charges gives ~1,280 typical; RealAdvisor Herault house median 14.75 EUR/m2 corroborates.",
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "MoneyVox - Immobilier a Montpellier octobre 2026 (SeLoger/MeilleursAgents)",
+          "url": "https://www.moneyvox.fr/immobilier/actualites/110763/immobilier-a-montpellier-les-prix-restent-stables-en-octobre-2026",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "RealAdvisor - Prix immobilier Herault (loyers medians oct 2026)",
+          "url": "https://realadvisor.fr/fr/prix-m2-immobilier/34-herault",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "groceries": {
       "min": 1050,
@@ -46,9 +59,9 @@
       "annualInflation": 0.025
     },
     "utilities": {
-      "min": 144,
-      "max": 234,
-      "typical": 180,
+      "min": 175,
+      "max": 310,
+      "typical": 230,
       "annualInflation": 0.025,
       "breakdown": {
         "electricity": {
@@ -73,14 +86,45 @@
         }
       },
       "taxes": "TVA included in bills: 5.5% on water/assainissement, 20% on electricity/gas.",
-      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig). Trash included in rent. Sewage included in water bill."
+      "notes": "Model: 4,500 kWh electricity incl. summer A/C at Tarif Bleu Base 0.2001 EUR/kWh + 190 EUR/yr ~91/mo; ~6,000 kWh gas heating (mild winters) at ~0.15-0.158 EUR/kWh + 361 EUR/yr ~105/mo; water+assainissement 3.16 EUR/m3 x 120 m3 ~32/mo. Internet excluded.",
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "Kelwatt - Tarif Bleu EDF au 1er aout 2026",
+          "url": "https://www.kelwatt.fr/actu/tarif-edf-reglemente-1er-aout-2026",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Hello Watt - Prix repere gaz novembre 2026",
+          "url": "https://www.hellowatt.fr/blog/publication-prix-repere-novembre-2026/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Selectra - Prix de l'eau a Montpellier",
+          "url": "https://eau.selectra.info/prix-eau/montpellier",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "healthcare": {
-      "min": 80,
-      "max": 180,
-      "typical": 120,
+      "min": 140,
+      "max": 300,
+      "typical": 210,
       "annualInflation": 0.04,
-      "notes": "PUMA universal coverage + Mutuelle complémentaire (~€55-80/person/mo, higher tier for chronic conditions). ALD (Affection Longue Durée) provides 100% coverage for hypertension and diabetes. Macular degeneration: anti-VEGF injections covered 100% at hospital. Hypothyroidism monitoring covered. GLP-1 covered for diabetes indication."
+      "notes": "PUMa base cover (CSM only on capital income above 50% PASS) + mutuelle for two at 60: Magnolia 60-64 medium 65-95/person, strong 82-125/person; Meilleurtaux Sept 2026 reinforced couple-60 average 248.82/mo, Mediterranean departments above average.",
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "Magnolia - Tarif mutuelle senior 2026",
+          "url": "https://www.magnolia.fr/mutuelle-sante/senior/prix",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "LeComparateurAssurance - Prix de la mutuelle sante en 2026 (etude Meilleurtaux)",
+          "url": "https://www.lecomparateurassurance.com/mutuelle-sante/actualites/prix-mutuelle-sante-2026-ecarts-age-departement",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "insurance": {
       "min": 25,

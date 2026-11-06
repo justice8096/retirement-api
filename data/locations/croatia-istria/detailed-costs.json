@@ -90,9 +90,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 70,
-      "typical": 85,
-      "max": 105
+      "min": 16,
+      "typical": 26,
+      "max": 40
     },
     "plans": [
       {
@@ -121,7 +121,8 @@
         "title": "Google Fi Plans",
         "url": "https://fi.google.com/about/plans"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "entertainment": {
     "monthlyBudget": {
@@ -706,7 +707,7 @@
           "type": "Salon",
           "address": "City center",
           "distanceKm": 5,
-          "rating": 4.0,
+          "rating": 4,
           "notes": "Some salons with multi-textured experience",
           "website": ""
         },

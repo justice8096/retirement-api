@@ -382,9 +382,9 @@
   "housing": {
     "propertyType": "2-bedroom house/apartment",
     "monthlyBudget": {
-      "min": 488,
-      "max": 813,
-      "typical": 650
+      "min": 550,
+      "max": 1500,
+      "typical": 850
     },
     "breakdown": {
       "baseRent": 598,
@@ -407,7 +407,8 @@
         "name": "Metrocuadrado",
         "url": "https://www.metrocuadrado.com/"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "groceryStores": {
     "stores": [
@@ -556,9 +557,9 @@
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 29,
-      "typical": 110,
-      "max": 220
+      "min": 80,
+      "typical": 125,
+      "max": 200
     },
     "publicTransit": {
       "monthlyPass": {
@@ -718,7 +719,8 @@
         "typical": 183,
         "max": 330
       }
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "visionDental": {
     "monthlyBudget": {
@@ -787,9 +789,9 @@
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 300,
-      "typical": 375,
-      "max": 469
+      "min": 200,
+      "typical": 320,
+      "max": 450
     },
     "categories": [
       {
@@ -858,6 +860,7 @@
       "from": "italy-puglia",
       "generatedAt": "2026-04-23",
       "note": "Template-derived section — prices are EUR-denominated from Puglia, Italy. Needs per-location currency + cost-of-living adaptation."
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-06"
   }
 }

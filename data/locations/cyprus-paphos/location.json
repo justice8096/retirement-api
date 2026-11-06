@@ -43,10 +43,19 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 950,
-      "min": 750,
-      "max": 1200,
-      "annualInflation": 0.04
+      "typical": 1200,
+      "min": 850,
+      "max": 1800,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-06",
+      "notes": "Paphos Q1 2026 3BR house averages: Konia EUR 1,050, Kato Paphos/Emba EUR 1,100, Chlorakas EUR 1,150, Tala EUR 1,250, Peyia EUR 1,350 (Coral Bay EUR 1,800). Sea views add 25-40%.",
+      "sources": [
+        {
+          "title": "Houses for Rent in Paphos guide (index.cy)",
+          "url": "https://index.cy/articles/houses-for-rent-in-paphos-guide/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "groceries": {
       "typical": 410,
@@ -55,23 +64,62 @@
       "annualInflation": 0.03
     },
     "utilities": {
-      "typical": 155,
-      "min": 115,
-      "max": 210,
-      "annualInflation": 0.035
+      "typical": 200,
+      "min": 140,
+      "max": 320,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-06",
+      "notes": "Tenant pays electricity at EUR 0.26/kWh (AC-driven summer peaks); water and trash (EUR 70-120/yr) often billed via water bill or included. Internet excluded.",
+      "sources": [
+        {
+          "title": "Houses for Rent in Paphos guide (index.cy)",
+          "url": "https://index.cy/articles/houses-for-rent-in-paphos-guide/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cyprus household power costs ease from 2023 peak (Cyprus Mail, Eurostat H1 2026 EUR 0.26/kWh)",
+          "url": "https://cyprus-mail.com/2026/10/30/cyprus-household-electricity-prices-remain-above-pre-crisis-levels",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 100,
-      "min": 65,
-      "max": 150,
+      "typical": 390,
+      "min": 230,
+      "max": 600,
       "annualInflation": 0.04,
-      "notes": "GeSY (General Health System) universal coverage after residency, contributions ~2.65% of income (~€60-120/mo). Private supplementary ~€80-180/mo. Anti-VEGF injections available in Nicosia and Limassol; partial GeSY coverage. GLP-1 covered for diabetes via GeSY. Strong English-speaking healthcare workforce; both public and private widely accessible."
+      "notes": "GeSY 2.65% on pension/passive income: about EUR 148/mo for the couple on ~USD 72k (EUR 67k); plus local top-up cover EUR 40-210/mo per person at 55-65 (typical ~EUR 120 each). Max assumes a full international plan (EUR 150-300 each) if GeSY access is not granted on their permit type.",
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "Cyprus GHS (GeSY) rates 2025-2026",
+          "url": "https://www.cyprustaxlife.com/news/cyprus-gesy-rates-2025-2026",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Healthcare in Cyprus guide (index.cy)",
+          "url": "https://index.cy/articles/healthcare-in-cyprus-guide/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cyprus private health insurance cost 2026",
+          "url": "https://www.zenolegal.com/resources/cyprus-private-health-insurance-cost-2026",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "How healthcare works in Cyprus: GeSY explained (Cyprus Mail)",
+          "url": "https://cyprus-mail.com/2026/01/28/how-healthcare-works-in-cyprus-gesy-explained-costs-compared-and-who-qualifies",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "insurance": {
-      "typical": 120,
-      "min": 80,
-      "max": 170,
-      "annualInflation": 0.04
+      "typical": 15,
+      "min": 10,
+      "max": 25,
+      "annualInflation": 0.04,
+      "estimate": true,
+      "notes": "Old-template value (was health insurance, now carried in healthcare). Re-modelled as a small renters/contents placeholder; Cyprus contents premiums not verified this run."
     },
     "petCare": {
       "typical": 60,
@@ -98,10 +146,19 @@
       "annualInflation": 0.03
     },
     "entertainment": {
-      "typical": 230,
-      "min": 160,
-      "max": 330,
-      "annualInflation": 0.03
+      "typical": 350,
+      "min": 250,
+      "max": 480,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "Mid-range 3-course dinner for two about EUR 60 in Paphos, ~4x/month = EUR 240; plus home fibre and streaming (~EUR 60, not separately verified) and activities.",
+      "sources": [
+        {
+          "title": "Why Limassol tops Cyprus in housing and living costs in 2026 (index.cy)",
+          "url": "https://index.cy/articles/why-limassol-tops-cyprus-in-housing-and-living-costs-in-2026/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "clothing": {
       "typical": 80,
@@ -154,10 +211,29 @@
       "annualInflation": 0.025
     },
     "medicalOOP": {
-      "min": 40,
-      "typical": 80,
-      "max": 160,
-      "annualInflation": 0.035
+      "min": 25,
+      "typical": 60,
+      "max": 140,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-06",
+      "notes": "GeSY co-pays are small (GP free, specialist EUR 6 with referral, EUR 1 per Rx/lab item, A&E EUR 10) and capped at EUR 150/person/yr (~EUR 25/mo for two); typical adds occasional private consults (GP EUR 50-150, specialist EUR 150-300) and adult dental not covered by GeSY.",
+      "sources": [
+        {
+          "title": "Healthcare in Cyprus guide (index.cy)",
+          "url": "https://index.cy/articles/healthcare-in-cyprus-guide/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Health Insurance in Cyprus: a plain guide (Insurance Edge)",
+          "url": "https://insurance-edge.net/2026/11/03/health-insurance-in-cyprus-a-plain-guide-for-expats-and-new-residents/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "How healthcare works in Cyprus (Cyprus Mail)",
+          "url": "https://cyprus-mail.com/2026/01/28/how-healthcare-works-in-cyprus-gesy-explained-costs-compared-and-who-qualifies",
+          "accessed": "2026-11-06"
+        }
+      ]
     }
   },
   "healthcare": {

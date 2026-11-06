@@ -114,10 +114,19 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 85,
-      "min": 70,
-      "max": 105,
-      "annualInflation": 0.02
+      "typical": 26,
+      "min": 16,
+      "max": 40,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-06",
+      "notes": "National figure: mobile plans EUR 8-18 per line per month, 2 lines.",
+      "sources": [
+        {
+          "title": "Cost of Living in Split 2026 - Freenance",
+          "url": "https://freenance.io/cities/split-cost-of-living/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "taxes": {
       "typical": 720,

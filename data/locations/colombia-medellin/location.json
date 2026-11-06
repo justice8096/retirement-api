@@ -26,10 +26,34 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 950,
-      "min": 700,
-      "max": 1200,
-      "annualInflation": 0.04
+      "typical": 1300,
+      "min": 940,
+      "max": 2000,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-06",
+      "notes": "ColombiaMove 2026 unfurnished 2BR: Laureles 2.7-3.5M COP, El Poblado 5M+, admin not included; Mitula 3BR listings 3.8-5.5M COP; ICI/Numbeo May 3BR centre $1,288 at 3,780. Typical ~3.8M COP plus ~0.4M admin. USD at ~3,200 COP/USD (TRM early Nov 2026).",
+      "sources": [
+        {
+          "title": "ColombiaMove - Average rent Medellin by neighborhood 2026",
+          "url": "https://colombiamove.com/blog/es/average-rent-medellin-neighborhood-prices/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Mitula - 3-bedroom apartments for rent Laureles/Medellin",
+          "url": "https://casas.mitula.com.co/casas/arriendo-apartamentos-3-habitaciones-laureles",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "International Citizens Insurance - Cost of Living in Colombia (Numbeo May 2026)",
+          "url": "https://www.internationalinsurance.com/countries/colombia/cost-of-living/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "TRM vigente 3 Nov 2026 (dolar-colombia.com)",
+          "url": "https://www.dolar-colombia.com/2026-11-03",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "groceries": {
       "typical": 350,
@@ -38,23 +62,62 @@
       "annualInflation": 0.03
     },
     "utilities": {
-      "typical": 100,
+      "typical": 110,
       "min": 65,
-      "max": 150,
-      "annualInflation": 0.035
+      "max": 160,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-06",
+      "notes": "A Way Abroad (June 2026): 1BR utilities 230,000 COP at estrato 5 and ~325,000 at estrato 6; scaled to a 2-3BR couple; ICI/Numbeo May $97 for 85m2. Excludes internet. USD at ~3,200 COP/USD (TRM early Nov 2026).",
+      "sources": [
+        {
+          "title": "A Way Abroad - Medellin Cost of Living 2026 (estrato utilities)",
+          "url": "https://numbers.findawayabroad.com/p/medellin-cost-of-living-2026-rent-estrato",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "International Citizens Insurance - Cost of Living in Colombia (Numbeo May 2026)",
+          "url": "https://www.internationalinsurance.com/countries/colombia/cost-of-living/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "TRM vigente 3 Nov 2026 (dolar-colombia.com)",
+          "url": "https://www.dolar-colombia.com/2026-11-03",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 150,
-      "min": 80,
-      "max": 250,
+      "typical": 450,
+      "min": 250,
+      "max": 650,
       "annualInflation": 0.04,
-      "notes": "EPS public system available to residents (Migration Visa M after 5 years for permanent residency). Private international plans ~$80-150/person/mo with pre-existing condition loadings; exclusions common first 6-12 months. Anti-VEGF injections available in Bogotá (Fundación Oftalmológica Nacional), Medellín, Cali. GLP-1 imported, ~$300-450/mo private. Hypertension/diabetes generics widely available at ~10-30% of US prices."
+      "notes": "Full health-coverage cost for 2 resident retirees age 60: EPS contributory affiliation (~12.5% of declared income, roughly $60-150 each in source at 4,050 COP) plus prepagada top-up (Colsanitas/Sura/Coomeva, $80-200 each depending on age, upper end at 60); converted at the stronger peso. Absorbs the old-template health figure previously stored under insurance. Anti-VEGF/GLP-1 notes from stored record still apply.",
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "Escape From USA - Cost of Living in Colombia 2026",
+          "url": "https://escapefromusa.com/blog/cost-of-living-in-colombia",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "WhereNext - Cost of Living Colombia 2026",
+          "url": "https://getwherenext.com/blog/cost-of-living-colombia-2026",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "TRM vigente 3 Nov 2026 (dolar-colombia.com)",
+          "url": "https://www.dolar-colombia.com/2026-11-03",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "insurance": {
-      "typical": 200,
-      "min": 120,
-      "max": 320,
-      "annualInflation": 0.04
+      "typical": 15,
+      "min": 10,
+      "max": 25,
+      "annualInflation": 0.04,
+      "estimate": true,
+      "notes": "OLD-TEMPLATE RULE: stored 200 was health insurance; re-modeled to renters/contents placeholder (contents policies are uncommon/cheap in Colombia). Not verified; health cost moved into healthcare."
     },
     "petCare": {
       "typical": 50,
@@ -75,16 +138,54 @@
       "annualInflation": 0.03
     },
     "transportation": {
-      "typical": 120,
-      "min": 60,
-      "max": 200,
-      "annualInflation": 0.03
+      "typical": 150,
+      "min": 80,
+      "max": 400,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "Car-free: Metro/Civica rides (~$0.75-0.99) for two plus app taxis; ICI/Numbeo May monthly pass $66; max reflects car ownership ($200-350 at 4,050 COP per EscapeFromUSA). USD at ~3,200 COP/USD (TRM early Nov 2026).",
+      "sources": [
+        {
+          "title": "International Citizens Insurance - Cost of Living in Colombia (Numbeo May 2026)",
+          "url": "https://www.internationalinsurance.com/countries/colombia/cost-of-living/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Escape From USA - Cost of Living in Colombia 2026",
+          "url": "https://escapefromusa.com/blog/cost-of-living-in-colombia",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "TRM vigente 3 Nov 2026 (dolar-colombia.com)",
+          "url": "https://www.dolar-colombia.com/2026-11-03",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 200,
-      "min": 120,
-      "max": 300,
-      "annualInflation": 0.03
+      "typical": 280,
+      "min": 180,
+      "max": 410,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "Fiber internet $25-45 at 4,050 COP, streaming ~$20, mid-range dinner for 2 ~$40 at 3,780 COP x4, plus activities. USD at ~3,200 COP/USD (TRM early Nov 2026).",
+      "sources": [
+        {
+          "title": "Escape From USA - Cost of Living in Colombia 2026",
+          "url": "https://escapefromusa.com/blog/cost-of-living-in-colombia",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "International Citizens Insurance - Cost of Living in Colombia (Numbeo May 2026)",
+          "url": "https://www.internationalinsurance.com/countries/colombia/cost-of-living/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "TRM vigente 3 Nov 2026 (dolar-colombia.com)",
+          "url": "https://www.dolar-colombia.com/2026-11-03",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "clothing": {
       "typical": 70,
@@ -105,10 +206,29 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 80,
-      "min": 65,
-      "max": 100,
-      "annualInflation": 0.02
+      "typical": 30,
+      "min": 16,
+      "max": 56,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-06",
+      "notes": "2 postpaid lines with 10GB+ data from local carriers (Claro/Movistar/Tigo): Numbeo Bogota 47,994 COP per line (range 24,000-90,000); national pricing, reused for all three cities. USD at ~3,200 COP/USD (TRM early Nov 2026).",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living in Bogota",
+          "url": "https://www.numbeo.com/cost-of-living/in/Bogota",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Escape From USA - Cost of Living in Colombia 2026",
+          "url": "https://escapefromusa.com/blog/cost-of-living-in-colombia",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "TRM vigente 3 Nov 2026 (dolar-colombia.com)",
+          "url": "https://www.dolar-colombia.com/2026-11-03",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "taxes": {
       "typical": 0,

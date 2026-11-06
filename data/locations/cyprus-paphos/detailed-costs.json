@@ -125,9 +125,9 @@
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 280,
+      "min": 250,
       "typical": 350,
-      "max": 438
+      "max": 480
     },
     "categories": [
       {
@@ -190,7 +190,8 @@
         "seniorDiscounts": "No specific discounts.",
         "notes": "Cyprus coffee/frappé ~€2.00-3.50. Budget for 2 visits/week. ~$14/mo."
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "transportation": {
     "monthlyBudget": {
@@ -560,9 +561,9 @@
   "housing": {
     "propertyType": "2-bedroom house or ground-floor apartment",
     "monthlyBudget": {
-      "min": 760,
-      "max": 1235,
-      "typical": 950
+      "min": 850,
+      "max": 1800,
+      "typical": 1200
     },
     "breakdown": {
       "baseRent": 950,
@@ -573,7 +574,8 @@
     },
     "taxNotes": "No rental tax for tenants. Immovable property tax abolished in 2017. Municipal taxes are low. Stamp duty on lease agreements is minimal.",
     "leaseTerms": "1-year lease standard, renewable. Security deposit 1-2 months rent. Statutory tenancy protection after 1 year continuous occupation.",
-    "marketNotes": "Popular retirement coast. Many purpose-built expat developments. Good value compared to Limassol."
+    "marketNotes": "Popular retirement coast. Many purpose-built expat developments. Good value compared to Limassol.",
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "groceryStores": {
     "stores": [

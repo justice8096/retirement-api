@@ -29,12 +29,20 @@
   },
   "monthlyCosts": {
     "rent": {
-      "min": 1100,
-      "max": 1650,
-      "typical": 1350,
+      "min": 1150,
+      "max": 1700,
+      "typical": 1400,
       "type": "2-bedroom house (maison)",
       "annualInflation": 0.025,
-      "notes": "Taxe d'habitation eliminated for primary residences."
+      "notes": "Lyon average house rent 15.40 EUR/m2 and apartment 17.70 EUR/m2 hors charges (Oct 2026); 2-3BR ~85-95 m2 house plus charges/TEOM gives ~1,400 typical; inner arrondissements and larger homes higher.",
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "MoneyVox - Marche immobilier a Lyon octobre 2026 (SeLoger/MeilleursAgents)",
+          "url": "https://www.moneyvox.fr/immobilier/actualites/110754/marche-immobilier-a-lyon-les-prix-progressent-en-octobre-2026",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "groceries": {
       "min": 1050,
@@ -43,9 +51,9 @@
       "annualInflation": 0.025
     },
     "utilities": {
-      "min": 172,
-      "max": 280,
-      "typical": 215,
+      "min": 220,
+      "max": 380,
+      "typical": 285,
       "annualInflation": 0.025,
       "breakdown": {
         "electricity": {
@@ -70,14 +78,45 @@
         }
       },
       "taxes": "TVA included in bills: 5.5% on water/assainissement, 20% on electricity/gas.",
-      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig). Trash included in rent. Sewage included in water bill."
+      "notes": "Model: 4,500 kWh electricity at Tarif Bleu Base 0.2001 EUR/kWh + 190 EUR/yr ~91/mo; ~10,000 kWh gas central heating (colder winters) at ~0.15-0.158 EUR/kWh + 361 EUR/yr ~155/mo; water+assainissement ~40/mo (Lyon tariff not verified; regional ~3.2 EUR/m3). Gas up sharply (energy CPI +21.3% y/y Sept 2026). Internet excluded.",
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "Kelwatt - Tarif Bleu EDF au 1er aout 2026",
+          "url": "https://www.kelwatt.fr/actu/tarif-edf-reglemente-1er-aout-2026",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Hello Watt - Prix repere gaz novembre 2026",
+          "url": "https://www.hellowatt.fr/blog/publication-prix-repere-novembre-2026/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "INSEE - Indice des prix a la consommation, septembre 2026 (definitif)",
+          "url": "https://www.insee.fr/fr/statistiques/9080209",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "healthcare": {
-      "min": 80,
-      "max": 180,
-      "typical": 120,
+      "min": 130,
+      "max": 280,
+      "typical": 195,
       "annualInflation": 0.04,
-      "notes": "PUMA universal coverage + Mutuelle complémentaire (~€55-80/person/mo, higher tier for chronic conditions). ALD (Affection Longue Durée) provides 100% coverage for hypertension and diabetes. Macular degeneration: anti-VEGF injections covered 100% at hospital. Hypothyroidism monitoring covered. GLP-1 covered for diabetes indication."
+      "notes": "PUMa base cover (CSM only on capital income above 50% PASS) + mutuelle for two at 60: Magnolia 60-64 medium 65-95/person, strong 82-125/person; Meilleurtaux Sept 2026 reinforced couple-60 national average 248.82/mo. Higher tier advisable for chronic conditions.",
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "Magnolia - Tarif mutuelle senior 2026",
+          "url": "https://www.magnolia.fr/mutuelle-sante/senior/prix",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "LeComparateurAssurance - Prix de la mutuelle sante en 2026 (etude Meilleurtaux)",
+          "url": "https://www.lecomparateurassurance.com/mutuelle-sante/actualites/prix-mutuelle-sante-2026-ecarts-age-departement",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "insurance": {
       "min": 25,

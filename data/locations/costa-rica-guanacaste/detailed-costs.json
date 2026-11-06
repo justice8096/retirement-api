@@ -90,9 +90,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 68,
-      "typical": 83,
-      "max": 103
+      "min": 20,
+      "typical": 40,
+      "max": 60
     },
     "plans": [
       {
@@ -121,7 +121,8 @@
         "title": "Google Fi Plans",
         "url": "https://fi.google.com/about/plans"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "groceries": {
     "categories": [
@@ -382,9 +383,9 @@
   "housing": {
     "propertyType": "2-bedroom house",
     "monthlyBudget": {
-      "min": 938,
-      "max": 1563,
-      "typical": 1250
+      "min": 900,
+      "max": 1500,
+      "typical": 1200
     },
     "breakdown": {
       "baseRent": 1188,
@@ -406,7 +407,8 @@
         "name": "CRListing",
         "url": "https://www.crlisting.com/"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "groceryStores": {
     "stores": [
@@ -549,9 +551,9 @@
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 53,
-      "typical": 200,
-      "max": 400
+      "min": 200,
+      "typical": 260,
+      "max": 350
     },
     "publicTransit": {
       "monthlyPass": {
@@ -707,7 +709,8 @@
         "typical": 333,
         "max": 600
       }
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "visionDental": {
     "monthlyBudget": {

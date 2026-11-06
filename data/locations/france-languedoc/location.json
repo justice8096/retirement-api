@@ -42,10 +42,29 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 1000,
-      "min": 800,
-      "max": 1200,
-      "annualInflation": 0.04
+      "typical": 1080,
+      "min": 850,
+      "max": 1350,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-06",
+      "notes": "Pet-friendly 2-3BR house ~90 m2: median house rents Oct 2026 about 10.8 EUR/m2 Beziers, 13.1 Narbonne, 14.75 Herault dept (Montpellier-weighted); typical uses ~12 EUR/m2 plus small tenant charges.",
+      "sources": [
+        {
+          "title": "Trackstone - Prix immobilier et loyers Beziers",
+          "url": "https://www.trackstone.fr/prix-immobilier/beziers-34500/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "RealAdvisor - Prix immobilier Narbonne (loyers medians oct 2026)",
+          "url": "https://realadvisor.fr/fr/prix-m2-immobilier/11100-narbonne",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "RealAdvisor - Prix immobilier Herault (loyers medians oct 2026)",
+          "url": "https://realadvisor.fr/fr/prix-m2-immobilier/34-herault",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "groceries": {
       "typical": 460,
@@ -54,23 +73,57 @@
       "annualInflation": 0.03
     },
     "utilities": {
-      "typical": 175,
-      "min": 130,
-      "max": 230,
-      "annualInflation": 0.035
+      "typical": 225,
+      "min": 170,
+      "max": 320,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-06",
+      "notes": "Model: 4,500 kWh electricity at Tarif Bleu Base 0.2001 EUR/kWh + 190 EUR/yr (6 kVA) ~91/mo; ~6,000 kWh gas heating at ~0.15-0.158 EUR/kWh + 361 EUR/yr subscription ~105/mo; water+sewer ~30-35/mo (Montpellier 3.16 EUR/m3 used as regional proxy). Rural homes on fioul/pellets/electric heat vary. Internet excluded.",
+      "sources": [
+        {
+          "title": "Kelwatt - Tarif Bleu EDF au 1er aout 2026",
+          "url": "https://www.kelwatt.fr/actu/tarif-edf-reglemente-1er-aout-2026",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Hello Watt - Prix repere gaz novembre 2026",
+          "url": "https://www.hellowatt.fr/blog/publication-prix-repere-novembre-2026/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Selectra - Prix de l'eau a Montpellier",
+          "url": "https://eau.selectra.info/prix-eau/montpellier",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 130,
-      "min": 90,
-      "max": 185,
+      "typical": 210,
+      "min": 140,
+      "max": 300,
       "annualInflation": 0.04,
-      "notes": "PUMA universal coverage + Mutuelle complémentaire (~€55-80/person/mo, higher tier for chronic conditions). ALD (Affection Longue Durée) provides 100% coverage for hypertension and diabetes. Macular degeneration: anti-VEGF injections covered 100% at hospital. Hypothyroidism monitoring covered. GLP-1 covered for diabetes indication."
+      "notes": "PUMa base cover (cotisation subsidiaire CSM only if capital income exceeds 50% PASS; often 0 for pension-only households) + mutuelle for two at 60: Magnolia 60-64 medium 65-95/person, strong 82-125/person; Meilleurtaux Sept 2026 reinforced couple-60 average 248.82/mo, Mediterranean above average.",
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "Magnolia - Tarif mutuelle senior 2026",
+          "url": "https://www.magnolia.fr/mutuelle-sante/senior/prix",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "LeComparateurAssurance - Prix de la mutuelle sante en 2026 (etude Meilleurtaux)",
+          "url": "https://www.lecomparateurassurance.com/mutuelle-sante/actualites/prix-mutuelle-sante-2026-ecarts-age-departement",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "insurance": {
-      "typical": 150,
-      "min": 100,
-      "max": 210,
-      "annualInflation": 0.04
+      "typical": 25,
+      "min": 15,
+      "max": 40,
+      "annualInflation": 0.04,
+      "estimate": true,
+      "notes": "OLD-TEMPLATE RULE: stored 150 was health insurance; re-modeled as renters (assurance habitation locataire) placeholder for a house, unverified. Full health cost now carried in healthcare."
     },
     "petCare": {
       "typical": 60,

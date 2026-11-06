@@ -31,10 +31,29 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 800,
-      "min": 600,
-      "max": 1000,
-      "annualInflation": 0.04
+      "typical": 1310,
+      "min": 810,
+      "max": 1875,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-06",
+      "notes": "Pet-friendly 2-3BR in Chapinero/Usaquen: Portafolio (Oct 2026, Fincaraiz data) gives Usaquen average 4.6M COP and Chapinero Alto 2BR 2.5-4.7M COP; Numbeo 3BR centre 3.53M (2.4-6.76M, flagged as lower bound). Typical ~4.2M COP incl. admin. USD at ~3,200 COP/USD (TRM early Nov 2026).",
+      "sources": [
+        {
+          "title": "Portafolio - Vivir en Chapinero Alto cuesta 3,7 millones al mes (Oct 2026)",
+          "url": "https://www.portafolio.co/mis-finanzas/vivienda/vivir-en-el-barrio-mas-cool-de-bogota-cuesta-3-7-millones-al-mes-el-metro-cuadrado-llega-a-70-504785",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Numbeo Cost of Living in Bogota",
+          "url": "https://www.numbeo.com/cost-of-living/in/Bogota",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "TRM vigente 3 Nov 2026 (dolar-colombia.com)",
+          "url": "https://www.dolar-colombia.com/2026-11-03",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "groceries": {
       "typical": 350,
@@ -43,23 +62,62 @@
       "annualInflation": 0.03
     },
     "utilities": {
-      "typical": 100,
-      "min": 65,
-      "max": 150,
-      "annualInflation": 0.035
+      "typical": 115,
+      "min": 75,
+      "max": 190,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-06",
+      "notes": "Electricity, gas, water, sewer, trash for a 2-3BR estrato 4-6 unit; Numbeo basic utilities 85m2 336,389 COP (229k-618k), scaled up slightly for size; no heating/cooling load. Excludes internet. USD at ~3,200 COP/USD (TRM early Nov 2026).",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living in Bogota",
+          "url": "https://www.numbeo.com/cost-of-living/in/Bogota",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "International Citizens Insurance - Cost of Living in Colombia (Numbeo May 2026)",
+          "url": "https://www.internationalinsurance.com/countries/colombia/cost-of-living/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "TRM vigente 3 Nov 2026 (dolar-colombia.com)",
+          "url": "https://www.dolar-colombia.com/2026-11-03",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 150,
-      "min": 80,
-      "max": 250,
+      "typical": 450,
+      "min": 250,
+      "max": 650,
       "annualInflation": 0.04,
-      "notes": "EPS public system available to residents (Migration Visa M after 5 years for permanent residency). Private international plans ~$80-150/person/mo with pre-existing condition loadings; exclusions common first 6-12 months. Anti-VEGF injections available in Bogotá (Fundación Oftalmológica Nacional), Medellín, Cali. GLP-1 imported, ~$300-450/mo private. Hypertension/diabetes generics widely available at ~10-30% of US prices."
+      "notes": "Full health-coverage cost for 2 resident retirees age 60: EPS contributory affiliation (~12.5% of declared income, roughly $60-150 each in source at 4,050 COP) plus prepagada top-up (Colsanitas/Sura/Coomeva, $80-200 each depending on age, upper end at 60); converted at the stronger peso. Absorbs the old-template health figure previously stored under insurance. Anti-VEGF/GLP-1 notes from stored record still apply.",
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "Escape From USA - Cost of Living in Colombia 2026",
+          "url": "https://escapefromusa.com/blog/cost-of-living-in-colombia",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "WhereNext - Cost of Living Colombia 2026",
+          "url": "https://getwherenext.com/blog/cost-of-living-colombia-2026",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "TRM vigente 3 Nov 2026 (dolar-colombia.com)",
+          "url": "https://www.dolar-colombia.com/2026-11-03",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "insurance": {
-      "typical": 200,
-      "min": 120,
-      "max": 320,
-      "annualInflation": 0.04
+      "typical": 15,
+      "min": 10,
+      "max": 25,
+      "annualInflation": 0.04,
+      "estimate": true,
+      "notes": "OLD-TEMPLATE RULE: stored 200 was health insurance; re-modeled to renters/contents placeholder (contents policies are uncommon/cheap in Colombia). Not verified; health cost moved into healthcare."
     },
     "petCare": {
       "typical": 50,
@@ -80,16 +138,54 @@
       "annualInflation": 0.03
     },
     "transportation": {
-      "typical": 130,
-      "min": 60,
-      "max": 210,
-      "annualInflation": 0.03
+      "typical": 170,
+      "min": 100,
+      "max": 400,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "Car-free: 2 TransMilenio/SITP monthly equivalents (Numbeo 160,000 COP each) plus app taxis; max reflects car ownership ($200-350 at 4,050 COP per EscapeFromUSA). Senior (62+) fare discounts not verified. USD at ~3,200 COP/USD (TRM early Nov 2026).",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living in Bogota",
+          "url": "https://www.numbeo.com/cost-of-living/in/Bogota",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Escape From USA - Cost of Living in Colombia 2026",
+          "url": "https://escapefromusa.com/blog/cost-of-living-in-colombia",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "TRM vigente 3 Nov 2026 (dolar-colombia.com)",
+          "url": "https://www.dolar-colombia.com/2026-11-03",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 200,
-      "min": 120,
-      "max": 300,
-      "annualInflation": 0.03
+      "typical": 270,
+      "min": 180,
+      "max": 400,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "Fiber internet (~108,700 COP, Numbeo), streaming ~$20, mid-range dinner for 2 ~125,000 COP x4/month, plus cinema/gym/activities. USD at ~3,200 COP/USD (TRM early Nov 2026).",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living in Bogota",
+          "url": "https://www.numbeo.com/cost-of-living/in/Bogota",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Escape From USA - Cost of Living in Colombia 2026",
+          "url": "https://escapefromusa.com/blog/cost-of-living-in-colombia",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "TRM vigente 3 Nov 2026 (dolar-colombia.com)",
+          "url": "https://www.dolar-colombia.com/2026-11-03",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "clothing": {
       "typical": 70,
@@ -110,10 +206,29 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 80,
-      "min": 65,
-      "max": 100,
-      "annualInflation": 0.02
+      "typical": 30,
+      "min": 16,
+      "max": 56,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-06",
+      "notes": "2 postpaid lines with 10GB+ data from local carriers (Claro/Movistar/Tigo): Numbeo Bogota 47,994 COP per line (range 24,000-90,000); national pricing, reused for all three cities. USD at ~3,200 COP/USD (TRM early Nov 2026).",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living in Bogota",
+          "url": "https://www.numbeo.com/cost-of-living/in/Bogota",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Escape From USA - Cost of Living in Colombia 2026",
+          "url": "https://escapefromusa.com/blog/cost-of-living-in-colombia",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "TRM vigente 3 Nov 2026 (dolar-colombia.com)",
+          "url": "https://www.dolar-colombia.com/2026-11-03",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "taxes": {
       "typical": 0,

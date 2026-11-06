@@ -26,35 +26,97 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 800,
+      "typical": 850,
       "min": 600,
-      "max": 1000,
-      "annualInflation": 0.04
+      "max": 1500,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-06",
+      "notes": "Furnished 2BR: La Carolina USD 500-800, Gonzalez Suarez 700-1,200, Cumbaya apt 600-1,200, Cumbaya houses 800-1,500; CityCost 3BR USD 638-1,141.",
+      "sources": [
+        {
+          "title": "Rio Times - Cost of living Quito expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-quito-expats-2026/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "CityCost - Quito (updated Nov 2026)",
+          "url": "https://citycost.org/quito/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "groceries": {
-      "typical": 320,
-      "min": 240,
-      "max": 430,
-      "annualInflation": 0.03
+      "typical": 430,
+      "min": 330,
+      "max": 580,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "CityCost Quito item prices (milk 1.15, chicken 5.33/kg, beef 7.77/kg) at or slightly above Cuenca's; 2 adults ~430 plus large-dog food (not separately verified).",
+      "sources": [
+        {
+          "title": "CityCost - Quito (updated Nov 2026)",
+          "url": "https://citycost.org/quito/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Rio Times - Cost of living Quito expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-quito-expats-2026/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "utilities": {
-      "typical": 90,
-      "min": 55,
-      "max": 135,
-      "annualInflation": 0.035
+      "typical": 60,
+      "min": 35,
+      "max": 95,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-06",
+      "notes": "CityCost 2-person 85m2 utilities ~USD 29; house adds water heating/LPG. Residential power ~USD 0.10/kWh national tariff with older-adult discount. Excludes internet.",
+      "sources": [
+        {
+          "title": "CityCost - Quito (updated Nov 2026)",
+          "url": "https://citycost.org/quito/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Rio Times - Cost of living Cuenca Ecuador expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-cuenca-ecuador-expats-2026/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 140,
-      "min": 70,
-      "max": 240,
+      "typical": 290,
+      "min": 145,
+      "max": 600,
       "annualInflation": 0.04,
-      "notes": "IESS public system affordable for residents with pensionado/visa, ~$70-90/person/mo. Private international plans ~$80-180/mo. Anti-VEGF injections available in Quito (Hospital Metropolitano), Cuenca, and Guayaquil; ~$1,200-2,000/injection at private clinics. GLP-1 limited availability, ~$300/mo private. Cuenca is a regional medical hub for retirees with strong specialist density."
+      "notes": "Resident couple: IESS voluntary affiliation 17.6% of declared income, min USD 84.83/mo in 2026 (spouse add-on ~3.41%, couple ~USD 88-101) plus a local private plan (SaludSA ~USD 70-72/mo at age 60; BMI 2026 quote USD 186.61 for a 53-yo couple). Typical = IESS couple + local private for two; max = international cover. Carries full health cost (insurance re-modeled).",
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "Vistazo - Aportes IESS suben en 2026 (SBU USD 482)",
+          "url": "https://www.vistazo.com/amp/actualidad/nacional/2025-12-17-aportes-iess-suben-2026-incremento-sueldo-basico-unificado-usd-482-ED10575274",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Rio Times - Healthcare Ecuador expats 2026",
+          "url": "https://www.riotimesonline.com/healthcare-ecuador-expats-2026/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cuenca High Life - expat health insurance (Nov 2025)",
+          "url": "https://cuencahighlife.com/?p=169159",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "insurance": {
-      "typical": 200,
-      "min": 120,
-      "max": 300,
-      "annualInflation": 0.04
+      "typical": 15,
+      "min": 10,
+      "max": 25,
+      "annualInflation": 0.04,
+      "estimate": true,
+      "notes": "Old-template value (was health insurance) re-modeled to renters/contents placeholder; no Ecuador contents-policy price verified."
     },
     "petCare": {
       "typical": 50,
@@ -75,16 +137,44 @@
       "annualInflation": 0.03
     },
     "transportation": {
-      "typical": 110,
-      "min": 50,
-      "max": 180,
-      "annualInflation": 0.03
+      "typical": 120,
+      "min": 60,
+      "max": 300,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "Monthly transit pass ~USD 21 each, metro/bus plus taxis/ride-hail (<50 heavy transit users up to several hundred with car). Fuel USD 3.175/gal Oct 2026.",
+      "sources": [
+        {
+          "title": "CityCost - Quito (updated Nov 2026)",
+          "url": "https://citycost.org/quito/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Rio Times - Cost of living Quito expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-quito-expats-2026/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "El Comercio - Precio combustibles desde 12 octubre 2026",
+          "url": "https://www.elcomercio.com/actualidad/negocios/precio-combustibles-baja-ecuador-desde-octubre/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 170,
-      "min": 100,
-      "max": 260,
-      "annualInflation": 0.03
+      "typical": 300,
+      "min": 170,
+      "max": 450,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "Internet 50+ Mbps ~USD 29 + streaming + mid-range dinner for two ~USD 55 several times/mo + gym/activities (~USD 45).",
+      "sources": [
+        {
+          "title": "CityCost - Quito (updated Nov 2026)",
+          "url": "https://citycost.org/quito/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "clothing": {
       "typical": 70,
@@ -105,10 +195,19 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 77,
-      "min": 62,
-      "max": 97,
-      "annualInflation": 0.02
+      "typical": 36,
+      "min": 25,
+      "max": 60,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-06",
+      "notes": "Mobile plan (calls + 10GB+) ~USD 17.94/line x2; max for larger postpaid plans.",
+      "sources": [
+        {
+          "title": "CityCost - Quito (updated Nov 2026)",
+          "url": "https://citycost.org/quito/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "taxes": {
       "typical": 0,
@@ -138,9 +237,18 @@
     },
     "medicalOOP": {
       "min": 30,
-      "typical": 55,
-      "max": 110,
-      "annualInflation": 0.04
+      "typical": 60,
+      "max": 120,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-06",
+      "notes": "Quito GP USD 25-45, specialists USD 50-80, imaging CT 100-250 / MRI 150-350; plus plan co-pays.",
+      "sources": [
+        {
+          "title": "Rio Times - Healthcare Ecuador expats 2026",
+          "url": "https://www.riotimesonline.com/healthcare-ecuador-expats-2026/",
+          "accessed": "2026-11-06"
+        }
+      ]
     }
   },
   "healthcare": {

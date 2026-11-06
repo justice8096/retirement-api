@@ -36,35 +36,102 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 650,
-      "min": 500,
-      "max": 800,
-      "annualInflation": 0.04
+      "typical": 750,
+      "min": 550,
+      "max": 1000,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-06",
+      "notes": "Salinas 2BR condos $600-1,000 (better deals March-November), 2BR ~$500 in older data; pet-friendly 2-3BR for a large dog pushes typical to mid-range.",
+      "sources": [
+        {
+          "title": "Escape From USA - Cost of Living in Ecuador (2026)",
+          "url": "https://escapefromusa.com/blog/cost-of-living-in-ecuador",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Expat Exchange - Cost of Living in Salinas",
+          "url": "https://www.expatexchange.com/gdc/8/39/4113/Ecuador/Cost-of-Living-in-Salinas",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Jobicy - Cost of living Salinas, Ecuador (May 2026)",
+          "url": "https://jobicy.com/cost-of-living/ecuador/salinas",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "groceries": {
-      "typical": 300,
-      "min": 220,
-      "max": 400,
-      "annualInflation": 0.03
+      "typical": 420,
+      "min": 300,
+      "max": 560,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "Couple basket from $30-45/wk per person (market + Tia) to $45-65/wk (Supermaxi); 100 lb dog food included as an allowance at the upper part of the range, not separately verified.",
+      "sources": [
+        {
+          "title": "Escape From USA - Cost of Living in Ecuador (2026)",
+          "url": "https://escapefromusa.com/blog/cost-of-living-in-ecuador",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "utilities": {
-      "typical": 90,
-      "min": 55,
-      "max": 140,
-      "annualInflation": 0.035
+      "typical": 95,
+      "min": 50,
+      "max": 150,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-06",
+      "notes": "Coastal electricity $40-80/mo for a 1BR with AC (larger home with AC higher), water $5-15; jobicy cites $20-30 elec+water without AC, doubling with AC. Internet excluded.",
+      "sources": [
+        {
+          "title": "Escape From USA - Cost of Living in Ecuador (2026)",
+          "url": "https://escapefromusa.com/blog/cost-of-living-in-ecuador",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Jobicy - Cost of living Salinas, Ecuador (May 2026)",
+          "url": "https://jobicy.com/cost-of-living/ecuador/salinas",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 120,
-      "min": 60,
-      "max": 200,
+      "typical": 300,
+      "min": 101,
+      "max": 660,
       "annualInflation": 0.04,
-      "notes": "IESS public system affordable for residents with pensionado/visa, ~$70-90/person/mo. Private international plans ~$80-180/mo. Anti-VEGF injections available in Quito (Hospital Metropolitano), Cuenca, and Guayaquil; ~$1,200-2,000/injection at private clinics. GLP-1 limited availability, ~$300/mo private. Cuenca is a regional medical hub for retirees with strong specialist density."
+      "notes": "IESS voluntary affiliation 2026 minimum $84.83 (17.6% of $482 SBU) plus 3.41% spouse extension = ~$101 for the couple (min, IESS only); typical adds a local private plan (~$200 for two, cf. BMI quote $187 for a 53-year-old couple, local insurers $60-150 pp); max adds international cover (BUPA $120-280 pp at 60).",
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "Expreso - Inscripciones IESS voluntarios 2026",
+          "url": "https://www.expreso.ec/servicios/inscripciones-iess-voluntarios-2026-pasos-para-afiliarse-con-el-nuevo-salario-269957.html",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Rio Times - Healthcare in Ecuador for expats 2026",
+          "url": "https://www.riotimesonline.com/healthcare-ecuador-expats-2026/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Escape From USA - Cost of Living in Ecuador (2026)",
+          "url": "https://escapefromusa.com/blog/cost-of-living-in-ecuador",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cuenca High Life - Expat guide to health insurance: IESS vs private (Nov 2025)",
+          "url": "https://cuencahighlife.com/the-expats-guide-to-health-insurance-iess-vs-private-plans/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "insurance": {
-      "typical": 180,
-      "min": 100,
-      "max": 280,
-      "annualInflation": 0.04
+      "typical": 20,
+      "min": 10,
+      "max": 35,
+      "annualInflation": 0.04,
+      "estimate": true,
+      "notes": "Old-template value (180) meant health insurance and is now carried in healthcare; this is a small contents-insurance placeholder, not verified (search budget exhausted)."
     },
     "petCare": {
       "typical": 50,
@@ -85,16 +152,49 @@
       "annualInflation": 0.03
     },
     "transportation": {
-      "typical": 100,
-      "min": 50,
-      "max": 170,
-      "annualInflation": 0.03
+      "typical": 160,
+      "min": 60,
+      "max": 260,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "One car: gasoline ~$0.84/L (Oct 2026, ~100 L/mo ~ $85), insurance $400-900/yr, plates/registration $80-150/yr, small maintenance allowance; min is car-free taxis (~$30/mo per person in Salinas).",
+      "sources": [
+        {
+          "title": "nomad.watch - Vilcabamba costs (Oct 2026)",
+          "url": "https://nomad.watch/cities/EC/vilcabamba/costs",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Escape From USA - Cost of Living in Ecuador (2026)",
+          "url": "https://escapefromusa.com/blog/cost-of-living-in-ecuador",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Jobicy - Cost of living Salinas, Ecuador (May 2026)",
+          "url": "https://jobicy.com/cost-of-living/ecuador/salinas",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 150,
-      "min": 90,
-      "max": 230,
-      "annualInflation": 0.03
+      "typical": 230,
+      "min": 140,
+      "max": 340,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "Coastal internet $30-60/mo, dining mid-range $15-30 pp a few times a month, plus streaming and activities.",
+      "sources": [
+        {
+          "title": "Escape From USA - Cost of Living in Ecuador (2026)",
+          "url": "https://escapefromusa.com/blog/cost-of-living-in-ecuador",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Jobicy - Cost of living Salinas, Ecuador (May 2026)",
+          "url": "https://jobicy.com/cost-of-living/ecuador/salinas",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "clothing": {
       "typical": 70,
@@ -115,10 +215,29 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 77,
-      "min": 62,
-      "max": 97,
-      "annualInflation": 0.02
+      "typical": 30,
+      "min": 20,
+      "max": 50,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-06",
+      "notes": "Two lines with Claro/Movistar/CNT at $10-25 per line; Salinas SIM ~$15 for 10 GB; $15 for 15 GB per SIM.",
+      "sources": [
+        {
+          "title": "Escape From USA - Cost of Living in Ecuador (2026)",
+          "url": "https://escapefromusa.com/blog/cost-of-living-in-ecuador",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Jobicy - Cost of living Salinas, Ecuador (May 2026)",
+          "url": "https://jobicy.com/cost-of-living/ecuador/salinas",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Live and Invest Overseas - Vilcabamba",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/ecuador/vilcabamba/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "taxes": {
       "typical": 0,
@@ -147,10 +266,24 @@
       "annualInflation": 0.025
     },
     "medicalOOP": {
-      "min": 30,
-      "typical": 55,
-      "max": 110,
-      "annualInflation": 0.04
+      "min": 25,
+      "typical": 60,
+      "max": 120,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-06",
+      "notes": "Private GP visits $25-50 and specialists $40-80; IESS in-network care has $0 copay, so OOP is mainly private visits and plan deductibles.",
+      "sources": [
+        {
+          "title": "Rio Times - Healthcare in Ecuador for expats 2026",
+          "url": "https://www.riotimesonline.com/healthcare-ecuador-expats-2026/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cuenca High Life - Expat guide to health insurance: IESS vs private (Nov 2025)",
+          "url": "https://cuencahighlife.com/the-expats-guide-to-health-insurance-iess-vs-private-plans/",
+          "accessed": "2026-11-06"
+        }
+      ]
     }
   },
   "healthcare": {

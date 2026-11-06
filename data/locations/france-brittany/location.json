@@ -32,12 +32,20 @@
   },
   "monthlyCosts": {
     "rent": {
-      "min": 750,
-      "max": 1150,
-      "typical": 950,
+      "min": 800,
+      "max": 1250,
+      "typical": 1000,
       "type": "2-bedroom house (maison)",
       "annualInflation": 0.02,
-      "notes": "Taxe d'habitation eliminated for primary residences (2023)."
+      "notes": "RealAdvisor Oct 2026 Morbihan houses average 129 EUR/m2/yr (about 10.75 EUR/m2/mo); a 90-100 m2 pet-friendly 2-3BR house is about 970-1075 EUR. Rennes metro runs higher, inland Brittany lower; TEOM trash charge typically passed to tenant in charges.",
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "RealAdvisor - Prix immobilier Morbihan (56)",
+          "url": "https://realadvisor.fr/fr/prix-m2-immobilier/56-morbihan",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "groceries": {
       "min": 1050,
@@ -47,9 +55,9 @@
       "annualInflation": 0.025
     },
     "utilities": {
-      "min": 152,
-      "max": 247,
-      "typical": 190,
+      "min": 175,
+      "max": 280,
+      "typical": 215,
       "annualInflation": 0.025,
       "breakdown": {
         "electricity": {
@@ -74,18 +82,44 @@
         }
       },
       "taxes": "TVA included in bills: 5.5% on water/assainissement, 20% on electricity/gas.",
-      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig). Trash included in rent. Sewage included in water bill."
+      "notes": "Electricity on EDF Tarif Bleu Base 9 kVA (0.1985 EUR/kWh, 238.56 EUR/yr subscription from 1 Aug 2026) at about 5,000 kWh/yr = about 103 EUR/mo; natural gas heating stored 60 EUR scaled by INSEE gas +19.0% y/y = about 71 EUR; water+assainissement stored 40 EUR (not re-verified). Excludes internet.",
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "Kelwatt - Evolution du Tarif Bleu au 1er aout 2026",
+          "url": "https://www.kelwatt.fr/actu/tarif-edf-reglemente-1er-aout-2026",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "INSEE - IPC septembre 2026",
+          "url": "https://www.insee.fr/fr/statistiques/9080209",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "healthcare": {
-      "min": 80,
-      "max": 180,
-      "typical": 120,
+      "min": 120,
+      "max": 250,
+      "typical": 180,
       "breakdown": {
         "mutuelle": 50,
         "copays": 25
       },
-      "notes": "PUMA universal coverage + Mutuelle complémentaire (~€55-80/person/mo, higher tier for chronic conditions). ALD (Affection Longue Durée) provides 100% coverage for hypertension and diabetes. Macular degeneration: anti-VEGF injections covered 100% at hospital. Hypothyroidism monitoring covered. GLP-1 covered for diabetes indication.",
-      "annualInflation": 0.04
+      "notes": "PUMA base coverage for residents plus a mutuelle for a couple age 60: Reassurez-moi average about 120 EUR/mo for a senior couple 60-75; Meilleurtaux 2026 study 248.82 EUR/mo for a couple of 60 with reinforced cover. Possible PUMA cotisation subsidiaire maladie on capital income not modeled.",
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "Reassurez-moi - Prix mutuelle senior couple",
+          "url": "https://reassurez-moi.fr/guide/mutuelle-sante/prix-mutuelle-senior-couple",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "LeComparateurAssurance - Prix de la mutuelle sante en 2026",
+          "url": "https://www.lecomparateurassurance.com/mutuelle-sante/actualites/prix-mutuelle-sante-2026-ecarts-age-departement",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "insurance": {
       "min": 25,

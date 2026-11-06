@@ -90,9 +90,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 62,
-      "typical": 77,
-      "max": 97
+      "min": 20,
+      "typical": 30,
+      "max": 50
     },
     "plans": [
       {
@@ -121,7 +121,8 @@
         "title": "Google Fi Plans",
         "url": "https://fi.google.com/about/plans"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "groceries": {
     "categories": [
@@ -382,9 +383,9 @@
   "housing": {
     "propertyType": "2-bedroom house/apartment",
     "monthlyBudget": {
-      "min": 488,
-      "max": 813,
-      "typical": 650
+      "min": 550,
+      "max": 1000,
+      "typical": 750
     },
     "breakdown": {
       "baseRent": 618,
@@ -406,7 +407,8 @@
         "name": "OLX Ecuador",
         "url": "https://www.olx.com.ec/"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "groceryStores": {
     "stores": [
@@ -559,9 +561,9 @@
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 27,
-      "typical": 100,
-      "max": 200
+      "min": 60,
+      "typical": 160,
+      "max": 260
     },
     "publicTransit": {
       "monthlyPass": {
@@ -721,7 +723,8 @@
         "typical": 167,
         "max": 300
       }
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "visionDental": {
     "monthlyBudget": {
@@ -790,9 +793,9 @@
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 300,
-      "typical": 375,
-      "max": 469
+      "min": 140,
+      "typical": 230,
+      "max": 340
     },
     "categories": [
       {
@@ -861,6 +864,7 @@
       "from": "italy-puglia",
       "generatedAt": "2026-04-23",
       "note": "Template-derived section — prices are EUR-denominated from Puglia, Italy. Needs per-location currency + cost-of-living adaptation."
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-06"
   }
 }

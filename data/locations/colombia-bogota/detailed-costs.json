@@ -90,9 +90,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 65,
-      "typical": 80,
-      "max": 100
+      "min": 16,
+      "typical": 30,
+      "max": 56
     },
     "plans": [
       {
@@ -121,7 +121,8 @@
         "title": "Google Fi Plans",
         "url": "https://fi.google.com/about/plans"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "groceries": {
     "categories": [
@@ -382,9 +383,9 @@
   "housing": {
     "propertyType": "2-bedroom house/apartment",
     "monthlyBudget": {
-      "min": 600,
-      "max": 1000,
-      "typical": 800
+      "min": 810,
+      "max": 1875,
+      "typical": 1310
     },
     "breakdown": {
       "baseRent": 736,
@@ -407,7 +408,8 @@
         "name": "Metrocuadrado",
         "url": "https://www.metrocuadrado.com/"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "groceryStores": {
     "stores": [
@@ -556,9 +558,9 @@
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 35,
-      "typical": 130,
-      "max": 260
+      "min": 100,
+      "typical": 170,
+      "max": 400
     },
     "publicTransit": {
       "monthlyPass": {
@@ -718,7 +720,8 @@
         "typical": 217,
         "max": 390
       }
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "visionDental": {
     "monthlyBudget": {
@@ -787,9 +790,9 @@
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 300,
-      "typical": 375,
-      "max": 469
+      "min": 180,
+      "typical": 270,
+      "max": 400
     },
     "categories": [
       {
@@ -858,6 +861,7 @@
       "from": "italy-puglia",
       "generatedAt": "2026-04-23",
       "note": "Template-derived section — prices are EUR-denominated from Puglia, Italy. Needs per-location currency + cost-of-living adaptation."
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-06"
   }
 }

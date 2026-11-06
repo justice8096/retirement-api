@@ -28,35 +28,102 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 550,
-      "min": 400,
-      "max": 700,
-      "annualInflation": 0.04
+      "typical": 750,
+      "min": 500,
+      "max": 1300,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-06",
+      "notes": "2026 guide puts furnished 2-3BR in Pinares/Cerritos at COP 3.5-6.0M (USD 1,120-1,920) and a couple's estrato 5-6 sample at COP 4.2M; older IL data and a 2026 retirement guide show 3BR/furnished units from USD 300-750. Typical set for an unfurnished pet-friendly 2-3BR incl. COP 250-600k admin fee, below furnished expat pricing. Converted at TRM 3,183.",
+      "sources": [
+        {
+          "title": "Colombiamove - Cost of living in Pereira monthly budget (Aug-Sep 2026)",
+          "url": "https://colombiamove.com/blog/cost-of-living-pereira-monthly-budget/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "International Living - Pereira, Colombia",
+          "url": "https://internationalliving.com/countries/colombia/pereira-colombia",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Colombiamove - Colombia retirement cost 2026 monthly budget",
+          "url": "https://colombiamove.com/blog/es/colombia-retirement-cost-2026-monthly-budget-breakdown/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "TRM 3 Nov 2026",
+          "url": "https://www.dolar-colombia.com/2026-11-03",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "groceries": {
-      "typical": 280,
-      "min": 200,
-      "max": 380,
-      "annualInflation": 0.03
+      "typical": 380,
+      "min": 285,
+      "max": 505,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "Couple mixing plaza and supermarkets COP 0.9-1.6M/mo, sample COP 1.2M (2026 guide). Source covers people only; food for a 100 lb dog is not separately verified and may add to this.",
+      "sources": [
+        {
+          "title": "Colombiamove - Cost of living in Pereira monthly budget (Aug-Sep 2026)",
+          "url": "https://colombiamove.com/blog/cost-of-living-pereira-monthly-budget/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "utilities": {
-      "typical": 80,
-      "min": 50,
-      "max": 120,
-      "annualInflation": 0.035
+      "typical": 120,
+      "min": 75,
+      "max": 170,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-06",
+      "notes": "Electricity, water/sewer, gas plus 200-300 Mbps fiber run COP 350-650k for estrato 4-5 (couple sample COP 580k); fiber (~COP 100-140k) removed since internet is excluded. Mild climate, no AC needed.",
+      "sources": [
+        {
+          "title": "Colombiamove - Cost of living in Pereira monthly budget (Aug-Sep 2026)",
+          "url": "https://colombiamove.com/blog/cost-of-living-pereira-monthly-budget/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "International Living - Pereira, Colombia",
+          "url": "https://internationalliving.com/countries/colombia/pereira-colombia",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 120,
-      "min": 60,
-      "max": 200,
+      "typical": 600,
+      "min": 245,
+      "max": 900,
       "annualInflation": 0.04,
-      "notes": "EPS public system available to residents (Migration Visa M after 5 years for permanent residency). Private international plans ~$80-150/person/mo with pre-existing condition loadings; exclusions common first 6-12 months. Anti-VEGF injections available in Bogotá (Fundación Oftalmológica Nacional), Medellín, Cali. GLP-1 imported, ~$300-450/mo private. Hypertension/diabetes generics widely available at ~10-30% of US prices."
+      "notes": "EPS (mandatory for cedula holders) at 12.5% of declared income, min 1 SMMLV (COP 219k) and typically ~3 SMMLV (COP 657k) for one cotizante with spouse as beneficiary, plus prepagada for two at age 60 (~COP 700k each interpolated between age-50 ~470k and age-65 ~800k, less 10% family discount). Min uses basic Colmedica-level prepagada; max approaches top-tier or international cover. Now carries the full health-coverage cost (old template split it into insurance).",
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "Medellin Guide - Health insurance in Colombia (May 2026)",
+          "url": "https://medellin-guide-git.pages.dev/guides/health-insurance",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Colombiamove - Best health insurance Colombia 2026 EPS vs prepagada",
+          "url": "https://colombiamove.com/blog/es/best-health-insurance-colombia-2026-eps-vs-prepagada/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cuanto me cuesta - EPS prepagada precios 2026",
+          "url": "https://cuantomecuesta.com/co/eps-prepagada/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "insurance": {
-      "typical": 180,
-      "min": 100,
-      "max": 280,
-      "annualInflation": 0.04
+      "typical": 15,
+      "min": 10,
+      "max": 25,
+      "annualInflation": 0.04,
+      "estimate": true,
+      "notes": "Old-template value (180) meant health insurance; re-modeled to renters/contents insurance. Placeholder only, no Colombian contents-policy price verified."
     },
     "petCare": {
       "typical": 50,
@@ -77,16 +144,44 @@
       "annualInflation": 0.03
     },
     "transportation": {
-      "typical": 100,
-      "min": 50,
-      "max": 170,
-      "annualInflation": 0.03
+      "typical": 125,
+      "min": 60,
+      "max": 200,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "Transit/taxi model: Megabus COP 3,600/ride, taxi min ~COP 7,300, couple sample COP 400k/mo. Regular gasoline COP 16,322/gal in Pereira (Oct 2026) if a car is used; car insurance/SOAT not verified, so max may be low for car ownership.",
+      "sources": [
+        {
+          "title": "Colombiamove - Cost of living in Pereira monthly budget (Aug-Sep 2026)",
+          "url": "https://colombiamove.com/blog/cost-of-living-pereira-monthly-budget/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Vanguardia - Gasoline price by city, 1 Oct 2026",
+          "url": "https://www.vanguardia.com/colombia/2026/10/01/la-gasolina-subio-en-colombia-este-es-el-nuevo-precio-del-galon-y-las-ciudades-donde-es-mas-cara/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 130,
-      "min": 80,
-      "max": 200,
-      "annualInflation": 0.03
+      "typical": 250,
+      "min": 175,
+      "max": 350,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "Couple dining/leisure sample COP 700k (dinner for two with wine COP 150-250k) plus fiber internet ~USD 25-40. Streaming not separately priced.",
+      "sources": [
+        {
+          "title": "Colombiamove - Cost of living in Pereira monthly budget (Aug-Sep 2026)",
+          "url": "https://colombiamove.com/blog/cost-of-living-pereira-monthly-budget/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Colombiamove - Colombia retirement cost 2026 monthly budget",
+          "url": "https://colombiamove.com/blog/es/colombia-retirement-cost-2026-monthly-budget-breakdown/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "clothing": {
       "typical": 70,
@@ -141,8 +236,17 @@
     "medicalOOP": {
       "min": 20,
       "typical": 40,
-      "max": 80,
-      "annualInflation": 0.04
+      "max": 160,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-06",
+      "notes": "2026 EPS cuota moderadora COP 20,100-52,800 per visit by income band; copagos 17.3-23% of service capped at COP 3.0-6.0M/yr (max reflects annual cap spread monthly). Prepagada visit bonos extra.",
+      "sources": [
+        {
+          "title": "Publimetro - Cuotas moderadoras y copagos EPS 2026",
+          "url": "https://www.publimetro.co/noticias/2026/01/03/esto-valdran-las-cuotas-moderadoras-y-copagos-de-las-eps-en-el-2026-segun-revelo-el-ministerio-de-salud/",
+          "accessed": "2026-11-06"
+        }
+      ]
     }
   },
   "healthcare": {

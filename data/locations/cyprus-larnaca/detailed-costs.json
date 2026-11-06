@@ -125,9 +125,9 @@
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 280,
-      "typical": 350,
-      "max": 438
+      "min": 220,
+      "typical": 300,
+      "max": 420
     },
     "categories": [
       {
@@ -190,7 +190,8 @@
         "seniorDiscounts": "No specific discounts.",
         "notes": "Cyprus coffee/frappé ~€2.00-3.50. Budget for 2 visits/week. ~$14/mo."
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "transportation": {
     "monthlyBudget": {
@@ -560,9 +561,9 @@
   "housing": {
     "propertyType": "2-bedroom house or ground-floor apartment",
     "monthlyBudget": {
-      "min": 680,
-      "max": 1105,
-      "typical": 850
+      "min": 900,
+      "max": 1800,
+      "typical": 1300
     },
     "breakdown": {
       "baseRent": 850,
@@ -573,7 +574,8 @@
     },
     "taxNotes": "No rental tax for tenants. Immovable property tax abolished in 2017. Municipal taxes are low. Stamp duty on lease agreements is minimal.",
     "leaseTerms": "1-year lease standard, renewable. Security deposit 1-2 months rent. Statutory tenancy protection after 1 year continuous occupation.",
-    "marketNotes": "Affordable coastal city. Mix of apartments and small houses. Good international airport access."
+    "marketNotes": "Affordable coastal city. Mix of apartments and small houses. Good international airport access.",
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "groceryStores": {
     "stores": [

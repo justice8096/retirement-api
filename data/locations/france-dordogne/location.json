@@ -39,8 +39,22 @@
     "rent": {
       "typical": 900,
       "min": 700,
-      "max": 1100,
-      "annualInflation": 0.04
+      "max": 1150,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-06",
+      "notes": "RealAdvisor Oct 2026 Dordogne houses average 114 EUR/m2/yr (about 9.50 EUR/m2/mo); LeSiteImmo Feb 2026 9.4 EUR/m2/mo for houses. A 90-100 m2 2-3BR house is about 850-950 EUR; Sarlat/Bergerac tourist areas higher.",
+      "sources": [
+        {
+          "title": "RealAdvisor - Prix immobilier Dordogne (24)",
+          "url": "https://realadvisor.fr/fr/prix-m2-immobilier/24-dordogne",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "LeSiteImmo - Immobilier Dordogne",
+          "url": "https://www.lesiteimmo.com/immobilier/dordogne-24",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "groceries": {
       "typical": 440,
@@ -49,23 +63,52 @@
       "annualInflation": 0.03
     },
     "utilities": {
-      "typical": 185,
-      "min": 140,
-      "max": 245,
-      "annualInflation": 0.035
+      "typical": 205,
+      "min": 160,
+      "max": 290,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-06",
+      "notes": "Rural house assumed largely electric-heated: EDF Tarif Bleu Base 9 kVA (0.1985 EUR/kWh + 238.56 EUR/yr) at about 7,000 kWh/yr = about 136 EUR/mo, plus water/sewer and supplemental heat from stored model. Max reflects fioul heating (INSEE heating oil +64.6% y/y). Excludes internet.",
+      "sources": [
+        {
+          "title": "Kelwatt - Evolution du Tarif Bleu au 1er aout 2026",
+          "url": "https://www.kelwatt.fr/actu/tarif-edf-reglemente-1er-aout-2026",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "INSEE - IPC septembre 2026",
+          "url": "https://www.insee.fr/fr/statistiques/9080209",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 125,
-      "min": 85,
-      "max": 175,
+      "typical": 180,
+      "min": 120,
+      "max": 250,
       "annualInflation": 0.04,
-      "notes": "PUMA universal coverage + Mutuelle complémentaire (~€55-80/person/mo, higher tier for chronic conditions). ALD (Affection Longue Durée) provides 100% coverage for hypertension and diabetes. Macular degeneration: anti-VEGF injections covered 100% at hospital. Hypothyroidism monitoring covered. GLP-1 covered for diabetes indication."
+      "notes": "PUMA base coverage plus mutuelle for a couple age 60: about 120 EUR/mo average (Reassurez-moi) to 248.82 EUR/mo with reinforced cover (Meilleurtaux 2026). Carries the full health-coverage cost; PUMA cotisation subsidiaire maladie on capital income not modeled.",
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "Reassurez-moi - Prix mutuelle senior couple",
+          "url": "https://reassurez-moi.fr/guide/mutuelle-sante/prix-mutuelle-senior-couple",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "LeComparateurAssurance - Prix de la mutuelle sante en 2026",
+          "url": "https://www.lecomparateurassurance.com/mutuelle-sante/actualites/prix-mutuelle-sante-2026-ecarts-age-departement",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "insurance": {
-      "typical": 145,
-      "min": 100,
-      "max": 200,
-      "annualInflation": 0.04
+      "typical": 20,
+      "min": 15,
+      "max": 30,
+      "annualInflation": 0.04,
+      "estimate": true,
+      "notes": "Old-template value (145, health insurance) re-modeled to a renters/contents (assurance habitation locataire) placeholder; not verified."
     },
     "petCare": {
       "typical": 60,

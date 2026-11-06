@@ -542,9 +542,9 @@
   "housing": {
     "propertyType": "2-bedroom house (maison)",
     "monthlyBudget": {
-      "min": 750,
-      "max": 1150,
-      "typical": 950
+      "min": 800,
+      "max": 1250,
+      "typical": 1000
     },
     "breakdown": {
       "baseRentEUR": 770,
@@ -566,7 +566,8 @@
         "name": "Service-Public.fr Taxe Habitation",
         "url": "https://www.service-public.fr/particuliers/vosdroits/F42"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "groceryStores": {
     "stores": [

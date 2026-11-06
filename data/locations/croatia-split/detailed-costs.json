@@ -90,9 +90,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 70,
-      "typical": 85,
-      "max": 105
+      "min": 16,
+      "typical": 26,
+      "max": 40
     },
     "plans": [
       {
@@ -121,13 +121,14 @@
         "title": "Google Fi Plans",
         "url": "https://fi.google.com/about/plans"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 235,
-      "typical": 294,
-      "max": 368
+      "min": 180,
+      "typical": 270,
+      "max": 440
     },
     "categories": [
       {
@@ -190,7 +191,8 @@
         "seniorDiscounts": "No specific discounts. Coffee culture very affordable.",
         "notes": "Kava (coffee) ~€1.20-2.00. Budget for 2 visits/week. ~$10/mo."
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "transportation": {
     "monthlyBudget": {
@@ -560,9 +562,9 @@
   "housing": {
     "propertyType": "2-bedroom house or ground-floor apartment",
     "monthlyBudget": {
-      "min": 680,
-      "max": 1105,
-      "typical": 850
+      "min": 700,
+      "max": 1400,
+      "typical": 900
     },
     "breakdown": {
       "baseRent": 850,
@@ -573,7 +575,8 @@
     },
     "taxNotes": "No rental tax for tenants. Landlord pays income tax on rental income. Communal charges (komunalna naknada) vary by municipality.",
     "leaseTerms": "1-year lease standard, renewable. Security deposit 1-2 months rent. 30-day notice typical for either party.",
-    "marketNotes": "Dalmatian capital, moderate market. Mix of old town and modern apartments. Growing expat scene."
+    "marketNotes": "Dalmatian capital, moderate market. Mix of old town and modern apartments. Growing expat scene.",
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "groceryStores": {
     "stores": [
@@ -706,7 +709,7 @@
           "type": "Salon",
           "address": "City center",
           "distanceKm": 5,
-          "rating": 4.0,
+          "rating": 4,
           "notes": "Some salons with multi-textured experience",
           "website": ""
         },

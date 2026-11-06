@@ -560,8 +560,8 @@
   "housing": {
     "propertyType": "2-bedroom house or ground-floor apartment",
     "monthlyBudget": {
-      "min": 720,
-      "max": 1170,
+      "min": 700,
+      "max": 1150,
       "typical": 900
     },
     "breakdown": {
@@ -573,7 +573,8 @@
     },
     "taxNotes": "No rental income tax for tenants. Taxe d'habitation abolished for primary residences. Property tax (taxe foncière) is landlord responsibility.",
     "leaseTerms": "3-year unfurnished lease (bail de 3 ans, renewable). 1-year furnished lease. Security deposit 1 month rent (unfurnished) or 2 months (furnished). 3-month notice period for tenants.",
-    "marketNotes": "Rural Périgord market. Stone farmhouses and village houses available. Low competition, good value."
+    "marketNotes": "Rural Périgord market. Stone farmhouses and village houses available. Low competition, good value.",
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "groceryStores": {
     "stores": [

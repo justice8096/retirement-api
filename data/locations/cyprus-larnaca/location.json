@@ -46,10 +46,19 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 850,
-      "min": 650,
-      "max": 1100,
-      "annualInflation": 0.04
+      "typical": 1300,
+      "min": 900,
+      "max": 1800,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-06",
+      "notes": "Larnaca long-term leases 2026: 2BR house EUR 900-1,200, 3BR house EUR 1,200-1,800; a house with yard suits a 100 lb dog. Deposit 1-2 months; communal fees EUR 0-100 in complexes.",
+      "sources": [
+        {
+          "title": "Houses for Rent in Larnaca: Complete 2026 Guide",
+          "url": "https://index.cy/articles/houses-for-rent-in-larnaca-guide/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "groceries": {
       "typical": 400,
@@ -58,23 +67,62 @@
       "annualInflation": 0.03
     },
     "utilities": {
-      "typical": 150,
-      "min": 110,
-      "max": 200,
-      "annualInflation": 0.035
+      "typical": 220,
+      "min": 150,
+      "max": 350,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-06",
+      "notes": "Electricity at EUR 0.26/kWh all-in (H1 2026) dominates, with summer AC peaks; plus water/sewer/trash. Guide puts house utilities at EUR 200-400 (may include extras); internet excluded.",
+      "sources": [
+        {
+          "title": "Houses for Rent in Larnaca: Complete 2026 Guide",
+          "url": "https://index.cy/articles/houses-for-rent-in-larnaca-guide/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cyprus household power costs ease from 2023 peak (Cyprus Mail, Eurostat H1 2026 EUR 0.26/kWh)",
+          "url": "https://cyprus-mail.com/2026/10/30/cyprus-household-electricity-prices-remain-above-pre-crisis-levels",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 95,
-      "min": 60,
-      "max": 140,
+      "typical": 390,
+      "min": 230,
+      "max": 600,
       "annualInflation": 0.04,
-      "notes": "GeSY (General Health System) universal coverage after residency, contributions ~2.65% of income (~€60-120/mo). Private supplementary ~€80-180/mo. Anti-VEGF injections available in Nicosia and Limassol; partial GeSY coverage. GLP-1 covered for diabetes via GeSY. Strong English-speaking healthcare workforce; both public and private widely accessible."
+      "notes": "GeSY 2.65% on pension/passive income: about EUR 148/mo for the couple on ~USD 72k (EUR 67k); plus local top-up cover EUR 40-210/mo per person at 55-65 (typical ~EUR 120 each). Max assumes a full international plan (EUR 150-300 each) if GeSY access is not granted on their permit type.",
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "Cyprus GHS (GeSY) rates 2025-2026",
+          "url": "https://www.cyprustaxlife.com/news/cyprus-gesy-rates-2025-2026",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Healthcare in Cyprus guide (index.cy)",
+          "url": "https://index.cy/articles/healthcare-in-cyprus-guide/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cyprus private health insurance cost 2026",
+          "url": "https://www.zenolegal.com/resources/cyprus-private-health-insurance-cost-2026",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "How healthcare works in Cyprus: GeSY explained (Cyprus Mail)",
+          "url": "https://cyprus-mail.com/2026/01/28/how-healthcare-works-in-cyprus-gesy-explained-costs-compared-and-who-qualifies",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "insurance": {
-      "typical": 115,
-      "min": 75,
-      "max": 165,
-      "annualInflation": 0.04
+      "typical": 15,
+      "min": 10,
+      "max": 25,
+      "annualInflation": 0.04,
+      "estimate": true,
+      "notes": "Old-template value (was health insurance, now carried in healthcare). Re-modelled as a small renters/contents placeholder; Cyprus contents premiums not verified this run."
     },
     "petCare": {
       "typical": 60,
@@ -101,10 +149,19 @@
       "annualInflation": 0.03
     },
     "entertainment": {
-      "typical": 210,
-      "min": 150,
-      "max": 300,
-      "annualInflation": 0.03
+      "typical": 300,
+      "min": 220,
+      "max": 420,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "Mid-range 3-course dinner for two about EUR 50 in Larnaca, ~4x/month = EUR 200; plus home fibre and streaming (~EUR 60, not separately verified) and activities.",
+      "sources": [
+        {
+          "title": "Why Limassol tops Cyprus in housing and living costs in 2026 (index.cy)",
+          "url": "https://index.cy/articles/why-limassol-tops-cyprus-in-housing-and-living-costs-in-2026/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "clothing": {
       "typical": 80,
@@ -157,10 +214,29 @@
       "annualInflation": 0.025
     },
     "medicalOOP": {
-      "min": 40,
-      "typical": 80,
-      "max": 160,
-      "annualInflation": 0.035
+      "min": 25,
+      "typical": 60,
+      "max": 140,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-06",
+      "notes": "GeSY co-pays are small (GP free, specialist EUR 6 with referral, EUR 1 per Rx/lab item, A&E EUR 10) and capped at EUR 150/person/yr (~EUR 25/mo for two); typical adds occasional private consults (GP EUR 50-150, specialist EUR 150-300) and adult dental not covered by GeSY.",
+      "sources": [
+        {
+          "title": "Healthcare in Cyprus guide (index.cy)",
+          "url": "https://index.cy/articles/healthcare-in-cyprus-guide/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Health Insurance in Cyprus: a plain guide (Insurance Edge)",
+          "url": "https://insurance-edge.net/2026/11/03/health-insurance-in-cyprus-a-plain-guide-for-expats-and-new-residents/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "How healthcare works in Cyprus (Cyprus Mail)",
+          "url": "https://cyprus-mail.com/2026/01/28/how-healthcare-works-in-cyprus-gesy-explained-costs-compared-and-who-qualifies",
+          "accessed": "2026-11-06"
+        }
+      ]
     }
   },
   "healthcare": {

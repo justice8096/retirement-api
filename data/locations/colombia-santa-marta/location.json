@@ -32,35 +32,102 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 650,
-      "min": 500,
-      "max": 800,
-      "annualInflation": 0.04
+      "typical": 850,
+      "min": 550,
+      "max": 1500,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-06",
+      "notes": "2026 guide: furnished 1BR in El Rodadero/Centro COP 1.8-3.2M, 2BR beachfront condos in Bello Horizonte/Pozos Colorados COP 3.5-7.0M+ (USD 1,115-2,230+); IL (2019) 3BR/2BA USD 400-1,000. Typical set for an unfurnished pet-friendly 2-3BR off the beachfront condo market. TRM 3,183.",
+      "sources": [
+        {
+          "title": "Colombiamove - Cost of living in Santa Marta monthly budget (Sep 2026)",
+          "url": "https://colombiamove.com/blog/cost-of-living-santa-marta-monthly-budget/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "International Living - Santa Marta, Colombia",
+          "url": "https://internationalliving.com/countries/colombia/santa-marta-colombia",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "TRM 3 Nov 2026",
+          "url": "https://www.dolar-colombia.com/2026-11-03",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "groceries": {
-      "typical": 300,
-      "min": 220,
-      "max": 400,
-      "annualInflation": 0.03
+      "typical": 380,
+      "min": 300,
+      "max": 500,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "Santa Marta sample groceries and household goods COP 950k/mo; Pereira couple range COP 0.9-1.6M used as corroboration. Dog food for a 100 lb dog not separately verified.",
+      "sources": [
+        {
+          "title": "Colombiamove - Cost of living in Santa Marta monthly budget (Sep 2026)",
+          "url": "https://colombiamove.com/blog/cost-of-living-santa-marta-monthly-budget/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Colombiamove - Cost of living in Pereira monthly budget (Aug-Sep 2026)",
+          "url": "https://colombiamove.com/blog/cost-of-living-pereira-monthly-budget/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "utilities": {
-      "typical": 110,
-      "min": 70,
-      "max": 160,
-      "annualInflation": 0.035
+      "typical": 190,
+      "min": 140,
+      "max": 285,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-06",
+      "notes": "Air-e electricity ~COP 796-890/kWh (estrato 5-6 +20%); a 2BR with inverter AC runs COP 350-750k, non-inverter heavy AC COP 530-800k+; water/gas/trash ~COP 95k. Hot coastal climate and a heavy-coated dog push AC use up. Internet excluded.",
+      "sources": [
+        {
+          "title": "Colombiamove - Cost of living in Santa Marta monthly budget (Sep 2026)",
+          "url": "https://colombiamove.com/blog/cost-of-living-santa-marta-monthly-budget/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Infobae - Air-e mantendra tarifas 2026 en 796 por kWh",
+          "url": "https://www.infobae.com/colombia/2026/01/09/aire-e-mantendra-tarifas-de-energia-en-2026-para-atlantico-magdalena-y-la-guajira-esta-en-796-por-kilovatiohora/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 130,
-      "min": 70,
-      "max": 220,
+      "typical": 600,
+      "min": 245,
+      "max": 900,
       "annualInflation": 0.04,
-      "notes": "EPS public system available to residents (Migration Visa M after 5 years for permanent residency). Private international plans ~$80-150/person/mo with pre-existing condition loadings; exclusions common first 6-12 months. Anti-VEGF injections available in Bogotá (Fundación Oftalmológica Nacional), Medellín, Cali. GLP-1 imported, ~$300-450/mo private. Hypertension/diabetes generics widely available at ~10-30% of US prices."
+      "notes": "Same national model as Pereira: EPS 12.5% of declared income (min COP 219k, typical ~COP 657k at 3 SMMLV) with spouse as beneficiary, plus prepagada for two at 60 (~COP 1.26M after family discount). Local sample single prepagada COP 450k corroborates. Now carries full health cost (old template split it into insurance).",
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "Medellin Guide - Health insurance in Colombia (May 2026)",
+          "url": "https://medellin-guide-git.pages.dev/guides/health-insurance",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Colombiamove - Best health insurance Colombia 2026 EPS vs prepagada",
+          "url": "https://colombiamove.com/blog/es/best-health-insurance-colombia-2026-eps-vs-prepagada/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Colombiamove - Cost of living in Santa Marta monthly budget (Sep 2026)",
+          "url": "https://colombiamove.com/blog/cost-of-living-santa-marta-monthly-budget/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "insurance": {
-      "typical": 180,
-      "min": 100,
-      "max": 280,
-      "annualInflation": 0.04
+      "typical": 15,
+      "min": 10,
+      "max": 25,
+      "annualInflation": 0.04,
+      "estimate": true,
+      "notes": "Old-template value (180) meant health insurance; re-modeled to renters/contents insurance. Placeholder only, no Colombian contents-policy price verified."
     },
     "petCare": {
       "typical": 50,
@@ -81,16 +148,34 @@
       "annualInflation": 0.03
     },
     "transportation": {
-      "typical": 110,
-      "min": 50,
-      "max": 180,
-      "annualInflation": 0.03
+      "typical": 125,
+      "min": 80,
+      "max": 200,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "Transit/taxi model: bus COP 2,950-3,050, taxi min COP 8,600, airport fixed fares ~COP 33-40k; sample local transport COP 250k per person, scaled for two. Car ownership costs not verified.",
+      "sources": [
+        {
+          "title": "Colombiamove - Cost of living in Santa Marta monthly budget (Sep 2026)",
+          "url": "https://colombiamove.com/blog/cost-of-living-santa-marta-monthly-budget/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 160,
-      "min": 100,
-      "max": 240,
-      "annualInflation": 0.03
+      "typical": 320,
+      "min": 200,
+      "max": 450,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "Sample dining out COP 750k (mid-range seafood dinner COP 60-100k pp), gym/beach activities COP 180k, and 200 Mbps fiber (bundled with SIM at COP 140k). Streaming not separately priced.",
+      "sources": [
+        {
+          "title": "Colombiamove - Cost of living in Santa Marta monthly budget (Sep 2026)",
+          "url": "https://colombiamove.com/blog/cost-of-living-santa-marta-monthly-budget/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "clothing": {
       "typical": 70,
@@ -145,8 +230,17 @@
     "medicalOOP": {
       "min": 20,
       "typical": 40,
-      "max": 80,
-      "annualInflation": 0.04
+      "max": 160,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-06",
+      "notes": "2026 EPS cuota moderadora COP 20,100-52,800 per visit by income band; copagos 17.3-23% capped at COP 3.0-6.0M/yr (max reflects annual cap spread monthly).",
+      "sources": [
+        {
+          "title": "Publimetro - Cuotas moderadoras y copagos EPS 2026",
+          "url": "https://www.publimetro.co/noticias/2026/01/03/esto-valdran-las-cuotas-moderadoras-y-copagos-de-las-eps-en-el-2026-segun-revelo-el-ministerio-de-salud/",
+          "accessed": "2026-11-06"
+        }
+      ]
     }
   },
   "healthcare": {

@@ -32,33 +32,90 @@
     "rent": {
       "typical": 550,
       "min": 400,
-      "max": 700,
-      "annualInflation": 0.04
+      "max": 800,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-06",
+      "notes": "Expat estimate USD 400-800 for a house; CityCost 3BR USD 406-472 (outside/center). Pet-friendly house typical ~550.",
+      "sources": [
+        {
+          "title": "Expat Exchange - Cost of Living in Cotacachi",
+          "url": "https://www.expatexchange.com/gdc/8/39/4652/Ecuador/Cost-of-Living-in-Cotacachi",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "CityCost - Cuenca vs Cotacachi (updated Oct/Nov 2026)",
+          "url": "https://citycost.org/compare/cuenca-ec-vs-cotacachi/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "groceries": {
-      "typical": 260,
-      "min": 190,
-      "max": 350,
-      "annualInflation": 0.03
+      "typical": 380,
+      "min": 300,
+      "max": 500,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "CityCost per-person grocery budget USD 188 x2 = ~376; large-dog food adds (not separately verified), so max raised.",
+      "sources": [
+        {
+          "title": "CityCost - Cuenca vs Cotacachi (updated Oct/Nov 2026)",
+          "url": "https://citycost.org/compare/cuenca-ec-vs-cotacachi/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "utilities": {
-      "typical": 70,
-      "min": 45,
-      "max": 110,
-      "annualInflation": 0.035
+      "typical": 50,
+      "min": 30,
+      "max": 80,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-06",
+      "notes": "CityCost 2-person 85m2 utilities ~USD 29; house adds electric water heating/LPG. Residential power ~USD 0.10/kWh with 50% older-adult discount up to 138 kWh. Excludes internet.",
+      "sources": [
+        {
+          "title": "CityCost - Cuenca vs Cotacachi (updated Oct/Nov 2026)",
+          "url": "https://citycost.org/compare/cuenca-ec-vs-cotacachi/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Rio Times - Cost of living Cuenca Ecuador expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-cuenca-ecuador-expats-2026/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 100,
-      "min": 50,
-      "max": 180,
+      "typical": 290,
+      "min": 145,
+      "max": 600,
       "annualInflation": 0.04,
-      "notes": "IESS public system affordable for residents with pensionado/visa, ~$70-90/person/mo. Private international plans ~$80-180/mo. Anti-VEGF injections available in Quito (Hospital Metropolitano), Cuenca, and Guayaquil; ~$1,200-2,000/injection at private clinics. GLP-1 limited availability, ~$300/mo private. Cuenca is a regional medical hub for retirees with strong specialist density."
+      "notes": "Resident couple: IESS voluntary affiliation 17.6% of declared income, min USD 84.83/mo in 2026 (spouse add-on ~3.41%, couple ~USD 88-101) plus a local private plan (SaludSA ~USD 70-72/mo at age 60; BMI 2026 quote USD 186.61 for a 53-yo couple). Typical = IESS couple + local private for two; max = international cover. Carries full health cost (insurance re-modeled).",
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "Vistazo - Aportes IESS suben en 2026 (SBU USD 482)",
+          "url": "https://www.vistazo.com/amp/actualidad/nacional/2025-12-17-aportes-iess-suben-2026-incremento-sueldo-basico-unificado-usd-482-ED10575274",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Rio Times - Healthcare Ecuador expats 2026",
+          "url": "https://www.riotimesonline.com/healthcare-ecuador-expats-2026/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cuenca High Life - expat health insurance (Nov 2025)",
+          "url": "https://cuencahighlife.com/?p=169159",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "insurance": {
-      "typical": 180,
-      "min": 100,
-      "max": 280,
-      "annualInflation": 0.04
+      "typical": 15,
+      "min": 10,
+      "max": 25,
+      "annualInflation": 0.04,
+      "estimate": true,
+      "notes": "Old-template value (was health insurance) re-modeled to renters/contents placeholder; no Ecuador contents-policy price verified."
     },
     "petCare": {
       "typical": 50,
@@ -81,14 +138,37 @@
     "transportation": {
       "typical": 80,
       "min": 40,
-      "max": 140,
-      "annualInflation": 0.03
+      "max": 250,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "Transit/taxi model: bus ~USD 0.45, monthly pass ~USD 15 each, cheap taxis to Otavalo/Ibarra. Max covers own car (Extra/Ecopais USD 3.175/gal from 12 Oct 2026).",
+      "sources": [
+        {
+          "title": "CityCost - Cuenca vs Cotacachi (updated Oct/Nov 2026)",
+          "url": "https://citycost.org/compare/cuenca-ec-vs-cotacachi/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "El Comercio - Precio combustibles desde 12 octubre 2026",
+          "url": "https://www.elcomercio.com/actualidad/negocios/precio-combustibles-baja-ecuador-desde-octubre/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 100,
-      "min": 60,
-      "max": 160,
-      "annualInflation": 0.03
+      "typical": 170,
+      "min": 100,
+      "max": 260,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "Internet 50+ Mbps ~USD 26 + streaming + mid-range dinner for two ~USD 26 a few times/mo + activities.",
+      "sources": [
+        {
+          "title": "CityCost - Cuenca vs Cotacachi (updated Oct/Nov 2026)",
+          "url": "https://citycost.org/compare/cuenca-ec-vs-cotacachi/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "clothing": {
       "typical": 70,
@@ -109,10 +189,19 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 77,
-      "min": 62,
-      "max": 97,
-      "annualInflation": 0.02
+      "typical": 26,
+      "min": 20,
+      "max": 50,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-06",
+      "notes": "Mobile plan (calls + 10GB+) ~USD 12.54/line x2; max for larger postpaid plans.",
+      "sources": [
+        {
+          "title": "CityCost - Cuenca vs Cotacachi (updated Oct/Nov 2026)",
+          "url": "https://citycost.org/compare/cuenca-ec-vs-cotacachi/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "taxes": {
       "typical": 0,
@@ -144,7 +233,16 @@
       "min": 30,
       "typical": 55,
       "max": 110,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-06",
+      "notes": "Cash GP visits USD 25-50, specialists USD 40-80, bloodwork USD 15-35, imaging 30-350; plan co-pays (SaludSA ~80% outpatient). Stored range consistent.",
+      "sources": [
+        {
+          "title": "Rio Times - Healthcare Ecuador expats 2026",
+          "url": "https://www.riotimesonline.com/healthcare-ecuador-expats-2026/",
+          "accessed": "2026-11-06"
+        }
+      ]
     }
   },
   "healthcare": {

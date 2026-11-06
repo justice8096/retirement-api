@@ -37,10 +37,24 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 850,
-      "min": 650,
-      "max": 1100,
-      "annualInflation": 0.04
+      "typical": 900,
+      "min": 700,
+      "max": 1400,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-06",
+      "notes": "2026 aggregator shows 2BR city-centre EUR 850-1,400; Numbeo via Croatia Week put a 2BR centre at EUR 812 in Dec 2024. Typical set for a pet-friendly 2-3BR somewhat outside the centre.",
+      "sources": [
+        {
+          "title": "Cost of Living in Split 2026 - Freenance",
+          "url": "https://freenance.io/cities/split-cost-of-living/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Which is the most expensive Croatian city to live in - Croatia Week",
+          "url": "https://www.croatiaweek.com/which-is-the-most-expensive-croatian-city-to-live-in-and-it-is-not-zagreb/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "groceries": {
       "typical": 380,
@@ -51,8 +65,17 @@
     "utilities": {
       "typical": 170,
       "min": 120,
-      "max": 215,
-      "annualInflation": 0.035
+      "max": 220,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-06",
+      "notes": "Electricity and water for ~70 m2 run EUR 120-220 per month, higher with summer AC or winter heating; internet excluded.",
+      "sources": [
+        {
+          "title": "Cost of Living in Split 2026 - Freenance",
+          "url": "https://freenance.io/cities/split-cost-of-living/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "healthcare": {
       "typical": 85,
@@ -92,10 +115,19 @@
       "annualInflation": 0.03
     },
     "entertainment": {
-      "typical": 220,
-      "min": 150,
-      "max": 310,
-      "annualInflation": 0.03
+      "typical": 270,
+      "min": 180,
+      "max": 440,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "Built from fast internet EUR 20-35, streaming, 3-4 dinners for two at EUR 40-70, and gym/activities (EUR 25-40 per person).",
+      "sources": [
+        {
+          "title": "Cost of Living in Split 2026 - Freenance",
+          "url": "https://freenance.io/cities/split-cost-of-living/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "clothing": {
       "typical": 80,
@@ -116,10 +148,19 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 85,
-      "min": 70,
-      "max": 105,
-      "annualInflation": 0.02
+      "typical": 26,
+      "min": 16,
+      "max": 40,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-06",
+      "notes": "National figure: mobile plans EUR 8-18 per line per month, 2 lines.",
+      "sources": [
+        {
+          "title": "Cost of Living in Split 2026 - Freenance",
+          "url": "https://freenance.io/cities/split-cost-of-living/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "taxes": {
       "typical": 720,

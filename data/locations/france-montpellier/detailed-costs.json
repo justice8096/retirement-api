@@ -536,9 +536,9 @@
   "housing": {
     "propertyType": "2-bedroom house (maison/villa)",
     "monthlyBudget": {
-      "min": 950,
-      "max": 1400,
-      "typical": 1150
+      "min": 1050,
+      "max": 1550,
+      "typical": 1280
     },
     "breakdown": {
       "baseRentEUR": 900,
@@ -560,7 +560,8 @@
         "name": "Montpellier Encadrement des Loyers",
         "url": "https://www.montpellier3m.fr/encadrement-des-loyers"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "groceryStores": {
     "stores": [

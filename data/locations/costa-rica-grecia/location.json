@@ -30,10 +30,34 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 750,
-      "min": 600,
-      "max": 900,
-      "annualInflation": 0.04
+      "typical": 850,
+      "min": 650,
+      "max": 1100,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-06",
+      "notes": "Pet-friendly 2-3BR house in Grecia area. A RE/MAX 2BR/2BA in Tacares that welcomes pets lists at $1,090; 2026 guide gives $550-800 for a house with garden; CityCost 3BR $691-774 (Nov 2026).",
+      "sources": [
+        {
+          "title": "RE/MAX Central America - 2BR/2BA for lease, Tacares, Grecia (pets welcome)",
+          "url": "https://remax-centralamerica.com/400273035079",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Escape From USA - Cost of Living in Costa Rica (2026)",
+          "url": "https://escapefromusa.com/blog/cost-of-living-in-costa-rica",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "CityCost - Cost of Living in Grecia",
+          "url": "https://citycost.org/grecia/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Expat Exchange - Cost of Living in Grecia",
+          "url": "https://www.expatexchange.com/gdc/8/33/4565/Costa-rica/Cost-of-Living-in-Grecia",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "groceries": {
       "typical": 400,
@@ -42,23 +66,57 @@
       "annualInflation": 0.03
     },
     "utilities": {
-      "typical": 110,
-      "min": 75,
-      "max": 160,
-      "annualInflation": 0.035
+      "typical": 95,
+      "min": 70,
+      "max": 135,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-06",
+      "notes": "Electricity, water, gas, trash for a 2-3BR home, excluding internet; mild Central Valley climate means no AC. CityCost 2BR basket $86.80 (range $65-131), Nov 2026.",
+      "sources": [
+        {
+          "title": "CityCost - Cost of Living in Grecia",
+          "url": "https://citycost.org/grecia/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Escape From USA - Cost of Living in Costa Rica (2026)",
+          "url": "https://escapefromusa.com/blog/cost-of-living-in-costa-rica",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 160,
-      "min": 80,
-      "max": 260,
+      "typical": 340,
+      "min": 150,
+      "max": 500,
       "annualInflation": 0.04,
-      "notes": "CCSS (Caja) universal coverage after pensionado/rentista visa, ~7-11% of declared income (~$60-150/mo). Private (INS / international plans) ~$100-250/mo with pre-existing loadings. Anti-VEGF injections at CIMA and Hospital La Católica in San José. GLP-1 ~$300-400/mo private. Pensionado discount 10-25% on most medical services."
+      "notes": "Full health-coverage cost for two (now includes what the old insurance line carried). CCSS/Caja for residents about $70-120/mo for the household (income-based) plus private INS supplemental cover at $80-200 per policy; modeled as Caja ~$100 + two policies ~$120 each for age 60.",
+      "lastVerified": "2026-11-06",
+      "sources": [
+        {
+          "title": "Escape From USA - Cost of Living in Costa Rica (2026)",
+          "url": "https://escapefromusa.com/blog/cost-of-living-in-costa-rica",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "SIXPERCENT - Cost of Living in Grecia 2026",
+          "url": "https://sixpercent-e6d.pages.dev/pages/cost-of-living-grecia-costa-rica.html",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "International Living - Why We Retired to Grecia",
+          "url": "https://internationalliving.com/why-we-retired-to-grecia-costa-rica/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "insurance": {
-      "typical": 280,
-      "min": 180,
-      "max": 420,
-      "annualInflation": 0.04
+      "typical": 20,
+      "min": 10,
+      "max": 40,
+      "annualInflation": 0.04,
+      "estimate": true,
+      "notes": "Old-template value (280, was health insurance) re-modeled to renters/contents only; small placeholder, not verified. Health cost moved to healthcare."
     },
     "petCare": {
       "typical": 50,
@@ -80,15 +138,43 @@
     },
     "transportation": {
       "typical": 150,
-      "min": 80,
+      "min": 100,
       "max": 230,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "One car plus occasional bus; 2026 guide puts car fuel plus bus at $100-180 in the Central Valley, gasoline ~$1.59/L. Marchamo and insurance can push the upper end.",
+      "sources": [
+        {
+          "title": "Escape From USA - Cost of Living in Costa Rica (2026)",
+          "url": "https://escapefromusa.com/blog/cost-of-living-in-costa-rica",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "CityCost - Cost of Living in Grecia",
+          "url": "https://citycost.org/grecia/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 160,
-      "min": 100,
-      "max": 240,
-      "annualInflation": 0.03
+      "typical": 240,
+      "min": 150,
+      "max": 360,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-06",
+      "notes": "Fiber internet ~$60 (range $44-85), mid-range dinner for two ~$55 three times a month, plus streaming and modest activities.",
+      "sources": [
+        {
+          "title": "CityCost - Cost of Living in Grecia",
+          "url": "https://citycost.org/grecia/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "SIXPERCENT - Cost of Living in Grecia 2026",
+          "url": "https://sixpercent-e6d.pages.dev/pages/cost-of-living-grecia-costa-rica.html",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "clothing": {
       "typical": 70,
@@ -109,10 +195,24 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 83,
-      "min": 68,
-      "max": 103,
-      "annualInflation": 0.02
+      "typical": 40,
+      "min": 20,
+      "max": 60,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-06",
+      "notes": "Two lines on local carriers at about $10-30 per line (2026 guide); a 2022 couple budget showed $25 for two phones.",
+      "sources": [
+        {
+          "title": "Escape From USA - Cost of Living in Costa Rica (2026)",
+          "url": "https://escapefromusa.com/blog/cost-of-living-in-costa-rica",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "International Living - Why We Retired to Grecia",
+          "url": "https://internationalliving.com/why-we-retired-to-grecia-costa-rica/",
+          "accessed": "2026-11-06"
+        }
+      ]
     },
     "taxes": {
       "typical": 0,
