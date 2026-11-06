@@ -2,7 +2,7 @@
   "meta": {
     "description": "Retirement planning location index â€” lightweight summary for dashboard boot",
     "lastUpdated": "2026-11-06",
-    "totalLocations": 159,
+    "totalLocations": 160,
     "dataVersion": 2,
     "note": "Full location data loaded on demand from data/locations/{id}/"
   },
@@ -1804,6 +1804,31 @@
         "expatCommunity": 5,
         "safety": 6,
         "internetSpeed": "50-100Mbps",
+        "englishPrevalence": 4
+      },
+      "inclusionScore": null,
+      "neighborhoodCount": 0,
+      "hasDetailedCosts": null
+    },
+    {
+      "id": "panama-dolega",
+      "name": "Dolega, Panama",
+      "country": "Panama",
+      "region": "Central America",
+      "currency": "USD",
+      "exchangeRate": 1,
+      "monthlyCostUSD": 4339,
+      "climate": {
+        "winterLowF": 63,
+        "summerHighF": 88,
+        "meetsWarmWinterReq": true
+      },
+      "scores": {
+        "healthcare": 6,
+        "dogFriendly": 7,
+        "expatCommunity": 5,
+        "safety": 8,
+        "internetSpeed": "50-150Mbps; fiber expanding but patchier than Boquete",
         "englishPrevalence": 4
       },
       "inclusionScore": null,
