@@ -2,7 +2,7 @@
 /**
  * apply-cost-refresh.mjs - merge researched cost results into data/locations.
  *
- * Usage: node tools/apply-cost-refresh.mjs <resultsDir> [--date YYYY-MM-DD] [--dry-run]
+ * Usage: node tools/cost-refresh/apply.mjs <resultsDir> [--date YYYY-MM-DD] [--dry-run]
  *
  * Each results file: {"locations":[{"id","currency","categories":{cat:{min,typical,max,verified,notes,sources}}}]}
  * Rules:
@@ -12,6 +12,7 @@
  *     "insurance") down to a renters placeholder, and only when healthcare was
  *     verified in the same result so the health cost is not lost.
  *   - max is capped at 3 x typical (dataset integrity rule).
+ *   - data/cost-refresh-log.json records each attempt for tools/cost-refresh/queue.mjs.
  *   - Results whose currency differs from the location's are skipped.
  *   - detailed-costs headline budgets (housing, transportation, entertainment,
  *     cellPhone) follow verified location values; index.json totals are recomputed.
@@ -20,12 +21,12 @@ import { readFileSync, writeFileSync, readdirSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const args = process.argv.slice(2);
 const dir = args.find(a => !a.startsWith('--'));
 const DATE = args.includes('--date') ? args[args.indexOf('--date') + 1] : new Date().toISOString().slice(0, 10);
 const DRY = args.includes('--dry-run');
-if (!dir) { console.error('usage: apply-cost-refresh.mjs <resultsDir> [--date D] [--dry-run]'); process.exit(1); }
+if (!dir) { console.error('usage: tools/cost-refresh/apply.mjs <resultsDir> [--date D] [--dry-run]'); process.exit(1); }
 
 const CATS = new Set(['rent', 'groceries', 'utilities', 'healthcare', 'healthcarePreMedicare', 'insurance', 'petCare',
   'petDaycare', 'petGrooming', 'transportation', 'entertainment', 'clothing', 'personalCare', 'phoneCell', 'medicalOOP']);
@@ -37,6 +38,8 @@ const ok = v => v && Number.isFinite(v.min) && Number.isFinite(v.typical) && Num
 
 const idxPath = join(ROOT, 'data', 'index.json');
 const idx = rj(idxPath);
+const logPath = join(ROOT, 'data', 'cost-refresh-log.json');
+const log = existsSync(logPath) ? rj(logPath) : {};
 const report = [];
 for (const f of readdirSync(dir).filter(f => f.endsWith('.json')).sort()) {
   let parsed;
@@ -86,9 +89,12 @@ for (const f of readdirSync(dir).filter(f => f.endsWith('.json')).sort()) {
     const ie = idx.locations.find(x => x.id === r.id);
     if (ie) ie.monthlyCostUSD = after;
     const verified = Object.values(mc).filter(v => v?.lastVerified === DATE).length;
+    const prev = log[r.id] || {};
+    log[r.id] = { lastAttempt: DATE, verifiedCategories: verified, attempts: (prev.attempts || 0) + 1 };
     report.push({ id: r.id, before, after, verified, changes });
   }
 }
 idx.meta.lastUpdated = DATE;
 wj(idxPath, idx);
+wj(logPath, Object.fromEntries(Object.entries(log).sort()));
 for (const x of report) console.log(`${x.id}: ${x.before} -> ${x.after} (${x.after - x.before >= 0 ? '+' : ''}${x.after - x.before}), ${x.verified} verified | ${x.changes.join(', ')}`);
