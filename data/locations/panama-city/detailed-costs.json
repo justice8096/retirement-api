@@ -273,13 +273,14 @@
         "title": "Panama Jubilado Discounts",
         "url": "https://www.visitpanama.com"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 40,
+      "min": 100,
       "typical": 150,
-      "max": 300
+      "max": 200
     },
     "publicTransit": {
       "monthlyPass": {
@@ -431,7 +432,8 @@
           "url": "https://www.gacetaoficial.gob.pa/"
         }
       ]
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "seniorDiscounts": {
     "minimumAge": 55,
@@ -496,9 +498,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 70,
-      "typical": 85,
-      "max": 105
+      "min": 40,
+      "typical": 60,
+      "max": 85
     },
     "plans": [
       {
@@ -531,7 +533,8 @@
         "title": "+Movil Panama",
         "url": "https://www.masmovil.com.pa/"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "housing": {
     "propertyType": "2-bedroom house",
@@ -559,7 +562,8 @@
         "name": "Panama Pensionado Benefits",
         "url": "https://www.visitpanama.com/plan/retirement-in-panama/"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "groceryStores": {
     "stores": [

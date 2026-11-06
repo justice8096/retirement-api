@@ -30,8 +30,22 @@
     "rent": {
       "typical": 550,
       "min": 400,
-      "max": 700,
-      "annualInflation": 0.04
+      "max": 800,
+      "annualInflation": 0.04,
+      "notes": "Expat reports from 2025 put a 2BR apartment at about $500 and a 3BR house at $400-800. A 2024 Live and Invest Overseas account says $500 or less. No source quoted a premium for a pet-friendly home with a 100 lb dog, so typical sits a little above the 2BR figure.",
+      "sources": [
+        {
+          "title": "Cost of Living in Puerto Armuelles - Expat Exchange",
+          "url": "https://www.expatexchange.com/gdc/8/87/5324/Panama/Cost-of-Living-in-Puerto-Armuelles",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Settled in Sleepy Puerto Armuelles - Live and Invest Overseas",
+          "url": "https://www.liveandinvestoverseas.com/in-focus-panama/settled-sleepy-puerto-armuelles-western-panama/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "groceries": {
       "typical": 300,
@@ -40,23 +54,57 @@
       "annualInflation": 0.03
     },
     "utilities": {
-      "typical": 90,
-      "min": 60,
-      "max": 140,
-      "annualInflation": 0.035
+      "typical": 130,
+      "min": 70,
+      "max": 230,
+      "annualInflation": 0.035,
+      "notes": "Panama-wide figures from October 2026: electricity $50-200 depending on A/C, water and garbage $12-25, propane about $5 a tank. A hot coastal town with A/C sits in the middle to upper part of that range. A 2024 local account reported under $100 for all utilities.",
+      "sources": [
+        {
+          "title": "Cost of Living in Panama 2026 - ExpatDen",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Settled in Sleepy Puerto Armuelles - Live and Invest Overseas",
+          "url": "https://www.liveandinvestoverseas.com/in-focus-panama/settled-sleepy-puerto-armuelles-western-panama/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "healthcare": {
-      "typical": 110,
-      "min": 60,
-      "max": 180,
+      "typical": 500,
+      "min": 235,
+      "max": 833,
       "annualInflation": 0.04,
-      "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. Hospital Ciudad de Puerto Armuelles handles primary care; Hospital Chiriquí in David (~30 mi northeast) for advanced cases. Pacific-coast rural location — emergency transport via road to David is ~45 min."
+      "notes": "Private health insurance premiums for two adults age 60-61. Min is two Family Medical Plan memberships ($117.30 each, ages 60-69); typical and max reflect 2026 local quotes of $6,000-10,000/yr for a couple age 60. Premiums are national and age-rated. Pensionado discounts apply to services, not premiums.",
+      "sources": [
+        {
+          "title": "Panama Relocation Tours - Health insurance options in Panama",
+          "url": "https://panamarelocationtours.com/health-insurance-options-in-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Feather - Health insurance in Panama guide (Jul 2026)",
+          "url": "https://feather-insurance.com/en-pa/blog/health-insurance-panama-guide",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Reside Panama - Healthcare in Panama 2026",
+          "url": "https://www.residepanama.com/en/reside-panama-blog/healthcare-in-panama-an-expat-guide-to-hospitals-insurance-costs-2026",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "insurance": {
-      "typical": 250,
-      "min": 150,
-      "max": 400,
-      "annualInflation": 0.04
+      "typical": 15,
+      "min": 10,
+      "max": 20,
+      "annualInflation": 0.04,
+      "notes": "Placeholder for renters/contents insurance. Panamanian insurers do not publish home premiums; an October 2026 guide only gives deductibles ($600 earthquake, $300 flood on $30k of contents).",
+      "estimate": true
     },
     "petCare": {
       "typical": 50,
@@ -65,28 +113,79 @@
       "annualInflation": 0.03
     },
     "petDaycare": {
-      "typical": 120,
-      "min": 80,
-      "max": 200,
-      "annualInflation": 0.03
+      "typical": 60,
+      "min": 20,
+      "max": 120,
+      "annualInflation": 0.03,
+      "notes": "No dog daycare exists locally, so this is modeled as boarding at the national rate of $10-30 a night, 2-4 nights a month. The nights per month are an assumption, and boarding is likely only in David.",
+      "sources": [
+        {
+          "title": "Pets in Panama - Relofirm",
+          "url": "https://relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "petGrooming": {
-      "typical": 40,
-      "min": 25,
-      "max": 65,
-      "annualInflation": 0.03
+      "typical": 35,
+      "min": 20,
+      "max": 40,
+      "annualInflation": 0.03,
+      "notes": "Full grooming in Panama typically costs $20-40, modeled as about one session a month. A heavy Bernese coat puts typical near the top of that range, and a groomer may mean a trip to David.",
+      "sources": [
+        {
+          "title": "Pets in Panama - Relofirm",
+          "url": "https://relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "transportation": {
-      "typical": 110,
-      "min": 50,
-      "max": 180,
-      "annualInflation": 0.03
+      "typical": 150,
+      "min": 100,
+      "max": 230,
+      "annualInflation": 0.03,
+      "notes": "One car: insurance $500-900 a year ($42-75 a month), plus 91 octane at B/.1.173 per liter in Puerto Armuelles (June 2026) for about 40-100 L a month including David trips. Maintenance and taxis are an estimate (about $10-40). No car purchase cost is included.",
+      "sources": [
+        {
+          "title": "Car ownership in Panama - Champion Motors",
+          "url": "https://championmotors.com.pa/blog/39",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Gasolina y diesel bajaran de precio por region - La Estrella de Panama",
+          "url": "https://www.laestrella.com.pa/panama/informacion-util/gasolina-y-diesel-bajaran-de-precio-conozca-cuanto-costara-el-combustible-en-cada-region-IH23179045",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "entertainment": {
-      "typical": 100,
-      "min": 60,
-      "max": 160,
-      "annualInflation": 0.03
+      "typical": 240,
+      "min": 145,
+      "max": 380,
+      "annualInflation": 0.03,
+      "notes": "Fixed internet is weak (a reader reported 7 Mbps for $99, and Tigo fiber was unavailable), so this uses Starlink at about $75 a month ($450 hardware not included). Also included: streaming at $7-50 and dining at about $15 per person for 2-4 dinners a month, plus activities.",
+      "sources": [
+        {
+          "title": "Internet Speeds in Panama - Panama Relocation Tours",
+          "url": "https://panamarelocationtours.com/internet-speeds-in-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Starlink Cost in Panama 2026 - SatSpeedCheck",
+          "url": "https://satspeedcheck.com/cost/panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in Puerto Armuelles - Expat Exchange",
+          "url": "https://www.expatexchange.com/gdc/8/87/5324/Panama/Cost-of-Living-in-Puerto-Armuelles",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "clothing": {
       "typical": 70,
@@ -107,10 +206,24 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 85,
-      "min": 70,
-      "max": 105,
-      "annualInflation": 0.02
+      "typical": 54,
+      "min": 20,
+      "max": 100,
+      "annualInflation": 0.02,
+      "notes": "Tigo/Mas Movil standard postpaid is $27 per line (October 2026), so $54 for two lines. A separate guide puts mostly-local use at $10-50 per line. Claro pricing was not found.",
+      "sources": [
+        {
+          "title": "Tarjetas SIM en Panama - ExpatDen",
+          "url": "https://expatden.com/es/panama-es/tarjetas-sim-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Bocas del Toro cost guide - International Living",
+          "url": "https://legacy.internationalliving.com/countries/panama/bocas-del-toro-panama",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "taxes": {
       "typical": 0,

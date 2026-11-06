@@ -38,7 +38,25 @@
       "typical": 1300,
       "type": "2-bedroom house",
       "annualInflation": 0.03,
-      "notes": "No rental tax in Panama."
+      "notes": "2026 guides give 2BR at 1200-2500 citywide, with a furnished city-center 2BR averaging about 1200. Range kept. Expect a one-time pet fee of around 450 for a large dog.",
+      "sources": [
+        {
+          "title": "Cost of Living in Panama City (2026) - Panama Home Realty",
+          "url": "https://panamahomerealty.com/articles/cost-of-living-in-panama-city-2026-real-monthly-expenses-rent-and-lifestyle-guide",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in Panama 2026 - ExpatDen",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Renting with a pet - Expat.com forum",
+          "url": "https://www.expat.com/forum/viewtopic.php?id=458865",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "groceries": {
       "min": 700,
@@ -47,9 +65,9 @@
       "annualInflation": 0.03
     },
     "utilities": {
-      "min": 120,
-      "max": 195,
-      "typical": 150,
+      "min": 130,
+      "max": 230,
+      "typical": 165,
       "annualInflation": 0.03,
       "breakdown": {
         "electricity": {
@@ -74,14 +92,45 @@
         }
       },
       "taxes": "ITBMS 7% on electricity (included in bill). Water/sewer exempt for residential.",
-      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig). Trash included in rent."
+      "notes": "A 2BR running several A/C units uses 120-200+ in electricity. Water, garbage and sewer add 10-25 and propane about 5-8. Internet excluded.",
+      "sources": [
+        {
+          "title": "Cost of Living in Panama City 2026 - Vidala guide",
+          "url": "https://vidala-166.pages.dev/guides/panama-city-cost-of-living",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Panama Utilities and Electricity Costs - Relofirm",
+          "url": "https://www.relofirm.com/?p=238749",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "healthcare": {
-      "min": 300,
-      "max": 600,
-      "typical": 450,
-      "notes": "Private insurance required (~$175-275/person/mo, higher with pre-existing conditions). Better specialist access than Boquete: Johns Hopkins-affiliated Punta Pacifica hospital. Anti-VEGF injections available locally. Pre-existing condition exclusions first 12-24 months.",
-      "annualInflation": 0.06
+      "min": 235,
+      "max": 833,
+      "typical": 500,
+      "notes": "Private health insurance premiums for two adults age 60-61. Min is two Family Medical Plan memberships ($117.30 each, ages 60-69); typical and max reflect 2026 local quotes of $6,000-10,000/yr for a couple age 60. Premiums are national and age-rated. Pensionado discounts apply to services, not premiums.",
+      "annualInflation": 0.06,
+      "sources": [
+        {
+          "title": "Panama Relocation Tours - Health insurance options in Panama",
+          "url": "https://panamarelocationtours.com/health-insurance-options-in-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Feather - Health insurance in Panama guide (Jul 2026)",
+          "url": "https://feather-insurance.com/en-pa/blog/health-insurance-panama-guide",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Reside Panama - Healthcare in Panama 2026",
+          "url": "https://www.residepanama.com/en/reside-panama-blog/healthcare-in-panama-an-expat-guide-to-hospitals-insurance-costs-2026",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "insurance": {
       "min": 15,
@@ -112,14 +161,46 @@
       "min": 100,
       "max": 200,
       "typical": 150,
-      "annualInflation": 0.025
+      "annualInflation": 0.025,
+      "notes": "ExpatDen puts car costs at 100-200 per month including fuel (91-octane 1.279/L, Oct 2026). A no-car Metro plus ride-hail budget is 80-150. Car insurance runs 500-900 per year.",
+      "sources": [
+        {
+          "title": "Cost of Living in Panama 2026 - ExpatDen",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in Panama City 2026 - Vidala guide",
+          "url": "https://vidala-166.pages.dev/guides/panama-city-cost-of-living",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Champion Motors blog 39",
+          "url": "https://championmotors.com.pa/blog/39",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "entertainment": {
       "min": 296,
       "max": 466,
       "typical": 366,
       "annualInflation": 0.025,
-      "notes": "Incl cable+1Gig internet, Netflix, Amazon Prime, Apple TV+, dining out (lunch for 2 2x/week w/ tax+tip)"
+      "notes": "Mas Movil 600 Mbps fiber is 39 plus 7% ITBMS, about 42. No 1 Gbps price is published. Mid-range dining runs 15-30 per person plus a 10% tip. Streaming and activities are estimates.",
+      "sources": [
+        {
+          "title": "Internet providers in Panama - ExpatDen",
+          "url": "https://expatden.com/panama/internet-providers-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in Panama 2026 - ExpatDen",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "clothing": {
       "min": 50,
@@ -141,11 +222,24 @@
       "notes": "Streaming, news, apps"
     },
     "phoneCell": {
-      "min": 70,
-      "max": 105,
-      "typical": 85,
+      "min": 40,
+      "max": 85,
+      "typical": 60,
       "annualInflation": 0.02,
-      "notes": "Google Fi Flexible (US Number) + +Movil Postpaid (Local). 2 phones, 1.5GB+ high-speed data each, all taxes included."
+      "notes": "Tigo and Mas Movil standard postpaid plans are 27 per line, so two lines are about 54 plus tax. Unlimited LTE plans run 20-30 per line.",
+      "sources": [
+        {
+          "title": "Tarjetas SIM Panama - ExpatDen",
+          "url": "https://expatden.com/es/panama-es/tarjetas-sim-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in Panama 2026 - ExpatDen",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "miscellaneous": {
       "min": 50,
@@ -165,7 +259,20 @@
       "max": 300,
       "typical": 160,
       "annualInflation": 0.06,
-      "notes": "Good specialist access in city: ophthalmology, endocrinology, cardiology. Anti-VEGF injections $400-700 each at private clinics. Pensionado discount 15-25%. Labs $15-30. Better infrastructure than Boquete for frequent specialist monitoring."
+      "notes": "Private GP visits run 15-80 and specialists 50-120. Stored range kept for two adults, assuming a few visits plus labs per month.",
+      "sources": [
+        {
+          "title": "Cost of Living in Panama 2026 - ExpatDen",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in Panama City (2026) - Panama Home Realty",
+          "url": "https://panamahomerealty.com/articles/cost-of-living-in-panama-city-2026-real-monthly-expenses-rent-and-lifestyle-guide",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "medicine": {
       "min": 383,

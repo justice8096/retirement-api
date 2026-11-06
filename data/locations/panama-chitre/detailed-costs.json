@@ -90,9 +90,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 70,
-      "typical": 85,
-      "max": 105
+      "min": 54,
+      "typical": 60,
+      "max": 100
     },
     "plans": [
       {
@@ -121,7 +121,8 @@
         "title": "Google Fi Plans",
         "url": "https://fi.google.com/about/plans"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "groceries": {
     "categories": [
@@ -487,8 +488,8 @@
   "housing": {
     "propertyType": "2-bedroom house/apartment",
     "monthlyBudget": {
-      "min": 488,
-      "max": 813,
+      "min": 500,
+      "max": 900,
       "typical": 650
     },
     "breakdown": {
@@ -512,7 +513,8 @@
         "name": "Encuentra24 Panama",
         "url": "https://www.encuentra24.com/panama"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "groceryStores": {
     "stores": [
@@ -665,19 +667,19 @@
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 32,
-      "typical": 120,
-      "max": 240
+      "min": 150,
+      "typical": 230,
+      "max": 380
     },
     "publicTransit": {
       "monthlyPass": {
-        "regular": 40,
-        "senior": 20,
-        "notes": "RapiPass rechargeable card for Metro and MetroBus. Expanding system."
+        "regular": 0,
+        "senior": 0,
+        "notes": "No metro outside Panama City. Local buses and colectivos are pay-per-ride."
       },
       "singleRide": 0.28,
-      "coverage": "Metro lines and MetroBus in Panama City. Bus networks in other cities.",
-      "seniorDiscount": "Pensionado/jubilado RapiPass for free metro and bus rides."
+      "coverage": "Local buses, colectivos and taxis. The Panama City Metro/MetroBus RapiPass does not apply here.",
+      "seniorDiscount": "Jubilado/pensionado discounts of 25-30% on bus fares."
     },
     "rideShare": {
       "baseFare": 2,
@@ -827,7 +829,8 @@
         "typical": 200,
         "max": 360
       }
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "visionDental": {
     "monthlyBudget": {
@@ -921,70 +924,47 @@
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 300,
-      "typical": 375,
-      "max": 469
+      "min": 150,
+      "typical": 240,
+      "max": 380
     },
     "categories": [
       {
         "name": "Dining Out",
-        "monthlyCost": 250,
-        "seniorDiscounts": "Pranzo (lunch) menus available €10-15 at trattorie. Coperto (cover charge) €1-3.",
-        "notes": "Lunch for 2 at trattoria ~€28 + coperto, 2x/week = ~€220/mo = ~$250/mo in Puglia, Italy."
+        "monthlyCost": 143,
+        "seniorDiscounts": "Jubilado discounts 15-25% at restaurants by law.",
+        "notes": "Remainder of the monthly entertainment budget after internet and subscriptions."
       },
       {
-        "name": "Cable + 1 Gig Internet",
-        "monthlyCost": 34,
-        "seniorDiscounts": "No specific senior discounts.",
-        "notes": "TIM/Vodafone/Fastweb fiber 1 Gig €25-35/mo. ~$28-40/mo."
+        "name": "Fiber internet (Mas Movil 600 Mbps)",
+        "monthlyCost": 42,
+        "seniorDiscounts": "Jubilado discount 25% on some utility bills.",
+        "notes": "$39 plus 7% ITBMS (Jun 2026). No public gigabit price."
       },
       {
         "name": "Netflix (Standard, no ads)",
-        "monthlyCost": 14,
-        "seniorDiscounts": "No senior discount.",
-        "notes": "€12.99/mo in Italy. ~$14/mo."
+        "monthlyCost": 10,
+        "seniorDiscounts": "No senior discount."
       },
       {
         "name": "Amazon Prime",
-        "monthlyCost": 6,
-        "seniorDiscounts": "No senior discount.",
-        "notes": "€4.99/mo (€49.90/yr). Includes Prime Video. ~$6/mo."
+        "monthlyCost": 7,
+        "seniorDiscounts": "No senior discount."
       },
       {
         "name": "Apple TV+",
-        "monthlyCost": 8,
-        "seniorDiscounts": "No senior discount.",
-        "notes": "€6.99/mo. ~$8/mo."
-      },
-      {
-        "name": "NFL RedZone",
-        "monthlyCost": 15,
-        "seniorDiscounts": "No senior discount.",
-        "notes": "DAZN NFL Game Pass €19.99/mo during season. Annualized ~€13/mo (~$15)."
+        "monthlyCost": 10,
+        "seniorDiscounts": "No senior discount."
       },
       {
         "name": "Gym/Fitness",
-        "monthlyCost": 28,
-        "seniorDiscounts": "Palestre comunali (municipal gyms) offer senior rates.",
-        "notes": "Virgin Active/McFit €25-40/mo, municipal gyms €15-25/mo. ~$22-34/mo."
-      },
-      {
-        "name": "Parks/Outdoors",
-        "monthlyCost": 0,
-        "seniorDiscounts": "EU citizens 65+ get free/reduced museum entry. Parks free.",
-        "notes": "Free parks, piazzas, coastal walks, hiking."
+        "monthlyCost": 20,
+        "seniorDiscounts": "Jubilado discounts at many gyms."
       },
       {
         "name": "Books/Media",
         "monthlyCost": 8,
-        "seniorDiscounts": "Biblioteche comunali free.",
-        "notes": "Public libraries free. Budget for newspapers, books."
-      },
-      {
-        "name": "Coffee/Cafes",
-        "monthlyCost": 12,
-        "seniorDiscounts": "No specific discounts. Espresso at the bar is very cheap.",
-        "notes": "Espresso €1-1.50 at the bar, cappuccino €1.50-2.00. Budget for 2 visits/week. ~$12/mo."
+        "seniorDiscounts": "No senior discount."
       }
     ],
     "_seedOrigin": {
@@ -992,6 +972,15 @@
       "from": "italy-puglia",
       "generatedAt": "2026-04-23",
       "note": "Template-derived section — prices are EUR-denominated from Puglia, Italy. Needs per-location currency + cost-of-living adaptation."
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-06",
+    "sources": [
+      {
+        "title": "ExpatDen - Internet providers in Panama",
+        "url": "https://expatden.com/panama/internet-providers-panama",
+        "accessed": "2026-11-06"
+      }
+    ],
+    "breakdownNote": "Rebuilt 2026-11-06: the previous breakdown was copied from an Italian location (EUR prices, trattorie)."
   }
 }

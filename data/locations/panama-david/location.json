@@ -30,35 +30,117 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 750,
-      "min": 600,
-      "max": 900,
-      "annualInflation": 0.04
+      "typical": 700,
+      "min": 450,
+      "max": 1100,
+      "annualInflation": 0.04,
+      "notes": "No direct listings could be opened (Encuentra24 blocked the fetch), so this range combines 2025-2026 guide figures. Those give unfurnished 2BR from $350, furnished apartments at $500-650 and suburban homes such as Los Algarrobos at $500-700, while modern places run $600-800 and houses in upscale areas $1,000-1,500. A fenced house that accepts a 100 lb dog sits in the middle to upper part of that range.",
+      "sources": [
+        {
+          "title": "Cost of Living in Panama - How Much You Need Per Month In 2026 (ExpatDen)",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Six Places in Panama Where a Couple Can Live Well for $2000 a Month (or Less)",
+          "url": "https://panamarelocationtours.com/six-places-in-panama-where-you-can-live-well-for-2000-a-month-or-less",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in David (Expat Exchange)",
+          "url": "https://expatexchange.com/ctryguide/8905/87/Panama/Cost-of-Living-in-David",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "groceries": {
-      "typical": 350,
-      "min": 260,
-      "max": 450,
-      "annualInflation": 0.03
+      "typical": 430,
+      "min": 300,
+      "max": 560,
+      "annualInflation": 0.03,
+      "notes": "Groceries for a couple run about $250-400 a month in Chiriqui, based on a general couple table of $250-350 and a real Boquete couple budget of $400. Dog food adds about $50-70 or more a month, but that figure is a 2019 Panama estimate, so the dog food part is weakly sourced.",
+      "sources": [
+        {
+          "title": "Six Places in Panama Where a Couple Can Live Well for $2000 a Month (or Less)",
+          "url": "https://panamarelocationtours.com/six-places-in-panama-where-you-can-live-well-for-2000-a-month-or-less",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "The Pros and Cons of Living in Boquete, Panama (Panama Relocation Tours)",
+          "url": "https://panamarelocationtours.com/the-pros-and-cons-of-living-in-boquete-panama-plus-a-realistic-look-at-the-cost-of-living",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in David (Expat Exchange)",
+          "url": "https://expatexchange.com/ctryguide/8905/87/Panama/Cost-of-Living-in-David",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Atender mascotas es un negocio rentable en Panama (Panama America, 2019)",
+          "url": "https://www.panamaamerica.com.pa/economia/atender-mascotas-es-un-negocio-rentable-en-panama-1125570",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "utilities": {
-      "typical": 120,
-      "min": 80,
-      "max": 170,
-      "annualInflation": 0.035
+      "typical": 140,
+      "min": 60,
+      "max": 270,
+      "annualInflation": 0.035,
+      "notes": "David is hot lowland, so electricity runs about $100-150 a month with A/C. Guides put moderate A/C use at $45-90 and heavy use at $120-250 or more. Water adds $5-25 and a 25 lb propane refill costs $5-8; internet is excluded.",
+      "sources": [
+        {
+          "title": "Panama Utilities and Electricity Costs: What Expats Need to Know (Relofirm, Nov 2025)",
+          "url": "https://www.relofirm.com/?p=238749",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Six Places in Panama Where a Couple Can Live Well for $2000 a Month (or Less)",
+          "url": "https://panamarelocationtours.com/six-places-in-panama-where-you-can-live-well-for-2000-a-month-or-less",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in Panama 2026 (ExpatDen)",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "healthcare": {
-      "typical": 160,
-      "min": 90,
-      "max": 260,
+      "typical": 500,
+      "min": 235,
+      "max": 833,
       "annualInflation": 0.04,
-      "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. Hospital Chiriquí is the regional anchor in David — the largest hospital in Western Panama, with cardiology + general surgery + maternity. Anti-VEGF and routine ophthalmology available locally; complex specialty care typically referred to Panama City (~5-6 hr drive east). David is also Boquete's referral hospital (~30 mi north)."
+      "notes": "Private health insurance premiums for two adults age 60-61. Min is two Family Medical Plan memberships ($117.30 each, ages 60-69); typical and max reflect 2026 local quotes of $6,000-10,000/yr for a couple age 60. Premiums are national and age-rated. Pensionado discounts apply to services, not premiums.",
+      "sources": [
+        {
+          "title": "Panama Relocation Tours - Health insurance options in Panama",
+          "url": "https://panamarelocationtours.com/health-insurance-options-in-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Feather - Health insurance in Panama guide (Jul 2026)",
+          "url": "https://feather-insurance.com/en-pa/blog/health-insurance-panama-guide",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Reside Panama - Healthcare in Panama 2026",
+          "url": "https://www.residepanama.com/en/reside-panama-blog/healthcare-in-panama-an-expat-guide-to-hospitals-insurance-costs-2026",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "insurance": {
-      "typical": 250,
-      "min": 150,
-      "max": 400,
-      "annualInflation": 0.04
+      "typical": 15,
+      "min": 10,
+      "max": 20,
+      "annualInflation": 0.04,
+      "notes": "Re-modeled to renters/contents insurance only, using the Dolega placeholder of $10-20 because the stored David value was health insurance. ExpatDen (Oct 2026) says MAPFRE Hogar and ASSA Hogar do not publish premiums, so no verified price was found.",
+      "estimate": true
     },
     "petCare": {
       "typical": 50,
@@ -67,28 +149,84 @@
       "annualInflation": 0.03
     },
     "petDaycare": {
-      "typical": 120,
-      "min": 80,
-      "max": 200,
-      "annualInflation": 0.03
+      "typical": 100,
+      "min": 40,
+      "max": 180,
+      "annualInflation": 0.03,
+      "notes": "Boarding costs about $10-30 a night depending on pet size (Relofirm 2025). This assumes an average of about 4-6 nights a month, with a large dog at the upper rate.",
+      "sources": [
+        {
+          "title": "Bring Pets to Panama: What You Need to Know (Relofirm, Mar 2025)",
+          "url": "https://relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "petGrooming": {
-      "typical": 40,
-      "min": 25,
-      "max": 65,
-      "annualInflation": 0.03
+      "typical": 35,
+      "min": 20,
+      "max": 50,
+      "annualInflation": 0.03,
+      "notes": "Full-service grooming costs about $20-40 a session (Relofirm 2025). A large double-coated dog is assumed at the top of that range or slightly above, groomed every 4-8 weeks.",
+      "sources": [
+        {
+          "title": "Bring Pets to Panama: What You Need to Know (Relofirm, Mar 2025)",
+          "url": "https://relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "transportation": {
-      "typical": 140,
-      "min": 70,
-      "max": 220,
-      "annualInflation": 0.03
+      "typical": 220,
+      "min": 150,
+      "max": 320,
+      "annualInflation": 0.03,
+      "notes": "Car insurance is about $500-900 a year ($42-75 a month), per a June 2026 guide. Fuel is 91 octane at about $1.30 a liter (Oct 2026), which comes to roughly $100-150 a month. Maintenance, registration and occasional $1-3 taxis are added on top; a real Chiriqui couple budget shows $263 a month for their car.",
+      "sources": [
+        {
+          "title": "The True Cost of Owning a Car in Panama (2026 Expat Breakdown) (Champion Motors)",
+          "url": "https://championmotors.com.pa/blog/39",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in Panama 2026 (ExpatDen)",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "The Pros and Cons of Living in Boquete, Panama (Panama Relocation Tours)",
+          "url": "https://panamarelocationtours.com/the-pros-and-cons-of-living-in-boquete-panama-plus-a-realistic-look-at-the-cost-of-living",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "entertainment": {
-      "typical": 150,
-      "min": 90,
-      "max": 230,
-      "annualInflation": 0.03
+      "typical": 270,
+      "min": 160,
+      "max": 400,
+      "annualInflation": 0.03,
+      "notes": "Mas Movil symmetric fiber costs $39 a month for 600 Mbps or $55 with TV, before 7% tax (Jun 2026). +Movil advertises speeds up to 1 Gbps in Chiriqui, but no price for that tier was found. Dining out costs $30-50 per mid-range meal for 2, three to four times a month, plus streaming and local activities.",
+      "sources": [
+        {
+          "title": "Internet Providers in Panama (ExpatDen, Jun 2026)",
+          "url": "https://www.expatden.com/panama/internet-providers-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "+Movil avanza en su cobertura con la red de fibra optica en Chiriqui (La Prensa, Dec 2024)",
+          "url": "https://www.prensa.com/contenido-patrocinado/movil-avanza-en-su-cobertura-con-la-red-de-fibra-optica-y-movil-siendo-el-operador-con-la-mayor-red-de-fibra-en-la-provincia-de-chiriqui/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in David (Expat Exchange)",
+          "url": "https://expatexchange.com/ctryguide/8905/87/Panama/Cost-of-Living-in-David",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "clothing": {
       "typical": 70,
@@ -109,10 +247,24 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 85,
-      "min": 70,
-      "max": 105,
-      "annualInflation": 0.02
+      "typical": 60,
+      "min": 30,
+      "max": 90,
+      "annualInflation": 0.02,
+      "notes": "Tigo and Mas Movil postpaid plans cost $27 a month per line with unlimited LTE, so two lines come to $54 before tax. A local SIM with 10GB costs about $12, which sets the prepaid low end. The upper end includes an allowance for a US number.",
+      "sources": [
+        {
+          "title": "Tarjetas SIM en Panama: planes, proveedores, costos (ExpatDen, updated Oct 2026)",
+          "url": "https://www.expatden.com/es/panama-es/tarjetas-sim-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in David, Panama (Jobicy, May 2026)",
+          "url": "https://jobicy.com/cost-of-living/panama/david",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "taxes": {
       "typical": 0,
@@ -141,10 +293,29 @@
       "annualInflation": 0.025
     },
     "medicalOOP": {
-      "min": 80,
-      "typical": 150,
+      "min": 60,
+      "typical": 140,
       "max": 300,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "notes": "A GP visit costs $40-80 and a specialist $60-150, with basic labs at $40-80 (2026 guides). The Pensionado discount takes 20% off. Expat reports from David cite doctor visits at $20-50 and specialists at $40-100.",
+      "sources": [
+        {
+          "title": "Healthcare in Panama: an expat guide to hospitals and insurance costs 2026 (Reside Panama)",
+          "url": "https://www.residepanama.com/en/reside-panama-blog/healthcare-in-panama-an-expat-guide-to-hospitals-insurance-costs-2026",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Healthcare in Panama for Expats (2026)",
+          "url": "https://vidala-166.pages.dev/guides/panama-healthcare-expats",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in David (Expat Exchange)",
+          "url": "https://expatexchange.com/ctryguide/8905/87/Panama/Cost-of-Living-in-David",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     }
   },
   "healthcare": {

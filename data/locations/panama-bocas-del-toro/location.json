@@ -27,34 +27,106 @@
   "monthlyCosts": {
     "rent": {
       "typical": 900,
-      "min": 700,
+      "min": 600,
       "max": 1100,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "notes": "A furnished 2BR runs $550-1,000 (October 2026). International Living cites a 2BR/2BA with A/C at $1,100, and 2025 expat reports put a 2BR at $500-900. A pet-friendly house for a large dog is scarcer, so min is set above the cheapest listings.",
+      "sources": [
+        {
+          "title": "Cost of Living in Panama 2026 - ExpatDen",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Bocas del Toro - International Living",
+          "url": "https://legacy.internationalliving.com/countries/panama/bocas-del-toro-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in Bocas del Toro - Expat Exchange",
+          "url": "https://expatexchange.com/gdc/8/87/5259/Panama/Cost-of-Living-in-Bocas-del-Toro-",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "groceries": {
-      "typical": 420,
-      "min": 320,
-      "max": 550,
-      "annualInflation": 0.03
+      "typical": 525,
+      "min": 450,
+      "max": 600,
+      "annualInflation": 0.03,
+      "notes": "Bocas couples report $400-500 a month on groceries with the island import markup already included. Dog food adds about $50-100 based on 2023 mainland bag prices, and island prices are likely higher. Expats report saving about 40% by stocking up at Costco in David.",
+      "sources": [
+        {
+          "title": "Bocas del Toro - International Living",
+          "url": "https://legacy.internationalliving.com/countries/panama/bocas-del-toro-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Aumento de precios llega hasta los alimentos para perros - Panama America",
+          "url": "https://panamaamerica.com.pa/sociedad/aumento-de-precios-llega-hasta-los-alimentos-para-perros-1217750",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in Bocas del Toro - Expat Exchange",
+          "url": "https://expatexchange.com/gdc/8/87/5259/Panama/Cost-of-Living-in-Bocas-del-Toro-",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "utilities": {
-      "typical": 130,
-      "min": 80,
-      "max": 190,
-      "annualInflation": 0.035
+      "typical": 115,
+      "min": 40,
+      "max": 180,
+      "annualInflation": 0.035,
+      "notes": "Bocas electricity runs $30-150 depending on A/C, and one expat couple reports about $100. Water is $6-20 and gas $2-10.",
+      "sources": [
+        {
+          "title": "Cost of Living in Panama 2026 - ExpatDen",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Bocas del Toro - International Living",
+          "url": "https://legacy.internationalliving.com/countries/panama/bocas-del-toro-panama",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "healthcare": {
-      "typical": 140,
-      "min": 70,
-      "max": 230,
+      "typical": 500,
+      "min": 235,
+      "max": 833,
       "annualInflation": 0.04,
-      "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. Hospital Bocas del Toro on Isla Colón handles primary care and stabilization. Limited specialty services — medevac to David (~6 hr by boat-then-drive via Almirante) or Panama City flight for serious conditions. Anti-VEGF + advanced ophthalmology not available locally; planned trips to Panama City required for chronic eye conditions."
+      "notes": "Private health insurance premiums for two adults age 60-61. Min is two Family Medical Plan memberships ($117.30 each, ages 60-69); typical and max reflect 2026 local quotes of $6,000-10,000/yr for a couple age 60. Premiums are national and age-rated. Pensionado discounts apply to services, not premiums.",
+      "sources": [
+        {
+          "title": "Panama Relocation Tours - Health insurance options in Panama",
+          "url": "https://panamarelocationtours.com/health-insurance-options-in-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Feather - Health insurance in Panama guide (Jul 2026)",
+          "url": "https://feather-insurance.com/en-pa/blog/health-insurance-panama-guide",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Reside Panama - Healthcare in Panama 2026",
+          "url": "https://www.residepanama.com/en/reside-panama-blog/healthcare-in-panama-an-expat-guide-to-hospitals-insurance-costs-2026",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "insurance": {
-      "typical": 250,
-      "min": 150,
-      "max": 400,
-      "annualInflation": 0.04
+      "typical": 15,
+      "min": 10,
+      "max": 20,
+      "annualInflation": 0.04,
+      "notes": "Placeholder for renters/contents insurance; no published premiums in Panama.",
+      "estimate": true
     },
     "petCare": {
       "typical": 50,
@@ -63,28 +135,89 @@
       "annualInflation": 0.03
     },
     "petDaycare": {
-      "typical": 120,
-      "min": 80,
-      "max": 200,
-      "annualInflation": 0.03
+      "typical": 60,
+      "min": 20,
+      "max": 120,
+      "annualInflation": 0.03,
+      "notes": "No daycare was found, so this is modeled as boarding at the national rate of $10-30 a night, 2-4 nights a month. Island boarding for a 100 lb dog may not be available.",
+      "sources": [
+        {
+          "title": "Pets in Panama - Relofirm",
+          "url": "https://relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "petGrooming": {
-      "typical": 40,
-      "min": 25,
-      "max": 65,
-      "annualInflation": 0.03
+      "typical": 35,
+      "min": 20,
+      "max": 40,
+      "annualInflation": 0.03,
+      "notes": "National rate of $20-40 per groom, modeled as about one a month. Whether a groomer exists on Isla Colon was not confirmed.",
+      "sources": [
+        {
+          "title": "Pets in Panama - Relofirm",
+          "url": "https://relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "transportation": {
-      "typical": 160,
-      "min": 90,
+      "typical": 130,
+      "min": 50,
       "max": 250,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "notes": "No car. Water taxis are $3 between islands and $6 to the mainland, about $50-90 a month for comfortable use, plus a bike or walking. Occasional Air Panama flights to Panama City run $80-150 one way, and KAYAK shows typical fares of $184-523.",
+      "sources": [
+        {
+          "title": "Cost of Living in Panama 2026 - ExpatDen",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Living in Bocas del Toro 2026 Expat Guide - Vidala",
+          "url": "https://vidala-166.pages.dev/guides/bocas-del-toro-panama-expat-guide",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Bocas del Toro to Panama City flights - KAYAK",
+          "url": "https://www.kayak.com/flight-routes/Bocas-Del-Toro-BOC/Panama-City-Tocumen-Intl-PTY",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "entertainment": {
-      "typical": 200,
-      "min": 120,
-      "max": 300,
-      "annualInflation": 0.03
+      "typical": 280,
+      "min": 175,
+      "max": 400,
+      "annualInflation": 0.03,
+      "notes": "Internet options: fiber at $35-55 (25-100 Mbps), Starlink at about $75, or PaNETma Professional at $99 in Bocas Town. Also included: streaming at $7-50 and about four dinners for two a month at $120-250.",
+      "sources": [
+        {
+          "title": "Living in Bocas del Toro 2026 Expat Guide - Vidala",
+          "url": "https://vidala-166.pages.dev/guides/bocas-del-toro-panama-expat-guide",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Internet Service in Bocas del Toro - PaNETma",
+          "url": "https://panetma.com/internet-bocas-del-toro.html",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Starlink Cost in Panama 2026 - SatSpeedCheck",
+          "url": "https://satspeedcheck.com/cost/panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Bocas del Toro - International Living",
+          "url": "https://legacy.internationalliving.com/countries/panama/bocas-del-toro-panama",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "clothing": {
       "typical": 70,
@@ -105,10 +238,24 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 85,
-      "min": 70,
-      "max": 105,
-      "annualInflation": 0.02
+      "typical": 54,
+      "min": 20,
+      "max": 100,
+      "annualInflation": 0.02,
+      "notes": "Tigo/Mas Movil postpaid is $27 per line (October 2026), so $54 for two lines. A Bocas guide puts mostly-local use at $10-50 per line.",
+      "sources": [
+        {
+          "title": "Tarjetas SIM en Panama - ExpatDen",
+          "url": "https://expatden.com/es/panama-es/tarjetas-sim-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Bocas del Toro - International Living",
+          "url": "https://legacy.internationalliving.com/countries/panama/bocas-del-toro-panama",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "taxes": {
       "typical": 0,

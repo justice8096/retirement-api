@@ -30,35 +30,97 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 800,
+      "typical": 900,
       "min": 600,
       "max": 1000,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "notes": "The 2026 Live and Invest rental budget for a couple lists $900. Expat Exchange puts 3BR rents at $700-1,000 in the town center and $500-800 outside it. Few long-term house rentals were found online, and none stated a pet policy.",
+      "sources": [
+        {
+          "title": "Live and Invest Overseas - El Valle Cost of Living 2026",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/panama/el-valle/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Expat Exchange - Cost of Living in El Valle de Anton",
+          "url": "https://expatexchange.com/ctryguide/7091/87/Panama/Cost-of-Living-in-El-Valle-de-Anton",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "groceries": {
-      "typical": 350,
-      "min": 260,
-      "max": 450,
-      "annualInflation": 0.03
+      "typical": 375,
+      "min": 250,
+      "max": 550,
+      "annualInflation": 0.03,
+      "notes": "The 2026 Live and Invest budgets put couple groceries at $200-300. Dog food for a 100 lb dog adds roughly $50-100 a month (2023 Panama bag prices). The bigger supermarkets are in Coronado or Penonome.",
+      "sources": [
+        {
+          "title": "Live and Invest Overseas - El Valle Cost of Living 2026",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/panama/el-valle/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Panama America - Aumento de precios llega hasta los alimentos para perros (2023)",
+          "url": "https://panamaamerica.com.pa/sociedad/aumento-de-precios-llega-hasta-los-alimentos-para-perros-1217750",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "utilities": {
-      "typical": 100,
-      "min": 70,
-      "max": 150,
-      "annualInflation": 0.035
+      "typical": 80,
+      "min": 45,
+      "max": 110,
+      "annualInflation": 0.035,
+      "notes": "The 2026 Live and Invest budget lists electricity $40-55, water $15 and a propane tank $8. In the highlands, electricity typically runs $25-70 because A/C is rarely needed. Internet is excluded.",
+      "sources": [
+        {
+          "title": "Live and Invest Overseas - El Valle Cost of Living 2026",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/panama/el-valle/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Relofirm - Panama Utilities and Electricity Costs",
+          "url": "https://www.relofirm.com/?p=238749",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "healthcare": {
-      "typical": 150,
-      "min": 80,
-      "max": 250,
+      "typical": 500,
+      "min": 235,
+      "max": 833,
       "annualInflation": 0.04,
-      "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. El Valle de Antón is a small mountain town with a Centro de Salud (public clinic). Hospital Aquilino Tejeira in Penonomé (~40 min east) handles regional cases; Panama City (~75 mi east) for tertiary care. Anti-VEGF + advanced ophthalmology only in capital."
+      "notes": "Private health insurance premiums for two adults age 60-61. Min is two Family Medical Plan memberships ($117.30 each, ages 60-69); typical and max reflect 2026 local quotes of $6,000-10,000/yr for a couple age 60. Premiums are national and age-rated. Pensionado discounts apply to services, not premiums.",
+      "sources": [
+        {
+          "title": "Panama Relocation Tours - Health insurance options in Panama",
+          "url": "https://panamarelocationtours.com/health-insurance-options-in-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Feather - Health insurance in Panama guide (Jul 2026)",
+          "url": "https://feather-insurance.com/en-pa/blog/health-insurance-panama-guide",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Reside Panama - Healthcare in Panama 2026",
+          "url": "https://www.residepanama.com/en/reside-panama-blog/healthcare-in-panama-an-expat-guide-to-hospitals-insurance-costs-2026",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "insurance": {
-      "typical": 250,
-      "min": 150,
-      "max": 400,
-      "annualInflation": 0.04
+      "typical": 15,
+      "min": 10,
+      "max": 20,
+      "annualInflation": 0.04,
+      "notes": "Renters (contents) insurance placeholder. Insurers in Panama do not publish home premiums. The old stored value meant health insurance and has been replaced.",
+      "estimate": true
     },
     "petCare": {
       "typical": 50,
@@ -68,27 +130,78 @@
     },
     "petDaycare": {
       "typical": 120,
-      "min": 80,
-      "max": 200,
-      "annualInflation": 0.03
+      "min": 60,
+      "max": 240,
+      "annualInflation": 0.03,
+      "notes": "National boarding rates are $10-30 a night (2025). The monthly figures assume 6-8 nights a month. No El Valle boarding facility was found, so the dog may need to board in Coronado or with a sitter.",
+      "sources": [
+        {
+          "title": "Relofirm - Pets in Panama",
+          "url": "https://www.relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "petGrooming": {
-      "typical": 40,
+      "typical": 35,
       "min": 25,
-      "max": 65,
-      "annualInflation": 0.03
+      "max": 45,
+      "annualInflation": 0.03,
+      "notes": "Full grooming costs $20-40 nationally. These assume about one groom a month for a Bernese, priced at the large-dog end. Local groomer availability is unconfirmed.",
+      "sources": [
+        {
+          "title": "Relofirm - Pets in Panama",
+          "url": "https://www.relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "transportation": {
-      "typical": 130,
-      "min": 70,
-      "max": 200,
-      "annualInflation": 0.03
+      "typical": 180,
+      "min": 105,
+      "max": 260,
+      "annualInflation": 0.03,
+      "notes": "Live and Invest El Valle (2026) lists car insurance at $356 a year, fuel at $30-100 a month and upkeep at $200-350 a year. Gasoline in Anton is about $1.19-1.26 per liter (July 2026). Panama City round trips (about 240 km) add roughly $29 each, plus regular drives to Coronado for shopping.",
+      "sources": [
+        {
+          "title": "Live and Invest Overseas - El Valle Cost of Living 2026",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/panama/el-valle/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "SNE fuel price notice 24 Jul - 7 Aug 2026 (via TVN)",
+          "url": "https://static.tvn-2.com/tvn/public/content/file/original/2026/0722/19/nota-de-prensa-ajuste-en-los-precios-de-combustibles-del-24-de-julio-al-7-de-agosto-de-2026-pdf.pdf",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Champion Motors - Car ownership costs in Panama (Jun 2026)",
+          "url": "https://championmotors.com.pa/blog/39",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "entertainment": {
-      "typical": 150,
-      "min": 90,
-      "max": 230,
-      "annualInflation": 0.03
+      "typical": 270,
+      "min": 130,
+      "max": 350,
+      "annualInflation": 0.03,
+      "notes": "Live and Invest (2026) lists internet $36, cable $36 and entertainment $196, with meals out about $12 per person. No source confirms fiber in El Valle. Starlink (about $120 a month) may be the fastest option and is priced into max.",
+      "sources": [
+        {
+          "title": "Live and Invest Overseas - El Valle Cost of Living 2026",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/panama/el-valle/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "ExpatDen - Internet Providers in Panama (Jun 2026)",
+          "url": "https://www.expatden.com/panama/internet-providers-panama/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "clothing": {
       "typical": 70,
@@ -109,10 +222,24 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 85,
-      "min": 70,
-      "max": 105,
-      "annualInflation": 0.02
+      "typical": 54,
+      "min": 35,
+      "max": 70,
+      "annualInflation": 0.02,
+      "notes": "Standard Tigo or Mas Movil postpaid plans are $27 a month each, so $54 for 2 lines. The 2026 Live and Invest El Valle budget lists $35 for a couple. Check cell signal in the crater area.",
+      "sources": [
+        {
+          "title": "ExpatDen - Tarjetas SIM en Panama",
+          "url": "https://www.expatden.com/es/panama-es/tarjetas-sim-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Live and Invest Overseas - El Valle Cost of Living 2026",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/panama/el-valle/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "taxes": {
       "typical": 0,
@@ -141,10 +268,24 @@
       "annualInflation": 0.025
     },
     "medicalOOP": {
-      "min": 80,
-      "typical": 150,
+      "min": 70,
+      "typical": 140,
       "max": 300,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "notes": "A 2026 estimate puts general doctor visits at $40-80 and specialists at $60-120, and Live and Invest lists $20 a month for medical appointments. El Valle has only basic clinics, so specialist and lab work means trips to Coronado or Panama City. That fuel is counted under transportation.",
+      "sources": [
+        {
+          "title": "Reside Panama - Cost of Living in Panama in 2026",
+          "url": "https://www.residepanama.com/en/reside-panama-blog/cost-of-living-in-panama-in-2026-what-expats-should-really-expect",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Live and Invest Overseas - El Valle Cost of Living 2026",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/panama/el-valle/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     }
   },
   "healthcare": {

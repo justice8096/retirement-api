@@ -30,35 +30,112 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 1050,
-      "min": 800,
-      "max": 1300,
-      "annualInflation": 0.04
+      "typical": 1250,
+      "min": 900,
+      "max": 1500,
+      "annualInflation": 0.04,
+      "notes": "Paraiso Village 3BR rents for $1,100 plus a $175 HOA that covers security, water and garbage. A Coronado 3BR that allows pets lists at $1,200 and an older 2BR pet-friendly listing was $850. Most listings do not state a pet policy, so confirm the landlord accepts a 100 lb dog. A $3,200 furnished beach house was left out as an outlier.",
+      "sources": [
+        {
+          "title": "CasaSolution - 3 Bedroom Home Paraiso Village Coronado (rent $1,100, HOA $175)",
+          "url": "https://www.casasolution.com/listings/3-bedroom-home-paraiso-village-coronado-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Expat.com - Beautiful house for long term rental, Coronado (3BR $1,200, pets allowed)",
+          "url": "https://www.expat.com/en/housing/central-america/panama/39-houses-for-rent/799012-beatiful-house-for-long-term-rental.html",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Encuentra24 - Furnished house in PH Paraiso Village Coronado ($1,200)",
+          "url": "https://www.encuentra24.com/panama-en/real-estate-for-rent-houses/your-home-near-the-beach-furnished-house-in-coronado/33081419",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Expat Exchange - House for rent Coronado (2BR pet friendly $850)",
+          "url": "https://www.expatexchange.com/thread/270/3465517/Panama/Expats-Living-in-Panama/House-for-rent-coronado",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Live and Invest Overseas - Coronado Cost of Living 2026 (rent $1,200)",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/panama/coronado",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "groceries": {
-      "typical": 420,
-      "min": 320,
-      "max": 550,
-      "annualInflation": 0.03
+      "typical": 475,
+      "min": 370,
+      "max": 650,
+      "annualInflation": 0.03,
+      "notes": "The 2026 Live and Invest budget puts couple groceries at $400. Dog food for a 100 lb dog (about 40-50 lb a month) adds roughly $50-100 a month, based on February 2023 Panama bag prices: Dog Chow 55 lb $45-60, Victor 50 lb $97.",
+      "sources": [
+        {
+          "title": "Live and Invest Overseas - Coronado Cost of Living 2026",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/panama/coronado",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Panama America - Aumento de precios llega hasta los alimentos para perros (2023)",
+          "url": "https://panamaamerica.com.pa/sociedad/aumento-de-precios-llega-hasta-los-alimentos-para-perros-1217750",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "utilities": {
-      "typical": 150,
+      "typical": 155,
       "min": 100,
-      "max": 220,
-      "annualInflation": 0.035
+      "max": 290,
+      "annualInflation": 0.035,
+      "notes": "Beach-town electricity runs $80-250+ a month depending on how much A/C you use. Water and garbage are $10-20 and a large propane tank is $12-20. The 2026 Live and Invest Coronado budget totals $155 ($125 electricity, $20 water and trash, $10 gas). Internet is excluded.",
+      "sources": [
+        {
+          "title": "Relofirm - Panama Utilities and Electricity Costs",
+          "url": "https://www.relofirm.com/?p=238749",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Live and Invest Overseas - Coronado Cost of Living 2026",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/panama/coronado",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "healthcare": {
-      "typical": 200,
-      "min": 120,
-      "max": 350,
+      "typical": 500,
+      "min": 235,
+      "max": 833,
       "annualInflation": 0.04,
-      "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. Centro Médico San Fernando-Coronado satellite + local clinics handle routine care. Panama City hospitals (~50 mi / ~1 hr east via the Pan-American Highway) for advanced specialty care, including JCI-accredited Punta Pacifica. Coronado is the closest beach community to top-tier Panama City medicine."
+      "notes": "Private health insurance premiums for two adults age 60-61. Min is two Family Medical Plan memberships ($117.30 each, ages 60-69); typical and max reflect 2026 local quotes of $6,000-10,000/yr for a couple age 60. Premiums are national and age-rated. Pensionado discounts apply to services, not premiums.",
+      "sources": [
+        {
+          "title": "Panama Relocation Tours - Health insurance options in Panama",
+          "url": "https://panamarelocationtours.com/health-insurance-options-in-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Feather - Health insurance in Panama guide (Jul 2026)",
+          "url": "https://feather-insurance.com/en-pa/blog/health-insurance-panama-guide",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Reside Panama - Healthcare in Panama 2026",
+          "url": "https://www.residepanama.com/en/reside-panama-blog/healthcare-in-panama-an-expat-guide-to-hospitals-insurance-costs-2026",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "insurance": {
-      "typical": 250,
-      "min": 150,
-      "max": 400,
-      "annualInflation": 0.04
+      "typical": 15,
+      "min": 10,
+      "max": 20,
+      "annualInflation": 0.04,
+      "notes": "Renters (contents) insurance placeholder. Insurers in Panama do not publish home premiums, and ExpatDen (Oct 2026) says to get a broker quote. The old stored value meant health insurance and has been replaced.",
+      "estimate": true
     },
     "petCare": {
       "typical": 50,
@@ -68,27 +145,83 @@
     },
     "petDaycare": {
       "typical": 120,
-      "min": 80,
-      "max": 200,
-      "annualInflation": 0.03
+      "min": 60,
+      "max": 240,
+      "annualInflation": 0.03,
+      "notes": "National boarding rates are $10-30 a night (2025 source). The monthly figures assume 6-8 nights a month, with a large dog at the upper end of the price range. No Coronado-specific facility pricing was found.",
+      "sources": [
+        {
+          "title": "Relofirm - Pets in Panama (boarding $10-30/night, grooming $20-40)",
+          "url": "https://www.relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "petGrooming": {
-      "typical": 40,
+      "typical": 35,
       "min": 25,
-      "max": 65,
-      "annualInflation": 0.03
+      "max": 45,
+      "annualInflation": 0.03,
+      "notes": "Full grooming costs $20-40 nationally (2025). Coronado groomers charge $14-30 depending on size (undated source). These assume about one groom a month for a Bernese double coat, priced at the large-dog end.",
+      "sources": [
+        {
+          "title": "Relofirm - Pets in Panama",
+          "url": "https://www.relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Panama Relocation Tours - Caring for Your Pet in Panama",
+          "url": "https://panamarelocationtours.com/caring-for-your-pet-in-panama",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "transportation": {
       "typical": 180,
-      "min": 100,
-      "max": 280,
-      "annualInflation": 0.03
+      "min": 110,
+      "max": 250,
+      "annualInflation": 0.03,
+      "notes": "Car insurance is $500-900 a year ($42-75 a month) and upkeep is about $200-350 a year. Local fuel is $30-100 a month. Gasoline is about $1.18-1.26 per liter (July 2026). One or two round trips to Panama City (about 180 km) add roughly $22-44 a month in fuel.",
+      "sources": [
+        {
+          "title": "Champion Motors - Car ownership costs in Panama (Jun 2026)",
+          "url": "https://championmotors.com.pa/blog/39",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "SNE fuel price notice 24 Jul - 7 Aug 2026 (via TVN)",
+          "url": "https://static.tvn-2.com/tvn/public/content/file/original/2026/0722/19/nota-de-prensa-ajuste-en-los-precios-de-combustibles-del-24-de-julio-al-7-de-agosto-de-2026-pdf.pdf",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Live and Invest Overseas - El Valle Cost of Living 2026 (car insurance, fuel, upkeep)",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/panama/el-valle/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "entertainment": {
-      "typical": 220,
-      "min": 140,
-      "max": 320,
-      "annualInflation": 0.03
+      "typical": 280,
+      "min": 160,
+      "max": 430,
+      "annualInflation": 0.03,
+      "notes": "Mas Movil 600 Mbps symmetric fiber is $39 a month (June 2026 promo). ExpatDen calls Coronado gated-community internet adequate, so confirm fiber at the specific address. The 2026 Live and Invest budget lists $80 for internet plus streaming and $350 for entertainment.",
+      "sources": [
+        {
+          "title": "ExpatDen - Internet Providers in Panama (Jun 2026)",
+          "url": "https://www.expatden.com/panama/internet-providers-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Live and Invest Overseas - Coronado Cost of Living 2026",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/panama/coronado",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "clothing": {
       "typical": 70,
@@ -109,10 +242,24 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 85,
-      "min": 70,
-      "max": 105,
-      "annualInflation": 0.02
+      "typical": 54,
+      "min": 35,
+      "max": 70,
+      "annualInflation": 0.02,
+      "notes": "Standard Tigo or Mas Movil postpaid plans are $27 a month each, so $54 for 2 lines (page updated Oct 2026). Couple budgets from Live and Invest list $25-35 total on cheaper plans.",
+      "sources": [
+        {
+          "title": "ExpatDen - Tarjetas SIM en Panama",
+          "url": "https://www.expatden.com/es/panama-es/tarjetas-sim-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Live and Invest Overseas - Coronado Cost of Living 2026",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/panama/coronado",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "taxes": {
       "typical": 0,
@@ -141,10 +288,19 @@
       "annualInflation": 0.025
     },
     "medicalOOP": {
-      "min": 80,
-      "typical": 150,
+      "min": 60,
+      "typical": 130,
       "max": 300,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "notes": "A 2026 estimate puts general doctor visits at $40-80 and specialists at $60-120. These figures assume several general visits and a couple of specialist visits a year for each of you, plus labs and medications. Major specialists are in Panama City, and that travel is counted under transportation.",
+      "sources": [
+        {
+          "title": "Reside Panama - Cost of Living in Panama in 2026",
+          "url": "https://www.residepanama.com/en/reside-panama-blog/cost-of-living-in-panama-in-2026-what-expats-should-really-expect",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     }
   },
   "healthcare": {

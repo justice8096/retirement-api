@@ -274,13 +274,14 @@
         "title": "Panama Jubilado Discounts",
         "url": "https://www.visitpanama.com"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 40,
-      "typical": 100,
-      "max": 250
+      "min": 110,
+      "typical": 150,
+      "max": 220
     },
     "publicTransit": {
       "monthlyPass": {
@@ -432,7 +433,8 @@
           "url": "https://www.gacetaoficial.gob.pa/"
         }
       ]
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "seniorDiscounts": {
     "minimumAge": 55,
@@ -532,14 +534,15 @@
         "title": "+Movil Panama",
         "url": "https://www.masmovil.com.pa/"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "housing": {
     "propertyType": "2-bedroom house/cottage",
     "monthlyBudget": {
-      "min": 700,
-      "max": 1200,
-      "typical": 900
+      "min": 600,
+      "max": 1450,
+      "typical": 1000
     },
     "breakdown": {
       "baseRent": 850,
@@ -559,7 +562,8 @@
         "name": "Encuentra24 Boquete Rentals",
         "url": "https://www.encuentra24.com/panama/bienes-raices-alquiler-casas/chiriqui-boquete"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "groceryStores": {
     "stores": [

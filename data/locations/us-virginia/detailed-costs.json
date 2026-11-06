@@ -270,13 +270,14 @@
         "title": "AARP Member Discounts",
         "url": "https://www.aarp.org/membership/benefits/discounts/"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 200,
-      "typical": 300,
-      "max": 400
+      "min": 290,
+      "typical": 410,
+      "max": 535
     },
     "publicTransit": {
       "monthlyPass": {
@@ -440,7 +441,8 @@
           "url": "https://afdc.energy.gov/fuels/electricity-charging-home"
         }
       ]
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "seniorDiscounts": {
     "minimumAge": 65,
@@ -490,7 +492,7 @@
   "cellPhone": {
     "monthlyBudget": {
       "min": 50,
-      "typical": 62,
+      "typical": 50,
       "max": 80
     },
     "plans": [
@@ -514,7 +516,8 @@
         "title": "VA Wireless Tax Rates",
         "url": "https://taxfoundation.org/data/all/state/wireless-taxes-2024/"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-06"
   },
   "housing": {
     "propertyType": "2-bedroom single-family house",

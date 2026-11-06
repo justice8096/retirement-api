@@ -28,35 +28,112 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 650,
-      "min": 500,
-      "max": 800,
-      "annualInflation": 0.04
+      "typical": 800,
+      "min": 550,
+      "max": 1200,
+      "annualInflation": 0.04,
+      "notes": "Guides put 2BR houses at $500 to $900 and 3BR at $750 to $1,200. Encuentra24 furnished 2-3BR listings run $950 to $1,400. Few listings state a pet policy.",
+      "sources": [
+        {
+          "title": "Encuentra24 houses for rent Volcan",
+          "url": "https://www.encuentra24.com/panama-en/real-estate-for-rent-houses/panama-en-prov-chiriqui-volcan",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Panama Relocation Tours: Living in Volcan",
+          "url": "https://panamarelocationtours.com/living-in-volcan-a-mountain-town-with-a-healthy-lifestyle",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Casa Solution: Living in Volcan cost of living breakdown",
+          "url": "https://www.casasolution.com/living-in-volcan-panama-cost-of-living-breakdown",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "groceries": {
-      "typical": 340,
-      "min": 250,
-      "max": 440,
-      "annualInflation": 0.03
+      "typical": 450,
+      "min": 360,
+      "max": 560,
+      "annualInflation": 0.03,
+      "notes": "Couple groceries are $300 to $400 a month. A 100 lb dog eats about 15 kg of kibble a month, roughly $55 to $100 depending on brand. A 2022 Pedigree price was used as the floor.",
+      "sources": [
+        {
+          "title": "Panama Relocation Tours: Living in Volcan",
+          "url": "https://panamarelocationtours.com/living-in-volcan-a-mountain-town-with-a-healthy-lifestyle",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Casa Solution: Living in Volcan cost of living breakdown",
+          "url": "https://www.casasolution.com/living-in-volcan-panama-cost-of-living-breakdown",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Panama Equity: grocery shopping in Panama",
+          "url": "https://www.panamaequity.com/blogs/come-grocery-shopping-with-us-in-panama/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "utilities": {
-      "typical": 100,
-      "min": 65,
-      "max": 150,
-      "annualInflation": 0.035
+      "typical": 65,
+      "min": 40,
+      "max": 100,
+      "annualInflation": 0.035,
+      "notes": "Electricity runs $15 to $60 with no air conditioning, water about $5, and 25 lb propane tanks $5 to $8. The colder climate may add propane for hot water. Internet is excluded.",
+      "sources": [
+        {
+          "title": "Panama Relocation Tours: Living in Volcan",
+          "url": "https://panamarelocationtours.com/living-in-volcan-a-mountain-town-with-a-healthy-lifestyle",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Relofirm: Panama Utilities and Electricity Costs",
+          "url": "https://www.relofirm.com/?p=238749",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Living in Volcan expat guide 2026",
+          "url": "https://vidala-166.pages.dev/guides/volcan-panama-expat-guide",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "healthcare": {
-      "typical": 130,
-      "min": 70,
-      "max": 220,
+      "typical": 500,
+      "min": 235,
+      "max": 833,
       "annualInflation": 0.04,
-      "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. Volcán has a small clinic; Hospital Chiriquí in David (~30 mi south) is the closest hospital. Tertiary care + anti-VEGF / advanced ophthalmology requires David or Panama City. Mountain location means weather can occasionally disrupt road access to David."
+      "notes": "Private health insurance premiums for two adults age 60-61. Min is two Family Medical Plan memberships ($117.30 each, ages 60-69); typical and max reflect 2026 local quotes of $6,000-10,000/yr for a couple age 60. Premiums are national and age-rated. Pensionado discounts apply to services, not premiums.",
+      "sources": [
+        {
+          "title": "Panama Relocation Tours - Health insurance options in Panama",
+          "url": "https://panamarelocationtours.com/health-insurance-options-in-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Feather - Health insurance in Panama guide (Jul 2026)",
+          "url": "https://feather-insurance.com/en-pa/blog/health-insurance-panama-guide",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Reside Panama - Healthcare in Panama 2026",
+          "url": "https://www.residepanama.com/en/reside-panama-blog/healthcare-in-panama-an-expat-guide-to-hospitals-insurance-costs-2026",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "insurance": {
-      "typical": 250,
-      "min": 150,
-      "max": 400,
-      "annualInflation": 0.04
+      "typical": 15,
+      "min": 10,
+      "max": 20,
+      "annualInflation": 0.04,
+      "notes": "Re-modeled to renters/contents insurance only. The old $150 to $400 was health insurance. No local quote was found, so this uses the Boquete model value.",
+      "estimate": true
     },
     "petCare": {
       "typical": 50,
@@ -68,25 +145,81 @@
       "typical": 120,
       "min": 80,
       "max": 200,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "notes": "Boarding is $10 to $30 a night nationally. Volcan has few dedicated kennels, so informal sitters are likely.",
+      "sources": [
+        {
+          "title": "Relofirm: pets in Panama costs",
+          "url": "https://www.relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "petGrooming": {
       "typical": 40,
       "min": 25,
       "max": 65,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "notes": "Full-service grooming is $20 to $40 nationally. A large double-coated dog sits at the upper end.",
+      "sources": [
+        {
+          "title": "Relofirm: pets in Panama costs",
+          "url": "https://www.relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "transportation": {
-      "typical": 130,
-      "min": 70,
-      "max": 200,
-      "annualInflation": 0.03
+      "typical": 180,
+      "min": 130,
+      "max": 260,
+      "annualInflation": 0.03,
+      "notes": "David is 45 to 60 minutes away, so weekly trips for specialists and big shopping add fuel. Modeled: about 800 km a month at about $1.16/L, insurance at $500 to $900 a year, plus maintenance. A taxi to David is $35 to $40; the bus is $2 to $3.",
+      "sources": [
+        {
+          "title": "Panama Relocation Tours: Living in Volcan",
+          "url": "https://panamarelocationtours.com/living-in-volcan-a-mountain-town-with-a-healthy-lifestyle",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Champion Motors: owning a car in Panama",
+          "url": "https://championmotors.com.pa/blog/39",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Combien-coute: cost of living Boquete 2026 (Chiriqui fuel price)",
+          "url": "https://www.combien-coute.net/cout-de-la-vie/panama/boquete/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "entertainment": {
-      "typical": 120,
-      "min": 70,
-      "max": 190,
-      "annualInflation": 0.03
+      "typical": 215,
+      "min": 150,
+      "max": 300,
+      "annualInflation": 0.03,
+      "notes": "+Movil is rolling out symmetric FTTH in Volcan, and Tigo 250 Mbps fiber is about $45. A nice dinner for two is $15 to $25, so four a month plus fonda lunches, streaming and local activities.",
+      "sources": [
+        {
+          "title": "La Prensa: +Movil fiber coverage in Chiriqui",
+          "url": "https://www.prensa.com/contenido-patrocinado/movil-avanza-en-su-cobertura-con-la-red-de-fibra-optica-y-movil-siendo-el-operador-con-la-mayor-red-de-fibra-en-la-provincia-de-chiriqui/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Panama Relocation Tours: Living in Volcan",
+          "url": "https://panamarelocationtours.com/living-in-volcan-a-mountain-town-with-a-healthy-lifestyle",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "ExpatDen: Internet providers Panama",
+          "url": "https://expatden.com/panama/internet-providers-panama",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "clothing": {
       "typical": 70,
@@ -110,7 +243,16 @@
       "typical": 85,
       "min": 70,
       "max": 105,
-      "annualInflation": 0.02
+      "annualInflation": 0.02,
+      "notes": "Tigo/Mas Movil postpaid is $27 a plan, or $54 for 2 lines before tax. The rest covers ITBMS and a US number.",
+      "sources": [
+        {
+          "title": "ExpatDen: SIM cards Panama",
+          "url": "https://expatden.com/es/panama-es/tarjetas-sim-panama",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "taxes": {
       "typical": 0,
@@ -142,7 +284,21 @@
       "min": 80,
       "typical": 150,
       "max": 300,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "notes": "A private clinic visit in Volcan is $15 to $20, and public hospital visits are $2 to $5. Specialists and labs are mostly in David. The monthly total is a stored allowance supported by these unit prices.",
+      "sources": [
+        {
+          "title": "Panama Relocation Tours: Living in Volcan",
+          "url": "https://panamarelocationtours.com/living-in-volcan-a-mountain-town-with-a-healthy-lifestyle",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "ExpatDen: Cost of Living in Panama 2026",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     }
   },
   "healthcare": {

@@ -31,12 +31,35 @@
   },
   "monthlyCosts": {
     "rent": {
-      "min": 700,
-      "max": 1200,
-      "typical": 900,
+      "min": 600,
+      "max": 1450,
+      "typical": 1000,
       "type": "2-bedroom house/cottage",
       "annualInflation": 0.025,
-      "notes": "No rental tax in Panama."
+      "notes": "Long-term 2-3BR houses on Encuentra24 run $450 to $1,450, and a pet-friendly 2BR in Macano is $1,200 on a 12-month lease. Combien-coute (Nov 2026) puts a suburban 3BR at $1,309. Several pet-friendly listings take small pets only, so a 100 lb dog narrows the choice.",
+      "sources": [
+        {
+          "title": "Encuentra24 houses for rent Boquete",
+          "url": "https://www.encuentra24.com/panama-en/real-estate-for-rent-houses/panama-en-prov-chiriqui-boquete",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Casa Solution 2-bed home for rent Macano, pet friendly",
+          "url": "https://casasolution.com/listings/2-bed-home-for-rent-in-macano-de-cochea-private-location-river-views-pet-friendly-close-to-boquete-and-david",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Combien-coute: cost of living Boquete 2026",
+          "url": "https://www.combien-coute.net/cout-de-la-vie/panama/boquete/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Casa Solution Brisas Boquetenas rental (small pets only)",
+          "url": "https://casasolution.com/listings/house-for-rent-in-brisas-boquetenas-alto-boquete-chiriqui-spacious-terrace-and-just-minutes-from-downtown-boquete",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "groceries": {
       "min": 610,
@@ -46,9 +69,9 @@
       "annualInflation": 0.03
     },
     "utilities": {
-      "min": 64,
-      "max": 104,
-      "typical": 80,
+      "min": 55,
+      "max": 105,
+      "typical": 75,
       "annualInflation": 0.025,
       "breakdown": {
         "electricity": {
@@ -73,14 +96,50 @@
         }
       },
       "taxes": "ITBMS 7% on electricity. Water exempt for residential.",
-      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig). Trash included in rent."
+      "notes": "No air conditioning is needed, so highland electricity runs about $25 to $70. Water and garbage are $12 to $25, propane tanks $5 to $20. Combien-coute lists 52 EUR (about $60) a month. Internet is excluded.",
+      "sources": [
+        {
+          "title": "Relofirm: Panama Utilities and Electricity Costs",
+          "url": "https://www.relofirm.com/?p=238749",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "ExpatDen: Cost of Living in Panama 2026",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Combien-coute: electricity, water, heating Boquete 2026",
+          "url": "https://www.combien-coute.net/electricite/panama/boquete/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "healthcare": {
-      "min": 280,
-      "max": 550,
-      "typical": 400,
-      "notes": "Private insurance required (~$175-250/person/mo, higher with pre-existing conditions). Pre-existing condition exclusions common first 12-24 months. Anti-VEGF injections: available in David/Panama City at private clinics. May need to travel for specialized ophthalmology. Pensionado discount 15-25% on medical services.",
-      "annualInflation": 0.06
+      "min": 235,
+      "max": 833,
+      "typical": 500,
+      "notes": "Private health insurance premiums for two adults age 60-61. Min is two Family Medical Plan memberships ($117.30 each, ages 60-69); typical and max reflect 2026 local quotes of $6,000-10,000/yr for a couple age 60. Premiums are national and age-rated. Pensionado discounts apply to services, not premiums.",
+      "annualInflation": 0.06,
+      "sources": [
+        {
+          "title": "Panama Relocation Tours - Health insurance options in Panama",
+          "url": "https://panamarelocationtours.com/health-insurance-options-in-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Feather - Health insurance in Panama guide (Jul 2026)",
+          "url": "https://feather-insurance.com/en-pa/blog/health-insurance-panama-guide",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Reside Panama - Healthcare in Panama 2026",
+          "url": "https://www.residepanama.com/en/reside-panama-blog/healthcare-in-panama-an-expat-guide-to-hospitals-insurance-costs-2026",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "insurance": {
       "min": 10,
@@ -100,28 +159,75 @@
       "max": 200,
       "typical": 150,
       "annualInflation": 0.025,
-      "notes": "Hired pet sitter 2 days/week (~$17/visit). No commercial daycare in Boquete. Expat community has informal pet sitting network. Lower cost of living reflected in rates."
+      "notes": "Boarding is $10 to $30 a night nationally, so the stored range is about 5 to 8 nights a month. No Boquete-specific kennel rates were found.",
+      "sources": [
+        {
+          "title": "Relofirm: pets in Panama costs",
+          "url": "https://www.relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "petGrooming": {
       "min": 30,
       "max": 70,
       "typical": 45,
       "annualInflation": 0.025,
-      "notes": "Bernese coat maintenance; fewer groomers than city"
+      "notes": "Full-service grooming is $20 to $40 nationally. A large double-coated dog sits at the upper end or above.",
+      "sources": [
+        {
+          "title": "Relofirm: pets in Panama costs",
+          "url": "https://www.relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "transportation": {
-      "min": 60,
-      "max": 150,
-      "typical": 100,
-      "notes": "Car useful; local buses cheap; David trips for supplies",
-      "annualInflation": 0.025
+      "min": 110,
+      "max": 220,
+      "typical": 150,
+      "notes": "Modeled: insurance at $500 to $900 a year ($42 to $75 a month), about 570 km a month at $1.16/L gasoline including weekly David trips, plus maintenance and registration. Taxis are $2 to $4 in town.",
+      "annualInflation": 0.025,
+      "sources": [
+        {
+          "title": "Champion Motors: owning a car in Panama",
+          "url": "https://championmotors.com.pa/blog/39",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Combien-coute: cost of living Boquete 2026",
+          "url": "https://www.combien-coute.net/cout-de-la-vie/panama/boquete/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Retiring in Boquete 2026 guide",
+          "url": "https://vidala-166.pages.dev/guides/panama-boquete",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "entertainment": {
       "min": 256,
       "max": 416,
       "typical": 326,
       "annualInflation": 0.02,
-      "notes": "Incl cable+1Gig internet, Netflix, Amazon Prime, Apple TV+, dining out (lunch for 2 2x/week w/ tax+tip)"
+      "notes": "Mas Movil 600 Mbps symmetric fiber is $39 plus 7% ITBMS, available in town but slower in rural valleys. A mid-range dinner is about $20 per person, so four dinners for two come to about $160, plus fonda lunches, streaming and activities.",
+      "sources": [
+        {
+          "title": "ExpatDen: Internet providers Panama",
+          "url": "https://expatden.com/panama/internet-providers-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Combien-coute: cost of living Boquete 2026",
+          "url": "https://www.combien-coute.net/cout-de-la-vie/panama/boquete/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "clothing": {
       "min": 30,
@@ -147,7 +253,15 @@
       "max": 100,
       "typical": 83,
       "annualInflation": 0.02,
-      "notes": "Google Fi Flexible (US Number) + +Movil Prepaid (Local). 2 phones, 1.5GB+ high-speed data each, all taxes included."
+      "notes": "Tigo/Mas Movil postpaid is $27 a plan, or $54 for 2 lines before tax. The rest covers ITBMS and a US number.",
+      "sources": [
+        {
+          "title": "ExpatDen: SIM cards Panama",
+          "url": "https://expatden.com/es/panama-es/tarjetas-sim-panama",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "miscellaneous": {
       "min": 40,
@@ -167,7 +281,20 @@
       "max": 325,
       "typical": 175,
       "annualInflation": 0.06,
-      "notes": "Private system OOP: specialist visits $40-80, anti-VEGF injections $400-800 each (6-10x/yr) if not covered by insurance. May need travel to Panama City for retina specialist. Pensionado discounts help. Labs $15-30 per panel. Higher costs for specialized monitoring."
+      "notes": "Private GP visits are $15 to $50 and specialists $50 to $70, with a 20% pensionado discount on consults. The monthly total is a stored allowance supported by these unit prices.",
+      "sources": [
+        {
+          "title": "ExpatDen: Cost of Living in Panama 2026",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Retiring in Boquete 2026 guide",
+          "url": "https://vidala-166.pages.dev/guides/panama-boquete",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "medicine": {
       "min": 383,

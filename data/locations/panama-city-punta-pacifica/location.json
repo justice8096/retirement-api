@@ -30,35 +30,100 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 1850,
-      "min": 1500,
-      "max": 2200,
-      "annualInflation": 0.04
+      "typical": 1600,
+      "min": 1300,
+      "max": 2300,
+      "annualInflation": 0.04,
+      "notes": "2BR asks run $1,250 to $1,400. A 3BR in PH Costa Pacifica that explicitly allows pets is $1,600. Furnished luxury 2BR units run about $2,300. No listing states the HOA fee.",
+      "sources": [
+        {
+          "title": "RE/MAX Central America - PH Costa Pacifica 3BR $1,600 pets allowed",
+          "url": "https://remax-centralamerica.com/002394401003",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Encuentra24 - Punta Pacifica 2BR 120m2 $1,400",
+          "url": "https://www.encuentra24.com/panama-en/real-estate-for-rent-apartments/for-rent-2-bedroom-apartment-120-m-punta-pacifica/32966570",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Panama Home Realty - 2BR Punta Pacifica $1,250",
+          "url": "https://panamahomerealty.com/properties/2-bedrooms-apartment-for-rent-located-in-punta-pacifica",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Panama Home Realty - Cozy apartment Punta Pacifica $1,350",
+          "url": "https://panamahomerealty.com/properties/cozy-apartment-for-rent-in-punta-pacifica",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Panama Home Realty - Luxurious 2BR Punta Pacifica $2,300",
+          "url": "https://panamahomerealty.com/properties/luxurious-2-bedrooms-apartment-in-punta-pacifica-for-rent",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "groceries": {
-      "typical": 550,
-      "min": 420,
-      "max": 700,
-      "annualInflation": 0.03
+      "typical": 875,
+      "min": 700,
+      "max": 1050,
+      "annualInflation": 0.03,
+      "notes": "No grocery data for this neighborhood, so aligned to city basket. That basket covers 2 adults plus dog food for a 100 lb dog.",
+      "estimate": true
     },
     "utilities": {
-      "typical": 200,
-      "min": 150,
-      "max": 280,
-      "annualInflation": 0.035
+      "typical": 210,
+      "min": 145,
+      "max": 300,
+      "annualInflation": 0.035,
+      "notes": "High-rise units with heavy A/C use: electricity $120 to $250+, water and garbage $10 to $40, gas $5 to $20. Internet is excluded.",
+      "sources": [
+        {
+          "title": "Relofirm - Panama Utilities and Electricity Costs",
+          "url": "https://www.relofirm.com/?p=238749",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Panama Home Realty - Cost of Living in Panama City 2026",
+          "url": "https://panamahomerealty.com/articles/cost-of-living-in-panama-city-2026-real-monthly-expenses-rent-and-lifestyle-guide",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "healthcare": {
-      "typical": 250,
-      "min": 150,
-      "max": 400,
+      "typical": 500,
+      "min": 235,
+      "max": 833,
       "annualInflation": 0.04,
-      "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. Excellent specialist access in Panama City: Hospital Punta Pacifica (JCI-accredited, Johns Hopkins-affiliated), Hospital Nacional, Pacifica Salud, Hospital Paitilla, Hospital San Fernando. Anti-VEGF + ophthalmology + cardiology + oncology widely available locally. GLP-1 (Ozempic/Wegovy) available via private prescription, ~$200-400/mo. Hospital Punta Pacifica is in this neighborhood — walking distance to JCI-accredited care."
+      "notes": "Private health insurance premiums for two adults age 60-61. Min is two Family Medical Plan memberships ($117.30 each, ages 60-69); typical and max reflect 2026 local quotes of $6,000-10,000/yr for a couple age 60. Premiums are national and age-rated. Pensionado discounts apply to services, not premiums.",
+      "sources": [
+        {
+          "title": "Panama Relocation Tours - Health insurance options in Panama",
+          "url": "https://panamarelocationtours.com/health-insurance-options-in-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Feather - Health insurance in Panama guide (Jul 2026)",
+          "url": "https://feather-insurance.com/en-pa/blog/health-insurance-panama-guide",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Reside Panama - Healthcare in Panama 2026",
+          "url": "https://www.residepanama.com/en/reside-panama-blog/healthcare-in-panama-an-expat-guide-to-hospitals-insurance-costs-2026",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "insurance": {
-      "typical": 300,
-      "min": 200,
-      "max": 450,
-      "annualInflation": 0.04
+      "typical": 20,
+      "min": 15,
+      "max": 25,
+      "annualInflation": 0.04,
+      "notes": "Placeholder for renters or contents cover only. MAPFRE Hogar and ASSA Hogar do not publish premiums.",
+      "estimate": true
     },
     "petCare": {
       "typical": 50,
@@ -79,22 +144,59 @@
       "annualInflation": 0.03
     },
     "transportation": {
-      "typical": 200,
-      "min": 120,
-      "max": 300,
-      "annualInflation": 0.03
+      "typical": 300,
+      "min": 180,
+      "max": 500,
+      "annualInflation": 0.03,
+      "notes": "Mix of ride-hailing near Multiplaza and a car for dog and errand trips. Without a car it costs $50 to $100 a month; car ownership runs $300 to $800.",
+      "sources": [
+        {
+          "title": "ExpatDen - Cost of Living in Panama 2026",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Panama Home Realty - Cost of Living in Panama City 2026",
+          "url": "https://panamahomerealty.com/articles/cost-of-living-in-panama-city-2026-real-monthly-expenses-rent-and-lifestyle-guide",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "entertainment": {
       "typical": 350,
-      "min": 220,
-      "max": 500,
-      "annualInflation": 0.03
+      "min": 210,
+      "max": 560,
+      "annualInflation": 0.03,
+      "notes": "Mas Movil 600 Mbps fiber is $39 plus tax. Add streaming, 3 to 4 mid-range dinners for two at $15 to $30 per person plus tip, and activities.",
+      "sources": [
+        {
+          "title": "ExpatDen - Internet Providers Panama 2026",
+          "url": "https://expatden.com/panama/internet-providers-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "ExpatDen - Cost of Living in Panama 2026",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "clothing": {
       "typical": 70,
       "min": 40,
       "max": 110,
-      "annualInflation": 0.02
+      "annualInflation": 0.02,
+      "notes": "Modeled from 2026 price points: jeans $50, running shoes about $77, a dress about $40, for 2 adults.",
+      "sources": [
+        {
+          "title": "ExpatDen - Cost of Living in Panama 2026",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "personalCare": {
       "typical": 50,
@@ -109,10 +211,19 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 85,
-      "min": 70,
-      "max": 105,
-      "annualInflation": 0.02
+      "typical": 58,
+      "min": 50,
+      "max": 75,
+      "annualInflation": 0.02,
+      "notes": "2 postpaid lines at $27 each plus 7% tax.",
+      "sources": [
+        {
+          "title": "ExpatDen - Tarjetas SIM Panama",
+          "url": "https://expatden.com/es/panama-es/tarjetas-sim-panama",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "taxes": {
       "typical": 0,
@@ -144,7 +255,16 @@
       "min": 80,
       "typical": 150,
       "max": 300,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "notes": "GP visit $40 to $80, specialist $60 to $120, bloodwork $40 to $80, averaged monthly for two adults.",
+      "sources": [
+        {
+          "title": "Reside Panama - Healthcare in Panama 2026",
+          "url": "https://www.residepanama.com/en/reside-panama-blog/healthcare-in-panama-an-expat-guide-to-hospitals-insurance-costs-2026",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     }
   },
   "healthcare": {

@@ -33,63 +33,215 @@
     "rent": {
       "typical": 650,
       "min": 500,
-      "max": 800,
-      "annualInflation": 0.04
+      "max": 900,
+      "annualInflation": 0.04,
+      "notes": "Current Chitre listings show unfurnished 3BR houses in Villa Rosa and La Arena at $450-550, and better areas (Villas del Golf, Altos del Fraile, Brisas de Guayacanes) at $800-900. No listing said whether pets are allowed, so a large dog may push you to the upper half. Gated communities can add HOA fees, e.g. $158/mo at Cubita.",
+      "sources": [
+        {
+          "title": "Trovit - viviendas en alquiler en Chitre",
+          "url": "https://casas.trovit.com.pa/alquiler-chitre",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Mitula - Casas en alquiler 3 recamaras en Chitre",
+          "url": "https://casas.mitula.com.pa/alquiler-casas-3-recamaras-chitre",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Chitre, Las Tablas and Azuero: Honest Cost Breakdown For Expats 2026",
+          "url": "https://www.igopanama.com/videos/relocate-to-panama-off-the-beaten-track-living-for-expats/chitre-las-tablas-azuero-honest-cost-breakdown-for-expats-2026",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Casa Solution - 3BR house for rent in Cubita, Chitre",
+          "url": "https://www.casasolution.com/listings/3-bedroom-house-for-sale-or-rent-in-the-gated-cubita-residential-development-chitre-herrera",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "groceries": {
-      "typical": 320,
-      "min": 240,
-      "max": 420,
-      "annualInflation": 0.03
+      "typical": 560,
+      "min": 450,
+      "max": 850,
+      "annualInflation": 0.03,
+      "notes": "A couple buying local food spends about $450-750 a month, and a 2024 Chitre expat budget showed $600. Typical adds about $90/mo of dog food for a 100 lb dog. That dog food figure is a judgment call: the only benchmark found is US pricing of $120-250 for giant dogs, and imported kibble in Panama can cost more.",
+      "sources": [
+        {
+          "title": "Chitre, Las Tablas and Azuero: Honest Cost Breakdown For Expats 2026",
+          "url": "https://www.igopanama.com/videos/relocate-to-panama-off-the-beaten-track-living-for-expats/chitre-las-tablas-azuero-honest-cost-breakdown-for-expats-2026",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in Chitre - livingcost.org",
+          "url": "https://livingcost.org/cost/panama/chitre",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Chitre Costs of Living - Panama Relocation Tours",
+          "url": "https://panamarelocationtours.com/chitre-costs-of-living",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Dog Food Cost Per Month: 2026 Prices by Dog Size",
+          "url": "https://petlifetimecost.com/how-much-does-dog-food-cost/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "utilities": {
-      "typical": 110,
-      "min": 75,
-      "max": 160,
-      "annualInflation": 0.035
+      "typical": 150,
+      "min": 90,
+      "max": 300,
+      "annualInflation": 0.035,
+      "notes": "livingcost.org puts family utilities in Chitre at $130/mo. Careful households pay $60-90 for electricity, but hot inland houses running A/C can reach $250-400. Water and propane add roughly $10-15.",
+      "sources": [
+        {
+          "title": "Cost of Living in Chitre - livingcost.org",
+          "url": "https://livingcost.org/cost/panama/chitre",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Chitre, Las Tablas and Azuero: Honest Cost Breakdown For Expats 2026",
+          "url": "https://www.igopanama.com/videos/relocate-to-panama-off-the-beaten-track-living-for-expats/chitre-las-tablas-azuero-honest-cost-breakdown-for-expats-2026",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Pedasi - Live and Invest Overseas",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/panama/pedasi",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "healthcare": {
-      "typical": 130,
-      "min": 70,
-      "max": 220,
+      "typical": 500,
+      "min": 235,
+      "max": 833,
       "annualInflation": 0.04,
-      "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. Hospital Cecilio Castillero is the Azuero Peninsula's regional public hospital. Hospital Anita Moreno (private) and Centro Médico Paitilla satellite serve private patients. Tertiary care (cardiology, oncology, complex surgery) typically referred to Panama City (~3 hr northwest)."
+      "notes": "Private health insurance premiums for two adults age 60-61. Min is two Family Medical Plan memberships ($117.30 each, ages 60-69); typical and max reflect 2026 local quotes of $6,000-10,000/yr for a couple age 60. Premiums are national and age-rated. Pensionado discounts apply to services, not premiums.",
+      "sources": [
+        {
+          "title": "Panama Relocation Tours - Health insurance options in Panama",
+          "url": "https://panamarelocationtours.com/health-insurance-options-in-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Feather - Health insurance in Panama guide (Jul 2026)",
+          "url": "https://feather-insurance.com/en-pa/blog/health-insurance-panama-guide",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Reside Panama - Healthcare in Panama 2026",
+          "url": "https://www.residepanama.com/en/reside-panama-blog/healthcare-in-panama-an-expat-guide-to-hospitals-insurance-costs-2026",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "insurance": {
-      "typical": 250,
-      "min": 150,
-      "max": 400,
-      "annualInflation": 0.04
+      "typical": 15,
+      "min": 10,
+      "max": 20,
+      "annualInflation": 0.04,
+      "notes": "This is now renters/contents cover only, not health insurance. No published Panamanian renters premium was found, so these are placeholder values.",
+      "estimate": true
     },
     "petCare": {
       "typical": 50,
       "min": 30,
       "max": 80,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "notes": "A routine vet visit in Panama costs about $20-50. The range assumes two visits a year plus vaccines and monthly flea, tick and heartworm preventives for a 100 lb dog. Preventive prices were not checked locally.",
+      "sources": [
+        {
+          "title": "Relofirm - pet costs in Panama",
+          "url": "https://relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "petDaycare": {
-      "typical": 120,
-      "min": 80,
-      "max": 200,
-      "annualInflation": 0.03
+      "typical": 80,
+      "min": 40,
+      "max": 150,
+      "annualInflation": 0.03,
+      "notes": "No dog daycare was found in Chitre, so this models occasional boarding at $10-30/night, about 4 nights a month for Panama City trips. Large dogs usually pay toward the top of that rate.",
+      "sources": [
+        {
+          "title": "Relofirm - pet costs in Panama",
+          "url": "https://relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "petGrooming": {
       "typical": 40,
       "min": 25,
-      "max": 65,
-      "annualInflation": 0.03
+      "max": 60,
+      "annualInflation": 0.03,
+      "notes": "A full groom in Panama costs about $20-40. A Bernese needs roughly monthly grooming and will sit at or above the top of that range.",
+      "sources": [
+        {
+          "title": "Relofirm - pet costs in Panama",
+          "url": "https://relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "transportation": {
-      "typical": 120,
-      "min": 60,
-      "max": 190,
-      "annualInflation": 0.03
+      "typical": 230,
+      "min": 150,
+      "max": 380,
+      "annualInflation": 0.03,
+      "notes": "91-octane gas in Chitre costs $1.202/L for Oct 30 to Nov 13, 2026, so 60-100 L/mo is about $70-120. Insurance adds $500-900/yr, and a roughly 500 km round trip to Panama City uses about $55 of fuel.",
+      "sources": [
+        {
+          "title": "Telemetro - precios de combustible 30 oct 2026",
+          "url": "https://www.telemetro.com/c6096959",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Champion Motors blog - car ownership costs",
+          "url": "https://championmotors.com.pa/blog/39",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Chitre, Las Tablas and Azuero: Honest Cost Breakdown For Expats 2026",
+          "url": "https://www.igopanama.com/videos/relocate-to-panama-off-the-beaten-track-living-for-expats/chitre-las-tablas-azuero-honest-cost-breakdown-for-expats-2026",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "entertainment": {
-      "typical": 130,
-      "min": 80,
-      "max": 200,
-      "annualInflation": 0.03
+      "typical": 240,
+      "min": 150,
+      "max": 380,
+      "annualInflation": 0.03,
+      "notes": "Includes Mas Movil 600 Mbps fiber at about $39 plus 7% tax, though Chitre coverage was not confirmed (Cable Onda is present), plus about $20 of streaming. Dinner for two averages $47.20, so 3-4 dinners a month is $140-190, plus some activities such as golf.",
+      "sources": [
+        {
+          "title": "Internet providers in Panama - ExpatDen",
+          "url": "https://expatden.com/panama/internet-providers-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in Chitre - livingcost.org",
+          "url": "https://livingcost.org/cost/panama/chitre",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Chitre Costs of Living - Panama Relocation Tours",
+          "url": "https://panamarelocationtours.com/chitre-costs-of-living",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "clothing": {
       "typical": 70,
@@ -110,10 +262,24 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 85,
-      "min": 70,
-      "max": 105,
-      "annualInflation": 0.02
+      "typical": 60,
+      "min": 54,
+      "max": 100,
+      "annualInflation": 0.02,
+      "notes": "Tigo and Mas Movil postpaid plans cost $27/line, so two lines are $54, or about $58 with tax. A 2024 Chitre budget paid $145 for two premium unlimited lines.",
+      "sources": [
+        {
+          "title": "Tarjetas SIM Panama - ExpatDen",
+          "url": "https://expatden.com/es/panama-es/tarjetas-sim-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Chitre Costs of Living - Panama Relocation Tours",
+          "url": "https://panamarelocationtours.com/chitre-costs-of-living",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "taxes": {
       "typical": 0,
@@ -145,7 +311,26 @@
       "min": 80,
       "typical": 150,
       "max": 300,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "notes": "Private doctor visits in Azuero cost about $15-25, and public visits $2-5. Pensionados get 15% off hospital bills and 20% off prescriptions. The stored range is kept to cover deductibles, labs and specialists.",
+      "sources": [
+        {
+          "title": "Pedasi - Live and Invest Overseas",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/panama/pedasi",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Chitre Costs of Living - Panama Relocation Tours",
+          "url": "https://panamarelocationtours.com/chitre-costs-of-living",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Health Insurance Panama Guide - Feather",
+          "url": "https://feather-insurance.com/en-pa/blog/health-insurance-panama-guide",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     }
   },
   "healthcare": {

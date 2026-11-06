@@ -41,9 +41,9 @@
       "notes": "NOVA grocery prices 15-20% above national average"
     },
     "utilities": {
-      "min": 276,
-      "max": 449,
-      "typical": 345,
+      "min": 230,
+      "max": 400,
+      "typical": 300,
       "annualInflation": 0.03,
       "breakdown": {
         "electricity": {
@@ -68,28 +68,106 @@
         }
       },
       "taxes": "Virginia exempts residential utilities from state sales tax.",
-      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig). "
+      "notes": "Dominion bill is about $180/mo at 1,000 kWh (Oct 2026), and sewer FY2027 is $55.78/qtr base plus $9.88 per 1,000 gal, about $58/mo at 12k gal/qtr. Fairfax Water averages about $26/mo, derived from a $1.93 rise equal to 7.5%. Range assumes 800-1,400 kWh. Trash/RUBS fees and any gas are estimates, not sourced.",
+      "sources": [
+        {
+          "title": "Dominion bill increase projection (WTVR, Oct 26 2026)",
+          "url": "https://www.wtvr.com/news/local-news/dominion-bill-increase-projection-oct-26-2026",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Fairfax County sewer charges FAQ",
+          "url": "https://www.fairfaxcounty.gov/publicworks/wastewater/sewer-charges-faqs",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Fairfax residents utility bills set to rise in 2026 (Fairfax Times)",
+          "url": "https://www.fairfaxtimes.com/articles/fairfax-residents-utility-bills-set-to-rise-in-2026/article_7875a665-c056-4396-aca8-c65cfdbdb06c.html",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Fairfax Water proposes annual rate increase",
+          "url": "https://greenrisks.blogspot.com/2025/10/fairfax-water-proposes-their-annual.html",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "healthcare": {
-      "min": 550,
-      "max": 850,
-      "typical": 650,
-      "notes": "Medicare Part B ($174.70/mo) + Medigap Plan G (~$200/mo x2 people) + Part D (~$45/mo x2) + dental/vision plans. Higher premiums reflect macular degeneration specialist coverage and frequent monitoring needs.",
-      "annualInflation": 0.055
+      "min": 682,
+      "max": 956,
+      "typical": 796,
+      "notes": "Uses the 2026 Part B standard premium of $202.90 x2, since 2027 is not yet published. Medigap G at age 65 in Virginia runs $138 (cheapest) to $156 among listed carriers, with a $236 average (MoneyGeek, 2026). Part D runs $0 to the $38.99 base beneficiary premium per person. This is not Fairfax-specific, and attained-age Plan G rises with age.",
+      "annualInflation": 0.055,
+      "sources": [
+        {
+          "title": "Medigap Plan G premiums rose 12 to 26 percent in 2026 filings (247WallSt)",
+          "url": "https://247wallst.com/personal-finance/2026/09/11/medigap-plan-g-premiums-rose-12-to-26-in-2026-filings-one-chubb-block-got-45-attained-age-policyholders-got-their-birthday-increase-on-top/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Best Medicare Supplement Virginia (MoneyGeek)",
+          "url": "https://moneygeek.com/insurance/health/best-medicare-supplement-virginia",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Medicare Part D plan premiums 2026 (Healthcare Dive)",
+          "url": "https://www.healthcaredive.com/news/medicare-part-d-plan-premiums-increase-2026-cms/756211/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "healthcarePreMedicare": {
-      "min": 1886,
-      "max": 2714,
-      "typical": 2300,
+      "min": 1712,
+      "max": 2332,
+      "typical": 2332,
       "annualInflation": 0.06,
-      "notes": "ACA silver benchmark for 2-adult household both age ~60, before subsidies. County-level estimate (Fairfax County, VA). NOVA marketplace: Anthem HealthKeepers, CareFirst, Kaiser. Metro pricing. Estimated ±15% vs healthcare.gov quote — verify for a specific ZIP before relying on the number."
+      "notes": "KFF 2027 Virginia statewide averages for a 40-year-old are bronze $403, benchmark silver $549 and lowest gold $518, scaled to age 60 with the federal default age curve (2.714/1.278) for two people. Lowest gold ($2,200 for two) is below benchmark silver because of silver loading, so max is set to the benchmark. These are statewide averages, not Fairfax-specific.",
+      "sources": [
+        {
+          "title": "KFF Average Monthly Marketplace Premiums by Metal Tier",
+          "url": "https://www.kff.org/affordable-care-act/state-indicator/average-marketplace-premiums-by-metal-tier/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "KFF Marketplace Average Benchmark Premiums",
+          "url": "https://www.kff.org/affordable-care-act/state-indicator/marketplace-average-benchmark-premiums/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "2027 Rate Changes - Virginia (ACASignups)",
+          "url": "https://acasignups.net/node/9968",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Virginia ACA marketplace (healthinsurance.org)",
+          "url": "https://www.healthinsurance.org/aca-marketplace/virginia/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "insurance": {
-      "min": 35,
-      "max": 55,
-      "typical": 45,
+      "min": 8,
+      "max": 22,
+      "typical": 20,
       "type": "renter's insurance",
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "notes": "Fairfax renters quotes average about $8/mo (range $6-18). Insure.com lists Fairfax ZIP 22035 at $20/mo and the Virginia average at $22/mo for $40k property and $300k liability. Higher liability limits for a large dog could push costs above this range.",
+      "sources": [
+        {
+          "title": "Cheap renters insurance Fairfax VA (SafeButler)",
+          "url": "https://www.safebutler.com/cheap-best-renters-insurance-fairfax-va",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Average renters insurance cost in Virginia (Insure.com)",
+          "url": "https://www.insure.com/renters-insurance/average-renters-insurance-cost-in-virginia/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "petCare": {
       "min": 140,
@@ -99,44 +177,114 @@
       "notes": "Vet care in NOVA premium-priced. VCA, Pender, and Fairfax Animal Hospital nearby."
     },
     "petDaycare": {
-      "min": 340,
-      "max": 520,
-      "typical": 420,
+      "min": 312,
+      "max": 516,
+      "typical": 403,
       "annualInflation": 0.035,
-      "notes": "Doggy daycare 2 days/week, large breed rate (~$48/day). Camp Bow Wow, Dogtopia, Whole Dogz in Fairfax area. NoVA premium pricing."
+      "notes": "Rover Fairfax daycare averages $39/day (range $29-45), and Dogtopia Fairfax City charges $41/day on an 8-day pass or $43/day on a 4-day pass, with $75/night boarding for non-enrolled dogs. Min is 8 days at $39, typical is an 8-day pass plus 1 boarding night, and max is 12 days at $43.",
+      "sources": [
+        {
+          "title": "Doggy Day Care in Fairfax (Rover)",
+          "url": "https://www.rover.com/fairfax--va--doggy-day-care/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Dogtopia Fairfax City Pricing",
+          "url": "https://www.dogtopia.com/fairfax-city/?p=19",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "petGrooming": {
-      "min": 90,
+      "min": 80,
       "max": 170,
       "typical": 125,
       "annualInflation": 0.03,
-      "notes": "Bernese coat maintenance, professional grooming monthly. NOVA grooming prices above average."
+      "notes": "Dogtopia Fairfax charges $50 for a large-dog bath, plus $15 nails, $15 ear or teeth care and brush-outs from $15, which puts a monthly bath at about $80. Fairfax full-deshed prices for a Bernese were not published, so typical and max are the stored values.",
+      "sources": [
+        {
+          "title": "Dogtopia Fairfax City Pricing",
+          "url": "https://www.dogtopia.com/fairfax-city/?p=19",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "transportation": {
-      "min": 250,
-      "max": 500,
-      "typical": 375,
-      "notes": "Car-dependent but Metro Orange/Silver lines accessible from Vienna/Falls Church. Gas, insurance, parking higher in NOVA.",
-      "annualInflation": 0.03
+      "min": 290,
+      "max": 535,
+      "typical": 410,
+      "notes": "Inputs: Virginia gas at $4.14/gal (AAA, Sep 2026) over 600-1,000 mi/mo at 25 mpg, and full coverage at age 65 of $92-194/mo (state average $1,709/yr). Fairfax car tax is $4.57 per $100, net of PPTRA relief. Maintenance and the registration fee are estimates, not sourced.",
+      "annualInflation": 0.03,
+      "sources": [
+        {
+          "title": "Gas prices jump in Richmond, across Virginia (12 On Your Side)",
+          "url": "https://www.12onyourside.com/2026/09/14/gas-prices-jump-richmond-across-virginia-nationwide/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cheap car insurance for seniors in Virginia (CarInsurance.com)",
+          "url": "https://www.carinsurance.com/state/cheap-car-insurance-for-seniors-in-virginia/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Fairfax County vehicle personal property tax",
+          "url": "https://www.fairfaxcounty.gov/taxes/node/256",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "entertainment": {
       "min": 444,
       "max": 654,
       "typical": 534,
       "annualInflation": 0.025,
-      "notes": "Incl cable+1Gig internet, Netflix, Amazon Prime, Apple TV+, dining out (lunch for 2 2x/week w/ tax+tip)"
+      "notes": "Fios 1 Gig is $89.99/mo with AutoPay. BLS puts Washington-metro food away from home at $5,905/yr per household (about $492/mo), which supports the stored dining and activities assumptions. Streaming and activities line items are not separately sourced.",
+      "sources": [
+        {
+          "title": "Verizon plans and pricing (HighSpeedInternet.com)",
+          "url": "https://highspeedinternet.com/providers/verizon",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "BLS Consumer Expenditures Washington area 2023-24",
+          "url": "https://www.bls.gov/regions/mid-atlantic/news-release/2026/consumerexpenditures_washington_20260116.htm",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "clothing": {
       "min": 100,
-      "max": 250,
-      "typical": 160,
-      "annualInflation": 0.02
+      "max": 298,
+      "typical": 175,
+      "annualInflation": 0.02,
+      "notes": "BLS puts Washington-metro apparel at 3.3% of $108,215/yr, about $298/mo for a 2.4-person working household, which is used as max. A retired couple is assumed to spend less, so min and typical are judgment calls under that ceiling.",
+      "sources": [
+        {
+          "title": "BLS Consumer Expenditures Washington area 2023-24",
+          "url": "https://www.bls.gov/regions/mid-atlantic/news-release/2026/consumerexpenditures_washington_20260116.htm",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "personalCare": {
       "min": 45,
-      "max": 110,
-      "typical": 70,
-      "annualInflation": 0.02
+      "max": 135,
+      "typical": 80,
+      "annualInflation": 0.02,
+      "notes": "BLS puts Washington-metro personal care at 1.5% of $108,215/yr, about $135/mo per household, which is used as max. Min and typical are scaled down for a retired couple and are judgment calls.",
+      "sources": [
+        {
+          "title": "BLS Consumer Expenditures Washington area 2023-24",
+          "url": "https://www.bls.gov/regions/mid-atlantic/news-release/2026/consumerexpenditures_washington_20260116.htm",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "subscriptions": {
       "min": 30,
@@ -148,9 +296,17 @@
     "phoneCell": {
       "min": 50,
       "max": 80,
-      "typical": 62,
+      "typical": 50,
       "annualInflation": 0.02,
-      "notes": "T-Mobile 55+ Essentials. 2 phones, 1.5GB+ high-speed data each, all taxes included."
+      "notes": "US Mobile Unlimited Starter is $50 for 2 lines with taxes included, and Visible is $25/line. T-Mobile Essentials Saver is $80 for 2 lines plus taxes, and Verizon starts at $110 (all prices Oct 2026).",
+      "sources": [
+        {
+          "title": "Best cell phone plans for 2 lines October 2026 (US Mobile)",
+          "url": "https://www.usmobile.com/blog/best-cell-phone-plans-for-2-lines-october-2026/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "miscellaneous": {
       "min": 120,

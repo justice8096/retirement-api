@@ -32,23 +32,41 @@
   },
   "monthlyCosts": {
     "rent": {
-      "min": 350,
-      "max": 700,
-      "typical": 525,
+      "min": 400,
+      "max": 900,
+      "typical": 600,
       "type": "2-3 bedroom house",
       "annualInflation": 0.025,
-      "notes": "No rental tax in Panama. Dolega rents run 30-50% below Boquete. Median ~$525/mo for a modest 2-3BR home per 2025 listings (Encuentra24, Rent By Owner). Furnished homes with expat amenities trend toward the upper end. David 15-20 min south for shopping, hospital, airport."
+      "notes": "Dolega district includes Los Algarrobos, where suburban homes rent for about $500-700. Furnished 2BR rentals start around $500, and the area is described as cheaper than both David and Boquete. Rent here is set a little below David.",
+      "sources": [
+        {
+          "title": "Six Places in Panama Where a Couple Can Live Well for $2000 a Month (or Less)",
+          "url": "https://panamarelocationtours.com/six-places-in-panama-where-you-can-live-well-for-2000-a-month-or-less",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in Panama 2026 (ExpatDen)",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "10 Most Affordable Places to Live in Panama (Panama Relocation Tours)",
+          "url": "https://panamarelocationtours.com/10-most-affordable-places-to-live-in-panama",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "groceries": {
       "min": 590,
       "max": 940,
       "typical": 760,
-      "notes": "2 adults + pet food; shop primarily in David (Super Baru, PriceSmart, Romero). Local Dolega market for produce. Prices similar to Boquete — same regional supply chain.",
+      "notes": "2 adults + pet food; shop primarily in David (Super Baru, PriceSmart, Romero). Local Dolega market for produce. Prices similar to Boquete — same regional supply chain. Basket model kept on the 2026-11-06 refresh: INEC food CPI +2.1% y/y to Sep 2026.",
       "annualInflation": 0.03
     },
     "utilities": {
-      "min": 65,
-      "max": 135,
+      "min": 50,
+      "max": 180,
       "typical": 95,
       "annualInflation": 0.025,
       "breakdown": {
@@ -74,14 +92,45 @@
         }
       },
       "taxes": "ITBMS 7% on electricity. Water exempt for residential.",
-      "notes": "Electricity, propane, water, sewage. Internet is in entertainment. Trash typically included in rent."
+      "notes": "Dolega lies between hot David, where A/C bills run $100-150, and the highlands, where bills run $25-70 with little A/C. Moderate A/C use costs about $45-90 a month. Water adds $5-25 and a propane refill $5-8.",
+      "sources": [
+        {
+          "title": "Panama Utilities and Electricity Costs: What Expats Need to Know (Relofirm, Nov 2025)",
+          "url": "https://www.relofirm.com/?p=238749",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in Panama 2026 (ExpatDen)",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "healthcare": {
-      "min": 280,
-      "max": 550,
-      "typical": 400,
-      "notes": "Private insurance required (~$175-250/person/mo). No public hospital in Dolega — Hospital Chiriquí and Hospital Mae Lewis both in David (15-20 min drive). Routine care at local Dolega clinics and pharmacies. Anti-VEGF and ophthalmology in David or Panama City. Pensionado discount 15-25% on services. Pre-existing condition exclusions common first 12-24 months.",
-      "annualInflation": 0.06
+      "min": 235,
+      "max": 833,
+      "typical": 500,
+      "notes": "Private health insurance premiums for two adults age 60-61. Min is two Family Medical Plan memberships ($117.30 each, ages 60-69); typical and max reflect 2026 local quotes of $6,000-10,000/yr for a couple age 60. Premiums are national and age-rated. Pensionado discounts apply to services, not premiums.",
+      "annualInflation": 0.06,
+      "sources": [
+        {
+          "title": "Panama Relocation Tours - Health insurance options in Panama",
+          "url": "https://panamarelocationtours.com/health-insurance-options-in-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Feather - Health insurance in Panama guide (Jul 2026)",
+          "url": "https://feather-insurance.com/en-pa/blog/health-insurance-panama-guide",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Reside Panama - Healthcare in Panama 2026",
+          "url": "https://www.residepanama.com/en/reside-panama-blog/healthcare-in-panama-an-expat-guide-to-hospitals-insurance-costs-2026",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "insurance": {
       "min": 10,
@@ -97,32 +146,84 @@
       "notes": "Basic vet care available in David (15-20 min). Fewer pet services than Boquete. Local vets affordable but limited specialty capability."
     },
     "petDaycare": {
-      "min": 90,
+      "min": 40,
       "max": 180,
-      "typical": 130,
+      "typical": 100,
       "annualInflation": 0.025,
-      "notes": "No commercial pet daycare in Dolega. Informal pet sitters via expat/local network. David has a few boarding options. Expect to pay $12-18/visit for in-home sitting."
+      "notes": "Boarding costs about $10-30 a night depending on size. This assumes about 4-6 nights a month at the large-dog rate; the facilities are likely in David or Boquete.",
+      "sources": [
+        {
+          "title": "Bring Pets to Panama: What You Need to Know (Relofirm, Mar 2025)",
+          "url": "https://relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "petGrooming": {
-      "min": 25,
-      "max": 60,
-      "typical": 40,
+      "min": 20,
+      "max": 50,
+      "typical": 35,
       "annualInflation": 0.025,
-      "notes": "Groomers available in David; may need to travel. Fewer options than Boquete."
+      "notes": "Full-service grooming costs about $20-40 a session. A large double-coated dog is assumed at or near the top of that range, every 4-8 weeks.",
+      "sources": [
+        {
+          "title": "Bring Pets to Panama: What You Need to Know (Relofirm, Mar 2025)",
+          "url": "https://relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "transportation": {
-      "min": 70,
-      "max": 170,
-      "typical": 115,
-      "notes": "Car strongly recommended — no expat-targeted local transit. David runs ($1-2 bus or $5-8 taxi). Gas, insurance, and David supply runs (~2-3x/week for many expats). Closer to David than Boquete, which reduces per-trip cost slightly.",
-      "annualInflation": 0.025
+      "min": 160,
+      "max": 340,
+      "typical": 240,
+      "notes": "Same car costs as David, with insurance at $42-75 a month and fuel at about $1.30 a liter. Extra mileage is added for regular trips into David for shopping and medical care. Buses to David cost under $2.",
+      "annualInflation": 0.025,
+      "sources": [
+        {
+          "title": "The True Cost of Owning a Car in Panama (2026 Expat Breakdown) (Champion Motors)",
+          "url": "https://championmotors.com.pa/blog/39",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in Panama 2026 (ExpatDen)",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Six Places in Panama Where a Couple Can Live Well for $2000 a Month (or Less)",
+          "url": "https://panamarelocationtours.com/six-places-in-panama-where-you-can-live-well-for-2000-a-month-or-less",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "entertainment": {
-      "min": 220,
-      "max": 390,
-      "typical": 290,
+      "min": 160,
+      "max": 400,
+      "typical": 270,
       "annualInflation": 0.02,
-      "notes": "Incl cable+internet (slower than Boquete — 50-150Mbps), Netflix, Amazon Prime, Apple TV+, NFL RedZone (DAZN). Fewer dining-out options than Boquete; David restaurants 15-20 min away. Small-town social scene; Boquete expat events accessible."
+      "notes": "Mas Movil fiber costs $39-55 a month for 600 Mbps, and Boquete bundles run about $64-65. +Movil says fiber covers Chiriqui, but Dolega addresses were not confirmed. The total also includes streaming, dining out for 2 three to four times a month at $30-50 per meal, and local activities.",
+      "sources": [
+        {
+          "title": "Internet Providers in Panama (ExpatDen, Jun 2026)",
+          "url": "https://www.expatden.com/panama/internet-providers-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "+Movil avanza en su cobertura con la red de fibra optica en Chiriqui (La Prensa, Dec 2024)",
+          "url": "https://www.prensa.com/contenido-patrocinado/movil-avanza-en-su-cobertura-con-la-red-de-fibra-optica-y-movil-siendo-el-operador-con-la-mayor-red-de-fibra-en-la-provincia-de-chiriqui/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in David (Expat Exchange)",
+          "url": "https://expatexchange.com/ctryguide/8905/87/Panama/Cost-of-Living-in-David",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "clothing": {
       "min": 30,
@@ -144,11 +245,24 @@
       "notes": "Streaming, news, apps"
     },
     "phoneCell": {
-      "min": 68,
-      "max": 100,
-      "typical": 83,
+      "min": 30,
+      "max": 90,
+      "typical": 60,
       "annualInflation": 0.02,
-      "notes": "Google Fi Flexible (US number) + +Movil or Claro prepaid (local). Same setup as Boquete region. 2 phones."
+      "notes": "Two postpaid lines on Tigo or Mas Movil cost $27 each, so $54 before tax. A prepaid SIM with 10GB costs about $12, which sets the low end. The upper end includes an allowance for a US number.",
+      "sources": [
+        {
+          "title": "Tarjetas SIM en Panama: planes, proveedores, costos (ExpatDen, updated Oct 2026)",
+          "url": "https://www.expatden.com/es/panama-es/tarjetas-sim-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in David, Panama (Jobicy, May 2026)",
+          "url": "https://jobicy.com/cost-of-living/panama/david",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "miscellaneous": {
       "min": 35,
@@ -164,11 +278,24 @@
       "notes": "Monthly safety buffer for unexpected expenses"
     },
     "medicalOOP": {
-      "min": 100,
-      "max": 325,
-      "typical": 175,
+      "min": 60,
+      "max": 300,
+      "typical": 140,
       "annualInflation": 0.06,
-      "notes": "Private system OOP: specialist visits $40-80 in David, anti-VEGF injections $400-800 each at David/Panama City clinics. Labs $15-30/panel. Pensionado discounts offset some costs. Serious specialties may require travel to Panama City."
+      "notes": "Care is mainly at David clinics and hospitals. A GP visit costs $40-80, a specialist $60-150 and basic labs $40-80, with a 20% Pensionado discount.",
+      "sources": [
+        {
+          "title": "Healthcare in Panama: an expat guide to hospitals and insurance costs 2026 (Reside Panama)",
+          "url": "https://www.residepanama.com/en/reside-panama-blog/healthcare-in-panama-an-expat-guide-to-hospitals-insurance-costs-2026",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Healthcare in Panama for Expats (2026)",
+          "url": "https://vidala-166.pages.dev/guides/panama-healthcare-expats",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "medicine": {
       "min": 383,

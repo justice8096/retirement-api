@@ -30,35 +30,105 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 1500,
-      "min": 1200,
+      "typical": 1400,
+      "min": 1150,
       "max": 1800,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "notes": "Current Bella Vista 2BR listings are 1100-1700, and the 1300 one includes maintenance. One guide puts the 2BR average at 1500 and 3BR at 2000. Pet-friendly buildings narrow the choice.",
+      "sources": [
+        {
+          "title": "RE/MAX Bella Vista 2BR 1300 maintenance included",
+          "url": "https://www.remax-centralamerica.com/003244213024",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "RE/MAX Bella Vista 2BR 1600",
+          "url": "https://www.remax-centralamerica.com/002573756041",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "RE/MAX Bella Vista PH El Botanico 2BR 1100 with pet area",
+          "url": "https://www.remax-centralamerica.com/002604331029",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "RE/MAX Bella Vista 2BR 1700",
+          "url": "https://remax-centralamerica.com/002602358068",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "RE/MAX Bella Vista 2BR 1200",
+          "url": "https://www.remax-centralamerica.com/003244147043",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Best Neighborhoods for Retirees in Panama City - Expat Exchange",
+          "url": "https://www.expatexchange.com/ctryguide/30263/87/Panama/Living-in-Panama-City-Best-Neighborhoods-for-Retirees-in-Panama-City",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "groceries": {
-      "typical": 500,
-      "min": 380,
-      "max": 650,
-      "annualInflation": 0.03
+      "typical": 875,
+      "min": 700,
+      "max": 1050,
+      "annualInflation": 0.03,
+      "notes": "aligned to city basket. No Bella Vista grocery data found.",
+      "estimate": true
     },
     "utilities": {
-      "typical": 180,
+      "typical": 165,
       "min": 130,
-      "max": 250,
-      "annualInflation": 0.035
+      "max": 230,
+      "annualInflation": 0.035,
+      "notes": "Same model as the city: 2BR electricity with A/C is 120-200+, plus water and sewer 10-25 and propane 5-8. No neighborhood-specific data.",
+      "sources": [
+        {
+          "title": "Cost of Living in Panama City 2026 - Vidala guide",
+          "url": "https://vidala-166.pages.dev/guides/panama-city-cost-of-living",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Panama Utilities and Electricity Costs - Relofirm",
+          "url": "https://www.relofirm.com/?p=238749",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "healthcare": {
-      "typical": 250,
-      "min": 150,
-      "max": 400,
+      "typical": 500,
+      "min": 235,
+      "max": 833,
       "annualInflation": 0.04,
-      "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. Excellent specialist access in Panama City: Hospital Punta Pacifica (JCI-accredited, Johns Hopkins-affiliated), Hospital Nacional, Pacifica Salud, Hospital Paitilla, Hospital San Fernando. Anti-VEGF + ophthalmology + cardiology + oncology widely available locally. GLP-1 (Ozempic/Wegovy) available via private prescription, ~$200-400/mo."
+      "notes": "Private health insurance premiums for two adults age 60-61. Min is two Family Medical Plan memberships ($117.30 each, ages 60-69); typical and max reflect 2026 local quotes of $6,000-10,000/yr for a couple age 60. Premiums are national and age-rated. Pensionado discounts apply to services, not premiums.",
+      "sources": [
+        {
+          "title": "Panama Relocation Tours - Health insurance options in Panama",
+          "url": "https://panamarelocationtours.com/health-insurance-options-in-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Feather - Health insurance in Panama guide (Jul 2026)",
+          "url": "https://feather-insurance.com/en-pa/blog/health-insurance-panama-guide",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Reside Panama - Healthcare in Panama 2026",
+          "url": "https://www.residepanama.com/en/reside-panama-blog/healthcare-in-panama-an-expat-guide-to-hospitals-insurance-costs-2026",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "insurance": {
-      "typical": 300,
-      "min": 200,
-      "max": 450,
-      "annualInflation": 0.04
+      "typical": 20,
+      "min": 15,
+      "max": 25,
+      "annualInflation": 0.04,
+      "notes": "The old template stored health insurance here. Replaced with the renters placeholder.",
+      "estimate": true
     },
     "petCare": {
       "typical": 50,
@@ -79,16 +149,49 @@
       "annualInflation": 0.03
     },
     "transportation": {
-      "typical": 200,
-      "min": 120,
+      "typical": 150,
+      "min": 80,
       "max": 300,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "notes": "Walkable to Metro Line 1, where retirees pay 0.24, but a 100 lb dog needs car trips to the vet. Typical is a car-light mix. Max is one car with central parking at 80-200.",
+      "sources": [
+        {
+          "title": "Cost of Living in Panama 2026 - ExpatDen",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in Panama City 2026 - Vidala guide",
+          "url": "https://vidala-166.pages.dev/guides/panama-city-cost-of-living",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Champion Motors blog 39",
+          "url": "https://championmotors.com.pa/blog/39",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "entertainment": {
-      "typical": 300,
-      "min": 200,
-      "max": 450,
-      "annualInflation": 0.03
+      "typical": 366,
+      "min": 296,
+      "max": 466,
+      "annualInflation": 0.03,
+      "notes": "Re-modeled to the city structure: Mas Movil 600 Mbps fiber at about 42 with tax, plus streaming, dining out 3-4 times a month at mid-range prices, and activities.",
+      "sources": [
+        {
+          "title": "Internet providers in Panama - ExpatDen",
+          "url": "https://expatden.com/panama/internet-providers-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in Panama 2026 - ExpatDen",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "clothing": {
       "typical": 70,
@@ -109,10 +212,19 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 85,
-      "min": 70,
-      "max": 105,
-      "annualInflation": 0.02
+      "typical": 60,
+      "min": 40,
+      "max": 85,
+      "annualInflation": 0.02,
+      "notes": "Two postpaid lines at 27 each with Tigo or Mas Movil, plus tax.",
+      "sources": [
+        {
+          "title": "Tarjetas SIM Panama - ExpatDen",
+          "url": "https://expatden.com/es/panama-es/tarjetas-sim-panama/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "taxes": {
       "typical": 0,
@@ -141,10 +253,24 @@
       "annualInflation": 0.025
     },
     "medicalOOP": {
-      "min": 80,
-      "typical": 150,
+      "min": 85,
+      "typical": 160,
       "max": 300,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "notes": "Aligned to the city model. GP visits run 15-80 and specialists 50-120.",
+      "sources": [
+        {
+          "title": "Cost of Living in Panama 2026 - ExpatDen",
+          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Cost of Living in Panama City (2026) - Panama Home Realty",
+          "url": "https://panamahomerealty.com/articles/cost-of-living-in-panama-city-2026-real-monthly-expenses-rent-and-lifestyle-guide",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     }
   },
   "healthcare": {

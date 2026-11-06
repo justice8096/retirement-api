@@ -30,65 +30,212 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 650,
-      "min": 500,
-      "max": 800,
-      "annualInflation": 0.04
+      "typical": 750,
+      "min": 550,
+      "max": 1200,
+      "annualInflation": 0.04,
+      "notes": "Live and Invest Overseas (updated Jun 2026) puts a 2BR at $650, with long leases near $500, and a furnished 2BR with pool at about $1,200. Few long-term 3BR listings exist: a 4BR in Pocri is $950 and Andromeda beach houses ask $1,700. Pet policies were not stated.",
+      "sources": [
+        {
+          "title": "Pedasi - Live and Invest Overseas",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/panama/pedasi",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Mitula - Casas en alquiler en Pedasi",
+          "url": "https://casas.mitula.com.pa/alquiler-casas-pedasi",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Inmopanama - alquiler casas Pedasi",
+          "url": "https://www.inmopanama.com/alquiler-casas-pedasi",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "groceries": {
-      "typical": 330,
-      "min": 250,
-      "max": 430,
-      "annualInflation": 0.03
+      "typical": 580,
+      "min": 470,
+      "max": 850,
+      "annualInflation": 0.03,
+      "notes": "Live and Invest Overseas lists $450 of groceries a month in Pedasi. Pedasi has three main stores, and residents drive to Chitre or Las Tablas for imported goods. Typical adds about $90 of dog food, based on a US giant-dog benchmark.",
+      "sources": [
+        {
+          "title": "Pedasi - Live and Invest Overseas",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/panama/pedasi",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "12 Tips for Living in Pedasi - Expat Exchange",
+          "url": "https://www.expatexchange.com/eetr/79426/87/11/expat-living-in/panama/12-Tips-for-Living-in-Pedasi-Panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Dog Food Cost Per Month: 2026 Prices by Dog Size",
+          "url": "https://petlifetimecost.com/how-much-does-dog-food-cost/",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "utilities": {
-      "typical": 100,
-      "min": 65,
-      "max": 150,
-      "annualInflation": 0.035
+      "typical": 140,
+      "min": 85,
+      "max": 280,
+      "annualInflation": 0.035,
+      "notes": "Live and Invest Overseas lists electricity $100, water $4 and gas $8 a month in Pedasi. Running A/C hard in a 2-3BR house can push electricity toward $250+, while a house that relies on breezes and fans costs much less.",
+      "sources": [
+        {
+          "title": "Pedasi - Live and Invest Overseas",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/panama/pedasi",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Chitre, Las Tablas and Azuero: Honest Cost Breakdown For Expats 2026",
+          "url": "https://www.igopanama.com/videos/relocate-to-panama-off-the-beaten-track-living-for-expats/chitre-las-tablas-azuero-honest-cost-breakdown-for-expats-2026",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "healthcare": {
-      "typical": 120,
-      "min": 60,
-      "max": 200,
+      "typical": 500,
+      "min": 235,
+      "max": 833,
       "annualInflation": 0.04,
-      "notes": "CSS public system available to Pensionado visa holders; private insurance ~$200-350/mo per person (ASSA / Mapfre / Bupa LatAm / international). Pre-existing exclusions common first 12-24 months. Pensionado 15-25% discount on most medical services. Farmacia Arrocha is the national chain. Pedasí has a small Centro de Salud (public clinic); Hospital Cecilio Castillero in Chitré (~50 mi north) is the regional hospital. Tertiary care via Panama City (~4 hr northwest). Anti-VEGF + advanced ophthalmology only available in capital."
+      "notes": "Private health insurance premiums for two adults age 60-61. Min is two Family Medical Plan memberships ($117.30 each, ages 60-69); typical and max reflect 2026 local quotes of $6,000-10,000/yr for a couple age 60. Premiums are national and age-rated. Pensionado discounts apply to services, not premiums.",
+      "sources": [
+        {
+          "title": "Panama Relocation Tours - Health insurance options in Panama",
+          "url": "https://panamarelocationtours.com/health-insurance-options-in-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Feather - Health insurance in Panama guide (Jul 2026)",
+          "url": "https://feather-insurance.com/en-pa/blog/health-insurance-panama-guide",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Reside Panama - Healthcare in Panama 2026",
+          "url": "https://www.residepanama.com/en/reside-panama-blog/healthcare-in-panama-an-expat-guide-to-hospitals-insurance-costs-2026",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "insurance": {
-      "typical": 250,
-      "min": 150,
-      "max": 400,
-      "annualInflation": 0.04
+      "typical": 15,
+      "min": 10,
+      "max": 20,
+      "annualInflation": 0.04,
+      "notes": "This is now renters/contents cover only, not health insurance. No published Panamanian renters premium was found, so these are placeholder values.",
+      "estimate": true
     },
     "petCare": {
       "typical": 50,
       "min": 30,
       "max": 80,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "notes": "A routine vet visit in Panama costs about $20-50. Pedasi has free spay/neuter clinics through Animal Advocates, but full vet care likely means driving to Las Tablas or Chitre.",
+      "sources": [
+        {
+          "title": "Relofirm - pet costs in Panama",
+          "url": "https://relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "12 Tips for Living in Pedasi - Expat Exchange",
+          "url": "https://www.expatexchange.com/eetr/79426/87/11/expat-living-in/panama/12-Tips-for-Living-in-Pedasi-Panama",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "petDaycare": {
-      "typical": 120,
-      "min": 80,
-      "max": 200,
-      "annualInflation": 0.03
+      "typical": 80,
+      "min": 40,
+      "max": 150,
+      "annualInflation": 0.03,
+      "notes": "No dog daycare was found in Pedasi, so this models occasional boarding or a sitter at $10-30/night, about 4 nights a month for trips away.",
+      "sources": [
+        {
+          "title": "Relofirm - pet costs in Panama",
+          "url": "https://relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "petGrooming": {
       "typical": 40,
       "min": 25,
-      "max": 65,
-      "annualInflation": 0.03
+      "max": 60,
+      "annualInflation": 0.03,
+      "notes": "A full groom in Panama costs about $20-40, and a large double-coated dog sits at the top of that range. Grooming may require trips to Las Tablas.",
+      "sources": [
+        {
+          "title": "Relofirm - pet costs in Panama",
+          "url": "https://relofirm.com/?p=238904",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "transportation": {
-      "typical": 130,
-      "min": 60,
-      "max": 200,
-      "annualInflation": 0.03
+      "typical": 270,
+      "min": 180,
+      "max": 420,
+      "annualInflation": 0.03,
+      "notes": "91-octane gas in Las Tablas costs $1.205/L for Oct 30 to Nov 13, 2026. Car insurance adds $500-900/yr. Regular drives to Las Tablas (45 min) and Chitre (1 hr), plus a Panama City trip of 4+ hrs each way, raise fuel use compared with Chitre.",
+      "sources": [
+        {
+          "title": "Telemetro - precios de combustible 30 oct 2026",
+          "url": "https://www.telemetro.com/c6096959",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Champion Motors blog - car ownership costs",
+          "url": "https://championmotors.com.pa/blog/39",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "12 Tips for Living in Pedasi - Expat Exchange",
+          "url": "https://www.expatexchange.com/eetr/79426/87/11/expat-living-in/panama/12-Tips-for-Living-in-Pedasi-Panama",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "entertainment": {
-      "typical": 120,
-      "min": 70,
-      "max": 190,
-      "annualInflation": 0.03
+      "typical": 270,
+      "min": 170,
+      "max": 400,
+      "annualInflation": 0.03,
+      "notes": "Fiber in Pedasi was not confirmed; one older source lists 10 Mbps for $50. Starlink is likely the fastest option at about $75-120/mo plus hardware. Live and Invest Overseas puts internet and streaming at $50 and entertainment at $160.",
+      "sources": [
+        {
+          "title": "Internet providers in Panama - ExpatDen",
+          "url": "https://expatden.com/panama/internet-providers-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Starlink Cost in Panama 2026 - SatSpeedCheck",
+          "url": "https://satspeedcheck.com/cost/panama/",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Internet Speeds in Panama - Panama Relocation Tours",
+          "url": "https://panamarelocationtours.com/internet-speeds-in-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Pedasi - Live and Invest Overseas",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/panama/pedasi",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "clothing": {
       "typical": 70,
@@ -109,10 +256,24 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 85,
-      "min": 70,
-      "max": 105,
-      "annualInflation": 0.02
+      "typical": 60,
+      "min": 54,
+      "max": 100,
+      "annualInflation": 0.02,
+      "notes": "Tigo and Mas Movil postpaid plans cost $27/line, so two lines are about $58 with tax. Live and Invest Overseas lists $35 per phone in Pedasi.",
+      "sources": [
+        {
+          "title": "Tarjetas SIM Panama - ExpatDen",
+          "url": "https://expatden.com/es/panama-es/tarjetas-sim-panama",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "Pedasi - Live and Invest Overseas",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/panama/pedasi",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     },
     "taxes": {
       "typical": 0,
@@ -144,7 +305,21 @@
       "min": 80,
       "typical": 150,
       "max": 300,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "notes": "A doctor visit costs $15-25, and the town clinic offers basic consults. Emergencies and specialists go to the Las Tablas or Chitre hospitals, so the stored range is kept to cover deductibles, labs and travel.",
+      "sources": [
+        {
+          "title": "Pedasi - Live and Invest Overseas",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/panama/pedasi",
+          "accessed": "2026-11-06"
+        },
+        {
+          "title": "12 Tips for Living in Pedasi - Expat Exchange",
+          "url": "https://www.expatexchange.com/eetr/79426/87/11/expat-living-in/panama/12-Tips-for-Living-in-Pedasi-Panama",
+          "accessed": "2026-11-06"
+        }
+      ],
+      "lastVerified": "2026-11-06"
     }
   },
   "healthcare": {
