@@ -46,35 +46,134 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 680,
-      "min": 550,
-      "max": 850,
-      "annualInflation": 0.04
+      "typical": 700,
+      "min": 500,
+      "max": 900,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-07",
+      "notes": "Asking rents May 2026: Kalamata 2BR EUR 690 / 3BR EUR 850, Nafplio 740/910, smaller Messinia/Laconia towns EUR 450-600; Expat Exchange reports EUR 500-600 for 2BR in central Kalamata. Pet-friendly 2-3BR house with yard sits around EUR 700. Spitogatos Q2 2026 index shows national rents up only 1.3% y/y.",
+      "sources": [
+        {
+          "title": "Investropa - Peloponnese rents (May 2026 snapshot)",
+          "url": "https://investropa.com/blogs/news/peloponnese-rents",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Expat Exchange - Cost of Living in Kalamata",
+          "url": "https://www.expatexchange.com/article/7399/Cost-of-Living-in-Kalamata-Cost-of-Living-in-Kalamata",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Parapolitika - Spitogatos Q2 2026 price index",
+          "url": "https://www.parapolitika.gr/oikonomia/article/1758703/mikroteri-auxisi-apo-perusi-stis-auxiseis-ton-timon-katoikion-to-v-trimino-tou-2026-katagrafi-dedomenon-apo-tin-platforma-spitogatos/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "groceries": {
-      "typical": 370,
-      "min": 290,
-      "max": 460,
-      "annualInflation": 0.03
+      "typical": 400,
+      "min": 320,
+      "max": 500,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Two adults ~EUR 280-350 (expat reports USD 300-400 in Kalamata) plus EUR 100+/month food for a large-breed dog. ELSTAT Sept 2026 food and non-alcoholic beverages CPI only +0.6% y/y so food prices are essentially flat since spring.",
+      "sources": [
+        {
+          "title": "Expat Exchange - Cost of Living in Kalamata",
+          "url": "https://www.expatexchange.com/article/7399/Cost-of-Living-in-Kalamata-Cost-of-Living-in-Kalamata",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Athens Times - How much does a dog cost in Greece 2026",
+          "url": "https://athens-times.com/how-much-does-a-dog-really-cost-in-greece-in-2026/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Odigos tou Politi - ELSTAT CPI September 2026",
+          "url": "https://www.odigostoupoliti.eu/afksisi-sto-5-simeiose-o-plithorismos-ton-septemvrio-2026/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "utilities": {
-      "typical": 145,
-      "min": 105,
-      "max": 195,
-      "annualInflation": 0.035
+      "typical": 150,
+      "min": 110,
+      "max": 210,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-07",
+      "notes": "DEI green tariff Nov 2026: EUR 0.169/kWh up to 200 kWh, 0.284/kWh above, plus EUR 5 fixed and regulated network charges; ELSTAT housing/energy CPI +14.7% y/y in Sept 2026. A 2-3BR house with AC in summer and electric/oil heating in winter runs ~EUR 110-130 electricity averaged, plus water/sewer/municipal fees ~EUR 25-35. Excludes internet.",
+      "sources": [
+        {
+          "title": "Odigos tou Politi - DEI tariffs November 2026",
+          "url": "https://www.odigostoupoliti.eu/dei-times-revmatos-noemvriou-2026-gia-prasino-kitrino-mple/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Odigos tou Politi - ELSTAT CPI September 2026",
+          "url": "https://www.odigostoupoliti.eu/afksisi-sto-5-simeiose-o-plithorismos-ton-septemvrio-2026/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Expat Exchange - Cost of Living in Kalamata",
+          "url": "https://www.expatexchange.com/article/7399/Cost-of-Living-in-Kalamata-Cost-of-Living-in-Kalamata",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 80,
-      "min": 50,
-      "max": 120,
+      "typical": 240,
+      "min": 150,
+      "max": 400,
       "annualInflation": 0.04,
-      "notes": "ESY (National Health System) universal coverage after residency permit. Private supplementary ~€80-180/mo. Anti-VEGF injections available in Athens (Hygeia, Metropolitan) and Thessaloniki; covered via ESY with prescription. GLP-1 covered for diabetes indication. Crisis-era underfunding means longer public waits — private picks up the gap. English availability moderate, better in private sector."
+      "notes": "Non-EU retirees on the FIP/retirement permit must carry private cover valid in Greece (EUR 600-1,800 per person per year; at age 60 expect the upper half, ~EUR 100-150 per person per month with Interamerican/Ethniki/NN). Alternative is voluntary EOPYY enrolment at 8.5% of declared pension income (would exceed EUR 400/month on this household's income). Typical reflects two local private plans; max reflects international plans (EUR 100-500/person) which rise 12-14% a year.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Freenance - How to retire in Greece 2026",
+          "url": "https://freenance.io/retirement/how-to-retire-in-greece-2026-7-percent-flat-tax-pension/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Argophilia - Optional health insurance for third-country pensioners",
+          "url": "https://www.argophilia.com/news/optional-health-insurance-for-third-country-pensioners-terms-and-procedures/243223",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Expatlife.ai - Greece healthcare (verified Oct 2026)",
+          "url": "https://expatlife.ai/greece/healthcare",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Feather - Health insurance in Greece guide 2026",
+          "url": "https://feather-insurance.com/en-gr/blog/health-insurance-greece-guide",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "To Vima - Soaring private health insurance costs",
+          "url": "https://www.tovima.com/finance/greece-struggles-with-soaring-private-health-insurance-costs/amp/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "insurance": {
-      "typical": 100,
-      "min": 65,
-      "max": 150,
-      "annualInflation": 0.04
+      "typical": 12,
+      "min": 5,
+      "max": 25,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-07",
+      "notes": "Re-modeled from old template (which carried health cover) to tenant contents insurance only. Greek contents policies start around EUR 35/year (Eurolife Sweet Home Content); a EUR 30-50k contents sum with liability runs roughly EUR 100-200/year. Health cover now sits fully in healthcare.",
+      "sources": [
+        {
+          "title": "Insurance Daily - Contents insurance for tenants (Eurolife)",
+          "url": "https://www.insurancedaily.gr/idiokatoikisi-enoikio-asfaleia-periechomenoy-se-afora",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Elxis - Home insurance in Greece",
+          "url": "https://elxis.com/gr/home-insurance-in-greece",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petCare": {
       "typical": 60,
@@ -95,28 +194,89 @@
       "annualInflation": 0.03
     },
     "transportation": {
-      "typical": 140,
-      "min": 90,
-      "max": 210,
-      "annualInflation": 0.03
+      "typical": 200,
+      "min": 140,
+      "max": 280,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "One mid-size petrol car in a rural region: unleaded ~EUR 1.99/L nationally (July 2026) and transport CPI +11.3% y/y in Sept 2026, ~55-60 L/month = EUR 110-120; insurance EUR 300-600/yr; road tax EUR 135-300/yr; KTEO and maintenance ~EUR 30-40/month. KTEL buses are sparse so a car is needed; Kalamata city bus pass ~EUR 20.",
+      "sources": [
+        {
+          "title": "Ta Nea - Unleaded prices across Greece, July 2026",
+          "url": "https://www.tanea.gr/2026/07/23/economy/kaysima-poso-kostizei-i-amolyvdi-se-oli-tin-ellada-analytikos-pinakas/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Hellas Calculator - Buying a car in Greece hidden costs",
+          "url": "https://hellascalculator.pages.dev/blog/buying-car-in-greece",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Odigos tou Politi - ELSTAT CPI September 2026",
+          "url": "https://www.odigostoupoliti.eu/afksisi-sto-5-simeiose-o-plithorismos-ton-septemvrio-2026/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Expat Exchange - Cost of Living in Kalamata",
+          "url": "https://www.expatexchange.com/article/7399/Cost-of-Living-in-Kalamata-Cost-of-Living-in-Kalamata",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 180,
-      "min": 120,
-      "max": 260,
-      "annualInflation": 0.03
+      "typical": 220,
+      "min": 150,
+      "max": 320,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Fastest common fiber (Nova Fiber 1Giga EUR 35/month; Cosmote/Vodafone fiber from ~EUR 28-30) plus ~EUR 25 streaming, taverna meals for two 3-4 times a month at EUR 15-20 per person (EUR 110-150) and ~EUR 30 activities.",
+      "sources": [
+        {
+          "title": "Greverse - Nova Fiber prices and plans 2026",
+          "url": "https://greverse-com.pages.dev/telecom/nova-fiber-prices-plans-availability",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Expat Exchange - Cost of Living in Kalamata",
+          "url": "https://www.expatexchange.com/article/7399/Cost-of-Living-in-Kalamata-Cost-of-Living-in-Kalamata",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "clothing": {
       "typical": 80,
       "min": 50,
       "max": 120,
-      "annualInflation": 0.02
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-07",
+      "notes": "Stored value retained; high-street dress ~EUR 30, branded jeans EUR 60-135 in Greece (Numbeo-derived data checked Oct 2026). Modest retiree wardrobe spend for two.",
+      "sources": [
+        {
+          "title": "MyLifeElsewhere - Cost of living in Rhodes (Greece prices)",
+          "url": "https://www.mylifeelsewhere.com/cost-of-living/rhodes-c5959",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "WageCentre - Prices in Greece (Oct 2026)",
+          "url": "https://wagecentre.com/immigration/life/prices-in-greece",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "personalCare": {
       "typical": 60,
       "min": 40,
       "max": 100,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Men's haircut EUR 12-22, mass-market toiletries EUR 1.50-6 per item (Oct 2026 Numbeo-based data); two adults with monthly haircuts and toiletries ~EUR 60.",
+      "sources": [
+        {
+          "title": "WageCentre - Prices in Greece (Oct 2026)",
+          "url": "https://wagecentre.com/immigration/life/prices-in-greece",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "subscriptions": {
       "typical": 100,
@@ -125,10 +285,19 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 87,
-      "min": 72,
-      "max": 107,
-      "annualInflation": 0.02
+      "typical": 45,
+      "min": 30,
+      "max": 85,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-07",
+      "notes": "Two SIM-only postpaid lines: My Cosmote M 20GB EUR 22 or Nova SIM 15 EUR 15 each (EUR 30-44 for two); max is two Vodafone Red+ Unlimited at EUR 42 each (Feb 2026 price table).",
+      "sources": [
+        {
+          "title": "Greverse - Best mobile plans in Greece 2026",
+          "url": "https://greverse-com.pages.dev/telecom/best-mobile-plans-in-greece-2026-cosmote-vodafone-nova",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "taxes": {
       "typical": 420,
@@ -158,9 +327,28 @@
     },
     "medicalOOP": {
       "min": 40,
-      "typical": 80,
-      "max": 160,
-      "annualInflation": 0.035
+      "typical": 90,
+      "max": 180,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-07",
+      "notes": "Private GP EUR 30-60, specialist EUR 60-120, dental cleaning EUR 50-100, blood panel ~EUR 30-55; a couple at 60 averaging one or two private visits a month plus dental and 25% prescription co-pays.",
+      "sources": [
+        {
+          "title": "Freenance - How to retire in Greece 2026",
+          "url": "https://freenance.io/retirement/how-to-retire-in-greece-2026-7-percent-flat-tax-pension/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Expatlife.ai - Greece healthcare (verified Oct 2026)",
+          "url": "https://expatlife.ai/greece/healthcare",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Grandpl - Medical costs in Greece 2026",
+          "url": "https://grandpl.com/en/greece/article/medical-costs-in-greece-prices-for-private-doctors-and-clinics/",
+          "accessed": "2026-11-07"
+        }
+      ]
     }
   },
   "healthcare": {

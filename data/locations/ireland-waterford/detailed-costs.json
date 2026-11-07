@@ -212,9 +212,9 @@
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 350,
-      "typical": 440,
-      "max": 550
+      "min": 320,
+      "typical": 420,
+      "max": 580
     },
     "categories": [
       {
@@ -279,13 +279,14 @@
         "title": "Netflix Ireland",
         "url": "https://help.netflix.com/en/node/24926"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 200,
-      "typical": 280,
-      "max": 380
+      "min": 220,
+      "typical": 320,
+      "max": 450
     },
     "publicTransit": {
       "monthlyPass": {
@@ -450,7 +451,8 @@
           "url": "https://esb.ie/ecars"
         }
       ]
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "seniorDiscounts": {
     "minimumAge": 66,
@@ -501,9 +503,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 55,
-      "typical": 70,
-      "max": 90
+      "min": 26,
+      "typical": 75,
+      "max": 95
     },
     "plans": [
       {
@@ -540,14 +542,15 @@
         "title": "T-Mobile 55+ Plans",
         "url": "https://www.t-mobile.com/cell-phone-plans/unlimited-55-plus"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "housing": {
     "propertyType": "2-bedroom house",
     "monthlyBudget": {
-      "min": 950,
-      "max": 1500,
-      "typical": 1200
+      "min": 1450,
+      "max": 1850,
+      "typical": 1650
     },
     "breakdown": {
       "baseRentEUR": 1150,
@@ -592,7 +595,8 @@
           "type": "purchase"
         }
       ]
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "groceryStores": {
     "stores": [

@@ -41,35 +41,134 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 750,
-      "min": 600,
-      "max": 950,
-      "annualInflation": 0.04
+      "typical": 850,
+      "min": 650,
+      "max": 1200,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-07",
+      "notes": "2BR 90 sqm in Ialysos listed at EUR 700 (Ktimatoemporiki); family 2-3BR in Ialysos/Ixia EUR 800-1,400 and Rhodes Town 1BR EUR 500-700 (2026 asking rents). Pet-friendly 2-3BR with outdoor space in the Ialysos/Koskinou/Afandou belt ~EUR 850; island long-term supply is squeezed by tourist lets.",
+      "sources": [
+        {
+          "title": "Ktimatoemporiki - Two bedroom apartment for rent in Ialysos",
+          "url": "https://de.ktimatoemporiki.gr/property/two-bedroom-apartment-for-rent-in-ialysos-rhodes-id-r01-1387",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Investropa - Greek islands rents (Oct 2026)",
+          "url": "https://investropa.com/blogs/news/greek-islands-rents",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Expatlife.ai - Rhodes cost of living (Nov 2026)",
+          "url": "https://expatlife.ai/greece/cities/rhodes/cost-of-living",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Jobicy - Rhodes cost of living (May 2026)",
+          "url": "https://www.jobicy.com/cost-of-living/greece/rhodes",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "groceries": {
-      "typical": 390,
-      "min": 310,
-      "max": 490,
-      "annualInflation": 0.03
+      "typical": 420,
+      "min": 330,
+      "max": 520,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Two adults ~EUR 300-330 (expat guide EUR 200-300 for one person-light basket; island mark-up on shipped goods) plus EUR 100+/month food for a large-breed dog. ELSTAT Sept 2026 food CPI +0.6% y/y, so little movement since spring.",
+      "sources": [
+        {
+          "title": "Expatlife.ai - Rhodes cost of living (Nov 2026)",
+          "url": "https://expatlife.ai/greece/cities/rhodes/cost-of-living",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Athens Times - How much does a dog cost in Greece 2026",
+          "url": "https://athens-times.com/how-much-does-a-dog-really-cost-in-greece-in-2026/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Odigos tou Politi - ELSTAT CPI September 2026",
+          "url": "https://www.odigostoupoliti.eu/afksisi-sto-5-simeiose-o-plithorismos-ton-septemvrio-2026/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "utilities": {
-      "typical": 145,
-      "min": 105,
-      "max": 195,
-      "annualInflation": 0.035
+      "typical": 150,
+      "min": 110,
+      "max": 220,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-07",
+      "notes": "Rhodes guides put utilities at EUR 100-150 (expatlife) and ~EUR 153 for two (MyLifeElsewhere); DEI green tariff Nov 2026 EUR 0.169/0.284 per kWh with heavy summer AC use, no gas network, water/municipal fees ~EUR 25-35. Energy CPI +14.7% y/y in Sept 2026. Excludes internet.",
+      "sources": [
+        {
+          "title": "Expatlife.ai - Rhodes cost of living (Nov 2026)",
+          "url": "https://expatlife.ai/greece/cities/rhodes/cost-of-living",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "MyLifeElsewhere - Cost of living in Rhodes",
+          "url": "https://www.mylifeelsewhere.com/cost-of-living/rhodes-c5959",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Odigos tou Politi - DEI tariffs November 2026",
+          "url": "https://www.odigostoupoliti.eu/dei-times-revmatos-noemvriou-2026-gia-prasino-kitrino-mple/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 85,
-      "min": 55,
-      "max": 130,
+      "typical": 240,
+      "min": 150,
+      "max": 400,
       "annualInflation": 0.04,
-      "notes": "ESY (National Health System) universal coverage after residency permit. Private supplementary ~€80-180/mo. Anti-VEGF injections available in Athens (Hygeia, Metropolitan) and Thessaloniki; covered via ESY with prescription. GLP-1 covered for diabetes indication. Crisis-era underfunding means longer public waits — private picks up the gap. English availability moderate, better in private sector."
+      "notes": "National figures: non-EU retirees on the FIP permit need private cover valid in Greece (EUR 600-1,800 per person per year; ~EUR 100-150 per person per month at age 60 with Interamerican/Ethniki/NN). Voluntary EOPYY enrolment costs 8.5% of declared pension income. Typical = two local private plans; max = international plans. Rhodes has a general hospital but complex care means travel to Athens.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Freenance - How to retire in Greece 2026",
+          "url": "https://freenance.io/retirement/how-to-retire-in-greece-2026-7-percent-flat-tax-pension/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Argophilia - Optional health insurance for third-country pensioners",
+          "url": "https://www.argophilia.com/news/optional-health-insurance-for-third-country-pensioners-terms-and-procedures/243223",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Expatlife.ai - Greece healthcare (verified Oct 2026)",
+          "url": "https://expatlife.ai/greece/healthcare",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Feather - Health insurance in Greece guide 2026",
+          "url": "https://feather-insurance.com/en-gr/blog/health-insurance-greece-guide",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "insurance": {
-      "typical": 105,
-      "min": 70,
-      "max": 155,
-      "annualInflation": 0.04
+      "typical": 12,
+      "min": 5,
+      "max": 25,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-07",
+      "notes": "Re-modeled from old template (which carried health cover) to tenant contents insurance only. Greek contents policies start around EUR 35/year (Eurolife Sweet Home Content); a EUR 30-50k contents sum with liability runs roughly EUR 100-200/year. Health cover now sits fully in healthcare.",
+      "sources": [
+        {
+          "title": "Insurance Daily - Contents insurance for tenants (Eurolife)",
+          "url": "https://www.insurancedaily.gr/idiokatoikisi-enoikio-asfaleia-periechomenoy-se-afora",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Elxis - Home insurance in Greece",
+          "url": "https://elxis.com/gr/home-insurance-in-greece",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petCare": {
       "typical": 60,
@@ -90,28 +189,89 @@
       "annualInflation": 0.03
     },
     "transportation": {
-      "typical": 130,
-      "min": 80,
-      "max": 190,
-      "annualInflation": 0.03
+      "typical": 190,
+      "min": 130,
+      "max": 270,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "One petrol car on a 80 km long island: Dodecanese unleaded EUR 2.11/L (July 2026, above the EUR 1.99 national average), ~45-50 L/month = EUR 95-105; insurance EUR 300-600/yr; road tax EUR 135-300/yr; maintenance/KTEO ~EUR 30/month. Rhodes guides budget EUR 80-120 for bus plus car; RODA/KTEL buses cover the coast.",
+      "sources": [
+        {
+          "title": "Ta Nea - Unleaded prices across Greece, July 2026",
+          "url": "https://www.tanea.gr/2026/07/23/economy/kaysima-poso-kostizei-i-amolyvdi-se-oli-tin-ellada-analytikos-pinakas/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Hellas Calculator - Buying a car in Greece hidden costs",
+          "url": "https://hellascalculator.pages.dev/blog/buying-car-in-greece",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Expatlife.ai - Rhodes cost of living (Nov 2026)",
+          "url": "https://expatlife.ai/greece/cities/rhodes/cost-of-living",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 200,
-      "min": 140,
-      "max": 280,
-      "annualInflation": 0.03
+      "typical": 240,
+      "min": 160,
+      "max": 340,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Fiber in Rhodes Town ~60 Mbps typical, Nova Fiber 1Giga EUR 35 where available (otherwise ~EUR 27-30 for 100-300 Mbps) plus ~EUR 25 streaming; dining out 2-3 times a week budgeted at EUR 100-180 locally (inexpensive meal EUR 16.50); plus ~EUR 30 activities. Tourist-season prices run higher than the Peloponnese.",
+      "sources": [
+        {
+          "title": "Expatlife.ai - Rhodes cost of living (Nov 2026)",
+          "url": "https://expatlife.ai/greece/cities/rhodes/cost-of-living",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "MyLifeElsewhere - Cost of living in Rhodes",
+          "url": "https://www.mylifeelsewhere.com/cost-of-living/rhodes-c5959",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Greverse - Nova Fiber prices and plans 2026",
+          "url": "https://greverse-com.pages.dev/telecom/nova-fiber-prices-plans-availability",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "clothing": {
       "typical": 80,
       "min": 50,
       "max": 120,
-      "annualInflation": 0.02
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-07",
+      "notes": "Stored value retained; Rhodes H&M-type dress ~EUR 30, branded jeans up to EUR 135 (MyLifeElsewhere 2026). Modest retiree wardrobe spend for two.",
+      "sources": [
+        {
+          "title": "MyLifeElsewhere - Cost of living in Rhodes",
+          "url": "https://www.mylifeelsewhere.com/cost-of-living/rhodes-c5959",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "WageCentre - Prices in Greece (Oct 2026)",
+          "url": "https://wagecentre.com/immigration/life/prices-in-greece",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "personalCare": {
       "typical": 60,
       "min": 40,
       "max": 100,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "National figures: men's haircut EUR 12-22, mass-market toiletries EUR 1.50-6 per item (Oct 2026 Numbeo-based data); two adults ~EUR 60.",
+      "sources": [
+        {
+          "title": "WageCentre - Prices in Greece (Oct 2026)",
+          "url": "https://wagecentre.com/immigration/life/prices-in-greece",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "subscriptions": {
       "typical": 100,
@@ -120,10 +280,19 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 87,
-      "min": 72,
-      "max": 107,
-      "annualInflation": 0.02
+      "typical": 45,
+      "min": 30,
+      "max": 85,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-07",
+      "notes": "National carrier prices: two SIM-only postpaid lines at My Cosmote M 20GB EUR 22 or Nova SIM 15 EUR 15 each (EUR 30-44 for two); max is two Vodafone Red+ Unlimited at EUR 42 each.",
+      "sources": [
+        {
+          "title": "Greverse - Best mobile plans in Greece 2026",
+          "url": "https://greverse-com.pages.dev/telecom/best-mobile-plans-in-greece-2026-cosmote-vodafone-nova",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "taxes": {
       "typical": 420,
@@ -153,9 +322,28 @@
     },
     "medicalOOP": {
       "min": 40,
-      "typical": 80,
-      "max": 160,
-      "annualInflation": 0.035
+      "typical": 90,
+      "max": 180,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-07",
+      "notes": "Private GP EUR 30-60, specialist EUR 60-120, dental cleaning EUR 50-100, blood panel ~EUR 30-55; a couple at 60 averaging one or two private visits a month plus dental and 25% prescription co-pays. Occasional Athens trips for specialist care would add travel.",
+      "sources": [
+        {
+          "title": "Freenance - How to retire in Greece 2026",
+          "url": "https://freenance.io/retirement/how-to-retire-in-greece-2026-7-percent-flat-tax-pension/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Expatlife.ai - Greece healthcare (verified Oct 2026)",
+          "url": "https://expatlife.ai/greece/healthcare",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Grandpl - Medical costs in Greece 2026",
+          "url": "https://grandpl.com/en/greece/article/medical-costs-in-greece-prices-for-private-doctors-and-clinics/",
+          "accessed": "2026-11-07"
+        }
+      ]
     }
   },
   "healthcare": {

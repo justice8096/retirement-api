@@ -90,9 +90,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 70,
-      "typical": 85,
-      "max": 105
+      "min": 10,
+      "typical": 28,
+      "max": 60
     },
     "plans": [
       {
@@ -121,13 +121,14 @@
         "title": "Google Fi Plans",
         "url": "https://fi.google.com/about/plans"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 326,
-      "typical": 408,
-      "max": 510
+      "min": 280,
+      "typical": 400,
+      "max": 560
     },
     "categories": [
       {
@@ -190,13 +191,14 @@
         "seniorDiscounts": "No specific discounts. Café culture is affordable.",
         "notes": "Café crème ~€2.50-3.50. Budget for 2 visits/week. ~$18/mo."
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 57,
-      "typical": 115,
-      "max": 368
+      "min": 90,
+      "typical": 180,
+      "max": 350
     },
     "publicTransit": {
       "monthlyPass": {
@@ -272,7 +274,8 @@
         "max": 518,
         "notes": "Includes insurance, fuel, parking, maintenance. Higher urban parking and insurance costs."
       }
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "visionDental": {
     "monthlyBudget": {
@@ -560,9 +563,9 @@
   "housing": {
     "propertyType": "2-bedroom house or ground-floor apartment",
     "monthlyBudget": {
-      "min": 2080,
-      "max": 3380,
-      "typical": 2600
+      "min": 2200,
+      "max": 3400,
+      "typical": 2700
     },
     "breakdown": {
       "baseRent": 2600,
@@ -573,7 +576,8 @@
     },
     "taxNotes": "No rental income tax for tenants. Taxe d'habitation abolished for primary residences. Property tax (taxe foncière) is landlord responsibility.",
     "leaseTerms": "3-year unfurnished lease (bail de 3 ans, renewable). 1-year furnished lease. Security deposit 1 month rent (unfurnished) or 2 months (furnished). 3-month notice period for tenants.",
-    "marketNotes": "Most expensive French market. Apartments only at 2BR budget. Extremely competitive. Consider inner suburbs."
+    "marketNotes": "Most expensive French market. Apartments only at 2BR budget. Extremely competitive. Consider inner suburbs.",
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "groceryStores": {
     "stores": [

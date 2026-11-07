@@ -33,65 +33,214 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 1500,
-      "min": 1200,
-      "max": 1800,
-      "annualInflation": 0.04
+      "typical": 2100,
+      "min": 1700,
+      "max": 2550,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-07",
+      "notes": "Daft Q1 2026 asking rents Cork city: 2-bed apartment EUR 2,126, 2-bed house EUR 2,206, 3-bed house EUR 2,516 (Cork county 3-bed house EUR 1,937). RTB Q3 2025 new-tenancy average Cork city EUR 1,753 (+9.6% y/y). Pet-friendly 2-3BR modelled at ~EUR 2,100.",
+      "sources": [
+        {
+          "title": "Daft.ie Rental Price Report Q1 2026 (via RTE)",
+          "url": "https://www.rte.ie/documents/news/2026/05/daft.ie-rental-report-2026q1.pdf",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "RTB Rent Index Q3 2025",
+          "url": "https://rtb.ie/wp-content/uploads/2026/03/RTB-Rent-Index-Q3-2025-Final-1.pdf",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "groceries": {
-      "typical": 490,
-      "min": 390,
-      "max": 610,
-      "annualInflation": 0.03
+      "typical": 600,
+      "min": 480,
+      "max": 760,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "CSO HBS 2022-23: two-adult households spend EUR 143.52/wk on food (incl. meals out); uplifted ~10% for food CPI since 2023 (4.5% y/y Oct 2025), ~75% taken as at-home groceries (~EUR 510/mo) plus ~EUR 90/mo food for a 100 lb dog. Buffer is 100 so basket rule does not apply.",
+      "sources": [
+        {
+          "title": "CSO Household Budget Survey 2022-2023 Results and Analysis",
+          "url": "https://cso.ie/en/releasesandpublications/ep/p-hbs/householdbudgetsurvey2022-2023/resultsandanalysis",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "CSO Consumer Price Index October 2025",
+          "url": "https://www.cso.ie/en/releasesandpublications/ep/p-cpi/consumerpriceindexoctober2025/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Dogs Trust Ireland - Cost of dog ownership",
+          "url": "https://www.dogstrust.ie/dog-advice/getting-dog/dog-ready/cost-of-dog-ownership",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "utilities": {
-      "typical": 205,
-      "min": 155,
-      "max": 270,
-      "annualInflation": 0.035
+      "typical": 300,
+      "min": 220,
+      "max": 420,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-07",
+      "notes": "Selectra Nov 2026: average electricity bill EUR 1,887/yr (EUR 157/mo at 4,200 kWh) and gas EUR 1,554/yr (EUR 129/mo at 11,000 kWh); no domestic water charges in Ireland; private bin collection ~EUR 20-30/mo. Numbeo Cork basic utilities for 85m2 apartment EUR 215/mo (min end). Oil-heated houses similar to gas.",
+      "sources": [
+        {
+          "title": "Selectra.ie - Average gas and electricity bill in Ireland",
+          "url": "https://selectra.ie/energy/guides/billing/average-gas-electricity-bill",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Irish Times - Bin collection charges: what is the best deal",
+          "url": "https://www.irishtimes.com/your-money/2025/01/31/bill-collection-charges-what-is-the-best-deal-for-you",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Numbeo - Cost of Living in Cork",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cork",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 165,
-      "min": 115,
-      "max": 230,
+      "typical": 330,
+      "min": 190,
+      "max": 520,
       "annualInflation": 0.04,
-      "notes": "Private insurance (VHI/Laya Healthcare) ~€220-280/person/mo for 2 adults with pre-existing conditions. Higher loading for macular degeneration, obesity, hypertension. GMS Medical Card may apply based on income. Anti-VEGF injections covered through public ophthalmology. DPS scheme caps drug costs at €80/mo."
+      "notes": "HIA weighted average adult premium EUR 1,902/yr at end-2025 (EUR 1,960 Q1 2026) x2 = ~EUR 330/mo; cheaper plans from ~EUR 550-1,100/yr each (min), richer plans up to EUR 4,000/yr (max). No public-system contributions for residents, but GP visits are fee-per-visit. Buy private cover within 9 months of becoming resident or a Lifetime Community Rating loading of 2%/yr over age 34 (52% at 60, for 10 years) applies.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "HIA Market Report 2025",
+          "url": "https://www.hia.ie/sites/default/files/2026-06/hia-market-report-2025.pdf",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "HIA - Lifetime Community Rating",
+          "url": "https://www.hia.ie/information/lifetime-community-rating-lcr",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Settle.ie - Healthcare in Ireland 2026: what you will pay",
+          "url": "https://settle.ie/guides/healthcare-system-ireland/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "insurance": {
-      "typical": 190,
-      "min": 135,
-      "max": 260,
-      "annualInflation": 0.04
+      "typical": 15,
+      "min": 10,
+      "max": 25,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-07",
+      "notes": "Re-modelled from old template (health) to renters contents cover only: AA Ireland quotes contents insurance from EUR 11.12/mo for EUR 15k cover; typical EUR 15/mo for a couple with higher contents.",
+      "sources": [
+        {
+          "title": "AA Ireland - Home contents insurance",
+          "url": "https://www.theaa.ie/home-insurance/contents-insurance/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petCare": {
-      "typical": 60,
-      "min": 40,
-      "max": 100,
-      "annualInflation": 0.03
+      "typical": 65,
+      "min": 35,
+      "max": 130,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Dogs Trust Ireland: vaccinations EUR 100-150/yr plus flea/worm EUR 180/yr (~EUR 25/mo) for an average dog; large-breed dosing, annual check-up and occasional treatment lifts a 100 lb dog to ~EUR 65/mo. Excludes food and pet insurance.",
+      "sources": [
+        {
+          "title": "Dogs Trust Ireland - Cost of dog ownership",
+          "url": "https://www.dogstrust.ie/dog-advice/getting-dog/dog-ready/cost-of-dog-ownership",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petDaycare": {
-      "typical": 150,
-      "min": 100,
-      "max": 250,
-      "annualInflation": 0.03
+      "typical": 140,
+      "min": 70,
+      "max": 280,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Rover median home boarding ~EUR 35/night in Cork (range EUR 20-55); Dogs Trust daycare EUR 10-35/day. Modelled as ~4 nights/days per month on average; large dogs often carry a surcharge.",
+      "sources": [
+        {
+          "title": "Rover - Dog boarding in Cork",
+          "url": "https://www.rover.com/ie/cork--cork--dog-boarding/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Dogs Trust Ireland - Cost of dog ownership",
+          "url": "https://www.dogstrust.ie/dog-advice/getting-dog/dog-ready/cost-of-dog-ownership",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petGrooming": {
-      "typical": 50,
-      "min": 30,
-      "max": 80,
-      "annualInflation": 0.03
+      "typical": 55,
+      "min": 37,
+      "max": 90,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Petmania (national chain with stores in Cork, Galway and Limerick) large long/heavy-coated breed 12-month plan EUR 449/yr (~EUR 37/mo, 6 full grooms + 6 washes + nail trims); standalone full grooms for a Bernese every 6-8 weeks run higher.",
+      "sources": [
+        {
+          "title": "Petmania - Large long/heavy-coated breed 12 month grooming plan",
+          "url": "https://www.petmania.ie/?p=4023747",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Dogs Trust Ireland - Cost of dog ownership",
+          "url": "https://www.dogstrust.ie/dog-advice/getting-dog/dog-ready/cost-of-dog-ownership",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "transportation": {
-      "typical": 140,
-      "min": 90,
-      "max": 210,
-      "annualInflation": 0.03
+      "typical": 260,
+      "min": 150,
+      "max": 400,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "One mid-size petrol car: OUTsurance 2025 guide gives fuel EUR 1,560 (15,000 km at EUR 1.76/l), insurance EUR 616, motor tax EUR 270-600, servicing/maintenance EUR 736 per year, i.e. ~EUR 270-290/mo excl. depreciation; retiree mileage ~10,000 km trims fuel. Adult Leap bus single EUR 1.70 (daily cap 5.10, weekly 20.40). Free Travel pass only from age 66.",
+      "sources": [
+        {
+          "title": "OUTsurance 2025 Car Running Cost Guide",
+          "url": "https://www.outsurance.ie/company-news/cost-of-running-a-car/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Transport for Ireland - Bus fares",
+          "url": "https://www.transportforireland.ie/fares/bus-fares",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "NTA 2026 Cork capping fare determination",
+          "url": "https://www.nationaltransport.ie/wp-content/uploads/2025/07/2026-Cork-Capping-Fare-Determination-Addendum-v1.2.pdf",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 290,
-      "min": 200,
-      "max": 400,
-      "annualInflation": 0.03
+      "typical": 400,
+      "min": 260,
+      "max": 600,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Home internet: 500Mb-1Gb fibre EUR 35-40 intro, ~EUR 40-60 standard (eir/Vodafone/Virgin); streaming ~EUR 35; dining out 3x/mo at Numbeo Cork mid-range meal for two EUR 86 (~EUR 260); cinema EUR 12, gym EUR 55 -> activities ~EUR 60.",
+      "sources": [
+        {
+          "title": "Pulse - Best broadband deals in Ireland April 2026",
+          "url": "https://www.pulse.bot/telecom/news/best-broadband-deals-in-ireland-april-2026-7a05aea8-e460-4ce8-b8b6-2b1334e36db0/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Numbeo - Cost of Living in Cork",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cork",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "clothing": {
       "typical": 80,
@@ -112,10 +261,24 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 90,
-      "min": 75,
-      "max": 110,
-      "annualInflation": 0.02
+      "typical": 30,
+      "min": 22,
+      "max": 60,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-07",
+      "notes": "Two SIM-only lines: 48 EUR 12.99/mo (unlimited 5G data), Clear Mobile EUR 12.99, Sky Mobile EUR 12.99 unlimited; Numbeo average mobile plan ~EUR 19-21/mo. Two lines ~EUR 26-42/mo.",
+      "sources": [
+        {
+          "title": "Irish Tech News - Best SIM-only deals April 2026",
+          "url": "https://irishtechnews.ie/best-sim-only-deals-in-ireland-april-2026/amp/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Numbeo - Cost of Living in Cork",
+          "url": "https://www.numbeo.com/cost-of-living/in/Cork",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "taxes": {
       "typical": 720,
@@ -144,10 +307,19 @@
       "annualInflation": 0.025
     },
     "medicalOOP": {
-      "min": 60,
+      "min": 50,
       "typical": 120,
-      "max": 240,
-      "annualInflation": 0.04
+      "max": 250,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-07",
+      "notes": "GP visits EUR 50-70 each (no GP visit card under 70 unless low income), out-of-hours EUR 60-80, A&E EUR 100 without referral, public inpatient charges abolished 2023; add dental/optical/physio. ~6 GP visits each per year plus dental/optical ~EUR 120/mo for two. Prescription costs sit in the separate medicine category (DPS cap EUR 80/mo).",
+      "sources": [
+        {
+          "title": "Settle.ie - Healthcare in Ireland 2026: what you will pay",
+          "url": "https://settle.ie/guides/healthcare-system-ireland/",
+          "accessed": "2026-11-07"
+        }
+      ]
     }
   },
   "healthcare": {

@@ -28,12 +28,25 @@
   },
   "monthlyCosts": {
     "rent": {
-      "min": 900,
-      "max": 1350,
-      "typical": 1100,
+      "min": 950,
+      "max": 1400,
+      "typical": 1150,
       "type": "2-bedroom house (maison)",
       "annualInflation": 0.025,
-      "notes": "Taxe d'habitation eliminated for primary residences."
+      "notes": "Toulouse houses rent at about 12.70 EUR/m2 (June 2026), so an 80-110 m2 pet-friendly 2-3BR maison runs roughly 1000-1400 EUR; Numbeo (Nov 2026) shows 3BR apartments at 1025 outside centre and 1347 in centre. Taxe d'habitation on primary residences is gone; TEOM is often passed through in charges.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "MoneyVox - Immobilier a Toulouse juin 2026",
+          "url": "https://www.moneyvox.fr/immobilier/actualites/109317/immobilier-a-toulouse-tout-savoir-sur-les-prix-a-achat-et-a-la-location-en-juin-2026",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Numbeo - Cost of Living in Toulouse",
+          "url": "https://www.numbeo.com/cost-of-living/in/Toulouse",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "groceries": {
       "min": 1015,
@@ -43,9 +56,9 @@
       "annualInflation": 0.025
     },
     "utilities": {
-      "min": 144,
-      "max": 234,
-      "typical": 180,
+      "min": 160,
+      "max": 290,
+      "typical": 215,
       "annualInflation": 0.025,
       "breakdown": {
         "electricity": {
@@ -70,60 +83,150 @@
         }
       },
       "taxes": "TVA included in bills: 5.5% on water/assainissement, 20% on electricity/gas.",
-      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig). Trash included in rent. Sewage included in water bill."
+      "notes": "EDF Tarif Bleu base 0.2001 EUR/kWh + 15.86 EUR/mo (6 kVA) at ~4500 kWh/yr = ~91/mo; natural gas heating ~8000 kWh/yr at the 0.1042 EUR/kWh prix repere plus subscription = ~85/mo; water + assainissement ~40/mo; trash (TEOM) passed through rent. Numbeo basic utilities for 85 m2 = 195 EUR. Excludes internet.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Hello Watt - Prix du kWh electricite et gaz 2026",
+          "url": "https://www.hellowatt.fr/electricite-et-gaz/prix-kwh",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Numbeo - Cost of Living in Toulouse",
+          "url": "https://www.numbeo.com/cost-of-living/in/Toulouse",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "healthcare": {
-      "min": 80,
-      "max": 180,
-      "typical": 120,
+      "min": 100,
+      "max": 250,
+      "typical": 130,
       "breakdown": {
         "mutuelle": 50,
         "copays": 25
       },
-      "notes": "PUMA universal coverage + Mutuelle complémentaire (~€55-80/person/mo, higher tier for chronic conditions). ALD (Affection Longue Durée) provides 100% coverage for hypertension and diabetes. Macular degeneration: anti-VEGF injections covered 100% at hospital. Hypothyroidism monitoring covered. GLP-1 covered for diabetes indication.",
-      "annualInflation": 0.04
+      "notes": "Legal-resident retirees join PUMA (no premium for pension income; a cotisation subsidiaire can apply if income is mostly capital). Complementary mutuelle for a couple aged ~60 runs about 100 EUR/mo (basic) to 250 EUR/mo (renforcee), ~120-130 typical per Magnolia 2026 tables. Copays moved to medicalOOP.",
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Magnolia - Mutuelle senior couple prix 2026",
+          "url": "https://www.magnolia.fr/mutuelle-sante/senior/couple",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "insurance": {
-      "min": 20,
-      "max": 30,
-      "typical": 25,
+      "min": 12,
+      "max": 35,
+      "typical": 20,
       "type": "renter's insurance",
-      "annualInflation": 0.02
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-07",
+      "notes": "Renters (locataire) assurance habitation: LeLynx October 2026 barometer shows 177 EUR/yr for a 70 m2+ apartment tenant (~15/mo); a rented house with contents cover and dog liability sits a little higher, hence ~20/mo typical.",
+      "sources": [
+        {
+          "title": "LeLynx - Prix assurance habitation octobre 2026",
+          "url": "https://www.lelynx.fr/breves/prix-assurance-habitation-octobre-2026/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petCare": {
-      "min": 80,
-      "max": 160,
-      "typical": 110,
+      "min": 70,
+      "max": 170,
+      "typical": 100,
       "annualInflation": 0.03,
-      "notes": "Vet visits, vaccinations, flea/tick, pet insurance"
+      "notes": "French vet guides 2026: annual vaccine visit 60-100 EUR, antiparasitaires/vermifuge 100-200 EUR/yr, routine budget 500-1000 EUR/yr for an adult dog (large breeds at the top), plus pet insurance 11-38 EUR/mo. ~75/mo care + ~25/mo insurance for a Bernese.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "LeComparateurAssurance - Frais veterinaires chien 2026",
+          "url": "https://www.lecomparateurassurance.com/assurance-animaux/guides-chien/frais-veterinaires",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Ymanci - Quel budget par mois pour un chien (juillet 2026)",
+          "url": "https://ymanci.fr/assurance-animaux/guide/quel-budget-par-mois-pour-un-chien/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petDaycare": {
-      "min": 210,
+      "min": 160,
       "max": 350,
-      "typical": 270,
+      "typical": 250,
       "annualInflation": 0.025,
-      "notes": "Hired pet sitter 2 days/week (~€29/visit). Few commercial daycare facilities in Toulouse. In-home pet care via local garde d'animaux, Rover.com. CESU eligible for 50% tax credit."
+      "notes": "Keeps the stored model of ~8 sitter/garderie days a month: pension canine or garderie 15-30 EUR/day nationally, Toulouse home pet-sitters list ~15 EUR/hour; 8 x ~30 EUR = ~250/mo. CESU tax credit may offset half of declared in-home sitting.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Ymanci - Quel budget par mois pour un chien (juillet 2026)",
+          "url": "https://ymanci.fr/assurance-animaux/guide/quel-budget-par-mois-pour-un-chien/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Aladom - Garde de chien Toulouse",
+          "url": "https://www.aladom.fr/garde-chien/toulouse-31/toilettage-et-garde-animaliere-a-domicile-2s1k",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petGrooming": {
-      "min": 60,
-      "max": 120,
-      "typical": 80,
+      "min": 45,
+      "max": 110,
+      "typical": 70,
       "annualInflation": 0.025,
-      "notes": "Bernese coat maintenance, professional grooming monthly"
+      "notes": "Professional grooming 40-90 EUR/session for long-coated breeds per 2026 guides; a 100 lb double-coated Bernese sits at the top (~90-110/session). Monthly average assumes a full groom every 6-8 weeks plus de-shedding in between.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Ymanci - Quel budget par mois pour un chien (juillet 2026)",
+          "url": "https://ymanci.fr/assurance-animaux/guide/quel-budget-par-mois-pour-un-chien/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "transportation": {
-      "min": 70,
-      "max": 140,
-      "typical": 95,
-      "notes": "Metro, tram, bus network; Tisséo transit pass",
-      "annualInflation": 0.02
+      "min": 60,
+      "max": 180,
+      "typical": 120,
+      "notes": "Transit-based as stored: Tisseo monthly pass ~58 EUR (Numbeo Nov 2026; fares rose 1 July 2026, single ticket 1.90), x2 adults = ~116/mo plus occasional taxi/car-share. Tisseo senior reductions start at 65, not 60. Max allows a cheap second-hand car's fuel share (petrol ~1.97 EUR/L).",
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Numbeo - Cost of Living in Toulouse",
+          "url": "https://www.numbeo.com/cost-of-living/in/Toulouse",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Le Bonbon - Tickets Tisseo plus chers au 1er juillet 2026",
+          "url": "https://lebonbon.fr/toulouse/news/tickets-tisseo-plus-cher-1er-juillet-toulouse/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "entertainment": {
-      "min": 310,
+      "min": 300,
       "max": 480,
-      "typical": 380,
+      "typical": 370,
       "annualInflation": 0.02,
-      "notes": "Incl cable+1Gig internet, Netflix, Amazon Prime, Apple TV+, dining out (lunch for 2 2x/week w/ tax+tip)"
+      "notes": "Freebox Pop fibre 5 Gb/s 29.99 EUR (39.99 after year 1) or Ultra 8 Gb/s 49.99; streaming ~35; lunch for 2 twice a week at ~15 EUR/head (Numbeo inexpensive meal) = ~240; activities/cinema (12 EUR) ~50.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Edcom - Offres Freebox 2026",
+          "url": "https://www.edcom.fr/offre-internet/fournisseur/Free/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Numbeo - Cost of Living in Toulouse",
+          "url": "https://www.numbeo.com/cost-of-living/in/Toulouse",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "clothing": {
       "min": 80,
@@ -145,11 +248,24 @@
       "notes": "Streaming, news, apps"
     },
     "phoneCell": {
-      "min": 70,
-      "max": 105,
-      "typical": 85,
+      "min": 35,
+      "max": 85,
+      "typical": 60,
       "annualInflation": 0.02,
-      "notes": "Google Fi Flexible (US Number) + Free Mobile (Local). 2 phones, 1.5GB+ high-speed data each, all taxes included."
+      "notes": "Two local lines: Free Mobile 5G+ 350 Go at 19.99 EUR each (9.99-15.99 for Freebox subscribers), ~40/mo; plus the stored Google Fi Flexible US-number line at $20/mo base (~19 EUR). Min = 2 discounted Free lines + Fi; max keeps headroom for Fi data.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Selectra - Forfaits Free Mobile 2026",
+          "url": "https://selectra.info/telecom/fournisseurs/free/mobile",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "UpPhone - Google Fi Flexible plan",
+          "url": "https://www.upphone.com/cell-phone-plans/googlefi/googlefi-flexible/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "miscellaneous": {
       "min": 50,

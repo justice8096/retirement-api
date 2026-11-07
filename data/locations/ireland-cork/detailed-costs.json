@@ -90,9 +90,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 75,
-      "typical": 90,
-      "max": 110
+      "min": 22,
+      "typical": 30,
+      "max": 60
     },
     "plans": [
       {
@@ -121,13 +121,14 @@
         "title": "Google Fi Plans",
         "url": "https://fi.google.com/about/plans"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 374,
-      "typical": 467,
-      "max": 584
+      "min": 260,
+      "typical": 400,
+      "max": 600
     },
     "categories": [
       {
@@ -190,13 +191,14 @@
         "seniorDiscounts": "No specific discounts.",
         "notes": "Coffee ~€3.50-4.50. Budget for 2 visits/week. ~$18/mo."
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 69,
-      "typical": 115,
-      "max": 437
+      "min": 150,
+      "typical": 260,
+      "max": 400
     },
     "publicTransit": {
       "monthlyPass": {
@@ -272,7 +274,8 @@
         "max": 610,
         "notes": "Includes insurance, fuel, parking, maintenance. Higher urban parking and insurance costs."
       }
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "visionDental": {
     "monthlyBudget": {
@@ -560,9 +563,9 @@
   "housing": {
     "propertyType": "2-bedroom house or ground-floor apartment",
     "monthlyBudget": {
-      "min": 1200,
-      "max": 1950,
-      "typical": 1500
+      "min": 1700,
+      "max": 2550,
+      "typical": 2100
     },
     "breakdown": {
       "baseRent": 1500,
@@ -573,7 +576,8 @@
     },
     "taxNotes": "No rental tax for tenants. LPT (Local Property Tax) is landlord responsibility. No stamp duty on residential leases.",
     "leaseTerms": "Part 4 tenancy rights after 6 months (up to 6-year security). Rent Pressure Zones cap increases at 2%/year. Security deposit 1 month rent. 28-day notice minimum.",
-    "marketNotes": "Second city, more affordable than Dublin. Mix of terraced houses and suburban estates. Rental supply tight."
+    "marketNotes": "Second city, more affordable than Dublin. Mix of terraced houses and suburban estates. Rental supply tight.",
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "groceryStores": {
     "stores": [

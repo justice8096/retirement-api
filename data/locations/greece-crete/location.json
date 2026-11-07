@@ -40,35 +40,119 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 800,
-      "min": 600,
-      "max": 1000,
-      "annualInflation": 0.04
+      "typical": 850,
+      "min": 650,
+      "max": 1100,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-07",
+      "notes": "Crete Direct (Jul 2026): 2BR annual lets 570-920 EUR in Heraklion, 620-980 EUR in Chania, 510-820 EUR in Rethymno, cheaper in Ierapetra and villages; Spitogatos Q2 2026 asking rents 12.0 EUR/sqm Heraklion, 12.9 Chania, 13.2 Rethymno for small units. A pet-friendly 3BR or house with yard sits at the upper half of the range.",
+      "sources": [
+        {
+          "title": "Crete Direct: Long term rentals in Crete (Jul 2026)",
+          "url": "https://crete.direct/articles/long-term-rentals-crete",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Athens Times: Student rental prices surge (Spitogatos Q2 2026)",
+          "url": "https://athens-times.com/student-rental-prices-surge-across-greece-corfu-most-expensive-sharp-rises-in-rhodes-and-drama/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Crete Direct: Cost of Living in Crete 2026",
+          "url": "https://crete.direct/articles/cost-of-living-crete",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "groceries": {
-      "typical": 380,
-      "min": 300,
-      "max": 480,
-      "annualInflation": 0.03
+      "typical": 570,
+      "min": 450,
+      "max": 700,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Crete Direct (Jun 2026): 200-280 EUR per person at local supermarkets, with cheap street-market produce and olive oil; two adults about 470 EUR plus 100+ EUR/month of food for a large-breed dog. Food CPI +0.9% y/y Aug 2026.",
+      "sources": [
+        {
+          "title": "Crete Direct: Cost of Living in Crete 2026",
+          "url": "https://crete.direct/articles/cost-of-living-crete",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Athens Times: How Much Does a Dog Really Cost in Greece in 2026",
+          "url": "https://athens-times.com/how-much-does-a-dog-really-cost-in-greece-in-2026/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Trading Economics: Greece inflation September 2026",
+          "url": "https://tradingeconomics.com/greece/inflation-cpi/news/590826",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "utilities": {
-      "typical": 150,
-      "min": 110,
-      "max": 200,
-      "annualInflation": 0.035
+      "typical": 170,
+      "min": 120,
+      "max": 250,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-07",
+      "notes": "Crete Direct (Jun 2026): electricity plus water 80-160 EUR/month for one person, peaking in July-August with AC, water rarely above 15 EUR; Expatistan Heraklion 125 EUR for two in 85 sqm (older data). Scaled for two adults in a 2-3BR and the November 2026 tariff rises (PPC green 0.169 EUR/kWh, others +30-76%).",
+      "sources": [
+        {
+          "title": "Crete Direct: Cost of Living in Crete 2026",
+          "url": "https://crete.direct/articles/cost-of-living-crete",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Expatistan: utilities for 2 people in 85m2 flat in Heraklion",
+          "url": "https://expatistan.com/price/utilities/heraklion",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "To Vima: Electricity prices rise sharply in November (2 Nov 2026)",
+          "url": "https://www.tovima.com/finance/electricity-prices-rise-sharply-in-november-in-greece/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 90,
-      "min": 60,
-      "max": 140,
+      "typical": 260,
+      "min": 150,
+      "max": 450,
       "annualInflation": 0.04,
-      "notes": "ESY (National Health System) universal coverage after residency permit. Private supplementary ~€80-180/mo. Anti-VEGF injections available in Athens (Hygeia, Metropolitan) and Thessaloniki; covered via ESY with prescription. GLP-1 covered for diabetes indication. Crisis-era underfunding means longer public waits — private picks up the gap. English availability moderate, better in private sector."
+      "notes": "Crete Direct (Jun 2026): private health insurance for non-EU expats 80-150 EUR per person per month depending on age and cover; Feather (Apr 2026): basic 50-100 EUR, mid-range 125-250 EUR per person. Two 60-year-olds on basic-to-mid plans about 260 EUR; Heraklion and Chania have university/public hospitals and private clinics.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Crete Direct: Cost of Living in Crete 2026",
+          "url": "https://crete.direct/articles/cost-of-living-crete",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Feather: Health insurance in Greece guide for expats (2026)",
+          "url": "https://feather-insurance.com/en-gr/blog/health-insurance-greece-guide",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "insurance": {
-      "typical": 110,
-      "min": 70,
-      "max": 160,
-      "annualInflation": 0.04
+      "typical": 8,
+      "min": 3,
+      "max": 15,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-07",
+      "notes": "Re-modelled from old template (health) to renters/contents cover. COSMOTE Insurance/Hellas Direct contents-only policies for tenants cost 18-54 EUR per year for 6,000-25,000 EUR of cover; sold nationally online.",
+      "sources": [
+        {
+          "title": "iefimerida: COSMOTE home insurance pricing",
+          "url": "https://www.iefimerida.gr/ellada/asfalisi-katoikias-cosmote",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "RES Greece: yearly property expenses",
+          "url": "https://www.res-greece.com/article/yearly-property-expences",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petCare": {
       "typical": 60,
@@ -89,16 +173,49 @@
       "annualInflation": 0.03
     },
     "transportation": {
-      "typical": 140,
-      "min": 90,
-      "max": 210,
-      "annualInflation": 0.03
+      "typical": 180,
+      "min": 110,
+      "max": 260,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Car needed for most of Crete: fuel 1.85-2.00 EUR/L for about 800-1000 km/month, basic third-party insurance about 150-200 EUR/yr (national online quote, driver 36-65), road tax unchanged for 2026, maintenance; Heraklion city bus pass about 30 EUR and KTEL Heraklion-Chania 14 EUR one way. Transport CPI +11.3% y/y Sept 2026.",
+      "sources": [
+        {
+          "title": "Crete Direct: Cost of Living in Crete 2026",
+          "url": "https://crete.direct/articles/cost-of-living-crete",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Magenta Insurance: car insurance quotes",
+          "url": "https://www.magentainsurance.gr/car/athina",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Elxis: Road tax in Greece 2026",
+          "url": "https://elxis.com/road-tax-in-greece-what-you-need-to-know-for-2026",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 200,
-      "min": 140,
-      "max": 280,
-      "annualInflation": 0.03
+      "typical": 215,
+      "min": 150,
+      "max": 310,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Cosmote/Nova fibre 100-300 Mbps 25-40 EUR, streaming about 30 EUR, dinner for two with wine 35-55 EUR three to four times a month (20-30% more in tourist areas), plus activities.",
+      "sources": [
+        {
+          "title": "Crete Direct: Cost of Living in Crete 2026",
+          "url": "https://crete.direct/articles/cost-of-living-crete",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Jobicy: Cost of living Heraklion (May 2026)",
+          "url": "https://www.jobicy.com/cost-of-living/greece/heraklion",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "clothing": {
       "typical": 80,
@@ -119,10 +236,29 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 87,
-      "min": 72,
-      "max": 107,
-      "annualInflation": 0.02
+      "typical": 46,
+      "min": 30,
+      "max": 84,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-07",
+      "notes": "National carrier pricing: two SIM-only lines at 15-25 EUR each (Nova SIM 15, Cosmote M, Vodafone Red 30), unlimited Vodafone Red+ 42 EUR each (Feb 2026); Crete Direct cites 10-20 EUR for 20-50 GB mobile data.",
+      "sources": [
+        {
+          "title": "Greverse: Best mobile plans in Greece 2026 - Cosmote, Vodafone, Nova",
+          "url": "https://greverse-com.pages.dev/telecom/best-mobile-plans-in-greece-2026-cosmote-vodafone-nova",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Crete Direct: Cost of Living in Crete 2026",
+          "url": "https://crete.direct/articles/cost-of-living-crete",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Business Daily: Unlimited mobile programmes - what providers offer",
+          "url": "https://businessdaily.gr/english-edition/95465_unlimited-mobile-programmes-what-providers-offer-right-now",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "taxes": {
       "typical": 420,
@@ -154,7 +290,16 @@
       "min": 40,
       "typical": 80,
       "max": 160,
-      "annualInflation": 0.035
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-07",
+      "notes": "Private GP consultation 40-70 EUR (Crete Direct); assumes about one private visit or diagnostic per month for the couple beyond plan cover.",
+      "sources": [
+        {
+          "title": "Crete Direct: Cost of Living in Crete 2026 (private GP)",
+          "url": "https://crete.direct/articles/cost-of-living-crete",
+          "accessed": "2026-11-07"
+        }
+      ]
     }
   },
   "healthcare": {

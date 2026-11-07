@@ -26,16 +26,29 @@
   },
   "monthlyCosts": {
     "rent": {
-      "min": 950,
-      "max": 1500,
-      "typical": 1200,
+      "min": 1450,
+      "max": 1850,
+      "typical": 1650,
       "type": "2-bedroom house",
       "annualInflation": 0.03,
-      "notes": "Much cheaper than Dublin. Waterford city and surrounding towns. HAP (Housing Assistance Payment) caps apply for subsidized tenants but not relevant for private renters.",
+      "notes": "Daft.ie Q1 2026: Waterford city 2-bed house EUR1,664, 3-bed EUR1,747; county 2-bed EUR1,511, 3-bed EUR1,738. Typical set near a 2-bed house/3-bed in surrounding towns; pet-friendly stock is scarce so a premium is likely.",
       "gigInternetTypical": 1260,
       "gigInternetCoverage": 70,
       "gigInternetProviders": "SIRO (via Vodafone, Eir, Digiweb), Open Eir",
-      "gigInternetNotes": "SIRO FTTH available in Waterford city and surrounding towns (up to 2Gbps). Coverage expanding — 695K premises nationally, targeting 770K. Not all rental properties connected yet. Moderate premium for verified fiber addresses."
+      "gigInternetNotes": "SIRO FTTH available in Waterford city and surrounding towns (up to 2Gbps). Coverage expanding — 695K premises nationally, targeting 770K. Not all rental properties connected yet. Moderate premium for verified fiber addresses.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Daft.ie Rental Report 2026 Q1 (PDF via RTE)",
+          "url": "https://www.rte.ie/documents/news/2026/05/daft.ie-rental-report-2026q1.pdf",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Selectra: Cost of living in Ireland (updated Sep 2026)",
+          "url": "https://selectra.ie/energy/guides/cost-of-living-ireland",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "groceries": {
       "min": 950,
@@ -45,9 +58,9 @@
       "notes": "2 adults + large dog. VAT 0% on groceries. Aldi, Lidl, Tesco widely available. Dunmore East farmers market seasonal."
     },
     "utilities": {
-      "min": 190,
-      "max": 320,
-      "typical": 250,
+      "min": 240,
+      "max": 400,
+      "typical": 310,
       "annualInflation": 0.03,
       "breakdown": {
         "electricity": {
@@ -72,25 +85,65 @@
         }
       },
       "taxes": "VAT at 13.5% on electricity and gas. Carbon tax on fossil fuels adds to energy costs.",
-      "notes": "Electricity, gas, trash. Water and sewage free. Internet is in entertainment. Oil heating common in older homes — budget €100-150/mo in winter if applicable."
+      "notes": "Selectra Nov 2026 averages: electricity EUR157/mo (4,200 kWh) and gas EUR129/mo (11,000 kWh) for a gas-heated house, plus private bins about EUR24-28/mo (Wiser/Panda plans); water and sewer free for domestic users. Energy CPI was up 18% y/y in Oct 2026. Oil-heated homes similar; internet excluded.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Selectra: Average gas and electricity bill Ireland (Nov 2026)",
+          "url": "https://selectra.ie/energy/guides/billing/average-gas-electricity-bill",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Selectra: Wiser Bins prices (Cork / West Waterford)",
+          "url": "https://selectra.ie/waste/suppliers/wiser-bins",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "AJ Bell: Ireland inflation accelerates in October 2026 as energy prices surge",
+          "url": "https://www.ajbell.co.uk/news/articles/ireland-inflation-accelerates-october-energy-prices-surge",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "healthcare": {
-      "min": 400,
-      "max": 700,
-      "typical": 550,
+      "min": 110,
+      "max": 500,
+      "typical": 330,
       "breakdown": {
         "privateInsurance": 350,
         "gpVisitsCopays": 100
       },
-      "notes": "Private insurance (VHI/Laya Healthcare) ~€220-280/person/mo for 2 adults with pre-existing conditions. Higher loading for macular degeneration, obesity, hypertension. GMS Medical Card may apply based on income. Anti-VEGF injections covered through public ophthalmology. DPS scheme caps drug costs at €80/mo.",
-      "annualInflation": 0.05
+      "notes": "Two adults on private cover at the HIA market-average adult premium (EUR1,902/yr at end-2025, about EUR1,960 in Q1 2026) = roughly EUR160-165 each per month; budget public-hospital plans start near EUR550-600/yr per adult (min), mid-range day-to-day plans EUR2,500+/yr (max). Legal residents use the public system; no medical card at 60 unless means-tested. New arrivals have a 9-month window to buy cover before lifetime community rating age loading applies.",
+      "annualInflation": 0.05,
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Irish Examiner: Average health insurance premiums reach EUR1,902 (HIA bulletin, Mar 2026)",
+          "url": "https://www.irishexaminer.com/business/economy/arid-41807432.html",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Settle.ie: Healthcare in Ireland 2026 - what you pay",
+          "url": "https://settle.ie/guides/healthcare-in-ireland/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "insurance": {
-      "min": 25,
-      "max": 45,
-      "typical": 35,
+      "min": 15,
+      "max": 40,
+      "typical": 25,
       "type": "renter's insurance",
-      "annualInflation": 0.02
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-07",
+      "notes": "Renters/contents cover only; Allianz quotes basic contents cover from about EUR10/mo and fuller cover around EUR15/mo (page dated 2019, so nudged up for premium inflation). Landlord insures the building.",
+      "sources": [
+        {
+          "title": "Allianz Ireland: How much does renters insurance cost",
+          "url": "https://www.allianz.ie/blog/Your-Home/cost-of-renters-insurance.html",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petCare": {
       "min": 100,
@@ -100,32 +153,84 @@
       "notes": "Vet visits, vaccinations, flea/tick prevention. Pet insurance available through Allianz, Petinsurance.ie. Microchipping mandatory."
     },
     "petDaycare": {
-      "min": 220,
-      "max": 400,
-      "typical": 300,
+      "min": 60,
+      "max": 300,
+      "typical": 150,
       "annualInflation": 0.03,
-      "notes": "Doggy daycare 2 days/week, large breed rate (~€35/day). Limited commercial daycare in Waterford area; in-home pet sitters and dog walkers more common."
+      "notes": "Occasional use: Rover sitters in Waterford from EUR18-30/day daycare, in-home sitters about EUR35/day, kennels about EUR25-45/night. Typical assumes ~4 daycare days a month plus one boarding week a year; 2 days/week daycare reaches the max.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Rover.ie: Dog day care in Waterford",
+          "url": "https://www.rover.com/ie/waterford--waterford--dog-day-care",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Irish Times: The cost of keeping a dog (2024)",
+          "url": "https://www.irishtimes.com/your-money/2024/07/17/the-cost-of-keeping-a-dog",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petGrooming": {
-      "min": 65,
+      "min": 50,
       "max": 120,
-      "typical": 90,
+      "typical": 75,
       "annualInflation": 0.025,
-      "notes": "Bernese coat maintenance, professional grooming monthly. Several groomers in Waterford city."
+      "notes": "Cork salon lists large-breed full groom from EUR90 (giant double-coated breeds typically more); Bernese de-shed/bath every 6-8 weeks averages about EUR75/mo, monthly visits toward the max.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Kinsale Dog Spaw price list (Fresha)",
+          "url": "https://www.fresha.com/a/kinsale-dog-spaw-kinsale-co-cork-gdt5whya",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "transportation": {
-      "min": 200,
-      "max": 380,
-      "typical": 280,
-      "notes": "Car needed outside city center. Bus Éireann local service limited. Fuel expensive ~€1.70/liter. Irish Rail to Dublin ~2hr. Parking affordable.",
-      "annualInflation": 0.025
+      "min": 220,
+      "max": 450,
+      "typical": 320,
+      "notes": "One petrol car: fuel EUR1.97/l (Oct 2026) ~EUR110/mo at 10,000 km/yr, motor insurance avg EUR655/yr in 2025 (new residents without Irish no-claims history pay more, EUR680-1,100), plus motor tax, NCT and maintenance. Selectra puts a rural car-dependent household at EUR350-550. Free Travel pass on public transport from age 66.",
+      "annualInflation": 0.025,
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "fuel-prices.eu: Ireland fuel prices 12-19 Oct 2026",
+          "url": "https://www.fuel-prices.eu/news/ireland-fuel-prices-weekly-recap-2026-10-19/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "RTE: Average cost of motor insurance was EUR655 in 2025 (Central Bank NCID)",
+          "url": "https://rte.ie/news/business/2026/0331/1566059-average-cost-of-motor-insurance-was-655-last-year/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Selectra: Cost of living in Ireland (updated Sep 2026)",
+          "url": "https://selectra.ie/energy/guides/cost-of-living-ireland",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "entertainment": {
-      "min": 350,
-      "max": 550,
-      "typical": 440,
+      "min": 320,
+      "max": 580,
+      "typical": 420,
       "annualInflation": 0.02,
-      "notes": "Incl broadband (SIRO 1Gig €50-60), Netflix €14, Amazon Prime €9, Apple TV+ €10, dining out (~€280/mo, no tipping culture), gym €35, pubs/culture €30."
+      "notes": "Vodafone 1Gb full fibre EUR35 promo then about EUR55, streaming ~EUR33, dining out for two a few times a month (inexpensive meal EUR20/head, pint EUR6.80), gym/pubs/culture.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Irish Tech News: Best broadband deals in Ireland April 2026",
+          "url": "https://irishtechnews.ie/best-broadband-deals-in-ireland-april-2026/amp/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Selectra: Cost of living in Ireland (updated Sep 2026)",
+          "url": "https://selectra.ie/energy/guides/cost-of-living-ireland",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "clothing": {
       "min": 80,
@@ -148,11 +253,24 @@
       "notes": "Streaming, news, apps"
     },
     "phoneCell": {
-      "min": 55,
-      "max": 90,
-      "typical": 70,
+      "min": 26,
+      "max": 95,
+      "typical": 75,
       "annualInflation": 0.02,
-      "notes": "Vodafone Ireland 2 SIMs ~€20/mo each (unlimited data) + keep T-Mobile US 55+ at $55/mo (~€50) for US banking/2FA."
+      "notes": "Two Irish SIM-only lines at EUR13-15 each (48 200GB EUR12.99, GoMo 120GB EUR14.99, Sky unlimited EUR15) = about EUR28, plus the retained US T-Mobile 55+ line (~EUR47) per the stored household model.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Goosed.ie: Best SIM-only deals in Ireland (2026)",
+          "url": "https://goosed.ie/news/tech-news/irish-sim-only-deals-march-2026/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Irish Tech News: Best SIM-only deals August 2026",
+          "url": "https://irishtechnews.ie/best-sim-only-deals-in-ireland-august-2026/amp/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "miscellaneous": {
       "min": 60,
@@ -170,10 +288,18 @@
     },
     "medicalOOP": {
       "min": 60,
-      "max": 200,
-      "typical": 110,
+      "max": 220,
+      "typical": 120,
       "annualInflation": 0.05,
-      "notes": "Public system: long waits for ophthalmology (anti-VEGF). Private: faster access but higher OOP. GP visits €55-65 without Medical Card. DPS caps prescriptions at €80/mo. Frequent specialist visits: ophthalmologist, endocrinologist, cardiologist. Labs via GP referral."
+      "notes": "GP visit EUR50-70 without a medical card, out-of-hours EUR60-80, A&E EUR100 without referral, DPS caps prescriptions at EUR80/mo (prescriptions sit in medicine). Private consultant visits and labs for frequent specialist follow-up push toward the max.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Settle.ie: Healthcare in Ireland 2026 - what you pay",
+          "url": "https://settle.ie/guides/healthcare-in-ireland/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "medicine": {
       "min": 45,

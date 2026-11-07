@@ -213,8 +213,8 @@
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 310,
-      "typical": 380,
+      "min": 300,
+      "typical": 370,
       "max": 480
     },
     "categories": [
@@ -273,13 +273,14 @@
         "title": "Netflix France",
         "url": "https://help.netflix.com/fr/node/24926"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 50,
+      "min": 60,
       "typical": 120,
-      "max": 350
+      "max": 180
     },
     "publicTransit": {
       "monthlyPass": {
@@ -444,7 +445,8 @@
           "url": "https://chargemap.com/map"
         }
       ]
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "seniorDiscounts": {
     "minimumAge": 60,
@@ -495,9 +497,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 70,
-      "typical": 85,
-      "max": 105
+      "min": 35,
+      "typical": 60,
+      "max": 85
     },
     "plans": [
       {
@@ -530,14 +532,15 @@
         "title": "Free Mobile Plans",
         "url": "https://mobile.free.fr/forfaits"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "housing": {
     "propertyType": "2-bedroom house (maison)",
     "monthlyBudget": {
-      "min": 900,
-      "max": 1350,
-      "typical": 1100
+      "min": 950,
+      "max": 1400,
+      "typical": 1150
     },
     "breakdown": {
       "baseRentEUR": 870,
@@ -559,7 +562,8 @@
         "name": "Toulouse Métropole Encadrement",
         "url": "https://www.toulouse-metropole.fr/encadrement-des-loyers"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "groceryStores": {
     "stores": [

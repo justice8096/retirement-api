@@ -90,9 +90,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 75,
-      "typical": 90,
-      "max": 110
+      "min": 22,
+      "typical": 30,
+      "max": 60
     },
     "plans": [
       {
@@ -121,13 +121,14 @@
         "title": "Google Fi Plans",
         "url": "https://fi.google.com/about/plans"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 374,
-      "typical": 467,
-      "max": 584
+      "min": 230,
+      "typical": 370,
+      "max": 570
     },
     "categories": [
       {
@@ -190,13 +191,14 @@
         "seniorDiscounts": "No specific discounts.",
         "notes": "Coffee ~€3.50-4.50. Budget for 2 visits/week. ~$18/mo."
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 51,
-      "typical": 85,
-      "max": 323
+      "min": 150,
+      "typical": 260,
+      "max": 400
     },
     "publicTransit": {
       "monthlyPass": {
@@ -272,7 +274,8 @@
         "max": 451,
         "notes": "Includes insurance, fuel, parking, maintenance. Moderate suburban costs."
       }
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "visionDental": {
     "monthlyBudget": {
@@ -560,9 +563,9 @@
   "housing": {
     "propertyType": "2-bedroom house or ground-floor apartment",
     "monthlyBudget": {
-      "min": 1000,
-      "max": 1625,
-      "typical": 1250
+      "min": 1600,
+      "max": 2500,
+      "typical": 2000
     },
     "breakdown": {
       "baseRent": 1250,
@@ -573,7 +576,8 @@
     },
     "taxNotes": "No rental tax for tenants. LPT (Local Property Tax) is landlord responsibility. No stamp duty on residential leases.",
     "leaseTerms": "Part 4 tenancy rights after 6 months (up to 6-year security). Rent Pressure Zones cap increases at 2%/year. Security deposit 1 month rent. 28-day notice minimum.",
-    "marketNotes": "Most affordable Irish city on this list. Good housing stock. Regeneration improving areas."
+    "marketNotes": "Most affordable Irish city on this list. Good housing stock. Regeneration improving areas.",
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "groceryStores": {
     "stores": [

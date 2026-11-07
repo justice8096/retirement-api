@@ -90,9 +90,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 70,
-      "typical": 85,
-      "max": 105
+      "min": 10,
+      "typical": 28,
+      "max": 60
     },
     "plans": [
       {
@@ -121,13 +121,14 @@
         "title": "Google Fi Plans",
         "url": "https://fi.google.com/about/plans"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 326,
-      "typical": 408,
-      "max": 510
+      "min": 200,
+      "typical": 300,
+      "max": 420
     },
     "categories": [
       {
@@ -190,13 +191,14 @@
         "seniorDiscounts": "No specific discounts. Café culture is affordable.",
         "notes": "Café crème ~€2.50-3.50. Budget for 2 visits/week. ~$18/mo."
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 43,
-      "typical": 85,
-      "max": 272
+      "min": 74,
+      "typical": 190,
+      "max": 330
     },
     "publicTransit": {
       "monthlyPass": {
@@ -272,7 +274,8 @@
         "max": 383,
         "notes": "Includes insurance, fuel, parking, maintenance. Moderate suburban costs."
       }
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "visionDental": {
     "monthlyBudget": {
@@ -560,9 +563,9 @@
   "housing": {
     "propertyType": "2-bedroom house or ground-floor apartment",
     "monthlyBudget": {
-      "min": 880,
-      "max": 1430,
-      "typical": 1100
+      "min": 850,
+      "max": 1400,
+      "typical": 1050
     },
     "breakdown": {
       "baseRent": 1100,
@@ -573,7 +576,8 @@
     },
     "taxNotes": "No rental income tax for tenants. Taxe d'habitation abolished for primary residences. Property tax (taxe foncière) is landlord responsibility.",
     "leaseTerms": "3-year unfurnished lease (bail de 3 ans, renewable). 1-year furnished lease. Security deposit 1 month rent (unfurnished) or 2 months (furnished). 3-month notice period for tenants.",
-    "marketNotes": "Var coast, more affordable than Nice. Mix of apartments and small houses. Good Mediterranean climate."
+    "marketNotes": "Var coast, more affordable than Nice. Mix of apartments and small houses. Good Mediterranean climate.",
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "groceryStores": {
     "stores": [

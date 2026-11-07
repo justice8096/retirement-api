@@ -38,10 +38,24 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 700,
-      "min": 550,
-      "max": 900,
-      "annualInflation": 0.04
+      "typical": 800,
+      "min": 600,
+      "max": 1050,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-07",
+      "notes": "Immobiliare.it October 2026: Abruzzo asking rents average 8.35 EUR/m2/mo (Pescara 9.83, L'Aquila 8.31, Teramo 7.95, Chieti 7.09), so a 90-110 m2 2-3BR runs ~700-1000 on the coast and ~650-800 inland; Numbeo Pescara 3BR 803 outside centre, 1066 centre (June 2026). Pet-friendly leases are common but landlords may ask a higher deposit.",
+      "sources": [
+        {
+          "title": "Immobiliare.it - Mercato immobiliare Abruzzo",
+          "url": "https://www.immobiliare.it/mercato-immobiliare/abruzzo/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Expatica - Cost of living in Pescara",
+          "url": "https://www.expatica.com/it/cost-of-living/pescara/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "groceries": {
       "typical": 380,
@@ -50,53 +64,164 @@
       "annualInflation": 0.03
     },
     "utilities": {
-      "typical": 165,
-      "min": 120,
-      "max": 220,
-      "annualInflation": 0.035
+      "typical": 230,
+      "min": 160,
+      "max": 300,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-07",
+      "notes": "Facile.it Osservatorio (Oct 2026) Pescara households average 937 EUR/yr electricity (1584 kWh) and 922 EUR/yr gas (1015 Smc) = ~155/mo at modest consumption; a 2-3BR house with winter heating plus water (~25/mo) and TARI (~25/mo) lands near 230. Numbeo Pescara basic utilities 85 m2 = 226 EUR. Excludes internet.",
+      "sources": [
+        {
+          "title": "Facile.it - Osservatorio luce e gas Pescara",
+          "url": "https://www.facile.it/energia-luce-gas/osservatorio/abruzzo/pescara.html",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Facile.it - Osservatorio luce e gas Abruzzo",
+          "url": "https://www.facile.it/energia-luce-gas/osservatorio/abruzzo.html",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Expatica - Cost of living in Pescara",
+          "url": "https://www.expatica.com/it/cost-of-living/pescara/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 95,
-      "min": 60,
-      "max": 140,
+      "typical": 290,
+      "min": 167,
+      "max": 565,
       "annualInflation": 0.04,
-      "notes": "SSN (Servizio Sanitario Nazionale) universal coverage after Elective Residence visa. Private supplementary ~€60-180/mo. Anti-VEGF injections available widely via SSN at hospital ophthalmology. GLP-1 covered for diabetes through SSN with prescription. Regional variation: Northern Italy has strongest public infrastructure; Southern regions thinner. English availability moderate in private sector."
+      "notes": "Non-EU elective-residence retirees register with the SSN voluntarily: 7.5% of worldwide income up to 20,658 EUR plus 4% up to 51,646 EUR, floor 2,000 EUR and cap ~2,789 EUR/yr, valid for the whole nucleo familiare (~167-232/mo for the couple). Typical adds a modest Italian private top-up (Italian resident policies 800-2,000 EUR/yr); max assumes two private policies on top of the capped SSN fee.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "The Local - Cost to register with Italy's national health service",
+          "url": "https://www.thelocal.it/20250130/how-much-does-it-cost-to-register-with-italys-national-health-service-in-2025",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "ASL Roma 3 - Iscrizione volontaria",
+          "url": "https://www.aslroma3.it/repository/2020/07/Iscrizione-volontaria.pdf",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "AUSL Modena - Iscrizione al SSN dei cittadini stranieri",
+          "url": "https://www.ausl.mo.it/media/Iscrizione-al-SSN-dei-cittadini-stranieri-e-comunitari-e-assistenza-ai-cittadini-non-iscrivibili-al-SSN.pdf",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Impatria - Assicurazione sanitaria per pensionati stranieri 2026",
+          "url": "https://impatria.com/?p=5323",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "insurance": {
-      "typical": 110,
-      "min": 75,
-      "max": 160,
-      "annualInflation": 0.04
+      "typical": 15,
+      "min": 10,
+      "max": 25,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-07",
+      "notes": "Re-modelled from the old template (110 was health cover, now in healthcare). Renters contents + RC capofamiglia policies (e.g. Redion, Bene, Chubb) sit in the 150-200 EUR/yr band Facile.it reports for Oct 2026, i.e. ~15/mo; dog liability usually rides on the RC capofamiglia cover.",
+      "sources": [
+        {
+          "title": "Facile.it - Assicurazioni casa inverno 2026",
+          "url": "https://www.facile.it/assicurazioni/news/assicurazioni-casa-inverno-2026.html",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petCare": {
-      "typical": 60,
-      "min": 40,
-      "max": 100,
-      "annualInflation": 0.03
+      "typical": 70,
+      "min": 45,
+      "max": 120,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Money.it (July 2026): annual vet visits 60-100 EUR, booster vaccines 40-60 EUR each, antiparassitari 10-20 EUR/mo, diagnostics 200-300 EUR/yr; large-breed total care is the top of the range. ~70/mo without pet insurance.",
+      "sources": [
+        {
+          "title": "Money.it - Quanto costa mantenere un cane (luglio 2026)",
+          "url": "https://www.money.it/Quanto-costa-mantenere-cane-spese-annue-e-straordinarie-importi",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petDaycare": {
       "typical": 150,
       "min": 100,
       "max": 250,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Pensione per cani in Abruzzo 20-26 EUR/day for a large dog (Cronoshare Roseto degli Abruzzi), 20-40 EUR/day nationally; ~6 boarding/daycare days a month = ~150.",
+      "sources": [
+        {
+          "title": "Cronoshare - Pensione per cani Roseto degli Abruzzi",
+          "url": "https://www.cronoshare.it/servizi/pensione-per-cani/teramo/roseto-degli-abruzzi",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Money.it - Quanto costa mantenere un cane (luglio 2026)",
+          "url": "https://www.money.it/Quanto-costa-mantenere-cane-spese-annue-e-straordinarie-importi",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petGrooming": {
       "typical": 50,
       "min": 30,
       "max": 80,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Toelettatura 20-80 EUR per session, long-coated and large breeds at the top; a Bernese full groom every 6-8 weeks (~70-80) averages ~50/mo.",
+      "sources": [
+        {
+          "title": "Money.it - Quanto costa mantenere un cane (luglio 2026)",
+          "url": "https://www.money.it/Quanto-costa-mantenere-cane-spese-annue-e-straordinarie-importi",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "transportation": {
-      "typical": 140,
-      "min": 90,
-      "max": 210,
-      "annualInflation": 0.03
+      "typical": 240,
+      "min": 150,
+      "max": 340,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Abruzzo outside Pescara needs a car. Isfort 2026: Italian households average 334 EUR/mo on the car; Facile.it 2026 components: petrol ~2 EUR/L (Numbeo Pescara 1.85), maintenance ~662 EUR/yr for a petrol car at 10k km, bollo 150-280 EUR, RC auto well below the 2,060 EUR new-driver average for 60-year-olds with a good class. Low-mileage retiree couple with one used car ~240/mo; Pescara bus pass ~42.",
+      "sources": [
+        {
+          "title": "Geopop - Quanto costa mantenere un'auto in Italia nel 2026 (Isfort)",
+          "url": "https://www.geopop.it/quanto-ci-costa-mantenere-unautomobile-in-italia-nel-2026-334-euro-mensili-in-media-i-dati-isfort/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Expatica - Cost of living in Pescara",
+          "url": "https://www.expatica.com/it/cost-of-living/pescara/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 200,
-      "min": 140,
-      "max": 280,
-      "annualInflation": 0.03
+      "typical": 280,
+      "min": 200,
+      "max": 380,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Iliad FTTH fibre 22.99 EUR/mo fixed (with an Iliad mobile line; Numbeo Pescara broadband 33); streaming ~35; mid-range dinner for 2 ~63 EUR three times a month = ~190; cinema 8.40 and activities ~40.",
+      "sources": [
+        {
+          "title": "HTML.it - Offerte Iliad 2026",
+          "url": "https://www.html.it/magazine/offerte-iliad-2026-piu-giga-piu-velocita-e-tariffe-senza-sorprese/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Expatica - Cost of living in Pescara",
+          "url": "https://www.expatica.com/it/cost-of-living/pescara/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "clothing": {
       "typical": 80,
@@ -117,10 +242,24 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 81,
-      "min": 66,
-      "max": 101,
-      "annualInflation": 0.02
+      "typical": 45,
+      "min": 26,
+      "max": 70,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-07",
+      "notes": "Two Iliad GIGA PRIME lines at 12.99 EUR (300 GB 5G, price fixed) = ~26/mo (Numbeo Pescara mobile plan 13.11), plus a Google Fi Flexible US-number line at $20/mo base (~19 EUR) to mirror the Toulouse model; max allows Fi data use.",
+      "sources": [
+        {
+          "title": "HTML.it - Offerte Iliad 2026",
+          "url": "https://www.html.it/magazine/offerte-iliad-2026-piu-giga-piu-velocita-e-tariffe-senza-sorprese/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "UpPhone - Google Fi Flexible plan",
+          "url": "https://www.upphone.com/cell-phone-plans/googlefi/googlefi-flexible/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "taxes": {
       "typical": 420,

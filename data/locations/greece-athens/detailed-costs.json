@@ -90,9 +90,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 72,
-      "typical": 87,
-      "max": 107
+      "min": 30,
+      "typical": 46,
+      "max": 84
     },
     "plans": [
       {
@@ -121,13 +121,14 @@
         "title": "Google Fi Plans",
         "url": "https://fi.google.com/about/plans"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 252,
-      "typical": 315,
-      "max": 394
+      "min": 170,
+      "typical": 240,
+      "max": 350
     },
     "categories": [
       {
@@ -190,13 +191,14 @@
         "seniorDiscounts": "No specific discounts. Kafeneio culture affordable.",
         "notes": "Greek coffee/frappé ~€1.50-3.00. Budget for 2 visits/week. ~$12/mo."
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 35,
-      "typical": 69,
-      "max": 253
+      "min": 70,
+      "typical": 130,
+      "max": 220
     },
     "publicTransit": {
       "monthlyPass": {
@@ -272,7 +274,8 @@
         "max": 368,
         "notes": "Includes insurance, fuel, parking, maintenance. Higher urban parking and insurance costs."
       }
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "visionDental": {
     "monthlyBudget": {
@@ -560,9 +563,9 @@
   "housing": {
     "propertyType": "2-bedroom house or ground-floor apartment",
     "monthlyBudget": {
-      "min": 880,
-      "max": 1430,
-      "typical": 1100
+      "min": 900,
+      "max": 1500,
+      "typical": 1150
     },
     "breakdown": {
       "baseRent": 1100,
@@ -573,7 +576,8 @@
     },
     "taxNotes": "No rental tax for tenants. ENFIA (property tax) is landlord responsibility. Stamp duty 3.6% on annual rent (typically landlord pays).",
     "leaseTerms": "3-year minimum lease (even if contract says less). Security deposit 2 months rent. Landlord must give 3-month notice; tenant 1-month notice.",
-    "marketNotes": "Capital city, moderate prices. Apartments dominate. Best value in southern suburbs (Glyfada, Voula)."
+    "marketNotes": "Capital city, moderate prices. Apartments dominate. Best value in southern suburbs (Glyfada, Voula).",
+    "monthlyBudgetRefreshed": "2026-11-07"
   },
   "groceryStores": {
     "stores": [
@@ -696,7 +700,7 @@
           "type": "Salon",
           "address": "Athens center",
           "distanceKm": 10,
-          "rating": 4.0,
+          "rating": 4,
           "notes": "Limited options, mainly in immigrant neighborhoods",
           "website": ""
         },

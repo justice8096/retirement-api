@@ -37,35 +37,124 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 750,
-      "min": 600,
-      "max": 950,
-      "annualInflation": 0.04
+      "typical": 850,
+      "min": 650,
+      "max": 1100,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-07",
+      "notes": "Spitogatos Q2 2026 asking rent in Corfu about 13.4 EUR/sqm for small units (most expensive student market in Greece); long-term listings seen: 2BR 100 sqm house near Kato Garouna 750 EUR bills included, 1BR Corfu town 640-900 EUR; Expatistan 85 sqm furnished about 519 EUR (few data points). Pet-friendly 2-3BR year-round lets are scarce and priced at the upper end.",
+      "sources": [
+        {
+          "title": "Athens Times: Student rental prices surge, Corfu most expensive (Spitogatos Q2 2026)",
+          "url": "https://athens-times.com/student-rental-prices-surge-across-greece-corfu-most-expensive-sharp-rises-in-rhodes-and-drama/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Rentyournest: apartment Ethniki Odos Lefkimis, Corfu",
+          "url": "https://www.rentyournest.com/en/detail/apartment_generic/Kerkira/Ethniki-Odos-Lefkimis/962084",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Expatistan: rent 85m2 normal area Corfu",
+          "url": "https://expatistan.com/price/rent-normal-area/corfu",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "groceries": {
-      "typical": 390,
-      "min": 310,
-      "max": 490,
-      "annualInflation": 0.03
+      "typical": 580,
+      "min": 460,
+      "max": 720,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Two adults at about 230-250 EUR each (Expat Exchange Corfu 200-300 EUR per person; Greek basket is Europe's cheapest per IELKA) plus 100+ EUR/month of food for a large-breed dog. Island supermarket prices run a little above Athens but local produce is cheap; food CPI +0.9% y/y Aug 2026.",
+      "sources": [
+        {
+          "title": "Expat Exchange: Cost of living in Corfu",
+          "url": "https://www.expatexchange.com/wp/infoguide/1873/Greece/Corfu/cost-of-living-in-corfu/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Athens Times: How Much Does a Dog Really Cost in Greece in 2026",
+          "url": "https://athens-times.com/how-much-does-a-dog-really-cost-in-greece-in-2026/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Trading Economics: Greece inflation September 2026",
+          "url": "https://tradingeconomics.com/greece/inflation-cpi/news/590826",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "utilities": {
-      "typical": 150,
-      "min": 110,
-      "max": 200,
-      "annualInflation": 0.035
+      "typical": 175,
+      "min": 120,
+      "max": 260,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-07",
+      "notes": "Electricity (AC in summer, heat pump/oil in the wet Corfu winter) plus municipal water: Expat Exchange 100-150 EUR for one person, Jobicy 100-150 USD; island water 100-300 EUR/yr. Uplifted for the November 2026 tariff rises (PPC green 0.169 EUR/kWh, other suppliers +30-76%).",
+      "sources": [
+        {
+          "title": "Expat Exchange: Cost of living in Corfu",
+          "url": "https://www.expatexchange.com/wp/infoguide/1873/Greece/Corfu/cost-of-living-in-corfu/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Jobicy: Cost of living Corfu (May 2026)",
+          "url": "https://jobicy.com/cost-of-living/greece/corfu",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "To Vima: Electricity prices rise sharply in November (2 Nov 2026)",
+          "url": "https://www.tovima.com/finance/electricity-prices-rise-sharply-in-november-in-greece/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "RES Greece: yearly property expenses (water)",
+          "url": "https://www.res-greece.com/article/yearly-property-expences",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 85,
-      "min": 55,
-      "max": 130,
+      "typical": 260,
+      "min": 150,
+      "max": 450,
       "annualInflation": 0.04,
-      "notes": "ESY (National Health System) universal coverage after residency permit. Private supplementary ~€80-180/mo. Anti-VEGF injections available in Athens (Hygeia, Metropolitan) and Thessaloniki; covered via ESY with prescription. GLP-1 covered for diabetes indication. Crisis-era underfunding means longer public waits — private picks up the gap. English availability moderate, better in private sector."
+      "notes": "National private-cover pricing: basic plans 50-100 EUR and mid-range 125-250 EUR per person per month (Feather, Apr 2026); 80-150 EUR per person by age (Crete Direct, Jun 2026). Two 60-year-olds on basic-to-mid plans about 260 EUR. Corfu has a public hospital but limited private capacity, so expats often travel to Athens for specialist care.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Feather: Health insurance in Greece guide for expats (2026)",
+          "url": "https://feather-insurance.com/en-gr/blog/health-insurance-greece-guide",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Crete Direct: Cost of Living in Crete 2026",
+          "url": "https://crete.direct/articles/cost-of-living-crete",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "insurance": {
-      "typical": 105,
-      "min": 70,
-      "max": 155,
-      "annualInflation": 0.04
+      "typical": 8,
+      "min": 3,
+      "max": 15,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-07",
+      "notes": "Re-modelled from old template (health) to renters/contents cover. COSMOTE Insurance/Hellas Direct contents-only policies for tenants cost 18-54 EUR per year for 6,000-25,000 EUR of cover; sold nationally online.",
+      "sources": [
+        {
+          "title": "iefimerida: COSMOTE home insurance pricing",
+          "url": "https://www.iefimerida.gr/ellada/asfalisi-katoikias-cosmote",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "RES Greece: yearly property expenses",
+          "url": "https://www.res-greece.com/article/yearly-property-expences",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petCare": {
       "typical": 60,
@@ -86,16 +175,54 @@
       "annualInflation": 0.03
     },
     "transportation": {
-      "typical": 130,
-      "min": 80,
-      "max": 190,
-      "annualInflation": 0.03
+      "typical": 170,
+      "min": 100,
+      "max": 250,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "A car is needed outside Corfu town: fuel 1.85-2.00 EUR/L for about 800 km/month, basic third-party insurance about 150-200 EUR/yr (national online quote, driver 36-65), road tax unchanged for 2026, maintenance; KTEL island buses are infrequent (Expat Exchange 30-50 EUR/month pass). Transport CPI +11.3% y/y Sept 2026.",
+      "sources": [
+        {
+          "title": "Crete Direct: Cost of Living in Crete 2026 (fuel)",
+          "url": "https://crete.direct/articles/cost-of-living-crete",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Magenta Insurance: car insurance quotes",
+          "url": "https://www.magentainsurance.gr/car/athina",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Elxis: Road tax in Greece 2026",
+          "url": "https://elxis.com/road-tax-in-greece-what-you-need-to-know-for-2026",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Expat Exchange: Cost of living in Corfu",
+          "url": "https://www.expatexchange.com/wp/infoguide/1873/Greece/Corfu/cost-of-living-in-corfu/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 190,
-      "min": 130,
-      "max": 270,
-      "annualInflation": 0.03
+      "typical": 210,
+      "min": 150,
+      "max": 300,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Fibre/VDSL internet 25-40 EUR (Cosmote/Nova; fibre coverage patchy outside Corfu town), streaming about 30 EUR, taverna dinner for two 35-55 EUR a few times a month, plus activities.",
+      "sources": [
+        {
+          "title": "Crete Direct: Cost of Living in Crete 2026 (internet, dining)",
+          "url": "https://crete.direct/articles/cost-of-living-crete",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Jobicy: Cost of living Corfu (May 2026)",
+          "url": "https://jobicy.com/cost-of-living/greece/corfu",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "clothing": {
       "typical": 80,
@@ -116,10 +243,24 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 87,
-      "min": 72,
-      "max": 107,
-      "annualInflation": 0.02
+      "typical": 46,
+      "min": 30,
+      "max": 84,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-07",
+      "notes": "National carrier pricing: two SIM-only lines at 15-25 EUR each (Nova SIM 15, Cosmote M, Vodafone Red 30), unlimited Vodafone Red+ 42 EUR each (Feb 2026).",
+      "sources": [
+        {
+          "title": "Greverse: Best mobile plans in Greece 2026 - Cosmote, Vodafone, Nova",
+          "url": "https://greverse-com.pages.dev/telecom/best-mobile-plans-in-greece-2026-cosmote-vodafone-nova",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Business Daily: Unlimited mobile programmes - what providers offer",
+          "url": "https://businessdaily.gr/english-edition/95465_unlimited-mobile-programmes-what-providers-offer-right-now",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "taxes": {
       "typical": 420,
@@ -151,7 +292,16 @@
       "min": 40,
       "typical": 80,
       "max": 160,
-      "annualInflation": 0.035
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-07",
+      "notes": "Private GP consultation 40-70 EUR; assumes about one private visit or diagnostic per month for the couple beyond plan cover, with occasional travel to Athens for specialists.",
+      "sources": [
+        {
+          "title": "Crete Direct: Cost of Living in Crete 2026 (private GP)",
+          "url": "https://crete.direct/articles/cost-of-living-crete",
+          "accessed": "2026-11-07"
+        }
+      ]
     }
   },
   "healthcare": {

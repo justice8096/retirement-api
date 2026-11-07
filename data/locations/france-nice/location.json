@@ -39,77 +39,249 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 1900,
-      "min": 1600,
-      "max": 2200,
-      "annualInflation": 0.04
+      "typical": 1750,
+      "min": 1400,
+      "max": 2300,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-07",
+      "notes": "Nice apartment rents ~20.20 EUR/m2 (Meilleurs Agents via Meilleurtaux, Mar 2026): 70 m2 T3 ~1,400 EUR, 85-90 m2 3BR ~1,750-1,800 EUR; 3-bedroom central listings avg ~1,960 EUR (Numbeo via combien-coute, Nov 2026). Pet-friendly stock is limited, so typical sits above the 70 m2 floor.",
+      "sources": [
+        {
+          "title": "Meilleurtaux - immobilier Nice mars 2026",
+          "url": "https://www.meilleurtaux.com/credit-immobilier/actualites/2026-mars/immobilier-a-nice-prix-dachat-en-baisse-en-mars-2026.html",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Combien-coute - location 3 pieces centre Nice 2026",
+          "url": "https://www.combien-coute.net/locstudio-centre/france/nice/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Wise - cost of living Nice 2026",
+          "url": "https://wise.com/gb/cost-of-living/france/nice",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "groceries": {
-      "typical": 530,
-      "min": 430,
-      "max": 660,
-      "annualInflation": 0.03
+      "typical": 610,
+      "min": 480,
+      "max": 760,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Couple grocery average ~530 EUR/mo (INSEE-based, 400-650 range) plus ~70-90 EUR/mo large-breed dog food. Cote d'Azur prices run slightly above the national average. Food CPI +1.2% y/y Oct 2026 (INSEE), so no inflation uplift applied.",
+      "sources": [
+        {
+          "title": "Budget courses 2 personnes 2026 (INSEE-based)",
+          "url": "https://meslistesdecourses.fr/budget-courses-2-personnes-couple/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "INSEE IPC provisoire octobre 2026",
+          "url": "https://www.insee.fr/fr/statistiques/fichier/version-html/9107965/IR266_IPCprov_oct26.pdf",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "utilities": {
-      "typical": 185,
-      "min": 140,
-      "max": 245,
-      "annualInflation": 0.035
-    },
-    "healthcare": {
-      "typical": 140,
-      "min": 95,
-      "max": 195,
-      "annualInflation": 0.04,
-      "notes": "PUMA universal coverage + Mutuelle complémentaire (~€55-80/person/mo, higher tier for chronic conditions). ALD (Affection Longue Durée) provides 100% coverage for hypertension and diabetes. Macular degeneration: anti-VEGF injections covered 100% at hospital. Hypothyroidism monitoring covered. GLP-1 covered for diabetes indication."
-    },
-    "insurance": {
       "typical": 160,
       "min": 110,
-      "max": 220,
-      "annualInflation": 0.04
+      "max": 230,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-07",
+      "notes": "Electric-heated apartment: TRV Base 0.2001 EUR/kWh + 15.86 EUR/mo subscription (Aug 2026), mild Nice winters so ~3,500-4,500 kWh/yr = 75-95 EUR/mo; water ~35 EUR/mo for two (estimate), trash (TEOM recharged in charges) ~15-20 EUR/mo. Excludes internet. Wise lists basic utilities for 85 m2 Nice at ~GBP 179.",
+      "sources": [
+        {
+          "title": "Selectra - tarif reglemente electricite aout 2026",
+          "url": "https://selectra.info/energie/guides/tarifs/electricite",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Wise - cost of living Nice 2026",
+          "url": "https://wise.com/gb/cost-of-living/france/nice",
+          "accessed": "2026-11-07"
+        }
+      ]
+    },
+    "healthcare": {
+      "typical": 200,
+      "min": 140,
+      "max": 300,
+      "annualInflation": 0.04,
+      "notes": "Old template put health cover under insurance; full cost now here. Two residents on PUMa plus a mid/high-tier mutuelle at age 60-64 (65-95 EUR medium, 82-125 EUR strong, ~125 EUR avg at 55-64 per Magnolia), x2. Caution: non-pensioners living on capital income above 24,030 EUR can owe the cotisation subsidiaire maladie (up to 6.5% of capital income over the threshold); exempt if either spouse receives a retirement pension.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Magnolia - prix mutuelle senior 2026",
+          "url": "https://www.magnolia.fr/mutuelle-sante/senior/prix",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Magnolia - prix mutuelle sante 2026",
+          "url": "https://www.magnolia.fr/mutuelle-sante/prix",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Indy - simulateur taxe PUMa / cotisation subsidiaire maladie 2026",
+          "url": "https://www.indy.fr/guide/fiscalite/gestion-financiere/simulateur-taxe-puma/",
+          "accessed": "2026-11-07"
+        }
+      ]
+    },
+    "insurance": {
+      "typical": 15,
+      "min": 10,
+      "max": 30,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-07",
+      "notes": "Re-modelled from old health-insurance template to renters/contents (assurance habitation locataire). LeLynx 2026: tenant T3 apartment ~118 EUR/yr nationally, Toulon all-profile avg 142 EUR/yr as the nearest PACA city figure; typical allows a 2-3BR with higher contents cover.",
+      "sources": [
+        {
+          "title": "LeLynx - prix assurance habitation 2026 (donnees 1er nov 2026)",
+          "url": "https://www.lelynx.fr/assurance-habitation/prix/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petCare": {
-      "typical": 60,
-      "min": 40,
-      "max": 100,
-      "annualInflation": 0.03
+      "typical": 70,
+      "min": 45,
+      "max": 110,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Routine vet for a healthy adult dog 500-1000 EUR/yr incl. 150-300 EUR prevention (consult 30-60 EUR, annual vaccine visit 60-100 EUR, antiparasitics/wormers 100-200 EUR/yr); large-dog dosing pushes to the upper half. Excludes food and pet insurance.",
+      "sources": [
+        {
+          "title": "LeComparateurAssurance - frais veterinaires chien 2026",
+          "url": "https://www.lecomparateurassurance.com/assurance-animaux/guides-chien/frais-veterinaires",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Ymanci - budget mensuel chien (maj 6 nov 2026)",
+          "url": "https://www.ymanci.fr/assurance-animaux/guide/quel-budget-par-mois-pour-un-chien/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petDaycare": {
-      "typical": 150,
-      "min": 100,
-      "max": 250,
-      "annualInflation": 0.03
+      "typical": 90,
+      "min": 40,
+      "max": 200,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Pension canine in the provinces 15-30 EUR/day (large dogs top of range); budget ~2-3 weeks boarding/yr plus a few daycare days = ~90 EUR/mo averaged.",
+      "sources": [
+        {
+          "title": "Comdewouf - prix pension chien (maj 17 oct 2026)",
+          "url": "https://comdewouf.fr/prix-pension-chien",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Ymanci - budget mensuel chien (maj 6 nov 2026)",
+          "url": "https://www.ymanci.fr/assurance-animaux/guide/quel-budget-par-mois-pour-un-chien/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petGrooming": {
-      "typical": 50,
-      "min": 30,
+      "typical": 45,
+      "min": 25,
       "max": 80,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Full groom (bath + brush/clip) for a large long-haired dog ~75 EUR per session (SanteVet grid, Dec 2025), giant breeds often billed hourly; every 6-10 weeks for a Bernese double coat.",
+      "sources": [
+        {
+          "title": "SanteVet - tarifs toilettage par taille (dec 2025)",
+          "url": "https://www.santevet.com/?p=35894",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Ymanci - budget mensuel chien (maj 6 nov 2026)",
+          "url": "https://www.ymanci.fr/assurance-animaux/guide/quel-budget-par-mois-pour-un-chien/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "transportation": {
-      "typical": 130,
-      "min": 80,
-      "max": 190,
-      "annualInflation": 0.03
+      "typical": 200,
+      "min": 90,
+      "max": 350,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "One modest used car: fuel at 1.75 EUR/L and ~8,000 km/yr ~75 EUR, insurance ~49 EUR/mo (national avg), maintenance/tyres/CT ~60 EUR/mo; no annual road tax in France. Min = two Lignes d'Azur monthly passes (45 EUR each, free for 65+ metro residents from Sept 2026, not yet at 60). Max adds city parking.",
+      "sources": [
+        {
+          "title": "Capcar - cout mensuel voiture occasion 2026",
+          "url": "https://www.capcar.fr/blog/combien-coute-vraiment-une-voiture-par-mois-en-2026-le-budget-complet-d-une-occasion",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "JeChange - prix moyen assurance auto 2026",
+          "url": "https://www.jechange.fr/assurance/auto/cout-voiture-mois",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Combien-coute - abonnement bus PACA 2026",
+          "url": "https://www.combien-coute.net/abo-bus/provence-alpes-c-te-d-azur/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Nice.fr - transports en commun (gratuite 65+)",
+          "url": "https://www.nice.fr/fr/transports-et-deplacements/le-bus",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 350,
+      "typical": 360,
       "min": 250,
-      "max": 480,
-      "annualInflation": 0.03
+      "max": 500,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Fibre box 22.99-49.99 EUR (avg 35 EUR; Freebox Ultra 8 Gbit/s at top tier) + ~30 EUR streaming + dining out for two ~3x/mo at ~70-85 EUR (Wise: mid-range meal for two ~GBP 72) + ~60 EUR activities.",
+      "sources": [
+        {
+          "title": "LaFibreOptique - barometre prix fibre nov 2026",
+          "url": "https://lafibreoptique.fr/guide/prix-fibre",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Wise - cost of living Nice 2026",
+          "url": "https://wise.com/gb/cost-of-living/france/nice",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "clothing": {
-      "typical": 80,
-      "min": 50,
+      "typical": 70,
+      "min": 45,
       "max": 120,
-      "annualInflation": 0.02
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-07",
+      "notes": "Ifop 2025: French consumers spend 256 EUR/yr (store shoppers) to 415 EUR/yr (online shoppers) per person on clothing; two adults = 45-70 EUR/mo, max allows coastal/city wardrobe refresh.",
+      "sources": [
+        {
+          "title": "Journal de l'Economie / Ifop - depenses habillement 2025",
+          "url": "https://www.journaldeleconomie.fr/le-vetement-revelateur-silencieux-des-tensions-sur-le-pouvoir-dachat-etude/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "personalCare": {
-      "typical": 60,
-      "min": 40,
-      "max": 100,
-      "annualInflation": 0.03
+      "typical": 85,
+      "min": 50,
+      "max": 140,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Hairdressing ~282 EUR/yr per client (6.6 visits at 42.70 EUR, FIDUCIAL 2026), men's cut 25-30 EUR; plus ~20-30 EUR/person/mo toiletries (estimate). Two adults.",
+      "sources": [
+        {
+          "title": "Modeles de business plan - marche coiffure (FIDUCIAL 2026)",
+          "url": "https://modelesdebusinessplan.com/blogs/infos/marche-coiffure-chiffres",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "subscriptions": {
       "typical": 100,
@@ -118,10 +290,19 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 85,
-      "min": 70,
-      "max": 105,
-      "annualInflation": 0.02
+      "typical": 28,
+      "min": 10,
+      "max": 60,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-07",
+      "notes": "Two SIM-only lines: 100-110 GB 5G plans at 12.99-13.99 EUR each (Free, B&You, Sosh, Sept 2026); min is two bare-bones 2 EUR plans plus margin, max is two premium carrier plans.",
+      "sources": [
+        {
+          "title": "Ariase - forfaits mobiles les moins chers sept 2026",
+          "url": "https://www.ariase.com/mobile/actualite/quels-sont-les-forfaits-mobiles-les-moins-chers-en-septembre-2026",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "taxes": {
       "typical": 720,
@@ -152,8 +333,22 @@
     "medicalOOP": {
       "min": 30,
       "typical": 60,
-      "max": 120,
-      "annualInflation": 0.03
+      "max": 130,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Franchises + participations forfaitaires capped at 140 EUR/yr per person from Oct 2026; DREES 2025 average out-of-pocket 495 EUR/person/yr of which ~112 EUR routine care and 52 EUR devices (LTC and medicines excluded here). Two adults with some dental/optical overrun beyond mutuelle.",
+      "sources": [
+        {
+          "title": "Weblex - franchises medicales plafonds octobre 2026",
+          "url": "https://www.weblex.fr/weblex-actualite/frais-de-sante-le-reste-a-charge-annuel-augmente-en-octobre-2026",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Selectra - DREES reste a charge 495 EUR 2025",
+          "url": "https://selectra.info/assurance/actualites/marche/reste-a-charge-sante-495-euros-drees",
+          "accessed": "2026-11-07"
+        }
+      ]
     }
   },
   "healthcare": {

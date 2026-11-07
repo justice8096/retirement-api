@@ -33,10 +33,19 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 1200,
-      "min": 950,
-      "max": 1450,
-      "annualInflation": 0.04
+      "typical": 1450,
+      "min": 1250,
+      "max": 1650,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-07",
+      "notes": "Daft.ie Q1 2026: County Wexford average EUR1,435; 2-bed house EUR1,372, 3-bed house EUR1,585. Typical sits between 2-bed and 3-bed house with a pet-friendly premium.",
+      "sources": [
+        {
+          "title": "Daft.ie Rental Report 2026 Q1 (PDF via RTE)",
+          "url": "https://www.rte.ie/documents/news/2026/05/daft.ie-rental-report-2026q1.pdf",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "groceries": {
       "typical": 465,
@@ -45,23 +54,64 @@
       "annualInflation": 0.03
     },
     "utilities": {
-      "typical": 200,
-      "min": 150,
-      "max": 265,
-      "annualInflation": 0.035
+      "typical": 315,
+      "min": 240,
+      "max": 400,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-07",
+      "notes": "Selectra Nov 2026 averages: electricity EUR157/mo and gas EUR129/mo for a gas-heated house (many Wexford houses are oil-heated at similar cost), plus Panda Essential EUR27.50/mo or AES Lite EUR23-24/mo bins; water and sewer free. Energy CPI up 18% y/y Oct 2026. Internet excluded.",
+      "sources": [
+        {
+          "title": "Selectra: Average gas and electricity bill Ireland (Nov 2026)",
+          "url": "https://selectra.ie/energy/guides/billing/average-gas-electricity-bill",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Selectra: Cheapest bin collection in Wexford",
+          "url": "https://selectra.ie/waste/wexford",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "AJ Bell: Ireland inflation accelerates in October 2026 as energy prices surge",
+          "url": "https://www.ajbell.co.uk/news/articles/ireland-inflation-accelerates-october-energy-prices-surge",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 155,
-      "min": 105,
-      "max": 215,
+      "typical": 330,
+      "min": 110,
+      "max": 500,
       "annualInflation": 0.04,
-      "notes": "Private insurance (VHI/Laya Healthcare) ~€220-280/person/mo for 2 adults with pre-existing conditions. Higher loading for macular degeneration, obesity, hypertension. GMS Medical Card may apply based on income. Anti-VEGF injections covered through public ophthalmology. DPS scheme caps drug costs at €80/mo."
+      "notes": "Two adults on private cover at the HIA market-average adult premium (EUR1,902/yr at end-2025, about EUR1,960 in Q1 2026) = roughly EUR160-165 each per month; budget public-hospital plans start near EUR550-600/yr per adult (min), mid-range day-to-day plans EUR2,500+/yr (max). Legal residents use the public system; no medical card at 60 unless means-tested. New arrivals have a 9-month window to buy cover before lifetime community rating age loading applies.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Irish Examiner: Average health insurance premiums reach EUR1,902 (HIA bulletin, Mar 2026)",
+          "url": "https://www.irishexaminer.com/business/economy/arid-41807432.html",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Settle.ie: Healthcare in Ireland 2026 - what you pay",
+          "url": "https://settle.ie/guides/healthcare-in-ireland/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "insurance": {
-      "typical": 180,
-      "min": 125,
-      "max": 245,
-      "annualInflation": 0.04
+      "typical": 25,
+      "min": 15,
+      "max": 40,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-07",
+      "notes": "Re-modelled from old template (stored EUR180 was health insurance, now carried in healthcare). Renters/contents only: Allianz quotes basic contents cover from about EUR10/mo, fuller cover about EUR15/mo (page dated 2019, nudged up).",
+      "sources": [
+        {
+          "title": "Allianz Ireland: How much does renters insurance cost",
+          "url": "https://www.allianz.ie/blog/Your-Home/cost-of-renters-insurance.html",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petCare": {
       "typical": 60,
@@ -70,28 +120,89 @@
       "annualInflation": 0.03
     },
     "petDaycare": {
-      "typical": 150,
-      "min": 100,
-      "max": 250,
-      "annualInflation": 0.03
+      "typical": 160,
+      "min": 60,
+      "max": 300,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Occasional use: Pawshake home boarding in County Wexford typically EUR45-50/night, sitters/daycare EUR14-35/day. Typical assumes ~4 daycare days a month plus one boarding week a year.",
+      "sources": [
+        {
+          "title": "Pawshake.ie: Home dog boarding County Wexford",
+          "url": "https://www.pawshake.ie/home-dog-boarding/county-wexford",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Rover.ie: Dog day care in Waterford",
+          "url": "https://www.rover.com/ie/waterford--waterford--dog-day-care",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Irish Times: The cost of keeping a dog (2024)",
+          "url": "https://www.irishtimes.com/your-money/2024/07/17/the-cost-of-keeping-a-dog",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petGrooming": {
-      "typical": 50,
-      "min": 30,
-      "max": 80,
-      "annualInflation": 0.03
+      "typical": 75,
+      "min": 50,
+      "max": 120,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Cork salon lists large-breed full groom from EUR90 (giant double-coated breeds typically more); Bernese de-shed/bath every 6-8 weeks averages about EUR75/mo, monthly visits toward the max.",
+      "sources": [
+        {
+          "title": "Kinsale Dog Spaw price list (Fresha)",
+          "url": "https://www.fresha.com/a/kinsale-dog-spaw-kinsale-co-cork-gdt5whya",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "transportation": {
-      "typical": 150,
-      "min": 100,
-      "max": 220,
-      "annualInflation": 0.03
+      "typical": 340,
+      "min": 240,
+      "max": 480,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "One petrol car, more rural driving than Waterford city: fuel EUR1.97/l (Oct 2026) ~EUR120/mo at 11,000 km/yr, motor insurance avg EUR655/yr in 2025 (new residents EUR680-1,100), plus motor tax, NCT and maintenance. Selectra rural car household EUR350-550. Free Travel pass from age 66.",
+      "sources": [
+        {
+          "title": "fuel-prices.eu: Ireland fuel prices 12-19 Oct 2026",
+          "url": "https://www.fuel-prices.eu/news/ireland-fuel-prices-weekly-recap-2026-10-19/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "RTE: Average cost of motor insurance was EUR655 in 2025 (Central Bank NCID)",
+          "url": "https://rte.ie/news/business/2026/0331/1566059-average-cost-of-motor-insurance-was-655-last-year/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Selectra: Cost of living in Ireland (updated Sep 2026)",
+          "url": "https://selectra.ie/energy/guides/cost-of-living-ireland",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 240,
-      "min": 170,
-      "max": 340,
-      "annualInflation": 0.03
+      "typical": 400,
+      "min": 300,
+      "max": 560,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Vodafone 1Gb full fibre EUR35 promo then about EUR55 (SIRO/open eir coverage in Wexford town, Gorey, Enniscorthy), streaming ~EUR33, dining out for two a few times a month (inexpensive meal EUR20/head), activities.",
+      "sources": [
+        {
+          "title": "Irish Tech News: Best broadband deals in Ireland April 2026",
+          "url": "https://irishtechnews.ie/best-broadband-deals-in-ireland-april-2026/amp/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Selectra: Cost of living in Ireland (updated Sep 2026)",
+          "url": "https://selectra.ie/energy/guides/cost-of-living-ireland",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "clothing": {
       "typical": 80,
@@ -112,10 +223,24 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 90,
-      "min": 75,
-      "max": 110,
-      "annualInflation": 0.02
+      "typical": 30,
+      "min": 26,
+      "max": 50,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-07",
+      "notes": "Two Irish SIM-only lines: 48 200GB EUR12.99, GoMo 120GB EUR14.99, Sky unlimited EUR15; max allows two mid-tier bill-pay plans.",
+      "sources": [
+        {
+          "title": "Goosed.ie: Best SIM-only deals in Ireland (2026)",
+          "url": "https://goosed.ie/news/tech-news/irish-sim-only-deals-march-2026/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Irish Tech News: Best SIM-only deals August 2026",
+          "url": "https://irishtechnews.ie/best-sim-only-deals-in-ireland-august-2026/amp/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "taxes": {
       "typical": 720,
@@ -147,7 +272,16 @@
       "min": 60,
       "typical": 120,
       "max": 240,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-07",
+      "notes": "GP visit EUR50-70 without a medical card, out-of-hours EUR60-80, A&E EUR100 without referral, DPS caps prescriptions at EUR80/mo (prescriptions sit in medicine). Private consultant visits and labs for frequent specialist follow-up push toward the max.",
+      "sources": [
+        {
+          "title": "Settle.ie: Healthcare in Ireland 2026 - what you pay",
+          "url": "https://settle.ie/guides/healthcare-in-ireland/",
+          "accessed": "2026-11-07"
+        }
+      ]
     }
   },
   "healthcare": {

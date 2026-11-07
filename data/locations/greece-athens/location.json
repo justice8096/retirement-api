@@ -43,35 +43,134 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 1100,
+      "typical": 1150,
       "min": 900,
-      "max": 1300,
-      "annualInflation": 0.04
+      "max": 1500,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-07",
+      "notes": "Spitogatos Q2 2026 asking rents: central, southern and northern Athens suburbs about 11.8 EUR/sqm, cheapest Attica areas about 7.5 EUR/sqm; a 90-100 sqm pet-friendly 2-3BR therefore runs roughly 800-1200 EUR in ordinary areas, more in the south coast. Wise/Numbeo 2026 puts a 3BR outside the centre near 940 EUR and in the centre near 1140 EUR; Athens-centre asking rents rose 6.9% in the year to Q1 2026.",
+      "sources": [
+        {
+          "title": "To Vima: Greece's Hottest Rental Markets (Spitogatos Q2 2026)",
+          "url": "https://www.tovima.com/society/greeces-hottest-rental-markets-push-housing-further-out-of-reach/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Wise: Cost of Living in Athens 2026",
+          "url": "https://wise.com/gb/cost-of-living/greece/athens",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Spitogatos blog: Q1 2026 annual changes in asking prices",
+          "url": "https://www.spitogatos.gr/blog/q1-2026-exelixi-etisies-metavoles-mzt-akiniton-ellada",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "groceries": {
-      "typical": 400,
-      "min": 320,
-      "max": 500,
-      "annualInflation": 0.03
+      "typical": 600,
+      "min": 480,
+      "max": 750,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Two adults at roughly 250-270 EUR each (Wise/Numbeo Athens 2026 gives about 268 EUR per person) plus 100+ EUR/month of food for a large-breed dog (Athens Times, July 2026). Food CPI was only +0.9% y/y in August 2026 and IELKA finds the Greek supermarket basket the cheapest of 10 European countries.",
+      "sources": [
+        {
+          "title": "Wise: Cost of Living in Athens 2026",
+          "url": "https://wise.com/gb/cost-of-living/greece/athens",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Athens Times: How Much Does a Dog Really Cost in Greece in 2026",
+          "url": "https://athens-times.com/how-much-does-a-dog-really-cost-in-greece-in-2026/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Trading Economics: Greece inflation September 2026",
+          "url": "https://tradingeconomics.com/greece/inflation-cpi/news/590826",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Protothema: Greek supermarket basket remains cheapest (IELKA, June 2026)",
+          "url": "https://en.protothema.gr/2026/06/23/greek-supermarket-basket-remains-cheapest-but-greece-has-the-second-highest-vat-rate-in-europe/",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "utilities": {
-      "typical": 195,
-      "min": 145,
-      "max": 280,
-      "annualInflation": 0.035
+      "typical": 210,
+      "min": 150,
+      "max": 300,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-07",
+      "notes": "Electricity, heating, water, sewer and municipal fees (billed on the power bill) for 2 adults in an 85-100 sqm flat: Expatistan 168 EUR and Wise about 173 EUR per month, before the November 2026 PPC green tariff rise to 0.169 EUR/kWh (+6.2%, other suppliers +30-76%) and the EYDAP fixed-charge rises from January 2026; housing/utilities CPI was +14.7% y/y in September 2026. Winter central heating (oil/gas) drives the max.",
+      "sources": [
+        {
+          "title": "Expatistan: utilities for 2 people in 85m2 flat in Athens",
+          "url": "https://expatistan.com/price/utilities/athens-greece",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "To Vima: Electricity prices rise sharply in November (2 Nov 2026)",
+          "url": "https://www.tovima.com/finance/electricity-prices-rise-sharply-in-november-in-greece/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "iefimerida: EYDAP water bills to rise from 1 Jan 2026",
+          "url": "https://www.iefimerida.gr/english/water-bills-rise-january-1-2026",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Trading Economics: Greece inflation September 2026",
+          "url": "https://tradingeconomics.com/greece/inflation-cpi/news/590826",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 100,
-      "min": 65,
-      "max": 150,
+      "typical": 260,
+      "min": 150,
+      "max": 450,
       "annualInflation": 0.04,
-      "notes": "ESY (National Health System) universal coverage after residency permit. Private supplementary ~€80-180/mo. Anti-VEGF injections available in Athens (Hygeia, Metropolitan) and Thessaloniki; covered via ESY with prescription. GLP-1 covered for diabetes indication. Crisis-era underfunding means longer public waits — private picks up the gap. English availability moderate, better in private sector."
+      "notes": "Non-EU resident retirees (FIP permit) must hold Greek private health cover and, without EFKA contributions, rely mainly on it; Feather (Apr 2026) prices basic plans at 50-100 EUR and mid-range at 125-250 EUR per person per month, Crete Direct (Jun 2026) 80-150 EUR per person depending on age. Two 60-year-olds on basic-to-mid plans: about 260 EUR for two; minimum-compliance visa policies (about 150 EUR/yr) set the floor.",
+      "lastVerified": "2026-11-07",
+      "sources": [
+        {
+          "title": "Feather: Health insurance in Greece guide for expats (2026)",
+          "url": "https://feather-insurance.com/en-gr/blog/health-insurance-greece-guide",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Crete Direct: Cost of Living in Crete 2026",
+          "url": "https://crete.direct/articles/cost-of-living-crete",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Expat.com forum: Health insurance Crete",
+          "url": "https://www.expat.com/en/forum/europe/greece/1103362-health-insurance-crete.html",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "insurance": {
-      "typical": 115,
-      "min": 75,
-      "max": 165,
-      "annualInflation": 0.04
+      "typical": 8,
+      "min": 3,
+      "max": 15,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-07",
+      "notes": "Re-modelled from old template (health) to renters/contents cover. COSMOTE Insurance/Hellas Direct contents-only policies for tenants cost 18-54 EUR per year for 6,000-25,000 EUR of cover (2023 launch pricing); fuller apartment policies start around 140 EUR/yr.",
+      "sources": [
+        {
+          "title": "iefimerida: COSMOTE home insurance pricing",
+          "url": "https://www.iefimerida.gr/ellada/asfalisi-katoikias-cosmote",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "RES Greece: yearly property expenses",
+          "url": "https://www.res-greece.com/article/yearly-property-expences",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petCare": {
       "typical": 60,
@@ -80,10 +179,19 @@
       "annualInflation": 0.03
     },
     "petDaycare": {
-      "typical": 150,
-      "min": 100,
-      "max": 250,
-      "annualInflation": 0.03
+      "typical": 90,
+      "min": 40,
+      "max": 180,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Attica boarding kennel (Chris's Animal Hotel, Kalivia near the airport) charges 17 EUR per night plus 24% VAT, about 21 EUR including food; typical assumes roughly 4 boarding nights per month on average (two trips a year plus occasional day boarding).",
+      "sources": [
+        {
+          "title": "Chris's Animal Hotel, Kalivia Attiki - prices",
+          "url": "https://0.comy.workers.dev/http/animalhotel.gr",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "petGrooming": {
       "typical": 50,
@@ -92,16 +200,59 @@
       "annualInflation": 0.03
     },
     "transportation": {
-      "typical": 100,
-      "min": 60,
-      "max": 160,
-      "annualInflation": 0.03
+      "typical": 130,
+      "min": 70,
+      "max": 220,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "One small car: basic third-party insurance about 150 EUR/yr (driver 36-65, Magenta/Cosmote Insurance Athens quote) to 290 EUR/yr comprehensive, fuel 1.85-2.00 EUR/L, road tax unchanged for 2026, plus maintenance; or transit-only at about 27 EUR per monthly pass (half price from age 65). Transport CPI +11.3% y/y in September 2026.",
+      "sources": [
+        {
+          "title": "Magenta Insurance: car insurance Athens",
+          "url": "https://www.magentainsurance.gr/car/athina",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Grandpl: public transport ticket prices in Athens 2026",
+          "url": "https://grandpl.com/en/greece/article/how-much-do-public-transport-tickets-cost-in-athens/",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Elxis: Road tax in Greece 2026",
+          "url": "https://elxis.com/road-tax-in-greece-what-you-need-to-know-for-2026",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Crete Direct: Cost of Living in Crete 2026 (fuel)",
+          "url": "https://crete.direct/articles/cost-of-living-crete",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 230,
-      "min": 160,
-      "max": 330,
-      "annualInflation": 0.03
+      "typical": 240,
+      "min": 170,
+      "max": 350,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-07",
+      "notes": "Fibre internet 25-40 EUR standalone (Cosmote/Nova 100-300 Mbps; MagentaONE XL with 1 Gbps about 80 EUR bundled), streaming about 30 EUR, dining for two 3-4 times a month at 45-60 EUR (Wise mid-range three-course about 61 EUR), plus activities.",
+      "sources": [
+        {
+          "title": "Crete Direct: Cost of Living in Crete 2026 (internet, dining)",
+          "url": "https://crete.direct/articles/cost-of-living-crete",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Wise: Cost of Living in Athens 2026",
+          "url": "https://wise.com/gb/cost-of-living/greece/athens",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Greverse: Best mobile plans in Greece 2026 (bundles)",
+          "url": "https://greverse-com.pages.dev/telecom/best-mobile-plans-in-greece-2026-cosmote-vodafone-nova",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "clothing": {
       "typical": 80,
@@ -122,10 +273,24 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 87,
-      "min": 72,
-      "max": 107,
-      "annualInflation": 0.02
+      "typical": 46,
+      "min": 30,
+      "max": 84,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-07",
+      "notes": "Two SIM-only postpaid lines: Nova SIM 15 at 15 EUR, Cosmote M 20 GB at 22 EUR, Vodafone Red 30 at 25 EUR, unlimited Vodafone Red+ at 42 EUR (Feb 2026); earlier Cosmote/Vodafone unlimited plans were 33-41 EUR. Typical = two mid plans.",
+      "sources": [
+        {
+          "title": "Greverse: Best mobile plans in Greece 2026 - Cosmote, Vodafone, Nova",
+          "url": "https://greverse-com.pages.dev/telecom/best-mobile-plans-in-greece-2026-cosmote-vodafone-nova",
+          "accessed": "2026-11-07"
+        },
+        {
+          "title": "Business Daily: Unlimited mobile programmes - what providers offer",
+          "url": "https://businessdaily.gr/english-edition/95465_unlimited-mobile-programmes-what-providers-offer-right-now",
+          "accessed": "2026-11-07"
+        }
+      ]
     },
     "taxes": {
       "typical": 420,
@@ -157,7 +322,16 @@
       "min": 40,
       "typical": 80,
       "max": 160,
-      "annualInflation": 0.035
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-07",
+      "notes": "Private GP consultation 40-70 EUR; assumes a couple makes roughly one private visit or diagnostic per month beyond plan cover.",
+      "sources": [
+        {
+          "title": "Crete Direct: Cost of Living in Crete 2026 (private GP)",
+          "url": "https://crete.direct/articles/cost-of-living-crete",
+          "accessed": "2026-11-07"
+        }
+      ]
     }
   },
   "healthcare": {
