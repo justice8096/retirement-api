@@ -45,77 +45,239 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 850,
-      "min": 650,
-      "max": 1100,
-      "annualInflation": 0.04
+      "typical": 1100,
+      "min": 800,
+      "max": 1600,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-08",
+      "notes": "Immobiliare.it asking rents Oct 2026: Sardegna region 13.64 EUR/m2/mo, Cagliari province 13.16, Sassari 10.38, Oristano 9.01, Gallura 20.34; Cagliari city 14.06 (+5.7% y/y). Modeled on an 85-95 m2 pet-friendly 2-3BR: typical ~1,100 (Cagliari/Sassari suburbs), min interior/Sassari-Oristano, max Cagliari centre or Gallura coast. Long-term pet-friendly stock is thin in tourist zones.",
+      "sources": [
+        {
+          "title": "Immobiliare.it - Mercato immobiliare Sardegna",
+          "url": "https://www.immobiliare.it/mercato-immobiliare/sardegna/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Immobiliare.it - Mercato immobiliare Cagliari",
+          "url": "https://www.immobiliare.it/mercato-immobiliare/sardegna/cagliari/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "groceries": {
-      "typical": 400,
-      "min": 320,
-      "max": 500,
-      "annualInflation": 0.03
+      "typical": 535,
+      "min": 420,
+      "max": 680,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "ISTAT 2025 household food and non-alcoholic beverage spend averages 552 EUR/mo nationally (avg household ~2.2 people); Sardinian total household spend (2,431) is below the national level, so 2 adults modeled at ~480 plus ~55/mo of large-breed kibble (about 14 kg/mo) for a 100 lb dog. ISTAT Oct 2026 shows unprocessed food +7.5% y/y and carrello della spesa +2.5%, which is folded in.",
+      "sources": [
+        {
+          "title": "ISTAT - Spese per consumi delle famiglie, anno 2025 (report PDF)",
+          "url": "https://www.istat.it/wp-content/uploads/2026/10/REPORT_Spese-per-consumi-2025.docx.pdf",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "ISTAT - Prezzi al consumo, dati provvisori ottobre 2026",
+          "url": "https://www.istat.it/comunicato-stampa/prezzi-al-consumo-dati-provvisori-ottobre-2026/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "utilities": {
-      "typical": 155,
-      "min": 115,
-      "max": 210,
-      "annualInflation": 0.035
+      "typical": 215,
+      "min": 160,
+      "max": 310,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-08",
+      "notes": "Facile.it Osservatorio Oct 2026: Sardinian households average 1,202 EUR/yr electricity (2,244 kWh) = ~100/mo; Sardinia has almost no methane grid so heating is LPG/pellet/heat-pump electric, modeled at ~40/mo averaged over the year. Water (UIL 2026 study, 180 m3) 520 EUR/yr in Cagliari/Sassari = 43/mo; TARI waste ~340 EUR/yr national average = 28/mo. ISTAT Oct 2026 shows regulated energy +59.5% y/y, hence the wide max. Excludes internet.",
+      "sources": [
+        {
+          "title": "Facile.it - Osservatorio luce e gas Sardegna",
+          "url": "https://www.facile.it/energia-luce-gas/osservatorio/sardegna.html",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "UIL - Studio servizio idrico marzo 2026",
+          "url": "https://www.uil.it/documents/Studio_Uil_servizioidrico_032026.pdf",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "QuiFinanza - Costo TARI classifica capoluoghi 2025 (Cittadinanzattiva)",
+          "url": "https://quifinanza.it/fisco-tasse/costo-tari-classifica-capoluoghi-2025/939394/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Finanza.com - PUN e prezzo gas ARERA settembre 2026",
+          "url": "https://www.finanza.com/?p=188814",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 90,
-      "min": 60,
-      "max": 135,
+      "typical": 450,
+      "min": 335,
+      "max": 670,
       "annualInflation": 0.04,
-      "notes": "SSN (Servizio Sanitario Nazionale) universal coverage after Elective Residence visa. Private supplementary ~€60-180/mo. Anti-VEGF injections available widely via SSN at hospital ophthalmology. GLP-1 covered for diabetes through SSN with prescription. Regional variation: Northern Italy has strongest public infrastructure; Southern regions thinner. English availability moderate in private sector."
+      "notes": "Non-EU elective-residence retirees join the SSN by voluntary enrolment (iscrizione volontaria): 7.5% of income up to 20,658 EUR plus 4% up to 51,645, minimum 2,000 and maximum 2,789 EUR per person per calendar year (ASL Sassari / The Local). Two enrolments: min 2x2,000 = 333/mo, typical ~2x2,700 = 450/mo, max 2x2,789 plus a private top-up policy (Feather expat cover from 72/mo per person) ~670/mo. Re-modeled to carry the full health-coverage cost (old template put part in insurance).",
+      "lastVerified": "2026-11-08",
+      "sources": [
+        {
+          "title": "ASL 1 Sassari - Informativa contributi iscrizione volontaria SSN",
+          "url": "https://www.asl1sassari.it/wp-content/uploads/2024/03/INFORMATIVA-SU-CONTRIBUTI-ISCRIZIONE-VOLONTARIA-del-distretto-di-SS.pdf",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "The Local - How much does it cost to register with Italy's national health service in 2025",
+          "url": "https://www.thelocal.it/20250130/how-much-does-it-cost-to-register-with-italys-national-health-service-in-2025",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Feather - Private health insurance for the Italian Elective Residence Visa",
+          "url": "https://feather-insurance.com/en-it/health-insurance/expat/elective-residence-visa",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "insurance": {
-      "typical": 110,
-      "min": 75,
-      "max": 160,
-      "annualInflation": 0.04
+      "typical": 15,
+      "min": 10,
+      "max": 25,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-08",
+      "notes": "Re-modeled from old template (110 = health) to tenant contents/liability only. Money.it (June 2026): basic Italian home policy (fire, liability, water damage) 120-180 EUR/yr, multi-risk incl. theft 200-350/yr; a tenant RC-locativa plus contents policy sits at ~180/yr = 15/mo.",
+      "sources": [
+        {
+          "title": "Money.it - Quanto costa davvero assicurare una casa (2026)",
+          "url": "https://www.money.it/quanto-costa-davvero-assicurare-una-casa",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "petCare": {
-      "typical": 60,
-      "min": 40,
+      "typical": 55,
+      "min": 35,
       "max": 100,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Finanza.com (updated Oct 2026): average yearly vet spend for a dog ~341 EUR, base visit from 39 EUR in the South, annual vaccines 40-80. A 100 lb dog needs weight-dosed flea/tick/heartworm and leishmaniasis prevention (endemic in Sardinia), so scaled to ~650 EUR/yr = 55/mo; max covers a senior-dog year with bloodwork.",
+      "sources": [
+        {
+          "title": "Finanza.com - Cure veterinarie: quanto costano davvero cani e gatti nelle citta italiane",
+          "url": "https://www.finanza.com/finanza-personale/cure-veterinarie-costi-cani-gatti-italia",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "petDaycare": {
-      "typical": 150,
-      "min": 100,
-      "max": 250,
-      "annualInflation": 0.03
+      "typical": 130,
+      "min": 80,
+      "max": 220,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Cronoshare Cagliari-area boarding guide: 15-20 EUR/day standard, 20-26 EUR/day for a large dog, ~8-10 EUR/hour daycare. Modeled as ~5-6 boarding days per month on average (holiday trips) at ~23/day.",
+      "sources": [
+        {
+          "title": "Cronoshare - Pensione per cani Cagliari (San Sperate)",
+          "url": "https://www.cronoshare.it/servizi/pensione-per-cani/cagliari/san-sperate",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "petGrooming": {
-      "typical": 50,
-      "min": 30,
-      "max": 80,
-      "annualInflation": 0.03
+      "typical": 40,
+      "min": 25,
+      "max": 70,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Cronoshare national grooming price guide: 10-40 EUR, average 25 per session; a large double-coated Bernese bath/deshed/dry runs at the top of the range (40-60). Modeled as one professional session every 6-8 weeks plus occasional nail trims.",
+      "sources": [
+        {
+          "title": "Cronoshare - Toelettatura per cani, guida prezzi",
+          "url": "https://www.cronoshare.it/servizi/toelettatura-per-cani/trento/rovereto",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "transportation": {
-      "typical": 150,
-      "min": 100,
-      "max": 220,
-      "annualInflation": 0.03
+      "typical": 190,
+      "min": 120,
+      "max": 280,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "One compact car: fuel at MIMIT 1 Nov 2026 national self-service average (petrol 2.010, diesel 2.241 EUR/l) for ~800 km/mo = ~95; RC auto Sardinia average 488 EUR/yr (Facile.it Oct 2026) = 41; maintenance/tyres ~40; bollo and revisione ~15. Cagliari CTM monthly pass ~36 EUR (Numbeo via Expatica) as an alternative; island transit outside Cagliari is sparse so a car is near-essential.",
+      "sources": [
+        {
+          "title": "Facile.it - Osservatorio RC auto Sardegna",
+          "url": "https://www.facile.it/assicurazioni/osservatorio/rc-auto-sardegna.html",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "L'Adige - MIMIT carburanti prezzo medio self 1 novembre 2026",
+          "url": "https://www.ladige.it/attualita/mimit-carburanti-in-calo-prezzo-medio-self-benzina-a-2-010-euro-gasolio-a-2-241-tywv0crm",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Expatica - Cost of living in Cagliari (Numbeo, June 2026)",
+          "url": "https://www.expatica.com/it/cost-of-living/cagliari/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 210,
-      "min": 150,
-      "max": 300,
-      "annualInflation": 0.03
+      "typical": 270,
+      "min": 190,
+      "max": 380,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "FTTH internet 24-26 EUR/mo (Iliad 25.99, WindTre 24.99, Fastweb 23.95, Nov 2026); streaming ~30; dining out for two 3x/month at Cagliari prices (mid-range 3-course for two ~84 EUR, cheaper trattoria ~45) ~180; cinema 11 EUR/ticket and activities ~35.",
+      "sources": [
+        {
+          "title": "SosTariffe - Iliad fibra costi e offerte (Nov 2026)",
+          "url": "https://www.sostariffe.it/internet-casa/guide/iliad-fibra-costi-e-offerte",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Expatica - Cost of living in Cagliari (Numbeo, June 2026)",
+          "url": "https://www.expatica.com/it/cost-of-living/cagliari/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "clothing": {
       "typical": 80,
       "min": 50,
-      "max": 120,
-      "annualInflation": 0.02
+      "max": 130,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-08",
+      "notes": "ISTAT 2025: Italian households spend 105 EUR/mo on clothing and footwear (all ages); Numbeo Cagliari June 2026 jeans 87, summer dress 48, running shoes 92. Two retirees modeled at ~80/mo.",
+      "sources": [
+        {
+          "title": "ISTAT - Spese per consumi delle famiglie, anno 2025 (report PDF)",
+          "url": "https://www.istat.it/wp-content/uploads/2026/10/REPORT_Spese-per-consumi-2025.docx.pdf",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Expatica - Cost of living in Cagliari (Numbeo, June 2026)",
+          "url": "https://www.expatica.com/it/cost-of-living/cagliari/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "personalCare": {
-      "typical": 60,
+      "typical": 65,
       "min": 40,
-      "max": 100,
-      "annualInflation": 0.03
+      "max": 110,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "MIMIT price observatory (via L'Adige): national average women's haircut ~22 EUR, men's 19.5, blow-dry 17.6. Monthly cut for each plus toiletries/pharmacy sundries ~25 = ~65/mo.",
+      "sources": [
+        {
+          "title": "L'Adige - Taglio dei capelli, prezzi per citta (Osservatorio prezzi MIMIT)",
+          "url": "https://www.ladige.it/cronaca/taglio-dei-capelli-trento-la-citta-italiana-con-i-prezzi-piu-alti-napoli-la-piu-economica-gi2n4fkb",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "subscriptions": {
       "typical": 100,
@@ -124,10 +286,19 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 81,
-      "min": 66,
-      "max": 101,
-      "annualInflation": 0.02
+      "typical": 20,
+      "min": 12,
+      "max": 30,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-08",
+      "notes": "Two SIM lines on Italian MVNO/low-cost plans: Iliad Giga 120 7.99, Top 250 9.99; WindTre Go 150 5.99; ho. 100GB 5.99; Kena 4.99-6.99; Very 5.99 (SmartWorld, Oct 2025 list, prices stable into 2026). Two lines at ~10 each = 20/mo. Stored 81 was far above market.",
+      "sources": [
+        {
+          "title": "SmartWorld - Migliori offerte mobile",
+          "url": "https://www.smartworld.it/migliori-offerte-mobile",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "taxes": {
       "typical": 420,
@@ -156,10 +327,19 @@
       "annualInflation": 0.025
     },
     "medicalOOP": {
-      "min": 40,
-      "typical": 80,
-      "max": 160,
-      "annualInflation": 0.035
+      "min": 50,
+      "typical": 95,
+      "max": 180,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-08",
+      "notes": "Italian out-of-pocket health spending was 41.3 bn EUR in 2024 (~700 EUR per person per year); excluding drugs (carried in medicine) leaves ~45-50 per person per month for private specialist visits (~110 EUR each), ticket co-pays and dental, so ~95/mo for two. Southern waiting lists push more care to paid private visits.",
+      "sources": [
+        {
+          "title": "Quotidiano Sanita - L'analisi della spesa sanitaria privata out of pocket",
+          "url": "https://www.quotidianosanita.it/studi-e-analisi/lanalisi-della-spesa-sanitaria-privata-out-of-pocket-oltre-tre-quarti-della-spesa-e-per-prestazioni-escluse-dai-livelli-essenziali-di-assistenza/",
+          "accessed": "2026-11-08"
+        }
+      ]
     }
   },
   "healthcare": {

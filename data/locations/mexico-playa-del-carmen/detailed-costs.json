@@ -90,9 +90,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 66,
-      "typical": 81,
-      "max": 101
+      "min": 21,
+      "typical": 30,
+      "max": 55
     },
     "plans": [
       {
@@ -121,7 +121,8 @@
         "title": "Google Fi Plans",
         "url": "https://fi.google.com/about/plans"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-08"
   },
   "groceries": {
     "categories": [
@@ -382,9 +383,9 @@
   "housing": {
     "propertyType": "2-bedroom house",
     "monthlyBudget": {
-      "min": 788,
-      "max": 1313,
-      "typical": 1050
+      "min": 800,
+      "max": 1900,
+      "typical": 1200
     },
     "breakdown": {
       "baseRent": 998,
@@ -406,7 +407,8 @@
         "name": "Segundamano",
         "url": "https://www.segundamano.mx/"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-08"
   },
   "groceryStores": {
     "stores": [
@@ -560,9 +562,9 @@
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 40,
-      "typical": 150,
-      "max": 300
+      "min": 70,
+      "typical": 210,
+      "max": 320
     },
     "publicTransit": {
       "monthlyPass": {
@@ -722,7 +724,8 @@
         "typical": 250,
         "max": 450
       }
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-08"
   },
   "visionDental": {
     "monthlyBudget": {
@@ -791,9 +794,9 @@
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 300,
-      "typical": 375,
-      "max": 469
+      "min": 150,
+      "typical": 270,
+      "max": 420
     },
     "categories": [
       {
@@ -862,6 +865,7 @@
       "from": "italy-puglia",
       "generatedAt": "2026-04-23",
       "note": "Template-derived section — prices are EUR-denominated from Puglia, Italy. Needs per-location currency + cost-of-living adaptation."
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-08"
   }
 }

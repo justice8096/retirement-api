@@ -35,65 +35,204 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 950,
-      "min": 650,
-      "max": 1500,
-      "annualInflation": 0.04
+      "typical": 1050,
+      "min": 750,
+      "max": 1800,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-08",
+      "notes": "Unfurnished 3BR houses in regular Merida neighborhoods (Tixcacal, Las Americas, Montecarlo, Temozon, Montes de Ame) list at 14,000-26,000 MXN/mo (about 750-1,390 USD at 18.75 MXN/USD); furnished 3BR listings have a median around 32,000 MXN. Rio Times Sep 2026 puts 2BR unfurnished at ~530 USD and a 92 m2 unit at ~943 USD. Typical assumes a pet-friendly 3BR house around 20,000 MXN.",
+      "sources": [
+        {
+          "title": "Trovit - renta departamento 3 recamaras Merida",
+          "url": "https://casas.trovit.com.mx/renta-departamento-3-recamaras-merida-amueblado/3",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Rio Times - Cost of Living Merida Expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-merida-expats-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Mitula - departamentos 3 recamaras Merida",
+          "url": "https://casas.mitula.mx/casas/renta-departamentos-3-recamaras-merida",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "groceries": {
-      "typical": 350,
-      "min": 260,
-      "max": 460,
-      "annualInflation": 0.03
+      "typical": 450,
+      "min": 330,
+      "max": 600,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Rio Times Sep 2026 gives 150-300 USD/mo per person for groceries in Merida, i.e. 300-500 for a couple; typical adds roughly 90-110 USD/mo of large-breed kibble for a 100 lb dog (about 13-15 kg/month), which is an estimate not separately priced. Mexican food inflation is running near the 3.6% headline (Oct 2026), so no basket shock.",
+      "sources": [
+        {
+          "title": "Rio Times - Cost of Living Merida Expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-merida-expats-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "UnoTV - Inflacion en Mexico llega a 3.62% en octubre",
+          "url": "https://www.unotv.com/negocios/inflacion-en-mexico-llega-a-3-62-en-octubre-electricidad-y-tomate-verde-suben-de-precio/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "utilities": {
-      "typical": 130,
-      "min": 85,
-      "max": 200,
-      "annualInflation": 0.035
+      "typical": 150,
+      "min": 80,
+      "max": 280,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-08",
+      "notes": "Rio Times Sep 2026: combined utilities incl. internet 88-177 USD/mo; water about 3 USD/mo. Internet (about 20-35) removed here. Electricity dominates: Yucatan homes are on CFE tariff 1C/1D with summer subsidy Apr-Oct, but a 2-3BR house running AC can fall into DAC at 4-7 MXN/kWh, which drives the max. Includes LP gas and trash.",
+      "sources": [
+        {
+          "title": "Rio Times - Cost of Living Merida Expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-merida-expats-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Por Esto - Subsidio de verano CFE 2026 en Yucatan",
+          "url": "https://www.poresto.com/yucatan/2026/3/31/subsidio-de-verano-cfe-2026-en-yucatan-cuando-entra-y-como-saber-si-tu-recibo-tendra-descuento.html",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Diario de Yucatan - CFE termina tarifa de verano 2026",
+          "url": "https://www.yucatan.com.mx/merida/2026/10/06/cfe-termina-tarifa-verano-2026-yucatan-campeche-quintana-roo.html",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 160,
-      "min": 80,
-      "max": 270,
+      "typical": 600,
+      "min": 176,
+      "max": 1250,
       "annualInflation": 0.04,
-      "notes": "IMSS public system available to residents (~$500-700/yr fixed, varies by age). Private international plans ~$100-300/mo. Anti-VEGF injections widely available in Mexico City, Guadalajara, Monterrey, and San Miguel; ~$700-1,200/injection at private. GLP-1 via private prescription, ~$200-400/mo. Major retiree expat hubs (San Miguel, Lake Chapala, Mérida) have strong English-speaking specialist networks."
+      "notes": "Min = IMSS Seguro de Salud para la Familia for two residents aged 60-69 at 19,800 MXN/yr each (39,600 MXN/yr, about 176 USD/mo at 18.75), paid annually, pre-existing conditions excluded. Private gastos medicos mayores for ages 56-65 runs 80,000-140,000 MXN/yr per person (Apr 2026 survey, up 12-15% vs 2025), i.e. about 710-1,245 USD/mo for two at full coverage (max). Typical = IMSS for two plus a lower-cost/high-deductible private plan, the mix expat retirees commonly carry; re-modeled so this category carries the full health-coverage cost.",
+      "lastVerified": "2026-11-08",
+      "sources": [
+        {
+          "title": "N+ - IMSS 2026 Seguro Facultativo costo",
+          "url": "https://www.nmas.com.mx/sociedad/programas-sociales/que-es-seguro-facultativo-imss-y-para-quienes-aplica-este-es-costo-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "CuantoMeCuesta - Seguro de gastos medicos mayores precios abril 2026",
+          "url": "https://cuantomecuesta.com/mx/seguro-gastos-medicos/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Rio Times - Cost of Living Merida Expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-merida-expats-2026/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "insurance": {
-      "typical": 250,
-      "min": 150,
-      "max": 380,
-      "annualInflation": 0.04
+      "typical": 12,
+      "min": 7,
+      "max": 20,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-08",
+      "notes": "Re-modeled from old template (250 = health) to renters/contents only. Tenant contents-only policies in Mexico run 1,500-4,000 MXN/yr (May 2026), about 7-18 USD/mo at 18.75 MXN/USD. Health coverage now sits entirely in healthcare.",
+      "sources": [
+        {
+          "title": "CuantoMeCuesta - Seguro incendio/temblor y contenidos, mayo 2026",
+          "url": "https://cuantomecuesta.com/mx/seguro-incendio-temblor/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "petCare": {
-      "typical": 50,
+      "typical": 45,
       "min": 30,
       "max": 80,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Merida vet visits run 481-739 MXN (avg 600). Bravecto flea/tick for a large dog is about 899-999 MXN per 3 months (20-40 kg size; 40-56 kg slightly more). Annual model: 2 visits, core vaccines, 4 Bravecto doses and heartworm preventive, roughly 8,000-10,000 MXN/yr = 35-45 USD/mo at 18.75.",
+      "sources": [
+        {
+          "title": "Cronoshare - precios veterinario Merida",
+          "url": "https://www.cronoshare.com.mx/servicios/veterinario/yucatan/merida",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Rappi - Bravecto antipulgas para perro precio",
+          "url": "https://www.rappi.com.mx/p/bravecto-antipulgas-para-perro-de-2-757948",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "petDaycare": {
-      "typical": 120,
-      "min": 80,
-      "max": 200,
-      "annualInflation": 0.03
+      "typical": 90,
+      "min": 50,
+      "max": 170,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Profeco (Revista del Consumidor) boarding rates for large breeds are 250-495 MXN per night nationally (article updated Nov 2026). Model: about 4 boarding nights per month averaged plus occasional daycare days = 1,000-2,000 MXN/mo (53-107 USD); max covers a 10-night trip month.",
+      "sources": [
+        {
+          "title": "TV Azteca - Cuanto cuesta dejar a un perro en una pension o guarderia",
+          "url": "https://www.tvazteca.com/aztecanoticias/cuanto-cuesta-dejar-a-un-perro-en-una-pension-o-guarderia-puedes-elegir-el-mejor",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "petGrooming": {
-      "typical": 40,
-      "min": 25,
-      "max": 65,
-      "annualInflation": 0.03
+      "typical": 30,
+      "min": 20,
+      "max": 55,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "National 2026 guide: bath for a giant long-haired dog 420-520 MXN, bath plus cut/brush-out 480-550 MXN. One full groom per month for a Bernese = about 500-600 MXN (27-32 USD at 18.75); max allows a second deshedding bath in hot months.",
+      "sources": [
+        {
+          "title": "Cronoshare - Cuanto cuesta un servicio de peluqueria canina (Jan 2026)",
+          "url": "https://www.cronoshare.com.mx/cuanto-cuesta/peluqueria-canina",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "transportation": {
-      "typical": 130,
-      "min": 60,
-      "max": 210,
-      "annualInflation": 0.03
+      "typical": 200,
+      "min": 70,
+      "max": 300,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "One modest car: Magna gasoline 23.90 MXN/L in Merida (Profeco, Sep 2026); 80 L/mo = about 1,900 MXN (100 USD); cobertura amplia auto insurance averages 12,500-15,800 MXN/yr (56-70 USD/mo, Nov 2026); plus maintenance and Yucatan registration. Min = no car: Va y Ven bus 0.71 USD/trip (seniors discounted) plus Uber/DiDi from 1.47 USD.",
+      "sources": [
+        {
+          "title": "Por Esto - Profeco coloca a Merida entre las ciudades con gasolina mas barata",
+          "url": "https://www.poresto.com/yucatan/merida/2026/9/24/profeco-coloca-a-merida-entre-las-ciudades-con-gasolina-premium-mas-barata.html",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "AhorraSeguros - Cuanto cuesta un seguro de auto (Nov 2026)",
+          "url": "https://ahorraseguros.mx/seguros-de-autos/guias/cuanto-cuesta-un-seguro-de-auto/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Rio Times - Cost of Living Merida Expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-merida-expats-2026/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 180,
-      "min": 110,
-      "max": 270,
-      "annualInflation": 0.03
+      "typical": 230,
+      "min": 120,
+      "max": 380,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Home internet: Telmex 120 Mbps ~21 USD, Totalplay 150 Mbps ~35, Izzi gigabit ~51 (Rio Times Sep 2026). Plus ~30 USD streaming, mid-range dinner for two 30-60 USD about 4x/month, and activities/cenotes/concerts.",
+      "sources": [
+        {
+          "title": "Rio Times - Cost of Living Merida Expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-merida-expats-2026/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "clothing": {
       "typical": 70,
@@ -114,10 +253,24 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 81,
-      "min": 66,
-      "max": 101,
-      "annualInflation": 0.02
+      "typical": 30,
+      "min": 21,
+      "max": 55,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-08",
+      "notes": "National carrier pricing: Movistar Plan Pro 20 GB 309 MXN/mo, AT&T prepaid 200 MXN for 12 GB, Telcel Amigo Sin Limite 200 MXN per 30 days (Nov 2026 tables). Two lines = 400-620 MXN/mo, about 21-33 USD at 18.75; max allows two higher-tier Telcel postpaid plans. Stored 81 reflected US-style pricing.",
+      "sources": [
+        {
+          "title": "Selectra MX - planes celulares 5G (tables dated Nov 2, 2026)",
+          "url": "https://selectra.mx/celular/5g",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "El Imparcial - Cuanto cuesta recargar Telcel en 2026",
+          "url": "https://www.elimparcial.com/espectaculos/2026/03/17/cuanto-cuesta-recargar-telcel-en-2026-paquetes-y-opciones-sin-limite-explicados/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "taxes": {
       "typical": 0,
@@ -149,7 +302,16 @@
       "min": 40,
       "typical": 75,
       "max": 150,
-      "annualInflation": 0.04
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-08",
+      "notes": "Private GP visit about 29 USD and specialist 40-80 USD in Merida (Rio Times Sep 2026); typical assumes 1-2 private visits plus labs/dental per month for the couple beyond premiums. Stored range still fits.",
+      "sources": [
+        {
+          "title": "Rio Times - Cost of Living Merida Expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-merida-expats-2026/",
+          "accessed": "2026-11-08"
+        }
+      ]
     }
   },
   "healthcare": {

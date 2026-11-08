@@ -90,9 +90,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 72,
-      "typical": 87,
-      "max": 107
+      "min": 32,
+      "typical": 50,
+      "max": 70
     },
     "plans": [
       {
@@ -121,13 +121,14 @@
         "title": "Google Fi Plans",
         "url": "https://fi.google.com/about/plans"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-08"
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 284,
-      "typical": 355,
-      "max": 444
+      "min": 200,
+      "typical": 320,
+      "max": 480
     },
     "categories": [
       {
@@ -190,13 +191,14 @@
         "seniorDiscounts": "No specific discounts.",
         "notes": "Coffee ~€2.00-3.50. Budget for 2 visits/week. ~$14/mo."
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-08"
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 29,
-      "typical": 63,
-      "max": 230
+      "min": 30,
+      "typical": 120,
+      "max": 250
     },
     "publicTransit": {
       "monthlyPass": {
@@ -272,7 +274,8 @@
         "max": 334,
         "notes": "Includes insurance, fuel, parking, maintenance. Higher urban parking and insurance costs."
       }
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-08"
   },
   "visionDental": {
     "monthlyBudget": {
@@ -560,9 +563,9 @@
   "housing": {
     "propertyType": "2-bedroom house or ground-floor apartment",
     "monthlyBudget": {
-      "min": 1120,
-      "max": 1820,
-      "typical": 1400
+      "min": 1400,
+      "max": 2300,
+      "typical": 1700
     },
     "breakdown": {
       "baseRent": 1400,
@@ -573,7 +576,8 @@
     },
     "taxNotes": "No rental tax in Malta. Stamp duty (1%) paid on lease registration. Property tax is landlord responsibility.",
     "leaseTerms": "1-year standard lease. Security deposit 1 month rent. Agency fee typically half month rent. Contracts must be registered with Housing Authority.",
-    "marketNotes": "Sliema is Malta's most popular expat area. Modern seafront apartments. Very competitive market."
+    "marketNotes": "Sliema is Malta's most popular expat area. Modern seafront apartments. Very competitive market.",
+    "monthlyBudgetRefreshed": "2026-11-08"
   },
   "groceryStores": {
     "stores": [

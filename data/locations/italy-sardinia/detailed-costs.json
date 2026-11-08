@@ -90,9 +90,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 66,
-      "typical": 81,
-      "max": 101
+      "min": 12,
+      "typical": 20,
+      "max": 30
     },
     "plans": [
       {
@@ -121,13 +121,14 @@
         "title": "Google Fi Plans",
         "url": "https://fi.google.com/about/plans"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-08"
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 300,
-      "typical": 375,
-      "max": 469
+      "min": 190,
+      "typical": 270,
+      "max": 380
     },
     "categories": [
       {
@@ -190,13 +191,14 @@
         "seniorDiscounts": "No specific discounts. Espresso at the bar is very cheap.",
         "notes": "Espresso €1-1.50 at the bar, cappuccino €1.50-2.00. Budget for 2 visits/week. ~$12/mo."
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-08"
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 38,
-      "typical": 77,
-      "max": 281
+      "min": 120,
+      "typical": 190,
+      "max": 280
     },
     "publicTransit": {
       "monthlyPass": {
@@ -272,7 +274,8 @@
         "max": 400,
         "notes": "Includes insurance, fuel, parking, maintenance. Moderate suburban costs."
       }
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-08"
   },
   "visionDental": {
     "monthlyBudget": {
@@ -560,9 +563,9 @@
   "housing": {
     "propertyType": "2-bedroom house or ground-floor apartment",
     "monthlyBudget": {
-      "min": 680,
-      "max": 1105,
-      "typical": 850
+      "min": 800,
+      "max": 1600,
+      "typical": 1100
     },
     "breakdown": {
       "baseRent": 850,
@@ -573,7 +576,8 @@
     },
     "taxNotes": "No rental tax for tenants. Registration tax (imposta di registro) 2% of annual rent, split 50/50. IMU property tax is landlord responsibility.",
     "leaseTerms": "4+4 year lease (contratto libero) most common. Cedolare secca (flat-rate tax) landlords may not increase rent. Security deposit 2-3 months. 6-month notice to terminate.",
-    "marketNotes": "Island premium for coast, affordable inland. Mix of apartments and rural houses."
+    "marketNotes": "Island premium for coast, affordable inland. Mix of apartments and rural houses.",
+    "monthlyBudgetRefreshed": "2026-11-08"
   },
   "groceryStores": {
     "stores": [

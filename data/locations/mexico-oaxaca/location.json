@@ -33,65 +33,239 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 650,
-      "min": 500,
-      "max": 800,
-      "annualInflation": 0.04
+      "typical": 850,
+      "min": 600,
+      "max": 1200,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-08",
+      "notes": "Unfurnished 2-3BR houses with patio in Oaxaca suburbs (San Sebastian Tutla, Reforma) list at 19,000-22,000 MXN; Live and Invest Overseas budgets 800 USD for a furnished 2BR in a desirable area; 1BR market runs 3,000-12,000 MXN. Converted at 18.65 MXN/USD (Nov 5 2026). Pet-friendly houses with yards sit mid-to-upper range.",
+      "sources": [
+        {
+          "title": "Casas en renta 20000 pesos en Oaxaca (Mitula)",
+          "url": "https://casas.mitula.mx/casas/renta-casas-st-oaxaca-20000-pesos",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Live and Invest Overseas - Oaxaca",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/mexico/oaxaca",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Rio Times - Cost of living Oaxaca expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-oaxaca-expats-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "eldolar.info USD/MXN Nov 5 2026",
+          "url": "https://www.eldolar.info/en/mexico/dia/20261105",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "groceries": {
-      "typical": 320,
-      "min": 240,
-      "max": 420,
-      "annualInflation": 0.03
+      "typical": 480,
+      "min": 320,
+      "max": 750,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "INEGI/CONEVAL urban food basket is 2,597 MXN per person (May 2026), about 280 USD for two as a floor; expat budgets run 330 USD (local markets) to 685 USD (with Sam's Club). Adds 600-1,200 MXN/mo basic to 2,500-4,500 MXN premium food for a large dog. Food CPI +4.57% y/y Sep 2026.",
+      "sources": [
+        {
+          "title": "El Imparcial - INEGI canasta alimentaria 2026",
+          "url": "https://www.elimparcial.com/dinero/2026/06/11/inegi-revela-cuanto-dinero-necesita-una-persona-para-vivir-en-mexico-en-2026-y-por-que-los-alimentos-siguen-presionando-el-gasto-familiar/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Live and Invest Overseas - Oaxaca",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/mexico/oaxaca",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Calculadora de Costo de Mascota 2026",
+          "url": "https://cotizadorhipotecario.mx/vida-diaria/calculadora-costo-mascota",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "INEGI INPC Septiembre 2026",
+          "url": "https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2026/inpc/inpc_2q2026_10.pdf",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "utilities": {
-      "typical": 80,
+      "typical": 85,
       "min": 50,
-      "max": 130,
-      "annualInflation": 0.035
+      "max": 140,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-08",
+      "notes": "Electricity, LP gas, water and trash, no internet. Numbeo-type basket for a 65 m2 apartment is 895 MXN (48 USD); Live and Invest Overseas budgets gas 30 + electricity 50 + water 20 USD for a couple. A 20 kg LP cylinder is about 400 MXN. Temperate climate keeps CFE bills in subsidized tariff 1.",
+      "sources": [
+        {
+          "title": "MyLifeElsewhere - Oaxaca de Juarez cost of living",
+          "url": "https://www.mylifeelsewhere.com/cost-of-living/oaxaca-de-juarez-c3593",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Live and Invest Overseas - Oaxaca",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/mexico/oaxaca",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Rio Times - Cost of living Oaxaca expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-oaxaca-expats-2026/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 140,
-      "min": 70,
-      "max": 240,
+      "typical": 420,
+      "min": 180,
+      "max": 850,
       "annualInflation": 0.04,
-      "notes": "IMSS public system available to residents (~$500-700/yr fixed, varies by age). Private international plans ~$100-300/mo. Anti-VEGF injections widely available in Mexico City, Guadalajara, Monterrey, and San Miguel; ~$700-1,200/injection at private. GLP-1 via private prescription, ~$200-400/mo. Major retiree expat hubs (San Miguel, Lake Chapala, Mérida) have strong English-speaking specialist networks."
+      "notes": "IMSS voluntary (Seguro de Salud para la Familia) 2026 fee for age 60-69 is 19,800 MXN per person per year, about 177 USD/mo for two (min). Typical adds a basic private gastos medicos mayores plan for each at 26,000-44,000 MXN/yr (age 55-60, 2026 reference); max uses intermediate private plans at 46,000-78,000 MXN/yr each plus IMSS.",
+      "lastVerified": "2026-11-08",
+      "sources": [
+        {
+          "title": "N+ IMSS 2026 seguro facultativo costo",
+          "url": "https://www.nmas.com.mx/sociedad/programas-sociales/que-es-seguro-facultativo-imss-y-para-quienes-aplica-este-es-costo-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Calculadora cotizacion GMM tarifas 2026",
+          "url": "https://cotizadorhipotecario.mx/salud/calculadora-cotizacion-gmm",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "CuantoMeCuesta - seguro gastos medicos 2026",
+          "url": "https://cuantomecuesta.com/mx/seguro-gastos-medicos/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "insurance": {
-      "typical": 250,
-      "min": 150,
-      "max": 380,
-      "annualInflation": 0.04
+      "typical": 12,
+      "min": 5,
+      "max": 25,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-08",
+      "notes": "Re-modeled from old template (250 was health insurance; health cost now fully in healthcare). Renters/contents cover for 200,000-300,000 MXN of belongings runs about 800-2,000 MXN per year (April 2026); a standalone inquilino policy with liability sits near the top of the range.",
+      "sources": [
+        {
+          "title": "CuantoMeCuesta - seguro de hogar Mexico 2026",
+          "url": "https://cuantomecuesta.com/mx/seguro-hogar/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "petCare": {
-      "typical": 50,
-      "min": 30,
-      "max": 80,
-      "annualInflation": 0.03
+      "typical": 55,
+      "min": 35,
+      "max": 100,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Large dog: 6 vet consults/yr at 400-800 MXN, annual vaccines plus rabies 800-3,000 MXN, deworming and flea/tick pipettes about 2,000 MXN/yr, roughly 12,000 MXN/yr (55 USD/mo). Max allows a dental cleaning (1,500-4,000 MXN) or pet insurance.",
+      "sources": [
+        {
+          "title": "Calculadora de Costo de Mascota 2026",
+          "url": "https://cotizadorhipotecario.mx/vida-diaria/calculadora-costo-mascota",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "CuantoMeCuesta - veterinario precios abril 2026",
+          "url": "https://cuantomecuesta.com/mx/veterinario/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "petDaycare": {
-      "typical": 120,
-      "min": 80,
-      "max": 200,
-      "annualInflation": 0.03
+      "typical": 80,
+      "min": 45,
+      "max": 150,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Pet hotels and daycare in Mexico charge 200-600 MXN per day (April 2026); budget assumes about 4 days per month of boarding or daycare for a large dog.",
+      "sources": [
+        {
+          "title": "CuantoMeCuesta - veterinario precios abril 2026",
+          "url": "https://cuantomecuesta.com/mx/veterinario/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "petGrooming": {
-      "typical": 40,
+      "typical": 45,
       "min": 25,
-      "max": 65,
-      "annualInflation": 0.03
+      "max": 75,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Grooming sessions run 300-1,200 MXN depending on size; a 100 lb double-coated dog at 800-1,000 MXN every 5-6 weeks averages about 850 MXN/mo (45 USD).",
+      "sources": [
+        {
+          "title": "Calculadora de Costo de Mascota 2026",
+          "url": "https://cotizadorhipotecario.mx/vida-diaria/calculadora-costo-mascota",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "CuantoMeCuesta - veterinario precios abril 2026",
+          "url": "https://cuantomecuesta.com/mx/veterinario/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "transportation": {
-      "typical": 110,
-      "min": 50,
-      "max": 180,
-      "annualInflation": 0.03
+      "typical": 150,
+      "min": 60,
+      "max": 260,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Oaxaca is compact: bus 8-10 MXN, taxis 70-100 MXN, expat budgets 25-90 USD without a car. Typical assumes mostly taxi/bus plus light use of one modest car; max is a full car: regular gasoline 23.67 MXN/L (Profeco Sep 2026) at ~80 L/mo, cobertura amplia insurance 12,500-15,800 MXN/yr, maintenance and state fees.",
+      "sources": [
+        {
+          "title": "Rio Times - Cost of living Oaxaca expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-oaxaca-expats-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Live and Invest Overseas - Oaxaca",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/mexico/oaxaca",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Por Esto - Profeco gasolina regular 23.67 pesos Sep 2026",
+          "url": "https://www.poresto.com/mexico/2026/9/14/profeco-reporta-gasolina-regular-en-2367-pesos-y-casi-12-mil-estaciones-debajo-de-24-pesos.html",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "AhorraSeguros - cuanto cuesta un seguro de auto (Nov 2026)",
+          "url": "https://ahorraseguros.mx/seguros-de-autos/guias/cuanto-cuesta-un-seguro-de-auto/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 150,
-      "min": 90,
-      "max": 230,
-      "annualInflation": 0.03
+      "typical": 240,
+      "min": 150,
+      "max": 380,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Telmex Infinitum 500 Mbps symmetric fiber 649 MXN (35 USD; 250 Mbps 499 MXN), streaming ~30 USD, dining out for two 3-4 times a month at 500-800 MXN (mid-range mains 150-250 MXN), plus activities. Live and Invest Overseas budgets 330 USD entertainment for a couple.",
+      "sources": [
+        {
+          "title": "Expansion - Telmex, Totalplay, Megacable paquetes Sep 2026",
+          "url": "https://expansion.mx/empresas/2026/09/15/telmex-totalplay-megacable-paquetes-internet-telefonia",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Rio Times - Cost of living Oaxaca expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-oaxaca-expats-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Live and Invest Overseas - Oaxaca",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/mexico/oaxaca",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "clothing": {
       "typical": 70,
@@ -112,10 +286,19 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 81,
-      "min": 66,
-      "max": 101,
-      "annualInflation": 0.02
+      "typical": 60,
+      "min": 35,
+      "max": 85,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-08",
+      "notes": "Two Telcel postpaid lines: Ultra 3 (15 GB, 5G) 349 MXN each = 37 USD; Ultra 5 (40 GB) 549 MXN each = 59 USD; Ultra 7 (60 GB) 749 MXN each = 80 USD. List prices updated Nov 2 2026, national.",
+      "sources": [
+        {
+          "title": "Selectra - Planes Telcel (actualizado nov 2026)",
+          "url": "https://selectra.mx/companias/telcel/planes-celular",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "taxes": {
       "typical": 0,
@@ -145,9 +328,23 @@
     },
     "medicalOOP": {
       "min": 40,
-      "typical": 75,
-      "max": 150,
-      "annualInflation": 0.04
+      "typical": 80,
+      "max": 160,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-08",
+      "notes": "Private GP visit 500-1,000 MXN in Oaxaca, English-speaking specialist about 80 USD; typical assumes 1-2 visits plus labs or dental per month for two beyond premiums. Prescription medicine is tracked separately.",
+      "sources": [
+        {
+          "title": "Rio Times - Cost of living Oaxaca expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-oaxaca-expats-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Live and Invest Overseas - Oaxaca",
+          "url": "https://www.liveandinvestoverseas.com/country-hub/mexico/oaxaca",
+          "accessed": "2026-11-08"
+        }
+      ]
     }
   },
   "healthcare": {

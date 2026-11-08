@@ -44,65 +44,252 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 900,
-      "min": 700,
-      "max": 1150,
-      "annualInflation": 0.04
+      "typical": 950,
+      "min": 750,
+      "max": 1400,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-08",
+      "notes": "2-bed apartments in Gozo EUR 700-1,000 (FreeMalta Apr 2026), from EUR 850 (Frank Salt Feb 2026), EUR 900-1,400 with farmhouses/townhouses EUR 1,200-2,000 (Sauerborn Mar 2026); Housing Authority 2023 medians EUR 550-834 by village. Pet-friendly 2-3BR with outdoor space for a large dog skews to houses, hence typical above the apartment median.",
+      "sources": [
+        {
+          "title": "FreeMalta - Rent prices Malta by area (Apr 2026)",
+          "url": "https://freemalta.com/articles/rent-prices-malta-by-area",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Frank Salt - Cost of living Malta 2026 (Feb 2026)",
+          "url": "https://franksalt.com.mt/blogs/cost-of-living-malta-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Sauerborn - Malta cost of living 2026 (Mar 2026)",
+          "url": "https://www.sebsauerborn.com/malta-unlocked/malta-cost-of-living-2026",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "MaltaToday - Rent increases in Gozo outpaced Malta (Housing Authority data)",
+          "url": "https://www.maltatoday.com.mt/news/national/133481/rent_increases_in_gozo_outpaced_those_in_malta_but_are_still_more_affordable",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "groceries": {
-      "typical": 420,
-      "min": 330,
-      "max": 530,
-      "annualInflation": 0.03
+      "typical": 550,
+      "min": 420,
+      "max": 740,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Couple's food shop in Malta EUR 80-140/week, budgets EUR 400 (conservative) / 600 (comfortable) per month (Sauerborn 2026); Freenance EUR 280-420 per person. Plus ~13 kg/month large-breed kibble for a 100 lb dog: Royal Canin Maxi 12 kg EUR 80-84 => ~EUR 90/mo. Gozo supermarkets (Arkadia, Lidl Victoria) slightly cheaper than Sliema. Food inflation Sept 2026 only 2.5% HICP / 3.4% RPI y/y (NSO).",
+      "sources": [
+        {
+          "title": "Sauerborn - Malta cost of living 2026 (Mar 2026)",
+          "url": "https://www.sebsauerborn.com/malta-unlocked/malta-cost-of-living-2026",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Freenance - Cost of living in Malta 2026",
+          "url": "https://freenance.io/cost-of-living/cost-of-living-malta-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Pet Shop Malta - Royal Canin Maxi 12 kg price",
+          "url": "https://petshopmalta.com/products/royal-canin-maxi-sterilised",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Sauerborn - Malta inflation September 2026 (NSO HICP/RPI)",
+          "url": "https://www.sebsauerborn.com/malta-unlocked/malta-inflation-september-2026",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "utilities": {
-      "typical": 160,
-      "min": 120,
-      "max": 215,
-      "annualInflation": 0.035
-    },
-    "healthcare": {
-      "typical": 100,
-      "min": 65,
-      "max": 150,
-      "annualInflation": 0.04,
-      "notes": "National Health Service free at point of use for residents (EU after 3 months; non-EU after residence permit). Private (BUPA Malta, Atlas) ~€70-150/mo. Anti-VEGF injections at Mater Dei Hospital (sole tertiary public hospital). GLP-1 covered via NHS for diabetes. English is an official language — strong English-speaking workforce. Compact size means specialist access usually within 30 min."
-    },
-    "insurance": {
-      "typical": 120,
-      "min": 80,
-      "max": 170,
-      "annualInflation": 0.04
-    },
-    "petCare": {
-      "typical": 60,
-      "min": 40,
-      "max": 100,
-      "annualInflation": 0.03
-    },
-    "petDaycare": {
       "typical": 150,
       "min": 100,
       "max": 250,
-      "annualInflation": 0.03
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-08",
+      "notes": "ARMS Residential tariff (registered residents): electricity EUR 0.1047/kWh first band, 0.1298 next; water EUR 1.40/m3 + EUR 41.43/yr service; no gas heating, electric A/C for cooling and winter heat; municipal waste collection is free. Guides: electricity+water EUR 80-150 (Frank Salt), EUR 150/250/400 for two adults with summer A/C adding EUR 150-400 in Jul-Aug (Sauerborn). Excludes internet. Gozo houses are larger and stone-built, so winter electric heating offsets lower A/C use.",
+      "sources": [
+        {
+          "title": "Expatax - Utilities, ARMS tariffs and Residential rates (Dec 2025, upd Jul 2026)",
+          "url": "https://expatax.mt/?p=10880",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "ARMS - Tariff prices (REWS-regulated residential/domestic tariffs)",
+          "url": "https://arms.com.mt/en/information/water-and-electricity/tariff-prices",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Frank Salt - Cost of living Malta 2026 (Feb 2026)",
+          "url": "https://franksalt.com.mt/blogs/cost-of-living-malta-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Sauerborn - Malta cost of living 2026 (Mar 2026)",
+          "url": "https://www.sebsauerborn.com/malta-unlocked/malta-cost-of-living-2026",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    "healthcare": {
+      "typical": 320,
+      "min": 150,
+      "max": 600,
+      "annualInflation": 0.04,
+      "notes": "US retirees on a self-sufficiency/retirement residence permit are NOT covered by the Maltese public system (Mater Dei is free only for insured workers/EU S1 holders), so this is the full comprehensive private premium for two 60-year-olds. Guides put comprehensive cover at EUR 1,500-4,000/yr per healthy adult (Sauerborn, Mar 2026) and a couple at EUR 1,500-3,000/yr (Rozie); GasanMamo quotes residency-minimum plans at EUR 180-400; local insurers often cap entry at age 60-70 so an expat insurer (Bupa, Cigna, Feather) may be needed. Old stored notes wrongly assumed free NHS access.",
+      "lastVerified": "2026-11-08",
+      "sources": [
+        {
+          "title": "Sauerborn - Malta cost of living 2026 (Mar 2026)",
+          "url": "https://www.sebsauerborn.com/malta-unlocked/malta-cost-of-living-2026",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Rozie - Cost of living Malta 2026 real numbers (Jul 2026)",
+          "url": "https://rozie.app/cost-of-living-malta-2026-real-numbers-for-expats/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "GasanMamo - How much does health insurance cost in Malta",
+          "url": "https://www.gasanmamo.com/blog/how-much-does-health-insurance-cost-in-malta",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Feather - Health insurance guide Malta (non-EU retirees need private cover; local insurer age limits)",
+          "url": "https://feather-insurance.com/en-mt/blog/health-insurance-guide-malta",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Atlas Insurance - Health insurance plans for residents of Malta",
+          "url": "https://atlas.com.mt/insurance/health/malta-cover",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    "insurance": {
+      "typical": 20,
+      "min": 10,
+      "max": 35,
+      "annualInflation": 0.04,
+      "estimate": true,
+      "notes": "Re-modelled from old template (stored 120-130 was health insurance). Renters contents cover (Atlas HomePlan, GasanMamo Home, Mapfre) exists but no premium was found online; placeholder for ~EUR 20k contents, quotes only via insurer forms."
+    },
+    "petCare": {
+      "typical": 80,
+      "min": 50,
+      "max": 150,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Malta vet price list: consult EUR 30-50, yearly DHPPi/lepto EUR 40, leishmania (sandfly, needed in Malta) EUR 100, kennel cough EUR 45, rabies EUR 45, CBC EUR 30, chemistry EUR 50. Annual vaccines/checks ~EUR 300-350 for a giant breed plus year-round flea/tick/heartworm preventives (est. EUR 25-35/mo) and one bloodwork gives ~EUR 950/yr; Bernese breed-risk pushes max.",
+      "sources": [
+        {
+          "title": "MyPet Veterinary Practice (Malta) - online booking price list",
+          "url": "https://book.heygoldie.com/MyPet-Veterinary-Practice",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    "petDaycare": {
+      "typical": 100,
+      "min": 50,
+      "max": 200,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Kennel boarding for a large/XL dog EUR 22-25/day + 18% VAT (~EUR 26-30) at Tattarga Kennels; home-sitter boarding EUR 18-35/night and daycare EUR 15-30/day (Petme 2026), large dogs at top of range. Modelled as ~2 daycare days/month plus ~15-20 boarding nights/yr averaged.",
+      "sources": [
+        {
+          "title": "Tattarga Kennels (Malta) - boarding rates",
+          "url": "https://www.tattargakennels.com/pages/kennels",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Petme - Pet sitter and dog boarding prices Malta 2026",
+          "url": "https://petme.social/pet-sitter-prices-malta-2026",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "petGrooming": {
-      "typical": 50,
-      "min": 30,
-      "max": 80,
-      "annualInflation": 0.03
+      "typical": 55,
+      "min": 35,
+      "max": 90,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Victoria (Gozo) salon: full groom large dog long hair from EUR 65, cabin dryer +EUR 10; wash-only long coat from EUR 30. Double-coated Bernese every 6-8 weeks ~EUR 75 incl. dryer => ~EUR 55/mo. Malta-island salons not price-listed online; assumed similar.",
+      "sources": [
+        {
+          "title": "La Pet Barber, Victoria Gozo - grooming price list",
+          "url": "https://lapetbarber.setmore.com/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "transportation": {
-      "typical": 110,
-      "min": 70,
-      "max": 170,
-      "annualInflation": 0.03
+      "typical": 190,
+      "min": 90,
+      "max": 300,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "A car is needed in Gozo. Petrol EUR 1.34/L (EU Oil Bulletin Oct 2026), ~600-800 km/mo => EUR 55-75 fuel; car insurance EUR 300-700/yr (Rozie 2026); road licence and servicing est. EUR 40-60/mo; Gozo Channel car+driver EUR 15.70 return (resident rates lower), foot passengers EUR 4.65 return but free for resident seniors 60+; Tallinja bus free/capped for resident card holders.",
+      "sources": [
+        {
+          "title": "fuel-prices.eu - Malta (EU Oil Bulletin 26 Oct 2026)",
+          "url": "https://www.fuel-prices.eu/Malta/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Rozie - Your car in Malta: ownership guide (May 2026)",
+          "url": "https://rozie.app/your-car-in-malta-ownership-rental-and-driving-guide/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "FreeMalta - Gozo ferry schedule and prices (Oct 2026)",
+          "url": "https://freemalta.com/articles/gozo-ferry-schedule-malta-prices",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Gozo Channel - Fares (seniors 60+ resident travel free)",
+          "url": "https://gozochannel.com/ferry/fares",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Dr Werner - Tallinja card explained (Feb 2026)",
+          "url": "https://www.drwerner.com/en/public-transport-malta-tallinja-card.md",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 200,
-      "min": 140,
-      "max": 280,
-      "annualInflation": 0.03
+      "typical": 260,
+      "min": 170,
+      "max": 380,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "GO Fibre 1 Gbps EUR 49.99/mo (500 Mbps EUR 39.99); streaming EUR 15-30; dining out for two EUR 50-80 per meal at a good local restaurant (Sauerborn), modelled as 2-3 dinners/month at Gozo prices; gym EUR 25-65/mo (Rozie 2026). Gozo dining and activities cheaper than Sliema; fewer venues.",
+      "sources": [
+        {
+          "title": "Subger - GO Malta fibre plan prices (verified Mar 2026)",
+          "url": "https://subger.com/en/mt/service/go-malta-fiber",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Sauerborn - Malta cost of living 2026 (Mar 2026)",
+          "url": "https://www.sebsauerborn.com/malta-unlocked/malta-cost-of-living-2026",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Rozie - Best gyms in Malta 2026 (Mar 2026)",
+          "url": "https://rozie.app/best-gyms-fitness-in-malta-2026-the-expats-honest-guide",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Freenance - Cost of living in Malta 2026",
+          "url": "https://freenance.io/cost-of-living/cost-of-living-malta-2026/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "clothing": {
       "typical": 80,
@@ -123,10 +310,24 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 87,
-      "min": 72,
-      "max": 107,
-      "annualInflation": 0.02
+      "typical": 50,
+      "min": 32,
+      "max": 70,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-08",
+      "notes": "Two postpaid SIMs with unlimited local data: Melita Endless Value EUR 15.99 (24-mo) / 20.99 rolling, Endless Xcelerate EUR 19.99/24.99; Epic Basic EUR 24.99 (24-mo) / 29.99 rolling (MCA Q2 2026 price report, Epic Jan 2026 terms). Typical = two mid plans ~EUR 25 each.",
+      "sources": [
+        {
+          "title": "MCA - Telecom Offer and Price Developments Apr-Jun 2026",
+          "url": "https://www.mca.org.mt/sites/default/files/pageattachments/Telecom%20Offer%20and%20Price%20Developments%20-%20April%20to%20June%202026.pdf",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Epic - Basic not-committed plan terms from 1 Jan 2026",
+          "url": "https://www.epic.com.mt/wp-content/uploads/2026/01/Epic-Basic-Not-Committed-applicable-from-1st-January-2026.pdf",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "taxes": {
       "typical": 625,
@@ -156,9 +357,23 @@
     },
     "medicalOOP": {
       "min": 40,
-      "typical": 80,
-      "max": 160,
-      "annualInflation": 0.035
+      "typical": 90,
+      "max": 180,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-08",
+      "notes": "Private GP consultation EUR 25-50 (Mondassur); specialists, dental and physio are paid out of pocket or above insurance excess. Public pharmacy/primary care not available to non-EU self-sufficient residents, so OOP is slightly higher than the stored value.",
+      "sources": [
+        {
+          "title": "Mondassur - Health insurance Malta (GP consultation EUR 25-50)",
+          "url": "https://mondassur.com/en/health-insurance-malta",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Feather - Health insurance guide Malta (non-EU retirees need private cover; local insurer age limits)",
+          "url": "https://feather-insurance.com/en-mt/blog/health-insurance-guide-malta",
+          "accessed": "2026-11-08"
+        }
+      ]
     }
   },
   "healthcare": {

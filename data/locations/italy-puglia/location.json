@@ -40,71 +40,239 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 750,
-      "min": 600,
-      "max": 950,
-      "annualInflation": 0.04
+      "typical": 900,
+      "min": 700,
+      "max": 1200,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-08",
+      "notes": "Immobiliare.it Oct 2026 asking rents: Puglia EUR 9.33/m2/mo (+4.1% y/y), Bari 11.71, Lecce 8.74, Brindisi 7.90; a 100 m2 pet-friendly 2-3BR ~EUR 870-1,170. Numbeo June 2026 3BR outside centre: Lecce EUR 840, Bari 1,001.",
+      "sources": [
+        {
+          "title": "Immobiliare.it - Quotazioni immobiliari nella regione Puglia",
+          "url": "https://www.immobiliare.it/mercato-immobiliare/puglia/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Expatica - Cost of living in Lecce (Numbeo June 2026)",
+          "url": "https://www.expatica.com/it/cost-of-living/lecce/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Expatica - Cost of living in Bari (Numbeo June 2026)",
+          "url": "https://www.expatica.com/it/cost-of-living/bari/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "groceries": {
-      "typical": 380,
-      "min": 300,
-      "max": 480,
-      "annualInflation": 0.03
+      "typical": 540,
+      "min": 430,
+      "max": 670,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Numbeo one-person grocery estimates Lecce EUR 277 / Bari EUR 292 (June 2026); two adults ~EUR 440 plus EUR 90-150/mo dog food for a 25kg+ dog. ISTAT Oct 2026 food basket +2.5% y/y.",
+      "sources": [
+        {
+          "title": "Expatica - Cost of living in Lecce",
+          "url": "https://www.expatica.com/it/cost-of-living/lecce/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Money.it - Quanto costa mantenere un cane 2026",
+          "url": "https://www.money.it/Quanto-costa-mantenere-cane-spese-annue-e-straordinarie-importi",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "ISTAT - Prezzi al consumo dati provvisori ottobre 2026",
+          "url": "https://www.istat.it/comunicato-stampa/prezzi-al-consumo-dati-provvisori-ottobre-2026/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "utilities": {
-      "typical": 155,
-      "min": 115,
-      "max": 210,
-      "annualInflation": 0.035
+      "typical": 240,
+      "min": 170,
+      "max": 330,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-08",
+      "notes": "ARERA Oct 2026: electricity 43.43 c/kWh (vulnerable reference), gas 1.768 EUR/Smc. Model: ~2,700 kWh/yr incl. summer A/C (~EUR 90/mo) + ~600 Smc gas or heat-pump heating in a mild climate (~EUR 90/mo) + water and TARI (~EUR 60/mo). Numbeo June 2026 basic utilities: Lecce EUR 161, Bari EUR 225 (pre-Q4 increase). Excludes internet.",
+      "sources": [
+        {
+          "title": "Sky TG24 - Bollette, +37,3% prezzi luce per i vulnerabili (ARERA Q4 2026)",
+          "url": "https://tg24.sky.it/economia/2026/09/29/bollette-prezzi-luce-gas-offerte",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "ARERA comunicato 3 novembre 2026 - gas vulnerabili ottobre 2026",
+          "url": "https://euroborsa.it/public/euroborsa/Comunicati_Stampa/Arera/Arera_3_novembre_2026.pdf",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Expatica - Cost of living in Lecce",
+          "url": "https://www.expatica.com/it/cost-of-living/lecce/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Expatica - Cost of living in Bari",
+          "url": "https://www.expatica.com/it/cost-of-living/bari/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 90,
-      "min": 60,
-      "max": 135,
+      "typical": 430,
+      "min": 335,
+      "max": 620,
       "annualInflation": 0.04,
-      "notes": "SSN (Servizio Sanitario Nazionale) universal coverage after Elective Residence visa. Private supplementary ~€60-180/mo. Anti-VEGF injections available widely via SSN at hospital ophthalmology. GLP-1 covered for diabetes through SSN with prescription. Regional variation: Northern Italy has strongest public infrastructure; Southern regions thinner. English availability moderate in private sector."
+      "notes": "National: voluntary SSN registration for elective-residence retirees (7.5% of income to EUR 20,658 + 4% to EUR 51,646; EUR 2,000/yr minimum, EUR 2,789 max per person) = ~EUR 335-345/mo for two; typical adds one basic Italian supplementary policy (EUR 800-2,000/yr), useful given thinner southern public capacity; max adds intermediate private cover for both.",
+      "lastVerified": "2026-11-08",
+      "sources": [
+        {
+          "title": "The Local - How much does it cost to register with Italy's national health service",
+          "url": "https://www.thelocal.it/20250130/how-much-does-it-cost-to-register-with-italys-national-health-service-in-2025",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Corte Costituzionale - Sentenza 97/2026",
+          "url": "https://www.cortecostituzionale.it/scheda-pronuncia/2026/97",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Impatria - Migliore assicurazione sanitaria per pensionati stranieri 2026",
+          "url": "https://impatria.com/?p=5323",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Moneyside - Assicurazione sanitaria over 65 (premi orientativi)",
+          "url": "https://www.moneyside.app/it/learn/assicurazioni/assicurazione-sanitaria-over-65",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "insurance": {
-      "typical": 110,
-      "min": 75,
-      "max": 160,
-      "annualInflation": 0.04
+      "typical": 25,
+      "min": 15,
+      "max": 40,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-08",
+      "notes": "Re-modeled from old template (health) to tenant contents + liability: RC EUR 60-150/yr plus basic contents EUR 150-300/yr, ~EUR 210-450/yr.",
+      "sources": [
+        {
+          "title": "Moneyside - Assicurazione affittuari",
+          "url": "https://www.moneyside.app/it/learn/assicurazioni/assicurazione-affittuari",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "petCare": {
-      "typical": 60,
-      "min": 40,
+      "typical": 55,
+      "min": 35,
       "max": 100,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Large dog (25kg+): vet + antiparassitari EUR 30-40/mo (year-round parasite season in the south) plus annual visits, boosters and amortized diagnostics. Excludes food.",
+      "sources": [
+        {
+          "title": "Money.it - Quanto costa mantenere un cane 2026",
+          "url": "https://www.money.it/Quanto-costa-mantenere-cane-spese-annue-e-straordinarie-importi",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "petDaycare": {
-      "typical": 150,
-      "min": 100,
-      "max": 250,
-      "annualInflation": 0.03
+      "typical": 120,
+      "min": 60,
+      "max": 200,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Dog boarding EUR 20-40/day nationally; occasional ~3-5 days/month averaged.",
+      "sources": [
+        {
+          "title": "Cronoshare - Quanto costa una pensione per cani",
+          "url": "https://www.cronoshare.it/quanto-costa/pensione-cani",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Money.it - Quanto costa mantenere un cane 2026",
+          "url": "https://www.money.it/Quanto-costa-mantenere-cane-spese-annue-e-straordinarie-importi",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "petGrooming": {
       "typical": 50,
       "min": 30,
       "max": 80,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Professional grooming EUR 20-80/session, higher for long-haired large breeds; every 6-8 weeks plus home upkeep.",
+      "sources": [
+        {
+          "title": "Money.it - Quanto costa mantenere un cane 2026",
+          "url": "https://www.money.it/Quanto-costa-mantenere-cane-spese-annue-e-straordinarie-importi",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "transportation": {
-      "typical": 140,
-      "min": 90,
-      "max": 210,
-      "annualInflation": 0.03
+      "typical": 205,
+      "min": 130,
+      "max": 300,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "One small car, needed outside city centres: Puglia average RC auto EUR 683/yr (June 2026, national 637; ~EUR 57/mo); fuel ~8,000 km/yr at MIMIT self petrol 2.026 EUR/l (~EUR 88/mo); bollo, revisione, maintenance ~EUR 60/mo. Lecce/Bari transit pass ~EUR 37/mo.",
+      "sources": [
+        {
+          "title": "Facile.it - Assicurazioni Auto in Puglia: RC auto Giugno 2026",
+          "url": "https://www.facile.it/assicurazioni/osservatorio/rc-auto-puglia.html",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Teleborsa/Borsa Italiana - Carburanti MIMIT prezzo medio self 21 ottobre 2026",
+          "url": "https://www.borsaitaliana.it/borsa/notizie/teleborsa/economia/carburanti-mimit-prezzo-medio-self-benzina-a-2026-eurolitro-gasolio-a-2259-43_2026-10-21_TLB.html?lang=it",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Expatica - Cost of living in Lecce",
+          "url": "https://www.expatica.com/it/cost-of-living/lecce/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 200,
-      "min": 140,
-      "max": 280,
-      "annualInflation": 0.03
+      "typical": 290,
+      "min": 190,
+      "max": 420,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "FTTH internet EUR 21-28/mo (coverage varies in smaller towns), streaming ~EUR 30, dining out 3x/month at Numbeo Lecce/Bari meal for two EUR 63, plus ~EUR 50 activities.",
+      "sources": [
+        {
+          "title": "Offerta-internet.it - Migliori offerte fibra ottica",
+          "url": "https://offerta-internet.it/fibra-ottica",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Expatica - Cost of living in Lecce",
+          "url": "https://www.expatica.com/it/cost-of-living/lecce/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "clothing": {
-      "typical": 80,
+      "typical": 85,
       "min": 50,
-      "max": 120,
-      "annualInflation": 0.02
+      "max": 130,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-08",
+      "notes": "Bari chain-store price points (Numbeo June 2026: jeans ~EUR 80, dress ~44, running shoes ~101, leather shoes ~134); two adults replacing a few items per month.",
+      "sources": [
+        {
+          "title": "Expatica - Cost of living in Bari (Numbeo item prices)",
+          "url": "https://www.expatica.com/it/cost-of-living/bari/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "personalCare": {
       "typical": 60,
@@ -119,10 +287,19 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 81,
-      "min": 66,
-      "max": 101,
-      "annualInflation": 0.02
+      "typical": 22,
+      "min": 16,
+      "max": 30,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-08",
+      "notes": "Two Iliad lines at EUR 7.99-11.99/mo each (150-250 GB, 5G, fixed price); max covers two premium-carrier lines.",
+      "sources": [
+        {
+          "title": "Selectra - Le offerte Iliad mobile attive (Nov 2026)",
+          "url": "https://selectra.net/internet/operatori/iliad/mobile",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "taxes": {
       "typical": 420,

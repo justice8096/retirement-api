@@ -90,9 +90,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 72,
-      "typical": 87,
-      "max": 107
+      "min": 32,
+      "typical": 50,
+      "max": 70
     },
     "plans": [
       {
@@ -121,13 +121,14 @@
         "title": "Google Fi Plans",
         "url": "https://fi.google.com/about/plans"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-08"
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 284,
-      "typical": 355,
-      "max": 444
+      "min": 170,
+      "typical": 260,
+      "max": 380
     },
     "categories": [
       {
@@ -190,13 +191,14 @@
         "seniorDiscounts": "No specific discounts.",
         "notes": "Coffee ~€2.00-3.50. Budget for 2 visits/week. ~$14/mo."
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-08"
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 21,
-      "typical": 47,
-      "max": 170
+      "min": 90,
+      "typical": 190,
+      "max": 300
     },
     "publicTransit": {
       "monthlyPass": {
@@ -272,7 +274,8 @@
         "max": 247,
         "notes": "Includes insurance, fuel, parking, maintenance. Moderate suburban costs."
       }
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-08"
   },
   "visionDental": {
     "monthlyBudget": {
@@ -560,9 +563,9 @@
   "housing": {
     "propertyType": "2-bedroom house or ground-floor apartment",
     "monthlyBudget": {
-      "min": 720,
-      "max": 1170,
-      "typical": 900
+      "min": 750,
+      "max": 1400,
+      "typical": 950
     },
     "breakdown": {
       "baseRent": 900,
@@ -573,7 +576,8 @@
     },
     "taxNotes": "No rental tax in Malta. Stamp duty (1%) paid on lease registration. Property tax is landlord responsibility.",
     "leaseTerms": "1-year standard lease. Security deposit 1 month rent. Agency fee typically half month rent. Contracts must be registered with Housing Authority.",
-    "marketNotes": "Gozo is 15-20% cheaper than mainland. 2BR houses in Rabat/Victoria, Xaghra, Nadur. Ferry to Malta 25 min."
+    "marketNotes": "Gozo is 15-20% cheaper than mainland. 2BR houses in Rabat/Victoria, Xaghra, Nadur. Ferry to Malta 25 min.",
+    "monthlyBudgetRefreshed": "2026-11-08"
   },
   "groceryStores": {
     "stores": [

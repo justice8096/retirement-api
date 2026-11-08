@@ -30,65 +30,194 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 1050,
+      "typical": 1200,
       "min": 800,
-      "max": 1300,
-      "annualInflation": 0.04
+      "max": 1900,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-08",
+      "notes": "Rio Times Sep 2026: 3BR outside centre 1,050-1,460 USD, 3BR centre 1,750-2,630, 1BR outside centre (Ejidal/Colosio) 410-700. Mitula shows 2BR units in outer developments (Playa del Sol, Ciudad Mayakoba, Selvanova) at 11,000 MXN (about 590 USD) and a furnished 2BR in Nicte-Ha at 31,000 MXN. Typical = pet-friendly 2-3BR outside the tourist core.",
+      "sources": [
+        {
+          "title": "Rio Times - Cost of Living Playa del Carmen Expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-playa-del-carmen-expats-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Mitula - departamentos 2 recamaras Playa del Carmen",
+          "url": "https://casas.mitula.mx/casas/renta-departamentos-2-recamaras-playa-carmen",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "groceries": {
-      "typical": 430,
-      "min": 330,
-      "max": 560,
-      "annualInflation": 0.03
+      "typical": 500,
+      "min": 380,
+      "max": 660,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Playa supermarket prices run above Merida (milk ~1.67 USD/L, eggs ~2.73/dozen per Rio Times Sep 2026); couple basket about 330-550 USD plus roughly 90-110 USD/mo large-breed kibble for a 100 lb dog (estimate). National food inflation near 3.6% (Oct 2026).",
+      "sources": [
+        {
+          "title": "Rio Times - Cost of Living Playa del Carmen Expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-playa-del-carmen-expats-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "UnoTV - Inflacion en Mexico llega a 3.62% en octubre",
+          "url": "https://www.unotv.com/negocios/inflacion-en-mexico-llega-a-3-62-en-octubre-electricidad-y-tomate-verde-suben-de-precio/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "utilities": {
-      "typical": 140,
-      "min": 90,
-      "max": 210,
-      "annualInflation": 0.035
+      "typical": 180,
+      "min": 100,
+      "max": 320,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-08",
+      "notes": "Rio Times Sep 2026: basic utilities for an 85 m2 flat 90-139 USD/mo, 175-292 in AC months; a 3BR house on CFE penalty (DAC) tariff bills 438-700 USD every two months. Excludes internet; includes LP gas, Aguakan water and trash. Quintana Roo summer subsidy Apr-Oct as in Yucatan.",
+      "sources": [
+        {
+          "title": "Rio Times - Cost of Living Playa del Carmen Expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-playa-del-carmen-expats-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Diario de Yucatan - CFE termina tarifa de verano 2026 (Yucatan, Campeche, Quintana Roo)",
+          "url": "https://www.yucatan.com.mx/merida/2026/10/06/cfe-termina-tarifa-verano-2026-yucatan-campeche-quintana-roo.html",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 170,
-      "min": 80,
-      "max": 280,
+      "typical": 600,
+      "min": 176,
+      "max": 1250,
       "annualInflation": 0.04,
-      "notes": "IMSS public system available to residents (~$500-700/yr fixed, varies by age). Private international plans ~$100-300/mo. Anti-VEGF injections widely available in Mexico City, Guadalajara, Monterrey, and San Miguel; ~$700-1,200/injection at private. GLP-1 via private prescription, ~$200-400/mo. Major retiree expat hubs (San Miguel, Lake Chapala, Mérida) have strong English-speaking specialist networks."
+      "notes": "National figures reused: IMSS family insurance 19,800 MXN/yr per person aged 60-69 (about 176 USD/mo for two at 18.75); private gastos medicos mayores at 56-65 is 80,000-140,000 MXN/yr each (710-1,245 USD/mo for two). Rio Times Playa corroborates: public cover ~100 USD/mo at 60, private 320-800 USD/mo at 60. Typical = IMSS plus a lower-cost private plan.",
+      "lastVerified": "2026-11-08",
+      "sources": [
+        {
+          "title": "N+ - IMSS 2026 Seguro Facultativo costo",
+          "url": "https://www.nmas.com.mx/sociedad/programas-sociales/que-es-seguro-facultativo-imss-y-para-quienes-aplica-este-es-costo-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "CuantoMeCuesta - Seguro de gastos medicos mayores precios abril 2026",
+          "url": "https://cuantomecuesta.com/mx/seguro-gastos-medicos/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Rio Times - Cost of Living Playa del Carmen Expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-playa-del-carmen-expats-2026/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "insurance": {
-      "typical": 250,
-      "min": 150,
-      "max": 380,
-      "annualInflation": 0.04
+      "typical": 12,
+      "min": 7,
+      "max": 20,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-08",
+      "notes": "Re-modeled from old template (250 = health) to renters/contents only: tenant contents policies 1,500-4,000 MXN/yr (May 2026), about 7-18 USD/mo. Hurricane-zone: confirm windstorm is included in the contents policy.",
+      "sources": [
+        {
+          "title": "CuantoMeCuesta - Seguro incendio/temblor y contenidos, mayo 2026",
+          "url": "https://cuantomecuesta.com/mx/seguro-incendio-temblor/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "petCare": {
-      "typical": 50,
+      "typical": 45,
       "min": 30,
       "max": 80,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "National pricing reused: vet visit about 480-740 MXN, Bravecto large-dog dose 899-999 MXN per 3 months; 2 visits, vaccines, flea/tick and heartworm preventives = roughly 8,000-10,000 MXN/yr (35-45 USD/mo). Riviera Maya clinics skew slightly pricier than Merida.",
+      "sources": [
+        {
+          "title": "Cronoshare - precios veterinario (Merida reference)",
+          "url": "https://www.cronoshare.com.mx/servicios/veterinario/yucatan/merida",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Rappi - Bravecto antipulgas para perro precio",
+          "url": "https://www.rappi.com.mx/p/bravecto-antipulgas-para-perro-de-2-757948",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "petDaycare": {
-      "typical": 120,
-      "min": 80,
-      "max": 200,
-      "annualInflation": 0.03
+      "typical": 90,
+      "min": 50,
+      "max": 170,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Profeco large-breed boarding 250-495 MXN/night nationally; about 4 nights/month plus occasional daycare = 1,000-2,000 MXN (53-107 USD); max covers a 10-night trip month.",
+      "sources": [
+        {
+          "title": "TV Azteca - Cuanto cuesta dejar a un perro en una pension o guarderia",
+          "url": "https://www.tvazteca.com/aztecanoticias/cuanto-cuesta-dejar-a-un-perro-en-una-pension-o-guarderia-puedes-elegir-el-mejor",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "petGrooming": {
-      "typical": 40,
-      "min": 25,
-      "max": 65,
-      "annualInflation": 0.03
+      "typical": 30,
+      "min": 20,
+      "max": 55,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "National 2026 guide: giant long-haired dog bath 420-520 MXN, bath plus cut 480-550 MXN; one full groom per month = about 27-32 USD, max allows an extra deshedding bath in the humid season.",
+      "sources": [
+        {
+          "title": "Cronoshare - Cuanto cuesta un servicio de peluqueria canina (Jan 2026)",
+          "url": "https://www.cronoshare.com.mx/cuanto-cuesta/peluqueria-canina",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "transportation": {
-      "typical": 150,
-      "min": 80,
-      "max": 240,
-      "annualInflation": 0.03
+      "typical": 210,
+      "min": 70,
+      "max": 320,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "One modest car: Magna about 24 MXN/L in the southeast (Profeco Sep 2026; national premium avg 28.57), 80 L/mo = about 100 USD; cobertura amplia insurance 12,500-15,800 MXN/yr (56-70 USD/mo); plus maintenance and Quintana Roo registration. Min = no car: colectivo 0.58 USD/ride, in-town taxi 3.50-8.75 USD (Rio Times Sep 2026).",
+      "sources": [
+        {
+          "title": "Por Esto - Profeco gasolina Merida / sureste Sep 2026",
+          "url": "https://www.poresto.com/yucatan/merida/2026/9/24/profeco-coloca-a-merida-entre-las-ciudades-con-gasolina-premium-mas-barata.html",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "AhorraSeguros - Cuanto cuesta un seguro de auto (Nov 2026)",
+          "url": "https://ahorraseguros.mx/seguros-de-autos/guias/cuanto-cuesta-un-seguro-de-auto/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Rio Times - Cost of Living Playa del Carmen Expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-playa-del-carmen-expats-2026/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 240,
+      "typical": 270,
       "min": 150,
-      "max": 360,
-      "annualInflation": 0.03
+      "max": 420,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Broadband 60 Mbps+ about 31 USD (Totalplay/Izzi fiber similar), ~30 USD streaming, three-course dinner for two about 47 USD roughly 4x/month, plus beach clubs, cenotes and ferry trips (Rio Times Sep 2026).",
+      "sources": [
+        {
+          "title": "Rio Times - Cost of Living Playa del Carmen Expats 2026",
+          "url": "https://www.riotimesonline.com/cost-of-living-playa-del-carmen-expats-2026/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "clothing": {
       "typical": 70,
@@ -109,10 +238,24 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 81,
-      "min": 66,
-      "max": 101,
-      "annualInflation": 0.02
+      "typical": 30,
+      "min": 21,
+      "max": 55,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-08",
+      "notes": "National carrier pricing reused: Movistar Plan Pro 20 GB 309 MXN/mo, AT&T prepaid 200 MXN/12 GB, Telcel Amigo Sin Limite 200 MXN/30 days; two lines 400-620 MXN = 21-33 USD at 18.75.",
+      "sources": [
+        {
+          "title": "Selectra MX - planes celulares 5G (tables dated Nov 2, 2026)",
+          "url": "https://selectra.mx/celular/5g",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "El Imparcial - Cuanto cuesta recargar Telcel en 2026",
+          "url": "https://www.elimparcial.com/espectaculos/2026/03/17/cuanto-cuesta-recargar-telcel-en-2026-paquetes-y-opciones-sin-limite-explicados/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "taxes": {
       "typical": 0,

@@ -90,9 +90,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 72,
-      "typical": 87,
-      "max": 107
+      "min": 32,
+      "typical": 50,
+      "max": 70
     },
     "plans": [
       {
@@ -121,13 +121,14 @@
         "title": "Google Fi Plans",
         "url": "https://fi.google.com/about/plans"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-08"
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 284,
-      "typical": 355,
-      "max": 444
+      "min": 180,
+      "typical": 300,
+      "max": 450
     },
     "categories": [
       {
@@ -190,13 +191,14 @@
         "seniorDiscounts": "No specific discounts.",
         "notes": "Coffee ~€2.00-3.50. Budget for 2 visits/week. ~$14/mo."
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-08"
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 29,
-      "typical": 63,
-      "max": 230
+      "min": 30,
+      "typical": 110,
+      "max": 240
     },
     "publicTransit": {
       "monthlyPass": {
@@ -272,7 +274,8 @@
         "max": 334,
         "notes": "Includes insurance, fuel, parking, maintenance. Higher urban parking and insurance costs."
       }
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-08"
   },
   "visionDental": {
     "monthlyBudget": {
@@ -560,9 +563,9 @@
   "housing": {
     "propertyType": "2-bedroom house or ground-floor apartment",
     "monthlyBudget": {
-      "min": 1040,
-      "max": 1690,
-      "typical": 1300
+      "min": 1350,
+      "max": 2200,
+      "typical": 1600
     },
     "breakdown": {
       "baseRent": 1300,
@@ -573,7 +576,8 @@
     },
     "taxNotes": "No rental tax in Malta. Stamp duty (1%) paid on lease registration. Property tax is landlord responsibility.",
     "leaseTerms": "1-year standard lease. Security deposit 1 month rent. Agency fee typically half month rent. Contracts must be registered with Housing Authority.",
-    "marketNotes": "UNESCO World Heritage capital. Mix of restored historic townhouses and modern apartments."
+    "marketNotes": "UNESCO World Heritage capital. Mix of restored historic townhouses and modern apartments.",
+    "monthlyBudgetRefreshed": "2026-11-08"
   },
   "groceryStores": {
     "stores": [

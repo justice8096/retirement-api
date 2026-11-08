@@ -34,77 +34,329 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 1150,
+      "typical": 1250,
       "min": 900,
-      "max": 1400,
-      "annualInflation": 0.04
+      "max": 1800,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-08",
+      "notes": "Numbeo PV (6 Nov 2026, 20 contributors): 3BR outside centre MXN 20,433 (~USD 1,090), 3BR centre MXN 37,133 (~USD 1,980); Fluvial Vallarta 2-3BR houses listed MXN 11,000-29,000 (median ~17,000); CB La Costa 2026 comfortable 1-2BR USD 1,200. Pet-friendly 2-3BR in Fluvial/Versalles/Las Gaviotas ~USD 1,100-1,500. Converted at ~18.75 MXN/USD (Banxico FIX 18.79 on 30 Oct 2026).",
+      "sources": [
+        {
+          "title": "Numbeo: Cost of Living in Puerto Vallarta (updated 6 Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Puerto-Vallarta",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Casas en renta Avenida Fluvial Vallarta (Nestoria)",
+          "url": "https://www.nestoria.mx/avenida-fluvial-vallarta/casa/renta",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Cost of Living Puerto Vallarta 2026 (CB La Costa)",
+          "url": "https://www.cblacosta.com/blog/cost-of-living-puerto-vallarta-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Precio del dolar hoy 2 de noviembre (Banxico FIX)",
+          "url": "https://www.publimetro.com.mx/noticias/2026/11/02/precio-del-dolar-hoy-lunes-2-de-noviembre-golpe-al-bolsillo-de-los-mexicanos/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "groceries": {
-      "typical": 450,
-      "min": 340,
-      "max": 580,
-      "annualInflation": 0.03
+      "typical": 480,
+      "min": 360,
+      "max": 640,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "CB La Costa 2026 couple groceries USD 300 modest / 450 comfortable; GayPV USD 350 local shopping; Numbeo PV prices (chicken MXN 91/lb, eggs MXN 41) run above Chapala/Mazatlan. Adds USD 35-100/mo large-breed kibble. Headline inflation 3.62%. Converted at ~18.75 MXN/USD (Banxico FIX 18.79 on 30 Oct 2026).",
+      "sources": [
+        {
+          "title": "Cost of Living Puerto Vallarta 2026 (CB La Costa)",
+          "url": "https://www.cblacosta.com/blog/cost-of-living-puerto-vallarta-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "The 2026 Puerto Vallarta Reality Check: costs, rents",
+          "url": "https://gaypv.com/?p=74335",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Numbeo: Cost of Living in Puerto Vallarta (updated 6 Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Puerto-Vallarta",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Walmart MX alimento seco para perros (precios)",
+          "url": "https://www.walmart.com.mx/browse/mascotas/perros/alimento-seco-para-perros/265487_265488_120429",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Inflacion en Mexico 3.62% primera quincena octubre 2026 (INEGI)",
+          "url": "https://www.excelsior.com.mx/finanzas/inflacion-mexico-sube-primera-quincena-octubre-2026",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Precio del dolar hoy 2 de noviembre (Banxico FIX)",
+          "url": "https://www.publimetro.com.mx/noticias/2026/11/02/precio-del-dolar-hoy-lunes-2-de-noviembre-golpe-al-bolsillo-de-los-mexicanos/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "utilities": {
-      "typical": 140,
-      "min": 90,
-      "max": 210,
-      "annualInflation": 0.035
+      "typical": 135,
+      "min": 70,
+      "max": 250,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-08",
+      "notes": "Hot humid coast: electricity USD 30-60 in cool months but USD 150-250+ in summer with A/C (CB La Costa, GayPV); water+gas USD 20-50; Numbeo basic utilities MXN 1,575 (~USD 84). Annualized average ~USD 135. Converted at ~18.75 MXN/USD (Banxico FIX 18.79 on 30 Oct 2026).",
+      "sources": [
+        {
+          "title": "Cost of Living Puerto Vallarta 2026 (CB La Costa)",
+          "url": "https://www.cblacosta.com/blog/cost-of-living-puerto-vallarta-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "The 2026 Puerto Vallarta Reality Check: costs, rents",
+          "url": "https://gaypv.com/?p=74335",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Numbeo: Cost of Living in Puerto Vallarta (updated 6 Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Puerto-Vallarta",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Precio del dolar hoy 2 de noviembre (Banxico FIX)",
+          "url": "https://www.publimetro.com.mx/noticias/2026/11/02/precio-del-dolar-hoy-lunes-2-de-noviembre-golpe-al-bolsillo-de-los-mexicanos/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 180,
-      "min": 90,
-      "max": 300,
+      "typical": 400,
+      "min": 185,
+      "max": 900,
       "annualInflation": 0.04,
-      "notes": "IMSS public system available to residents (~$500-700/yr fixed, varies by age). Private international plans ~$100-300/mo. Anti-VEGF injections widely available in Mexico City, Guadalajara, Monterrey, and San Miguel; ~$700-1,200/injection at private. GLP-1 via private prescription, ~$200-400/mo. Major retiree expat hubs (San Miguel, Lake Chapala, Mérida) have strong English-speaking specialist networks."
+      "notes": "IMSS Modalidad 33 voluntary enrollment for age 60-69 is MXN 20,600/yr per person from 1 Mar 2026 (~USD 92/mo, ~USD 183/mo for two); this is the min. Typical adds a basic private Mexican plan for one person (brokers quote ~USD 120-300/mo per person at 60 for Mexican-insurer plans, USD 320-500 for broader cover); max is two basic-to-mid private plans. Converted at ~18.75 MXN/USD (Banxico FIX 18.79 on 30 Oct 2026).",
+      "lastVerified": "2026-11-08",
+      "sources": [
+        {
+          "title": "Healthcare in Mexico for expats 2026 (IMSS Modalidad 33 rates from 1 Mar 2026)",
+          "url": "https://www.riotimesonline.com/healthcare-mexico-expats-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Incorporacion voluntaria al IMSS cuesta 20,538 pesos al ano (2026)",
+          "url": "https://www.elimparcial.com/dinero/2026/04/15/incorporacion-voluntaria-al-imss-cuesta-20538-pesos-al-ano-pero-no-habra-devoluciones-ni-acceso-con-ciertas-enfermedades/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "IMSS Seguro de Salud para la Familia: costo por edad",
+          "url": "https://www.nmas.com.mx/sociedad/programas-sociales/que-es-seguro-facultativo-imss-y-para-quienes-aplica-este-es-costo-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "The 2026 Puerto Vallarta Reality Check: costs, rents",
+          "url": "https://gaypv.com/?p=74335",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Precio del dolar hoy 2 de noviembre (Banxico FIX)",
+          "url": "https://www.publimetro.com.mx/noticias/2026/11/02/precio-del-dolar-hoy-lunes-2-de-noviembre-golpe-al-bolsillo-de-los-mexicanos/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "insurance": {
-      "typical": 250,
-      "min": 150,
-      "max": 380,
-      "annualInflation": 0.04
+      "typical": 8,
+      "min": 4,
+      "max": 15,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-08",
+      "notes": "Re-modeled from old template (health) to renters/contents only: Mexican contents cover of MXN 200k-300k runs about MXN 800-2,000/yr (~USD 4-9/mo); max allows a standalone policy with liability. Converted at ~18.75 MXN/USD (Banxico FIX 18.79 on 30 Oct 2026).",
+      "sources": [
+        {
+          "title": "Cuanto cuesta un seguro de hogar en Mexico? Precios 2026",
+          "url": "https://cuantomecuesta.com/mx/seguro-hogar/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Precio del dolar hoy 2 de noviembre (Banxico FIX)",
+          "url": "https://www.publimetro.com.mx/noticias/2026/11/02/precio-del-dolar-hoy-lunes-2-de-noviembre-golpe-al-bolsillo-de-los-mexicanos/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "petCare": {
-      "typical": 50,
-      "min": 30,
+      "typical": 45,
+      "min": 25,
       "max": 80,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Large-dog private-clinic basket: 2 consults (MXN 200-350), annual polyvalent + rabies (MXN 450-1,000), monthly flea/tick (MXN 120-300), quarterly deworming (MXN 70-200), dental cleaning every 2 yrs (MXN 2,500-4,000 for large dogs) = roughly MXN 7,000-10,000/yr. Converted at ~18.75 MXN/USD (Banxico FIX 18.79 on 30 Oct 2026).",
+      "sources": [
+        {
+          "title": "Precios veterinario Mexico, abril 2026",
+          "url": "https://cuantomecuesta.com/mx/veterinario/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Precio del dolar hoy 2 de noviembre (Banxico FIX)",
+          "url": "https://www.publimetro.com.mx/noticias/2026/11/02/precio-del-dolar-hoy-lunes-2-de-noviembre-golpe-al-bolsillo-de-los-mexicanos/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "petDaycare": {
-      "typical": 120,
-      "min": 80,
-      "max": 200,
-      "annualInflation": 0.03
+      "typical": 60,
+      "min": 25,
+      "max": 130,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Boarding for dogs over 21 kg runs MXN 300-350/night (Cronoshare) and Profeco found MXN 200-500/night; modeled as ~2 weeks boarding per year plus 1-2 daycare days a month. Converted at ~18.75 MXN/USD (Banxico FIX 18.79 on 30 Oct 2026).",
+      "sources": [
+        {
+          "title": "Cuanto cuesta una guarderia canina (Cronoshare MX)",
+          "url": "https://www.cronoshare.com.mx/cuanto-cuesta/guarderia-perros",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Esto cuesta dejar a tu mascota en una pension, segun Profeco",
+          "url": "https://www.elimparcial.com/dinero/2024/12/21/esto-cuesta-dejar-a-tu-mascota-en-una-pension-en-mexico-segun-profeco/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Precio del dolar hoy 2 de noviembre (Banxico FIX)",
+          "url": "https://www.publimetro.com.mx/noticias/2026/11/02/precio-del-dolar-hoy-lunes-2-de-noviembre-golpe-al-bolsillo-de-los-mexicanos/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "petGrooming": {
-      "typical": 40,
-      "min": 25,
-      "max": 65,
-      "annualInflation": 0.03
+      "typical": 35,
+      "min": 20,
+      "max": 60,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Bath and trim quoted at MXN 150-600 per visit nationally; a 100 lb double-coated dog sits at the top of that range (MXN 500-900) every 6-8 weeks. Converted at ~18.75 MXN/USD (Banxico FIX 18.79 on 30 Oct 2026).",
+      "sources": [
+        {
+          "title": "Precios veterinario Mexico, abril 2026",
+          "url": "https://cuantomecuesta.com/mx/veterinario/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Precio del dolar hoy 2 de noviembre (Banxico FIX)",
+          "url": "https://www.publimetro.com.mx/noticias/2026/11/02/precio-del-dolar-hoy-lunes-2-de-noviembre-golpe-al-bolsillo-de-los-mexicanos/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "transportation": {
-      "typical": 160,
-      "min": 90,
-      "max": 250,
-      "annualInflation": 0.03
+      "typical": 200,
+      "min": 80,
+      "max": 320,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "One car: Magna MXN 24.56/L in Puerto Vallarta (Nov 5 2026), ~90 L/mo = MXN 2,200; cobertura amplia MXN 12,500-15,800/yr; Jalisco refrendo MXN 1,100/yr; maintenance. Min is buses (~MXN 12/ride, Numbeo pass MXN 484) plus Uber/taxis. Converted at ~18.75 MXN/USD (Banxico FIX 18.79 on 30 Oct 2026).",
+      "sources": [
+        {
+          "title": "Precio de la gasolina en Jalisco hoy 5 de noviembre de 2026",
+          "url": "https://www.aztecajalisco.com/noticias-jalisco-local/precio-de-la-gasolina-en-jalisco-hoy-5-de-noviembre-de-2026-cuanto-cuesta-la-magna-premium-y-diesel/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Cuanto cuesta un seguro de auto en Mexico (actualizado 2 Nov 2026)",
+          "url": "https://ahorraseguros.mx/seguros-de-autos/guias/cuanto-cuesta-un-seguro-de-auto/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Costo del refrendo vehicular en Jalisco 2026",
+          "url": "https://www.tvazteca.com/aztecanoticias/costo-del-refrendo-vehicular-en-jalisco-2026-precio-descuentos/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Numbeo: Cost of Living in Puerto Vallarta (updated 6 Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Puerto-Vallarta",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Precio del dolar hoy 2 de noviembre (Banxico FIX)",
+          "url": "https://www.publimetro.com.mx/noticias/2026/11/02/precio-del-dolar-hoy-lunes-2-de-noviembre-golpe-al-bolsillo-de-los-mexicanos/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 260,
-      "min": 160,
-      "max": 380,
-      "annualInflation": 0.03
+      "typical": 325,
+      "min": 190,
+      "max": 480,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Fiber 500M-1G MXN 599-869 (~USD 35-48) + streaming ~USD 30 + mid-range dinner for two MXN 1,050 x 4/mo (~USD 225) + activities/beach clubs ~USD 40. CB La Costa dining+entertainment USD 150-400. Converted at ~18.75 MXN/USD (Banxico FIX 18.79 on 30 Oct 2026).",
+      "sources": [
+        {
+          "title": "Numbeo: Cost of Living in Puerto Vallarta (updated 6 Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Puerto-Vallarta",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Cost of Living Puerto Vallarta 2026 (CB La Costa)",
+          "url": "https://www.cblacosta.com/blog/cost-of-living-puerto-vallarta-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Mejores planes de internet para casa Mexico 2026",
+          "url": "https://tecnoguias.net/mejores-planes-internet-casa-mexico-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Precio del dolar hoy 2 de noviembre (Banxico FIX)",
+          "url": "https://www.publimetro.com.mx/noticias/2026/11/02/precio-del-dolar-hoy-lunes-2-de-noviembre-golpe-al-bolsillo-de-los-mexicanos/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "clothing": {
       "typical": 70,
       "min": 40,
       "max": 110,
-      "annualInflation": 0.02
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-08",
+      "notes": "Chain-store prices (jeans ~MXN 1,000, running shoes ~MXN 1,875, summer dress ~MXN 630) are near US levels; stored couple budget retained as consistent with those prices. Converted at ~18.75 MXN/USD (Banxico FIX 18.79 on 30 Oct 2026).",
+      "sources": [
+        {
+          "title": "Numbeo: Cost of Living in Puerto Vallarta (updated 6 Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Puerto-Vallarta",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Precio del dolar hoy 2 de noviembre (Banxico FIX)",
+          "url": "https://www.publimetro.com.mx/noticias/2026/11/02/precio-del-dolar-hoy-lunes-2-de-noviembre-golpe-al-bolsillo-de-los-mexicanos/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "personalCare": {
-      "typical": 50,
+      "typical": 55,
       "min": 30,
-      "max": 80,
-      "annualInflation": 0.03
+      "max": 90,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-08",
+      "notes": "Men's haircut MXN 270, women's cut MXN 600 (Numbeo PV); couple haircuts plus toiletries and occasional salon/pharmacy items. Converted at ~18.75 MXN/USD (Banxico FIX 18.79 on 30 Oct 2026).",
+      "sources": [
+        {
+          "title": "Numbeo: Cost of Living in Puerto Vallarta (updated 6 Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Puerto-Vallarta",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Precio del dolar hoy 2 de noviembre (Banxico FIX)",
+          "url": "https://www.publimetro.com.mx/noticias/2026/11/02/precio-del-dolar-hoy-lunes-2-de-noviembre-golpe-al-bolsillo-de-los-mexicanos/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "subscriptions": {
       "typical": 80,
@@ -113,10 +365,29 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 81,
-      "min": 66,
-      "max": 101,
-      "annualInflation": 0.02
+      "typical": 50,
+      "min": 25,
+      "max": 80,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-08",
+      "notes": "Two postpaid Telcel lines: Ultra 4 (25 GB) MXN 449/line = MXN 898 typical; min two prepaid Amigo Sin Limite 200 (MXN 400); max two Ultra 7 (60 GB) at MXN 749 or Movistar Pro Ilimitado MXN 599. Converted at ~18.75 MXN/USD (Banxico FIX 18.79 on 30 Oct 2026).",
+      "sources": [
+        {
+          "title": "Telcel paquetes y planes (tablas actualizadas 2 Nov 2026)",
+          "url": "https://internetencasa.mx/analisis-companias/telcel/paquetes",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Planes con datos ilimitados Telcel/AT&T/Movistar (Nov 2026)",
+          "url": "https://selectra.mx/celular/internet-ilimitado",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Precio del dolar hoy 2 de noviembre (Banxico FIX)",
+          "url": "https://www.publimetro.com.mx/noticias/2026/11/02/precio-del-dolar-hoy-lunes-2-de-noviembre-golpe-al-bolsillo-de-los-mexicanos/",
+          "accessed": "2026-11-08"
+        }
+      ]
     },
     "taxes": {
       "typical": 0,
@@ -146,9 +417,23 @@
     },
     "medicalOOP": {
       "min": 40,
-      "typical": 75,
-      "max": 150,
-      "annualInflation": 0.04
+      "typical": 90,
+      "max": 180,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-08",
+      "notes": "Cash prices 2026: GP MXN 600-1,400, specialist MXN 800-2,000, private imaging MXN 3,400-15,300; modeled as roughly one visit per person per month plus labs and dental cleanings, with private-plan deductibles (MXN 20k-80k) pushing the max. Converted at ~18.75 MXN/USD (Banxico FIX 18.79 on 30 Oct 2026).",
+      "sources": [
+        {
+          "title": "Healthcare in Mexico for expats 2026 (IMSS Modalidad 33 rates from 1 Mar 2026)",
+          "url": "https://www.riotimesonline.com/healthcare-mexico-expats-2026/",
+          "accessed": "2026-11-08"
+        },
+        {
+          "title": "Precio del dolar hoy 2 de noviembre (Banxico FIX)",
+          "url": "https://www.publimetro.com.mx/noticias/2026/11/02/precio-del-dolar-hoy-lunes-2-de-noviembre-golpe-al-bolsillo-de-los-mexicanos/",
+          "accessed": "2026-11-08"
+        }
+      ]
     }
   },
   "healthcare": {
