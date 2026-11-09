@@ -37,47 +37,159 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 1000,
-      "min": 800,
-      "max": 1300,
-      "annualInflation": 0.04
+      "typical": 1200,
+      "min": 950,
+      "max": 1550,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-09",
+      "notes": "Porto city asking rents 14.57 EUR/m2 (Aug 2026 listings): ~1165 for an 80 m2 T2, ~1455 for a 100 m2 T3; Euro Dicas quotes T2 950-1350 and T3 outside centre 1451, Ricavida ~900 for a T2. Pet-friendly units carry a premium; Numbeo 3BR outside centre 1529.",
+      "sources": [
+        {
+          "title": "Doutor Financas - Observatorio do Mercado Imobiliario Residencial, agosto 2026 (rent EUR/m2 by municipality)",
+          "url": "https://www.doutorfinancas.pt/wp-content/uploads/2026/08/observatorio-imobiliario-agosto-2026.pdf",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Euro Dicas - Custo de vida no Porto (values checked May 2026, updated Oct 2026)",
+          "url": "https://www.eurodicas.com.br/custo-de-vida-no-porto/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Ricavida - Casas no Porto: guia completo para 2026",
+          "url": "https://ricavida.pt/casas-no-porto-guia-completo-para-2026/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo - Cost of Living in Porto (updated 8 Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Porto",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "groceries": {
-      "typical": 420,
-      "min": 340,
-      "max": 530,
-      "annualInflation": 0.03
+      "typical": 500,
+      "min": 420,
+      "max": 650,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Supermarket spend for a couple in Porto 350-600 EUR; add ~70-90 EUR for premium large-breed kibble (14 kg bag ~50 EUR lasts under a month for a 45 kg dog). Unprocessed food CPI +3.7% y/y Oct 2026 flash.",
+      "sources": [
+        {
+          "title": "Euro Dicas - Custo de vida no Porto (values checked May 2026, updated Oct 2026)",
+          "url": "https://www.eurodicas.com.br/custo-de-vida-no-porto/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "E-konomista - Quanto custa ter um cao (dog food and grooming prices; 2018 article)",
+          "url": "https://www.e-konomista.pt/quanto-custa-ter-um-cao/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Simula.pt - INE flash estimate, inflation October 2026 (unprocessed food +3.7% y/y, energy +17.4%)",
+          "url": "https://simula.pt/noticias/inflacao-outubro-2026-estimativa-rapida/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "utilities": {
-      "typical": 155,
-      "min": 115,
-      "max": 210,
-      "annualInflation": 0.035
+      "typical": 160,
+      "min": 110,
+      "max": 220,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-09",
+      "notes": "Electricity+gas 70-140 and water 25-40 EUR/month (Euro Dicas, May 2026); Numbeo basic utilities 143 EUR for 85 m2. Energy CPI +17.4% y/y in Oct 2026 pushes the upper end. Excludes internet.",
+      "sources": [
+        {
+          "title": "Euro Dicas - Custo de vida no Porto (values checked May 2026, updated Oct 2026)",
+          "url": "https://www.eurodicas.com.br/custo-de-vida-no-porto/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo - Cost of Living in Porto (updated 8 Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Porto",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Simula.pt - INE flash estimate, inflation October 2026 (unprocessed food +3.7% y/y, energy +17.4%)",
+          "url": "https://simula.pt/noticias/inflacao-outubro-2026-estimativa-rapida/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 105,
-      "min": 70,
-      "max": 155,
+      "typical": 290,
+      "min": 150,
+      "max": 400,
       "annualInflation": 0.04,
-      "notes": "SNS public healthcare after NHR/D7 visa residency. Private insurance optional (~€80-120/person/mo with pre-existing conditions). Anti-VEGF injections available through SNS hospitals. Pre-existing condition loading on private plans. GLP-1 covered through SNS for diabetes."
+      "notes": "SNS is essentially free for legal residents (GP visits free since 2022), so this is the private top-up cover retiree couples typically carry: domestic comprehensive plans for a couple both aged 60 run about 250-360 EUR/month combined (basic hospital-only plans for two ~140-200). Former stored value excluded the insurance that was parked in 'insurance'; renewal increases of 8-15%/yr after 60 are common.",
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "Apoio Juridico Imigracao - Portugal private health insurance for expats 2026 (premiums by age, couple both 60)",
+          "url": "https://www.apoiojuridico-imigracao.com/blog/portugal-private-health-insurance-expats-2026",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Bozeco - Best private health insurance in Portugal 2026 (premium tables by age band, updated Sep 2026)",
+          "url": "https://bozeco.com/articles/30_private_health_insurance.html",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Freenance - Expat health insurance Portugal 2026: SNS access for residents",
+          "url": "https://freenance.io/insurance/expat-health-insurance-portugal-2026-sns-public-private-multicare-medis-cuf-luz-cost/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "insurance": {
-      "typical": 125,
-      "min": 85,
-      "max": 175,
-      "annualInflation": 0.04
+      "typical": 8,
+      "min": 4,
+      "max": 15,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-09",
+      "notes": "Re-modeled from old template (stored value was health insurance). DECO Sep 2026: tenant contents policy on 30,000 EUR of contents incl. seismic cover costs 46.81-92.10 EUR in Porto per year, so about 4-8 EUR/month; tenant-specific extras can add a little.",
+      "sources": [
+        {
+          "title": "DECO Proteste - Melhor seguro casa para inquilinos (Sep 2026, contents 30k EUR premiums Faro/Lisboa/Porto)",
+          "url": "https://www.deco.proteste.pt/dinheiro/seguro-multirriscos-habitacao/noticias/melhor-seguro-casa-para-inquilinos",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petCare": {
-      "typical": 60,
-      "min": 40,
+      "typical": 55,
+      "min": 25,
       "max": 100,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Basic consult 27.65 EUR, annual vaccines 30-50, flea/tick ~6/month and internal deworming ~4/quarter; large-dog doses cost more and a senior Bernese usually adds bloodwork and 1-2 extra visits, so ~300-1200 EUR/yr.",
+      "sources": [
+        {
+          "title": "Generali Tranquilidade - Preco consulta veterinario (Apr 2025: consult 27.65 EUR, vaccines 30-50, deworming)",
+          "url": "https://www.generalitranquilidade.pt/blog/familia/preco-consulta-veterinario",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petDaycare": {
-      "typical": 150,
-      "min": 100,
-      "max": 250,
-      "annualInflation": 0.03
+      "typical": 110,
+      "min": 60,
+      "max": 200,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Dog hotels average ~15 EUR/night nationally (range 4-26); Porto-district daycare/boarding quotes 9-20 EUR/day (median 12). Occasional use of 5-10 days a month.",
+      "sources": [
+        {
+          "title": "DECO Proteste - Hoteis para caes e gatos: quanto custam por noite (75 hotels, avg 15 EUR/night, 2024)",
+          "url": "https://www.deco.proteste.pt/familia-consumo/animais-estimacao/noticias/hoteis-para-caes-e-gatos-quanto-custam-por-noite",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Fixando - Hotel e creche para animais, Porto district prices 2026 (daily 9-20 EUR, median 12)",
+          "url": "https://www.fixando.pt/en/hotel-e-creche-para-animais/preco/Porto/Marco_de_Canaveses",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petGrooming": {
       "typical": 50,
@@ -86,22 +198,64 @@
       "annualInflation": 0.03
     },
     "transportation": {
-      "typical": 120,
-      "min": 75,
-      "max": 180,
-      "annualInflation": 0.03
+      "typical": 150,
+      "min": 80,
+      "max": 250,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Two Andante metropolitano passes 40 EUR each (price frozen for 2026) = 80; a modest car instead costs ~145/month (fuel 2.0-2.2 EUR/L, insurance avg ~344 EUR/yr, maintenance/IUC). Typical assumes passes plus taxis or light car use.",
+      "sources": [
+        {
+          "title": "ECO - Andante passes keep price in 2026 (metropolitano 40 EUR, municipal 30 EUR)",
+          "url": "https://eco.sapo.pt/2025/11/28/bilhetes-de-bordo-e-andante-ocasional-com-aumento-em-2026-mas-passes-mantem-preco/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Caetano - Preco dos combustiveis esta semana (2-8 Nov 2026: gasoleo 2.205, gasolina 95 2.006 EUR/L, DGEG)",
+          "url": "https://caetano.pt/blog/preco-dos-combustiveis-esta-semana/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "E-konomista - Seguro automovel mais caro em 2026 (avg premium ~344 EUR/yr, +11.4%)",
+          "url": "https://www.e-konomista.pt/seguro-automovel-mais-caro-em-2026/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 240,
-      "min": 170,
-      "max": 340,
-      "annualInflation": 0.03
+      "typical": 270,
+      "min": 180,
+      "max": 380,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "1 Gbps fiber 29-45 EUR (Numbeo 60Mbps+ 31), streaming ~30, mid-range meal for two 50 EUR x3, cinema 8 EUR and activities.",
+      "sources": [
+        {
+          "title": "Portugal Internet - Home internet Portugal 2026 (1 Gbps fiber 29-45 EUR)",
+          "url": "https://www.portugalinternet.com/en/blog/home-internet-portugal",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo - Cost of Living in Porto (updated 8 Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Porto",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "clothing": {
       "typical": 80,
       "min": 50,
       "max": 120,
-      "annualInflation": 0.02
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "Numbeo Porto: jeans 92.50 EUR, chain-store dress 29.71, Nike runners 83.75, leather shoes 92.89; a few items per month for two fits the stored 80 (national proxy for Silver Coast).",
+      "sources": [
+        {
+          "title": "Numbeo - Cost of Living in Porto (updated 8 Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Porto",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "personalCare": {
       "typical": 60,
@@ -116,10 +270,24 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 85,
-      "min": 70,
-      "max": 105,
-      "annualInflation": 0.02
+      "typical": 26,
+      "min": 14,
+      "max": 40,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "Two lines: Digi unlimited 6 EUR each (14 total), MEO/NOS unlimited 12.99-13 each (~26), Vodafone unlimited 20 each (40). Stored 85 was far above current market after the 2025-2026 price war.",
+      "sources": [
+        {
+          "title": "4gnews - Tarifario telemovel melhor preco (Jul 2026: Digi 6 EUR unlimited, MEO/NOS 12.99, Vodafone 20)",
+          "url": "https://4gnews.pt/tarifario-telemovel-melhor-preco/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "ComparaJa - Vodafone, NOS e MEO lancam tarifarios por 13 euros (Sep 2026)",
+          "url": "https://www.comparaja.pt/tv-net-voz/noticias/tarifario-movel-13-euros-setembro-2026",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "taxes": {
       "typical": 600,
@@ -151,7 +319,16 @@
       "min": 40,
       "typical": 80,
       "max": 160,
-      "annualInflation": 0.035
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-09",
+      "notes": "SNS user fees are small; private consult without insurance ~85 EUR, with insurance co-pay ~17 EUR, elective procedure co-pays up to ~250 EUR. Stored range kept as consistent with these.",
+      "sources": [
+        {
+          "title": "Nomad Gate community - Health insurance in Portugal (private visit ~85 EUR, insured co-pay ~17 EUR)",
+          "url": "https://community.nomadgate.com/t/health-insurance/59826",
+          "accessed": "2026-11-09"
+        }
+      ]
     }
   },
   "healthcare": {

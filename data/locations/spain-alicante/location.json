@@ -44,12 +44,30 @@
   },
   "monthlyCosts": {
     "rent": {
-      "min": 750,
-      "max": 1200,
-      "typical": 950,
+      "min": 900,
+      "max": 1600,
+      "typical": 1200,
       "type": "2-bedroom house/villa (chalet)",
       "annualInflation": 0.03,
-      "notes": "No VAT (IVA) on residential rent in Spain."
+      "notes": "idealista: Alicante city EUR 13.0/m2 in Oct 2025 (record) and +5.6% y/y to Oct 2026, so about EUR 13.7/m2; a pet-friendly 2-3BR house/apartment of 85-100 m2 lands at EUR 1,150-1,400. Numbeo Nov 2026: 3BR EUR 1,348 outside centre, EUR 1,594 centre. Pet-friendly listings carry a premium; no VAT on residential rent.",
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "idealista: El precio del alquiler en Espana sube un 5,6% interanual en octubre 2026",
+          "url": "https://www.idealista.com/sala-de-prensa/notas-de-prensa/2026/11/03/275251-el-precio-del-alquiler-en-espana-sube-un-5-6-interanual-durante-el-mes-de",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "El Espanol: precio alquiler Alicante octubre 2025 (idealista data)",
+          "url": "https://www.elespanol.com/alacant/economia/20251104/precio-alquiler-alicante-sube-anual-octubre-barrios-encarecidos/1003743997745_0.html",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo: Cost of Living in Alicante (Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Alicante",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "groceries": {
       "min": 875,
@@ -58,9 +76,9 @@
       "annualInflation": 0.025
     },
     "utilities": {
-      "min": 116,
-      "max": 189,
-      "typical": 145,
+      "min": 125,
+      "max": 215,
+      "typical": 160,
       "annualInflation": 0.03,
       "breakdown": {
         "electricity": {
@@ -85,52 +103,160 @@
         }
       },
       "taxes": "IVA included in bills: 10% on electricity, 10% on gas, 10% on water/sewage.",
-      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig). Trash included in rent. Sewage included in water bill."
+      "notes": "Electricity: PVPC average bill EUR 88/mo for a 3,500 kWh/yr household in Oct 2026 (+26% y/y, papernest); a 2-3BR with summer A/C runs about EUR 100-120. Butane cylinder EUR 15.46 (1-2/mo). Water/sewer (AMAEM) about EUR 35 incl. alcantarillado; trash in rent. Numbeo Alicante basic utilities EUR 125 (90-160). Excludes internet.",
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "papernest: Termometro factura de luz octubre 2026",
+          "url": "https://www.papernest.es/wp-content/uploads/sites/27/2026/11/nota_prensa_termometro_octubre-2.pdf",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Selectra: precio bombona de butano noviembre 2025 (BOE)",
+          "url": "https://selectra.es/energia/noticias/boe-bombona-butano-barata-precio-noviembre",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo: Cost of Living in Alicante (Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Alicante",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "healthcare": {
-      "min": 150,
-      "max": 350,
-      "typical": 220,
-      "notes": "Private insurance required for NLV visa (Sanitas/Adeslas ~€100-140/person/mo, higher with pre-existing conditions: hypertension, hypothyroidism, macular degeneration, obesity). After residency, can access public SNS. Anti-VEGF injections available through public system. Pre-existing condition loading 20-40% on premiums.",
-      "annualInflation": 0.045
+      "min": 185,
+      "max": 375,
+      "typical": 245,
+      "notes": "Resident retiree couple age 60 on private full-cover policies (required for the non-lucrative visa; pre-existing conditions can be loaded or excluded). Poliza Medica Nov 2026 market average at age 60: EUR 91/person full cover with copays, EUR 123/person no-copay; Sanitas Mas Salud 60-64 no-copay EUR 186 (Valencia) to EUR 220 (Barcelona) per person. Typical = 2 x EUR 123; after 1 year of legal residency the public SNS becomes an option via the convenio especial (not priced here). Max uses Sanitas Valencia-region 60-64 no-copay x2.",
+      "annualInflation": 0.045,
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "Poliza Medica: seguros medicos privados precios por edad (Nov 2026)",
+          "url": "https://www.polizamedica.es/seguros/salud/seguros-medicos-privados-precios",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Poliza Medica: seguros medicos para personas mayores (Nov 2026)",
+          "url": "https://www.polizamedica.es/kpw8",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "insurance": {
-      "min": 20,
-      "max": 30,
-      "typical": 25,
-      "annualInflation": 0.02
+      "min": 7,
+      "max": 25,
+      "typical": 12,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "Renters/contents (seguro de inquilino) policy only: Selectra quotes EUR 70-300/yr (Tuio 79, Caser 110, Santalucia 141 for a 71 m2 flat); full owner-type home policies average about EUR 265/yr nationally (Selectra 2026 report), used as the upper bound. Typical about EUR 140/yr. Alicante capital average home premium EUR 282/yr.",
+      "sources": [
+        {
+          "title": "Selectra: seguro para inquilinos precios",
+          "url": "https://selectra.es/seguros/seguros-hogar/seguro-inquilinos",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Selectra: Informe seguros de hogar 2026 (prima media por capital)",
+          "url": "https://selectra.es/sites/selectra.es/files/2026-04/Informe%20seguros%20de%20hogar%202026.pdf",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petCare": {
-      "min": 70,
-      "max": 150,
-      "typical": 100,
-      "annualInflation": 0.03
+      "min": 40,
+      "max": 120,
+      "typical": 65,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Large dog, no food: annual vaccines incl. rabies EUR 50-80, 2 consults EUR 30-60 each, monthly antiparasitic pipette EUR 8-15 plus quarterly worming EUR 12-20, periodic dental cleaning EUR 100-250 (cuantomecuesta, Apr 2026); giant-breed dosing and Bernese health risks push the typical above the EUR 200-400/yr healthy-pet estimate.",
+      "sources": [
+        {
+          "title": "Cuantomecuesta: precios veterinario Espana (abril 2026)",
+          "url": "https://cuantomecuesta.com/es/veterinario/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Hola: cuanto cuesta mantener un perro en Espana (Sep 2025)",
+          "url": "https://www.hola.com/al-dia/20250910854923/cuanto-cuesta-mantener-perro-espana-gastos/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petDaycare": {
-      "min": 170,
+      "min": 130,
       "max": 290,
-      "typical": 220,
+      "typical": 200,
       "annualInflation": 0.03,
-      "notes": "Hired pet sitter 2 days/week (~€24/visit). Commercial daycare very limited on Costa Blanca. In-home pet sitting via Rover.com, Gudog, local cuidadores. Many expat pet sitters available."
+      "notes": "Kept the stored model of a sitter/daycare about 8 days per month: Cronoshare national daycare price EUR 9-30/day, average EUR 16 (8 x 16 = EUR 128; 8 x 24-30 = EUR 190-240) plus a week of boarding per year. Commercial daycare remains thin on the Costa Blanca; in-home sitters dominate.",
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "Cronoshare: guarderia canina precios",
+          "url": "https://www.cronoshare.com/servicios/guarderia-canina",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petGrooming": {
-      "min": 50,
-      "max": 100,
-      "typical": 70,
-      "annualInflation": 0.025
+      "min": 35,
+      "max": 90,
+      "typical": 50,
+      "annualInflation": 0.025,
+      "lastVerified": "2026-11-09",
+      "notes": "Giant long/double coat: bath EUR 42-47, brush-out EUR 20-24, tidy-up EUR 46-51 per visit (Cronoshare 2026 national price guide); modeled as one full groom per month with a brush-out in between.",
+      "sources": [
+        {
+          "title": "Cronoshare: cuanto cuesta peluqueria canina (precios 2026)",
+          "url": "https://www.cronoshare.com/cuanto-cuesta/peluqueria-canina",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "transportation": {
-      "min": 80,
-      "max": 150,
-      "typical": 100,
-      "annualInflation": 0.02
+      "min": 60,
+      "max": 280,
+      "typical": 180,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "One modest car: insurance EUR 394/yr national average (CHECK24 Jan 2026) = EUR 33/mo; gasolina 95 EUR 1.73/l (MITECO 3 Nov 2026) for about 800 km/mo = EUR 95; maintenance, ITV and IVTM about EUR 50. Transit alternative: TAM Bono 30 EUR 24 with 40% subsidy; Mobilis Oro gives pensioners 300 free trips/yr (65+). Min = two bus passes plus taxis.",
+      "sources": [
+        {
+          "title": "CHECK24: prima media seguro de coche enero 2026",
+          "url": "https://seguros.check24.es/wp-content/uploads/2026/02/NdP_La-prima-media-del-seguro-de-coche-arranca-2026-con-un-ligero-descenso-situandose-por-debajo-de-los-400-euros.pdf",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Rmotion: precio combustible Espana (MITECO, 3 Nov 2026)",
+          "url": "https://www.rmotion.es/noticias/precio-combustible-espana/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Alicante Plaza: bonos del bus en Alicante (TAM) 2025",
+          "url": "https://alicanteplaza.es/alicanteplaza/alicante/asi-quedan-los-bonos-del-bus-en-alicante-gratis-hasta-los-14-anos-y-rebaja-del-50-y-el-40-el-resto",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "entertainment": {
-      "min": 282,
-      "max": 442,
-      "typical": 352,
+      "min": 280,
+      "max": 450,
+      "typical": 355,
       "annualInflation": 0.02,
-      "notes": "Incl cable+1Gig internet, Netflix, Amazon Prime, Apple TV+, dining out (lunch for 2 2x/week w/ tax+tip)"
+      "notes": "Home fibre 1 Gbps EUR 20-30 (Digi; Numbeo city average EUR 26-33) plus about EUR 35 streaming, 4 mid-range meals for two at about EUR 60 (Numbeo), and EUR 40-70 activities. Alicante meal for two EUR 60 (35-80).",
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "Kelisto: fibra de Digi precios (octubre 2026)",
+          "url": "https://www.kelisto.es/internet/consejos-y-analisis/fibra-de-digi",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo: Cost of Living in Alicante (Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Alicante",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "clothing": {
       "min": 70,
@@ -152,11 +278,24 @@
       "notes": "Streaming, news, apps"
     },
     "phoneCell": {
-      "min": 68,
-      "max": 100,
-      "typical": 82,
+      "min": 14,
+      "max": 40,
+      "typical": 20,
       "annualInflation": 0.02,
-      "notes": "Google Fi Flexible (US Number) + Digi Mobil (Local). 2 phones, 1.5GB+ high-speed data each, all taxes included."
+      "notes": "Two local lines: Digi 50 GB unlimited calls EUR 7/line, 100 GB EUR 10, unlimited EUR 12 (Kelisto, Oct 2026; Digi froze prices for 2026); Numbeo city average for a 10 GB+ plan is about EUR 17/line. Stored value included a US Google Fi line; add roughly EUR 45/mo if that line is kept.",
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "Kelisto: tarifas de Digi movil (octubre 2026)",
+          "url": "https://www.kelisto.es/telefonia-movil/consejos-y-analisis/movil-con-digi-son-sus-tarifas-las-mas-baratas-del-mercado",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo: Cost of Living in Alicante (Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Alicante",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "miscellaneous": {
       "min": 50,

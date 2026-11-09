@@ -44,77 +44,224 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 1500,
-      "min": 1200,
-      "max": 1800,
-      "annualInflation": 0.04
+      "typical": 1600,
+      "min": 1300,
+      "max": 2000,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-09",
+      "notes": "Idealista Q3 2026 (Sep 2026) asking rents: Malaga province 18.8 EUR/m2 (~1,504 for an 80 m2 2BR), Malaga city 16.5, Mijas 17.1, Estepona 21.1 (~1,688), Marbella 23.6 (~1,888). A pet-friendly 2-3BR of 80-100 m2 in Fuengirola/Mijas/Benalmadena sits around 1,600; Marbella and Estepona push toward the max.",
+      "sources": [
+        {
+          "title": "Malaga rents hit record high - Idealista Q3 2026 (The Olive Press, 2 Oct 2026)",
+          "url": "https://theolivepress.es/spain-news/2026/10/02/malaga-rents-record-high",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "groceries": {
-      "typical": 450,
-      "min": 360,
-      "max": 560,
-      "annualInflation": 0.03
+      "typical": 470,
+      "min": 380,
+      "max": 580,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Couple grocery spend in Malaga 350-500 EUR/mo (WaypointSur model on Numbeo Aug 2026 data) plus roughly 60-90 EUR/mo of kibble for a 100 lb dog (modelled share, not separately sourced). Spain headline CPI was 4.9% y/y in Oct 2026 (INE flash), food rising but below last year's pace.",
+      "sources": [
+        {
+          "title": "Cost of Living in Malaga 2026 (WaypointSur, updated 31 Aug 2026)",
+          "url": "https://guides.waypointsur.com/cost-of-living-malaga/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "INE - IPC adelantado octubre 2026",
+          "url": "https://www.ine.es/dyngs/Prensa/adIPC1026.pdf",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "utilities": {
-      "typical": 170,
-      "min": 125,
-      "max": 225,
-      "annualInflation": 0.035
+      "typical": 150,
+      "min": 110,
+      "max": 210,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-09",
+      "notes": "Electricity for a 2-person home runs 50-60 EUR/mo nationally (about 270 kWh); Numbeo-based electricity+water for an 85 m2 Malaga flat is 138 EUR and the national 85 m2 basic-utilities figure is 133 EUR. Adds butane/propane for hot water and cooking, water, sewer and municipal trash (basura) fee; summer A/C in a house pushes toward the max. Internet excluded.",
+      "sources": [
+        {
+          "title": "Gasto medio de luz al mes en Espana (Papernest, Jul 2026)",
+          "url": "https://www.papernest.es/info/gasto-medio-luz/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Cost of Living in Malaga 2026 (WaypointSur)",
+          "url": "https://guides.waypointsur.com/cost-of-living-malaga/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Prices in Spain (WageCentre, updated 4 Oct 2026)",
+          "url": "https://wagecentre.com/immigration/life/prices-in-spain",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 115,
-      "min": 75,
-      "max": 165,
+      "typical": 334,
+      "min": 120,
+      "max": 460,
       "annualInflation": 0.04,
-      "notes": "Sistema Nacional de Salud (SNS) universal coverage after residency permit. Private (Sanitas, Adeslas, ASISA) ~€60-150/mo with pre-existing condition loadings. Anti-VEGF injections available widely via SNS at public ophthalmology. GLP-1 covered for diabetes via SNS. Chronic-disease coverage is strong; regional variation — Catalonia and Madrid have densest infrastructure."
+      "notes": "Non-EU resident retirees must carry full private cover (sin copago) for the visa and first year; Adeslas Plena Plus in Andalucia is 167 EUR/person/month at ages 60-64 (334 for two), with 61-70 quotes across insurers running 175-230 per person. Min is the public convenio especial after one year of residence: 60 EUR/person/month under 65 (157 at 65+), outpatient prescriptions not covered. Re-modelled from the old template where insurance carried health cover.",
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "Private Health Insurance in Spain: Costs, Providers (WaypointSur, updated 26 Oct 2026)",
+          "url": "https://guides.waypointsur.com/private-health-insurance-spain/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Convenio Especial in Spain: How to Buy Into Public Healthcare (WaypointSur, verified 30 Oct 2026)",
+          "url": "https://guides.waypointsur.com/convenio-especial-spain/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Mejores seguros de salud noviembre 2026 (Rankia)",
+          "url": "https://www.rankia.com/blog/mejores-seguros/5343701-mejores-seguros-salud",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "insurance": {
-      "typical": 135,
-      "min": 95,
-      "max": 190,
-      "annualInflation": 0.04
+      "typical": 10,
+      "min": 6,
+      "max": 25,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-09",
+      "notes": "Renters/contents (seguro de hogar para inquilinos) only; health cover moved to healthcare per the old-template rule. Tenant policies run 70-300 EUR/yr nationally (Tuio from 79, Caser Inquilinamente from 110, Santalucia from 141 per year for a 71 m2 flat).",
+      "sources": [
+        {
+          "title": "Seguro para inquilinos: precios (Selectra, updated Jan 2025)",
+          "url": "https://selectra.es/seguros/seguros-hogar/seguro-inquilinos",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petCare": {
-      "typical": 60,
-      "min": 40,
+      "typical": 55,
+      "min": 30,
       "max": 100,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Spain vet prices Apr 2026: consultation 30-60, annual vaccine pack 50-80, rabies 15-25, deworming 20-35/yr, dental cleaning 100-250; a healthy pet averages 200-400 EUR/yr. A 100 lb dog pays large-breed doses for flea/tick/heartworm and leishmania prevention (sandfly zone), so typical is set above the generic mid-point.",
+      "sources": [
+        {
+          "title": "Cuanto cuesta el veterinario - precios abril 2026 (CuantoMeCuesta)",
+          "url": "https://cuantomecuesta.com/es/veterinario/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petDaycare": {
-      "typical": 150,
-      "min": 100,
-      "max": 250,
-      "annualInflation": 0.03
+      "typical": 120,
+      "min": 60,
+      "max": 200,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "National 2026 guide: residencia canina 11-25 EUR/night (18-30 on holidays), guarderia de dia 9-20 EUR/day. Assumes 4-6 nights or days a month at the large-dog end of the range.",
+      "sources": [
+        {
+          "title": "Cuanto cuesta un cuidador de perros - precios 2026 (Cronoshare)",
+          "url": "https://www.cronoshare.com/cuanto-cuesta/cuidador-perros",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petGrooming": {
-      "typical": 50,
-      "min": 30,
-      "max": 80,
-      "annualInflation": 0.03
+      "typical": 40,
+      "min": 25,
+      "max": 70,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Spain 2026 grooming guide: bath for a large long-haired dog 30-35 EUR, full arreglo 40-45, giant long-haired 42-51; de-matting 5-20 extra. A Bernese groomed every 6-8 weeks with an occasional brush-out averages about 40 EUR/mo.",
+      "sources": [
+        {
+          "title": "Cuanto cuesta un servicio de peluqueria canina - precios 2026 (Cronoshare)",
+          "url": "https://www.cronoshare.com/cuanto-cuesta/peluqueria-canina",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "transportation": {
-      "typical": 150,
+      "typical": 170,
       "min": 100,
-      "max": 220,
-      "annualInflation": 0.03
+      "max": 250,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "One modest car: average Spanish premium about 390 EUR/yr (CHECK24, May 2026), gasolina 95 about 1.53 EUR/L (Jul 2026) for ~800 km/mo, plus maintenance, ITV and road tax. EMT Malaga monthly bus card is 23.95 EUR (no over-60 card listed; Andalucia's tarjeta 65+ comes later). Min is a mostly car-free coastal-town setup with bus and Cercanias.",
+      "sources": [
+        {
+          "title": "CHECK24 - prima media del seguro de coche mayo 2026",
+          "url": "https://seguros.check24.es/wp-content/uploads/2026/06/NdP_La-prima-media-del-seguro-de-coche-baja-en-mayo-hasta-los-390-euros-un-53-menos-que-hace-un-ano.pdf",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Precio del combustible hoy 3 de julio 2026 (El Cronista)",
+          "url": "https://www.cronista.com/espana/economia-finanzas/precio-del-combustible-hoy-viernes-3-de-julio-cuanto-cuesta-el-litro-de-gasolina-y-el-de-gasoleo/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Precios de billetes y abonos EMT Malaga 2026 (RedTransporte)",
+          "url": "https://www.redtransporte.com/malaga/precios-abonos.html",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 280,
+      "typical": 300,
       "min": 200,
-      "max": 400,
-      "annualInflation": 0.03
+      "max": 450,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Fibre 300-600 Mbps about 24-30 EUR/mo (Lowi/Digi/O2 bundles with two mobile lines run 30-48), a couple of streaming services, mid-range dinner for two about 60 EUR three times a month, gym 25-50 and cinema 7-10 per ticket. WaypointSur puts Malaga dining+entertainment at 300-550 for a couple.",
+      "sources": [
+        {
+          "title": "Cost of Living in Malaga 2026 (WaypointSur)",
+          "url": "https://guides.waypointsur.com/cost-of-living-malaga/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Mejores tarifas baratas de fibra y movil 2026 (Xataka Movil, Aug 2026)",
+          "url": "https://www.xatakamovil.com/comparativa-de-tarifas/mejores-tarifas-baratas-fibra-movil",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "clothing": {
       "typical": 80,
       "min": 50,
       "max": 120,
-      "annualInflation": 0.02
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "Levi's 501-type jeans about 90 EUR in Malaga (Expatistan, Feb 2026, 7 data points); mid-market chains (Zara, Mango, Decathlon) keep a couple's replacement wardrobe near 80 EUR/mo. Stored range retained.",
+      "sources": [
+        {
+          "title": "Price of jeans in Malaga (Expatistan, Feb 2026)",
+          "url": "https://expatistan.com/price/jeans/malaga",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "personalCare": {
       "typical": 60,
       "min": 40,
-      "max": 100,
-      "annualInflation": 0.03
+      "max": 90,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Men's haircut about 18 EUR, toothpaste about 1.92, shampoo 2.50-4, shower gel 2-3.50 (Oct 2026). Two adults with monthly haircuts and toiletries land near 60 EUR.",
+      "sources": [
+        {
+          "title": "Prices in Spain (WageCentre, updated 4 Oct 2026)",
+          "url": "https://wagecentre.com/immigration/life/prices-in-spain",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "subscriptions": {
       "typical": 100,
@@ -123,10 +270,19 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 79,
-      "min": 64,
-      "max": 99,
-      "annualInflation": 0.02
+      "typical": 15,
+      "min": 10,
+      "max": 30,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "Two mobile-only lines (Nov 2026): Lowi 10 EUR for 2x15GB unlimited calls, MasMovil 9.80, Digi 16 EUR for unlimited data on both lines, Finetwork 20. Stored 79 EUR was a US-style figure; Spanish MVNO pricing is far lower.",
+      "sources": [
+        {
+          "title": "Mejores tarifas con dos lineas moviles - actualizado 1 nov 2026 (Roams)",
+          "url": "https://roams.es/telefonia/rankings/dos-lineas-movil/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "taxes": {
       "typical": 840,
@@ -158,7 +314,16 @@
       "min": 40,
       "typical": 80,
       "max": 160,
-      "annualInflation": 0.035
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-09",
+      "notes": "Private GP visit 25-60 EUR, specialist 60-120, full blood panel 49-79 (Doctoralia/Top Doctors 2025-2026). With a no-copay private policy most visits are covered, so OOP is dental, physio, glasses and occasional self-pay specialists.",
+      "sources": [
+        {
+          "title": "Cuanto cuesta una consulta medica privada en Espana (Selectra)",
+          "url": "https://selectra.es/seguros/seguros-salud/precio-consulta-privada",
+          "accessed": "2026-11-09"
+        }
+      ]
     }
   },
   "healthcare": {

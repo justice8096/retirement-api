@@ -26,77 +26,314 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 1400,
-      "min": 1000,
-      "max": 1800,
-      "annualInflation": 0.04
+      "typical": 1300,
+      "min": 850,
+      "max": 1900,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-09",
+      "notes": "Numbeo Punta del Este (Aug 2026, 14 contributors): 3BR centre 59,019 UYU (~1,470 USD), 3BR outside centre 49,294 UYU (~1,230 USD); rents ~26% above Montevideo. InfoCasas Nov 2026 annual 2BR houses: Maldonado/Piriapolis suburbs 24,000-38,000 UYU (600-950 USD), Punta del Este proper (Cantegril, Las Delicias, San Francisco, La Barra) 1,350-1,500 USD, Roosevelt 2BR 1,700 USD GC included. Annual (not seasonal) contract for a pet-friendly 2-3BR house.",
+      "sources": [
+        {
+          "title": "Numbeo Punta del Este vs Montevideo comparison",
+          "url": "https://www.numbeo.com/cost-of-living/compare_cities.jsp?country1=Uruguay&city1=Punta+del+Este&country2=Uruguay&city2=Montevideo",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "InfoCasas alquiler casas 2 dormitorios Maldonado",
+          "url": "https://www.infocasas.com.uy/alquiler/casas/maldonado/2-dormitorios/baratos/con-garaje",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "USD-UYU history 2026 (approx 40.1 UYU per USD late Oct 2026)",
+          "url": "https://www.poundsterlinglive.com/history/USD-UYU-2026",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "groceries": {
-      "typical": 520,
-      "min": 400,
-      "max": 680,
-      "annualInflation": 0.03
+      "typical": 680,
+      "min": 520,
+      "max": 860,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Montevideo Numbeo (Nov 2026, 73 contributors): single-person monthly costs excl. rent 969 USD; Expatistan May 2026 milk 54 UYU/l, eggs 231 UYU/dozen, chicken breast 246 UYU/500g. Food for two about 450-520 USD plus food for a 45 kg dog: cuantomecuesta mid-range dog food 4,500 UYU/mo x1.6 large-dog factor = ~7,200 UYU (about 180 USD), economy 4,800 UYU (~120 USD). CPI 4.68% y/y Sep 2026 so no basket shock. Punta del Este grocery index roughly on par with Montevideo per Numbeo (small sample); resort-area premium on fresh goods in season, so set slightly above Montevideo.",
+      "sources": [
+        {
+          "title": "Numbeo Punta del Este vs Montevideo comparison",
+          "url": "https://www.numbeo.com/cost-of-living/compare_cities.jsp?country1=Uruguay&city1=Punta+del+Este&country2=Uruguay&city2=Montevideo",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo Cost of Living in Montevideo (updated Nov 6 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Montevideo",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Expatistan cost of living Montevideo (May 2026)",
+          "url": "https://expatistan.com/cost-of-living/montevideo",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Cuanto me cuesta: veterinario y mascotas Uruguay (abril 2026)",
+          "url": "https://cuantomecuesta.com/uy/veterinario-mascotas/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Inflacion interanual 4,68% setiembre 2026 (montevideo.com.uy)",
+          "url": "https://www.montevideo.com.uy/Noticias/Inflacion-interanual-subio-al-4-68-en-setiembre-por-encima-de-la-meta-del-BCU-uc977605",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "USD-UYU history 2026 (approx 40.1 UYU per USD late Oct 2026)",
+          "url": "https://www.poundsterlinglive.com/history/USD-UYU-2026",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "utilities": {
       "typical": 170,
-      "min": 120,
-      "max": 250,
-      "annualInflation": 0.035
+      "min": 110,
+      "max": 260,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-09",
+      "notes": "UTE Residencial Simple from 30 Apr 2026: fixed 324.90 UYU, 83.20 UYU/kW, 6.74 UYU/kWh to 100 kWh, 8.45 to 600, plus 22% VAT; ~300 kWh is about 3,600 UYU (90 USD), ~500 kWh with electric heating in winter about 6,700 UYU (170 USD). OSE water/sewer tariffs rose Jan 2026 (roughly 1,000-1,300 UYU for a household); supergas cylinder for cooking/heating adds 10-25 USD. Trash is funded via owner-paid municipal tax. Numbeo Montevideo 85m2 utilities 188 USD, Expatistan 5,023 UYU (125 USD). Detached coastal houses are electric-heated and damp in winter, so electricity runs higher than a Montevideo apartment; Numbeo PdE 85m2 utilities 4,612 UYU is a small summer-weighted sample.",
+      "sources": [
+        {
+          "title": "UTE Tarifa Residencial Simple vigente 30 abril 2026 (datosUruguay)",
+          "url": "https://datosuruguay.com/tarifa-electrica/residencial-simple",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "URSEA informe ajuste tarifario OSE vigente 1 enero 2026",
+          "url": "https://www.gub.uy/unidad-reguladora-servicios-energia-agua/comunicacion/publicaciones/informe-ajuste-tarifario-ose-vigente-1-enero-2026",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo Cost of Living in Montevideo (updated Nov 6 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Montevideo",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Expatistan cost of living Montevideo (May 2026)",
+          "url": "https://expatistan.com/cost-of-living/montevideo",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "USD-UYU history 2026 (approx 40.1 UYU per USD late Oct 2026)",
+          "url": "https://www.poundsterlinglive.com/history/USD-UYU-2026",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 200,
-      "min": 120,
-      "max": 320,
+      "typical": 220,
+      "min": 190,
+      "max": 660,
       "annualInflation": 0.04,
-      "notes": "ASSE/FONASA universal coverage for residents (pensioner residency requires legal pension income proof). Private (Hospital Británico, Casa de Galicia, Asociación Española) ~$100-220/mo. Anti-VEGF injections available in Montevideo. GLP-1 partially covered through FONASA for diabetes. Strong public infrastructure; Montevideo is the medical hub."
+      "notes": "Resident retirees without BPS/FONASA affiliation pay a mutualista (IAMC) individual cuota directly: Asociacion Espanola 3,869 UYU/mo (Jul 2026), Medica Uruguaya ~3,200, CASMU ~3,400, i.e. about 90-97 USD per adult at ~40 UYU/USD, plus an emergencia movil plan (~272 UYU/adult). Typical = two mutualista cuotas plus emergencia movil; max = two adults in a private hospital plan such as Hospital Britanico (14,254-21,501 UYU per adult, joining age limit 60). Regulated copays (190-968 UYU per consult, 880 UYU ticket cap) are carried in medicalOOP. Max capped at 3x typical by the refresh QA pass (premium international plans can run higher).",
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "Healthcare in Uruguay for retirees: mutualista and private prices (Sep 2026)",
+          "url": "https://www.puntaselectclub.com/healthcare-in-uruguay-public-mutualistas-private-retirees/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Cuanto me cuesta: FONASA aportes y cuotas mutuales (abril 2026)",
+          "url": "https://cuantomecuesta.com/uy/fonasa-aportes/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Decreto 163/2026 incremento cuota mutual julio 2026 (IMPO)",
+          "url": "https://impo.com.uy/bases/decretos/163-2026",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Healthcare in Uruguay for Expats: 2026 costs",
+          "url": "https://uruwhy.uy/guides/healthcare-in-uruguay/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "USD-UYU history 2026 (approx 40.1 UYU per USD late Oct 2026)",
+          "url": "https://www.poundsterlinglive.com/history/USD-UYU-2026",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "insurance": {
-      "typical": 280,
-      "min": 170,
-      "max": 420,
-      "annualInflation": 0.04
+      "typical": 10,
+      "min": 5,
+      "max": 20,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-09",
+      "notes": "Re-modeled from old template (previous value was health insurance). Renters/contents cover: Sura Hogar plans with fire-contents and theft cover cost 112-533 UYU/month (about 3-13 USD); Plan C (288,600 UYU contents, 133,200 theft) is 345 UYU, about 9 USD.",
+      "sources": [
+        {
+          "title": "Tarifario Seguro Hogar Sura (Scotiabank Uruguay)",
+          "url": "https://cdn.agilitycms.com/scotiabank-uruguay/seguros/otros-seguros/Tarifario-Hogar-Sura.pdf",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "USD-UYU history 2026 (approx 40.1 UYU per USD late Oct 2026)",
+          "url": "https://www.poundsterlinglive.com/history/USD-UYU-2026",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petCare": {
-      "typical": 50,
-      "min": 30,
-      "max": 80,
-      "annualInflation": 0.03
+      "typical": 45,
+      "min": 25,
+      "max": 90,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Large dog: annual vaccine package (sextuple + rabies) 2,100-2,600 UYU, quarterly flea/tick/worm treatment 1,500-2,200 UYU each (6,000-9,000/yr), 2 vet visits at 1,200-2,800 UYU; roughly 16,000-22,000 UYU/yr (about 400-550 USD), averaged with a margin for incidentals. Municipal (IMM) clinics are free for registered pets.",
+      "sources": [
+        {
+          "title": "Cuanto me cuesta: veterinario y mascotas Uruguay (abril 2026)",
+          "url": "https://cuantomecuesta.com/uy/veterinario-mascotas/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "USD-UYU history 2026 (approx 40.1 UYU per USD late Oct 2026)",
+          "url": "https://www.poundsterlinglive.com/history/USD-UYU-2026",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petDaycare": {
-      "typical": 120,
-      "min": 80,
+      "typical": 100,
+      "min": 50,
       "max": 200,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Guarderia/pension 800-2,000 UYU per day (Apr 2026). Typical assumes 3-4 days per month of daycare or boarding at ~1,200 UYU; max covers a week of boarding at a premium kennel.",
+      "sources": [
+        {
+          "title": "Cuanto me cuesta: veterinario y mascotas Uruguay (abril 2026)",
+          "url": "https://cuantomecuesta.com/uy/veterinario-mascotas/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "USD-UYU history 2026 (approx 40.1 UYU per USD late Oct 2026)",
+          "url": "https://www.poundsterlinglive.com/history/USD-UYU-2026",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petGrooming": {
-      "typical": 40,
-      "min": 25,
-      "max": 65,
-      "annualInflation": 0.03
+      "typical": 55,
+      "min": 30,
+      "max": 90,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Bano y corte 800-3,000 UYU per month depending on size; a ~45 kg double-coated dog is at the top of that range (about 75 USD per full groom). Typical assumes a full groom every 6-8 weeks.",
+      "sources": [
+        {
+          "title": "Cuanto me cuesta: veterinario y mascotas Uruguay (abril 2026)",
+          "url": "https://cuantomecuesta.com/uy/veterinario-mascotas/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "USD-UYU history 2026 (approx 40.1 UYU per USD late Oct 2026)",
+          "url": "https://www.poundsterlinglive.com/history/USD-UYU-2026",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "transportation": {
-      "typical": 180,
-      "min": 100,
-      "max": 280,
-      "annualInflation": 0.03
+      "typical": 230,
+      "min": 120,
+      "max": 320,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "A car is effectively required (spread-out balnearios, limited buses). Nafta Super 90.45 UYU/l: ~55 l/month = ~5,000 UYU (125 USD); terceros completo insurance 1,385-1,550 UYU/month (~37 USD); patente and maintenance ~70-100 USD (patente estimated). Min = very light driving.",
+      "sources": [
+        {
+          "title": "Nafta Super $90,45 por litro, noviembre 2026 (datosUruguay)",
+          "url": "https://datosuruguay.com/actualizaciones/combustible-2026-11-01",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Cuanto me cuesta: seguro automotor Uruguay (abril 2026)",
+          "url": "https://cuantomecuesta.com/uy/seguro-automotor/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "USD-UYU history 2026 (approx 40.1 UYU per USD late Oct 2026)",
+          "url": "https://www.poundsterlinglive.com/history/USD-UYU-2026",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 300,
+      "typical": 320,
       "min": 200,
-      "max": 450,
-      "annualInflation": 0.03
+      "max": 480,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Antel Fibra Plus 550 Mbps 2,138 UYU (53 USD) or Fibra Basico 1,650 UYU; Numbeo PdE broadband 1,814 UYU; streaming ~30 USD; dining out in Punta del Este is at or above Montevideo prices in season (Montevideo mid-range dinner for two ~67 USD), 3 times a month; beach, golf and cultural activities.",
+      "sources": [
+        {
+          "title": "Antel precios generales datos 2026 (fibra hogar)",
+          "url": "https://antel.com.uy/documents/37544/151022/precios-generales-datos-2026-v2.pdf",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo Punta del Este vs Montevideo comparison",
+          "url": "https://www.numbeo.com/cost-of-living/compare_cities.jsp?country1=Uruguay&city1=Punta+del+Este&country2=Uruguay&city2=Montevideo",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo Cost of Living in Montevideo (updated Nov 6 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Montevideo",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "USD-UYU history 2026 (approx 40.1 UYU per USD late Oct 2026)",
+          "url": "https://www.poundsterlinglive.com/history/USD-UYU-2026",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "clothing": {
-      "typical": 70,
-      "min": 40,
-      "max": 110,
-      "annualInflation": 0.02
+      "typical": 80,
+      "min": 50,
+      "max": 130,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "Imported clothing is expensive in Uruguay: Numbeo Montevideo jeans ~100 USD, chain-store dress ~56 USD, mid-range running shoes ~122 USD; Expatistan jeans 3,504 UYU. Modest replacement budget for two retirees.",
+      "sources": [
+        {
+          "title": "Numbeo Cost of Living in Montevideo (updated Nov 6 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Montevideo",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Expatistan cost of living Montevideo (May 2026)",
+          "url": "https://expatistan.com/cost-of-living/montevideo",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "personalCare": {
-      "typical": 50,
-      "min": 30,
-      "max": 80,
-      "annualInflation": 0.03
+      "typical": 60,
+      "min": 35,
+      "max": 100,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Men's haircut 506 UYU (~13 USD) per Expatistan; toiletries and salon visits for two. Uruguay prices for imported personal-care goods track or exceed US levels.",
+      "sources": [
+        {
+          "title": "Expatistan cost of living Montevideo (May 2026)",
+          "url": "https://expatistan.com/cost-of-living/montevideo",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "USD-UYU history 2026 (approx 40.1 UYU per USD late Oct 2026)",
+          "url": "https://www.poundsterlinglive.com/history/USD-UYU-2026",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "subscriptions": {
       "typical": 80,
@@ -105,10 +342,29 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 87,
-      "min": 72,
-      "max": 107,
-      "annualInflation": 0.02
+      "typical": 30,
+      "min": 18,
+      "max": 50,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "Two lines on national carriers: Antel/Movistar 40 GB postpaid 590 UYU each (about 15 USD), 70 GB 890 UYU; prepaid 350 UYU. Numbeo Montevideo 10GB+ plan 20.57 USD. Two 40 GB lines = ~1,180 UYU = ~30 USD.",
+      "sources": [
+        {
+          "title": "Cuanto me cuesta: planes celulares Uruguay (abril 2026)",
+          "url": "https://cuantomecuesta.com/uy/plan-celular/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo Cost of Living in Montevideo (updated Nov 6 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Montevideo",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "USD-UYU history 2026 (approx 40.1 UYU per USD late Oct 2026)",
+          "url": "https://www.poundsterlinglive.com/history/USD-UYU-2026",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "taxes": {
       "typical": 0,
@@ -137,10 +393,29 @@
       "annualInflation": 0.025
     },
     "medicalOOP": {
-      "min": 35,
-      "typical": 70,
+      "min": 30,
+      "typical": 60,
       "max": 140,
-      "annualInflation": 0.045
+      "annualInflation": 0.045,
+      "lastVerified": "2026-11-09",
+      "notes": "Mutualista copays: general consult 190 UYU, specialist 479 UYU, emergency 968 UYU, imaging 1,138 UYU (Asociacion Espanola Aug 2026); regulated tasas moderadoras capped at 880 UYU, rising 1.6% in July 2026. Dental and optical are extra. Typical assumes a few consults and tests a month for two.",
+      "sources": [
+        {
+          "title": "Healthcare in Uruguay for retirees: mutualista and private prices (Sep 2026)",
+          "url": "https://www.puntaselectclub.com/healthcare-in-uruguay-public-mutualistas-private-retirees/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Decreto 163/2026 incremento cuota mutual julio 2026 (IMPO)",
+          "url": "https://impo.com.uy/bases/decretos/163-2026",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "USD-UYU history 2026 (approx 40.1 UYU per USD late Oct 2026)",
+          "url": "https://www.poundsterlinglive.com/history/USD-UYU-2026",
+          "accessed": "2026-11-09"
+        }
+      ]
     }
   },
   "healthcare": {

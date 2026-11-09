@@ -35,71 +35,294 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 1150,
-      "min": 900,
-      "max": 1400,
-      "annualInflation": 0.04
+      "typical": 1450,
+      "min": 1000,
+      "max": 2100,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-09",
+      "notes": "2BR house/apartment in outer colonias (San Antonio, Ojo de Agua, Los Frailes) 700-1,300 USD and 3BR with garden 1,200-2,000; Guadiana/San Antonio 1-2BR 1,000-1,800; Centro 2BR 1,400-2,400+. Numbeo 3BR outside centre 22,961 MXN (~1,220 USD at 18.8). Pet-friendly house with yard sits mid-range.",
+      "sources": [
+        {
+          "title": "MXMove - Living in San Miguel de Allende: Expat Guide 2026 (rent by bedrooms/area, utilities, healthcare, transport)",
+          "url": "https://mxmove.com/articles/living-in-san-miguel-de-allende/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Mexico Handbook - Cost of living in San Miguel de Allende 2026 (updated Oct 2026)",
+          "url": "https://themexicohandbook.com/cost-of-living-in-san-miguel-de-allende-2026-expat-guide/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo - Cost of Living in San Miguel de Allende (updated 8 Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/San-Miguel-de-Allende",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "UnoTV - Dolar cotiza en 18.79 pesos, 2 Nov 2026 (Banxico FIX 18.7962)",
+          "url": "https://www.unotv.com/dolar-hoy/dolar-cotiza-en-18-79-pesos-este-lunes-2-de-noviembre-de-2026/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "groceries": {
-      "typical": 420,
-      "min": 320,
-      "max": 550,
-      "annualInflation": 0.03
+      "typical": 480,
+      "min": 380,
+      "max": 650,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Couple mixing local markets and basics 250-350 USD, mostly imported-goods stores 400-600; add ~80-100 USD for premium large-breed kibble in Mexico. Food, beverages and tobacco CPI +4.57% y/y (Sep 2026).",
+      "sources": [
+        {
+          "title": "Mexico Handbook - Cost of living in San Miguel de Allende 2026 (updated Oct 2026)",
+          "url": "https://themexicohandbook.com/cost-of-living-in-san-miguel-de-allende-2026-expat-guide/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Falling in Love with San Miguel - Cost of living (updated Oct 2026)",
+          "url": "https://fallinginlovewithsanmiguel.com/cost-of-living-in-san-miguel-de-allende/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "INEGI - INPC septiembre 2026 (alimentos, bebidas y tabaco +4.57% y/y)",
+          "url": "https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2026/inpc/inpc_2q2026_10.pdf",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "utilities": {
-      "typical": 110,
-      "min": 70,
-      "max": 160,
-      "annualInflation": 0.035
+      "typical": 95,
+      "min": 50,
+      "max": 170,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-09",
+      "notes": "CFE electricity 20-50 USD per bimonthly bill (DAC tariff can exceed 150), LP gas ~20 summer to 60+ winter, municipal water under 15 plus garrafones; Numbeo basic utilities 757 MXN (~40 USD) for 85 m2. A 2-3BR house with winter heating lands near 95. Excludes internet.",
+      "sources": [
+        {
+          "title": "Mexico Handbook - Cost of living in San Miguel de Allende 2026 (updated Oct 2026)",
+          "url": "https://themexicohandbook.com/cost-of-living-in-san-miguel-de-allende-2026-expat-guide/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "MXMove - Living in San Miguel de Allende: Expat Guide 2026 (rent by bedrooms/area, utilities, healthcare, transport)",
+          "url": "https://mxmove.com/articles/living-in-san-miguel-de-allende/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo - Cost of Living in San Miguel de Allende (updated 8 Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/San-Miguel-de-Allende",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "UnoTV - Dolar cotiza en 18.79 pesos, 2 Nov 2026 (Banxico FIX 18.7962)",
+          "url": "https://www.unotv.com/dolar-hoy/dolar-cotiza-en-18-79-pesos-este-lunes-2-de-noviembre-de-2026/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 180,
-      "min": 90,
-      "max": 300,
+      "typical": 600,
+      "min": 180,
+      "max": 1250,
       "annualInflation": 0.04,
-      "notes": "IMSS public system available to residents (~$500-700/yr fixed, varies by age). Private international plans ~$100-300/mo. Anti-VEGF injections widely available in Mexico City, Guadalajara, Monterrey, and San Miguel; ~$700-1,200/injection at private. GLP-1 via private prescription, ~$200-400/mo. Major retiree expat hubs (San Miguel, Lake Chapala, Mérida) have strong English-speaking specialist networks."
+      "notes": "IMSS voluntary family insurance for age 60-69 is 19,800 MXN/yr each (2026), ~3,300 MXN/month for two (~176 USD) = minimum. Typical adds a mid-range private/expat plan for one or both (private plans ages 50-65 ~2,000-5,000 USD/yr each; global plans 150-300 USD/month each); full domestic GMM cover for two at 56-65 is 160,000-280,000 MXN/yr (~700-1,250 USD/month). Premiums rose 20-40% in 2026.",
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "N+ - IMSS 2026 Seguro de Salud para la Familia cost by age (60-69: 19,800 MXN/yr), 1 Oct 2026",
+          "url": "https://www.nmas.com.mx/sociedad/programas-sociales/que-es-seguro-facultativo-imss-y-para-quienes-aplica-este-es-costo-2026/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "CuantoMeCuesta - Seguro de gastos medicos mayores Mexico, precios abril 2026 (56-65: 80,000-140,000 MXN/yr)",
+          "url": "https://cuantomecuesta.com/mx/seguro-gastos-medicos/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "MXMove - Living in San Miguel de Allende: Expat Guide 2026 (rent by bedrooms/area, utilities, healthcare, transport)",
+          "url": "https://mxmove.com/articles/living-in-san-miguel-de-allende/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Mexico Handbook - Cost of living in San Miguel de Allende 2026 (updated Oct 2026)",
+          "url": "https://themexicohandbook.com/cost-of-living-in-san-miguel-de-allende-2026-expat-guide/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Mexico News Daily - Health insurance premiums up 20-40% in 2026 (Feb 2026)",
+          "url": "https://mexiconewsdaily.com/news/health-insurance-premiums-mexico/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "UnoTV - Dolar cotiza en 18.79 pesos, 2 Nov 2026 (Banxico FIX 18.7962)",
+          "url": "https://www.unotv.com/dolar-hoy/dolar-cotiza-en-18-79-pesos-este-lunes-2-de-noviembre-de-2026/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "insurance": {
-      "typical": 250,
-      "min": 150,
-      "max": 380,
-      "annualInflation": 0.04
+      "typical": 12,
+      "min": 5,
+      "max": 25,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-09",
+      "notes": "Re-modeled from old template (stored value was health insurance). Contents cover of 200,000-300,000 MXN costs about 800-2,000 MXN/yr (~3.5-9 USD/month); higher contents or a full renter policy up to ~5,000 MXN/yr (~22 USD/month).",
+      "sources": [
+        {
+          "title": "CuantoMeCuesta - Seguro de hogar Mexico precios 2026 (contents 200-300k MXN: 800-2,000 MXN/yr)",
+          "url": "https://cuantomecuesta.com/mx/seguro-hogar/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "UnoTV - Dolar cotiza en 18.79 pesos, 2 Nov 2026 (Banxico FIX 18.7962)",
+          "url": "https://www.unotv.com/dolar-hoy/dolar-cotiza-en-18-79-pesos-este-lunes-2-de-noviembre-de-2026/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petCare": {
-      "typical": 50,
-      "min": 30,
-      "max": 80,
-      "annualInflation": 0.03
+      "typical": 45,
+      "min": 25,
+      "max": 90,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Private consult 200-350 MXN, annual vaccines ~450-1,000, flea/tick pipette 120-200/month (large-dog doses higher), deworming 70-150/quarter; ~5,000-10,000 MXN/yr plus senior bloodwork.",
+      "sources": [
+        {
+          "title": "CuantoMeCuesta - Veterinario Mexico precios abril 2026 (consult, vaccines, deworming, grooming, boarding)",
+          "url": "https://cuantomecuesta.com/mx/veterinario/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "UnoTV - Dolar cotiza en 18.79 pesos, 2 Nov 2026 (Banxico FIX 18.7962)",
+          "url": "https://www.unotv.com/dolar-hoy/dolar-cotiza-en-18-79-pesos-este-lunes-2-de-noviembre-de-2026/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petDaycare": {
       "typical": 120,
-      "min": 80,
-      "max": 200,
-      "annualInflation": 0.03
+      "min": 60,
+      "max": 220,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Daycare/boarding 200-600 MXN per day (~11-32 USD); occasional use of 5-8 days a month.",
+      "sources": [
+        {
+          "title": "CuantoMeCuesta - Veterinario Mexico precios abril 2026 (consult, vaccines, deworming, grooming, boarding)",
+          "url": "https://cuantomecuesta.com/mx/veterinario/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "UnoTV - Dolar cotiza en 18.79 pesos, 2 Nov 2026 (Banxico FIX 18.7962)",
+          "url": "https://www.unotv.com/dolar-hoy/dolar-cotiza-en-18-79-pesos-este-lunes-2-de-noviembre-de-2026/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petGrooming": {
-      "typical": 40,
-      "min": 25,
-      "max": 65,
-      "annualInflation": 0.03
+      "typical": 35,
+      "min": 20,
+      "max": 60,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Bath and cut 150-600 MXN per visit depending on size; a 100 lb double-coated dog sits at the top (~500-700 MXN), every 6 weeks.",
+      "sources": [
+        {
+          "title": "CuantoMeCuesta - Veterinario Mexico precios abril 2026 (consult, vaccines, deworming, grooming, boarding)",
+          "url": "https://cuantomecuesta.com/mx/veterinario/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "UnoTV - Dolar cotiza en 18.79 pesos, 2 Nov 2026 (Banxico FIX 18.7962)",
+          "url": "https://www.unotv.com/dolar-hoy/dolar-cotiza-en-18-79-pesos-este-lunes-2-de-noviembre-de-2026/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "transportation": {
       "typical": 150,
       "min": 80,
-      "max": 240,
-      "annualInflation": 0.03
+      "max": 260,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Car-free: green taxis 60-80 MXN per cross-town ride (~3-4.50 USD), local bus 10 MXN; ~30 taxi rides plus shuttles ~110-150 USD. One modest car: gasoline 27.63 MXN/L (~1.47 USD) for ~600 km, plus insurance and maintenance ~160-250.",
+      "sources": [
+        {
+          "title": "Mexico Handbook - Cost of living in San Miguel de Allende 2026 (updated Oct 2026)",
+          "url": "https://themexicohandbook.com/cost-of-living-in-san-miguel-de-allende-2026-expat-guide/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "MXMove - Living in San Miguel de Allende: Expat Guide 2026 (rent by bedrooms/area, utilities, healthcare, transport)",
+          "url": "https://mxmove.com/articles/living-in-san-miguel-de-allende/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo - Cost of Living in San Miguel de Allende (updated 8 Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/San-Miguel-de-Allende",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "UnoTV - Dolar cotiza en 18.79 pesos, 2 Nov 2026 (Banxico FIX 18.7962)",
+          "url": "https://www.unotv.com/dolar-hoy/dolar-cotiza-en-18-79-pesos-este-lunes-2-de-noviembre-de-2026/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 250,
-      "min": 160,
-      "max": 370,
-      "annualInflation": 0.03
+      "typical": 300,
+      "min": 200,
+      "max": 450,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Fiber internet 349-399 MXN list (~19-21 USD; 100-300 Mbps plans 30-50 USD), streaming ~40, mid-range dinner for two 40-70 USD x3, cinema 120 MXN, activities.",
+      "sources": [
+        {
+          "title": "Selectra MX - Solo internet plans (Telmex 349, Totalplay 399 MXN; updated 2 Nov 2026)",
+          "url": "https://selectra.mx/internet-casa/solo-internet",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Mexico Handbook - Cost of living in San Miguel de Allende 2026 (updated Oct 2026)",
+          "url": "https://themexicohandbook.com/cost-of-living-in-san-miguel-de-allende-2026-expat-guide/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "MXMove - Living in San Miguel de Allende: Expat Guide 2026 (rent by bedrooms/area, utilities, healthcare, transport)",
+          "url": "https://mxmove.com/articles/living-in-san-miguel-de-allende/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo - Cost of Living in San Miguel de Allende (updated 8 Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/San-Miguel-de-Allende",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "UnoTV - Dolar cotiza en 18.79 pesos, 2 Nov 2026 (Banxico FIX 18.7962)",
+          "url": "https://www.unotv.com/dolar-hoy/dolar-cotiza-en-18-79-pesos-este-lunes-2-de-noviembre-de-2026/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "clothing": {
-      "typical": 70,
-      "min": 40,
-      "max": 110,
-      "annualInflation": 0.02
+      "typical": 75,
+      "min": 45,
+      "max": 120,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "Numbeo SMA: jeans 1,200 MXN (~64 USD), chain-store dress 1,100 (~59), Nike runners 2,067 (~110); a few items a month for two.",
+      "sources": [
+        {
+          "title": "Numbeo - Cost of Living in San Miguel de Allende (updated 8 Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/San-Miguel-de-Allende",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "UnoTV - Dolar cotiza en 18.79 pesos, 2 Nov 2026 (Banxico FIX 18.7962)",
+          "url": "https://www.unotv.com/dolar-hoy/dolar-cotiza-en-18-79-pesos-este-lunes-2-de-noviembre-de-2026/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "personalCare": {
       "typical": 50,
@@ -114,10 +337,34 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 81,
-      "min": 66,
-      "max": 101,
-      "annualInflation": 0.02
+      "typical": 50,
+      "min": 32,
+      "max": 150,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "Two Telcel postpaid lines: Ultra 3 (15GB) 349 MXN each = ~37 USD, Ultra 5 (40GB) 549 each = ~58 USD, Ultra Ilimitado 1,399 each = ~149 USD; Numbeo 10GB+ plan 293 MXN. Expat guides cite 15-25 USD per line for unlimited.",
+      "sources": [
+        {
+          "title": "Selectra MX - Telcel postpaid plans (Ultra 3 15GB 349, Ultra 5 40GB 549, Ultra Ilimitado 1,399 MXN; 9 Nov 2026)",
+          "url": "https://selectra.mx/companias/telcel/internet-ilimitado",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo - Cost of Living in San Miguel de Allende (updated 8 Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/San-Miguel-de-Allende",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "MXMove - Living in San Miguel de Allende: Expat Guide 2026 (rent by bedrooms/area, utilities, healthcare, transport)",
+          "url": "https://mxmove.com/articles/living-in-san-miguel-de-allende/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "UnoTV - Dolar cotiza en 18.79 pesos, 2 Nov 2026 (Banxico FIX 18.7962)",
+          "url": "https://www.unotv.com/dolar-hoy/dolar-cotiza-en-18-79-pesos-este-lunes-2-de-noviembre-de-2026/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "taxes": {
       "typical": 0,
@@ -146,10 +393,24 @@
       "annualInflation": 0.025
     },
     "medicalOOP": {
-      "min": 40,
-      "typical": 75,
-      "max": 150,
-      "annualInflation": 0.04
+      "min": 50,
+      "typical": 110,
+      "max": 220,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-09",
+      "notes": "GP visit 30-60 USD, specialist 50-100 (English-speaking 40-70), basic blood panel 30-80, dental cleaning 40-70, ER visit 100-300; a couple at 60 with a few visits and dental per year.",
+      "sources": [
+        {
+          "title": "MXMove - Living in San Miguel de Allende: Expat Guide 2026 (rent by bedrooms/area, utilities, healthcare, transport)",
+          "url": "https://mxmove.com/articles/living-in-san-miguel-de-allende/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Mexico Handbook - Cost of living in San Miguel de Allende 2026 (updated Oct 2026)",
+          "url": "https://themexicohandbook.com/cost-of-living-in-san-miguel-de-allende-2026-expat-guide/",
+          "accessed": "2026-11-09"
+        }
+      ]
     }
   },
   "healthcare": {

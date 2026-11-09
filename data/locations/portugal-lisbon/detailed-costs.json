@@ -213,9 +213,9 @@
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 280,
+      "min": 250,
       "typical": 350,
-      "max": 440
+      "max": 480
     },
     "categories": [
       {
@@ -274,13 +274,14 @@
         "title": "Netflix Portugal",
         "url": "https://help.netflix.com/pt/node/24926"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-09"
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 30,
+      "min": 60,
       "typical": 80,
-      "max": 180
+      "max": 150
     },
     "publicTransit": {
       "monthlyPass": {
@@ -440,7 +441,8 @@
           "url": "https://www.mobie.pt/"
         }
       ]
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-09"
   },
   "seniorDiscounts": {
     "minimumAge": 65,
@@ -505,9 +507,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 70,
-      "typical": 85,
-      "max": 105
+      "min": 14,
+      "typical": 30,
+      "max": 60
     },
     "plans": [
       {
@@ -540,14 +542,15 @@
         "title": "WTF by NOS",
         "url": "https://www.nos.pt/particulares/tarifarios"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-09"
   },
   "housing": {
     "propertyType": "2-bedroom house (moradia)",
     "monthlyBudget": {
-      "min": 1100,
-      "max": 1800,
-      "typical": 1400
+      "min": 1400,
+      "max": 2500,
+      "typical": 1850
     },
     "breakdown": {
       "baseRentEUR": 1150,
@@ -568,7 +571,8 @@
         "name": "Portugal NRAU Rental Law",
         "url": "https://www.portaldahabitacao.pt/arrendamento"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-09"
   },
   "groceryStores": {
     "stores": [

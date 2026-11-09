@@ -39,12 +39,25 @@
   },
   "monthlyCosts": {
     "rent": {
-      "min": 1200,
-      "max": 2400,
-      "typical": 1700,
+      "min": 1400,
+      "max": 2500,
+      "typical": 1850,
       "type": "2-bedroom house (moradia)",
       "annualInflation": 0.035,
-      "notes": "No VAT on residential rent. Lisbon city 2BR median ~€1,900 (2026); Algarve (Faro/Lagos) lower at €1,200–€1,600."
+      "notes": "Lisbon municipality asking rents 20.35 EUR/m2/month (Aug 2026 observatory) and 23.2 EUR/m2 (MVGM Q1 2026); an 80-90 m2 pet-friendly T2/small moradia implies ~1,700-2,000. Min reflects outer parishes/Loures-Amadora side, max central or house with garden. Asking rents fell 2-4% y/y in early 2026 after years of gains.",
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "Observatorio do Mercado Imobiliario Residencial - agosto 2026 (Doutor Financas)",
+          "url": "https://www.doutorfinancas.pt/wp-content/uploads/2026/08/observatorio-imobiliario-agosto-2026.pdf",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Lisboa e a cidade mais cara para viver em Portugal (The Portugal News, Jun 2026)",
+          "url": "https://www.theportugalnews.com/pt/noticias/2026-06-11/lisboa-e-a-cidade-mais-cara-para-viver-em-portugal/1038085",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "groceries": {
       "min": 785,
@@ -53,8 +66,8 @@
       "annualInflation": 0.025
     },
     "utilities": {
-      "min": 116,
-      "max": 189,
+      "min": 110,
+      "max": 200,
       "typical": 145,
       "annualInflation": 0.03,
       "breakdown": {
@@ -80,58 +93,170 @@
         }
       },
       "taxes": "IVA: 6% on electricity (≤150kWh), 23% above; 6% on water; 23% on gas. All included in bills.",
-      "notes": "Electricity (heating+cooling), gas, water, sewage, trash. Internet is in entertainment (Cable+1Gig). Trash included in rent. Sewage included in water bill."
+      "notes": "Electricity ~80 for a 2BR moradia with summer A/C and electric heating (regulated-market couple benchmark 37.77/month at 1,900 kWh after the Oct 2026 +2.7%; ERSE proposes +1.5% for Jan 2027), gas ~30 (unverified estimate), EPAL water incl. saneamento and residuos ~35 (EPAL +0.17/month in 2026 at 7 m3; ERSAR national 10 m3 average 34.65). Numbeo Lisbon basic utilities 85 m2: 136.74 (Nov 2026). Excludes internet.",
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "Fatura da eletricidade sobe 2,7% a partir de hoje (Postal, 1 Oct 2026)",
+          "url": "https://postal.pt/nacional/fatura-da-eletricidade-sobe-27-a-partir-de-hoje-veja-quanto-passa-a-pagar/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Agua em Lisboa mais cara 17 centimos em 2026 (Dinheiro Vivo)",
+          "url": "https://dinheirovivo.dn.pt/economia/gua-em-lisboa-mais-cara-17-cntimos-para-a-maioria-dos-clientes-em-2026",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Agua pesa cada vez mais no orcamento - ERSAR 2026 (Postal)",
+          "url": "https://postal.pt/economia/agua-pesa-cada-vez-mais-no-orcamento-ha-concelhos-onde-a-fatura-ja-supera-os-50-euros/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Cost of Living in Lisbon, Nov 2026 (Numbeo)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lisbon",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "healthcare": {
-      "min": 70,
-      "max": 220,
-      "typical": 130,
-      "notes": "SNS public healthcare after NHR/D7 visa residency. Private insurance optional (~€80-120/person/mo with pre-existing conditions). Anti-VEGF injections available through SNS hospitals. Pre-existing condition loading on private plans. GLP-1 covered through SNS for diabetes.",
-      "annualInflation": 0.045
+      "min": 120,
+      "max": 450,
+      "typical": 280,
+      "notes": "Legal residents register with the SNS at no premium (primary care free since 2022). Private top-up cover that expat retirees typically carry: a couple in their 60s on standard Medis/Multicare/Fidelidade plans pays about 250-350 EUR/month total (Sep 2026 guide); hospital-only plans for two around 120; premium tiers 180-280 per person. Pre-existing condition loading can push toward max. Premiums rose ~10% in 2026.",
+      "annualInflation": 0.045,
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "Best Private Health Insurance in Portugal 2026 (Bozeco, updated Sep 2026)",
+          "url": "https://bozeco.com/articles/30_private_health_insurance.html",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "The Real Cost of Private Healthcare in Portugal 2026 (Portugal Brief)",
+          "url": "https://theportugalbrief.pt/the-real-cost-of-private-healthcare-in-portugal-what-expats-pay-in-2026/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Seguro de saude sobe 10% em 2026 (ComparaJa)",
+          "url": "https://www.comparaja.pt/blog/noticias/seguro-de-saude-sobe-10-em-2026",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Expat Health Insurance Portugal 2026: SNS, Multicare, Medis (Freenance)",
+          "url": "https://freenance.io/insurance/expat-health-insurance-portugal-2026-sns-public-private-multicare-medis-cuf-luz-cost/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "insurance": {
-      "min": 20,
-      "max": 30,
-      "typical": 25,
-      "annualInflation": 0.02
+      "min": 4,
+      "max": 20,
+      "typical": 8,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "Tenant contents (recheio) policy for 30k EUR incl. seismic cover costs 44-77 EUR/year in Lisbon per DECO Sep 2026 test (Allianz Casa Base 43.58, ok! casa Completo 76.52); max allows higher contents value and tenant-liability add-on.",
+      "sources": [
+        {
+          "title": "Melhor seguro casa para inquilinos (DECO Proteste, 11 Sep 2026)",
+          "url": "https://www.deco.proteste.pt/dinheiro/seguro-multirriscos-habitacao/noticias/melhor-seguro-casa-para-inquilinos",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petCare": {
-      "min": 60,
-      "max": 140,
-      "typical": 90,
-      "annualInflation": 0.03
+      "min": 45,
+      "max": 130,
+      "typical": 75,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Routine vet consults 30-45 EUR, annual vaccines 25-50 EUR (2026 guide; average dog upkeep 1,021 EUR/yr all-in), plus flea/tick/heartworm preventives dosed for a 100 lb dog (~35-45/month) and one extra visit or bloodwork a year. Food excluded.",
+      "sources": [
+        {
+          "title": "Animais de estimacao em Portugal: guia completo 2026 (Ricavida)",
+          "url": "https://ricavida.pt/animais-de-estimacao-em-portugal-guia-completo-2026/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petDaycare": {
-      "min": 180,
-      "max": 310,
-      "typical": 240,
+      "min": 130,
+      "max": 300,
+      "typical": 200,
       "annualInflation": 0.03,
-      "notes": "Hired pet sitter 2 days/week (~€26/visit). Limited commercial daycare in Greater Lisbon. In-home pet sitting via Rover.com, PetSitting.pt, local services. Algarve has fewer options than Lisbon."
+      "notes": "Keeps the stored model of ~2 sitter/daycare days per week (8-9 a month): Lisbon-area daycare/boarding quotes run 15-25 EUR per day (Fixando Q3 2026 median 20), giving 160-200 plus an occasional boarding night.",
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "Preco de hotel e creche para animais em Cascais (Fixando)",
+          "url": "https://www.fixando.pt/en/hotel-e-creche-para-animais/preco/Lisboa/Cascais",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petGrooming": {
-      "min": 45,
-      "max": 95,
-      "typical": 65,
-      "annualInflation": 0.025
+      "min": 35,
+      "max": 90,
+      "typical": 55,
+      "annualInflation": 0.025,
+      "lastVerified": "2026-11-09",
+      "notes": "Lisbon bath and grooming quotes average 38-43 EUR (range 30-60); a 100 lb double-coated dog is priced at the top of the range or above, groomed every 6-8 weeks.",
+      "sources": [
+        {
+          "title": "Preco de banhos e tosquias para animais em Lisboa (Fixando)",
+          "url": "https://www.fixando.pt/en/banhos-e-tosquias-para-animais/preco/Lisboa",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "transportation": {
       "min": 60,
-      "max": 120,
+      "max": 150,
       "typical": 80,
-      "annualInflation": 0.02
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "Transit-based as stored: two Navegante Metropolitano passes at 40 EUR each (price frozen for 2026, seventh year); Navegante +65 drops to 20 EUR each at 65. Max covers occasional taxi/ride-hail or car rental; min is one pass plus pay-as-you-go.",
+      "sources": [
+        {
+          "title": "Preco do passe Navegante sem alteracoes em 2026 (ECO)",
+          "url": "https://eco.sapo.pt/2025/12/18/preco-do-passe-navegante-sem-alteracoes-em-2026/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "entertainment": {
-      "min": 280,
-      "max": 440,
+      "min": 250,
+      "max": 480,
       "typical": 350,
       "annualInflation": 0.02,
-      "notes": "Incl cable+1Gig internet, Netflix, Amazon Prime, Apple TV+, dining out (lunch for 2 2x/week w/ tax+tip)"
+      "notes": "Stored meaning kept: 1 Gbps fibre 30-35 EUR on a main brand (MEO 29.99, Vodafone 31, NOS 35; low-cost 10-15, Jul 2026), Netflix/Prime/Apple TV+ ~30, lunch for two twice a week (~8 meals at 30-55 EUR; Numbeo mid-range dinner for two 55, Nov 2026), plus cinema (8.50) and activities.",
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "Internet fixa com melhor preco em Portugal em 2026 (4gnews, Jul 2026)",
+          "url": "https://4gnews.pt/internet-fixa-melhor-preco/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Cost of Living in Lisbon, Nov 2026 (Numbeo)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lisbon",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "clothing": {
       "min": 60,
       "max": 150,
       "typical": 100,
-      "annualInflation": 0.02
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "Modeled basket for two retirees from Numbeo Lisbon Nov 2026 item prices (jeans 92, chain-store dress 40, running shoes 92, men's leather shoes 108): a few mid-range items per person per quarter.",
+      "sources": [
+        {
+          "title": "Cost of Living in Lisbon, Nov 2026 (Numbeo)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lisbon",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "personalCare": {
       "min": 25,
@@ -147,11 +272,19 @@
       "notes": "Streaming, news, apps"
     },
     "phoneCell": {
-      "min": 70,
-      "max": 105,
-      "typical": 85,
+      "min": 14,
+      "max": 60,
+      "typical": 30,
       "annualInflation": 0.02,
-      "notes": "Google Fi Flexible (US Number) + WTF by NOS (Local). 2 phones, 1.5GB+ high-speed data each, all taxes included."
+      "notes": "Two local lines: low-cost brands (Digi, UZO, WOO, Amigo) 5-7 EUR each for 100 GB/unlimited; main brands MEO/NOS/Vodafone 13-20 EUR unlimited (Jul 2026). Typical assumes two main-brand plans; max allows keeping a Google Fi US number alongside one local line as in the stored setup.",
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "Tarifario movel com melhor preco em Portugal em 2026 (4gnews, Jul 2026)",
+          "url": "https://4gnews.pt/tarifario-telemovel-melhor-preco/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "miscellaneous": {
       "min": 50,
@@ -168,10 +301,23 @@
     },
     "medicalOOP": {
       "min": 40,
-      "max": 140,
+      "max": 150,
       "typical": 75,
       "annualInflation": 0.045,
-      "notes": "SNS covers specialist visits (€4.50 taxa moderadora) and hospital-based anti-VEGF injections. Private labs: €15-30 per panel. Frequent monitoring needed: ophthalmologist, endocrinologist. Prescription copays income-based; 95% reimbursement for pensioners."
+      "notes": "Stored meaning kept (frequent specialist monitoring). SNS taxas moderadoras now apply only to unreferred hospital emergencies; SNS consultations, exams and hospital-based injections are free. Private-side prices 2026: GP 50-100, specialist 80-180, blood panel 60-150, dental check 40-90, or 15-25 EUR copays in insurer networks.",
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "Vai as urgencias sem passar pelo SNS 24 - taxas moderadoras (Postal, Aug 2026)",
+          "url": "https://postal.pt/nacional/vai-as-urgencias-sem-passar-pelo-sns-24-saiba-quando-ainda-tem-de-pagar-taxas-moderadoras/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "The Real Cost of Private Healthcare in Portugal 2026 (Portugal Brief)",
+          "url": "https://theportugalbrief.pt/the-real-cost-of-private-healthcare-in-portugal-what-expats-pay-in-2026/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "medicine": {
       "min": 30,

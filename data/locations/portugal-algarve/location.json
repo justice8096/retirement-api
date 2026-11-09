@@ -44,71 +44,224 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 1000,
-      "min": 800,
-      "max": 1200,
-      "annualInflation": 0.04
+      "typical": 1400,
+      "min": 1000,
+      "max": 1900,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-09",
+      "notes": "Faro district asking rents averaged 17.50 EUR/m2/month in Aug 2026 (Doutor Financas observatory, listing based); a 80-100 m2 pet-friendly T2/T3 implies roughly 1,400-1,750. Idealista municipal medians (Mar 2025) ranged 12-17 EUR/m2 with Loule/Albufeira/Lagos highest, Olhao/VRSA/Portimao lowest; min reflects inland or eastern Algarve, max coastal Loule/Lagos houses.",
+      "sources": [
+        {
+          "title": "Observatorio do Mercado Imobiliario Residencial - agosto 2026 (Doutor Financas)",
+          "url": "https://www.doutorfinancas.pt/wp-content/uploads/2026/08/observatorio-imobiliario-agosto-2026.pdf",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Rendas das casas no Algarve aumentaram 14,5% em marco (Barlavento, idealista data)",
+          "url": "https://www.barlavento.pt/?p=369648",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Descubra onde e mais barato ou mais caro arrendar casa no Algarve (Postal)",
+          "url": "https://postal.pt/economia/descubra-onde-e-mais-barato-ou-mais-caro-arrendar-casa-no-algarve/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "groceries": {
-      "typical": 430,
-      "min": 350,
-      "max": 540,
-      "annualInflation": 0.03
+      "typical": 600,
+      "min": 480,
+      "max": 760,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Two adults at 220-350 EUR per person per month (Lisbon-based 2026 guide; Algarve food prices are similar to Lisbon) plus about 85-95 EUR/month of large-breed kibble for a 100 lb dog (Royal Canin Maxi Adult 15 kg listed at 82-104 EUR, roughly 13-14 kg/month). Food CPI running 3.7% y/y (Oct 2026).",
+      "sources": [
+        {
+          "title": "Cost of Living in Lisbon 2026 (Freenance)",
+          "url": "https://freenance.io/cities/lisbon-cost-of-living/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Royal Canin Dog Maxi Adult 15 kg (Pet Doctors PT)",
+          "url": "https://loja.petdoctors.pt/en/products/royal-canin-dog-maxi-adult-15-kg",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Inflacao outubro 2026 estimativa rapida (simula.pt, INE flash)",
+          "url": "https://simula.pt/noticias/inflacao-outubro-2026-estimativa-rapida/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "utilities": {
-      "typical": 160,
-      "min": 120,
-      "max": 215,
-      "annualInflation": 0.035
+      "typical": 145,
+      "min": 100,
+      "max": 210,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-09",
+      "notes": "Electricity ~65-80 (regulated-market couple at 3.45 kVA/1,900 kWh pays 37.77/month from Oct 2026; a 2-3BR house with summer A/C and some electric heating runs roughly double), bottled/piped gas ~25-30 (unverified estimate), water+sanitation+waste ~35-47 for 10 m3 (ERSAR 2026: national average 34.65; Loule 47.18, VRSA 47.39; Faro among the most expensive district capitals). Excludes internet.",
+      "sources": [
+        {
+          "title": "Fatura da eletricidade sobe 2,7% a partir de hoje (Postal, 1 Oct 2026)",
+          "url": "https://postal.pt/nacional/fatura-da-eletricidade-sobe-27-a-partir-de-hoje-veja-quanto-passa-a-pagar/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Agua pesa cada vez mais no orcamento - ERSAR 2026 (Postal)",
+          "url": "https://postal.pt/economia/agua-pesa-cada-vez-mais-no-orcamento-ha-concelhos-onde-a-fatura-ja-supera-os-50-euros/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 110,
-      "min": 75,
-      "max": 160,
+      "typical": 280,
+      "min": 120,
+      "max": 450,
       "annualInflation": 0.04,
-      "notes": "SNS public healthcare after NHR/D7 visa residency. Private insurance optional (~€80-120/person/mo with pre-existing conditions). Anti-VEGF injections available through SNS hospitals. Pre-existing condition loading on private plans. GLP-1 covered through SNS for diabetes."
+      "notes": "Legal residents register with the SNS at no premium (primary care free since 2022). Private top-up cover that expat retirees typically carry: a couple in their 60s on standard Medis/Multicare/Fidelidade plans pays about 250-350 EUR/month total (Sep 2026 guide); hospital-only plans for two are around 120; premium tiers 180-280 per person. Premiums rose ~10% in 2026.",
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "Best Private Health Insurance in Portugal 2026 (Bozeco, updated Sep 2026)",
+          "url": "https://bozeco.com/articles/30_private_health_insurance.html",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "The Real Cost of Private Healthcare in Portugal 2026 (Portugal Brief)",
+          "url": "https://theportugalbrief.pt/the-real-cost-of-private-healthcare-in-portugal-what-expats-pay-in-2026/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Seguro de saude sobe 10% em 2026 (ComparaJa)",
+          "url": "https://www.comparaja.pt/blog/noticias/seguro-de-saude-sobe-10-em-2026",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Expat Health Insurance Portugal 2026: SNS, Multicare, Medis (Freenance)",
+          "url": "https://freenance.io/insurance/expat-health-insurance-portugal-2026-sns-public-private-multicare-medis-cuf-luz-cost/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "insurance": {
-      "typical": 130,
-      "min": 90,
-      "max": 180,
-      "annualInflation": 0.04
+      "typical": 8,
+      "min": 4,
+      "max": 15,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-09",
+      "notes": "Re-modeled from old template (stored 130 was health cover; health cost now fully in healthcare). Tenant contents (recheio) policy for 30k EUR incl. seismic cover costs 40-73 EUR/year in Faro per DECO Sep 2026 test (Allianz Casa Base 39.68, ok! casa Completo 72.82); max allows tenant-liability add-on.",
+      "sources": [
+        {
+          "title": "Melhor seguro casa para inquilinos (DECO Proteste, 11 Sep 2026)",
+          "url": "https://www.deco.proteste.pt/dinheiro/seguro-multirriscos-habitacao/noticias/melhor-seguro-casa-para-inquilinos",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petCare": {
-      "typical": 60,
-      "min": 40,
-      "max": 100,
-      "annualInflation": 0.03
+      "typical": 75,
+      "min": 45,
+      "max": 130,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Routine vet consults 30-45 EUR, annual vaccines 25-50 EUR (2026 guide; average dog upkeep 1,021 EUR/yr all-in), plus flea/tick/heartworm preventives dosed for a 100 lb dog (~35-45/month) and one extra visit or bloodwork a year. Food excluded.",
+      "sources": [
+        {
+          "title": "Animais de estimacao em Portugal: guia completo 2026 (Ricavida)",
+          "url": "https://ricavida.pt/animais-de-estimacao-em-portugal-guia-completo-2026/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petDaycare": {
       "typical": 150,
-      "min": 100,
+      "min": 80,
       "max": 250,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Daycare/boarding quotes in the Lisbon area run 15-25 EUR per day (Fixando Q3 2026 median 20); occasional use of ~6-8 days a month or one boarding week a quarter gives ~150. Algarve-specific rates not separately verified; fewer commercial options outside Faro/Loule/Lagos.",
+      "sources": [
+        {
+          "title": "Preco de hotel e creche para animais em Cascais (Fixando)",
+          "url": "https://www.fixando.pt/en/hotel-e-creche-para-animais/preco/Lisboa/Cascais",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petGrooming": {
       "typical": 50,
       "min": 30,
       "max": 80,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Bath and grooming quotes average 38-43 EUR (range 30-60) in the Lisbon market; a large double-coated dog sits at the top of that range, groomed every 6-8 weeks with home brushing in between.",
+      "sources": [
+        {
+          "title": "Preco de banhos e tosquias para animais em Lisboa (Fixando)",
+          "url": "https://www.fixando.pt/en/banhos-e-tosquias-para-animais/preco/Lisboa",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "transportation": {
-      "typical": 160,
-      "min": 100,
-      "max": 240,
-      "annualInflation": 0.03
+      "typical": 200,
+      "min": 120,
+      "max": 300,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Car-dependent region: one small car, ~800 km/month at 7 L/100 km with gasoline 95 at 2.03 EUR/L (1 Nov 2026) ~115, insurance ~29 (national average 344 EUR/yr, Mar 2026), maintenance/tyres ~40, IUC road tax ~15. Regional Passe Algarve (Vamus) is 40 EUR/month per person as an alternative; no senior discount found.",
+      "sources": [
+        {
+          "title": "Gasoleo mais caro que gasolina novembro 2026 (simula.pt, DGEG averages)",
+          "url": "https://simula.pt/noticias/gasoleo-mais-caro-que-gasolina-novembro-2026/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Seguro automovel mais caro em 2026 (e-konomista, MUDEY data)",
+          "url": "https://www.e-konomista.pt/seguro-automovel-mais-caro-em-2026/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Novo passe Algarve 40 euros mensais (Postal)",
+          "url": "https://postal.pt/algarve/novo-passe-algarve-vai-permitir-viajar-em-toda-a-regiao-por-40-euros-mensais/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 250,
-      "min": 180,
-      "max": 350,
-      "annualInflation": 0.03
+      "typical": 300,
+      "min": 200,
+      "max": 420,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "1 Gbps fibre 15-35 EUR (Digi/UZO/WOO 10-15, MEO 29.99, Vodafone 31, NOS 35, Jul 2026), streaming ~30, dining out for two 3-4 times a month at ~55 EUR mid-range (Numbeo Lisbon Nov 2026; Algarve similar), plus cinema (8.50) and activities.",
+      "sources": [
+        {
+          "title": "Internet fixa com melhor preco em Portugal em 2026 (4gnews, Jul 2026)",
+          "url": "https://4gnews.pt/internet-fixa-melhor-preco/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Cost of Living in Lisbon, Nov 2026 (Numbeo)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lisbon",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "clothing": {
       "typical": 80,
       "min": 50,
-      "max": 120,
-      "annualInflation": 0.02
+      "max": 130,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "Modeled basket for two retirees from Numbeo Nov 2026 item prices (jeans 92, chain-store dress 40, running shoes 92, men's leather shoes 108): a few mid-range items per person per quarter.",
+      "sources": [
+        {
+          "title": "Cost of Living in Lisbon, Nov 2026 (Numbeo)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lisbon",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "personalCare": {
       "typical": 60,
@@ -123,10 +276,19 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 85,
-      "min": 70,
-      "max": 105,
-      "annualInflation": 0.02
+      "typical": 30,
+      "min": 14,
+      "max": 60,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "Two local lines: low-cost brands (Digi, UZO, WOO, Amigo) 5-7 EUR each for 100 GB/unlimited; main brands MEO/NOS/Vodafone 13-20 EUR unlimited (Jul 2026). Typical assumes two main-brand plans; max allows keeping one US number (e.g. Google Fi) alongside.",
+      "sources": [
+        {
+          "title": "Tarifario movel com melhor preco em Portugal em 2026 (4gnews, Jul 2026)",
+          "url": "https://4gnews.pt/tarifario-telemovel-melhor-preco/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "taxes": {
       "typical": 600,
@@ -155,10 +317,24 @@
       "annualInflation": 0.025
     },
     "medicalOOP": {
-      "min": 40,
-      "typical": 80,
-      "max": 160,
-      "annualInflation": 0.035
+      "min": 30,
+      "typical": 70,
+      "max": 150,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-09",
+      "notes": "SNS taxas moderadoras now apply only to unreferred hospital emergencies; primary care, scheduled consultations and exams are free. Out-of-pocket is mainly private-side: GP 50-100, specialist 80-180, dental check 40-90, blood panel 60-150 (2026), reduced to 15-25 EUR copays when using insurer networks; interior/Algarve 15-30% below Lisbon.",
+      "sources": [
+        {
+          "title": "Vai as urgencias sem passar pelo SNS 24 - taxas moderadoras (Postal, Aug 2026)",
+          "url": "https://postal.pt/nacional/vai-as-urgencias-sem-passar-pelo-sns-24-saiba-quando-ainda-tem-de-pagar-taxas-moderadoras/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "The Real Cost of Private Healthcare in Portugal 2026 (Portugal Brief)",
+          "url": "https://theportugalbrief.pt/the-real-cost-of-private-healthcare-in-portugal-what-expats-pay-in-2026/",
+          "accessed": "2026-11-09"
+        }
+      ]
     }
   },
   "healthcare": {

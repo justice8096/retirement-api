@@ -39,47 +39,154 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 860,
-      "min": 650,
-      "max": 1100,
-      "annualInflation": 0.04
+      "typical": 1050,
+      "min": 850,
+      "max": 1400,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-09",
+      "notes": "Asking rents Aug 2026: Caldas da Rainha 8.75 EUR/m2, Obidos 10.47 EUR/m2 (~875-1050 for 100 m2); live listings: T2 house Obidos 120 m2 900 EUR, T3 apartment Caldas 144 m2 1300 EUR; Obidos T2 950-1100, T3 house 1300-1600; Numbeo 3BR Caldas 1010 outside centre / 1272 centre.",
+      "sources": [
+        {
+          "title": "Doutor Financas - Observatorio do Mercado Imobiliario Residencial, agosto 2026 (rent EUR/m2 by municipality)",
+          "url": "https://www.doutorfinancas.pt/wp-content/uploads/2026/08/observatorio-imobiliario-agosto-2026.pdf",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "RE/MAX - T2 house for rent, Obidos, 120 m2, 900 EUR",
+          "url": "https://remax.pt/en/imoveis/arrendamento-moradia-t2-obidos-santa-maria-sao-pedro-e-sobral-da-lagoa/122481544-39",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "RE/MAX - T3 apartment for rent, Caldas da Rainha, 144 m2, 1300 EUR",
+          "url": "https://remax.pt/en/imoveis/arrendamento-apartamento-t3-caldas-da-rainha-caldas-da-rainha---santo-onofre-e-serra-do-bouro/122481544-58",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Tagus Property - Real estate market in Obidos (rental medians, Idealista March 2026)",
+          "url": "https://www.tagusproperty.com/real-estate-market-in-obidos/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo - Cost of Living in Caldas da Rainha (updated 2 Oct 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Caldas-da-Rainha-Portugal",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "groceries": {
-      "typical": 400,
-      "min": 320,
-      "max": 500,
-      "annualInflation": 0.03
+      "typical": 480,
+      "min": 400,
+      "max": 620,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "National supermarket basket for a couple 350-600 EUR (Porto survey used as proxy; small-town prices slightly lower) plus ~70-90 EUR large-breed dog food. Unprocessed food CPI +3.7% y/y Oct 2026 flash.",
+      "sources": [
+        {
+          "title": "Euro Dicas - Custo de vida no Porto (values checked May 2026, updated Oct 2026)",
+          "url": "https://www.eurodicas.com.br/custo-de-vida-no-porto/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "E-konomista - Quanto custa ter um cao (dog food and grooming prices; 2018 article)",
+          "url": "https://www.e-konomista.pt/quanto-custa-ter-um-cao/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Simula.pt - INE flash estimate, inflation October 2026 (unprocessed food +3.7% y/y, energy +17.4%)",
+          "url": "https://simula.pt/noticias/inflacao-outubro-2026-estimativa-rapida/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "utilities": {
       "typical": 150,
-      "min": 110,
-      "max": 200,
-      "annualInflation": 0.035
+      "min": 100,
+      "max": 210,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-09",
+      "notes": "Numbeo Caldas da Rainha basic utilities 96.50 EUR for 85 m2; a 2-3BR house with electric/gas heating in damp coastal winters runs higher, and energy CPI is +17.4% y/y (Oct 2026). Excludes internet.",
+      "sources": [
+        {
+          "title": "Numbeo - Cost of Living in Caldas da Rainha (updated 2 Oct 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Caldas-da-Rainha-Portugal",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Simula.pt - INE flash estimate, inflation October 2026 (unprocessed food +3.7% y/y, energy +17.4%)",
+          "url": "https://simula.pt/noticias/inflacao-outubro-2026-estimativa-rapida/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 100,
-      "min": 65,
-      "max": 150,
+      "typical": 290,
+      "min": 150,
+      "max": 400,
       "annualInflation": 0.04,
-      "notes": "SNS public healthcare after NHR/D7 visa residency. Private insurance optional (~€80-120/person/mo with pre-existing conditions). Anti-VEGF injections available through SNS hospitals. Pre-existing condition loading on private plans. GLP-1 covered through SNS for diabetes."
+      "notes": "SNS is essentially free for legal residents (GP visits free since 2022), so this is the private top-up cover retiree couples typically carry: domestic comprehensive plans for a couple both aged 60 run about 250-360 EUR/month combined (basic hospital-only plans for two ~140-200). Former stored value excluded the insurance that was parked in 'insurance'; renewal increases of 8-15%/yr after 60 are common.",
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "Apoio Juridico Imigracao - Portugal private health insurance for expats 2026 (premiums by age, couple both 60)",
+          "url": "https://www.apoiojuridico-imigracao.com/blog/portugal-private-health-insurance-expats-2026",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Bozeco - Best private health insurance in Portugal 2026 (premium tables by age band, updated Sep 2026)",
+          "url": "https://bozeco.com/articles/30_private_health_insurance.html",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Freenance - Expat health insurance Portugal 2026: SNS access for residents",
+          "url": "https://freenance.io/insurance/expat-health-insurance-portugal-2026-sns-public-private-multicare-medis-cuf-luz-cost/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "insurance": {
-      "typical": 120,
-      "min": 80,
-      "max": 170,
-      "annualInflation": 0.04
+      "typical": 7,
+      "min": 4,
+      "max": 14,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-09",
+      "notes": "Re-modeled from old template (stored value was health insurance). DECO Sep 2026: tenant contents policy on 30,000 EUR of contents incl. seismic cover costs 39.68-76.52 EUR in Faro/Lisboa (Porto 46.81-92.10) per year, so about 4-8 EUR/month; tenant-specific extras can add a little.",
+      "sources": [
+        {
+          "title": "DECO Proteste - Melhor seguro casa para inquilinos (Sep 2026, contents 30k EUR premiums Faro/Lisboa/Porto)",
+          "url": "https://www.deco.proteste.pt/dinheiro/seguro-multirriscos-habitacao/noticias/melhor-seguro-casa-para-inquilinos",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petCare": {
-      "typical": 60,
-      "min": 40,
+      "typical": 55,
+      "min": 25,
       "max": 100,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Basic consult 27.65 EUR, annual vaccines 30-50, flea/tick ~6/month and internal deworming ~4/quarter; large-dog doses cost more and a senior Bernese usually adds bloodwork and 1-2 extra visits, so ~300-1200 EUR/yr.",
+      "sources": [
+        {
+          "title": "Generali Tranquilidade - Preco consulta veterinario (Apr 2025: consult 27.65 EUR, vaccines 30-50, deworming)",
+          "url": "https://www.generalitranquilidade.pt/blog/familia/preco-consulta-veterinario",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petDaycare": {
-      "typical": 150,
-      "min": 100,
-      "max": 250,
-      "annualInflation": 0.03
+      "typical": 100,
+      "min": 60,
+      "max": 180,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Dog hotels average ~15 EUR/night nationally (range 4-26, 75 hotels surveyed); occasional boarding/daycare of 5-10 days a month.",
+      "sources": [
+        {
+          "title": "DECO Proteste - Hoteis para caes e gatos: quanto custam por noite (75 hotels, avg 15 EUR/night, 2024)",
+          "url": "https://www.deco.proteste.pt/familia-consumo/animais-estimacao/noticias/hoteis-para-caes-e-gatos-quanto-custam-por-noite",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petGrooming": {
       "typical": 50,
@@ -88,22 +195,64 @@
       "annualInflation": 0.03
     },
     "transportation": {
-      "typical": 150,
-      "min": 100,
-      "max": 220,
-      "annualInflation": 0.03
+      "typical": 190,
+      "min": 120,
+      "max": 280,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Car needed on the Silver Coast: ~800 km/month at 2.0-2.2 EUR/L (gasoleo 2.205, gasolina 2.006 on 2 Nov 2026) ~110, insurance avg ~344 EUR/yr (~29), maintenance/IUC/inspection ~50; Numbeo Caldas gasoline 1.75 EUR/L is the lower bound.",
+      "sources": [
+        {
+          "title": "Caetano - Preco dos combustiveis esta semana (2-8 Nov 2026: gasoleo 2.205, gasolina 95 2.006 EUR/L, DGEG)",
+          "url": "https://caetano.pt/blog/preco-dos-combustiveis-esta-semana/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "E-konomista - Seguro automovel mais caro em 2026 (avg premium ~344 EUR/yr, +11.4%)",
+          "url": "https://www.e-konomista.pt/seguro-automovel-mais-caro-em-2026/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo - Cost of Living in Caldas da Rainha (updated 2 Oct 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Caldas-da-Rainha-Portugal",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 200,
-      "min": 140,
-      "max": 280,
-      "annualInflation": 0.03
+      "typical": 230,
+      "min": 160,
+      "max": 330,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Fiber 1 Gbps 29-45 EUR (Numbeo Caldas 35), streaming ~30, mid-range meal for two 45 EUR x3, plus activities.",
+      "sources": [
+        {
+          "title": "Portugal Internet - Home internet Portugal 2026 (1 Gbps fiber 29-45 EUR)",
+          "url": "https://www.portugalinternet.com/en/blog/home-internet-portugal",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo - Cost of Living in Caldas da Rainha (updated 2 Oct 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Caldas-da-Rainha-Portugal",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "clothing": {
       "typical": 80,
       "min": 50,
       "max": 120,
-      "annualInflation": 0.02
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "Numbeo Porto: jeans 92.50 EUR, chain-store dress 29.71, Nike runners 83.75, leather shoes 92.89; a few items per month for two fits the stored 80 (national proxy for Silver Coast).",
+      "sources": [
+        {
+          "title": "Numbeo - Cost of Living in Porto (updated 8 Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Porto",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "personalCare": {
       "typical": 60,
@@ -118,10 +267,24 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 85,
-      "min": 70,
-      "max": 105,
-      "annualInflation": 0.02
+      "typical": 26,
+      "min": 14,
+      "max": 40,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "Two lines: Digi unlimited 6 EUR each (14 total), MEO/NOS unlimited 12.99-13 each (~26), Vodafone unlimited 20 each (40). Stored 85 was far above current market after the 2025-2026 price war.",
+      "sources": [
+        {
+          "title": "4gnews - Tarifario telemovel melhor preco (Jul 2026: Digi 6 EUR unlimited, MEO/NOS 12.99, Vodafone 20)",
+          "url": "https://4gnews.pt/tarifario-telemovel-melhor-preco/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "ComparaJa - Vodafone, NOS e MEO lancam tarifarios por 13 euros (Sep 2026)",
+          "url": "https://www.comparaja.pt/tv-net-voz/noticias/tarifario-movel-13-euros-setembro-2026",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "taxes": {
       "typical": 600,
@@ -153,7 +316,16 @@
       "min": 40,
       "typical": 80,
       "max": 160,
-      "annualInflation": 0.035
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-09",
+      "notes": "SNS user fees are small; private consult without insurance ~85 EUR, with insurance co-pay ~17 EUR, elective procedure co-pays up to ~250 EUR. Stored range kept as consistent with these.",
+      "sources": [
+        {
+          "title": "Nomad Gate community - Health insurance in Portugal (private visit ~85 EUR, insured co-pay ~17 EUR)",
+          "url": "https://community.nomadgate.com/t/health-insurance/59826",
+          "accessed": "2026-11-09"
+        }
+      ]
     }
   },
   "healthcare": {

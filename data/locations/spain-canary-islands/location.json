@@ -44,65 +44,224 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 1050,
-      "min": 800,
-      "max": 1300,
-      "annualInflation": 0.04
+      "typical": 1250,
+      "min": 950,
+      "max": 1650,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-09",
+      "notes": "idealista Oct 2026: Canarias EUR 15.2/m2 (+4.5% y/y), Santa Cruz de Tenerife province EUR 15.3; Las Palmas de Gran Canaria city EUR 14.0 and Santa Cruz city EUR 13.3 at end-2025. An 85-95 m2 pet-friendly 2-3BR = EUR 1,200-1,450 in the capitals; tourist-south municipalities (Adeje, Arona, San Bartolome) run EUR 19-22/m2. Numbeo LPGC Nov 2026: 3BR EUR 1,146 outside centre, EUR 1,370 centre; Barometro del Alquiler Q1 2026 average rent EUR 1,135.",
+      "sources": [
+        {
+          "title": "idealista: El precio del alquiler en Espana sube un 5,6% interanual en octubre 2026",
+          "url": "https://www.idealista.com/sala-de-prensa/notas-de-prensa/2026/11/03/275251-el-precio-del-alquiler-en-espana-sube-un-5-6-interanual-durante-el-mes-de",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "La Voz de Lanzarote: rent increase in the Canary Islands 2025 (idealista data)",
+          "url": "https://www.lavozdelanzarote.com/en/ekonomus/housing/how-much-did-rent-increase-in-the-canary-islands-in-2025-the-most-expensive-and-most-affordable-municipalities_240359_102.html",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo: Cost of Living in Las Palmas de Gran Canaria (Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Las-Palmas",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "RTVC: Barometro del Alquiler Q1 2026 Canarias",
+          "url": "https://rtvc.es/canarias-unas-de-las-comunidades-mas-caras-para-vivir-de-alquiler-28-abril-2026/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "groceries": {
-      "typical": 440,
-      "min": 350,
-      "max": 560,
-      "annualInflation": 0.03
+      "typical": 570,
+      "min": 470,
+      "max": 720,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "OCU 2026 study: average household basket EUR 6,602/yr (EUR 550/mo) nationally; Las Palmas shows a wide price spread (EUR 2,167/yr savings potential) and island import costs offset the lower IGIC. Food CPI +2.3% y/y Aug 2026. Includes about EUR 60-80/mo of food for a 100 lb dog.",
+      "sources": [
+        {
+          "title": "idealista/news: OCU 2026 supermarket price study",
+          "url": "https://www.idealista.com/en/news/node/916838",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "MAPA: Serie IPC alimentos informe n.16 (agosto 2026)",
+          "url": "https://www.mapa.gob.es/ca/dam/jcr:e63422c3-05f3-491d-88a5-9e62bba953bb/AYP_serie_ipc_informe_n%C2%BA16_agosto_2026_.8f4b22e16c9418cb4782d4c07901fefb.pdf",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Hola: cuanto cuesta mantener un perro en Espana (Sep 2025)",
+          "url": "https://www.hola.com/al-dia/20250910854923/cuanto-cuesta-mantener-perro-espana-gastos/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "utilities": {
-      "typical": 145,
-      "min": 105,
-      "max": 195,
-      "annualInflation": 0.035
+      "typical": 135,
+      "min": 100,
+      "max": 190,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-09",
+      "notes": "Mild climate, no heating: electricity about EUR 85-100 (PVPC average bill EUR 88/mo at 3,500 kWh/yr, Oct 2026), butane EUR 15 per cylinder for cooking/hot water, desalinated water plus sewer about EUR 30. Numbeo LPGC basic utilities EUR 101 (70-200). Excludes internet.",
+      "sources": [
+        {
+          "title": "papernest: Termometro factura de luz octubre 2026",
+          "url": "https://www.papernest.es/wp-content/uploads/sites/27/2026/11/nota_prensa_termometro_octubre-2.pdf",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Selectra: precio bombona de butano noviembre 2025 (BOE)",
+          "url": "https://selectra.es/energia/noticias/boe-bombona-butano-barata-precio-noviembre",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo: Cost of Living in Las Palmas de Gran Canaria (Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Las-Palmas",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 110,
-      "min": 70,
-      "max": 160,
+      "typical": 245,
+      "min": 185,
+      "max": 440,
       "annualInflation": 0.04,
-      "notes": "Sistema Nacional de Salud (SNS) universal coverage after residency permit. Private (Sanitas, Adeslas, ASISA) ~€60-150/mo with pre-existing condition loadings. Anti-VEGF injections available widely via SNS at public ophthalmology. GLP-1 covered for diabetes via SNS. Chronic-disease coverage is strong; regional variation — Catalonia and Madrid have densest infrastructure."
+      "notes": "Resident retiree couple age 60 on private full-cover policies (required for the non-lucrative visa; pre-existing conditions can be loaded or excluded). Poliza Medica Nov 2026 market average at age 60: EUR 91/person full cover with copays, EUR 123/person no-copay; Sanitas Mas Salud 60-64 no-copay EUR 186 (Valencia) to EUR 220 (Barcelona) per person. Typical = 2 x EUR 123; after 1 year of legal residency the public SNS becomes an option via the convenio especial (not priced here). No Canarias-specific insurer quote found; max uses the Barcelona Sanitas quote as an upper bound.",
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "Poliza Medica: seguros medicos privados precios por edad (Nov 2026)",
+          "url": "https://www.polizamedica.es/seguros/salud/seguros-medicos-privados-precios",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Poliza Medica: seguros medicos para personas mayores (Nov 2026)",
+          "url": "https://www.polizamedica.es/kpw8",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "insurance": {
-      "typical": 125,
-      "min": 85,
-      "max": 180,
-      "annualInflation": 0.04
+      "typical": 12,
+      "min": 7,
+      "max": 25,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-09",
+      "notes": "Renters/contents (seguro de inquilino) policy only: Selectra quotes EUR 70-300/yr (Tuio 79, Caser 110, Santalucia 141 for a 71 m2 flat); full owner-type home policies average about EUR 265/yr nationally (Selectra 2026 report), used as the upper bound. Typical about EUR 140/yr. Re-modeled from old template (stored 125 was health cover). Las Palmas EUR 267/yr and Santa Cruz EUR 258/yr average home premiums.",
+      "sources": [
+        {
+          "title": "Selectra: seguro para inquilinos precios",
+          "url": "https://selectra.es/seguros/seguros-hogar/seguro-inquilinos",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Selectra: Informe seguros de hogar 2026 (prima media por capital)",
+          "url": "https://selectra.es/sites/selectra.es/files/2026-04/Informe%20seguros%20de%20hogar%202026.pdf",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petCare": {
-      "typical": 60,
+      "typical": 65,
       "min": 40,
-      "max": 100,
-      "annualInflation": 0.03
+      "max": 120,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Large dog, no food: annual vaccines incl. rabies EUR 50-80, 2 consults EUR 30-60 each, monthly antiparasitic pipette EUR 8-15 plus quarterly worming EUR 12-20, periodic dental cleaning EUR 100-250 (cuantomecuesta, Apr 2026); giant-breed dosing and Bernese health risks push the typical above the EUR 200-400/yr healthy-pet estimate. Island vet prices track the mainland; fewer specialists, so referrals may mean travel.",
+      "sources": [
+        {
+          "title": "Cuantomecuesta: precios veterinario Espana (abril 2026)",
+          "url": "https://cuantomecuesta.com/es/veterinario/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Hola: cuanto cuesta mantener un perro en Espana (Sep 2025)",
+          "url": "https://www.hola.com/al-dia/20250910854923/cuanto-cuesta-mantener-perro-espana-gastos/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petDaycare": {
-      "typical": 150,
-      "min": 100,
+      "typical": 130,
+      "min": 80,
       "max": 250,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Occasional use: about 6-8 daycare days per month at the Cronoshare national average EUR 16/day (range 9-30) plus one week of boarding per year; residencias caninas exist on Gran Canaria and Tenerife (Valsequillo, Granadilla).",
+      "sources": [
+        {
+          "title": "Cronoshare: guarderia canina precios",
+          "url": "https://www.cronoshare.com/servicios/guarderia-canina",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petGrooming": {
       "typical": 50,
-      "min": 30,
-      "max": 80,
-      "annualInflation": 0.03
+      "min": 35,
+      "max": 90,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Giant long/double coat: bath EUR 42-47, brush-out EUR 20-24, tidy-up EUR 46-51 per visit (Cronoshare 2026 national price guide); modeled as one full groom per month with a brush-out in between.",
+      "sources": [
+        {
+          "title": "Cronoshare: cuanto cuesta peluqueria canina (precios 2026)",
+          "url": "https://www.cronoshare.com/cuanto-cuesta/peluqueria-canina",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "transportation": {
-      "typical": 140,
-      "min": 90,
-      "max": 210,
-      "annualInflation": 0.03
+      "typical": 150,
+      "min": 40,
+      "max": 260,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Guaguas and tram are free for recurring (bono) travelers across Canarias through 2026 (state aid renewed Dec 2025), so transit costs little. A car: insurance EUR 394/yr (CHECK24), gasolina about EUR 1.32/l in Las Palmas (Mar 2026; no mainland hydrocarbon tax) for 800 km/mo = EUR 75, maintenance/ITV/IVTM about EUR 45. Island living usually needs a car.",
+      "sources": [
+        {
+          "title": "RTVC: Gobierno central mantiene en 2026 la gratuidad del transporte en Canarias",
+          "url": "https://rtvc.es/gobierno-central-2026-gratuidad-transporte-canarias-23-diciembre-2025/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "CHECK24: prima media seguro de coche enero 2026",
+          "url": "https://seguros.check24.es/wp-content/uploads/2026/02/NdP_La-prima-media-del-seguro-de-coche-arranca-2026-con-un-ligero-descenso-situandose-por-debajo-de-los-400-euros.pdf",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Maspalomas24h: gasoline prices Gran Canaria (Mar 2026)",
+          "url": "https://www.maspalomas24h.uk/Article/10259/Why-does-gasoline-in-southern-Gran-Canaria-strangle-wages",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo: Cost of Living in Las Palmas de Gran Canaria (Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Las-Palmas",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 250,
-      "min": 180,
-      "max": 350,
-      "annualInflation": 0.03
+      "typical": 340,
+      "min": 260,
+      "max": 440,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Home fibre 1 Gbps EUR 20-30 (Digi; Numbeo city average EUR 26-33) plus about EUR 35 streaming, 4 mid-range meals for two at about EUR 60 (Numbeo), and EUR 40-70 activities. LPGC meal for two EUR 60 (40-150), internet EUR 26.",
+      "sources": [
+        {
+          "title": "Kelisto: fibra de Digi precios (octubre 2026)",
+          "url": "https://www.kelisto.es/internet/consejos-y-analisis/fibra-de-digi",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo: Cost of Living in Las Palmas de Gran Canaria (Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Las-Palmas",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "clothing": {
       "typical": 80,
@@ -123,10 +282,24 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 79,
-      "min": 64,
-      "max": 99,
-      "annualInflation": 0.02
+      "typical": 20,
+      "min": 14,
+      "max": 40,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "Two local lines: Digi 50 GB unlimited calls EUR 7/line, 100 GB EUR 10, unlimited EUR 12 (Kelisto, Oct 2026; Digi froze prices for 2026); Numbeo city average for a 10 GB+ plan is about EUR 17/line. Stored value included a US Google Fi line; add roughly EUR 45/mo if that line is kept.",
+      "sources": [
+        {
+          "title": "Kelisto: tarifas de Digi movil (octubre 2026)",
+          "url": "https://www.kelisto.es/telefonia-movil/consejos-y-analisis/movil-con-digi-son-sus-tarifas-las-mas-baratas-del-mercado",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Numbeo: Cost of Living in Las Palmas de Gran Canaria (Nov 2026)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Las-Palmas",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "taxes": {
       "typical": 840,

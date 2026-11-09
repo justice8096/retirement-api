@@ -40,71 +40,234 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 1800,
-      "min": 1400,
-      "max": 2200,
-      "annualInflation": 0.04
+      "typical": 2200,
+      "min": 1600,
+      "max": 3000,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-09",
+      "notes": "Cascais municipality had the highest asking rent in the Lisbon district at 24.58 EUR/m2/month (Aug 2026 observatory); a 85-95 m2 T2 implies ~2,100-2,300, matching a 90-100 m2 T2 estimate of 1,800-2,050 at 20.5 EUR/m2 (May 2026) and a live Imovirtual T2 sample (Cascais e Estoril, 121 listings) with 1,300-2,500 common and luxury outliers to 9,000.",
+      "sources": [
+        {
+          "title": "Observatorio do Mercado Imobiliario Residencial - agosto 2026 (Doutor Financas)",
+          "url": "https://www.doutorfinancas.pt/wp-content/uploads/2026/08/observatorio-imobiliario-agosto-2026.pdf",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "T2 em Cascais: precos e zonas (Ricavida, 2026)",
+          "url": "https://ricavida.pt/t2-em-cascais-precos-e-zonas-para-este-ano/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Apartamentos T2 para arrendar, Cascais e Estoril (Imovirtual)",
+          "url": "https://www.imovirtual.com/pt/resultados/arrendar/apartamento,t2/lisboa/cascais/cascais-e-estoril",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "groceries": {
-      "typical": 500,
-      "min": 400,
-      "max": 620,
-      "annualInflation": 0.03
+      "typical": 650,
+      "min": 520,
+      "max": 820,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Two adults at 220-350 EUR per person per month (Lisbon-area 2026 guide; Cascais supermarkets price like Lisbon or slightly above) plus ~85-95 EUR/month large-breed kibble for a 100 lb dog (Royal Canin Maxi Adult 15 kg at 82-104 EUR). Food CPI 3.7% y/y Oct 2026.",
+      "sources": [
+        {
+          "title": "Cost of Living in Lisbon 2026 (Freenance)",
+          "url": "https://freenance.io/cities/lisbon-cost-of-living/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Royal Canin Dog Maxi Adult 15 kg (Pet Doctors PT)",
+          "url": "https://loja.petdoctors.pt/en/products/royal-canin-dog-maxi-adult-15-kg",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Inflacao outubro 2026 estimativa rapida (simula.pt, INE flash)",
+          "url": "https://simula.pt/noticias/inflacao-outubro-2026-estimativa-rapida/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "utilities": {
-      "typical": 180,
-      "min": 135,
-      "max": 240,
-      "annualInflation": 0.035
-    },
-    "healthcare": {
-      "typical": 120,
-      "min": 80,
-      "max": 170,
-      "annualInflation": 0.04,
-      "notes": "SNS public healthcare after NHR/D7 visa residency. Private insurance optional (~€80-120/person/mo with pre-existing conditions). Anti-VEGF injections available through SNS hospitals. Pre-existing condition loading on private plans. GLP-1 covered through SNS for diabetes."
-    },
-    "insurance": {
-      "typical": 140,
+      "typical": 145,
       "min": 100,
       "max": 200,
-      "annualInflation": 0.04
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-09",
+      "notes": "Electricity ~70-80 for a 2-3BR with electric heating and light A/C (regulated-market couple benchmark 37.77/month at 1,900 kWh, Oct 2026), gas ~25-30 (unverified estimate), Aguas de Cascais 2026: 9.64 fixed + 0.65/0.97 per m3 in tiers 1-2, i.e. ~18 for 10 m3 of water before sanitation and waste, so ~35 all-in (ERSAR national average 34.65); a 25% cut to tiers 1-2 was approved Jul 2026. Excludes internet.",
+      "sources": [
+        {
+          "title": "Fatura da eletricidade sobe 2,7% a partir de hoje (Postal, 1 Oct 2026)",
+          "url": "https://postal.pt/nacional/fatura-da-eletricidade-sobe-27-a-partir-de-hoje-veja-quanto-passa-a-pagar/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Tarifas da Aguas de Cascais 2026 (ComparaJa)",
+          "url": "https://www.comparaja.pt/agua/empresas/aguas-de-cascais",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Cascais aprova reducao ate 25% na tarifa de agua (ECO, Jul 2026)",
+          "url": "https://eco.sapo.pt/2026/07/01/cascais-aprova-reducao-ate-25-na-tarifa-de-agua-para-consumos-essenciais/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Agua pesa cada vez mais no orcamento - ERSAR 2026 (Postal)",
+          "url": "https://postal.pt/economia/agua-pesa-cada-vez-mais-no-orcamento-ha-concelhos-onde-a-fatura-ja-supera-os-50-euros/",
+          "accessed": "2026-11-09"
+        }
+      ]
+    },
+    "healthcare": {
+      "typical": 280,
+      "min": 120,
+      "max": 450,
+      "annualInflation": 0.04,
+      "notes": "Legal residents register with the SNS at no premium (primary care free since 2022). Private top-up cover that expat retirees typically carry: a couple in their 60s on standard Medis/Multicare/Fidelidade plans pays about 250-350 EUR/month total (Sep 2026 guide); hospital-only plans for two are around 120; premium tiers 180-280 per person. Premiums rose ~10% in 2026.",
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "Best Private Health Insurance in Portugal 2026 (Bozeco, updated Sep 2026)",
+          "url": "https://bozeco.com/articles/30_private_health_insurance.html",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "The Real Cost of Private Healthcare in Portugal 2026 (Portugal Brief)",
+          "url": "https://theportugalbrief.pt/the-real-cost-of-private-healthcare-in-portugal-what-expats-pay-in-2026/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Seguro de saude sobe 10% em 2026 (ComparaJa)",
+          "url": "https://www.comparaja.pt/blog/noticias/seguro-de-saude-sobe-10-em-2026",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Expat Health Insurance Portugal 2026: SNS, Multicare, Medis (Freenance)",
+          "url": "https://freenance.io/insurance/expat-health-insurance-portugal-2026-sns-public-private-multicare-medis-cuf-luz-cost/",
+          "accessed": "2026-11-09"
+        }
+      ]
+    },
+    "insurance": {
+      "typical": 8,
+      "min": 4,
+      "max": 15,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-09",
+      "notes": "Re-modeled from old template (stored 140 was health cover; health cost now fully in healthcare). Tenant contents (recheio) policy for 30k EUR incl. seismic cover costs 44-77 EUR/year in Lisbon per DECO Sep 2026 test (Allianz Casa Base 43.58, ok! casa Completo 76.52); max allows tenant-liability add-on.",
+      "sources": [
+        {
+          "title": "Melhor seguro casa para inquilinos (DECO Proteste, 11 Sep 2026)",
+          "url": "https://www.deco.proteste.pt/dinheiro/seguro-multirriscos-habitacao/noticias/melhor-seguro-casa-para-inquilinos",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petCare": {
-      "typical": 60,
-      "min": 40,
-      "max": 100,
-      "annualInflation": 0.03
+      "typical": 75,
+      "min": 45,
+      "max": 130,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Routine vet consults 30-45 EUR, annual vaccines 25-50 EUR (2026 guide; average dog upkeep 1,021 EUR/yr all-in), plus flea/tick/heartworm preventives dosed for a 100 lb dog (~35-45/month) and one extra visit or bloodwork a year. Food excluded.",
+      "sources": [
+        {
+          "title": "Animais de estimacao em Portugal: guia completo 2026 (Ricavida)",
+          "url": "https://ricavida.pt/animais-de-estimacao-em-portugal-guia-completo-2026/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petDaycare": {
       "typical": 150,
-      "min": 100,
+      "min": 80,
       "max": 250,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Cascais daycare/boarding quotes 15-25 EUR per day (Fixando Q3 2026 median 20, up from 15 in Q1); occasional use of ~6-8 days a month or one boarding week a quarter gives ~150.",
+      "sources": [
+        {
+          "title": "Preco de hotel e creche para animais em Cascais (Fixando)",
+          "url": "https://www.fixando.pt/en/hotel-e-creche-para-animais/preco/Lisboa/Cascais",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petGrooming": {
       "typical": 50,
       "min": 30,
       "max": 80,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Bath and grooming quotes average 38-43 EUR (range 30-60) in the Lisbon market; a large double-coated dog sits at the top of that range, groomed every 6-8 weeks.",
+      "sources": [
+        {
+          "title": "Preco de banhos e tosquias para animais em Lisboa (Fixando)",
+          "url": "https://www.fixando.pt/en/banhos-e-tosquias-para-animais/preco/Lisboa",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "transportation": {
-      "typical": 140,
+      "typical": 165,
       "min": 90,
-      "max": 210,
-      "annualInflation": 0.03
+      "max": 260,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "One lightly used car (~500 km/month at 7 L/100 km, gasoline 95 at 2.03 EUR/L on 1 Nov 2026 ~70; insurance ~29 on a 344 EUR/yr national average; maintenance ~35; IUC ~12) plus occasional Navegante use (~20). Navegante Metropolitano is 40 EUR/month per person, frozen for 2026; Navegante +65 is 20 EUR once they reach 65.",
+      "sources": [
+        {
+          "title": "Gasoleo mais caro que gasolina novembro 2026 (simula.pt, DGEG averages)",
+          "url": "https://simula.pt/noticias/gasoleo-mais-caro-que-gasolina-novembro-2026/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Seguro automovel mais caro em 2026 (e-konomista, MUDEY data)",
+          "url": "https://www.e-konomista.pt/seguro-automovel-mais-caro-em-2026/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Preco do passe Navegante sem alteracoes em 2026 (ECO)",
+          "url": "https://eco.sapo.pt/2025/12/18/preco-do-passe-navegante-sem-alteracoes-em-2026/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 320,
-      "min": 220,
-      "max": 440,
-      "annualInflation": 0.03
+      "typical": 340,
+      "min": 230,
+      "max": 470,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "1 Gbps fibre 15-35 EUR (Digi/UZO/WOO 10-15, MEO 29.99, Vodafone 31, NOS 35, Jul 2026), streaming ~30, dining out for two 4 times a month at ~55 EUR mid-range (Numbeo Lisbon Nov 2026; Cascais slightly higher), plus cinema (8.50), gym (42) or similar activities.",
+      "sources": [
+        {
+          "title": "Internet fixa com melhor preco em Portugal em 2026 (4gnews, Jul 2026)",
+          "url": "https://4gnews.pt/internet-fixa-melhor-preco/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Cost of Living in Lisbon, Nov 2026 (Numbeo)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lisbon",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "clothing": {
       "typical": 80,
       "min": 50,
-      "max": 120,
-      "annualInflation": 0.02
+      "max": 130,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "Modeled basket for two retirees from Numbeo Nov 2026 item prices (jeans 92, chain-store dress 40, running shoes 92, men's leather shoes 108): a few mid-range items per person per quarter.",
+      "sources": [
+        {
+          "title": "Cost of Living in Lisbon, Nov 2026 (Numbeo)",
+          "url": "https://www.numbeo.com/cost-of-living/in/Lisbon",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "personalCare": {
       "typical": 60,
@@ -119,10 +282,19 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 85,
-      "min": 70,
-      "max": 105,
-      "annualInflation": 0.02
+      "typical": 30,
+      "min": 14,
+      "max": 60,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "Two local lines: low-cost brands (Digi, UZO, WOO, Amigo) 5-7 EUR each for 100 GB/unlimited; main brands MEO/NOS/Vodafone 13-20 EUR unlimited (Jul 2026). Typical assumes two main-brand plans; max allows keeping one US number (e.g. Google Fi) alongside.",
+      "sources": [
+        {
+          "title": "Tarifario movel com melhor preco em Portugal em 2026 (4gnews, Jul 2026)",
+          "url": "https://4gnews.pt/tarifario-telemovel-melhor-preco/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "taxes": {
       "typical": 600,
@@ -151,10 +323,24 @@
       "annualInflation": 0.025
     },
     "medicalOOP": {
-      "min": 40,
-      "typical": 80,
-      "max": 160,
-      "annualInflation": 0.035
+      "min": 30,
+      "typical": 70,
+      "max": 150,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-09",
+      "notes": "SNS taxas moderadoras now apply only to unreferred hospital emergencies; primary care, scheduled consultations and exams are free. Out-of-pocket is mainly private-side (CUF Cascais, Hospital da Luz): GP 50-100, specialist 80-180, dental check 40-90, blood panel 60-150 (2026), reduced to 15-25 EUR copays in insurer networks.",
+      "sources": [
+        {
+          "title": "Vai as urgencias sem passar pelo SNS 24 - taxas moderadoras (Postal, Aug 2026)",
+          "url": "https://postal.pt/nacional/vai-as-urgencias-sem-passar-pelo-sns-24-saiba-quando-ainda-tem-de-pagar-taxas-moderadoras/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "The Real Cost of Private Healthcare in Portugal 2026 (Portugal Brief)",
+          "url": "https://theportugalbrief.pt/the-real-cost-of-private-healthcare-in-portugal-what-expats-pay-in-2026/",
+          "accessed": "2026-11-09"
+        }
+      ]
     }
   },
   "healthcare": {

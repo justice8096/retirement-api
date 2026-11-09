@@ -90,9 +90,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 72,
-      "typical": 87,
-      "max": 107
+      "min": 18,
+      "typical": 30,
+      "max": 50
     },
     "plans": [
       {
@@ -121,7 +121,8 @@
         "title": "Google Fi Plans",
         "url": "https://fi.google.com/about/plans"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-09"
   },
   "groceries": {
     "categories": [
@@ -382,9 +383,9 @@
   "housing": {
     "propertyType": "2-bedroom house/apartment",
     "monthlyBudget": {
-      "min": 1050,
-      "max": 1750,
-      "typical": 1400
+      "min": 850,
+      "max": 1900,
+      "typical": 1300
     },
     "breakdown": {
       "baseRent": 1260,
@@ -407,7 +408,8 @@
         "name": "InfoCasas",
         "url": "https://www.infocasas.com.uy/"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-09"
   },
   "groceryStores": {
     "stores": [
@@ -550,9 +552,9 @@
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 48,
-      "typical": 180,
-      "max": 360
+      "min": 120,
+      "typical": 230,
+      "max": 320
     },
     "publicTransit": {
       "monthlyPass": {
@@ -708,7 +710,8 @@
         "typical": 300,
         "max": 540
       }
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-09"
   },
   "visionDental": {
     "monthlyBudget": {
@@ -777,9 +780,9 @@
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 300,
-      "typical": 375,
-      "max": 469
+      "min": 200,
+      "typical": 320,
+      "max": 480
     },
     "categories": [
       {
@@ -848,6 +851,7 @@
       "from": "italy-puglia",
       "generatedAt": "2026-04-23",
       "note": "Template-derived section — prices are EUR-denominated from Puglia, Italy. Needs per-location currency + cost-of-living adaptation."
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-09"
   }
 }

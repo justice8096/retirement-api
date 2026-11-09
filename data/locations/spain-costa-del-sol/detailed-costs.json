@@ -90,9 +90,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 64,
-      "typical": 79,
-      "max": 99
+      "min": 10,
+      "typical": 15,
+      "max": 30
     },
     "plans": [
       {
@@ -121,13 +121,14 @@
         "title": "Google Fi Plans",
         "url": "https://fi.google.com/about/plans"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-09"
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 302,
-      "typical": 377,
-      "max": 471
+      "min": 200,
+      "typical": 300,
+      "max": 450
     },
     "categories": [
       {
@@ -190,13 +191,14 @@
         "seniorDiscounts": "No specific discounts. Café con leche very affordable.",
         "notes": "Café con leche ~€1.50-2.00. Budget for 2 visits/week. ~$15/mo."
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-09"
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 34,
-      "typical": 72,
-      "max": 238
+      "min": 100,
+      "typical": 170,
+      "max": 250
     },
     "publicTransit": {
       "monthlyPass": {
@@ -272,7 +274,8 @@
         "max": 340,
         "notes": "Includes insurance, fuel, parking, maintenance. Moderate suburban costs."
       }
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-09"
   },
   "visionDental": {
     "monthlyBudget": {
@@ -560,9 +563,9 @@
   "housing": {
     "propertyType": "2-bedroom house or ground-floor apartment",
     "monthlyBudget": {
-      "min": 1200,
-      "max": 1950,
-      "typical": 1500
+      "min": 1300,
+      "max": 2000,
+      "typical": 1600
     },
     "breakdown": {
       "baseRent": 1500,
@@ -573,7 +576,8 @@
     },
     "taxNotes": "No rental tax for tenants. IBI (property tax) is landlord responsibility. Comunidad (HOA) fees typically included or landlord responsibility.",
     "leaseTerms": "5-year lease (Ley de Arrendamientos Urbanos). Tenant can leave after 6 months with 30-day notice. Security deposit 1-2 months rent. Landlord must justify rent increases.",
-    "marketNotes": "Established expat market. Many urbanizaciones (gated communities). Good selection of 2BR properties."
+    "marketNotes": "Established expat market. Many urbanizaciones (gated communities). Good selection of 2BR properties.",
+    "monthlyBudgetRefreshed": "2026-11-09"
   },
   "groceryStores": {
     "stores": [

@@ -90,9 +90,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 64,
-      "typical": 79,
-      "max": 99
+      "min": 14,
+      "typical": 20,
+      "max": 40
     },
     "plans": [
       {
@@ -121,13 +121,14 @@
         "title": "Google Fi Plans",
         "url": "https://fi.google.com/about/plans"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-09"
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 302,
-      "typical": 377,
-      "max": 471
+      "min": 290,
+      "typical": 380,
+      "max": 500
     },
     "categories": [
       {
@@ -190,13 +191,14 @@
         "seniorDiscounts": "No specific discounts. Café con leche very affordable.",
         "notes": "Café con leche ~€1.50-2.00. Budget for 2 visits/week. ~$15/mo."
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-09"
   },
   "transportation": {
     "monthlyBudget": {
       "min": 46,
-      "typical": 98,
-      "max": 322
+      "typical": 150,
+      "max": 300
     },
     "publicTransit": {
       "monthlyPass": {
@@ -272,7 +274,8 @@
         "max": 460,
         "notes": "Includes insurance, fuel, parking, maintenance. Higher urban parking and insurance costs."
       }
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-09"
   },
   "visionDental": {
     "monthlyBudget": {
@@ -560,9 +563,9 @@
   "housing": {
     "propertyType": "2-bedroom house or ground-floor apartment",
     "monthlyBudget": {
-      "min": 1520,
-      "max": 2470,
-      "typical": 1900
+      "min": 1450,
+      "max": 2400,
+      "typical": 1800
     },
     "breakdown": {
       "baseRent": 1900,
@@ -573,7 +576,8 @@
     },
     "taxNotes": "No rental tax for tenants. IBI (property tax) is landlord responsibility. Comunidad (HOA) fees typically included or landlord responsibility.",
     "leaseTerms": "5-year lease (Ley de Arrendamientos Urbanos). Tenant can leave after 6 months with 30-day notice. Security deposit 1-2 months rent. Landlord must justify rent increases.",
-    "marketNotes": "Expensive by Spanish standards. Apartments dominate. Tourist rental regulations affect supply. Consider outer barrios."
+    "marketNotes": "Expensive by Spanish standards. Apartments dominate. Tourist rental regulations affect supply. Consider outer barrios.",
+    "monthlyBudgetRefreshed": "2026-11-09"
   },
   "groceryStores": {
     "stores": [

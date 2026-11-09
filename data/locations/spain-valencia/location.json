@@ -43,77 +43,224 @@
   },
   "monthlyCosts": {
     "rent": {
-      "typical": 1050,
-      "min": 800,
-      "max": 1300,
-      "annualInflation": 0.04
+      "typical": 1550,
+      "min": 1250,
+      "max": 1900,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-09",
+      "notes": "Brainsre Q3 2026 asking rents for Valencia city: 16.32 EUR/m2, average flat 1,593 EUR (+8.4% y/y), 2BR 1,574, 3BR 1,660. Pet-friendly stock is scarcer, so typical sits near the 2BR average; min reflects outer districts and metro-area towns, max central 3BR. Stored 1,050 was well below current asking.",
+      "sources": [
+        {
+          "title": "Alquiler piso Valencia - precios Q3 2026 (Brainsre)",
+          "url": "https://brainsre.news/alquiler-piso-valencia/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "groceries": {
-      "typical": 420,
-      "min": 340,
-      "max": 530,
-      "annualInflation": 0.03
+      "typical": 460,
+      "min": 380,
+      "max": 580,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Valencia groceries 200-320 EUR per person (400-640 for two) in 2026, Mercadona/Consum pricing a bit under Malaga, plus roughly 60-90 EUR/mo of kibble for a 100 lb dog (modelled share). Spain headline CPI 4.9% y/y in Oct 2026.",
+      "sources": [
+        {
+          "title": "Cost of Living in Valencia 2026 (Freenance)",
+          "url": "https://freenance.io/cities/valencia-cost-of-living/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "INE - IPC adelantado octubre 2026",
+          "url": "https://www.ine.es/dyngs/Prensa/adIPC1026.pdf",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "utilities": {
-      "typical": 155,
-      "min": 115,
-      "max": 210,
-      "annualInflation": 0.035
+      "typical": 140,
+      "min": 100,
+      "max": 200,
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-09",
+      "notes": "Valencia electricity+water+gas for a 70 m2 flat 90-160 EUR/mo (electricity alone 50-90); national 85 m2 basic utilities 133 EUR and a 2-person electricity bill 50-60 EUR. Includes butane/gas, water, sewer and the municipal trash fee; summer A/C and a larger 3BR push to the max. Internet excluded.",
+      "sources": [
+        {
+          "title": "Cost of Living in Valencia 2026 (Freenance)",
+          "url": "https://freenance.io/cities/valencia-cost-of-living/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Gasto medio de luz al mes en Espana (Papernest, Jul 2026)",
+          "url": "https://www.papernest.es/info/gasto-medio-luz/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Prices in Spain (WageCentre, updated 4 Oct 2026)",
+          "url": "https://wagecentre.com/immigration/life/prices-in-spain",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "healthcare": {
-      "typical": 110,
-      "min": 70,
-      "max": 160,
+      "typical": 334,
+      "min": 120,
+      "max": 460,
       "annualInflation": 0.04,
-      "notes": "Sistema Nacional de Salud (SNS) universal coverage after residency permit. Private (Sanitas, Adeslas, ASISA) ~€60-150/mo with pre-existing condition loadings. Anti-VEGF injections available widely via SNS at public ophthalmology. GLP-1 covered for diabetes via SNS. Chronic-disease coverage is strong; regional variation — Catalonia and Madrid have densest infrastructure."
+      "notes": "National pricing: non-EU resident retirees carry full no-copay private cover; Adeslas Plena Plus is 167 EUR/person/month at 60-64 (published table is Andalucia zone 2, Valencia zone pricing is similar but not separately published), with 61-70 quotes of 175-230 per person across insurers. Min is the convenio especial at 60 EUR/person under 65 after one year of residence (SIP card, no outpatient prescriptions). Re-modelled from old template.",
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "Private Health Insurance in Spain: Costs, Providers (WaypointSur, updated 26 Oct 2026)",
+          "url": "https://guides.waypointsur.com/private-health-insurance-spain/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Convenio Especial in Spain (WaypointSur, verified 30 Oct 2026)",
+          "url": "https://guides.waypointsur.com/convenio-especial-spain/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Mejores seguros de salud noviembre 2026 (Rankia)",
+          "url": "https://www.rankia.com/blog/mejores-seguros/5343701-mejores-seguros-salud",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "insurance": {
-      "typical": 125,
-      "min": 85,
-      "max": 180,
-      "annualInflation": 0.04
+      "typical": 10,
+      "min": 6,
+      "max": 25,
+      "annualInflation": 0.04,
+      "lastVerified": "2026-11-09",
+      "notes": "Renters/contents only; health cover moved to healthcare per the old-template rule. Tenant policies run 70-300 EUR/yr nationally (Tuio from 79, Caser from 110, Santalucia from 141 per year).",
+      "sources": [
+        {
+          "title": "Seguro para inquilinos: precios (Selectra, updated Jan 2025)",
+          "url": "https://selectra.es/seguros/seguros-hogar/seguro-inquilinos",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petCare": {
-      "typical": 60,
-      "min": 40,
+      "typical": 55,
+      "min": 30,
       "max": 100,
-      "annualInflation": 0.03
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Spain vet prices Apr 2026: consultation 30-60, annual vaccine pack 50-80, rabies 15-25, deworming 20-35/yr, dental 100-250; healthy pet 200-400 EUR/yr. Large-breed preventive doses and leishmania prevention lift a Bernese above the mid-point.",
+      "sources": [
+        {
+          "title": "Cuanto cuesta el veterinario - precios abril 2026 (CuantoMeCuesta)",
+          "url": "https://cuantomecuesta.com/es/veterinario/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petDaycare": {
-      "typical": 150,
-      "min": 100,
-      "max": 250,
-      "annualInflation": 0.03
+      "typical": 120,
+      "min": 60,
+      "max": 200,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "National 2026 guide: residencia canina 11-25 EUR/night, guarderia 9-20 EUR/day; 4-6 nights or days a month at the large-dog end.",
+      "sources": [
+        {
+          "title": "Cuanto cuesta un cuidador de perros - precios 2026 (Cronoshare)",
+          "url": "https://www.cronoshare.com/cuanto-cuesta/cuidador-perros",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petGrooming": {
-      "typical": 50,
-      "min": 30,
-      "max": 80,
-      "annualInflation": 0.03
+      "typical": 40,
+      "min": 25,
+      "max": 70,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Large long-haired dog bath 30-35 EUR, full arreglo 40-45, giant 42-51, de-matting extra; every 6-8 weeks averages about 40 EUR/mo.",
+      "sources": [
+        {
+          "title": "Cuanto cuesta un servicio de peluqueria canina - precios 2026 (Cronoshare)",
+          "url": "https://www.cronoshare.com/cuanto-cuesta/peluqueria-canina",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "transportation": {
-      "typical": 110,
+      "typical": 150,
       "min": 70,
-      "max": 170,
-      "annualInflation": 0.03
+      "max": 240,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Valencia is flat and transit-rich: SUMA monthly 1-zone pass (metro, EMT bus, Cercanias) is 35 EUR, so two passes are 70 EUR; metro TuiN rides 0.80 capped at 35/mo. Typical adds a small car used part-time (insurance about 390 EUR/yr, gasolina 95 about 1.53 EUR/L, maintenance/ITV/tax); max is full car use plus parking. Senior fares start at 65.",
+      "sources": [
+        {
+          "title": "Precios de billetes y abonos transporte en Valencia 2026 (RedTransporte)",
+          "url": "https://www.redtransporte.com/valencia/precios-abonos.html",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "CHECK24 - prima media del seguro de coche mayo 2026",
+          "url": "https://seguros.check24.es/wp-content/uploads/2026/06/NdP_La-prima-media-del-seguro-de-coche-baja-en-mayo-hasta-los-390-euros-un-53-menos-que-hace-un-ano.pdf",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Precio del combustible hoy 3 de julio 2026 (El Cronista)",
+          "url": "https://www.cronista.com/espana/economia-finanzas/precio-del-combustible-hoy-viernes-3-de-julio-cuanto-cuesta-el-litro-de-gasolina-y-el-de-gasoleo/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "entertainment": {
-      "typical": 250,
-      "min": 180,
-      "max": 350,
-      "annualInflation": 0.03
+      "typical": 280,
+      "min": 200,
+      "max": 420,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Fibre 25-40 EUR (300-600 Mbps bundles with mobile 30-48), streaming, dinner for two 40-65 EUR three times a month, menu del dia 11-16 pp, gym 20-35 pp, cinema 7-10. Slightly below Costa del Sol dining prices.",
+      "sources": [
+        {
+          "title": "Cost of Living in Valencia 2026 (Freenance)",
+          "url": "https://freenance.io/cities/valencia-cost-of-living/",
+          "accessed": "2026-11-09"
+        },
+        {
+          "title": "Mejores tarifas baratas de fibra y movil 2026 (Xataka Movil, Aug 2026)",
+          "url": "https://www.xatakamovil.com/comparativa-de-tarifas/mejores-tarifas-baratas-fibra-movil",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "clothing": {
       "typical": 80,
       "min": 50,
       "max": 120,
-      "annualInflation": 0.02
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "National chain pricing (Levi's 501-type jeans about 90 EUR in Spanish cities per Expatistan, Feb 2026); a couple's replacement wardrobe near 80 EUR/mo. Stored range retained.",
+      "sources": [
+        {
+          "title": "Price of jeans in Malaga (Expatistan, Feb 2026)",
+          "url": "https://expatistan.com/price/jeans/malaga",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "personalCare": {
       "typical": 60,
       "min": 40,
-      "max": 100,
-      "annualInflation": 0.03
+      "max": 90,
+      "annualInflation": 0.03,
+      "lastVerified": "2026-11-09",
+      "notes": "Men's haircut about 18 EUR, toothpaste about 1.92, shampoo 2.50-4 (Oct 2026); two adults with monthly haircuts and toiletries near 60 EUR.",
+      "sources": [
+        {
+          "title": "Prices in Spain (WageCentre, updated 4 Oct 2026)",
+          "url": "https://wagecentre.com/immigration/life/prices-in-spain",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "subscriptions": {
       "typical": 100,
@@ -122,10 +269,19 @@
       "annualInflation": 0.05
     },
     "phoneCell": {
-      "typical": 79,
-      "min": 64,
-      "max": 99,
-      "annualInflation": 0.02
+      "typical": 15,
+      "min": 10,
+      "max": 30,
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "Two mobile-only lines (Nov 2026): Lowi 10 EUR for 2x15GB, MasMovil 9.80, Digi 16 EUR unlimited on both lines, Finetwork 20. National pricing.",
+      "sources": [
+        {
+          "title": "Mejores tarifas con dos lineas moviles - actualizado 1 nov 2026 (Roams)",
+          "url": "https://roams.es/telefonia/rankings/dos-lineas-movil/",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "taxes": {
       "typical": 840,
@@ -157,7 +313,16 @@
       "min": 40,
       "typical": 80,
       "max": 160,
-      "annualInflation": 0.035
+      "annualInflation": 0.035,
+      "lastVerified": "2026-11-09",
+      "notes": "Private GP 25-60 EUR, specialist 60-120, full blood panel 49-75 in Valencia (Doctoralia/Top Doctors 2025-2026). With no-copay private cover, OOP is mainly dental, physio, optics and self-pay extras.",
+      "sources": [
+        {
+          "title": "Cuanto cuesta una consulta medica privada en Espana (Selectra)",
+          "url": "https://selectra.es/seguros/seguros-salud/precio-consulta-privada",
+          "accessed": "2026-11-09"
+        }
+      ]
     }
   },
   "healthcare": {

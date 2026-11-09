@@ -37,25 +37,20 @@
       "typical": 600,
       "type": "2-3 bedroom house",
       "annualInflation": 0.025,
-      "notes": "Dolega district includes Los Algarrobos, where suburban homes rent for about $500-700. Furnished 2BR rentals start around $500, and the area is described as cheaper than both David and Boquete. Rent here is set a little below David.",
+      "notes": "Los Algarrobos (Dolega district, 10 min north of David) 2-3BR houses rent around $500; comfortable suburban David-area homes $500-700, furnished 2BR in Dolega from about $500. Encuentra24 shows current furnished/fenced Los Algarrobos house listings but pages could not be loaded for prices. Stored values retained.",
       "sources": [
         {
-          "title": "Six Places in Panama Where a Couple Can Live Well for $2000 a Month (or Less)",
+          "title": "Six Places in Panama Where a Couple Can Live Well for $2000 a Month (Panama Relocation Tours)",
           "url": "https://panamarelocationtours.com/six-places-in-panama-where-you-can-live-well-for-2000-a-month-or-less",
-          "accessed": "2026-11-06"
+          "accessed": "2026-11-09"
         },
         {
-          "title": "Cost of Living in Panama 2026 (ExpatDen)",
-          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
-          "accessed": "2026-11-06"
-        },
-        {
-          "title": "10 Most Affordable Places to Live in Panama (Panama Relocation Tours)",
-          "url": "https://panamarelocationtours.com/10-most-affordable-places-to-live-in-panama",
-          "accessed": "2026-11-06"
+          "title": "Cost of living in David, Panama (LivingCost, Jun 2026) - 3BR center $602, cheap 3BR $361",
+          "url": "https://livingcost.org/cost/panama/david",
+          "accessed": "2026-11-09"
         }
       ],
-      "lastVerified": "2026-11-06"
+      "lastVerified": "2026-11-09"
     },
     "groceries": {
       "min": 590,
@@ -92,45 +87,40 @@
         }
       },
       "taxes": "ITBMS 7% on electricity. Water exempt for residential.",
-      "notes": "Dolega lies between hot David, where A/C bills run $100-150, and the highlands, where bills run $25-70 with little A/C. Moderate A/C use costs about $45-90 a month. Water adds $5-25 and a propane refill $5-8.",
+      "notes": "Dolega at ~1,150 ft: moderate A/C electricity $45-90/mo (fans only $25-45; heavy A/C in David $100-150+), water $5-15 with sewer usually included, 25 lb propane refill $5-8, trash often municipal. EDECHI bills carry 7% ITBMS. Internet excluded.",
       "sources": [
         {
-          "title": "Panama Utilities and Electricity Costs: What Expats Need to Know (Relofirm, Nov 2025)",
+          "title": "Panama Utilities and Electricity Costs (Relofirm, 21 Nov 2025)",
           "url": "https://www.relofirm.com/?p=238749",
-          "accessed": "2026-11-06"
+          "accessed": "2026-11-09"
         },
         {
-          "title": "Cost of Living in Panama 2026 (ExpatDen)",
-          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
-          "accessed": "2026-11-06"
+          "title": "Six Places in Panama Where a Couple Can Live Well for $2000 a Month (Panama Relocation Tours) - David electricity $100-150",
+          "url": "https://panamarelocationtours.com/six-places-in-panama-where-you-can-live-well-for-2000-a-month-or-less",
+          "accessed": "2026-11-09"
         }
       ],
-      "lastVerified": "2026-11-06"
+      "lastVerified": "2026-11-09"
     },
     "healthcare": {
       "min": 235,
       "max": 833,
       "typical": 500,
-      "notes": "Private health insurance premiums for two adults age 60-61. Min is two Family Medical Plan memberships ($117.30 each, ages 60-69); typical and max reflect 2026 local quotes of $6,000-10,000/yr for a couple age 60. Premiums are national and age-rated. Pensionado discounts apply to services, not premiums.",
+      "notes": "Private cover for two adults age 60-61 (no public-system buy-in for retiree residents; CSS is for contributors). Min is two Family Medical Plan memberships at $117.30 each (ages 60-69, 2025 brochure); typical and max reflect local plans quoted at $350-700+ per person per month in one's 60s and 2026 couple quotes of $6,000-10,000/yr. Pensionado discounts apply to services, not premiums.",
       "annualInflation": 0.06,
       "sources": [
         {
-          "title": "Panama Relocation Tours - Health insurance options in Panama",
+          "title": "Health insurance options in Panama (Panama Relocation Tours)",
           "url": "https://panamarelocationtours.com/health-insurance-options-in-panama",
-          "accessed": "2026-11-06"
+          "accessed": "2026-11-09"
         },
         {
-          "title": "Feather - Health insurance in Panama guide (Jul 2026)",
-          "url": "https://feather-insurance.com/en-pa/blog/health-insurance-panama-guide",
-          "accessed": "2026-11-06"
-        },
-        {
-          "title": "Reside Panama - Healthcare in Panama 2026",
+          "title": "Healthcare in Panama: an expat guide to hospitals and insurance costs 2026 (Reside Panama)",
           "url": "https://www.residepanama.com/en/reside-panama-blog/healthcare-in-panama-an-expat-guide-to-hospitals-insurance-costs-2026",
-          "accessed": "2026-11-06"
+          "accessed": "2026-11-09"
         }
       ],
-      "lastVerified": "2026-11-06"
+      "lastVerified": "2026-11-09"
     },
     "insurance": {
       "min": 10,
@@ -143,99 +133,120 @@
       "max": 100,
       "typical": 65,
       "annualInflation": 0.03,
-      "notes": "Basic vet care available in David (15-20 min). Fewer pet services than Boquete. Local vets affordable but limited specialty capability."
+      "notes": "Routine vet visit $20-50 in Panama; care is in David (15-20 min). A 100 lb dog needs large-breed doses of tick/flea/heartworm preventives year-round in the tropics plus annual vaccines, so the monthly average sits above the visit price alone. Stored values retained.",
+      "lastVerified": "2026-11-09",
+      "sources": [
+        {
+          "title": "Bring Pets to Panama: What You Need to Know (Relofirm, Mar 2025)",
+          "url": "https://relofirm.com/?p=238904",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "petDaycare": {
       "min": 40,
       "max": 180,
       "typical": 100,
       "annualInflation": 0.025,
-      "notes": "Boarding costs about $10-30 a night depending on size. This assumes about 4-6 nights a month at the large-dog rate; the facilities are likely in David or Boquete.",
+      "notes": "Boarding $10-30 a night depending on size; 4-6 nights a month at the large-dog rate, facilities in David or Boquete.",
       "sources": [
         {
           "title": "Bring Pets to Panama: What You Need to Know (Relofirm, Mar 2025)",
           "url": "https://relofirm.com/?p=238904",
-          "accessed": "2026-11-06"
+          "accessed": "2026-11-09"
         }
       ],
-      "lastVerified": "2026-11-06"
+      "lastVerified": "2026-11-09"
     },
     "petGrooming": {
       "min": 20,
       "max": 50,
       "typical": 35,
       "annualInflation": 0.025,
-      "notes": "Full-service grooming costs about $20-40 a session. A large double-coated dog is assumed at or near the top of that range, every 4-8 weeks.",
+      "notes": "Full-service grooming $20-40 a session; a large double-coated dog at the top of the range every 4-8 weeks.",
       "sources": [
         {
           "title": "Bring Pets to Panama: What You Need to Know (Relofirm, Mar 2025)",
           "url": "https://relofirm.com/?p=238904",
-          "accessed": "2026-11-06"
+          "accessed": "2026-11-09"
         }
       ],
-      "lastVerified": "2026-11-06"
+      "lastVerified": "2026-11-09"
     },
     "transportation": {
       "min": 160,
       "max": 340,
       "typical": 240,
-      "notes": "Same car costs as David, with insurance at $42-75 a month and fuel at about $1.30 a liter. Extra mileage is added for regular trips into David for shopping and medical care. Buses to David cost under $2.",
+      "notes": "One car: third-party insurance about $500/yr, full cover about $900/yr ($42-75/mo), gasoline roughly $0.97-1.30 per liter (SNE adjusts prices every two weeks; 95 octane fell about 10 cents/L on 30 Oct 2026), maintenance and annual placa/revisado. Extra mileage for David shopping and medical trips; buses to David under $2.",
       "annualInflation": 0.025,
       "sources": [
         {
-          "title": "The True Cost of Owning a Car in Panama (2026 Expat Breakdown) (Champion Motors)",
+          "title": "The True Cost of Owning a Car in Panama 2026 (Champion Motors, Jun 2026)",
           "url": "https://championmotors.com.pa/blog/39",
-          "accessed": "2026-11-06"
+          "accessed": "2026-11-09"
         },
         {
-          "title": "Cost of Living in Panama 2026 (ExpatDen)",
-          "url": "https://expatden.com/panama/cost-of-living-in-panama/",
-          "accessed": "2026-11-06"
+          "title": "Cost of living in David, Panama (LivingCost, Jun 2026)",
+          "url": "https://livingcost.org/cost/panama/david",
+          "accessed": "2026-11-09"
         },
         {
-          "title": "Six Places in Panama Where a Couple Can Live Well for $2000 a Month (or Less)",
-          "url": "https://panamarelocationtours.com/six-places-in-panama-where-you-can-live-well-for-2000-a-month-or-less",
-          "accessed": "2026-11-06"
+          "title": "Nuevos precios de combustible 30 oct - 13 nov 2026 (Telemetro, 28 Oct 2026)",
+          "url": "https://www.telemetro.com/c6096888",
+          "accessed": "2026-11-09"
         }
       ],
-      "lastVerified": "2026-11-06"
+      "lastVerified": "2026-11-09"
     },
     "entertainment": {
       "min": 160,
       "max": 400,
       "typical": 270,
       "annualInflation": 0.02,
-      "notes": "Mas Movil fiber costs $39-55 a month for 600 Mbps, and Boquete bundles run about $64-65. +Movil says fiber covers Chiriqui, but Dolega addresses were not confirmed. The total also includes streaming, dining out for 2 three to four times a month at $30-50 per meal, and local activities.",
+      "notes": "Mas Movil symmetric fiber 600 Mbps $39 standalone ($55 with TV) plus 7% ITBMS; Tigo fiber reaches David and Boquete with bundles $43-65. Dolega-address fiber availability still unconfirmed. Adds streaming, dinner for two about $32 at a mid-range David restaurant three to four times a month, and local activities.",
       "sources": [
         {
           "title": "Internet Providers in Panama (ExpatDen, Jun 2026)",
           "url": "https://www.expatden.com/panama/internet-providers-panama/",
-          "accessed": "2026-11-06"
+          "accessed": "2026-11-09"
         },
         {
-          "title": "+Movil avanza en su cobertura con la red de fibra optica en Chiriqui (La Prensa, Dec 2024)",
-          "url": "https://www.prensa.com/contenido-patrocinado/movil-avanza-en-su-cobertura-con-la-red-de-fibra-optica-y-movil-siendo-el-operador-con-la-mayor-red-de-fibra-en-la-provincia-de-chiriqui/",
-          "accessed": "2026-11-06"
-        },
-        {
-          "title": "Cost of Living in David (Expat Exchange)",
-          "url": "https://expatexchange.com/ctryguide/8905/87/Panama/Cost-of-Living-in-David",
-          "accessed": "2026-11-06"
+          "title": "Cost of living in David, Panama (LivingCost, Jun 2026)",
+          "url": "https://livingcost.org/cost/panama/david",
+          "accessed": "2026-11-09"
         }
       ],
-      "lastVerified": "2026-11-06"
+      "lastVerified": "2026-11-09"
     },
     "clothing": {
       "min": 30,
       "max": 80,
       "typical": 50,
-      "annualInflation": 0.02
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "David prices Jun 2026: brand jeans about $41, brand sneakers $65; casual tropical wardrobe for two averages about $50/mo with Panama City mall trips at the max.",
+      "sources": [
+        {
+          "title": "Cost of living in David, Panama (LivingCost, Jun 2026)",
+          "url": "https://livingcost.org/cost/panama/david",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "personalCare": {
       "min": 15,
       "max": 40,
       "typical": 25,
-      "annualInflation": 0.02
+      "annualInflation": 0.02,
+      "lastVerified": "2026-11-09",
+      "notes": "David: simple haircut about $8, shampoo about $3.91, toothpaste $2.21 (Jun 2026). Two adults with monthly haircuts and toiletries land near $25.",
+      "sources": [
+        {
+          "title": "Cost of living in David, Panama (LivingCost, Jun 2026)",
+          "url": "https://livingcost.org/cost/panama/david",
+          "accessed": "2026-11-09"
+        }
+      ]
     },
     "subscriptions": {
       "min": 30,
@@ -249,20 +260,20 @@
       "max": 90,
       "typical": 60,
       "annualInflation": 0.02,
-      "notes": "Two postpaid lines on Tigo or Mas Movil cost $27 each, so $54 before tax. A prepaid SIM with 10GB costs about $12, which sets the low end. The upper end includes an allowance for a US number.",
+      "notes": "Two postpaid lines on Tigo or Mas Movil at $27 each ($54 before tax; Mas Movil 15GB, Tigo 5GB plus LTE); a prepaid 10GB SIM about $12 sets the low end. Upper end allows a US number.",
       "sources": [
         {
           "title": "Tarjetas SIM en Panama: planes, proveedores, costos (ExpatDen, updated Oct 2026)",
           "url": "https://www.expatden.com/es/panama-es/tarjetas-sim-panama/",
-          "accessed": "2026-11-06"
+          "accessed": "2026-11-09"
         },
         {
           "title": "Cost of Living in David, Panama (Jobicy, May 2026)",
           "url": "https://jobicy.com/cost-of-living/panama/david",
-          "accessed": "2026-11-06"
+          "accessed": "2026-11-09"
         }
       ],
-      "lastVerified": "2026-11-06"
+      "lastVerified": "2026-11-09"
     },
     "miscellaneous": {
       "min": 35,
@@ -282,20 +293,15 @@
       "max": 300,
       "typical": 140,
       "annualInflation": 0.06,
-      "notes": "Care is mainly at David clinics and hospitals. A GP visit costs $40-80, a specialist $60-150 and basic labs $40-80, with a 20% Pensionado discount.",
+      "notes": "David clinics and hospitals: GP $40-80, specialist $60-120, basic labs $40-80, MRI $350-700, with a 20% Pensionado discount on private care. Deductibles on local plans add to OOP.",
       "sources": [
         {
           "title": "Healthcare in Panama: an expat guide to hospitals and insurance costs 2026 (Reside Panama)",
           "url": "https://www.residepanama.com/en/reside-panama-blog/healthcare-in-panama-an-expat-guide-to-hospitals-insurance-costs-2026",
-          "accessed": "2026-11-06"
-        },
-        {
-          "title": "Healthcare in Panama for Expats (2026)",
-          "url": "https://vidala-166.pages.dev/guides/panama-healthcare-expats",
-          "accessed": "2026-11-06"
+          "accessed": "2026-11-09"
         }
       ],
-      "lastVerified": "2026-11-06"
+      "lastVerified": "2026-11-09"
     },
     "medicine": {
       "min": 383,

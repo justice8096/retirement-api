@@ -213,9 +213,9 @@
   },
   "entertainment": {
     "monthlyBudget": {
-      "min": 282,
-      "typical": 352,
-      "max": 442
+      "min": 280,
+      "typical": 355,
+      "max": 450
     },
     "categories": [
       {
@@ -273,13 +273,14 @@
         "title": "Netflix Spain",
         "url": "https://help.netflix.com/es/node/24926"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-09"
   },
   "transportation": {
     "monthlyBudget": {
-      "min": 30,
-      "typical": 100,
-      "max": 200
+      "min": 60,
+      "typical": 180,
+      "max": 280
     },
     "publicTransit": {
       "monthlyPass": {
@@ -435,7 +436,8 @@
           "url": "https://www.electromaps.com/en/charging-stations"
         }
       ]
-    }
+    },
+    "monthlyBudgetRefreshed": "2026-11-09"
   },
   "seniorDiscounts": {
     "minimumAge": 65,
@@ -493,9 +495,9 @@
   },
   "cellPhone": {
     "monthlyBudget": {
-      "min": 68,
-      "typical": 82,
-      "max": 100
+      "min": 14,
+      "typical": 20,
+      "max": 40
     },
     "plans": [
       {
@@ -528,14 +530,15 @@
         "title": "Digi Mobil Spain",
         "url": "https://www.digimobil.es/tarifas-movil"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-09"
   },
   "housing": {
     "propertyType": "2-bedroom house/villa (chalet)",
     "monthlyBudget": {
-      "min": 750,
-      "max": 1200,
-      "typical": 950
+      "min": 900,
+      "max": 1600,
+      "typical": 1200
     },
     "breakdown": {
       "baseRentEUR": 750,
@@ -557,7 +560,8 @@
         "name": "Spain LAU Rental Law",
         "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003"
       }
-    ]
+    ],
+    "monthlyBudgetRefreshed": "2026-11-09"
   },
   "groceryStores": {
     "stores": [
