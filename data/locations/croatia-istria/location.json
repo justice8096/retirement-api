@@ -218,5 +218,18 @@
   "coordinates": {
     "lat": 45.0827,
     "lon": 13.6346
+  },
+  "catastrophicCoverage": {
+    "pathway": "national-mandatory",
+    "plan": "HZZO obvezno (mandatory basic insurance)",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "in-healthcare-line",
+    "confidence": "single-source",
+    "asOf": "2026-11-16",
+    "notes": "Mandatory for residents after 90 days; quoted at about $85-225 per person per month with 20% co-pays, and non-EU applicants may owe the previous 12 months of premiums on first registration.",
+    "sources": [
+      "https://expatsi.com/healthcare/croatia-healthcare-report/"
+    ]
   }
 }

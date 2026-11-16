@@ -90,11 +90,11 @@
       "lastVerified": "2026-11-06"
     },
     "healthcare": {
-      "typical": 500,
-      "min": 235,
-      "max": 833,
+      "typical": 750,
+      "min": 500,
+      "max": 1000,
       "annualInflation": 0.04,
-      "notes": "Private health insurance premiums for two adults age 60-61. Min is two Family Medical Plan memberships ($117.30 each, ages 60-69); typical and max reflect 2026 local quotes of $6,000-10,000/yr for a couple age 60. Premiums are national and age-rated. Pensionado discounts apply to services, not premiums.",
+      "notes": "Catastrophic cover required: private major-medical premium for two adults ($1,700/mo from 70; see catastrophicCoverage.ageBands). | Previous note: Private health insurance premiums for two adults age 60-61. Min is two Family Medical Plan memberships ($117.30 each, ages 60-69); typical and max reflect 2026 local quotes of $6,000-10,000/yr for a couple age 60. Premiums are national and age-rated. Pensionado discounts apply to services, not premiums.",
       "sources": [
         {
           "title": "Panama Relocation Tours - Health insurance options in Panama",
@@ -347,5 +347,30 @@
   "coordinates": {
     "lat": 8.612,
     "lon": -80.126
+  },
+  "catastrophicCoverage": {
+    "pathway": "private-required",
+    "plan": "Local private major-medical plan",
+    "coversAccident": true,
+    "coversCancer": true,
+    "priceStatus": "priced",
+    "ageBands": [
+      {
+        "fromAge": 0,
+        "monthlyPerAdult": 375
+      },
+      {
+        "fromAge": 70,
+        "monthlyPerAdult": 850
+      }
+    ],
+    "confidence": "researched",
+    "asOf": "2026-11-16",
+    "notes": "Midpoint of broker ranges at a moderate deductible: about $250-500 per adult per month at 60, $500-1,200 at 70. Not quotes. The social security system (CSS) is for workers and voluntary entry reportedly closes at 57 (women) / 62 (men); public MINSA facilities are a pay-per-use backstop. Most insurers stop accepting new members between 55 and 75, and pre-existing conditions are usually excluded or surcharged.",
+    "sources": [
+      "https://ten-pac.com/the-ultimate-guide-to-health-insurance-in-panama/",
+      "https://revisa24.com/pa/en/seguros-de-salud",
+      "https://panamarealestateguide.com/living/panama-healthcare-costs-2026"
+    ]
   }
 }

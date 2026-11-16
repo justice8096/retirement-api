@@ -314,5 +314,19 @@
   "coordinates": {
     "lat": 9.9749,
     "lon": -84.3789
+  },
+  "catastrophicCoverage": {
+    "pathway": "national-mandatory",
+    "plan": "Caja Costarricense de Seguro Social (CCSS)",
+    "coversAccident": true,
+    "coversCancer": true,
+    "priceStatus": "in-healthcare-line",
+    "confidence": "researched",
+    "asOf": "2026-11-16",
+    "notes": "Mandatory for legal residents; pre-existing conditions covered, no age limit. Contribution is roughly 7-11% of declared income with a $1,000/month floor for pensionados, so the stored line understates the cost for higher declared pensions.",
+    "sources": [
+      "https://costarica-immigration.com/caja-in-costa-rica-do-i-need-to-pay-caja-as-a-resident/",
+      "https://www.expatden.com/costa-rica/how-to-use-caja-as-a-retiree-in-costa-rica/"
+    ]
   }
 }

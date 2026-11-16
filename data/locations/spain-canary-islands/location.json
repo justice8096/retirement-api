@@ -407,5 +407,19 @@
   "coordinates": {
     "lat": 28.3298,
     "lon": -16.5097
+  },
+  "catastrophicCoverage": {
+    "pathway": "national-voluntary",
+    "plan": "Convenio Especial (public system buy-in)",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "in-healthcare-line",
+    "confidence": "researched",
+    "asOf": "2026-11-16",
+    "notes": "Available after 12 months of registered residence: about EUR 60/month per person under 65 and EUR 157 from 65; pre-existing conditions covered; outpatient prescriptions not included. A private policy without co-pays is required for the non-lucrative visa before that.",
+    "sources": [
+      "https://myspainvisa.com/convenio-especial-spain/",
+      "https://www.costaluzlawyers.com/public-healthcare-non-lucrative-visa-spain/"
+    ]
   }
 }

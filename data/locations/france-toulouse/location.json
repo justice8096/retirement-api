@@ -436,5 +436,19 @@
   "coordinates": {
     "lat": 43.6043,
     "lon": 1.4437
+  },
+  "catastrophicCoverage": {
+    "pathway": "national-mandatory",
+    "plan": "PUMA (Protection Universelle Maladie)",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "in-healthcare-line",
+    "confidence": "researched",
+    "asOf": "2026-11-16",
+    "notes": "Residence-based after a 3-month wait for people with no professional activity. A new financial participation for certain non-working residents (Article L160-1-1) has no published amount yet, so the stored line may understate the cost for visitor-visa retirees.",
+    "sources": [
+      "https://easyfrancenow.com/updates/health-cover-europe-american-retirees",
+      "https://www.frenchentree.com/living-in-france/family-life/elderly/retiring-to-france-in-2026-what-does-the-new-puma-healthcare-contribution-mean-for-us-retirees/"
+    ]
   }
 }

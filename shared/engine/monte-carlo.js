@@ -21,6 +21,7 @@ import { ordinaryTaxDelta } from './ordinary-tax.js';
 import { taxableSocialSecurity } from './ordinary-tax.js';
 import { irmaaTier, irmaaMonthlySurcharge } from './irmaa.js';
 import { TAX_TABLE_YEAR } from './tax-sources.js';
+import { catastrophicMonthly, medicareFallbackMonthly } from './catastrophic-coverage.js';
 export const DEFAULT_REGIME = {
     bullMean: 0.12,
     bullVol: 0.12,
@@ -127,6 +128,26 @@ function segmentCostAtYear(m, y, p, survivorPhase = false, magiAugment = 0) {
         // adjusting `foreignHealthcareMonthly` directly per segment, or via the
         // lifestyle ratio on `nonHealthcareBase` — but not here).
         healthcare = m.foreignHealthcareMonthly ?? 0;
+        if (m.foreignCatastrophicAgeBands?.length || m.foreignMedicareFallbackMonthlyPerAdult) {
+            // Required catastrophic cover is age-rated per adult. In the survivor
+            // phase only one adult remains: the declared survivor, else the
+            // youngest adult. With no birth years, assume two adults aged 65 at
+            // the start of the sim.
+            const births = p.adultBirthYears ?? [];
+            let ages;
+            if (survivorPhase) {
+                const by = p.survivorBirthYear ?? (births.length ? Math.max(...births) : undefined);
+                ages = by != null ? [calYear - by] : [65 + y];
+            }
+            else if (births.length) {
+                ages = births.map((by) => calYear - by);
+            }
+            else {
+                ages = [65 + y, 65 + y];
+            }
+            healthcare += catastrophicMonthly(m.foreignCatastrophicAgeBands, ages)
+                + medicareFallbackMonthly(m.foreignMedicareFallbackMonthlyPerAdult, ages);
+        }
     }
     // Lifestyle ratio scales the non-tax / non-healthcare portion only —
     // housing, food, transport, utilities. Tax + healthcare are already
@@ -137,13 +158,33 @@ function segmentCostAtYear(m, y, p, survivorPhase = false, magiAugment = 0) {
         healthcare,
     };
 }
-/** Whether any adult crosses 65 exactly at calendar year (simStartYear + y). */
+/** Ages (> 0) at which any scheduled segment's catastrophic premium steps. */
+function catastrophicBandAges(p) {
+    const ages = [];
+    for (const seg of p.moveSchedule ?? []) {
+        for (const band of seg.foreignCatastrophicAgeBands ?? []) {
+            if (band.fromAge > 0 && !ages.includes(band.fromAge))
+                ages.push(band.fromAge);
+        }
+    }
+    return ages;
+}
+/**
+ * Whether the active segment's cost must be recomputed at calendar year
+ * (simStartYear + y): any adult crosses 65 (Medicare), or crosses an age at
+ * which a required catastrophic premium band steps.
+ */
 function ageTransitionAtYear(y, p) {
     const adults = p.adultBirthYears;
-    if (!adults?.length)
-        return false;
+    const bandAges = catastrophicBandAges(p);
+    if (!adults?.length) {
+        // Unknown ages: the catastrophic bands assume two adults aged 65 at y = 0.
+        return bandAges.includes(65 + y);
+    }
     const calYear = (p.simStartYear ?? new Date().getFullYear()) + y;
-    return adults.some(by => calYear === by + 65);
+    if (adults.some(by => calYear === by + 65))
+        return true;
+    return bandAges.length > 0 && adults.some(by => bandAges.includes(calYear - by));
 }
 /**
  * Mulberry32 seeded PRNG factory. Returns a function that produces a

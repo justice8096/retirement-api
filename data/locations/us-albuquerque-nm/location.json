@@ -236,5 +236,18 @@
   "coordinates": {
     "lat": 35.0845,
     "lon": -106.6511
+  },
+  "catastrophicCoverage": {
+    "pathway": "us-aca-medicare",
+    "plan": "ACA marketplace plan before 65, Medicare from 65",
+    "coversAccident": true,
+    "coversCancer": true,
+    "priceStatus": "in-healthcare-line",
+    "confidence": "researched",
+    "asOf": "2026-11-16",
+    "notes": "Priced by the ACA / Medicare model in the kernel. Original Medicare has no out-of-pocket cap unless a Medigap or Medicare Advantage plan is added.",
+    "sources": [
+      "https://www.medicare.gov/coverage/travel-outside-the-u.s."
+    ]
   }
 }

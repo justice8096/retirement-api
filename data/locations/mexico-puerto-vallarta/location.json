@@ -495,5 +495,19 @@
   "coordinates": {
     "lat": 20.617,
     "lon": -105.2302
+  },
+  "catastrophicCoverage": {
+    "pathway": "national-voluntary",
+    "plan": "IMSS voluntary enrolment",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "in-healthcare-line",
+    "confidence": "researched",
+    "asOf": "2026-11-16",
+    "notes": "Open to temporary and permanent residents; about 18,300 pesos per year for a person in their 60s. Applicants with listed pre-existing conditions (including malignant tumours and chronic degenerative disease) cannot enrol, in which case a private major-medical plan is needed and is not priced here.",
+    "sources": [
+      "https://www.mexperience.com/how-to-access-the-mexican-healthcare-system-imss/",
+      "https://www.riotimesonline.com/health-insurance-expats-mexico-2026/"
+    ]
   }
 }

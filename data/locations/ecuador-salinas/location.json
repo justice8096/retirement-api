@@ -345,5 +345,18 @@
   "coordinates": {
     "lat": -2.214,
     "lon": -80.958
+  },
+  "catastrophicCoverage": {
+    "pathway": "national-voluntary",
+    "plan": "IESS voluntary affiliation",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "in-healthcare-line",
+    "confidence": "single-source",
+    "asOf": "2026-11-16",
+    "notes": "About $83/month, or $97 with a spouse, scaling with declared income; reported to cover pre-existing conditions without exclusions; long waits.",
+    "sources": [
+      "https://www.riotimesonline.com/retire-in-ecuador-2026/"
+    ]
   }
 }

@@ -1,0 +1,195 @@
+{
+  "United States": {
+    "pathway": "us-aca-medicare",
+    "plan": "ACA marketplace plan before 65, Medicare from 65",
+    "coversAccident": true,
+    "coversCancer": true,
+    "priceStatus": "in-healthcare-line",
+    "confidence": "researched",
+    "notes": "Priced by the ACA / Medicare model in the kernel. Original Medicare has no out-of-pocket cap unless a Medigap or Medicare Advantage plan is added.",
+    "sources": ["https://www.medicare.gov/coverage/travel-outside-the-u.s."]
+  },
+  "Panama": {
+    "pathway": "private-required",
+    "plan": "Local private major-medical plan",
+    "coversAccident": true,
+    "coversCancer": true,
+    "priceStatus": "priced",
+    "ageBands": [
+      { "fromAge": 0, "monthlyPerAdult": 375 },
+      { "fromAge": 70, "monthlyPerAdult": 850 }
+    ],
+    "healthcareLine": { "min": 500, "max": 1000 },
+    "confidence": "researched",
+    "notes": "Midpoint of broker ranges at a moderate deductible: about $250-500 per adult per month at 60, $500-1,200 at 70. Not quotes. The social security system (CSS) is for workers and voluntary entry reportedly closes at 57 (women) / 62 (men); public MINSA facilities are a pay-per-use backstop. Most insurers stop accepting new members between 55 and 75, and pre-existing conditions are usually excluded or surcharged.",
+    "sources": [
+      "https://ten-pac.com/the-ultimate-guide-to-health-insurance-in-panama/",
+      "https://revisa24.com/pa/en/seguros-de-salud",
+      "https://panamarealestateguide.com/living/panama-healthcare-costs-2026"
+    ]
+  },
+  "Costa Rica": {
+    "pathway": "national-mandatory",
+    "plan": "Caja Costarricense de Seguro Social (CCSS)",
+    "coversAccident": true,
+    "coversCancer": true,
+    "priceStatus": "in-healthcare-line",
+    "confidence": "researched",
+    "notes": "Mandatory for legal residents; pre-existing conditions covered, no age limit. Contribution is roughly 7-11% of declared income with a $1,000/month floor for pensionados, so the stored line understates the cost for higher declared pensions.",
+    "sources": [
+      "https://costarica-immigration.com/caja-in-costa-rica-do-i-need-to-pay-caja-as-a-resident/",
+      "https://www.expatden.com/costa-rica/how-to-use-caja-as-a-retiree-in-costa-rica/"
+    ]
+  },
+  "Spain": {
+    "pathway": "national-voluntary",
+    "plan": "Convenio Especial (public system buy-in)",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "in-healthcare-line",
+    "confidence": "researched",
+    "notes": "Available after 12 months of registered residence: about EUR 60/month per person under 65 and EUR 157 from 65; pre-existing conditions covered; outpatient prescriptions not included. A private policy without co-pays is required for the non-lucrative visa before that.",
+    "sources": [
+      "https://myspainvisa.com/convenio-especial-spain/",
+      "https://www.costaluzlawyers.com/public-healthcare-non-lucrative-visa-spain/"
+    ]
+  },
+  "Portugal": {
+    "pathway": "national-voluntary",
+    "plan": "Servico Nacional de Saude (SNS)",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "in-healthcare-line",
+    "confidence": "researched",
+    "notes": "Open to registered legal residents at low co-pays; family-doctor assignment can take months. Private insurance is required for the D7 visa, and Portuguese private plans often cap entry at 65-70.",
+    "sources": [
+      "https://feather-insurance.com/en-pt/blog/health-insurance-guide-portugal",
+      "https://www.greenbacktaxservices.com/country-guide/portugal/healthcare-in-portugal/"
+    ]
+  },
+  "France": {
+    "pathway": "national-mandatory",
+    "plan": "PUMA (Protection Universelle Maladie)",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "in-healthcare-line",
+    "confidence": "researched",
+    "notes": "Residence-based after a 3-month wait for people with no professional activity. A new financial participation for certain non-working residents (Article L160-1-1) has no published amount yet, so the stored line may understate the cost for visitor-visa retirees.",
+    "sources": [
+      "https://easyfrancenow.com/updates/health-cover-europe-american-retirees",
+      "https://www.frenchentree.com/living-in-france/family-life/elderly/retiring-to-france-in-2026-what-does-the-new-puma-healthcare-contribution-mean-for-us-retirees/"
+    ]
+  },
+  "Italy": {
+    "pathway": "national-voluntary",
+    "plan": "Servizio Sanitario Nazionale (SSN) voluntary enrolment",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "in-healthcare-line",
+    "confidence": "researched",
+    "notes": "Annual fee of EUR 2,000 minimum (4% of income above EUR 31,923.99, capped at EUR 2,788.87), by calendar year and not pro-rated; a dependent spouse is covered by the same payment; pre-existing conditions covered. A private policy or SSN enrolment satisfies the elective-residence visa.",
+    "sources": [
+      "https://impatria.com/en/magazine/healthcare-italy-foreign-retirees-ssn-guide/",
+      "https://italyhandbook.com/?p=4323"
+    ]
+  },
+  "Greece": {
+    "pathway": "national-voluntary",
+    "plan": "EOPYY optional insurance for third-country pensioners",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "in-healthcare-line",
+    "confidence": "single-source",
+    "notes": "Optional for holders of a pensioner residence permit at 8.5% of pension income, so the stored line understates the cost for higher pensions. Whether passive-income permits qualify is not confirmed.",
+    "sources": ["https://www.argophilia.com/news/optional-health-insurance-for-third-country-pensioners-terms-and-procedures/243223"]
+  },
+  "Cyprus": {
+    "pathway": "private-required",
+    "plan": "Private health insurance (GESY not open to non-EU retiree permit holders)",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "unpriced",
+    "confidence": "single-source",
+    "notes": "Non-EU nationals qualify for GESY only if employed, permanently resident or family of a beneficiary. No sourced age-banded private premium yet; the stored healthcare line is not a catastrophic premium.",
+    "sources": ["https://en.politis.com.cy/in-depth/guides/1011293/healthcare-in-cyprus-what-expats-need-to-know"]
+  },
+  "Malta": {
+    "pathway": "private-required",
+    "plan": "Private health insurance",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "unpriced",
+    "confidence": "unverified",
+    "notes": "No source could be read on 2026-11-16. Classified from general knowledge that third-country retirement permits require private cover. No sourced premium; the stored healthcare line is not a catastrophic premium.",
+    "sources": []
+  },
+  "Ireland": {
+    "pathway": "private-required",
+    "plan": "Private medical insurance at or above VHI Plan D level",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "unpriced",
+    "confidence": "single-source",
+    "notes": "Stamp 0 holders cannot use public hospitals; private cover with at least EUR 25,000 in-hospital cover is mandatory at every renewal. No sourced age-banded premium yet.",
+    "sources": ["https://expatsi.com/visas/ireland/stamp-0-retirement"]
+  },
+  "Croatia": {
+    "pathway": "national-mandatory",
+    "plan": "HZZO obvezno (mandatory basic insurance)",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "in-healthcare-line",
+    "confidence": "single-source",
+    "notes": "Mandatory for residents after 90 days; quoted at about $85-225 per person per month with 20% co-pays, and non-EU applicants may owe the previous 12 months of premiums on first registration.",
+    "sources": ["https://expatsi.com/healthcare/croatia-healthcare-report/"]
+  },
+  "Mexico": {
+    "pathway": "national-voluntary",
+    "plan": "IMSS voluntary enrolment",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "in-healthcare-line",
+    "confidence": "researched",
+    "notes": "Open to temporary and permanent residents; about 18,300 pesos per year for a person in their 60s. Applicants with listed pre-existing conditions (including malignant tumours and chronic degenerative disease) cannot enrol, in which case a private major-medical plan is needed and is not priced here.",
+    "sources": [
+      "https://www.mexperience.com/how-to-access-the-mexican-healthcare-system-imss/",
+      "https://www.riotimesonline.com/health-insurance-expats-mexico-2026/"
+    ]
+  },
+  "Colombia": {
+    "pathway": "private-required",
+    "plan": "Prepaid medicine (medicina prepagada) or international plan",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "unpriced",
+    "confidence": "single-source",
+    "notes": "Sources conflict on whether retirement-visa holders can join the public EPS (one says excluded since October 2022). Prepaid plans are quoted at about $75-180 per person per month without age bands; visa applicants must carry insurance with repatriation cover.",
+    "sources": [
+      "https://colombiamove.com/blog/colombia-healthcare-expats-eps-private-insurance/",
+      "https://www.riotimesonline.com/retire-in-colombia-foreigners-2026/"
+    ]
+  },
+  "Ecuador": {
+    "pathway": "national-voluntary",
+    "plan": "IESS voluntary affiliation",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "in-healthcare-line",
+    "confidence": "single-source",
+    "notes": "About $83/month, or $97 with a spouse, scaling with declared income; reported to cover pre-existing conditions without exclusions; long waits.",
+    "sources": ["https://www.riotimesonline.com/retire-in-ecuador-2026/"]
+  },
+  "Uruguay": {
+    "pathway": "national-voluntary",
+    "plan": "Mutualista membership or public ASSE",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "in-healthcare-line",
+    "confidence": "researched",
+    "notes": "Mutualistas run about $100-200 per person per month; many cap new members at 60-65, some accept older members for a buy-in fee. ASSE has no age or pre-existing restriction.",
+    "sources": [
+      "https://www.taxesforexpats.com/country-guides/uruguay/retire-in-uruguay.html",
+      "https://www.realestate-in-uruguay.com/?p=90551"
+    ]
+  }
+}

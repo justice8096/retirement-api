@@ -417,5 +417,19 @@
   "coordinates": {
     "lat": 38.1166,
     "lon": 13.3636
+  },
+  "catastrophicCoverage": {
+    "pathway": "national-voluntary",
+    "plan": "Servizio Sanitario Nazionale (SSN) voluntary enrolment",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "in-healthcare-line",
+    "confidence": "researched",
+    "asOf": "2026-11-16",
+    "notes": "Annual fee of EUR 2,000 minimum (4% of income above EUR 31,923.99, capped at EUR 2,788.87), by calendar year and not pro-rated; a dependent spouse is covered by the same payment; pre-existing conditions covered. A private policy or SSN enrolment satisfies the elective-residence visa.",
+    "sources": [
+      "https://impatria.com/en/magazine/healthcare-italy-foreign-retirees-ssn-guide/",
+      "https://italyhandbook.com/?p=4323"
+    ]
   }
 }

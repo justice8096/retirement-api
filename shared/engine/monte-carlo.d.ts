@@ -15,6 +15,7 @@
  */
 import { type RentalProperty } from './rental-income.js';
 import { type LtcgFilingStatus } from './tax-sources.js';
+import { type CatastrophicAgeBand } from './catastrophic-coverage.js';
 export type ReturnMode = 'normal' | 'bootstrap' | 'regime' | 'historical-sequence';
 /**
  * One-time discrete expense at a specific sim year — modelled as a balance
@@ -96,6 +97,19 @@ export interface LocationMove {
     acaSubsidyCapPct?: number;
     /** Foreign location: monthly healthcare from stored data (public system or local private). */
     foreignHealthcareMonthly?: number;
+    /**
+     * Foreign location: required catastrophic (accident + cancer) premium as
+     * per-adult age bands in today's $. Evaluated per adult per sim year from
+     * `adultBirthYears`, and ADDED to `foreignHealthcareMonthly`. Runners
+     * should build both fields with `resolveForeignHealthcare` so a priced
+     * band set replaces the flat line instead of stacking on it.
+     */
+    foreignCatastrophicAgeBands?: CatastrophicAgeBand[];
+    /**
+     * Foreign location: Medicare Part B kept as a US fallback, per adult per
+     * month in today's $, charged from age 65. Omit to model no US fallback.
+     */
+    foreignMedicareFallbackMonthlyPerAdult?: number;
     /** True if this is a US location — drives Medicare eligibility. */
     isUS?: boolean;
     /**
