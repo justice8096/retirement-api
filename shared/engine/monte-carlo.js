@@ -19,7 +19,7 @@ import { ltcgFederalTax } from './tax-sources.js';
 import { calcRMD } from '../rmd.js';
 import { ordinaryTaxDelta } from './ordinary-tax.js';
 import { taxableSocialSecurity } from './ordinary-tax.js';
-import { irmaaTier, irmaaMonthlySurcharge } from './irmaa.js';
+import { irmaaTier, irmaaMonthlySurcharge, IRMAA_TABLE_YEAR } from './irmaa.js';
 import { TAX_TABLE_YEAR } from './tax-sources.js';
 export const DEFAULT_REGIME = {
     bullMean: 0.12,
@@ -460,11 +460,10 @@ export function runMonteCarlo(p) {
         magi: new Array(years).fill(0),
     } : null;
     const rmdBracket = rmdOn && (p.rmdTaxMode ?? 'flat') === 'bracket';
-    // Indexation of the 2026 tables to the sim's calendar start year.
-    // IRMAA still uses the 2026 CMS tables (2027 not yet published), so it
-    // keeps a 2026 base; the ordinary-tax pass uses the 2027 IRS tables. The
-    // exponent may be negative for a 2026 start, deflating the 2027 tables.
-    const rmdIndexBase = Math.pow(1 + (p.meanInflation ?? 0), Math.max(0, calStart - 2026));
+    // Indexation of the 2027 tables to the sim's calendar start year.
+    // Both the IRMAA tables (CMS 2027) and the ordinary-tax tables (IRS 2027)
+    // are 2027-based. The exponent may be negative for a 2026 start, deflating them.
+    const rmdIndexBase = Math.pow(1 + (p.meanInflation ?? 0), calStart - IRMAA_TABLE_YEAR);
     const taxIndexBase = Math.pow(1 + (p.meanInflation ?? 0), calStart - TAX_TABLE_YEAR);
     const afterTaxResults = [];
     const irmaaOn = rmdOn && !!p.irmaaEnabled;

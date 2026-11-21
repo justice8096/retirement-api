@@ -94,12 +94,17 @@
       "lastVerified": "2026-11-06"
     },
     "healthcare": {
-      "min": 682,
-      "max": 956,
-      "typical": 796,
+      "min": 695,
+      "max": 969,
+      "typical": 809,
       "notes": "Uses the 2026 Part B standard premium of $202.90 x2, since 2027 is not yet published. Medigap G at age 65 in Virginia runs $138 (cheapest) to $156 among listed carriers, with a $236 average (MoneyGeek, 2026). Part D runs $0 to the $38.99 base beneficiary premium per person. This is not Fairfax-specific, and attained-age Plan G rises with age.",
       "annualInflation": 0.055,
       "sources": [
+        {
+          "title": "CMS fact sheet: 2027 Medicare Parts A and B premiums and deductibles",
+          "url": "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles",
+          "accessed": "2026-11-20"
+        },
         {
           "title": "Medigap Plan G premiums rose 12 to 26 percent in 2026 filings (247WallSt)",
           "url": "https://247wallst.com/personal-finance/2026/09/11/medigap-plan-g-premiums-rose-12-to-26-in-2026-filings-one-chubb-block-got-45-attained-age-policyholders-got-their-birthday-increase-on-top/",
@@ -116,7 +121,7 @@
           "accessed": "2026-11-06"
         }
       ],
-      "lastVerified": "2026-11-06"
+      "lastVerified": "2026-11-20"
     },
     "healthcarePreMedicare": {
       "min": 1712,

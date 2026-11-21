@@ -230,8 +230,8 @@ describe('SS scheduled-cut fields (spec 2026-08-29)', () => {
       })).json();
       expect(b.rmd.meanConversionByYear[0]).toBe(50_000);
       expect(b.rmd.totalConversions).toBe(50_000);
-      // Tier 3 single: (324.60 + 60.40) * 12 = 4620 for the two prior-MAGI years
-      expect(b.rmd.meanIrmaaByYear.slice(0, 2)).toEqual([4_620, 4_620]);
+      // Tier 3 single (2027 CMS): (335.00 + 64.00) * 12 = 4788 for the two prior-MAGI years
+      expect(b.rmd.meanIrmaaByYear.slice(0, 2)).toEqual([4_788, 4_788]);
       expect(b.inputs.rmdTaxMode).toBe('bracket');
       expect(b.inputs.conversionYears).toBe(1);
     });
