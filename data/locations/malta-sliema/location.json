@@ -431,5 +431,16 @@
   "coordinates": {
     "lat": 35.9125,
     "lon": 14.5018
+  },
+  "catastrophicCoverage": {
+    "pathway": "private-required",
+    "plan": "Private health insurance",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "unpriced",
+    "confidence": "unverified",
+    "asOf": "2026-11-16",
+    "notes": "No source could be read on 2026-11-16. Classified from general knowledge that third-country retirement permits require private cover. No sourced premium; the stored healthcare line is not a catastrophic premium.",
+    "sources": []
   }
 }

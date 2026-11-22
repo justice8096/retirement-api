@@ -21,6 +21,7 @@ import { ordinaryTaxDelta, type OrdinaryFilingStatus, type OrdinaryTaxInputs } f
 import { taxableSocialSecurity } from './ordinary-tax.js';
 import { irmaaTier, irmaaMonthlySurcharge, IRMAA_TABLE_YEAR } from './irmaa.js';
 import { TAX_TABLE_YEAR } from './tax-sources.js';
+import { catastrophicMonthly, medicareFallbackMonthly, type CatastrophicAgeBand } from './catastrophic-coverage.js';
 
 
 export type ReturnMode = 'normal' | 'bootstrap' | 'regime' | 'historical-sequence';
@@ -113,6 +114,19 @@ export interface LocationMove {
   acaSubsidyCapPct?: number;
   /** Foreign location: monthly healthcare from stored data (public system or local private). */
   foreignHealthcareMonthly?: number;
+  /**
+   * Foreign location: required catastrophic (accident + cancer) premium as
+   * per-adult age bands in today's $. Evaluated per adult per sim year from
+   * `adultBirthYears`, and ADDED to `foreignHealthcareMonthly`. Runners
+   * should build both fields with `resolveForeignHealthcare` so a priced
+   * band set replaces the flat line instead of stacking on it.
+   */
+  foreignCatastrophicAgeBands?: CatastrophicAgeBand[];
+  /**
+   * Foreign location: Medicare Part B kept as a US fallback, per adult per
+   * month in today's $, charged from age 65. Omit to model no US fallback.
+   */
+  foreignMedicareFallbackMonthlyPerAdult?: number;
   /** True if this is a US location — drives Medicare eligibility. */
   isUS?: boolean;
   /**
@@ -1000,6 +1014,24 @@ function segmentCostAtYear(m: LocationMove, y: number, p: MonteCarloParams, surv
     // adjusting `foreignHealthcareMonthly` directly per segment, or via the
     // lifestyle ratio on `nonHealthcareBase` — but not here).
     healthcare = m.foreignHealthcareMonthly ?? 0;
+    if (m.foreignCatastrophicAgeBands?.length || m.foreignMedicareFallbackMonthlyPerAdult) {
+      // Required catastrophic cover is age-rated per adult. In the survivor
+      // phase only one adult remains: the declared survivor, else the
+      // youngest adult. With no birth years, assume two adults aged 65 at
+      // the start of the sim.
+      const births = p.adultBirthYears ?? [];
+      let ages: number[];
+      if (survivorPhase) {
+        const by = p.survivorBirthYear ?? (births.length ? Math.max(...births) : undefined);
+        ages = by != null ? [calYear - by] : [65 + y];
+      } else if (births.length) {
+        ages = births.map((by) => calYear - by);
+      } else {
+        ages = [65 + y, 65 + y];
+      }
+      healthcare += catastrophicMonthly(m.foreignCatastrophicAgeBands, ages)
+        + medicareFallbackMonthly(m.foreignMedicareFallbackMonthlyPerAdult, ages);
+    }
   }
 
   // Lifestyle ratio scales the non-tax / non-healthcare portion only —
@@ -1012,12 +1044,32 @@ function segmentCostAtYear(m: LocationMove, y: number, p: MonteCarloParams, surv
   };
 }
 
-/** Whether any adult crosses 65 exactly at calendar year (simStartYear + y). */
+/** Ages (> 0) at which any scheduled segment's catastrophic premium steps. */
+function catastrophicBandAges(p: MonteCarloParams): number[] {
+  const ages: number[] = [];
+  for (const seg of p.moveSchedule ?? []) {
+    for (const band of seg.foreignCatastrophicAgeBands ?? []) {
+      if (band.fromAge > 0 && !ages.includes(band.fromAge)) ages.push(band.fromAge);
+    }
+  }
+  return ages;
+}
+
+/**
+ * Whether the active segment's cost must be recomputed at calendar year
+ * (simStartYear + y): any adult crosses 65 (Medicare), or crosses an age at
+ * which a required catastrophic premium band steps.
+ */
 function ageTransitionAtYear(y: number, p: MonteCarloParams): boolean {
   const adults = p.adultBirthYears;
-  if (!adults?.length) return false;
+  const bandAges = catastrophicBandAges(p);
+  if (!adults?.length) {
+    // Unknown ages: the catastrophic bands assume two adults aged 65 at y = 0.
+    return bandAges.includes(65 + y);
+  }
   const calYear = (p.simStartYear ?? new Date().getFullYear()) + y;
-  return adults.some(by => calYear === by + 65);
+  if (adults.some(by => calYear === by + 65)) return true;
+  return bandAges.length > 0 && adults.some(by => bandAges.includes(calYear - by));
 }
 
 /**

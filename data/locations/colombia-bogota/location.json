@@ -322,5 +322,19 @@
   "coordinates": {
     "lat": 4.6097,
     "lon": -74.0817
+  },
+  "catastrophicCoverage": {
+    "pathway": "private-required",
+    "plan": "Prepaid medicine (medicina prepagada) or international plan",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "unpriced",
+    "confidence": "single-source",
+    "asOf": "2026-11-16",
+    "notes": "Sources conflict on whether retirement-visa holders can join the public EPS (one says excluded since October 2022). Prepaid plans are quoted at about $75-180 per person per month without age bands; visa applicants must carry insurance with repatriation cover.",
+    "sources": [
+      "https://colombiamove.com/blog/colombia-healthcare-expats-eps-private-insurance/",
+      "https://www.riotimesonline.com/retire-in-colombia-foreigners-2026/"
+    ]
   }
 }

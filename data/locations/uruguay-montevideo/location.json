@@ -486,5 +486,19 @@
   "coordinates": {
     "lat": -34.9033,
     "lon": -56.1882
+  },
+  "catastrophicCoverage": {
+    "pathway": "national-voluntary",
+    "plan": "Mutualista membership or public ASSE",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "in-healthcare-line",
+    "confidence": "researched",
+    "asOf": "2026-11-16",
+    "notes": "Mutualistas run about $100-200 per person per month; many cap new members at 60-65, some accept older members for a buy-in fee. ASSE has no age or pre-existing restriction.",
+    "sources": [
+      "https://www.taxesforexpats.com/country-guides/uruguay/retire-in-uruguay.html",
+      "https://www.realestate-in-uruguay.com/?p=90551"
+    ]
   }
 }

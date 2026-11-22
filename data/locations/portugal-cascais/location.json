@@ -478,5 +478,19 @@
   "coordinates": {
     "lat": 38.6968,
     "lon": -9.4215
+  },
+  "catastrophicCoverage": {
+    "pathway": "national-voluntary",
+    "plan": "Servico Nacional de Saude (SNS)",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "in-healthcare-line",
+    "confidence": "researched",
+    "asOf": "2026-11-16",
+    "notes": "Open to registered legal residents at low co-pays; family-doctor assignment can take months. Private insurance is required for the D7 visa, and Portuguese private plans often cap entry at 65-70.",
+    "sources": [
+      "https://feather-insurance.com/en-pt/blog/health-insurance-guide-portugal",
+      "https://www.greenbacktaxservices.com/country-guide/portugal/healthcare-in-portugal/"
+    ]
   }
 }

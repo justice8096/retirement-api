@@ -314,5 +314,18 @@
   "coordinates": {
     "lat": 34.7768,
     "lon": 32.4245
+  },
+  "catastrophicCoverage": {
+    "pathway": "private-required",
+    "plan": "Private health insurance (GESY not open to non-EU retiree permit holders)",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "unpriced",
+    "confidence": "single-source",
+    "asOf": "2026-11-16",
+    "notes": "Non-EU nationals qualify for GESY only if employed, permanently resident or family of a beneficiary. No sourced age-banded private premium yet; the stored healthcare line is not a catastrophic premium.",
+    "sources": [
+      "https://en.politis.com.cy/in-depth/guides/1011293/healthcare-in-cyprus-what-expats-need-to-know"
+    ]
   }
 }

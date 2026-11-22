@@ -429,5 +429,18 @@
   "coordinates": {
     "lat": 37.5686,
     "lon": 22.8069
+  },
+  "catastrophicCoverage": {
+    "pathway": "national-voluntary",
+    "plan": "EOPYY optional insurance for third-country pensioners",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "in-healthcare-line",
+    "confidence": "single-source",
+    "asOf": "2026-11-16",
+    "notes": "Optional for holders of a pensioner residence permit at 8.5% of pension income, so the stored line understates the cost for higher pensions. Whether passive-income permits qualify is not confirmed.",
+    "sources": [
+      "https://www.argophilia.com/news/optional-health-insurance-for-third-country-pensioners-terms-and-procedures/243223"
+    ]
   }
 }

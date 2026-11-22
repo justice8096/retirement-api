@@ -371,5 +371,18 @@
   "coordinates": {
     "lat": 53.2725,
     "lon": -9.0509
+  },
+  "catastrophicCoverage": {
+    "pathway": "private-required",
+    "plan": "Private medical insurance at or above VHI Plan D level",
+    "coversAccident": true,
+    "coversCancer": "unstated",
+    "priceStatus": "unpriced",
+    "confidence": "single-source",
+    "asOf": "2026-11-16",
+    "notes": "Stamp 0 holders cannot use public hospitals; private cover with at least EUR 25,000 in-hospital cover is mandatory at every renewal. No sourced age-banded premium yet.",
+    "sources": [
+      "https://expatsi.com/visas/ireland/stamp-0-retirement"
+    ]
   }
 }
